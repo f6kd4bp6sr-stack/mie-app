@@ -28,7 +28,7 @@ Ogni argomento contiene:
 
 Per ogni esame ci sono anche:
 - **Percorso**: piano di studio e consiglio del giorno;
-- **Test d'ingresso** per partire dal livello giusto;
+- **Test d'ingresso** per partire dal livello giusto, con l'analisi degli errori: risposta data, perché è sbagliata, risposta giusta, perché, e argomento da ripassare;
 - **Esercizi**: serie da 10, punti deboli, ripasso errori;
 - **Simulazione** 21 + 10 in 50 minuti, con timer che continua anche chiudendo l'app;
 - **Formulario** o schemi;
@@ -50,6 +50,7 @@ Pagine comuni:
 | `b2_other.js` | Chimica e Biologia: unità, CFU, argomenti e voci del syllabus. Registro `EXAMS` dei tre esami. |
 | `b4_chimica.js` | Chimica: contenuti (`CHI_EXPL`), domande `CHI_QB`, test d'ingresso `CHI_PT`, animazioni collegate, sintesi delle prove 2025. |
 | `b5_biologia.js` | Biologia: contenuti (`BIO_EXPL`), domande `BIO_QB`, test d'ingresso `BIO_PT`, animazioni collegate, sintesi delle prove 2025. |
+| `b7_pt_spiegazioni.js` | Test d'ingresso: per ogni domanda l'argomento da ripassare, perché la risposta giusta è giusta e, per ogni opzione sbagliata, il ragionamento che porta all'errore (`PT_EXPL`). |
 | `c_anim.js` | Motore delle animazioni (`mountAnim`) e 25 animazioni di Fisica. |
 | `c2_anim_chi_bio.js` | 19 animazioni di Chimica e Biologia. |
 | `c3_anim_fis_extra.js` | 9 animazioni di Fisica aggiuntive. |
