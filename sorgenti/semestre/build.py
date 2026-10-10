@@ -15,7 +15,7 @@ APP = ROOT + "semestre/"
 APP_URL = "https://f6kd4bp6sr-stack.github.io/mie-app/semestre/"
 now = datetime.datetime.now().astimezone().strftime("%Y-%m-%dT%H:%M%z")
 BUILD = now[:-2] + ":" + now[-2:]
-BODY = ["b_data.js", "b3_spiegazioni_fis.js", "b2_other.js", "b4_chimica.js", "b5_biologia.js", "c_anim.js", "c2_anim_chi_bio.js", "d_app.js"]   # ordine di caricamento
+BODY = ["b_data.js", "b3_spiegazioni_fis.js", "b2_other.js", "b4_chimica.js", "b5_biologia.js", "c_anim.js", "c2_anim_chi_bio.js", "c3_anim_fis_extra.js", "d_app.js"]   # ordine di caricamento
 
 def rd(p): return open(p, encoding="utf-8").read()
 def wr(p, s): open(p, "w", encoding="utf-8").write(s)

@@ -13,11 +13,12 @@ Le pagine pubblicate **non si modificano a mano**: si modificano questi sorgenti
 |---|---|
 | `a_head.html` | intestazione della pagina e stile grafico (colori chiari e scuri) |
 | `b_data.js` | link `SRC` e **tutte le fonti** `SOURCES` (pagina «Fonti» e schede delle materie); **Fisica**: unità e CFU, 34 argomenti (spiegazioni, formule, trappole), banca domande, test d'ingresso, date, fonti |
-| `b3_spiegazioni_fis.js` | **Fisica**: spiegazione estesa, esempi svolti passo per passo e collegamento medico per ognuno dei 34 argomenti (`FIS_EXPL`) |
+| `b3_spiegazioni_fis.js` | **Fisica**: spiegazione estesa, esempi svolti e collegamento medico per i 34 argomenti (`FIS_EXPL`), domande aggiuntive (ogni argomento ne ha almeno 6) e mappa del syllabus voce per voce (`FIS_MAP`) |
 | `b2_other.js` | **Chimica e Biologia**: unità, CFU, argomenti e voci del syllabus; registro `EXAMS` dei tre esami |
 | `b4_chimica.js` | **Chimica**: spiegazioni, esempi, formule, trappole, collegamenti medici (`CHI_EXPL`), banca domande `CHI_QB`, test d'ingresso `CHI_PT`, sintesi delle prove 2025 |
 | `b5_biologia.js` | **Biologia**: come sopra (`BIO_EXPL`, `BIO_QB`, `BIO_PT`); le «formule» sono schemi da ricordare |
 | `c_anim.js` | 25 animazioni interattive di Fisica (`AN.<nome>`), collegate agli argomenti con `anim:"<nome>"` |
+| `c3_anim_fis_extra.js` | 9 animazioni di Fisica aggiunte (estensive/intensive, potenze di 10, analisi dimensionale, urti, Laplace e capillarità, Carnot, trasmissione del calore, Coulomb, condensatore): ora ogni argomento di Fisica ha la sua |
 | `c2_anim_chi_bio.js` | 19 animazioni di Chimica (orbitali, Gibbs, Dalton, osmosi, cinetica, equilibrio, pH, tampone, pila, amminoacidi) e Biologia (membrana, Mendel, legata all'X, replicazione, traduzione, ciclo cellulare, mitosi, meiosi); Chimica usa anche `gas` di Fisica |
 | `d_app.js` | motore: navigazione, test, esercizi, simulazione 21+10 in 50 minuti, piano di studio, progressi, installazione |
 | `e_barra_sf.js` | aggiornamento automatico, copia giornaliera, copia su File / iCloud |

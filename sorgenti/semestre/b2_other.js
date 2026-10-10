@@ -74,7 +74,7 @@ const BIO_TOPICS=[
 
 /* ===== Registro degli esami della piattaforma ===== */
 const EXAMS={
- fis:{id:"fis",t:"Fisica",ic:"⚛️",col:"--u2",ready:true,units:FIS_UNITS,topics:FIS_TOPICS,qb:FIS_QB,pt:FIS_PT,
+ fis:{id:"fis",t:"Fisica",ic:"⚛️",col:"--u2",ready:true,units:FIS_UNITS,topics:FIS_TOPICS,qb:FIS_QB,pt:FIS_PT,map:FIS_MAP,
    syl:"https://www.mur.gov.it/sites/default/files/2026-06/Syllabus_FISICA_%20finale%202026.pdf",
    r25:"Al 1° appello 2025 l'hanno superata circa il 10–17% dei candidati (la più difficile delle tre); sui due appelli i promossi sono stati poco più di 11 mila."},
  chi:{id:"chi",t:"Chimica e propedeutica biochimica",short:"Chimica",ic:"🧪",col:"--u5",ready:false,units:CHI_UNITS,topics:CHI_TOPICS,qb:[],pt:[],

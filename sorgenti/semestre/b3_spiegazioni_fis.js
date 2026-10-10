@@ -247,3 +247,116 @@ u7e:{sp:["Alcuni nuclei sono instabili e si trasformano spontaneamente emettendo
  med:"In medicina nucleare si scelgono isotopi con emivita breve (ore) per fare l'esame con poca dose; in radioterapia si usano fotoni e particelle per distruggere le cellule tumorali."}
 };
 FIS_TOPICS.forEach(t=>{const x=FIS_EXPL[t.id];if(x)Object.assign(t,x);});
+
+/* ===== Completamento di tutte le parti (10 ottobre 2026, sera): voci del syllabus, esempi, animazioni, esercizi ===== */
+FIS_EXPL.u2a.sp.splice(1,0,"La legge oraria x(t) dice dove si trova il corpo a ogni istante; la traiettoria è la linea che percorre. Velocità media = Δx/Δt; la velocità istantanea è quella in un preciso istante, cioè la pendenza del grafico posizione-tempo in quel punto. Allo stesso modo l'accelerazione istantanea è la pendenza del grafico velocità-tempo, e nel grafico velocità-tempo l'area sotto la curva è lo spazio percorso. Saper leggere questi grafici è una delle richieste esplicite del syllabus.");
+FIS_EXPL.u3a.sp.unshift("Stati di aggregazione: nei solidi le particelle restano in posizioni fisse e il corpo ha forma e volume propri; i liquidi hanno volume proprio ma prendono la forma del recipiente; i gas occupano tutto lo spazio disponibile. Liquidi e gas sono fluidi perché scorrono: non oppongono resistenza a uno sforzo di taglio.");
+FIS_EXPL.u3a.sp.push("Il manometro misura la pressione relativa, cioè la differenza rispetto all'atmosfera: in un manometro a U il dislivello h del liquido dà Δp = ρgh. Lo sfigmomanometro esprime la pressione arteriosa in mmHg, cioè come altezza di una colonna di mercurio, la stessa unità dell'esperimento di Torricelli.");
+FIS_EXPL.u5a.sp.unshift("Sistema è la parte di universo che si studia (un gas in un cilindro, il corpo umano), ambiente tutto il resto; lo stato del sistema è descritto da variabili come pressione, volume e temperatura. Scale di temperatura: Celsius (0 °C fusione del ghiaccio, 100 °C ebollizione a 1 atm), Kelvin (T = t + 273,15; 0 K è lo zero assoluto) e Fahrenheit (°F = 1,8·°C + 32). Una variazione di 1 °C è uguale a una di 1 K.");
+FIS_EXPL.u5b.sp.push("Calore specifico dei gas ideali: dipende da come si scalda il gas. A volume costante tutto il calore diventa energia interna; per un gas monoatomico c_v = (3/2)R per mole. A pressione costante il gas si espande e compie anche lavoro, quindi serve più calore: c_p = c_v + R, cioè (5/2)R per un monoatomico (relazione di Mayer).");
+FIS_EXPL.u6b.sp.push("Con più cariche vale il principio di sovrapposizione: il campo totale è la somma vettoriale dei campi di ciascuna carica, mentre i potenziali (scalari) si sommano con il loro segno. Due cariche uguali danno campo nullo nel punto medio. L'energia potenziale di due cariche puntiformi è U = k·q₁q₂/r: positiva se si respingono, negativa se si attraggono.");
+FIS_EXPL.u3e.es.push({q:"Un capillare di raggio 0,25 mm è immerso in acqua (τ = 0,073 N/m, g = 10 m/s²). Di quanto sale l'acqua?",p:["h = 2τ/(ρ·g·r)","= 2·0,073 / (1000·10·0,25·10⁻³) = 0,146/2,5"],r:"circa 0,058 m, cioè 6 cm"});
+FIS_EXPL.u5e.es.push({q:"Un vetro di 2 m², spesso 4 mm, separa 20 °C da 0 °C (k = 0,8 W/(m·K)). Quanta potenza passa per conduzione?",p:["Q/t = k·A·ΔT/d","= 0,8·2·20/0,004"],r:"8000 W: per questo si usano i doppi vetri con aria in mezzo"});
+FIS_EXPL.u6a.es.push({q:"Due cariche di +2 µC e +3 µC distano 30 cm. Quanto vale la forza?",p:["F = k·q₁q₂/r² = 9·10⁹ · (2·10⁻⁶)(3·10⁻⁶) / 0,3²","= 0,054 / 0,09"],r:"0,6 N, repulsiva"});
+FIS_EXPL.u1d.med="In farmacologia si controllano le unità come le dimensioni: una dose in mg/kg moltiplicata per il peso in kg dà mg; una velocità di infusione in mL/h per un tempo in h dà mL. Se l'unità finale non torna, il calcolo è sbagliato.";
+const FIS_ANIM2={u1a:"estensive",u1b:"potenze",u1d:"dimensioni",u2f:"urti",u3e:"laplace",u5d:"carnot",u5e:"calore",u6a:"coulomb",u6c:"condensatore"};
+FIS_TOPICS.forEach(t=>{const x=FIS_EXPL[t.id];if(x)Object.assign(t,x);if(FIS_ANIM2[t.id])t.anim=FIS_ANIM2[t.id];});
+
+/* domande aggiuntive: ogni argomento ha ora almeno 6 domande, con almeno 2 a completamento */
+FIS_QB.push(
+{t:"u1a",k:"m",q:"Quale di queste grandezze è intensiva?",o:["massa","volume","temperatura","energia interna","quantità di calore"],a:2,s:"Non dipende dalla quantità di materia: tagliando un corpo a metà la temperatura resta uguale."},
+{t:"u1a",k:"m",q:"Quale coppia contiene solo grandezze vettoriali?",o:["massa e tempo","velocità e forza","energia e lavoro","temperatura e pressione","densità e volume"],a:1,s:"Hanno modulo, direzione e verso."},
+{t:"u1c",k:"m",q:"Il valore di cos 60° è:",o:["0","0,5","0,71","0,87","1"],a:1,s:"cos 60° = sin 30° = 0,5."},
+{t:"u1c",k:"c",q:"Il prodotto scalare di due vettori perpendicolari vale ____.",a:["ZERO","0"],s:"a·b = ab·cos 90° = 0."},
+{t:"u1c",k:"c",q:"Il prodotto vettoriale di due vettori è un vettore ____ a entrambi.",a:["PERPENDICOLARE","ORTOGONALE"],s:"Regola della mano destra."},
+{t:"u1d",k:"m",q:"Quale grandezza è adimensionale?",o:["velocità","indice di rifrazione","pressione","energia","accelerazione"],a:1,s:"n = c/v: rapporto tra due velocità."},
+{t:"u1d",k:"c",q:"Le dimensioni della pressione sono [M][L]^a[T]⁻²: l'esponente a vale ____.",a:["-1","−1","MENOUNO"],s:"Pa = N/m² = kg·m⁻¹·s⁻²."},
+{t:"u1d",k:"c",q:"Una formula è sicuramente sbagliata se i due membri hanno ____ diverse.",a:["DIMENSIONI"],s:"Si possono uguagliare solo grandezze omogenee."},
+{t:"u2a",k:"m",q:"Nel grafico posizione-tempo di un moto rettilineo uniforme si ottiene:",o:["una parabola","una retta inclinata","una retta sull'asse dei tempi","un'iperbole","una sinusoide"],a:1,s:"x = x₀ + vt: la pendenza è la velocità."},
+{t:"u2a",k:"c",q:"Nel grafico velocità-tempo lo spazio percorso è uguale all'____ sotto la curva.",a:["AREA"],s:"Per un moto uniforme è un rettangolo v·t."},
+{t:"u2b",k:"m",q:"Un sasso è lanciato orizzontalmente da 20 m d'altezza (g = 10 m/s²). Il tempo di volo è:",o:["1 s","2 s","4 s","0,5 s","dipende dalla velocità orizzontale"],a:1,s:"20 = ½·10·t² → t = 2 s; il moto orizzontale non conta."},
+{t:"u2b",k:"c",q:"Nel moto circolare uniforme l'accelerazione è diretta verso il ____ della circonferenza.",a:["CENTRO"],s:"Accelerazione centripeta v²/r."},
+{t:"u2b",k:"c",q:"Un corpo compie un giro ogni 2 s: la frequenza è ____ Hz.",a:["0.5","0,5"],s:"f = 1/T."},
+{t:"u2e",k:"m",q:"Le pinzette e l'avambraccio flesso dal bicipite sono leve di:",o:["primo genere","secondo genere","terzo genere","quarto genere","nessun genere"],a:2,s:"La forza motrice sta tra fulcro e resistenza: sempre svantaggiose."},
+{t:"u2e",k:"c",q:"Un corpo rigido è in equilibrio se sono nulle la somma delle forze e la somma dei ____.",a:["MOMENTI","MOMENTITORCENTI"],s:"Equilibrio traslazionale e rotazionale."},
+{t:"u2e",k:"c",q:"Una massa di 2 kg in x = 0 e una di 3 kg in x = 5 m: il centro di massa è in x = ____ m.",a:["3","TRE"],s:"(2·0 + 3·5)/(2 + 3) = 3 m."},
+{t:"u3a",k:"m",q:"Un manometro misura:",o:["la pressione assoluta più quella atmosferica","la differenza tra pressione assoluta e atmosferica","sempre 1 atm","la densità del fluido","la portata"],a:1,s:"Pressione relativa (manometrica)."},
+{t:"u3a",k:"c",q:"Nell'esperimento di Torricelli l'atmosfera sostiene una colonna di mercurio alta ____ mm.",a:["760"],s:"1 atm = 760 mmHg."},
+{t:"u3e",k:"m",q:"Secondo la legge di Laplace, la differenza di pressione tra interno ed esterno di una goccia:",o:["non dipende dal raggio","è maggiore se la goccia è più piccola","è maggiore se la goccia è più grande","è sempre nulla","dipende solo dalla densità"],a:1,s:"Δp = 2τ/r."},
+{t:"u3e",k:"m",q:"In un tubo capillare di vetro l'acqua:",o:["scende sotto il livello esterno","sale, tanto più quanto il tubo è sottile","sale, tanto più quanto il tubo è largo","resta allo stesso livello","sale solo se è calda"],a:1,s:"h = 2τ/(ρgr)."},
+{t:"u3e",k:"m",q:"La tensione superficiale si misura in:",o:["N/m","N/m²","J/kg","Pa·s","N·m"],a:0,s:"Forza per unità di lunghezza (o energia per unità di superficie, J/m²)."},
+{t:"u3e",k:"m",q:"Il surfattante polmonare:",o:["aumenta la tensione superficiale negli alveoli","riduce la tensione superficiale e stabilizza gli alveoli piccoli","è un gas","aumenta la viscosità del sangue","trasporta l'ossigeno"],a:1,s:"Senza surfattante gli alveoli piccoli collassano (distress respiratorio del prematuro)."},
+{t:"u3e",k:"c",q:"Il mercurio in un capillare di vetro ____ rispetto al livello esterno (sale/scende).",a:["SCENDE"],s:"Non bagna il vetro."},
+{t:"u3e",k:"c",q:"La legge di ____ lega la pressione di curvatura al raggio di una superficie curva.",a:["LAPLACE"],s:"Δp = 2τ/r."},
+{t:"u3e",k:"c",q:"Collegando due bolle di sapone di raggio diverso si svuota quella più ____.",a:["PICCOLA"],s:"Ha la pressione interna maggiore."},
+{t:"u4b",k:"c",q:"Dieci sorgenti uguali da 50 dB, insieme, producono ____ dB.",a:["60"],s:"Intensità ×10 → +10 dB."},
+{t:"u4b",k:"c",q:"A distanza doppia da una sorgente puntiforme l'intensità diventa un ____ (scrivi la frazione in lettere).",a:["QUARTO"],s:"I ∝ 1/r²."},
+{t:"u4c",k:"m",q:"Se una sorgente sonora si allontana dall'ascoltatore, la frequenza percepita:",o:["aumenta","diminuisce","resta uguale","si annulla","raddoppia"],a:1,s:"Le creste arrivano più distanziate."},
+{t:"u4c",k:"m",q:"In ecografia la profondità di un'interfaccia si ricava da:",o:["l'intensità dell'eco soltanto","il tempo di andata e ritorno dell'eco e la velocità del suono nei tessuti","la frequenza della sonda soltanto","il colore dell'immagine","l'effetto Doppler soltanto"],a:1,s:"d = v·t/2."},
+{t:"u4c",k:"c",q:"Gli ultrasuoni hanno frequenza superiore a ____ kHz.",a:["20"],s:"Limite superiore dell'udibile."},
+{t:"u4d",k:"m",q:"Raddoppiando la massa appesa a una molla, il periodo di oscillazione:",o:["raddoppia","si dimezza","aumenta di √2 volte","resta uguale","quadruplica"],a:2,s:"T = 2π√(m/k)."},
+{t:"u3d",k:"c",q:"Nel moto laminare in un tubo il profilo delle velocità è ____ (massima al centro, nulla alle pareti).",a:["PARABOLICO"],s:"Gli strati vicini alla parete sono frenati dalla viscosità."},
+{t:"u5b",k:"c",q:"Nell'equazione pV = nRT la temperatura va espressa in ____.",a:["KELVIN","K"],s:"Scala assoluta."},
+{t:"u5b",k:"c",q:"Per un gas monoatomico c_v = (3/2)R e c_p = c_v + R = (x/2)R: x vale ____.",a:["5","CINQUE"],s:"Relazione di Mayer."},
+{t:"u5d",k:"m",q:"Una macchina termica lavora tra 600 K e 300 K. Il rendimento massimo possibile è:",o:["25%","50%","75%","100%","200%"],a:1,s:"η = 1 − 300/600."},
+{t:"u5d",k:"c",q:"In un sistema isolato l'entropia non può ____ (aumentare/diminuire).",a:["DIMINUIRE"],s:"Secondo principio."},
+{t:"u5d",k:"c",q:"Spontaneamente il calore passa dal corpo più caldo a quello più ____.",a:["FREDDO"],s:"Enunciato di Clausius."},
+{t:"u5e",k:"m",q:"Nel vuoto il calore si trasmette solo per:",o:["conduzione","convezione","irraggiamento","evaporazione","diffusione"],a:2,s:"Onde elettromagnetiche."},
+{t:"u5e",k:"m",q:"Raddoppiando lo spessore di uno strato isolante (stessi ΔT e area), la potenza trasmessa per conduzione:",o:["raddoppia","si dimezza","resta uguale","quadruplica","si annulla"],a:1,s:"Q/t = kAΔT/d."},
+{t:"u5e",k:"m",q:"Il trasporto di calore dovuto al movimento di un fluido si chiama:",o:["conduzione","convezione","irraggiamento","capillarità","osmosi"],a:1,s:"Il fluido caldo sale, il freddo scende."},
+{t:"u5e",k:"c",q:"La potenza irraggiata da un corpo è proporzionale alla ____ potenza della temperatura assoluta.",a:["QUARTA"],s:"Legge di Stefan-Boltzmann (cenno)."},
+{t:"u5e",k:"c",q:"A riposo il corpo umano disperde calore soprattutto per ____.",a:["IRRAGGIAMENTO"],s:"Sotto sforzo prevale l'evaporazione del sudore."},
+{t:"u6a",k:"m",q:"Avvicinando un corpo carico a una sferetta metallica scarica, senza toccarla:",o:["la sferetta acquista una carica netta dello stesso segno","le cariche della sferetta si separano (induzione) e la sferetta viene attratta","non succede nulla","la sferetta diventa un isolante","si crea una corrente continua"],a:1,s:"Induzione elettrostatica."},
+{t:"u6a",k:"c",q:"La carica dell'elettrone vale in modulo 1,6·10^x C: l'esponente x è ____.",a:["-19","−19"],s:"e = 1,6·10⁻¹⁹ C."},
+{t:"u6a",k:"c",q:"Dimezzando la distanza tra due cariche la forza di Coulomb diventa ____ volte più grande.",a:["4","QUATTRO"],s:"F ∝ 1/r²."},
+{t:"u6b",k:"m",q:"Due cariche uguali +q sono a distanza d. Il campo elettrico nel punto medio è:",o:["il doppio di quello di una sola carica","nullo","uguale a quello di una sola carica","infinito","diretto verso una delle due cariche"],a:1,s:"Sovrapposizione: due vettori uguali e opposti."},
+{t:"u6e",k:"c",q:"La generazione di una f.e.m. per variazione del flusso magnetico si chiama induzione ____.",a:["ELETTROMAGNETICA"],s:"Faraday-Neumann-Lenz."},
+{t:"u7b",k:"m",q:"In un materiale la luce viaggia a 2·10⁸ m/s. L'indice di rifrazione è:",o:["0,67","1","1,5","2","3"],a:2,s:"n = c/v = 3/2."},
+{t:"u7b",k:"c",q:"Per la legge della riflessione l'angolo di riflessione è ____ all'angolo di incidenza.",a:["UGUALE"],s:"Entrambi misurati dalla normale."},
+{t:"u7c",k:"m",q:"Un oggetto è a 20 cm da una lente convergente con f = 10 cm. L'immagine si forma a:",o:["10 cm","20 cm","30 cm","40 cm","all'infinito"],a:1,s:"1/q = 1/10 − 1/20 = 1/20: oggetto in 2f, immagine in 2f, capovolta e uguale."},
+{t:"u7c",k:"c",q:"Una lente con distanza focale 50 cm ha un potere di ____ diottrie.",a:["2","DUE"],s:"D = 1/f = 1/0,5 m."},
+{t:"u7d",k:"m",q:"Una soluzione ha assorbanza 2. Quale frazione della luce trasmette?",o:["2%","1%","10%","20%","50%"],a:1,s:"T = 10⁻²."},
+{t:"u7d",k:"c",q:"Secondo Lambert-Beer l'assorbanza è proporzionale alla concentrazione e al ____ ottico.",a:["CAMMINO"],s:"A = ε·c·l."},
+{t:"u7d",k:"c",q:"Lo strumento che misura l'assorbanza per ricavare una concentrazione è lo ____.",a:["SPETTROFOTOMETRO"],s:"Usato in tutti i laboratori di analisi."}
+);
+
+/* mappa del syllabus ufficiale 2026/27: ogni voce → argomento dell'app */
+const FIS_MAP=[
+["u1","Notazione scientifica; grandezze fisiche, dimensioni e unità, Sistema Internazionale",["u1a","u1b","u1d"]],
+["u1","Conversioni, stima dell'ordine di grandezza; grandezze estensive e intensive, scalari e vettoriali",["u1b","u1a"]],
+["u1","Funzioni trigonometriche elementari; vettori: componenti, somma, differenza, prodotto scalare e vettoriale",["u1c"]],
+["u2","Cinematica: posizione, spostamento, traiettoria e legge oraria; velocità e accelerazione medie e istantanee",["u2a"]],
+["u2","Moto rettilineo uniforme, uniformemente accelerato, caduta libera, moto parabolico; moto circolare uniforme",["u2a","u2b"]],
+["u2","Tre principi della dinamica; equilibrio traslazionale; peso, gravitazione, contatto, attrito, tensione, Hooke",["u2c"]],
+["u2","Lavoro, potenza, teorema dell'energia cinetica, forze conservative, energia potenziale, conservazione",["u2d"]],
+["u2","Quantità di moto, impulso, conservazione nei sistemi isolati",["u2f"]],
+["u2","Centro di massa, corpo rigido, momento torcente, equilibrio rotazionale, leve nel corpo umano",["u2e"]],
+["u3","Stati di aggregazione; pressione e densità",["u3a"]],
+["u3","Stevino, Pascal, Archimede e galleggiamento; Torricelli e manometro",["u3a","u3b"]],
+["u3","Flusso e portata; moto stazionario, laminare e turbolento; continuità; Bernoulli, stenosi e aneurisma",["u3c","u3d"]],
+["u3","Viscosità, profilo parabolico, gradiente di velocità; Poiseuille; resistenze in serie e in parallelo",["u3d"]],
+["u3","Tensione superficiale, capillarità, interfacce piane e curve, legge di Laplace (qualitativa)",["u3e"]],
+["u4","Onde meccaniche; oscillatore armonico; frequenza, periodo, pulsazione, lunghezza d'onda, velocità; equazione dell'onda armonica; onde trasversali e longitudinali",["u4a","u4d"]],
+["u4","Sovrapposizione e interferenza",["u4d"]],
+["u4","Energia, potenza e intensità delle onde; legge dell'inverso del quadrato",["u4b"]],
+["u4","Onde acustiche, velocità del suono, intensità e percezione, decibel",["u4a","u4b"]],
+["u4","Effetto Doppler (qualitativo)",["u4c"]],
+["u5","Sistema e ambiente; variabili e stato; funzioni di stato; scale di temperatura; gas perfetti",["u5a","u5b"]],
+["u5","Calore, capacità termica, calore specifico (anche dei gas ideali), passaggi di stato, calore latente, calorimetria",["u5a","u5b"]],
+["u5","Conduzione, convezione, irraggiamento",["u5e"]],
+["u5","Primo principio; energia interna, calore e lavoro; reversibili e irreversibili; isoterma, isocora, isobara, adiabatica",["u5c"]],
+["u5","Secondo principio, cicli, macchine termiche, rendimento, Carnot; entropia e sua interpretazione statistica",["u5d"]],
+["u6","Carica, conservazione, Coulomb; campo elettrico e linee di forza; campo di più cariche; moto in campo uniforme",["u6a","u6b"]],
+["u6","Energia potenziale e potenziale elettrico; conservazione dell'energia",["u6b"]],
+["u6","Conduttori e dielettrici: induzione elettrostatica e polarizzazione (qualitativa)",["u6a","u6c"]],
+["u6","Corrente continua, generatore ideale, leggi di Ohm, resistività, effetto Joule, resistenze in serie e parallelo",["u6d"]],
+["u6","Capacità, condensatore piano, dielettrico, energia, condensatori in serie e parallelo",["u6c"]],
+["u6","Campo magnetico dalle correnti (Oersted); forza di Lorentz su carica e su filo; moto circolare",["u6e"]],
+["u6","Induzione elettromagnetica, Faraday-Neumann-Lenz, correnti indotte e loro verso",["u6e"]],
+["u7","Onde elettromagnetiche: campi E e B perpendicolari, λ, f, velocità, ampiezza, intensità; spettro",["u7a"]],
+["u7","Fotone ed energia E = hf; radiazioni ionizzanti e non ionizzanti",["u7a"]],
+["u7","Assorbimento della radiazione: legge di Lambert-Beer",["u7d"]],
+["u7","Radioattività: nuclei instabili, isotopi, attività, legge del decadimento, emivita, decadimenti α, β, γ",["u7e"]],
+["u7","Ottica: riflessione, rifrazione, indice di rifrazione; lenti convergenti sottili e punti coniugati",["u7b","u7c"]]
+];
+

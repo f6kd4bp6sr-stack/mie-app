@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" href="icon-192.png">
 <title>Semestre filtro</title>
-<script>window.APP_VERSION="46d4ebca51";window.APP_BUILD="2026-10-10T20:58+02:00";</script>
+<script>window.APP_VERSION="d020a48235";window.APP_BUILD="2026-10-10T21:28+02:00";</script>
 <style>
 :root{--bg:#f3f4f7;--card:#ffffff;--ink:#15181d;--muted:#6b7280;--line:#e4e6eb;--navy:#163054;--accent:#1f5fae;--seg:#e6e8ee;
   --ok:#2e7d5b;--ok-bg:#e3f3ea;--warn:#b3261e;--warn-bg:#fdecea;--soon:#b7791f;--soon-bg:#fdf1dc;--lp:#a24a24;--lp-bg:#f9e6dc;--fam:#6d4bb8;--fam-bg:#ece6fa;--ben:#2b7a83;--ben-bg:#dff1f2;--euro:#1f5fae;--euro-bg:#e3edf9;
@@ -851,6 +851,119 @@ u7e:{sp:["Alcuni nuclei sono instabili e si trasformano spontaneamente emettendo
 };
 FIS_TOPICS.forEach(t=>{const x=FIS_EXPL[t.id];if(x)Object.assign(t,x);});
 
+/* ===== Completamento di tutte le parti (10 ottobre 2026, sera): voci del syllabus, esempi, animazioni, esercizi ===== */
+FIS_EXPL.u2a.sp.splice(1,0,"La legge oraria x(t) dice dove si trova il corpo a ogni istante; la traiettoria è la linea che percorre. Velocità media = Δx/Δt; la velocità istantanea è quella in un preciso istante, cioè la pendenza del grafico posizione-tempo in quel punto. Allo stesso modo l'accelerazione istantanea è la pendenza del grafico velocità-tempo, e nel grafico velocità-tempo l'area sotto la curva è lo spazio percorso. Saper leggere questi grafici è una delle richieste esplicite del syllabus.");
+FIS_EXPL.u3a.sp.unshift("Stati di aggregazione: nei solidi le particelle restano in posizioni fisse e il corpo ha forma e volume propri; i liquidi hanno volume proprio ma prendono la forma del recipiente; i gas occupano tutto lo spazio disponibile. Liquidi e gas sono fluidi perché scorrono: non oppongono resistenza a uno sforzo di taglio.");
+FIS_EXPL.u3a.sp.push("Il manometro misura la pressione relativa, cioè la differenza rispetto all'atmosfera: in un manometro a U il dislivello h del liquido dà Δp = ρgh. Lo sfigmomanometro esprime la pressione arteriosa in mmHg, cioè come altezza di una colonna di mercurio, la stessa unità dell'esperimento di Torricelli.");
+FIS_EXPL.u5a.sp.unshift("Sistema è la parte di universo che si studia (un gas in un cilindro, il corpo umano), ambiente tutto il resto; lo stato del sistema è descritto da variabili come pressione, volume e temperatura. Scale di temperatura: Celsius (0 °C fusione del ghiaccio, 100 °C ebollizione a 1 atm), Kelvin (T = t + 273,15; 0 K è lo zero assoluto) e Fahrenheit (°F = 1,8·°C + 32). Una variazione di 1 °C è uguale a una di 1 K.");
+FIS_EXPL.u5b.sp.push("Calore specifico dei gas ideali: dipende da come si scalda il gas. A volume costante tutto il calore diventa energia interna; per un gas monoatomico c_v = (3/2)R per mole. A pressione costante il gas si espande e compie anche lavoro, quindi serve più calore: c_p = c_v + R, cioè (5/2)R per un monoatomico (relazione di Mayer).");
+FIS_EXPL.u6b.sp.push("Con più cariche vale il principio di sovrapposizione: il campo totale è la somma vettoriale dei campi di ciascuna carica, mentre i potenziali (scalari) si sommano con il loro segno. Due cariche uguali danno campo nullo nel punto medio. L'energia potenziale di due cariche puntiformi è U = k·q₁q₂/r: positiva se si respingono, negativa se si attraggono.");
+FIS_EXPL.u3e.es.push({q:"Un capillare di raggio 0,25 mm è immerso in acqua (τ = 0,073 N/m, g = 10 m/s²). Di quanto sale l'acqua?",p:["h = 2τ/(ρ·g·r)","= 2·0,073 / (1000·10·0,25·10⁻³) = 0,146/2,5"],r:"circa 0,058 m, cioè 6 cm"});
+FIS_EXPL.u5e.es.push({q:"Un vetro di 2 m², spesso 4 mm, separa 20 °C da 0 °C (k = 0,8 W/(m·K)). Quanta potenza passa per conduzione?",p:["Q/t = k·A·ΔT/d","= 0,8·2·20/0,004"],r:"8000 W: per questo si usano i doppi vetri con aria in mezzo"});
+FIS_EXPL.u6a.es.push({q:"Due cariche di +2 µC e +3 µC distano 30 cm. Quanto vale la forza?",p:["F = k·q₁q₂/r² = 9·10⁹ · (2·10⁻⁶)(3·10⁻⁶) / 0,3²","= 0,054 / 0,09"],r:"0,6 N, repulsiva"});
+FIS_EXPL.u1d.med="In farmacologia si controllano le unità come le dimensioni: una dose in mg/kg moltiplicata per il peso in kg dà mg; una velocità di infusione in mL/h per un tempo in h dà mL. Se l'unità finale non torna, il calcolo è sbagliato.";
+const FIS_ANIM2={u1a:"estensive",u1b:"potenze",u1d:"dimensioni",u2f:"urti",u3e:"laplace",u5d:"carnot",u5e:"calore",u6a:"coulomb",u6c:"condensatore"};
+FIS_TOPICS.forEach(t=>{const x=FIS_EXPL[t.id];if(x)Object.assign(t,x);if(FIS_ANIM2[t.id])t.anim=FIS_ANIM2[t.id];});
+
+/* domande aggiuntive: ogni argomento ha ora almeno 6 domande, con almeno 2 a completamento */
+FIS_QB.push(
+{t:"u1a",k:"m",q:"Quale di queste grandezze è intensiva?",o:["massa","volume","temperatura","energia interna","quantità di calore"],a:2,s:"Non dipende dalla quantità di materia: tagliando un corpo a metà la temperatura resta uguale."},
+{t:"u1a",k:"m",q:"Quale coppia contiene solo grandezze vettoriali?",o:["massa e tempo","velocità e forza","energia e lavoro","temperatura e pressione","densità e volume"],a:1,s:"Hanno modulo, direzione e verso."},
+{t:"u1c",k:"m",q:"Il valore di cos 60° è:",o:["0","0,5","0,71","0,87","1"],a:1,s:"cos 60° = sin 30° = 0,5."},
+{t:"u1c",k:"c",q:"Il prodotto scalare di due vettori perpendicolari vale ____.",a:["ZERO","0"],s:"a·b = ab·cos 90° = 0."},
+{t:"u1c",k:"c",q:"Il prodotto vettoriale di due vettori è un vettore ____ a entrambi.",a:["PERPENDICOLARE","ORTOGONALE"],s:"Regola della mano destra."},
+{t:"u1d",k:"m",q:"Quale grandezza è adimensionale?",o:["velocità","indice di rifrazione","pressione","energia","accelerazione"],a:1,s:"n = c/v: rapporto tra due velocità."},
+{t:"u1d",k:"c",q:"Le dimensioni della pressione sono [M][L]^a[T]⁻²: l'esponente a vale ____.",a:["-1","−1","MENOUNO"],s:"Pa = N/m² = kg·m⁻¹·s⁻²."},
+{t:"u1d",k:"c",q:"Una formula è sicuramente sbagliata se i due membri hanno ____ diverse.",a:["DIMENSIONI"],s:"Si possono uguagliare solo grandezze omogenee."},
+{t:"u2a",k:"m",q:"Nel grafico posizione-tempo di un moto rettilineo uniforme si ottiene:",o:["una parabola","una retta inclinata","una retta sull'asse dei tempi","un'iperbole","una sinusoide"],a:1,s:"x = x₀ + vt: la pendenza è la velocità."},
+{t:"u2a",k:"c",q:"Nel grafico velocità-tempo lo spazio percorso è uguale all'____ sotto la curva.",a:["AREA"],s:"Per un moto uniforme è un rettangolo v·t."},
+{t:"u2b",k:"m",q:"Un sasso è lanciato orizzontalmente da 20 m d'altezza (g = 10 m/s²). Il tempo di volo è:",o:["1 s","2 s","4 s","0,5 s","dipende dalla velocità orizzontale"],a:1,s:"20 = ½·10·t² → t = 2 s; il moto orizzontale non conta."},
+{t:"u2b",k:"c",q:"Nel moto circolare uniforme l'accelerazione è diretta verso il ____ della circonferenza.",a:["CENTRO"],s:"Accelerazione centripeta v²/r."},
+{t:"u2b",k:"c",q:"Un corpo compie un giro ogni 2 s: la frequenza è ____ Hz.",a:["0.5","0,5"],s:"f = 1/T."},
+{t:"u2e",k:"m",q:"Le pinzette e l'avambraccio flesso dal bicipite sono leve di:",o:["primo genere","secondo genere","terzo genere","quarto genere","nessun genere"],a:2,s:"La forza motrice sta tra fulcro e resistenza: sempre svantaggiose."},
+{t:"u2e",k:"c",q:"Un corpo rigido è in equilibrio se sono nulle la somma delle forze e la somma dei ____.",a:["MOMENTI","MOMENTITORCENTI"],s:"Equilibrio traslazionale e rotazionale."},
+{t:"u2e",k:"c",q:"Una massa di 2 kg in x = 0 e una di 3 kg in x = 5 m: il centro di massa è in x = ____ m.",a:["3","TRE"],s:"(2·0 + 3·5)/(2 + 3) = 3 m."},
+{t:"u3a",k:"m",q:"Un manometro misura:",o:["la pressione assoluta più quella atmosferica","la differenza tra pressione assoluta e atmosferica","sempre 1 atm","la densità del fluido","la portata"],a:1,s:"Pressione relativa (manometrica)."},
+{t:"u3a",k:"c",q:"Nell'esperimento di Torricelli l'atmosfera sostiene una colonna di mercurio alta ____ mm.",a:["760"],s:"1 atm = 760 mmHg."},
+{t:"u3e",k:"m",q:"Secondo la legge di Laplace, la differenza di pressione tra interno ed esterno di una goccia:",o:["non dipende dal raggio","è maggiore se la goccia è più piccola","è maggiore se la goccia è più grande","è sempre nulla","dipende solo dalla densità"],a:1,s:"Δp = 2τ/r."},
+{t:"u3e",k:"m",q:"In un tubo capillare di vetro l'acqua:",o:["scende sotto il livello esterno","sale, tanto più quanto il tubo è sottile","sale, tanto più quanto il tubo è largo","resta allo stesso livello","sale solo se è calda"],a:1,s:"h = 2τ/(ρgr)."},
+{t:"u3e",k:"m",q:"La tensione superficiale si misura in:",o:["N/m","N/m²","J/kg","Pa·s","N·m"],a:0,s:"Forza per unità di lunghezza (o energia per unità di superficie, J/m²)."},
+{t:"u3e",k:"m",q:"Il surfattante polmonare:",o:["aumenta la tensione superficiale negli alveoli","riduce la tensione superficiale e stabilizza gli alveoli piccoli","è un gas","aumenta la viscosità del sangue","trasporta l'ossigeno"],a:1,s:"Senza surfattante gli alveoli piccoli collassano (distress respiratorio del prematuro)."},
+{t:"u3e",k:"c",q:"Il mercurio in un capillare di vetro ____ rispetto al livello esterno (sale/scende).",a:["SCENDE"],s:"Non bagna il vetro."},
+{t:"u3e",k:"c",q:"La legge di ____ lega la pressione di curvatura al raggio di una superficie curva.",a:["LAPLACE"],s:"Δp = 2τ/r."},
+{t:"u3e",k:"c",q:"Collegando due bolle di sapone di raggio diverso si svuota quella più ____.",a:["PICCOLA"],s:"Ha la pressione interna maggiore."},
+{t:"u4b",k:"c",q:"Dieci sorgenti uguali da 50 dB, insieme, producono ____ dB.",a:["60"],s:"Intensità ×10 → +10 dB."},
+{t:"u4b",k:"c",q:"A distanza doppia da una sorgente puntiforme l'intensità diventa un ____ (scrivi la frazione in lettere).",a:["QUARTO"],s:"I ∝ 1/r²."},
+{t:"u4c",k:"m",q:"Se una sorgente sonora si allontana dall'ascoltatore, la frequenza percepita:",o:["aumenta","diminuisce","resta uguale","si annulla","raddoppia"],a:1,s:"Le creste arrivano più distanziate."},
+{t:"u4c",k:"m",q:"In ecografia la profondità di un'interfaccia si ricava da:",o:["l'intensità dell'eco soltanto","il tempo di andata e ritorno dell'eco e la velocità del suono nei tessuti","la frequenza della sonda soltanto","il colore dell'immagine","l'effetto Doppler soltanto"],a:1,s:"d = v·t/2."},
+{t:"u4c",k:"c",q:"Gli ultrasuoni hanno frequenza superiore a ____ kHz.",a:["20"],s:"Limite superiore dell'udibile."},
+{t:"u4d",k:"m",q:"Raddoppiando la massa appesa a una molla, il periodo di oscillazione:",o:["raddoppia","si dimezza","aumenta di √2 volte","resta uguale","quadruplica"],a:2,s:"T = 2π√(m/k)."},
+{t:"u3d",k:"c",q:"Nel moto laminare in un tubo il profilo delle velocità è ____ (massima al centro, nulla alle pareti).",a:["PARABOLICO"],s:"Gli strati vicini alla parete sono frenati dalla viscosità."},
+{t:"u5b",k:"c",q:"Nell'equazione pV = nRT la temperatura va espressa in ____.",a:["KELVIN","K"],s:"Scala assoluta."},
+{t:"u5b",k:"c",q:"Per un gas monoatomico c_v = (3/2)R e c_p = c_v + R = (x/2)R: x vale ____.",a:["5","CINQUE"],s:"Relazione di Mayer."},
+{t:"u5d",k:"m",q:"Una macchina termica lavora tra 600 K e 300 K. Il rendimento massimo possibile è:",o:["25%","50%","75%","100%","200%"],a:1,s:"η = 1 − 300/600."},
+{t:"u5d",k:"c",q:"In un sistema isolato l'entropia non può ____ (aumentare/diminuire).",a:["DIMINUIRE"],s:"Secondo principio."},
+{t:"u5d",k:"c",q:"Spontaneamente il calore passa dal corpo più caldo a quello più ____.",a:["FREDDO"],s:"Enunciato di Clausius."},
+{t:"u5e",k:"m",q:"Nel vuoto il calore si trasmette solo per:",o:["conduzione","convezione","irraggiamento","evaporazione","diffusione"],a:2,s:"Onde elettromagnetiche."},
+{t:"u5e",k:"m",q:"Raddoppiando lo spessore di uno strato isolante (stessi ΔT e area), la potenza trasmessa per conduzione:",o:["raddoppia","si dimezza","resta uguale","quadruplica","si annulla"],a:1,s:"Q/t = kAΔT/d."},
+{t:"u5e",k:"m",q:"Il trasporto di calore dovuto al movimento di un fluido si chiama:",o:["conduzione","convezione","irraggiamento","capillarità","osmosi"],a:1,s:"Il fluido caldo sale, il freddo scende."},
+{t:"u5e",k:"c",q:"La potenza irraggiata da un corpo è proporzionale alla ____ potenza della temperatura assoluta.",a:["QUARTA"],s:"Legge di Stefan-Boltzmann (cenno)."},
+{t:"u5e",k:"c",q:"A riposo il corpo umano disperde calore soprattutto per ____.",a:["IRRAGGIAMENTO"],s:"Sotto sforzo prevale l'evaporazione del sudore."},
+{t:"u6a",k:"m",q:"Avvicinando un corpo carico a una sferetta metallica scarica, senza toccarla:",o:["la sferetta acquista una carica netta dello stesso segno","le cariche della sferetta si separano (induzione) e la sferetta viene attratta","non succede nulla","la sferetta diventa un isolante","si crea una corrente continua"],a:1,s:"Induzione elettrostatica."},
+{t:"u6a",k:"c",q:"La carica dell'elettrone vale in modulo 1,6·10^x C: l'esponente x è ____.",a:["-19","−19"],s:"e = 1,6·10⁻¹⁹ C."},
+{t:"u6a",k:"c",q:"Dimezzando la distanza tra due cariche la forza di Coulomb diventa ____ volte più grande.",a:["4","QUATTRO"],s:"F ∝ 1/r²."},
+{t:"u6b",k:"m",q:"Due cariche uguali +q sono a distanza d. Il campo elettrico nel punto medio è:",o:["il doppio di quello di una sola carica","nullo","uguale a quello di una sola carica","infinito","diretto verso una delle due cariche"],a:1,s:"Sovrapposizione: due vettori uguali e opposti."},
+{t:"u6e",k:"c",q:"La generazione di una f.e.m. per variazione del flusso magnetico si chiama induzione ____.",a:["ELETTROMAGNETICA"],s:"Faraday-Neumann-Lenz."},
+{t:"u7b",k:"m",q:"In un materiale la luce viaggia a 2·10⁸ m/s. L'indice di rifrazione è:",o:["0,67","1","1,5","2","3"],a:2,s:"n = c/v = 3/2."},
+{t:"u7b",k:"c",q:"Per la legge della riflessione l'angolo di riflessione è ____ all'angolo di incidenza.",a:["UGUALE"],s:"Entrambi misurati dalla normale."},
+{t:"u7c",k:"m",q:"Un oggetto è a 20 cm da una lente convergente con f = 10 cm. L'immagine si forma a:",o:["10 cm","20 cm","30 cm","40 cm","all'infinito"],a:1,s:"1/q = 1/10 − 1/20 = 1/20: oggetto in 2f, immagine in 2f, capovolta e uguale."},
+{t:"u7c",k:"c",q:"Una lente con distanza focale 50 cm ha un potere di ____ diottrie.",a:["2","DUE"],s:"D = 1/f = 1/0,5 m."},
+{t:"u7d",k:"m",q:"Una soluzione ha assorbanza 2. Quale frazione della luce trasmette?",o:["2%","1%","10%","20%","50%"],a:1,s:"T = 10⁻²."},
+{t:"u7d",k:"c",q:"Secondo Lambert-Beer l'assorbanza è proporzionale alla concentrazione e al ____ ottico.",a:["CAMMINO"],s:"A = ε·c·l."},
+{t:"u7d",k:"c",q:"Lo strumento che misura l'assorbanza per ricavare una concentrazione è lo ____.",a:["SPETTROFOTOMETRO"],s:"Usato in tutti i laboratori di analisi."}
+);
+
+/* mappa del syllabus ufficiale 2026/27: ogni voce → argomento dell'app */
+const FIS_MAP=[
+["u1","Notazione scientifica; grandezze fisiche, dimensioni e unità, Sistema Internazionale",["u1a","u1b","u1d"]],
+["u1","Conversioni, stima dell'ordine di grandezza; grandezze estensive e intensive, scalari e vettoriali",["u1b","u1a"]],
+["u1","Funzioni trigonometriche elementari; vettori: componenti, somma, differenza, prodotto scalare e vettoriale",["u1c"]],
+["u2","Cinematica: posizione, spostamento, traiettoria e legge oraria; velocità e accelerazione medie e istantanee",["u2a"]],
+["u2","Moto rettilineo uniforme, uniformemente accelerato, caduta libera, moto parabolico; moto circolare uniforme",["u2a","u2b"]],
+["u2","Tre principi della dinamica; equilibrio traslazionale; peso, gravitazione, contatto, attrito, tensione, Hooke",["u2c"]],
+["u2","Lavoro, potenza, teorema dell'energia cinetica, forze conservative, energia potenziale, conservazione",["u2d"]],
+["u2","Quantità di moto, impulso, conservazione nei sistemi isolati",["u2f"]],
+["u2","Centro di massa, corpo rigido, momento torcente, equilibrio rotazionale, leve nel corpo umano",["u2e"]],
+["u3","Stati di aggregazione; pressione e densità",["u3a"]],
+["u3","Stevino, Pascal, Archimede e galleggiamento; Torricelli e manometro",["u3a","u3b"]],
+["u3","Flusso e portata; moto stazionario, laminare e turbolento; continuità; Bernoulli, stenosi e aneurisma",["u3c","u3d"]],
+["u3","Viscosità, profilo parabolico, gradiente di velocità; Poiseuille; resistenze in serie e in parallelo",["u3d"]],
+["u3","Tensione superficiale, capillarità, interfacce piane e curve, legge di Laplace (qualitativa)",["u3e"]],
+["u4","Onde meccaniche; oscillatore armonico; frequenza, periodo, pulsazione, lunghezza d'onda, velocità; equazione dell'onda armonica; onde trasversali e longitudinali",["u4a","u4d"]],
+["u4","Sovrapposizione e interferenza",["u4d"]],
+["u4","Energia, potenza e intensità delle onde; legge dell'inverso del quadrato",["u4b"]],
+["u4","Onde acustiche, velocità del suono, intensità e percezione, decibel",["u4a","u4b"]],
+["u4","Effetto Doppler (qualitativo)",["u4c"]],
+["u5","Sistema e ambiente; variabili e stato; funzioni di stato; scale di temperatura; gas perfetti",["u5a","u5b"]],
+["u5","Calore, capacità termica, calore specifico (anche dei gas ideali), passaggi di stato, calore latente, calorimetria",["u5a","u5b"]],
+["u5","Conduzione, convezione, irraggiamento",["u5e"]],
+["u5","Primo principio; energia interna, calore e lavoro; reversibili e irreversibili; isoterma, isocora, isobara, adiabatica",["u5c"]],
+["u5","Secondo principio, cicli, macchine termiche, rendimento, Carnot; entropia e sua interpretazione statistica",["u5d"]],
+["u6","Carica, conservazione, Coulomb; campo elettrico e linee di forza; campo di più cariche; moto in campo uniforme",["u6a","u6b"]],
+["u6","Energia potenziale e potenziale elettrico; conservazione dell'energia",["u6b"]],
+["u6","Conduttori e dielettrici: induzione elettrostatica e polarizzazione (qualitativa)",["u6a","u6c"]],
+["u6","Corrente continua, generatore ideale, leggi di Ohm, resistività, effetto Joule, resistenze in serie e parallelo",["u6d"]],
+["u6","Capacità, condensatore piano, dielettrico, energia, condensatori in serie e parallelo",["u6c"]],
+["u6","Campo magnetico dalle correnti (Oersted); forza di Lorentz su carica e su filo; moto circolare",["u6e"]],
+["u6","Induzione elettromagnetica, Faraday-Neumann-Lenz, correnti indotte e loro verso",["u6e"]],
+["u7","Onde elettromagnetiche: campi E e B perpendicolari, λ, f, velocità, ampiezza, intensità; spettro",["u7a"]],
+["u7","Fotone ed energia E = hf; radiazioni ionizzanti e non ionizzanti",["u7a"]],
+["u7","Assorbimento della radiazione: legge di Lambert-Beer",["u7d"]],
+["u7","Radioattività: nuclei instabili, isotopi, attività, legge del decadimento, emivita, decadimenti α, β, γ",["u7e"]],
+["u7","Ottica: riflessione, rifrazione, indice di rifrazione; lenti convergenti sottili e punti coniugati",["u7b","u7c"]]
+];
+
+
 /* ================= CHIMICA E BIOLOGIA: struttura dal syllabus MUR 2026/27 =================
    Per ora: unità con CFU, argomenti e voci del syllabus, autovalutazione.
    Spiegazioni, animazioni ed esercizi si aggiungono riempiendo breve/form/trap/anim e la banca domande qb. */
@@ -927,7 +1040,7 @@ const BIO_TOPICS=[
 
 /* ===== Registro degli esami della piattaforma ===== */
 const EXAMS={
- fis:{id:"fis",t:"Fisica",ic:"⚛️",col:"--u2",ready:true,units:FIS_UNITS,topics:FIS_TOPICS,qb:FIS_QB,pt:FIS_PT,
+ fis:{id:"fis",t:"Fisica",ic:"⚛️",col:"--u2",ready:true,units:FIS_UNITS,topics:FIS_TOPICS,qb:FIS_QB,pt:FIS_PT,map:FIS_MAP,
    syl:"https://www.mur.gov.it/sites/default/files/2026-06/Syllabus_FISICA_%20finale%202026.pdf",
    r25:"Al 1° appello 2025 l'hanno superata circa il 10–17% dei candidati (la più difficile delle tre); sui due appelli i promossi sono stati poco più di 11 mila."},
  chi:{id:"chi",t:"Chimica e propedeutica biochimica",short:"Chimica",ic:"🧪",col:"--u5",ready:false,units:CHI_UNITS,topics:CHI_TOPICS,qb:[],pt:[],
@@ -2267,6 +2380,89 @@ meiosi:{h:320,c:[],
   return `<b>${N[k]}</b>: ${T[k]}`;}}
 });
 
+/* ================= FISICA: animazioni per gli argomenti che non ne avevano =================
+   u1a estensive, u1b potenze, u1d dimensioni, u2f urti, u3e laplace, u5d carnot, u5e calore, u6a coulomb, u6c condensatore */
+Object.assign(AN,{
+estensive:{h:280,c:[{k:"f",l:"Frazione del blocco che prendo",min:.1,max:1,st:.05,v:.5}],
+ f(g,p,st,dt,W,H){const s=Math.min(H*.55,W*.28),x0=W*.08,y0=H*.18,cut=s*p.f;
+  rr(g,x0,y0,s,s,6,A_(C.acc,.25),C.acc);line(g,x0+cut,y0-6,x0+cut,y0+s+6,C.warn,2,[5,4]);rr(g,x0,y0,cut,s,6,A_(C.warn,.25));txt(g,"blocco intero",x0+s/2,y0-14,C.muted,12,"center");
+  const x1=W*.5;rr(g,x1,y0,cut,s,6,A_(C.warn,.3),C.warn);txt(g,"pezzo",x1+cut/2,y0-14,C.warn,12,"center",true);
+  const m=2*p.f,V=2*p.f,E=m*4186*37/1000;const tx=x1+Math.max(cut,40)+20;
+  [["Massa",F2(m,2)+" kg","estensiva"],["Volume",F2(V,2)+" L","estensiva"],["Energia interna (rel.)",F2(E,0)+" kJ","estensiva"],["Temperatura","37 °C","intensiva"],["Densità","1 kg/L","intensiva"],["Pressione","1 atm","intensiva"]].forEach(([a,b,c],i)=>{txt(g,a+": ",tx,y0+10+i*24,C.muted,13);txt(g,b,tx+150,y0+10+i*24,c==="estensiva"?C.warn:C.ok,13,"left",true);});
+  return `Prendendo il ${F2(p.f*100,0)}% del blocco d'acqua, le grandezze <b style="color:var(--warn)">estensive</b> (massa, volume, energia) si riducono nella stessa proporzione; quelle <b style="color:var(--ok)">intensive</b> (temperatura, densità, pressione) restano uguali. Due grandezze estensive divise tra loro danno un'intensiva: densità = massa/volume.`;}},
+potenze:{h:250,c:[{k:"e",l:"Ordine di grandezza: 10^x metri, x =",min:-10,max:7,st:1,v:-6}],
+ f(g,p,st,dt,W,H){const O=[[-10,"atomo"],[-9,"DNA (largh. 2 nm)"],[-7,"virus"],[-6,"batterio"],[-5,"globulo rosso (7 µm)"],[-4,"spessore di un capello"],[-3,"formica"],[0,"persona (1,7 m)"],[2,"campo da calcio"],[4,"Everest"],[6,"Italia"],[7,"Terra (diametro)"]];
+  const P={"-9":"nano (n)","-6":"micro (µ)","-3":"milli (m)","-2":"centi (c)","-1":"deci (d)","0":"—","3":"kilo (k)","6":"mega (M)","9":"giga (G)"},x0=30,w=W-60,y=H*.5,X=e=>x0+(e+10)/17*w;
+  line(g,x0,y,x0+w,y,C.muted,2);for(let e=-10;e<=7;e++){line(g,X(e),y-6,X(e),y+6,C.muted,1.5);txt(g,"10"+(e<0?"⁻":"")+String(Math.abs(e)).split("").map(d=>"⁰¹²³⁴⁵⁶⁷⁸⁹"[+d]).join(""),X(e),y+20,C.muted,11,"center");}
+  O.forEach(([e,l],i)=>{const up=i%2===0;line(g,X(e),y-8,X(e),up?y-40:y-70,A_(C.acc,.5),1);txt(g,l,X(e),up?y-48:y-78,e===p.e?C.acc:C.muted,11,"center",e===p.e);});
+  arrow(g,X(p.e),y+60,X(p.e),y+12,C.warn,3);const near=O.reduce((a,b)=>Math.abs(b[0]-p.e)<Math.abs(a[0]-p.e)?b:a);
+  return `10^${p.e} m = <b>${p.e>=0?F2(Math.pow(10,p.e),0):"0,"+"0".repeat(-p.e-1)+"1"} m</b>${P[p.e]?` · prefisso <b>${P[p.e]}</b>`:""}. Più vicino: <b>${near[1]}</b>. Ogni tacca è un fattore 10: un globulo rosso (10⁻⁵ m) sta 10⁵ volte in una persona.`;}},
+dimensioni:{h:260,c:[{k:"fo",l:"Formula da controllare",seg:["v = √(2gh)","E = ½mv²","p = ρgh","F = m·v","T = 2π√(m/k)","v = λ·T"],v:0}],
+ f(g,p,st,dt,W,H){const D=[[[0,1,-1],[0,1,-1],"velocità","√(g·h)"],[[1,2,-2],[1,2,-2],"energia","massa·velocità²"],[[1,-1,-2],[1,-1,-2],"pressione","densità·g·altezza"],[[1,1,-2],[1,1,-1],"forza","massa·velocità"],[[0,0,1],[0,0,1],"tempo","√(massa/costante elastica)"],[[0,1,-1],[0,1,1],"velocità","lunghezza·tempo"]][p.fo];
+  const lab=["M","L","T"],x0=W*.12,cw=Math.min(90,W*.12),y0=H*.55,sc=26;
+  ["a sinistra: "+D[2],"a destra: "+D[3]].forEach((t,s)=>{txt(g,t,x0+s*(cw*3+60),26,C.muted,12);lab.forEach((l,i)=>{const v=D[s][i],x=x0+s*(cw*3+60)+i*cw;line(g,x,y0,x+cw-12,y0,C.muted,1);rr(g,x+8,v>0?y0-v*sc:y0,cw-28,Math.abs(v)*sc,4,D[0][i]===D[1][i]?C.ok:C.warn);txt(g,l+(v?(v>0?"⁺":"⁻")+"¹²³"[Math.abs(v)-1]:"⁰"),x+cw/2-6,y0+(v<0?-14:16)+(v>0?0:0)+(v>0?14:0),C.ink,13,"center",true);});});
+  const ok=D[0].every((v,i)=>v===D[1][i]);txt(g,ok?"✓ dimensionalmente corretta":"✗ dimensioni diverse: formula sbagliata",W/2,H-18,ok?C.ok:C.warn,15,"center",true);
+  const f=d=>lab.map((l,i)=>d[i]?`[${l}]${d[i]!==1?"<sup>"+d[i]+"</sup>":""}`:"").join("")||"adimensionale";
+  return `Sinistra: ${f(D[0])} · destra: ${f(D[1])}. ${ok?"Gli esponenti di massa, lunghezza e tempo coincidono.":"Gli esponenti non coincidono: la formula non può essere giusta."} I numeri puri (½, 2π) non hanno dimensioni e non contano.`;}},
+urti:{h:280,c:[{k:"m1",l:"Massa 1",min:1,max:5,st:.5,v:2,u:" kg"},{k:"v1",l:"Velocità 1",min:1,max:6,st:.5,v:4,u:" m/s"},{k:"m2",l:"Massa 2",min:1,max:5,st:.5,v:2,u:" kg"},{k:"v2",l:"Velocità 2",min:-4,max:3,st:.5,v:0,u:" m/s"},{k:"tipo",l:"Urto",seg:["Elastico","Completamente anelastico"],v:0}],ri:1,
+ init(st,p){st.x1=1;st.x2=6;st.u1=p?p.v1:4;st.u2=p?p.v2:0;st.hit=false;st.tt=0;},
+ f(g,p,st,dt,W,H){const L=12,sx=(W-40)/L,X=x=>20+x*sx,w1=.4+p.m1*.12,w2=.4+p.m2*.12,y=H*.55;st.tt+=dt;
+  if(!st.hit&&st.u1>st.u2&&st.x1+w1>=st.x2){st.hit=true;if(p.tipo==0){const a=((p.m1-p.m2)*p.v1+2*p.m2*p.v2)/(p.m1+p.m2),b=((p.m2-p.m1)*p.v2+2*p.m1*p.v1)/(p.m1+p.m2);st.u1=a;st.u2=b;}else{const v=(p.m1*p.v1+p.m2*p.v2)/(p.m1+p.m2);st.u1=st.u2=v;}}
+  st.x1+=st.u1*dt*.6;st.x2+=st.u2*dt*.6;if(p.tipo==1&&st.hit)st.x1=st.x2-w1;if(st.tt>7||st.x1>L+2||st.x2<-3||st.x1<-4)this.init(st,p);
+  line(g,10,y+30,W-10,y+30,C.muted,2);rr(g,X(st.x1),y+30-w1*sx*.6,w1*sx,w1*sx*.6,6,C.acc);rr(g,X(st.x2),y+30-w2*sx*.6,w2*sx,w2*sx*.6,6,C.warn);
+  txt(g,p.m1+" kg",X(st.x1)+w1*sx/2,y+30-w1*sx*.3,C.card,12,"center",true);txt(g,p.m2+" kg",X(st.x2)+w2*sx/2,y+30-w2*sx*.3,C.card,12,"center",true);
+  const p0=p.m1*p.v1+p.m2*p.v2,E0=.5*p.m1*p.v1**2+.5*p.m2*p.v2**2,E1=.5*p.m1*st.u1**2+.5*p.m2*st.u2**2;
+  txt(g,`prima: p = ${F2(p0,1)} kg·m/s   Ec = ${F2(E0,1)} J`,20,24,C.muted,13);if(st.hit)txt(g,`dopo: p = ${F2(p.m1*st.u1+p.m2*st.u2,1)} kg·m/s   Ec = ${F2(E1,1)} J`,20,46,C.ink,13,"left",true);
+  if(p.v1<=p.v2)return "Il carrello 1 non raggiunge il 2: aumenta v₁ o rendi v₂ più piccola (negativa = verso sinistra).";
+  return st.hit?`Dopo l'urto: v₁ = <b>${F2(st.u1,2)} m/s</b>, v₂ = <b>${F2(st.u2,2)} m/s</b>. La quantità di moto totale si conserva (${F2(p0,1)} kg·m/s). ${p.tipo==0?"Urto elastico: si conserva anche l'energia cinetica.":`Urto anelastico: si perdono <b>${F2(E0-E1,1)} J</b> di energia cinetica (calore e deformazione).`}`:"I carrelli si avvicinano…";}},
+laplace:{h:300,c:[{k:"mode",l:"Fenomeno",seg:["Due bolle collegate","Capillarità"],v:0},{k:"r",l:"Raggio (bolla piccola o tubo capillare)",min:.2,max:1,st:.05,v:.5}],ri:1,
+ init(st,p){const r=p?p.r:.5;st.a=r;st.b=1.2;},
+ f(g,p,st,dt,W,H){if(p.mode==0){const V=st.a**3+st.b**3;if(st.a>.05){st.a=Math.max(.05,st.a-dt*.08);st.b=Math.cbrt(V-st.a**3);}const s=Math.min(H*.32,W*.16),cy=H*.5,xa=W*.28,xb=W*.68;
+   line(g,xa,cy,xb,cy,C.muted,8);rr(g,(xa+xb)/2-8,cy-14,16,28,4,C.soon);circ(g,xa,cy,st.a*s,A_(C.acc,.25),C.acc,2);circ(g,xb,cy,st.b*s,A_(C.acc,.25),C.acc,2);
+   if(st.a>.06)arrow(g,(xa+xb)/2-40,cy-28,(xa+xb)/2+40,cy-28,C.warn,3,"aria");txt(g,"Δp = 4τ/r",xa,cy+st.a*s+16,C.muted,12,"center");
+   return `La pressione dentro una bolla è maggiore che fuori: Δp = 2τ/r per una goccia, 4τ/r per una bolla di sapone (due superfici). <b>Più la bolla è piccola, più la pressione interna è alta</b>: l'aria passa dalla piccola alla grande, che si gonfia. Negli alveoli il surfattante abbassa τ ed evita che i piccoli si svuotino nei grandi.`;}
+  const rm=p.r,h=1.49e-5/(rm/1000)*100,sc=Math.min(6,(H*.6)/Math.max(h,1)),wy=H*.7,tx=W*.35;
+  rr(g,40,wy,W-80,H-wy-10,0,A_(C.acc,.25));[[tx,rm,C.acc,"acqua (bagna il vetro)",1],[W*.65,rm,C.soon,"mercurio (non bagna)",-1]].forEach(([x,r,c,l,sg])=>{const tw=Math.max(6,r*30),hh=sg>0?h*sc:-h*sc*.4;
+   rr(g,x-tw/2-3,40,tw+6,H-50-40,4,null,C.muted);rr(g,x-tw/2,wy-hh,tw,hh+(H-wy-10),0,sg>0?A_(C.acc,.5):A_(C.muted,.5));txt(g,l,x,26,c,12,"center",true);});
+  txt(g,"h = "+F2(h,1)+" cm",tx+40,wy-h*sc/2,C.acc,13,"left",true);
+  return `In un tubo di raggio <b>${F2(rm,2)} mm</b> l'acqua sale di circa <b>${F2(h,1)} cm</b> (h = 2τ/(ρgr)): più il tubo è sottile, più sale. Il mercurio, che non bagna il vetro, scende. È la capillarità, utile per esempio nei prelievi con il capillare dal dito.`;}},
+carnot:{h:300,c:[{k:"Tc",l:"Sorgente calda",min:300,max:900,st:10,v:600,u:" K"},{k:"Tf",l:"Sorgente fredda",min:250,max:400,st:5,v:300,u:" K"},{k:"tipo",l:"Macchina",seg:["Carnot (ideale, reversibile)","Reale (metà del rendimento)"],v:0}],
+ f(g,p,st,dt,W,H){const ec=Math.max(0,1-p.Tf/p.Tc),e=p.tipo?ec/2:ec,Qc=1000,L=e*Qc,Qf=Qc-L,cx=W*.38;
+  rr(g,cx-120,14,240,40,8,A_(C.warn,.3),C.warn);txt(g,"sorgente calda "+p.Tc+" K",cx,34,C.ink,13,"center",true);rr(g,cx-120,H-54,240,40,8,A_(C.acc,.3),C.acc);txt(g,"sorgente fredda "+p.Tf+" K",cx,H-34,C.ink,13,"center",true);
+  circ(g,cx,H/2,34,C.card,C.ink,3);txt(g,"⚙",cx,H/2,C.ink,26,"center");const t=(st.t*2)%1;
+  g.lineWidth=4+Qc/60;g.strokeStyle=A_(C.warn,.7);line(g,cx,54,cx,H/2-34,A_(C.warn,.7),4+Qc/70);txt(g,"Qc = 1000 J",cx+14,H*.3,C.warn,13,"left",true);
+  line(g,cx,H/2+34,cx,H-54,A_(C.acc,.7),4+Qf/70);txt(g,"Qf = "+F2(Qf,0)+" J",cx+14,H*.72,C.acc,13,"left",true);
+  if(L>1){arrow(g,cx+34,H/2,cx+34+Math.max(30,L/4),H/2,C.ok,4+L/70);txt(g,"L = "+F2(L,0)+" J",cx+44+Math.max(30,L/4),H/2,C.ok,13,"left",true);}
+  for(let i=0;i<3;i++){const y=54+((t+i/3)%1)*(H/2-88);circ(g,cx,y,4,C.warn);}
+  const dS=-Qc/p.Tc+Qf/p.Tf;
+  return `Rendimento = 1 − T_f/T_c = <b>${F2(ec*100,1)}%</b> (Carnot)${p.tipo?`; la macchina reale arriva solo al <b>${F2(e*100,1)}%</b>`:""}. Lavoro L = ${F2(L,0)} J, calore ceduto ${F2(Qf,0)} J. Variazione di entropia dell'universo: <b>${F2(Math.max(0,dS),2)} J/K</b> ${p.tipo?"(> 0: processo irreversibile)":"(zero: ciclo reversibile)"}. Nessuna macchina può avere rendimento 100%.`;}},
+calore:{h:290,c:[{k:"mode",l:"Meccanismo",seg:["Conduzione","Convezione","Irraggiamento"],v:0},{k:"dT",l:"Differenza di temperatura",min:5,max:40,st:1,v:20,u:" °C"},{k:"d",l:"Spessore dello strato (conduzione)",min:1,max:10,st:.5,v:2,u:" cm"}],
+ init(st){st.P=Array.from({length:40},(_,i)=>({a:i/40*6.283,r:.3+Math.random()*.6}));},
+ f(g,p,st,dt,W,H){if(p.mode==0){const P=.2*1*p.dT/(p.d/100),x0=W*.3,w=Math.max(16,p.d*14),y0=30,h=H-60;
+   rr(g,30,y0,x0-30,h,0,A_(C.warn,.3));txt(g,"caldo",50,y0+14,C.warn,12);rr(g,x0+w,y0,W-x0-w-30,h,0,A_(C.acc,.2));txt(g,"freddo",W-80,y0+14,C.acc,12);rr(g,x0,y0,w,h,0,A_(C.soon,.5));txt(g,"strato (es. grasso)",x0+w/2,y0+h+14,C.muted,11,"center");
+   const n=Math.min(10,Math.round(P/20)+1);for(let i=0;i<n;i++){const u=((st.t*.6+i/n)%1);circ(g,x0+u*w,y0+h*(i+.5)/n,4,C.warn);}
+   return `Conduzione: Q/t = k·A·ΔT/d. Con k = 0,2 W/(m·K) (tessuto adiposo), A = 1 m², ΔT = ${p.dT} °C e spessore ${F2(p.d,1)} cm passano circa <b>${F2(P,0)} W</b>. Raddoppiando lo spessore la potenza si dimezza: il grasso e l'aria ferma isolano.`;}
+  if(p.mode==1){const cx=W*.4,cy=H/2,R=Math.min(H*.36,W*.25);rr(g,cx-R,cy-R,2*R,2*R,10,A_(C.acc,.12),C.line);rr(g,cx-R,cy+R-8,2*R,10,3,C.warn);txt(g,"fonte di calore",cx,cy+R+14,C.warn,12,"center");
+   st.P.forEach(q=>{q.a+=dt*(.2+p.dT/40);const x=cx+Math.cos(q.a)*R*q.r*.8,y=cy-Math.sin(q.a)*R*q.r*.8;circ(g,x,y,4,Math.cos(q.a)>0?C.warn:C.acc);});
+   return `Convezione: il fluido scaldato dal basso diventa meno denso e sale, quello freddo scende: il calore viaggia con il fluido che si muove. Nel corpo il sangue porta il calore dagli organi interni alla pelle; più grande è ΔT, più rapida è la circolazione.`;}
+  const T=310,Ta=T-p.dT,s=5.67e-8,P=s*1.8*(T**4-Ta**4),cx=W*.3,cy=H/2;circ(g,cx,cy,40,A_(C.warn,.4),C.warn,2);txt(g,"corpo 37 °C",cx,cy,C.ink,12,"center",true);
+  for(let i=0;i<8;i++){const a=i*Math.PI/4;g.strokeStyle=C.lp;g.lineWidth=2;g.beginPath();for(let s2=0;s2<60;s2++){const r=48+s2+((st.t*40)%20),x=cx+Math.cos(a)*r+Math.cos(a+Math.PI/2)*Math.sin(s2*.6)*4,y=cy+Math.sin(a)*r+Math.sin(a+Math.PI/2)*Math.sin(s2*.6)*4;s2?g.lineTo(x,y):g.moveTo(x,y);}g.stroke();}
+  return `Irraggiamento: ogni corpo emette onde elettromagnetiche (infrarosso a queste temperature), anche nel vuoto, con potenza proporzionale a T⁴. Con l'ambiente a ${37-p.dT} °C un corpo nudo (1,8 m²) perde circa <b>${F2(P,0)} W</b>: è la via principale di dispersione a riposo.`;}},
+coulomb:{h:260,c:[{k:"q1",l:"Carica 1",min:-5,max:5,st:1,v:3,u:" µC"},{k:"q2",l:"Carica 2",min:-5,max:5,st:1,v:-2,u:" µC"},{k:"r",l:"Distanza",min:.1,max:1,st:.05,v:.3,u:" m"}],
+ f(g,p,st,dt,W,H){const F=9e9*p.q1*p.q2*1e-12/(p.r*p.r),cy=H/2+10,d=(W-260)*p.r+40,x1=W/2-d/2,x2=W/2+d/2,L=Math.min(110,30*Math.log10(1+Math.abs(F)*20)),att=F<0;
+  line(g,x1,cy+50,x2,cy+50,C.muted,1,[3,3]);txt(g,F2(p.r,2)+" m",(x1+x2)/2,cy+62,C.muted,12,"center");
+  [[x1,p.q1],[x2,p.q2]].forEach(([x,q])=>{circ(g,x,cy,10+Math.abs(q)*3,q>0?C.warn:q<0?C.acc:C.muted);txt(g,q>0?"+":q<0?"−":"0",x,cy,C.card,18,"center",true);});
+  if(F!==0){const r1=10+Math.abs(p.q1)*3+4,r2=10+Math.abs(p.q2)*3+4,LL=Math.max(28,L);if(att){arrow(g,x1+r1,cy-26,x1+r1+LL,cy-26,C.ink,3,"F");arrow(g,x2-r2,cy-26,x2-r2-LL,cy-26,C.ink,3,"F");}else{arrow(g,x1-r1,cy-26,x1-r1-LL,cy-26,C.ink,3,"F");arrow(g,x2+r2,cy-26,x2+r2+LL,cy-26,C.ink,3,"F");}}
+  return F===0?"Una delle due cariche è nulla: nessuna forza.":`F = k·q₁q₂/r² = <b>${F2(Math.abs(F),3)} N</b>, ${att?"<b>attrattiva</b> (segni opposti)":"<b>repulsiva</b> (stesso segno)"}. Le due forze sono uguali e opposte (terzo principio). Dimezzando la distanza la forza diventa 4 volte più grande.`;}},
+condensatore:{h:280,c:[{k:"d",l:"Distanza tra le armature",min:1,max:10,st:.5,v:2,u:" mm"},{k:"A",l:"Area delle armature",min:20,max:200,st:10,v:100,u:" cm²"},{k:"V",l:"Tensione applicata",min:1,max:12,st:1,v:9,u:" V"},{k:"diel",l:"Tra le armature",seg:["Vuoto/aria (εr 1)","Vetro (εr 5)","Acqua (εr 80)"],v:0}],
+ f(g,p,st,dt,W,H){const er=[1,5,80][p.diel],C0=8.85e-12*er*(p.A*1e-4)/(p.d*1e-3),Q=C0*p.V,U=.5*C0*p.V*p.V,E=p.V/(p.d*1e-3),cx=W*.38,cy=H/2,ph=Math.min(H*.75,40+Math.sqrt(p.A)*12),gap=14+p.d*12;
+  if(p.diel)rr(g,cx-gap/2,cy-ph/2,gap,ph,0,A_(C.soon,p.diel==2?.45:.25));rr(g,cx-gap/2-8,cy-ph/2,8,ph,2,C.warn);rr(g,cx+gap/2,cy-ph/2,8,ph,2,C.acc);
+  const n=Math.max(2,Math.min(12,Math.round(Math.log10(Q*1e12+1)*3)));for(let i=0;i<n;i++){const y=cy-ph/2+ph*(i+.5)/n;txt(g,"+",cx-gap/2-16,y,C.warn,13,"center",true);txt(g,"−",cx+gap/2+16,y,C.acc,13,"center",true);if(i%2===0)arrow(g,cx-gap/2+2,y,cx+gap/2-2,y,A_(C.ink,.6),1.5);}
+  line(g,cx-gap/2-4,cy-ph/2,cx-gap/2-4,22,C.ink,2);line(g,cx+gap/2+4,cy-ph/2,cx+gap/2+4,22,C.ink,2);line(g,cx-gap/2-4,22,cx+gap/2+4,22,C.ink,2);rr(g,cx-22,12,44,20,4,C.card,C.ink);txt(g,p.V+" V",cx,22,C.ink,12,"center",true);
+  const fx=W*.62;[["C = ε₀εᵣA/d",F2(C0*1e12,1)+" pF"],["Q = C·V",F2(Q*1e9,2)+" nC"],["U = ½CV²",F2(U*1e9,2)+" nJ"],["E = V/d",F2(E,0)+" V/m"]].forEach(([a,b],i)=>{txt(g,a,fx,40+i*34,C.muted,13);txt(g,b,fx+120,40+i*34,C.ink,14,"left",true);});
+  return `Capacità <b>${F2(C0*1e12,1)} pF</b>: cresce con l'area e con εᵣ, diminuisce allontanando le armature. A tensione fissa ${p.V} V la carica è Q = CV = ${F2(Q*1e9,2)} nC e l'energia U = ½CV² = ${F2(U*1e9,2)} nJ. Il dielettrico si polarizza e fa aumentare la capacità di εᵣ volte.`;}}
+});
+
 /* ================= PIATTAFORMA «SEMESTRE FILTRO»: STATO E SALVATAGGIO =================
    Un solo stato (chiave semestre-v1) con una sezione per esame: exams.fis / exams.chi / exams.bio.
    Ogni esame del registro EXAMS usa lo stesso motore (argomenti, test, esercizi, simulazione). */
@@ -2496,6 +2692,7 @@ function vInfo(){let o=exHead()+`<h1>📜 Storia e syllabus · ${esc(ename(EX))}
   else{if(E.u25)o+=`<div class="card"><h3>📝 Che cosa è uscito nel 2025</h3><ul class="breve">${E.u25.map(x=>`<li>${x}</li>`).join("")}</ul><p class="src">Fonti: ${LK("prove","testi e soluzioni delle prove 2025")} · ${LK("tb2","analisi del 2° appello")}${E.pit?` · <a href="${E.pit}" target="_blank" rel="noopener">domande commentate</a>`:""}</p></div>`;
    o+=`<div class="card"><h3>🔄 Che cosa cambia nel 2026/27</h3><ul class="breve">${E.n26.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="src">Fonte: ${LK("tbsyl","analisi delle differenze 2025–2026")}</p></div>
    <div class="card"><h3>📐 Peso delle unità</h3><table class="t"><tr><th>Unità</th><th>CFU</th><th>Domande stimate su 31</th></tr>${UNITS.map(u=>`<tr><td>${u.ic} ${esc(u.t)}</td><td>${u.cfu.toLocaleString("it-IT")}</td><td>${u.q}</td></tr>`).join("")}</table></div>`;}
+  if(E.map)o+=`<div class="card"><h3>🗺️ Il syllabus voce per voce</h3><p class="lbl" style="margin:0 0 6px">Ogni voce del programma ufficiale 2026/27 e l'argomento dell'app che la tratta. Il segno ✓ indica che hai già segnato come studiati tutti gli argomenti collegati.</p><table class="t"><tr><th>Unità</th><th>Voce del syllabus</th><th>Nell'app</th></tr>${E.map.map(([u,v,ids])=>`<tr><td>${UN[u].ic}</td><td>${esc(v)}</td><td>${ids.map(id=>`<button class="lnk" data-go="${EX}/t/${id}">${esc(TP[id].t)}</button>`).join("<br>")}${ids.every(id=>(S.tp[id]||{}).st)?" ✓":""}</td></tr>`).join("")}</table></div>`;
   const fs=SOURCES.flatMap(g=>g.it).filter(x=>x[2]===EX||(x[2]==="*"&&/MUR|UPO|Prove|Correzione|Soluzioni|syllabus/i.test(x[0])));
   o+=`<div class="card"><h3>🔗 Fonti di ${esc(ename(EX))}</h3>${fs.map(srcRow).join("")}<p class="src"><button class="lnk" data-go="fonti">Tutte le fonti ›</button></p></div>`;
   return o;}
