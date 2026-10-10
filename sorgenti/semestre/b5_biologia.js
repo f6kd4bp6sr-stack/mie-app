@@ -240,6 +240,8 @@ b7d:{breve:["Necrosi: morte accidentale, la cellula si gonfia e si rompe, il con
  med:"Nel linfoma follicolare la traslocazione t(14;18) iperattiva Bcl-2; nell'infarto le cellule al centro muoiono per necrosi."}
 };
 BIO_TOPICS.forEach(t=>{const x=BIO_EXPL[t.id];if(x)Object.assign(t,x);});
+const BIO_ANIM={b3a:"replicazione",b3d:"traduzione",b4b:"mendel",b4d:"xlegato",b5a:"membrana",b7a:"ciclo",b7b:"mitosi",b7c:"meiosi"};
+BIO_TOPICS.forEach(t=>{if(BIO_ANIM[t.id])t.anim=BIO_ANIM[t.id];});
 
 const BIO_QB=[
 /* b1 */

@@ -12,12 +12,13 @@ Le pagine pubblicate **non si modificano a mano**: si modificano questi sorgenti
 | File | Contenuto |
 |---|---|
 | `a_head.html` | intestazione della pagina e stile grafico (colori chiari e scuri) |
-| `b_data.js` | **Fisica**: unità e CFU, 34 argomenti (spiegazioni, formule, trappole), banca domande, test d'ingresso, date, fonti |
+| `b_data.js` | link `SRC` e **tutte le fonti** `SOURCES` (pagina «Fonti» e schede delle materie); **Fisica**: unità e CFU, 34 argomenti (spiegazioni, formule, trappole), banca domande, test d'ingresso, date, fonti |
 | `b3_spiegazioni_fis.js` | **Fisica**: spiegazione estesa, esempi svolti passo per passo e collegamento medico per ognuno dei 34 argomenti (`FIS_EXPL`) |
 | `b2_other.js` | **Chimica e Biologia**: unità, CFU, argomenti e voci del syllabus; registro `EXAMS` dei tre esami |
 | `b4_chimica.js` | **Chimica**: spiegazioni, esempi, formule, trappole, collegamenti medici (`CHI_EXPL`), banca domande `CHI_QB`, test d'ingresso `CHI_PT`, sintesi delle prove 2025 |
 | `b5_biologia.js` | **Biologia**: come sopra (`BIO_EXPL`, `BIO_QB`, `BIO_PT`); le «formule» sono schemi da ricordare |
-| `c_anim.js` | 25 animazioni interattive (`AN.<nome>`), collegate agli argomenti con `anim:"<nome>"` |
+| `c_anim.js` | 25 animazioni interattive di Fisica (`AN.<nome>`), collegate agli argomenti con `anim:"<nome>"` |
+| `c2_anim_chi_bio.js` | 19 animazioni di Chimica (orbitali, Gibbs, Dalton, osmosi, cinetica, equilibrio, pH, tampone, pila, amminoacidi) e Biologia (membrana, Mendel, legata all'X, replicazione, traduzione, ciclo cellulare, mitosi, meiosi); Chimica usa anche `gas` di Fisica |
 | `d_app.js` | motore: navigazione, test, esercizi, simulazione 21+10 in 50 minuti, piano di studio, progressi, installazione |
 | `e_barra_sf.js` | aggiornamento automatico, copia giornaliera, copia su File / iCloud |
 | `qrcode.js` | libreria per il codice QR della pagina «Installa» (MIT, vedi `LICENSE-qrcode.txt`) |
@@ -39,5 +40,6 @@ Il numero di versione nasce dal contenuto: se cambia qualcosa, gli iPad trovano 
 - Per ogni unità `q` = domande nella simulazione (somma 31) e `cp` = di cui a completamento (somma 10).
 
 ## Fonti dei contenuti
+L'elenco completo con i link è in `SOURCES` (`b_data.js`) e nella pagina «🔗 Fonti» dell'app.
 Syllabus ufficiali MUR 2026/27 (D.M. 941/2026), pagina UPO sull'accesso a Medicina 2026/27, prove e analisi dei due appelli 2025. Dove le analisi commerciali e il testo ufficiale non coincidono, l'app segue il testo ufficiale.
 Nessun dato personale nel codice: test, risposte e progressi restano solo sul dispositivo.

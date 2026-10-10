@@ -212,6 +212,9 @@ c7d:{breve:["Basi puriniche (A, G: due anelli) e pirimidiniche (C, T, U: un anel
  med:"Molti antivirali e antitumorali sono analoghi dei nucleosidi; lo stress ossidativo contribuisce a invecchiamento, aterosclerosi e tumori."}
 };
 CHI_TOPICS.forEach(t=>{const x=CHI_EXPL[t.id];if(x)Object.assign(t,x);});
+/* animazioni interattive (definite in c_anim.js e c2_anim_chi_bio.js) */
+const CHI_ANIM={c1a:"orbitali",c1c:"gas",c1d:"gibbs",c2b:"dalton",c2c:"osmosi",c3a:"cinetica",c3b:"equilibrio",c4a:"ph",c4b:"tampone",c4c:"pila",c7a:"amminoacido"};
+CHI_TOPICS.forEach(t=>{if(CHI_ANIM[t.id])t.anim=CHI_ANIM[t.id];});
 
 const CHI_QB=[
 /* c1a atomo */

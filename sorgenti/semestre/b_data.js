@@ -391,5 +391,49 @@ const SRC={
  esiti:"https://www.studenti.it/test-di-medicina-del-20-novembre-risultati-disastrosi-e-allarme-fisica-cosa-sta-succedendo-e-cosa-cambia-ora.html",
  promossi:"https://www.ilgiorno.it/milano/cronaca/medicina-semestre-filtrio-fvlfut48",
  crui:"https://www.semestreaperto-medodovet.it/",
- prove:"https://futura.study/simulazioni-gratis/prove-ufficiali/test-medicina/2025"
+ prove:"https://futura.study/simulazioni-gratis/prove-ufficiali/test-medicina/2025",
+ upoen:"https://www.uniupo.it/en/studentinfo/arrangements-access-medicine-and-surgery-ay-20262027",
+ mood:"https://semestre-aperto.progetto-mood.com/",
+ guida:"https://www.orizzontescuola.it/medicina-2026-2027-domani-al-via-il-semestre-filtro-la-guida-con-tutte-le-date-e-le-regole/",
+ nov:"https://futura.study/blog/medicina/novita-semestre-filtro-2026-2027/",
+ tar:"https://www.newsistruzione.it/2026/07/15/medicina-semestre-filtro-2026-chiarimenti-tar"
 };
+/* Tutte le fonti consultate (pagina «Fonti» e schede delle materie). m = materie a cui si riferisce: fis, chi, bio o tutte (*) */
+const SOURCES=[
+ {g:"📜 Documenti ufficiali",it:[
+  ["MUR – Semestre aperto a.a. 2026/2027 (syllabus e comunicazioni)",SRC.mur,"*"],
+  ["Syllabus ufficiale di Fisica 2026/27 (PDF)","https://www.mur.gov.it/sites/default/files/2026-06/Syllabus_FISICA_%20finale%202026.pdf","fis"],
+  ["Syllabus ufficiale di Chimica e propedeutica biochimica 2026/27 (PDF)","https://www.mur.gov.it/sites/default/files/2026-06/Syllabus%20Chim.Prop_.Bioch_.%20-%20finale-%202026.pdf","chi"],
+  ["Syllabus ufficiale di Biologia 2026/27 (PDF)","https://www.mur.gov.it/sites/default/files/2026-06/Syllabus_BIOLOGIA_%20finale%202026.pdf","bio"],
+  ["UPO – Modalità di accesso a Medicina e Chirurgia 2026/27",SRC.upo,"*"],
+  ["UPO – Arrangements for access to Medicine and Surgery 2026/27 (aggiornamenti al 28 settembre 2026)",SRC.upoen,"*"]]},
+ {g:"🆓 Piattaforme gratuite per esercitarsi",it:[
+  ["Semestre Aperto MedOdoVet (CRUI, MUR, CISIA): MOOC, esercizi per unità, simulazioni ufficiali da novembre",SRC.crui,"*"],
+  ["Progetto MOOD – piattaforma di 44 atenei per il semestre aperto",SRC.mood,"*"]]},
+ {g:"📅 Date, regole e novità 2026/27",it:[
+  ["Orizzonte Scuola – Esami il 10 dicembre e l'11 gennaio, 31 domande per materia",SRC.date,"*"],
+  ["Orizzonte Scuola – Guida con tutte le date e le regole (graduatoria, scorrimenti)",SRC.guida,"*"],
+  ["Futura – Novità del semestre filtro 2026/27 (aggiornato al 30 settembre 2026)",SRC.nov,"*"],
+  ["Futura – Semestre filtro 2026/27: bando, date, funzionamento","https://futura.study/blog/medicina/semestre-filtro-medicina-2026-come-funziona/","*"],
+  ["TestBusters – Semestre filtro 2026: cosa cambia rispetto al 2025","https://www.testbusters.it/blog/test-medicina/semestre-filtro-2026-cosa-cambia","*"],
+  ["News Istruzione – Il TAR del Lazio chiede chiarimenti al MUR (luglio 2026)",SRC.tar,"*"],
+  ["Studenti.it – Simulatore e materiali gratuiti del MUR","https://www.studenti.it/simulatore-e-materiali-didattici-gratuiti-gli-strumenti-online-del-mur-a-supporto-delle-matricole.html","*"]]},
+ {g:"🔍 Analisi dei syllabus 2026",it:[
+  ["TestBusters – Analisi del syllabus 2026 e differenze con il 2025 (PDF)",SRC.tbsyl,"*"]]},
+ {g:"📝 Prove 2025: testi, soluzioni e commenti",it:[
+  ["Futura – Prove ufficiali 2025 (testi)",SRC.prove,"*"],
+  ["Futura – Soluzioni del 2° appello: Chimica, Biologia, Fisica","https://futura.study/blog/medicina/soluzioni-secondo-appello-semestre-filtro-medicina/","*"],
+  ["TestBusters – Correzione commentata del 1° appello","https://www.testbusters.it/blog/test-medicina/semestre-filtro-2025-correzione-commentata-test-primo-appello","*"],
+  ["TestBusters – Correzione commentata del 2° appello",SRC.tb2,"*"],
+  ["Skuola.net – Esami del 10 dicembre 2025: tutte le soluzioni","https://www.skuola.net/guide/test-ingresso/medicina-chirurgia/soluzioni-esami-medicina-10-dicembre-2025.html","*"],
+  ["TestAmmissione – Domande del semestre filtro 2025","https://testammissione.com/domande-semestre-filtro-medicina-2025/","*"],
+  ["TestAmmissione – Domande di Fisica 2025 (due appelli)","https://testammissione.com/domande-fisica-semestre-filtro-2025/","fis"],
+  ["TestBuddy – Commento della prima prova di Fisica",SRC.tb1,"fis"],
+  ["TestBuddy – Analisi della prova di Fisica, 2ª sessione",SRC.tbuddy,"fis"],
+  ["PiTest – Chimica, 1° appello 2025 (domande commentate)","https://www.pitest.it/chimica/semestre-filtro-2025-primo-appello-chimica/","chi"],
+  ["PiTest – Biologia, 1° appello 2025 (domande commentate)","https://www.pitest.it/biologia/semestre-filtro-2025-primo-appello-biologia/","bio"],
+  ["PiTest – Biologia, 2° appello 2025 (domande commentate)","https://www.pitest.it/biologia/semestre-filtro-2025-secondo-appello-biologia/","bio"]]},
+ {g:"📊 Risultati 2025",it:[
+  ["Studenti.it – Risultati del 20 novembre 2025 e allarme Fisica",SRC.esiti,"*"],
+  ["Il Giorno – Promossi sui due appelli",SRC.promossi,"*"]]}
+];
