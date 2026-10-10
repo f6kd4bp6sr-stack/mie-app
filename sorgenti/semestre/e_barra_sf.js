@@ -29,7 +29,7 @@
     kvDb().then(function(db){return new Promise(function(res){var tx=db.transaction("kv","readwrite"),s=tx.objectStore("kv"),k="sf-snap-"+today();s.put(JSON.stringify(o),k);
       var q=s.getAllKeys();q.onsuccess=function(){var ks=q.result.map(String).filter(function(x){return x.indexOf("sf-snap-")===0;});if(ks.indexOf(k)<0)ks.push(k);ks.sort();ks.slice(0,Math.max(0,ks.length-30)).forEach(function(x){s.delete(x);});};
       tx.oncomplete=function(){try{localStorage.setItem("sf-lastSnap",new Date().toISOString());}catch(e){}res();paint();};tx.onerror=function(){res();};});}).catch(function(){}).then(function(){snapBusy=false;});}
-  function exportAll(){try{if(typeof window.__flush==="function")window.__flush();}catch(e){}var o=lsJ(KEY);if(!o){alert("Ancora nessun dato da salvare");return;}
+  function exportAll(){try{if(typeof window.__flush==="function")window.__flush();}catch(e){}var o=lsJ(KEY);if(!o){var b0=document.querySelector(".updbar .u-st");if(b0)b0.textContent="Ancora nessun dato da salvare";return;}
     var data=JSON.stringify({app:"semestre-filtro",semestre:o},null,1),fn="semestre-filtro-copia-"+today()+".json";
     var done=function(){try{localStorage.setItem("sf-lastBackup",new Date().toISOString());}catch(e){}paint();};
     try{var f=new File([data],fn,{type:"application/json"});if(navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f],title:"Copia Semestre filtro"}).then(done,function(){});return;}}catch(e){}

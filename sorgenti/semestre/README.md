@@ -31,6 +31,7 @@ Per ogni esame ci sono anche:
 - **Test d'ingresso** per partire dal livello giusto, con l'analisi degli errori: risposta data, perché è sbagliata, risposta giusta, perché, e argomento da ripassare;
 - **Esercizi**: serie da 10, punti deboli, ripasso errori;
 - **Simulazione** 21 + 10 in 50 minuti, con timer che continua anche chiudendo l'app;
+- **Errori e storico**: obiettivo di studio dagli errori, ripasso guidato, storico di tutte le prove con data e ora;
 - **Formulario** o schemi;
 - **Storia e syllabus**: cosa è uscito nel 2025, novità 2026 e fonti. In Fisica c'è anche la mappa del syllabus voce per voce.
 
@@ -54,6 +55,7 @@ Pagine comuni:
 | `c_anim.js` | Motore delle animazioni (`mountAnim`) e 25 animazioni di Fisica. |
 | `c2_anim_chi_bio.js` | 19 animazioni di Chimica e Biologia. |
 | `c3_anim_fis_extra.js` | 9 animazioni di Fisica aggiuntive. |
+| `d2_storico.js` | **Storico delle prove** (ogni test, serie di esercizi e simulazione salvati con data, ora e risposte, sempre riapribili), **obiettivo di studio** creato in automatico dagli errori e **ripasso guidato** degli errori (concetti chiave, trappola, spiegazione di ogni errore, «Rifai gli errori»). |
 | `d_app.js` | Motore dell'app: navigazione, test, esercizi, simulazione, piano di studio, progressi, copie, installazione. |
 | `e_barra_sf.js` | Aggiornamento automatico, copia giornaliera sul dispositivo, copia su File / iCloud. |
 | `qrcode.js` | Libreria per il codice QR della pagina «Installa» (licenza MIT, vedi `LICENSE-qrcode.txt`). |
@@ -77,6 +79,14 @@ Le pagine pubblicate **non si modificano a mano**: si modificano questi sorgenti
 - Le opzioni vengono rimescolate in modo stabile: la risposta giusta può stare in qualsiasi posizione. Ogni testo di domanda deve essere unico, perché da esso nasce l'identificativo che salva i progressi.
 - Per ogni unità, `q` è il numero di domande in simulazione (in tutto 31) e `cp` quante sono a completamento (in tutto 10).
 - Animazione nuova: `AN.<nome> = {h, c:[controlli], init(st,p), f(g,p,st,dt,W,H)}`. `f` disegna e restituisce il testo da mostrare sotto.
+
+## Salvataggio
+Tutto si salva da solo, a ogni risposta, senza nessuna richiesta:
+- nella memoria del browser (`localStorage`) e in IndexedDB;
+- con una copia del giorno conservata per 30 giorni;
+- con la richiesta silenziosa di memoria persistente.
+
+Anche un test d'ingresso lasciato a metà e la simulazione in corso restano salvati se si chiude l'app. Le azioni che cancellano o consegnano non aprono finestre di conferma: si conferma toccando due volte lo stesso pulsante.
 
 ## Fonti e privacy
 - L'elenco completo con i link è in `SOURCES` e nella pagina «🔗 Fonti» dell'app.

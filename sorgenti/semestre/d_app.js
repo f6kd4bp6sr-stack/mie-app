@@ -3,7 +3,7 @@
    Ogni esame del registro EXAMS usa lo stesso motore (argomenti, test, esercizi, simulazione). */
 const KEY="semestre-v1",OLDKEY="fisica-v1";
 const APP_URL="https://f6kd4bp6sr-stack.github.io/mie-app/semestre/";
-const EDEF={pt:null,tp:{},qs:{},sims:[],run:null,days:{}};
+const EDEF={pt:null,tp:{},qs:{},sims:[],run:null,days:{},hist:[],goal:null,goalsDone:[],ptDraft:null};
 const $=id=>document.getElementById(id);
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const pad=n=>("0"+n).slice(-2);
@@ -19,7 +19,7 @@ const ename=id=>EXAMS[id].short||EXAMS[id].t;
   const mix=(q,seed)=>{if(!Array.isArray(q.o)||typeof q.a!=="number"||q.mixed)return;let x=parseInt(h(seed),36)||1;const rnd=()=>{x^=x<<13;x^=x>>>17;x^=x<<5;return (x>>>0)/4294967296;};
     const idx=q.o.map((_,i)=>i);for(let i=idx.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[idx[i],idx[j]]=[idx[j],idx[i]];}q.o=idx.map(i=>q.o[i]);if(Array.isArray(q.e))q.e=idx.map(i=>q.e[i]);q.a=idx.indexOf(q.a);q.mixed=1;};
   EXORD.forEach(k=>{const E=EXAMS[k],tp=Object.fromEntries(E.topics.map(t=>[t.id,t]));E.qb.forEach(q=>{q.id=k+"-"+h(q.q);q.u=tp[q.t].u;mix(q,q.id);});E.pt.forEach((q,i)=>mix(q,k+"pt"+i+q.q));});})();
-function normE(e){const o=JSON.parse(JSON.stringify(EDEF));if(e&&typeof e==="object"){Object.assign(o,e);o.tp=e.tp||{};o.qs=e.qs||{};o.sims=Array.isArray(e.sims)?e.sims:[];o.days=e.days||{};}return o;}
+function normE(e){const o=JSON.parse(JSON.stringify(EDEF));if(e&&typeof e==="object"){Object.assign(o,e);o.tp=e.tp||{};o.qs=e.qs||{};o.sims=Array.isArray(e.sims)?e.sims:[];o.days=e.days||{};o.hist=Array.isArray(e.hist)?e.hist:[];o.goalsDone=Array.isArray(e.goalsDone)?e.goalsDone:[];}return o;}
 function norm(r){const o={ver:2,savedAt:null,school:null,exams:{},sum:null};if(r&&typeof r==="object"){o.savedAt=r.savedAt||null;o.school=r.school||null;}EXORD.forEach(k=>o.exams[k]=normE(r&&r.exams&&r.exams[k]));return o;}
 function migrate(old){/* da «Fisica» (fisica-v1) alla piattaforma */const r=norm(null);r.school=old.school||null;r.exams.fis=normE(old);r.savedAt=old.savedAt||null;return r;}
 function load(){let r=null;try{r=JSON.parse(localStorage.getItem(KEY)||"null");}catch(e){}
@@ -72,6 +72,9 @@ function summary(){const nt=nextTopic(),ls=S.sims[S.sims.length-1];return{t:enam
   week:Object.entries(S.days).filter(([d])=>daysTo(d)>-7).reduce((a,[,n])=>a+n,0),studied:TOPICS.filter(t=>(S.tp[t.id]||{}).st).length,topics:TOPICS.length};}
 function summaryAll(){const o={date:new Date().toISOString(),exams:{}};EXORD.forEach(k=>o.exams[k]=withExam(k,summary));return o;}
 
+/* conferma senza finestre di dialogo: il primo tocco chiede conferma sul pulsante stesso, il secondo (entro 5 s) esegue */
+function armed(b,msg){if(b.dataset.armed){delete b.dataset.armed;clearTimeout(b._t);if(b._txt!=null)b.textContent=b._txt;return true;}
+  b._txt=b.textContent;b.dataset.armed=1;b.textContent=msg;b.classList.add("armed");b._t=setTimeout(()=>{delete b.dataset.armed;b.textContent=b._txt;b.classList.remove("armed");},5000);return false;}
 /* ================= QUIZ ================= */
 const nrm=s=>String(s||"").toUpperCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/\s+/g,"").replace(/,/g,".").replace(/−/g,"-");
 const cpOK=(q,v)=>q.a.map(nrm).includes(nrm(v));
@@ -83,16 +86,16 @@ function answerImmediate(box,q,val){if(box.dataset.done)return;box.dataset.done=
   if(q.k==="m"){ok=val===q.a;box.querySelectorAll(".opt").forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add("right");else if(j===val)b.classList.add("wrong");});}
   else{const inp=box.querySelector("input");ok=val!=null&&cpOK(q,val);inp.disabled=true;inp.classList.add(ok?"right":"wrong");box.querySelectorAll(".cpl button").forEach(b=>b.disabled=true);}
   box.querySelector(".solw").innerHTML=`<div class="sol">${ok?'<b class="okc">✓ Giusto.</b>':'<b class="koc">✗ '+(val==null?"Saltata.":"Sbagliato.")+'</b> Risposta: <b>'+esc(q.k==="m"?L5[q.a]+") "+q.o[q.a]:q.a[0])+"</b>."} ${esc(q.s||"")}</div>`;
-  rec(q,ok);save();return ok;}
+  rec(q,ok);try{logAns(box.dataset.ctx,q,val,ok);}catch(e){}save();return ok;}
 
 /* ================= NAVIGAZIONE ================= */
 const PLAT=[["home","🩺","Semestre filtro"],["regole","🎓","Regole e UPO"],["fonti","🔗","Fonti"],["prog","📈","Progressi e copie"],["installa","📲","Installa su un altro iPad"]];
 function exSects(){const s=[["","🏠","Percorso"]];if(PT.length)s.push(["test","🧭","Test d'ingresso"]);s.push(["arg","📚",E.ready?"Argomenti":"Programma"]);
-  if(QB.length){s.push(["es","✏️","Esercizi"]);s.push(["sim","⏱️","Simulazione"]);}if(TOPICS.some(t=>t.form))s.push(["form",E.formLab?"📌":"📐",E.formT||"Formulario"]);s.push(["info","📜","Storia e syllabus"]);return s;}
+  if(QB.length){s.push(["es","✏️","Esercizi"]);s.push(["sim","⏱️","Simulazione"]);s.push(["storico","🗂️","Errori e storico"]);}if(TOPICS.some(t=>t.form))s.push(["form",E.formLab?"📌":"📐",E.formT||"Formulario"]);s.push(["info","📜","Storia e syllabus"]);return s;}
 let view="home",curT=null,PR=null,SIMV=null,simTimer=null,PTA=null,argU=null;
 function route(){const h=decodeURIComponent((location.hash||"").slice(1));const p=h.split("/");
   if(EXAMS[p[0]]){if(p[0]!==EX){useExam(p[0]);PR=null;SIMV=null;PTA=null;}
-    if(p[1]==="t"&&TP[p[2]]){view="arg";curT=p[2];}else{curT=null;view=exSects().some(s=>s[0]===(p[1]||""))?"ex:"+(p[1]||""):"ex:";}}
+    HID=p[1]==="storico"&&p[2]?p[2]:null;if(p[1]==="t"&&TP[p[2]]){view="arg";curT=p[2];}else{curT=null;view=exSects().some(s=>s[0]===(p[1]||""))?"ex:"+(p[1]||""):"ex:";}}
   else{curT=null;view=PLAT.some(s=>s[0]===h)?h:"home";}render();}
 function go(h){if(location.hash!=="#"+h)location.hash=h;else route();}
 const exView=()=>view.startsWith("ex:")||view==="arg";
@@ -101,7 +104,7 @@ function side(){const inEx=exView();let o=PLAT.map(([k,i,t])=>`<button data-go="
   $("side").innerHTML=o;}
 function render(){RUN.clear();clearInterval(simTimer);side();const m=$("main");const v=view;
   let h;if(v==="home")h=vHub();else if(v==="regole")h=vRegole();else if(v==="fonti")h=vFonti();else if(v==="prog")h=vProg();else if(v==="installa")h=vInstalla();
-  else if(curT)h=vTopic(curT);else h=({"ex:":vHome,"ex:test":vTest,"ex:arg":vArg,"ex:es":vEs,"ex:sim":vSim,"ex:form":vForm,"ex:info":vInfo}[v]||vHome)();
+  else if(curT)h=vTopic(curT);else h=({"ex:":vHome,"ex:test":vTest,"ex:arg":vArg,"ex:es":vEs,"ex:sim":vSim,"ex:form":vForm,"ex:info":vInfo,"ex:storico":vStorico}[v]||vHome)();
   m.innerHTML=h+'<p class="saved" id="fzSaved"></p>';paintSaved();bind();window.scrollTo(0,0);}
 const exHead=()=>`<p class="crumb"><button class="btn sm" data-go="home">‹ Semestre filtro</button> <span class="lbl">${E.ic} ${esc(E.t)}</span></p>`;
 
@@ -124,6 +127,7 @@ function vHome(){const ov=overall(),nt=nextTopic(),ls=S.sims[S.sims.length-1],t=
   let o=exHead()+`<h1>${E.ic} ${esc(E.t)}</h1><p class="sub">Programma ministeriale 2026/27 (syllabus MUR, 6 CFU) · ${UNITS.length} unità · ${TOPICS.length} argomenti${QB.length?` · ${QB.length} esercizi`:""}.</p>`;
   if(!E.ready)o+=`<div class="note">🚧 <b>In costruzione.</b> Per ora trovi il programma ufficiale completo, diviso in unità e argomenti, con l'autovalutazione (segna quanto conosci ogni argomento) e il piano di studio. Spiegazioni, animazioni, esercizi e simulazioni arriveranno con lo stesso schema di Fisica.</div>`;
   o+=`<div class="kpi"><div><b>${TOPICS.filter(x=>(S.tp[x.id]||{}).st).length}/${TOPICS.length}</b><span>argomenti studiati</span></div><div><b>${ov}%</b><span>preparazione</span></div>${QB.length?`<div><b>${ls?F2(ls.pts,1):"—"}</b><span>ultima simulazione (su 31)</span></div>`:""}</div>`;
+  if(E.ready&&(S.hist.length||S.goal))o+=goalHTML(true);
   if(PT.length&&!S.pt)o+=`<div class="card" style="border-color:var(--accent)"><h3>🧭 Inizia da qui: test d'ingresso</h3><p class="lead" style="margin:0 0 6px">${PT.length} domande, circa 10 minuti. Serve a capire da quale base parti e a costruire il piano di studio su misura fino al 10 dicembre.</p><div class="btns"><button class="btn pri" data-go="${EX}/test">Fai il test d'ingresso</button></div></div>`;
   o+=`<div class="grid"><div class="card"><h3>📊 Preparazione</h3><div class="hero"><div class="ring" style="--p:${ov}"><b>${ov}%</b></div><div class="lbl">Media pesata delle unità, con il peso che hanno nella prova (31 domande). ${E.ready?"Sale studiando gli argomenti e rispondendo bene agli esercizi.":"Per ora si basa sulla tua autovalutazione."}${S.pt?`<br>Test d'ingresso: <b>${S.pt.score}/${PT.length}</b> · livello <b>${S.pt.lev}</b>.`:""}</div></div></div>`;
   o+=`<div class="card"><h3>🎯 Oggi ti consiglio</h3>${nt?`<div class="row"><span class="ubadge" style="--uc:var(--${nt.u.replace(/^[cb]/,"u")})">${UN[nt.u].ic}</span><div class="grow"><b>${esc(nt.t)}</b><small>${esc(UN[nt.u].t)} · ${stLab(tScore(nt.id))[0]}</small></div></div><div class="btns"><button class="btn pri" data-go="${EX}/t/${nt.id}">${E.ready?"Studia l'argomento":"Apri il programma"}</button>${hasQ(nt.id)?`<button class="btn" data-pr="t:${nt.id}">Solo esercizi</button>`:""}</div>`:`<p class="empty">Tutti gli argomenti sono padroneggiati: fai simulazioni complete.</p>`}</div></div>`;
@@ -145,7 +149,7 @@ function ptReview(p){if(!p.ans)return `<div class="card"><h3>🔍 Errori e perch
   return `<div class="card"><h3>🔍 Errori e perché</h3>${bad.length?`<p style="margin:0 0 10px">${bad.length-nb?`<b>${bad.length-nb}</b> ${bad.length-nb===1?"risposta sbagliata":"risposte sbagliate"}`:""}${bad.length-nb&&nb?" e ":""}${nb?`<b>${nb}</b> senza risposta`:""}. Per ognuna trovi il ragionamento che porta all'errore, la risposta giusta e l'argomento da ripassare.</p>
    ${tps.length?`<p class="lbl" style="margin:0 0 10px">Da ripassare per primi: ${tps.map(t=>`<button class="lnk" data-go="${EX}/t/${t}">${esc(TP[t].t)}</button>`).join(" · ")}</p>`:""}${bad.map(x=>card(x)).join("")}`:`<p style="margin:0">Nessun errore: ottima base di partenza! Le spiegazioni delle risposte sono qui sotto.</p>`}
    ${good.length?`<details class="ptgood"><summary>✓ Risposte giuste (${good.length}): rivedi perché</summary>${good.map(x=>card(x)).join("")}</details>`:""}</div>`;}
-  PTA=PTA||{a:{},school:Rt.school};
+  PTA=PTA||(S.ptDraft&&S.ptDraft.a?{a:Object.assign({},S.ptDraft.a),school:S.ptDraft.school||Rt.school}:{a:{},school:Rt.school});
   return head+`<h1>🧭 Test d'ingresso · ${esc(ename(EX))}</h1><p class="sub">${PT.length} domande di livello scuola superiore, 2 per ogni unità. Non conta per il voto: serve a capire da dove partire. Rispondi d'istinto; se non sai, lascia vuoto.</p>
   <div class="card"><h3>Che scuola superiore hai fatto?</h3><div class="segc" id="ptSchool">${SCHOOLS.map(s=>`<button type="button" class="${PTA.school===s?"on":""}">${s}</button>`).join("")}</div></div>
   <div class="card">${PT.map((q,i)=>`<div class="q" data-pt="${i}"><div class="qh"><span class="qn">${i+1}.</span><div class="qt">${esc(q.q)} <span class="pill" style="font-size:11px">${UN[q.u].ic} ${esc(UN[q.u].t)}</span></div></div><div class="opts">${q.o.map((o,j)=>`<button class="opt${PTA.a[i]===j?" sel":""}" type="button" data-o="${j}"><i>${L5[j]}</i><span>${esc(o)}</span></button>`).join("")}</div></div>`).join("")}
@@ -177,6 +181,7 @@ function pick(arr,n){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=M
 function startPR(mode){let list,lab;
   if(mode.startsWith("t:")){const id=mode.slice(2);list=pick(QB.filter(q=>q.t===id),10);lab=TP[id].t;}
   else if(mode.startsWith("u:")){const u=mode.slice(2);list=pick(QB.filter(q=>q.u===u),10);lab=UN[u].t;}
+  else if(mode.startsWith("et:")){const t=mode.slice(3),w=QB.filter(q=>q.t===t&&S.qs[q.id]&&S.qs[q.id].last===0);list=w.concat(pick(QB.filter(q=>q.t===t&&!w.includes(q)),Math.max(0,6-w.length)));lab="Errori di: "+TP[t].t;}
   else if(mode==="err"){list=pick(QB.filter(q=>S.qs[q.id]&&S.qs[q.id].last===0),10);lab="Ripasso degli errori";}
   else if(mode==="weak"){const w=TOPICS.filter(t=>hasQ(t.id)).sort((a,b)=>tScore(a.id)-tScore(b.id)).slice(0,5).map(t=>t.id);list=pick(QB.filter(q=>w.includes(q.t)),10);lab="Punti deboli";}
   else{list=pick(QB,10);lab="Misto";}
@@ -195,7 +200,7 @@ function simLeft(){return S.run?Math.max(0,S.run.start+SIM_MIN*60e3-Date.now()):
 function grade(run){let ok=0,ko=0,om=0;const per={};run.q.forEach((id,i)=>{const q=QI[id],v=run.a[i];if(!q)return;const u=q.u;per[u]=per[u]||[0,0];per[u][1]++;
   if(v==null||v===""){om++;return;}const r=q.k==="m"?v===q.a:cpOK(q,v);if(r){ok++;per[u][0]++;}else ko++;});return{ok,ko,om,pts:Math.round((ok-.1*ko)*10)/10,per};}
 function finishSim(auto){const r=S.run;if(!r)return;const g=grade(r);r.q.forEach((id,i)=>{const q=QI[id],v=r.a[i];if(q&&v!=null&&v!=="")rec(q,q.k==="m"?v===q.a:cpOK(q,v));});
-  S.sims.push({date:new Date().toISOString(),pts:g.pts,ok:g.ok,ko:g.ko,om:g.om,per:g.per,q:r.q,a:r.a,min:Math.round((Date.now()-r.start)/60e3)});S.run=null;save();SIMV=S.sims.length-1;if(auto)toast("Tempo scaduto: prova consegnata");render();}
+  S.sims.push({date:new Date().toISOString(),pts:g.pts,ok:g.ok,ko:g.ko,om:g.om,per:g.per,q:r.q,a:r.a,min:Math.round((Date.now()-r.start)/60e3)});try{logSim(r,g);}catch(e){}S.run=null;S.goal&&S.goal.t.every(goalOK)||ensureGoal();save();SIMV=S.sims.length-1;if(auto)toast("Tempo scaduto: prova consegnata");render();}
 function voto(p){return p>30?"30 e lode":p>=18?Math.min(30,Math.round(p))+"/30":"non superato";}
 function vSim(){const h=exHead();
   if(S.run){if(simLeft()<=0){setTimeout(()=>finishSim(true),0);return "<p>Consegna…</p>";}const r=S.run;
@@ -294,13 +299,14 @@ function bind(){if(curT){const t=TP[curT];if(t.anim)mountAnim($("animBox"),t.ani
 document.addEventListener("click",e=>{
   const g=e.target.closest("[data-go]");if(g){if(g.dataset.u)argU=g.dataset.u;if(g.closest("#side")){PR=null;SIMV=null;}go(g.dataset.go);return;}
   const pr=e.target.closest("[data-pr]");if(pr){startPR(pr.dataset.pr);return;}
+  const hs=e.target.closest("[data-hsim]");if(hs){SIMV=+hs.dataset.hsim;go(EX+"/sim");return;}
   const sv=e.target.closest("[data-simv]");if(sv){SIMV=+sv.dataset.simv;render();return;}
   const se=e.target.closest("#selfEv button");if(se&&curT){const s=S.tp[curT]||{};s.self=+se.dataset.v;S.tp[curT]=s;save();se.parentNode.querySelectorAll("button").forEach(b=>b.classList.toggle("on",b===se));toast("Autovalutazione salvata");side();const ts=$("tSub");if(ts)ts.textContent=stLab(tScore(curT))[0]+" · "+tScore(curT)+"%";return;}
   const ps=e.target.closest("#ptSchool button");if(ps){PTA.school=ps.textContent;ps.parentNode.querySelectorAll("button").forEach(b=>b.classList.toggle("on",b===ps));return;}
-  const pq=e.target.closest("[data-pt] .opt");if(pq){const i=+pq.closest("[data-pt]").dataset.pt,j=+pq.dataset.o;PTA.a[i]=PTA.a[i]===j?undefined:j;pq.parentNode.querySelectorAll(".opt").forEach((b,k)=>b.classList.toggle("sel",PTA.a[i]===k));return;}
+  const pq=e.target.closest("[data-pt] .opt");if(pq){const i=+pq.closest("[data-pt]").dataset.pt,j=+pq.dataset.o;PTA.a[i]=PTA.a[i]===j?undefined:j;pq.parentNode.querySelectorAll(".opt").forEach((b,k)=>b.classList.toggle("sel",PTA.a[i]===k));S.ptDraft={a:PTA.a,school:PTA.school,ts:new Date().toISOString()};save();return;}
   if(e.target.closest("#ptDone")){const unit={};let sc=0;PT.forEach((q,i)=>{unit[q.u]=unit[q.u]||[0,2];if(PTA.a[i]===q.a){unit[q.u][0]++;sc++;}});const r=sc/PT.length;
-    S.pt={date:today(),score:sc,unit,lev:r>=.78?"avanzato":r>=.43?"intermedio":"base",ans:PT.map((q,i)=>PTA.a[i]==null?null:q.o[PTA.a[i]])};if(PTA.school)Rt.school=PTA.school;PTA=null;save();render();toast("Test salvato: piano di studio aggiornato");return;}
-  if(e.target.closest("#ptRedo")){PTA={a:{},school:Rt.school};render();return;}
+    const lev=r>=.78?"avanzato":r>=.43?"intermedio":"base";S.pt={date:today(),score:sc,unit,lev,ans:PT.map((q,i)=>PTA.a[i]==null?null:q.o[PTA.a[i]])};try{logPT(sc,lev);}catch(e){}S.ptDraft=null;ensureGoal();if(PTA.school)Rt.school=PTA.school;PTA=null;save();render();toast("Test salvato: piano di studio aggiornato");return;}
+  if(e.target.closest("#ptRedo")){PTA={a:{},school:Rt.school};S.ptDraft=null;render();return;}
   const op=e.target.closest('.q[data-ctx] .opt');if(op){const box=op.closest(".q"),q=QI[box.dataset.q];const ok=answerImmediate(box,q,+op.dataset.o);afterPR(box,ok);return;}
   const ck=e.target.closest('.q[data-ctx] [data-chk]');if(ck){const box=ck.closest(".q"),v=box.querySelector("input").value.trim();if(!v){toast("Scrivi la risposta o tocca «Non so»");return;}const ok=answerImmediate(box,QI[box.dataset.q],v);afterPR(box,ok);return;}
   const sk=e.target.closest('.q[data-ctx] [data-skip]');if(sk){const box=sk.closest(".q");const ok=answerImmediate(box,QI[box.dataset.q],null);afterPR(box,ok);return;}
@@ -310,9 +316,9 @@ document.addEventListener("click",e=>{
   if(e.target.closest("#simBack")){SIMV=null;render();return;}
   if(e.target.closest("#cpUrl")){try{navigator.clipboard.writeText(APP_URL).then(()=>toast("Indirizzo copiato"),()=>toast(APP_URL));}catch(_){toast(APP_URL);}return;}
   if(e.target.closest("#shUrl")){navigator.share({title:"Semestre filtro",text:"App per preparare gli esami del semestre filtro di Medicina",url:APP_URL}).catch(()=>{});return;}
-  if(e.target.closest("#simEnd")||e.target.closest("#simEnd2")){const n=S.run.q.filter((id,i)=>S.run.a[i]==null||S.run.a[i]==="").length;if(!confirm(n?`Ci sono ${n} risposte vuote. Consegnare comunque?`:"Consegnare la prova?"))return;finishSim(false);return;}
+  const sEnd=e.target.closest("#simEnd")||e.target.closest("#simEnd2");if(sEnd){const n=S.run.q.filter((id,i)=>S.run.a[i]==null||S.run.a[i]==="").length;if(!armed(sEnd,n?`Tocca di nuovo per consegnare (${n} vuote)`:"Tocca di nuovo per consegnare"))return;finishSim(false);return;}
   const so=e.target.closest("[data-si] .opt");if(so&&S.run){const i=+so.closest("[data-si]").dataset.si,j=+so.dataset.o;S.run.a[i]=S.run.a[i]===j?null:j;so.parentNode.querySelectorAll(".opt").forEach((b,k)=>b.classList.toggle("sel",S.run.a[i]===k));save();return;}
-  if(e.target.closest("#fzReset")){if(confirm("Cancellare test, esercizi, autovalutazioni e simulazioni di tutti e tre gli esami? L’operazione non si può annullare, salvo ripristinare una copia.")){Rt=norm(null);useExam(EX);save();render();toast("Progressi azzerati");}return;}
+  const rz=e.target.closest("#fzReset");if(rz){if(armed(rz,"Tocca di nuovo per cancellare tutto")){idb("readwrite","sf-prima-del-reset-"+Date.now(),JSON.stringify(Rt)).catch(()=>{});Rt=norm(null);useExam(EX);save();render();toast("Progressi azzerati");}return;}
 });
 function afterPR(box,ok){if(box.dataset.ctx!=="pr")return;if(ok)PR.ok++;const n=$("prNext");if(n){n.hidden=false;n.focus();}}
 let svT2=null;
@@ -320,8 +326,10 @@ document.addEventListener("input",e=>{const i=e.target.closest("[data-si] input"
 document.addEventListener("keydown",e=>{if(e.key==="Enter"){const i=e.target.closest('.q[data-ctx] input');if(i){e.preventDefault();i.closest(".q").querySelector("[data-chk]").click();}}});
 document.addEventListener("change",e=>{if(e.target.id!=="fzImp")return;const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{const o=JSON.parse(rd.result);let r=null;
   if(o&&o.semestre)r=norm(o.semestre);else if(o&&o.exams)r=norm(o);else if(o&&o.fisica)r=migrate(o.fisica);else if(o&&o.tp&&o.qs)r=migrate(o);if(!r)throw 0;
-  if(!confirm("Sostituire i progressi del semestre filtro con quelli della copia?"))return;Rt=r;useExam(EX);save();render();toast("Progressi ripristinati");}catch(_){toast("Nella copia non ci sono dati del semestre filtro");}};rd.readAsText(f);e.target.value="";});
+  idb("readwrite","sf-prima-del-ripristino",JSON.stringify(Rt)).catch(()=>{});Rt=r;histMigrate();useExam(EX);save();render();toast("Progressi ripristinati");}catch(_){toast("Nella copia non ci sono dati del semestre filtro");}};rd.readAsText(f);e.target.value="";});
 window.addEventListener("hashchange",route);
 window.addEventListener("storage",e=>{if(e.key===KEY&&e.newValue){Rt=norm(JSON.parse(e.newValue));useExam(EX);if(!S.run)render();}});
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")window.__flush();else if(S.run&&view==="ex:sim")tickSim();});
+try{histMigrate();}catch(e){}try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{});}catch(e){}
+window.addEventListener("pagehide",()=>window.__flush());
 route();recover();if(!Rt.sum){Rt.sum=summaryAll();try{localStorage.setItem(KEY,JSON.stringify(Rt));}catch(e){}}

@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" href="icon-192.png">
 <title>Semestre filtro</title>
-<script>window.APP_VERSION="58644b7ef0";window.APP_BUILD="2026-10-10T22:12+02:00";</script>
+<script>window.APP_VERSION="3053998187";window.APP_BUILD="2026-10-10T22:26+02:00";</script>
 <style>
 :root{--bg:#f3f4f7;--card:#ffffff;--ink:#15181d;--muted:#6b7280;--line:#e4e6eb;--navy:#163054;--accent:#1f5fae;--seg:#e6e8ee;
   --ok:#2e7d5b;--ok-bg:#e3f3ea;--warn:#b3261e;--warn-bg:#fdecea;--soon:#b7791f;--soon-bg:#fdf1dc;--lp:#a24a24;--lp-bg:#f9e6dc;--fam:#6d4bb8;--fam-bg:#ece6fa;--ben:#2b7a83;--ben-bg:#dff1f2;--euro:#1f5fae;--euro-bg:#e3edf9;
@@ -89,6 +89,7 @@ a.btn{text-decoration:none}
 .esv{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0}.esv summary{cursor:pointer;line-height:1.5}.esv ol{margin:8px 0 4px;padding-left:22px}.esv li{margin:4px 0;font-variant-numeric:tabular-nums}.esr{margin:6px 0 0;font-weight:700;color:var(--ok)}
 .med{border-left:4px solid var(--accent)}
 .ptr{border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:12px;padding:10px 12px;margin:10px 0}.ptr.ok{border-left-color:var(--ok)}.ptl{margin:6px 0 0}.ptl.no{color:var(--warn)}.ptl.si{color:var(--ok)}.ptl b{color:var(--ink)}.ptw{margin:4px 0 0;line-height:1.5;font-size:14.5px}.ptgood{margin-top:12px}.ptgood summary{cursor:pointer;font-weight:700;color:var(--ok)}
+.goal{border:2px solid var(--accent)}.grow-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:10px 0;border-top:1px solid var(--line)}.grow-row .grow{min-width:220px}.grow-row.done{opacity:.7}.bar.sm{height:6px;margin-top:6px}.rv summary{cursor:pointer;font-size:16px;line-height:1.5}.rv[open] summary{margin-bottom:8px}.rvk{margin:8px 0}.btn.armed{background:var(--warn);color:#fff}
 .srcrow{display:flex;gap:10px;align-items:center;padding:10px 4px;border-top:1px solid var(--line);color:var(--ink);text-decoration:none;line-height:1.4}.srcrow:first-of-type{border-top:0}.srcrow small{display:block;color:var(--muted);font-size:12px}.srcrow span[aria-hidden]{color:var(--accent);font-weight:700}.srcrow:hover{background:var(--seg)}
 .formula{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:15px;background:var(--seg);border-radius:10px;padding:8px 12px;margin:6px 0;overflow-x:auto;white-space:nowrap}
 .formula small{font-family:-apple-system,BlinkMacSystemFont,sans-serif;color:var(--muted);margin-left:10px;white-space:normal}
@@ -2701,12 +2702,100 @@ condensatore:{h:280,c:[{k:"d",l:"Distanza tra le armature",min:1,max:10,st:.5,v:
   return `Capacità <b>${F2(C0*1e12,1)} pF</b>: cresce con l'area e con εᵣ, diminuisce allontanando le armature. A tensione fissa ${p.V} V la carica è Q = CV = ${F2(Q*1e9,2)} nC e l'energia U = ½CV² = ${F2(U*1e9,2)} nJ. Il dielettrico si polarizza e fa aumentare la capacità di εᵣ volte.`;}}
 });
 
+/* ================= STORICO DELLE PROVE, OBIETTIVO DI STUDIO DAGLI ERRORI, RIPASSO GUIDATO =================
+   - Ogni prova (test d'ingresso, serie di esercizi, esercizi di un argomento, simulazione) crea una voce in S.hist
+     con data e ora e tutte le risposte date: si riapre quando si vuole, anche dopo mesi.
+   - Dagli errori nasce in automatico un obiettivo di studio (S.goal) con gli argomenti su cui lavorare.
+   - Il ripasso guidato ripercorre per ogni argomento sbagliato i concetti chiave, la trappola e la spiegazione di ogni errore.
+   Tutto si salva da solo sul dispositivo, senza nessuna richiesta. */
+const HMAX=300;let TPS=null,HID=null;
+const ansTxt=(q,v)=>v==null||v===""?null:q.k==="m"?q.o[v]:String(v);
+const fmtTS=ts=>{const d=new Date(ts);return d.toLocaleDateString("it-IT",{weekday:"short",day:"numeric",month:"short",year:"numeric"})+", ore "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});};
+function hNew(type,lab,extra){const h=Object.assign({id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),ts:new Date().toISOString(),type,lab,items:[],done:false},extra||{});
+  S.hist.push(h);if(S.hist.length>HMAX)S.hist.splice(0,S.hist.length-HMAX);return h;}
+const hGet=id=>S.hist.find(x=>x.id===id);
+/* ogni risposta data negli esercizi finisce subito nello storico */
+function logAns(ctx,q,val,ok){let h=null;
+  if(ctx==="pr"&&PR){h=PR.h&&hGet(PR.h);if(!h){h=hNew("es",PR.lab,{n:PR.list.length});PR.h=h.id;}}
+  else if(ctx==="tp"){if(!TPS||TPS.t!==curT||!hGet(TPS.h)){const x=hNew("arg","Esercizi dell'argomento: "+TP[q.t].t,{t:q.t});TPS={t:curT,h:x.id};}h=hGet(TPS.h);}
+  if(!h)return;h.items.push({id:q.id,a:ansTxt(q,val),ok:!!ok});if(ctx==="pr"&&PR&&h.items.length>=PR.list.length)h.done=true;}
+function logSim(r,g){hNew("sim","Simulazione d'esame",{done:true,pts:g.pts,sim:S.sims.length-1,min:Math.round((Date.now()-r.start)/60e3),
+  items:r.q.map((id,i)=>{const q=QI[id],v=r.a[i];return {id,a:q?ansTxt(q,v):null,ok:!!(q&&v!=null&&v!==""&&(q.k==="m"?v===q.a:cpOK(q,v)))};})});}
+function logPT(sc,lev){hNew("pt","Test d'ingresso",{done:true,score:sc,n:PT.length,lev,items:PT.map((q,i)=>({k:i,a:PTA.a[i]==null?null:q.o[PTA.a[i]],ok:PTA.a[i]===q.a}))});}
+/* le prove fatte prima di questa versione entrano nello storico (simulazioni e ultimo test d'ingresso) */
+function histMigrate(){EXORD.forEach(k=>withExam(k,()=>{if(S.hist.length||(!S.sims.length&&!(S.pt&&S.pt.ans)))return;
+  S.sims.forEach((s,si)=>S.hist.push({id:"s"+si+"-"+Date.parse(s.date).toString(36),ts:s.date,type:"sim",lab:"Simulazione d'esame",done:true,pts:s.pts,sim:si,min:s.min,
+    items:(s.q||[]).map((id,i)=>{const q=QI[id],v=s.a?s.a[i]:null;return {id,a:q?ansTxt(q,v):null,ok:!!(q&&v!=null&&v!==""&&(q.k==="m"?v===q.a:cpOK(q,v)))};})}));
+  if(S.pt&&S.pt.ans)S.hist.push({id:"pt-"+S.pt.date,ts:S.pt.date+"T12:00:00",type:"pt",lab:"Test d'ingresso",done:true,score:S.pt.score,n:PT.length,lev:S.pt.lev,items:PT.map((q,i)=>({k:i,a:S.pt.ans[i],ok:S.pt.ans[i]===q.o[q.a]}))});
+  S.hist.sort((a,b)=>a.ts<b.ts?-1:1);}));}
+
+/* ----- errori aperti e obiettivo di studio ----- */
+function lastGiven(qid){for(let i=S.hist.length-1;i>=0;i--){const it=S.hist[i].items.find(x=>x.id===qid);if(it)return it;}return null;}
+function errTopics(){const m={};const add=(t,k,n)=>{if(!TP[t])return;m[t]=m[t]||{t,open:[],pt:[],ko:(S.tp[t]||{}).ko||0};m[t][k].push(n);};
+  QB.forEach(q=>{const s=S.qs[q.id];if(s&&s.last===0)add(q.t,"open",q.id);});
+  if(S.pt&&S.pt.ans)PT.forEach((q,i)=>{if(q.t&&S.pt.ans[i]!==q.o[q.a]&&tScore(q.t)<60)add(q.t,"pt",i);});
+  return Object.values(m).map(x=>Object.assign(x,{w:x.open.length*3+x.pt.length*2+x.ko,sc:tScore(x.t)})).sort((a,b)=>b.w-a.w||a.sc-b.sc);}
+const GOAL_SC=60;
+const goalOK=t=>{const s=S.qs,open=QB.some(q=>q.t===t&&s[q.id]&&s[q.id].last===0);return !open&&tScore(t)>=GOAL_SC;};
+function ensureGoal(){if(!E.ready)return;const g=S.goal;
+  if(g&&g.t.every(goalOK)){S.goalsDone=(S.goalsDone||[]).concat([{ts:g.ts,end:new Date().toISOString(),t:g.t}]).slice(-50);S.goal=null;}
+  if(!S.goal){const et=errTopics().slice(0,5).map(x=>x.t).filter(t=>!goalOK(t));if(!et.length)return;
+    const dl=new Date();dl.setDate(dl.getDate()+7);const lim=dOf(EXAM1);lim.setDate(lim.getDate()-3);const end=dl<lim?dl:(new Date()<lim?lim:dl);
+    S.goal={ts:new Date().toISOString(),deadline:iso(end),t:et};}
+  let ch=S.goal!==g;
+  /* gli errori nuovi entrano nell'obiettivo in corso (fino a 6 argomenti) */
+  if(S.goal&&S.goal.t.length<6){const add=errTopics().filter(x=>x.open.length&&!S.goal.t.includes(x.t)).map(x=>x.t).slice(0,6-S.goal.t.length);if(add.length){S.goal.t=S.goal.t.concat(add);ch=true;}}
+  if(ch)setTimeout(save,0);}
+function goalHTML(mini){ensureGoal();const g=S.goal,ndone=(S.goalsDone||[]).length;
+  if(!g)return mini?"":`<div class="card goal"><h3>🎯 Obiettivo di studio</h3><p style="margin:0">${S.hist.length?"Nessun errore aperto: ottimo! Continua con una simulazione o con gli argomenti che non hai ancora affrontato.":"L'obiettivo nasce dagli errori: fai il test d'ingresso o una serie di esercizi e l'app costruirà qui il tuo obiettivo."}${ndone?` Obiettivi già raggiunti: <b>${ndone}</b>.`:""}</p></div>`;
+  const ok=g.t.filter(goalOK).length,first=g.t.find(t=>!goalOK(t)),dd=daysTo(g.deadline);
+  const rows=g.t.map(t=>{const sc=tScore(t),open=QB.filter(q=>q.t===t&&S.qs[q.id]&&S.qs[q.id].last===0).length,d=goalOK(t);
+    return `<div class="grow-row${d?" done":""}"><div class="grow"><b>${d?"✅ ":""}${esc(TP[t].t)}</b><small>${UN[TP[t].u].ic} ${esc(UN[TP[t].u].t)} · ${open?`${open} ${open===1?"errore aperto":"errori aperti"}`:"nessun errore aperto"} · ${sc}% (obiettivo ${GOAL_SC}%)</small><div class="bar sm"><i style="width:${Math.min(100,sc/GOAL_SC*100)}%"></i></div></div>${mini||d?"":`<div class="btns" style="margin:0"><button class="btn sm" data-go="${EX}/t/${t}">📖 Spiegazione</button>${open?`<button class="btn sm pri" data-pr="et:${t}">🎯 Rifai gli errori</button>`:`<button class="btn sm pri" data-pr="t:${t}">✏️ Esercizi</button>`}</div>`}</div>`;}).join("");
+  return `<div class="card goal"><h3>🎯 Obiettivo di studio <span class="pill">${ok}/${g.t.length} raggiunti</span></h3><p style="margin:0 0 8px">Creato dai tuoi errori il ${fmtD(g.ts.slice(0,10),{day:"numeric",month:"long"})}. <b>Entro ${fmtD(g.deadline,{weekday:"long",day:"numeric",month:"long"})}</b>${dd>=0?` (${dd===0?"oggi":dd===1?"domani":"tra "+dd+" giorni"})`:""}: risolvi gli errori aperti e porta ogni argomento almeno al ${GOAL_SC}%. Quando li completi tutti, l'app crea da sola il prossimo obiettivo.</p>
+   ${first?`<p class="lbl" style="margin:0 0 8px">👉 Oggi: <b>${esc(TP[first].t)}</b> — rileggi la spiegazione, poi rifai gli errori.</p>`:""}${rows}
+   ${mini?`<div class="btns"><button class="btn pri" data-go="${EX}/storico">Apri il ripasso degli errori ›</button></div>`:""}</div>`;}
+
+/* ----- ripasso guidato: per ogni argomento sbagliato i concetti, la trappola e la spiegazione di ogni errore ----- */
+function itemHTML(q,given,ok,extra){return `<div class="ptr${ok?" ok":""}"><div class="qh"><div class="qt">${esc(q.q)}</div></div>
+  ${ok?`<p class="ptl si">✓ Risposta data: <b>${esc(given)}</b></p>`:given==null?`<p class="ptl no">➖ Non risposta</p>`:`<p class="ptl no">✗ Risposta data: <b>${esc(given)}</b></p>`}
+  ${extra||""}${ok?"":`<p class="ptl si">✓ Risposta giusta: <b>${esc(q.k==="m"?q.o[q.a]:(Array.isArray(q.a)?q.a[0]:q.o[q.a]))}</b></p>`}${q.s?`<p class="ptw"><b>Perché:</b> ${esc(q.s)}</p>`:""}</div>`;}
+function reviewHTML(){const et=errTopics().filter(x=>x.open.length||x.pt.length);if(!et.length)return `<div class="card"><h3>🔁 Ripasso guidato degli errori</h3><p style="margin:0">Non ci sono errori aperti da ripassare.</p></div>`;
+  return `<h2>🔁 Ripasso guidato degli errori</h2><p class="sub" style="margin-top:-4px">Per ogni argomento: i concetti chiave, la trappola d'esame e la spiegazione di ogni errore. Poi rifai le domande sbagliate: quando rispondi bene l'errore si chiude.</p>`+
+   et.slice(0,8).map(x=>{const t=TP[x.t];return `<details class="card rv"${x===et[0]?" open":""}><summary><b>${UN[t.u].ic} ${esc(t.t)}</b> <span class="pill">${x.open.length+x.pt.length} da rivedere</span></summary>
+    ${t.breve?`<div class="rvk"><b>💡 Concetti chiave</b><ul class="breve">${t.breve.map(b=>`<li>${esc(b)}</li>`).join("")}</ul></div>`:""}
+    ${t.trap?`<div class="trap">⚠️ <b>Trappola d'esame:</b> ${esc(t.trap)}</div>`:""}
+    ${x.pt.map(i=>{const q=PT[i],c=S.pt.ans[i],ci=c==null?-1:q.o.indexOf(c);return itemHTML(q,c,false,`<p class="lbl" style="margin:4px 0 0">dal test d'ingresso</p>${q.e&&q.e[ci]?`<p class="ptw"><b>Perché è sbagliata:</b> ${esc(q.e[ci])}</p>`:""}`);}).join("")}
+    ${x.open.map(id=>{const q=QI[id],lg=lastGiven(id);return itemHTML(q,lg?lg.a:null,false);}).join("")}
+    <div class="btns"><button class="btn" data-go="${EX}/t/${x.t}">📖 Ripercorri la spiegazione completa</button>${x.open.length?`<button class="btn pri" data-pr="et:${x.t}">🎯 Rifai gli errori (${x.open.length})</button>`:`<button class="btn pri" data-pr="t:${x.t}">✏️ Esercizi sull'argomento</button>`}</div></details>`;}).join("");}
+
+/* ----- storico ----- */
+const HT={pt:["🧭","Test d'ingresso"],es:["✏️","Serie di esercizi"],arg:["📚","Esercizi di un argomento"],sim:["⏱️","Simulazione"]};
+const hRes=h=>{const n=h.items.length,ok=h.items.filter(x=>x.ok).length;return h.type==="sim"?`${F2(h.pts,1)}/31 · ${h.pts>=18?"superata":"non superata"}`:h.type==="pt"?`${h.score}/${h.n} · livello ${h.lev}`:`${ok}/${n} giuste${h.type==="es"&&!h.done?" · interrotta":""}`;};
+function vStorico(){const h=exHead();if(HID){const x=hGet(HID);if(x)return h+vHistDetail(x);HID=null;}
+  let o=h+`<h1>🗂️ Errori e storico · ${esc(ename(EX))}</h1><p class="sub">Ogni prova viene salvata da sola, con data e ora, insieme a tutte le risposte date: puoi riaprirla e ripercorrere le spiegazioni quando vuoi. Gli errori diventano il tuo obiettivo di studio.</p>`;
+  o+=goalHTML(false)+reviewHTML();
+  const L=S.hist.slice().reverse();
+  o+=`<h2>📒 Storico delle prove (${L.length})</h2>`+(L.length?`<div class="card">${L.map(x=>{const n=x.items.length,ko=x.items.filter(i=>!i.ok).length;return `<button class="trow" data-go="${EX}/storico/${x.id}"><span class="ubadge">${HT[x.type][0]}</span><div class="grow"><b>${esc(x.lab)}</b><small>${fmtTS(x.ts)} · ${n} domande${ko?` · ${ko} ${ko===1?"errore":"errori"}`:""}</small></div><b>${hRes(x)}</b></button>`;}).join("")}</div>`:`<div class="card"><p style="margin:0">Ancora nessuna prova: inizia dal test d'ingresso o da una serie di esercizi.</p></div>`);
+  return o;}
+function vHistDetail(x){const n=x.items.length,ko=x.items.filter(i=>!i.ok);
+  let o=`<p class="crumb"><button class="btn sm" data-go="${EX}/storico">‹ Errori e storico</button></p><h1>${HT[x.type][0]} ${esc(x.lab)}</h1><p class="sub">${fmtTS(x.ts)}${x.min?` · durata ${x.min} min`:""} · ${hRes(x)}</p>`;
+  o+=`<div class="kpi"><div><b>${n-ko.length}</b><span>giuste</span></div><div><b>${ko.filter(i=>i.a!=null).length}</b><span>sbagliate</span></div><div><b>${ko.filter(i=>i.a==null).length}</b><span>senza risposta</span></div></div>`;
+  const tps=[...new Set(ko.map(i=>i.k!=null?PT[i.k]&&PT[i.k].t:QI[i.id]&&QI[i.id].t).filter(t=>t&&TP[t]))];
+  if(tps.length)o+=`<div class="card"><h3>📚 Argomenti da ripercorrere</h3><div class="btns">${tps.map(t=>`<button class="btn sm" data-go="${EX}/t/${t}">${esc(TP[t].t)}</button>`).join("")}</div></div>`;
+  const card=it=>{if(it.k!=null){const q=PT[it.k];if(!q)return"";const ci=it.a==null?-1:q.o.indexOf(it.a);return itemHTML(q,it.a,it.ok,!it.ok&&q.e&&q.e[ci]?`<p class="ptw"><b>Perché è sbagliata:</b> ${esc(q.e[ci])}</p>`:"")+(q.t&&TP[q.t]&&!it.ok?`<div class="btns" style="margin:-4px 0 8px"><button class="btn sm" data-go="${EX}/t/${q.t}">📖 ${esc(TP[q.t].t)}</button></div>`:"");}
+    const q=QI[it.id];if(!q)return `<div class="ptr"><p class="lbl" style="margin:0">Domanda non più presente in questa versione dell'app.</p></div>`;
+    return itemHTML(q,it.a,it.ok)+(!it.ok?`<div class="btns" style="margin:-4px 0 8px"><button class="btn sm" data-go="${EX}/t/${q.t}">📖 ${esc(TP[q.t].t)}</button></div>`:"");};
+  o+=ko.length?`<h2>Errori (${ko.length})</h2><div class="card">${ko.map(card).join("")}</div>`:`<div class="card"><p style="margin:0">Nessun errore in questa prova. 👏</p></div>`;
+  const ok=x.items.filter(i=>i.ok);if(ok.length)o+=`<details class="card ptgood"><summary>✓ Risposte giuste (${ok.length}): rivedi le spiegazioni</summary>${ok.map(card).join("")}</details>`;
+  if(x.type==="sim"&&x.sim!=null&&S.sims[x.sim])o+=`<div class="btns"><button class="btn" data-hsim="${x.sim}">Apri la correzione della simulazione</button></div>`;
+  return o;}
+
 /* ================= PIATTAFORMA «SEMESTRE FILTRO»: STATO E SALVATAGGIO =================
    Un solo stato (chiave semestre-v1) con una sezione per esame: exams.fis / exams.chi / exams.bio.
    Ogni esame del registro EXAMS usa lo stesso motore (argomenti, test, esercizi, simulazione). */
 const KEY="semestre-v1",OLDKEY="fisica-v1";
 const APP_URL="https://f6kd4bp6sr-stack.github.io/mie-app/semestre/";
-const EDEF={pt:null,tp:{},qs:{},sims:[],run:null,days:{}};
+const EDEF={pt:null,tp:{},qs:{},sims:[],run:null,days:{},hist:[],goal:null,goalsDone:[],ptDraft:null};
 const $=id=>document.getElementById(id);
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const pad=n=>("0"+n).slice(-2);
@@ -2722,7 +2811,7 @@ const ename=id=>EXAMS[id].short||EXAMS[id].t;
   const mix=(q,seed)=>{if(!Array.isArray(q.o)||typeof q.a!=="number"||q.mixed)return;let x=parseInt(h(seed),36)||1;const rnd=()=>{x^=x<<13;x^=x>>>17;x^=x<<5;return (x>>>0)/4294967296;};
     const idx=q.o.map((_,i)=>i);for(let i=idx.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[idx[i],idx[j]]=[idx[j],idx[i]];}q.o=idx.map(i=>q.o[i]);if(Array.isArray(q.e))q.e=idx.map(i=>q.e[i]);q.a=idx.indexOf(q.a);q.mixed=1;};
   EXORD.forEach(k=>{const E=EXAMS[k],tp=Object.fromEntries(E.topics.map(t=>[t.id,t]));E.qb.forEach(q=>{q.id=k+"-"+h(q.q);q.u=tp[q.t].u;mix(q,q.id);});E.pt.forEach((q,i)=>mix(q,k+"pt"+i+q.q));});})();
-function normE(e){const o=JSON.parse(JSON.stringify(EDEF));if(e&&typeof e==="object"){Object.assign(o,e);o.tp=e.tp||{};o.qs=e.qs||{};o.sims=Array.isArray(e.sims)?e.sims:[];o.days=e.days||{};}return o;}
+function normE(e){const o=JSON.parse(JSON.stringify(EDEF));if(e&&typeof e==="object"){Object.assign(o,e);o.tp=e.tp||{};o.qs=e.qs||{};o.sims=Array.isArray(e.sims)?e.sims:[];o.days=e.days||{};o.hist=Array.isArray(e.hist)?e.hist:[];o.goalsDone=Array.isArray(e.goalsDone)?e.goalsDone:[];}return o;}
 function norm(r){const o={ver:2,savedAt:null,school:null,exams:{},sum:null};if(r&&typeof r==="object"){o.savedAt=r.savedAt||null;o.school=r.school||null;}EXORD.forEach(k=>o.exams[k]=normE(r&&r.exams&&r.exams[k]));return o;}
 function migrate(old){/* da «Fisica» (fisica-v1) alla piattaforma */const r=norm(null);r.school=old.school||null;r.exams.fis=normE(old);r.savedAt=old.savedAt||null;return r;}
 function load(){let r=null;try{r=JSON.parse(localStorage.getItem(KEY)||"null");}catch(e){}
@@ -2775,6 +2864,9 @@ function summary(){const nt=nextTopic(),ls=S.sims[S.sims.length-1];return{t:enam
   week:Object.entries(S.days).filter(([d])=>daysTo(d)>-7).reduce((a,[,n])=>a+n,0),studied:TOPICS.filter(t=>(S.tp[t.id]||{}).st).length,topics:TOPICS.length};}
 function summaryAll(){const o={date:new Date().toISOString(),exams:{}};EXORD.forEach(k=>o.exams[k]=withExam(k,summary));return o;}
 
+/* conferma senza finestre di dialogo: il primo tocco chiede conferma sul pulsante stesso, il secondo (entro 5 s) esegue */
+function armed(b,msg){if(b.dataset.armed){delete b.dataset.armed;clearTimeout(b._t);if(b._txt!=null)b.textContent=b._txt;return true;}
+  b._txt=b.textContent;b.dataset.armed=1;b.textContent=msg;b.classList.add("armed");b._t=setTimeout(()=>{delete b.dataset.armed;b.textContent=b._txt;b.classList.remove("armed");},5000);return false;}
 /* ================= QUIZ ================= */
 const nrm=s=>String(s||"").toUpperCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/\s+/g,"").replace(/,/g,".").replace(/−/g,"-");
 const cpOK=(q,v)=>q.a.map(nrm).includes(nrm(v));
@@ -2786,16 +2878,16 @@ function answerImmediate(box,q,val){if(box.dataset.done)return;box.dataset.done=
   if(q.k==="m"){ok=val===q.a;box.querySelectorAll(".opt").forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add("right");else if(j===val)b.classList.add("wrong");});}
   else{const inp=box.querySelector("input");ok=val!=null&&cpOK(q,val);inp.disabled=true;inp.classList.add(ok?"right":"wrong");box.querySelectorAll(".cpl button").forEach(b=>b.disabled=true);}
   box.querySelector(".solw").innerHTML=`<div class="sol">${ok?'<b class="okc">✓ Giusto.</b>':'<b class="koc">✗ '+(val==null?"Saltata.":"Sbagliato.")+'</b> Risposta: <b>'+esc(q.k==="m"?L5[q.a]+") "+q.o[q.a]:q.a[0])+"</b>."} ${esc(q.s||"")}</div>`;
-  rec(q,ok);save();return ok;}
+  rec(q,ok);try{logAns(box.dataset.ctx,q,val,ok);}catch(e){}save();return ok;}
 
 /* ================= NAVIGAZIONE ================= */
 const PLAT=[["home","🩺","Semestre filtro"],["regole","🎓","Regole e UPO"],["fonti","🔗","Fonti"],["prog","📈","Progressi e copie"],["installa","📲","Installa su un altro iPad"]];
 function exSects(){const s=[["","🏠","Percorso"]];if(PT.length)s.push(["test","🧭","Test d'ingresso"]);s.push(["arg","📚",E.ready?"Argomenti":"Programma"]);
-  if(QB.length){s.push(["es","✏️","Esercizi"]);s.push(["sim","⏱️","Simulazione"]);}if(TOPICS.some(t=>t.form))s.push(["form",E.formLab?"📌":"📐",E.formT||"Formulario"]);s.push(["info","📜","Storia e syllabus"]);return s;}
+  if(QB.length){s.push(["es","✏️","Esercizi"]);s.push(["sim","⏱️","Simulazione"]);s.push(["storico","🗂️","Errori e storico"]);}if(TOPICS.some(t=>t.form))s.push(["form",E.formLab?"📌":"📐",E.formT||"Formulario"]);s.push(["info","📜","Storia e syllabus"]);return s;}
 let view="home",curT=null,PR=null,SIMV=null,simTimer=null,PTA=null,argU=null;
 function route(){const h=decodeURIComponent((location.hash||"").slice(1));const p=h.split("/");
   if(EXAMS[p[0]]){if(p[0]!==EX){useExam(p[0]);PR=null;SIMV=null;PTA=null;}
-    if(p[1]==="t"&&TP[p[2]]){view="arg";curT=p[2];}else{curT=null;view=exSects().some(s=>s[0]===(p[1]||""))?"ex:"+(p[1]||""):"ex:";}}
+    HID=p[1]==="storico"&&p[2]?p[2]:null;if(p[1]==="t"&&TP[p[2]]){view="arg";curT=p[2];}else{curT=null;view=exSects().some(s=>s[0]===(p[1]||""))?"ex:"+(p[1]||""):"ex:";}}
   else{curT=null;view=PLAT.some(s=>s[0]===h)?h:"home";}render();}
 function go(h){if(location.hash!=="#"+h)location.hash=h;else route();}
 const exView=()=>view.startsWith("ex:")||view==="arg";
@@ -2804,7 +2896,7 @@ function side(){const inEx=exView();let o=PLAT.map(([k,i,t])=>`<button data-go="
   $("side").innerHTML=o;}
 function render(){RUN.clear();clearInterval(simTimer);side();const m=$("main");const v=view;
   let h;if(v==="home")h=vHub();else if(v==="regole")h=vRegole();else if(v==="fonti")h=vFonti();else if(v==="prog")h=vProg();else if(v==="installa")h=vInstalla();
-  else if(curT)h=vTopic(curT);else h=({"ex:":vHome,"ex:test":vTest,"ex:arg":vArg,"ex:es":vEs,"ex:sim":vSim,"ex:form":vForm,"ex:info":vInfo}[v]||vHome)();
+  else if(curT)h=vTopic(curT);else h=({"ex:":vHome,"ex:test":vTest,"ex:arg":vArg,"ex:es":vEs,"ex:sim":vSim,"ex:form":vForm,"ex:info":vInfo,"ex:storico":vStorico}[v]||vHome)();
   m.innerHTML=h+'<p class="saved" id="fzSaved"></p>';paintSaved();bind();window.scrollTo(0,0);}
 const exHead=()=>`<p class="crumb"><button class="btn sm" data-go="home">‹ Semestre filtro</button> <span class="lbl">${E.ic} ${esc(E.t)}</span></p>`;
 
@@ -2827,6 +2919,7 @@ function vHome(){const ov=overall(),nt=nextTopic(),ls=S.sims[S.sims.length-1],t=
   let o=exHead()+`<h1>${E.ic} ${esc(E.t)}</h1><p class="sub">Programma ministeriale 2026/27 (syllabus MUR, 6 CFU) · ${UNITS.length} unità · ${TOPICS.length} argomenti${QB.length?` · ${QB.length} esercizi`:""}.</p>`;
   if(!E.ready)o+=`<div class="note">🚧 <b>In costruzione.</b> Per ora trovi il programma ufficiale completo, diviso in unità e argomenti, con l'autovalutazione (segna quanto conosci ogni argomento) e il piano di studio. Spiegazioni, animazioni, esercizi e simulazioni arriveranno con lo stesso schema di Fisica.</div>`;
   o+=`<div class="kpi"><div><b>${TOPICS.filter(x=>(S.tp[x.id]||{}).st).length}/${TOPICS.length}</b><span>argomenti studiati</span></div><div><b>${ov}%</b><span>preparazione</span></div>${QB.length?`<div><b>${ls?F2(ls.pts,1):"—"}</b><span>ultima simulazione (su 31)</span></div>`:""}</div>`;
+  if(E.ready&&(S.hist.length||S.goal))o+=goalHTML(true);
   if(PT.length&&!S.pt)o+=`<div class="card" style="border-color:var(--accent)"><h3>🧭 Inizia da qui: test d'ingresso</h3><p class="lead" style="margin:0 0 6px">${PT.length} domande, circa 10 minuti. Serve a capire da quale base parti e a costruire il piano di studio su misura fino al 10 dicembre.</p><div class="btns"><button class="btn pri" data-go="${EX}/test">Fai il test d'ingresso</button></div></div>`;
   o+=`<div class="grid"><div class="card"><h3>📊 Preparazione</h3><div class="hero"><div class="ring" style="--p:${ov}"><b>${ov}%</b></div><div class="lbl">Media pesata delle unità, con il peso che hanno nella prova (31 domande). ${E.ready?"Sale studiando gli argomenti e rispondendo bene agli esercizi.":"Per ora si basa sulla tua autovalutazione."}${S.pt?`<br>Test d'ingresso: <b>${S.pt.score}/${PT.length}</b> · livello <b>${S.pt.lev}</b>.`:""}</div></div></div>`;
   o+=`<div class="card"><h3>🎯 Oggi ti consiglio</h3>${nt?`<div class="row"><span class="ubadge" style="--uc:var(--${nt.u.replace(/^[cb]/,"u")})">${UN[nt.u].ic}</span><div class="grow"><b>${esc(nt.t)}</b><small>${esc(UN[nt.u].t)} · ${stLab(tScore(nt.id))[0]}</small></div></div><div class="btns"><button class="btn pri" data-go="${EX}/t/${nt.id}">${E.ready?"Studia l'argomento":"Apri il programma"}</button>${hasQ(nt.id)?`<button class="btn" data-pr="t:${nt.id}">Solo esercizi</button>`:""}</div>`:`<p class="empty">Tutti gli argomenti sono padroneggiati: fai simulazioni complete.</p>`}</div></div>`;
@@ -2848,7 +2941,7 @@ function ptReview(p){if(!p.ans)return `<div class="card"><h3>🔍 Errori e perch
   return `<div class="card"><h3>🔍 Errori e perché</h3>${bad.length?`<p style="margin:0 0 10px">${bad.length-nb?`<b>${bad.length-nb}</b> ${bad.length-nb===1?"risposta sbagliata":"risposte sbagliate"}`:""}${bad.length-nb&&nb?" e ":""}${nb?`<b>${nb}</b> senza risposta`:""}. Per ognuna trovi il ragionamento che porta all'errore, la risposta giusta e l'argomento da ripassare.</p>
    ${tps.length?`<p class="lbl" style="margin:0 0 10px">Da ripassare per primi: ${tps.map(t=>`<button class="lnk" data-go="${EX}/t/${t}">${esc(TP[t].t)}</button>`).join(" · ")}</p>`:""}${bad.map(x=>card(x)).join("")}`:`<p style="margin:0">Nessun errore: ottima base di partenza! Le spiegazioni delle risposte sono qui sotto.</p>`}
    ${good.length?`<details class="ptgood"><summary>✓ Risposte giuste (${good.length}): rivedi perché</summary>${good.map(x=>card(x)).join("")}</details>`:""}</div>`;}
-  PTA=PTA||{a:{},school:Rt.school};
+  PTA=PTA||(S.ptDraft&&S.ptDraft.a?{a:Object.assign({},S.ptDraft.a),school:S.ptDraft.school||Rt.school}:{a:{},school:Rt.school});
   return head+`<h1>🧭 Test d'ingresso · ${esc(ename(EX))}</h1><p class="sub">${PT.length} domande di livello scuola superiore, 2 per ogni unità. Non conta per il voto: serve a capire da dove partire. Rispondi d'istinto; se non sai, lascia vuoto.</p>
   <div class="card"><h3>Che scuola superiore hai fatto?</h3><div class="segc" id="ptSchool">${SCHOOLS.map(s=>`<button type="button" class="${PTA.school===s?"on":""}">${s}</button>`).join("")}</div></div>
   <div class="card">${PT.map((q,i)=>`<div class="q" data-pt="${i}"><div class="qh"><span class="qn">${i+1}.</span><div class="qt">${esc(q.q)} <span class="pill" style="font-size:11px">${UN[q.u].ic} ${esc(UN[q.u].t)}</span></div></div><div class="opts">${q.o.map((o,j)=>`<button class="opt${PTA.a[i]===j?" sel":""}" type="button" data-o="${j}"><i>${L5[j]}</i><span>${esc(o)}</span></button>`).join("")}</div></div>`).join("")}
@@ -2880,6 +2973,7 @@ function pick(arr,n){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=M
 function startPR(mode){let list,lab;
   if(mode.startsWith("t:")){const id=mode.slice(2);list=pick(QB.filter(q=>q.t===id),10);lab=TP[id].t;}
   else if(mode.startsWith("u:")){const u=mode.slice(2);list=pick(QB.filter(q=>q.u===u),10);lab=UN[u].t;}
+  else if(mode.startsWith("et:")){const t=mode.slice(3),w=QB.filter(q=>q.t===t&&S.qs[q.id]&&S.qs[q.id].last===0);list=w.concat(pick(QB.filter(q=>q.t===t&&!w.includes(q)),Math.max(0,6-w.length)));lab="Errori di: "+TP[t].t;}
   else if(mode==="err"){list=pick(QB.filter(q=>S.qs[q.id]&&S.qs[q.id].last===0),10);lab="Ripasso degli errori";}
   else if(mode==="weak"){const w=TOPICS.filter(t=>hasQ(t.id)).sort((a,b)=>tScore(a.id)-tScore(b.id)).slice(0,5).map(t=>t.id);list=pick(QB.filter(q=>w.includes(q.t)),10);lab="Punti deboli";}
   else{list=pick(QB,10);lab="Misto";}
@@ -2898,7 +2992,7 @@ function simLeft(){return S.run?Math.max(0,S.run.start+SIM_MIN*60e3-Date.now()):
 function grade(run){let ok=0,ko=0,om=0;const per={};run.q.forEach((id,i)=>{const q=QI[id],v=run.a[i];if(!q)return;const u=q.u;per[u]=per[u]||[0,0];per[u][1]++;
   if(v==null||v===""){om++;return;}const r=q.k==="m"?v===q.a:cpOK(q,v);if(r){ok++;per[u][0]++;}else ko++;});return{ok,ko,om,pts:Math.round((ok-.1*ko)*10)/10,per};}
 function finishSim(auto){const r=S.run;if(!r)return;const g=grade(r);r.q.forEach((id,i)=>{const q=QI[id],v=r.a[i];if(q&&v!=null&&v!=="")rec(q,q.k==="m"?v===q.a:cpOK(q,v));});
-  S.sims.push({date:new Date().toISOString(),pts:g.pts,ok:g.ok,ko:g.ko,om:g.om,per:g.per,q:r.q,a:r.a,min:Math.round((Date.now()-r.start)/60e3)});S.run=null;save();SIMV=S.sims.length-1;if(auto)toast("Tempo scaduto: prova consegnata");render();}
+  S.sims.push({date:new Date().toISOString(),pts:g.pts,ok:g.ok,ko:g.ko,om:g.om,per:g.per,q:r.q,a:r.a,min:Math.round((Date.now()-r.start)/60e3)});try{logSim(r,g);}catch(e){}S.run=null;S.goal&&S.goal.t.every(goalOK)||ensureGoal();save();SIMV=S.sims.length-1;if(auto)toast("Tempo scaduto: prova consegnata");render();}
 function voto(p){return p>30?"30 e lode":p>=18?Math.min(30,Math.round(p))+"/30":"non superato";}
 function vSim(){const h=exHead();
   if(S.run){if(simLeft()<=0){setTimeout(()=>finishSim(true),0);return "<p>Consegna…</p>";}const r=S.run;
@@ -2997,13 +3091,14 @@ function bind(){if(curT){const t=TP[curT];if(t.anim)mountAnim($("animBox"),t.ani
 document.addEventListener("click",e=>{
   const g=e.target.closest("[data-go]");if(g){if(g.dataset.u)argU=g.dataset.u;if(g.closest("#side")){PR=null;SIMV=null;}go(g.dataset.go);return;}
   const pr=e.target.closest("[data-pr]");if(pr){startPR(pr.dataset.pr);return;}
+  const hs=e.target.closest("[data-hsim]");if(hs){SIMV=+hs.dataset.hsim;go(EX+"/sim");return;}
   const sv=e.target.closest("[data-simv]");if(sv){SIMV=+sv.dataset.simv;render();return;}
   const se=e.target.closest("#selfEv button");if(se&&curT){const s=S.tp[curT]||{};s.self=+se.dataset.v;S.tp[curT]=s;save();se.parentNode.querySelectorAll("button").forEach(b=>b.classList.toggle("on",b===se));toast("Autovalutazione salvata");side();const ts=$("tSub");if(ts)ts.textContent=stLab(tScore(curT))[0]+" · "+tScore(curT)+"%";return;}
   const ps=e.target.closest("#ptSchool button");if(ps){PTA.school=ps.textContent;ps.parentNode.querySelectorAll("button").forEach(b=>b.classList.toggle("on",b===ps));return;}
-  const pq=e.target.closest("[data-pt] .opt");if(pq){const i=+pq.closest("[data-pt]").dataset.pt,j=+pq.dataset.o;PTA.a[i]=PTA.a[i]===j?undefined:j;pq.parentNode.querySelectorAll(".opt").forEach((b,k)=>b.classList.toggle("sel",PTA.a[i]===k));return;}
+  const pq=e.target.closest("[data-pt] .opt");if(pq){const i=+pq.closest("[data-pt]").dataset.pt,j=+pq.dataset.o;PTA.a[i]=PTA.a[i]===j?undefined:j;pq.parentNode.querySelectorAll(".opt").forEach((b,k)=>b.classList.toggle("sel",PTA.a[i]===k));S.ptDraft={a:PTA.a,school:PTA.school,ts:new Date().toISOString()};save();return;}
   if(e.target.closest("#ptDone")){const unit={};let sc=0;PT.forEach((q,i)=>{unit[q.u]=unit[q.u]||[0,2];if(PTA.a[i]===q.a){unit[q.u][0]++;sc++;}});const r=sc/PT.length;
-    S.pt={date:today(),score:sc,unit,lev:r>=.78?"avanzato":r>=.43?"intermedio":"base",ans:PT.map((q,i)=>PTA.a[i]==null?null:q.o[PTA.a[i]])};if(PTA.school)Rt.school=PTA.school;PTA=null;save();render();toast("Test salvato: piano di studio aggiornato");return;}
-  if(e.target.closest("#ptRedo")){PTA={a:{},school:Rt.school};render();return;}
+    const lev=r>=.78?"avanzato":r>=.43?"intermedio":"base";S.pt={date:today(),score:sc,unit,lev,ans:PT.map((q,i)=>PTA.a[i]==null?null:q.o[PTA.a[i]])};try{logPT(sc,lev);}catch(e){}S.ptDraft=null;ensureGoal();if(PTA.school)Rt.school=PTA.school;PTA=null;save();render();toast("Test salvato: piano di studio aggiornato");return;}
+  if(e.target.closest("#ptRedo")){PTA={a:{},school:Rt.school};S.ptDraft=null;render();return;}
   const op=e.target.closest('.q[data-ctx] .opt');if(op){const box=op.closest(".q"),q=QI[box.dataset.q];const ok=answerImmediate(box,q,+op.dataset.o);afterPR(box,ok);return;}
   const ck=e.target.closest('.q[data-ctx] [data-chk]');if(ck){const box=ck.closest(".q"),v=box.querySelector("input").value.trim();if(!v){toast("Scrivi la risposta o tocca «Non so»");return;}const ok=answerImmediate(box,QI[box.dataset.q],v);afterPR(box,ok);return;}
   const sk=e.target.closest('.q[data-ctx] [data-skip]');if(sk){const box=sk.closest(".q");const ok=answerImmediate(box,QI[box.dataset.q],null);afterPR(box,ok);return;}
@@ -3013,9 +3108,9 @@ document.addEventListener("click",e=>{
   if(e.target.closest("#simBack")){SIMV=null;render();return;}
   if(e.target.closest("#cpUrl")){try{navigator.clipboard.writeText(APP_URL).then(()=>toast("Indirizzo copiato"),()=>toast(APP_URL));}catch(_){toast(APP_URL);}return;}
   if(e.target.closest("#shUrl")){navigator.share({title:"Semestre filtro",text:"App per preparare gli esami del semestre filtro di Medicina",url:APP_URL}).catch(()=>{});return;}
-  if(e.target.closest("#simEnd")||e.target.closest("#simEnd2")){const n=S.run.q.filter((id,i)=>S.run.a[i]==null||S.run.a[i]==="").length;if(!confirm(n?`Ci sono ${n} risposte vuote. Consegnare comunque?`:"Consegnare la prova?"))return;finishSim(false);return;}
+  const sEnd=e.target.closest("#simEnd")||e.target.closest("#simEnd2");if(sEnd){const n=S.run.q.filter((id,i)=>S.run.a[i]==null||S.run.a[i]==="").length;if(!armed(sEnd,n?`Tocca di nuovo per consegnare (${n} vuote)`:"Tocca di nuovo per consegnare"))return;finishSim(false);return;}
   const so=e.target.closest("[data-si] .opt");if(so&&S.run){const i=+so.closest("[data-si]").dataset.si,j=+so.dataset.o;S.run.a[i]=S.run.a[i]===j?null:j;so.parentNode.querySelectorAll(".opt").forEach((b,k)=>b.classList.toggle("sel",S.run.a[i]===k));save();return;}
-  if(e.target.closest("#fzReset")){if(confirm("Cancellare test, esercizi, autovalutazioni e simulazioni di tutti e tre gli esami? L’operazione non si può annullare, salvo ripristinare una copia.")){Rt=norm(null);useExam(EX);save();render();toast("Progressi azzerati");}return;}
+  const rz=e.target.closest("#fzReset");if(rz){if(armed(rz,"Tocca di nuovo per cancellare tutto")){idb("readwrite","sf-prima-del-reset-"+Date.now(),JSON.stringify(Rt)).catch(()=>{});Rt=norm(null);useExam(EX);save();render();toast("Progressi azzerati");}return;}
 });
 function afterPR(box,ok){if(box.dataset.ctx!=="pr")return;if(ok)PR.ok++;const n=$("prNext");if(n){n.hidden=false;n.focus();}}
 let svT2=null;
@@ -3023,10 +3118,12 @@ document.addEventListener("input",e=>{const i=e.target.closest("[data-si] input"
 document.addEventListener("keydown",e=>{if(e.key==="Enter"){const i=e.target.closest('.q[data-ctx] input');if(i){e.preventDefault();i.closest(".q").querySelector("[data-chk]").click();}}});
 document.addEventListener("change",e=>{if(e.target.id!=="fzImp")return;const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{const o=JSON.parse(rd.result);let r=null;
   if(o&&o.semestre)r=norm(o.semestre);else if(o&&o.exams)r=norm(o);else if(o&&o.fisica)r=migrate(o.fisica);else if(o&&o.tp&&o.qs)r=migrate(o);if(!r)throw 0;
-  if(!confirm("Sostituire i progressi del semestre filtro con quelli della copia?"))return;Rt=r;useExam(EX);save();render();toast("Progressi ripristinati");}catch(_){toast("Nella copia non ci sono dati del semestre filtro");}};rd.readAsText(f);e.target.value="";});
+  idb("readwrite","sf-prima-del-ripristino",JSON.stringify(Rt)).catch(()=>{});Rt=r;histMigrate();useExam(EX);save();render();toast("Progressi ripristinati");}catch(_){toast("Nella copia non ci sono dati del semestre filtro");}};rd.readAsText(f);e.target.value="";});
 window.addEventListener("hashchange",route);
 window.addEventListener("storage",e=>{if(e.key===KEY&&e.newValue){Rt=norm(JSON.parse(e.newValue));useExam(EX);if(!S.run)render();}});
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden")window.__flush();else if(S.run&&view==="ex:sim")tickSim();});
+try{histMigrate();}catch(e){}try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist().catch(()=>{});}catch(e){}
+window.addEventListener("pagehide",()=>window.__flush());
 route();recover();if(!Rt.sum){Rt.sum=summaryAll();try{localStorage.setItem(KEY,JSON.stringify(Rt));}catch(e){}}
 
 })();
@@ -3063,7 +3160,7 @@ route();recover();if(!Rt.sum){Rt.sum=summaryAll();try{localStorage.setItem(KEY,J
     kvDb().then(function(db){return new Promise(function(res){var tx=db.transaction("kv","readwrite"),s=tx.objectStore("kv"),k="sf-snap-"+today();s.put(JSON.stringify(o),k);
       var q=s.getAllKeys();q.onsuccess=function(){var ks=q.result.map(String).filter(function(x){return x.indexOf("sf-snap-")===0;});if(ks.indexOf(k)<0)ks.push(k);ks.sort();ks.slice(0,Math.max(0,ks.length-30)).forEach(function(x){s.delete(x);});};
       tx.oncomplete=function(){try{localStorage.setItem("sf-lastSnap",new Date().toISOString());}catch(e){}res();paint();};tx.onerror=function(){res();};});}).catch(function(){}).then(function(){snapBusy=false;});}
-  function exportAll(){try{if(typeof window.__flush==="function")window.__flush();}catch(e){}var o=lsJ(KEY);if(!o){alert("Ancora nessun dato da salvare");return;}
+  function exportAll(){try{if(typeof window.__flush==="function")window.__flush();}catch(e){}var o=lsJ(KEY);if(!o){var b0=document.querySelector(".updbar .u-st");if(b0)b0.textContent="Ancora nessun dato da salvare";return;}
     var data=JSON.stringify({app:"semestre-filtro",semestre:o},null,1),fn="semestre-filtro-copia-"+today()+".json";
     var done=function(){try{localStorage.setItem("sf-lastBackup",new Date().toISOString());}catch(e){}paint();};
     try{var f=new File([data],fn,{type:"application/json"});if(navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f],title:"Copia Semestre filtro"}).then(done,function(){});return;}}catch(e){}
