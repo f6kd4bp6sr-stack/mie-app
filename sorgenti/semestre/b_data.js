@@ -179,7 +179,7 @@ const FIS_QB=[
 {t:"u1d",k:"m",q:"In quale unità si misura una pressione espressa in unità fondamentali?",o:["kg·m/s²","kg/(m·s²)","kg·m²/s²","kg/m³","kg·m²/s³"],a:1,s:"Pa = N/m² = (kg·m/s²)/m² = kg/(m·s²)."},
 /* U2 */
 {t:"u2a",k:"m",q:"Un'auto parte da ferma con accelerazione costante di 2 m/s². Dopo 5 s la sua velocità è:",o:["2 m/s","5 m/s","7 m/s","10 m/s","25 m/s"],a:3,s:"v = a·t = 2·5 = 10 m/s."},
-{t:"u2a",k:"m",q:"Nella situazione precedente (partenza da ferma, a = 2 m/s², 5 s), lo spazio percorso è:",o:["10 m","20 m","25 m","50 m","100 m"],a:2,s:"s = ½·a·t² = ½·2·25 = 25 m."},
+{t:"u2a",k:"m",q:"Un'auto parte da ferma con a = 2 m/s². In 5 s percorre:",o:["10 m","20 m","25 m","50 m","100 m"],a:2,s:"s = ½·a·t² = ½·2·25 = 25 m."},
 {t:"u2a",k:"m",q:"Un oggetto viene lasciato cadere da 20 m (g = 10 m/s², aria trascurabile). Il tempo di caduta è:",o:["1 s","2 s","4 s","√2 s","10 s"],a:1,s:"t = √(2h/g) = √(40/10) = 2 s."},
 {t:"u2d",k:"m",q:"Con quale velocità tocca terra un oggetto lasciato cadere da 20 m? (g = 10 m/s²)",o:["10 m/s","14 m/s","20 m/s","200 m/s","40 m/s"],a:2,s:"v = √(2gh) = √400 = 20 m/s."},
 {t:"u2c",k:"c",q:"In assenza di forze risultanti, un corpo in movimento prosegue di moto rettilineo ____ .",a:["UNIFORME"],s:"È il primo principio della dinamica (principio d'inerzia)."},
@@ -330,7 +330,33 @@ const FIS_QB=[
 {t:"u7a",k:"m",q:"Quale di queste è una radiazione ionizzante?",o:["onde radio","microonde","infrarosso","raggi X","luce rossa"],a:3,s:"I fotoni X hanno energia (keV) molto superiore a quella di ionizzazione degli atomi."},
 {t:"u7e",k:"c",q:"Atomi dello stesso elemento con diverso numero di neutroni si chiamano ____ .",a:["ISOTOPI"],s:"Stesso Z, diverso A."},
 {t:"u7a",k:"m",q:"In un'onda elettromagnetica i campi elettrico e magnetico sono:",o:["paralleli tra loro","perpendicolari tra loro e alla direzione di propagazione","entrambi nulli","paralleli alla direzione di propagazione","solo elettrici"],a:1,s:"È un'onda trasversale; è uscito al 1° appello 2025."},
-{t:"u7c",k:"m",q:"Con una lente convergente, un oggetto posto tra f e 2f dà un'immagine:",o:["virtuale","reale, capovolta e ingrandita","reale e rimpicciolita","diritta","nessuna immagine"],a:1,s:"È il caso del proiettore; è uscito al 1° appello 2025."}
+{t:"u7c",k:"m",q:"Con una lente convergente, un oggetto posto tra f e 2f dà un'immagine:",o:["virtuale","reale, capovolta e ingrandita","reale e rimpicciolita","diritta","nessuna immagine"],a:1,s:"È il caso del proiettore; è uscito al 1° appello 2025."},
+/* ---- tipo 2025: stessi argomenti degli appelli 2025, numeri diversi ---- */
+{t:"u1c",k:"m",q:"Una nave percorre 8 km verso nord, 6 km verso est e 16 km verso sud. Il modulo dello spostamento risultante è:",o:["30 km","10 km","14 km","2 km","22 km"],a:1,s:"Nord-sud: 8 − 16 = 8 km a sud; est 6 km. √(8² + 6²) = 10 km (tipo 2025)."},
+{t:"u1b",k:"c",q:"Un'accelerazione di 250 cm/s² vale ____ m/s².",a:["2.5","2,5"],s:"Si divide per 100 (tipo 2025)."},
+{t:"u1b",k:"c",q:"Una concentrazione di 3 µg/mm³ equivale a ____ g per litro.",a:["3","TRE"],s:"1 mm³ = 10⁻⁶ L e 1 µg = 10⁻⁶ g: 3·10⁻⁶ g / 10⁻⁶ L = 3 g/L (tipo 2025)."},
+{t:"u1b",k:"c",q:"1 Pa = 10^x nPa: l'esponente x vale ____.",a:["9","NOVE"],s:"1 nPa = 10⁻⁹ Pa (tipo 2025)."},
+{t:"u2a",k:"c",q:"Un sasso cade da fermo da 20 m. A che altezza dal suolo (in m) la sua velocità è metà di quella con cui arriva a terra? ____",a:["15","QUINDICI"],s:"v² ∝ spazio percorso: metà velocità dopo 1/4 della caduta, cioè 5 m; altezza 20 − 5 = 15 m (tipo 2025)."},
+{t:"u2f",k:"c",q:"Una pallina di 10 g a 3 m/s urta una pallina ferma di 20 g e restano attaccate. La velocità finale è ____ m/s.",a:["1","UNO"],s:"0,01·3 = 0,03·v → v = 1 m/s (tipo 2025)."},
+{t:"u3a",k:"c",q:"Pressione relativa (manometrica) sul fondo di una vasca d'acqua profonda 3 m, con g = 10 m/s²: ____ Pa.",a:["30000","3*10^4","3·10⁴"],s:"ρgh = 1000·10·3 (tipo 2025)."},
+{t:"u3b",k:"m",q:"Una zattera di legno (densità 0,6 g/cm³), quadrata di lato 2 m e spessa 50 cm, galleggia in acqua. Di quanto è immersa?",o:["20 cm","30 cm","40 cm","50 cm","10 cm"],a:1,s:"Frazione immersa = 0,6/1 = 60% di 50 cm (tipo 2025)."},
+{t:"u3b",k:"m",q:"Sulla stessa zattera (lato 2 m, spessore 50 cm, legno 600 kg/m³) si carica una massa di 400 kg. L'altezza immersa diventa:",o:["30 cm","35 cm","40 cm","45 cm","50 cm"],a:2,s:"Massa totale 1200 + 400 = 1600 kg → volume immerso 1,6 m³ → 1,6/4 m² = 0,4 m (tipo 2025)."},
+{t:"u3b",k:"c",q:"Carico massimo (in N, g = 10) che la zattera di lato 2 m, spessa 50 cm e di densità 600 kg/m³ può portare senza affondare: ____",a:["8000","8.000"],s:"Spinta massima 1000·2·10 = 20 000 N; peso zattera 12 000 N; restano 8000 N (tipo 2025)."},
+{t:"u3c",k:"c",q:"In un condotto orizzontale scorrono 300 cm³/s d'acqua; la sezione passa da 1 cm² a 3 cm². La differenza di pressione tra le due sezioni è ____ Pa.",a:["4000","4.000"],s:"v = 3 m/s e 1 m/s; Δp = ½·1000·(9 − 1) = 4000 Pa (tipo 2025)."},
+{t:"u4a",k:"m",q:"Un'onda sonora NON trasporta:",o:["energia","quantità di moto","massa","informazione","potenza"],a:2,s:"Le particelle oscillano attorno alla loro posizione (tipo 2025)."},
+{t:"u4b",k:"m",q:"Se la frequenza di un'onda sonora raddoppia mantenendo la stessa ampiezza, la potenza trasportata:",o:["raddoppia","resta uguale","aumenta di un fattore 4","si dimezza","aumenta di un fattore 8"],a:2,s:"L'energia di un'onda è proporzionale a ω²A² (tipo 2025)."},
+{t:"u4c",k:"c",q:"La sirena di un'ambulanza che si avvicina si sente il 3% più acuta. Con il suono a circa 1200 km/h, l'ambulanza va a circa ____ km/h.",a:["36","35"],s:"Per velocità piccole Δf/f ≈ v/v_suono: 0,03·1200 = 36 km/h (con la formula esatta circa 35) (tipo 2025)."},
+{t:"u4d",k:"c",q:"Un pendolo reale smette di oscillare perché agiscono forze ____ (come l'attrito con l'aria).",a:["DISSIPATIVE","DISSIPATIVA","NONCONSERVATIVE"],s:"L'energia meccanica diventa calore (tipo 2025)."},
+{t:"u5b",k:"m",q:"Se la temperatura assoluta di un gas perfetto triplica, l'energia cinetica media delle molecole:",o:["resta uguale","triplica","aumenta di 9 volte","aumenta di √3 volte","si riduce a un terzo"],a:1,s:"Ec media = (3/2)kT (tipo 2025)."},
+{t:"u5b",k:"m",q:"Rispetto al gas perfetto, in un gas reale (approfondimento):",o:["le molecole non si urtano","il volume proprio delle molecole (covolume) non è trascurabile","la pressione è sempre nulla","la temperatura non conta","non esiste energia interna"],a:1,s:"Equazione di van der Waals: covolume e attrazioni tra molecole (tipo 2025)."},
+{t:"u5c",k:"c",q:"In una trasformazione isocora il lavoro è nullo e la variazione di energia interna è uguale al ____ scambiato.",a:["CALORE"],s:"ΔU = Q (tipo 2025)."},
+{t:"u6a",k:"m",q:"Un conduttore isolato porta una carica di 10 nC. La differenza di potenziale tra due suoi punti qualsiasi è:",o:["0 V","2 V","10 V","dipende dalla distanza tra i punti","infinita"],a:0,s:"Un conduttore in equilibrio è tutto allo stesso potenziale (tipo 2025)."},
+{t:"u6b",k:"c",q:"Un elettrone accelerato da una d.d.p. di 2·10⁴ V acquista un'energia di ____ keV.",a:["20","VENTI"],s:"E = e·ΔV = 20 000 eV (tipo 2025)."},
+{t:"u6d",k:"m",q:"A 230 V, una lavatrice da 2300 W assorbe una corrente di:",o:["0,1 A","1 A","10 A","100 A","23 A"],a:2,s:"I = P/V = 2300/230 (tipo 2025)."},
+{t:"u6d",k:"c",q:"Due resistenze da 600 Ω in parallelo sono collegate in serie a una da 200 Ω. La resistenza equivalente è ____ Ω.",a:["500","CINQUECENTO"],s:"Parallelo 300 Ω + 200 Ω (tipo 2025)."},
+{t:"u7a",k:"c",q:"In un'onda elettromagnetica il campo elettrico e il campo magnetico sono tra loro ____.",a:["PERPENDICOLARI","ORTOGONALI"],s:"E entrambi perpendicolari alla direzione di propagazione (tipo 2025)."},
+{t:"u7a",k:"c",q:"L'energia di un fotone è direttamente proporzionale alla sua ____.",a:["FREQUENZA"],s:"E = h·f (tipo 2025)."},
+{t:"u7c",k:"c",q:"Con una lente convergente, un oggetto posto tra il fuoco e il doppio della distanza focale dà un'immagine ____ e ingrandita (reale/virtuale).",a:["REALE"],s:"E capovolta (tipo 2025)."}
 ];
 
 
