@@ -14,6 +14,7 @@ Le pagine pubblicate **non si modificano a mano**: si modificano questi sorgenti
 | `a_head.html` | intestazione della pagina e stile grafico (colori chiari e scuri) |
 | `b_data.js` | link `SRC` e **tutte le fonti** `SOURCES` (pagina «Fonti» e schede delle materie); **Fisica**: unità e CFU, 34 argomenti (spiegazioni, formule, trappole), banca domande, test d'ingresso, date, fonti |
 | `b3_spiegazioni_fis.js` | **Fisica**: spiegazione estesa, esempi svolti e collegamento medico per i 34 argomenti (`FIS_EXPL`), domande aggiuntive (ogni argomento ne ha almeno 6) e mappa del syllabus voce per voce (`FIS_MAP`) |
+| `b6_fis_esercizi.js` | **Fisica, approfondimento**: un problema guidato in più per argomento (`FIS_PROB`, contesti medici) e 132 esercizi significativi; ogni argomento ha ora almeno 3 esempi svolti e 9 domande |
 | `b2_other.js` | **Chimica e Biologia**: unità, CFU, argomenti e voci del syllabus; registro `EXAMS` dei tre esami |
 | `b4_chimica.js` | **Chimica**: spiegazioni, esempi, formule, trappole, collegamenti medici (`CHI_EXPL`), banca domande `CHI_QB`, test d'ingresso `CHI_PT`, sintesi delle prove 2025 |
 | `b5_biologia.js` | **Biologia**: come sopra (`BIO_EXPL`, `BIO_QB`, `BIO_PT`); le «formule» sono schemi da ricordare |
