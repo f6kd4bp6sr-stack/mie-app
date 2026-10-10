@@ -1,47 +1,84 @@
-# Semestre filtro — file sorgente
+# Semestre filtro — file sorgente (versione finale, 10 ottobre 2026)
 
-App per preparare gli esami del semestre filtro di Medicina 2026/27 (UPO): Fisica, Chimica e Biologia complete (spiegazioni, esempi svolti, esercizi, test d'ingresso, simulazioni).
-Le pagine pubblicate **non si modificano a mano**: si modificano questi sorgenti e si rilancia la costruzione.
+App per iPad per preparare i tre esami del semestre filtro di Medicina 2026/27 (Università del Piemonte Orientale): **Fisica, Chimica e propedeutica biochimica, Biologia**. Segue i syllabus ufficiali MUR 2026/27 e il formato d'esame 2026: 21 domande a risposta multipla + 10 a completamento, 50 minuti, +1 / −0,1 / 0.
 
-## Dove finisce
-`semestre/` → https://f6kd4bp6sr-stack.github.io/mie-app/semestre/ — app **autonoma**, installabile su qualsiasi iPad (Safari → Condividi → Aggiungi alla schermata Home).
+## Provarla
+- **Indirizzo:** https://f6kd4bp6sr-stack.github.io/mie-app/semestre/
+- **Installarla su iPad:** aprire l'indirizzo con **Safari** → pulsante Condividi → «Aggiungi alla schermata Home» → Aggiungi.
+- Dopo il primo avvio funziona anche senza internet. Si aggiorna da sola quando viene pubblicata una nuova versione, ma mai durante una simulazione.
+- I progressi restano solo su quel dispositivo; per passarli a un altro iPad: «Salva copia su File / iCloud» → sull'altro iPad «Progressi e copie» → «Ripristina da una copia».
 
-È separata da Pianificazione e da Il mio mondo: memoria propria sul dispositivo (`semestre-v1` e database `semestre-filtro`), service worker proprio. I vecchi indirizzi `licenze/semestre.html` e `licenze/fisica.html` rimandano solo qui. Tra iPad diversi i progressi si passano con la copia su File / iCloud.
+## Che cosa contiene
+| | Fisica | Chimica | Biologia |
+|---|---|---|---|
+| Argomenti (dal syllabus ufficiale) | 34 | 21 | 29 |
+| Domande (multipla + completamento) | 374 | 149 | 156 |
+| Animazioni interattive | 34 (una per argomento) | 11 | 8 |
+| Test d'ingresso | 14 domande | 14 | 14 |
 
-## File
+Ogni argomento contiene:
+- **In breve**;
+- **Spiegazione**;
+- **Animazione**;
+- **Esempi svolti** passo per passo (in Fisica almeno 3, tra cui un problema guidato);
+- **Formule** (in Biologia: schemi da ricordare);
+- **Trappola d'esame**;
+- **In medicina**;
+- **Esercizi** con correzione e spiegazione.
+
+Per ogni esame ci sono anche:
+- **Percorso**: piano di studio e consiglio del giorno;
+- **Test d'ingresso** per partire dal livello giusto;
+- **Esercizi**: serie da 10, punti deboli, ripasso errori;
+- **Simulazione** 21 + 10 in 50 minuti, con timer che continua anche chiudendo l'app;
+- **Formulario** o schemi;
+- **Storia e syllabus**: cosa è uscito nel 2025, novità 2026 e fonti. In Fisica c'è anche la mappa del syllabus voce per voce.
+
+Pagine comuni:
+- **Regole e UPO**: date, graduatoria, recuperi, aggiornamenti datati;
+- **Fonti**: 30 link;
+- **Progressi e copie**;
+- **Installa su un altro iPad**, con codice QR.
+
+## File (in ordine di caricamento)
 | File | Contenuto |
 |---|---|
-| `a_head.html` | intestazione della pagina e stile grafico (colori chiari e scuri) |
-| `b_data.js` | link `SRC` e **tutte le fonti** `SOURCES` (pagina «Fonti» e schede delle materie); **Fisica**: unità e CFU, 34 argomenti (spiegazioni, formule, trappole), banca domande, test d'ingresso, date, fonti |
-| `b3_spiegazioni_fis.js` | **Fisica**: spiegazione estesa, esempi svolti e collegamento medico per i 34 argomenti (`FIS_EXPL`), domande aggiuntive (ogni argomento ne ha almeno 6) e mappa del syllabus voce per voce (`FIS_MAP`) |
-| `b6_fis_esercizi.js` | **Fisica, approfondimento**: un problema guidato in più per argomento (`FIS_PROB`, contesti medici) e 132 esercizi significativi; ogni argomento ha ora almeno 3 esempi svolti e 9 domande |
-| `b2_other.js` | **Chimica e Biologia**: unità, CFU, argomenti e voci del syllabus; registro `EXAMS` dei tre esami |
-| `b4_chimica.js` | **Chimica**: spiegazioni, esempi, formule, trappole, collegamenti medici (`CHI_EXPL`), banca domande `CHI_QB`, test d'ingresso `CHI_PT`, sintesi delle prove 2025 |
-| `b5_biologia.js` | **Biologia**: come sopra (`BIO_EXPL`, `BIO_QB`, `BIO_PT`); le «formule» sono schemi da ricordare |
-| `c_anim.js` | 25 animazioni interattive di Fisica (`AN.<nome>`), collegate agli argomenti con `anim:"<nome>"` |
-| `c3_anim_fis_extra.js` | 9 animazioni di Fisica aggiunte (estensive/intensive, potenze di 10, analisi dimensionale, urti, Laplace e capillarità, Carnot, trasmissione del calore, Coulomb, condensatore): ora ogni argomento di Fisica ha la sua |
-| `c2_anim_chi_bio.js` | 19 animazioni di Chimica (orbitali, Gibbs, Dalton, osmosi, cinetica, equilibrio, pH, tampone, pila, amminoacidi) e Biologia (membrana, Mendel, legata all'X, replicazione, traduzione, ciclo cellulare, mitosi, meiosi); Chimica usa anche `gas` di Fisica |
-| `d_app.js` | motore: navigazione, test, esercizi, simulazione 21+10 in 50 minuti, piano di studio, progressi, installazione |
-| `e_barra_sf.js` | aggiornamento automatico, copia giornaliera, copia su File / iCloud |
-| `qrcode.js` | libreria per il codice QR della pagina «Installa» (MIT, vedi `LICENSE-qrcode.txt`) |
-| `build.py` | costruisce tutto (serve `node` per il codice QR) |
+| `a_head.html` | Intestazione della pagina e stile grafico (temi chiaro e scuro, adatto a iPad e telefono). |
+| `b_data.js` | Date d'esame, link `SRC` e **tutte le fonti** `SOURCES`. Fisica: unità e CFU, 34 argomenti (in breve, formule, trappole), domande di base, test d'ingresso. |
+| `b3_spiegazioni_fis.js` | Fisica: spiegazioni, esempi svolti, collegamenti medici (`FIS_EXPL`), domande aggiuntive, mappa del syllabus (`FIS_MAP`). |
+| `b6_fis_esercizi.js` | Fisica, approfondimento: un problema guidato per argomento (`FIS_PROB`) e 132 esercizi significativi. |
+| `b2_other.js` | Chimica e Biologia: unità, CFU, argomenti e voci del syllabus. Registro `EXAMS` dei tre esami. |
+| `b4_chimica.js` | Chimica: contenuti (`CHI_EXPL`), domande `CHI_QB`, test d'ingresso `CHI_PT`, animazioni collegate, sintesi delle prove 2025. |
+| `b5_biologia.js` | Biologia: contenuti (`BIO_EXPL`), domande `BIO_QB`, test d'ingresso `BIO_PT`, animazioni collegate, sintesi delle prove 2025. |
+| `c_anim.js` | Motore delle animazioni (`mountAnim`) e 25 animazioni di Fisica. |
+| `c2_anim_chi_bio.js` | 19 animazioni di Chimica e Biologia. |
+| `c3_anim_fis_extra.js` | 9 animazioni di Fisica aggiuntive. |
+| `d_app.js` | Motore dell'app: navigazione, test, esercizi, simulazione, piano di studio, progressi, copie, installazione. |
+| `e_barra_sf.js` | Aggiornamento automatico, copia giornaliera sul dispositivo, copia su File / iCloud. |
+| `qrcode.js` | Libreria per il codice QR della pagina «Installa» (licenza MIT, vedi `LICENSE-qrcode.txt`). |
+| `icone/` | Icone dell'app (180, 192, 512 px). |
+| `build.py` | Costruisce l'app pubblicata nella cartella `semestre/`. |
 
 ## Costruire e pubblicare
+Dalla cartella principale del repository (servono Python 3 e Node.js):
 ```
 python3 sorgenti/semestre/build.py
 git add -A && git commit -m "Semestre filtro: …" && git push
 ```
-Il numero di versione nasce dal contenuto: se cambia qualcosa, gli iPad trovano la nuova versione al prossimo avvio e si aggiornano da soli (mai durante una simulazione).
+`build.py` produce `semestre/index.html` (un'unica pagina con tutto dentro), `sw.js` (funzionamento offline), `manifest.webmanifest`, `version.json` e copia le icone. Il numero di versione nasce dal contenuto: se cambia qualcosa, gli iPad trovano la nuova versione al prossimo avvio. GitHub Pages pubblica in pochi minuti.
+
+Le pagine pubblicate **non si modificano a mano**: si modificano questi sorgenti e si rilancia la costruzione.
 
 ## Aggiungere contenuti
-- **Domanda**: in `qb` dell'esame, `{t:"<argomento>",k:"m",q:"testo",o:[5 opzioni],a:<indice giusta>,s:"spiegazione"}` oppure completamento `{t:…,k:"c",q:"… ____ …",a:["RISPOSTA","VARIANTE"],s:…}`.
-- **Argomento**: `{id,u,t,breve:[…],form:[["formula","nota"]],trap:"…",anim:"<nome>"}`; spiegazione in un file a parte `{sp:[paragrafi],es:[{q,p:[passaggi],r}],med:"…"}`; per Chimica e Biologia oggi c'è solo `syl:[…]` (voci del syllabus).
-- Le opzioni delle domande a risposta multipla vengono rimescolate in modo stabile all'avvio: la risposta giusta si può scrivere in qualsiasi posizione.
-- Le domande segnate «tipo 2025» nella spiegazione riprendono gli argomenti degli appelli 2025 con numeri diversi.
-- **Rendere pronto un esame**: riempire `topics` con le spiegazioni, aggiungere almeno 31 domande in `qb` (con almeno 10 a completamento) e un test d'ingresso `pt`, poi mettere `ready:true` in `EXAMS`.
-- Per ogni unità `q` = domande nella simulazione (somma 31) e `cp` = di cui a completamento (somma 10).
+- **Domanda a risposta multipla:** `{t:"<argomento>",k:"m",q:"testo",o:[5 opzioni],a:<indice della giusta>,s:"spiegazione"}`.
+- **Domanda a completamento:** `{t:…,k:"c",q:"… ____ …",a:["RISPOSTA","VARIANTE"],s:…}`. Maiuscole, accenti e spazi non contano.
+- **Argomento:** `{id,u,t,breve:[…],form:[["formula","nota"]],trap:"…",anim:"<nome>",sp:[paragrafi],es:[{q,p:[passaggi],r}],med:"…"}`.
+- Le opzioni vengono rimescolate in modo stabile: la risposta giusta può stare in qualsiasi posizione. Ogni testo di domanda deve essere unico, perché da esso nasce l'identificativo che salva i progressi.
+- Per ogni unità, `q` è il numero di domande in simulazione (in tutto 31) e `cp` quante sono a completamento (in tutto 10).
+- Animazione nuova: `AN.<nome> = {h, c:[controlli], init(st,p), f(g,p,st,dt,W,H)}`. `f` disegna e restituisce il testo da mostrare sotto.
 
-## Fonti dei contenuti
-L'elenco completo con i link è in `SOURCES` (`b_data.js`) e nella pagina «🔗 Fonti» dell'app.
-Syllabus ufficiali MUR 2026/27 (D.M. 941/2026), pagina UPO sull'accesso a Medicina 2026/27, prove e analisi dei due appelli 2025. Dove le analisi commerciali e il testo ufficiale non coincidono, l'app segue il testo ufficiale.
-Nessun dato personale nel codice: test, risposte e progressi restano solo sul dispositivo.
+## Fonti e privacy
+- L'elenco completo con i link è in `SOURCES` e nella pagina «🔗 Fonti» dell'app.
+- Dove le analisi non ufficiali e i testi ufficiali (syllabus MUR, pagina UPO) non coincidono, l'app segue i testi ufficiali.
+- Spiegazioni ed esercizi sono scritti apposta per l'app.
+- Il codice non contiene dati personali: test, risposte e progressi restano solo sul dispositivo.

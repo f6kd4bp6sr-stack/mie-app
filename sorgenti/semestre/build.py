@@ -29,6 +29,8 @@ page = (rd(SRC + "a_head.html")
         + "<script>\n" + rd(SRC + "e_barra_sf.js") + "</script>\n</body>\n</html>\n")
 
 os.makedirs(APP, exist_ok=True)
+import shutil, glob
+for f in glob.glob(SRC + "icone/icon-*.png"): shutil.copyfile(f, APP + os.path.basename(f))   # icone dell'app (180, 192, 512 px)
 V = hashlib.sha1(page.replace("/*APPVERSION*/", "").encode()).hexdigest()[:10]
 old = json.load(open(APP + "version.json"))["v"] if os.path.exists(APP + "version.json") else None
 built = BUILD
