@@ -48,7 +48,23 @@ Prima le fonti ufficiali (sono quelle che contano), poi i sindacati (spesso arri
 8. **Dati** (`attesa` e notizie già presenti): a ogni giro ricontrolla i parametri in attesa alla fonte ufficiale (Gazzetta per il DPR, ISTAT per il tasso 2026, decreto per i coefficienti 2027-2028, F.A.F. per la quota) e correggi le notizie già pubblicate se una fonte ha cambiato date o numeri (scrivilo nella sintesi: «aggiornato il …»).
 9. **Registro** (`controlli`): aggiungi in fondo `{"at": ora, "notizie": quante nuove, "note": "…"}`; tieni gli ultimi 60.
 
+## 🔄 Scheda pensione cifrata (dopo le novità, a ogni giro)
+`licenze/scheda-pensione.cifrata.json` è la scheda personale di Marco **cifrata** (AES-256-GCM). L'iPad la scarica e la unisce da sola: le sue spunte, note, importi reali, esito e documenti restano comunque. La chiave è **solo** nel testo dell'attività programmata: passala con `SCHEDA_CHIAVE`, non scriverla mai in un file, in un commit, in una notizia o nell'output.
+
+1. Apri in una cartella temporanea fuori dal repository: `T=$(mktemp -d); python3 sorgenti/pianificazione/strumenti/scheda_cifrata.py apri licenze/scheda-pensione.cifrata.json $T/s.json`.
+2. Cambia la scheda **solo** per un fatto nuovo e verificato (regola 1) da una fonte ufficiale, o da un sindacato quando l'ufficiale non c'è ancora (scrivilo nella nota: «secondo …»). Che cosa si può cambiare:
+   - `pens.calc`: `coeffB` (o un coefficiente ufficiale 2027-2028 a 60 anni, in percentuale) quando esce il decreto;
+   - `pens.ipotesi[].det`, `entro`: quando una data attesa cambia (per esempio il DPR in Gazzetta);
+   - `pens.cedolini[]`: mese e nota degli arretrati quando NoiPA o il Comando Generale li annunciano; importi solo se pubblicati in tabella ufficiale per il grado;
+   - `pens.incassi[]` e `pens.adem[]`: data (`d`) e nota quando una norma o una circolare INPS cambia un termine (TFS, premio, pensione); un adempimento nuovo solo se lo impone una norma o circolare nuova, con `id` nuovo (`nAAAAMMGG-…`), `d`, `t`, `det`, `tag`;
+   - `pens.contatti[]`: un indirizzo o telefono quando l'ufficio lo cambia sul sito ufficiale;
+   - `pens.tappe[]`: date delle tappe collegate a quanto sopra.
+   Non cambiare mai `dati`, `esito`, i `testi`, gli id esistenti, le spunte; non togliere voci; non aggiungere dati personali nuovi; niente consigli.
+3. Se non c'è niente da cambiare, **non** chiudere la scheda (la revisione resta quella).
+4. Se hai cambiato qualcosa: `python3 sorgenti/pianificazione/strumenti/scheda_cifrata.py chiudi $T/s.json licenze/scheda-pensione.cifrata.json sorgenti/pianificazione/statici/scheda-pensione.cifrata.json --nota "che cosa è cambiato, in una riga" --fonte URL`, poi `... verifica licenze/scheda-pensione.cifrata.json sorgenti/pianificazione/statici/scheda-pensione.cifrata.json` deve dire ✅. Annota nel registro (`controlli[].note`) «scheda rev. N: …» senza numeri personali.
+5. `rm -rf $T` sempre, anche in caso di errore. La scheda in chiaro non va mai nel repository.
+
 ## Pubblicazione
 1. Scrivi lo stesso file in `sorgenti/pianificazione/statici/news-pensione.json` e in `licenze/news-pensione.json`.
 2. `python3 sorgenti/pianificazione/strumenti/verifica_novita.py licenze/news-pensione.json sorgenti/pianificazione/statici/news-pensione.json` deve dire ✅.
-3. Commit «Pianificazione: novità contratto e pensione AAAA-MM-GG HH:MM» (solo i due file), push su main (se rifiutato: git pull --rebase e riprova). Non toccare altri file.
+3. Commit «Pianificazione: novità contratto e pensione AAAA-MM-GG HH:MM» (solo i due file delle novità e, se la scheda è cambiata, i due file `scheda-pensione.cifrata.json`), push su main (se rifiutato: git pull --rebase e riprova). Non toccare altri file.

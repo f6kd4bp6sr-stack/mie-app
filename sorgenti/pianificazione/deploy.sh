@@ -9,6 +9,11 @@ r, l = '/home/claude/mie-app/licenze/news-pensione.json', '/home/claude/pian/sta
 if os.path.exists(r):
     up = lambda f: json.load(open(f, encoding='utf-8')).get('updated', '')
     if not os.path.exists(l) or up(r) > up(l): shutil.copy(r, l); print('novità: presa la versione pubblicata')
+# la scheda cifrata la aggiorna anche l'attività: vince la revisione più alta
+r, l = '/home/claude/mie-app/licenze/scheda-pensione.cifrata.json', '/home/claude/pian/statici/scheda-pensione.cifrata.json'
+if os.path.exists(r):
+    rv = lambda f: int(json.load(open(f, encoding='utf-8')).get('rev') or 0)
+    if not os.path.exists(l) or rv(r) > rv(l): shutil.copy(r, l); print('scheda cifrata: presa la versione pubblicata')
 PY
 cd /home/claude/pian && python3 build.py
 rm -rf /home/claude/mie-app/licenze && mkdir -p /home/claude/mie-app/licenze && cp -r /home/claude/pian/out/licenze/. /home/claude/mie-app/licenze/

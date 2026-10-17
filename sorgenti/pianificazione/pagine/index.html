@@ -416,6 +416,7 @@ const SECT=[["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--
 const ALL_SECT=SECT.map(x=>x[0]).concat(["set"]);
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
 function mapOld(k){
+  if(k.indexOf("sk=")===0){skFromHash(k.slice(3));return "pens";}
   if(k==="oggi"||k==="ben"){setCalV("giorno");calD=calSel=today();return "cal";}
   if(k==="fam"){setCalV("sett");calD=today();return "cal";}
   if(k==="scad"){setCalV("scad");return "cal";}
@@ -595,11 +596,11 @@ async function exportIcs(all){
   try{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([txt],{type:"text/calendar"}));a.download=fn;document.body.appendChild(a);a.click();a.remove();mark();}catch(e){toast("Non riesco a creare il file");}
 }
 window.addEventListener("hashchange",()=>{const k=(location.hash||"").slice(1);if(k&&k!==cur){cur=mapOld(k);render();}});
-document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"){softRender();valePull(false);}});
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"){softRender();valePull(false);newsFetch(false);schedaFetch(false);}});
 let wNarrow=window.innerWidth<640;window.addEventListener("resize",()=>{const n=window.innerWidth<640;if(n!==wNarrow){wNarrow=n;if(cur==="pens")softRender();}});
 window.addEventListener("online",()=>valePull(false));setInterval(()=>valePull(false),30*60e3);
 window.__pn={dayData,licOver,icsItems,icsText,licCalc,licS,absBlocks,nextPayments,monthTotals,proj:()=>projection(),CONTI_ON,get P(){return P;}};
-render(); recover(); setTimeout(()=>valePull(false),800); setTimeout(ghDaily,1500); setTimeout(()=>newsFetch(false),1200);
+render(); recover(); setTimeout(()=>valePull(false),800); setTimeout(ghDaily,1500); setTimeout(()=>newsFetch(false),1200); setTimeout(()=>schedaFetch(false),1700);
 </script>
 <!--@BARRA-->
 </body>

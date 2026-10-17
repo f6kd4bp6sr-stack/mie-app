@@ -7,7 +7,7 @@ self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
   if (new URL(e.request.url).origin !== self.location.origin) return; // GitHub e altri siti: sempre dalla rete, mai in cache
   if (new URL(e.request.url).pathname.endsWith('version.json')) return; // sempre dalla rete
-  if (new URL(e.request.url).pathname.endsWith('news-pensione.json')) return; // novità: sempre dalla rete (l'app ne tiene una copia)
+  if (/(news-pensione|scheda-pensione\.cifrata)\.json$/.test(new URL(e.request.url).pathname)) return; // novità e scheda cifrata: sempre dalla rete (l'app ne tiene una copia)
   if (e.request.mode === 'navigate') { const pn = new URL(e.request.url).pathname, page = pn.endsWith('taichi.html') ? './taichi.html' : pn.endsWith('progressi.html') ? './progressi.html' : pn.endsWith('licenze.html') ? './licenze.html' : './index.html'; e.respondWith(fetch(e.request, { cache: 'no-store' }).then(r => { const cp = r.clone(); if (r.ok) caches.open(CACHE).then(c => { c.put(page, cp); c.match('./progressi.html').then(h => h || c.addAll(FILES).catch(() => {})); }); return r.ok ? r : caches.match(page).then(h => h || r); }).catch(() => caches.match(page))); return; }
   e.respondWith(caches.match(e.request).then(hit => hit || fetch(e.request).then(r => { if (r.ok) { const cp = r.clone(); caches.open(CACHE).then(c => c.put(e.request, cp)); } return r; })));
 });

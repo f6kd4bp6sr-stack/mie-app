@@ -23,8 +23,11 @@ pian/
 │                     attività fisse della famiglia (ogni 1 o 2 settimane, fino a, pause)
 ├── sezioni/pensione.js 🎖️ Pensione (`pn-v1` → `pens`): adempimenti (nel Calendario e nel file .ics), leve, cifre stimate/reali,
 │                     incassi, cassa giugno 2027–febbraio 2028, documenti (`pf-…`); si carica dal file privato «scheda pensione»
-├── strumenti/         NOVITA.md (istruzioni dell'agente del mattino) e verifica_novita.py (controllo del file delle novità)
+├── strumenti/         NOVITA.md (istruzioni dell'agente delle 13 · 17 · 23), verifica_novita.py (controllo delle novità),
+│                     scheda_cifrata.py (apre, chiude e verifica la scheda cifrata; chiave solo in SCHEDA_CHIAVE)
 ├── statici/news-pensione.json  novità pubbliche su contratto e pensione GdF (aggiornate alle 13, 17 e 23 con fonti e registro dei controlli; non cambiano la versione)
+├── statici/scheda-pensione.cifrata.json  scheda pensione CIFRATA (AES-256-GCM, chiave casuale mai nel repository): l'iPad la scarica,
+│                     la apre con la chiave `pn-scheda-chiave` e la unisce da sola (spunte, note, importi reali restano); non cambia la versione
 ├── sezioni/pratiche.js 🗂️ Pratiche (`pn-v1` → `prat`): stato, prossimo passo, documenti, contatti, diario, note;
 │                     file allegati nel database `licenze-marco`, chiavi `pf-…` (non vanno nella copia su iCloud)
 ├── docs/             ricerca sui formati di esportazione delle banche
@@ -36,6 +39,8 @@ Segnaposto nelle pagine: `<!--@NAV-->` (menu), `<!--@BARRA-->` (barra comune), `
 
 Dati sul dispositivo: Licenze `licenze-marco-v1`, Tai Chi `tc_*`, Progressi `prog-*` (con il diario di «Il mio mondo»), Pianificazione `pn-v1` (note dei giorni in `dn`), vista del calendario `pn-calv`, copie `pn-lastSnap`, `pn-lastBackup`, `pn-copia-cloud`, blocco `pn-lock`; copia nel database `licenze-marco` (kv). Tutte le sezioni entrano nelle copie giornaliere e nel file su iCloud.
 Regola: nessun dato personale nel codice (il sito è pubblico).
+
+Collegamento della scheda: `#sk=<chiave>` salva la chiave della scheda cifrata su questo iPad, la toglie subito dall'indirizzo e apre Pensione → Documenti.
 
 Vecchi indirizzi: `#oggi` e `#ben` aprono il Calendario sul giorno di oggi, `#fam` la vista Settimana, `#scad` la vista Scadenze, `#sic` le Impostazioni, `#conti` (nascosta) il Calendario.
 

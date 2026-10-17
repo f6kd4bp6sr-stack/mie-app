@@ -10,14 +10,14 @@ App per iPad del genitore: calendario di casa e di lavoro, licenze fino al conge
 | Copia senza internet | cache `licenze-<versione>` (il service worker cancella solo le proprie cache) |
 
 ## Le pagine
-- 🏠 **Pianificazione** (`pagine/index.html`): 📆 Calendario (Giorno · Settimana · Mese · Anno · Scadenze; il giorno contiene benessere e Tai Chi, oggi anche il riepilogo), 🎖️ Pensione (`sezioni/pensione.js`: adempimenti, leve, cifre e incassi, cassa, documenti; dati solo dal file privato «scheda pensione», mai nel codice; 📰 Novità dal file pubblico `news-pensione.json`, aggiornato alle 13, alle 17 e alle 23 da un'attività programmata con le regole di `strumenti/NOVITA.md`; ricalcolo, cedolino, contatti e testi, linea del tempo), 🗂️ Pratiche, ⚙️ Impostazioni (blocco con Face ID, Calendario dell'iPad, copie).
+- 🏠 **Pianificazione** (`pagine/index.html`): 📆 Calendario (Giorno · Settimana · Mese · Anno · Scadenze; il giorno contiene benessere e Tai Chi, oggi anche il riepilogo), 🎖️ Pensione (`sezioni/pensione.js`: adempimenti, leve, cifre e incassi, cassa, documenti; dati solo dal file privato «scheda pensione», mai nel codice; 📰 Novità dal file pubblico `news-pensione.json`, aggiornato alle 13, alle 17 e alle 23 da un'attività programmata con le regole di `strumenti/NOVITA.md`; ricalcolo, cedolino, contatti e testi, linea del tempo; 🔄 la scheda si aggiorna da sola dal file pubblico **cifrato** `scheda-pensione.cifrata.json`, chiave solo sull'iPad e nell'attività programmata, strumento `strumenti/scheda_cifrata.py`), 🗂️ Pratiche, ⚙️ Impostazioni (blocco con Face ID, Calendario dell'iPad, copie).
 - 📅 **Licenze** (`pagine/licenze.html`), 🧘 **Tai Chi** (`pagine/taichi.html`), 🐉 **Progressi** di «Il mio mondo» (`pagine/progressi.html`).
 - 💶 **Conti** (`sezioni/conti.js`): **nascosta** ma conservata. In `pagine/index.html` basta `const CONTI_ON=true` per farla tornare (menu, pagamenti nel Calendario, riquadro di oggi, file per il Calendario dell'iPad). I dati dei Conti restano nelle copie.
 
 ## Dati sul dispositivo (solo di questa app)
 | Dove | Chiavi |
 |---|---|
-| localStorage | `pn-v1` (Calendario, Scadenze, Pensione, Pratiche, Famiglia, Benessere, Conti), `pn-calv`, `pn-icsnag`, `pn-lock`, `pn-lastSnap`, `pn-lastBackup`, `pn-copia-cloud`; Licenze `licenze-marco-v1`; Tai Chi `tc_*`; Progressi `prog-*` |
+| localStorage | `pn-v1` (Calendario, Scadenze, Pensione, Pratiche, Famiglia, Benessere, Conti), `pn-calv`, `pn-icsnag`, `pn-lock`, `pn-lastSnap`, `pn-lastBackup`, `pn-copia-cloud`, `pn-news`, `pn-scheda-chiave` (chiave della scheda cifrata, fuori dalle copie), `pn-scheda-meta`; Licenze `licenze-marco-v1`; Tai Chi `tc_*`; Progressi `prog-*` |
 | IndexedDB | `licenze-marco` → `kv`: `stato`, `pianifica`, `taichi`, `progressi`, `progressi-link`, `snap-<data>` (copie giornaliere, 30 giorni), `pf-<id>` (file di Pratiche e Pensione) |
 | OPFS | `licenze-stato.json` |
 
@@ -35,6 +35,6 @@ Da «Il mio mondo» Pianificazione **legge soltanto**: l'invio cifrato dell'iPad
 Dettagli dei file e dei segnaposto: `STRUTTURA.md`.
 
 ## Regole
-- Nessun dato personale nel codice: il sito è pubblico.
+- Nessun dato personale nel codice: il sito è pubblico. La scheda pensione entra nel repository solo cifrata; la chiave e la scheda in chiaro mai.
 - Prima di variazioni all'app si propongono sezioni nuove o varianti strutturali.
 - I contenuti sui soldi sono fatti e strategie, non consigli.

@@ -37,7 +37,7 @@ else:
     h = hashlib.md5()
     for k in sorted(pages): h.update(re.sub(r'window\.APP_VERSION="[^"]*";window\.APP_BUILD="[^"]*";', '', pages[k]).encode())
     for f in sorted(os.listdir(D + 'statici')):
-        if f not in ('version.json', 'sw.js', 'news-pensione.json'): h.update(open(D + 'statici/' + f, 'rb').read())  # le novità cambiano ogni giorno senza cambiare versione
+        if f not in ('version.json', 'sw.js', 'news-pensione.json', 'scheda-pensione.cifrata.json'): h.update(open(D + 'statici/' + f, 'rb').read())  # le novità cambiano ogni giorno senza cambiare versione
     ver = h.hexdigest()[:10]
     import datetime
     built = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=2))).strftime('%Y-%m-%dT%H:%M+02:00')
@@ -63,4 +63,7 @@ GUARD_SALUTE = [[1, 4, 1, "0965105e44659ce2", ""], [1, 9, 0, "1232ff47c6f9ef8f",
 for k, s in pages.items():
     if guarda(s, GUARD_SALUTE): sys.exit('termine vietato in ' + k)
     open(OUT + k, 'w', encoding='utf-8').write(s)
+# la scheda pensione entra nel sito solo cifrata: nessun file in chiaro fra gli statici
+for f in os.listdir(OUT):
+    if f.endswith('.json') and '"pianificazione-pensione"' in open(OUT + f, encoding='utf-8', errors='ignore').read(): sys.exit('scheda pensione in chiaro: ' + f)
 print('ok', ver, sorted(pages))

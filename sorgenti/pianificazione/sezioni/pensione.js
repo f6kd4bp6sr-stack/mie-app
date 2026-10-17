@@ -25,9 +25,9 @@ function lastPresence(){const S=licS();if(!S)return null;for(let s=add(S.end,-1)
 function vPens(){
   const p=PENS(),t=today(),D=p.dati,cess=D.cess||(licS()||{}).end;
   let o=`<h1>🎖️ Pensione</h1>`;
-  if(!pensHas())return o+`<p class="sub">Il passaggio dal servizio alla pensione: adempimenti, leve, cifre, incassi e cassa fino al TFS.</p>`+pensImport(true);
+  if(!pensHas())return o+`<p class="sub">Il passaggio dal servizio alla pensione: adempimenti, leve, cifre, incassi e cassa fino al TFS.</p>`+skCard()+pensImport(true);
   const op=pensOpen(),late=op.filter(a=>a.d<t),next=op.filter(a=>a.d>=t).slice(0,1)[0],lp=lastPresence();
-  o+=`<p class="sub">${esc(p.src||"Dati della scheda pensione")}${p.at?" · caricati il "+fmt(p.at.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):""}</p>
+  o+=`<p class="sub">${esc(p.src||"Dati della scheda pensione")}${p.rev?" · scheda rev. "+esc(String(p.rev))+(p.revAt?" del "+fmt(p.revAt.slice(0,10),{day:"numeric",month:"long"}):""):""}${p.at?" · caricati il "+fmt(p.at.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):""}</p>
   <div class="kpi" style="margin-bottom:14px">${cess?`<div><b>${Math.max(0,diff(t,cess))}</b><span>giorni alla cessazione (${fmt(cess,{day:"numeric",month:"short",year:"numeric"})})</span></div>`:""}
     ${lp?`<div><b>${fmt(lp,{day:"numeric",month:"short"})}</b><span>ultimo giorno in ufficio (dalle Licenze)</span></div>`:""}
     <div><b style="${late.length?"color:var(--scad)":""}">${late.length||op.length}</b><span>${late.length?"scadenze passate da guardare":"adempimenti e leve aperti"}</span></div>
@@ -108,7 +108,7 @@ function pensCassa(){
 function pensDoc(){const p=PENS(),files=p.files||[];
   return pensDocAttesi()+`<div class="card k-pens"><h3>📎 Documenti</h3>${files.map(f=>`<div class="row"><span class="pill">${/pdf/.test(f.type)?"PDF":/image/.test(f.type)?"🖼️":"📄"}</span><div class="grow"><b>${esc(f.n)}</b><small>${Math.max(1,Math.round(f.size/1024))} KB · ${fmt(f.at.slice(0,10),{day:"numeric",month:"short",year:"numeric"})}</small></div><button class="btn sm" data-pfo2="${f.id}">Apri</button><button class="btn sm" data-pfx2="${f.id}" aria-label="Togli">×</button></div>`).join("")||'<p class="empty">Nessun documento: allega l’analisi previdenziale e i provvedimenti quando arrivano.</p>'}
     <div class="btns"><label class="btn sm pri" style="cursor:pointer">➕ Aggiungi PDF o foto<input type="file" id="pfIn2" accept="application/pdf,image/*" hidden></label></div>
-    <p class="lbl" style="margin:8px 0 0">I documenti restano su questo iPad (massimo 15 MB l’uno) ed entrano nelle copie.</p></div>`+pensImport(false);}
+    <p class="lbl" style="margin:8px 0 0">I documenti restano su questo iPad (massimo 15 MB l’uno) ed entrano nelle copie.</p></div>`+skCard()+pensImport(false);}
 function pensImport(first){return `<div class="card k-pens"><h3>📥 ${first?"Carica la scheda pensione":"Aggiorna la scheda"}</h3><p class="lbl" style="margin-top:0">${first?"Scegli il file «scheda pensione» (.json): contiene adempimenti, leve, cifre e incassi presi dall’analisi previdenziale. Resta solo su questo iPad.":"Un file nuovo sostituisce adempimenti, leve, cifre e incassi; le tue spunte, gli stati, le note, gli importi reali e i documenti restano."}</p>
   <div class="btns"><label class="btn sm${first?" pri":""}" style="cursor:pointer">📥 Scegli il file<input type="file" id="pnsIn" accept="application/json,.json" hidden></label></div></div>`;}
 /* unione: i dati nuovi della scheda + quello che hai già segnato sull'iPad */
@@ -139,11 +139,11 @@ function bindPens(){
   document.querySelectorAll("[data-cfr]").forEach(i=>i.onchange=()=>{const c=p.cifre.find(x=>x.id===i.dataset.cfr);if(c){const v=num(i.value);c.reale=v==null?"":v;save();R();toast("Salvato");}});
   document.querySelectorAll("[data-inc]").forEach(b=>b.onclick=()=>{const x=p.incassi.find(y=>y.id===b.dataset.inc);if(x){x.ok=x.ok?"":today();save();R();}});
   document.querySelectorAll("[data-cs]").forEach(i=>i.onchange=()=>{const k=i.dataset.cs;p.cassa[k]=k==="premioMese"?i.value:k==="rit"?+i.value:(k==="pens"&&!i.value.trim()?"":num(i.value));save();R();});
-  bindPens2(p,num);bindPens3(p,num);
+  bindPens2(p,num);bindPens3(p,num);bindSk();
   const pin=$("pnsIn");if(pin)pin.onchange=async()=>{const f=pin.files&&pin.files[0];pin.value="";if(!f)return;
     try{const o=JSON.parse(await f.text());if(o.app!=="pianificazione-pensione"||!o.pens)throw 0;
       if(pensHas()&&!confirm("Aggiornare la scheda con il file «"+f.name+"»? Le tue spunte, note e importi reali restano."))return;
-      pensMerge(o.pens);save();pensV="adem";R();toast("🎖️ Scheda pensione caricata");}catch(e){toast("Questo file non è una scheda pensione");}};
+      pensMerge(o.pens);P.pens.rev=+o.v||0;save();pensV="adem";R();toast("🎖️ Scheda pensione caricata");}catch(e){toast("Questo file non è una scheda pensione");}};
   const fin=$("pfIn2");if(fin)fin.onchange=async()=>{const f=fin.files&&fin.files[0];fin.value="";if(!f)return;if(f.size>15*1024*1024)return toast("File troppo grande (massimo 15 MB)");
     const id=uid();try{await kv("readwrite","pf-"+id,f);}catch(e){return toast("Non riesco a salvare il file su questo iPad");}
     p.files.push({id,n:f.name||"documento",type:f.type||"",size:f.size,at:new Date().toISOString()});save();R();toast("Documento allegato");if(window.__pfRefresh)window.__pfRefresh();};
@@ -323,3 +323,50 @@ function bindPens3(p,num){const R=()=>render();
   document.querySelectorAll("[data-pics]").forEach(b=>b.onclick=()=>exportIcs(false));
   document.querySelectorAll("[data-usc]").forEach(b=>b.onclick=()=>{const k=b.dataset.usc;if(k==="add"){const m=$("usM").value,v=num($("usI").value),t=$("usT").value.trim();if(!m||!v)return toast("Scegli il mese e scrivi l’importo");p.uscite.push({id:uid(),ym:m,imp:v,t:t||"uscita"});}else p.uscite=p.uscite.filter(x=>x.id!==k);save();R();});
 }
+
+/* ---------- 🔄 Scheda che si aggiorna da sola ----------
+   File pubblico «scheda-pensione.cifrata.json» (AES-256-GCM). La chiave (32 byte, base64url) sta solo su questo iPad
+   in «pn-scheda-chiave», fuori dalle copie: senza chiave il file è illeggibile. Arriva con il collegamento …/licenze/#sk=<chiave>
+   (la parte dopo # non lascia mai l'iPad) o incollata a mano. Lo aggiornano Claude e l'attività delle 13 · 17 · 23
+   (strumenti/scheda_cifrata.py); qui si unisce con pensMerge: spunte, note, importi reali, esito e documenti restano. */
+const SK_KEY="pn-scheda-chiave",SK_META="pn-scheda-meta",SK_AAD="pianificazione-scheda-v1";let skBusy=false;
+const skKey=()=>{try{return localStorage.getItem(SK_KEY)||"";}catch(e){return "";}};
+const skMeta=()=>lsJ(SK_META)||{};
+const skSetMeta=m=>{try{localStorage.setItem(SK_META,JSON.stringify(Object.assign(skMeta(),m)));}catch(e){}};
+function b64u(s){s=String(s).replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const b=atob(s),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u;}
+function skValid(k){try{return /^[A-Za-z0-9_-]{43}$/.test(k)&&b64u(k).length===32;}catch(e){return false;}}
+function skFromHash(k){try{k=decodeURIComponent(k||"").trim();}catch(e){k="";}
+  if(!skValid(k)){setTimeout(()=>toast("Il collegamento della scheda non è valido"),700);return;}
+  try{localStorage.setItem(SK_KEY,k);localStorage.removeItem(SK_META);}catch(e){}pensV="doc";try{sessionStorage.setItem("pn-pensv","doc");}catch(e){}
+  setTimeout(()=>schedaFetch(true),400);}
+async function skOpen(o,k){const key=await crypto.subtle.importKey("raw",b64u(k),"AES-GCM",false,["decrypt"]);
+  const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64u(o.iv),additionalData:new TextEncoder().encode(SK_AAD)},key,b64u(o.ct));
+  return JSON.parse(new TextDecoder().decode(pt));}
+async function schedaFetch(force){const k=skKey();if(!k||skBusy||navigator.onLine===false)return;const M=skMeta();
+  if(!force&&M.checked&&Date.now()-new Date(M.checked).getTime()<30*60e3)return;
+  skBusy=true;let err="";
+  try{let o;try{const r=await fetch("scheda-pensione.cifrata.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw 0;o=await r.json();}catch(e){err="rete";throw e;}
+    if(!o||o.app!=="pianificazione-scheda-cifrata"||!o.iv||!o.ct){err="file";throw 0;}
+    const mine=P.pens&&+P.pens.rev||0;
+    if(o.rev>mine){let s;try{s=await skOpen(o,k);}catch(e){err="chiave";throw e;}
+      if(!s||s.app!=="pianificazione-pensione"||!s.pens||s.v!==o.rev){err="file";throw 0;}
+      pensMerge(s.pens);P.pens.rev=o.rev;P.pens.revAt=o.updated;save();
+      toast("🎖️ Scheda pensione aggiornata (rev. "+o.rev+")");}
+    skSetMeta({checked:new Date().toISOString(),pub:o.rev,err:""});}
+  catch(e){skSetMeta({checked:new Date().toISOString(),err:err||"rete"});if(force)toast(err==="chiave"?"La chiave non apre la scheda":err==="file"?"Il file della scheda non è valido":"Scheda non raggiungibile ora");}
+  finally{skBusy=false;if(cur==="pens"||cur==="cal")softRender();}}
+function skCard(){const k=skKey(),M=skMeta(),p=P.pens||{},when=s=>s?new Date(s).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"";
+  if(!k)return `<div class="card k-pens"><h3>🔄 Aggiornamento automatico della scheda</h3><p class="lbl" style="margin-top:0">Apri il collegamento della scheda oppure incolla qui la chiave: da quel momento la scheda si aggiorna da sola quando cambia, e le tue spunte, note e importi restano. La chiave resta solo su questo iPad.</p>
+    <div class="form"><label>Chiave della scheda<input id="skIn" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="43 caratteri"></label></div><div class="btns"><button class="btn sm pri" data-sk="on">Attiva</button></div></div>`;
+  const err=M.err==="chiave"?"⚠️ La chiave non apre la scheda pubblicata: disattiva e incolla la chiave nuova.":M.err==="file"?"⚠️ Il file pubblicato non è valido: riprovo al prossimo controllo.":M.err==="rete"?"Ultimo controllo senza rete: riprovo da solo.":"";
+  const mods=(p.modifiche||[]).slice(-6).reverse();
+  return `<div class="card k-pens"><h3>🔄 Aggiornamento automatico della scheda</h3>
+    <div class="row"><span class="pill pens">rev. ${esc(String(p.rev||"—"))}</span><div class="grow"><b>Attivo</b><small>${p.revAt?"scheda del "+when(p.revAt)+" · ":""}${M.checked?"controllata il "+when(M.checked):"non ancora controllata"}</small></div><button class="btn sm" data-sk="now">Controlla ora</button></div>
+    ${err?`<p class="lbl" style="color:var(--scad)">${err}</p>`:""}
+    ${mods.length?`<details data-k="skmod"><summary>Ultime modifiche della scheda</summary>${mods.map(m=>`<div class="row"><span class="pill">rev. ${esc(String(m.rev))}</span><div class="grow">${esc(m.t||"")}<small>${when(m.at)}${/^https:\/\//.test(m.fonte||"")?` · <a href="${esc(m.fonte)}" target="_blank" rel="noopener">fonte</a>`:""}</small></div></div>`).join("")}</details>`:""}
+    <p class="lbl" style="margin:8px 0 0">Controllo a ogni apertura (al massimo ogni mezz’ora). Le modifiche arrivano da Claude e dall’attività delle 13, 17 e 23.</p>
+    <div class="btns"><button class="btn sm" data-sk="off">Disattiva</button></div></div>`;}
+function bindSk(){document.querySelectorAll("[data-sk]").forEach(b=>b.onclick=()=>{const a=b.dataset.sk;
+  if(a==="on"){const i=$("skIn"),v=(i&&i.value||"").trim();if(!skValid(v))return toast("La chiave non è valida (43 caratteri)");try{localStorage.setItem(SK_KEY,v);localStorage.removeItem(SK_META);}catch(e){}schedaFetch(true);render();}
+  else if(a==="now")schedaFetch(true);
+  else if(a==="off"){if(!confirm("Disattivare l’aggiornamento automatico? La scheda resta com’è su questo iPad."))return;try{localStorage.removeItem(SK_KEY);localStorage.removeItem(SK_META);}catch(e){}render();}});}
