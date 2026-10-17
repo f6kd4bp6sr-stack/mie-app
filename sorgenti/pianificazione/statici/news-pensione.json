@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-17T13:19:00+02:00",
+ "updated": "2026-10-17T13:21:00+02:00",
  "voci": [
   {
    "id": "n20261016-usic",
@@ -191,7 +191,7 @@
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:19:00+02:00",
+   "ultimo": "2026-10-17T13:21:00+02:00",
    "esito": "non raggiungibile"
   },
   {
@@ -205,15 +205,22 @@
    "n": "MEF",
    "url": "https://www.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:19:00+02:00",
+   "ultimo": "2026-10-17T13:21:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:19:00+02:00",
+   "ultimo": "2026-10-17T13:21:00+02:00",
    "esito": "non raggiungibile"
+  },
+  {
+   "n": "OpenBDAP – Ragioneria Generale dello Stato",
+   "url": "https://openbdap.rgs.mef.gov.it/",
+   "tipo": "ufficiale",
+   "ultimo": "2026-10-17T13:21:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "INPS",
@@ -247,21 +254,21 @@
    "n": "Difesa – Previmil",
    "url": "https://www.difesa.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:19:00+02:00",
+   "ultimo": "2026-10-17T13:21:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Polizia di Stato",
    "url": "https://www.poliziadistato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:19:00+02:00",
+   "ultimo": "2026-10-17T13:21:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Corte dei conti",
    "url": "https://www.corteconti.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:19:00+02:00",
+   "ultimo": "2026-10-17T13:21:00+02:00",
    "esito": "non raggiungibile"
   },
   {
@@ -282,7 +289,7 @@
    "n": "Agenzia delle Entrate",
    "url": "https://www.agenziaentrate.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:19:00+02:00",
+   "ultimo": "2026-10-17T13:21:00+02:00",
    "esito": "non raggiungibile"
   },
   {
@@ -324,7 +331,7 @@
    "n": "SIAP",
    "url": "https://www.siap-polizia.org/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:19:00+02:00",
+   "ultimo": "2026-10-17T13:21:00+02:00",
    "esito": "non raggiungibile"
   },
   {
@@ -455,6 +462,11 @@
    "at": "2026-10-17T13:19:00+02:00",
    "notizie": 0,
    "note": "giro manuale: controllate tutte le 37 fonti. Nessuna notizia nuova; aggiunta USAMI come seconda fonte sul tavolo del 13/10. DPR non ancora in Gazzetta, tasso 2026 e coefficienti 2027-2028 non usciti. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, SIAP"
+  },
+  {
+   "at": "2026-10-17T13:21:00+02:00",
+   "notizie": 0,
+   "note": "nuovo tentativo sulle 8 fonti non raggiunte (home e pagine interne): ancora non raggiungibili Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate, SIAP. Aggiunta OpenBDAP (RGS-MEF), raggiungibile: ultima notizia 8/10 sul DPFP 2026, niente di nuovo"
   }
  ]
 }
