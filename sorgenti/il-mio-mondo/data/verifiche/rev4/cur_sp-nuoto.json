@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Olimpiadi in mare aperto",
+    "x": "Alle prime Olimpiadi moderne, ad Atene nel 1896, le gare di nuoto non si fecero in piscina ma in mare, nella baia di Zea! Erano 4 gare, solo maschili, tutte nello stesso giorno.",
+    "ic": "🌊",
+    "q": "Dove si nuotò alle Olimpiadi di Atene 1896?",
+    "ok": "In mare, nella baia di Zea",
+    "wrong": [
+      "In un lago ghiacciato",
+      "In una piscina coperta"
+    ],
+    "src": "en.wikipedia.org – Swimming at the 1896 Summer Olympics"
+  },
+  {
+    "t": "Arrivano le nuotatrici",
+    "x": "Le donne hanno gareggiato nel nuoto olimpico per la prima volta a Stoccolma nel 1912: 100 metri stile libero e staffetta 4×100. La vasca era costruita nel porto della città!",
+    "ic": "🏊‍♀️",
+    "q": "In che anno le donne nuotarono per la prima volta alle Olimpiadi?",
+    "ok": "1912",
+    "wrong": [
+      "1812",
+      "1992"
+    ],
+    "src": "en.wikipedia.org – Swimming at the 1912 Summer Olympics"
+  },
+  {
+    "t": "Dalla FINA a World Aquatics",
+    "x": "La federazione mondiale del nuoto nacque a Londra nel 1908 con il nome FINA. Nel dicembre 2022 ha cambiato nome: oggi si chiama World Aquatics, cioè «sport acquatici mondiali».",
+    "ic": "🌐",
+    "q": "Come si chiama oggi la FINA?",
+    "ok": "World Aquatics",
+    "wrong": [
+      "World Swim Club",
+      "Olympic Pool Union"
+    ],
+    "src": "en.wikipedia.org – World Aquatics"
+  },
+  {
+    "t": "Oro a pancia in su",
+    "x": "Thomas Ceccon ha vinto l’oro olimpico nei 100 metri dorso a Parigi 2024, in 52,00 secondi. Ha vinto nuotando a pancia in su, con lo sguardo verso il soffitto!",
+    "ic": "🥇",
+    "q": "In quale stile Ceccon vinse l’oro a Parigi 2024?",
+    "ok": "Dorso",
+    "wrong": [
+      "Rana",
+      "Delfino"
+    ],
+    "src": "en.wikipedia.org – Swimming at the 2024 Summer Olympics"
+  },
+  {
+    "t": "Oro a rana",
+    "x": "Sempre a Parigi 2024 Nicolò Martinenghi ha vinto l’oro nei 100 metri rana. Con lui e Ceccon, l’Italia ha conquistato 2 ori nel nuoto in piscina a quei Giochi!",
+    "ic": "🐸",
+    "q": "Quanti ori vinse l’Italia nel nuoto in piscina a Parigi 2024?",
+    "ok": "2",
+    "wrong": [
+      "0",
+      "10"
+    ],
+    "src": "en.wikipedia.org – Swimming at the 2024 Summer Olympics"
+  },
+  {
+    "t": "Una piscina nello stadio",
+    "x": "A Parigi 2024 la piscina olimpica era provvisoria: era montata dentro la Paris La Défense Arena, uno stadio di rugby che ospita anche concerti! La vasca era profonda 2,15 metri.",
+    "ic": "🏟️",
+    "q": "Dove fu montata la piscina olimpica di Parigi 2024?",
+    "ok": "In uno stadio di rugby",
+    "wrong": [
+      "Sotto la Torre Eiffel",
+      "In un aeroporto"
+    ],
+    "src": "en.wikipedia.org – Swimming at the 2024 Summer Olympics"
+  },
+  {
+    "t": "Attraverso la Manica",
+    "x": "Nel 1875 il capitano inglese Matthew Webb fu il primo ad attraversare a nuoto la Manica, dall'Inghilterra alla Francia, senza aiuti: ci mise quasi 22 ore, nuotando sempre a rana!",
+    "ic": "⛴️",
+    "q": "Quanto tempo impiegò Webb ad attraversare la Manica?",
+    "ok": "Quasi 22 ore",
+    "wrong": [
+      "Circa 2 ore",
+      "Quasi 22 giorni"
+    ],
+    "src": "en.wikipedia.org – Matthew Webb"
+  },
+  {
+    "t": "Il re delle medaglie",
+    "x": "Michael Phelps ha vinto in tutto 28 medaglie olimpiche, di cui 23 d’oro, in cinque Olimpiadi: nessuno, in nessuno sport, ha vinto più ori olimpici di lui! Si è ritirato nel 2016.",
+    "ic": "🏅",
+    "q": "Quante medaglie d’oro olimpiche ha vinto Phelps in tutto?",
+    "ok": "23",
+    "wrong": [
+      "8",
+      "3"
+    ],
+    "src": "en.wikipedia.org – Michael Phelps"
+  },
+  {
+    "t": "Il nuotatore Tarzan",
+    "x": "Johnny Weissmuller fu il primo uomo a nuotare i 100 metri stile libero in meno di un minuto. Vinse 5 ori olimpici, nel 1924 e nel 1928, e poi diventò attore: fu Tarzan in 12 film!",
+    "ic": "🌴",
+    "q": "Quale personaggio interpretò al cinema il nuotatore Weissmuller?",
+    "ok": "Tarzan",
+    "wrong": [
+      "Peter Pan",
+      "Pinocchio"
+    ],
+    "src": "en.wikipedia.org – Johnny Weissmuller"
+  },
+  {
+    "t": "La grotta dei nuotatori",
+    "x": "Nel deserto dell’Egitto c’è la «Grotta dei nuotatori»: pitture di circa 10.000 anni fa mostrano figure che sembrano nuotare. Allora il Sahara era più verde e ricco d’acqua!",
+    "ic": "🏜️",
+    "q": "Che cosa mostrano le pitture della Grotta dei nuotatori?",
+    "ok": "Figure che sembrano nuotare",
+    "wrong": [
+      "Navi con le vele",
+      "Pesci giganti che volano"
+    ],
+    "src": "en.wikipedia.org – Cave of Swimmers"
+  },
+  {
+    "t": "Lo stile più antico",
+    "x": "Si pensa che la rana sia il più antico degli stili di nuoto ancora usati oggi: movimenti simili si vedono già in disegni molto antichi. Ma nessuno può esserne sicuro al cento per cento!",
+    "ic": "🪨",
+    "q": "Quale stile si pensa sia il più antico?",
+    "ok": "La rana",
+    "wrong": [
+      "Il delfino",
+      "Il dorso"
+    ],
+    "src": "en.wikipedia.org – Breaststroke"
+  },
+  {
+    "t": "Un solo colpo a delfino",
+    "x": "Nella rana, dopo la partenza e dopo ogni virata, è permesso un solo colpo di gambe a delfino: la regola esiste dal 2005. Uno solo, non di più!",
+    "ic": "☝️",
+    "q": "Quanti colpi a delfino si possono fare nella rana dopo una virata?",
+    "ok": "Uno solo",
+    "wrong": [
+      "Quanti vuoi",
+      "Nessuno, mai"
+    ],
+    "src": "en.wikipedia.org – Breaststroke"
+  },
+  {
+    "t": "La corsia dei campioni",
+    "x": "In finale chi ha il tempo migliore nuota nella corsia 4, al centro della vasca: lì le onde che rimbalzano sui bordi danno meno fastidio. Il secondo va in corsia 5, il terzo in corsia 3.",
+    "ic": "4️⃣",
+    "q": "In quale corsia nuota in finale chi ha il tempo migliore?",
+    "ok": "Corsia 4",
+    "wrong": [
+      "Corsia 1",
+      "Corsia 8"
+    ],
+    "src": "nbcolympics.com – Swimming 101: competition format"
+  },
+  {
+    "t": "L’acqua giusta",
+    "x": "L’acqua di una piscina olimpica da gara deve stare tra 25 e 28 °C: né troppo fredda né troppo calda, perfetta per nuotare veloci. È più fresca dell’acqua di un bagno caldo!",
+    "ic": "🌡️",
+    "q": "Che temperatura deve avere l’acqua di una piscina olimpica?",
+    "ok": "Tra 25 e 28 °C",
+    "wrong": [
+      "Tra 5 e 8 °C",
+      "Tra 45 e 48 °C"
+    ],
+    "src": "en.wikipedia.org – Olympic-size swimming pool (regole World Aquatics)"
+  },
+  {
+    "t": "Quanta acqua in vasca?",
+    "x": "Una vasca olimpica è lunga 50 m e larga 25 m, con 10 corsie da 2,5 m. Se è profonda 2 m contiene 50 × 25 × 2 = 2.500 m³ d’acqua: cioè 2,5 milioni di litri!",
+    "ic": "💧",
+    "q": "Quanti litri contiene una vasca olimpica profonda 2 m?",
+    "ok": "2,5 milioni",
+    "wrong": [
+      "2.500",
+      "25 miliardi"
+    ],
+    "src": "en.wikipedia.org – Olympic-size swimming pool"
+  }
+]

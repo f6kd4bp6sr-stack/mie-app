@@ -1,0 +1,126 @@
+    {
+      id: 'storia', name: 'Storia', ic: '🏛️', c: 'var(--c2)', s: 'var(--c2-soft)',
+      topic: 'Greci, Etruschi e Romani',
+      motto: 'Quest’anno viaggi nel tempo fino all’antica Roma. E Roma… è passata anche da Torino!',
+      facts: [
+        ['Come si chiamava Torino ai tempi dei Romani?', 'Augusta Taurinorum! I Romani l’hanno fondata più di 2000 anni fa. Le Porte Palatine, in centro, sono una delle sue antiche porte.'],
+        ['I Romani avevano già i fast food?', 'Sì! Si chiamavano thermopolia: banconi dove si comprava cibo caldo da mangiare per strada. A Pompei se ne vedono ancora.'],
+        ['Dove sono nate le Olimpiadi?', 'In Grecia, a Olimpia, circa 2800 anni fa (nel 776 a.C.). Durante i giochi c\u2019era una «tregua sacra»: chi viaggiava per andare a Olimpia doveva poter passare in pace.'],
+        ['I Romani avevano lo zero?', 'No! Nei numeri romani lo zero non esiste. Per questo fare i conti con I, V, X era un bel pasticcio.']
+      ],
+      missions: [
+        ['Caccia romana in città', 'Andate alle Porte Palatine: conta le torri, fai una foto e immagina chi passava di lì 2000 anni fa.'],
+        ['Il compleanno in numeri romani', 'Scrivi la data del tuo compleanno alla romana. Esempio: 25 dicembre 2015 = XXV · XII · MMXV. Aiutino: X = 10, V = 5, M = 1000. Poi prova con l’età di papà!'],
+        ['Parole nonne', 'Con mamma o papà cerca 3 parole italiane che vengono dal latino, per esempio «scuola» da «schola».']
+      ],
+      quiz: [
+        ['Come si chiamava Torino ai tempi dei Romani?', ['Augusta Taurinorum', 'Mediolanum', 'Roma Piccola'], 0],
+        ['Quanto fa X + V in numeri romani?', ['XV', 'VX', 'XX'], 0],
+        ['In quale paese sono nate le Olimpiadi?', ['Egitto', 'Grecia', 'Francia'], 1]
+      ]
+    },
+    {
+      id: 'geo', name: 'Geografia', ic: '🗺️', c: 'var(--c4)', s: 'var(--c4-soft)',
+      topic: 'Le regioni d’Italia',
+      motto: 'L’Italia è come un grande puzzle di 20 pezzi. Quest’anno li scopri tutti, e il tuo è il Piemonte!',
+      facts: [
+        ['Quante regioni ha l’Italia?', '20! La più grande è la Sicilia, la più piccola è la Valle d’Aosta, proprio vicino a noi.'],
+        ['Dove nasce il fiume più lungo d’Italia?', 'Il Po nasce in Piemonte, sul Monviso, e attraversa Torino. È lungo 652 km!'],
+        ['Qual è la montagna più alta d’Italia?', 'Il Monte Bianco, sulle Alpi, al confine con la Francia: è alto più di 4800 metri, come quasi 15 torri Eiffel una sopra l’altra!'],
+        ['Perché l’Italia sembra uno stivale?', 'È una penisola: terra circondata dal mare su tre lati. Il «tacco» è la Puglia, la «punta» la Calabria.']
+      ],
+      missions: [
+        ['La cartolina delle vacanze', 'Scegli una regione dove sei stata e prepara una cartolina: capoluogo, un cibo tipico e il posto che ti è piaciuto di più.'],
+        ['Indovina la regione a tavola', 'A cena, chi cucina dice il piatto e tu indovini la regione: pesto, pizza, bagna cauda, arancini…'],
+        ['Il ponte sul Po', 'Passeggiando lungo il Po, conta quanti ponti vedi e cerca il nome di uno di loro.']
+      ],
+      quiz: [
+        ['Quante regioni ha l’Italia?', ['15', '20', '25'], 1],
+        ['Qual è il capoluogo del Piemonte?', ['Milano', 'Genova', 'Torino'], 2],
+        ['Qual è il fiume più lungo d’Italia?', ['Il Po', 'Il Tevere', 'L’Arno'], 0]
+      ]
+    },
+    {
+      id: 'scienze', name: 'Scienze', ic: '🔬', c: 'var(--c5)', s: 'var(--c5-soft)',
+      topic: 'Il corpo umano e l’universo',
+      motto: 'Quest’anno esplori due mondi: quello dentro di te e quello lassù, tra le stelle.',
+      facts: [
+        ['Quante volte batte il cuore in un giorno?', 'Circa 100.000 volte! Anche adesso, mentre leggi, lavora senza fermarsi mai.'],
+        ['Quante ossa ha il corpo umano?', '206 in un adulto. I neonati ne hanno di più, perché alcune poi si saldano insieme.'],
+        ['Quanto è grande il Sole?', 'Tantissimo: dentro ci starebbero più di un milione di pianeti Terra!'],
+        ['Quanto ci mette la luce del Sole ad arrivare da noi?', 'Circa 8 minuti. Quindi il Sole che vedi è quello di 8 minuti fa!']
+      ],
+      missions: [
+        ['Detective del battito', 'Conta i battiti al polso per 15 secondi e moltiplica per 4. Poi fai 30 salti e ricontali: cosa è cambiato?'],
+        ['Il diario della Luna', 'Per una settimana guarda la Luna ogni sera e disegnane la forma. Sta crescendo o calando?'],
+        ['Lo scheletro di carta', 'Disegna lo scheletro a grandezza naturale su un rotolo di carta: sdraiati e fatti ricalcare il contorno!']
+      ],
+      quiz: [
+        ['Quale organo pompa il sangue nel corpo?', ['I polmoni', 'Il cuore', 'Lo stomaco'], 1],
+        ['Qual è il pianeta più vicino al Sole?', ['Mercurio', 'Marte', 'Giove'], 0],
+        ['Quante ossa ha un adulto?', ['50', '206', '1000'], 1]
+      ]
+    },
+    {
+      id: 'mate', name: 'Matematica', ic: '🍕', c: 'var(--c1)', s: 'var(--c1-soft)',
+      topic: 'Frazioni, decimali e percentuali',
+      motto: 'La matematica è ovunque: nella pizza, nei saldi, nelle ricette. Quest’anno la trovi e la usi.',
+      facts: [
+        ['Cosa vuol dire «metà» in matematica?', 'È la frazione 1/2, ma anche 0,5 e anche 50%. Tre modi diversi di dire la stessa cosa!'],
+        ['Chi ha portato lo zero in Europa?', 'Un matematico italiano, Fibonacci, circa 800 anni fa: l’aveva imparato dai matematici arabi, che lo avevano preso dall’India.'],
+        ['Quanto è un milione?', 'Se conti un numero al secondo, senza mai fermarti, ci metti più di 11 giorni per arrivare a un milione!'],
+        ['Perché le api amano gli esagoni?', 'Le cellette delle api sono esagoni: è la forma che usa meno cera per contenere più miele.']
+      ],
+      missions: [
+        ['La cuoca delle frazioni', 'Taglia una pizza o una torta in 8 fette. Quante fette sono 1/2? E 1/4? Poi mangia 1/8 come premio!'],
+        ['Detective dei saldi', 'Al supermercato cerca un cartello «−50%» e calcola quanto costa quel prodotto dopo lo sconto.'],
+        ['Ricetta raddoppiata', 'Prendi una ricetta semplice e scrivi le dosi per il doppio delle persone. Poi cucinatela insieme!']
+      ],
+      quiz: [
+        ['Una pizza è tagliata in 8 fette. Quante fette sono la metà?', ['2', '4', '6'], 1],
+        ['Quanto fa 1/4 di 20?', ['4', '5', '10'], 1],
+        ['Un gioco costa 10 € ed è scontato del 50%. Quanto costa ora?', ['5 €', '8 €', '2 €'], 0]
+      ]
+    },
+    {
+      id: 'ita', name: 'Italiano', ic: '📖', c: 'var(--c6)', s: 'var(--c6-soft)',
+      topic: 'Parole, frasi e storie',
+      motto: 'Le parole sono i tuoi mattoncini: quest’anno impari a costruirci frasi e storie tutte tue.',
+      facts: [
+        ['Qual è una delle parole italiane più lunghe?', '«Precipitevolissimevolmente»: 26 lettere! Riesci a dirla tutta d’un fiato?'],
+        ['Chi è il «papà» della lingua italiana?', 'Dante Alighieri, più di 700 anni fa, scrisse la Divina Commedia nella lingua del popolo invece che in latino.'],
+        ['Cos’è un palindromo?', 'Una parola che si legge uguale anche al contrario: «anna», «osso», «radar». Ne trovi un’altra?'],
+        ['Chi fa l’azione in una frase?', 'Il soggetto! In «Giulia canta» il soggetto è Giulia e «canta» è il predicato.']
+      ],
+      missions: [
+        ['La storia delle 3 parole', 'Qualcuno ti dice 3 parole a caso (per esempio: drago, pizza, bicicletta). Tu inventi una storia di 5 frasi.'],
+        ['Caccia al verbo cantando', 'Metti la tua canzone preferita e conta quanti verbi ci sono nel ritornello.'],
+        ['Il diario segreto', 'Ogni sera scrivi 3 righe: una cosa bella, una cosa buffa e una cosa che hai imparato.']
+      ],
+      quiz: [
+        ['In «Giulia canta una canzone», chi compie l’azione?', ['Giulia', 'canta', 'una canzone'], 0],
+        ['Qual è il plurale di «uovo»?', ['uovi', 'uova', 'uove'], 1],
+        ['Quale di queste parole è un palindromo?', ['osso', 'orso', 'ossa'], 0]
+      ]
+    },
+    {
+      id: 'eng', name: 'Inglese', ic: '🎤', c: 'var(--c3)', s: 'var(--c3-soft)',
+      topic: 'Parlare e cantare in inglese',
+      motto: 'L’inglese si impara con le orecchie: canzoni, cartoni e giochi valgono quanto il libro.',
+      facts: [
+        ['Come si dice «ho dieci anni» in inglese?', '«I’m ten!» I’m = io sono, ten = dieci.'],
+        ['Qual è una delle canzoni più famose del mondo?', '«Happy Birthday to You»! La cantano ai compleanni in tantissimi paesi. Al tuo compleanno la canteranno per te!'],
+        ['Perché in inglese «bat» vuol dire due cose?', '«Bat» è sia il pipistrello sia la mazza da baseball. Molte parole inglesi hanno doppi significati!'],
+        ['Quante persone parlano inglese nel mondo?', 'Più di un miliardo e mezzo, contando chi l’ha imparato a scuola, proprio come te.']
+      ],
+      missions: [
+        ['Casa in inglese', 'Attacca 5 post-it in inglese su oggetti di casa: door, window, table, chair, bed. Rileggili ogni mattina.'],
+        ['Karaoke inglese', 'Canta una canzone in inglese e trova 3 parole che conosci già.'],
+        ['Cartone in inglese', 'Guarda un episodio del tuo cartone preferito in inglese, con i sottotitoli in italiano.']
+      ],
+      quiz: [
+        ['Cosa vuol dire «Happy birthday»?', ['Buona giornata', 'Buon compleanno', 'Buon Natale'], 1],
+        ['Come si dice 10 in inglese?', ['ten', 'two', 'tea'], 0],
+        ['Cosa vuol dire «cat»?', ['cane', 'gatto', 'topo'], 1]
+      ]
+    }

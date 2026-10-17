@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Il pesce batteria",
+    "x": "L'anguilla elettrica (che in realtà non è un'anguilla) dà forti scariche. Una specie, descritta nel 2019, arriva a circa 860 volt e si chiama Electrophorus voltai, in onore di Alessandro Volta!",
+    "ic": "🐟",
+    "q": "In onore di chi è stata chiamata una specie di anguilla elettrica?",
+    "ok": "Alessandro Volta",
+    "wrong": [
+      "Galileo Galilei",
+      "Guglielmo Marconi"
+    ],
+    "src": "Smithsonian Magazine; Agência FAPESP"
+  },
+  {
+    "t": "Diamante e matita, fratelli",
+    "x": "Il diamante, durissimo, e la grafite della matita, morbida, sono fatti dello stesso elemento: il carbonio! Cambia solo come sono sistemati gli atomi. Stessi mattoncini, costruzioni diverse.",
+    "ic": "✏️",
+    "q": "Di che cosa sono fatti sia il diamante sia la grafite della matita?",
+    "ok": "Di carbonio",
+    "wrong": [
+      "Di ferro",
+      "Di vetro"
+    ],
+    "src": "Scientific American"
+  },
+  {
+    "t": "Luce che non scotta",
+    "x": "Le lucciole fanno luce con una reazione chimica nel loro corpo: è una «luce fredda», perché quasi tutta l'energia diventa luce e pochissima calore. Una vecchia lampadina invece scalda tantissimo.",
+    "ic": "✨",
+    "q": "Perché la luce delle lucciole si chiama «luce fredda»?",
+    "ok": "Produce pochissimo calore",
+    "wrong": [
+      "Si accende solo d'inverno",
+      "È di colore azzurro"
+    ],
+    "src": "Britannica"
+  },
+  {
+    "t": "Una stufetta umana",
+    "x": "Anche quando stai ferma, il tuo corpo produce calore: circa 100 watt, come una vecchia lampadina accesa. Per questo una stanza piena di gente si scalda!",
+    "ic": "🔥",
+    "q": "Quanto calore produce più o meno il corpo a riposo?",
+    "ok": "Circa 100 watt, come una lampadina",
+    "wrong": [
+      "Niente, solo il sole scalda",
+      "Come una stufa enorme"
+    ],
+    "src": "Big Think; Inverse"
+  },
+  {
+    "t": "Il polo nord che cammina",
+    "x": "Il polo nord magnetico, quello verso cui punta la bussola, non sta fermo: si sposta ogni anno, da tempo verso la Siberia. Gli scienziati aggiornano spesso le mappe magnetiche per aerei e telefoni.",
+    "ic": "🧭",
+    "q": "Il polo nord magnetico…",
+    "ok": "Si sposta ogni anno",
+    "wrong": [
+      "È sempre fermo nello stesso punto",
+      "Sta al polo sud"
+    ],
+    "src": "NOAA World Magnetic Model; Live Science"
+  },
+  {
+    "t": "Vetro dalla sabbia",
+    "x": "Il vetro si fa soprattutto con la sabbia (silice), fusa a temperature altissime, oltre 1.000 °C, e poi raffreddata. Le finestre di casa erano granelli di spiaggia!",
+    "ic": "🏖️",
+    "q": "Con quale materiale si fa soprattutto il vetro?",
+    "ok": "La sabbia",
+    "wrong": [
+      "Il legno",
+      "Il sale"
+    ],
+    "src": "Corning"
+  },
+  {
+    "t": "La lattina infinita",
+    "x": "L'alluminio delle lattine si può riciclare all'infinito senza perdere qualità: una lattina può tornare lattina tante e tante volte. Ecco perché conviene metterla nella raccolta giusta!",
+    "ic": "🥫",
+    "q": "Quante volte si può riciclare l'alluminio?",
+    "ok": "All'infinito, senza perdere qualità",
+    "wrong": [
+      "Una volta sola",
+      "Mai"
+    ],
+    "src": "International Aluminium Institute; European Aluminium"
+  },
+  {
+    "t": "La Torre Eiffel si piega al sole",
+    "x": "Quando il sole scalda un lato della Torre Eiffel, il ferro di quel lato si dilata e la cima si sposta pian piano, disegnando una curva di circa 15 cm. Con il caldo diventa anche qualche millimetro più alta.",
+    "ic": "🗼",
+    "q": "Perché la cima della Torre Eiffel si sposta al sole?",
+    "ok": "Il ferro scaldato si dilata",
+    "wrong": [
+      "Il vento la spinge sempre",
+      "Le persone salgono tutte da un lato"
+    ],
+    "src": "toureiffel.paris"
+  },
+  {
+    "t": "Il metallo che fonde in mano",
+    "x": "Il gallio è un metallo che fonde a circa 30 °C, meno della temperatura del corpo: tenuto nel palmo diventerebbe liquido come argento. I chimici lo usano con i guanti, perché macchia e rovina altri metalli.",
+    "ic": "🥄",
+    "q": "A quanti gradi più o meno fonde il gallio?",
+    "ok": "Circa 30 °C",
+    "wrong": [
+      "Circa 1.000 °C",
+      "Circa -100 °C"
+    ],
+    "src": "Wikipedia «Gallium»; MEL Science"
+  },
+  {
+    "t": "Il ghiaccio che non bagna",
+    "x": "Il ghiaccio secco è anidride carbonica solida a -78,5 °C. Non diventa liquido: passa direttamente a gas (sublimazione) e fa la nebbiolina dei concerti. Non va mai toccato a mani nude!",
+    "ic": "🌫️",
+    "q": "Che cosa fa il ghiaccio secco scaldandosi?",
+    "ok": "Diventa subito gas",
+    "wrong": [
+      "Diventa acqua",
+      "Diventa sale"
+    ],
+    "src": "USGS; Wikipedia «Dry ice»"
+  },
+  {
+    "t": "Il velcro nato dai fiori",
+    "x": "Nel 1941 l'ingegnere svizzero George de Mestral vide i ricci (i frutti spinosi) della bardana attaccati al pelo del suo cane: avevano tanti uncini. Copiandoli inventò il velcro! Copiare la natura si chiama biomimetica.",
+    "ic": "🐕",
+    "q": "Da che cosa prese l'idea l'inventore del velcro?",
+    "ok": "Dai ricci della bardana attaccati al cane",
+    "wrong": [
+      "Dalle ali delle farfalle",
+      "Dalle zampe dei gechi"
+    ],
+    "src": "WIPO; Wikipedia «George de Mestral»"
+  },
+  {
+    "t": "Trottola sul ghiaccio",
+    "x": "Quando una pattinatrice in trottola stringe le braccia al corpo, gira più veloce; se le apre, rallenta. È la conservazione del momento angolare. Provalo su una sedia girevole!",
+    "ic": "⛸️",
+    "q": "Che cosa succede se una pattinatrice in trottola stringe le braccia?",
+    "ok": "Gira più veloce",
+    "wrong": [
+      "Si ferma subito",
+      "Gira al contrario"
+    ],
+    "src": "OpenStax University Physics; Sketchplanations"
+  },
+  {
+    "t": "Marconi e le onde",
+    "x": "Guglielmo Marconi, di Bologna, fu un pioniere della radio: mandò messaggi senza fili usando le onde elettromagnetiche. Nel 1909 vinse il premio Nobel per la fisica. Ogni radio ringrazia!",
+    "ic": "📻",
+    "q": "Per quale invenzione è famoso Guglielmo Marconi?",
+    "ok": "Il telegrafo senza fili, antenato della radio",
+    "wrong": [
+      "La lampadina",
+      "Il telefono a filo"
+    ],
+    "src": "NobelPrize.org"
+  },
+  {
+    "t": "Il mare nella conchiglia",
+    "x": "Se avvicini una conchiglia all'orecchio senti un fruscio, ma non è il mare! È il rumore intorno a te che rimbalza dentro la conchiglia. Prova con una tazza: senti un suono simile.",
+    "ic": "🐚",
+    "q": "Che cosa senti davvero in una conchiglia?",
+    "ok": "I rumori intorno che rimbalzano dentro",
+    "wrong": [
+      "Il mare rimasto dentro",
+      "Il cuore della conchiglia"
+    ],
+    "src": "HowStuffWorks; Wonderopolis"
+  },
+  {
+    "t": "L'arcobaleno è un cerchio",
+    "x": "L'arcobaleno in realtà è un cerchio intero! Da terra ne vediamo solo un arco perché il terreno nasconde il resto. Da un aereo o da una montagna, a volte, si può vedere il cerchio completo.",
+    "ic": "🌈",
+    "q": "Che forma ha davvero l'arcobaleno?",
+    "ok": "Un cerchio intero",
+    "wrong": [
+      "Un triangolo",
+      "Una linea dritta"
+    ],
+    "src": "BBC Science Focus; Old Farmer's Almanac"
+  }
+]

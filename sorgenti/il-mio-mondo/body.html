@@ -1,0 +1,38 @@
+<header class="appbar">
+  <div class="appbar-in">
+    <button type="button" class="mini" id="mini" aria-label="Vai alla casa del drago"></button>
+    <div class="who">
+      <div class="dn" id="bar-name">Il tuo drago</div>
+      <div class="dl" id="bar-level">Uovo magico</div>
+      <div class="ebar" aria-hidden="true"><i id="bar-e" style="width:0%"></i></div>
+    </div>
+    <div class="energy-pill" title="Energia della volontà">
+      <span aria-hidden="true">⚡️</span><b id="bar-energy">0</b>
+      <span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">punti energia</span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section id="p-home" data-page></section>
+  <section id="p-diario" data-page hidden></section>
+  <section id="p-routine" data-page hidden></section>
+  <section id="p-giochi" data-page hidden></section>
+  <section id="p-mate" data-page hidden></section>
+  <section id="p-scienze" data-page hidden></section>
+  <section id="p-scopri" data-page hidden></section>
+  <section id="p-sport" data-page hidden></section>
+  <section id="p-metodo" data-page hidden></section>
+</main>
+
+<nav class="tabbar" aria-label="Sezioni dell'app">
+  <div class="tabbar-in" id="tabs"></div>
+</nav>
+
+<div class="overlay" id="move" hidden>
+  <div class="modal mv" id="move-box" role="dialog" aria-modal="true" aria-label="Pausa movimento"></div>
+</div>
+
+<div class="overlay" id="modal" hidden>
+  <div class="modal" id="modal-box" role="dialog" aria-modal="true" aria-label="Messaggio"></div>
+</div>

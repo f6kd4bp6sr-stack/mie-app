@@ -1,0 +1,539 @@
+[
+ {
+  "id": 10,
+  "q_old": "Che cosa sono i colori secondari?",
+  "why": "spiegazione troppo corta",
+  "set": {
+   "wrong": [
+    "Colori che si usano poco",
+    "Colori ottenuti solo con il nero"
+   ],
+   "e": "Sono verde, arancione e viola: nascono mescolando due primari. Trucco: giallo + blu = verde, giallo + rosso = arancione, rosso + blu = viola."
+  }
+ },
+ {
+  "id": 11,
+  "q_old": "Quali sono i colori freddi?",
+  "why": "spiegazione troppo corta",
+  "set": {
+   "e": "Blu, verde e viola ricordano l'acqua, il ghiaccio e la notte: guardandoli sembra di sentire un po' di fresco, come davanti a una pista di ghiaccio."
+  }
+ },
+ {
+  "id": 12,
+  "q_old": "Che cosa sono i colori complementari?",
+  "why": "indizio di lunghezza: distrattori troppo corti",
+  "set": {
+   "wrong": [
+    "Coppie di colori vicini nel cerchio dei colori",
+    "Coppie di colori schiariti con il bianco"
+   ],
+   "e": "Stanno uno di fronte all'altro nel cerchio dei colori: rosso e verde, giallo e viola, blu e arancione. Messi vicini si fanno brillare a vicenda!"
+  }
+ },
+ {
+  "id": 13,
+  "q_old": "Che cosa si ottiene aggiungendo il bianco a un colore?",
+  "why": "spiegazione troppo corta",
+  "set": {
+   "e": "Il bianco schiarisce: rosso più bianco fa il rosa, blu più bianco fa l'azzurro. Trucco: più bianco aggiungi, più il colore diventa leggero come una nuvola."
+  }
+ },
+ {
+  "id": 14,
+  "q_old": "Che cosa si ottiene aggiungendo il nero a un colore?",
+  "why": "spiegazione poco chiara e corta",
+  "set": {
+   "e": "Il nero scurisce il colore: il verde diventa verde bosco, il blu diventa blu notte. Bastano poche gocce, perché il nero è fortissimo!"
+  }
+ },
+ {
+  "id": 15,
+  "q_old": "Che cos'è una natura morta?",
+  "why": "distrattore ambiguo e poco adatto; spiegazione corta",
+  "set": {
+   "wrong": [
+    "Un dipinto di animali che corrono",
+    "Un dipinto di montagne e fiumi"
+   ],
+   "e": "È un quadro di cose che non si muovono: frutta, fiori, vasi, libri. Si chiama «natura morta» perché i soggetti stanno fermi, in posa per il pittore."
+  }
+ },
+ {
+  "id": 16,
+  "q_old": "Che cos'è un paesaggio?",
+  "why": "indizio di lunghezza; spiegazione corta",
+  "set": {
+   "wrong": [
+    "Un dipinto di una persona in posa",
+    "Un dipinto di frutta su un tavolo"
+   ],
+   "e": "Il paesaggio mostra luoghi: montagne, mari, campagne o città. Trucco: «paesaggio» contiene «paese», cioè un luogo da guardare."
+  }
+ },
+ {
+  "id": 17,
+  "q_old": "Che cos'è un ritratto?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Il ritratto mostra una persona, spesso il suo viso. Se l'artista ritrae se stesso, guardandosi allo specchio, si chiama autoritratto."
+  }
+ },
+ {
+  "id": 18,
+  "q_old": "Che cos'è una scultura?",
+  "why": "indizio di lunghezza; spiegazione corta",
+  "set": {
+   "wrong": [
+    "Un disegno piatto fatto su un foglio",
+    "Una foto stampata su carta lucida"
+   ],
+   "e": "La scultura ha tre dimensioni: puoi girarle intorno. Si fa in marmo, bronzo, legno o argilla, togliendo materiale o modellandolo con le mani."
+  }
+ },
+ {
+  "id": 19,
+  "q_old": "Chi ha scolpito il David di marmo che si trova a Firenze?",
+  "why": "spiegazione non nomina l'autore",
+  "set": {
+   "e": "Michelangelo lo scolpì da giovane, da un unico blocco di marmo: la statua è alta più di 4 metri, con il basamento supera i 5. Un vero gigante!"
+  }
+ },
+ {
+  "id": 20,
+  "q_old": "Chi ha dipinto «L'ultima cena» a Milano?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Leonardo la dipinse sul muro del refettorio di Santa Maria delle Grazie, la sala dove mangiavano i frati: così sembrava che Gesù cenasse con loro."
+  }
+ },
+ {
+  "id": 21,
+  "q_old": "Dove si trova la Gioconda?",
+  "why": "distrattori più corti della risposta",
+  "set": {
+   "wrong": [
+    "Agli Uffizi, a Firenze",
+    "Al Prado, a Madrid"
+   ],
+   "e": "Leonardo la portò con sé in Francia e oggi è al Louvre di Parigi, protetta da un vetro speciale: ogni giorno migliaia di persone vanno a vederla."
+  }
+ },
+ {
+  "id": 22,
+  "q_old": "Chi ha dipinto «La nascita di Venere»?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Botticelli dipinse Venere che arriva dal mare su una grande conchiglia, spinta dal vento. Oggi si trova agli Uffizi di Firenze.",
+   "wrong": [
+    "Giotto di Bondone",
+    "Pablo Picasso"
+   ]
+  }
+ },
+ {
+  "id": 23,
+  "q_old": "Quale pittore usava forte contrasto tra luce e ombra?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Caravaggio illuminava le figure come con un faro in una stanza buia: per questo sembrano uscire dal buio e venirti incontro."
+  }
+ },
+ {
+  "id": 24,
+  "q_old": "Quale pittore dipinse tante ninfee nel suo giardino?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Monet, pittore impressionista, creò uno stagno nel suo giardino di Giverny e dipinse le ninfee centinaia di volte, con la luce di ore diverse."
+  }
+ },
+ {
+  "id": 25,
+  "q_old": "Che cosa volevano dipingere gli impressionisti?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Volevano fermare la luce di un attimo, che cambia in fretta: per questo dipingevano all'aperto, con pennellate veloci, come una foto scattata con il pennello."
+  }
+ },
+ {
+  "id": 26,
+  "q_old": "Chi ha dipinto «I girasoli»?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Van Gogh ne dipinse diverse versioni, con un giallo luminoso: per lui i girasoli erano il colore del sole e dell'allegria."
+  }
+ },
+ {
+  "id": 27,
+  "q_old": "Quale artista spagnolo inventò con Braque il cubismo?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Nel cubismo di Picasso e Braque le figure sembrano fatte di cubi e forme geometriche, come se le guardassi da più lati insieme."
+  }
+ },
+ {
+  "id": 28,
+  "q_old": "Quale pittore dipinse orologi molli che si sciolgono?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Dalí era un pittore surrealista: dipingeva scene strane come nei sogni. I suoi orologi si sciolgono come formaggio al sole!"
+  }
+ },
+ {
+  "id": 29,
+  "q_old": "Quale pittore è considerato tra i primi artisti astratti?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Kandinskij dipingeva forme e colori senza cose riconoscibili, come se fossero musica: per lui ogni colore aveva un suono.",
+   "wrong": [
+    "Michelangelo Merisi",
+    "Giotto di Bondone"
+   ]
+  }
+ },
+ {
+  "id": 30,
+  "q_old": "Chi ha dipinto gli affreschi della Cappella degli Scrovegni a Padova?",
+  "why": "spiegazione mancante/corta",
+  "set": {
+   "e": "Giotto li dipinse più di 700 anni fa: la volta è un cielo blu pieno di stelle d'oro, e le pareti raccontano storie come un grande fumetto."
+  }
+ },
+ {
+  "id": 31,
+  "q_old": "Che cos'è un affresco?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Si dipinge sull'intonaco ancora bagnato: asciugando, il colore resta dentro il muro. Per questo si chiama «a fresco» e dura secoli.",
+   "wrong": [
+    "Un quadro dipinto su tela",
+    "Una foto stampata su muro"
+   ]
+  }
+ },
+ {
+  "id": 32,
+  "q_old": "Che cos'è un mosaico?",
+  "why": "indizio di lunghezza; spiegazione corta",
+  "set": {
+   "wrong": [
+    "Un quadro dipinto a olio su tela",
+    "Una scultura di marmo bianco"
+   ],
+   "e": "Il mosaico è fatto di tessere di pietra o vetro messe vicine vicine. A Ravenna ci sono mosaici dorati bellissimi."
+  }
+ },
+ {
+  "id": 33,
+  "q_old": "Quali sono le pitture più antiche, fatte nelle caverne?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Le pitture rupestri, come quelle di Lascaux in Francia, mostrano cavalli e bisonti dipinti con terre colorate dagli uomini della preistoria."
+  }
+ },
+ {
+  "id": 34,
+  "q_old": "Che cos'è la prospettiva?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Un modo di colorare usando solo il nero",
+    "Un modo di incorniciare un quadro antico"
+   ],
+   "e": "Con la prospettiva il foglio sembra profondo: le cose lontane si disegnano più piccole, come i binari che si avvicinano all'orizzonte."
+  }
+ },
+ {
+  "id": 35,
+  "q_old": "Che cos'è il punto di fuga?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Il punto in cui il pittore firma il quadro",
+    "Il punto più colorato di tutto il quadro"
+   ],
+   "e": "Le linee della prospettiva corrono tutte verso il punto di fuga, di solito sulla linea dell'orizzonte: come una strada dritta che sparisce lontano."
+  }
+ },
+ {
+  "id": 36,
+  "q_old": "Che cosa sono le linee orizzontali?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Sono distese come l'orizzonte del mare. Le verticali invece vanno dall'alto in basso, come un albero dritto o un lampione.",
+   "wrong": [
+    "Linee dritte in piedi",
+    "Linee storte e curve"
+   ]
+  }
+ },
+ {
+  "id": 37,
+  "q_old": "Che cosa vuol dire «primo piano» in una foto o un quadro?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Ciò che è più lontano da chi guarda",
+    "La parte più in alto di tutto il quadro"
+   ],
+   "e": "Il primo piano è ciò che è più vicino a te; lo sfondo è ciò che sta più lontano, dietro a tutto."
+  }
+ },
+ {
+  "id": 38,
+  "q_old": "Quale tecnica usa colori sciolti in acqua, trasparenti?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Nell'acquerello il colore è sciolto in tanta acqua ed è trasparente: si usa carta spessa che beve l'acqua senza rovinarsi."
+  }
+ },
+ {
+  "id": 39,
+  "q_old": "Che cos'è un museo?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Un negozio che vende quadri e statue",
+    "Una palestra per artisti famosi"
+   ],
+   "e": "Il museo conserva opere e oggetti preziosi perché tutti possano vederli. A Torino ce ne sono tantissimi, come il Museo Egizio.",
+   "ok": "Un luogo che conserva ed espone opere"
+  }
+ },
+ {
+  "id": 40,
+  "q_old": "Quale museo di Torino è dedicato al cinema?",
+  "why": "indizio di lunghezza: risposta accorciata",
+  "set": {
+   "ok": "Il Museo Nazionale del Cinema",
+   "wrong": [
+    "Il Museo Egizio",
+    "Il Museo dell'Automobile"
+   ],
+   "e": "Il Museo del Cinema sta dentro la Mole Antonelliana: c'è anche un ascensore di vetro che sale fino in cima, da dove si vede tutta Torino."
+  }
+ },
+ {
+  "id": 41,
+  "q_old": "Quale edificio è il simbolo di Torino?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "La Mole Antonelliana prende il nome dall'architetto Alessandro Antonelli: con la sua punta altissima si vede da tutta la città."
+  }
+ },
+ {
+  "id": 42,
+  "q_old": "Dove si trova la Reggia di Venaria?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "La Reggia di Venaria è a pochi chilometri da Torino: fu una residenza di caccia dei Savoia, con giardini grandissimi.",
+   "wrong": [
+    "Vicino a Roma",
+    "Vicino a Napoli"
+   ]
+  }
+ },
+ {
+  "id": 43,
+  "q_old": "Che cos'è un'opera d'arte «astratta»?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Un'opera che copia la realtà come una foto",
+    "Un'opera fatta solo con il colore nero"
+   ],
+   "e": "Un'opera astratta non mostra cose riconoscibili: gioca con forme, linee e colori, come la musica gioca con i suoni."
+  }
+ },
+ {
+  "id": 44,
+  "q_old": "Che cos'è la street art?",
+  "why": "spiegazione mancante/corta",
+  "set": {
+   "wrong": [
+    "Arte che si vede solo nei musei",
+    "Arte fatta con il cibo nei piatti"
+   ],
+   "e": "«Street» in inglese vuol dire strada: è arte dipinta sui muri delle città, come i grandi murales colorati che si vedono anche a Torino."
+  }
+ },
+ {
+  "id": 45,
+  "q_old": "Che cos'è un fumetto?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Un libro di sole parole, senza disegni",
+    "Un quadro antico appeso in un museo"
+   ],
+   "e": "Il fumetto racconta una storia con disegni e nuvolette: le nuvolette con le parole si chiamano anche «balloon»."
+  }
+ },
+ {
+  "id": 46,
+  "q_old": "Che cosa sono i cartoni animati?",
+  "why": "indizio di lunghezza; spiegazione corta",
+  "set": {
+   "wrong": [
+    "Un solo disegno appeso al muro",
+    "Statuine colorate che stanno ferme"
+   ],
+   "e": "Ogni disegno è un po' diverso dal precedente: mostrati velocissimi, molti in un secondo, sembrano muoversi. Prova a disegnare un flipbook sull'angolo di un quaderno!"
+  }
+ },
+ {
+  "id": 47,
+  "q_old": "Come si realizza di solito una statua di bronzo?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Legno intagliato con il coltello",
+    "Pietra scolpita con lo scalpello"
+   ],
+   "e": "Il bronzo, una lega di rame e stagno, si scioglie col fuoco e si versa in uno stampo: raffreddandosi diventa duro e prende la forma della statua."
+  }
+ },
+ {
+  "id": 48,
+  "q_old": "Di che cosa è fatto il David di Michelangelo?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Il David è scolpito in un unico blocco di marmo di Carrara: si racconta che per Michelangelo la statua fosse già nella pietra, bastava liberarla."
+  }
+ },
+ {
+  "id": 49,
+  "q_old": "Da dove viene il famoso marmo bianco usato da Michelangelo?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Le cave di Carrara sono sulle Alpi Apuane, in Toscana: da lontano le montagne sembrano coperte di neve, ma è marmo bianco!",
+   "wrong": [
+    "Da Aosta, in Valle d'Aosta",
+    "Da Palermo, in Sicilia"
+   ]
+  }
+ },
+ {
+  "id": 50,
+  "q_old": "Che cosa sono le forme geometriche nel disegno?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Macchie di colore senza forma",
+    "Lettere e numeri scritti in fila"
+   ],
+   "e": "Cerchi, quadrati e triangoli sono i mattoncini del disegno: molti artisti partono da queste forme semplici per costruire figure e case."
+  }
+ },
+ {
+  "id": 51,
+  "q_old": "Che cos'è una texture in un disegno?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Il colore più scuro di tutto il disegno",
+    "La cornice che sta intorno al disegno"
+   ],
+   "e": "La texture fa capire com'è una superficie al tatto: ruvida, liscia, a righe. Puoi crearla con tratteggi e puntini, come la corteccia di un albero."
+  }
+ },
+ {
+  "id": 52,
+  "q_old": "Che cos'è il chiaroscuro?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Una matita molto morbida e scura",
+    "Una cornice scura intorno al disegno"
+   ],
+   "e": "Con il chiaroscuro alterni zone chiare e scure: il disegno prende volume e sembra in 3D, come una palla illuminata da una lampada."
+  }
+ },
+ {
+  "id": 53,
+  "q_old": "Che cosa vuol dire «simmetria»?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Una figura è simmetrica se, piegata a metà, le due parti combaciano come allo specchio: proprio come le ali di una farfalla.",
+   "wrong": [
+    "Due metà del tutto diverse",
+    "Un colore unico e uniforme"
+   ]
+  }
+ },
+ {
+  "id": 54,
+  "q_old": "Quale artista italiano era anche inventore e scienziato?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Leonardo riempiva i quaderni di invenzioni: disegnò macchine volanti secoli prima degli aerei, studiando il volo degli uccelli.",
+   "wrong": [
+    "Giotto di Bondone",
+    "Michelangelo Merisi"
+   ]
+  }
+ },
+ {
+  "id": 55,
+  "q_old": "In quale periodo vissero Leonardo, Michelangelo e Raffaello?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Il Rinascimento, tra il Quattrocento e il Cinquecento: «rinascere» perché si riscoprì l'arte degli antichi Greci e Romani."
+  }
+ },
+ {
+  "id": 56,
+  "q_old": "Che cos'è un'icona bizantina?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "ok": "Un'immagine sacra dipinta su tavola",
+   "wrong": [
+    "Una statua greca di marmo",
+    "Un mosaico romano di sassi"
+   ]
+  }
+ },
+ {
+  "id": 57,
+  "q_old": "Che cosa vedi al Museo Egizio di Torino?",
+  "why": "indizio di lunghezza; spiegazione arricchita",
+  "set": {
+   "wrong": [
+    "Scheletri di dinosauri e fossili",
+    "Automobili e motori d'epoca"
+   ],
+   "e": "Al Museo Egizio ci sono mummie, papiri e statue di migliaia di anni fa: è il museo più antico del mondo dedicato all'antico Egitto."
+  }
+ },
+ {
+  "id": 58,
+  "q_old": "Che cos'è un'installazione?",
+  "why": "distrattore poco chiaro; spiegazione arricchita",
+  "set": {
+   "wrong": [
+    "Un programma da mettere sul computer",
+    "Una cornice di legno per i quadri"
+   ],
+   "e": "L'installazione è un'opera che riempie una stanza o uno spazio: a volte ci puoi camminare dentro, come in un mondo inventato dall'artista."
+  }
+ },
+ {
+  "id": 59,
+  "q_old": "Perché è utile copiare un'opera d'arte per esercizio?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Copiando si capisce come lavoravano i grandi: i tratti, i colori, le ombre. Anche i grandi artisti da giovani imparavano copiando i loro maestri."
+  }
+ },
+ {
+  "id": 149,
+  "q_old": "Che cos'è uno stencil?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Un pennello piatto per il colore",
+    "Una cornice di legno per tele"
+   ]
+  }
+ }
+]

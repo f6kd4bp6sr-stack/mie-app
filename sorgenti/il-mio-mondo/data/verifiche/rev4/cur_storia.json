@@ -1,0 +1,182 @@
+[
+ {
+  "t": "Cleopatra e la Luna",
+  "x": "La Grande Piramide fu costruita circa 2500 anni prima di Cleopatra; lei visse circa 2000 anni prima dello sbarco sulla Luna. È più «vicina» agli astronauti che ai costruttori!",
+  "ic": "🌙",
+  "q": "Cleopatra visse più vicina nel tempo a…?",
+  "ok": "Lo sbarco sulla Luna",
+  "wrong": [
+   "La Grande Piramide",
+   "I dinosauri"
+  ],
+  "src": "worldatlas.com"
+ },
+ {
+  "t": "Elmi senza corna",
+  "x": "Nei film i Vichinghi hanno l'elmo con le corna, ma non ci sono prove che li usassero: l'idea nacque da artisti dell'Ottocento. Corna nei cartoni, non nella storia!",
+  "ic": "⚔️",
+  "q": "I Vichinghi portavano elmi con le corna?",
+  "ok": "No, è un'idea dell'Ottocento",
+  "wrong": [
+   "Sì, in ogni battaglia",
+   "Sì, ma solo i re"
+  ],
+  "src": "smithsonianmag.com"
+ },
+ {
+  "t": "Napoleone non era basso",
+  "x": "Si dice che fosse bassissimo, ma era alto circa 1,68-1,70 m: nella media dei Francesi del suo tempo. Il «mito» nacque anche dalle vignette inglesi che lo prendevano in giro.",
+  "ic": "🎩",
+  "q": "Napoleone era davvero bassissimo?",
+  "ok": "No, era nella media del tempo",
+  "wrong": [
+   "Sì, era alto un metro",
+   "Sì, il più basso d'Europa"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "Settembre, il settimo",
+  "x": "Settembre viene da «septem», sette: era il 7° mese dei Romani, che all'inizio facevano partire l'anno da marzo. Trucco: ottobre = otto, novembre = nove, dicembre = dieci!",
+  "ic": "📅",
+  "q": "Perché settembre si chiama così?",
+  "ok": "Era il 7° mese dei Romani",
+  "wrong": [
+   "Ha sette feste",
+   "Dura sette settimane"
+  ],
+  "src": "treccani.it"
+ },
+ {
+  "t": "I tatuaggi di Ötzi",
+  "x": "Ötzi, l'uomo venuto dal ghiaccio, ha 61 tatuaggi a linee e crocette. Forse servivano a curare i dolori alle articolazioni. Sono tra i tatuaggi più antichi del mondo!",
+  "ic": "🧊",
+  "q": "Quanti tatuaggi ha Ötzi?",
+  "ok": "61",
+  "wrong": [
+   "Nessuno",
+   "3"
+  ],
+  "src": "si.edu (Smithsonian)"
+ },
+ {
+  "t": "La prima campionessa",
+  "x": "Cinisca, principessa di Sparta, vinse la corsa dei carri a 4 cavalli alle Olimpiadi del 396 e del 392 a.C.: i cavalli erano suoi. Fu la prima donna campionessa olimpica!",
+  "ic": "🏆",
+  "q": "Chi fu la prima donna a vincere alle Olimpiadi antiche?",
+  "ok": "Cinisca di Sparta",
+  "wrong": [
+   "Cleopatra d'Egitto",
+   "Penelope di Itaca"
+  ],
+  "src": "worldhistory.org"
+ },
+ {
+  "t": "Record di altezza",
+  "x": "La Grande Piramide di Giza è stata la costruzione più alta fatta dall'uomo per più di 3800 anni! La superò solo la cattedrale di Lincoln, in Inghilterra, verso il 1311.",
+  "ic": "📏",
+  "q": "Che cosa superò in altezza la Grande Piramide?",
+  "ok": "Una cattedrale inglese",
+  "wrong": [
+   "Il Colosseo",
+   "Il Faro di Alessandria"
+  ],
+  "src": "historyrevealed.com"
+ },
+ {
+  "t": "Una meraviglia sola",
+  "x": "Delle Sette meraviglie del mondo antico ne resta in piedi una sola: la Grande Piramide di Giza, che è anche la più antica! Le altre sei sono andate distrutte.",
+  "ic": "🔺",
+  "q": "Quale delle Sette meraviglie antiche esiste ancora?",
+  "ok": "La Grande Piramide di Giza",
+  "wrong": [
+   "Il Colosso di Rodi",
+   "Il Faro di Alessandria"
+  ],
+  "src": "history.com"
+ },
+ {
+  "t": "Le 24 ore egizie",
+  "x": "L'idea di dividere il giorno e la notte in 24 parti sembra nata nell'antico Egitto. Ogni volta che guardi l'orologio usi un'idea antichissima!",
+  "ic": "🕰️",
+  "q": "Da quale popolo viene l'idea del giorno in 24 parti?",
+  "ok": "Dagli antichi Egizi",
+  "wrong": [
+   "Dai Vichinghi",
+   "Dagli Etruschi"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "Lasciare le noci",
+  "x": "I bambini romani giocavano con le noci, come noi con le biglie. Per dire «diventare grande» si diceva «nuces relinquere»: lasciare le noci!",
+  "ic": "🌰",
+  "q": "Che cosa voleva dire «lasciare le noci» per i Romani?",
+  "ok": "Diventare grandi",
+  "wrong": [
+   "Andare a dormire",
+   "Fare merenda"
+  ],
+  "src": "Lewis & Short, dizionario latino"
+ },
+ {
+  "t": "Cesare e i pirati",
+  "x": "Da giovane Giulio Cesare fu rapito dai pirati. Chiesero 20 talenti di riscatto e lui, offeso, disse che ne valeva almeno 50! Lo racconta lo storico Plutarco.",
+  "ic": "🏴‍☠️",
+  "q": "Che cosa fece Cesare quando i pirati chiesero 20 talenti?",
+  "ok": "Disse che ne valeva 50",
+  "wrong": [
+   "Scappò subito a nuoto",
+   "Pagò solo 5 talenti"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "La cupola che resiste",
+  "x": "La cupola del Pantheon, a Roma, è di calcestruzzo senza armature d'acciaio ed è in piedi da quasi 1900 anni! Era la più grande del mondo antico.",
+  "ic": "🏛️",
+  "q": "Di che cosa è fatta la cupola del Pantheon?",
+  "ok": "Calcestruzzo senza acciaio",
+  "wrong": [
+   "Vetro e legno",
+   "Ferro e plastica"
+  ],
+  "src": "smithsonianmag.com"
+ },
+ {
+  "t": "Gatti sacri",
+  "x": "Gli Egizi amavano così tanto i gatti che li mummificavano e li dedicavano alla dea Bastet. Nei musei ci sono perfino scatoline per mummie di gatto!",
+  "ic": "🐈",
+  "q": "A quale dea erano dedicati i gatti in Egitto?",
+  "ok": "Bastet",
+  "wrong": [
+   "Atena",
+   "Giunone"
+  ],
+  "src": "metmuseum.org"
+ },
+ {
+  "t": "Detersivo... speciale",
+  "x": "I lavandai romani usavano la pipì per smacchiare i vestiti! La raccoglievano in vasi lungo le strade, e l'imperatore Vespasiano ci mise perfino una tassa.",
+  "ic": "🧺",
+  "q": "Che cosa usavano i lavandai romani per smacchiare?",
+  "ok": "La pipì",
+  "wrong": [
+   "Il sapone al limone",
+   "La neve"
+  ],
+  "src": "worldhistory.org"
+ },
+ {
+  "t": "I «social» di Pompei",
+  "x": "I muri di Pompei sono pieni di scritte antiche: battute, saluti, messaggi d'amore e tifo per i gladiatori. Un po' come i commenti sui social di oggi!",
+  "ic": "✍️",
+  "q": "Che cosa si trova sui muri di Pompei?",
+  "ok": "Scritte e messaggi antichi",
+  "wrong": [
+   "Cartelli stradali moderni",
+   "Pubblicità di Roblox"
+  ],
+  "src": "smithsonianmag.com"
+ }
+]

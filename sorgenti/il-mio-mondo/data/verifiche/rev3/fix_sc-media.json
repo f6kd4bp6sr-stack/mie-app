@@ -1,0 +1,214 @@
+[
+ {
+  "id": 5,
+  "q_old": "In 5⁴, come si chiama il 5?",
+  "why": "Spiegazione citava solo le altre opzioni: ora spiega la base",
+  "set": {
+   "e": "Il 5 è la base: è il numero che si moltiplica per se stesso. Il 4 piccolo in alto è l'esponente e il risultato è la potenza. La base sta in basso, come le fondamenta di una casa!"
+  }
+ },
+ {
+  "id": 6,
+  "q_old": "Che cos'è un numero primo?",
+  "why": "Spiegazione corta: aggiunto rinforzo; Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Un numero che si può dividere per tutti i numeri più piccoli",
+    "Un numero che viene sempre prima degli altri in una fila"
+   ],
+   "e": "Un numero primo ha solo due divisori, 1 e se stesso: 2, 3, 5, 7, 11, 13… È un numero «testardo»: non si lascia dividere in parti uguali da nessun altro!"
+  }
+ },
+ {
+  "id": 9,
+  "q_old": "Quale di questi numeri è primo?",
+  "why": "Spiegazione corta: aggiunto rinforzo",
+  "set": {
+   "e": "13 si divide solo per 1 e per 13, quindi è primo. Invece 15 = 3 × 5 e 21 = 3 × 7: si possono smontare in fattori più piccoli, quindi non sono primi."
+  }
+ },
+ {
+  "id": 10,
+  "q_old": "Quando un numero è divisibile per 3?",
+  "why": "Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Quando la sua ultima cifra è un 3, un 6 o un 9",
+    "Quando la somma delle sue cifre è un numero pari"
+   ]
+  }
+ },
+ {
+  "id": 12,
+  "q_old": "Quando un numero è divisibile per 2?",
+  "why": "Spiegazione corta: aggiunto rinforzo; Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Quando finisce con una cifra dispari",
+    "Quando la somma delle cifre è 2"
+   ],
+   "e": "Basta guardare l'ultima cifra: se è 0, 2, 4, 6 o 8 il numero è pari, cioè divisibile per 2. Per esempio 358 finisce con 8: è divisibile per 2!"
+  }
+ },
+ {
+  "id": 13,
+  "q_old": "Quando un numero è divisibile per 9?",
+  "why": "Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Quando la sua ultima cifra è un 9 oppure uno 0",
+    "Quando la somma delle sue cifre è un numero dispari"
+   ],
+   "e": "Esempio: 729 → 7 + 2 + 9 = 18, e 18 è divisibile per 9; infatti 729 : 9 = 81. È la stessa regola del 3, ma con il 9!"
+  }
+ },
+ {
+  "id": 14,
+  "q_old": "Che cos'è il m.c.m. di due numeri?",
+  "why": "Spiegazione corta: aggiunto rinforzo; Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Il più grande divisore che hanno in comune",
+    "Il numero che si ottiene sommandoli"
+   ],
+   "e": "Multipli di 4: 4, 8, 12… Multipli di 6: 6, 12… Il primo che hanno in comune è 12, quindi il m.c.m. di 4 e 6 è 12. È il primo traguardo dove le due file si incontrano!"
+  }
+ },
+ {
+  "id": 22,
+  "q_old": "Come si chiama un angolo minore di 90°?",
+  "why": "Spiegazione corta e citava solo l'opzione sbagliata",
+  "set": {
+   "e": "L'angolo acuto è più piccolo di un angolo retto: stretto e appuntito come la punta di una matita. L'ottuso invece è tra 90° e 180°, e il piatto misura esattamente 180°."
+  }
+ },
+ {
+  "id": 25,
+  "q_old": "Due angoli complementari insieme fanno…",
+  "why": "Spiegazione citava solo l'opzione sbagliata",
+  "set": {
+   "e": "Due angoli complementari insieme formano un angolo retto, cioè 90°, come lo spigolo di un quaderno. I supplementari invece fanno 180°. Trucco: C viene prima di S, e 90 viene prima di 180!"
+  }
+ },
+ {
+  "id": 28,
+  "q_old": "Quanti metri sono 1 chilometro?",
+  "why": "Spiegazione corta: aggiunto rinforzo",
+  "set": {
+   "e": "«Chilo» viene dal greco e vuol dire mille: 1 km = 1000 m. Una pista di atletica è lunga 400 m: per fare un chilometro servono due giri e mezzo!"
+  }
+ },
+ {
+  "id": 29,
+  "q_old": "Quanti grammi sono 1 chilogrammo?",
+  "why": "Spiegazione corta: aggiunto rinforzo",
+  "set": {
+   "e": "Anche qui «chilo» vuol dire mille: 1 kg = 1000 g. Mezzo chilo sono 500 g, come un pacco di pasta!"
+  }
+ },
+ {
+  "id": 31,
+  "q_old": "Che cos'è un segmento?",
+  "why": "Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Una linea che va all'infinito da tutte e due le parti",
+    "Una linea curva che si chiude su se stessa"
+   ],
+   "e": "Il segmento ha due estremi, un inizio e una fine, come il bordo di un righello. La semiretta invece ha un inizio ma non una fine, e la retta non ha né l'uno né l'altra."
+  }
+ },
+ {
+  "id": 32,
+  "q_old": "Due rette che non si incontrano mai, sullo stesso piano, si dicono…",
+  "why": "Spiegazione corta: aggiunto rinforzo",
+  "set": {
+   "e": "Le rette parallele hanno sempre la stessa distanza tra loro e non si toccano mai, come i due binari del treno: se si incontrassero, il treno non potrebbe passare!"
+  }
+ },
+ {
+  "id": 36,
+  "q_old": "Che cos'è un'ipotesi?",
+  "why": "Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Una regola già dimostrata che non si può più cambiare",
+    "Il risultato che si scrive alla fine dell'esperimento"
+   ]
+  }
+ },
+ {
+  "id": 39,
+  "q_old": "Che cosa hanno le cellule vegetali che quelle animali non hanno?",
+  "why": "Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Il nucleo e la membrana cellulare",
+    "I mitocondri e il citoplasma"
+   ],
+   "e": "La parete è una «scatola» rigida intorno alla cellula, e i cloroplasti, verdi, catturano la luce per la fotosintesi. Nucleo, membrana, mitocondri e citoplasma li hanno sia le cellule animali sia quelle vegetali."
+  }
+ },
+ {
+  "id": 40,
+  "q_old": "Che cos'è la formula H₂O?",
+  "why": "Indizio di lunghezza: distrattori riequilibrati (accorciata la risposta giusta, dettagli spostati nella spiegazione)",
+  "set": {
+   "ok": "L'acqua",
+   "e": "H₂O è l'acqua: in ogni molecola ci sono 2 atomi di idrogeno (H) e 1 di ossigeno (O). Il numeretto piccolo in basso dice quanti atomi ci sono!"
+  }
+ },
+ {
+  "id": 42,
+  "q_old": "Calore e temperatura sono la stessa cosa?",
+  "why": "Indizio di lunghezza: distrattori riequilibrati (accorciata la risposta giusta, definizioni spostate nella spiegazione)",
+  "set": {
+   "ok": "No, sono due cose diverse",
+   "wrong": [
+    "Sì, sono proprio la stessa cosa",
+    "Sì, ma solo quando fa caldo"
+   ],
+   "e": "Il calore è energia che passa sempre dal corpo più caldo a quello più freddo; la temperatura misura quanto un corpo è caldo, con il termometro. Per questo il ghiaccio in mano si scioglie!"
+  }
+ },
+ {
+  "id": 44,
+  "q_old": "Nella frase «Giulia pattina», «pattina» è…",
+  "why": "Spiegazione rafforzata (flag: falso allarme, ma ora più chiara)",
+  "set": {
+   "e": "Il predicato verbale è il verbo che dice che cosa fa il soggetto: Giulia (soggetto) che cosa fa? Pattina! Trucco: trova prima il verbo, poi chiedi «chi?» per trovare il soggetto."
+  }
+ },
+ {
+  "id": 45,
+  "q_old": "Che cos'è l'analisi grammaticale?",
+  "why": "Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Trovare il soggetto e il predicato di ogni frase",
+    "Contare quante parole e quante sillabe ha una frase"
+   ],
+   "e": "Nell'analisi grammaticale dai un nome a ogni parola: nome, verbo, articolo… Trovare soggetto e predicato invece è l'analisi logica, che studia il ruolo delle parole nella frase."
+  }
+ },
+ {
+  "id": 52,
+  "q_old": "Che cos'era il feudo nel Medioevo?",
+  "why": "Indizio di lunghezza: distrattori riequilibrati",
+  "set": {
+   "wrong": [
+    "Una tassa pagata ogni anno dai contadini al re",
+    "Un castello costruito dai monaci per difendere i libri"
+   ],
+   "e": "Il re dava una terra a un signore, che in cambio gli giurava fedeltà e lo aiutava in guerra. Da «feudo» viene la parola «feudalesimo», il sistema del Medioevo."
+  }
+ },
+ {
+  "id": 56,
+  "q_old": "Qual è il fiume più lungo d'Europa?",
+  "why": "Spiegazione corta: aggiunto rinforzo",
+  "set": {
+   "e": "Il Volga è lungo circa 3500 km, scorre tutto in Russia e sfocia nel Mar Caspio. Il Danubio arriva secondo e attraversa ben dieci Stati!"
+  }
+ }
+]

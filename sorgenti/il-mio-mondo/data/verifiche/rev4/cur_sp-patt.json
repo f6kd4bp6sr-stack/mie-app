@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Ultima a 11 anni, poi regina",
+    "x": "Sonja Henie gareggiò alle Olimpiadi del 1924 a soli 11 anni e arrivò ultima. Non si arrese: vinse poi 10 Mondiali e 3 ori olimpici. Trucco: ultima oggi, prima domani!",
+    "ic": "🥇",
+    "q": "Come andò Sonja Henie alla sua prima Olimpiade, nel 1924?",
+    "ok": "Arrivò ultima",
+    "wrong": [
+      "Vinse l'oro",
+      "Arrivò seconda"
+    ],
+    "src": "olympics.com; britannica.com"
+  },
+  {
+    "t": "Il primo triplo Axel",
+    "x": "Nel 1988, al Trofeo NHK, la giapponese Midori Ito fu la prima donna a fare un triplo Axel in una gara internazionale: tre giri e mezzo in aria! Nel 1992 lo fece anche alle Olimpiadi.",
+    "ic": "🇯🇵",
+    "q": "Chi fu la prima donna a fare il triplo Axel in una gara internazionale?",
+    "ok": "Midori Ito",
+    "wrong": [
+      "Sonja Henie",
+      "Carolina Kostner"
+    ],
+    "src": "en.wikipedia.org (Midori Ito)"
+  },
+  {
+    "t": "Quattro giri e mezzo!",
+    "x": "Nel 2022 lo statunitense Ilia Malinin, a 17 anni, fu il primo a fare un quadruplo Axel in gara: 4 giri e mezzo in aria. È il salto che vale più punti di tutti i quadrupli!",
+    "ic": "🌀",
+    "q": "Quanti giri ha il quadruplo Axel?",
+    "ok": "Quattro e mezzo",
+    "wrong": [
+      "Quattro",
+      "Tre e mezzo"
+    ],
+    "src": "nbcsports.com"
+  },
+  {
+    "t": "Il primo triplo della storia",
+    "x": "Alle Olimpiadi del 1952 l'americano Dick Button fece il primo salto triplo della storia: un triplo loop. Oggi i campioni fanno anche i quadrupli, ma tutto è iniziato da lì!",
+    "ic": "3️⃣",
+    "q": "Quale fu il primo salto triplo della storia, nel 1952?",
+    "ok": "Un triplo loop",
+    "wrong": [
+      "Un triplo Axel",
+      "Un triplo Lutz"
+    ],
+    "src": "britannica.com (Dick Button)"
+  },
+  {
+    "t": "La macchina col nome di un italiano",
+    "x": "Il rasaghiaccio si chiama spesso «Zamboni», dal nome di Frank Zamboni, figlio di immigrati italiani in America. Aveva una pista e inventò la macchina negli anni Quaranta per lisciarla in fretta.",
+    "ic": "🚜",
+    "q": "Da chi prende il nome la macchina «Zamboni»?",
+    "ok": "Dal suo inventore Frank Zamboni",
+    "wrong": [
+      "Da una città italiana",
+      "Da un pattinatore famoso"
+    ],
+    "src": "en.wikipedia.org (Frank Zamboni)"
+  },
+  {
+    "t": "Campioni del mondo italiani",
+    "x": "Nel 2001 Barbara Fusar-Poli e Maurizio Margaglio vinsero il Mondiale di danza su ghiaccio, e nel 2002 il bronzo alle Olimpiadi. Una coppia italiana sul tetto del mondo!",
+    "ic": "🇮🇹",
+    "q": "Che cosa vinsero Fusar-Poli e Margaglio nel 2001?",
+    "ok": "Il Mondiale di danza su ghiaccio",
+    "wrong": [
+      "Il Mondiale di hockey",
+      "L'oro nel curling"
+    ],
+    "src": "en.wikipedia.org (Barbara Fusar-Poli)"
+  },
+  {
+    "t": "Vinto per 2 centesimi",
+    "x": "Nel 2014 Anna Cappellini e Luca Lanotte vinsero il Mondiale di danza su ghiaccio per soli 0,02 punti! Ogni piccolo dettaglio conta: anche un sorriso o un piede ben teso.",
+    "ic": "🔍",
+    "q": "Con quanto vantaggio vinsero il Mondiale 2014 Cappellini e Lanotte?",
+    "ok": "0,02 punti",
+    "wrong": [
+      "20 punti",
+      "2 punti"
+    ],
+    "src": "en.wikipedia.org (Anna Cappellini)"
+  },
+  {
+    "t": "Una medaglia olimpica per Carolina",
+    "x": "Carolina Kostner, della Val Gardena, ha vinto il bronzo alle Olimpiadi di Sochi 2014 e 5 titoli europei. Trucco: 5 Europei come le dita di una mano!",
+    "ic": "🥉",
+    "q": "Quale medaglia olimpica vinse Carolina Kostner a Sochi 2014?",
+    "ok": "Il bronzo",
+    "wrong": [
+      "L'oro",
+      "Nessuna medaglia"
+    ],
+    "src": "en.wikipedia.org (Carolina Kostner)"
+  },
+  {
+    "t": "Il loop ha un altro nome",
+    "x": "Il salto loop in Europa si chiama spesso «Rittberger», dal pattinatore tedesco Werner Rittberger che lo inventò. Un salto, due nomi: come un soprannome!",
+    "ic": "🏷️",
+    "q": "Come si chiama spesso il salto loop in Europa?",
+    "ok": "Rittberger",
+    "wrong": [
+      "Salchow",
+      "Paulsen"
+    ],
+    "src": "en.wikipedia.org (Loop jump)"
+  },
+  {
+    "t": "La santa dei pattinatori",
+    "x": "Santa Liduina, vissuta in Olanda nel Medioevo, è la patrona dei pattinatori: cadde pattinando da ragazza. Un'incisione del 1498 lo racconta: si pattinava già più di 500 anni fa!",
+    "ic": "⛸️",
+    "q": "Di chi è patrona Santa Liduina?",
+    "ok": "Dei pattinatori sul ghiaccio",
+    "wrong": [
+      "Dei nuotatori",
+      "Dei cuochi"
+    ],
+    "src": "en.wikipedia.org (Lidwina)"
+  },
+  {
+    "t": "Il primo ghiaccio artificiale",
+    "x": "Nel 1876 a Londra John Gamgee aprì la prima pista di ghiaccio artificiale: tubi pieni di liquido freddo sotto la pista. L'idea gli era venuta per conservare la carne!",
+    "ic": "❄️",
+    "q": "Dove aprì nel 1876 la prima pista di ghiaccio artificiale?",
+    "ok": "A Londra",
+    "wrong": [
+      "A Torino",
+      "A Oslo"
+    ],
+    "src": "en.wikipedia.org (Glaciarium)"
+  },
+  {
+    "t": "Ghiaccio più morbido per saltare",
+    "x": "Per il pattinaggio artistico il ghiaccio si tiene un po' meno freddo e più morbido che per la velocità: la lama fa più presa per staccare i salti. Ogni sport ha il suo ghiaccio!",
+    "ic": "🌡️",
+    "q": "Com'è il ghiaccio preferito per il pattinaggio artistico?",
+    "ok": "Più morbido, un po' meno freddo",
+    "wrong": [
+      "Durissimo e freddissimo",
+      "Bagnato con acqua calda"
+    ],
+    "src": "npr.org (Turin 2006)"
+  },
+  {
+    "t": "Canzoni con le parole",
+    "x": "Solo dalla stagione 2014-15 nel singolo e nelle coppie si possono usare canzoni cantate, con le parole. Prima si pattinava quasi sempre su musica solo strumentale!",
+    "ic": "🎤",
+    "q": "Da quando nel singolo si possono usare canzoni cantate?",
+    "ok": "Dalla stagione 2014-15",
+    "wrong": [
+      "Dal 1908",
+      "Non si possono mai usare"
+    ],
+    "src": "npr.org (2018)"
+  },
+  {
+    "t": "Voti da -5 a +5",
+    "x": "Dal 2018 i giudici danno a ogni elemento un voto di qualità da -5 a +5, chiamato GOE. Prima andava solo da -3 a +3. Pensa a un termometro: più bello è il salto, più sale!",
+    "ic": "📊",
+    "q": "Da quanto a quanto va oggi il voto GOE?",
+    "ok": "Da -5 a +5",
+    "wrong": [
+      "Da 0 a 10",
+      "Da -3 a +3"
+    ],
+    "src": "skatecanada.ca"
+  },
+  {
+    "t": "Una lama sottile e curva",
+    "x": "La lama da artistico è spessa circa 5 millimetri, come una matita schiacciata, ed è curva come un pezzo di cerchio di circa 2 metri di raggio: per questo si può girare e oscillare.",
+    "ic": "🔪",
+    "q": "Quanto è spessa circa la lama da pattinaggio artistico?",
+    "ok": "Circa 5 millimetri",
+    "wrong": [
+      "Circa 5 centimetri",
+      "Circa 1 metro"
+    ],
+    "src": "en.wikipedia.org (Figure skate)"
+  }
+]

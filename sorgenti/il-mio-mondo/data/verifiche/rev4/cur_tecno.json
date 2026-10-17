@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Il re dal dente blu",
+    "x": "Bluetooth prende il nome da Harald «Dente Blu», re danese del X secolo che unì i popoli della Danimarca. Il logo unisce due rune: le sue iniziali! Come il re, il Bluetooth «unisce» i dispositivi.",
+    "ic": "🦷",
+    "q": "Da chi prende il nome il Bluetooth?",
+    "ok": "Da un antico re danese",
+    "wrong": [
+      "Da un dentista inglese",
+      "Da un pesce dell’oceano"
+    ],
+    "src": "en.wikipedia.org – Bluetooth"
+  },
+  {
+    "t": "Il primo SMS",
+    "x": "Il primo SMS della storia partì il 3 dicembre 1992 nel Regno Unito: l’ingegnere Neil Papworth lo mandò da un computer a un telefono. Il testo? «Merry Christmas», cioè «Buon Natale»!",
+    "ic": "🎄",
+    "q": "Che cosa diceva il primo SMS?",
+    "ok": "Buon Natale",
+    "wrong": [
+      "Ciao mamma",
+      "Buon compleanno"
+    ],
+    "src": "en.wikipedia.org – Short Message Service"
+  },
+  {
+    "t": "Un computer piemontese per la Luna",
+    "x": "Nel 1965 l’Olivetti, azienda di Ivrea, lanciò la Programma 101, uno dei primi computer da scrivania. La NASA la usò per alcuni calcoli della missione Apollo 11 sulla Luna!",
+    "ic": "🌙",
+    "q": "Quale missione aiutò la Programma 101 dell’Olivetti?",
+    "ok": "L’Apollo 11, verso la Luna",
+    "wrong": [
+      "Il primo volo dei Wright",
+      "Il viaggio del Titanic"
+    ],
+    "src": "en.wikipedia.org – Programma 101"
+  },
+  {
+    "t": "Perché si chiama mouse?",
+    "x": "Il primo mouse fu costruito nel 1964 da Douglas Engelbart e Bill English. Perché «mouse», cioè topo? Il filo sembrava una coda! Guarda un mouse con il filo: ecco il topolino.",
+    "ic": "🖱️",
+    "q": "Perché il mouse si chiama così?",
+    "ok": "Il filo sembra una coda",
+    "wrong": [
+      "Squittisce quando clicchi",
+      "È grigio come un topo"
+    ],
+    "src": "en.wikipedia.org – Computer mouse"
+  },
+  {
+    "t": "Le emoji al museo",
+    "x": "Le prime emoji famose le disegnò il giapponese Shigetaka Kurita nel 1999: erano 176, piccolissime. Oggi sono custodite al MoMA, un grande museo d’arte di New York!",
+    "ic": "😀",
+    "q": "Quante erano le emoji disegnate da Kurita nel 1999?",
+    "ok": "176",
+    "wrong": [
+      "12",
+      "5.000"
+    ],
+    "src": "moma.org – Shigetaka Kurita, Emoji, 1999"
+  },
+  {
+    "t": "Il primo codice a barre",
+    "x": "Il primo prodotto pagato alla cassa leggendo il codice a barre fu un pacchetto di gomme da masticare, il 26 giugno 1974, in un supermercato dell’Ohio (Stati Uniti). Una copia è esposta in un museo!",
+    "ic": "🛒",
+    "q": "Qual è stato il primo prodotto letto con il codice a barre?",
+    "ok": "Un pacchetto di gomme da masticare",
+    "wrong": [
+      "Una bottiglia di latte fresco",
+      "Una scatola di biscotti"
+    ],
+    "src": "en.wikipedia.org – Universal Product Code"
+  },
+  {
+    "t": "Il robot di Leonardo",
+    "x": "Verso il 1495 Leonardo da Vinci progettò un cavaliere meccanico: un robot con l’armatura che muoveva braccia, collo e mascella. Nel 2002 e nel 2007 è stato ricostruito dai suoi disegni… e funzionava!",
+    "ic": "🤖",
+    "q": "Che cosa progettò Leonardo verso il 1495?",
+    "ok": "Un cavaliere meccanico",
+    "wrong": [
+      "Un telefono con i fili",
+      "Un treno a vapore"
+    ],
+    "src": "en.wikipedia.org – Leonardo’s robot"
+  },
+  {
+    "t": "Il nonno del fax",
+    "x": "Il pantelegrafo dell'abate italiano Giovanni Caselli mandava disegni e scritte a mano lungo i fili del telegrafo: fu usato in Francia, sulla linea Parigi-Lione (poi fino a Marsiglia), dal 1865 al 1870!",
+    "ic": "📠",
+    "q": "Che cosa trasmetteva il pantelegrafo di Caselli?",
+    "ok": "Disegni e scritte a mano",
+    "wrong": [
+      "Musica e voci",
+      "Film in bianco e nero"
+    ],
+    "src": "Wikipedia «Pantelegraph»"
+  },
+  {
+    "t": "Quando il computer era una persona",
+    "x": "Un tempo «computer» era un mestiere: voleva dire una persona che fa i calcoli! A fine Ottocento all'osservatorio di Harvard lavorava un famoso gruppo di «computer» donne. Poi il nome è passato alle macchine.",
+    "ic": "👩‍🔬",
+    "q": "Che cosa voleva dire un tempo la parola «computer»?",
+    "ok": "Una persona che fa i calcoli",
+    "wrong": [
+      "Una macchina per cucire",
+      "Un tipo di orologio"
+    ],
+    "src": "Wikipedia «Harvard Computers»"
+  },
+  {
+    "t": "Il cellulare da un chilo",
+    "x": "Il 3 aprile 1973, a New York, Martin Cooper fece la prima telefonata con un cellulare portatile. Quel telefono pesava circa 1,1 kg: più di un pacco di zucchero da un chilo!",
+    "ic": "📱",
+    "q": "Quanto pesava il primo cellulare di Martin Cooper?",
+    "ok": "Circa 1,1 kg",
+    "wrong": [
+      "Circa 10 grammi",
+      "Circa 20 kg"
+    ],
+    "src": "en.wikipedia.org – Martin Cooper (inventor)"
+  },
+  {
+    "t": "La colla che non incollava",
+    "x": "Nel 1968 Spencer Silver cercava una colla fortissima e ne creò una debole. Anni dopo il collega Art Fry la usò per non far cadere il segnalibro dal suo libro di canti: nacquero i Post-it, in vendita dal 1980!",
+    "ic": "🗒️",
+    "q": "Per che cosa voleva usare la colla debole Art Fry?",
+    "ok": "Per tenere fermo il segnalibro",
+    "wrong": [
+      "Per attaccare le scarpe",
+      "Per riparare un aereo"
+    ],
+    "src": "en.wikipedia.org – Post-it Note"
+  },
+  {
+    "t": "La barretta sciolta",
+    "x": "Nel 1945 l’ingegnere Percy Spencer lavorava vicino a un radar e si accorse che una barretta dolce che aveva in tasca si era sciolta! Così nacque il forno a microonde. Il primo cibo cotto apposta? I popcorn.",
+    "ic": "🍿",
+    "q": "Quale fu il primo cibo cotto apposta con le microonde?",
+    "ok": "I popcorn",
+    "wrong": [
+      "La pizza",
+      "Il gelato"
+    ],
+    "src": "en.wikipedia.org – Microwave oven"
+  },
+  {
+    "t": "Scratch come i DJ",
+    "x": "Scratch è stato creato al MIT, negli Stati Uniti, e la versione 1.0 è uscita nel 2007. Il nome viene dallo «scratch» dei DJ, che muovono i dischi per mescolare suoni: in Scratch si mescolano idee!",
+    "ic": "🎧",
+    "q": "Da dove viene il nome Scratch?",
+    "ok": "Da una tecnica dei DJ",
+    "wrong": [
+      "Da un gatto famoso",
+      "Da un gioco di carte"
+    ],
+    "src": "en.wikipedia.org – Scratch (programming language)"
+  },
+  {
+    "t": "La calcolatrice di un ragazzo",
+    "x": "Nel 1642 Blaise Pascal, a 19 anni, cominciò a costruire una calcolatrice meccanica per aiutare il papà, che per lavoro faceva calcoli lunghissimi. La Pascalina faceva addizioni e sottrazioni con le rotelle!",
+    "ic": "🧮",
+    "q": "Perché Pascal costruì la Pascalina?",
+    "ok": "Per aiutare il papà nei calcoli",
+    "wrong": [
+      "Per vincere una gara di corsa",
+      "Per suonare la musica"
+    ],
+    "src": "it.wikipedia.org – Pascalina"
+  },
+  {
+    "t": "Non spegnere!",
+    "x": "Il primo server del web, al CERN, era un computer NeXT con un'etichetta scritta a mano in rosso: «This machine is a server. DO NOT POWER IT DOWN!!», cioè «Non spegnerlo!». Ospitava il primo sito, info.cern.ch.",
+    "ic": "🔴",
+    "q": "Che cosa diceva l’etichetta sul primo server del web?",
+    "ok": "Non spegnerlo!",
+    "wrong": [
+      "Non toccare lo schermo!",
+      "Lavare con acqua!"
+    ],
+    "src": "Wikipedia/CERN «NeXT first web server»"
+  }
+]

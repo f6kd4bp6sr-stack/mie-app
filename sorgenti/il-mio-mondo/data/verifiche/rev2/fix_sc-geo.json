@@ -1,0 +1,26 @@
+[
+ {
+  "id": 5,
+  "q_old": "Quali montagne attraversano l’Italia da nord a sud?",
+  "why": "Gli Appennini proseguono anche in Sicilia",
+  "set": {
+   "e": "Gli Appennini: sono come la spina dorsale dello stivale, dalla Liguria fino alla Calabria, e continuano anche in Sicilia."
+  }
+ },
+ {
+  "id": 75,
+  "q_old": "Qual è il primo parco nazionale d'Italia, tra Piemonte e Valle d'Aosta?",
+  "why": "«Unica vetta oltre 4000 m tutta italiana» è discutibile (es. Piramide Vincent, Punta Giordani sul Monte Rosa)",
+  "set": {
+   "e": "Nacque nel 1922 per proteggere lo stambecco, che allora rischiava di sparire. La vetta del Gran Paradiso supera i 4000 metri!"
+  }
+ },
+ {
+  "id": 93,
+  "q_old": "Che forma ha il lago di Como?",
+  "why": "Errore: nella Y rovesciata i due rami si separano in basso (Como e Lecco), non si uniscono",
+  "set": {
+   "e": "In alto c'è un solo ramo, che a metà lago, vicino a Bellagio, si divide in due rami verso sud: quello di Como e quello di Lecco. Sembra un omino che cammina! Il ramo di Lecco è quello dove iniziano i Promessi Sposi."
+  }
+ }
+]

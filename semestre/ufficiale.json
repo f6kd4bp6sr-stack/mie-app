@@ -1,0 +1,115 @@
+{
+ "updated": "2026-10-17T10:00+02:00",
+ "nota": "Materiali ufficiali pubblicati (piattaforma MUR-CRUI-CISIA e avvisi UPO). Ogni voce è inserita solo dopo doppia verifica: due letture indipendenti della fonte e conferma da una seconda fonte quando esiste.",
+ "fonti": [
+  {
+   "name": "UPO – Modalità di accesso a Medicina e Chirurgia 2026/27",
+   "url": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027"
+  },
+  {
+   "name": "MUR – notizie sul semestre aperto",
+   "url": "https://www.mur.gov.it/it/news"
+  },
+  {
+   "name": "Piattaforma Semestre aperto MedOdoVet (CRUI, MUR, CISIA)",
+   "url": "https://www.semestreaperto-medodovet.it/"
+  }
+ ],
+ "voci": [
+  {
+   "date": "2026-09-18",
+   "tipo": "esercitazioni",
+   "titolo": "Esercitazioni ufficiali sulle prime due unità didattiche dei tre insegnamenti",
+   "dettaglio": "Sulla piattaforma semestreaperto-medodovet.it sono online le esercitazioni sulle prime due unità didattiche di ogni insegnamento; altre verranno aggiunte fino a fine ottobre. La piattaforma comprende anche gli esercizi di valutazione delle conoscenze in ingresso e i MOOC (circa 32.000 iscritti).",
+   "materie": {
+    "fis": [
+     "u1",
+     "u2"
+    ],
+    "chi": [
+     "c1",
+     "c2"
+    ],
+    "bio": [
+     "b1",
+     "b2"
+    ]
+   },
+   "fonte": "UPO",
+   "url": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027",
+   "verifica": {
+    "letture": 2,
+    "seconda_fonte": "MUR, comunicato del 1° settembre 2026 (unità coerenti)",
+    "url2": "https://www.mur.gov.it/it/news/martedi-01092026/medicina-semestre-aperto-online-le-prime-esercitazioni-prepararsi-agli-esami",
+    "controllato": "2026-10-17"
+   }
+  },
+  {
+   "date": "2026-09-18",
+   "tipo": "simulazioni",
+   "titolo": "Simulazioni ufficiali della prova d'esame previste a novembre",
+   "dettaglio": "Nel mese di novembre la piattaforma metterà a disposizione le simulazioni della prova d'esame, con numero di quesiti e tempi simili a quelli reali.",
+   "materie": {
+    "fis": [],
+    "chi": [],
+    "bio": []
+   },
+   "stato": "previste",
+   "fonte": "UPO",
+   "url": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027",
+   "verifica": {
+    "letture": 2,
+    "seconda_fonte": "MUR, comunicato del 1° settembre 2026 («da novembre» le simulazioni)",
+    "url2": "https://www.mur.gov.it/it/news/martedi-01092026/medicina-semestre-aperto-online-le-prime-esercitazioni-prepararsi-agli-esami",
+    "controllato": "2026-10-17"
+   }
+  },
+  {
+   "date": "2026-09-01",
+   "tipo": "esercitazioni",
+   "titolo": "Prime esercitazioni online sulla piattaforma ufficiale",
+   "dettaglio": "Biologia: basi dell'organizzazione biologica e molecolare della vita, trasmissione dell'informazione genetica. Fisica: metodi della fisica e meccanica. Chimica: struttura dell'atomo, legami chimici e stati di aggregazione. Nuovi quesiti nelle settimane successive, seguendo le lezioni.",
+   "materie": {
+    "fis": [
+     "u1",
+     "u2"
+    ],
+    "chi": [
+     "c1"
+    ],
+    "bio": [
+     "b1",
+     "b2"
+    ]
+   },
+   "fonte": "MUR",
+   "url": "https://www.mur.gov.it/it/news/martedi-01092026/medicina-semestre-aperto-online-le-prime-esercitazioni-prepararsi-agli-esami",
+   "verifica": {
+    "letture": 2,
+    "seconda_fonte": "UPO, avviso del 18 settembre 2026",
+    "url2": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027",
+    "controllato": "2026-10-17"
+   }
+  },
+  {
+   "date": "2026-07-01",
+   "tipo": "piattaforma",
+   "titolo": "Online la piattaforma gratuita di preparazione",
+   "dettaglio": "CRUI e MUR, con il consorzio CISIA, aprono semestreaperto-medodovet.it: MOOC, esercizi di ingresso e poi esercitazioni sui syllabus 2026/27.",
+   "materie": {
+    "fis": [],
+    "chi": [],
+    "bio": []
+   },
+   "fonte": "MUR",
+   "url": "https://www.mur.gov.it/it/news/mercoledi-01072026/universita-online-la-piattaforma-gratuita-la-preparazione-semestre-aperto",
+   "verifica": {
+    "letture": 2,
+    "seconda_fonte": "MUR, comunicato del 1° settembre 2026 («attiva dal 1° luglio»)",
+    "url2": "https://www.mur.gov.it/it/news/martedi-01092026/medicina-semestre-aperto-online-le-prime-esercitazioni-prepararsi-agli-esami",
+    "controllato": "2026-10-17"
+   }
+  }
+ ],
+ "in_verifica": []
+}

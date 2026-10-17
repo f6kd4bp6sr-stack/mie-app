@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Più ossa da piccoli!",
+    "x": "Un neonato ha tra 270 e 300 ossa: crescendo molte si saldano insieme e un adulto ne ha 206. Trucco: da piccoli si hanno più «pezzi» che poi si incollano, come un puzzle che diventa un unico disegno.",
+    "ic": "🦴",
+    "q": "Chi ha più ossa: un neonato o un adulto?",
+    "ok": "Il neonato",
+    "wrong": [
+      "Hanno lo stesso numero di ossa",
+      "L'adulto, perché è più grande"
+    ],
+    "src": "Healthline; Popular Science"
+  },
+  {
+    "t": "Il muscolo più piccolo",
+    "x": "Il muscolo più piccolo del corpo è lo stapedio: misura circa 1 millimetro e sta nell'orecchio, attaccato alla staffa. Tira l'ossicino per proteggerci dai suoni troppo forti. Mini osso, mini muscolo!",
+    "ic": "👂",
+    "q": "Dove si trova il muscolo più piccolo del corpo?",
+    "ok": "Nell'orecchio",
+    "wrong": [
+      "Nel mignolo del piede",
+      "Nella palpebra dell'occhio"
+    ],
+    "src": "Guinness World Records; Kenhub"
+  },
+  {
+    "t": "Il cuore ha un direttore",
+    "x": "Il cuore batte da solo grazie a un gruppetto di cellule speciali, il nodo senoatriale: è il suo «pacemaker naturale», che manda una scintilla elettrica a ogni battito. Immagina un direttore d'orchestra dentro il cuore!",
+    "ic": "❤️",
+    "q": "Come si chiama il «pacemaker naturale» del cuore?",
+    "ok": "Il nodo senoatriale",
+    "wrong": [
+      "Il nodo della cravatta",
+      "La valvola aortica"
+    ],
+    "src": "NIH StatPearls (ncbi.nlm.nih.gov)"
+  },
+  {
+    "t": "Il fegato ricresce",
+    "x": "Il fegato è un organo speciale: se una parte viene tolta, quella che resta può ricrescere fino a tornare quasi della grandezza giusta. Per questo un donatore può regalarne un pezzo. Come una lucertola con la coda!",
+    "ic": "🫀",
+    "q": "Che cosa sa fare di speciale il fegato?",
+    "ok": "Ricrescere se ne resta una parte",
+    "wrong": [
+      "Spostarsi da un lato all'altro",
+      "Battere come il cuore"
+    ],
+    "src": "UPMC; MIT Biology"
+  },
+  {
+    "t": "Gemelli, ma non di dita",
+    "x": "Anche i gemelli identici, che hanno lo stesso DNA, hanno impronte digitali diverse! Le creste si formano prima della nascita e cambiano per piccole differenze nella pancia della mamma, come la posizione e i movimenti.",
+    "ic": "🫆",
+    "q": "I gemelli identici hanno le stesse impronte digitali?",
+    "ok": "No, sono diverse",
+    "wrong": [
+      "Sì, identiche",
+      "Sì, ma solo sui pollici"
+    ],
+    "src": "Washington State Twin Registry; BBC Science Focus"
+  },
+  {
+    "t": "Il cervello non sente male",
+    "x": "Il cervello sente il dolore del corpo, ma il suo tessuto non ha recettori del dolore! Per questo, con un'anestesia sulla pelle della testa, alcune operazioni al cervello si fanno con il paziente sveglio.",
+    "ic": "🧠",
+    "q": "Che cosa manca al tessuto del cervello?",
+    "ok": "I recettori del dolore",
+    "wrong": [
+      "Le cellule nervose",
+      "Il sangue"
+    ],
+    "src": "BrainFacts.org; UCSF Brain Tumor Center"
+  },
+  {
+    "t": "Un secondo cervello nella pancia",
+    "x": "L'intestino ha una sua rete di centinaia di milioni di neuroni, il sistema nervoso enterico: per questo lo chiamano «secondo cervello». Dirige la digestione quasi da solo e «parla» di continuo con il cervello.",
+    "ic": "🌀",
+    "q": "Come chiamano a volte il sistema nervoso dell'intestino?",
+    "ok": "Il secondo cervello",
+    "wrong": [
+      "Il secondo cuore",
+      "Il terzo polmone"
+    ],
+    "src": "Johns Hopkins Medicine"
+  },
+  {
+    "t": "La mappa della lingua è un mito",
+    "x": "Su vecchi libri c'era una «mappa» con dolce sulla punta e amaro in fondo: è sbagliata! Tutte le zone della lingua con papille sentono tutti i gusti. Prova: un po' di zucchero sul lato della lingua sa di dolce.",
+    "ic": "👅",
+    "q": "È vero che il dolce si sente solo sulla punta della lingua?",
+    "ok": "No, è un mito",
+    "wrong": [
+      "Sì, solo sulla punta",
+      "Sì, ma solo da piccoli"
+    ],
+    "src": "Wikipedia «Tongue map»; Live Science"
+  },
+  {
+    "t": "Perché dopo una trottola gira la testa",
+    "x": "Nell'orecchio interno ci sono canali pieni di liquido per l'equilibrio. Quando smetti di girare, il liquido continua a muoversi ancora un po': il cervello crede che tu giri ancora! Le pattinatrici si allenano a fissare un punto.",
+    "ic": "🌀",
+    "q": "Perché dopo tante giravolte ti gira la testa?",
+    "ok": "Il liquido nell'orecchio si muove ancora",
+    "wrong": [
+      "Il cervello si stanca di pensare",
+      "Il cuore batte più piano"
+    ],
+    "src": "Live Science; How It Works"
+  },
+  {
+    "t": "Un buchino invisibile",
+    "x": "Ogni occhio ha un punto cieco: dove il nervo ottico esce dalla retina non ci sono cellule che vedono la luce. Non te ne accorgi perché il cervello riempie il buco e l'altro occhio aiuta. Un «buco» che non vedi mai!",
+    "ic": "👁️",
+    "q": "Perché ogni occhio ha un punto cieco?",
+    "ok": "Lì esce il nervo ottico e mancano cellule della luce",
+    "wrong": [
+      "Lì c'è una ciglia",
+      "Lì l'occhio è chiuso"
+    ],
+    "src": "Britannica; UCLA Health"
+  },
+  {
+    "t": "Il mondo a testa in giù",
+    "x": "Il cristallino dell'occhio, come una lente, proietta sulla retina un'immagine capovolta! È il cervello che la interpreta e ce la fa vedere dritta. Come una fotocamera dentro la testa.",
+    "ic": "🙃",
+    "q": "Com'è l'immagine che si forma sulla retina?",
+    "ok": "Capovolta",
+    "wrong": [
+      "Colorata solo di blu",
+      "Doppia e storta"
+    ],
+    "src": "ScienceAlert; The Conversation"
+  },
+  {
+    "t": "Papille sempre nuove",
+    "x": "Le cellule che sentono i sapori nelle papille gustative si rinnovano di continuo, più o meno ogni una o due settimane. Così, se ti scotti la lingua con la cioccolata calda, dopo qualche giorno senti di nuovo bene!",
+    "ic": "😋",
+    "q": "Le cellule del gusto sulla lingua…",
+    "ok": "Si rinnovano ogni una o due settimane",
+    "wrong": [
+      "Durano per tutta la vita",
+      "Si rinnovano ogni dieci anni"
+    ],
+    "src": "Ask Dr. Universe (Washington State University); EBSCO"
+  },
+  {
+    "t": "Lo stomaco si protegge",
+    "x": "Nello stomaco c'è un succo così acido che scioglie il cibo. Lo stomaco non si fa male perché si ricopre di uno strato di muco, come un impermeabile, e rinnova di continuo le cellule del suo rivestimento.",
+    "ic": "🧪",
+    "q": "Come si protegge lo stomaco dal suo stesso acido?",
+    "ok": "Con uno strato di muco",
+    "wrong": [
+      "Con uno strato di grasso",
+      "Con dei peli sottili"
+    ],
+    "src": "Scientific American"
+  },
+  {
+    "t": "Dita raggrinzite in piscina",
+    "x": "Dopo tanto tempo in acqua le dita si raggrinziscono: non è solo pelle bagnata, è il sistema nervoso che restringe i vasi sanguigni. Gli scienziati pensano, ma non è ancora sicuro, che serva a tenere meglio gli oggetti bagnati.",
+    "ic": "🏊",
+    "q": "Chi fa raggrinzire le dita dopo tanto tempo in acqua?",
+    "ok": "Il sistema nervoso",
+    "wrong": [
+      "Il cloro della piscina",
+      "Il freddo delle ossa"
+    ],
+    "src": "Smithsonian Magazine; MDC Berlin"
+  },
+  {
+    "t": "I sogni hanno gli occhi veloci",
+    "x": "Quasi tutti i sogni più vivaci arrivano in una fase del sonno chiamata REM, cioè «movimenti rapidi degli occhi»: gli occhi si muovono veloci sotto le palpebre chiuse, mentre il corpo resta rilassato.",
+    "ic": "💤",
+    "q": "Che cosa fanno gli occhi nella fase REM del sonno?",
+    "ok": "Si muovono veloci sotto le palpebre",
+    "wrong": [
+      "Si aprono da soli",
+      "Restano fermissimi"
+    ],
+    "src": "NIH – NINDS «Brain Basics: Understanding Sleep»"
+  }
+]

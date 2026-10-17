@@ -1,0 +1,27 @@
+[
+ {
+  "id": 10,
+  "q_old": "Di che cosa sono fatti i tessuti aerei?",
+  "why": "Il tessuto è di solito un unico telo piegato a metà (vedi id 117), non due strisce; è solo un po' elastico",
+  "set": {
+   "ok": "Di stoffa lunga, un po' elastica",
+   "e": "È un lungo tessuto sintetico appeso in alto, morbido e un po' elastico."
+  }
+ },
+ {
+  "id": 22,
+  "q_old": "Che cosa fa la magnesite (talco) sulle mani?",
+  "why": "La magnesite non è talco (il talco anzi fa scivolare)",
+  "set": {
+   "q": "Che cosa fa la magnesite (la polvere bianca per la presa) sulle mani?"
+  }
+ },
+ {
+  "id": 39,
+  "q_old": "Che cosa fa un acrobata del circo con gli occhi durante un giro?",
+  "why": "I pattinatori nelle trottole non fissano un punto: lo fanno le ballerine nelle piroette",
+  "set": {
+   "e": "Come fanno le ballerine nelle piroette. Si impara piano, con l’insegnante."
+  }
+ }
+]

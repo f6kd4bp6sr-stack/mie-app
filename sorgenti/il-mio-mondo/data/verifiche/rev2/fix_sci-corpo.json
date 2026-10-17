@@ -1,0 +1,58 @@
+[
+ {
+  "id": 6,
+  "q_old": "A cosa servono i muscoli?",
+  "why": "Anche i muscoli di stomaco e intestino aiutano la digestione: la sbagliata «A digerire» è in parte vera",
+  "set": {
+   "wrong": [
+    "A sentire gli odori",
+    "A produrre il sangue"
+   ]
+  }
+ },
+ {
+  "id": 19,
+  "q_old": "Quale gas buttiamo fuori quando espiriamo?",
+  "why": "Nell'aria espirata c'è ancora molto ossigeno: la sbagliata «Ossigeno» è in parte vera",
+  "set": {
+   "q": "Quale gas di scarto, prodotto dalle cellule, buttiamo fuori quando espiriamo?",
+   "wrong": [
+    "Elio",
+    "Idrogeno"
+   ],
+   "e": "Le cellule producono anidride carbonica come scarto: il sangue la porta ai polmoni e noi la buttiamo fuori espirando."
+  }
+ },
+ {
+  "id": 27,
+  "q_old": "Quanti sono i cinque sensi?",
+  "why": "La domanda chiede «quanti» ma la risposta è un elenco",
+  "set": {
+   "q": "Quali sono i cinque sensi?"
+  }
+ },
+ {
+  "id": 36,
+  "q_old": "Che cosa sono le cellule?",
+  "why": "Le cellule del corpo sono decine di migliaia di miliardi, non solo miliardi",
+  "set": {
+   "e": "Il nostro corpo ne ha moltissime: decine di migliaia di miliardi!"
+  }
+ },
+ {
+  "id": 62,
+  "q_old": "Quale osso forma la parte bassa della mascella e si muove quando mastichi?",
+  "why": "In italiano la mascella è l'osso superiore e la mandibola quello inferiore: «parte bassa della mascella» è impreciso",
+  "set": {
+   "q": "Come si chiama l'osso del mento che si muove su e giù quando mastichi?"
+  }
+ },
+ {
+  "id": 115,
+  "q_old": "Di quale sostanza sono fatti unghie e capelli?",
+  "why": "Esagerazione: la cheratina di piume e corna non è proprio la stessa delle unghie e le corna di cervo sono d'osso",
+  "set": {
+   "e": "La cheratina è una sostanza robusta e flessibile: ne sono fatti anche artigli, zoccoli e piume degli animali."
+  }
+ }
+]

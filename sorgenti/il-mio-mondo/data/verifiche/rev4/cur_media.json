@@ -1,0 +1,182 @@
+[
+  {
+    "t": "La scuola media per tutti",
+    "x": "La scuola media «unica», uguale e gratuita per tutti i ragazzi, è nata in Italia con una legge del 31 dicembre 1962. Prima, a 11 anni, si sceglieva già tra scuola media e avviamento al lavoro!",
+    "ic": "🎒",
+    "q": "In che anno è nata la scuola media unica in Italia?",
+    "ok": "Nel 1962",
+    "wrong": [
+      "Nel 1861",
+      "Nel 2000"
+    ],
+    "src": "Camera dei deputati (legge n. 1859/1962)"
+  },
+  {
+    "t": "Galileo e le lune di Giove",
+    "x": "Nel 1610 Galileo Galilei puntò il suo cannocchiale verso Giove e scoprì quattro lune: Io, Europa, Ganimede e Callisto. Oggi si chiamano «satelliti galileiani», in suo onore!",
+    "ic": "🔭",
+    "q": "Quante lune di Giove scoprì Galileo nel 1610?",
+    "ok": "Quattro",
+    "wrong": [
+      "Una",
+      "Dodici"
+    ],
+    "src": "NASA Science (Jupiter Moons)"
+  },
+  {
+    "t": "Le cellule come stanzette",
+    "x": "Nel 1665 Robert Hooke guardò un pezzetto di sughero al microscopio e vide tante scatoline. Gli ricordarono le stanzette dei monaci, le «celle»: per questo oggi parliamo di cellule!",
+    "ic": "🔬",
+    "q": "Che cosa osservò Hooke quando inventò il nome «cellula»?",
+    "ok": "Un pezzo di sughero",
+    "wrong": [
+      "Una goccia di sangue",
+      "Una foglia di basilico"
+    ],
+    "src": "Science Friday; Britannica (Robert Hooke)"
+  },
+  {
+    "t": "Gli occhiali sono medievali",
+    "x": "Gli occhiali furono inventati in Italia nel Medioevo! Nel 1306, a Firenze, il frate Giordano da Pisa disse in una predica che erano stati inventati da meno di vent'anni.",
+    "ic": "👓",
+    "q": "Dove furono inventati gli occhiali?",
+    "ok": "In Italia, nel Medioevo",
+    "wrong": [
+      "In America, nel 1900",
+      "In Egitto, al tempo dei faraoni"
+    ],
+    "src": "Biblioteca dell'Archiginnasio, Bologna"
+  },
+  {
+    "t": "Libri di pelle",
+    "x": "Nel Medioevo i monaci copiavano i libri sulla pergamena, fatta di pelle di animale (agnello, capra, vitello) lavorata a lungo. Il nome viene da Pergamo, una città antica dove la si produceva molto.",
+    "ic": "📜",
+    "q": "Di che cosa era fatta la pergamena?",
+    "ok": "Di pelle di animale",
+    "wrong": [
+      "Di foglie di palma",
+      "Di stoffa di cotone"
+    ],
+    "src": "Treccani, Vocabolario (pergamena)"
+  },
+  {
+    "t": "Lo Stato più piccolo del mondo",
+    "x": "Il Vaticano, dentro Roma, è lo Stato indipendente più piccolo del mondo: solo 0,44 km². Ci starebbero circa 60 campi da calcio! Ha francobolli, bandiera e perfino una sua stazione ferroviaria.",
+    "ic": "🇻🇦",
+    "q": "Qual è lo Stato più piccolo del mondo?",
+    "ok": "Il Vaticano",
+    "wrong": [
+      "San Marino",
+      "Monaco"
+    ],
+    "src": "Guinness World Records (Smallest country)"
+  },
+  {
+    "t": "Eratostene misurò la Terra",
+    "x": "Più di 2200 anni fa Eratostene confrontò le ombre del Sole a mezzogiorno in due città d'Egitto e con la geometria calcolò quanto è grande la Terra. Bastarono ombre, geometria e tanta intelligenza!",
+    "ic": "🌞",
+    "q": "Che cosa usò Eratostene per misurare la Terra?",
+    "ok": "Le ombre del Sole",
+    "wrong": [
+      "Una nave a vela",
+      "Un satellite"
+    ],
+    "src": "Britannica (Eratosthenes)"
+  },
+  {
+    "t": "Il libro di geometria più famoso",
+    "x": "Gli «Elementi» di Euclide, scritti più di 2000 anni fa, sono il libro di geometria più famoso di sempre. Dopo la Bibbia, è tra i libri più tradotti e studiati del mondo occidentale!",
+    "ic": "📐",
+    "q": "Chi scrisse gli «Elementi» di geometria?",
+    "ok": "Euclide",
+    "wrong": [
+      "Galileo",
+      "Pitagora"
+    ],
+    "src": "Britannica (Euclid)"
+  },
+  {
+    "t": "Troia esisteva davvero",
+    "x": "La Troia dell'Iliade era una città vera: le sue rovine, sulla collina di Hisarlik, sono in Turchia. Le scavò Heinrich Schliemann dal 1870 e oggi è Patrimonio UNESCO. Sotto terra ci sono città costruite una sopra l'altra!",
+    "ic": "🏺",
+    "q": "In quale Paese si trovano oggi le rovine di Troia?",
+    "ok": "In Turchia",
+    "wrong": [
+      "In Grecia",
+      "In Italia"
+    ],
+    "src": "Wikipedia «Troy»; UNESCO"
+  },
+  {
+    "t": "Atomo vuol dire «che non si taglia»",
+    "x": "«Atomo» viene dal greco e vuol dire «indivisibile», che non si può tagliare. Gli antichi pensavano che fosse il pezzettino più piccolo possibile. Oggi sappiamo che anche l'atomo è fatto di parti ancora più piccole!",
+    "ic": "⚛️",
+    "q": "Che cosa vuol dire la parola greca «atomo»?",
+    "ok": "Indivisibile",
+    "wrong": [
+      "Invisibile",
+      "Velocissimo"
+    ],
+    "src": "Treccani, Vocabolario (atomo)"
+  },
+  {
+    "t": "Perché il ghiaccio galleggia",
+    "x": "Quando l'acqua gela, le sue molecole si sistemano in una rete con più spazio vuoto: il ghiaccio è circa il 9% più leggero dell'acqua, a parità di volume. Per questo galleggia, e i pesci vivono sotto i laghi ghiacciati!",
+    "ic": "🧊",
+    "q": "Perché il ghiaccio galleggia sull'acqua?",
+    "ok": "È meno denso dell'acqua",
+    "wrong": [
+      "È più pesante dell'acqua",
+      "Ha dentro dell'aria calda"
+    ],
+    "src": "USGS Water Science School (water density)"
+  },
+  {
+    "t": "La curva della dimenticanza",
+    "x": "Nel 1885 lo psicologo Hermann Ebbinghaus scoprì che dimentichiamo in fretta subito dopo aver studiato, poi più lentamente. Ripassare un po' dopo qualche giorno aiuta a far restare i ricordi!",
+    "ic": "🧠",
+    "q": "Che cosa aiuta a non dimenticare quello che hai studiato?",
+    "ok": "Ripassare dopo qualche giorno",
+    "wrong": [
+      "Studiare solo una volta",
+      "Studiare solo di notte"
+    ],
+    "src": "Britannica (Hermann Ebbinghaus)"
+  },
+  {
+    "t": "La Groenlandia imbrogliona",
+    "x": "Su molte carte geografiche la Groenlandia sembra grande come l'Africa. In realtà l'Africa è circa 14 volte più grande! La colpa è della proiezione di Mercatore, che allarga le terre vicino ai Poli.",
+    "ic": "🗺️",
+    "q": "Quante volte l'Africa è più grande della Groenlandia?",
+    "ok": "Circa 14 volte",
+    "wrong": [
+      "Sono uguali",
+      "Circa 2 volte"
+    ],
+    "src": "WorldAtlas (Greenland vs Africa)"
+  },
+  {
+    "t": "Non esiste l'anno zero",
+    "x": "Nella linea del tempo della storia, dopo l'anno 1 a.C. viene subito l'anno 1 d.C.: l'anno zero non c'è! Ricordalo quando fai i calcoli tra date avanti e dopo Cristo.",
+    "ic": "📅",
+    "q": "Che anno viene subito dopo l'1 a.C.?",
+    "ok": "L'1 d.C.",
+    "wrong": [
+      "L'anno 0",
+      "Il 2 a.C."
+    ],
+    "src": "Wikipedia (Year zero); calendario gregoriano"
+  },
+  {
+    "t": "I continenti si muovono",
+    "x": "Nel 1912 lo scienziato Alfred Wegener disse che i continenti si spostano lentamente sulla Terra. Quasi nessuno gli credette, ma aveva ragione: oggi lo spiega la teoria della tettonica a placche!",
+    "ic": "🌎",
+    "q": "Che cosa sostenne Alfred Wegener nel 1912?",
+    "ok": "Che i continenti si spostano",
+    "wrong": [
+      "Che la Terra è piatta",
+      "Che la Luna è di ghiaccio"
+    ],
+    "src": "Britannica (Alfred Wegener)"
+  }
+]

@@ -1,0 +1,289 @@
+{
+ "updated": "2026-10-17T06:54:00+02:00",
+ "sources": [
+  {
+   "name": "MUR – comunicato Semestre aperto 2026/27",
+   "url": "https://www.mur.gov.it/it/news/lunedi-13072026/medicina-al-le-iscrizioni-al-semestre-aperto",
+   "what": "comunicato ufficiale con scadenze, regole d'esame e graduatoria 2026/27"
+  },
+  {
+   "name": "MUR – D.M. n. 941 del 10/7/2026",
+   "url": "https://www.mur.gov.it/it/atti-e-normativa/decreto-ministeriale-n-941-del-10-7-2026",
+   "what": "decreto «Semestre filtro a.a. 2026-2027» con 5 allegati"
+  },
+  {
+   "name": "MUR – D.D. n. 249 del 13/7/2026",
+   "url": "https://www.mur.gov.it/it/atti-e-normativa/decreto-direttoriale-n-249-del-13-7-2026",
+   "what": "date ufficiali degli esami di profitto del semestre filtro"
+  },
+  {
+   "name": "MUR – Syllabus 2026/27",
+   "url": "https://www.mur.gov.it/it/news/venerdi-19062026/semestre-aperto-aa-2026-2027",
+   "what": "syllabus di Biologia, Fisica, Chimica e propedeutica biochimica"
+  },
+  {
+   "name": "Universitaly – home (banner Semestre aperto)",
+   "url": "https://www.universitaly.it/",
+   "what": "accesso a iscrizione, syllabus e decreto"
+  },
+  {
+   "name": "Universitaly – piattaforme di studio 2026",
+   "url": "https://www.universitaly.it/it/medicina-info-2026",
+   "what": "elenco piattaforme gratuite ufficiali (CRUI/CISIA e MOOD)"
+  },
+  {
+   "name": "Piattaforma Semestre aperto (CRUI-MUR-CISIA)",
+   "url": "https://www.semestreaperto-medodovet.it",
+   "what": "esercizi sui syllabus e simulazioni d'esame (attese a novembre)"
+  },
+  {
+   "name": "Piattaforma MOOD",
+   "url": "https://semestre-aperto.progetto-mood.com",
+   "what": "videolezioni gratuite di Biologia, Chimica, Fisica (44 atenei)"
+  },
+  {
+   "name": "UPO – Modalità di accesso a Medicina e Chirurgia 2026/27",
+   "url": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027",
+   "what": "avvisi UPO per gli iscritti: posti, lezioni, frequenza, link Zoom, esami"
+  },
+  {
+   "name": "UPO – pagina inglese accesso Medicina 2026/27",
+   "url": "https://www.uniupo.it/en/studentinfo/arrangements-access-medicine-and-surgery-ay-20262027",
+   "what": "stessi avvisi in inglese (archivio 2025/26 incluso)"
+  },
+  {
+   "name": "UPO – Scuola di Medicina, accesso al corso",
+   "url": "https://scuolamed.uniupo.it/it/didattica/iscriversi-carriera/accesso-al-corso-di-laurea-medicina-chirurgia",
+   "what": "pagina della Scuola di Medicina UPO (rimanda all'Ateneo)"
+  },
+  {
+   "name": "UPO – UpoPlanner",
+   "url": "https://upoplanner.uniupo.it",
+   "what": "orari e aule delle lezioni (indicato dagli avvisi UPO)"
+  },
+  {
+   "name": "Quotidiano Sanità",
+   "url": "https://www.quotidianosanita.it/lavoro-e-professioni/medicina-odontoiatria-e-veterinaria-da-domani-al-via-il-semestre-aperto-oltre-62mila-studenti-per-30mila-posti/",
+   "what": "testata di settore: numeri, decreti, sentenze"
+  },
+  {
+   "name": "Orizzonte Scuola",
+   "url": "https://www.orizzontescuola.it/posti-per-medicina-e-odontoiatria-fissati-a-30-225-per-lanno-accademico-2026-2027-bernini-firma-il-decreto/",
+   "what": "decreti posti e sentenze TAR con link ai PDF MUR"
+  },
+  {
+   "name": "CorriereUniv",
+   "url": "https://corriereuniv.it/semestre-aperto-medicina-2026-primo-giorno/",
+   "what": "cronaca dell'avvio e organizzazione degli atenei"
+  }
+ ],
+ "items": [
+  {
+   "date": "2026-09-28",
+   "title": "UPO: dal 1° ottobre lezioni solo online",
+   "summary": "Dal 1° ottobre 2026 le lezioni del semestre filtro UPO proseguono esclusivamente online via Zoom sulla piattaforma DIR (orari su UpoPlanner); le registrazioni sono caricate su DIR e la loro visione conta per la frequenza obbligatoria (soglia 51%), verificata dall'Ateneo a fine lezioni e non più con l'app UPOFrequency.",
+   "source": "UPO",
+   "url": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027",
+   "tag": "UPO",
+   "scope": "UPO"
+  },
+  {
+   "date": "2026-09-18",
+   "title": "Piattaforma nazionale: nuovi esercizi, simulazioni a novembre",
+   "summary": "Avviso UPO: sulla piattaforma gratuita semestreaperto-medodovet.it sono online le esercitazioni sulle prime due unità didattiche di ciascuno dei tre insegnamenti; altre verranno aggiunte fino a fine ottobre. A novembre arrivano le simulazioni d'esame con stesso numero di domande, punteggio e tempi della prova reale. Circa 32.000 iscritti.",
+   "source": "UPO",
+   "url": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027",
+   "tag": "Materiali",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-09-01",
+   "title": "Al via la seconda edizione del semestre aperto",
+   "summary": "Il 1° settembre 2026 sono iniziate le lezioni per oltre 52.300 aspiranti medici (54.313 nel 2025); appelli il 10 dicembre 2026 e l'11 gennaio 2027, graduatoria in tre sezioni in base agli esami superati.",
+   "source": "CorriereUniv",
+   "url": "https://corriereuniv.it/semestre-aperto-medicina-2026-primo-giorno/",
+   "tag": "Date",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-08-31",
+   "title": "62.200 iscritti per 30.225 posti",
+   "summary": "Iscritti al semestre aperto 2026/27: 62.200 (Medicina oltre 52.300, Odontoiatria circa 4.300, Veterinaria 5.550; 72% donne) contro 30.225 posti (Medicina 27.001). Nel 2025/26 gli iscritti erano 64.825.",
+   "source": "Quotidiano Sanità",
+   "url": "https://www.quotidianosanita.it/lavoro-e-professioni/medicina-odontoiatria-e-veterinaria-da-domani-al-via-il-semestre-aperto-oltre-62mila-studenti-per-30mila-posti/",
+   "tag": "Statistiche",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-08-31",
+   "title": "Aule insufficienti: molti atenei passano all'online",
+   "summary": "Solo poco più della metà degli iscritti trova posto in aula: Sapienza in presenza a settembre e quasi solo a distanza a novembre, Federico II online dal 5 ottobre, Palermo solo online. Il MUR stanzia 60 milioni aggiuntivi per tutorato e supporto.",
+   "source": "Avvenire",
+   "url": "https://www.avvenire.it/attualita/al-via-il-semestre-filtro-di-medicina-ma-i-posti-ancora-non-bastano_112478",
+   "tag": "Statistiche",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-08-26",
+   "title": "MUR rettifica il decreto IMAT 2026/27",
+   "summary": "Avviso di rettifica del D.M. n. 1005 del 6/8/2026 (accesso ai corsi in inglese, IMAT, fuori dal semestre aperto): aggiunta Firenze tra le sedi di prova, omessa per errore materiale.",
+   "source": "MUR",
+   "url": "https://www.mur.gov.it/sites/default/files/2026-08/Avviso%20del%2026-8-2026.pdf",
+   "tag": "Regole",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-08-07",
+   "title": "Firmato il decreto posti: 30.225, Medicina 27.001",
+   "summary": "Con il D.M. n. 1004 del 6/8/2026 la ministra Bernini fissa 30.225 posti per il 2026/27 (+3.160): Medicina e Chirurgia 27.001, Odontoiatria 1.825, Veterinaria 1.399; 23.495 negli atenei statali e 6.730 nei non statali.",
+   "source": "Orizzonte Scuola",
+   "url": "https://www.orizzontescuola.it/posti-per-medicina-e-odontoiatria-fissati-a-30-225-per-lanno-accademico-2026-2027-bernini-firma-il-decreto/",
+   "tag": "Iscrizioni",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-08-05",
+   "title": "Consiglio di Stato: scorrere la graduatoria sui posti vacanti",
+   "summary": "Con l'ordinanza cautelare n. 3347/2026 (pubblicata il 4/8/2026) il Consiglio di Stato, riformando il TAR Lazio, ordina al MUR di far scorrere la graduatoria 2025/26 sui circa 200 posti rimasti vacanti, ritenendo il meccanismo «non rispettoso del principio meritocratico».",
+   "source": "Quotidiano Sanità",
+   "url": "https://www.quotidianosanita.it/lavoro-e-professioni/medicina-posti-vuoti-e-studenti-esclusi-il-consiglio-di-stato-accoglie-il-ricorso-di-cp-semestre-filtro-penalizza-il-merito/",
+   "tag": "Ricorsi",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-07-16",
+   "title": "UPO: domande di esonero dalla frequenza",
+   "summary": "Avviso UPO: chi rientra nelle categorie del D.M. 941/2026 (es. già iscritti o laureati in LM-41/42/46 o corsi affini con esami del semestre filtro) poteva chiedere l'esonero entro il 6 agosto 2026 ore 12:00, solo con certificazioni ufficiali (no autocertificazioni).",
+   "source": "UPO",
+   "url": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027",
+   "tag": "UPO",
+   "scope": "UPO"
+  },
+  {
+   "date": "2026-07-13",
+   "title": "UPO: posti provvisori e lezioni a Novara",
+   "summary": "Data indicativa (avvio iscrizioni; la pagina UPO non data questa sezione). Posti provvisori UPO: Novara 158 UE + 13 non UE, Alessandria 150 UE + 4 non UE; contributo UPO 250 euro entro il 6 agosto; lezioni in presenza dall'1 al 30 settembre solo al Complesso Perrone di Novara.",
+   "source": "UPO",
+   "url": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027",
+   "tag": "UPO",
+   "scope": "UPO"
+  },
+  {
+   "date": "2026-07-13",
+   "title": "MUR: al via le iscrizioni e nuove regole d'esame",
+   "summary": "Domande su Universitaly entro il 3 agosto 2026, contributo entro il 6 agosto, lezioni dal 1° settembre. Prove da 31 domande (21 a risposta multipla + 10 a completamento) in 50 minuti (+5), pausa 30 minuti; +1 corretta, −0,1 errata; graduatoria in 3 sezioni (3 esami, 2 esami, 1 esame) col miglior voto tra i due appelli.",
+   "source": "MUR",
+   "url": "https://www.mur.gov.it/it/news/lunedi-13072026/medicina-al-le-iscrizioni-al-semestre-aperto",
+   "tag": "Regole",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-07-13",
+   "title": "Date ufficiali: 10 dicembre 2026 e 11 gennaio 2027",
+   "summary": "Il D.D. n. 249 del 13/7/2026 fissa le prove nazionali alle ore 11:00 del 10 dicembre 2026 (esiti 23 dicembre) e dell'11 gennaio 2027 (esiti 20 gennaio); stesse prove in tutte le sedi, iscrizione tramite le piattaforme d'ateneo, materiale gestito da CINECA.",
+   "source": "MUR",
+   "url": "https://www.mur.gov.it/sites/default/files/2026-07/Decreto%20Direttoriale%20n.%20249%20del%2013-7-2026.pdf",
+   "tag": "Date",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-07-13",
+   "title": "Pubblicato il D.M. 941/2026 sul semestre filtro",
+   "summary": "Il D.M. n. 941 del 10/7/2026 «Semestre filtro a.a. 2026-2027», pubblicato sul sito MUR il 13/7/2026 con 5 allegati, disciplina iscrizione, frequenza, esami e graduatoria nazionale.",
+   "source": "MUR",
+   "url": "https://www.mur.gov.it/it/atti-e-normativa/decreto-ministeriale-n-941-del-10-7-2026",
+   "tag": "Regole",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-07-01",
+   "title": "Online la piattaforma gratuita di preparazione",
+   "summary": "CRUI e MUR, con il consorzio CISIA, lanciano semestreaperto-medodovet.it: esercizi di Chimica, Fisica e Biologia, poi esercitazioni sui syllabus 2026/27 e simulazioni d'esame con numero, tipologia e durata reali.",
+   "source": "MUR",
+   "url": "https://www.mur.gov.it/it/news/mercoledi-01072026/universita-online-la-piattaforma-gratuita-la-preparazione-semestre-aperto",
+   "tag": "Materiali",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-06-20",
+   "title": "TAR Lazio respinge il ricorso dei docenti",
+   "summary": "Con sentenza pubblicata il 15 giugno 2026 il TAR Lazio respinge il ricorso di numerosi docenti universitari contro il D.M. 418/2025 sul semestre filtro, rigettando anche la questione di costituzionalità.",
+   "source": "Orizzonte Scuola",
+   "url": "https://www.orizzontescuola.it/medicina-il-tar-conferma-il-semestre-filtro-respinto-il-ricorso-dei-docenti-universitari/",
+   "tag": "Ricorsi",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-06-19",
+   "title": "Pubblicati i syllabus 2026/27",
+   "summary": "Il MUR pubblica i syllabus 2026/27 di Biologia, Fisica e Chimica e propedeutica biochimica per Medicina, Odontoiatria e Veterinaria: sono la base dei contenuti d'esame.",
+   "source": "MUR",
+   "url": "https://www.mur.gov.it/it/news/venerdi-19062026/semestre-aperto-aa-2026-2027",
+   "tag": "Materiali",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-03-25",
+   "title": "Storico: TAR Lazio respinge i ricorsi degli studenti",
+   "summary": "Il TAR Lazio respinge in blocco le istanze per sospendere le graduatorie 2025/26 e il D.M. 1115/2025: il semestre filtro è considerato un insieme di veri esami universitari, le graduatorie restano valide.",
+   "source": "Open",
+   "url": "https://www.open.online/2026/03/25/medicina-ricorsi-semestre-filtro-respinti-tar/",
+   "tag": "Storico",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2026-01-08",
+   "title": "Storico: graduatorie nazionali 2025/26",
+   "summary": "Pubblicate l'8 gennaio 2026 (data dell'evento, confermata dall'avviso UPO dell'8/1/2026): 25.387 idonei (22.688 Medicina); voti validi ≥18: Biologia 19.089, Chimica 21.763, Fisica solo 10.022. Fisica è stata la materia più selettiva.",
+   "source": "Orizzonte Scuola",
+   "url": "https://www.orizzontescuola.it/pubblicate-le-graduatorie-nazionali-per-il-semestre-aperto-di-medicina-odontoiatria-e-veterinaria-le-date-chiave-per-immatricolazioni-e-iscrizioni-dall8-al-31-gennaio-2026/",
+   "tag": "Storico",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2025-12-23",
+   "title": "Storico: D.M. 1115/2025 cambia la graduatoria 2025/26",
+   "summary": "Il D.M. n. 1115 del 22/12/2025 introduce una graduatoria in nove sezioni con bonus da 700 a 400 punti e ammette anche chi ha superato 1-2 esami, con recupero dei CFU mancanti presso la sede assegnata.",
+   "source": "Quotidiano Sanità",
+   "url": "https://www.quotidianosanita.it/governo-e-parlamento/medicina-il-semestre-filtro-entra-nel-vivo-ecco-come-funzioneranno-graduatorie-recuperi-e-accesso-al-secondo-semestre-il-decreto-del-mur/",
+   "tag": "Storico",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2025-08-30",
+   "title": "Storico: il MUR segnala all'AGCM i corsi privati",
+   "summary": "Il MUR segnala all'Antitrust e alla Procura di Roma pubblicità di corsi a pagamento che promettevano il successo al semestre aperto, giudicate «scorrette e fuorvianti».",
+   "source": "Virgilio Sapere",
+   "url": "https://sapere.virgilio.it/scuola/mondo-scuola/corsi-per-semestre-aperto-medicina-mur-invia-segnalazione-a-agcm",
+   "tag": "Storico",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2025-08-07",
+   "title": "Storico: 748 iscritti UPO nel 2025/26",
+   "summary": "Al primo semestre filtro UPO si erano iscritti in 748 (553 a Novara, 195 ad Alessandria) per 252 posti; esami allora il 20 novembre e il 10 dicembre 2025.",
+   "source": "Quotidiano Piemontese",
+   "url": "https://www.quotidianopiemontese.it/2025/08/07/medicina-upo-748-iscritti-2025/",
+   "tag": "Storico",
+   "scope": "UPO"
+  },
+  {
+   "date": "2025-07-28",
+   "title": "Storico: 64.825 iscritti al semestre aperto 2025/26",
+   "summary": "Primo anno della riforma: 64.825 iscritti (Medicina 54.313, Odontoiatria 4.473, Veterinaria 6.039); prove da 15 domande a risposta multipla + 16 a completamento in 45 minuti.",
+   "source": "MUR",
+   "url": "https://www.mur.gov.it/it/news/lunedi-28072025/universita-sono-64825-gli-studenti-iscritti-al-semestre-aperto-il-2025-2026",
+   "tag": "Storico",
+   "scope": "nazionale"
+  },
+  {
+   "date": "2025-07-19",
+   "title": "Storico: criteri originari della graduatoria 2025/26",
+   "summary": "Il D.M. 454/2025 prevedeva +1/−0,25/0 per risposta e graduatorie il 12 gennaio 2026; criteri poi modificati dal D.M. 1115/2025 e graduatorie anticipate all'8 gennaio.",
+   "source": "MUR",
+   "url": "https://www.mur.gov.it/it/news/sabato-19072025/medicina-il-12-gennaio-2026-la-pubblicazione-delle-graduatorie-nazionali-di",
+   "tag": "Storico",
+   "scope": "nazionale"
+  }
+ ]
+}
