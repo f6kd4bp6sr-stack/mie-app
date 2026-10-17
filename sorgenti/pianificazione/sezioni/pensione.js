@@ -10,8 +10,8 @@
 const PV=[["news","Novità"],["adem","Adempimenti"],["leve","Leve"],["cifre","Cifre"],["ced","Cedolino"],["cassa","Cassa"],["cont","Contatti e testi"],["doc","Documenti"]];
 let pensV=(()=>{try{const v=sessionStorage.getItem("pn-pensv");return PV.some(x=>x[0]===v)?v:"adem";}catch(e){return "adem";}})(), pensEd=null;
 const LV_ST={da:["Da fare","soon"],corso:["In corso","fam"],fatta:["Fatta","ok"],no:["Non serve",""]};
-function PENS(){if(!P.pens||typeof P.pens!=="object")P.pens={};const p=P.pens;["adem","leve","cifre","incassi","files","cedolini","contatti","testi","tappe","newsSeen"].forEach(k=>{if(!Array.isArray(p[k]))p[k]=[];});
-  ["dati","cassa","calc","io","ricalc"].forEach(k=>{if(!p[k]||typeof p[k]!=="object")p[k]={};});return p;}
+function PENS(){if(!P.pens||typeof P.pens!=="object")P.pens={};const p=P.pens;["adem","leve","cifre","incassi","files","cedolini","contatti","testi","tappe","newsSeen","ipotesi","docAttesi","uscite"].forEach(k=>{if(!Array.isArray(p[k]))p[k]=[];});
+  ["dati","cassa","calc","io","ricalc","esito"].forEach(k=>{if(!p[k]||typeof p[k]!=="object")p[k]={};});return p;}
 const pensHas=()=>!!(P.pens&&((P.pens.adem||[]).length||(P.pens.leve||[]).length||(P.pens.cifre||[]).length));
 const eur0=n=>n==null||n===""?"—":(Math.round(+n)).toLocaleString("it-IT")+" €";
 const rng=(a,b)=>a!=null&&b!=null&&+a!==+b?eur0(a).replace(" €","")+" – "+eur0(b):eur0(a!=null?a:b);
@@ -32,20 +32,21 @@ function vPens(){
     ${lp?`<div><b>${fmt(lp,{day:"numeric",month:"short"})}</b><span>ultimo giorno in ufficio (dalle Licenze)</span></div>`:""}
     <div><b style="${late.length?"color:var(--scad)":""}">${late.length||op.length}</b><span>${late.length?"scadenze passate da guardare":"adempimenti e leve aperti"}</span></div>
     ${next?`<div><b>${fmt(next.d,{day:"numeric",month:"short"})}</b><span>prossima: ${esc(next.t.slice(0,60))}</span></div>`:""}</div>`;
-  o+=pensTimeline();
+  o+=pensIcsNag()+pensTimeline2();
   if(D.rientro){const S=licS();if(S&&S.start&&S.start!==D.rientro)o+=`<div class="warnbox" style="margin:0 0 12px">In Licenze il rientro è il ${fmt(S.start,{day:"numeric",month:"long"})}, nella scheda il ${fmt(D.rientro,{day:"numeric",month:"long"})}: controlla quale è giusto in <a href="licenze.html">Licenze</a>.</div>`;}
   o+=`<div class="seg" role="tablist" style="margin:0 0 14px;width:max-content;max-width:100%">${PV.map(([k,n])=>`<button role="tab" data-pv="${k}" class="${pensV===k?"on":""}" aria-selected="${pensV===k}">${n}${k==="adem"&&late.length?`<span class="n">${late.length}</span>`:""}${k==="news"&&newsNew()?`<span class="n">${newsNew()}</span>`:""}</button>`).join("")}</div>`;
   return o+({news:pensNews,adem:pensAdem,leve:pensLeve,cifre:pensCifre,ced:pensCed,cassa:pensCassa,cont:pensCont,doc:pensDoc}[pensV]||pensAdem)();
 }
 /* ---- adempimenti ---- */
 function pensAdem(){
-  const p=PENS(),t=today(),L=p.adem.slice().sort((a,b)=>((a.d||"9")<(b.d||"9")?-1:(a.d||"9")>(b.d||"9")?1:0)),open=L.filter(a=>!a.fatto),done=L.filter(a=>a.fatto);
+  const p=PENS(),t=today(),L=p.adem.slice().sort((a,b)=>((a.d||"9")<(b.d||"9")?-1:(a.d||"9")>(b.d||"9")?1:0)),open=L.filter(a=>!a.fatto&&a.fase!=="dopo"),dopo=L.filter(a=>!a.fatto&&a.fase==="dopo"),done=L.filter(a=>a.fatto);
   const row=a=>{const st=a.fatto?"ok":!a.d?"":a.d<t?"warn":diff(t,a.d)<=14?"soon":"";
     return `<div class="row"><button class="chk${a.fatto?" done":""}" data-pa2="${a.id}" aria-label="${a.fatto?"Riapri":"Segna fatto"}">✓</button><div class="grow${a.fatto?" lbl":""}"><b>${esc(a.t)}</b>${a.det?`<small>${esc(a.det)}</small>`:""}${a.nota?`<small>📝 ${esc(a.nota)}</small>`:""}</div>
       <span class="pill ${st}">${a.d?fmt(a.d,{day:"numeric",month:"short",year:"2-digit"}):esc(a.quando||"senza data")}</span><button class="btn sm" data-pae="${a.id}" aria-label="Modifica">✏️</button></div>
       ${pensEd===a.id?`<div class="form addf"><label>Data<input type="date" data-paf="d" value="${esc(a.d||"")}"></label><label class="wide">Nota (protocollo, risposta, ufficio…)<input data-paf="nota" maxlength="200" value="${esc(a.nota||"")}"></label><div class="btns wide"><button class="btn sm" data-pae="">Chiudi</button><button class="btn sm danger" data-pax="${a.id}">Togli</button></div></div>`:""}`;};
-  let o=`<div class="card k-pens">${open.length?open.map(row).join(""):'<p class="empty">Tutto fatto. 👍</p>'}
+  let o=pensEsito()+`<div class="card k-pens"><h3>🎖️ Fino alla cessazione</h3>${open.length?open.map(row).join(""):'<p class="empty">Tutto fatto. 👍</p>'}
     <div class="btns"><input id="paT" maxlength="140" placeholder="Aggiungi un adempimento" class="pin"><input id="paD" type="date" class="pin" style="flex:0 1 170px;min-width:150px"><button class="btn sm" data-pa3="add">Aggiungi</button></div></div>`;
+  if(dopo.length)o+=`<h2>🧭 Dopo la cessazione</h2><div class="card k-pens">${dopo.map(row).join("")}</div>`;
   if(done.length)o+=`<details class="more"><summary>Fatti (${done.length})</summary><div class="card k-pens">${done.map(row).join("")}</div></details>`;
   return o+`<p class="lbl">Gli adempimenti con una data compaiono nel Calendario e nel file dei promemoria per il Calendario dell’iPad.</p>`;
 }
@@ -60,7 +61,7 @@ function pensLeve(){
 /* ---- cifre e incassi ---- */
 function pensCifre(){
   const p=PENS(),t=today();
-  let o=pensRicalc()+`<div class="card k-pens"><h3>📊 Le cifre stimate e quelle reali</h3>${p.cifre.map(c=>{const r=c.reale!=null&&c.reale!==""?+c.reale:null,lo=c.min!=null?+c.min:c.val,hi=c.max!=null?+c.max:c.val;
+  let o=pensIpotesi()+pensRicalc()+`<div class="card k-pens"><h3>📊 Le cifre stimate e quelle reali</h3>${p.cifre.map(c=>{const r=c.reale!=null&&c.reale!==""?+c.reale:null,lo=c.min!=null?+c.min:c.val,hi=c.max!=null?+c.max:c.val;
     const fuori=r!=null&&lo!=null&&(r<lo*0.98||r>hi*1.02);
     return `<div class="row"><div class="grow"><b>${esc(c.t)}</b><small>stima: ${c.min!=null||c.max!=null?rng(c.min,c.max):eur0(c.val)}${c.centr!=null?" · valore centrale "+eur0(c.centr):""}${c.nota?" · "+esc(c.nota):""}</small>${r!=null?`<small style="color:var(${fuori?"--scad":"--ok"});font-weight:700">${fuori?"⚠️ fuori dalla forbice stimata":"✓ dentro la forbice"}: reale ${eur0(r)}</small>`:""}</div>
       <input data-cfr="${c.id}" inputmode="decimal" placeholder="reale €" value="${r!=null?esc(String(r).replace(".",",")):""}" class="pin" style="flex:0 0 110px;min-width:0" aria-label="Importo reale"></div>`;}).join("")||'<p class="empty">Nessuna cifra.</p>'}
@@ -75,23 +76,26 @@ function pensCifre(){
 /* ---- cassa: da giugno 2027 al primo incasso del TFS ---- */
 function pensCassa(){
   const p=PENS(),C=p.cassa,D=p.dati,start=(D.decor||"2027-06-01").slice(0,7),n=+(C.mesi||9);
-  const pen=+(C.pens!=null?C.pens:(D.pensNetta||0)),sp=+(C.spese||0),alt=+(C.altre||0),sal=+(C.saldo||0),rit=+(C.rit||0),pm=C.premioMese||"",pv=+(C.premio!=null?C.premio:(D.premio||0));
+  const rcN=p.calc&&p.calc.base25?rcState().netto:null,penRc=rcN?Math.round(rcN/13):null,pen=+(C.pens!=null&&C.pens!==""?C.pens:(penRc||D.pensNetta||0)),U=p.uscite||[],sp=+(C.spese||0),alt=+(C.altre||0),sal=+(C.saldo||0),rit=+(C.rit||0),pm=C.premioMese||"",pv=+(C.premio!=null?C.premio:(D.premio||0));
   const months=[...Array(n)].map((_,i)=>{const d=parse(start+"-01");d.setMonth(d.getMonth()+i);return iso(d).slice(0,7);});
   const run=delay=>{let s=sal,min=Infinity,minM="";const rows=months.map((ym,i)=>{let e=alt,note=[];
       if(i===delay){e+=pen*(delay+1);if(delay)note.push("pensione + "+delay+" "+(delay===1?"mese":"mesi")+" arretrati");}else if(i>delay)e+=pen;
       if(ym.slice(5)==="12"&&i>=delay){e+=pen;note.push("tredicesima");}
       if(pm&&ym===pm&&pv){e+=pv;note.push("premio di previdenza");}
+      U.filter(u=>u.ym===ym).forEach(u=>{s-=+u.imp||0;note.push("− "+u.t);});
       s+=e-sp;if(s<min){min=s;minM=ym;}return{ym,e,s,note};});return{rows,min,minM};};
   const A=run(0),B=run(rit);
   const mm=ym=>parse(ym+"-01").toLocaleDateString("it-IT",{month:"short",year:"2-digit"});
   const num=(id,v,lab,ph)=>`<label>${lab}<input data-cs="${id}" inputmode="decimal" value="${v?esc(String(v).replace(".",",")):""}" placeholder="${ph||"0"}"></label>`;
   let o=`<div class="card k-pens"><h3>💶 I tuoi numeri</h3><div class="form">
     ${num("saldo",C.saldo,"Soldi disponibili al 31 maggio 2027 €")}${num("spese",C.spese,"Spese di casa al mese €")}${num("altre",C.altre,"Altre entrate al mese € (affitto…)")}
-    ${num("pens",C.pens!=null?C.pens:D.pensNetta,"Pensione netta al mese €")}
+    <label>Pensione netta al mese €${C.pens!=null&&C.pens!==""?"":penRc?" (dal Ricalcolo)":""}<input data-cs="pens" inputmode="decimal" value="${esc(String(pen).replace(".",","))}" placeholder="0"></label>
     <label>Ritardo della prima pensione<select data-cs="rit">${[0,1,2,3,4].map(k=>`<option value="${k}"${rit===k?" selected":""}>${k?k+" "+(k===1?"mese":"mesi"):"nessuno"}</option>`).join("")}</select></label>
     <label>Premio di previdenza arriva a<select data-cs="premioMese"><option value="">non contarlo</option>${months.map(ym=>`<option value="${ym}"${pm===ym?" selected":""}>${mm(ym)}</option>`).join("")}</select></label>
     ${num("premio",C.premio!=null?C.premio:D.premio,"Premio di previdenza €")}</div>
-    <p class="lbl" style="margin:8px 0 0">La scheda indica: pensione netta ${esc(D.pensForb||"—")}, possibile liquidazione provvisoria con 2–3 mesi di ritardo, premio di previdenza nel secondo semestre 2027, prima rata del TFS fra marzo e giugno 2028.</p></div>`;
+    <div style="margin-top:10px"><b style="font-size:14px">Uscite straordinarie</b>${U.map(u=>`<div class="row"><span class="pill">${parse(u.ym+"-01").toLocaleDateString("it-IT",{month:"short",year:"2-digit"})}</span><div class="grow">${esc(u.t)}</div><b>${eur0(u.imp)}</b><button class="btn sm" data-usc="${u.id}" aria-label="Togli">×</button></div>`).join("")}
+      <div class="btns"><select id="usM" class="pin" style="flex:0 1 130px;min-width:110px">${months.map(ym=>`<option value="${ym}">${mm(ym)}</option>`).join("")}</select><input id="usT" class="pin" maxlength="60" placeholder="per esempio riscatto, auto, assicurazione"><input id="usI" class="pin" inputmode="decimal" placeholder="€" style="flex:0 1 100px;min-width:80px"><button class="btn sm" data-usc="add">Aggiungi</button></div></div>
+    <p class="lbl" style="margin:8px 0 0">${C.pens!=null&&C.pens!==""?"Pensione scritta a mano: cancellala per usare quella del Ricalcolo. ":penRc?"La pensione segue il Ricalcolo (scheda Cifre). ":""}La scheda indica: pensione netta ${esc(D.pensForb||"—")}, possibile liquidazione provvisoria con 2–3 mesi di ritardo, premio di previdenza nel secondo semestre 2027, prima rata del TFS fra marzo e giugno 2028.</p></div>`;
   if(!sp&&!sal)return o+`<div class="card k-pens"><p class="empty">Scrivi i soldi disponibili e le spese al mese: qui compare il saldo mese per mese.</p></div>`;
   o+=`<div class="card k-pens"><h3>📉 Saldo mese per mese</h3><div style="overflow-x:auto"><table class="ptab"><thead><tr><th>Mese</th><th>Pensione puntuale</th>${rit?`<th>Con ${rit} ${rit===1?"mese":"mesi"} di ritardo</th>`:""}</tr></thead><tbody>
     ${months.map((ym,i)=>{const a=A.rows[i],b=B.rows[i];const c=v=>`<span class="amt ${v<0?"u":""}">${eur0(v)}</span>`;return `<tr><td>${mm(ym)}</td><td>${c(a.s)}<small>${a.note.join(", ")}</small></td>${rit?`<td>${c(b.s)}<small>${b.note.join(", ")}</small></td>`:""}</tr>`;}).join("")}</tbody></table></div>
@@ -102,7 +106,7 @@ function pensCassa(){
 }
 /* ---- documenti e scheda ---- */
 function pensDoc(){const p=PENS(),files=p.files||[];
-  return `<div class="card k-pens"><h3>📎 Documenti</h3>${files.map(f=>`<div class="row"><span class="pill">${/pdf/.test(f.type)?"PDF":/image/.test(f.type)?"🖼️":"📄"}</span><div class="grow"><b>${esc(f.n)}</b><small>${Math.max(1,Math.round(f.size/1024))} KB · ${fmt(f.at.slice(0,10),{day:"numeric",month:"short",year:"numeric"})}</small></div><button class="btn sm" data-pfo2="${f.id}">Apri</button><button class="btn sm" data-pfx2="${f.id}" aria-label="Togli">×</button></div>`).join("")||'<p class="empty">Nessun documento: allega l’analisi previdenziale e i provvedimenti quando arrivano.</p>'}
+  return pensDocAttesi()+`<div class="card k-pens"><h3>📎 Documenti</h3>${files.map(f=>`<div class="row"><span class="pill">${/pdf/.test(f.type)?"PDF":/image/.test(f.type)?"🖼️":"📄"}</span><div class="grow"><b>${esc(f.n)}</b><small>${Math.max(1,Math.round(f.size/1024))} KB · ${fmt(f.at.slice(0,10),{day:"numeric",month:"short",year:"numeric"})}</small></div><button class="btn sm" data-pfo2="${f.id}">Apri</button><button class="btn sm" data-pfx2="${f.id}" aria-label="Togli">×</button></div>`).join("")||'<p class="empty">Nessun documento: allega l’analisi previdenziale e i provvedimenti quando arrivano.</p>'}
     <div class="btns"><label class="btn sm pri" style="cursor:pointer">➕ Aggiungi PDF o foto<input type="file" id="pfIn2" accept="application/pdf,image/*" hidden></label></div>
     <p class="lbl" style="margin:8px 0 0">I documenti restano su questo iPad (massimo 15 MB l’uno) ed entrano nelle copie.</p></div>`+pensImport(false);}
 function pensImport(first){return `<div class="card k-pens"><h3>📥 ${first?"Carica la scheda pensione":"Aggiorna la scheda"}</h3><p class="lbl" style="margin-top:0">${first?"Scegli il file «scheda pensione» (.json): contiene adempimenti, leve, cifre e incassi presi dall’analisi previdenziale. Resta solo su questo iPad.":"Un file nuovo sostituisce adempimenti, leve, cifre e incassi; le tue spunte, gli stati, le note, gli importi reali e i documenti restano."}</p>
@@ -115,6 +119,9 @@ function pensMerge(nw){const old=PENS(),by=(L,id)=>(L||[]).find(x=>x.id===id);
   (nw.incassi||[]).forEach(x=>{const o=by(old.incassi,x.id);if(o&&o.ok)x.ok=o.ok;});
   old.adem.filter(a=>a.mio&&!by(nw.adem,a.id)).forEach(a=>nw.adem.push(a));
   (nw.cedolini||[]).forEach(x=>{const o=by(old.cedolini,x.id);if(o&&o.ric!=null&&o.ric!=="")x.ric=o.ric;});
+  (nw.ipotesi||[]).forEach(x=>{const o=by(old.ipotesi,x.id);if(o&&o.st)x.st=o.st;});
+  (nw.docAttesi||[]).forEach(x=>{const o=by(old.docAttesi,x.id);if(o){if(o.ok)x.ok=o.ok;if(o.file)x.file=o.file;}});
+  nw.esito=Object.assign({},nw.esito||{},old.esito||{});nw.uscite=old.uscite&&old.uscite.length?old.uscite:(nw.uscite||[]);
   nw.files=old.files||[];nw.cassa=Object.assign({},nw.cassa||{},old.cassa||{});nw.io=Object.assign({},nw.io||{},old.io||{});nw.ricalc=Object.assign({},old.ricalc||{});nw.newsSeen=old.newsSeen||[];
   nw.at=new Date().toISOString();P.pens=nw;}
 
@@ -131,8 +138,8 @@ function bindPens(){
   document.querySelectorAll("[data-lvn]").forEach(i=>i.onchange=()=>{const l=p.leve.find(x=>x.id===i.dataset.lvn);if(l){l.nota=i.value.trim();save();toast("Nota salvata");}});
   document.querySelectorAll("[data-cfr]").forEach(i=>i.onchange=()=>{const c=p.cifre.find(x=>x.id===i.dataset.cfr);if(c){const v=num(i.value);c.reale=v==null?"":v;save();R();toast("Salvato");}});
   document.querySelectorAll("[data-inc]").forEach(b=>b.onclick=()=>{const x=p.incassi.find(y=>y.id===b.dataset.inc);if(x){x.ok=x.ok?"":today();save();R();}});
-  document.querySelectorAll("[data-cs]").forEach(i=>i.onchange=()=>{const k=i.dataset.cs;p.cassa[k]=k==="premioMese"?i.value:k==="rit"?+i.value:num(i.value);save();R();});
-  bindPens2(p,num);
+  document.querySelectorAll("[data-cs]").forEach(i=>i.onchange=()=>{const k=i.dataset.cs;p.cassa[k]=k==="premioMese"?i.value:k==="rit"?+i.value:(k==="pens"&&!i.value.trim()?"":num(i.value));save();R();});
+  bindPens2(p,num);bindPens3(p,num);
   const pin=$("pnsIn");if(pin)pin.onchange=async()=>{const f=pin.files&&pin.files[0];pin.value="";if(!f)return;
     try{const o=JSON.parse(await f.text());if(o.app!=="pianificazione-pensione"||!o.pens)throw 0;
       if(pensHas()&&!confirm("Aggiornare la scheda con il file «"+f.name+"»? Le tue spunte, note e importi reali restano."))return;
@@ -229,18 +236,6 @@ let pensTp=null;
 function pensTappe(){const p=PENS(),L=p.tappe.slice(),lp=lastPresence();
   if(lp&&!L.some(x=>x.id==="lic"))L.push({id:"lic",ic:"🏖️",t:"Inizio della licenza in coda",da:add(lp,1),nota:"ultimo giorno in ufficio "+fmt(lp,{weekday:"long",day:"numeric",month:"long"})+" (dalle Licenze)"});
   return L.filter(x=>x.da).sort((a,b)=>a.da<b.da?-1:1);}
-function pensTimeline(){const L=pensTappe();if(!L.length)return "";
-  const t=today(),d0="2026-10-01",d1="2029-07-01",W=1000,H=92,X=s=>20+(W-40)*Math.max(0,Math.min(1,diff(d0,s)/diff(d0,d1)));
-  const yrs=["2027-01-01","2028-01-01","2029-01-01"];let svg=`<line x1="20" x2="${W-20}" y1="58" y2="58" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/>`;
-  svg+=yrs.map(y=>`<line x1="${X(y)}" x2="${X(y)}" y1="50" y2="66" stroke="var(--muted)" stroke-width="1"/><text x="${X(y)}" y="84" font-size="13" text-anchor="middle" fill="var(--muted)">${y.slice(0,4)}</text>`).join("");
-  svg+=`<line x1="20" x2="${X(t)}" y1="58" y2="58" stroke="var(--pens)" stroke-width="4" stroke-linecap="round"/><circle cx="${X(t)}" cy="58" r="6" fill="var(--cal)"/><text x="${X(t)}" y="84" font-size="12" text-anchor="middle" fill="var(--cal)" font-weight="700">oggi</text>`;
-  L.forEach((x,i)=>{const a=X(x.da),b=x.a?X(x.a):a,sel=pensTp===x.id,y=i%2?16:30;
-    svg+=(x.a?`<rect x="${a}" y="52" width="${Math.max(6,b-a)}" height="12" rx="6" fill="var(--pens)" opacity="${sel?1:.55}" data-tp="${x.id}" style="cursor:pointer"/>`:`<circle cx="${a}" cy="58" r="${sel?8:6}" fill="var(--pens)" stroke="var(--card)" stroke-width="2" data-tp="${x.id}" style="cursor:pointer"/>`)
-      +`<text x="${(a+b)/2}" y="${y+12}" font-size="${sel?22:18}" text-anchor="middle" data-tp="${x.id}" style="cursor:pointer">${x.ic||"•"}</text>`;});
-  const s=L.find(x=>x.id===pensTp);
-  return `<div class="card k-pens" style="padding-bottom:10px"><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="Linea del tempo dal 2026 al 2029">${svg}</svg>
-    <div class="btns" style="margin-top:4px">${L.map(x=>`<button class="btn sm${pensTp===x.id?" pri":""}" data-tp="${x.id}">${x.ic||""} ${fmt(x.da,{day:x.a?undefined:"numeric",month:"short",year:"2-digit"})}${x.a?"–"+fmt(x.a,{month:"short",year:"2-digit"}):""}</button>`).join("")}</div>
-    ${s?`<p style="margin:8px 2px 0"><b>${s.ic||""} ${esc(s.t)}</b>${s.nota?` <span class="lbl">· ${esc(s.nota)}</span>`:""}</p>`:`<p class="lbl" style="margin:8px 2px 0">Tocca una tappa per i dettagli.</p>`}</div>`;}
 function bindPens2(p,num){const R=()=>render();
   document.querySelectorAll("[data-tp]").forEach(b=>b.onclick=()=>{pensTp=pensTp===b.dataset.tp?null:b.dataset.tp;R();});
   document.querySelectorAll("[data-nt]").forEach(b=>b.onclick=()=>{newsTema=b.dataset.nt;R();});
@@ -253,4 +248,78 @@ function bindPens2(p,num){const R=()=>render();
   /* le novità guardate non contano più nel numero sulla scheda */
   if(pensV==="news"){const ids=newsList().map(n=>n.id),miss=ids.filter(id=>!p.newsSeen.includes(id));if(miss.length)setTimeout(()=>{p.newsSeen=p.newsSeen.concat(miss).slice(-300);save();side();},2500);}
   if(cur==="pens")newsFetch(false);
+}
+
+/* ---------- 🧪 Ipotesi della scheda: confermate o superate dai dati ufficiali ---------- */
+const IP_ST={da:["Da verificare","soon"],ok:["Confermata","ok"],no:["Superata","warn"]};
+function licPlanned(){const S=licS();if(!S)return null;let n=0;const st=S.start||today(),from=today()>st?today():st;
+  for(let s=from;s<=S.end;s=add(s,1)){const d=licDay(S,s);if(d.k==="LAV"&&(d.c==="LP"||d.c==="LO"))n++;}return n;}
+function ipAuto(x){const A=newsData().attesa||[],a=x.attesa?A.find(y=>y.id===x.attesa):null,p=PENS();
+  if(x.auto==="licenza"){const n=licPlanned();if(n==null)return null;return n>=(+x.soglia||0)?{st:"ok",why:n+" giorni di licenza già messi in Licenze"}:{st:"no",why:"in Licenze ne risultano "+n+" su "+x.soglia+": completa il piano"};}
+  if(x.auto==="arretrati"){const c=p.cedolini.find(y=>/arretrat/i.test(y.t));if(c&&c.ric!=null&&c.ric!=="")return{st:"ok",why:"arretrati arrivati nel cedolino di "+parse(c.ym+"-01").toLocaleDateString("it-IT",{month:"long",year:"numeric"})};if(today()>"2027-05-31")return{st:"no",why:"non risultano arrivati entro maggio 2027"};return null;}
+  if(!a||a.stato!=="uscito"||a.valore==null||a.valore==="")return a&&a.quando?{st:"da",why:a.quando}:null;
+  const v=a.valore;
+  if(x.attesa==="dpr2527"){const d=String(v).slice(0,10);return d<=(x.entro||"2026-12-31")?{st:"ok",why:"in Gazzetta il "+fmt(d,{day:"numeric",month:"long",year:"numeric"})}:{st:"no",why:"in Gazzetta solo il "+fmt(d,{day:"numeric",month:"long",year:"numeric"})};}
+  if(x.attesa==="coeff2728"){const d=Math.abs(+v-(+x.atteso));return d<0.0051?{st:"ok",why:"ufficiale "+String(v).replace(".",",")+"%"}:{st:"no",why:"ufficiale "+String(v).replace(".",",")+"% (scheda "+String(x.atteso).replace(".",",")+"%): vedi il Ricalcolo"};}
+  if(x.attesa==="tasso2026")return{st:"no",why:"tasso ufficiale +"+String(Math.round((+v-1)*1e4)/100).replace(".",",")+"%: chiedi al patronato se va applicato al montante e guarda il Ricalcolo"};
+  if(x.attesa==="faf2027"){const d=(+v-(+x.atteso))/(+x.atteso);return Math.abs(d)<0.05?{st:"ok",why:"quota ufficiale "+eur0(v)}:{st:"no",why:"quota ufficiale "+eur0(v)+" (scheda "+eur0(x.atteso)+")"};}
+  return null;}
+function pensIpotesi(){const p=PENS();if(!p.ipotesi.length)return "";
+  const rows=p.ipotesi.map(x=>{const au=ipAuto(x),st=x.st&&x.st!=="da"?x.st:(au&&au.st)||"da",S=IP_ST[st];
+    return `<div class="row"><span class="pill ${S[1]}">${S[0]}</span><div class="grow"><b>${esc(x.t)}</b><small>${esc(x.det||"")}${au&&au.why?" · "+(x.st&&x.st!=="da"?"dato: ":"")+esc(au.why):""}</small></div>
+      <select data-ips="${x.id}" class="pin" style="flex:0 0 auto;min-width:0" aria-label="Stato"><option value="">${au?"automatico":"—"}</option>${Object.entries(IP_ST).map(([k,v])=>`<option value="${k}"${x.st===k?" selected":""}>${v[0]}</option>`).join("")}</select></div>`;}).join("");
+  const no=p.ipotesi.filter(x=>(x.st&&x.st!=="da"?x.st:(ipAuto(x)||{}).st)==="no").length;
+  return `<div class="card k-pens"><h3>🧪 Le ipotesi della scheda${no?` <span class="pill warn">${no} superate</span>`:""}</h3>${rows}<p class="lbl" style="margin:8px 0 0">Lo stato cambia da solo quando escono i dati ufficiali (novità delle 13, 17 e 23), dalle Licenze e dal Cedolino; puoi anche fissarlo a mano. Un’ipotesi superata vuol dire che le cifre della scheda vanno riviste.</p></div>`;}
+/* ---------- 🩺 Esito del C.M.O. e domanda di congedo ---------- */
+const ESITI=[["","—"],["idoneo","Idoneo"],["limitazioni","Idoneo con limitazioni"],["non","Non idoneo al servizio"],["altro","Altro (vedi nota)"]];
+function pensEsito(){const p=PENS(),E=p.esito,lv=n=>p.leve.find(l=>+l.n===n);
+  const link=[[6,"Trattamento privilegiato"],[7,"Accesso all’ausiliaria"],[12,"Domanda di congedo"]].map(([n,t])=>{const l=lv(n);return l?`<span class="pill ${(LV_ST[l.stato]||LV_ST.da)[1]}">Leva ${n} · ${(LV_ST[l.stato]||LV_ST.da)[0]}</span>`:"";}).join(" ");
+  const hint=E.esito==="limitazioni"||E.esito==="non"?`<div class="warnbox" style="margin-top:8px">Con questo esito la scheda indica: ausiliaria preclusa (il moltiplicatore spetta di diritto) e possibile istanza di trattamento privilegiato entro due anni dal congedo (leva 6, termine 31 maggio 2029). Da verificare con il patronato.</div>`:E.esito==="idoneo"?`<div class="warnbox" style="margin-top:8px;background:var(--pens-bg);border-color:var(--pens)">Con l’idoneità la scelta fra riserva e ausiliaria resta aperta: la categoria indicata nella domanda decide il moltiplicatore (leva 7).</div>`:"";
+  return `<div class="card k-pens"><h3>🩺 C.M.O. e domanda di congedo</h3><div class="form">
+    <label>Esito del verbale C.M.O.<select data-es="esito">${ESITI.map(([k,t])=>`<option value="${k}"${(E.esito||"")===k?" selected":""}>${t}</option>`).join("")}</select></label>
+    <label>Data del verbale<input type="date" data-es="dVerb" value="${esc(E.dVerb||"")}"></label>
+    <label>Categoria scelta nella domanda<select data-es="cat"><option value="">—</option><option value="riserva"${E.cat==="riserva"?" selected":""}>Riserva (mod. 1/A età-ris)</option><option value="ausiliaria"${E.cat==="ausiliaria"?" selected":""}>Ausiliaria (mod. 1/A età-aus)</option></select></label>
+    <label>Protocollo della domanda di congedo<input data-es="prot" maxlength="60" value="${esc(E.prot||"")}" placeholder="numero del Comando Regionale"></label>
+    <label>Data di presa in carico<input type="date" data-es="dProt" value="${esc(E.dProt||"")}"></label>
+    <label class="wide">Note sul verbale<input data-es="nota" maxlength="240" value="${esc(E.nota||"")}" placeholder="infermità riconosciute, limitazioni, prossimi passi…"></label></div>
+    <p class="lbl" style="margin:8px 0 0">Collegate: ${link}</p>${hint}</div>`;}
+function esitoApply(p){const E=p.esito,lv=n=>p.leve.find(l=>+l.n===n);
+  if(E.prot){const a=p.adem.find(x=>/Domanda di congedo presentata/.test(x.t));if(a)a.nota="prot. "+E.prot+(E.dProt?" del "+fmt(E.dProt,{day:"numeric",month:"short",year:"numeric"}):"");const l=lv(12);if(l&&l.stato!=="fatta")l.stato="fatta";}
+  if(E.cat){const l=lv(7);if(l){if(E.cat==="riserva"&&(l.stato==="da"||!l.stato))l.nota=l.nota||"categoria scelta: riserva";}}
+  if(E.esito==="limitazioni"||E.esito==="non"){const l=lv(6);if(l&&l.stato==="no")l.stato="da";if(l&&!l.d)l.d="2029-05-31";}}
+/* ---------- 📋 Documenti attesi ---------- */
+function pensDocAttesi(){const p=PENS(),L=p.docAttesi;if(!L.length)return "";const files=p.files||[],n=L.filter(d=>d.ok).length;
+  return `<div class="card k-pens"><h3>📋 Documenti attesi <span class="lbl" style="margin-left:auto;font-weight:600">${n}/${L.length}</span></h3>${L.map(d=>{const f=d.file&&files.find(x=>x.id===d.file);
+    return `<div class="row"><button class="chk${d.ok?" done":""}" data-dak="${d.id}" aria-label="Segna">✓</button><div class="grow${d.ok?" lbl":""}"><b>${esc(d.t)}</b><small>${esc(d.da||"")}${d.quando?" · "+esc(d.quando):""}${f?" · 📎 "+esc(f.n):""}</small></div>
+      ${f?`<button class="btn sm" data-pfo2="${f.id}">Apri</button>`:`<label class="btn sm" style="cursor:pointer">📎<input type="file" data-daf="${d.id}" accept="application/pdf,image/*" hidden></label>`}</div>`;}).join("")}
+    <p class="lbl" style="margin:8px 0 0">Spunta quando lo hai; con 📎 alleghi direttamente il PDF o la foto (resta su questo iPad e nelle copie).</p></div>`;}
+/* ---------- 📆 avviso: scadenze della Pensione non ancora mandate al Calendario dell'iPad ---------- */
+function pensIcsNag(){try{const opt=P.ics.opt||{abs:true,app:true,scad:true,pens:true,prat:true,pay:true,fam:true};if(opt.pens===false)return "";
+  const n=icsItems(opt).filter(i=>/^pens-/.test(i.uid)&&P.ics.sent[i.uid]!==i.sig).length;if(!n)return "";
+  return `<div class="card k-cal icsnag"><div class="row" style="border:0;padding:0"><span style="font-size:24px">📆</span><div class="grow"><b>${n} ${n===1?"scadenza della Pensione":"scadenze della Pensione"} da mandare al Calendario dell’iPad</b><small>Così il promemoria arriva anche ad app chiusa, una settimana prima.</small></div><button class="btn pri sm" data-pics="1">Aggiungi al Calendario</button></div></div>`;}catch(e){return "";}}
+/* ---------- 🗓️ linea del tempo: tappe vicine raggruppate, verticale sul telefono ---------- */
+function pensTimeline2(){const L=pensTappe();if(!L.length)return "";const t=today(),narrow=window.innerWidth<640,s=L.find(x=>x.id===pensTp);
+  const det=s?`<p style="margin:8px 2px 0"><b>${s.ic||""} ${esc(s.t)}</b>${s.nota?` <span class="lbl">· ${esc(s.nota)}</span>`:""}</p>`:"";
+  if(narrow){const items=L.map(x=>({k:x.da,x})).concat([{k:t,oggi:1}]).sort((a,b)=>a.k<b.k?-1:a.k>b.k?1:(a.oggi?-1:1));
+    return `<div class="card k-pens"><div class="vtl">${items.map(it=>it.oggi?`<div class="vt oggi"><i></i><b>Oggi</b><small>${fmt(t,{day:"numeric",month:"short",year:"numeric"})}</small></div>`:
+      `<button class="vt${it.k<t?" past":""}${pensTp===it.x.id?" sel":""}" data-tp="${it.x.id}"><i></i><span class="ic">${it.x.ic||"•"}</span><span class="tx"><b>${esc(it.x.t)}</b><small>${fmt(it.x.da,{day:it.x.a?undefined:"numeric",month:"short",year:"numeric"})}${it.x.a?" – "+fmt(it.x.a,{month:"short",year:"numeric"}):""}${pensTp===it.x.id&&it.x.nota?" · "+esc(it.x.nota):""}</small></span></button>`).join("")}</div></div>`;}
+  const d0="2026-10-01",d1="2029-07-01",W=1000,H=96,X=q=>20+(W-40)*Math.max(0,Math.min(1,diff(d0,q)/diff(d0,d1)));
+  let svg=`<line x1="20" x2="${W-20}" y1="62" y2="62" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/>`+["2027-01-01","2028-01-01","2029-01-01"].map(y=>`<line x1="${X(y)}" x2="${X(y)}" y1="54" y2="70" stroke="var(--muted)"/><text x="${X(y)}" y="88" font-size="13" text-anchor="middle" fill="var(--muted)">${y.slice(0,4)}</text>`).join("")
+    +`<line x1="20" x2="${X(t)}" y1="62" y2="62" stroke="var(--pens)" stroke-width="4" stroke-linecap="round"/><circle cx="${X(t)}" cy="62" r="6" fill="var(--cal)"/><text x="${X(t)}" y="88" font-size="12" text-anchor="middle" fill="var(--cal)" font-weight="700">oggi</text>`;
+  /* le icone di tappe a meno di 34 punti l'una dall'altra vanno in un gruppo, una sopra l'altra */
+  const groups=[];L.forEach(x=>{const cx=x.a?(X(x.da)+X(x.a))/2:X(x.da),g=groups.find(g=>Math.abs(g.cx-cx)<34);if(g){g.L.push(x);}else groups.push({cx,L:[x]});});
+  L.forEach(x=>{const a=X(x.da),b=x.a?X(x.a):a,sel=pensTp===x.id;svg+=x.a?`<rect x="${a}" y="56" width="${Math.max(6,b-a)}" height="12" rx="6" fill="var(--pens)" opacity="${sel?1:.5}" data-tp="${x.id}" style="cursor:pointer"/>`:`<circle cx="${a}" cy="62" r="${sel?8:6}" fill="var(--pens)" stroke="var(--card)" stroke-width="2" data-tp="${x.id}" style="cursor:pointer"/>`;});
+  groups.forEach(g=>g.L.forEach((x,j)=>{svg+=`<text x="${g.cx+(g.L.length>1?(j-(g.L.length-1)/2)*24:0)}" y="${40-(j%2)*0}" font-size="${pensTp===x.id?22:19}" text-anchor="middle" data-tp="${x.id}" style="cursor:pointer">${x.ic||"•"}</text>`;}));
+  return `<div class="card k-pens" style="padding-bottom:10px"><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="Linea del tempo dal 2026 al 2029">${svg}</svg>
+    <div class="btns" style="margin-top:4px">${L.map(x=>`<button class="btn sm${pensTp===x.id?" pri":""}" data-tp="${x.id}">${x.ic||""} ${fmt(x.da,{day:x.a?undefined:"numeric",month:"short",year:"2-digit"})}${x.a?"–"+fmt(x.a,{month:"short",year:"2-digit"}):""}</button>`).join("")}</div>
+    ${det||`<p class="lbl" style="margin:8px 2px 0">Tocca una tappa per i dettagli.</p>`}</div>`;}
+function bindPens3(p,num){const R=()=>render();
+  document.querySelectorAll("[data-ips]").forEach(s=>s.onchange=()=>{const x=p.ipotesi.find(y=>y.id===s.dataset.ips);if(x){x.st=s.value;save();R();}});
+  document.querySelectorAll("[data-es]").forEach(i=>i.onchange=()=>{p.esito[i.dataset.es]=i.value.trim();esitoApply(p);save();R();toast("Salvato");});
+  document.querySelectorAll("[data-dak]").forEach(b=>b.onclick=()=>{const d=p.docAttesi.find(x=>x.id===b.dataset.dak);if(d){d.ok=d.ok?"":today();save();R();}});
+  document.querySelectorAll("[data-daf]").forEach(inp=>inp.onchange=async()=>{const f=inp.files&&inp.files[0],d=p.docAttesi.find(x=>x.id===inp.dataset.daf);inp.value="";if(!f||!d)return;if(f.size>15*1024*1024)return toast("File troppo grande (massimo 15 MB)");
+    const id=uid();try{await kv("readwrite","pf-"+id,f);}catch(e){return toast("Non riesco a salvare il file su questo iPad");}
+    p.files.push({id,n:f.name||d.t,type:f.type||"",size:f.size,at:new Date().toISOString()});d.file=id;d.ok=d.ok||today();save();R();toast("📎 "+d.t+" allegato");if(window.__pfRefresh)window.__pfRefresh();});
+  document.querySelectorAll("[data-pics]").forEach(b=>b.onclick=()=>exportIcs(false));
+  document.querySelectorAll("[data-usc]").forEach(b=>b.onclick=()=>{const k=b.dataset.usc;if(k==="add"){const m=$("usM").value,v=num($("usI").value),t=$("usT").value.trim();if(!m||!v)return toast("Scegli il mese e scrivi l’importo");p.uscite.push({id:uid(),ym:m,imp:v,t:t||"uscita"});}else p.uscite=p.uscite.filter(x=>x.id!==k);save();R();});
 }
