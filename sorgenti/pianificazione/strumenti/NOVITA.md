@@ -1,9 +1,9 @@
-# Novità su contratto e pensione — istruzioni per l'agente del mattino
+# Novità su contratto e pensione — istruzioni per l'agente (13 · 17 · 23)
 
 Pianificazione → 🎖️ Pensione → **Novità** legge il file pubblico `licenze/news-pensione.json`.
-Ogni mattina un'attività programmata lo aggiorna. Il file è **pubblico**: solo notizie generali, mai dati personali.
+Un'attività programmata lo aggiorna **tre volte al giorno: alle 13, alle 17 e alle 23** (ora italiana; parte qualche minuto prima). Il file è **pubblico**: solo notizie generali, mai dati personali.
 
-## Che cosa cercare (ultimi 7 giorni, personale della Guardia di Finanza e del comparto sicurezza-difesa)
+## Che cosa cercare (dall'ultimo controllo e negli ultimi 7 giorni, personale della Guardia di Finanza e del comparto sicurezza-difesa)
 - **contratto**: accordi 2025-2027 (e successivi), DPR di recepimento, Gazzetta Ufficiale, aumenti, arretrati, F.E.S.I., circolari NoiPA o del Comando Generale.
 - **previdenza**: previdenza dedicata (tavolo del Governo con la Funzione Pubblica), moltiplicatore art. 3 c. 7 D.Lgs. 165/1997, ausiliaria, coefficienti per chi esce per limiti di età, TFS/TFR.
 - **inps**: circolari e messaggi INPS (TFS, termini di pagamento, coefficienti di trasformazione 2027-2028, tasso di capitalizzazione 2026, requisiti), legge di bilancio 2027.
@@ -44,8 +44,11 @@ Prima le fonti ufficiali (sono quelle che contano), poi i sindacati (spesso arri
 4. `attesa`: i parametri che servono al ricalcolo. Quando escono ufficialmente: `stato` "uscito", `valore` (coefficiente a 60 anni in percentuale, per esempio 4.512; tasso 2026 come fattore, per esempio 1.0634), `fonte`, `url`. Le stime restano in `stima`, mai in `valore`.
 5. Niente consigli, niente dati personali, niente nomi di persone private. Solo informazioni con data e fonte.
 6. Aggiorna `updated` (ora italiana, ISO) anche quando non ci sono notizie nuove.
+7. **Fonti** (`fonti`): a ogni giro controlla almeno tutte le fonti ufficiali e i sindacati GdF, poi a rotazione gli altri; per ognuna aggiorna `ultimo` (ora del controllo) ed `esito` ("ok", oppure "non raggiungibile" / "spostata" con il nuovo indirizzo). Puoi aggiungere una fonte nuova autorevole (ufficiale, sindacato, testata di settore) con `n`, `url` https, `tipo` (ufficiale, sindacato GdF, sindacato polizia, sindacato militari, testata). Non togliere le fonti ufficiali.
+8. **Dati** (`attesa` e notizie già presenti): a ogni giro ricontrolla i parametri in attesa alla fonte ufficiale (Gazzetta per il DPR, ISTAT per il tasso 2026, decreto per i coefficienti 2027-2028, F.A.F. per la quota) e correggi le notizie già pubblicate se una fonte ha cambiato date o numeri (scrivilo nella sintesi: «aggiornato il …»).
+9. **Registro** (`controlli`): aggiungi in fondo `{"at": ora, "notizie": quante nuove, "note": "…"}`; tieni gli ultimi 60.
 
 ## Pubblicazione
 1. Scrivi lo stesso file in `sorgenti/pianificazione/statici/news-pensione.json` e in `licenze/news-pensione.json`.
 2. `python3 sorgenti/pianificazione/strumenti/verifica_novita.py licenze/news-pensione.json sorgenti/pianificazione/statici/news-pensione.json` deve dire ✅.
-3. Commit «Pianificazione: novità contratto e pensione AAAA-MM-GG» (solo i due file), push su main. Non toccare altri file.
+3. Commit «Pianificazione: novità contratto e pensione AAAA-MM-GG HH:MM» (solo i due file), push su main (se rifiutato: git pull --rebase e riprova). Non toccare altri file.

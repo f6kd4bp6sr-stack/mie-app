@@ -24,7 +24,7 @@ pian/
 ├── sezioni/pensione.js 🎖️ Pensione (`pn-v1` → `pens`): adempimenti (nel Calendario e nel file .ics), leve, cifre stimate/reali,
 │                     incassi, cassa giugno 2027–febbraio 2028, documenti (`pf-…`); si carica dal file privato «scheda pensione»
 ├── strumenti/         NOVITA.md (istruzioni dell'agente del mattino) e verifica_novita.py (controllo del file delle novità)
-├── statici/news-pensione.json  novità pubbliche su contratto e pensione GdF (aggiornate ogni mattina; non cambiano la versione)
+├── statici/news-pensione.json  novità pubbliche su contratto e pensione GdF (aggiornate alle 13, 17 e 23 con fonti e registro dei controlli; non cambiano la versione)
 ├── sezioni/pratiche.js 🗂️ Pratiche (`pn-v1` → `prat`): stato, prossimo passo, documenti, contatti, diario, note;
 │                     file allegati nel database `licenze-marco`, chiavi `pf-…` (non vanno nella copia su iCloud)
 ├── docs/             ricerca sui formati di esportazione delle banche

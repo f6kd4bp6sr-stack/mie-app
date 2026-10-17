@@ -3,7 +3,13 @@
 set -e
 cd /home/claude/mie-app && git fetch -q origin main && git reset -q --hard origin/main
 # le novità le aggiorna ogni mattina l'attività programmata: prendo la versione pubblicata prima di costruire
-[ -f /home/claude/mie-app/licenze/news-pensione.json ] && cp /home/claude/mie-app/licenze/news-pensione.json /home/claude/pian/statici/news-pensione.json
+python3 - <<'PY'
+import json, os, shutil
+r, l = '/home/claude/mie-app/licenze/news-pensione.json', '/home/claude/pian/statici/news-pensione.json'
+if os.path.exists(r):
+    up = lambda f: json.load(open(f, encoding='utf-8')).get('updated', '')
+    if not os.path.exists(l) or up(r) > up(l): shutil.copy(r, l); print('novità: presa la versione pubblicata')
+PY
 cd /home/claude/pian && python3 build.py
 rm -rf /home/claude/mie-app/licenze && mkdir -p /home/claude/mie-app/licenze && cp -r /home/claude/pian/out/licenze/. /home/claude/mie-app/licenze/
 python3 /home/claude/pian/tools/sorgenti_pubbliche.py /home/claude/pian pianificazione

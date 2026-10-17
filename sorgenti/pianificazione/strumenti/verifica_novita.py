@@ -42,5 +42,10 @@ for a in o.get('attesa', []):
     if a['stato'] not in ('atteso', 'uscito'): err('attesa stato ' + a['id'])
     if a['stato'] == 'uscito' and a.get('valore') in (None, ''): err('attesa uscito senza valore ' + a['id'])
 if guarda(raw, GUARD): err('termine personale nel file pubblico')
+TIPI = {'ufficiale', 'sindacato GdF', 'sindacato polizia', 'sindacato militari', 'testata'}
+for x in o.get('fonti', []):
+    if not x.get('n') or not str(x.get('url', '')).startswith('https://') or x.get('tipo') not in TIPI: err('fonte non valida: ' + str(x.get('n')))
+    if x.get('ultimo') and x['ultimo'][:10] > today: err('fonte con data futura: ' + x['n'])
+if len(o.get('controlli', [])) > 60: err('controlli: tieni solo gli ultimi 60')
 if len(sys.argv) > 2 and open(sys.argv[2], encoding='utf-8').read() != raw: err('le due copie sono diverse')
 print('✅ novità ok:', len(V), 'notizie,', len(o.get('attesa', [])), 'parametri in attesa')

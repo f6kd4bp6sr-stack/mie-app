@@ -1,8 +1,29 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-17T12:40:00+02:00",
+ "updated": "2026-10-17T13:10:00+02:00",
  "voci": [
+  {
+   "id": "n20261014-tavolo2",
+   "d": "2026-10-14",
+   "titolo": "Previdenza dedicata: confermate le risorse, serve una legge; nuovi incontri senza data",
+   "sintesi": "Dopo la riunione del 13 ottobre la Funzione Pubblica ha confermato le risorse già stanziate, ma per usarle serve un percorso di legge concordato con il MEF; invierà alle organizzazioni i dati sul personale, le soluzioni possibili e i costi. Temi da approfondire: misure per chi lascia il servizio, correzione dei coefficienti legati ai limiti di età, tutele per chi è nel sistema misto o contributivo, previdenza complementare. Altri incontri tecnici sono previsti, senza date; il banco di prova indicato dai sindacati è la legge di bilancio.",
+   "fonte": "ANFP",
+   "url": "https://www.anfp.it/previdenza-dedicata-avviato-il-confronto",
+   "fonti2": [
+    "https://infodifesa.it/previdenza-militari-usmia-carabinieri-tavolo-zangrillo/"
+   ],
+   "temi": [
+    "previdenza"
+   ],
+   "tocca": [
+    "coefficienti",
+    "moltiplicatore",
+    "ausiliaria",
+    "requisiti"
+   ],
+   "effetto": "Ancora nessuna misura: si attendono i prossimi incontri e la legge di bilancio. Riguarda chi è nel sistema misto ed esce per limiti di età."
+  },
   {
    "id": "n20261015-dpr",
    "d": "2026-10-15",
@@ -138,6 +159,274 @@
    "quando": "delibera del C.d.A. in sede di rendiconto, entro il 30 aprile 2028",
    "nota": "ultima quota nota: 309,98 € (congedati nel 2022)",
    "valore": null
+  }
+ ],
+ "fonti": [
+  {
+   "n": "Gazzetta Ufficiale",
+   "url": "https://www.gazzettaufficiale.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Governo – Consiglio dei ministri",
+   "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Funzione Pubblica",
+   "url": "https://www.funzionepubblica.gov.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "MEF",
+   "url": "https://www.mef.gov.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "NoiPA",
+   "url": "https://noipa.mef.gov.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "INPS",
+   "url": "https://www.inps.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Ministero del Lavoro",
+   "url": "https://www.lavoro.gov.it/",
+   "tipo": "ufficiale",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "ISTAT",
+   "url": "https://www.istat.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Guardia di Finanza",
+   "url": "https://www.gdf.gov.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Difesa – Previmil",
+   "url": "https://www.difesa.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Polizia di Stato",
+   "url": "https://www.poliziadistato.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Corte dei conti",
+   "url": "https://www.corteconti.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Camera dei deputati",
+   "url": "https://www.camera.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Senato",
+   "url": "https://www.senato.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Agenzia delle Entrate",
+   "url": "https://www.agenziaentrate.gov.it/",
+   "tipo": "ufficiale",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "USIF",
+   "url": "https://www.usif.it/",
+   "tipo": "sindacato GdF",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "SILF",
+   "url": "https://www.silfnazionale.it/",
+   "tipo": "sindacato GdF",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "SINAFI",
+   "url": "https://www.sinafi.org/",
+   "tipo": "sindacato GdF",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "SIULP",
+   "url": "https://siulp.it/",
+   "tipo": "sindacato polizia",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "COISP",
+   "url": "https://coisp.it/",
+   "tipo": "sindacato polizia",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "SIAP",
+   "url": "https://www.siap-polizia.org/",
+   "tipo": "sindacato polizia",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "UIL Polizia",
+   "url": "https://www.uilpolizia.com/",
+   "tipo": "sindacato polizia",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "SILP CGIL",
+   "url": "https://www.silpcgil.it/",
+   "tipo": "sindacato polizia",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "MP",
+   "url": "https://mpnazionale.it/",
+   "tipo": "sindacato polizia",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "ANFP",
+   "url": "https://www.anfp.it/",
+   "tipo": "sindacato polizia",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "SAPPE",
+   "url": "https://www.sappe.it/",
+   "tipo": "sindacato polizia",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Al.Si.P.Pe.",
+   "url": "https://www.alsippe.it/",
+   "tipo": "sindacato polizia",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "FNS CISL",
+   "url": "https://www.fnscisl.it/",
+   "tipo": "sindacato polizia",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "USMIA Carabinieri",
+   "url": "https://www.usmia.it/",
+   "tipo": "sindacato militari",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "USAMI",
+   "url": "https://usami-aeronautica.it/",
+   "tipo": "sindacato militari",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "Infodifesa",
+   "url": "https://infodifesa.it/",
+   "tipo": "testata",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "Corriere dei Militari",
+   "url": "https://www.corrieredeimilitari.com/",
+   "tipo": "testata",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "ForzeArmate.org",
+   "url": "https://forzearmate.org/",
+   "tipo": "testata",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "poliziapenitenziaria.it",
+   "url": "https://www.poliziapenitenziaria.it/",
+   "tipo": "testata",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "PensioniOggi",
+   "url": "https://www.pensionioggi.it/",
+   "tipo": "testata",
+   "ultimo": null,
+   "esito": ""
+  },
+  {
+   "n": "ESCAP",
+   "url": "https://www.escap.it/",
+   "tipo": "testata",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "Sky TG24",
+   "url": "https://tg24.sky.it/economia",
+   "tipo": "testata",
+   "ultimo": "2026-10-17T13:10:00+02:00",
+   "esito": "ok"
+  }
+ ],
+ "controlli": [
+  {
+   "at": "2026-10-17T13:10:00+02:00",
+   "notizie": 1,
+   "note": "prima raccolta: 6 notizie, 4 parametri in attesa"
   }
  ]
 }

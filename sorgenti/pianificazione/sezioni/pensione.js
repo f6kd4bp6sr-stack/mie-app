@@ -5,7 +5,7 @@
    il codice pubblico non contiene nessun dato. I dati si caricano da un file privato «scheda pensione» (.json).
    Solo fatti e numeri dei documenti: nessun consiglio.
    📰 Novità su contratto e pensione per il personale della Guardia di Finanza: file pubblico «news-pensione.json»
-   (aggiornato ogni mattina da un'attività programmata, solo notizie generali con fonte e data), collegato qui sull'iPad
+   (aggiornato alle 13, 17 e 23 da un'attività programmata, solo notizie generali con fonte e data, con l'elenco delle fonti controllate), collegato qui sull'iPad
    alle tue leve, cifre e adempimenti («Cosa cambia per te»), con i parametri ancora attesi che servono al ricalcolo. */
 const PV=[["news","Novità"],["adem","Adempimenti"],["leve","Leve"],["cifre","Cifre"],["ced","Cedolino"],["cassa","Cassa"],["cont","Contatti e testi"],["doc","Documenti"]];
 let pensV=(()=>{try{const v=sessionStorage.getItem("pn-pensv");return PV.some(x=>x[0]===v)?v:"adem";}catch(e){return "adem";}})(), pensEd=null;
@@ -176,8 +176,13 @@ function pensNews(){
   o+=`<div class="card k-pens">${L.map(n=>{const tc=newsTouch(n),nw=!seen.has(n.id);return `<div class="fx"><div class="row" style="border:0;padding:0;align-items:flex-start"><span class="pill ${nw?"soon":"pens"}">${fmt(n.d,{day:"numeric",month:"short",year:"2-digit"})}</span><div class="grow"><b>${nw?"🆕 ":""}${esc(n.titolo)}</b><small style="color:var(--ink);margin-top:2px">${esc(n.sintesi)}</small>
       <small>${(n.temi||[]).map(t=>TEMI[t]?TEMI[t][0]+" "+TEMI[t][1]:"").filter(Boolean).join(" · ")}${n.url?` · <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.fonte||"fonte")} ›</a>`:""}</small>
       ${n.effetto||tc.length?`<div class="warnbox" style="margin-top:6px;background:var(--pens-bg);border-color:var(--pens)"><b>Cosa cambia per te.</b> ${esc(n.effetto||"")}${tc.length?`<br>${tc.slice(0,3).map(x=>"• "+esc(x.t)).join("<br>")}${tc.length>3?`<br><span class="lbl">e altre ${tc.length-3} voci della tua scheda</span>`:""}`:""}</div>`:""}</div></div></div>`;}).join("")||'<p class="empty">Ancora nessuna notizia scaricata: serve internet una volta.</p>'}</div>
-    <p class="lbl">Notizie con data e fonte, controllate ogni mattina su fonti ufficiali e sindacali di categoria${N.updated?" · ultimo aggiornamento "+new Date(N.updated).toLocaleDateString("it-IT",{day:"numeric",month:"long"}):""}. Sono informazioni, non consigli: per decidere vale il testo ufficiale.</p>`;
+    <p class="lbl">Dati e fonti si aggiornano da soli alle 13, alle 17 e alle 23${N.updated?" · ultimo controllo "+whenIt(N.updated):""}. Sono informazioni con data e fonte, non consigli: per decidere vale il testo ufficiale.</p>`;
+  const F=N.fonti||[],G={};F.forEach(f=>(G[f.tipo]=G[f.tipo]||[]).push(f));
+  if(F.length)o+=`<details class="more"><summary>🔎 Fonti controllate (${F.length})</summary><div class="card k-pens">${Object.entries(G).map(([tp,L])=>`<h3 style="color:var(--ink);font-size:14.5px;margin:6px 0 4px">${esc(tp.charAt(0).toUpperCase()+tp.slice(1))}</h3>${L.map(f=>`<div class="row" style="padding:5px 0"><div class="grow"><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.n)}</a></div><small class="lbl" style="${f.esito&&f.esito!=="ok"?"color:var(--scad)":""}">${f.ultimo?(f.esito&&f.esito!=="ok"?esc(f.esito)+" · ":"")+whenIt(f.ultimo):"da controllare"}</small></div>`).join("")}`).join("")}</div></details>`;
+  const K=(N.controlli||[]).slice(-6).reverse();
+  if(K.length)o+=`<details class="more"><summary>🕒 Ultimi controlli</summary><div class="card k-pens">${K.map(k=>`<div class="row"><span class="pill pens">${whenIt(k.at)}</span><div class="grow">${k.notizie?`<b>${k.notizie} ${k.notizie===1?"novità":"novità"}</b> · `:""}${esc(k.note||"")}</div></div>`).join("")}</div></details>`;
   return o;}
+const whenIt=t=>{const d=new Date(t);if(isNaN(d))return "";const o=new Date();return (d.toDateString()===o.toDateString()?"oggi":d.toLocaleDateString("it-IT",{day:"numeric",month:"short"}))+" "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});};
 /* ---------- 🔁 Ricalcolo con la formula in chiaro (parametri della scheda + quelli pubblicati) ---------- */
 function rcState(){const p=PENS(),C=p.calc,R=p.ricalc,A=newsData().attesa||[],get=id=>A.find(x=>x.id===id)||{};
   const cU=get("coeff2728"),tU=get("tasso2026"),cUff=cU.valore!=null&&cU.valore!==""?+cU.valore:null,tUff=tU.valore!=null&&tU.valore!==""?+tU.valore:null,tSt=tU.stima!=null?+tU.stima:null;
