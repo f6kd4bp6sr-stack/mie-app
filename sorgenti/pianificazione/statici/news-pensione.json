@@ -1,28 +1,24 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-17T13:10:00+02:00",
+ "updated": "2026-10-17T13:17:00+02:00",
  "voci": [
   {
-   "id": "n20261014-tavolo2",
-   "d": "2026-10-14",
-   "titolo": "Previdenza dedicata: confermate le risorse, serve una legge; nuovi incontri senza data",
-   "sintesi": "Dopo la riunione del 13 ottobre la Funzione Pubblica ha confermato le risorse già stanziate, ma per usarle serve un percorso di legge concordato con il MEF; invierà alle organizzazioni i dati sul personale, le soluzioni possibili e i costi. Temi da approfondire: misure per chi lascia il servizio, correzione dei coefficienti legati ai limiti di età, tutele per chi è nel sistema misto o contributivo, previdenza complementare. Altri incontri tecnici sono previsti, senza date; il banco di prova indicato dai sindacati è la legge di bilancio.",
-   "fonte": "ANFP",
-   "url": "https://www.anfp.it/previdenza-dedicata-avviato-il-confronto",
-   "fonti2": [
-    "https://infodifesa.it/previdenza-militari-usmia-carabinieri-tavolo-zangrillo/"
-   ],
+   "id": "n20261016-usic",
+   "d": "2026-10-16",
+   "titolo": "Previdenza dedicata: USIC propone il sistema misto fino agli arruolati del 2001",
+   "sintesi": "Secondo l’Unione Sindacale Italiana Carabinieri (USIC), riportata da Infodifesa il 16 ottobre 2026, il tavolo aperto il 13 ottobre alla Funzione Pubblica parte senza risorse dedicate e si teme che la legge di bilancio non preveda stanziamenti adeguati. USIC propone una soluzione «ponte»: applicare il sistema di calcolo misto al personale arruolato fino al 2001, per attenuare gli effetti del passaggio al contributivo del 1995 su chi è entrato in servizio dopo. Dice che non parteciperà a tavoli ridotti a dichiarazioni di principio, ma continuerà a portare proposte. È una proposta sindacale, non un provvedimento.",
+   "fonte": "Infodifesa (secondo USIC)",
+   "url": "https://infodifesa.it/pensioni-carabinieri-forze-armate-tavolo-senza-fondi-proposta-usic/",
+   "fonti2": [],
    "temi": [
     "previdenza"
    ],
    "tocca": [
-    "coefficienti",
-    "moltiplicatore",
-    "ausiliaria",
+    "quotaA",
     "requisiti"
    ],
-   "effetto": "Ancora nessuna misura: si attendono i prossimi incontri e la legge di bilancio. Riguarda chi è nel sistema misto ed esce per limiti di età."
+   "effetto": "Per ora non cambia nulla: è una proposta. Riguarderebbe chi è entrato in servizio dopo il 1995 e fino al 2001, oggi con pensione calcolata solo col contributivo."
   },
   {
    "id": "n20261015-dpr",
@@ -46,6 +42,47 @@
    "effetto": "Aumenti e arretrati arrivano solo dopo la Gazzetta Ufficiale. Se sono pagati prima della cessazione dal servizio entrano nella base imponibile dell’ultimo anno; il mese preciso si vedrà nel cedolino."
   },
   {
+   "id": "n20261015-manovra",
+   "d": "2026-10-15",
+   "titolo": "Manovra 2027 da 23,5 miliardi: detassazione degli aumenti solo ipotesi",
+   "sintesi": "Il Documento programmatico di bilancio, approvato dal Consiglio dei ministri il 13 ottobre e inviato all’UE, vale 23,5 miliardi. Fra le ipotesi non confermate c’è la detassazione di tredicesime e aumenti dei rinnovi contrattuali. L’imposta sostitutiva del 5% sugli aumenti prevista dalla legge di bilancio 2026 riguarda il settore privato e non si applica automaticamente a militari e polizia.",
+   "fonte": "Sky TG24",
+   "url": "https://tg24.sky.it/economia/2026/10/15/manovra-2027-dpb-coperture-tagli",
+   "fonti2": [
+    "https://forzearmate.org/manovra-2027-fino-a-21-22-miliardi-di-flessibilita-per-la-difesa-resta-aperta-la-partita-sulla-detassazione-degli-aumenti/"
+   ],
+   "temi": [
+    "inps"
+   ],
+   "tocca": [
+    "fiscale",
+    "aumenti",
+    "arretrati"
+   ],
+   "effetto": "Nessuna misura confermata: conta il testo della legge di bilancio quando sarà presentato in Parlamento."
+  },
+  {
+   "id": "n20261014-tavolo2",
+   "d": "2026-10-14",
+   "titolo": "Previdenza dedicata: confermate le risorse, serve una legge; nuovi incontri senza data",
+   "sintesi": "Dopo la riunione del 13 ottobre la Funzione Pubblica ha confermato le risorse già stanziate, ma per usarle serve un percorso di legge concordato con il MEF; invierà alle organizzazioni i dati sul personale, le soluzioni possibili e i costi. Temi da approfondire: misure per chi lascia il servizio, correzione dei coefficienti legati ai limiti di età, tutele per chi è nel sistema misto o contributivo, previdenza complementare. Altri incontri tecnici sono previsti, senza date; il banco di prova indicato dai sindacati è la legge di bilancio.",
+   "fonte": "ANFP",
+   "url": "https://www.anfp.it/previdenza-dedicata-avviato-il-confronto",
+   "fonti2": [
+    "https://infodifesa.it/previdenza-militari-usmia-carabinieri-tavolo-zangrillo/"
+   ],
+   "temi": [
+    "previdenza"
+   ],
+   "tocca": [
+    "coefficienti",
+    "moltiplicatore",
+    "ausiliaria",
+    "requisiti"
+   ],
+   "effetto": "Ancora nessuna misura: si attendono i prossimi incontri e la legge di bilancio. Riguarda chi è nel sistema misto ed esce per limiti di età."
+  },
+  {
    "id": "n20261013-tavolo",
    "d": "2026-10-13",
    "titolo": "Aperto il tavolo sulla previdenza dedicata per Forze di polizia e Forze armate",
@@ -65,26 +102,6 @@
     "tfs"
    ],
    "effetto": "Per ora non cambia nulla: è l’inizio di un confronto. Va seguito perché riguarda proprio moltiplicatore, ausiliaria, coefficienti e TFS."
-  },
-  {
-   "id": "n20261015-manovra",
-   "d": "2026-10-15",
-   "titolo": "Manovra 2027 da 23,5 miliardi: detassazione degli aumenti solo ipotesi",
-   "sintesi": "Il Documento programmatico di bilancio, approvato dal Consiglio dei ministri il 13 ottobre e inviato all’UE, vale 23,5 miliardi. Fra le ipotesi non confermate c’è la detassazione di tredicesime e aumenti dei rinnovi contrattuali. L’imposta sostitutiva del 5% sugli aumenti prevista dalla legge di bilancio 2026 riguarda il settore privato e non si applica automaticamente a militari e polizia.",
-   "fonte": "Sky TG24",
-   "url": "https://tg24.sky.it/economia/2026/10/15/manovra-2027-dpb-coperture-tagli",
-   "fonti2": [
-    "https://forzearmate.org/manovra-2027-fino-a-21-22-miliardi-di-flessibilita-per-la-difesa-resta-aperta-la-partita-sulla-detassazione-degli-aumenti/"
-   ],
-   "temi": [
-    "inps"
-   ],
-   "tocca": [
-    "fiscale",
-    "aumenti",
-    "arretrati"
-   ],
-   "effetto": "Nessuna misura confermata: conta il testo della legge di bilancio quando sarà presentato in Parlamento."
   },
   {
    "id": "n20261002-cdm",
@@ -166,133 +183,133 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "non raggiungibile"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "MEF",
    "url": "https://www.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "non raggiungibile"
   },
   {
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "non raggiungibile"
   },
   {
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "Ministero del Lavoro",
    "url": "https://www.lavoro.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ISTAT",
    "url": "https://www.istat.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "Difesa – Previmil",
    "url": "https://www.difesa.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "non raggiungibile"
   },
   {
    "n": "Polizia di Stato",
    "url": "https://www.poliziadistato.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "non raggiungibile"
   },
   {
    "n": "Corte dei conti",
    "url": "https://www.corteconti.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "non raggiungibile"
   },
   {
    "n": "Camera dei deputati",
    "url": "https://www.camera.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "Senato",
    "url": "https://www.senato.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "Agenzia delle Entrate",
    "url": "https://www.agenziaentrate.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "non raggiungibile"
   },
   {
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
@@ -327,14 +344,14 @@
    "n": "MP",
    "url": "https://mpnazionale.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ANFP",
    "url": "https://www.anfp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
@@ -348,7 +365,7 @@
    "n": "Al.Si.P.Pe.",
    "url": "https://www.alsippe.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
@@ -362,8 +379,8 @@
    "n": "USMIA Carabinieri",
    "url": "https://www.usmia.it/",
    "tipo": "sindacato militari",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:17:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "USAMI",
@@ -376,21 +393,21 @@
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Corriere dei Militari",
    "url": "https://www.corrieredeimilitari.com/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ForzeArmate.org",
    "url": "https://forzearmate.org/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:17:00+02:00",
    "esito": "ok"
   },
   {
@@ -427,6 +444,11 @@
    "at": "2026-10-17T13:10:00+02:00",
    "notizie": 1,
    "note": "prima raccolta: 6 notizie, 4 parametri in attesa"
+  },
+  {
+   "at": "2026-10-17T13:17:00+02:00",
+   "notizie": 1,
+   "note": "1 notizia nuova (proposta USIC sul sistema misto); DPR non ancora in Gazzetta (ultima S.G. n. 241 del 16/10); tasso 2026 ISTAT e coefficienti 2027-2028 non ancora usciti; quota F.A.F. 2027 attesa nel 2028. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
   }
  ]
 }
