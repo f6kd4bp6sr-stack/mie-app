@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-17T13:17:00+02:00",
+ "updated": "2026-10-17T13:19:00+02:00",
  "voci": [
   {
    "id": "n20261016-usic",
@@ -69,7 +69,8 @@
    "fonte": "ANFP",
    "url": "https://www.anfp.it/previdenza-dedicata-avviato-il-confronto",
    "fonti2": [
-    "https://infodifesa.it/previdenza-militari-usmia-carabinieri-tavolo-zangrillo/"
+    "https://infodifesa.it/previdenza-militari-usmia-carabinieri-tavolo-zangrillo/",
+    "https://usami-aeronautica.it/previdenza-militare-al-via-il-tavolo-tecnico-con-la-funzione-pubblica-usami-senza-risorse-non-bastano-le-buone-intenzioni/"
    ],
    "temi": [
     "previdenza"
@@ -183,259 +184,259 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "MEF",
    "url": "https://www.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Ministero del Lavoro",
    "url": "https://www.lavoro.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ISTAT",
    "url": "https://www.istat.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Difesa – Previmil",
    "url": "https://www.difesa.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Polizia di Stato",
    "url": "https://www.poliziadistato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Corte dei conti",
    "url": "https://www.corteconti.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Camera dei deputati",
    "url": "https://www.camera.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Senato",
    "url": "https://www.senato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Agenzia delle Entrate",
    "url": "https://www.agenziaentrate.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "COISP",
    "url": "https://coisp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SIAP",
    "url": "https://www.siap-polizia.org/",
    "tipo": "sindacato polizia",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:19:00+02:00",
+   "esito": "non raggiungibile"
   },
   {
    "n": "UIL Polizia",
    "url": "https://www.uilpolizia.com/",
    "tipo": "sindacato polizia",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:19:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "SILP CGIL",
    "url": "https://www.silpcgil.it/",
    "tipo": "sindacato polizia",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:19:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "MP",
    "url": "https://mpnazionale.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ANFP",
    "url": "https://www.anfp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SAPPE",
    "url": "https://www.sappe.it/",
    "tipo": "sindacato polizia",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:19:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "Al.Si.P.Pe.",
    "url": "https://www.alsippe.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "FNS CISL",
    "url": "https://www.fnscisl.it/",
    "tipo": "sindacato polizia",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:19:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "USMIA Carabinieri",
    "url": "https://www.usmia.it/",
    "tipo": "sindacato militari",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "USAMI",
    "url": "https://usami-aeronautica.it/",
    "tipo": "sindacato militari",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:19:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Corriere dei Militari",
    "url": "https://www.corrieredeimilitari.com/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ForzeArmate.org",
    "url": "https://forzearmate.org/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T13:17:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "poliziapenitenziaria.it",
    "url": "https://www.poliziapenitenziaria.it/",
    "tipo": "testata",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:19:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "PensioniOggi",
    "url": "https://www.pensionioggi.it/",
    "tipo": "testata",
-   "ultimo": null,
-   "esito": ""
+   "ultimo": "2026-10-17T13:19:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "ESCAP",
    "url": "https://www.escap.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Sky TG24",
    "url": "https://tg24.sky.it/economia",
    "tipo": "testata",
-   "ultimo": "2026-10-17T13:10:00+02:00",
+   "ultimo": "2026-10-17T13:19:00+02:00",
    "esito": "ok"
   }
  ],
@@ -449,6 +450,11 @@
    "at": "2026-10-17T13:17:00+02:00",
    "notizie": 1,
    "note": "1 notizia nuova (proposta USIC sul sistema misto); DPR non ancora in Gazzetta (ultima S.G. n. 241 del 16/10); tasso 2026 ISTAT e coefficienti 2027-2028 non ancora usciti; quota F.A.F. 2027 attesa nel 2028. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-10-17T13:19:00+02:00",
+   "notizie": 0,
+   "note": "giro manuale: controllate tutte le 37 fonti. Nessuna notizia nuova; aggiunta USAMI come seconda fonte sul tavolo del 13/10. DPR non ancora in Gazzetta, tasso 2026 e coefficienti 2027-2028 non usciti. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, SIAP"
   }
  ]
 }
