@@ -4,7 +4,7 @@ Tre app separate pubblicate con GitHub Pages dallo stesso repository. Ognuna ha 
 
 | App | Indirizzo | Cartella pubblicata | Sorgenti e memoria | Dati sul dispositivo | Cache |
 |---|---|---|---|---|---|
-| 🐉 **Il mio mondo** | [/mie-app/](https://f6kd4bp6sr-stack.github.io/mie-app/) | cartella principale (`index.html`, `sw.js`…) | [`sorgenti/il-mio-mondo/`](sorgenti/il-mio-mondo/README.md) | `vale2-…`, `msync-cfg`, `mondo-…`; IndexedDB `il-mio-mondo`, `mondo-sfondo` | `mondo-…` |
+| 🐉 **Il mio mondo** | [/mie-app/](https://f6kd4bp6sr-stack.github.io/mie-app/) | cartella principale (`index.html`, `sw.js`…) | [`sorgenti/il-mio-mondo/`](sorgenti/il-mio-mondo/README.md) | `vale2-…`, `msync-cfg`, `mondo-…`; IndexedDB `il-mio-mondo`, `mondo-sfondo`, `mondo-disegni` | `mondo-…` |
 | 🏠 **Pianificazione** | [/mie-app/licenze/](https://f6kd4bp6sr-stack.github.io/mie-app/licenze/) | `licenze/` | [`sorgenti/pianificazione/`](sorgenti/pianificazione/README.md) | `pn-…`, `licenze-marco-v1`, `tc_…`, `prog-…`; IndexedDB `licenze-marco` | `licenze-…` |
 | 🩺 **Semestre filtro** | [/mie-app/semestre/](https://f6kd4bp6sr-stack.github.io/mie-app/semestre/) | `semestre/` (più i rimandi `licenze/fisica.html`, `licenze/semestre.html`) | [`sorgenti/semestre/`](sorgenti/semestre/README.md) | `semestre-…`, `sf-…`; IndexedDB `semestre-filtro` | `semestre-…` |
 
