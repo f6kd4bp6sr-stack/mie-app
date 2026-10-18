@@ -82,7 +82,7 @@ function pensCifre(){
    incassi della scheda nel loro mese (senza doppioni con il Cedolino). Movimenti miei in P.pens.mov (una volta o ricorrenti, anche nel Calendario).
    P.pens.cassa: ini {d,imp} punto di partenza, saldi {ym: saldo reale a fine mese}, spunte {chiave: {ok, imp}}, sposta {chiave: ym}, rit, pens. */
 const CS_FINE="2029-06",CS_FREQ={una:["una volta",0],m:["ogni mese",1],"2m":["ogni 2 mesi",2],"3m":["ogni 3 mesi",3],"6m":["ogni 6 mesi",6],a:["ogni anno",12]};
-let csEd=null,csIt=null,csIniEd=false;
+let csEd=null,csIt=null,csIniEd=false,csQ="";
 const ymAdd=(ym,n)=>{let[y,m]=ym.split("-").map(Number);m+=n;y+=Math.floor((m-1)/12);m=((m-1)%12+12)%12+1;return y+"-"+String(m).padStart(2,"0");};
 const ymDays=ym=>{const[y,m]=ym.split("-").map(Number);return new Date(y,m,0).getDate();};
 const dayIn=(ym,d)=>ym+"-"+String(Math.max(1,Math.min(+d||1,ymDays(ym)))).padStart(2,"0");
@@ -106,13 +106,20 @@ function cassaCalc(){const p=PENS(),C=p.cassa,D=p.dati,t=today(),T=t.slice(0,7),
     const it=put("inc:"+x.id,x.d,"e",x.t,+x.netto||0,{src:"Scheda",inc:x.id,nd:!x.netto});if(x.ok)it.ok=true;});
   p.mov.forEach(x=>movDates(x,start+"-01",CS_FINE+"-31").forEach(d=>put("mov:"+x.id+":"+d,d,x.tipo,x.t,+x.imp||0,{mov:x.id,freq:x.freq})));
   items.sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0);
-  const rows=[];let s=null,min=Infinity,minM="",oggi=null;
-  for(let ym=start;ym<=CS_FINE;ym=ymAdd(ym,1)){let L=items.filter(i=>i.ym===ym);if(ini&&ym===start)L=L.filter(i=>i.d>ini.d);
-    const pr=SA[ymAdd(ym,-1)],fromReal=has(pr)&&ym!==start||(ym===start&&!ini&&has(pr)),open=fromReal?+pr:(s==null?(ini?+ini.imp:0):s);
-    const e=L.filter(i=>i.tipo==="e").reduce((a,i)=>a+i.imp,0),u=L.filter(i=>i.tipo==="u").reduce((a,i)=>a+i.imp,0),prev=open+e-u,real=has(SA[ym])?+SA[ym]:null;
-    if(ym===T)oggi=open+L.filter(i=>i.d<=t).reduce((a,i)=>a+(i.tipo==="e"?i.imp:-i.imp),0);
-    const fin=real!=null?real:prev;rows.push({ym,L,open,e,u,prev,real,fin,fromReal});s=fin;if(ym>=T&&fin<min){min=fin;minM=ym;}}
-  return{ini,start,T,t,rows,items,min,minM,oggi,fine:rows.length?rows[rows.length-1]:null};}
+  /* saldi veri: partenza, fine mese (saldi) e a una data qualsiasi (punti); da ognuno il conto riparte */
+  const eom=ym=>ym+"-"+String(ymDays(ym)).padStart(2,"0"),cps=[];
+  if(ini)cps.push({ev:"c",cp:"ini",d:ini.d,imp:+ini.imp});
+  Object.keys(SA).forEach(ym=>{if(has(SA[ym])&&(!ini||eom(ym)>ini.d))cps.push({ev:"c",cp:"m",ym,d:eom(ym),imp:+SA[ym]});});
+  (C.punti||[]).forEach(x=>{if(x.d&&has(x.imp)&&(!ini||x.d>ini.d))cps.push({ev:"c",cp:"p",id:x.id,d:x.d,imp:+x.imp});});
+  const EV=items.filter(i=>!ini||i.d>ini.d).map(i=>Object.assign(i,{ev:"i"})).concat(cps).sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:(a.cp==="ini"?-1:b.cp==="ini"?1:(a.ev==="c")-(b.ev==="c")));
+  let bal=ini?+ini.imp:0;EV.forEach(x=>{if(x.ev==="i")bal+=x.tipo==="e"?x.imp:-x.imp;else{x.diff=x.cp==="ini"?null:x.imp-bal;bal=x.imp;}x.bal=bal;});
+  const balAt=d=>{if(ini&&d<ini.d)return null;let r=ini?+ini.imp:0;for(const x of EV){if(x.d>d)break;r=x.bal;}return r;};
+  const rows=[];let min=Infinity,minM="";
+  for(let ym=start;ym<=CS_FINE;ym=ymAdd(ym,1)){const E=EV.filter(x=>x.d.slice(0,7)===ym),L=E.filter(x=>x.ev==="i"),open=ym===start?(ini?+ini.imp:0):balAt(eom(ymAdd(ym,-1)));
+    const e=L.filter(i=>i.tipo==="e").reduce((a,i)=>a+i.imp,0),u=L.filter(i=>i.tipo==="u").reduce((a,i)=>a+i.imp,0),fin=balAt(eom(ym)),real=has(SA[ym])?+SA[ym]:null;
+    rows.push({ym,E,L,open,e,u,fin,prev:fin,real,veri:E.filter(x=>x.ev==="c"&&x.cp!=="ini").length});if(ym>=T&&fin<min){min=fin;minM=ym;}}
+  const oggi=balAt(t);
+  return{ini,start,T,t,rows,items,min,minM,oggi,balAt,fine:rows.length?rows[rows.length-1]:null};}
 /* riquadro della Cassa che si apre e si chiude: titolo a sinistra, totali a destra (stato ricordato fra un disegno e l'altro) */
 function csBox(k,title,right,open,body){return `<details class="card k-pens csm csb" data-k="cb-${k}"${open?" open":""}><summary><span class="csm-h"><b class="csb-t">${title}</b></span><span class="csm-v">${right||""}</span></summary>${body}</details>`;}
 function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,man}=cassaPen(),rit=+(C.rit||0),T=K.T;
@@ -126,6 +133,7 @@ function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,
       ${K.oggi!=null?`<div><b>${c(Math.round(K.oggi))}</b><span>dovresti avere oggi</span></div>`:""}${r0?`<div><b>${c(Math.round(r0.fin))}</b><span>a fine ${ymLab(T,1)}${r0.real!=null?" (saldo vero)":""}</span></div>`:""}
       <div><b>${c(Math.round(K.min))}</b><span>punto più basso (${ymLab(K.minM)})</span></div>${last?`<div><b>${c(Math.round(last.fin))}</b><span>a fine ${ymLab(last.ym,1)}</span></div>`:""}</div>
       ${neg?`<p class="lbl" style="color:var(--scad);margin:8px 0 0">⚠️ In ${ymLab(K.minM,1)} il saldo previsto va sotto zero di ${eur0(-K.min)}.</p>`:""}
+      <div class="btns cs-add"><span class="lbl">🔎 Saldo previsto al</span><input type="date" id="csQ" class="pin" value="${esc(csQ||"")}" min="${esc(K.ini.d)}" max="${CS_FINE}-30">${csQ?`<b>${(()=>{const v=K.balAt(csQ);return v==null?"—":c(Math.round(v));})()}</b>`:""}</div>
       <div class="btns"><button class="btn sm" data-csx="iniedit">Partenza: ${eur0(K.ini.imp)} al ${fmt(K.ini.d,{day:"numeric",month:"short",year:"numeric"})} · cambia</button></div>`);}
   /* movimenti miei */
   const M=p.mov.slice().sort((a,b)=>a.tipo===b.tipo?(a.da<b.da?-1:1):a.tipo==="e"?-1:1),ed=csEd&&csEd!=="new"?p.mov.find(x=>x.id===csEd):null,f=ed||{tipo:"u",freq:"m",da:K.t,cal:1};
@@ -148,15 +156,16 @@ function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,
   if(!K.ini)return o+`<div class="card k-pens"><p class="empty">Scrivi da dove parti: qui compare la cassa mese per mese, da ${ymLab(T,1)} a giugno 2029.</p></div>`;
   /* mese per mese */
   const ite=x=>{const open=csIt===x.k,auto=x.src?x.src+(x.moved?" · spostato":""):(CS_FREQ[x.freq]||CS_FREQ.una)[0];
-    return `<div class="row"><button class="chk${x.ok?" done":""}" data-csk="${esc(x.k)}" aria-label="${x.tipo==="e"?"Arrivata":"Pagata"}">✓</button><span class="pill">${fmt(x.d,{day:"numeric",month:"short"})}</span><div class="grow"><b>${esc(x.t)}</b><small>${esc(auto)}${x.nd&&!x.real?" · importo da definire":""}${x.real&&x.imp!==x.exp?" · previsti "+eur0(x.exp):""}</small></div><b class="amt ${x.tipo==="u"?"u":""}">${x.tipo==="e"?"+":"−"}${eur0(x.imp)}</b><button class="btn sm" data-csi="${esc(x.k)}" aria-label="Correggi">✏️</button></div>
+    return `<div class="row"><button class="chk${x.ok?" done":""}" data-csk="${esc(x.k)}" aria-label="${x.tipo==="e"?"Arrivata":"Pagata"}">✓</button><span class="pill">${fmt(x.d,{day:"numeric",month:"short"})}</span><div class="grow"><b>${esc(x.t)}</b><small>${esc(auto)}${x.nd&&!x.real?" · importo da definire":""}${x.real&&x.imp!==x.exp?" · previsti "+eur0(x.exp):""}</small></div><span class="cs-am"><b class="amt ${x.tipo==="u"?"u":""}">${x.tipo==="e"?"+":"−"}${eur0(x.imp)}</b><small class="${x.bal<0?"amt u":""}">saldo ${eur0(Math.round(x.bal))}</small></span><button class="btn sm" data-csi="${esc(x.k)}" aria-label="Correggi">✏️</button></div>
     ${open?`<div class="form" style="margin:0 0 10px 40px"><label>Importo vero €<input id="ciI" inputmode="decimal" value="${x.real?esc(String(x.imp).replace(".",",")):""}" placeholder="${esc(String(x.exp))}"></label>${x.mov?"":`<label>Mese<select id="ciM">${K.rows.map(r=>`<option value="${r.ym}"${r.ym===x.ym?" selected":""}>${ymLab(r.ym)}</option>`).join("")}</select></label>`}
       <div class="btns" style="grid-column:1/-1"><button class="btn sm pri" data-csi="save">Salva</button><button class="btn sm" data-csi="close">Chiudi</button>${x.real||x.moved?`<button class="btn sm" data-csi="reset">Torna al previsto</button>`:""}</div></div>`:""}`;};
-  const mese=r=>{const past=r.ym<=T,todo=r.L.filter(i=>!i.ok&&i.d<=K.t).length,sc=r.real!=null?r.real-r.prev:null;
-    return `<details class="csm csm2" data-k="cm-${r.ym}"${r.ym===T?" open":""}><summary><span class="csm-h"><b>${cap(ymLab(r.ym,1))}</b>${todo?`<span class="n">${todo}</span>`:""}</span><span class="csm-v"><span class="amt">+${eur0(r.e)}</span><span class="amt u">−${eur0(r.u)}</span><b>${r.real!=null?"✓ "+eur0(r.real):c(Math.round(r.prev))}</b></span></summary>
-      ${r.fromReal?`<p class="lbl" style="margin:6px 0 0">Parte dal saldo vero di fine ${ymLab(ymAdd(r.ym,-1),1)}: ${eur0(r.open)}</p>`:`<p class="lbl" style="margin:6px 0 0">Inizio mese: ${eur0(Math.round(r.open))}${r.ym===K.start?" (partenza)":" (previsto)"}</p>`}
-      ${r.L.map(ite).join("")||'<p class="empty">Nessun movimento.</p>'}
-      ${past?`<div class="form" style="margin-top:8px"><label>Saldo vero a fine ${ymLab(r.ym,1)} €<input data-csr="${r.ym}" inputmode="decimal" value="${r.real!=null?esc(String(r.real).replace(".",",")):""}" placeholder="previsti ${esc(String(Math.round(r.prev)))}"></label></div>
-        ${sc!=null?`<p class="lbl" style="margin:4px 0 0">Scarto con il previsto: <b class="amt ${sc<0?"u":""}">${sc>=0?"+":"−"}${eur0(Math.abs(sc))}</b>. I mesi dopo ripartono da qui.</p>`:""}`:""}</details>`;};
+  const cpr=x=>`<div class="row cs-cp"><span class="pill ok">🏦</span><span class="pill">${fmt(x.d,{day:"numeric",month:"short"})}</span><div class="grow"><b>${x.cp==="ini"?"Partenza":"Saldo vero"}</b><small>${x.diff==null?"da qui parte il conto":x.diff===0?"uguale al previsto":"scarto con il previsto "+(x.diff>0?"+":"−")+eur0(Math.abs(Math.round(x.diff)))+" · da qui riparte il conto"}</small></div><span class="cs-am"><b>${eur0(x.imp)}</b></span>${x.cp==="ini"?`<button class="btn sm" data-csx="iniedit" aria-label="Cambia">✏️</button>`:`<button class="btn sm" data-csp="${x.cp==="m"?"m:"+x.ym:"p:"+x.id}" aria-label="Togli">×</button>`}</div>`;
+  const mese=r=>{const past=r.ym<=T,todo=r.L.filter(i=>!i.ok&&i.d<=K.t).length,dd=r.ym===T?K.t:r.ym+"-"+String(ymDays(r.ym)).padStart(2,"0"),mn=r.ym===K.start&&K.ini?K.ini.d:r.ym+"-01";
+    return `<details class="csm csm2" data-k="cm-${r.ym}"${r.ym===T?" open":""}><summary><span class="csm-h"><b>${cap(ymLab(r.ym,1))}</b>${todo?`<span class="n">${todo}</span>`:""}</span><span class="csm-v"><span class="amt">+${eur0(r.e)}</span><span class="amt u">−${eur0(r.u)}</span><b>${r.veri?"🏦 ":""}${c(Math.round(r.fin))}</b></span></summary>
+      ${r.ym===K.start?"":`<p class="lbl" style="margin:6px 0 0">Inizio mese: ${eur0(Math.round(r.open))}</p>`}
+      ${r.E.map(x=>x.ev==="c"?cpr(x):ite(x)).join("")||'<p class="empty">Nessun movimento.</p>'}
+      ${past?`<div class="btns cs-add"><span class="lbl">🏦 Saldo vero al</span><input type="date" id="cpD-${r.ym}" class="pin" value="${dd}" min="${mn}" max="${dd}"><input id="cpI-${r.ym}" class="pin" inputmode="decimal" placeholder="previsti ${esc(String(Math.round(K.balAt(dd)??0)))}"><button class="btn sm" data-csp="add:${r.ym}">Aggiungi</button></div>`:""}
+      <p class="lbl" style="margin:6px 0 0">A fine mese: <b>${eur0(Math.round(r.fin))}</b>${r.veri?" (con i saldi veri)":" (previsto)"}</p></details>`;};
   const yrs=[...new Set(K.rows.map(r=>r.ym.slice(0,4)))];
   o+=`<h2>📅 Mese per mese</h2>`+yrs.map(y=>{const R=K.rows.filter(r=>r.ym.slice(0,4)===y),e=R.reduce((a,r)=>a+r.e,0),u=R.reduce((a,r)=>a+r.u,0),l=R[R.length-1],todo=R.reduce((a,r)=>a+r.L.filter(i=>!i.ok&&i.d<=K.t).length,0);
     return csBox("y"+y,`📅 ${y}${todo?` <span class="n">${todo}</span>`:""}`,`<span class="lbl">${R.length} ${R.length===1?"mese":"mesi"}</span><span class="amt">+${eur0(e)}</span><span class="amt u">−${eur0(u)}</span><b>${c(Math.round(l.fin))}</b>`,y===T.slice(0,4),R.map(mese).join(""));}).join("")
@@ -168,7 +177,7 @@ function cassaOn(s){return P.pens?(PENS().mov||[]).filter(x=>x.cal&&movDates(x,s
 function cassaIcs(t){if(!P.pens)return[];const out=[],h=add(t,400);(PENS().mov||[]).filter(x=>x.cal).forEach(x=>movDates(x,t,h).forEach(d=>out.push({uid:"pens-mov-"+x.id+"-"+d,lines:["DTSTART;VALUE=DATE:"+dval(d),"DTEND;VALUE=DATE:"+dval(add(d,1)),"SUMMARY:"+icsEsc((x.tipo==="e"?"💰 ":"💶 ")+x.t+" "+(x.tipo==="e"?"+":"−")+eur0(x.imp)),"TRANSP:TRANSPARENT",...alarm(1)]})));return out;}
 /* riquadro di oggi: saldo da scrivere a inizio mese, movimenti da spuntare */
 function cassaNag(){const p=P.pens;if(!p||!p.cassa||!p.cassa.ini)return null;const K=cassaCalc(),prev=ymAdd(K.T,-1),day=+K.t.slice(8,10);
-  const askSaldo=day<=10&&prev>=K.start&&!has((p.cassa.saldi||{})[prev]),r=K.rows.find(x=>x.ym===K.T),todo=r?r.L.filter(i=>!i.ok&&i.d<=K.t):[],next=K.items.filter(i=>i.d>K.t&&i.d<=add(K.t,7));
+  const askSaldo=day<=10&&prev>=K.start&&!has((p.cassa.saldi||{})[prev])&&!(p.cassa.punti||[]).some(x=>x.d>=prev+"-24"&&x.d<=K.t),r=K.rows.find(x=>x.ym===K.T),todo=r?r.L.filter(i=>!i.ok&&i.d<=K.t):[],next=K.items.filter(i=>i.d>K.t&&i.d<=add(K.t,7));
   return{askSaldo,prev,todo,next,oggi:K.oggi};}
 function bindCassa(p,num){const R=()=>render(),C=p.cassa;C.spunte=C.spunte||{};C.sposta=C.sposta||{};C.saldi=C.saldi||{};
   document.querySelectorAll("[data-csx]").forEach(b=>b.onclick=()=>{const a=b.dataset.csx;
@@ -197,6 +206,12 @@ function bindCassa(p,num){const R=()=>render(),C=p.cassa;C.spunte=C.spunte||{};C
       csIt=null;save();R();toast("Salvato");return;}
     if(a==="reset"&&x){if(x.ced){const y=p.cedolini.find(z=>z.id===x.ced);if(y)y.ric="";}const s=C.spunte[x.k];if(s)delete s.imp;delete C.sposta[x.k];csIt=null;save();R();return;}
     csIt=a;R();});
+  const q=$("csQ");if(q)q.onchange=()=>{csQ=q.value;R();};
+  document.querySelectorAll("[data-csp]").forEach(b=>b.onclick=()=>{const a=b.dataset.csp;C.punti=C.punti||[];
+    if(a.startsWith("add:")){const ym=a.slice(4),d=$("cpD-"+ym).value,v=num($("cpI-"+ym).value);if(!d||v==null)return toast("Scrivi la data e il saldo vero");
+      const eom=ym+"-"+String(ymDays(ym)).padStart(2,"0");if(d===eom)C.saldi[ym]=v;else{C.punti=C.punti.filter(x=>x.d!==d);C.punti.push({id:uid(),d,imp:v});}
+      save();R();toast("🏦 Saldo vero del "+fmt(d,{day:"numeric",month:"short"})+": da qui riparte il conto");return;}
+    if(!confirm("Togliere questo saldo vero?"))return;if(a.startsWith("m:"))delete C.saldi[a.slice(2)];else C.punti=C.punti.filter(x=>x.id!==a.slice(2));save();R();});
   document.querySelectorAll("[data-csr]").forEach(i=>i.onchange=()=>{const v=num(i.value);if(v==null)delete C.saldi[i.dataset.csr];else C.saldi[i.dataset.csr]=v;save();R();toast(v==null?"Saldo tolto":"Saldo vero salvato: i mesi dopo ripartono da qui");});
 }
 /* ---- documenti e scheda ---- */

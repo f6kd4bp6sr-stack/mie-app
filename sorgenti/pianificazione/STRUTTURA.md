@@ -22,7 +22,7 @@ pian/
 │                     Famiglia, Benessere, Tai Chi `tc_sessions`); istruzioni del Calendario iPad dietro un pulsante;
 │                     attività fisse della famiglia (ogni 1 o 2 settimane, fino a, pause)
 ├── sezioni/pensione.js 🎖️ Pensione (`pn-v1` → `pens`): adempimenti (nel Calendario e nel file .ics), leve, cifre stimate/reali,
-│                     incassi, 💶 cassa da oggi a giugno 2029 (`pens.mov` entrate e uscite una tantum o ricorrenti, anche nel Calendario e nel file .ics; `pens.cassa`: `ini` partenza, `saldi` saldo vero di fine mese, `spunte`, `sposta`), documenti (`pf-…`); si carica dal file privato «scheda pensione»
+│                     incassi, 💶 cassa da oggi a giugno 2029 (`pens.mov` entrate e uscite una tantum o ricorrenti, anche nel Calendario e nel file .ics; `pens.cassa`: `ini` partenza, `saldi` saldo vero di fine mese, `punti` saldi veri a una data, `spunte`, `sposta`), documenti (`pf-…`); si carica dal file privato «scheda pensione»
 ├── strumenti/         NOVITA.md (istruzioni dell'agente delle 13 · 17 · 23), verifica_novita.py (controllo delle novità),
 │                     scheda_cifrata.py (apre, chiude e verifica la scheda cifrata; chiave solo in SCHEDA_CHIAVE)
 ├── statici/news-pensione.json  novità pubbliche su contratto e pensione GdF (aggiornate alle 13, 17 e 23 con fonti e registro dei controlli; non cambiano la versione)
