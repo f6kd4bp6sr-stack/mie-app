@@ -77,7 +77,7 @@ function openProg() {
   const bar = r => '<div style="height:10px;border-radius:6px;background:var(--bad-soft);overflow:hidden;margin-top:4px"><i style="display:block;height:100%;width:' + r.pc + '%;background:var(--c4)"></i></div>';
   openModal('<div class="big" style="font-size:26px">📊 I miei progressi</div>' +
     '<p style="font-weight:700;color:var(--ink-soft)">Risposte giuste e sbagliate in ogni materia. Sbagliare fa parte dell’imparare!</p>' + progWeek() +
-    (rows.length ? '<div style="text-align:left;max-height:50vh;overflow:auto">' + rows.map(r => '<div style="padding:8px 0;border-bottom:1px solid var(--line)"><div class="row between" style="font-weight:800"><span>' + esc(r.name) + '</span><span>✅ ' + r.ok + ' · ❌ ' + r.ko + ' · ' + r.pc + '%</span></div>' + bar(r) + '</div>').join('') + '</div>'
+    (rows.length ? '<div style="text-align:left;max-height:50vh;overflow:auto">' + rows.map(r => '<div style="padding:8px 0;border-bottom:1px solid var(--line)"><div class="row between" style="font-weight:800"><span>' + esc(r.name) + '</span><span>✅ ' + r.ok + ' · ❌ ' + r.ko + '</span></div>' + bar(r) + '</div>').join('') + '</div>'
       : '<p style="font-weight:800">Ancora nessuna risposta: prova un quiz!</p>') +
     '<p style="font-weight:700;font-size:14px;color:var(--ink-soft);margin-top:10px">' + progSavedTxt() + '</p>' +
     '<div class="row center" style="margin-top:14px"><button type="button" class="btn" id="pg-share">📤 Condividi</button><button type="button" class="btn ghost" id="pg-ok" data-focus>Chiudi</button></div>');
@@ -95,7 +95,7 @@ function progWeek() {
   const h = store.get('prog-days', {}); let ok = 0, ko = 0, act = 0;
   for (let i = 0; i < 7; i++) { const d = h[iso(addDays(new Date(), -i))]; if (!d) continue; act++; Object.values(d).forEach(r => { ok += r.ok; ko += r.ko; }); }
   if (!ok && !ko) return '';
-  return '<div class="pill" style="margin:6px auto 4px;display:inline-block;font-weight:800">Ultimi 7 giorni: ✅ ' + ok + ' · ❌ ' + ko + ' · ' + Math.round(ok / (ok + ko) * 100) + '% · ' + act + (act === 1 ? ' giorno' : ' giorni') + ' di studio</div>';
+  return '<div class="pill" style="margin:6px auto 4px;display:inline-block;font-weight:800">Ultimi 7 giorni: ✅ ' + ok + ' · ❌ ' + ko + ' · ' + act + (act === 1 ? ' giorno' : ' giorni') + ' di studio</div>';
 }
 
 /* ---------- 🔗 collegamento con i genitori: disponibile da subito, anche senza risposte ---------- */

@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="f4ba0f4ef7";</script>
+<script>window.APP_VERSION="452e79242c";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -11334,7 +11334,7 @@ function openProg() {
   const bar = r => '<div style="height:10px;border-radius:6px;background:var(--bad-soft);overflow:hidden;margin-top:4px"><i style="display:block;height:100%;width:' + r.pc + '%;background:var(--c4)"></i></div>';
   openModal('<div class="big" style="font-size:26px">📊 I miei progressi</div>' +
     '<p style="font-weight:700;color:var(--ink-soft)">Risposte giuste e sbagliate in ogni materia. Sbagliare fa parte dell’imparare!</p>' + progWeek() +
-    (rows.length ? '<div style="text-align:left;max-height:50vh;overflow:auto">' + rows.map(r => '<div style="padding:8px 0;border-bottom:1px solid var(--line)"><div class="row between" style="font-weight:800"><span>' + esc(r.name) + '</span><span>✅ ' + r.ok + ' · ❌ ' + r.ko + ' · ' + r.pc + '%</span></div>' + bar(r) + '</div>').join('') + '</div>'
+    (rows.length ? '<div style="text-align:left;max-height:50vh;overflow:auto">' + rows.map(r => '<div style="padding:8px 0;border-bottom:1px solid var(--line)"><div class="row between" style="font-weight:800"><span>' + esc(r.name) + '</span><span>✅ ' + r.ok + ' · ❌ ' + r.ko + '</span></div>' + bar(r) + '</div>').join('') + '</div>'
       : '<p style="font-weight:800">Ancora nessuna risposta: prova un quiz!</p>') +
     '<p style="font-weight:700;font-size:14px;color:var(--ink-soft);margin-top:10px">' + progSavedTxt() + '</p>' +
     '<div class="row center" style="margin-top:14px"><button type="button" class="btn" id="pg-share">📤 Condividi</button><button type="button" class="btn ghost" id="pg-ok" data-focus>Chiudi</button></div>');
@@ -11352,7 +11352,7 @@ function progWeek() {
   const h = store.get('prog-days', {}); let ok = 0, ko = 0, act = 0;
   for (let i = 0; i < 7; i++) { const d = h[iso(addDays(new Date(), -i))]; if (!d) continue; act++; Object.values(d).forEach(r => { ok += r.ok; ko += r.ko; }); }
   if (!ok && !ko) return '';
-  return '<div class="pill" style="margin:6px auto 4px;display:inline-block;font-weight:800">Ultimi 7 giorni: ✅ ' + ok + ' · ❌ ' + ko + ' · ' + Math.round(ok / (ok + ko) * 100) + '% · ' + act + (act === 1 ? ' giorno' : ' giorni') + ' di studio</div>';
+  return '<div class="pill" style="margin:6px auto 4px;display:inline-block;font-weight:800">Ultimi 7 giorni: ✅ ' + ok + ' · ❌ ' + ko + ' · ' + act + (act === 1 ? ' giorno' : ' giorni') + ' di studio</div>';
 }
 
 /* ---------- 🔗 collegamento con i genitori: disponibile da subito, anche senza risposte ---------- */
@@ -11783,7 +11783,7 @@ function pathHome(el) {
         '<div class="row" style="gap:8px;flex-wrap:wrap;margin-top:8px"><button type="button" class="btn" id="pa-go" style="--bc:' + u.c + '">▶ Continua: ' + esc(u.ic + ' ' + u.name) + '</button>' + (due ? '<button type="button" class="btn ghost" id="pa-rip">💪 Rafforza (' + due + ')</button>' : '') + '<button type="button" class="btn ghost" id="pa-shop">🛍️ Negozio · 💎 ' + Gems.get().n + '</button>' + (typeof openAlbum === 'function' ? '<button type="button" class="btn ghost" id="pa-alb">📒 Album ' + figOwned() + '/' + figTotal() + '</button><button type="button" class="btn ghost" id="pa-tes">🔍 Tesori ' + tesoriFound() + '/' + TESORI.length + '</button>' : '') + '</div></div>' +
     '</div>' +
     '<div class="path-units" id="pa-units" role="tablist" aria-label="Materie">' + units.map(x => { const inf = unitInfo(x); return '<button type="button" class="pu' + (x.id === u.id ? ' on' : '') + '" data-u="' + x.id + '" style="--uc:' + x.c + ';--us:' + x.s + '" role="tab" aria-selected="' + (x.id === u.id) + '"><span class="pu-ic">' + x.ic + '</span><span class="pu-n">' + esc(x.name) + '</span><span class="pu-b"><i style="width:' + inf.pct + '%"></i></span></button>'; }).join('') + '</div>' +
-    '<div class="path-banner" style="--uc:' + u.c + ';--us:' + u.s + '"><div><b>' + esc(u.ic + ' ' + u.name) + '</b><small>' + info.learned + ' nozioni imparate su ' + info.total + '</small></div><div class="pb-pct">' + info.pct + '%</div></div>' +
+    '<div class="path-banner" style="--uc:' + u.c + ';--us:' + u.s + '"><div><b>' + esc(u.ic + ' ' + u.name) + '</b><small>' + info.learned + ' nozioni imparate su ' + info.total + '</small></div></div>' +
     '<div class="path theme-' + (store.get('path-theme', '') || 'base') + '" style="--uc:' + u.c + ';--us:' + u.s + '">' + nodes.map((nd, k) => {
       const st = nodeState(u, nodes, k), cur = k === nk;
       const ic = !st.open ? '🔒' : nd.t === 'rip' ? (nd.last ? '🏆' : '🎁') : st.conquered ? '👑' : st.done ? '⭐' : (u.math ? MATH_TAPPE[nd.i].ic : '📘');
@@ -12191,7 +12191,7 @@ function piggyCard() {
   const tot = g + p.n, pct = goal ? Math.min(100, Math.round(tot / goal.p * 100)) : 0;
   return '<div class="piggy"><div class="pg-ic">🐷</div><div style="flex:1;min-width:0"><b>Salvadanaio: ' + p.n + ' 💎</b>' +
     '<small>Ogni lunedì il salvadanaio cresce del 10% (se ci sono almeno 10 gemme): è l’<b>interesse</b>, il premio di chi risparmia!</small>' +
-    (goal ? '<div class="pg-goal">🎯 Obiettivo: ' + esc(goal.ic + ' ' + goal.n) + ' (' + goal.p + ' 💎) · ' + pct + '%<div class="ebig"><i style="width:' + pct + '%"></i></div></div>' : '<small>Scegli un obiettivo con 🎯 su un oggetto del negozio.</small>') +
+    (goal ? '<div class="pg-goal">🎯 Obiettivo: ' + esc(goal.ic + ' ' + goal.n) + ' (' + goal.p + ' 💎)<div class="ebig"><i style="width:' + pct + '%"></i></div></div>' : '<small>Scegli un obiettivo con 🎯 su un oggetto del negozio.</small>') +
     '<div class="row" style="gap:6px;margin-top:6px;flex-wrap:wrap"><button type="button" class="btn small" id="pg-10"' + (g < 10 ? ' disabled' : '') + ' style="--bc:var(--c3);color:var(--ink)">Metti 10 💎</button><button type="button" class="btn small ghost" id="pg-all"' + (g < 1 ? ' disabled' : '') + '>Metti tutto</button><button type="button" class="btn small ghost" id="pg-take"' + (!p.n ? ' disabled' : '') + '>Rompi il salvadanaio</button></div></div></div>';
 }
 function piggyBind(reopen) {
@@ -12343,7 +12343,7 @@ PAGES.home = el => {
   if (!store.get('gems-welcome', false)) { store.set('gems-welcome', true); Gems.add(20); }
   const due = dueKeys(pState()).length, last = unitById(store.get('path-sel', '')) || null;
   const tile = (go, ic, n, sm, c) => '<button type="button" class="v2-tile h-tile" data-go="' + go + '"' + (c ? ' style="--uc:' + c + '"' : '') + '><span class="v2-ti">' + ic + '</span><b>' + esc(n) + '</b>' + (sm ? '<small>' + esc(sm) + '</small>' : '') + '</button>';
-  const ut = u => tile('u:' + u.id, u.ic, u.name, unitInfo(u).pct + '%', u.c);
+  const ut = u => tile('u:' + u.id, u.ic, u.name, '', u.c);
   el.innerHTML = '<h1 class="v2-h1">' + (childName() ? 'Ciao ' + esc(childName()) + '!' : 'Ciao!') + '</h1><p class="v2-sub">Che cosa facciamo?</p>' +
     (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
     '<input type="search" class="h-find" id="h-find" placeholder="🔎 Cerca un argomento in tutte le materie (es. acqua, Romani, frazioni)" autocomplete="off" enterkeyhint="search"><div id="h-res" hidden></div><div id="h-rest">' +
@@ -12427,7 +12427,7 @@ function openUnits() {
   const ids = unitUnlockedIds(), nx = nextUnitNeed(), ne = nextExtra();
   openModal('<div class="big" style="font-size:28px">📚 Le tue materie</div><p style="font-weight:700;color:var(--ink-soft)">Ogni ' + UNLOCK.per + ' nozioni si apre una materia. 🎁 Sport e Roblox sono premi per l’obiettivo del giorno.</p>' +
     '<div class="v2-units">' + pathUnits().map(x => { const on = ids.has(x.id), inf = unitInfo(x);
-      return '<button type="button" class="v2-u' + (on ? '' : ' lock') + (x.id === pathSel ? ' sel' : '') + '" data-u="' + x.id + '" style="--uc:' + x.c + '"' + (on ? '' : ' disabled') + '><span class="v2-ui">' + (on ? x.ic : '🔒') + '</span><b>' + esc(x.name) + '</b><small>' + (on ? inf.pct + '%' : nx && nx.u.id === x.id ? 'ancora ' + nx.need : ne && ne.u.id === x.id ? '🎁 ' + ne.need + ' obiettiv' + (ne.need === 1 ? 'o' : 'i') : EXTRA_UNITS.includes(x.id) ? '🎁 premio' : '') + '</small></button>'; }).join('') + '</div>' +
+      return '<button type="button" class="v2-u' + (on ? '' : ' lock') + (x.id === pathSel ? ' sel' : '') + '" data-u="' + x.id + '" style="--uc:' + x.c + '"' + (on ? '' : ' disabled') + '><span class="v2-ui">' + (on ? x.ic : '🔒') + '</span><b>' + esc(x.name) + '</b><small>' + (on ? '' : nx && nx.u.id === x.id ? 'ancora ' + nx.need : ne && ne.u.id === x.id ? '🎁 ' + ne.need + ' obiettiv' + (ne.need === 1 ? 'o' : 'i') : EXTRA_UNITS.includes(x.id) ? '🎁 premio' : '') + '</small></button>'; }).join('') + '</div>' +
     '<div class="row center" style="margin-top:12px"><button type="button" class="btn ghost" id="un-x" data-focus>Chiudi</button></div>');
   $('modal-box').classList.add('wide');
   $('un-x').addEventListener('click', closeModal);

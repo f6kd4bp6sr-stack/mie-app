@@ -129,7 +129,7 @@ PAGES.home = el => {
   if (!store.get('gems-welcome', false)) { store.set('gems-welcome', true); Gems.add(20); }
   const due = dueKeys(pState()).length, last = unitById(store.get('path-sel', '')) || null;
   const tile = (go, ic, n, sm, c) => '<button type="button" class="v2-tile h-tile" data-go="' + go + '"' + (c ? ' style="--uc:' + c + '"' : '') + '><span class="v2-ti">' + ic + '</span><b>' + esc(n) + '</b>' + (sm ? '<small>' + esc(sm) + '</small>' : '') + '</button>';
-  const ut = u => tile('u:' + u.id, u.ic, u.name, unitInfo(u).pct + '%', u.c);
+  const ut = u => tile('u:' + u.id, u.ic, u.name, '', u.c);
   el.innerHTML = '<h1 class="v2-h1">' + (childName() ? 'Ciao ' + esc(childName()) + '!' : 'Ciao!') + '</h1><p class="v2-sub">Che cosa facciamo?</p>' +
     (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
     '<input type="search" class="h-find" id="h-find" placeholder="🔎 Cerca un argomento in tutte le materie (es. acqua, Romani, frazioni)" autocomplete="off" enterkeyhint="search"><div id="h-res" hidden></div><div id="h-rest">' +
@@ -213,7 +213,7 @@ function openUnits() {
   const ids = unitUnlockedIds(), nx = nextUnitNeed(), ne = nextExtra();
   openModal('<div class="big" style="font-size:28px">📚 Le tue materie</div><p style="font-weight:700;color:var(--ink-soft)">Ogni ' + UNLOCK.per + ' nozioni si apre una materia. 🎁 Sport e Roblox sono premi per l’obiettivo del giorno.</p>' +
     '<div class="v2-units">' + pathUnits().map(x => { const on = ids.has(x.id), inf = unitInfo(x);
-      return '<button type="button" class="v2-u' + (on ? '' : ' lock') + (x.id === pathSel ? ' sel' : '') + '" data-u="' + x.id + '" style="--uc:' + x.c + '"' + (on ? '' : ' disabled') + '><span class="v2-ui">' + (on ? x.ic : '🔒') + '</span><b>' + esc(x.name) + '</b><small>' + (on ? inf.pct + '%' : nx && nx.u.id === x.id ? 'ancora ' + nx.need : ne && ne.u.id === x.id ? '🎁 ' + ne.need + ' obiettiv' + (ne.need === 1 ? 'o' : 'i') : EXTRA_UNITS.includes(x.id) ? '🎁 premio' : '') + '</small></button>'; }).join('') + '</div>' +
+      return '<button type="button" class="v2-u' + (on ? '' : ' lock') + (x.id === pathSel ? ' sel' : '') + '" data-u="' + x.id + '" style="--uc:' + x.c + '"' + (on ? '' : ' disabled') + '><span class="v2-ui">' + (on ? x.ic : '🔒') + '</span><b>' + esc(x.name) + '</b><small>' + (on ? '' : nx && nx.u.id === x.id ? 'ancora ' + nx.need : ne && ne.u.id === x.id ? '🎁 ' + ne.need + ' obiettiv' + (ne.need === 1 ? 'o' : 'i') : EXTRA_UNITS.includes(x.id) ? '🎁 premio' : '') + '</small></button>'; }).join('') + '</div>' +
     '<div class="row center" style="margin-top:12px"><button type="button" class="btn ghost" id="un-x" data-focus>Chiudi</button></div>');
   $('modal-box').classList.add('wide');
   $('un-x').addEventListener('click', closeModal);

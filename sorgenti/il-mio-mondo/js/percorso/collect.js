@@ -187,7 +187,7 @@ function piggyCard() {
   const tot = g + p.n, pct = goal ? Math.min(100, Math.round(tot / goal.p * 100)) : 0;
   return '<div class="piggy"><div class="pg-ic">🐷</div><div style="flex:1;min-width:0"><b>Salvadanaio: ' + p.n + ' 💎</b>' +
     '<small>Ogni lunedì il salvadanaio cresce del 10% (se ci sono almeno 10 gemme): è l’<b>interesse</b>, il premio di chi risparmia!</small>' +
-    (goal ? '<div class="pg-goal">🎯 Obiettivo: ' + esc(goal.ic + ' ' + goal.n) + ' (' + goal.p + ' 💎) · ' + pct + '%<div class="ebig"><i style="width:' + pct + '%"></i></div></div>' : '<small>Scegli un obiettivo con 🎯 su un oggetto del negozio.</small>') +
+    (goal ? '<div class="pg-goal">🎯 Obiettivo: ' + esc(goal.ic + ' ' + goal.n) + ' (' + goal.p + ' 💎)<div class="ebig"><i style="width:' + pct + '%"></i></div></div>' : '<small>Scegli un obiettivo con 🎯 su un oggetto del negozio.</small>') +
     '<div class="row" style="gap:6px;margin-top:6px;flex-wrap:wrap"><button type="button" class="btn small" id="pg-10"' + (g < 10 ? ' disabled' : '') + ' style="--bc:var(--c3);color:var(--ink)">Metti 10 💎</button><button type="button" class="btn small ghost" id="pg-all"' + (g < 1 ? ' disabled' : '') + '>Metti tutto</button><button type="button" class="btn small ghost" id="pg-take"' + (!p.n ? ' disabled' : '') + '>Rompi il salvadanaio</button></div></div></div>';
 }
 function piggyBind(reopen) {
