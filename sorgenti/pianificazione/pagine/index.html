@@ -14,7 +14,7 @@
 <title>Pianificazione</title>
 <style>
 /* Colori per sezione: ogni sezione ha il suo (riquadri, schede, chip del calendario) */
-:root{--bg:#f4f5f9;--card:#ffffff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);
+:root{--chp:#a8740a;--bg:#f4f5f9;--card:#ffffff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);
   --cal:#2563eb;--cal-bg:#e8f0fe;--scad:#d6342c;--scad-bg:#fdeceb;--prat:#e8770e;--prat-bg:#fff0e0;--fam:#7c3aed;--fam-bg:#f1eafe;--ben:#0d9488;--ben-bg:#ddf4f1;
   --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;
   --accent:var(--cal);--ok:#2e7d5b;--ok-bg:#e1f3e9;--warn:var(--scad);--warn-bg:var(--scad-bg);--soon:#b7791f;--soon-bg:#fdf1dc;--lp:var(--lic);--lp-bg:var(--lic-bg);--euro:#1f5fae;--euro-bg:#e3edf9}
@@ -61,6 +61,12 @@ details.csm2{padding:10px 0 10px 4px;border-top:1px solid var(--line)}details.cs
 .cs-am{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2}.cs-am small{color:var(--muted);font-size:12px}.cs-am small.u{color:var(--scad)}
 .cs-cp{background:var(--pens-bg);border-radius:10px;padding-left:6px;padding-right:6px}.cs-add{align-items:center;margin-top:8px}.cs-add .pin{flex:0 1 160px;min-width:120px}.cs-add .lbl{margin:0}
 .csm-h .n{background:var(--scad);color:#fff;border-radius:10px;font-size:11px;line-height:1;padding:3px 7px;font-weight:700}
+.cs-ch{width:100%;height:auto;display:block;margin-top:6px;touch-action:pan-y}.cs-ch .cg{stroke:var(--line);stroke-width:1}.cs-ch .cg.z{stroke:var(--muted);stroke-dasharray:4 4}
+.cs-ch .ct{font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums}.cs-ch .oc{fill:var(--cal);font-weight:700}.cs-ch .cv{stroke:var(--pens);stroke-width:1;stroke-dasharray:3 3}.cs-ch .co{stroke:var(--cal);stroke-width:1}
+.cs-ch .cl{fill:none;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}.cs-ch .cl.p{stroke:var(--chp)}.cs-ch .cl.s{stroke:var(--cal)}.cs-ch .cx{stroke:var(--muted);stroke-width:1}
+.cs-ch .cm{stroke:var(--card);stroke-width:2}.cs-ch .cm.p{fill:var(--chp)}.cs-ch .cm.s{fill:var(--cal)}.cs-ch .cm.v{fill:var(--ink)}
+.cs-leg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px}.cs-leg span{display:flex;align-items:center;gap:6px}.cs-leg .sw{width:16px;height:3px;border-radius:2px;display:inline-block}.cs-leg .sw.p{background:var(--chp)}.cs-leg .sw.s{background:var(--cal)}.cs-leg .sw.v{width:9px;height:9px;border-radius:50%;background:var(--ink)}
+.cs-tip{font-size:13px;color:var(--muted);margin:4px 0 0;min-height:18px}.cs-tip b{color:var(--ink)}
 .cs-sub{display:flex;justify-content:space-between;align-items:baseline;margin:12px 0 2px;font-size:14px;color:var(--muted)}
 .chkl{display:flex!important;gap:8px;align-items:center;flex-direction:row!important}
 .vtl{position:relative;display:grid;gap:2px;padding-left:6px}.vtl::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:3px;border-radius:3px;background:var(--pens-bg)}.vt{position:relative;display:flex;align-items:flex-start;gap:10px;border:0;background:none;font:inherit;color:var(--ink);text-align:left;padding:6px 0 6px 26px;cursor:pointer;width:100%}.vt i{position:absolute;left:3px;top:11px;width:11px;height:11px;border-radius:50%;background:var(--pens);box-shadow:0 0 0 3px var(--card)}.vt.past{opacity:.55}.vt.oggi i{background:var(--cal)}.vt.oggi b{color:var(--cal)}.vt.oggi small{color:var(--muted);margin-left:8px}.vt .ic{font-size:20px;line-height:1}.vt .tx small{display:block;color:var(--muted)}.vt.sel .tx b{color:var(--pens)}
@@ -161,7 +167,7 @@ a.btn{text-decoration:none;display:inline-block}
 @media (max-width:600px){.mc{min-height:62px;padding:3px}.mc .cc{display:none}.mc .md{display:flex}.mc .mi{font-size:11px}.mc .holn{display:none}}
 .saved{font-size:12.5px;color:var(--muted);margin:6px 2px 0}
 .setl .row{cursor:default}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--shadow:0 1px 2px rgba(0,0,0,.4);
+@media (prefers-color-scheme:dark){:root{--chp:#b58424;--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--shadow:0 1px 2px rgba(0,0,0,.4);
   --cal:#5b8cff;--cal-bg:#18264a;--scad:#ff6b5f;--scad-bg:#3b1a18;--prat:#ff9a3d;--prat-bg:#3a2612;--fam:#a98bff;--fam-bg:#271f3d;--ben:#2cc5b6;--ben-bg:#12302d;
   --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
   .warnbox{background:#3a2a1c;border-color:#b8743c}}

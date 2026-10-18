@@ -14,7 +14,7 @@
 <title>Pianificazione</title>
 <style>
 /* Colori per sezione: ogni sezione ha il suo (riquadri, schede, chip del calendario) */
-:root{--bg:#f4f5f9;--card:#ffffff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);
+:root{--chp:#a8740a;--bg:#f4f5f9;--card:#ffffff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);
   --cal:#2563eb;--cal-bg:#e8f0fe;--scad:#d6342c;--scad-bg:#fdeceb;--prat:#e8770e;--prat-bg:#fff0e0;--fam:#7c3aed;--fam-bg:#f1eafe;--ben:#0d9488;--ben-bg:#ddf4f1;
   --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;
   --accent:var(--cal);--ok:#2e7d5b;--ok-bg:#e1f3e9;--warn:var(--scad);--warn-bg:var(--scad-bg);--soon:#b7791f;--soon-bg:#fdf1dc;--lp:var(--lic);--lp-bg:var(--lic-bg);--euro:#1f5fae;--euro-bg:#e3edf9}
@@ -61,6 +61,12 @@ details.csm2{padding:10px 0 10px 4px;border-top:1px solid var(--line)}details.cs
 .cs-am{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2}.cs-am small{color:var(--muted);font-size:12px}.cs-am small.u{color:var(--scad)}
 .cs-cp{background:var(--pens-bg);border-radius:10px;padding-left:6px;padding-right:6px}.cs-add{align-items:center;margin-top:8px}.cs-add .pin{flex:0 1 160px;min-width:120px}.cs-add .lbl{margin:0}
 .csm-h .n{background:var(--scad);color:#fff;border-radius:10px;font-size:11px;line-height:1;padding:3px 7px;font-weight:700}
+.cs-ch{width:100%;height:auto;display:block;margin-top:6px;touch-action:pan-y}.cs-ch .cg{stroke:var(--line);stroke-width:1}.cs-ch .cg.z{stroke:var(--muted);stroke-dasharray:4 4}
+.cs-ch .ct{font-size:11px;fill:var(--muted);font-variant-numeric:tabular-nums}.cs-ch .oc{fill:var(--cal);font-weight:700}.cs-ch .cv{stroke:var(--pens);stroke-width:1;stroke-dasharray:3 3}.cs-ch .co{stroke:var(--cal);stroke-width:1}
+.cs-ch .cl{fill:none;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}.cs-ch .cl.p{stroke:var(--chp)}.cs-ch .cl.s{stroke:var(--cal)}.cs-ch .cx{stroke:var(--muted);stroke-width:1}
+.cs-ch .cm{stroke:var(--card);stroke-width:2}.cs-ch .cm.p{fill:var(--chp)}.cs-ch .cm.s{fill:var(--cal)}.cs-ch .cm.v{fill:var(--ink)}
+.cs-leg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px}.cs-leg span{display:flex;align-items:center;gap:6px}.cs-leg .sw{width:16px;height:3px;border-radius:2px;display:inline-block}.cs-leg .sw.p{background:var(--chp)}.cs-leg .sw.s{background:var(--cal)}.cs-leg .sw.v{width:9px;height:9px;border-radius:50%;background:var(--ink)}
+.cs-tip{font-size:13px;color:var(--muted);margin:4px 0 0;min-height:18px}.cs-tip b{color:var(--ink)}
 .cs-sub{display:flex;justify-content:space-between;align-items:baseline;margin:12px 0 2px;font-size:14px;color:var(--muted)}
 .chkl{display:flex!important;gap:8px;align-items:center;flex-direction:row!important}
 .vtl{position:relative;display:grid;gap:2px;padding-left:6px}.vtl::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:3px;border-radius:3px;background:var(--pens-bg)}.vt{position:relative;display:flex;align-items:flex-start;gap:10px;border:0;background:none;font:inherit;color:var(--ink);text-align:left;padding:6px 0 6px 26px;cursor:pointer;width:100%}.vt i{position:absolute;left:3px;top:11px;width:11px;height:11px;border-radius:50%;background:var(--pens);box-shadow:0 0 0 3px var(--card)}.vt.past{opacity:.55}.vt.oggi i{background:var(--cal)}.vt.oggi b{color:var(--cal)}.vt.oggi small{color:var(--muted);margin-left:8px}.vt .ic{font-size:20px;line-height:1}.vt .tx small{display:block;color:var(--muted)}.vt.sel .tx b{color:var(--pens)}
@@ -161,12 +167,12 @@ a.btn{text-decoration:none;display:inline-block}
 @media (max-width:600px){.mc{min-height:62px;padding:3px}.mc .cc{display:none}.mc .md{display:flex}.mc .mi{font-size:11px}.mc .holn{display:none}}
 .saved{font-size:12.5px;color:var(--muted);margin:6px 2px 0}
 .setl .row{cursor:default}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--shadow:0 1px 2px rgba(0,0,0,.4);
+@media (prefers-color-scheme:dark){:root{--chp:#b58424;--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--shadow:0 1px 2px rgba(0,0,0,.4);
   --cal:#5b8cff;--cal-bg:#18264a;--scad:#ff6b5f;--scad-bg:#3b1a18;--prat:#ff9a3d;--prat-bg:#3a2612;--fam:#a98bff;--fam-bg:#271f3d;--ben:#2cc5b6;--ben-bg:#12302d;
   --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
   .warnbox{background:#3a2a1c;border-color:#b8743c}}
 </style>
-<script>window.APP_VERSION="ca5d0408e1";window.APP_BUILD="2026-10-18T12:29+02:00";</script>
+<script>window.APP_VERSION="557590c58d";window.APP_BUILD="2026-10-18T12:42+02:00";</script>
 </head>
 <body>
 <style id="lockCss">
@@ -1451,6 +1457,7 @@ function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,
   let o="";
   if(!K.ini||csIniEd)o+=`<div class="card k-pens"><h3>💶 Da dove parti</h3><p class="lbl" style="margin-top:0">Scrivi quanto hai sul conto (o sui conti, insieme) in una data: da lì l’app conta entrate e uscite fino a giugno 2029.</p>
     <div class="form"><label>Soldi disponibili €<input id="csIniI" inputmode="decimal" value="${K.ini?esc(String(K.ini.imp).replace(".",",")):""}" placeholder="0"></label><label>Al giorno<input id="csIniD" type="date" value="${esc(K.ini?K.ini.d:K.t)}"></label></div>
+    ${(()=>{const F=finecoStorico();return F?`<p class="lbl">Nei Conti il conto ${esc(F.n)} risulta ${eur0(Math.round(F.oggi))} al ${fmt(F.last<K.t?F.last:K.t,{day:"numeric",month:"short",year:"numeric"})}. <button class="lnk" data-csx="fineco">Usa questo</button></p>`:"";})()}
     <div class="btns"><button class="btn sm pri" data-csx="ini">Parti da qui</button>${K.ini?`<button class="btn sm" data-csx="inino">Annulla</button>`:""}</div></div>`;
   else{const r0=K.rows.find(r=>r.ym===T),last=K.fine,neg=K.min<0;
     o+=csBox("oggi","💶 La tua cassa oggi",K.oggi!=null?`<span class="lbl">oggi</span><b>${c(Math.round(K.oggi))}</b>`:"",true,`<div class="kpi" style="margin-top:10px">
@@ -1459,6 +1466,7 @@ function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,
       ${neg?`<p class="lbl" style="color:var(--scad);margin:8px 0 0">⚠️ In ${ymLab(K.minM,1)} il saldo previsto va sotto zero di ${eur0(-K.min)}.</p>`:""}
       <div class="btns cs-add"><span class="lbl">🔎 Saldo previsto al</span><input type="date" id="csQ" class="pin" value="${esc(csQ||"")}" min="${esc(K.ini.d)}" max="${CS_FINE}-30">${csQ?`<b>${(()=>{const v=K.balAt(csQ);return v==null?"—":c(Math.round(v));})()}</b>`:""}</div>
       <div class="btns"><button class="btn sm" data-csx="iniedit">Partenza: ${eur0(K.ini.imp)} al ${fmt(K.ini.d,{day:"numeric",month:"short",year:"numeric"})} · cambia</button></div>`);}
+  if(K.ini)o+=cassaChart(K);
   /* movimenti miei */
   const M=p.mov.slice().sort((a,b)=>a.tipo===b.tipo?(a.da<b.da?-1:1):a.tipo==="e"?-1:1),ed=csEd&&csEd!=="new"?p.mov.find(x=>x.id===csEd):null,f=ed||{tipo:"u",freq:"m",da:K.t,cal:1};
   const mrow=x=>`<div class="row"><span class="pill ${x.tipo==="e"?"ok":""}">${x.tipo==="e"?"💰":"💶"}</span><div class="grow"><b>${esc(x.t)}</b><small>${esc((CS_FREQ[x.freq]||CS_FREQ.una)[0])} · ${x.freq==="una"?fmt(x.da,{day:"numeric",month:"short",year:"numeric"}):"dal "+fmt(x.da,{day:"numeric",month:"short",year:"numeric"})+(x.a?" al "+fmt(x.a,{day:"numeric",month:"short",year:"numeric"}):"")}${x.cal?" · 📆 nel Calendario":""}</small></div><b class="amt ${x.tipo==="u"?"u":""}">${x.tipo==="e"?"+":"−"}${eur0(x.imp)}</b><button class="btn sm" data-csm="${x.id}" aria-label="Modifica">✏️</button></div>`;
@@ -1496,6 +1504,47 @@ function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,
     +`<p class="lbl" style="margin:8px 2px 0">Stipendi dal Cedolino (il 27), pensione dal Ricalcolo (il 1°, tredicesima a dicembre in proporzione ai mesi), incassi della scheda nel loro mese; ✓ quando un movimento è arrivato o pagato, ✏️ per l’importo vero o un altro mese. Sono i tuoi numeri messi in fila, non consigli.</p>`;
   return o;
 }
+/* ---- 📈 andamento nel tempo: storico del conto Fineco (dai Conti, anche se la sezione è nascosta) + cassa prevista ---- */
+function finecoStorico(){const c=P.conti;if(!c||!Array.isArray(c.acc)||!Array.isArray(c.mov))return null;
+  const A=c.acc.filter(a=>!a.arch&&a.bank==="fineco"&&a.tipo==="conto");if(!A.length)return null;
+  const ids=new Set(A.map(a=>a.id)),M=c.mov.filter(m=>ids.has(m.acc)&&m.d).sort((a,b)=>a.d<b.d?-1:1);if(!M.length)return null;
+  const sg=m=>m.tipo==="e"?+m.imp||0:-(+m.imp||0);
+  const at=d=>A.reduce((s,a)=>{let b=+a.s0||0;const d0=a.d0||"0000-00-00";M.forEach(m=>{if(m.acc!==a.id)return;if(m.d>d0&&m.d<=d)b+=sg(m);else if(m.d<=d0&&m.d>d)b-=sg(m);});return s+b;},0);
+  const t=today(),lm=[M[M.length-1].d].concat(A.map(a=>a.d0||"")).sort().pop(),last=lm<t?lm:t,end=last,T=end.slice(0,7);let ym=M[0].d.slice(0,7);const lim=ymAdd(T,-36);if(ym<lim)ym=lim;
+  const pts=[];for(;ym<=T;ym=ymAdd(ym,1)){const d=ym===T?end:ym+"-"+String(ymDays(ym)).padStart(2,"0");pts.push({ym,d,v:at(d)});}
+  return{pts,n:A.map(a=>a.n).join(" + "),last,oggi:at(end)};}
+function cassaChart(K){const F=finecoStorico(),P2=[{ym:K.ini.d.slice(0,7),d:K.ini.d,v:+K.ini.imp,ini:1}].concat(K.rows.map(r=>({ym:r.ym,d:r.ym+"-"+String(ymDays(r.ym)).padStart(2,"0"),v:r.fin})));
+  const d0=F&&F.pts.length&&F.pts[0].d<P2[0].d?F.pts[0].d.slice(0,7)+"-01":P2[0].d,d1=P2[P2.length-1].d,day=d=>Date.parse(d+"T12:00:00Z")/864e5,D0=day(d0),D1=day(d1);
+  const nar=window.innerWidth<640,W=nar?380:720,H=nar?250:230,L=nar?40:52,R=nar?8:14,TP=22,B=26,x=d=>L+(day(d)-D0)/(D1-D0||1)*(W-L-R);
+  const cps=K.rows.flatMap(r=>r.E.filter(e=>e.ev==="c"&&e.cp!=="ini")),big=K.items.filter(i=>i.src==="Scheda"&&i.imp>=5000&&(!K.ini||i.d>K.ini.d));
+  const vals=P2.map(p=>p.v).concat(F?F.pts.map(p=>p.v):[]).concat(cps.map(c=>c.imp));let mn=Math.min(0,...vals),mx=Math.max(1,...vals);
+  const st=[1e3,2e3,5e3,1e4,2e4,5e4,1e5,2e5].find(s=>(mx-mn)/s<=5)||5e5;mn=Math.floor(mn/st)*st;mx=Math.ceil(mx/st)*st;const y=v=>TP+(H-TP-B)*(1-(v-mn)/(mx-mn||1));
+  const k=v=>Math.abs(v)>=1e3?(Math.round(v/100)/10).toLocaleString("it-IT")+" k":String(Math.round(v));
+  let g="";for(let v=mn;v<=mx+1;v+=st)g+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" class="cg${v===0?" z":""}"/><text x="${L-6}" y="${y(v)+4}" class="ct" text-anchor="end">${k(v)}</text>`;
+  for(let yr=+d0.slice(0,4)+1;yr<=+d1.slice(0,4);yr++){const xx=x(yr+"-01-01");g+=`<line x1="${xx}" x2="${xx}" y1="${TP}" y2="${H-B}" class="cg"/><text x="${xx}" y="${H-8}" class="ct" text-anchor="middle">${yr}</text>`;}
+  const t=K.t,dec=((PENS().dati||{}).decor||"2027-06-01");
+  if(dec>d0&&dec<d1)g+=`<line x1="${x(dec)}" x2="${x(dec)}" y1="${TP}" y2="${H-B}" class="cv"/><text x="${x(dec)+4}" y="${TP+10}" class="ct">🎖️ pensione</text>`;
+  if(t>=d0&&t<=d1)g+=`<line x1="${x(t)}" x2="${x(t)}" y1="${TP}" y2="${H-B}" class="co"/><text x="${x(t)+4}" y="${H-B-6}" class="ct oc">oggi</text>`;
+  const path=a=>a.map((p,i)=>(i?"L":"M")+x(p.d).toFixed(1)+" "+y(p.v).toFixed(1)).join(" ");
+  if(F)g+=`<path d="${path(F.pts)}" class="cl s"/>`;
+  g+=`<path d="${path(P2)}" class="cl p"/>`;
+  big.forEach(i=>{const p=P2.find(q=>q.ym===i.ym);if(p)g+=`<circle cx="${x(p.d)}" cy="${y(p.v)}" r="4.5" class="cm p"/><text x="${x(p.d)}" y="${y(p.v)-10}" class="ct" text-anchor="middle">${esc(/TFS/.test(i.t)?"TFS":/F\.A\.F/.test(i.t)?"F.A.F.":/premio/i.test(i.t)?"premio":i.t.split(" ")[0])}</text>`;});
+  cps.forEach(c=>g+=`<circle cx="${x(c.d)}" cy="${y(c.imp)}" r="5" class="cm v"/>`);
+  g+=`<g id="csX" style="display:none"><line y1="${TP}" y2="${H-B}" class="cx"/><circle r="5" class="cm p"/><circle r="5" class="cm s"/></g><rect x="${L}" y="${TP}" width="${W-L-R}" height="${H-TP-B}" fill="transparent" id="csHit"/>`;
+  window.__csCh={x0:L,x1:W-R,W,D0,D1,P2,F:F?F.pts:[],y,x,day};
+  const leg=`<div class="cs-leg"><span><i class="sw p"></i>Cassa prevista</span>${F?`<span><i class="sw s"></i>${esc(F.n)} (storico dai Conti)</span>`:""}${cps.length?`<span><i class="sw v"></i>saldo vero</span>`:""}</div>`;
+  const note=F?(F.last<add(t,-10)?`<p class="lbl" style="margin:6px 0 0">Storico Fineco fino al ${fmt(F.last,{day:"numeric",month:"short",year:"numeric"})}, ultimo movimento importato: per allungarlo importa l’estratto nei Conti.</p>`:"")
+    :`<p class="lbl" style="margin:6px 0 0">Per vedere anche lo storico, la linea del conto Fineco usa i movimenti importati nei Conti (sezione nascosta): finora non ce ne sono su questo iPad.</p>`;
+  return csBox("graf","📈 Andamento nel tempo",F?`<span class="lbl">Fineco ${F.last<t?"al "+fmt(F.last,{day:"numeric",month:"short"}):"oggi"}</span><b>${eur0(Math.round(F.oggi))}</b>`:`<span class="lbl">fino a giugno 2029</span>`,true,
+    leg+`<svg class="cs-ch" viewBox="0 0 ${W} ${H}" role="img" aria-label="Andamento del saldo: storico e previsione">${g}</svg><p class="cs-tip" id="csTip">Tocca il grafico per leggere il saldo di un giorno.</p>`+note);}
+function bindChart(){const S=$("csHit"),C=window.__csCh;if(!S||!C)return;const svg=S.ownerSVGElement,X=$("csX"),tip=$("csTip");
+  const near=(L,dd)=>{let b=null;for(const p of L){if(!b||Math.abs(C.day(p.d)-dd)<Math.abs(C.day(b.d)-dd))b=p;}return b;};
+  const show=ev=>{const r=svg.getBoundingClientRect(),px=(ev.clientX-r.left)*C.W/r.width;if(px<C.x0||px>C.x1)return;const dd=C.D0+(px-C.x0)/(C.x1-C.x0)*(C.D1-C.D0);
+    const p=near(C.P2,dd),f=C.F.length?near(C.F,dd):null,pp=p&&Math.abs(C.day(p.d)-dd)<=20?p:null,ff=f&&Math.abs(C.day(f.d)-dd)<=20?f:null;if(!pp&&!ff)return;const ref=pp||ff;
+    X.style.display="";const ln=X.querySelector("line"),cs=X.querySelectorAll("circle");ln.setAttribute("x1",C.x(ref.d));ln.setAttribute("x2",C.x(ref.d));
+    [[cs[0],pp],[cs[1],ff]].forEach(([c,q])=>{if(q){c.style.display="";c.setAttribute("cx",C.x(q.d));c.setAttribute("cy",C.y(q.v));}else c.style.display="none";});
+    tip.innerHTML=`<b>${fmt(ref.d,{day:"numeric",month:"long",year:"numeric"})}</b>${pp?` · prevista <b>${eur0(Math.round(pp.v))}</b>`:""}${ff?` · Fineco <b>${eur0(Math.round(ff.v))}</b>`:""}`;};
+  S.onpointerdown=show;S.onpointermove=show;}
 /* giorni del Calendario e promemoria dell'iPad per i movimenti segnati «nel Calendario» */
 function cassaOn(s){return P.pens?(PENS().mov||[]).filter(x=>x.cal&&movDates(x,s,s).length).map(x=>({ic:x.tipo==="e"?"💰":"💶",t:x.t,amt:(x.tipo==="e"?"+":"−")+eur0(x.imp),c:"pens",k:"pens",id:"mov-"+x.id,sub:(x.tipo==="e"?"+":"−")+eur0(x.imp)+" · "+(CS_FREQ[x.freq]||CS_FREQ.una)[0]})):[];}
 function cassaIcs(t){if(!P.pens)return[];const out=[],h=add(t,400);(PENS().mov||[]).filter(x=>x.cal).forEach(x=>movDates(x,t,h).forEach(d=>out.push({uid:"pens-mov-"+x.id+"-"+d,lines:["DTSTART;VALUE=DATE:"+dval(d),"DTEND;VALUE=DATE:"+dval(add(d,1)),"SUMMARY:"+icsEsc((x.tipo==="e"?"💰 ":"💶 ")+x.t+" "+(x.tipo==="e"?"+":"−")+eur0(x.imp)),"TRANSP:TRANSPARENT",...alarm(1)]})));return out;}
@@ -1503,9 +1552,10 @@ function cassaIcs(t){if(!P.pens)return[];const out=[],h=add(t,400);(PENS().mov||
 function cassaNag(){const p=P.pens;if(!p||!p.cassa||!p.cassa.ini)return null;const K=cassaCalc(),prev=ymAdd(K.T,-1),day=+K.t.slice(8,10);
   const askSaldo=day<=10&&prev>=K.start&&!has((p.cassa.saldi||{})[prev])&&!(p.cassa.punti||[]).some(x=>x.d>=prev+"-24"&&x.d<=K.t),r=K.rows.find(x=>x.ym===K.T),todo=r?r.L.filter(i=>!i.ok&&i.d<=K.t):[],next=K.items.filter(i=>i.d>K.t&&i.d<=add(K.t,7));
   return{askSaldo,prev,todo,next,oggi:K.oggi};}
-function bindCassa(p,num){const R=()=>render(),C=p.cassa;C.spunte=C.spunte||{};C.sposta=C.sposta||{};C.saldi=C.saldi||{};
+function bindCassa(p,num){const R=()=>render(),C=p.cassa;bindChart();C.spunte=C.spunte||{};C.sposta=C.sposta||{};C.saldi=C.saldi||{};
   document.querySelectorAll("[data-csx]").forEach(b=>b.onclick=()=>{const a=b.dataset.csx;
     if(a==="ini"){const v=num($("csIniI").value),d=$("csIniD").value||today();if(v==null)return toast("Scrivi i soldi disponibili");C.ini={d,imp:v};csIniEd=false;save();R();toast("Cassa: si parte da "+eur0(v));}
+    else if(a==="fineco"){const F=finecoStorico();if(F){$("csIniI").value=String(Math.round(F.oggi*100)/100).replace(".",",");$("csIniD").value=F.last<today()?F.last:today();}}
     else if(a==="iniedit"){csIniEd=true;R();}else if(a==="inino"){csIniEd=false;R();}});
   document.querySelectorAll("[data-csm]").forEach(b=>b.onclick=()=>{const a=b.dataset.csm;
     if(a==="new"){csEd="new";R();const i=$("mvT");if(i)i.focus();return;}if(a==="close"){csEd=null;R();return;}
