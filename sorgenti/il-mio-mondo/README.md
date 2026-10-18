@@ -12,8 +12,8 @@ App di studio per bambini (5ª elementare), con il drago, il percorso, i giochi,
 ## Dati sul dispositivo (solo di questa app)
 | Dove | Chiavi |
 |---|---|
-| localStorage | `vale2-…` (tutto lo stato: drago, percorso, diario, festa, capsula, teatro…), `msync-cfg` (collegamento con i genitori), `mondo-copia` (stato della copia automatica), `mondo-pre-migra` |
-| IndexedDB | `il-mio-mondo` (copie), `mondo-sfondo` (sfondo scelto) |
+| localStorage | `vale2-…` (tutto lo stato: drago, percorso, diario, festa, capsula, teatro, disegno: progetti fatti e quadri del museo con anteprima piccola…), `msync-cfg` (collegamento con i genitori), `mondo-copia` (stato della copia automatica), `mondo-pre-migra` |
+| IndexedDB | `il-mio-mondo` (copie), `mondo-sfondo` (sfondo scelto), `mondo-disegni` (disegni a grandezza piena, livelli per continuare, bozza della tela: restano solo sull'iPad, nella copia vanno le anteprime) |
 
 Nome, compleanno, aspetto, copione del teatro e capsula del tempo restano solo sull'iPad e nelle sue copie: **non vanno mai nel repository**.
 

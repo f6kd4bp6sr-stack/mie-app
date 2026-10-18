@@ -111,7 +111,7 @@ renderTabs = function () {
   const open = tabsOpen(), box = $('tabs'); box.innerHTML = '';
   const T = [['home', '🏠', 'Impara'], open.giochi && ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], open.esplora && ['esplora', '🔭', 'Esplora'], ['io', '🐉', 'Io']].filter(Boolean);
   TABS.length = 0; T.forEach(t => TABS.push([t[0], t[1], t[2], 'var(--c4-soft)']));
-  const sub = { mate: 'esplora', scienze: 'esplora', scopri: 'esplora', sport: 'esplora', routine: 'esplora', metodo: 'esplora', teatro: 'esplora' };
+  const sub = { mate: 'esplora', scienze: 'esplora', scopri: 'esplora', sport: 'esplora', routine: 'esplora', metodo: 'esplora', teatro: 'esplora', disegno: 'esplora' };
   TABS.forEach(t => {
     const b = document.createElement('button'); b.type = 'button'; b.className = 'tab'; b.dataset.t = t[0];
     if (t[0] === current || sub[current] === t[0]) b.setAttribute('aria-current', 'page');
@@ -175,7 +175,7 @@ function openUnits() {
 }
 
 /* ---------- 🔭 ESPLORA: gli strumenti di prima, tutti insieme ---------- */
-const EXPLORE = [['mate', '🔢', 'Officina dei numeri', 'Tabelline turbo, frazioni, orologio, problemi'], ['scienze', '🔬', 'Laboratorio', 'Esperimenti e quiz di scienze'], ['scopri', '🌍', 'Scopri il mondo', 'Storia, geografia, arte, lingue e curiosità'], ['sport', '🤸‍♀️', 'Pausa movimento', 'Pattinaggio, aerea, nuoto: muoviti!'], ['vita', '🧼', 'Io e il mio corpo', 'Armadio del meteo, timer di mani e denti'], ['teatro', '🎭', 'Teatro', 'La mia parte e i segreti del palco'], ['routine', '☀️', 'Le mie routine', 'Mattino, compiti, sera e borse dello sport'], ['metodo', '🧠', 'Il mio metodo', 'Trucchi per studiare e concentrarsi']];
+const EXPLORE = [['mate', '🔢', 'Officina dei numeri', 'Tabelline turbo, frazioni, orologio, problemi'], ['scienze', '🔬', 'Laboratorio', 'Esperimenti e quiz di scienze'], ['scopri', '🌍', 'Scopri il mondo', 'Storia, geografia, arte, lingue e curiosità'], ['sport', '🤸‍♀️', 'Pausa movimento', 'Pattinaggio, aerea, nuoto: muoviti!'], ['vita', '🧼', 'Io e il mio corpo', 'Armadio del meteo, timer di mani e denti'], ['teatro', '🎭', 'Teatro', 'La mia parte e i segreti del palco'], ['disegno', '🎨', 'Disegno', 'Tela libera, impara a disegnare, il mio museo'], ['routine', '☀️', 'Le mie routine', 'Mattino, compiti, sera e borse dello sport'], ['metodo', '🧠', 'Il mio metodo', 'Trucchi per studiare e concentrarsi']];
 PAGES.esplora = el => {
   el.innerHTML = '<h1 class="v2-h1">🔭 Esplora</h1><p class="v2-sub">Gli strumenti per allenarti e scoprire di più.</p><div class="v2-grid">' +
     EXPLORE.map(e => '<button type="button" class="v2-tile" data-go="' + e[0] + '"><span class="v2-ti">' + e[1] + '</span><b>' + esc(e[2]) + '</b><small>' + esc(e[3]) + '</small></button>').join('') + '</div>';

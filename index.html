@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="d6f4c15e68";</script>
+<script>window.APP_VERSION="e8ec5a7b90";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -1138,6 +1138,101 @@
     .fs-scene, .fs-age, .fs-gift.wiggle, .fs-wig, .dragon.fs-dancing, .fs-lights i, .fs-msg.in { animation: none !important; }
     .fs-bal { animation: none !important; bottom: auto; top: var(--y); }
     .fs-fl { animation: none; }
+  }
+  /* =================== 🎨 DISEGNO =================== */
+  .ds-back { margin: 0 0 10px; }
+  .ds-idea { margin-top: 14px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .ds-idea p { margin: 0; flex: 1 1 220px; font-weight: 700; }
+  /* impara */
+  .ds-fase { margin-bottom: 14px; }
+  .ds-fase.chiusa { opacity: .6; }
+  .ds-fh { display: flex; gap: 12px; align-items: center; }
+  .ds-fh small { display: block; color: var(--ink-soft); font-weight: 700; }
+  .ds-fi { font-size: 34px; }
+  .ds-ft { margin: 8px 0 10px; font-weight: 600; }
+  .ds-plist { display: grid; gap: 8px; }
+  .ds-proj { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; font: inherit; color: var(--ink); background: var(--surface-2, #f4f6f8); border: 2px solid var(--line); border-radius: 16px; padding: 10px 12px; cursor: pointer; }
+  .ds-proj:disabled { cursor: default; opacity: .55; }
+  .ds-proj.me { border-color: var(--v2-orange, #ff9a3c); box-shadow: 0 3px 0 color-mix(in srgb, var(--v2-orange, #ff9a3c) 60%, transparent); }
+  .ds-proj.ok .ds-ps { color: var(--v2-green, #58c46b); }
+  .ds-pi { font-size: 28px; width: 36px; text-align: center; }
+  .ds-pt { flex: 1; min-width: 0; } .ds-pt small { display: block; color: var(--ink-soft); font-weight: 700; }
+  .ds-ps { font-size: 22px; font-weight: 900; }
+  /* museo */
+  .ds-hall { text-align: center; }
+  .ds-arr { font-size: 34px; letter-spacing: 6px; min-height: 44px; }
+  .ds-hall small { color: var(--ink-soft); font-weight: 700; }
+  .ds-sale { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 12px; }
+  .ds-sala { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left; font: inherit; color: var(--ink); background: linear-gradient(180deg, #f3ead9, #e9dcc3); border: 2px solid #c9b48c; border-radius: 18px; padding: 14px; cursor: pointer; min-height: 130px; }
+  .ds-sala small { color: #6b5a3c; font-weight: 700; }
+  .ds-sala.chiusa { background: var(--surface-2, #f4f6f8); border-style: dashed; border-color: var(--line); cursor: default; }
+  .ds-sala.chiusa small { color: var(--ink-soft); }
+  .ds-si { font-size: 30px; }
+  .ds-mini { display: flex; gap: 6px; margin-top: auto; padding-top: 8px; }
+  .ds-mini img { width: 48px; height: 36px; object-fit: cover; border: 3px solid #8b5a2b; border-radius: 3px; background: #fff; }
+  .ds-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 22px; padding: 22px; border-radius: 18px; background: linear-gradient(180deg, #efe6d6, #e3d4b8 80%, #b89a6c 80.5%, #a3865a); }
+  .ds-frame { display: flex; flex-direction: column; align-items: center; gap: 8px; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: #3a2e1c; }
+  .ds-frame img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #fff; border: 12px solid #8b5a2b; box-shadow: inset 0 0 0 3px #5e3b18, 0 8px 14px rgba(0, 0, 0, .25); border-radius: 2px; }
+  .ds-frame.argento img { border-color: #c0c4cc; box-shadow: inset 0 0 0 3px #8a8f99, 0 8px 14px rgba(0, 0, 0, .25); }
+  .ds-frame.oro img { border-color: #d4a72c; box-shadow: inset 0 0 0 3px #9c7410, 0 0 0 3px #f2d27a, 0 8px 18px rgba(0, 0, 0, .3); }
+  .ds-frame.top::after { content: '⭐'; position: absolute; margin-top: -6px; font-size: 22px; }
+  .ds-tag { background: #fbf6ea; border: 1px solid #cbb994; border-radius: 4px; padding: 4px 10px; text-align: center; max-width: 100%; }
+  .ds-tag b { display: block; font-size: 14px; } .ds-tag small { color: #6b5a3c; font-weight: 700; font-size: 12px; }
+  .ds-qbig img { width: 100%; max-height: 52vh; object-fit: contain; background: #fff; border: 10px solid #8b5a2b; border-radius: 3px; }
+  .ds-qbtn { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .ds-fl { display: block; text-align: left; font-weight: 800; margin: 10px 0; }
+  .ds-fl input, .ds-fl select { display: block; width: 100%; margin-top: 4px; font: inherit; font-weight: 700; padding: 10px 12px; border: 2px solid var(--line); border-radius: 12px; background: var(--surface, #fff); color: var(--ink); }
+  /* editor a tutto schermo */
+  body.ds-open { overflow: hidden; }
+  .ds-ed { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; background: var(--surface-2, #eef0f3); color: var(--ink); touch-action: none; -webkit-user-select: none; user-select: none; }
+  .ds-top { display: flex; align-items: center; gap: 8px; padding: max(8px, env(safe-area-inset-top)) 10px 8px; background: var(--surface, #fff); border-bottom: 2px solid var(--line); }
+  .ds-ttl { flex: 1; min-width: 0; font-size: 16px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .ds-body { flex: 1; display: flex; min-height: 0; }
+  .ds-tools { display: flex; flex-direction: column; gap: 4px; padding: 6px; background: var(--surface, #fff); border-right: 2px solid var(--line); overflow-y: auto; }
+  .ds-tb { display: flex; flex-direction: column; align-items: center; gap: 0; width: 64px; padding: 6px 2px; border: 2px solid transparent; border-radius: 12px; background: none; font: inherit; color: var(--ink); cursor: pointer; }
+  .ds-tb span { font-size: 24px; line-height: 1.1; } .ds-tb small { font-size: 10.5px; font-weight: 800; }
+  .ds-tb.on { border-color: var(--v2-orange, #ff9a3c); background: color-mix(in srgb, var(--v2-orange, #ff9a3c) 14%, transparent); }
+  .ds-stage { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; padding: 10px; }
+  .ds-stack { position: relative; box-shadow: 0 6px 20px rgba(0, 0, 0, .18); border-radius: 4px; overflow: hidden; touch-action: none; }
+  .ds-paper, .ds-stack canvas, .ds-ric, .ds-guide { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .ds-paper { background: #fff; }
+  .ds-ric { object-fit: contain; pointer-events: none; }
+  .ds-guide { pointer-events: none; overflow: visible; }
+  .ds-guide .ds-g { fill: none; stroke-width: 5; stroke-dasharray: 14 10; stroke-linecap: round; opacity: .85; }
+  .ds-guide .ds-gp { fill: none; stroke-width: 3; opacity: .45; }
+  .ds-guide text { font: 800 26px system-ui, sans-serif; fill: #2563eb; paint-order: stroke; stroke: #fff; stroke-width: 6px; }
+  .ds-guide .ds-dot text { fill: #333; }
+  .ds-guide .ds-axis { stroke: #ff9a3c; stroke-width: 3; stroke-dasharray: 10 8; opacity: .7; }
+  .ds-side { width: 236px; padding: 10px; background: var(--surface, #fff); border-left: 2px solid var(--line); overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+  .ds-pal { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .ds-sw { aspect-ratio: 1; border-radius: 50%; border: 3px solid var(--line); cursor: pointer; padding: 0; position: relative; overflow: hidden; }
+  .ds-sw.on { border-color: var(--ink); box-shadow: 0 0 0 2px var(--v2-orange, #ff9a3c); }
+  .ds-pick { background: conic-gradient(#f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); }
+  .ds-pick input { position: absolute; inset: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+  .ds-rng, .ds-op { display: flex; flex-direction: column; font-size: 13px; font-weight: 800; gap: 2px; }
+  .ds-rng input, .ds-op input { width: 100%; }
+  .ds-chk { display: flex; gap: 8px; align-items: center; font-size: 13px; font-weight: 800; }
+  .ds-chk input { width: 20px; height: 20px; }
+  .ds-lay { display: flex; flex-direction: column; gap: 4px; border-top: 2px solid var(--line); padding-top: 8px; }
+  .ds-lay small { color: var(--ink-soft); font-weight: 700; font-size: 12px; }
+  .ds-li { display: flex; gap: 4px; align-items: center; border: 2px solid transparent; border-radius: 10px; padding: 2px; }
+  .ds-li.on { border-color: var(--v2-blue, #3fa9f5); background: color-mix(in srgb, var(--v2-blue, #3fa9f5) 10%, transparent); }
+  .ds-ln { flex: 1; text-align: left; background: none; border: 0; font: inherit; font-weight: 800; color: var(--ink); padding: 6px; cursor: pointer; }
+  .ds-lv { background: none; border: 0; font-size: 16px; cursor: pointer; padding: 4px; }
+  .ds-lrow { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .ds-lez { display: flex; gap: 12px; align-items: center; padding: 10px 14px max(10px, env(safe-area-inset-bottom)); background: var(--surface, #fff); border-top: 2px solid var(--line); }
+  .ds-lt { flex: 1; min-width: 0; } .ds-lt p { margin: 2px 0; font-weight: 700; font-size: 15px; } .ds-lt small { color: var(--ink-soft); font-weight: 700; }
+  .ds-lb { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+  .ds-ref { width: 120px; border: 4px solid #8b5a2b; border-radius: 3px; background: #fff; }
+  @media (max-width: 820px) {
+    .ds-side { width: 190px; }
+    .ds-tb { width: 54px; } .ds-tb small { display: none; }
+  }
+  @media (max-width: 600px) {
+    .ds-body { flex-direction: column; }
+    .ds-tools { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 2px solid var(--line); }
+    .ds-side { width: auto; max-height: 34vh; border-left: 0; border-top: 2px solid var(--line); }
+    .ds-lez { flex-direction: column; align-items: stretch; }
   }
 
 </style>
@@ -9300,6 +9395,681 @@ function tProva() {
   paint();
 }
 
+/* ================= 🎨 DISEGNO: il percorso delle basi del disegno artistico =================
+   5 fasi, dal più semplice al più difficile; ogni fase ha piccoli progetti a livelli (1 facile → 3 più impegnativo).
+   Ogni progetto: passi con una guida tratteggiata (coordinate su un foglio di 1200 × 900) che la bambina ricalca,
+   poi l'app aggiunge da sola il passo finale «Ora da sola» (senza guida, con il suo disegno guidato piccolo accanto).
+   Primitive della guida:
+     ["l",x1,y1,x2,y2] linea · ["c",cx,cy,r] cerchio · ["e",cx,cy,rx,ry] ovale · ["r",x,y,w,h] rettangolo
+     ["p","d"] tracciato SVG · ["dot",x,y,"#colore","etichetta"] dove colorare · ["txt",x,y,"testo"] scritta · ["sun",x,y] da dove viene la luce
+   Contenuti: autore → revisore indipendente → controllo automatico (regola dell'app). Gli id non si cambiano mai. */
+const DIS_COL = {
+  nero: '#222222', grigio: '#8a8a8a', bianco: '#ffffff', marrone: '#8b5a2b', rosa: '#f4a6c1',
+  giallo: '#f6d000', arancione: '#f28c1b', rosso: '#d62828', viola: '#7b3fa0', blu: '#1f5fbf', verde: '#2e9e44',
+  azzurro: '#7cc4f2', verdechiaro: '#9bd770', celestino: '#cfe8fb',
+  blu1: '#dbe7fb', blu2: '#a9c4f2', blu3: '#5f8fe0', blu4: '#2a5cb8', blu5: '#16336b',
+  g1: '#f2f2f2', g2: '#c8c8c8', g3: '#9a9a9a', g4: '#5e5e5e', g5: '#262626'
+};
+const DIS_FASI = [
+  { id: 'linee', ic: '✏️', n: 'Linee e forme', sala: 'Sala delle linee',
+    t: 'Ogni disegno è fatto di linee e di forme semplici: cerchi, ovali, quadrati e triangoli. Se impari a vederle, puoi disegnare tutto.' },
+  { id: 'colore', ic: '🎨', n: 'Il colore', sala: 'Sala dei colori',
+    t: 'I colori si possono mescolare, schiarire e scurire. Alcuni sembrano caldi, altri freddi; alcuni si fanno risaltare a vicenda.' },
+  { id: 'ombra', ic: '🌗', n: 'Luce, ombra e volume', sala: 'Sala delle ombre',
+    t: 'La luce arriva da una parte: dove batte è chiaro, dall’altra parte c’è l’ombra. Così un cerchio diventa una palla.' },
+  { id: 'spazio', ic: '🏞️', n: 'Prospettiva e paesaggio', sala: 'Sala dei paesaggi',
+    t: 'Le cose lontane sembrano più piccole, più vicine alla linea dell’orizzonte e più chiare. Con questi trucchi un foglio piatto diventa profondo.' },
+  { id: 'figura', ic: '🙂', n: 'Il viso e la figura', sala: 'Sala dei ritratti',
+    t: 'Il viso e il corpo hanno misure che si ripetono: gli occhi stanno a metà della testa, il gomito all’altezza della vita.' }
+];
+const DIS_PROG = [
+  /* ---------- ✏️ FASE 1: linee e forme ---------- */
+  { id: 'd101', f: 'linee', lv: 1, ic: '〰️', n: 'Le linee', tool: 'matita', col: 'nero', impara: 'i tipi di linea e il gesto sciolto',
+    passi: [
+      { t: 'La linea dritta orizzontale: parti da sinistra e vai a destra con un solo movimento, senza fermarti. Muovi tutto il braccio, non solo le dita.', g: [['l', 150, 130, 1050, 130]] },
+      { t: 'La linea verticale, dall’alto in basso, e la linea obliqua, inclinata.', g: [['l', 200, 220, 200, 520], ['l', 320, 520, 520, 220]] },
+      { t: 'La linea curva: come un arco o un sorriso.', g: [['p', 'M620 480 Q760 220 900 480']] },
+      { t: 'La linea ondulata: su e giù morbido, come le onde del mare.', g: [['p', 'M150 640 Q225 580 300 640 T450 640 T600 640 T750 640 T900 640 T1050 640']] },
+      { t: 'La linea a zig-zag: su e giù a punta, come i denti di una sega.', g: [['p', 'M150 780 L225 720 L300 780 L375 720 L450 780 L525 720 L600 780']] },
+      { t: 'La spirale: parti dal centro e gira allargandoti piano piano.', g: [['p', 'M900 760 m0 0 a10 10 0 1 1 20 0 a25 25 0 1 1 -45 0 a40 40 0 1 1 75 0 a55 55 0 1 1 -105 0']] }
+    ] },
+  { id: 'd102', f: 'linee', lv: 1, ic: '🔺', n: 'Le forme base', tool: 'matita', col: 'nero', impara: 'cerchio, quadrato, triangolo, ovale e rettangolo',
+    passi: [
+      { t: 'Il cerchio: fai qualche giro leggero, poi ripassa quello che ti sembra più tondo. Va bene se non è perfetto!', g: [['c', 230, 230, 130]] },
+      { t: 'Il quadrato: quattro lati uguali e quattro angoli retti, come gli angoli di un foglio.', g: [['r', 460, 100, 260, 260]] },
+      { t: 'Il triangolo: tre lati e tre punte.', g: [['p', 'M940 100 L1080 360 L800 360 Z']] },
+      { t: 'L’ovale: un cerchio un po’ schiacciato, come un uovo sdraiato.', g: [['e', 300, 640, 190, 110]] },
+      { t: 'Il rettangolo: come il quadrato, ma con due lati più lunghi.', g: [['r', 640, 540, 420, 200]] }
+    ] },
+  { id: 'd103', f: 'linee', lv: 1, ic: '🐱', n: 'Il gattino fatto di forme', tool: 'matita', col: 'nero', impara: 'costruire un animale con cerchi, ovali e triangoli',
+    passi: [
+      { t: 'La testa è un cerchio.', g: [['c', 600, 300, 150]] },
+      { t: 'Le orecchie sono due triangoli sopra la testa.', g: [['p', 'M490 200 L470 90 L570 160'], ['p', 'M630 160 L730 90 L710 200']] },
+      { t: 'Il corpo è un ovale grande sotto la testa.', g: [['e', 600, 615, 200, 170]] },
+      { t: 'La coda è una linea curva che parte dal corpo.', g: [['p', 'M785 680 Q950 690 930 520 Q920 450 980 430']] },
+      { t: 'Gli occhi sono due ovali, il naso un triangolino, la bocca due curve; poi i baffi, tre per lato.', g: [['e', 545, 280, 22, 32], ['e', 655, 280, 22, 32], ['p', 'M585 340 L615 340 L600 360 Z'], ['p', 'M600 360 Q580 390 560 375'], ['p', 'M600 360 Q620 390 640 375'], ['l', 530, 350, 420, 330], ['l', 530, 365, 420, 370], ['l', 530, 380, 425, 410], ['l', 670, 350, 780, 330], ['l', 670, 365, 780, 370], ['l', 670, 380, 775, 410]] },
+      { t: 'Ora coloralo come vuoi con il secchiello o con i pastelli.', g: [['dot', 600, 640, '#f28c1b', 'colora']] , tool: 'secchiello', col: 'arancione' }
+    ] },
+  { id: 'd104', f: 'linee', lv: 2, ic: '🐟', n: 'Il pesce', tool: 'matita', col: 'nero', impara: 'ovali e triangoli, e un motivo che si ripete',
+    passi: [
+      { t: 'Il corpo è un ovale sdraiato.', g: [['e', 540, 450, 280, 160]] },
+      { t: 'La coda è un triangolo attaccato a destra, con la punta verso il corpo.', g: [['p', 'M810 450 L1040 300 L1040 600 Z']] },
+      { t: 'Le pinne: un triangolo sopra e uno sotto.', g: [['p', 'M450 300 L560 170 L640 300'], ['p', 'M500 600 L560 700 L620 600']] },
+      { t: 'L’occhio è un cerchio con un puntino; la bocca una piccola curva.', g: [['c', 380, 410, 30], ['c', 385, 410, 8], ['p', 'M275 470 Q300 490 325 470']] },
+      { t: 'Le scaglie sono tanti archetti che si ripetono, in file.', g: [['p', 'M520 380 q30 40 60 0 q30 40 60 0 q30 40 60 0'], ['p', 'M490 450 q30 40 60 0 q30 40 60 0 q30 40 60 0 q30 40 60 0'], ['p', 'M520 520 q30 40 60 0 q30 40 60 0 q30 40 60 0']] },
+      { t: 'Colora il pesce e il mare intorno.', g: [['dot', 560, 330, '#f6d000', 'pesce'], ['dot', 1100, 150, '#7cc4f2', 'mare']], tool: 'secchiello', col: 'giallo' }
+    ] },
+  { id: 'd105', f: 'linee', lv: 2, ic: '🏠', n: 'La casa', tool: 'matita', col: 'nero', impara: 'quadrati, rettangoli e triangoli insieme',
+    passi: [
+      { t: 'La casa è un grande quadrato, appoggiato sulla linea del terreno.', g: [['r', 400, 380, 400, 400], ['l', 0, 780, 1200, 780]] },
+      { t: 'Il tetto è un triangolo appoggiato sopra, un po’ più largo della casa.', g: [['p', 'M360 380 L600 150 L840 380 Z']] },
+      { t: 'La porta è un rettangolo in basso, con la maniglia.', g: [['r', 550, 600, 110, 180], ['c', 640, 690, 7]] },
+      { t: 'Due finestre quadrate con la croce in mezzo.', g: [['r', 440, 440, 90, 90], ['l', 485, 440, 485, 530], ['l', 440, 485, 530, 485], ['r', 670, 440, 90, 90], ['l', 715, 440, 715, 530], ['l', 670, 485, 760, 485]] },
+      { t: 'Il comignolo è un rettangolo sul tetto; il fumo una linea ondulata.', g: [['p', 'M700 246 L700 190 L760 190 L760 303'], ['p', 'M730 180 Q700 150 730 120 Q760 90 730 60']] },
+      { t: 'Colora: muri, tetto, porta e un prato sotto la casa.', g: [['dot', 470, 650, '#f6d000', 'muri'], ['dot', 600, 280, '#d62828', 'tetto'], ['dot', 600, 690, '#8b5a2b', 'porta'], ['dot', 600, 850, '#2e9e44', 'prato']], tool: 'secchiello', col: 'giallo' }
+    ] },
+  { id: 'd106', f: 'linee', lv: 3, ic: '🐉', n: 'Il drago di forme', tool: 'matita', col: 'nero', impara: 'un soggetto più grande, costruito un pezzo alla volta',
+    passi: [
+      { t: 'Prima le forme grandi e leggere: il corpo è un ovale grande.', g: [['e', 560, 560, 230, 150]] },
+      { t: 'Il collo è fatto di due curve che salgono; la testa un cerchio con un ovale per il muso.', g: [['p', 'M700 470 Q780 380 800 290'], ['p', 'M760 520 Q850 420 870 320'], ['c', 850, 260, 80], ['e', 950, 290, 70, 45]] },
+      { t: 'Le ali sono triangoli con il lato ondulato, attaccati alla schiena.', g: [['p', 'M520 420 L380 140 Q440 250 470 230 Q500 330 560 300 Z'], ['p', 'M620 420 L600 150 Q640 250 670 240 Q690 330 720 330 Z']] },
+      { t: 'La coda è una curva lunga che finisce a punta.', g: [['p', 'M340 600 Q180 640 160 760 Q150 820 230 800'], ['p', 'M224 776 L236 824 L279 788 Z']] },
+      { t: 'Le zampe sono ovali piccoli sotto il corpo.', g: [['e', 470, 710, 45, 60], ['e', 660, 710, 45, 60]] },
+      { t: 'Ultimi dettagli: occhio, narice e una fila di spine a triangolo sulla schiena.', g: [['c', 860, 245, 14], ['c', 1000, 280, 6], ['p', 'M349 498 L332 459 L373 471 M381 465 L376 422 L415 443 M424 438 L431 394 L466 422 M545 411 L565 371 L585 411']] },
+      { t: 'Colora il tuo drago con i colori che preferisci.', g: [['dot', 560, 580, '#2e9e44', 'drago']], tool: 'secchiello', col: 'verde' }
+    ] },
+  /* ---------- 🎨 FASE 2: il colore ---------- */
+  { id: 'd201', f: 'colore', lv: 1, ic: '🎡', n: 'La ruota dei colori', tool: 'secchiello', col: 'giallo', impara: 'colori primari e secondari',
+    base: [['c', 600, 450, 330], ['l', 600, 450, 600, 120], ['l', 600, 450, 886, 285], ['l', 600, 450, 886, 615], ['l', 600, 450, 600, 780], ['l', 600, 450, 314, 615], ['l', 600, 450, 314, 285]],
+    passi: [
+      { t: 'Ricalca la ruota: un cerchio diviso in 6 spicchi.', g: [['c', 600, 450, 330], ['l', 600, 450, 600, 120], ['l', 600, 450, 886, 285], ['l', 600, 450, 886, 615], ['l', 600, 450, 600, 780], ['l', 600, 450, 314, 615], ['l', 600, 450, 314, 285]], tool: 'pennarello', col: 'nero' },
+      { t: 'Nella pittura i colori primari sono giallo, rosso e blu: non si ottengono mescolando altri colori. Colora uno spicchio sì e uno no: giallo, rosso, blu.', g: [['dot', 720, 250, '#f6d000', 'giallo'], ['dot', 720, 650, '#d62828', 'rosso'], ['dot', 360, 450, '#1f5fbf', 'blu']], tool: 'secchiello', col: 'giallo' },
+      { t: 'I secondari si ottengono mescolando due primari: giallo + rosso = arancione, rosso + blu = viola, blu + giallo = verde. Mettili nello spicchio tra i due colori che li formano.', g: [['dot', 830, 450, '#f28c1b', 'arancione'], ['dot', 480, 650, '#7b3fa0', 'viola'], ['dot', 480, 250, '#2e9e44', 'verde']], tool: 'secchiello', col: 'arancione' }
+    ] },
+  { id: 'd202', f: 'colore', lv: 1, ic: '🔥', n: 'Colori caldi e colori freddi', tool: 'pastello', col: 'arancione', impara: 'come i colori cambiano la sensazione di un disegno',
+    passi: [
+      { t: 'Dividi il foglio a metà con una linea dritta, dall’alto fino in fondo. A sinistra un sole, a destra una luna.', g: [['l', 600, 0, 600, 900], ['c', 300, 300, 110], ['p', 'M960 200 A120 120 0 1 0 960 440 A150 150 0 0 1 960 200']], tool: 'matita', col: 'nero' },
+      { t: 'I colori caldi (giallo, arancione, rosso) ricordano il sole e il fuoco. Colora la parte del sole solo con colori caldi.', g: [['dot', 300, 300, '#f6d000', 'giallo'], ['dot', 300, 600, '#f28c1b', 'arancione'], ['dot', 150, 780, '#d62828', 'rosso']], tool: 'pastello', col: 'arancione' },
+      { t: 'I colori freddi (blu, azzurro, verde, viola) ricordano l’acqua, il ghiaccio e la notte. Colora la parte della luna solo con colori freddi.', g: [['dot', 900, 650, '#1f5fbf', 'blu'], ['dot', 1050, 780, '#7b3fa0', 'viola'], ['dot', 760, 780, '#2e9e44', 'verde']], tool: 'pastello', col: 'blu' },
+      { t: 'Guarda i due lati: i colori caldi sembrano venire verso di te, quelli freddi sembrano più lontani e calmi. I pittori lo usano per dare emozione e profondità.', g: [] }
+    ] },
+  { id: 'd203', f: 'colore', lv: 2, ic: '🌈', n: 'Dal chiaro allo scuro', tool: 'secchiello', col: 'blu1', impara: 'le sfumature di un colore',
+    passi: [
+      { t: 'Ricalca cinque quadrati in fila.', g: [['r', 90, 330, 190, 190], ['r', 300, 330, 190, 190], ['r', 510, 330, 190, 190], ['r', 720, 330, 190, 190], ['r', 930, 330, 190, 190]], tool: 'pennarello', col: 'nero' },
+      { t: 'Ogni colore ha tante sfumature. Per schiarirlo i pittori aggiungono bianco (con l’acquerello, più acqua); per scurirlo un po’ di nero o un colore più scuro. Colora dal più chiaro al più scuro.', g: [['dot', 185, 425, '#dbe7fb', '1'], ['dot', 395, 425, '#a9c4f2', '2'], ['dot', 605, 425, '#5f8fe0', '3'], ['dot', 815, 425, '#2a5cb8', '4'], ['dot', 1025, 425, '#16336b', '5']], tool: 'secchiello', col: 'blu1' },
+      { t: 'Ora prova con un altro colore che ti piace, sotto: usa il pastello premendo poco per il chiaro e di più per lo scuro.', g: [['r', 90, 600, 1030, 160]], tool: 'pastello', col: 'rosso' }
+    ] },
+  { id: 'd204', f: 'colore', lv: 2, ic: '🍎', n: 'I colori complementari', tool: 'secchiello', col: 'rosso', impara: 'coppie di colori che si fanno risaltare',
+    passi: [
+      { t: 'Nella ruota dei colori i complementari stanno uno di fronte all’altro: rosso e verde, giallo e viola, blu e arancione. Disegna una mela con la foglia.', g: [['p', 'M600 260 C470 170 300 260 330 470 C350 640 480 760 600 690 C720 760 850 640 870 470 C900 260 730 170 600 260 Z'], ['p', 'M600 260 Q590 190 610 140'], ['p', 'M600 180 Q690 110 780 150 Q690 210 600 180 Z']], tool: 'matita', col: 'nero' },
+      { t: 'Mela rossa e foglia verde: messi vicini, i complementari si accendono a vicenda.', g: [['dot', 600, 480, '#d62828', 'rosso'], ['dot', 700, 160, '#2e9e44', 'verde']], tool: 'secchiello', col: 'rosso' },
+      { t: 'Ora prova un’altra coppia: disegna in alto un sole giallo e colora lo sfondo di viola, il suo complementare.', g: [['c', 1000, 160, 90], ['dot', 1000, 160, '#f6d000', 'giallo'], ['dot', 150, 800, '#7b3fa0', 'viola']], tool: 'secchiello', col: 'viola' }
+    ] },
+  { id: 'd205', f: 'colore', lv: 3, ic: '🌅', n: 'Il tramonto sfumato', tool: 'acquerello', col: 'giallo', impara: 'sfumare un colore nell’altro',
+    passi: [
+      { t: 'Con l’acquerello fai delle strisce larghe da sinistra a destra: in basso giallo.', g: [['r', 0, 560, 1200, 200]], tool: 'acquerello', col: 'giallo' },
+      { t: 'Sopra l’arancione, che tocca un po’ il giallo.', g: [['r', 0, 360, 1200, 220]], tool: 'acquerello', col: 'arancione' },
+      { t: 'In alto il rosa e il viola.', g: [['r', 0, 80, 1200, 300]], tool: 'acquerello', col: 'viola' },
+      { t: 'Con lo sfumino passa dove i colori si toccano, avanti e indietro: il confine sparisce e il cielo diventa morbido (con l’acquerello vero si fa passando il pennello bagnato quando il colore è ancora umido).', g: [['l', 0, 570, 1200, 570], ['l', 0, 370, 1200, 370]], tool: 'sfumino', col: 'giallo' },
+      { t: 'Per finire, una collina scura in basso: sembrerà davanti al tramonto.', g: [['p', 'M0 770 Q350 620 650 720 Q900 800 1200 680 L1200 900 L0 900 Z']], tool: 'pennarello', col: 'viola' }
+    ] },
+  /* ---------- 🌗 FASE 3: luce, ombra e volume ---------- */
+  { id: 'd301', f: 'ombra', lv: 1, ic: '⬛', n: 'La scala dei grigi', tool: 'matita', col: 'nero', impara: 'chiaro e scuro con la pressione della matita',
+    passi: [
+      { t: 'Ricalca cinque rettangoli in fila.', g: [['r', 90, 330, 190, 240], ['r', 300, 330, 190, 240], ['r', 510, 330, 190, 240], ['r', 720, 330, 190, 240], ['r', 930, 330, 190, 240]] },
+      { t: 'Lascia il primo bianco. Nel secondo passa la matita premendo pochissimo, poi sempre di più: l’ultimo deve essere quasi nero. Premere di più fa il tratto più scuro.', g: [['txt', 185, 620, 'bianco'], ['txt', 395, 620, 'chiaro'], ['txt', 605, 620, 'medio'], ['txt', 815, 620, 'scuro'], ['txt', 1025, 620, 'nero']] }
+    ] },
+  { id: 'd302', f: 'ombra', lv: 1, ic: '⚪', n: 'Da cerchio a palla', tool: 'matita', col: 'nero', impara: 'luce, ombra propria e ombra portata',
+    passi: [
+      { t: 'Disegna un cerchio e decidi da dove arriva la luce: qui arriva dall’alto a sinistra.', g: [['c', 560, 420, 230], ['sun', 160, 120]] },
+      { t: 'Dove la luce batte più forte resta una piccola zona bianca: il punto di luce.', g: [['e', 470, 330, 45, 35], ['txt', 470, 260, 'luce']] },
+      { t: 'Dalla parte opposta alla luce c’è l’ombra propria: colora con la matita una mezzaluna in basso a destra. Comincia leggera dove finisce la luce e diventa più scura verso il centro della mezzaluna.', g: [['p', 'M760 300 A230 230 0 0 1 440 615 Q700 590 760 300 Z'], ['txt', 700, 560, 'ombra propria']] },
+      { t: 'Sul tavolo, dalla parte opposta alla luce, la palla fa l’ombra portata: un ovale scuro appoggiato sotto.', g: [['e', 720, 675, 200, 30], ['txt', 900, 740, 'ombra portata']] },
+      { t: 'Proprio sul bordo in basso lascia una sottile striscia un po’ più chiara: è il riflesso della luce che rimbalza dal tavolo.', g: [['p', 'M430 600 Q560 680 720 590'], ['txt', 560, 730, 'riflesso']] }
+    ] },
+  { id: 'd303', f: 'ombra', lv: 2, ic: '▦', n: 'Il tratteggio', tool: 'matita', col: 'nero', impara: 'fare l’ombra con le linee',
+    passi: [
+      { t: 'Ricalca tre quadrati.', g: [['r', 120, 300, 260, 260], ['r', 470, 300, 260, 260], ['r', 820, 300, 260, 260]] },
+      { t: 'Nel primo, linee parallele lontane tra loro: è un’ombra leggera. Riempi tutto il quadrato in questo modo.', g: [['l', 140, 540, 360, 320], ['l', 180, 540, 360, 360], ['l', 220, 540, 360, 400], ['l', 140, 500, 320, 320], ['l', 140, 460, 280, 320]] },
+      { t: 'Nel secondo, linee parallele vicine, in tutto il quadrato: l’ombra è più scura.', g: [['l', 490, 540, 710, 320], ['l', 510, 540, 710, 340], ['l', 530, 540, 710, 360], ['l', 490, 520, 690, 320], ['l', 490, 500, 670, 320]] },
+      { t: 'Nel terzo, il tratteggio incrociato: linee in una direzione e poi nell’altra. Riempi tutto il quadrato: è l’ombra più scura.', g: [['l', 840, 540, 1060, 320], ['l', 860, 540, 1060, 340], ['l', 840, 520, 1040, 320], ['l', 840, 320, 1060, 540], ['l', 860, 320, 1060, 520], ['l', 840, 340, 1040, 540]] }
+    ] },
+  { id: 'd304', f: 'ombra', lv: 2, ic: '🧊', n: 'Il cubo con la luce', tool: 'matita', col: 'nero', impara: 'tre facce, tre toni',
+    passi: [
+      { t: 'Disegna il cubo: la faccia davanti è un quadrato, quella sopra e quella di lato sono inclinate.', g: [['r', 420, 380, 300, 300], ['p', 'M420 380 L560 260 L860 260 L720 380'], ['p', 'M720 680 L860 560 L860 260']] },
+      { t: 'La luce arriva dall’alto a sinistra. La faccia sopra è la più chiara: lasciala quasi bianca.', g: [['sun', 200, 120], ['txt', 640, 330, 'chiaro']] },
+      { t: 'La faccia davanti è un po’ in ombra: grigio medio, con tratti leggeri.', g: [['txt', 570, 530, 'medio']] },
+      { t: 'La faccia di lato è la più lontana dalla luce: la più scura.', g: [['txt', 790, 480, 'scuro']] },
+      { t: 'A terra, dalla parte opposta alla luce, l’ombra portata del cubo.', g: [['p', 'M720 680 L860 560 L1060 600 L960 700 Z']] }
+    ] },
+  { id: 'd305', f: 'ombra', lv: 3, ic: '🍐', n: 'La pera dal vero', tool: 'pastello', col: 'verdechiaro', impara: 'colore con luce e ombra',
+    passi: [
+      { t: 'Disegna la pera: un cerchio grande in basso e uno più piccolo sopra, uniti da due curve; poi il picciolo. Cancella le linee dei cerchi che restano dentro la pera. Se puoi, metti una pera vera davanti a te e guardala.', g: [['c', 600, 580, 210], ['c', 600, 300, 120], ['p', 'M480 320 Q470 430 400 520'], ['p', 'M720 320 Q730 430 800 520'], ['p', 'M600 180 Q610 130 640 100']], tool: 'matita', col: 'nero' },
+      { t: 'Colora tutta la pera di verde chiaro con il pastello, leggero.', g: [['dot', 600, 580, '#9bd770', 'verde chiaro']], tool: 'pastello', col: 'verdechiaro' },
+      { t: 'La luce viene da sinistra: sul lato destro passa un verde più scuro. Lascia chiara una macchia a sinistra.', g: [['sun', 150, 300], ['p', 'M743 420 Q830 600 700 760']], tool: 'pastello', col: 'verde' },
+      { t: 'Sfuma con lo sfumino tra il chiaro e lo scuro, e aggiungi l’ombra portata a destra sul tavolo.', g: [['e', 800, 800, 200, 40]], tool: 'sfumino', col: 'verde' }
+    ] },
+  /* ---------- 🏞️ FASE 4: prospettiva e paesaggio ---------- */
+  { id: 'd401', f: 'spazio', lv: 1, ic: '🌳', n: 'Vicino e lontano', tool: 'matita', col: 'nero', impara: 'le cose lontane sembrano piccole e più vicine all’orizzonte',
+    passi: [
+      { t: 'Traccia la linea dell’orizzonte, dove il cielo tocca la terra, da un bordo all’altro.', g: [['l', 0, 380, 1200, 380]] },
+      { t: 'Un albero grande vicino a te, in basso: tronco e chioma.', g: [['r', 230, 560, 50, 260], ['c', 255, 470, 140]] },
+      { t: 'Un albero medio più indietro: più piccolo e più vicino all’orizzonte.', g: [['r', 600, 470, 30, 140], ['c', 615, 420, 75]] },
+      { t: 'Un albero piccolissimo lontano, vicino all’orizzonte.', g: [['r', 900, 395, 14, 50], ['c', 907, 375, 30]] },
+      { t: 'Colora: le cose lontane si vedono più chiare e un po’ azzurrine, perché c’è tanta aria in mezzo.', g: [['dot', 255, 470, '#2e9e44', 'verde'], ['dot', 615, 420, '#9bd770', 'più chiaro'], ['dot', 907, 375, '#cfe8fb', 'chiarissimo']], tool: 'pastello', col: 'verde' }
+    ] },
+  { id: 'd402', f: 'spazio', lv: 1, ic: '⛰️', n: 'Le colline una dietro l’altra', tool: 'matita', col: 'nero', impara: 'la sovrapposizione',
+    passi: [
+      { t: 'Una collina lontana, in alto.', g: [['p', 'M0 430 Q350 220 650 400 Q900 260 1200 370']] },
+      { t: 'Una collina davanti, che copre il fondo della prima: quello che sta davanti nasconde quello che sta dietro.', g: [['p', 'M0 580 Q400 380 800 560 Q1000 480 1200 520']] },
+      { t: 'La collina più vicina, in basso.', g: [['p', 'M0 730 Q500 560 1200 700']] },
+      { t: 'Colora dalla più lontana (azzurrina e chiara) alla più vicina (verde scuro).', g: [['dot', 900, 420, '#cfe8fb', 'lontana'], ['dot', 500, 520, '#9bd770', 'in mezzo'], ['dot', 600, 800, '#2e9e44', 'vicina']], tool: 'secchiello', col: 'celestino' }
+    ] },
+  { id: 'd403', f: 'spazio', lv: 2, ic: '⛵', n: 'Il mare e l’orizzonte', tool: 'matita', col: 'nero', impara: 'la linea dell’orizzonte all’altezza dei tuoi occhi',
+    passi: [
+      { t: 'L’orizzonte sul mare è una linea dritta da un bordo all’altro del foglio: sta all’altezza dei tuoi occhi.', g: [['l', 0, 420, 1200, 420]] },
+      { t: 'Una barca vicina, grande e in basso.', g: [['p', 'M230 700 L570 700 L510 770 L290 770 Z'], ['l', 400, 700, 400, 470], ['p', 'M400 480 L400 680 L560 680 Z']] },
+      { t: 'Una barca lontana: piccola e vicina all’orizzonte.', g: [['p', 'M850 450 L930 450 L915 466 L865 466 Z'], ['l', 890, 450, 890, 400], ['p', 'M890 402 L890 445 L925 445 Z']] },
+      { t: 'Qualche onda: grande davanti, piccola lontano.', g: [['p', 'M120 820 q40 -30 80 0 q40 -30 80 0'], ['p', 'M700 600 q25 -18 50 0 q25 -18 50 0'], ['p', 'M980 480 q12 -9 24 0 q12 -9 24 0']] },
+      { t: 'Colora il cielo e il mare.', g: [['dot', 600, 200, '#cfe8fb', 'cielo'], ['dot', 700, 700, '#1f5fbf', 'mare']], tool: 'secchiello', col: 'celestino' }
+    ] },
+  { id: 'd404', f: 'spazio', lv: 2, ic: '🛣️', n: 'La strada che va lontano', tool: 'matita', col: 'nero', impara: 'il punto di fuga',
+    passi: [
+      { t: 'L’orizzonte e, al centro, un punto: è il punto di fuga, dove sembrano incontrarsi le linee che vanno lontano.', g: [['l', 0, 360, 1200, 360], ['c', 600, 360, 8]] },
+      { t: 'I bordi della strada partono larghi in basso e vanno tutti verso il punto di fuga.', g: [['l', 168, 900, 600, 360], ['l', 1032, 900, 600, 360]] },
+      { t: 'La riga di mezzo: trattini sempre più corti e più vicini verso il punto.', g: [['l', 600, 840, 600, 760], ['l', 600, 680, 600, 620], ['l', 600, 560, 600, 520], ['l', 600, 480, 600, 455], ['l', 600, 425, 600, 410]] },
+      { t: 'I pali della luce lungo la strada: alti vicino a te, sempre più bassi verso il punto di fuga. I piedi e le punte dei pali stanno su due linee che vanno al punto di fuga.', g: [['l', 150, 800, 150, 420], ['l', 283, 670, 283, 402], ['l', 395, 560, 395, 387], ['l', 477, 480, 477, 376], ['l', 528, 430, 528, 370]] },
+      { t: 'Colora la strada grigia e il prato verde.', g: [['dot', 450, 760, '#8a8a8a', 'strada'], ['dot', 100, 600, '#2e9e44', 'prato'], ['dot', 1100, 600, '#2e9e44', 'prato']], tool: 'secchiello', col: 'grigio' }
+    ] },
+  { id: 'd405', f: 'spazio', lv: 3, ic: '🏡', n: 'Il paesaggio in tre piani', tool: 'matita', col: 'nero', impara: 'primo piano, piano medio e sfondo',
+    passi: [
+      { t: 'Lo sfondo: montagne lontane, in alto, contro il cielo.', g: [['p', 'M0 400 L250 200 L420 360 L620 160 L860 370 L1000 250 L1200 330']] },
+      { t: 'Il piano medio: un prato con una casetta e due alberi, di grandezza media.', g: [['l', 0, 520, 1200, 520], ['p', 'M0 640 Q600 580 1200 640'], ['r', 700, 420, 120, 100], ['p', 'M690 420 L760 360 L830 420'], ['c', 320, 440, 50], ['l', 320, 490, 320, 520], ['c', 450, 450, 40], ['l', 450, 490, 450, 520]] },
+      { t: 'Il primo piano: in basso, grandi e con i dettagli, dei fiori e dell’erba.', g: [['c', 200, 760, 40], ['l', 200, 800, 200, 880], ['c', 980, 720, 50], ['l', 980, 770, 980, 880], ['p', 'M80 880 l15 -60 l15 60 l15 -50 l15 50 M500 880 l15 -60 l15 60 l15 -50 l15 50']] },
+      { t: 'Colora: lo sfondo chiaro e azzurrino, il piano medio con colori normali, il primo piano con i colori più vivi.', g: [['dot', 620, 250, '#cfe8fb', 'sfondo'], ['dot', 600, 570, '#9bd770', 'medio'], ['dot', 600, 780, '#2e9e44', 'primo piano']], tool: 'pastello', col: 'verde' }
+    ] },
+  /* ---------- 🙂 FASE 5: il viso e la figura ---------- */
+  { id: 'd501', f: 'figura', lv: 1, ic: '🙂', n: 'Le misure del viso', tool: 'matita', col: 'nero', impara: 'dove stanno occhi, naso, bocca e orecchie',
+    passi: [
+      { t: 'Il viso è un ovale. Traccia leggera una linea verticale al centro.', g: [['e', 600, 460, 230, 320], ['l', 600, 140, 600, 780]] },
+      { t: 'Gli occhi stanno a metà altezza della testa: traccia lì una linea orizzontale. (Sembra basso, ma è proprio così!)', g: [['l', 370, 460, 830, 460]] },
+      { t: 'Due occhi a forma di mandorla sulla linea; tra un occhio e l’altro c’è lo spazio di un altro occhio.', g: [['p', 'M440 460 Q490 425 540 460 Q490 490 440 460 Z'], ['p', 'M660 460 Q710 425 760 460 Q710 490 660 460 Z']] },
+      { t: 'Il naso finisce più o meno a metà tra gli occhi e il mento.', g: [['l', 520, 620, 680, 620], ['p', 'M575 615 Q600 640 625 615']] },
+      { t: 'La bocca sta più vicina al naso che al mento, circa a un terzo della distanza.', g: [['p', 'M530 680 Q600 715 670 680']] },
+      { t: 'Le orecchie stanno tra la linea degli occhi e la fine del naso; sopra, i capelli.', g: [['p', 'M372 460 Q322 540 401 620'], ['p', 'M828 460 Q878 540 799 620'], ['p', 'M370 400 Q380 120 600 135 Q820 120 830 400']] }
+    ] },
+  { id: 'd502', f: 'figura', lv: 2, ic: '😮', n: 'Le espressioni', tool: 'matita', col: 'nero', impara: 'come sopracciglia e bocca cambiano l’emozione',
+    passi: [
+      { t: 'Quattro cerchi per quattro facce.', g: [['c', 200, 450, 130], ['c', 470, 450, 130], ['c', 740, 450, 130], ['c', 1010, 450, 130]] },
+      { t: 'Felice: occhi a puntino e bocca a sorriso.', g: [['c', 160, 420, 8], ['c', 240, 420, 8], ['p', 'M140 480 Q200 540 260 480']] },
+      { t: 'Triste: sopracciglia che scendono verso l’esterno e bocca all’ingiù.', g: [['l', 405, 395, 445, 380], ['l', 495, 380, 535, 395], ['c', 430, 420, 8], ['c', 510, 420, 8], ['p', 'M420 520 Q470 480 520 520']] },
+      { t: 'Sorpresa: sopracciglia alte e curve, bocca a cerchio.', g: [['p', 'M680 380 Q700 360 720 380'], ['p', 'M760 380 Q780 360 800 380'], ['c', 700, 420, 10], ['c', 780, 420, 10], ['c', 740, 500, 25]] },
+      { t: 'Arrabbiata: sopracciglia che scendono verso il centro e bocca dritta stretta.', g: [['l', 945, 380, 990, 400], ['l', 1030, 400, 1075, 380], ['c', 970, 425, 8], ['c', 1050, 425, 8], ['l', 965, 505, 1055, 505]] }
+    ] },
+  { id: 'd503', f: 'figura', lv: 2, ic: '🧍', n: 'Il manichino di forme', tool: 'matita', col: 'nero', impara: 'le proporzioni del corpo',
+    passi: [
+      { t: 'Un corpo si misura in «teste». Un adulto è alto circa 7–8 teste; un bambino della tua età circa 6 e mezzo. Disegna la testa, un ovale piccolo in alto.', g: [['e', 600, 130, 50, 62]] },
+      { t: 'Il collo corto e il busto, una forma più larga in alto per le spalle.', g: [['l', 600, 192, 600, 220], ['p', 'M510 220 L690 220 L660 420 L540 420 Z']] },
+      { t: 'Il bacino è un ovale sotto il busto.', g: [['e', 600, 450, 75, 40]] },
+      { t: 'Le braccia: il gomito arriva all’altezza della vita, la mano a metà della coscia.', g: [['l', 515, 225, 470, 410], ['l', 470, 410, 452, 530], ['c', 450, 548, 18], ['l', 685, 225, 730, 410], ['l', 730, 410, 748, 530], ['c', 750, 548, 18]] },
+      { t: 'Le gambe sono lunghe circa metà di tutto il corpo; il ginocchio sta a metà della gamba.', g: [['l', 565, 480, 545, 640], ['l', 545, 640, 540, 800], ['l', 635, 480, 655, 640], ['l', 655, 640, 660, 800], ['e', 525, 812, 35, 14], ['e', 675, 812, 35, 14]] }
+    ] },
+  { id: 'd504', f: 'figura', lv: 3, ic: '🏃‍♀️', n: 'La figura in movimento', tool: 'matita', col: 'nero', impara: 'la linea del movimento',
+    passi: [
+      { t: 'Ogni figura in movimento ha una «linea di azione»: una curva che segue la spinta del corpo. Disegnala inclinata, come chi corre.', g: [['p', 'M500 820 Q560 500 700 170']] },
+      { t: 'Sopra la linea metti la testa e il busto inclinati in avanti.', g: [['c', 710, 150, 50], ['p', 'M640 210 L740 230 L640 450 L570 420 Z']] },
+      { t: 'Una gamba spinge indietro, l’altra si piega in avanti.', g: [['l', 600, 440, 470, 600], ['l', 470, 600, 380, 720], ['l', 620, 440, 740, 590], ['l', 740, 590, 700, 760]] },
+      { t: 'Le braccia si muovono al contrario delle gambe: un braccio avanti, l’altro indietro.', g: [['l', 700, 240, 800, 360], ['l', 800, 360, 880, 320], ['l', 660, 240, 560, 330], ['l', 560, 330, 540, 420]] },
+      { t: 'Ora vesti il manichino: maglietta, pantaloncini, scarpe e capelli che volano all’indietro.', g: [] }
+    ] }
+];
+/* idee per la tela libera */
+const DIS_IDEE = ['il tuo drago che vola sopra la città', 'la tua colazione preferita', 'un animale che non esiste, metà gatto e metà pesce', 'la vista dalla tua finestra', 'un albero nelle quattro stagioni', 'il tuo zaino e quello che c’è dentro', 'una casa sull’albero', 'un mostriciattolo simpatico', 'un paesaggio con un tramonto', 'il ritratto di qualcuno che ti vuole bene', 'una pianta del giardino, guardandola dal vero', 'una città nel futuro', 'il fondo del mare', 'la tua mano, guardandola mentre la disegni', 'tre frutti su un tavolo con le loro ombre'];
+
+/* ================= 🎨 DISEGNO: tela libera, impara a disegnare, il mio museo =================
+   - Tela: matita, pennarello, pastello, acquerello, sfumino, gomma, secchiello, forme (linea, rettangolo, ovale),
+     righello (linee dritte), simmetria a specchio, livelli (fino a 5), foglio di ricalco (una foto o un modello sotto),
+     annulla/ripeti. Con l'Apple Pencil il tratto segue la pressione; «solo Pencil» ignora il palmo sullo schermo.
+   - Impara: il percorso di data/domande/disegno.js (5 fasi, progetti a livelli). Ogni progetto: passi con la guida
+     tratteggiata da ricalcare («Guarda» mostra il tratto animato), poi «Ora da sola» senza guida.
+   - Il mio museo: ogni disegno salvato diventa un quadro; il museo cresce (sale, cornici, arredi, visitatori).
+   Dati: store 'disegno' (progressi, elenco dei quadri con anteprima piccola: entra nelle copie);
+   immagini grandi e livelli nel database dell'iPad 'mondo-disegni' (restano sull'iPad: per tenerle altrove, «Condividi»). */
+const DS_KEY = 'disegno', DS_W = 1200, DS_H = 900, DS_S = 1.25, DS_MAXL = 5;
+const dsState = () => { const s = Object.assign({ done: {}, museo: [], opts: {}, visti: {} }, store.get(DS_KEY, {})); if (!Array.isArray(s.museo)) s.museo = []; return s; };
+const dsSave = s => store.set(DS_KEY, s);
+const DSDB = {
+  db() { return new Promise((res, rej) => { try { const r = indexedDB.open('mondo-disegni', 1); r.onupgradeneeded = () => r.result.createObjectStore('f'); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); } }); },
+  async op(mode, fn) { const db = await this.db(); return new Promise((res, rej) => { const tx = db.transaction('f', mode), st = tx.objectStore('f'), q = fn(st); tx.oncomplete = () => res(q && q.result); tx.onerror = () => rej(tx.error); }); },
+  get(k) { return this.op('readonly', s => s.get(k)).catch(() => null); },
+  put(k, v) { return this.op('readwrite', s => s.put(v, k)).catch(() => null); },
+  del(k) { return this.op('readwrite', s => s.delete(k)).catch(() => null); }
+};
+const dsCol = k => DIS_COL[k] || k || '#222222';
+const dsFase = id => DIS_FASI.find(f => f.id === id);
+const dsProj = id => DIS_PROG.find(p => p.id === id);
+/* sblocco progressivo: la prima fase è aperta; ogni fase si apre con 3 progetti finiti della precedente; dentro la fase, un progetto alla volta */
+function dsFaseOpen(i, s) { if (i === 0) return true; const prev = DIS_PROG.filter(p => p.f === DIS_FASI[i - 1].id); return prev.filter(p => s.done[p.id]).length >= Math.min(3, prev.length); }
+function dsProjOpen(p, s) { const i = DIS_FASI.findIndex(f => f.id === p.f); if (!dsFaseOpen(i, s)) return false; const L = DIS_PROG.filter(q => q.f === p.f), k = L.indexOf(p); return k === 0 || !!s.done[L[k - 1].id] || !!s.done[p.id]; }
+const dsNext = s => DIS_PROG.find(p => !s.done[p.id] && dsProjOpen(p, s));
+
+/* ================= 🏛️ il museo che cresce ================= */
+const DS_LIV = [[0, 'La mia piccola galleria'], [3, 'La mia galleria'], [8, 'Il mio museo'], [15, 'Il grande museo'], [30, 'Il museo nazionale'], [50, 'Il museo dei capolavori']];
+const DS_ARR = [[2, '🪑', 'una panchina per i visitatori'], [4, '🪴', 'le piante all’ingresso'], [6, '💡', 'le luci per i quadri'], [9, '🗿', 'una statua'], [12, '🟥', 'il tappeto rosso'], [16, '⛲', 'la fontana'], [20, '🎻', 'la musica nelle sale'], [25, '🎟️', 'la biglietteria'], [35, '🌟', 'la sala dei capolavori illuminata'], [50, '🏛️', 'la facciata con le colonne']];
+const dsLiv = n => DS_LIV.filter(x => n >= x[0]).pop()[1];
+const dsCornice = n => n >= 15 ? 'oro' : n >= 5 ? 'argento' : 'legno';
+const dsSale = s => { const R = [{ id: 'libera', ic: '🖌️', n: 'Sala della fantasia' }].concat(DIS_FASI.map(f => ({ id: f.id, ic: f.ic, n: f.sala }))); if (s.museo.some(q => q.top)) R.push({ id: 'top', ic: '⭐', n: 'Sala dei capolavori' }); return R; };
+const dsInSala = (s, id) => id === 'top' ? s.museo.filter(q => q.top) : s.museo.filter(q => (q.sala || 'libera') === id);
+const dsVisit = n => n ? Math.round(n * 37 + Math.sqrt(n) * 113) : 0;
+
+/* ================= pagina ================= */
+let dsView = 'home', dsSala = null;
+PAGES.disegno = el => {
+  const s = dsState(), n = s.museo.length, nx = dsNext(s), ndone = Object.keys(s.done).length;
+  if (dsView === 'impara') return dsImpara(el, s);
+  if (dsView === 'museo') return dsMuseo(el, s);
+  const idea = DIS_IDEE[(new Date().getDate() + new Date().getMonth() * 31) % DIS_IDEE.length];
+  el.innerHTML = '<h1 class="v2-h1">🎨 Disegno</h1><p class="v2-sub">Disegna quello che vuoi, impara le basi un passo alla volta e riempi il tuo museo.</p>' +
+    '<div class="v2-grid">' +
+    '<button type="button" class="v2-tile" id="ds-libera"><span class="v2-ti">🖌️</span><b>Tela libera</b><small>Matita, pennarelli, pastelli, acquerello, livelli e ricalco</small></button>' +
+    '<button type="button" class="v2-tile" id="ds-impara"><span class="v2-ti">📚</span><b>Impara a disegnare</b><small>' + ndone + ' progetti su ' + DIS_PROG.length + (nx ? ' · prossimo: ' + esc(nx.n) : ' · tutti finiti!') + '</small></button>' +
+    '<button type="button" class="v2-tile" id="ds-museo"><span class="v2-ti">🏛️</span><b>' + esc(dsLiv(n)) + '</b><small>' + n + (n === 1 ? ' quadro' : ' quadri') + (n ? ' · ' + dsVisit(n) + ' visitatori' : ' · il primo disegno salvato apre il museo') + '</small></button></div>' +
+    '<div class="card ds-idea"><b>💡 Idea di oggi</b><p>Disegna ' + esc(idea) + '.</p><button type="button" class="btn small" id="ds-idea">Comincia</button></div>';
+  $('ds-libera').onclick = () => dsFree();
+  $('ds-impara').onclick = () => { dsView = 'impara'; PAGES.disegno(el); window.scrollTo(0, 0); };
+  $('ds-museo').onclick = () => { dsView = 'museo'; dsSala = null; PAGES.disegno(el); window.scrollTo(0, 0); };
+  $('ds-idea').onclick = () => dsEditor({ title: 'Idea: ' + idea });
+};
+function dsBack(el, html) { return '<button type="button" class="btn small ghost ds-back" id="ds-back">← Disegno</button>' + html; }
+function dsWireBack(el) { const b = $('ds-back'); if (b) b.onclick = () => { if (dsView === 'museo' && dsSala) { dsSala = null; } else dsView = 'home'; PAGES.disegno(el); window.scrollTo(0, 0); }; }
+
+/* ---------- 📚 impara ---------- */
+function dsImpara(el, s) {
+  const nx = dsNext(s);
+  el.innerHTML = dsBack(el, '<h1 class="v2-h1">📚 Impara a disegnare</h1><p class="v2-sub">Cinque tappe, dal più semplice al più difficile. In ogni progetto ricalchi la guida passo passo, poi lo rifai da sola.</p>' +
+    DIS_FASI.map((f, i) => {
+      const L = DIS_PROG.filter(p => p.f === f.id), dn = L.filter(p => s.done[p.id]).length, open = dsFaseOpen(i, s);
+      return '<div class="card ds-fase' + (open ? '' : ' chiusa') + '"><div class="ds-fh"><span class="ds-fi">' + f.ic + '</span><div><b>' + (i + 1) + '. ' + esc(f.n) + '</b><small>' + (open ? dn + ' su ' + L.length + ' fatti' : '🔒 si apre con 3 progetti della tappa prima') + '</small></div></div>' +
+        '<p class="ds-ft">' + esc(f.t) + '</p>' + (open ? '<div class="ds-plist">' + L.map(p => {
+          const ok = !!s.done[p.id], av = dsProjOpen(p, s), me = nx && nx.id === p.id;
+          return '<button type="button" class="ds-proj' + (ok ? ' ok' : '') + (me ? ' me' : '') + '" data-dp="' + p.id + '"' + (av ? '' : ' disabled') + '><span class="ds-pi">' + (av ? p.ic : '🔒') + '</span><span class="ds-pt"><b>' + esc(p.n) + '</b><small>' + '★'.repeat(p.lv) + '☆'.repeat(3 - p.lv) + ' · impari ' + esc(p.impara) + '</small></span><span class="ds-ps">' + (ok ? '✓' : me ? '▶' : '') + '</span></button>';
+        }).join('') + '</div>' : '') + '</div>';
+    }).join(''));
+  dsWireBack(el);
+  el.querySelectorAll('[data-dp]').forEach(b => b.onclick = async () => {
+    const pid = b.dataset.dp, bz = await DSDB.get('bozza');
+    if (bz && bz.pid === pid && bz.layers && bz.layers.length) {
+      openModal('<div style="font-size:46px">' + dsProj(pid).ic + '</div><div class="big" style="font-size:22px">Avevi cominciato questo progetto</div><button type="button" class="btn" id="dsb-c" data-focus>Continua da dove eri</button> <button type="button" class="btn ghost" id="dsb-n">Ricomincia</button>', ['#c2410c', '#ffedd5']);
+      $('dsb-c').onclick = () => { closeModal(); dsEditor({ pid, cont: bz }); };
+      $('dsb-n').onclick = () => { closeModal(); DSDB.del('bozza'); dsEditor({ pid }); };
+    } else dsEditor({ pid });
+  });
+}
+
+/* ---------- 🏛️ museo ---------- */
+function dsMuseo(el, s) {
+  const n = s.museo.length, sale = dsSale(s), arr = DS_ARR.filter(a => n >= a[0]), nextA = DS_ARR.find(a => n < a[0]);
+  if (dsSala) {
+    const sa = sale.find(x => x.id === dsSala) || sale[0], Q = dsInSala(s, sa.id).slice().reverse();
+    el.innerHTML = dsBack(el, '<h1 class="v2-h1">' + sa.ic + ' ' + esc(sa.n) + '</h1><p class="v2-sub">' + Q.length + (Q.length === 1 ? ' quadro' : ' quadri') + ' · cornici ' + dsCornice(n) + '</p>' +
+      (Q.length ? '<div class="ds-wall">' + Q.map(q => '<button type="button" class="ds-frame ' + (q.top ? 'oro top' : dsCornice(n)) + '" data-dq="' + q.id + '"><img alt="" src="' + q.th + '"><span class="ds-tag"><b>' + esc(q.t || 'Senza titolo') + '</b><small>' + esc(fmtShort(q.d)) + (q.tec ? ' · ' + esc(q.tec) : '') + '</small></span></button>').join('') + '</div>'
+        : '<div class="card"><p>Questa sala è ancora vuota: ' + (sa.id === 'libera' ? 'salva un disegno della tela libera.' : sa.id === 'top' ? 'segna un quadro come capolavoro ⭐.' : 'salva un progetto di questa tappa.') + '</p></div>'));
+    dsWireBack(el);
+    el.querySelectorAll('[data-dq]').forEach(b => b.onclick = () => dsQuadro(b.dataset.dq, el));
+    return;
+  }
+  el.innerHTML = dsBack(el, '<h1 class="v2-h1">🏛️ ' + esc(dsLiv(n)) + '</h1><p class="v2-sub">' + n + (n === 1 ? ' quadro' : ' quadri') + (n ? ' · ' + dsVisit(n) + ' visitatori immaginari · cornici ' + dsCornice(n) : '') + '</p>' +
+    '<div class="card ds-hall"><div class="ds-arr">' + (arr.length ? arr.map(a => '<span title="' + esc(a[2]) + '">' + a[1] + '</span>').join('') : '<small>L’ingresso è ancora vuoto.</small>') + '</div>' +
+    (nextA ? '<small>Con ' + nextA[0] + ' quadri arriva ' + esc(nextA[2]) + ' ' + nextA[1] + '.</small>' : '<small>Il museo è completo: continua a riempire le sale!</small>') + '</div>' +
+    '<div class="ds-sale">' + sale.map(sa => { const Q = dsInSala(s, sa.id), open = Q.length || sa.id === 'libera'; return '<button type="button" class="ds-sala' + (open ? '' : ' chiusa') + '" data-ds="' + sa.id + '"' + (open ? '' : ' disabled') + '><span class="ds-si">' + (open ? sa.ic : '🚧') + '</span><b>' + esc(sa.n) + '</b><small>' + (open ? Q.length + (Q.length === 1 ? ' quadro' : ' quadri') : 'si apre con il primo quadro') + '</small>' + (Q.length ? '<span class="ds-mini">' + Q.slice(-3).map(q => '<img alt="" src="' + q.th + '">').join('') + '</span>' : '') + '</button>'; }).join('') + '</div>');
+  dsWireBack(el);
+  el.querySelectorAll('[data-ds]').forEach(b => b.onclick = () => { dsSala = b.dataset.ds; PAGES.disegno(el); window.scrollTo(0, 0); });
+}
+async function dsQuadro(id, el) {
+  const s = dsState(), q = s.museo.find(x => x.id === id); if (!q) return;
+  const blob = await DSDB.get('img-' + id), url = blob ? URL.createObjectURL(blob) : q.th, lay = await DSDB.get('lay-' + id);
+  openModal('<div class="ds-qbig"><img alt="" src="' + url + '"></div><div class="big" style="font-size:22px">' + esc(q.t || 'Senza titolo') + '</div><p style="margin:4px 0 10px;font-weight:700">' + esc(fmtDay(q.d)) + (q.tec ? ' · ' + esc(q.tec) : '') + (blob ? '' : ' · anteprima (l’originale non è su questo iPad)') + '</p>' +
+    '<div class="ds-qbtn">' + (lay ? '<button type="button" class="btn small" id="dq-cont">✏️ Continua</button>' : '') + '<button type="button" class="btn small" id="dq-top">' + (q.top ? '☆ Non più capolavoro' : '⭐ Capolavoro') + '</button><button type="button" class="btn small" id="dq-nome">✍️ Titolo</button>' + (blob ? '<button type="button" class="btn small" id="dq-sh">📤 Condividi o salva</button>' : '') + '<button type="button" class="btn small ghost" id="dq-del">🗑️ Togli</button><button type="button" class="btn small ghost" id="dq-ok" data-focus>Chiudi</button></div>', ['#c2410c', '#ffedd5']);
+  const done = () => { closeModal(); if (blob) URL.revokeObjectURL(url); PAGES.disegno(el); };
+  $('dq-ok').onclick = done;
+  if ($('dq-cont')) $('dq-cont').onclick = () => { done(); dsEditor({ qid: id, title: q.t, sala: q.sala, pid: q.pid, cont: lay }); };
+  $('dq-top').onclick = () => { q.top = !q.top; dsSave(s); toastV2(q.top ? '⭐ Nella sala dei capolavori' : 'Tolto dai capolavori'); done(); };
+  $('dq-nome').onclick = () => { const t = prompt('Titolo del quadro:', q.t || ''); if (t == null) return; q.t = t.trim().slice(0, 60); dsSave(s); done(); };
+  if ($('dq-sh')) $('dq-sh').onclick = async () => { try { const f = new File([blob], (q.t || 'disegno').replace(/[^\wàèéìòù -]/gi, '').slice(0, 40) + '.jpg', { type: 'image/jpeg' }); if (navigator.canShare && navigator.canShare({ files: [f] })) await navigator.share({ files: [f], title: q.t || 'Il mio disegno' }); else { const a = document.createElement('a'); a.href = url; a.download = f.name; a.click(); } } catch (e) {} };
+  $('dq-del').onclick = async () => { if (!confirm('Togliere questo quadro dal museo? Non si potrà recuperare.')) return; s.museo = s.museo.filter(x => x.id !== id); dsSave(s); await DSDB.del('img-' + id); await DSDB.del('lay-' + id); toastV2('Quadro tolto'); done(); };
+}
+
+/* ================= 🖌️ la tela ================= */
+const DS_TOOLS = [['matita', '✏️', 'Matita'], ['pennarello', '🖊️', 'Pennarello'], ['pastello', '🖍️', 'Pastello'], ['acquerello', '💧', 'Acquerello'], ['sfumino', '👆', 'Sfumino'], ['gomma', '🧽', 'Gomma'], ['secchiello', '🪣', 'Secchiello'], ['linea', '📏', 'Linea'], ['rett', '▭', 'Rettangolo'], ['ovale', '◯', 'Ovale']];
+const DS_PAL = ['nero', 'grigio', 'bianco', 'marrone', 'rosa', 'rosso', 'arancione', 'giallo', 'verdechiaro', 'verde', 'azzurro', 'blu', 'viola', 'celestino'];
+let DS = null;
+function dsFree() {
+  DSDB.get('bozza').then(b => {
+    if (b && b.layers && b.layers.length && !b.pid) {
+      openModal('<div style="font-size:46px">🖌️</div><div class="big" style="font-size:22px">Hai un disegno lasciato a metà</div><p style="font-weight:700">' + esc(b.title || 'Senza titolo') + '</p><button type="button" class="btn" id="dsb-c" data-focus>Continua</button> <button type="button" class="btn ghost" id="dsb-n">Foglio nuovo</button>', ['#c2410c', '#ffedd5']);
+      $('dsb-c').onclick = () => { closeModal(); dsEditor({ title: b.title, cont: b, bozza: 1 }); };
+      $('dsb-n').onclick = () => { closeModal(); DSDB.del('bozza'); dsEditor({}); };
+    } else dsEditor({});
+  });
+}
+function dsCanvas() { const c = document.createElement('canvas'); c.width = Math.round(DS_W * DS_S); c.height = Math.round(DS_H * DS_S); return c; }
+function dsGrain(col, coarse) {
+  const c = document.createElement('canvas'); c.width = c.height = 96; const x = c.getContext('2d'), im = x.createImageData(96, 96), h = col.replace('#', ''), r = parseInt(h.slice(0, 2), 16), g = parseInt(h.slice(2, 4), 16), b = parseInt(h.slice(4, 6), 16);
+  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  for (let i = 0; i < im.data.length; i += 4) { const v = rnd(); im.data[i] = r; im.data[i + 1] = g; im.data[i + 2] = b; im.data[i + 3] = coarse ? (v < 0.28 ? 0 : 150 + v * 105) : (v < 0.12 ? 40 : 170 + v * 85); }
+  x.putImageData(im, 0, 0); return c;
+}
+async function dsEditor(o) {
+  const s = dsState(), proj = o.pid ? dsProj(o.pid) : null;
+  const ov = document.createElement('div'); ov.className = 'ds-ed'; ov.id = 'ds-ed';
+  ov.innerHTML = '<div class="ds-top"><button type="button" class="btn small ghost" id="de-x" aria-label="Chiudi">✕</button><b class="ds-ttl" id="de-ttl"></b>' +
+    '<button type="button" class="btn small ghost" id="de-un" aria-label="Annulla">↶</button><button type="button" class="btn small ghost" id="de-re" aria-label="Ripeti">↷</button><button type="button" class="btn small" id="de-sv">💾 Nel museo</button></div>' +
+    '<div class="ds-body"><div class="ds-tools" id="de-tools"></div><div class="ds-stage" id="de-stage"><div class="ds-stack" id="de-stack"></div></div><div class="ds-side" id="de-side"></div></div>' +
+    '<div class="ds-lez" id="de-lez" hidden></div>';
+  document.body.appendChild(ov); document.body.classList.add('ds-open');
+  DS = { o, proj, step: 0, solo: false, layers: [], act: 0, tool: 'matita', col: '#222222', w: 8, alpha: 1, sym: false, ruler: false, pen: !!s.opts.pen, sawPen: false, undo: [], redo: [], guide: true, ric: null, ricOp: 0.35, ricVis: true, tec: new Set(), title: o.title || (proj ? proj.n : ''), dirty: false, guided: null };
+  const stack = $('de-stack');
+  DS.bg = document.createElement('div'); DS.bg.className = 'ds-paper'; stack.appendChild(DS.bg);
+  DS.ricImg = document.createElement('img'); DS.ricImg.className = 'ds-ric'; DS.ricImg.alt = ''; DS.ricImg.hidden = true; stack.appendChild(DS.ricImg);
+  DS.tmp = dsCanvas(); DS.tmp.className = 'ds-tmp';
+  DS.guideEl = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); DS.guideEl.setAttribute('viewBox', '0 0 ' + DS_W + ' ' + DS_H); DS.guideEl.setAttribute('class', 'ds-guide');
+  if (o.cont && o.cont.layers) { for (const L of o.cont.layers) await dsAddLayer(L.n, L.blob, L.vis !== false, L.op); DS.act = Math.min(o.cont.act || 0, DS.layers.length - 1); }
+  else { dsAddLayer('Colore'); dsAddLayer('Linee'); DS.act = 1; }
+  dsRestack();
+  if (proj) { DS.tool = proj.tool; DS.col = dsCol(proj.col); DS.step = o.cont && o.cont.step != null ? Math.min(o.cont.step, proj.passi.length - 1) : 0; if (o.cont && o.cont.solo) DS.solo = true; }
+  dsTools(); dsSide(); dsTitle(); dsFit(); dsLesson();
+  window.addEventListener('resize', dsFit);
+  dsPointer(stack);
+  $('de-x').onclick = () => dsClose();
+  $('de-un').onclick = () => dsUndo(); $('de-re').onclick = () => dsRedo();
+  $('de-sv').onclick = () => dsSaveAsk();
+}
+async function dsAddLayer(n, blob, vis, op) {
+  if (DS.layers.length >= DS_MAXL) { toastV2('Al massimo ' + DS_MAXL + ' livelli'); return; }
+  const c = dsCanvas(), L = { id: 'L' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5), n: n || 'Livello ' + (DS.layers.length + 1), c, x: c.getContext('2d'), vis: vis !== false, op: op == null ? 1 : op };
+  if (blob) { try { const bm = await createImageBitmap(blob); L.x.drawImage(bm, 0, 0, c.width, c.height); } catch (e) {} }
+  c.className = 'ds-layer'; DS.layers.push(L); return L;
+}
+function dsRestack() {
+  const st = $('de-stack'); if (!st) return;
+  DS.layers.forEach(L => L.c.remove()); DS.tmp.remove(); DS.guideEl.remove();
+  DS.layers.forEach((L, i) => { L.c.style.opacity = L.vis ? L.op : 0; st.appendChild(L.c); if (i === DS.act) st.appendChild(DS.tmp); });
+  if (!DS.layers.length) st.appendChild(DS.tmp);
+  st.appendChild(DS.guideEl);
+}
+function dsFit() {
+  const st = $('de-stage'), k = $('de-stack'); if (!st || !k) return;
+  const r = st.getBoundingClientRect(), sc = Math.min(r.width / DS_W, r.height / DS_H);
+  k.style.width = DS_W * sc + 'px'; k.style.height = DS_H * sc + 'px'; DS.sc = sc;
+}
+function dsTitle() { const t = $('de-ttl'); if (t) t.textContent = DS.proj ? DS.proj.ic + ' ' + DS.proj.n + (DS.solo ? ' · da sola' : ' · passo ' + (DS.step + 1) + ' di ' + DS.proj.passi.length) : (DS.title || 'Tela libera'); }
+function dsTools() {
+  const box = $('de-tools');
+  box.innerHTML = DS_TOOLS.map(t => '<button type="button" class="ds-tb' + (DS.tool === t[0] ? ' on' : '') + '" data-dt="' + t[0] + '" title="' + t[2] + '"><span>' + t[1] + '</span><small>' + t[2] + '</small></button>').join('') +
+    '<button type="button" class="ds-tb' + (DS.ruler ? ' on' : '') + '" id="de-rul" title="Righello: linee dritte"><span>📐</span><small>Dritto</small></button>' +
+    '<button type="button" class="ds-tb' + (DS.sym ? ' on' : '') + '" id="de-sym" title="Simmetria a specchio"><span>🦋</span><small>Specchio</small></button>';
+  box.querySelectorAll('[data-dt]').forEach(b => b.onclick = () => { DS.tool = b.dataset.dt; dsTools(); dsSide(); });
+  $('de-rul').onclick = () => { DS.ruler = !DS.ruler; dsTools(); toastV2(DS.ruler ? '📐 Righello: ogni tratto viene dritto' : 'Righello spento'); };
+  $('de-sym').onclick = () => { DS.sym = !DS.sym; dsTools(); dsGuide(); toastV2(DS.sym ? '🦋 Specchio: disegni anche dall’altra parte' : 'Specchio spento'); };
+}
+function dsSide() {
+  const box = $('de-side'), shape = ['linea', 'rett', 'ovale'].includes(DS.tool);
+  box.innerHTML = '<div class="ds-pal">' + DS_PAL.map(k => '<button type="button" class="ds-sw' + (DS.col === dsCol(k) ? ' on' : '') + '" style="background:' + dsCol(k) + '" data-dc="' + k + '" aria-label="' + k + '"></button>').join('') + '<label class="ds-sw ds-pick" title="Altro colore"><input type="color" id="de-pick" value="' + DS.col + '"></label></div>' +
+    (DS.tool !== 'secchiello' ? '<label class="ds-rng">Spessore<input type="range" id="de-w" min="1" max="60" value="' + DS.w + '"></label>' : '') +
+    (shape ? '<label class="ds-chk"><input type="checkbox" id="de-fill"' + (DS.fill ? ' checked' : '') + '> forma piena</label>' : '') +
+    '<div class="ds-lay"><b>Livelli</b>' + DS.layers.map((L, i) => '<div class="ds-li' + (i === DS.act ? ' on' : '') + '"><button type="button" class="ds-ln" data-la="' + i + '">' + esc(L.n) + '</button><button type="button" class="ds-lv" data-lv="' + i + '" aria-label="Mostra o nascondi">' + (L.vis ? '👁️' : '🚫') + '</button>' + (i ? '<button type="button" class="ds-lv" data-ld="' + i + '" aria-label="Giù">⬇️</button>' : '') + '</div>').reverse().join('') +
+    '<div class="ds-lrow"><button type="button" class="btn small ghost" id="de-ladd">➕</button><button type="button" class="btn small ghost" id="de-ldel">🗑️</button><label class="ds-op">trasparenza<input type="range" id="de-lop" min="10" max="100" value="' + Math.round((DS.layers[DS.act] || { op: 1 }).op * 100) + '"></label></div></div>' +
+    '<div class="ds-lay"><b>Foglio di ricalco</b><div class="ds-lrow"><label class="btn small ghost" style="cursor:pointer">🖼️ Foto<input type="file" accept="image/*" id="de-ricf" hidden></label>' + (DS.ric ? '<button type="button" class="btn small ghost" id="de-ricv">' + (DS.ricVis ? '🙈 Nascondi' : '👁️ Mostra') + '</button><button type="button" class="btn small ghost" id="de-ricx">✕</button>' : '') + '</div>' + (DS.ric ? '<label class="ds-op">visibile<input type="range" id="de-rico" min="10" max="80" value="' + Math.round(DS.ricOp * 100) + '"></label>' : '<small>Metti sotto una foto o un disegno da ricalcare: non finisce nel quadro.</small>') + '</div>' +
+    '<label class="ds-chk"><input type="checkbox" id="de-pen"' + (DS.pen ? ' checked' : '') + '> ✍️ Solo Apple Pencil (il palmo non disegna)</label>' +
+    '<button type="button" class="btn small ghost" id="de-clr">🧹 Pulisci il livello</button>';
+  box.querySelectorAll('[data-dc]').forEach(b => b.onclick = () => { DS.col = dsCol(b.dataset.dc); dsSide(); });
+  const pk = $('de-pick'); if (pk) pk.oninput = () => { DS.col = pk.value; };
+  const w = $('de-w'); if (w) w.oninput = () => { DS.w = +w.value; };
+  const fi = $('de-fill'); if (fi) fi.onchange = () => { DS.fill = fi.checked; };
+  box.querySelectorAll('[data-la]').forEach(b => b.onclick = () => { DS.act = +b.dataset.la; dsRestack(); dsSide(); });
+  box.querySelectorAll('[data-lv]').forEach(b => b.onclick = () => { const L = DS.layers[+b.dataset.lv]; L.vis = !L.vis; dsRestack(); dsSide(); });
+  box.querySelectorAll('[data-ld]').forEach(b => b.onclick = () => { const i = +b.dataset.ld, L = DS.layers.splice(i, 1)[0]; DS.layers.splice(i - 1, 0, L); if (DS.act === i) DS.act = i - 1; else if (DS.act === i - 1) DS.act = i; dsRestack(); dsSide(); dsDirty(); });
+  $('de-ladd').onclick = async () => { const L = await dsAddLayer(); if (L) { DS.act = DS.layers.length - 1; dsRestack(); dsSide(); } };
+  $('de-ldel').onclick = () => { if (DS.layers.length < 2) return toastV2('Serve almeno un livello'); if (!confirm('Togliere il livello «' + DS.layers[DS.act].n + '» con quello che c’è disegnato?')) return; const L = DS.layers.splice(DS.act, 1)[0]; L.c.remove(); DS.act = Math.max(0, DS.act - 1); DS.undo = DS.undo.filter(u => u.L !== L); dsRestack(); dsSide(); dsDirty(); };
+  const lo = $('de-lop'); if (lo) lo.oninput = () => { const L = DS.layers[DS.act]; L.op = lo.value / 100; dsRestack(); };
+  $('de-ricf').onchange = e => { const f = e.target.files && e.target.files[0]; if (!f) return; const u = URL.createObjectURL(f); DS.ric = u; DS.ricImg.src = u; DS.ricImg.hidden = false; DS.ricVis = true; DS.ricImg.style.opacity = DS.ricOp; dsSide(); };
+  if ($('de-ricv')) $('de-ricv').onclick = () => { DS.ricVis = !DS.ricVis; DS.ricImg.hidden = !DS.ricVis; dsSide(); };
+  if ($('de-ricx')) $('de-ricx').onclick = () => { DS.ric = null; DS.ricImg.hidden = true; DS.ricImg.removeAttribute('src'); dsSide(); };
+  const ro = $('de-rico'); if (ro) ro.oninput = () => { DS.ricOp = ro.value / 100; DS.ricImg.style.opacity = DS.ricOp; };
+  $('de-pen').onchange = e => { DS.pen = e.target.checked; const s = dsState(); s.opts.pen = DS.pen ? 1 : 0; dsSave(s); };
+  $('de-clr').onclick = () => { const L = DS.layers[DS.act]; if (!confirm('Cancellare tutto il livello «' + L.n + '»?')) return; const u = dsSnapBefore(L); L.x.clearRect(0, 0, L.c.width, L.c.height); dsPushUndo(u, L, 0, 0, L.c.width, L.c.height); };
+}
+
+/* ---------- annulla / ripeti: solo il rettangolo toccato ---------- */
+function dsSnapBefore(L) { const c = document.createElement('canvas'); c.width = L.c.width; c.height = L.c.height; c.getContext('2d').drawImage(L.c, 0, 0); return c; }
+function dsPushUndo(before, L, x, y, w, h) {
+  x = Math.max(0, Math.floor(x)); y = Math.max(0, Math.floor(y)); w = Math.min(L.c.width - x, Math.ceil(w)); h = Math.min(L.c.height - y, Math.ceil(h)); if (w <= 0 || h <= 0) return;
+  const b = before.getContext('2d').getImageData(x, y, w, h), a = L.x.getImageData(x, y, w, h);
+  DS.undo.push({ L, x, y, b, a }); if (DS.undo.length > 30) DS.undo.shift(); DS.redo = []; dsDirty();
+}
+function dsUndo() { const u = DS.undo.pop(); if (!u) return toastV2('Niente da annullare'); u.L.x.putImageData(u.b, u.x, u.y); DS.redo.push(u); dsDirty(); }
+function dsRedo() { const u = DS.redo.pop(); if (!u) return; u.L.x.putImageData(u.a, u.x, u.y); DS.undo.push(u); dsDirty(); }
+function dsDirty() { DS.dirty = true; clearTimeout(DS.bt); DS.bt = setTimeout(dsBozza, 1500); }
+async function dsLayersData() { const out = []; for (const L of DS.layers) { const b = await new Promise(r => L.c.toBlob(r, 'image/png')); out.push({ n: L.n, vis: L.vis, op: L.op, blob: b }); } return out; }
+async function dsBozza() { if (!DS || DS.saving) return; try { await DSDB.put('bozza', { title: DS.title, pid: DS.proj ? DS.proj.id : '', step: DS.step, solo: DS.solo ? 1 : 0, act: DS.act, layers: await dsLayersData(), at: Date.now() }); } catch (e) {} }
+
+/* ---------- tratti ---------- */
+function dsPointer(stack) {
+  let cur = null;
+  const pt = e => { const r = stack.getBoundingClientRect(); return { x: (e.clientX - r.left) / r.width * DS_W * DS_S, y: (e.clientY - r.top) / r.height * DS_H * DS_S, p: e.pointerType === 'pen' ? (e.pressure || 0.5) : 0.5 }; };
+  stack.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'pen') DS.sawPen = true;
+    if (DS.pen && DS.sawPen && e.pointerType === 'touch') return;
+    const L = DS.layers[DS.act]; if (!L) return; if (!L.vis) return toastV2('Questo livello è nascosto: toccalo con 👁️ per vederlo');
+    e.preventDefault(); try { stack.setPointerCapture(e.pointerId); } catch (x) {}
+    const P = pt(e);
+    if (DS.tool === 'secchiello') { dsFill(L, P.x, P.y); DS.tec.add('secchiello'); return; }
+    cur = { id: e.pointerId, L, pts: [P], before: dsSnapBefore(L), box: [P.x, P.y, P.x, P.y], last: P };
+    DS.tec.add(DS.tool);
+    dsStrokeStart(cur);
+  });
+  stack.addEventListener('pointermove', e => {
+    if (!cur || e.pointerId !== cur.id) return; e.preventDefault();
+    const evs = e.getCoalescedEvents ? e.getCoalescedEvents() : [e];
+    for (const ev of (evs.length ? evs : [e])) { const P = pt(ev); dsStrokeMove(cur, P); }
+  });
+  const end = e => { if (!cur || e.pointerId !== cur.id) return; dsStrokeEnd(cur); cur = null; };
+  stack.addEventListener('pointerup', end); stack.addEventListener('pointercancel', end);
+  stack.addEventListener('touchmove', e => { if (cur) e.preventDefault(); }, { passive: false });
+}
+const dsShape = () => ['linea', 'rett', 'ovale'].includes(DS.tool) || (DS.ruler && ['matita', 'pennarello', 'pastello', 'acquerello', 'gomma'].includes(DS.tool));
+function dsStyle(ctx, P) {
+  const t = DS.tool, w = DS.w * DS_S, p = P ? P.p : 0.5;
+  ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+  if (t === 'matita') { ctx.lineWidth = Math.max(1, w * 0.45 * (0.3 + 1.4 * p)); }
+  else if (t === 'pastello') { ctx.lineWidth = w * (0.8 + 0.4 * p); }
+  else if (t === 'acquerello') { ctx.strokeStyle = DS.col; ctx.lineWidth = w * 1.6 * (0.6 + 0.6 * p); }
+  else if (t === 'gomma') { ctx.strokeStyle = '#000'; ctx.lineWidth = w * 1.4; }
+  else { ctx.strokeStyle = DS.col; ctx.lineWidth = w * (0.45 + 1.0 * p); }
+  if (t === 'matita' || t === 'pastello') { const key = DS.col + t; if (!DS.pat || DS.patK !== key) { DS.pat = ctx.createPattern(dsGrain(DS.col, t === 'pastello'), 'repeat'); DS.patK = key; } ctx.strokeStyle = DS.pat; }
+  if (['linea', 'rett', 'ovale'].includes(t)) { ctx.strokeStyle = DS.col; ctx.fillStyle = DS.col; ctx.lineWidth = w * 0.8; }
+}
+const DS_BUF = { matita: 0.85, pastello: 0.92, acquerello: 0.35, pennarello: 1, linea: 1, rett: 1, ovale: 1 };
+function dsStrokeStart(c) {
+  const t = DS.tool, T = DS.tmp, x = T.getContext('2d'); x.clearRect(0, 0, T.width, T.height);
+  T.style.opacity = DS_BUF[t] != null ? DS_BUF[t] : 1; T.style.mixBlendMode = t === 'acquerello' ? 'multiply' : 'normal';
+  c.buf = DS_BUF[t] != null && t !== 'gomma';
+  if (t === 'sfumino') { c.br = Math.max(6, DS.w * DS_S); return; }
+  if (!dsShape()) { const ctx = c.buf ? x : c.L.x; ctx.save(); if (t === 'gomma') ctx.globalCompositeOperation = 'destination-out'; dsStyle(ctx, c.last); dsDot(ctx, c.last); ctx.restore(); }
+}
+function dsDot(ctx, P) { ctx.beginPath(); ctx.moveTo(P.x, P.y); ctx.lineTo(P.x + 0.1, P.y); ctx.stroke(); if (DS.sym) { const m = DS_W * DS_S; ctx.beginPath(); ctx.moveTo(m - P.x, P.y); ctx.lineTo(m - P.x - 0.1, P.y); ctx.stroke(); } }
+function dsGrow(c, P, r) { const b = c.box; b[0] = Math.min(b[0], P.x - r); b[1] = Math.min(b[1], P.y - r); b[2] = Math.max(b[2], P.x + r); b[3] = Math.max(b[3], P.y + r); if (DS.sym) { const m = DS_W * DS_S; b[0] = Math.min(b[0], m - P.x - r); b[2] = Math.max(b[2], m - P.x + r); } }
+function dsStrokeMove(c, P) {
+  const t = DS.tool, r = DS.w * DS_S * 2 + 4;
+  dsGrow(c, P, r);
+  if (t === 'sfumino') { dsSmudge(c, c.last, P); c.last = P; return; }
+  if (dsShape()) { c.end = P; dsShapeDraw(c, DS.tmp.getContext('2d'), true); return; }
+  const ctx = c.buf ? DS.tmp.getContext('2d') : c.L.x; ctx.save(); if (t === 'gomma') ctx.globalCompositeOperation = 'destination-out'; dsStyle(ctx, P);
+  const a = c.last, mx = (a.x + P.x) / 2, my = (a.y + P.y) / 2;
+  ctx.beginPath(); ctx.moveTo(c.mid ? c.mid.x : a.x, c.mid ? c.mid.y : a.y); ctx.quadraticCurveTo(a.x, a.y, mx, my); ctx.stroke();
+  if (DS.sym) { const m = DS_W * DS_S; ctx.beginPath(); ctx.moveTo(m - (c.mid ? c.mid.x : a.x), c.mid ? c.mid.y : a.y); ctx.quadraticCurveTo(m - a.x, a.y, m - mx, my); ctx.stroke(); }
+  ctx.restore(); c.mid = { x: mx, y: my }; c.last = P; c.pts.push(P);
+}
+function dsShapeDraw(c, ctx, preview) {
+  const T = DS.tmp; if (preview) ctx.clearRect(0, 0, T.width, T.height);
+  const a = c.pts[0], b = c.end || a, t = DS.tool; ctx.save(); if (t === 'gomma' && !preview) ctx.globalCompositeOperation = 'destination-out'; dsStyle(ctx, b);
+  const one = (ax, bx) => { ctx.beginPath();
+    if (t === 'rett') { ctx.rect(Math.min(ax, bx), Math.min(a.y, b.y), Math.abs(bx - ax), Math.abs(b.y - a.y)); }
+    else if (t === 'ovale') { ctx.ellipse((ax + bx) / 2, (a.y + b.y) / 2, Math.abs(bx - ax) / 2 || 1, Math.abs(b.y - a.y) / 2 || 1, 0, 0, Math.PI * 2); }
+    else { ctx.moveTo(ax, a.y); ctx.lineTo(bx, b.y); }
+    if (DS.fill && (t === 'rett' || t === 'ovale')) ctx.fill(); else ctx.stroke(); };
+  one(a.x, b.x); if (DS.sym) { const m = DS_W * DS_S; one(m - a.x, m - b.x); }
+  ctx.restore();
+}
+function dsSmudge(c, a, b) {
+  const L = c.L, r = c.br, d = Math.hypot(b.x - a.x, b.y - a.y), n = Math.max(1, Math.ceil(d / (r / 3)));
+  const B = DS.smB || (DS.smB = document.createElement('canvas')); B.width = B.height = Math.ceil(r * 2); const bx = B.getContext('2d');
+  for (let i = 1; i <= n; i++) {
+    const px = a.x + (b.x - a.x) * (i - 1) / n, py = a.y + (b.y - a.y) * (i - 1) / n, qx = a.x + (b.x - a.x) * i / n, qy = a.y + (b.y - a.y) * i / n;
+    bx.clearRect(0, 0, B.width, B.height); bx.save(); bx.beginPath(); bx.arc(r, r, r, 0, Math.PI * 2); bx.clip(); bx.drawImage(L.c, px - r, py - r, r * 2, r * 2, 0, 0, r * 2, r * 2); bx.restore();
+    const g = bx.createRadialGradient(r, r, r * 0.2, r, r, r); g.addColorStop(0, 'rgba(0,0,0,1)'); g.addColorStop(1, 'rgba(0,0,0,0)'); bx.globalCompositeOperation = 'destination-in'; bx.fillStyle = g; bx.fillRect(0, 0, B.width, B.height); bx.globalCompositeOperation = 'source-over';
+    L.x.save(); L.x.globalAlpha = 0.55; L.x.drawImage(B, qx - r, qy - r); L.x.restore();
+  }
+}
+function dsStrokeEnd(c) {
+  const t = DS.tool, T = DS.tmp, L = c.L;
+  if (dsShape()) { T.getContext('2d').clearRect(0, 0, T.width, T.height); if (c.end) { if (t === 'gomma') dsShapeDraw(c, L.x, false); else if (c.buf || ['linea', 'rett', 'ovale'].includes(t)) { const X = T.getContext('2d'); dsShapeDraw(c, X, false); dsCommitBuf(L, t); } } }
+  else if (c.buf) dsCommitBuf(L, t);
+  const b = c.box, pad = DS.w * DS_S * 3 + 6; dsPushUndo(c.before, L, b[0] - pad, b[1] - pad, b[2] - b[0] + pad * 2, b[3] - b[1] + pad * 2);
+}
+function dsCommitBuf(L, t) { const T = DS.tmp; L.x.save(); L.x.globalAlpha = DS_BUF[t] != null ? DS_BUF[t] : 1; if (t === 'acquerello') L.x.globalCompositeOperation = 'multiply'; L.x.drawImage(T, 0, 0); L.x.restore(); T.getContext('2d').clearRect(0, 0, T.width, T.height); }
+
+/* ---------- 🪣 secchiello: riempie l'area chiusa guardando tutti i livelli visibili ---------- */
+function dsFill(L, x0, y0) {
+  const W = L.c.width, H = L.c.height, comp = document.createElement('canvas'); comp.width = W; comp.height = H; const cx = comp.getContext('2d');
+  cx.fillStyle = '#fff'; cx.fillRect(0, 0, W, H); DS.layers.forEach(Q => { if (Q.vis) { cx.globalAlpha = Q.op; cx.drawImage(Q.c, 0, 0); } }); cx.globalAlpha = 1;
+  const src = cx.getImageData(0, 0, W, H).data, sx = Math.floor(x0), sy = Math.floor(y0); if (sx < 0 || sy < 0 || sx >= W || sy >= H) return;
+  const i0 = (sy * W + sx) * 4, R = src[i0], G = src[i0 + 1], Bc = src[i0 + 2], tol = 60, mask = new Uint8Array(W * H);
+  const same = i => { const k = i * 4; return Math.abs(src[k] - R) + Math.abs(src[k + 1] - G) + Math.abs(src[k + 2] - Bc) <= tol; };
+  const stack = [sx, sy]; let minx = sx, maxx = sx, miny = sy, maxy = sy, cnt = 0;
+  while (stack.length) {
+    let y = stack.pop(), x = stack.pop(), i = y * W + x;
+    while (x >= 0 && !mask[i] && same(i)) { x--; i--; } x++; i++;
+    let up = false, dn = false;
+    while (x < W && !mask[i] && same(i)) {
+      mask[i] = 1; cnt++; if (x < minx) minx = x; if (x > maxx) maxx = x; if (y < miny) miny = y; if (y > maxy) maxy = y;
+      if (y > 0) { const j = i - W; if (!mask[j] && same(j)) { if (!up) { stack.push(x, y - 1); up = true; } } else up = false; }
+      if (y < H - 1) { const j = i + W; if (!mask[j] && same(j)) { if (!dn) { stack.push(x, y + 1); dn = true; } } else dn = false; }
+      x++; i++;
+    }
+  }
+  if (!cnt) return;
+  const before = dsSnapBefore(L), x1 = Math.max(0, minx - 2), y1 = Math.max(0, miny - 2), w = Math.min(W, maxx + 3) - x1, h = Math.min(H, maxy + 3) - y1;
+  const im = L.x.getImageData(x1, y1, w, h), d = im.data, hx = DS.col.replace('#', ''), r = parseInt(hx.slice(0, 2), 16), g = parseInt(hx.slice(2, 4), 16), b = parseInt(hx.slice(4, 6), 16);
+  for (let yy = 0; yy < h; yy++) for (let xx = 0; xx < w; xx++) {
+    const X = x1 + xx, Y = y1 + yy, m = mask[Y * W + X] || (X > 0 && mask[Y * W + X - 1]) || (X < W - 1 && mask[Y * W + X + 1]) || (Y > 0 && mask[(Y - 1) * W + X]) || (Y < H - 1 && mask[(Y + 1) * W + X]);
+    if (m) { const k = (yy * w + xx) * 4; d[k] = r; d[k + 1] = g; d[k + 2] = b; d[k + 3] = 255; }
+  }
+  L.x.putImageData(im, x1, y1); dsPushUndo(before, L, x1, y1, w, h);
+  if (cnt > W * H * 0.6) toastV2('Hai colorato quasi tutto il foglio: per colorare una parte, chiudi bene i contorni');
+}
+
+/* ---------- 📚 lezione: guida, «Guarda», passi, «Ora da sola» ---------- */
+function dsLesson() {
+  const box = $('de-lez'); if (!DS.proj) { box.hidden = true; dsGuide(); return; }
+  const P = DS.proj, st = P.passi[DS.step];
+  box.hidden = false;
+  if (DS.solo) {
+    box.innerHTML = '<div class="ds-lt"><b>🌟 Ora da sola</b><p>Rifai «' + esc(P.n) + '» senza la guida, come ti viene: guarda il tuo disegno piccolo qui accanto se ti serve. Quando hai finito, mettilo nel museo.</p></div>' + (DS.guided ? '<img class="ds-ref" alt="" src="' + DS.guided + '">' : '') +
+      '<div class="ds-lb"><button type="button" class="btn small ghost" id="dl-pr">← Torna alla guida</button><button type="button" class="btn small" id="dl-fin">💾 Nel museo</button></div>';
+    $('dl-pr').onclick = () => { DS.solo = false; DS.step = P.passi.length - 1; dsTitle(); dsLesson(); };
+    $('dl-fin').onclick = () => dsSaveAsk();
+    dsGuide(); return;
+  }
+  const tool = st.tool || P.tool, col = st.col || P.col;
+  DS.tool = tool; DS.col = dsCol(col); dsTools(); dsSide();
+  box.innerHTML = '<div class="ds-lt"><b>' + P.ic + ' Passo ' + (DS.step + 1) + ' di ' + P.passi.length + '</b><p>' + esc(st.t) + '</p><small>Strumento: ' + esc((DS_TOOLS.find(x => x[0] === tool) || ['', '', tool])[2]) + ' · colore ' + esc(col.replace('verdechiaro', 'verde chiaro').replace(/^(blu|g)(\d)$/, (m, a, n) => (a === 'g' ? 'grigio ' : 'blu ') + n)) + '</small></div>' +
+    '<div class="ds-lb"><button type="button" class="btn small ghost" id="dl-pr"' + (DS.step ? '' : ' disabled') + '>←</button>' + (st.g && st.g.some(g => !['dot', 'txt', 'sun'].includes(g[0])) ? '<button type="button" class="btn small ghost" id="dl-see">▶ Guarda</button>' : '') +
+    '<button type="button" class="btn small ghost" id="dl-gd">' + (DS.guide ? '🙈 Guida' : '👁️ Guida') + '</button><button type="button" class="btn small" id="dl-nx">' + (DS.step < P.passi.length - 1 ? 'Fatto →' : 'Ora da sola →') + '</button></div>';
+  $('dl-pr').onclick = () => { if (DS.step) { DS.step--; dsTitle(); dsLesson(); } };
+  if ($('dl-see')) $('dl-see').onclick = () => dsGuide(true);
+  $('dl-gd').onclick = () => { DS.guide = !DS.guide; dsLesson(); };
+  $('dl-nx').onclick = () => { if (DS.step < P.passi.length - 1) { DS.step++; dsTitle(); dsLesson(); dsDirty(); } else dsToSolo(); };
+  dsGuide();
+}
+function dsGuideHtml(prims, cls, color) {
+  const sw = 'stroke="' + color + '"';
+  return prims.map(g => {
+    const k = g[0];
+    if (k === 'l') return '<line class="' + cls + '" ' + sw + ' x1="' + g[1] + '" y1="' + g[2] + '" x2="' + g[3] + '" y2="' + g[4] + '"/>';
+    if (k === 'c') return '<circle class="' + cls + '" ' + sw + ' cx="' + g[1] + '" cy="' + g[2] + '" r="' + g[3] + '"/>';
+    if (k === 'e') return '<ellipse class="' + cls + '" ' + sw + ' cx="' + g[1] + '" cy="' + g[2] + '" rx="' + g[3] + '" ry="' + g[4] + '"/>';
+    if (k === 'r') return '<rect class="' + cls + '" ' + sw + ' x="' + g[1] + '" y="' + g[2] + '" width="' + g[3] + '" height="' + g[4] + '"/>';
+    if (k === 'p') return '<path class="' + cls + '" ' + sw + ' d="' + g[1] + '"/>';
+    if (cls !== 'ds-g') return '';
+    if (k === 'dot') return '<g class="ds-dot"><circle cx="' + g[1] + '" cy="' + g[2] + '" r="22" fill="' + g[3] + '" stroke="#fff" stroke-width="5"/><text x="' + g[1] + '" y="' + (g[2] + 52) + '" text-anchor="middle">' + esc(g[4] || '') + '</text></g>';
+    if (k === 'txt') return '<text class="ds-gt" x="' + g[1] + '" y="' + g[2] + '" text-anchor="middle">' + esc(g[3]) + '</text>';
+    if (k === 'sun') return '<g class="ds-sun"><circle cx="' + g[1] + '" cy="' + g[2] + '" r="34" fill="#f6d000"/>' + [0, 45, 90, 135, 180, 225, 270, 315].map(a => { const r = a * Math.PI / 180; return '<line x1="' + (g[1] + Math.cos(r) * 46) + '" y1="' + (g[2] + Math.sin(r) * 46) + '" x2="' + (g[1] + Math.cos(r) * 66) + '" y2="' + (g[2] + Math.sin(r) * 66) + '" stroke="#f6a800" stroke-width="7" stroke-linecap="round"/>'; }).join('') + '<text x="' + g[1] + '" y="' + (g[2] + 104) + '" text-anchor="middle">luce</text></g>';
+    return '';
+  }).join('');
+}
+function dsGuide(anim) {
+  const G = DS.guideEl; let h = '';
+  if (DS.sym) h += '<line x1="600" y1="0" x2="600" y2="900" class="ds-axis"/>';
+  if (DS.proj && !DS.solo && DS.guide) {
+    const P = DS.proj, prev = P.passi.slice(0, DS.step).flatMap(s => s.g || []);
+    h += dsGuideHtml(prev, 'ds-gp', '#9aa7b8') + dsGuideHtml(P.passi[DS.step].g || [], 'ds-g', '#2563eb');
+  }
+  G.innerHTML = h;
+  if (anim) G.querySelectorAll('.ds-g').forEach((e, i) => { try { const len = e.getTotalLength(); e.style.strokeDasharray = len; e.style.strokeDashoffset = len; e.getBoundingClientRect(); e.style.transition = 'stroke-dashoffset 1.1s ease ' + (i * 0.9) + 's'; e.style.strokeDashoffset = 0; setTimeout(() => { e.style.transition = ''; e.style.strokeDasharray = ''; e.style.strokeDashoffset = ''; }, 1200 + i * 900); } catch (x) {} });
+}
+function dsFlatten(maxW) {
+  const W = DS.layers[0] ? DS.layers[0].c.width : DS_W * DS_S, H = DS.layers[0] ? DS.layers[0].c.height : DS_H * DS_S, k = maxW ? Math.min(1, maxW / W) : 1;
+  const c = document.createElement('canvas'); c.width = Math.round(W * k); c.height = Math.round(H * k); const x = c.getContext('2d');
+  x.fillStyle = '#fff'; x.fillRect(0, 0, c.width, c.height); DS.layers.forEach(L => { if (L.vis) { x.globalAlpha = L.op; x.drawImage(L.c, 0, 0, c.width, c.height); } }); x.globalAlpha = 1; return c;
+}
+async function dsToSolo() {
+  const guided = dsFlatten(480).toDataURL('image/jpeg', 0.8);
+  openModal('<div style="font-size:46px">🌟</div><div class="big" style="font-size:22px">Bravissima, hai finito la guida!</div><p style="font-weight:700">Adesso lo rifai da sola, su un foglio nuovo. Vuoi mettere nel museo anche questo disegno fatto con la guida?</p><button type="button" class="btn" id="dg-si" data-focus>Sì, mettilo nel museo</button> <button type="button" class="btn ghost" id="dg-no">No, vado avanti</button>', ['#c2410c', '#ffedd5']);
+  const go = async keep => { closeModal(); if (keep) await dsStore(DS.proj.n + ' (con la guida)'); DS.guided = guided; DS.solo = true; for (const L of DS.layers) { L.x.clearRect(0, 0, L.c.width, L.c.height); } DS.undo = []; DS.redo = []; DS.tec = new Set(); dsTitle(); dsLesson(); dsDirty(); };
+  $('dg-si').onclick = () => go(true); $('dg-no').onclick = () => go(false);
+}
+
+/* ---------- 💾 salvare nel museo ---------- */
+function dsSaveAsk() {
+  const def = DS.proj ? DS.proj.n : (DS.title || ''), s = dsState();
+  const sale = [['libera', '🖌️ Sala della fantasia']].concat(DIS_FASI.map(f => [f.id, f.ic + ' ' + f.sala])), defS = DS.o.sala || (DS.proj ? DS.proj.f : 'libera');
+  openModal('<div style="font-size:46px">🏛️</div><div class="big" style="font-size:22px">Nel museo</div><label class="ds-fl">Titolo del quadro<input id="dsv-t" maxlength="60" value="' + esc(def) + '"></label><label class="ds-fl">In quale sala<select id="dsv-s">' + sale.map(x => '<option value="' + x[0] + '"' + (x[0] === defS ? ' selected' : '') + '>' + esc(x[1]) + '</option>').join('') + '</select></label>' +
+    '<button type="button" class="btn" id="dsv-ok" data-focus>Appendi il quadro</button> <button type="button" class="btn ghost" id="dsv-no">Non ancora</button>', ['#c2410c', '#ffedd5']);
+  $('dsv-no').onclick = closeModal;
+  $('dsv-ok').onclick = async () => { const t = $('dsv-t').value.trim() || 'Senza titolo', sa = $('dsv-s').value; closeModal(); const before = s.museo.length; await dsStore(t, sa); if (DS.proj && DS.solo) { const s2 = dsState(); s2.done[DS.proj.id] = todayIso(); dsSave(s2); DSDB.del('bozza'); DS.dirty = false; } dsCelebrate(before); };
+}
+const DS_TEC = { matita: 'matita', pennarello: 'pennarelli', pastello: 'pastelli', acquerello: 'acquerello', sfumino: 'sfumino', secchiello: 'colori pieni', linea: 'righello', rett: 'forme', ovale: 'forme', gomma: '' };
+async function dsStore(t, sala) {
+  DS.saving = true;
+  const s = dsState(), id = DS.o.qid && !/con la guida/.test(t) ? DS.o.qid : 'q' + Date.now().toString(36);
+  const big = dsFlatten(), th = dsFlatten(320).toDataURL('image/jpeg', 0.72), blob = await new Promise(r => big.toBlob(r, 'image/jpeg', 0.9));
+  await DSDB.put('img-' + id, blob); await DSDB.put('lay-' + id, { layers: await dsLayersData(), act: DS.act, step: DS.step });
+  const tec = [...new Set([...DS.tec].map(k => DS_TEC[k]).filter(Boolean))].join(', ');
+  const old = s.museo.find(q => q.id === id), q = { id, t, d: todayIso(), sala: sala || (DS.proj ? DS.proj.f : 'libera'), tec, th, pid: DS.proj ? DS.proj.id : '' };
+  if (old) Object.assign(old, q, { top: old.top }); else s.museo.push(q);
+  dsSave(s); DS.o.qid = id; DS.saving = false; DS.dirty = false;
+  if (!DS.proj) DSDB.del('bozza');
+  return q;
+}
+function dsCelebrate(before) {
+  const s = dsState(), n = s.museo.length, arr = DS_ARR.find(a => a[0] > before && a[0] <= n), liv = dsLiv(before) !== dsLiv(n) ? dsLiv(n) : '';
+  const extra = (liv ? '<p style="font-weight:800">🎉 Ora è «' + esc(liv) + '»!</p>' : '') + (arr ? '<p style="font-weight:800">' + arr[1] + ' Nel museo arriva ' + esc(arr[2]) + '!</p>' : '');
+  openModal('<div style="font-size:52px">🖼️</div><div class="big" style="font-size:22px">Quadro appeso!</div><p style="font-weight:700">Il museo ha ' + n + (n === 1 ? ' quadro' : ' quadri') + '.</p>' + extra + '<button type="button" class="btn" id="dc-m" data-focus>Vai al museo</button> <button type="button" class="btn ghost" id="dc-c">Continua a disegnare</button>', ['#c2410c', '#ffedd5']);
+  $('dc-m').onclick = () => { closeModal(); dsClose(true); dsView = 'museo'; dsSala = null; go('disegno'); };
+  $('dc-c').onclick = closeModal;
+}
+async function dsClose(force) {
+  if (!DS) return;
+  if (!force && DS.dirty && !DS.proj) { await dsBozza(); toastV2('Disegno conservato: lo ritrovi in «Tela libera»'); }
+  else if (!force && DS.dirty && DS.proj) await dsBozza();
+  window.removeEventListener('resize', dsFit);
+  const ov = $('ds-ed'); if (ov) ov.remove(); document.body.classList.remove('ds-open');
+  if (DS.ric) try { URL.revokeObjectURL(DS.ric); } catch (e) {}
+  DS = null; if (current === 'disegno') PAGES.disegno($('p-disegno'));
+}
+if (!$('p-disegno')) { const s = document.createElement('section'); s.id = 'p-disegno'; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); }
+
 /* ================= SALVATAGGIO: account Claude (remoto) + browser (locale) + copia di sicurezza =================
    SYNC.phase: 'start' | 'no-claude' | 'no-db' | 'no-user' | 'denied' | 'error' | 'ok'  */
 const SYNC = { phase: 'start', detail: '', lastOk: null, uid: null, opens: 0, localPersist: null };
@@ -11501,7 +12271,7 @@ renderTabs = function () {
   const open = tabsOpen(), box = $('tabs'); box.innerHTML = '';
   const T = [['home', '🏠', 'Impara'], open.giochi && ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], open.esplora && ['esplora', '🔭', 'Esplora'], ['io', '🐉', 'Io']].filter(Boolean);
   TABS.length = 0; T.forEach(t => TABS.push([t[0], t[1], t[2], 'var(--c4-soft)']));
-  const sub = { mate: 'esplora', scienze: 'esplora', scopri: 'esplora', sport: 'esplora', routine: 'esplora', metodo: 'esplora', teatro: 'esplora' };
+  const sub = { mate: 'esplora', scienze: 'esplora', scopri: 'esplora', sport: 'esplora', routine: 'esplora', metodo: 'esplora', teatro: 'esplora', disegno: 'esplora' };
   TABS.forEach(t => {
     const b = document.createElement('button'); b.type = 'button'; b.className = 'tab'; b.dataset.t = t[0];
     if (t[0] === current || sub[current] === t[0]) b.setAttribute('aria-current', 'page');
@@ -11565,7 +12335,7 @@ function openUnits() {
 }
 
 /* ---------- 🔭 ESPLORA: gli strumenti di prima, tutti insieme ---------- */
-const EXPLORE = [['mate', '🔢', 'Officina dei numeri', 'Tabelline turbo, frazioni, orologio, problemi'], ['scienze', '🔬', 'Laboratorio', 'Esperimenti e quiz di scienze'], ['scopri', '🌍', 'Scopri il mondo', 'Storia, geografia, arte, lingue e curiosità'], ['sport', '🤸‍♀️', 'Pausa movimento', 'Pattinaggio, aerea, nuoto: muoviti!'], ['vita', '🧼', 'Io e il mio corpo', 'Armadio del meteo, timer di mani e denti'], ['teatro', '🎭', 'Teatro', 'La mia parte e i segreti del palco'], ['routine', '☀️', 'Le mie routine', 'Mattino, compiti, sera e borse dello sport'], ['metodo', '🧠', 'Il mio metodo', 'Trucchi per studiare e concentrarsi']];
+const EXPLORE = [['mate', '🔢', 'Officina dei numeri', 'Tabelline turbo, frazioni, orologio, problemi'], ['scienze', '🔬', 'Laboratorio', 'Esperimenti e quiz di scienze'], ['scopri', '🌍', 'Scopri il mondo', 'Storia, geografia, arte, lingue e curiosità'], ['sport', '🤸‍♀️', 'Pausa movimento', 'Pattinaggio, aerea, nuoto: muoviti!'], ['vita', '🧼', 'Io e il mio corpo', 'Armadio del meteo, timer di mani e denti'], ['teatro', '🎭', 'Teatro', 'La mia parte e i segreti del palco'], ['disegno', '🎨', 'Disegno', 'Tela libera, impara a disegnare, il mio museo'], ['routine', '☀️', 'Le mie routine', 'Mattino, compiti, sera e borse dello sport'], ['metodo', '🧠', 'Il mio metodo', 'Trucchi per studiare e concentrarsi']];
 PAGES.esplora = el => {
   el.innerHTML = '<h1 class="v2-h1">🔭 Esplora</h1><p class="v2-sub">Gli strumenti per allenarti e scoprire di più.</p><div class="v2-grid">' +
     EXPLORE.map(e => '<button type="button" class="v2-tile" data-go="' + e[0] + '"><span class="v2-ti">' + e[1] + '</span><b>' + esc(e[2]) + '</b><small>' + esc(e[3]) + '</small></button>').join('') + '</div>';

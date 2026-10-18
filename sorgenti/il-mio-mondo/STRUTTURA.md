@@ -19,7 +19,8 @@ app/
 │   │                   musica, microfono (mic: registra e riascolta), guscio dell'app (shell), avvio (boot),
 │   │                   applicatore delle correzioni
 │   ├── sezioni/        routine, giochi, matematica, scienze, sport, scopri, diario, orologio, schede,
-│   │                   teatro (la mia parte), festa (compleanno: vigilia, festa, 10 sorprese, capsula)
+│   │                   teatro (la mia parte), festa (compleanno: vigilia, festa, 10 sorprese, capsula),
+│   │                   disegno (tela libera, percorso in 5 tappe, Il mio museo)
 │   └── percorso/       percorso e lezioni, tappe di matematica di 5ª, negozio, collezioni, video
 ├── tools/controlla.py  controllo automatico (parte da solo a ogni build; con errori non si pubblica)
 ├── tools/sorgenti_pubbliche.py  copia le sorgenti in /sorgenti/il-mio-mondo/ del repository (senza revisioni di lavoro, con controllo dei dati personali)
@@ -27,7 +28,8 @@ app/
 ├── data/
 │   ├── domande/quiz/   ★ FONTE UNICA delle domande: un file per materia, una scheda per domanda
 │   │                   _codici.txt = registro dei codici (non modificare), _ritirati.txt = codici tolti apposta
-│   ├── domande/        altri contenuti (curiosità, missioni, barzellette, Roblox, soldi, video, aiuti, teatro)
+│   ├── domande/        altri contenuti (curiosità, missioni, barzellette, Roblox, soldi, video, aiuti, teatro,
+│   │                   disegno: 25 progetti guidati con le guide da ricalcare)
 │   ├── programma/      mappa del programma per anno (5a.json; poi 1m.json, 2m.json, 3m.json)
 │   ├── testi/          testi lunghi delle materie (inseriti al build)
 │   ├── verifiche/      revisioni indipendenti (rev2…rev6): correzioni, figurine, istruzioni ai revisori (nel repository solo fix_, factfix_, cur_)
