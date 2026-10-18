@@ -2,9 +2,9 @@
    Strategie per le somme in arrivo (premio, TFS, F.A.F.), riserva di sicurezza, debiti da estinguere o no,
    simulatore, profilo di rischio (questionario breve), tassi di mercato (dal file pubblico news-pensione.json → «mercati»,
    aggiornato alle 13 · 17 · 23). Dati in P.inv. Sono calcoli con ipotesi dichiarate: fatti e strategie, non consigli. */
-const IV=[["pan","Panoramica"],["prof","Profilo"],["ris","Riserva"],["som","Somme in arrivo"],["deb","Debiti"],["sim","Simulatore"],["tas","Tassi"]];
+const IV=[["pan","Panoramica"],["pat","I miei investimenti"],["prof","Profilo"],["ris","Riserva"],["som","Somme in arrivo"],["deb","Debiti"],["sim","Simulatore"],["tas","Tassi"]];
 let invV=(()=>{try{const v=sessionStorage.getItem("pn-invv");return IV.some(x=>x[0]===v)?v:"pan";}catch(e){return "pan";}})(),invQ=null;
-function INV(){if(!P.inv||typeof P.inv!=="object")P.inv={};const v=P.inv;["prof","ris","deb","sim","ipo","som"].forEach(k=>{if(!v[k]||typeof v[k]!=="object")v[k]={};});return v;}
+function INV(){if(!P.inv||typeof P.inv!=="object")P.inv={};const v=P.inv;["prof","ris","deb","sim","ipo","som"].forEach(k=>{if(!v[k]||typeof v[k]!=="object")v[k]={};});if(!Array.isArray(v.pos))v.pos=[];if(!v.posBbva){if(!v.pos.some(x=>x.tipo==="bbva"))v.pos.unshift({id:"bbva",tipo:"bbva",t:"Conto BBVA",imp:"",cond:0});v.posBbva=1;}return v;}
 /* tassi: valori pubblicati (con data e fonte) e, se scritti, i tuoi */
 const MK_BASE=[
   {id:"infl",t:"Inflazione in Italia (NIC, su un anno)",valore:4.2,d:"2026-10-16",fonte:"ISTAT, settembre 2026 (definitivo)",url:"https://www.istat.it/wp-content/uploads/2026/10/Prezzi-al-consumo-def-Set2026-1.pdf"},
@@ -16,6 +16,10 @@ const MK_BASE=[
   {id:"cdl",t:"Conto deposito libero, miglior tasso lordo",valore:3.0,d:"2026-10-18",fonte:"conti-deposito.net",url:"https://www.conti-deposito.net/confronto-conti-deposito.php",nota:"tasso promozionale"},
   {id:"cd12",t:"Conto deposito vincolato 12 mesi, miglior tasso lordo",valore:4.0,d:"2026-10-18",fonte:"conti-deposito.net",url:"https://www.conti-deposito.net/confronto-conti-deposito.php"},
   {id:"cd24",t:"Conto deposito vincolato 24 mesi, miglior tasso lordo",valore:4.0,d:"2026-10-18",fonte:"conti-deposito.net",url:"https://www.conti-deposito.net/confronto-conti-deposito.php"},
+  {id:"bbva0",t:"Conto BBVA: tasso base (25% del tasso BCE sui depositi), ott–dic 2026",valore:0.65,d:"2026-10-16",fonte:"BBVA",url:"https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",nota:"cambia a ogni trimestre"},
+  {id:"bbva10",t:"Conto BBVA: saldo medio da 10.000 €",valore:1.25,d:"2026-10-16",fonte:"BBVA",url:"https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html"},
+  {id:"bbva50",t:"Conto BBVA: saldo medio da 50.000 €",valore:1.75,d:"2026-10-16",fonte:"BBVA",url:"https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html"},
+  {id:"bbvac",t:"Conto BBVA: con una condizione al mese (stipendio o pensione accreditati, carte ≥ 1.000 €, fondi ≥ 15.000 €)",valore:2.25,d:"2026-10-16",fonte:"BBVA",url:"https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",nota:"nuovi clienti: 4% per 6 mesi fino a 200.000 € (aperture entro l’11/12/2026)"},
   {id:"cd36",t:"Conto deposito vincolato 36 mesi, miglior tasso lordo",valore:3.75,d:"2026-10-18",fonte:"conti-deposito.net",url:"https://www.conti-deposito.net/confronto-conti-deposito.php"}];
 function mkList(){const pub=(newsData().mercati||[]),I=INV().ipo;return MK_BASE.map(b=>{const p=pub.find(x=>x.id===b.id&&isFinite(+x.valore));const o=Object.assign({},b,p||{});o.pub=+o.valore;if(I[b.id]!=null&&I[b.id]!==""){o.valore=+I[b.id];o.mio=1;}else o.valore=+o.valore;return o;});}
 const mk=id=>{const x=mkList().find(y=>y.id===id);return x?x.valore:0;};
@@ -24,9 +28,19 @@ const eurI=n=>n==null||!isFinite(n)?"—":Math.round(n).toLocaleString("it-IT")+
 /* ---- strategie: rendimenti lordi annui (prudente / medio / ottimista), tasse sul guadagno, bollo, costi, perdita in un anno cattivo ---- */
 function btpRate(y){const a=mk("btp2"),b=mk("btp5"),c=mk("btp10");return y<=2?a:y<=5?a+(b-a)*(y-2)/3:y<=10?b+(c-b)*(y-5)/5:c;}
 function cdRate(y){return y<=1?mk("cd12"):y<=2?mk("cd24"):mk("cd36");}
-function STRAT(y){return [
+/* ---- 💳 Conto BBVA e altri investimenti tuoi ---- */
+function bankBal(bank){const c=P.conti;if(!c||!Array.isArray(c.acc))return null;const A=c.acc.filter(a=>!a.arch&&a.bank===bank&&a.tipo==="conto");if(!A.length)return null;
+  const M=Array.isArray(c.mov)?c.mov:[];let b=0,last="";A.forEach(a=>{b+=+a.s0||0;if((a.d0||"")>last)last=a.d0||"";M.forEach(m=>{if(m.acc===a.id&&(!a.d0||m.d>a.d0)){b+=m.tipo==="e"?+m.imp||0:-(+m.imp||0);if(m.d>last)last=m.d;}});});return{v:b,d:last,n:A.map(a=>a.n).join(" + ")};}
+const bbvaPos=()=>INV().pos.find(x=>x.tipo==="bbva");
+function posImp(x){if(x.imp!=null&&x.imp!=="")return +x.imp;if(x.tipo==="bbva"){const b=bankBal("bbva");return b?b.v:0;}return 0;}
+function bbvaRate(saldo,cond){return cond?mk("bbvac"):saldo>=50000?mk("bbva50"):saldo>=10000?mk("bbva10"):mk("bbva0");}
+function posRate(x){return x.tipo==="bbva"?bbvaRate(posImp(x),x.cond):+(x.tasso||0);}
+const POS_T={bbva:["💳","Conto remunerato",26],conto:["💳","Conto remunerato",26],dep:["🔒","Conto deposito",26],btp:["🇮🇹","Titoli di Stato",12.5],etf:["📄","ETF o fondi",26],altro:["📦","Altro",26]};
+function STRAT(y,cap){return [
   {id:"cc",ic:"🏦",n:"Lasciarli sul conto corrente",r:[0,0,0],tax:26,boll:0,fix:34.2,ter:0,peg:0,risk:1,liq:"subito",
     pro:"sempre disponibili",con:"l’inflazione ne mangia il valore; bollo di 34,20 € l’anno sopra 5.000 € di giacenza media"},
+  ...(bbvaPos()?[{id:"bbva",ic:"💳",n:"Sul Conto BBVA (remunerato)",r:(()=>{const b=bbvaPos(),r=bbvaRate(posImp(b)+(+cap||0),b.cond);return[r*0.5,r*0.85,r];})(),tax:26,boll:0,ter:0,peg:0,risk:1,liq:"subito",
+    pro:"già aperto, interessi accreditati ogni mese, sempre disponibile",con:"tasso variabile ogni trimestre: segue il tasso BCE (base = 25%) e sale con saldo o condizioni; il conto corrente paga il bollo di 34,20 € l’anno (già pagato)"}]:[]),
   {id:"cdl",ic:"🐖",n:"Conto deposito libero",r:[Math.max(0,mk("cdl")-1.5),mk("cdl")-0.5,mk("cdl")],tax:26,boll:0.2,ter:0,peg:0,risk:1,liq:"in pochi giorni",
     pro:"capitale garantito dal Fondo Interbancario fino a 100.000 € per banca; disponibile",con:"il tasso migliore spesso è promozionale e scende dopo qualche mese"},
   {id:"cdv",ic:"🔒",n:"Conto deposito vincolato "+(y<=1?"12":y<=2?"24":"36")+" mesi",r:[cdRate(y)-(y>3?1:0),cdRate(y)-(y>3?0.5:0),cdRate(y)],tax:26,boll:0.2,ter:0,peg:0,risk:1,liq:"alla scadenza del vincolo",
@@ -41,7 +55,7 @@ function STRAT(y){return [
     pro:"storicamente il rendimento più alto su periodi lunghi",con:"nel 2008 ha perso circa il 37% in un anno e ci ha messo anni a recuperare; adatto a orizzonti di 10 anni e più"},
   {id:"pac",ic:"🪜",n:"Ingresso graduale (PAC): dal conto deposito al bilanciato in 24 mesi",r:null,tax:26,boll:0.2,ter:0.2,peg:0.15,risk:4,liq:"vendibile ogni giorno",
     pro:"entri un po’ alla volta: riduce il rischio di comprare tutto nel momento sbagliato",con:"nei primi due anni rende come il conto deposito; poi oscilla come il bilanciato"}];}
-const MIN_Y={cc:0,cdl:0,cdv:1,btp:1,eob:3,bil:5,azi:10,pac:5};
+const MIN_Y={bbva:0,cc:0,cdl:0,cdv:1,btp:1,eob:3,bil:5,azi:10,pac:5};
 /* crescita mese per mese: rendimento netto dei costi, bollo ogni anno, tasse sul guadagno alla fine */
 function grow(cap,mens,anni,r,s,mesiPac){let v=cap,vers=cap,tassaCed=0;const n=Math.round(anni*12),pts=[{m:0,v}];
   for(let m=1;m<=n;m++){let rr;if(s.id==="pac"){const inB=Math.min(1,m/(mesiPac||24));rr=(1-inB)*(mk("cdl")-0.5)+inB*r;}else rr=r;
@@ -81,11 +95,11 @@ function debCalc(d,quando){const t=today(),q=quando||t,rata=+d.x.imp||0;if(d.tan
 function vInv(){const v=INV(),pr=profilo();
   let o=`<h1>🌱 Investimenti</h1><p class="sub">Che cosa fare dei soldi in arrivo e di quelli che non servono alla cassa: strategie a confronto con i tassi di oggi. Calcoli con ipotesi dichiarate, non consigli.</p>`;
   o+=`<div class="seg" role="tablist" style="margin:0 0 14px;width:max-content;max-width:100%">${IV.map(([k,n])=>`<button role="tab" data-iv="${k}" class="${invV===k?"on":""}" aria-selected="${invV===k}">${n}${k==="prof"&&!pr?`<span class="n">!</span>`:""}</button>`).join("")}</div>`;
-  o+=({pan:invPan,prof:invProf,ris:invRis,som:invSom,deb:invDeb,sim:invSim,tas:invTas}[invV]||invPan)();
+  o+=({pat:invPat,pan:invPan,prof:invProf,ris:invRis,som:invSom,deb:invDeb,sim:invSim,tas:invTas}[invV]||invPan)();
   return o+`<p class="lbl" style="margin:14px 2px 0">I rendimenti di ETF e portafogli sono ipotesi basate sull’andamento storico, non promesse; quelli di conti deposito e titoli di Stato sono i tassi pubblicati oggi. Le tasse sono quelle in vigore (26%, titoli di Stato 12,5%; bollo 0,20% l’anno). Per una decisione concreta serve un consulente finanziario indipendente: questa sezione mette in fila i numeri, non sostituisce la consulenza.</p>`;}
 function invPan(){const K=invCassa(),pr=profilo(),S=somme(),ris=riserva(),D=debiti();let o="";
   o+=`<div class="kpi" style="margin-bottom:12px">${K&&K.oggi!=null?`<div><b>${eurI(K.oggi)}</b><span>liquidità di oggi (Cassa)</span></div>`:""}<div><b>${eurI(ris)}</b><span>riserva di sicurezza (${+(INV().ris.mesi||6)} mesi di spese)</span></div>
-    ${S.length?`<div><b>${eurI(S.reduce((a,x)=>a+x.imp,0))}</b><span>somme in arrivo fino al ${fmt(S[S.length-1].d,{month:"short",year:"numeric"})}</span></div>`:""}${pr?`<div><b>${esc(pr.n)}</b><span>il tuo profilo</span></div>`:""}</div>`;
+    ${S.length?`<div><b>${eurI(S.reduce((a,x)=>a+x.imp,0))}</b><span>somme in arrivo fino al ${fmt(S[S.length-1].d,{month:"short",year:"numeric"})}</span></div>`:""}${pr?`<div><b>${esc(pr.n)}</b><span>il tuo profilo</span></div>`:""}${(()=>{const b=bbvaPos();return b?`<div><b>${eurI(posImp(b))}</b><span>sul Conto BBVA al ${ipct(posRate(b))} lordo</span></div>`:"";})()}</div>`;
   if(!K)o+=`<div class="card k-inv"><p class="empty">Per i calcoli su liquidità e riserva serve la Cassa: in Pensione → Cassa scrivi da dove parti.</p><div class="btns"><button class="btn sm" data-goinv="cassa">Vai alla Cassa</button></div></div>`;
   if(!pr)o+=`<div class="card k-inv"><h3>🧭 Prima il profilo</h3><p class="lbl" style="margin-top:0">Sette domande: servono a ordinare le strategie da quelle più adatte a te.</p><div class="btns"><button class="btn sm pri" data-iv="prof">Rispondi</button></div></div>`;
   if(S.length){o+=`<div class="card k-inv"><h3>📥 Somme in arrivo</h3>${S.map(x=>{const inv=investibile(x.d);const best=invBest(x.imp,pr?pr.anni:5);
@@ -96,7 +110,23 @@ function invPan(){const K=invCassa(),pr=profilo(),S=somme(),ris=riserva(),D=debi
     <div class="btns"><button class="btn sm" data-iv="deb">Estinguere o no</button></div></div>`;
   const m=mkList();o+=`<div class="card k-inv"><h3>📊 Tassi di oggi</h3><div class="kpi">${["infl","bce","btp5","cd12"].map(id=>{const x=m.find(y=>y.id===id);return `<div><b>${ipct(x.valore)}</b><span>${esc(x.t.replace(/ \(.*\)/,""))}</span></div>`;}).join("")}</div><div class="btns"><button class="btn sm" data-iv="tas">Tutti i tassi e le fonti</button></div></div>`;
   return o;}
-function invBest(cap,anni){const pr=profilo(),L=STRAT(anni).filter(s=>(!pr||s.risk<=pr.max)&&MIN_Y[s.id]<=anni).map(s=>stratCalc(s,cap,anni));return L.sort((a,b)=>b.m.net-a.m.net)[0]||null;}
+function invPat(){const v=INV(),L=v.pos;let tot=0,netA=0;
+  const rows=L.map(x=>{const imp=posImp(x),r=posRate(x),T=POS_T[x.tipo]||POS_T.altro,lordo=imp*r/100,net=lordo*(1-T[2]/100);tot+=imp;netA+=net;
+    if(x.tipo==="bbva"){const b=bankBal("bbva");return `<div class="card k-inv"><h3>💳 ${esc(x.t)} <small class="lbl" style="font-weight:400">conto corrente remunerato</small></h3><div class="form">
+      <label>Saldo €${x.imp!=null&&x.imp!==""?"":b?" (dai Conti, "+fmt(b.d||today(),{day:"numeric",month:"short"})+")":""}<input data-ip="${x.id}:imp" inputmode="decimal" value="${esc(String(Math.round(imp*100)/100).replace(".",","))}"></label>
+      <label class="chkl"><input type="checkbox" data-ip="${x.id}:cond"${x.cond?" checked":""}> Ogni mese: stipendio o pensione accreditati su BBVA, oppure spese con carta ≥ 1.000 €</label></div>
+      <div class="kpi" style="margin-top:10px"><div><b>${ipct(r)}</b><span>tasso lordo che si applica</span></div><div><b>${eurI(net/12)}</b><span>interessi netti al mese (circa)</span></div><div><b>${eurI(net)}</b><span>in un anno, netti (tasse 26%)</span></div></div>
+      <div style="margin-top:8px">${[["bbva0","base"],["bbva10","da 10.000 €"],["bbva50","da 50.000 €"],["bbvac","con una condizione"]].map(([id,t])=>`<span class="pill${Math.abs(mk(id)-r)<1e-9?" inv":""}" style="margin:0 6px 6px 0">${t}: ${ipct(mk(id))}</span>`).join("")}</div>
+      <p class="lbl" style="margin:6px 0 0">Tassi BBVA per ottobre–dicembre 2026: il tasso base è il 25% del tasso BCE sui depositi e cambia a ogni trimestre; sale con il saldo medio o con una condizione al mese. Interessi accreditati ogni mese. BBVA in Italia è una succursale della banca spagnola: i depositi sono garantiti fino a 100.000 € dal fondo di garanzia spagnolo (da verificare con BBVA). ${x.imp!=null&&x.imp!==""?"Saldo scritto a mano: cancellalo per usare quello dei Conti.":b?"":"Nei Conti non c’è un conto BBVA: scrivi qui il saldo."} Se il saldo BBVA è già nella partenza della Cassa, non contarlo due volte.</p>
+      <p class="lbl" style="margin:4px 0 0">Per spostare qui una somma in arrivo e vedere quanto renderebbe a confronto con le altre strategie: <button class="lnk" data-iv="som">Somme in arrivo</button>.</p></div>`;}
+    return `<div class="row"><span class="pill inv">${T[0]}</span><div class="grow"><b>${esc(x.t)}</b><small>${esc(T[1])} · ${ipct(r)} lordo${x.scad?" · scadenza "+fmt(x.scad,{day:"numeric",month:"short",year:"numeric"}):""} · netti ${eurI(net)} l’anno</small></div><b>${eurI(imp)}</b><button class="btn sm" data-ipx="${x.id}" aria-label="Togli">×</button></div>`;});
+  const bb=rows.filter((_,i)=>L[i].tipo==="bbva").join(""),ot=rows.filter((_,i)=>L[i].tipo!=="bbva").join("");
+  return `<div class="kpi" style="margin-bottom:12px"><div><b>${eurI(tot)}</b><span>in totale</span></div><div><b>${eurI(netA)}</b><span>interessi netti in un anno (circa)</span></div></div>`+bb+
+    `<div class="card k-inv"><h3>➕ Altri investimenti</h3>${ot||'<p class="empty">Nessun altro investimento: puoi aggiungere conti deposito, titoli di Stato, ETF o fondi.</p>'}
+    <div class="form" style="margin-top:8px"><label>Che cos’è<input id="ipT" maxlength="50" placeholder="per esempio BTP Valore 2031"></label><label>Tipo<select id="ipK">${Object.entries(POS_T).filter(([k])=>k!=="bbva").map(([k,t])=>`<option value="${k}">${t[0]} ${t[1]}</option>`).join("")}</select></label>
+      <label>Importo €<input id="ipI" inputmode="decimal"></label><label>Tasso lordo %<input id="ipR" inputmode="decimal"></label><label>Scadenza (facoltativa)<input id="ipS" type="date"></label></div>
+    <div class="btns"><button class="btn sm pri" data-ipa="1">Aggiungi</button></div></div>`;}
+function invBest(cap,anni){const pr=profilo(),L=STRAT(anni,cap).filter(s=>(!pr||s.risk<=pr.max)&&MIN_Y[s.id]<=anni).map(s=>stratCalc(s,cap,anni));return L.sort((a,b)=>b.m.net-a.m.net)[0]||null;}
 function invProf(){const a=INV().prof.r||[],pr=profilo();
   return `<div class="card k-inv"><h3>🧭 Il tuo profilo di rischio</h3><p class="lbl" style="margin-top:0">Un orientamento, non il questionario di una banca (MiFID): serve solo a ordinare le strategie in questa sezione.</p>
     ${QZ.map(([q,op],i)=>`<div class="iq"><b>${i+1}. ${esc(q)}</b><div class="iqo">${op.map((t,j)=>`<button class="btn sm${+a[i]===j&&a[i]!=null?" pri":""}" data-iq="${i}:${j}">${esc(t)}</button>`).join("")}</div></div>`).join("")}
@@ -113,7 +143,7 @@ function invRis(){const v=INV().ris,K=invCassa(),sp=spesaMese(),m=+(v.mesi||6),r
 function invSom(){const v=INV().som,pr=profilo(),S=somme(),K=invCassa();
   const opts=S.map(x=>({k:x.k,t:x.t+" ("+fmt(x.d,{month:"short",year:"numeric"})+")",imp:x.imp})).concat(K?[{k:"oggi",t:"Investibile da oggi",imp:investibile(K.t)||0}]:[]);
   const sel=opts.find(x=>x.k===v.k)||opts[0],cap=v.cap!=null&&v.cap!==""?+v.cap:(sel?sel.imp:10000),anni=+(v.anni||(pr?pr.anni:5));
-  const L=STRAT(anni).map(s=>stratCalc(s,cap,anni)).map(x=>Object.assign(x,{ok:(!pr||x.s.risk<=pr.max),hz:MIN_Y[x.s.id]<=anni})).sort((a,b)=>(b.ok&&b.hz)-(a.ok&&a.hz)||b.m.net-a.m.net);
+  const L=STRAT(anni,cap).map(s=>stratCalc(s,cap,anni)).map(x=>Object.assign(x,{ok:(!pr||x.s.risk<=pr.max),hz:MIN_Y[x.s.id]<=anni})).sort((a,b)=>(b.ok&&b.hz)-(a.ok&&a.hz)||b.m.net-a.m.net);
   let o=`<div class="card k-inv"><h3>📥 Che cosa fare di una somma</h3><div class="form">
     <label>Somma<select data-is="k">${opts.map(x=>`<option value="${esc(x.k)}"${sel&&sel.k===x.k?" selected":""}>${esc(x.t)}</option>`).join("")}<option value="mano"${v.k==="mano"?" selected":""}>Scrivo io l’importo</option></select></label>
     <label>Importo €<input data-is="cap" inputmode="decimal" value="${esc(String(Math.round(cap)))}"></label>
@@ -145,7 +175,7 @@ function invDeb(){const D=debiti(),S=somme();
         <p style="margin:10px 0 0">${(c.risp-c.detr)>c.alt?`✅ Con questi numeri estinguere fa risparmiare più di quanto renderebbe investire la stessa somma: <b>${eurI(c.risp-c.detr-c.alt)}</b> di differenza.`:`➖ Con questi numeri investire la somma renderebbe più degli interessi risparmiati (<b>${eurI(c.alt-(c.risp-c.detr))}</b> di differenza), ma solo se il tasso del deposito resta quello di oggi.`}</p>
         <p class="lbl" style="margin:6px 0 0">${d.tipo==="mutuo"?"Mutuo per la casa: nessuna penale per l’estinzione anticipata (art. 120-ter TUB); sugli interessi della prima casa c’è la detrazione del 19% fino a 4.000 € l’anno.":"Prestiti: la banca può chiedere un indennizzo fino all’1% del residuo (0,5% se manca meno di un anno) e deve togliere interessi e costi non ancora maturati (art. 125-sexies TUB)."} Da verificare con il conteggio di estinzione della banca.</p>
         <div class="btns"><button class="btn sm" data-idc="${d.x.id}">📆 Prova nella Cassa</button></div>`:`<p class="lbl" style="margin:8px 0 0">Scrivi il TAN per vedere il conto.</p>`}</div>`;}).join("");}
-function invSim(){const v=INV().sim,anni=+(v.anni||10),cap=+(v.cap!=null&&v.cap!==""?v.cap:20000),mens=+(v.mens||0),sid=v.s||"bil",L=STRAT(anni),s=L.find(x=>x.id===sid)||L[5];
+function invSim(){const v=INV().sim,anni=+(v.anni||10),cap=+(v.cap!=null&&v.cap!==""?v.cap:20000),mens=+(v.mens||0),sid=v.s||"bil",L=STRAT(anni,cap),s=L.find(x=>x.id===sid)||L[5];
   const r=v.r!=null&&v.r!==""?+v.r:null,ss=r!=null?Object.assign({},s,{r:[r-1.5,r,r+1.5]}):s,x=stratCalc(ss,cap,anni,mens);
   const P3=[x.p,x.m,x.o],W=nar2()?360:700,H=210,Lm=46,R=10,TP=14,B=24,mxv=Math.max(...P3.flatMap(z=>z.pts.map(p=>p.v)),1),mnv=Math.min(0,...P3.flatMap(z=>z.pts.map(p=>p.v)));
   const X=m=>Lm+m/(anni*12)*(W-Lm-R),Y=val=>TP+(H-TP-B)*(1-(val-mnv)/(mxv-mnv||1)),line=z=>z.pts.map((p,i)=>(i?"L":"M")+X(p.m).toFixed(1)+" "+Y(p.v).toFixed(1)).join(" ");
@@ -167,6 +197,9 @@ function invTas(){const L=mkList(),N=newsData();return `<div class="card k-inv">
   ${L.map(x=>`<div class="row"><div class="grow"><b>${esc(x.t)}</b><small>${fmt(x.d,{day:"numeric",month:"short",year:"numeric"})} · <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.fonte)}</a>${x.nota?" · "+esc(x.nota):""}${x.mio?" · pubblicato "+ipct(x.pub):""}</small></div><input data-it="${x.id}" class="pin" inputmode="decimal" style="flex:0 0 86px;text-align:right" value="${esc(String(x.valore).replace(".",","))}"><span>%</span></div>`).join("")}</div>`;}
 function bindInv(){const R=()=>render(),v=INV(),num=x=>{const n=parseFloat(String(x).replace(/\./g,"").replace(",","."));return isFinite(n)?n:null;};
   document.querySelectorAll("[data-iv]").forEach(b=>b.onclick=()=>{invV=b.dataset.iv;try{sessionStorage.setItem("pn-invv",invV);}catch(e){}R();window.scrollTo(0,0);});
+  document.querySelectorAll("[data-ip]").forEach(i=>i.onchange=()=>{const[id,k]=i.dataset.ip.split(":"),x=v.pos.find(y=>y.id===id);if(!x)return;if(k==="cond")x.cond=i.checked?1:0;else{const b=x.tipo==="bbva"?bankBal("bbva"):null,n=num(i.value);x[k]=n==null||(b&&Math.abs(n-b.v)<0.01)?"":n;}save();R();toast("Salvato");});
+  document.querySelectorAll("[data-ipa]").forEach(b=>b.onclick=()=>{const t=$("ipT").value.trim(),imp=num($("ipI").value);if(!t||imp==null)return toast("Scrivi che cos’è e l’importo");v.pos.push({id:uid(),t,tipo:$("ipK").value,imp,tasso:num($("ipR").value)||0,scad:$("ipS").value||""});save();R();toast("Aggiunto");});
+  document.querySelectorAll("[data-ipx]").forEach(b=>b.onclick=()=>{if(!confirm("Togliere questo investimento?"))return;v.pos=v.pos.filter(x=>x.id!==b.dataset.ipx);save();R();});
   document.querySelectorAll("[data-goinv]").forEach(b=>b.onclick=()=>{pensV="cassa";try{sessionStorage.setItem("pn-pensv","cassa");}catch(e){}go("pens");});
   document.querySelectorAll("[data-iq]").forEach(b=>b.onclick=()=>{const[i,j]=b.dataset.iq.split(":").map(Number);v.prof.r=v.prof.r||[];v.prof.r[i]=j;v.prof.at=today();save();R();});
   document.querySelectorAll("[data-ir]").forEach(i=>i.onchange=()=>{const k=i.dataset.ir;v.ris[k]=k==="mesi"?+i.value:(i.value.trim()===""?"":num(i.value));save();R();});

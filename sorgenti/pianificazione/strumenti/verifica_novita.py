@@ -41,7 +41,7 @@ for a in o.get('attesa', []):
         if k not in a: err('attesa: manca ' + k)
     if a['stato'] not in ('atteso', 'uscito'): err('attesa stato ' + a['id'])
     if a['stato'] == 'uscito' and a.get('valore') in (None, ''): err('attesa uscito senza valore ' + a['id'])
-MK = {'infl', 'bce', 'btp2', 'btp5', 'btp10', 'btpv', 'cdl', 'cd12', 'cd24', 'cd36'}
+MK = {'infl', 'bce', 'btp2', 'btp5', 'btp10', 'btpv', 'cdl', 'cd12', 'cd24', 'cd36', 'bbva0', 'bbva10', 'bbva50', 'bbvac'}
 for x in o.get('mercati', []):
     for k in ('id', 't', 'valore', 'd', 'fonte', 'url'):
         if k not in x: err('mercati: manca %s in %s' % (k, x.get('id')))

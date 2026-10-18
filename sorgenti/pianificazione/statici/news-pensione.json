@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-18T13:40:00+02:00",
+ "updated": "2026-10-18T13:50:00+02:00",
  "voci": [
   {
    "id": "n20261016-usic",
@@ -575,6 +575,44 @@
    "d": "2026-10-18",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
+   "unita": "%"
+  },
+  {
+   "id": "bbva0",
+   "t": "Conto BBVA: tasso base (25% del tasso BCE sui depositi), ott–dic 2026",
+   "valore": 0.65,
+   "d": "2026-10-16",
+   "fonte": "BBVA",
+   "url": "https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",
+   "nota": "cambia a ogni trimestre",
+   "unita": "%"
+  },
+  {
+   "id": "bbva10",
+   "t": "Conto BBVA: saldo medio da 10.000 €",
+   "valore": 1.25,
+   "d": "2026-10-16",
+   "fonte": "BBVA",
+   "url": "https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",
+   "unita": "%"
+  },
+  {
+   "id": "bbva50",
+   "t": "Conto BBVA: saldo medio da 50.000 €",
+   "valore": 1.75,
+   "d": "2026-10-16",
+   "fonte": "BBVA",
+   "url": "https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",
+   "unita": "%"
+  },
+  {
+   "id": "bbvac",
+   "t": "Conto BBVA: con una condizione al mese (stipendio o pensione accreditati, carte ≥ 1.000 €, fondi ≥ 15.000 €)",
+   "valore": 2.25,
+   "d": "2026-10-16",
+   "fonte": "BBVA",
+   "url": "https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",
+   "nota": "nuovi clienti: 4% per 6 mesi fino a 200.000 € (aperture entro l’11/12/2026)",
    "unita": "%"
   }
  ]

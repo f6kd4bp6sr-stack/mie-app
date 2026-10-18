@@ -49,12 +49,13 @@ Prima le fonti ufficiali (sono quelle che contano), poi i sindacati (spesso arri
 9. **Registro** (`controlli`): aggiungi in fondo `{"at": ora, "notizie": quante nuove, "note": "…"}`; tieni gli ultimi 60.
 
 ## 📊 Tassi di mercato (`mercati`, per la sezione 🌱 Investimenti)
-A ogni giro aggiorna i 10 valori di `mercati` (stessi `id`, numeri in percentuale, `d` = data del dato, `fonte`, `url` https esatto, `nota` facoltativa):
+A ogni giro aggiorna i 14 valori di `mercati` (stessi `id`, numeri in percentuale, `d` = data del dato, `fonte`, `url` https esatto, `nota` facoltativa):
 - `infl` inflazione NIC su un anno: ultimo comunicato ISTAT (provvisorio a fine mese, definitivo a metà mese successivo) — istat.it;
 - `bce` tasso BCE sui depositi: ultima decisione — ecb.europa.eu;
 - `btp2`, `btp5`, `btp10` rendimenti lordi dei BTP a 2, 5 e 10 anni: ultima chiusura (Trading Economics, Borsa Italiana, rendimentibtp.it; due fonti che coincidono entro 0,05 punti);
 - `btpv` emissione retail del MEF in corso o più recente (BTP Valore, BTP Italia, BTP Più…): rendimento lordo a scadenza e, nella `nota`, nome, date di collocamento e cedole minime — dt.mef.gov.it o una testata che lo riporta;
-- `cdl`, `cd12`, `cd24`, `cd36` miglior tasso lordo dei conti deposito libero e vincolati 12/24/36 mesi di banche italiane aderenti al Fondo Interbancario (siti di confronto come conti-deposito.net, facile.it; nella `nota` «promozionale» quando lo è).
+- `cdl`, `cd12`, `cd24`, `cd36` miglior tasso lordo dei conti deposito libero e vincolati 12/24/36 mesi di banche italiane aderenti al Fondo Interbancario (siti di confronto come conti-deposito.net, facile.it; nella `nota` «promozionale» quando lo è);
+- `bbva0`, `bbva10`, `bbva50`, `bbvac` tassi lordi del conto corrente BBVA per i clienti già aperti (base = 25% del tasso BCE, saldo medio da 10.000 € e da 50.000 €, con una condizione mensile): pagina ufficiale bbva.it «conto corrente con remunerazione», cambiano a inizio trimestre; nella `nota` di `bbvac` l’eventuale promozione per i nuovi clienti.
 Doppia verifica come per le notizie; se un valore non si può verificare, lascia quello di prima (con la sua data). Niente consigli: sono solo numeri con data e fonte.
 
 ## 🔄 Scheda pensione cifrata (dopo le novità, a ogni giro)
