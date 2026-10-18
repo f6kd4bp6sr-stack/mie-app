@@ -54,9 +54,9 @@ h2{font-size:18px;margin:20px 2px 8px}
 .pill.warn{background:var(--warn-bg);color:var(--warn)}.pill.soon{background:var(--soon-bg);color:var(--soon)}.pill.ok{background:var(--ok-bg);color:var(--ok)}
 .pill.fam{background:var(--fam-bg);color:var(--fam)}.pill.ben{background:var(--ben-bg);color:var(--ben)}.pill.lp{background:var(--lic-bg);color:var(--lic)}.pill.euro{background:var(--euro-bg);color:var(--euro)}.pill.prat{background:var(--prat-bg);color:var(--prat)}.pill.mondo{background:var(--mondo-bg);color:var(--mondo)}.pill.pens{background:var(--pens-bg);color:var(--pens)}
 details.csm{padding:12px 14px}details.csm>summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-details.csm>summary::-webkit-details-marker{display:none}details.csm>summary::before{content:"▸";color:var(--pens);margin-right:-4px}details.csm[open]>summary::before{content:"▾"}
+details.csm>summary::-webkit-details-marker{display:none}details.csm>summary::before,details.fold>summary::before{content:"▸";color:var(--c,var(--pens));margin-right:-4px}details.fold[open]>summary::before{content:"▾"}details.csm[open]>summary::before{content:"▾"}
 .csm-h{display:flex;gap:6px;align-items:center;flex:1 1 140px}.csm-v{display:flex;gap:12px;align-items:baseline;font-size:14px;flex-wrap:wrap;justify-content:flex-end}.csm-v b{min-width:84px;text-align:right}.csm-v .lbl{margin:0}
-.csb-t{color:var(--pens);font-size:17px}details.csb{margin-bottom:12px}details.csb[open]>summary{padding-bottom:8px;border-bottom:1px solid var(--line)}
+.csb-t{color:var(--c,var(--pens));font-size:17px}details.fold>summary{cursor:pointer;list-style:none;display:flex;gap:8px;align-items:baseline}details.fold>summary::-webkit-details-marker{display:none}details.fold>summary>h3{margin:0;flex:1}details.fold[open]>summary{margin-bottom:10px}details.fold:not([open]){padding-bottom:12px}details.csb{margin-bottom:12px}details.csb[open]>summary{padding-bottom:8px;border-bottom:1px solid var(--line)}
 details.csm2{padding:10px 0 10px 4px;border-top:1px solid var(--line)}details.csm2:first-of-type{border-top:0}details.csm2[open]{padding-bottom:14px}
 .cs-am{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2}.cs-am small{color:var(--muted);font-size:12px}.cs-am small.u{color:var(--scad)}
 .cs-cp{background:var(--pens-bg);border-radius:10px;padding-left:6px;padding-right:6px}.cs-add{align-items:center;margin-top:8px}.cs-add .pin{flex:0 1 160px;min-width:120px}.cs-add .lbl{margin:0}
@@ -176,7 +176,7 @@ a.btn{text-decoration:none;display:inline-block}
   --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
   .warnbox{background:#3a2a1c;border-color:#b8743c}}
 </style>
-<script>window.APP_VERSION="0c7f731d79";window.APP_BUILD="2026-10-18T13:41+02:00";</script>
+<script>window.APP_VERSION="6bbb92cdd6";window.APP_BUILD="2026-10-18T14:46+02:00";</script>
 </head>
 <body>
 <style id="lockCss">
@@ -1262,7 +1262,7 @@ function vPrat(){
     <label>Prossimo passo (facoltativo)<input id="pnP" maxlength="120" placeholder="es. chiedere il preventivo"></label><label>Entro il<input id="pnD" type="date"></label></div>
     <p class="lbl">Il tipo propone l’elenco dei documenti più comuni: lo puoi cambiare come vuoi.</p>
     <div class="btns"><button class="btn pri" data-pa="create">Crea</button><button class="btn" data-pa="cancel">Annulla</button></div></div>`;
-  o+=open.length?`<div class="card k-prat plist">${open.map(pratRow).join("")}</div>`:(pratNew?"":`<div class="card k-prat"><p class="empty">Nessuna pratica aperta. Creane una con «➕ Nuova pratica».</p></div>`);
+  o+=open.length?`<div class="card k-prat plist"><h3>🗂️ Pratiche aperte <span class="lbl" style="font-weight:400">${open.length}</span></h3>${open.map(pratRow).join("")}</div>`:(pratNew?"":`<div class="card k-prat"><p class="empty">Nessuna pratica aperta. Creane una con «➕ Nuova pratica».</p></div>`);
   if(closed.length)o+=`<details class="more"><summary>Chiuse (${closed.length})</summary><div class="card plist">${closed.map(pratRow).join("")}</div></details>`;
   return o;
 }
@@ -1390,7 +1390,8 @@ function pensAdem(){
 /* ---- leve ---- */
 function pensLeve(){
   const p=PENS(),L=p.leve.slice().sort((a,b)=>{const r=s=>s==="fatta"||s==="no"?1:0;return r(a.stato)-r(b.stato)||((a.d||"9")<(b.d||"9")?-1:1);});
-  return `<div class="card k-pens">${L.map(l=>{const st=LV_ST[l.stato]||LV_ST.da;return `<div class="fx"><div class="row" style="border:0;padding:0"><span class="pill pens">${esc(String(l.n))}</span><div class="grow"><b>${esc(l.t)}</b><small>💶 ${esc(l.val||"—")} · ⏱️ ${esc(l.term||"—")}${l.d?" ("+fmt(l.d,{day:"numeric",month:"short",year:"numeric"})+")":""}</small>${l.nota?`<small>📝 ${esc(l.nota)}</small>`:""}</div>
+  const aperte=L.filter(l=>l.stato!=="fatta"&&l.stato!=="no").length;
+  return `<div class="card k-pens"><h3>🎚️ Le leve <span class="lbl" style="font-weight:400">${aperte} da fare o in corso su ${L.length}</span></h3>${L.map(l=>{const st=LV_ST[l.stato]||LV_ST.da;return `<div class="fx"><div class="row" style="border:0;padding:0"><span class="pill pens">${esc(String(l.n))}</span><div class="grow"><b>${esc(l.t)}</b><small>💶 ${esc(l.val||"—")} · ⏱️ ${esc(l.term||"—")}${l.d?" ("+fmt(l.d,{day:"numeric",month:"short",year:"numeric"})+")":""}</small>${l.nota?`<small>📝 ${esc(l.nota)}</small>`:""}</div>
       <select data-lvs="${l.id}" aria-label="Stato" class="pin" style="flex:0 0 auto;min-width:0">${Object.entries(LV_ST).map(([k,v])=>`<option value="${k}"${l.stato===k?" selected":""}>${v[0]}</option>`).join("")}</select><button class="btn sm" data-lve="${pensEd===l.id?"":l.id}" aria-label="Nota">📝</button></div>
       ${pensEd===l.id?`<div class="form" style="margin-top:6px"><label class="wide">Nota<input data-lvn="${l.id}" maxlength="240" value="${esc(l.nota||"")}" placeholder="a chi l’hai chiesto, risposta, numero di protocollo…"></label></div>`:""}</div>`;}).join("")||'<p class="empty">Nessuna leva.</p>'}</div>
     <p class="lbl">Valori e termini sono quelli della scheda: verificali con il patronato, l’Amministrazione o un legale prima di decidere.</p>`;
@@ -1795,7 +1796,7 @@ function pensIcsNag(){try{const opt=P.ics.opt||{abs:true,app:true,scad:true,pens
 function pensTimeline2(){const L=pensTappe();if(!L.length)return "";const t=today(),narrow=window.innerWidth<640,s=L.find(x=>x.id===pensTp);
   const det=s?`<p style="margin:8px 2px 0"><b>${s.ic||""} ${esc(s.t)}</b>${s.nota?` <span class="lbl">· ${esc(s.nota)}</span>`:""}</p>`:"";
   if(narrow){const items=L.map(x=>({k:x.da,x})).concat([{k:t,oggi:1}]).sort((a,b)=>a.k<b.k?-1:a.k>b.k?1:(a.oggi?-1:1));
-    return `<div class="card k-pens"><div class="vtl">${items.map(it=>it.oggi?`<div class="vt oggi"><i></i><b>Oggi</b><small>${fmt(t,{day:"numeric",month:"short",year:"numeric"})}</small></div>`:
+    return `<div class="card k-pens"><h3>🗓️ Linea del tempo</h3><div class="vtl">${items.map(it=>it.oggi?`<div class="vt oggi"><i></i><b>Oggi</b><small>${fmt(t,{day:"numeric",month:"short",year:"numeric"})}</small></div>`:
       `<button class="vt${it.k<t?" past":""}${pensTp===it.x.id?" sel":""}" data-tp="${it.x.id}"><i></i><span class="ic">${it.x.ic||"•"}</span><span class="tx"><b>${esc(it.x.t)}</b><small>${fmt(it.x.da,{day:it.x.a?undefined:"numeric",month:"short",year:"numeric"})}${it.x.a?" – "+fmt(it.x.a,{month:"short",year:"numeric"}):""}${pensTp===it.x.id&&it.x.nota?" · "+esc(it.x.nota):""}</small></span></button>`).join("")}</div></div>`;}
   const d0="2026-10-01",d1="2029-07-01",W=1000,H=96,X=q=>20+(W-40)*Math.max(0,Math.min(1,diff(d0,q)/diff(d0,d1)));
   let svg=`<line x1="20" x2="${W-20}" y1="62" y2="62" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/>`+["2027-01-01","2028-01-01","2029-01-01"].map(y=>`<line x1="${X(y)}" x2="${X(y)}" y1="54" y2="70" stroke="var(--muted)"/><text x="${X(y)}" y="88" font-size="13" text-anchor="middle" fill="var(--muted)">${y.slice(0,4)}</text>`).join("")
@@ -1804,7 +1805,7 @@ function pensTimeline2(){const L=pensTappe();if(!L.length)return "";const t=toda
   const groups=[];L.forEach(x=>{const cx=x.a?(X(x.da)+X(x.a))/2:X(x.da),g=groups.find(g=>Math.abs(g.cx-cx)<34);if(g){g.L.push(x);}else groups.push({cx,L:[x]});});
   L.forEach(x=>{const a=X(x.da),b=x.a?X(x.a):a,sel=pensTp===x.id;svg+=x.a?`<rect x="${a}" y="56" width="${Math.max(6,b-a)}" height="12" rx="6" fill="var(--pens)" opacity="${sel?1:.5}" data-tp="${x.id}" style="cursor:pointer"/>`:`<circle cx="${a}" cy="62" r="${sel?8:6}" fill="var(--pens)" stroke="var(--card)" stroke-width="2" data-tp="${x.id}" style="cursor:pointer"/>`;});
   groups.forEach(g=>g.L.forEach((x,j)=>{svg+=`<text x="${g.cx+(g.L.length>1?(j-(g.L.length-1)/2)*24:0)}" y="${40-(j%2)*0}" font-size="${pensTp===x.id?22:19}" text-anchor="middle" data-tp="${x.id}" style="cursor:pointer">${x.ic||"•"}</text>`;}));
-  return `<div class="card k-pens" style="padding-bottom:10px"><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="Linea del tempo dal 2026 al 2029">${svg}</svg>
+  return `<div class="card k-pens" style="padding-bottom:10px"><h3>🗓️ Linea del tempo</h3><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="Linea del tempo dal 2026 al 2029">${svg}</svg>
     <div class="btns" style="margin-top:4px">${L.map(x=>`<button class="btn sm${pensTp===x.id?" pri":""}" data-tp="${x.id}">${x.ic||""} ${fmt(x.da,{day:x.a?undefined:"numeric",month:"short",year:"2-digit"})}${x.a?"–"+fmt(x.a,{month:"short",year:"2-digit"}):""}</button>`).join("")}</div>
     ${det||`<p class="lbl" style="margin:8px 2px 0">Tocca una tappa per i dettagli.</p>`}</div>`;}
 function bindPens3(p,num){const R=()=>render();
@@ -1945,17 +1946,19 @@ const PROF=[[0,6,"Prudente",2,"Capitale al sicuro prima di tutto: conti deposito
 function profilo(){const a=INV().prof.r||[];if(a.length<QZ.length||a.some(x=>x==null))return null;const s=a.reduce((x,y)=>x+(+y),0),p=PROF.find(z=>s>=z[0]&&s<=z[1]);return{s,n:p[2],max:p[3],t:p[4],anni:[1,3,7,10][+a[0]]};}
 /* ---- dati dalla Pensione e dalla Cassa ---- */
 function invCassa(){try{if(!P.pens||!P.pens.cassa||!P.pens.cassa.ini)return null;return cassaCalc();}catch(e){return null;}}
-function spesaMese(){const v=INV().ris.spese;if(v!=null&&v!=="")return +v;const K=invCassa();if(!K)return 0;const T=K.T,L=(PENS().mov||[]).filter(x=>x.tipo==="u");
+function spesaMese(){const v=INV().ris.spese;if(v!=null&&v!=="")return +v;const K=invCassa();if(!K)return 0;const T=K.T,L=(PENS().mov||[]).filter(x=>x.tipo==="u"&&x.freq!=="una");
   return L.reduce((a,x)=>a+movDates(x,T+"-01",T+"-31").length*(+x.imp||0),0);}
 const riserva=()=>spesaMese()*(+(INV().ris.mesi||6));
-function somme(){const K=invCassa();if(!K)return[];return K.items.filter(i=>i.src==="Scheda"&&i.imp>=1000&&i.d>K.t).map(i=>({k:i.k,t:i.t,d:i.d,imp:i.imp}));}
+function somme(){const K=invCassa();if(!K)return[];return K.items.filter(i=>i.src==="Scheda"&&i.imp>=1000&&i.d>K.t&&!i.ok).map(i=>({k:i.k,t:i.t,d:i.d,imp:i.imp}));}
 function investibile(d){const K=invCassa();if(!K)return null;const ym=d.slice(0,7),fut=K.rows.filter(r=>r.ym>=ym).map(r=>r.fin);if(!fut.length)return null;return Math.max(0,Math.min(...fut)-riserva());}
 function debiti(){const t=today(),D=INV().deb;return (P.pens&&P.pens.mov||[]).filter(x=>x.tipo==="u"&&x.freq==="m"&&x.a&&x.a>t).map(x=>{const o=D[x.id]||{},n=Math.max(0,(+x.a.slice(0,4)-+t.slice(0,4))*12+(+x.a.slice(5,7)-+t.slice(5,7))+(x.a.slice(8)>=t.slice(8)?1:0));
   const mutuo=/mutu/i.test(x.t),tipo=o.tipo||(mutuo?"mutuo":"consumo");return{x,o,n,tipo,tan:o.tan!=null&&o.tan!==""?+o.tan:null,res:o.res!=null&&o.res!==""?+o.res:null};});}
 const annuityPV=(rata,i,n)=>i>0?rata*(1-Math.pow(1+i,-n))/i:rata*n;
 function debCalc(d,quando){const t=today(),q=quando||t,rata=+d.x.imp||0;if(d.tan==null)return null;const i=d.tan/1200;
   const nq=Math.max(0,d.n-Math.max(0,(+q.slice(0,4)-+t.slice(0,4))*12+(+q.slice(5,7)-+t.slice(5,7))));
-  const resQ=d.res!=null&&q===t?d.res:annuityPV(rata,i,nq),interessi=rata*nq-resQ,pen=d.tipo==="mutuo"?0:resQ*(nq>12?0.01:0.005),risp=interessi-pen;
+  const k=d.n-nq,resQ=d.res!=null?Math.max(0,i>0?d.res*Math.pow(1+i,k)-rata*(Math.pow(1+i,k)-1)/i:d.res-rata*k):annuityPV(rata,i,nq),interessi=Math.max(0,rata*nq-resQ);
+  /* prestiti: indennizzo fino all'1% (0,5% se manca meno di un anno), non dovuto se si chiude tutto il debito e il residuo è fino a 10.000 € (art. 125-sexies TUB); mutuo casa: nessuna penale (art. 120-ter TUB) */
+  const pen=d.tipo==="mutuo"||resQ<=10000?0:Math.min(interessi,resQ*(nq>12?0.01:0.005)),risp=interessi-pen;
   const cdv=STRAT(nq/12).find(s=>s.id==="cdv"),alt=grow(resQ,0,nq/12,cdv.r[2],cdv).gain,detr=d.tipo==="mutuo"?Math.min(interessi*0.19,4000*0.19*nq/12):0;
   return{nq,resQ,interessi,pen,risp,alt,detr,costo:resQ+pen,rata};}
 /* ================= viste ================= */
@@ -1997,7 +2000,7 @@ function invBest(cap,anni){const pr=profilo(),L=STRAT(anni,cap).filter(s=>(!pr||
 function invProf(){const a=INV().prof.r||[],pr=profilo();
   return `<div class="card k-inv"><h3>🧭 Il tuo profilo di rischio</h3><p class="lbl" style="margin-top:0">Un orientamento, non il questionario di una banca (MiFID): serve solo a ordinare le strategie in questa sezione.</p>
     ${QZ.map(([q,op],i)=>`<div class="iq"><b>${i+1}. ${esc(q)}</b><div class="iqo">${op.map((t,j)=>`<button class="btn sm${+a[i]===j&&a[i]!=null?" pri":""}" data-iq="${i}:${j}">${esc(t)}</button>`).join("")}</div></div>`).join("")}
-    ${pr?`<div class="card k-inv" style="margin-top:12px;box-shadow:none;border:1px solid var(--line)"><h3>${esc(pr.n)} · ${pr.s} punti su 21</h3><p style="margin:0">${esc(pr.t)}</p><p class="lbl" style="margin:6px 0 0">Orizzonte: circa ${pr.anni} ${pr.anni===1?"anno":"anni"}. Le strategie con rischio più alto restano visibili ma segnate.</p></div>`:`<p class="lbl">Rispondi a tutte le domande per vedere il profilo.</p>`}</div>`;}
+    ${pr?`<div class="card k-inv nofold" style="margin-top:12px;box-shadow:none;border:1px solid var(--line)"><h3>${esc(pr.n)} · ${pr.s} punti su 21</h3><p style="margin:0">${esc(pr.t)}</p><p class="lbl" style="margin:6px 0 0">Orizzonte: circa ${pr.anni} ${pr.anni===1?"anno":"anni"}. Le strategie con rischio più alto restano visibili ma segnate.</p></div>`:`<p class="lbl">Rispondi a tutte le domande per vedere il profilo.</p>`}</div>`;}
 function invRis(){const v=INV().ris,K=invCassa(),sp=spesaMese(),m=+(v.mesi||6),r=sp*m;
   let o=`<div class="card k-inv"><h3>🛟 Riserva di sicurezza</h3><p class="lbl" style="margin-top:0">Soldi da tenere sempre disponibili per imprevisti e ritardi (per esempio la pensione che arriva tardi). Una regola diffusa è da 3 a 12 mesi di spese; chi ha entrate fisse sicure spesso sta più vicino a 6.</p>
     <div class="form"><label>Spese al mese €${v.spese!=null&&v.spese!==""?"":K?" (uscite della Cassa di questo mese)":""}<input data-ir="spese" inputmode="decimal" value="${esc(String(Math.round(sp)))}"></label>
@@ -2040,7 +2043,7 @@ function invDeb(){const D=debiti(),S=somme();
       <label>Estinguere<select data-id="${d.x.id}:q"><option value="">oggi</option>${S.map(x=>`<option value="${x.d}"${q===x.d?" selected":""}>con ${esc(x.t)} (${fmt(x.d,{month:"short",year:"numeric"})})</option>`).join("")}</select></label></div>
       ${c?`<div class="kpi" style="margin-top:10px"><div><b>${eurI(c.costo)}</b><span>per chiudere${c.pen?" (con "+eurI(c.pen)+" di penale)":""}</span></div><div><b>${eurI(c.risp)}</b><span>interessi risparmiati${c.detr?", meno la detrazione del 19% (≈ "+eurI(c.detr)+")":""}</span></div><div><b>${eurI(c.alt)}</b><span>renderebbe la stessa somma in un deposito vincolato (netto)</span></div><div><b>${eurI(c.rata)}</b><span>al mese in più nella Cassa per ${c.nq} mesi</span></div></div>
         <p style="margin:10px 0 0">${(c.risp-c.detr)>c.alt?`✅ Con questi numeri estinguere fa risparmiare più di quanto renderebbe investire la stessa somma: <b>${eurI(c.risp-c.detr-c.alt)}</b> di differenza.`:`➖ Con questi numeri investire la somma renderebbe più degli interessi risparmiati (<b>${eurI(c.alt-(c.risp-c.detr))}</b> di differenza), ma solo se il tasso del deposito resta quello di oggi.`}</p>
-        <p class="lbl" style="margin:6px 0 0">${d.tipo==="mutuo"?"Mutuo per la casa: nessuna penale per l’estinzione anticipata (art. 120-ter TUB); sugli interessi della prima casa c’è la detrazione del 19% fino a 4.000 € l’anno.":"Prestiti: la banca può chiedere un indennizzo fino all’1% del residuo (0,5% se manca meno di un anno) e deve togliere interessi e costi non ancora maturati (art. 125-sexies TUB)."} Da verificare con il conteggio di estinzione della banca.</p>
+        <p class="lbl" style="margin:6px 0 0">${d.tipo==="mutuo"?"Mutuo per la casa: nessuna penale per l’estinzione anticipata (art. 120-ter TUB); sugli interessi della prima casa c’è la detrazione del 19% fino a 4.000 € l’anno.":"Prestiti: la banca deve togliere interessi e costi non ancora maturati e può chiedere un indennizzo fino all’1% del residuo (0,5% se manca meno di un anno), che non è dovuto se chiudi tutto il debito e il residuo è fino a 10.000 € (art. 125-sexies TUB)."} Da verificare con il conteggio di estinzione della banca.</p>
         <div class="btns"><button class="btn sm" data-idc="${d.x.id}">📆 Prova nella Cassa</button></div>`:`<p class="lbl" style="margin:8px 0 0">Scrivi il TAN per vedere il conto.</p>`}</div>`;}).join("");}
 function invSim(){const v=INV().sim,anni=+(v.anni||10),cap=+(v.cap!=null&&v.cap!==""?v.cap:20000),mens=+(v.mens||0),sid=v.s||"bil",L=STRAT(anni,cap),s=L.find(x=>x.id===sid)||L[5];
   const r=v.r!=null&&v.r!==""?+v.r:null,ss=r!=null?Object.assign({},s,{r:[r-1.5,r,r+1.5]}):s,x=stratCalc(ss,cap,anni,mens);
@@ -2186,7 +2189,18 @@ function side(){const late=lateN();
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(k==="prat")pratNew=false;cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({cal:vCal,pens:vPens,inv:vInv,prat:vPrat,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
+function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({cal:vCal,pens:vPens,inv:vInv,prat:vPrat,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
+/* ---------- 🪟 finestre: ogni riquadro con un titolo si apre e si chiude; lo stato resta su questo iPad (pn-fold) ---------- */
+const FOLD_KEY="pn-fold";let foldSt=lsJ(FOLD_KEY)||{};
+function foldCards(m){m.querySelectorAll(":scope > h2").forEach(h=>{const c=h.nextElementSibling;if(!c||c.tagName!=="DIV"||!c.classList.contains("card")||(c.firstElementChild&&c.firstElementChild.tagName==="H3"))return;const t=document.createElement("h3");t.innerHTML=h.innerHTML;c.prepend(t);h.remove();});
+  m.querySelectorAll(".card").forEach(c=>{if(c.tagName==="DETAILS"||c.classList.contains("nofold")||c.parentElement.closest(".card"))return;const h=c.firstElementChild;if(!h||h.tagName!=="H3")return;
+    const d=document.createElement("details");d.className=c.className+" fold";for(const a of [...c.attributes])if(a.name!=="class")d.setAttribute(a.name,a.value);
+    const s=document.createElement("summary");s.appendChild(h);d.appendChild(s);while(c.firstChild)d.appendChild(c.firstChild);
+    const k=cur+"|"+(h.textContent||"").replace(/[\d·,()€.%:+−-]+/g,"").replace(/\s+/g," ").trim().slice(0,40);d.dataset.fk=k;d.open=foldSt[k]!==false;c.replaceWith(d);});
+  m.querySelectorAll("details.csb").forEach(d=>{const k=cur+"|"+d.dataset.k;d.dataset.fk=k;if(k in foldSt)d.open=foldSt[k];});
+  m.querySelectorAll("details[data-fk]").forEach(d=>d.addEventListener("toggle",()=>{foldSt[d.dataset.fk]=d.open;try{localStorage.setItem(FOLD_KEY,JSON.stringify(foldSt));}catch(e){}}));}
+/* un pulsante nel titolo fa il suo lavoro senza aprire o chiudere la finestra */
+document.addEventListener("click",e=>{const s=e.target.closest&&e.target.closest("summary");if(!s)return;const b=e.target.closest("button,input,select,label");if(b&&b!==s&&s.contains(b))e.preventDefault();},true);
 /* ridisegno chiesto da un controllo in sottofondo: aspetta se si sta scrivendo o compilando qualcosa */
 function softRender(){const a=document.activeElement;if((a&&/INPUT|SELECT|TEXTAREA/.test(a.tagName))||calAdd||editId){clearTimeout(softRender.t);softRender.t=setTimeout(softRender,4000);return;}render();}
 

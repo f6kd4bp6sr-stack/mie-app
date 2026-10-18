@@ -28,7 +28,7 @@ function vPrat(){
     <label>Prossimo passo (facoltativo)<input id="pnP" maxlength="120" placeholder="es. chiedere il preventivo"></label><label>Entro il<input id="pnD" type="date"></label></div>
     <p class="lbl">Il tipo propone l’elenco dei documenti più comuni: lo puoi cambiare come vuoi.</p>
     <div class="btns"><button class="btn pri" data-pa="create">Crea</button><button class="btn" data-pa="cancel">Annulla</button></div></div>`;
-  o+=open.length?`<div class="card k-prat plist">${open.map(pratRow).join("")}</div>`:(pratNew?"":`<div class="card k-prat"><p class="empty">Nessuna pratica aperta. Creane una con «➕ Nuova pratica».</p></div>`);
+  o+=open.length?`<div class="card k-prat plist"><h3>🗂️ Pratiche aperte <span class="lbl" style="font-weight:400">${open.length}</span></h3>${open.map(pratRow).join("")}</div>`:(pratNew?"":`<div class="card k-prat"><p class="empty">Nessuna pratica aperta. Creane una con «➕ Nuova pratica».</p></div>`);
   if(closed.length)o+=`<details class="more"><summary>Chiuse (${closed.length})</summary><div class="card plist">${closed.map(pratRow).join("")}</div></details>`;
   return o;
 }

@@ -78,17 +78,19 @@ const PROF=[[0,6,"Prudente",2,"Capitale al sicuro prima di tutto: conti deposito
 function profilo(){const a=INV().prof.r||[];if(a.length<QZ.length||a.some(x=>x==null))return null;const s=a.reduce((x,y)=>x+(+y),0),p=PROF.find(z=>s>=z[0]&&s<=z[1]);return{s,n:p[2],max:p[3],t:p[4],anni:[1,3,7,10][+a[0]]};}
 /* ---- dati dalla Pensione e dalla Cassa ---- */
 function invCassa(){try{if(!P.pens||!P.pens.cassa||!P.pens.cassa.ini)return null;return cassaCalc();}catch(e){return null;}}
-function spesaMese(){const v=INV().ris.spese;if(v!=null&&v!=="")return +v;const K=invCassa();if(!K)return 0;const T=K.T,L=(PENS().mov||[]).filter(x=>x.tipo==="u");
+function spesaMese(){const v=INV().ris.spese;if(v!=null&&v!=="")return +v;const K=invCassa();if(!K)return 0;const T=K.T,L=(PENS().mov||[]).filter(x=>x.tipo==="u"&&x.freq!=="una");
   return L.reduce((a,x)=>a+movDates(x,T+"-01",T+"-31").length*(+x.imp||0),0);}
 const riserva=()=>spesaMese()*(+(INV().ris.mesi||6));
-function somme(){const K=invCassa();if(!K)return[];return K.items.filter(i=>i.src==="Scheda"&&i.imp>=1000&&i.d>K.t).map(i=>({k:i.k,t:i.t,d:i.d,imp:i.imp}));}
+function somme(){const K=invCassa();if(!K)return[];return K.items.filter(i=>i.src==="Scheda"&&i.imp>=1000&&i.d>K.t&&!i.ok).map(i=>({k:i.k,t:i.t,d:i.d,imp:i.imp}));}
 function investibile(d){const K=invCassa();if(!K)return null;const ym=d.slice(0,7),fut=K.rows.filter(r=>r.ym>=ym).map(r=>r.fin);if(!fut.length)return null;return Math.max(0,Math.min(...fut)-riserva());}
 function debiti(){const t=today(),D=INV().deb;return (P.pens&&P.pens.mov||[]).filter(x=>x.tipo==="u"&&x.freq==="m"&&x.a&&x.a>t).map(x=>{const o=D[x.id]||{},n=Math.max(0,(+x.a.slice(0,4)-+t.slice(0,4))*12+(+x.a.slice(5,7)-+t.slice(5,7))+(x.a.slice(8)>=t.slice(8)?1:0));
   const mutuo=/mutu/i.test(x.t),tipo=o.tipo||(mutuo?"mutuo":"consumo");return{x,o,n,tipo,tan:o.tan!=null&&o.tan!==""?+o.tan:null,res:o.res!=null&&o.res!==""?+o.res:null};});}
 const annuityPV=(rata,i,n)=>i>0?rata*(1-Math.pow(1+i,-n))/i:rata*n;
 function debCalc(d,quando){const t=today(),q=quando||t,rata=+d.x.imp||0;if(d.tan==null)return null;const i=d.tan/1200;
   const nq=Math.max(0,d.n-Math.max(0,(+q.slice(0,4)-+t.slice(0,4))*12+(+q.slice(5,7)-+t.slice(5,7))));
-  const resQ=d.res!=null&&q===t?d.res:annuityPV(rata,i,nq),interessi=rata*nq-resQ,pen=d.tipo==="mutuo"?0:resQ*(nq>12?0.01:0.005),risp=interessi-pen;
+  const k=d.n-nq,resQ=d.res!=null?Math.max(0,i>0?d.res*Math.pow(1+i,k)-rata*(Math.pow(1+i,k)-1)/i:d.res-rata*k):annuityPV(rata,i,nq),interessi=Math.max(0,rata*nq-resQ);
+  /* prestiti: indennizzo fino all'1% (0,5% se manca meno di un anno), non dovuto se si chiude tutto il debito e il residuo è fino a 10.000 € (art. 125-sexies TUB); mutuo casa: nessuna penale (art. 120-ter TUB) */
+  const pen=d.tipo==="mutuo"||resQ<=10000?0:Math.min(interessi,resQ*(nq>12?0.01:0.005)),risp=interessi-pen;
   const cdv=STRAT(nq/12).find(s=>s.id==="cdv"),alt=grow(resQ,0,nq/12,cdv.r[2],cdv).gain,detr=d.tipo==="mutuo"?Math.min(interessi*0.19,4000*0.19*nq/12):0;
   return{nq,resQ,interessi,pen,risp,alt,detr,costo:resQ+pen,rata};}
 /* ================= viste ================= */
@@ -130,7 +132,7 @@ function invBest(cap,anni){const pr=profilo(),L=STRAT(anni,cap).filter(s=>(!pr||
 function invProf(){const a=INV().prof.r||[],pr=profilo();
   return `<div class="card k-inv"><h3>🧭 Il tuo profilo di rischio</h3><p class="lbl" style="margin-top:0">Un orientamento, non il questionario di una banca (MiFID): serve solo a ordinare le strategie in questa sezione.</p>
     ${QZ.map(([q,op],i)=>`<div class="iq"><b>${i+1}. ${esc(q)}</b><div class="iqo">${op.map((t,j)=>`<button class="btn sm${+a[i]===j&&a[i]!=null?" pri":""}" data-iq="${i}:${j}">${esc(t)}</button>`).join("")}</div></div>`).join("")}
-    ${pr?`<div class="card k-inv" style="margin-top:12px;box-shadow:none;border:1px solid var(--line)"><h3>${esc(pr.n)} · ${pr.s} punti su 21</h3><p style="margin:0">${esc(pr.t)}</p><p class="lbl" style="margin:6px 0 0">Orizzonte: circa ${pr.anni} ${pr.anni===1?"anno":"anni"}. Le strategie con rischio più alto restano visibili ma segnate.</p></div>`:`<p class="lbl">Rispondi a tutte le domande per vedere il profilo.</p>`}</div>`;}
+    ${pr?`<div class="card k-inv nofold" style="margin-top:12px;box-shadow:none;border:1px solid var(--line)"><h3>${esc(pr.n)} · ${pr.s} punti su 21</h3><p style="margin:0">${esc(pr.t)}</p><p class="lbl" style="margin:6px 0 0">Orizzonte: circa ${pr.anni} ${pr.anni===1?"anno":"anni"}. Le strategie con rischio più alto restano visibili ma segnate.</p></div>`:`<p class="lbl">Rispondi a tutte le domande per vedere il profilo.</p>`}</div>`;}
 function invRis(){const v=INV().ris,K=invCassa(),sp=spesaMese(),m=+(v.mesi||6),r=sp*m;
   let o=`<div class="card k-inv"><h3>🛟 Riserva di sicurezza</h3><p class="lbl" style="margin-top:0">Soldi da tenere sempre disponibili per imprevisti e ritardi (per esempio la pensione che arriva tardi). Una regola diffusa è da 3 a 12 mesi di spese; chi ha entrate fisse sicure spesso sta più vicino a 6.</p>
     <div class="form"><label>Spese al mese €${v.spese!=null&&v.spese!==""?"":K?" (uscite della Cassa di questo mese)":""}<input data-ir="spese" inputmode="decimal" value="${esc(String(Math.round(sp)))}"></label>
@@ -173,7 +175,7 @@ function invDeb(){const D=debiti(),S=somme();
       <label>Estinguere<select data-id="${d.x.id}:q"><option value="">oggi</option>${S.map(x=>`<option value="${x.d}"${q===x.d?" selected":""}>con ${esc(x.t)} (${fmt(x.d,{month:"short",year:"numeric"})})</option>`).join("")}</select></label></div>
       ${c?`<div class="kpi" style="margin-top:10px"><div><b>${eurI(c.costo)}</b><span>per chiudere${c.pen?" (con "+eurI(c.pen)+" di penale)":""}</span></div><div><b>${eurI(c.risp)}</b><span>interessi risparmiati${c.detr?", meno la detrazione del 19% (≈ "+eurI(c.detr)+")":""}</span></div><div><b>${eurI(c.alt)}</b><span>renderebbe la stessa somma in un deposito vincolato (netto)</span></div><div><b>${eurI(c.rata)}</b><span>al mese in più nella Cassa per ${c.nq} mesi</span></div></div>
         <p style="margin:10px 0 0">${(c.risp-c.detr)>c.alt?`✅ Con questi numeri estinguere fa risparmiare più di quanto renderebbe investire la stessa somma: <b>${eurI(c.risp-c.detr-c.alt)}</b> di differenza.`:`➖ Con questi numeri investire la somma renderebbe più degli interessi risparmiati (<b>${eurI(c.alt-(c.risp-c.detr))}</b> di differenza), ma solo se il tasso del deposito resta quello di oggi.`}</p>
-        <p class="lbl" style="margin:6px 0 0">${d.tipo==="mutuo"?"Mutuo per la casa: nessuna penale per l’estinzione anticipata (art. 120-ter TUB); sugli interessi della prima casa c’è la detrazione del 19% fino a 4.000 € l’anno.":"Prestiti: la banca può chiedere un indennizzo fino all’1% del residuo (0,5% se manca meno di un anno) e deve togliere interessi e costi non ancora maturati (art. 125-sexies TUB)."} Da verificare con il conteggio di estinzione della banca.</p>
+        <p class="lbl" style="margin:6px 0 0">${d.tipo==="mutuo"?"Mutuo per la casa: nessuna penale per l’estinzione anticipata (art. 120-ter TUB); sugli interessi della prima casa c’è la detrazione del 19% fino a 4.000 € l’anno.":"Prestiti: la banca deve togliere interessi e costi non ancora maturati e può chiedere un indennizzo fino all’1% del residuo (0,5% se manca meno di un anno), che non è dovuto se chiudi tutto il debito e il residuo è fino a 10.000 € (art. 125-sexies TUB)."} Da verificare con il conteggio di estinzione della banca.</p>
         <div class="btns"><button class="btn sm" data-idc="${d.x.id}">📆 Prova nella Cassa</button></div>`:`<p class="lbl" style="margin:8px 0 0">Scrivi il TAN per vedere il conto.</p>`}</div>`;}).join("");}
 function invSim(){const v=INV().sim,anni=+(v.anni||10),cap=+(v.cap!=null&&v.cap!==""?v.cap:20000),mens=+(v.mens||0),sid=v.s||"bil",L=STRAT(anni,cap),s=L.find(x=>x.id===sid)||L[5];
   const r=v.r!=null&&v.r!==""?+v.r:null,ss=r!=null?Object.assign({},s,{r:[r-1.5,r,r+1.5]}):s,x=stratCalc(ss,cap,anni,mens);
