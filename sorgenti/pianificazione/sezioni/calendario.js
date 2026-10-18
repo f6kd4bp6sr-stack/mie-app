@@ -46,6 +46,7 @@ function dayData(s,V){
   if(CONTI_ON)try{C().ric.forEach(r=>{if(ricDates(r,s,s).length)it.push({ic:r.tipo==="e"?"💰":"💶",t:r.t,amt:(r.tipo==="e"?"+":"−")+euro(r.imp),c:"pay"+(r.tipo==="e"?" in":""),k:"pay",id:r.id});});}catch(e){}
   famOn(s).forEach(a=>it.push({ic:"👨‍👧",t:(a.chi?a.chi+": ":"")+a.t,o:a.o||"",f:a.f||"",c:"fam",k:a.tipo==="att"?"att":"fev",id:a.id,sub:[a.tipo==="att"?(+a.ogni===2?"ogni 2 settimane":"ogni settimana"):"",a.acc?"🚗 "+a.acc:""].filter(Boolean).join(" · ")}));
   if(typeof pensOn==="function")pensOn(s).forEach(a=>it.push({ic:"🎖️",t:a.t,c:"pens",k:"pens",id:a.id}));
+  if(typeof cassaOn==="function")cassaOn(s).forEach(x=>it.push(x));
   if(typeof pratOn==="function")pratOn(s).forEach(x=>it.push({ic:"🗂️",t:x.passo.t,c:"prat",k:"prat",id:x.id,sub:x.t}));
   calOn(s).forEach(e=>it.push({ic:calIc(e),t:e.t,o:e.o||"",f:e.f||"",c:"ipad",k:"ipad",sub:[e.cal,e.loc].filter(Boolean).join(" · ")}));
   const dn=(P.dn||{})[s];
