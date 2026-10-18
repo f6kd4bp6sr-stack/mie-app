@@ -33,8 +33,14 @@ function pathUnits() {
   u.sort((a, b) => { const ia = PATH_ORDER.indexOf(a.id), ib = PATH_ORDER.indexOf(b.id); return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib); });
   u.forEach(x => { if (x.items) x.items = x.items.filter(it => it.q && Array.isArray(it.o) && it.o.length >= 2); });
   /* domande dalla fonte unica, con il loro codice fisso (data/domande/quiz/*.json) */
-  if (typeof QUIZ !== 'undefined') u.forEach(x => { if (x.items && QUIZ[x.id]) x.items = QUIZ[x.id].map(z => ({ id: z.id, q: z.q, o: [z.ok].concat(z.wrong), a: 0, e: z.e || '', k: z.k || '', enl: z.en || null, kind: z.kind || '', say: z.say || '', it: z.it || '' })); else if (x.items) x.items = rev5Items(x.id, x.items); });
+  if (typeof QUIZ !== 'undefined') u.forEach(x => { if (x.items && QUIZ[x.id]) x.items = QUIZ[x.id].map(z => ({ id: z.id, q: z.q, o: [z.ok].concat(z.wrong), a: 0, e: z.e || '', k: z.k || '', enl: z.en || null, kind: z.kind || '', say: z.say || '', it: z.it || '', arg: z.arg || z.t || '' })); else if (x.items) x.items = rev5Items(x.id, x.items); });
   else u.forEach(x => { if (x.items) x.items = rev5Items(x.id, x.items); });
+  /* argomenti: ogni domanda ha il suo (data/domande/argomenti.json); le lezioni sono gli argomenti, non più blocchi da 10 */
+  u.forEach(x => { if (!x.items) return; const A = (typeof ARGOMENTI !== 'undefined' && ARGOMENTI[x.id]) || [];
+    const T = A.map(a => ({ id: a[0], n: a[1], ic: a[2], items: [] })), by = {}; T.forEach(t => by[t.id] = t);
+    x.items.forEach(it => { let t = by[it.arg]; if (!t) { t = by.__altro || (by.__altro = { id: '__altro', n: 'Altre curiosità', ic: '✨', items: [] }); } t.items.push(it); });
+    if (by.__altro) T.push(by.__altro);
+    x.topics = T.filter(t => t.items.length); });
   return (__units = u);
 }
 /* righe chiave brevi (la spiegazione lunga resta dietro «Perché?»), correzioni e domande nuove di 5ª */
@@ -120,7 +126,11 @@ const goalReached = g => g.nuove >= GOAL.nuove && g.rip >= g.ripGoal;
 
 /* ---------- struttura delle tappe di un'unità ---------- */
 const CHUNK = 10;
+const nodeKey = nd => nd.t === 'arg' ? 'a:' + nd.id : nd.t + nd.i;
+const topicOf = (u, nd) => nd && nd.t === 'arg' ? u.topics[nd.i] : null;
+function topicLearned(u, t) { const s = pState(); return t.items.filter(it => (s.srs[itemKey(u, it)] || {}).b > 0).length; }
 function unitNodes(u) {
+  if (u.topics && u.topics.length) { const nodes = u.topics.map((t, i) => ({ t: 'arg', i, id: t.id })); nodes.push({ t: 'rip', i: nodes.length - 1, last: true }); return nodes; }
   const n = u.math ? MATH_TAPPE.length : Math.ceil(u.items.length / CHUNK);
   const nodes = [];
   for (let i = 0; i < n; i++) {
@@ -143,13 +153,13 @@ function chunkLearned(u, i) {
 }
 function nodeState(u, nodes, k) {
   const us = (pState().u[u.id] || { done: {} });
-  const node = nodes[k], id = node.t + node.i;
-  const done = !!us.done[id];
-  const conquered = node.t === 'lez' && chunkLearned(u, node.i) >= (u.math ? CHUNK : Math.min(8, u.items.slice(node.i * CHUNK, node.i * CHUNK + CHUNK).length));
+  const node = nodes[k], id = nodeKey(node);
+  const done = !!us.done[id], tp = topicOf(u, node);
+  const conquered = tp ? topicLearned(u, tp) >= Math.min(8, tp.items.length) : node.t === 'lez' && chunkLearned(u, node.i) >= (u.math ? CHUNK : Math.min(8, u.items.slice(node.i * CHUNK, node.i * CHUNK + CHUNK).length));
   const open = true; /* tutte le lezioni aperte da subito (scelta del genitore) */
   return { done, conquered, open, id };
 }
-function nextNode(u) { const nodes = unitNodes(u); for (let k = 0; k < nodes.length; k++) { const st = nodeState(u, nodes, k); if (st.open && !st.done) return k; } return nodes.length - 1; }
+function nextNode(u) { const nodes = unitNodes(u); if (u.topics && u.topics.length) { const k = u.topics.findIndex(t => topicLearned(u, t) < t.items.length); return k < 0 ? nodes.length - 1 : k; } for (let k = 0; k < nodes.length; k++) { const st = nodeState(u, nodes, k); if (st.open && !st.done) return k; } return nodes.length - 1; }
 
 /* ---------- composizione di una lezione ---------- */
 function buildLesson(u, node) {
@@ -161,6 +171,16 @@ function buildLesson(u, node) {
     return out;
   }
   const wrap = it => Object.assign(mixOpts(it), { q: it.q, e: it.e, k: it.k, key: itemKey(u, it), enl: it.enl, kind: it.kind, say: it.say, it: it.it });
+  if (node.t === 'arg') {
+    /* un argomento: prima le nozioni nuove (fino a 5), poi un ricordo in scadenza della stessa materia, poi le meno sicure */
+    const tp = topicOf(u, node), sr = it => s.srs[itemKey(u, it)];
+    const fresh = shuffle(tp.items.filter(it => !((sr(it) || {}).b > 0)));
+    const known = tp.items.filter(it => (sr(it) || {}).b > 0).sort((a, b) => sr(a).b - sr(b).b);
+    const due = shuffle(u.items.filter(it => !tp.items.includes(it) && sr(it) && sr(it).b > 0 && sr(it).d <= todayIso()));
+    const pickd = fresh.slice(0, 5); if (due[0]) pickd.push(due[0]);
+    known.concat(fresh).forEach(it => { if (pickd.length < 6 && !pickd.includes(it)) pickd.push(it); });
+    return shuffle(pickd).map(wrap);
+  }
   if (node.t === 'lez') {
     const ch = u.items.slice(node.i * CHUNK, node.i * CHUNK + CHUNK);
     const fresh = shuffle(ch.filter(it => !((s.srs[itemKey(u, it)] || {}).b > 0)));
@@ -173,7 +193,7 @@ function buildLesson(u, node) {
     return shuffle(pickd).map(wrap);
   }
   // ripasso: prima le nozioni in scadenza, poi quelle meno sicure delle tappe fatte
-  const upto = u.items.slice(0, (node.i + 1) * CHUNK);
+  const upto = u.topics ? u.items : u.items.slice(0, (node.i + 1) * CHUNK);
   const scored = upto.map(it => ({ it, r: s.srs[itemKey(u, it)] })).filter(x => x.r);
   scored.sort((a, b) => (a.r.d <= todayIso() ? 0 : 1) - (b.r.d <= todayIso() ? 0 : 1) || a.r.b - b.r.b);
   let list = scored.slice(0, 8).map(x => x.it);
@@ -192,10 +212,10 @@ function startLesson(uid, k, opts) {
   opts = opts || {};
   const u = uid ? unitById(uid) : null;
   const nodes = u ? unitNodes(u) : null, node = nodes ? nodes[k] : null;
-  const qs = opts.daily ? buildDailyReview() : buildLesson(u, node);
+  const qs = opts.mix ? opts.mix.map(x => Object.assign(mixOpts(x.it), { q: x.it.q, e: x.it.e, k: x.it.k, key: itemKey(x.u, x.it), uid: x.u.id, enl: x.it.enl, kind: x.it.kind, say: x.it.say, it: x.it.it })) : opts.daily ? buildDailyReview() : buildLesson(u, node);
   if (!qs.length) { openModal('<div style="font-size:50px">🌟</div><div class="big" style="font-size:26px">Tutto ripassato!</div><p style="font-weight:700">Oggi non ci sono nozioni da rafforzare. Torna domani!</p><button type="button" class="btn" id="ls-ok" data-focus>Ok</button>'); $('ls-ok').addEventListener('click', closeModal); return; }
   const col = u ? u.c : 'var(--c6)';
-  LESSON = { u, k, node, qs, i: 0, queue: [], firstOk: 0, think: 0, combo: 0, gems: 0, t0: Date.now(), tq: 0, daily: !!opts.daily, col, newL: 0, rip: 0, firstAns: 0 };
+  LESSON = { u, k, node, qs, i: 0, queue: [], firstOk: 0, think: 0, combo: 0, gems: 0, t0: Date.now(), tq: 0, daily: !!(opts.daily || opts.mix), mix: opts.mixLabel || '', col, newL: 0, rip: 0, firstAns: 0 };
   let box = $('lesson'); if (!box) { box = document.createElement('div'); box.id = 'lesson'; box.className = 'lesson'; document.body.appendChild(box); }
   box.hidden = false; document.body.classList.add('in-lesson');
   showQ();
@@ -212,7 +232,7 @@ function showQ() {
   const readMs = q.kind === 'ascolta' ? Math.max(1400, Math.min(3200, 900 + String(q.say).length * 45)) : Math.max(900, Math.min(2600, 600 + String(q.q).length * 22));
   box.innerHTML = lessonBar() +
     '<div class="ls-body">' +
-      '<div class="ls-tag" style="--lc:' + L.col + '">' + (q.redo ? '🔁 Riproviamo questa' : L.daily ? '💪 Rafforza i ricordi' : esc(L.u.ic + ' ' + L.u.name + (L.node.t === 'rip' ? ' · Ripasso' : ' · Tappa ' + (L.node.i + 1)))) + '</div>' +
+      '<div class="ls-tag" style="--lc:' + L.col + '">' + (q.redo ? '🔁 Riproviamo questa' : L.mix ? esc('🔎 ' + L.mix) : L.daily ? '💪 Rafforza i ricordi' : esc(L.u.ic + ' ' + L.u.name + (L.node.t === 'arg' ? ' · ' + topicOf(L.u, L.node).n : L.node.t === 'rip' ? ' · Ripasso' : L.u.math && MATH_TAPPE[L.node.i] ? ' · ' + MATH_TAPPE[L.node.i].n : ' · Tappa ' + (L.node.i + 1)))) + '</div>' +
       (q.kind === 'ascolta'
         ? '<div class="ls-q"><span>' + esc(q.q) + '</span></div><div class="pl-listen"><button type="button" class="pl-play" id="pl-play" aria-label="Ascolta di nuovo">🔊</button><button type="button" class="pl-slow" id="pl-slow" aria-label="Ascolta piano">🐢</button></div>'
         : '<div class="ls-q"><span>' + esc(q.q) + '</span>' + sayBtn(q.q + '. ' + q.o.join('; '), q.enl) + '</div>') +
@@ -266,7 +286,7 @@ function check(q, opts) {
     ding(); cheer(opts[q.a]);
     if (q.key && first) {
       const s = pState(); const isNew = srsUpdate(s, q.key, L.daily ? q.uid : L.u.id, true); pSave(s);
-      const dg = dayGoal(); if (isNew) { dg.nuove++; L.newL++; } if (L.daily || (L.node && L.node.t === 'rip')) { dg.rip++; L.rip++; } store.set('path-day', dg);
+      const dg = dayGoal(); if (isNew) { dg.nuove++; L.newL++; } if ((L.daily && !isNew) || (L.node && L.node.t === 'rip')) { dg.rip++; L.rip++; } store.set('path-day', dg);
     } else if (!q.key && first) { const dg = dayGoal(); dg.nuove++; L.newL++; store.set('path-day', dg); }
     feedback(true, notes, q);
   } else {
@@ -318,13 +338,13 @@ function endLesson() {
   if (perfect) { Gems.add(5); L.gems += 5; bonus.push('⭐ Lezione perfetta +5 💎'); }
   let conqNow = false;
   if (L.u) {
-    const s = pState(), us = s.u[L.u.id] || { done: {}, best: {} }; const id = L.node.t + L.node.i;
-    const wasConq = L.node.t === 'lez' && nodeState(L.u, unitNodes(L.u), L.k).conquered;
+    const s = pState(), us = s.u[L.u.id] || { done: {}, best: {} }; const id = nodeKey(L.node);
+    const wasConq = (L.node.t === 'lez' || L.node.t === 'arg') && nodeState(L.u, unitNodes(L.u), L.k).conquered;
     us.done[id] = (us.done[id] || 0) + 1;
     if (L.u.math && L.node.t === 'lez') us.best[L.node.i] = Math.max(us.best[L.node.i] || 0, L.firstOk);
     s.u[L.u.id] = us; pSave(s);
-    const isConq = L.node.t === 'lez' && nodeState(L.u, unitNodes(L.u), L.k).conquered;
-    if (isConq && !wasConq) { conqNow = true; Gems.add(10); L.gems += 10; bonus.push('👑 Tappa conquistata +10 💎'); }
+    const isConq = (L.node.t === 'lez' || L.node.t === 'arg') && nodeState(L.u, unitNodes(L.u), L.k).conquered;
+    if (isConq && !wasConq) { conqNow = true; Gems.add(10); L.gems += 10; bonus.push(L.node.t === 'arg' ? '👑 Argomento conquistato +10 💎' : '👑 Tappa conquistata +10 💎'); }
     if (L.u.prog === 'mate') markDay('mate', box); if (L.u.prog === 'scienze') markDay('scienze', box);
   }
   gain(3, box);
@@ -336,7 +356,7 @@ function endLesson() {
   const c = dcol(), lv = levelOf(D.energy);
   box.innerHTML = '<div class="ls-end">' +
     '<div class="ls-dragon">' + dragonSVG(lv, D.color, 'bob') + '</div>' +
-    '<div class="big" style="font-size:30px">' + (perfect ? 'Lezione perfetta!' : conqNow ? 'Tappa conquistata!' : 'Lezione completata!') + '</div>' +
+    '<div class="big" style="font-size:30px">' + (perfect ? 'Lezione perfetta!' : conqNow ? (L.node && L.node.t === 'arg' ? 'Argomento conquistato!' : 'Tappa conquistata!') : 'Lezione completata!') + '</div>' +
     '<div class="ls-stats">' +
       '<div><b>' + L.firstOk + '/' + n + '</b><small>giuste al primo colpo</small></div>' +
       '<div><b>🧠 ' + L.think + '</b><small>ci hai pensato</small></div>' +

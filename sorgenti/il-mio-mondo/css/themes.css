@@ -181,3 +181,9 @@
   html.ipad-win .ls-top { padding-left: max(16px, calc(var(--winL) + 8px - max(0px, (100vw - 760px) / 2))); }
   html.ipad-win .tt-top { padding-left: calc(var(--winL) - 10px); }
   html.ipad-win .overlay { padding-top: max(16px, var(--winT)); }
+  /* ===== ricerca per argomento ===== */
+  .h-find, .m-find { display: block; width: 100%; max-width: 640px; margin: 14px 0 6px; font: inherit; font-weight: 700; font-size: 17px; padding: 13px 16px; border: 2px solid var(--line); border-radius: 16px; background: var(--surface); color: var(--ink); box-shadow: 0 3px 0 var(--line); }
+  .h-find:focus, .m-find:focus { outline: none; border-color: var(--v2-blue, #3fa9f5); }
+  #h-res { margin-top: 10px; max-width: 640px; }
+  #h-res .v2-btn { margin-bottom: 8px; }
+  .m-row small { white-space: nowrap; } #h-res .m-row { flex-wrap: wrap; } #h-res .m-row small { white-space: normal; }

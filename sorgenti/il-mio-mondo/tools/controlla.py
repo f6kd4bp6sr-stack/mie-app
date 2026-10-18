@@ -9,6 +9,9 @@ import glob, json, os, re, sys
 
 D = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 QDIR = D + 'data/domande/quiz/'
+import json as _j
+_A = _j.load(open(D + 'data/domande/argomenti.json', encoding='utf-8')) if os.path.exists(D + 'data/domande/argomenti.json') else {}
+ARG_IDS = {u: {t[0] for t in L} for u, L in _A.items()}
 # termini che non devono comparire nei contenuti: solo impronte, le parole non sono nel codice pubblico
 import hashlib as _hl, re as _re
 def guarda(testo, regole):
@@ -67,6 +70,8 @@ def run(write=True):
                 if x.get('kind') == 'dillo' and x.get('ok') != x.get('say'): err.append(f'{where}: in «dillo» la risposta giusta deve essere la frase da dire (say)')
                 if x.get('kind') == 'ascolta' and any(re.search(r'[A-Za-zÀ-ÿ0-9]', o) for o in opts): err.append(f'{where}: in «ascolta» le risposte sono solo immagini (emoji)')
                 if words(x.get('e', '')) > 35: err.append(f'{where}: spiegazione oltre 35 parole')
+            # argomento: ogni domanda ne ha uno, scritto in data/domande/argomenti.json
+            if x.get('arg') not in ARG_IDS.get(u, set()): err.append(f'{where}: argomento «{x.get("arg", "")}» mancante o sconosciuto (data/domande/argomenti.json)')
             txt = ' '.join([x.get('q', ''), *opts, x.get('k', ''), x.get('e', '')]).lower()
             if guarda(txt, GUARD_SALUTE): err.append(f'{where}: termine vietato')
     # registro dei codici: un codice registrato non può sparire

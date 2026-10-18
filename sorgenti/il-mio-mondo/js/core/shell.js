@@ -132,27 +132,83 @@ PAGES.home = el => {
   const ut = u => tile('u:' + u.id, u.ic, u.name, unitInfo(u).pct + '%', u.c);
   el.innerHTML = '<h1 class="v2-h1">' + (childName() ? 'Ciao ' + esc(childName()) + '!' : 'Ciao!') + '</h1><p class="v2-sub">Che cosa facciamo?</p>' +
     (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
+    '<input type="search" class="h-find" id="h-find" placeholder="🔎 Cerca un argomento in tutte le materie (es. acqua, Romani, frazioni)" autocomplete="off" enterkeyhint="search"><div id="h-res" hidden></div><div id="h-rest">' +
     '<h2 class="h-h2">📚 Materie di scuola</h2><div class="v2-grid h-grid">' + pathUnits().filter(u => !HOME_VITA.includes(u.id)).map(ut).join('') + '</div>' +
     '<h2 class="h-h2">🎨 Fare e scoprire</h2><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[1], x[2])).join('') + '</div>' +
-    '<h2 class="h-h2">🌟 Per la vita e per passione</h2><div class="v2-grid h-grid">' + HOME_VITA.map(unitById).filter(Boolean).map(ut).join('') + '</div>';
+    '<h2 class="h-h2">🌟 Per la vita e per passione</h2><div class="v2-grid h-grid">' + HOME_VITA.map(unitById).filter(Boolean).map(ut).join('') + '</div></div>';
   el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { const g = b.dataset.go; if (g.startsWith('u:')) openMateria(g.slice(2)); else if (g === 'vita') openVita(); else go(g); }));
   if ($('h-cont')) $('h-cont').addEventListener('click', () => startLesson(last.id, nextNode(last)));
   if ($('h-rip')) $('h-rip').addEventListener('click', () => startLesson(null, 0, { daily: true }));
+  homeSearchWire(el);
 };
 /* una materia: «Studia» riprende dalla prima lezione non fatta; tutte le lezioni si possono aprire */
 function openMateria(id) { pathSel = id; store.set('path-sel', id); go('materia'); }
 PAGES.materia = el => {
   const u = unitById(pathSel || store.get('path-sel', '')) || pathUnits()[0]; pathSel = u.id;
-  const nodes = unitNodes(u), info = unitInfo(u), nk = nextNode(u);
-  el.innerHTML = '<h1 class="v2-h1">' + esc(u.ic + ' ' + u.name) + '</h1><p class="v2-sub">' + info.learned + ' nozioni imparate su ' + info.total + '</p>' +
-    '<button type="button" class="v2-btn" id="m-go" style="--uc:' + u.c + ';max-width:420px">▶ Studia</button>' +
-    '<div class="m-list">' + nodes.map((nd, k) => { const st = nodeState(u, nodes, k);
-      const lab = nd.t === 'rip' ? (nd.last ? '🏆 Grande ripasso' : '🎁 Ripasso') : (u.math ? MATH_TAPPE[nd.i].ic + ' ' + MATH_TAPPE[nd.i].n : '📘 Lezione ' + (nd.i + 1));
-      const sm = nd.t === 'lez' && !u.math ? chunkLearned(u, nd.i) + '/' + Math.min(CHUNK, u.items.length - nd.i * CHUNK) : '';
-      return '<button type="button" class="m-row' + (st.done ? ' done' : '') + (k === nk ? ' cur' : '') + '" data-k="' + k + '"><span>' + esc(lab) + '</span><small>' + sm + '</small><b>' + (st.conquered ? '👑' : st.done ? '⭐' : '') + '</b></button>'; }).join('') + '</div>';
+  const nodes = unitNodes(u), info = unitInfo(u), nk = nextNode(u), nx = nodes[nk];
+  const name = nd => nd.t === 'arg' ? u.topics[nd.i].ic + ' ' + u.topics[nd.i].n : nd.t === 'rip' ? (nd.last ? '🏆 Ripasso di tutta la materia' : '🎁 Ripasso') : u.math ? MATH_TAPPE[nd.i].ic + ' ' + MATH_TAPPE[nd.i].n : '📘 Lezione ' + (nd.i + 1);
+  const count = nd => nd.t === 'arg' ? topicLearned(u, u.topics[nd.i]) + '/' + u.topics[nd.i].items.length : '';
+  el.innerHTML = '<h1 class="v2-h1">' + esc(u.ic + ' ' + u.name) + '</h1><p class="v2-sub">' + info.learned + ' nozioni imparate su ' + info.total + (u.topics ? ' · ' + u.topics.length + ' argomenti: scegli tu da dove partire' : '') + '</p>' +
+    '<button type="button" class="v2-btn" id="m-go" style="max-width:520px">▶ ' + (nx && nx.t !== 'rip' ? 'Impara: ' + esc(name(nx).replace(/^\S+\s/, '')) : 'Ripassa') + '</button>' +
+    (u.topics && u.topics.length > 6 ? '<input type="search" class="m-find" id="m-find" placeholder="🔎 Cerca un argomento di ' + esc(u.name) + '" autocomplete="off">' : '') +
+    '<div class="m-list" id="m-list">' + nodes.map((nd, k) => { const st = nodeState(u, nodes, k);
+      return '<button type="button" class="m-row' + (st.done ? ' done' : '') + (k === nk ? ' cur' : '') + '" data-k="' + k + '" data-n="' + esc(normQ(name(nd))) + '"><span>' + esc(name(nd)) + '</span><small>' + count(nd) + '</small><b>' + (st.conquered ? '👑' : st.done ? '⭐' : '') + '</b></button>'; }).join('') + '</div>';
   $('m-go').addEventListener('click', () => startLesson(u.id, nk));
   el.querySelectorAll('.m-row').forEach(b => b.addEventListener('click', () => startLesson(u.id, +b.dataset.k)));
+  if ($('m-find')) $('m-find').addEventListener('input', e => { const w = qWords(e.target.value); el.querySelectorAll('.m-row').forEach(b => { b.hidden = w.length > 0 && !qHas(b.dataset.n, w); }); });
 };
+
+/* ---------- 🔎 ricerca libera per argomento, in tutte le materie (interdisciplinare) ---------- */
+function normQ(t) { return String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim(); }
+/* parole cercate: si confronta l'inizio della parola senza l'ultima lettera (romani → romana, romano; pianeti → pianeta) */
+const qWords = q => normQ(q).split(' ').filter(x => x.length >= 2).map(x => x.length >= 6 ? x.slice(0, -1) : x);
+const qHas = (nn, w) => w.every(x => (' ' + nn).includes(' ' + x));
+let __qIdx = null;
+function searchIndex() {
+  if (__qIdx) return __qIdx;
+  const T = [], Q = [];
+  pathUnits().forEach(u => {
+    if (u.topics) u.topics.forEach((t, i) => { T.push({ u, i, n: t.n, ic: t.ic, nn: normQ(t.n), size: t.items.length });
+      t.items.forEach(it => Q.push({ u, it, ti: i, nn: normQ([it.q, it.o[it.a], it.k].join(' ')) })); });
+    else if (u.math) MATH_TAPPE.forEach((m, i) => T.push({ u, math: i, n: m.n, ic: m.ic, nn: normQ(m.n), size: 6 }));
+  });
+  return (__qIdx = { T, Q });
+}
+function searchTopics(q) {
+  const w = qWords(q); if (!w.length) return null;
+  const has = nn => qHas(nn, w);
+  const I = searchIndex(), qs = I.Q.filter(x => has(x.nn)), per = {};
+  qs.forEach(x => { const k = x.u.id + ':' + x.ti; per[k] = (per[k] || 0) + 1; });
+  const topics = I.T.map(t => ({ t, by: has(t.nn), hits: t.math === undefined ? per[t.u.id + ':' + t.i] || 0 : 0 })).filter(r => r.by || r.hits >= 1)
+    .sort((a, b) => (b.by - a.by) || (b.hits - a.hits)).slice(0, 30);
+  return { qs, topics, units: new Set(qs.map(x => x.u.id)).size };
+}
+function startMix(q) {
+  const r = searchTopics(q); if (!r || !r.qs.length) return;
+  const s = pState(), fresh = x => !((s.srs[itemKey(x.u, x.it)] || {}).b > 0);
+  /* un po' da ogni materia, prima le nozioni nuove: così si vede lo stesso argomento da punti di vista diversi */
+  const groups = {}; shuffle(r.qs.slice()).sort((a, b) => fresh(b) - fresh(a)).forEach(x => (groups[x.u.id] = groups[x.u.id] || []).push(x));
+  const G = Object.values(groups), pick = [];
+  while (pick.length < 8 && G.some(g => g.length)) G.forEach(g => { if (g.length && pick.length < 8) pick.push(g.shift()); });
+  startLesson(null, 0, { mix: shuffle(pick), mixLabel: q.trim() });
+}
+function homeSearchWire(el) {
+  const inp = $('h-find'), out = $('h-res'), rest = $('h-rest'); if (!inp) return;
+  const paint = () => {
+    const q = inp.value, r = searchTopics(q);
+    rest.hidden = !!r; out.hidden = !r; if (!r) { out.innerHTML = ''; return; }
+    out.innerHTML = (r.qs.length >= 3 ? '<button type="button" class="v2-btn" id="h-mix">🔀 Lezione mista su «' + esc(q.trim()) + '»' + (r.units > 1 ? ': domande da materie diverse' : '') + '</button><p class="v2-sub" style="margin:0 0 8px">' + r.qs.length + (r.qs.length === 1 ? ' domanda parla' : ' domande parlano') + ' di «' + esc(q.trim()) + '» in ' + r.units + (r.units === 1 ? ' materia' : ' materie') + '. Oppure scegli un argomento:</p>' : '') +
+      (r.topics.length ? '<div class="m-list">' + r.topics.map((x, k) => '<button type="button" class="m-row" data-r="' + k + '"><span>' + esc(x.t.ic + ' ' + x.t.n) + '</span><small>' + esc(x.t.u.ic + ' ' + x.t.u.name) + (x.hits ? ' · ' + x.hits + (x.hits === 1 ? ' domanda' : ' domande') + ' su «' + q.trim() + '»' : '') + '</small></button>').join('') + '</div>'
+        : '<p class="v2-sub">Nessun argomento trovato. Prova con un’altra parola (per esempio: acqua, Romani, frazioni, cuore).</p>');
+    if ($('h-mix')) $('h-mix').addEventListener('click', () => startMix(q));
+    out.querySelectorAll('[data-r]').forEach(b => b.addEventListener('click', () => { const x = r.topics[+b.dataset.r].t;
+      if (x.math !== undefined) { pathSel = x.u.id; store.set('path-sel', x.u.id); startLesson(x.u.id, unitNodes(x.u).findIndex(nd => nd.t === 'lez' && nd.i === x.math)); }
+      else { pathSel = x.u.id; store.set('path-sel', x.u.id); startLesson(x.u.id, x.i); } }));
+  };
+  let t = null; inp.addEventListener('input', () => { clearTimeout(t); t = setTimeout(paint, 180); });
+  const last = store.get('h-find', ''); if (last) { inp.value = last; paint(); }
+  inp.addEventListener('change', () => store.set('h-find', inp.value));
+}
 function openUnits() {
   const ids = unitUnlockedIds(), nx = nextUnitNeed(), ne = nextExtra();
   openModal('<div class="big" style="font-size:28px">📚 Le tue materie</div><p style="font-weight:700;color:var(--ink-soft)">Ogni ' + UNLOCK.per + ' nozioni si apre una materia. 🎁 Sport e Roblox sono premi per l’obiettivo del giorno.</p>' +

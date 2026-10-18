@@ -4,6 +4,8 @@ App di studio per bambini (5ª elementare), con il drago, le lezioni delle mater
 
 Interfaccia semplice (scelta del genitore, ottobre 2026): una sola 🏠 Casa con tutte le sezioni e tutte le materie aperte da subito; niente percorso a tappe bloccate, niente linguette in basso, niente missioni né contatore dei giorni di fila. I dati di prima (lezioni fatte, ricordi, gemme) restano tutti.
 
+Argomenti: ogni domanda di `data/domande/quiz/*.json` ha il campo `arg`; i nomi degli argomenti di ogni materia sono in `data/domande/argomenti.json` ([id, nome, icona]). Le lezioni sono gli argomenti (scelta libera, non più in fila); in Casa c'è la ricerca per parola in tutte le materie con la lezione mista. Ogni domanda nuova deve avere il suo `arg`: il controllo automatico lo verifica.
+
 | | |
 |---|---|
 | Indirizzo | https://f6kd4bp6sr-stack.github.io/mie-app/ (non cambia: icona sulla Home e dati restano) |
