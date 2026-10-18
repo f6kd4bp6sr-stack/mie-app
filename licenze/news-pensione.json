@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-17T22:57:00+02:00",
+ "updated": "2026-10-18T16:59:00+02:00",
  "voci": [
   {
    "id": "n20261016-usic",
@@ -82,6 +82,25 @@
     "requisiti"
    ],
    "effetto": "Ancora nessuna misura: si attendono i prossimi incontri e la legge di bilancio. Riguarda chi è nel sistema misto ed esce per limiti di età."
+  },
+  {
+   "id": "n20261014-usami",
+   "d": "2026-10-14",
+   "titolo": "Previdenza militare: USAMI propone una «terza strada» con un coefficiente aggiuntivo sul montante",
+   "sintesi": "Secondo USAMI Aeronautica (comunicato del 14 ottobre 2026, ripreso da ForzeArmate.org il 15 ottobre), al primo incontro tecnico del 13 ottobre alla Funzione Pubblica il sindacato ha proposto una «terza strada» fra previdenza complementare e previdenza dedicata: un coefficiente aggiuntivo nella rivalutazione annuale del montante contributivo individuale, per compensare la mancata attivazione della previdenza complementare. Ha chiesto al Governo di valutare gli spazi di flessibilità europei per la spesa per la Difesa come copertura. Nessuna cifra e nessuna risorsa annunciate: prima la raccolta dei dati presso le Amministrazioni, poi un nuovo incontro.",
+   "fonte": "USAMI Aeronautica",
+   "url": "https://usami-aeronautica.it/previdenza-militare-al-via-il-tavolo-tecnico-con-la-funzione-pubblica-usami-senza-risorse-non-bastano-le-buone-intenzioni/",
+   "fonti2": [
+    "https://forzearmate.org/previdenza-militare-primo-tavolo-con-il-governo-usami-propone-una-terza-strada-ma-mancano-le-risorse/"
+   ],
+   "temi": [
+    "previdenza"
+   ],
+   "tocca": [
+    "tasso",
+    "quotaA"
+   ],
+   "effetto": "Per ora non cambia nulla: è una proposta sindacale. Se adottata, farebbe crescere il montante contributivo, quindi la quota contributiva della pensione."
   },
   {
    "id": "n20261013-tavolo",
@@ -184,35 +203,35 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "MEF",
    "url": "https://www.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "non raggiungibile"
   },
   {
@@ -226,112 +245,112 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Ministero del Lavoro",
    "url": "https://www.lavoro.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ISTAT",
    "url": "https://www.istat.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Difesa – Previmil",
    "url": "https://www.difesa.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Polizia di Stato",
    "url": "https://www.poliziadistato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Corte dei conti",
    "url": "https://www.corteconti.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Camera dei deputati",
    "url": "https://www.camera.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Senato",
    "url": "https://www.senato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Agenzia delle Entrate",
    "url": "https://www.agenziaentrate.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "COISP",
    "url": "https://coisp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T12:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SIAP",
    "url": "https://www.siap-polizia.org/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T12:58:00+02:00",
    "esito": "non raggiungibile"
   },
   {
@@ -345,14 +364,14 @@
    "n": "SILP CGIL",
    "url": "https://www.silpcgil.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T12:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "MP",
    "url": "https://mpnazionale.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T12:58:00+02:00",
    "esito": "ok"
   },
   {
@@ -373,7 +392,7 @@
    "n": "Al.Si.P.Pe.",
    "url": "https://www.alsippe.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T12:58:00+02:00",
    "esito": "ok"
   },
   {
@@ -394,28 +413,28 @@
    "n": "USAMI",
    "url": "https://usami-aeronautica.it/",
    "tipo": "sindacato militari",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Corriere dei Militari",
    "url": "https://www.corrieredeimilitari.com/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T12:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ForzeArmate.org",
    "url": "https://forzearmate.org/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T22:57:00+02:00",
+   "ultimo": "2026-10-18T16:59:00+02:00",
    "esito": "ok"
   },
   {
@@ -429,7 +448,7 @@
    "n": "PensioniOggi",
    "url": "https://www.pensionioggi.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-17T13:19:00+02:00",
+   "ultimo": "2026-10-18T12:58:00+02:00",
    "esito": "ok"
   },
   {
@@ -477,6 +496,299 @@
    "at": "2026-10-17T22:57:00+02:00",
    "notizie": 0,
    "note": "giro delle 23: nessuna notizia nuova dal giro delle 17 (SIULP Flash 42 del 17/10 richiama solo il tavolo del 13/10, già presente). Gazzetta ferma alla S.G. n. 241 del 16/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora in Parlamento. Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate, SIAP"
+  },
+  {
+   "at": "2026-10-18T12:58:00+02:00",
+   "notizie": 0,
+   "note": "giro delle 13: nessuna notizia nuova dal giro delle 23 (Infodifesa 17/10: USMIA lamenta che nella manovra 2027 non c’è stanziamento per la previdenza dedicata, dichiarazione sindacale già coperta dalle voci sul tavolo; ForzeArmate.org 16/10: 4,5 miliardi alla difesa senza misure per il personale). Gazzetta ferma alla S.G. n. 242 del 17/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora in Parlamento. Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate, SIAP"
+  },
+  {
+   "at": "2026-10-18T16:59:00+02:00",
+   "notizie": 1,
+   "note": "giro delle 17: 1 notizia aggiunta (proposta USAMI del 14/10 sul coefficiente aggiuntivo nella rivalutazione del montante, verificata su USAMI e ForzeArmate.org). Gazzetta ferma alla S.G. n. 242 del 17/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora in Parlamento. SILF 18/10: tavolo sulle relazioni sindacali convocato per il 21/10 (non riguarda contratto o pensione). Tassi di mercato invariati (fine settimana); nota su ContoTe (3,75% nel riquadro, 3,50% nell’elenco). Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate"
+  }
+ ],
+ "mercati": [
+  {
+   "id": "infl",
+   "t": "Inflazione in Italia (NIC, su un anno)",
+   "valore": 4.2,
+   "d": "2026-10-16",
+   "fonte": "ISTAT, settembre 2026 (definitivo)",
+   "url": "https://www.istat.it/wp-content/uploads/2026/10/Prezzi-al-consumo-def-Set2026-1.pdf",
+   "unita": "%"
+  },
+  {
+   "id": "bce",
+   "t": "Tasso BCE sui depositi",
+   "valore": 2.5,
+   "d": "2026-09-16",
+   "fonte": "BCE, decisione del 10 settembre 2026",
+   "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.it.html",
+   "unita": "%"
+  },
+  {
+   "id": "btp2",
+   "t": "BTP a 2 anni (rendimento lordo)",
+   "valore": 3.45,
+   "d": "2026-10-16",
+   "fonte": "Trading Economics",
+   "url": "https://it.tradingeconomics.com/italy/government-bond-yield",
+   "unita": "%"
+  },
+  {
+   "id": "btp5",
+   "t": "BTP a 5 anni (rendimento lordo)",
+   "valore": 3.92,
+   "d": "2026-10-16",
+   "fonte": "Trading Economics",
+   "url": "https://it.tradingeconomics.com/italy/government-bond-yield",
+   "unita": "%"
+  },
+  {
+   "id": "btp10",
+   "t": "BTP a 10 anni (rendimento lordo)",
+   "valore": 4.48,
+   "d": "2026-10-16",
+   "fonte": "Trading Economics",
+   "url": "https://it.tradingeconomics.com/italy/government-bond-yield",
+   "unita": "%"
+  },
+  {
+   "id": "btpv",
+   "t": "BTP Valore ottobre 2026, 5 anni (rendimento lordo a scadenza, circa)",
+   "valore": 4.1,
+   "d": "2026-10-16",
+   "fonte": "Milano Finanza",
+   "url": "https://www.milanofinanza.it/news/btp-valore-ottobre-2026-ai-raggi-x-quanto-rendono-davvero-i-rischi-e-come-usarli-in-portafoglio-202610161506541622",
+   "nota": "collocamento 19–23 ottobre 2026; cedole minime 3,7% (anni 1–2), 4,1% (3–4), 4,7% (5)",
+   "unita": "%"
+  },
+  {
+   "id": "cdl",
+   "t": "Conto deposito libero, miglior tasso lordo",
+   "valore": 3.0,
+   "d": "2026-10-18",
+   "fonte": "conti-deposito.net",
+   "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
+   "nota": "tasso promozionale",
+   "unita": "%"
+  },
+  {
+   "id": "cd12",
+   "t": "Conto deposito vincolato 12 mesi, miglior tasso lordo",
+   "valore": 4.0,
+   "d": "2026-10-18",
+   "fonte": "conti-deposito.net",
+   "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
+   "unita": "%"
+  },
+  {
+   "id": "cd24",
+   "t": "Conto deposito vincolato 24 mesi, miglior tasso lordo",
+   "valore": 4.0,
+   "d": "2026-10-18",
+   "fonte": "conti-deposito.net",
+   "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
+   "unita": "%"
+  },
+  {
+   "id": "cd36",
+   "t": "Conto deposito vincolato 36 mesi, miglior tasso lordo",
+   "valore": 3.75,
+   "d": "2026-10-18",
+   "fonte": "conti-deposito.net",
+   "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
+   "unita": "%"
+  },
+  {
+   "id": "bbva0",
+   "t": "Conto BBVA: tasso base (25% del tasso BCE sui depositi), ott–dic 2026",
+   "valore": 0.65,
+   "d": "2026-10-16",
+   "fonte": "BBVA",
+   "url": "https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",
+   "nota": "cambia a ogni trimestre",
+   "unita": "%"
+  },
+  {
+   "id": "bbva10",
+   "t": "Conto BBVA: saldo medio da 10.000 €",
+   "valore": 1.25,
+   "d": "2026-10-16",
+   "fonte": "BBVA",
+   "url": "https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",
+   "unita": "%"
+  },
+  {
+   "id": "bbva50",
+   "t": "Conto BBVA: saldo medio da 50.000 €",
+   "valore": 1.75,
+   "d": "2026-10-16",
+   "fonte": "BBVA",
+   "url": "https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",
+   "unita": "%"
+  },
+  {
+   "id": "bbvac",
+   "t": "Conto BBVA: con una condizione al mese (stipendio o pensione accreditati, carte ≥ 1.000 €, fondi ≥ 15.000 €)",
+   "valore": 2.25,
+   "d": "2026-10-16",
+   "fonte": "BBVA",
+   "url": "https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",
+   "nota": "nuovi clienti: 4% per 6 mesi fino a 200.000 € (aperture entro l’11/12/2026)",
+   "unita": "%"
+  }
+ ],
+ "prodotti": [
+  {
+   "id": "ifis12",
+   "tipo": "dep",
+   "n": "Rendimax Interessi Posticipati Top · 12 mesi",
+   "em": "Banca IFIS",
+   "tasso": 4.0,
+   "anni": 1,
+   "gar": "Fondo Interbancario fino a 100.000 €",
+   "d": "2026-10-18",
+   "fonte": "conti-deposito.net",
+   "url": "https://www.conti-deposito.net/confronto-conti-deposito.php"
+  },
+  {
+   "id": "key24",
+   "tipo": "dep",
+   "n": "Conto Key · 24 mesi",
+   "em": "Banca Progetto",
+   "tasso": 4.0,
+   "anni": 2,
+   "gar": "Fondo Interbancario fino a 100.000 €",
+   "d": "2026-10-18",
+   "fonte": "conti-deposito.net",
+   "url": "https://www.conti-deposito.net/confronto-conti-deposito.php"
+  },
+  {
+   "id": "tyche36",
+   "tipo": "dep",
+   "n": "ContoTe · 36 mesi",
+   "em": "Tyche Bank",
+   "tasso": 3.75,
+   "anni": 3,
+   "gar": "da verificare con la banca",
+   "d": "2026-10-18",
+   "fonte": "conti-deposito.net",
+   "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
+   "nota": "sulla stessa pagina il riquadro dei migliori indica 3,75%, l’elenco 3,50%: verificare con la banca"
+  },
+  {
+   "id": "progl",
+   "tipo": "dep",
+   "n": "Conto Progetto · libero",
+   "em": "Banca Progetto",
+   "tasso": 3.0,
+   "anni": 0,
+   "gar": "Fondo Interbancario fino a 100.000 €",
+   "d": "2026-10-18",
+   "fonte": "conti-deposito.net",
+   "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
+   "nota": "tasso promozionale"
+  },
+  {
+   "id": "bbvacc",
+   "tipo": "conto",
+   "n": "Conto BBVA (già tuo)",
+   "em": "BBVA",
+   "tasso": null,
+   "mk": "bbva",
+   "anni": 0,
+   "gar": "fondo di garanzia spagnolo fino a 100.000 € (da verificare)",
+   "d": "2026-10-16",
+   "fonte": "BBVA",
+   "url": "https://www.bbva.it/blog/banca-in-pillole/conto-corrente-remunerazione-lungo-termine-bbva.html",
+   "nota": "0,65% base, 1,25% da 10.000 €, 1,75% da 50.000 €, 2,25% con una condizione"
+  },
+  {
+   "id": "btpv2610",
+   "tipo": "btp",
+   "n": "BTP Valore ottobre 2026 · 5 anni",
+   "em": "Tesoro (MEF)",
+   "tasso": 4.1,
+   "anni": 5,
+   "gar": "rimborso a 100 alla scadenza (rischio Italia)",
+   "d": "2026-10-16",
+   "fonte": "Milano Finanza",
+   "url": "https://www.milanofinanza.it/news/btp-valore-ottobre-2026-ai-raggi-x-quanto-rendono-davvero-i-rischi-e-come-usarli-in-portafoglio-202610161506541622",
+   "nota": "collocamento 19–23 ottobre 2026; cedole minime 3,7% (anni 1–2), 4,1% (3–4), 4,7% (5); rendimento lordo a scadenza circa 4,1%"
+  },
+  {
+   "id": "btp36",
+   "tipo": "btp",
+   "n": "BTP 1 ottobre 2036 · cedola 4%",
+   "em": "Tesoro (MEF)",
+   "tasso": 4.5,
+   "anni": 10,
+   "gar": "rimborso a 100 alla scadenza (rischio Italia)",
+   "d": "2026-10-18",
+   "fonte": "rendimentibtp.it",
+   "url": "https://www.rendimentibtp.it/btp/10anni",
+   "nota": "prezzo 96,49; rendimento netto indicato 3,95% (lordo circa 4,5%)"
+  },
+  {
+   "id": "xeon",
+   "tipo": "mon",
+   "n": "Xtrackers EUR Overnight Rate Swap UCITS ETF (Acc)",
+   "em": "DWS Xtrackers",
+   "isin": "LU0290358497",
+   "ter": 0.1,
+   "tasso": null,
+   "mk": "bce",
+   "anni": 0,
+   "gar": "nessuna garanzia: segue il tasso €STR, quasi senza oscillazioni",
+   "d": "2026-10-18",
+   "fonte": "extraETF",
+   "url": "https://extraetf.com/etf-profile/LU0290358497"
+  },
+  {
+   "id": "aggh",
+   "tipo": "obb",
+   "n": "iShares Core Global Aggregate Bond UCITS ETF EUR-Hedged (Acc)",
+   "em": "BlackRock iShares",
+   "isin": "IE00BDBRDM35",
+   "ter": 0.1,
+   "tasso": null,
+   "anni": 0,
+   "gar": "nessuna: il prezzo oscilla",
+   "d": "2026-10-18",
+   "fonte": "extraETF",
+   "url": "https://extraetf.com/etf-profile/IE00BDBRDM35"
+  },
+  {
+   "id": "ls60",
+   "tipo": "bil",
+   "n": "Vanguard LifeStrategy 60% Equity UCITS ETF (EUR) Distributing",
+   "em": "Vanguard",
+   "isin": "IE00BMVB5Q68",
+   "ter": 0.25,
+   "tasso": null,
+   "anni": 0,
+   "gar": "nessuna: il prezzo oscilla",
+   "d": "2026-10-18",
+   "fonte": "Eulerpool",
+   "url": "https://eulerpool.com/etf/IE00BMVB5Q68",
+   "nota": "circa 60% azioni e 40% obbligazioni; distribuisce i proventi"
+  },
+  {
+   "id": "eunl",
+   "tipo": "az",
+   "n": "iShares Core MSCI World UCITS ETF USD (Acc)",
+   "em": "BlackRock iShares",
+   "isin": "IE00B4L5Y983",
+   "ter": 0.2,
+   "tasso": null,
+   "anni": 0,
+   "gar": "nessuna: il prezzo oscilla molto",
+   "d": "2026-10-18",
+   "fonte": "etf.capital",
+   "url": "https://etf.capital/etf/IE00B4L5Y983",
+   "nota": "MSCI World, circa 1.300 aziende di paesi sviluppati; valuta del fondo USD"
   }
  ]
 }

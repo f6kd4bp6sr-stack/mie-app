@@ -27,7 +27,7 @@ _lic = pages['licenze.html']
 _dati = '\n'.join(re.search(r'const %s=.*?;(?=\s*(?:const|let|function|/\*|\n))' % n, _lic, re.S).group(0) for n in ('HOL', 'DEF', 'PROV_START'))
 _cena = re.search(r'const VCENA=\{.*?\]\]\};', pages['index.html'], re.S).group(0)
 pages['progressi.html'] = pages['progressi.html'].replace('/*@VCENA*/', _cena)
-pages['index.html'] = pages['index.html'].replace('/*@LICENZE_DATI*/', _dati).replace('/*@FOGLI*/', open(D + 'comune/fogli.js', encoding='utf-8').read()).replace('/*@CONTI*/', open(D + 'sezioni/conti.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/conti_stat.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/calendario.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pratiche.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pensione.js', encoding='utf-8').read())
+pages['index.html'] = pages['index.html'].replace('/*@LICENZE_DATI*/', _dati).replace('/*@FOGLI*/', open(D + 'comune/fogli.js', encoding='utf-8').read()).replace('/*@CONTI*/', open(D + 'sezioni/conti.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/conti_stat.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/calendario.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pratiche.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pensione.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/investimenti.js', encoding='utf-8').read())
 for f in os.listdir(D + 'statici'):
     shutil.copy(D + 'statici/' + f, OUT + f)
 # versione: impronta di tutte le pagine (stessa in tutte, letta da version.json)
