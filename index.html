@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="ec58bf663f";</script>
+<script>window.APP_VERSION="4c67c09e2e";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -1006,6 +1006,13 @@
   .m-row b { min-width: 24px; text-align: right; }
   body.v2 #upd-btn { display: flex; width: auto; padding: 0 14px; gap: 6px; font-size: 16px; font-weight: 900; color: var(--ink); align-items: center; }
   body.v2 #upd-btn::after { content: 'Aggiorna'; }
+  /* ===== iPad: angolo in alto a sinistra libero per i pallini della finestra ===== */
+  html.ipad-win { --winL: 150px; --winT: 66px; }
+  html.ipad-win .appbar { padding-left: var(--winL); }
+  html.ipad-win .ds-top { padding-left: calc(var(--winL) + 8px); }
+  html.ipad-win .ls-top { padding-left: max(16px, calc(var(--winL) + 8px - max(0px, (100vw - 760px) / 2))); }
+  html.ipad-win .tt-top { padding-left: calc(var(--winL) - 10px); }
+  html.ipad-win .overlay { padding-top: max(16px, var(--winT)); }
   /* =================== 🎂 FESTA DI COMPLEANNO =================== */
   body.fs-lock { overflow: hidden; }
   .fs { position: fixed; inset: 0; z-index: 86; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
@@ -12181,6 +12188,8 @@ function openTesori() {
    Interfaccia semplice: una sola 🏠 Casa con tutte le sezioni, tutte aperte da subito
    (niente percorso a tappe bloccate, niente missioni). Da ogni sezione «← Casa» riporta qui. */
 document.body.classList.add('v2');
+/* iPad: in alto a sinistra ci sono i tre pallini della finestra (chiudi, riduci, schermo intero): lì non mettiamo tasti */
+if (navigator.maxTouchPoints > 1 && /iPad|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('ipad-win');
 Object.keys(BANNERS).forEach(k => delete BANNERS[k]);   // niente strisce di decorazioni: più pulito
 
 /* ---------- conoscenza e sblocchi ---------- */

@@ -174,3 +174,10 @@
   .m-row b { min-width: 24px; text-align: right; }
   body.v2 #upd-btn { display: flex; width: auto; padding: 0 14px; gap: 6px; font-size: 16px; font-weight: 900; color: var(--ink); align-items: center; }
   body.v2 #upd-btn::after { content: 'Aggiorna'; }
+  /* ===== iPad: angolo in alto a sinistra libero per i pallini della finestra ===== */
+  html.ipad-win { --winL: 150px; --winT: 66px; }
+  html.ipad-win .appbar { padding-left: var(--winL); }
+  html.ipad-win .ds-top { padding-left: calc(var(--winL) + 8px); }
+  html.ipad-win .ls-top { padding-left: max(16px, calc(var(--winL) + 8px - max(0px, (100vw - 760px) / 2))); }
+  html.ipad-win .tt-top { padding-left: calc(var(--winL) - 10px); }
+  html.ipad-win .overlay { padding-top: max(16px, var(--winT)); }

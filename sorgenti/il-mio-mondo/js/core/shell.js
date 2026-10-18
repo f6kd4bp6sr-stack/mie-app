@@ -2,6 +2,8 @@
    Interfaccia semplice: una sola 🏠 Casa con tutte le sezioni, tutte aperte da subito
    (niente percorso a tappe bloccate, niente missioni). Da ogni sezione «← Casa» riporta qui. */
 document.body.classList.add('v2');
+/* iPad: in alto a sinistra ci sono i tre pallini della finestra (chiudi, riduci, schermo intero): lì non mettiamo tasti */
+if (navigator.maxTouchPoints > 1 && /iPad|Macintosh/.test(navigator.userAgent)) document.documentElement.classList.add('ipad-win');
 Object.keys(BANNERS).forEach(k => delete BANNERS[k]);   // niente strisce di decorazioni: più pulito
 
 /* ---------- conoscenza e sblocchi ---------- */
