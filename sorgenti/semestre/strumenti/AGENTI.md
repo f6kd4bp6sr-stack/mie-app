@@ -85,6 +85,7 @@ Scopo: trovare gli errori dell'app, correggerli e pubblicare l'esito in `sorgent
 4. Controllare la versione online: aprire `https://f6kd4bp6sr-stack.github.io/mie-app/semestre/version.json` e confrontarla con `semestre/version.json`.
 5. Lanciare `python3 sorgenti/semestre/strumenti/verifica_ufficiale.py` e **ricontrollare (terza verifica)** con WebFetch le voci di `ufficiale.json` aggiunte o cambiate nelle ultime 24 ore: se una non è più confermata dalla fonte, va spostata in `in_verifica` con il motivo.
 6. Controllare a campione 10 link di `SOURCES` (in `b_data.js`) e di `news.json`.
+   Se WebFetch rifiuta un indirizzo copiato dai file, cercarlo prima con WebSearch (titolo della pagina) e poi aprirlo dal risultato della ricerca.
 7. Se c'è un problema:
    - Correggerlo nei sorgenti con la modifica più piccola e sicura. Esempi: un dato sbagliato, un link rotto da sostituire con la pagina ufficiale aggiornata, una domanda malformata o doppia, un errore JavaScript.
    - Ricostruire e rilanciare le verifiche finché sono verdi.
