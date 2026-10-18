@@ -7,7 +7,7 @@ const VID_MAX_DAY = 3, VID_MAX_TICKETS = 3;
 const vidState = () => { const v = store.get('vid', { tickets: 0, day: '', today: 0, seen: {}, lessons: 0, gift: false }); if (v.day !== todayIso()) { v.day = todayIso(); v.today = 0; } return v; };
 const vidSave = v => store.set('vid', v);
 const vidHidden = () => store.get('vid-hide', []);
-const vidOpen = () => { const v = vidState(); return (typeof goalDays === 'function' && goalDays() >= 1) || v.lessons >= 3; };
+const vidOpen = () => true; /* sezione visibile da subito: i video si guardano con i biglietti delle lezioni */
 function vidList() {
   const hide = vidHidden(), open = typeof unitUnlockedIds === 'function' ? unitUnlockedIds() : new Set();
   return VIDEOS.filter(x => !hide.includes(x.id)).sort((a, b) => (open.has(b.u) ? 1 : 0) - (open.has(a.u) ? 1 : 0));

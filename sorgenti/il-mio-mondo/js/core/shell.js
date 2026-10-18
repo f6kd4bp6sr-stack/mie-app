@@ -1,6 +1,6 @@
 /* ================= IL MIO MONDO · versione 2 (ispirata a Duolingo) =================
-   Poche sezioni, chiare: 🏠 Impara · 🎮 Giochi · 📅 Diario · 🔭 Esplora · 🐉 Io.
-   Le materie e le sezioni compaiono man mano che cresce la conoscenza. */
+   Interfaccia semplice: una sola 🏠 Casa con tutte le sezioni, tutte aperte da subito
+   (niente percorso a tappe bloccate, niente missioni). Da ogni sezione «← Casa» riporta qui. */
 document.body.classList.add('v2');
 Object.keys(BANNERS).forEach(k => delete BANNERS[k]);   // niente strisce di decorazioni: più pulito
 
@@ -21,20 +21,12 @@ const schoolUnits = () => pathUnits().filter(u => !EXTRA_UNITS.includes(u.id) &&
 const extraUnits = () => pathUnits().filter(u => EXTRA_UNITS.includes(u.id));
 const goalDays = () => store.get('goal-days', []).length;
 const extrasOpen = () => { const g = goalDays(); return g ? 1 + Math.floor((g - 1) / 2) : 0; };
-function unitUnlockedIds() {
-  const k = UNLOCK.start + Math.floor(knowTotal() / UNLOCK.per), s = pState();
-  const ids = new Set(schoolUnits().slice(0, k).map(u => u.id));
-  extraUnits().slice(0, extrasOpen()).forEach(u => ids.add(u.id));
-  ALWAYS_OPEN.forEach(id => ids.add(id));
-  pathUnits().forEach(u => { const us = (s.u || {})[u.id]; if (us && Object.keys(us.done || {}).length) ids.add(u.id); });
-  return ids;
-}
-const nextUnitNeed = () => { const k = UNLOCK.start + Math.floor(knowTotal() / UNLOCK.per), units = schoolUnits(); if (k >= units.length) return null; return { u: units[k], need: (k - UNLOCK.start + 1) * UNLOCK.per - knowTotal() }; };
-const nextExtra = () => { const n = extrasOpen(), x = extraUnits()[n]; if (!x) return null; const g = goalDays(); return { u: x, need: n === 0 ? 1 : 1 + 2 * n - g }; };
+/* tutte le materie sono aperte da subito (scelta del genitore) */
+function unitUnlockedIds() { return new Set(pathUnits().map(u => u.id)); }
+const nextUnitNeed = () => null;
+const nextExtra = () => null;
 const oldUser = () => !!(Object.keys(store.get('math-done', {})).length || Object.keys(store.get('sci-done', {})).length);
-function tabsOpen() {
-  return { giochi: lessonsDone() >= 1 || oldUser(), esplora: knowTotal() >= UNLOCK.esplora || oldUser() };
-}
+function tabsOpen() { return { giochi: true, esplora: true }; }
 function streakDays() {
   const set = new Set(store.get('days', []).map(isoDay)); let n = 0, d = new Date();
   if (!set.has(iso(d))) d = addDays(d, -1);
@@ -51,7 +43,8 @@ const todayKeyOld = todayKey;
 })();
 
 /* ---------- celebrazione quando si apre qualcosa di nuovo ---------- */
-function checkUnlocks() {
+function checkUnlocks() { return; /* tutto è già aperto: niente più annunci di sblocco */ }
+function checkUnlocksOld() {
   const seen = store.get('v2-seen', null), now = { units: [...unitUnlockedIds()], tabs: tabsOpen() };
   if (!seen) { store.set('v2-seen', now); return; }
   const newU = now.units.filter(x => !seen.units.includes(x)), newT = Object.keys(now.tabs).filter(k => now.tabs[k] && !seen.tabs[k]);
@@ -83,6 +76,7 @@ function questsToday() {
 }
 let __questLock = false;
 function questEv(id, n, max) {
+  return; /* interfaccia semplice: niente missioni del giorno */
   const q = questsToday(); let changed = false;
   q.list.forEach(x => { if (x.id !== id || x.done) return; x.p = max ? Math.max(x.p, n) : x.p + n; changed = true;
     if (x.p >= x.g) { x.done = true; __questLock = true; Gems.add(5); __questLock = false; setTimeout(() => toastV2('✅ Missione completata: ' + QUESTS.find(z => z[0] === x.id)[3] + ' · +5 💎'), 300); } });
@@ -100,6 +94,7 @@ function tabStat(a, ok) {
 
 /* ---------- barra in alto ---------- */
 function topbar() {
+  return; /* interfaccia semplice: niente contatore dei giorni di fila */
   const bar = document.querySelector('.appbar-in'); if (!bar) return;
   let st = $('bar-streak');
   if (!st) { st = document.createElement('button'); st.type = 'button'; st.id = 'bar-streak'; st.className = 'energy-pill v2-streak'; st.title = 'Giorni di fila'; bar.insertBefore(st, bar.querySelector('.gem-pill') || bar.querySelector('.energy-pill')); st.addEventListener('click', () => go('io')); }
@@ -108,7 +103,8 @@ function topbar() {
 
 /* ---------- schede in basso ---------- */
 renderTabs = function () {
-  const open = tabsOpen(), box = $('tabs'); box.innerHTML = '';
+  const box = $('tabs'); box.innerHTML = ''; TABS.length = 0; TABS.push(['home', '🏠', 'Casa', 'var(--c4-soft)']); return;
+  const open = tabsOpen();
   const T = [['home', '🏠', 'Impara'], open.giochi && ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], open.esplora && ['esplora', '🔭', 'Esplora'], ['io', '🐉', 'Io']].filter(Boolean);
   TABS.length = 0; T.forEach(t => TABS.push([t[0], t[1], t[2], 'var(--c4-soft)']));
   const sub = { mate: 'esplora', scienze: 'esplora', scopri: 'esplora', sport: 'esplora', routine: 'esplora', metodo: 'esplora', teatro: 'esplora', disegno: 'esplora' };
@@ -120,48 +116,36 @@ renderTabs = function () {
   });
   topbar();
 };
-['esplora', 'io', 'teatro'].forEach(id => { if (!$('p-' + id)) { const s = document.createElement('section'); s.id = 'p-' + id; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); } });
+['esplora', 'io', 'teatro', 'materia'].forEach(id => { if (!$('p-' + id)) { const s = document.createElement('section'); s.id = 'p-' + id; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); } });
 
-/* ---------- 🏠 IMPARA ---------- */
+/* ---------- 🏠 CASA: tutte le sezioni, subito ---------- */
+const HOME_DO = [['disegno', '🎨', 'Disegno'], ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], ['mate', '🔢', 'Officina dei numeri'], ['scienze', '🔬', 'Laboratorio'], ['scopri', '🌍', 'Scopri il mondo'], ['teatro', '🎭', 'Teatro'], ['sport', '🤸‍♀️', 'Pausa movimento'], ['vita', '🧼', 'Io e il mio corpo'], ['routine', '☀️', 'Le mie routine'], ['metodo', '🧠', 'Il mio metodo'], ['io', '🐉', 'Io e il mio drago']];
 PAGES.home = el => {
   if (!D) { el.innerHTML = ''; return; }
   if (!store.get('gems-welcome', false)) { store.set('gems-welcome', true); Gems.add(20); }
-  const ids = unitUnlockedIds();
-  if (!pathSel) pathSel = store.get('path-sel', 'mate');
-  if (!ids.has(pathSel)) pathSel = [...ids][0];
-  const u = unitById(pathSel) || pathUnits()[0];
-  const nodes = unitNodes(u), info = unitInfo(u), nk = nextNode(u), dg = dayGoal(), q = questsToday(), due = dueKeys(pState()).length;
-  const bar = (v, max, c) => '<div class="v2-bar"><i style="width:' + Math.min(100, Math.round(v / Math.max(1, max) * 100)) + '%;background:' + c + '"></i></div>';
-  const nx = nextUnitNeed(), mood = (store.get('diary', {}) || {})[todayIso()];
-  const side =
-    '<div class="v2-card"><div class="v2-ct">🎯 Obiettivo di oggi' + (dg.done ? ' <span class="v2-ok">✓</span>' : '') + '</div>' +
-      '<div class="v2-row"><span>🌱 Nozioni nuove</span><b>' + Math.min(dg.nuove, GOAL.nuove) + '/' + GOAL.nuove + '</b></div>' + bar(dg.nuove, GOAL.nuove, 'var(--v2-green)') +
-      (dg.ripGoal ? '<div class="v2-row"><span>💪 Ricordi rafforzati</span><b>' + Math.min(dg.rip, dg.ripGoal) + '/' + dg.ripGoal + '</b></div>' + bar(dg.rip, dg.ripGoal, 'var(--v2-blue)') : '') +
-      '<div class="v2-row"><span>⏱️ Minuti</span><b>' + Math.round(dg.ms / 60000) + '/' + GOAL.minuti + '</b></div>' + bar(dg.ms / 60000, GOAL.minuti, 'var(--v2-orange)') +
-      (due ? '<button type="button" class="v2-btn blue" id="v2-rip" style="margin-top:12px">💪 Rafforza i ricordi (' + due + ')</button>' : '') + '</div>' +
-    '<div class="v2-card"><div class="v2-ct">📜 Missioni del giorno</div>' + q.list.map(x => { const d = QUESTS.find(z => z[0] === x.id); return '<div class="v2-q' + (x.done ? ' done' : '') + '"><span class="v2-qi">' + d[2] + '</span><div style="flex:1;min-width:0"><div class="v2-qt">' + esc(d[3]) + '</div>' + bar(x.p, x.g, 'var(--v2-yellow)') + '</div><b>' + (x.done ? '✓' : Math.min(x.p, x.g) + '/' + x.g) + '</b></div>'; }).join('') +
-      '<div class="v2-chest">' + (q.chest ? '🎁 Forziere aperto: +10 💎' : '🎁 Completa le tre missioni per aprire il forziere') + '</div></div>' +
-    (!mood ? '<button type="button" class="v2-card v2-mood" id="v2-mood"><span>💬</span><div><b>Come ti senti oggi?</b><small>Scrivilo nel diario</small></div></button>' : '') +
-    (nx ? '<div class="v2-card v2-next"><span>🔒</span><div><b>Prossima materia: ' + esc(nx.u.ic + ' ' + nx.u.name) + '</b><small>Si apre con ancora ' + nx.need + (nx.need === 1 ? ' nozione imparata' : ' nozioni imparate') + '</small></div></div>' : '');
-  const deco = PATH_DECO[store.get('path-theme', '') || 'base'];
-  el.innerHTML =
-    '<div class="v2-learn"><div class="v2-main">' +
-      '<button type="button" class="v2-unit" id="v2-unit" style="--uc:' + u.c + '"><div><small>MATERIA · ' + info.learned + '/' + info.total + ' nozioni</small><b>' + esc(u.ic + ' ' + u.name) + '</b></div><span class="v2-switch">📚 Cambia</span></button>' +
-      '<div class="v2-path path theme-' + (store.get('path-theme', '') || 'base') + '" style="--uc:' + u.c + '">' + nodes.map((nd, k) => {
-        const st = nodeState(u, nodes, k), cur = k === nk, x = Math.round(Math.sin(k * 0.85) * 80);
-        const ic = !st.open ? '🔒' : nd.t === 'rip' ? (nd.last ? '🏆' : '🎁') : st.conquered ? '👑' : st.done ? '⭐' : '★';
-        const lab = nd.t === 'rip' ? (nd.last ? 'Grande ripasso' : 'Ripasso') : (u.math ? MATH_TAPPE[nd.i].n : 'Tappa ' + (nd.i + 1));
-        return '<div class="pn-wrap" style="transform:translateX(' + x + 'px)">' + (k % 3 === 1 ? '<span class="pn-deco" style="' + (x > 0 ? 'right' : 'left') + ':-120px" aria-hidden="true">' + deco[k % deco.length] + '</span>' : '') + (cur ? '<div class="pn-bub">INIZIA</div>' : '') +
-          '<button type="button" class="pn ' + (st.open ? 'open' : 'lock') + (st.done ? ' done' : '') + (st.conquered ? ' gold' : '') + (cur ? ' cur' : '') + (nd.t === 'rip' ? ' rip' : '') + '" data-k="' + k + '" ' + (st.open ? '' : 'disabled') + ' aria-label="' + esc(lab) + '">' + ic + '</button>' +
-          (cur || st.done ? '<div class="pn-lab">' + esc(lab) + '</div>' : '') + '</div>';
-      }).join('') + '</div></div>' +
-      '<aside class="v2-side">' + side + '</aside></div>';
-  $('v2-unit').addEventListener('click', openUnits);
-  el.querySelectorAll('.pn.open').forEach(b => b.addEventListener('click', () => startLesson(u.id, +b.dataset.k)));
-  if ($('v2-rip')) $('v2-rip').addEventListener('click', () => startLesson(null, 0, { daily: true }));
-  if ($('v2-mood')) $('v2-mood').addEventListener('click', () => go('diario'));
-  topbar(); checkUnlocks();
-  setTimeout(() => { const c = el.querySelector('.pn.cur'); if (c && c.getBoundingClientRect().top > window.innerHeight * 0.75) c.scrollIntoView({ block: 'center' }); }, 60);
+  const due = dueKeys(pState()).length, last = unitById(store.get('path-sel', '')) || null;
+  const tile = (go, ic, n, sm, c) => '<button type="button" class="v2-tile h-tile" data-go="' + go + '"' + (c ? ' style="--uc:' + c + '"' : '') + '><span class="v2-ti">' + ic + '</span><b>' + esc(n) + '</b>' + (sm ? '<small>' + esc(sm) + '</small>' : '') + '</button>';
+  el.innerHTML = '<h1 class="v2-h1">' + (childName() ? 'Ciao ' + esc(childName()) + '!' : 'Ciao!') + '</h1><p class="v2-sub">Che cosa facciamo?</p>' +
+    (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
+    '<h2 class="h-h2">📚 Studiare</h2><div class="v2-grid h-grid">' + pathUnits().map(u => tile('u:' + u.id, u.ic, u.name, unitInfo(u).pct + '%', u.c)).join('') + '</div>' +
+    '<h2 class="h-h2">🎨 Fare e scoprire</h2><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[1], x[2])).join('') + '</div>';
+  el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { const g = b.dataset.go; if (g.startsWith('u:')) openMateria(g.slice(2)); else if (g === 'vita') openVita(); else go(g); }));
+  if ($('h-cont')) $('h-cont').addEventListener('click', () => startLesson(last.id, nextNode(last)));
+  if ($('h-rip')) $('h-rip').addEventListener('click', () => startLesson(null, 0, { daily: true }));
+};
+/* una materia: «Studia» riprende dalla prima lezione non fatta; tutte le lezioni si possono aprire */
+function openMateria(id) { pathSel = id; store.set('path-sel', id); go('materia'); }
+PAGES.materia = el => {
+  const u = unitById(pathSel || store.get('path-sel', '')) || pathUnits()[0]; pathSel = u.id;
+  const nodes = unitNodes(u), info = unitInfo(u), nk = nextNode(u);
+  el.innerHTML = '<h1 class="v2-h1">' + esc(u.ic + ' ' + u.name) + '</h1><p class="v2-sub">' + info.learned + ' nozioni imparate su ' + info.total + '</p>' +
+    '<button type="button" class="v2-btn" id="m-go" style="--uc:' + u.c + ';max-width:420px">▶ Studia</button>' +
+    '<div class="m-list">' + nodes.map((nd, k) => { const st = nodeState(u, nodes, k);
+      const lab = nd.t === 'rip' ? (nd.last ? '🏆 Grande ripasso' : '🎁 Ripasso') : (u.math ? MATH_TAPPE[nd.i].ic + ' ' + MATH_TAPPE[nd.i].n : '📘 Lezione ' + (nd.i + 1));
+      const sm = nd.t === 'lez' && !u.math ? chunkLearned(u, nd.i) + '/' + Math.min(CHUNK, u.items.length - nd.i * CHUNK) : '';
+      return '<button type="button" class="m-row' + (st.done ? ' done' : '') + (k === nk ? ' cur' : '') + '" data-k="' + k + '"><span>' + esc(lab) + '</span><small>' + sm + '</small><b>' + (st.conquered ? '👑' : st.done ? '⭐' : '') + '</b></button>'; }).join('') + '</div>';
+  $('m-go').addEventListener('click', () => startLesson(u.id, nk));
+  el.querySelectorAll('.m-row').forEach(b => b.addEventListener('click', () => startLesson(u.id, +b.dataset.k)));
 };
 function openUnits() {
   const ids = unitUnlockedIds(), nx = nextUnitNeed(), ne = nextExtra();
@@ -176,7 +160,8 @@ function openUnits() {
 
 /* ---------- 🔭 ESPLORA: gli strumenti di prima, tutti insieme ---------- */
 const EXPLORE = [['mate', '🔢', 'Officina dei numeri', 'Tabelline turbo, frazioni, orologio, problemi'], ['scienze', '🔬', 'Laboratorio', 'Esperimenti e quiz di scienze'], ['scopri', '🌍', 'Scopri il mondo', 'Storia, geografia, arte, lingue e curiosità'], ['sport', '🤸‍♀️', 'Pausa movimento', 'Pattinaggio, aerea, nuoto: muoviti!'], ['vita', '🧼', 'Io e il mio corpo', 'Armadio del meteo, timer di mani e denti'], ['teatro', '🎭', 'Teatro', 'La mia parte e i segreti del palco'], ['disegno', '🎨', 'Disegno', 'Tela libera, impara a disegnare, il mio museo'], ['routine', '☀️', 'Le mie routine', 'Mattino, compiti, sera e borse dello sport'], ['metodo', '🧠', 'Il mio metodo', 'Trucchi per studiare e concentrarsi']];
-PAGES.esplora = el => {
+PAGES.esplora = el => { setTimeout(() => go('home'), 0); };
+PAGES.esploraOld = el => {
   el.innerHTML = '<h1 class="v2-h1">🔭 Esplora</h1><p class="v2-sub">Gli strumenti per allenarti e scoprire di più.</p><div class="v2-grid">' +
     EXPLORE.map(e => '<button type="button" class="v2-tile" data-go="' + e[0] + '"><span class="v2-ti">' + e[1] + '</span><b>' + esc(e[2]) + '</b><small>' + esc(e[3]) + '</small></button>').join('') + '</div>';
   el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => b.dataset.go === 'vita' ? openVita() : go(b.dataset.go)));
@@ -228,8 +213,7 @@ PAGES.io = el => {
   const orig = go;
   go = function (id) {
     orig(id);
-    if (EXPLORE.some(e => e[0] === id)) { const el = $('p-' + id); if (el && !el.querySelector('.v2-back')) { const b = document.createElement('button'); b.type = 'button'; b.className = 'v2-back'; b.textContent = '← Esplora'; b.addEventListener('click', () => go('esplora')); el.insertBefore(b, el.firstChild); } }
-    if (!TABS.some(t => t[0] === id) && !EXPLORE.some(e => e[0] === id)) { /* sezione non più visibile: nessun problema */ }
+    if (id !== 'home') { const el = $('p-' + id); if (el && !el.querySelector('.v2-back')) { const b = document.createElement('button'); b.type = 'button'; b.className = 'v2-back'; b.textContent = '← Casa'; b.addEventListener('click', () => go('home')); el.insertBefore(b, el.firstChild); } }
   };
 })();
 /* dopo ogni lezione: sblocchi, missioni e invio immediato ai genitori se collegato */

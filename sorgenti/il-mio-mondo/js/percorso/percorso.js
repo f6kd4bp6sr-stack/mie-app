@@ -146,7 +146,7 @@ function nodeState(u, nodes, k) {
   const node = nodes[k], id = node.t + node.i;
   const done = !!us.done[id];
   const conquered = node.t === 'lez' && chunkLearned(u, node.i) >= (u.math ? CHUNK : Math.min(8, u.items.slice(node.i * CHUNK, node.i * CHUNK + CHUNK).length));
-  const open = k === 0 || !!us.done[nodes[k - 1].t + nodes[k - 1].i] || done;
+  const open = true; /* tutte le lezioni aperte da subito (scelta del genitore) */
   return { done, conquered, open, id };
 }
 function nextNode(u) { const nodes = unitNodes(u); for (let k = 0; k < nodes.length; k++) { const st = nodeState(u, nodes, k); if (st.open && !st.done) return k; } return nodes.length - 1; }

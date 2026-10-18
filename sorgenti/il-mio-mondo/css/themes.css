@@ -157,3 +157,20 @@
   .qs-ov { position: fixed; inset: 0; z-index: 99999; background: #000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 16px; }
   .qs-ov video { max-width: 100%; max-height: 66vh; border-radius: 18px; }
   .qs-t { color: #fff; font-weight: 800; text-align: center; font-size: 18px; } .qs-t small { font-weight: 700; opacity: .8; }
+  /* ===== interfaccia semplice: una sola Casa, niente linguette in basso ===== */
+  body.v2 .tabbar { display: none; }
+  body.v2 main { padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px)); }
+  body.v2 .appbar .energy-pill { display: none; }
+  .h-quick { display: flex; flex-wrap: wrap; gap: 10px; margin: 4px 0 6px; }
+  .h-quick .v2-btn { width: auto; flex: 1 1 260px; font-size: 18px; padding: 14px 18px; }
+  .h-h2 { font-family: var(--font-display); font-size: 22px; margin: 22px 0 10px; }
+  .h-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+  .h-tile { justify-items: center; text-align: center; padding: 16px 10px; border-color: color-mix(in srgb, var(--uc, var(--line)) 45%, var(--line)); }
+  .h-tile .v2-ti { font-size: 44px; } .h-tile b { font-size: 18px; line-height: 1.15; }
+  .m-list { display: grid; gap: 8px; margin-top: 16px; max-width: 640px; }
+  .m-row { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; font: inherit; font-weight: 800; font-size: 17px; color: var(--ink); background: var(--surface); border: 2px solid var(--line); border-radius: 14px; padding: 12px 14px; box-shadow: 0 3px 0 var(--line); cursor: pointer; }
+  .m-row span { flex: 1; } .m-row small { color: var(--ink-soft); font-weight: 800; }
+  .m-row.cur { border-color: var(--v2-green); }
+  .m-row b { min-width: 24px; text-align: right; }
+  body.v2 #upd-btn { display: flex; width: auto; padding: 0 14px; gap: 6px; font-size: 16px; font-weight: 900; color: var(--ink); align-items: center; }
+  body.v2 #upd-btn::after { content: 'Aggiorna'; }

@@ -32,10 +32,10 @@ function newsItems() {
   if (open.giochi && gm && !g.done) N.push({ k: 'gotd', ic: gm.ic, t: 'Nuovo gioco del giorno: ' + gm.name, s: (g.ex ? g.ex + ' · ' : '') + 'premio +8 💎', go: () => { gameSel = g.id; go('giochi'); } });
   const due = dueKeys(pState()).length;
   if (due) N.push({ k: 'rip', ic: '💪', t: due + (due === 1 ? ' ricordo da rafforzare' : ' ricordi da rafforzare'), s: 'Il ripasso al momento giusto li fissa per sempre', go: () => startLesson(null, 0, { daily: true }) });
-  const q = questsToday(), left = q.list.filter(x => !x.done).length;
+  const q = questsToday(), left = 0; /* niente missioni nell'interfaccia semplice */
   if (left) N.push({ k: 'quest', ic: '📜', t: left === 3 ? 'Tre missioni nuove ti aspettano' : 'Ancora ' + left + (left === 1 ? ' missione' : ' missioni') + ' per il forziere', s: '🎁 Forziere da +10 💎', go: () => go('home') });
   const dg = dayGoal();
-  if (!dg.done) N.push({ k: 'goal', ic: '🎯', t: 'Obiettivo di oggi: ' + Math.min(dg.nuove, GOAL.nuove) + ' nozioni su ' + GOAL.nuove, s: 'Una lezione e ci sei quasi', go: () => go('home') });
+  if (false && !dg.done) N.push({ k: 'goal', ic: '🎯', t: 'Obiettivo di oggi: ' + Math.min(dg.nuove, GOAL.nuove) + ' nozioni su ' + GOAL.nuove, s: 'Una lezione e ci sei quasi', go: () => go('home') });
   const tes = TESORI && COLL.get(), foundToday = Object.keys((tes && tes.h) || {}).filter(k => k.startsWith(todayIso())).length;
   if (foundToday < 2) N.push({ k: 'tes', ic: '🔍', t: 'Oggi ci sono tesori nascosti nell’app', s: 'Aguzza la vista in ogni sezione', go: null });
   const pg = Piggy.get(); if (pg.hist && pg.hist[0] && pg.hist[0].d === todayIso()) N.push({ k: 'pig', ic: '🐷', t: 'Il salvadanaio è cresciuto di ' + pg.hist[0].it + ' 💎', s: 'È l’interesse di chi risparmia', go: () => openShop() });

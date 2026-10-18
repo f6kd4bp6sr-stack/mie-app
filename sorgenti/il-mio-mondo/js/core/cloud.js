@@ -627,8 +627,10 @@ async function checkUpdates() {
   // aggiornamento completo: rinnova il motore offline e ricarica tutto dalla rete (i dati restano sull'iPad)
   openModal('<div style="font-size:50px">✨</div><div class="big" style="font-size:26px">Aggiorno l’app…</div><p style="font-weight:700">' + saved + '<br><br>' + (v.v === window.APP_VERSION ? 'Ricarico tutto dalla rete per sicurezza.' : 'C’è una versione nuova!') + ' I progressi restano al loro posto.</p>');
   store.set('__updAt', Date.now(), true);
-  try { const regs = navigator.serviceWorker ? await navigator.serviceWorker.getRegistrations() : []; for (const r of regs) { if (!String(r.scope).includes('/licenze/')) await r.unregister(); } } catch (e) {}
-  try { const ks = await caches.keys(); await Promise.all(ks.filter(k => !k.startsWith('licenze-')).map(k => caches.delete(k))); } catch (e) {}
+  /* solo il motore e le copie di questa app: Pianificazione e Semestre filtro non si toccano */
+  const root = new URL('./', location.href).href;
+  try { const regs = navigator.serviceWorker ? await navigator.serviceWorker.getRegistrations() : []; for (const r of regs) { if (String(r.scope) === root) await r.unregister(); } } catch (e) {}
+  try { const ks = await caches.keys(); await Promise.all(ks.filter(k => k.startsWith('mondo-')).map(k => caches.delete(k))); } catch (e) {}
   setTimeout(() => location.replace(location.pathname + '?agg=' + Date.now()), 900);
 }
 /* tasto 🔄 Aggiorna sempre a portata di mano, in alto */
