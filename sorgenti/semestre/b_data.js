@@ -414,7 +414,7 @@ const SOURCES=[
   ["UPO – Scuola di Medicina: accesso al corso di Medicina e Chirurgia","https://scuolamed.uniupo.it/it/didattica/iscriversi-carriera/accesso-al-corso-di-laurea-medicina-chirurgia","*"],
   ["UPO – UpoPlanner: orari e aule delle lezioni","https://upoplanner.uniupo.it","*"],
   ["Orizzonte Scuola – Decreto posti 2026/27: 30.225 posti, Medicina 27.001","https://www.orizzontescuola.it/posti-per-medicina-e-odontoiatria-fissati-a-30-225-per-lanno-accademico-2026-2027-bernini-firma-il-decreto/","*"],
-  ["Quotidiano Sanità – 62.200 iscritti al semestre aperto 2026/27","https://www.quotidianosanita.it/lavoro-e-professioni/medicina-odontoiatria-e-veterinaria-da-domani-al-via-il-semestre-aperto-oltre-62mila-studenti-per-30mila-posti/","*"],
+  ["Quotidiano Sanità – 62.200 iscritti al semestre aperto 2026/27","https://www.quotidianosanita.it/uncategorized/medicina-odontoiatria-e-veterinaria-da-domani-al-via-il-semestre-aperto-oltre-62mila-studenti-per-30mila-posti/","*"],
   ["Quotidiano Sanità – Consiglio di Stato: scorrimento sui posti vacanti 2025/26","https://www.quotidianosanita.it/lavoro-e-professioni/medicina-posti-vuoti-e-studenti-esclusi-il-consiglio-di-stato-accoglie-il-ricorso-di-cp-semestre-filtro-penalizza-il-merito/","*"],
   ["Orizzonte Scuola – Il TAR Lazio respinge il ricorso dei docenti (giugno 2026)","https://www.orizzontescuola.it/medicina-il-tar-conferma-il-semestre-filtro-respinto-il-ricorso-dei-docenti-universitari/","*"],
   ["Open – Il TAR Lazio respinge i ricorsi degli studenti (marzo 2026)","https://www.open.online/2026/03/25/medicina-ricorsi-semestre-filtro-respinti-tar/","*"]]},
