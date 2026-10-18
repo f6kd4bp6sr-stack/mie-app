@@ -49,6 +49,20 @@ for x in o.get('mercati', []):
     if not isinstance(x['valore'], (int, float)) or not -5 <= x['valore'] <= 25: err('mercati: valore fuori scala ' + x['id'])
     if not re.match(r'^\d{4}-\d{2}-\d{2}$', x['d']) or x['d'] > today: err('mercati: data ' + x['id'])
     if not x['url'].startswith('https://'): err('mercati: url ' + x['id'])
+PT = {'dep', 'conto', 'btp', 'mon', 'obb', 'bil', 'az'}
+P = o.get('prodotti', [])
+if len(P) > 40: err('prodotti: al massimo 40')
+pid = set()
+for x in P:
+    for k in ('id', 'tipo', 'n', 'em', 'd', 'fonte', 'url'):
+        if k not in x: err('prodotti: manca %s in %s' % (k, x.get('id')))
+    if x['id'] in pid: err('prodotti: doppione ' + x['id'])
+    pid.add(x['id'])
+    if x['tipo'] not in PT: err('prodotti: tipo ' + x['id'])
+    if x.get('tasso') is not None and (not isinstance(x['tasso'], (int, float)) or not 0 <= x['tasso'] <= 15): err('prodotti: tasso ' + x['id'])
+    if x.get('isin') and not re.match(r'^[A-Z]{2}[A-Z0-9]{9}[0-9]$', x['isin']): err('prodotti: ISIN ' + x['id'])
+    if not re.match(r'^\d{4}-\d{2}-\d{2}$', x['d']) or x['d'] > today: err('prodotti: data ' + x['id'])
+    if not x['url'].startswith('https://'): err('prodotti: url ' + x['id'])
 if guarda(raw, GUARD): err('termine personale nel file pubblico')
 TIPI = {'ufficiale', 'sindacato GdF', 'sindacato polizia', 'sindacato militari', 'testata'}
 for x in o.get('fonti', []):
@@ -56,4 +70,4 @@ for x in o.get('fonti', []):
     if x.get('ultimo') and x['ultimo'][:10] > today: err('fonte con data futura: ' + x['n'])
 if len(o.get('controlli', [])) > 60: err('controlli: tieni solo gli ultimi 60')
 if len(sys.argv) > 2 and open(sys.argv[2], encoding='utf-8').read() != raw: err('le due copie sono diverse')
-print('✅ novità ok:', len(V), 'notizie,', len(o.get('attesa', [])), 'parametri in attesa,', len(o.get('mercati', [])), 'tassi di mercato')
+print('✅ novità ok:', len(V), 'notizie,', len(o.get('attesa', [])), 'parametri in attesa,', len(o.get('mercati', [])), 'tassi di mercato,', len(P), 'prodotti')
