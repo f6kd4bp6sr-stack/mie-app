@@ -122,15 +122,19 @@ renderTabs = function () {
 
 /* ---------- 🏠 CASA: tutte le sezioni, subito ---------- */
 const HOME_DO = [['disegno', '🎨', 'Disegno'], ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], ['mate', '🔢', 'Officina dei numeri'], ['scienze', '🔬', 'Laboratorio'], ['scopri', '🌍', 'Scopri il mondo'], ['teatro', '🎭', 'Teatro'], ['sport', '🤸‍♀️', 'Pausa movimento'], ['vita', '🧼', 'Io e il mio corpo'], ['routine', '☀️', 'Le mie routine'], ['metodo', '🧠', 'Il mio metodo'], ['io', '🐉', 'Io e il mio drago']];
+/* materie non di scuola: in fondo alla Casa */
+const HOME_VITA = ['media', 'soldi', 'lavo', 'vesto', 'sp-patt', 'sp-aerea', 'sp-nuoto', 'sp-corpo', 'roblox'];
 PAGES.home = el => {
   if (!D) { el.innerHTML = ''; return; }
   if (!store.get('gems-welcome', false)) { store.set('gems-welcome', true); Gems.add(20); }
   const due = dueKeys(pState()).length, last = unitById(store.get('path-sel', '')) || null;
   const tile = (go, ic, n, sm, c) => '<button type="button" class="v2-tile h-tile" data-go="' + go + '"' + (c ? ' style="--uc:' + c + '"' : '') + '><span class="v2-ti">' + ic + '</span><b>' + esc(n) + '</b>' + (sm ? '<small>' + esc(sm) + '</small>' : '') + '</button>';
+  const ut = u => tile('u:' + u.id, u.ic, u.name, unitInfo(u).pct + '%', u.c);
   el.innerHTML = '<h1 class="v2-h1">' + (childName() ? 'Ciao ' + esc(childName()) + '!' : 'Ciao!') + '</h1><p class="v2-sub">Che cosa facciamo?</p>' +
     (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
-    '<h2 class="h-h2">📚 Studiare</h2><div class="v2-grid h-grid">' + pathUnits().map(u => tile('u:' + u.id, u.ic, u.name, unitInfo(u).pct + '%', u.c)).join('') + '</div>' +
-    '<h2 class="h-h2">🎨 Fare e scoprire</h2><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[1], x[2])).join('') + '</div>';
+    '<h2 class="h-h2">📚 Materie di scuola</h2><div class="v2-grid h-grid">' + pathUnits().filter(u => !HOME_VITA.includes(u.id)).map(ut).join('') + '</div>' +
+    '<h2 class="h-h2">🎨 Fare e scoprire</h2><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[1], x[2])).join('') + '</div>' +
+    '<h2 class="h-h2">🌟 Per la vita e per passione</h2><div class="v2-grid h-grid">' + HOME_VITA.map(unitById).filter(Boolean).map(ut).join('') + '</div>';
   el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { const g = b.dataset.go; if (g.startsWith('u:')) openMateria(g.slice(2)); else if (g === 'vita') openVita(); else go(g); }));
   if ($('h-cont')) $('h-cont').addEventListener('click', () => startLesson(last.id, nextNode(last)));
   if ($('h-rip')) $('h-rip').addEventListener('click', () => startLesson(null, 0, { daily: true }));
