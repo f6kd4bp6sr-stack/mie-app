@@ -41,6 +41,14 @@ for a in o.get('attesa', []):
         if k not in a: err('attesa: manca ' + k)
     if a['stato'] not in ('atteso', 'uscito'): err('attesa stato ' + a['id'])
     if a['stato'] == 'uscito' and a.get('valore') in (None, ''): err('attesa uscito senza valore ' + a['id'])
+MK = {'infl', 'bce', 'btp2', 'btp5', 'btp10', 'btpv', 'cdl', 'cd12', 'cd24', 'cd36'}
+for x in o.get('mercati', []):
+    for k in ('id', 't', 'valore', 'd', 'fonte', 'url'):
+        if k not in x: err('mercati: manca %s in %s' % (k, x.get('id')))
+    if x['id'] not in MK: err('mercati: id sconosciuto ' + x['id'])
+    if not isinstance(x['valore'], (int, float)) or not -5 <= x['valore'] <= 25: err('mercati: valore fuori scala ' + x['id'])
+    if not re.match(r'^\d{4}-\d{2}-\d{2}$', x['d']) or x['d'] > today: err('mercati: data ' + x['id'])
+    if not x['url'].startswith('https://'): err('mercati: url ' + x['id'])
 if guarda(raw, GUARD): err('termine personale nel file pubblico')
 TIPI = {'ufficiale', 'sindacato GdF', 'sindacato polizia', 'sindacato militari', 'testata'}
 for x in o.get('fonti', []):
@@ -48,4 +56,4 @@ for x in o.get('fonti', []):
     if x.get('ultimo') and x['ultimo'][:10] > today: err('fonte con data futura: ' + x['n'])
 if len(o.get('controlli', [])) > 60: err('controlli: tieni solo gli ultimi 60')
 if len(sys.argv) > 2 and open(sys.argv[2], encoding='utf-8').read() != raw: err('le due copie sono diverse')
-print('✅ novità ok:', len(V), 'notizie,', len(o.get('attesa', [])), 'parametri in attesa')
+print('✅ novità ok:', len(V), 'notizie,', len(o.get('attesa', [])), 'parametri in attesa,', len(o.get('mercati', [])), 'tassi di mercato')

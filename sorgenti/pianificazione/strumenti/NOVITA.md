@@ -48,6 +48,15 @@ Prima le fonti ufficiali (sono quelle che contano), poi i sindacati (spesso arri
 8. **Dati** (`attesa` e notizie già presenti): a ogni giro ricontrolla i parametri in attesa alla fonte ufficiale (Gazzetta per il DPR, ISTAT per il tasso 2026, decreto per i coefficienti 2027-2028, F.A.F. per la quota) e correggi le notizie già pubblicate se una fonte ha cambiato date o numeri (scrivilo nella sintesi: «aggiornato il …»).
 9. **Registro** (`controlli`): aggiungi in fondo `{"at": ora, "notizie": quante nuove, "note": "…"}`; tieni gli ultimi 60.
 
+## 📊 Tassi di mercato (`mercati`, per la sezione 🌱 Investimenti)
+A ogni giro aggiorna i 10 valori di `mercati` (stessi `id`, numeri in percentuale, `d` = data del dato, `fonte`, `url` https esatto, `nota` facoltativa):
+- `infl` inflazione NIC su un anno: ultimo comunicato ISTAT (provvisorio a fine mese, definitivo a metà mese successivo) — istat.it;
+- `bce` tasso BCE sui depositi: ultima decisione — ecb.europa.eu;
+- `btp2`, `btp5`, `btp10` rendimenti lordi dei BTP a 2, 5 e 10 anni: ultima chiusura (Trading Economics, Borsa Italiana, rendimentibtp.it; due fonti che coincidono entro 0,05 punti);
+- `btpv` emissione retail del MEF in corso o più recente (BTP Valore, BTP Italia, BTP Più…): rendimento lordo a scadenza e, nella `nota`, nome, date di collocamento e cedole minime — dt.mef.gov.it o una testata che lo riporta;
+- `cdl`, `cd12`, `cd24`, `cd36` miglior tasso lordo dei conti deposito libero e vincolati 12/24/36 mesi di banche italiane aderenti al Fondo Interbancario (siti di confronto come conti-deposito.net, facile.it; nella `nota` «promozionale» quando lo è).
+Doppia verifica come per le notizie; se un valore non si può verificare, lascia quello di prima (con la sua data). Niente consigli: sono solo numeri con data e fonte.
+
 ## 🔄 Scheda pensione cifrata (dopo le novità, a ogni giro)
 `licenze/scheda-pensione.cifrata.json` è la scheda personale di Marco **cifrata** (AES-256-GCM). L'iPad la scarica e la unisce da sola: le sue spunte, note, importi reali, esito e documenti restano comunque. La chiave è **solo** nel testo dell'attività programmata: passala con `SCHEDA_CHIAVE`, non scriverla mai in un file, in un commit, in una notizia o nell'output.
 

@@ -229,7 +229,7 @@ function bindCassa(p,num){const R=()=>render(),C=p.cassa;bindChart();C.spunte=C.
     else if(a==="iniedit"){csIniEd=true;R();}else if(a==="inino"){csIniEd=false;R();}});
   document.querySelectorAll("[data-csm]").forEach(b=>b.onclick=()=>{const a=b.dataset.csm;
     if(a==="new"){csEd="new";R();const i=$("mvT");if(i)i.focus();return;}if(a==="close"){csEd=null;R();return;}
-    if(a==="del"){if(!confirm("Togliere questo movimento?"))return;p.mov=p.mov.filter(x=>x.id!==csEd);csEd=null;save();R();return;}
+    if(a==="del"){if(!confirm("Togliere questo movimento?"))return;const m0=p.mov.find(x=>x.id===csEd);if(m0&&m0.est){const o=p.mov.find(x=>x.id===m0.est);if(o&&o.aOrig){o.a=o.aOrig;delete o.aOrig;}}p.mov=p.mov.filter(x=>x.id!==csEd);csEd=null;save();R();return;}
     if(a==="save"){const t=$("mvT").value.trim(),v=num($("mvI").value),d=$("mvD").value,fr=$("mvF").value,to=$("mvA").value;
       if(!t||v==null||!d)return toast("Scrivi che cos’è, l’importo e il giorno");if(to&&to<d)return toast("La fine viene prima dell’inizio");
       const x={tipo:$("mvTi").value,t,imp:Math.abs(v),freq:fr,da:d,a:fr==="una"?"":to,cal:$("mvC").checked?1:0};

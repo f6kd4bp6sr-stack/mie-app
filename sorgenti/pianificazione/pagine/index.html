@@ -16,7 +16,7 @@
 /* Colori per sezione: ogni sezione ha il suo (riquadri, schede, chip del calendario) */
 :root{--chp:#a8740a;--bg:#f4f5f9;--card:#ffffff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);
   --cal:#2563eb;--cal-bg:#e8f0fe;--scad:#d6342c;--scad-bg:#fdeceb;--prat:#e8770e;--prat-bg:#fff0e0;--fam:#7c3aed;--fam-bg:#f1eafe;--ben:#0d9488;--ben-bg:#ddf4f1;
-  --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;
+  --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;--inv:#15803d;--inv-bg:#dcf2e3;
   --accent:var(--cal);--ok:#2e7d5b;--ok-bg:#e1f3e9;--warn:var(--scad);--warn-bg:var(--scad-bg);--soon:#b7791f;--soon-bg:#fdf1dc;--lp:var(--lic);--lp-bg:var(--lic-bg);--euro:#1f5fae;--euro-bg:#e3edf9}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -30,7 +30,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.42 -apple-system
 .sect button.on{background:var(--c);color:#fff}
 .sect button .n{font-size:12px;font-weight:800;background:var(--scad);color:#fff;border-radius:999px;padding:1px 7px}
 .sect button.on .n{background:#fff;color:var(--scad)}
-.sect .gear{margin-left:auto;padding:10px 12px}.sect .gear .ic{font-size:20px}
+.sect .gear{margin-left:auto;padding:10px 12px}@media (max-width:560px){.sect button:not(.on) .lb{display:none}.sect button{padding:9px 12px}}.sect .gear .ic{font-size:20px}
 main{min-width:0;--c:var(--cal)}main[data-sec=prat]{--c:var(--prat)}main[data-sec=set]{--c:var(--set)}main[data-sec=pens]{--c:var(--pens)}main[data-sec=conti]{--c:var(--euro)}
 h1{font-size:28px;margin:4px 0 2px;letter-spacing:-.01em}
 .sub{color:var(--muted);margin:0 0 14px}
@@ -38,7 +38,7 @@ h2{font-size:18px;margin:20px 2px 8px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
 .card{background:var(--card);border-radius:18px;padding:14px 16px;margin-bottom:14px;box-shadow:var(--shadow)}
 .card[class*=" k-"]{box-shadow:inset 0 4px 0 var(--c),var(--shadow);padding-top:16px}
-.k-cal{--c:var(--cal)}.k-scad{--c:var(--scad)}.k-prat{--c:var(--prat)}.k-fam{--c:var(--fam)}.k-ben{--c:var(--ben)}.k-lic{--c:var(--lic)}.k-mondo{--c:var(--mondo)}.k-ipad{--c:var(--ipad)}.k-set{--c:var(--set)}.k-pens{--c:var(--pens)}.k-conti{--c:var(--euro)}
+.k-cal{--c:var(--cal)}.k-scad{--c:var(--scad)}.k-prat{--c:var(--prat)}.k-fam{--c:var(--fam)}.k-ben{--c:var(--ben)}.k-lic{--c:var(--lic)}.k-mondo{--c:var(--mondo)}.k-ipad{--c:var(--ipad)}.k-set{--c:var(--set)}.k-pens{--c:var(--pens)}.k-inv{--c:var(--inv)}.k-conti{--c:var(--euro)}
 .grid .card{margin-bottom:0}
 .card h3{margin:0 0 8px;font-size:16px;display:flex;align-items:center;gap:8px;color:var(--c)}
 .card:not([class*=" k-"]) h3{color:var(--ink)}
@@ -67,6 +67,10 @@ details.csm2{padding:10px 0 10px 4px;border-top:1px solid var(--line)}details.cs
 .cs-ch .cm{stroke:var(--card);stroke-width:2}.cs-ch .cm.p{fill:var(--chp)}.cs-ch .cm.s{fill:var(--cal)}.cs-ch .cm.v{fill:var(--ink)}
 .cs-leg{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:8px}.cs-leg span{display:flex;align-items:center;gap:6px}.cs-leg .sw{width:16px;height:3px;border-radius:2px;display:inline-block}.cs-leg .sw.p{background:var(--chp)}.cs-leg .sw.s{background:var(--cal)}.cs-leg .sw.v{width:9px;height:9px;border-radius:50%;background:var(--ink)}
 .cs-tip{font-size:13px;color:var(--muted);margin:4px 0 0;min-height:18px}.cs-tip b{color:var(--ink)}
+.pill.inv{background:var(--inv-bg);color:var(--inv)}.iq{padding:10px 0;border-top:1px solid var(--line)}.iq b{display:block;margin-bottom:6px}.iqo{display:flex;flex-wrap:wrap;gap:6px}
+.ibars{display:grid;gap:14px;margin-top:8px}.ib.no{opacity:.55}.ibh{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}.ibh span{font-variant-numeric:tabular-nums}
+.ibt{position:relative;height:12px;margin:6px 0 4px;border-radius:6px;background:var(--seg);overflow:hidden}.ibt i{position:absolute;top:0;bottom:0;border-radius:6px}.ibt .rng{background:var(--inv-bg);box-shadow:inset 0 0 0 1px var(--inv)}.ibt .mid{left:0;background:var(--inv);opacity:.85}
+.ib small{color:var(--muted);font-size:12.5px;display:block}.idt summary{cursor:pointer;color:var(--inv);font-size:13px;margin-top:4px}.idt p{margin:4px 0;font-size:14px}
 .cs-sub{display:flex;justify-content:space-between;align-items:baseline;margin:12px 0 2px;font-size:14px;color:var(--muted)}
 .chkl{display:flex!important;gap:8px;align-items:center;flex-direction:row!important}
 .vtl{position:relative;display:grid;gap:2px;padding-left:6px}.vtl::before{content:"";position:absolute;left:15px;top:8px;bottom:8px;width:3px;border-radius:3px;background:var(--pens-bg)}.vt{position:relative;display:flex;align-items:flex-start;gap:10px;border:0;background:none;font:inherit;color:var(--ink);text-align:left;padding:6px 0 6px 26px;cursor:pointer;width:100%}.vt i{position:absolute;left:3px;top:11px;width:11px;height:11px;border-radius:50%;background:var(--pens);box-shadow:0 0 0 3px var(--card)}.vt.past{opacity:.55}.vt.oggi i{background:var(--cal)}.vt.oggi b{color:var(--cal)}.vt.oggi small{color:var(--muted);margin-left:8px}.vt .ic{font-size:20px;line-height:1}.vt .tx small{display:block;color:var(--muted)}.vt.sel .tx b{color:var(--pens)}
@@ -169,7 +173,7 @@ a.btn{text-decoration:none;display:inline-block}
 .setl .row{cursor:default}
 @media (prefers-color-scheme:dark){:root{--chp:#b58424;--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--shadow:0 1px 2px rgba(0,0,0,.4);
   --cal:#5b8cff;--cal-bg:#18264a;--scad:#ff6b5f;--scad-bg:#3b1a18;--prat:#ff9a3d;--prat-bg:#3a2612;--fam:#a98bff;--fam-bg:#271f3d;--ben:#2cc5b6;--ben-bg:#12302d;
-  --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
+  --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
   .warnbox{background:#3a2a1c;border-color:#b8743c}}
 </style>
 <script>window.APP_VERSION="dev";window.APP_BUILD="dev";</script>
@@ -428,7 +432,7 @@ function icsText(items){const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Pian
 
 /* ---------- interfaccia ---------- */
 /* sezioni nel menu (ognuna con il suo colore); ⚙️ Impostazioni sta a parte, a destra */
-const SECT=[["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["prat","🗂️","Pratiche","--prat"]].concat(CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
+const SECT=[["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["prat","🗂️","Pratiche","--prat"]].concat(CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
 const ALL_SECT=SECT.map(x=>x[0]).concat(["set"]);
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
 function mapOld(k){
@@ -443,12 +447,12 @@ if(location.hash&&location.hash.slice(1)!==cur)try{history.replaceState(null,"",
 let editId=null;
 const lateN=()=>scadOpen().filter(x=>scadState(x)==="warn").length;
 function side(){const late=lateN();
-  $("side").innerHTML=SECT.map(([k,i,t,c])=>`<button data-s="${k}" style="--c:var(${c})" class="${k===cur?"on":""}"${k===cur?' aria-current="page"':""}><span class="ic">${i}</span>${t}${k==="cal"&&late?`<span class="n" title="scadenze passate">${late}</span>`:""}${k==="pens"&&(pensLate()+newsNew())?`<span class="n" title="scadenze passate e novità che ti riguardano">${pensLate()+newsNew()}</span>`:""}</button>`).join("")
+  $("side").innerHTML=SECT.map(([k,i,t,c])=>`<button data-s="${k}" style="--c:var(${c})" class="${k===cur?"on":""}"${k===cur?' aria-current="page"':""}><span class="ic">${i}</span><span class="lb">${t}</span>${k==="cal"&&late?`<span class="n" title="scadenze passate">${late}</span>`:""}${k==="pens"&&(pensLate()+newsNew())?`<span class="n" title="scadenze passate e novità che ti riguardano">${pensLate()+newsNew()}</span>`:""}</button>`).join("")
     +`<button data-s="set" style="--c:var(--set)" class="gear${cur==="set"?" on":""}" aria-label="Impostazioni"${cur==="set"?' aria-current="page"':""}><span class="ic">⚙️</span></button>`;}
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(k==="prat")pratNew=false;cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({cal:vCal,pens:vPens,prat:vPrat,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
+function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({cal:vCal,pens:vPens,inv:vInv,prat:vPrat,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
 /* ridisegno chiesto da un controllo in sottofondo: aspetta se si sta scrivendo o compilando qualcosa */
 function softRender(){const a=document.activeElement;if((a&&/INPUT|SELECT|TEXTAREA/.test(a.tagName))||calAdd||editId){clearTimeout(softRender.t);softRender.t=setTimeout(softRender,4000);return;}render();}
 
@@ -568,6 +572,7 @@ function bind(){
   if(cur!=="prat")document.querySelectorAll("[data-psel]").forEach(b=>b.onclick=()=>{pratSel=b.dataset.psel;go("prat");});
   if(cur==="prat"&&typeof bindPrat==="function")bindPrat();
   if(cur==="pens")bindPens();
+  if(cur==="inv")bindInv();
   if(cur==="cal"&&typeof bindCal==="function")bindCal();
   if(cur==="cal"&&calV==="scad")bindScad();
   if(CONTI_ON&&typeof bindConti==="function"&&cur==="conti")bindConti();
