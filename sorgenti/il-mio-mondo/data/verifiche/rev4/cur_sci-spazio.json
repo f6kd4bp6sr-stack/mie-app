@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Tramonti blu su Marte",
+    "x": "Su Marte il cielo di giorno è color caramello, ma al tramonto intorno al Sole diventa blu! La polvere marziana fa passare meglio la luce blu vicino al Sole. Il contrario della Terra!",
+    "ic": "🌅",
+    "q": "Di che colore appare il tramonto su Marte?",
+    "ok": "Blu",
+    "wrong": [
+      "Verde",
+      "Viola"
+    ],
+    "src": "NASA Science (Curiosity, 2015)"
+  },
+  {
+    "t": "Astronauti più alti",
+    "x": "Nello spazio la colonna vertebrale non è schiacciata dalla gravità e si allunga: gli astronauti diventano più alti fino a circa il 3%. Tornati sulla Terra, tornano alla loro altezza.",
+    "ic": "🧑‍🚀",
+    "q": "Che cosa succede all'altezza degli astronauti nello spazio?",
+    "ok": "Diventano un po' più alti",
+    "wrong": [
+      "Diventano più bassi",
+      "Non cambia mai"
+    ],
+    "src": "Space.com; Scientific American"
+  },
+  {
+    "t": "Ghiaccio vicino al Sole",
+    "x": "Mercurio è il pianeta più vicino al Sole, eppure in fondo a crateri vicino ai poli, dove il Sole non arriva mai, c'è ghiaccio d'acqua! Lo ha scoperto la sonda MESSENGER della NASA nel 2012.",
+    "ic": "🧊",
+    "q": "Dove si trova il ghiaccio su Mercurio?",
+    "ok": "In crateri vicino ai poli sempre all'ombra",
+    "wrong": [
+      "Sulla cima dei vulcani",
+      "In mezzo all'equatore"
+    ],
+    "src": "NASA JPL; Johns Hopkins APL"
+  },
+  {
+    "t": "Il pianeta più ventoso",
+    "x": "Su Nettuno soffiano i venti più forti del sistema solare: oltre 2.000 km/h, molto più veloci dei venti degli uragani più forti della Terra. Eppure Nettuno è lontanissimo dal Sole ed è freddissimo!",
+    "ic": "💨",
+    "q": "Su quale pianeta ci sono i venti più forti?",
+    "ok": "Nettuno",
+    "wrong": [
+      "Mercurio",
+      "Marte"
+    ],
+    "src": "NASA Science – Neptune Facts"
+  },
+  {
+    "t": "La Luna si allontana",
+    "x": "Ogni anno la Luna si allontana dalla Terra di circa 3,8 centimetri: più o meno quanto crescono le tue unghie in un anno! Lo misurano con laser puntati su specchi lasciati dagli astronauti.",
+    "ic": "🌙",
+    "q": "Di quanto si allontana la Luna ogni anno?",
+    "ok": "Circa 3,8 centimetri",
+    "wrong": [
+      "Circa 38 chilometri",
+      "Non si muove mai"
+    ],
+    "src": "NASA; Time"
+  },
+  {
+    "t": "Un oceano sotto il ghiaccio",
+    "x": "Europa, una luna di Giove, è coperta di ghiaccio, ma sotto c'è un oceano di acqua salata che potrebbe contenere più acqua di tutti gli oceani della Terra. La NASA ha lanciato la sonda Europa Clipper per studiarla.",
+    "ic": "🌊",
+    "q": "Che cosa c'è sotto il ghiaccio di Europa, luna di Giove?",
+    "ok": "Un oceano di acqua salata",
+    "wrong": [
+      "Un mare di lava",
+      "Una grotta vuota"
+    ],
+    "src": "NASA Europa Clipper; NASA JPL"
+  },
+  {
+    "t": "Laghi di metano",
+    "x": "Titano, la luna più grande di Saturno, ha laghi e mari sulla superficie, ma non di acqua: sono di metano ed etano liquidi, perché fa freddissimo. Lì piove metano!",
+    "ic": "🪐",
+    "q": "Di che cosa sono fatti i laghi di Titano?",
+    "ok": "Di metano ed etano liquidi",
+    "wrong": [
+      "Di acqua calda",
+      "Di succo di arancia"
+    ],
+    "src": "NASA JPL (Cassini)"
+  },
+  {
+    "t": "Un disco d'oro per gli alieni",
+    "x": "Le sonde Voyager, partite nel 1977, portano un disco d'oro con musiche, suoni della Terra e saluti in 55 lingue, per chi un giorno le trovasse. Un messaggio in bottiglia nello spazio!",
+    "ic": "📀",
+    "q": "Che cosa portano le sonde Voyager?",
+    "ok": "Un disco d'oro con suoni e saluti",
+    "wrong": [
+      "Una bandiera di cioccolato",
+      "Un astronauta addormentato"
+    ],
+    "src": "NASA Science – Voyager"
+  },
+  {
+    "t": "Lo specchio d'oro",
+    "x": "Il telescopio James Webb ha uno specchio fatto di 18 esagoni ricoperti da un velo d'oro sottilissimo: l'oro riflette benissimo la luce infrarossa, quella del calore, con cui Webb vede galassie lontanissime.",
+    "ic": "🔭",
+    "q": "Di che cosa sono ricoperti gli specchi del telescopio Webb?",
+    "ok": "Di un velo d'oro",
+    "wrong": [
+      "Di argento spesso",
+      "Di ghiaccio"
+    ],
+    "src": "NASA Webb; Big Think"
+  },
+  {
+    "t": "Plutone ha un cuore",
+    "x": "Nel 2015 la sonda New Horizons ha fotografato su Plutone una grande zona chiara a forma di cuore. È fatta soprattutto di ghiaccio di azoto e si chiama Tombaugh Regio, dal nome di chi scoprì Plutone.",
+    "ic": "💗",
+    "q": "Che forma ha la grande zona chiara su Plutone?",
+    "ok": "Un cuore",
+    "wrong": [
+      "Una stella",
+      "Un quadrato"
+    ],
+    "src": "Space.com; AGU"
+  },
+  {
+    "t": "Un caffè in orbita",
+    "x": "Nel 2015 l'astronauta italiana Samantha Cristoforetti ha bevuto il primo vero espresso nello spazio, fatto con la macchina ISSpresso sulla Stazione Spaziale. Lo ha bevuto da una tazza speciale!",
+    "ic": "☕",
+    "q": "Chi ha bevuto il primo espresso nello spazio?",
+    "ok": "Samantha Cristoforetti",
+    "wrong": [
+      "Neil Armstrong",
+      "Galileo Galilei"
+    ],
+    "src": "Guinness World Records; Phys.org"
+  },
+  {
+    "t": "Fiamme a palla",
+    "x": "Sulla Terra la fiamma di una candela è allungata perché l'aria calda sale. In orbita l'aria calda non sale, così la fiamma diventa una pallina, spesso bluastra. La NASA fa esperimenti apposta!",
+    "ic": "🕯️",
+    "q": "Che forma ha una fiamma nella stazione spaziale?",
+    "ok": "Una pallina",
+    "wrong": [
+      "Un lungo filo",
+      "Un quadrato"
+    ],
+    "src": "NASA – Candle flame 1g vs microgravity"
+  },
+  {
+    "t": "Le lacrime non cadono",
+    "x": "Nello spazio le lacrime non scendono sulle guance: restano attaccate all'occhio formando una pallina d'acqua che va asciugata. Lo ha mostrato l'astronauta Chris Hadfield sulla Stazione Spaziale.",
+    "ic": "💧",
+    "q": "Che cosa fanno le lacrime nello spazio?",
+    "ok": "Restano sull'occhio come una pallina",
+    "wrong": [
+      "Cadono velocissime",
+      "Si trasformano in ghiaccio"
+    ],
+    "src": "Agenzia Spaziale Canadese (asc-csa.gc.ca)"
+  },
+  {
+    "t": "Più caldo del Sole",
+    "x": "Un fulmine scalda l'aria intorno a sé fino a circa 30.000 °C: circa 5 volte più della superficie del Sole! È per un istante, ma basta a far «scoppiare» l'aria con il tuono.",
+    "ic": "⚡",
+    "q": "Rispetto alla superficie del Sole, un fulmine è…",
+    "ok": "Circa 5 volte più caldo",
+    "wrong": [
+      "Mille volte più freddo",
+      "Caldo come un forno"
+    ],
+    "src": "National Weather Service (weather.gov)"
+  },
+  {
+    "t": "Il giorno su Marte",
+    "x": "Un giorno su Marte si chiama «sol» e dura circa 24 ore e 40 minuti, quasi come il nostro. Gli scienziati che guidano i rover a volte vivono con l'orologio di Marte e ogni giorno arrivano 40 minuti dopo!",
+    "ic": "🕰️",
+    "q": "Come si chiama un giorno su Marte?",
+    "ok": "Sol",
+    "wrong": [
+      "Lun",
+      "Mars"
+    ],
+    "src": "NASA; NBC News"
+  }
+]

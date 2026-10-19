@@ -1,0 +1,1421 @@
+{
+ "storia": [
+  [
+   "tempo",
+   "Il tempo e le fonti",
+   "🕰️"
+  ],
+  [
+   "preistoria",
+   "La preistoria",
+   "🦴"
+  ],
+  [
+   "mesopotamia",
+   "La Mesopotamia",
+   "🏺"
+  ],
+  [
+   "egizi",
+   "L'antico Egitto",
+   "🐫"
+  ],
+  [
+   "indo-cina",
+   "India e Cina antiche",
+   "🐉"
+  ],
+  [
+   "ebrei-fenici",
+   "Ebrei e Fenici",
+   "⛵"
+  ],
+  [
+   "creta-micene",
+   "Cretesi e Micenei",
+   "🐂"
+  ],
+  [
+   "persiani",
+   "I Persiani",
+   "👑"
+  ],
+  [
+   "greci",
+   "L'antica Grecia",
+   "🏛️"
+  ],
+  [
+   "pensatori",
+   "Filosofi e scienziati greci",
+   "🦉"
+  ],
+  [
+   "alessandro",
+   "Alessandro Magno e l'età ellenistica",
+   "🐎"
+  ],
+  [
+   "italici",
+   "I popoli dell'Italia antica",
+   "🗿"
+  ],
+  [
+   "etruschi",
+   "Gli Etruschi",
+   "🏺"
+  ],
+  [
+   "roma-re",
+   "Roma dei re",
+   "🐺"
+  ],
+  [
+   "repubblica",
+   "La Repubblica romana",
+   "🗳️"
+  ],
+  [
+   "impero",
+   "L'Impero romano",
+   "🦅"
+  ],
+  [
+   "vita-romana",
+   "Vivere nell'antica Roma",
+   "🏟️"
+  ],
+  [
+   "torino",
+   "Torino romana",
+   "🏰"
+  ]
+ ],
+ "geo": [
+  [
+   "carte",
+   "Carte e orientamento",
+   "🧭"
+  ],
+  [
+   "coordinate",
+   "Equatore, paralleli e meridiani",
+   "🌐"
+  ],
+  [
+   "regioni",
+   "Le regioni italiane",
+   "🗺️"
+  ],
+  [
+   "capoluoghi",
+   "Capoluoghi e città",
+   "🏙️"
+  ],
+  [
+   "confini",
+   "L'Italia, i confini e i mari",
+   "🇮🇹"
+  ],
+  [
+   "montagne",
+   "Montagne e vulcani",
+   "⛰️"
+  ],
+  [
+   "coste",
+   "Pianure, coste e isole",
+   "🏝️"
+  ],
+  [
+   "acque",
+   "Fiumi e laghi",
+   "🏞️"
+  ],
+  [
+   "clima",
+   "Il clima e i venti",
+   "🌦️"
+  ],
+  [
+   "lavoro",
+   "I settori del lavoro",
+   "🏭"
+  ],
+  [
+   "piemonte",
+   "Il Piemonte",
+   "🏔️"
+  ],
+  [
+   "europa",
+   "L'Europa e l'Unione Europea",
+   "🇪🇺"
+  ],
+  [
+   "mondo",
+   "Continenti, oceani e ambienti",
+   "🌍"
+  ]
+ ],
+ "ita": [
+  [
+   "ortografia",
+   "Ortografia, accenti e sillabe",
+   "✏️"
+  ],
+  [
+   "nomi",
+   "Nomi e articoli",
+   "🏷️"
+  ],
+  [
+   "aggettivi",
+   "Aggettivi e pronomi",
+   "🎨"
+  ],
+  [
+   "verbi",
+   "Il verbo",
+   "🏃"
+  ],
+  [
+   "invariabili",
+   "Avverbi, preposizioni, congiunzioni e interiezioni",
+   "🔗"
+  ],
+  [
+   "frase",
+   "Soggetto, predicato e attributo",
+   "🧩"
+  ],
+  [
+   "complementi",
+   "I complementi",
+   "➕"
+  ],
+  [
+   "lessico",
+   "Parole: significati e famiglie",
+   "📖"
+  ],
+  [
+   "modi-dire",
+   "Modi di dire",
+   "💬"
+  ],
+  [
+   "poesia",
+   "Poesia e figure retoriche",
+   "🎵"
+  ],
+  [
+   "testi",
+   "I tipi di testo",
+   "📝"
+  ],
+  [
+   "punteggiatura",
+   "Punteggiatura, discorso diretto e indiretto",
+   "❝"
+  ],
+  [
+   "autori",
+   "Libri e autori",
+   "📚"
+  ]
+ ],
+ "eng": [
+  [
+   "saluti",
+   "Saluti, presentarsi e frasi gentili",
+   "👋"
+  ],
+  [
+   "numeri",
+   "I numeri",
+   "🔢"
+  ],
+  [
+   "colori",
+   "I colori",
+   "🌈"
+  ],
+  [
+   "animali",
+   "Gli animali",
+   "🐶"
+  ],
+  [
+   "famiglia",
+   "Famiglia e amici",
+   "👪"
+  ],
+  [
+   "corpo",
+   "Il corpo e l'aspetto",
+   "👃"
+  ],
+  [
+   "vestiti",
+   "I vestiti",
+   "👕"
+  ],
+  [
+   "cibo",
+   "Il cibo",
+   "🍎"
+  ],
+  [
+   "meteo",
+   "Il tempo e le stagioni",
+   "🌦️"
+  ],
+  [
+   "calendario",
+   "Giorni e mesi",
+   "📅"
+  ],
+  [
+   "ore",
+   "Le ore e la giornata",
+   "🕒"
+  ],
+  [
+   "scuola",
+   "A scuola",
+   "🏫"
+  ],
+  [
+   "casa",
+   "La casa e dove sono le cose",
+   "🏠"
+  ],
+  [
+   "mestieri",
+   "I mestieri",
+   "👩‍⚕️"
+  ],
+  [
+   "sport",
+   "Sport e tempo libero",
+   "⛸️"
+  ],
+  [
+   "emozioni",
+   "Emozioni e bisogni",
+   "😊"
+  ],
+  [
+   "essere-avere",
+   "To be e have got",
+   "🧩"
+  ],
+  [
+   "verbi",
+   "Verbi, pronomi e frasi",
+   "🗣️"
+  ],
+  [
+   "plurali",
+   "I plurali",
+   "➕"
+  ],
+  [
+   "domande",
+   "Parole per fare domande",
+   "❓"
+  ],
+  [
+   "paesi",
+   "I Paesi di lingua inglese",
+   "🇬🇧"
+  ]
+ ],
+ "parlo": [
+  [
+   "meteo",
+   "Che tempo fa",
+   "🌦️"
+  ],
+  [
+   "vestiti",
+   "I vestiti",
+   "👕"
+  ],
+  [
+   "sport",
+   "Lo sport",
+   "⛸️"
+  ],
+  [
+   "misto",
+   "Frasi di tutti i giorni",
+   "💬"
+  ]
+ ],
+ "sci-corpo": [
+  [
+   "cellule",
+   "Cellule, tessuti e organi",
+   "🔬"
+  ],
+  [
+   "ossa",
+   "Ossa e scheletro",
+   "🦴"
+  ],
+  [
+   "muscoli",
+   "I muscoli",
+   "💪"
+  ],
+  [
+   "cuore",
+   "Cuore e sangue",
+   "❤️"
+  ],
+  [
+   "respiro",
+   "La respirazione",
+   "🫁"
+  ],
+  [
+   "digestione",
+   "La digestione",
+   "🍽️"
+  ],
+  [
+   "denti",
+   "Denti e bocca",
+   "🦷"
+  ],
+  [
+   "nervi",
+   "Cervello e nervi",
+   "🧠"
+  ],
+  [
+   "sensi",
+   "I cinque sensi",
+   "👁️"
+  ],
+  [
+   "pelle",
+   "Pelle, capelli e unghie",
+   "✋"
+  ],
+  [
+   "reni",
+   "Reni e vescica",
+   "💧"
+  ],
+  [
+   "salute",
+   "Igiene, sonno e salute",
+   "🧼"
+  ],
+  [
+   "cibo",
+   "Mangiare sano",
+   "🥕"
+  ],
+  [
+   "incidenti",
+   "Piccoli incidenti e sicurezza",
+   "🩹"
+  ]
+ ],
+ "sci-energia": [
+  [
+   "stati",
+   "Gli stati della materia",
+   "🧊"
+  ],
+  [
+   "miscugli",
+   "Miscugli e soluzioni",
+   "🥤"
+  ],
+  [
+   "galleggiare",
+   "Galleggiare e affondare",
+   "⛵"
+  ],
+  [
+   "misure",
+   "Misurare",
+   "📏"
+  ],
+  [
+   "calore",
+   "Il calore",
+   "🔥"
+  ],
+  [
+   "luce",
+   "La luce e i colori",
+   "🌈"
+  ],
+  [
+   "suono",
+   "Il suono",
+   "🔊"
+  ],
+  [
+   "elettricita",
+   "L'elettricità",
+   "⚡"
+  ],
+  [
+   "magneti",
+   "Calamite e magnetismo",
+   "🧲"
+  ],
+  [
+   "forze",
+   "Forze e movimento",
+   "🏃"
+  ],
+  [
+   "macchine",
+   "Le macchine semplici",
+   "⚙️"
+  ],
+  [
+   "energia",
+   "Fonti di energia",
+   "☀️"
+  ],
+  [
+   "risparmio",
+   "Risparmiare energia e risorse",
+   "🌱"
+  ],
+  [
+   "trasformazioni",
+   "Trasformazioni e reazioni",
+   "🧪"
+  ],
+  [
+   "aria",
+   "L'aria e la pressione",
+   "🎈"
+  ],
+  [
+   "acqua",
+   "Il ciclo dell'acqua",
+   "💧"
+  ]
+ ],
+ "sci-spazio": [
+  [
+   "pianeti",
+   "I pianeti",
+   "🪐"
+  ],
+  [
+   "sole",
+   "Il Sole",
+   "☀️"
+  ],
+  [
+   "terra",
+   "La Terra nello spazio",
+   "🌍"
+  ],
+  [
+   "luna",
+   "La Luna",
+   "🌙"
+  ],
+  [
+   "eclissi",
+   "Le eclissi",
+   "🌑"
+  ],
+  [
+   "stelle",
+   "Stelle e costellazioni",
+   "⭐"
+  ],
+  [
+   "universo",
+   "Galassie e universo",
+   "🌌"
+  ],
+  [
+   "comete",
+   "Comete, asteroidi e stelle cadenti",
+   "☄️"
+  ],
+  [
+   "gravita",
+   "Gravità e orbite",
+   "🍎"
+  ],
+  [
+   "esplorazione",
+   "L'esplorazione dello spazio",
+   "🚀"
+  ],
+  [
+   "astronomi",
+   "Astronomi e telescopi",
+   "🔭"
+  ],
+  [
+   "dentro-terra",
+   "Dentro la Terra: vulcani e terremoti",
+   "🌋"
+  ],
+  [
+   "rocce",
+   "Rocce e minerali",
+   "🪨"
+  ],
+  [
+   "atmosfera",
+   "L'aria e il cielo",
+   "🌤️"
+  ],
+  [
+   "meteo",
+   "Nuvole, pioggia e temporali",
+   "⛈️"
+  ]
+ ],
+ "sci-animali": [
+  [
+   "vertebrati",
+   "I vertebrati",
+   "🦎"
+  ],
+  [
+   "invertebrati",
+   "Gli invertebrati",
+   "🐌"
+  ],
+  [
+   "insetti",
+   "Insetti e metamorfosi",
+   "🦋"
+  ],
+  [
+   "catena",
+   "Chi mangia chi: la catena alimentare",
+   "🍃"
+  ],
+  [
+   "ecosistemi",
+   "Ambienti ed ecosistemi",
+   "🌳"
+  ],
+  [
+   "adattamenti",
+   "Adattarsi all'ambiente",
+   "🐻‍❄️"
+  ],
+  [
+   "curiosi",
+   "Animali da record e curiosità",
+   "🦒"
+  ],
+  [
+   "cuccioli",
+   "I cuccioli",
+   "🐣"
+  ],
+  [
+   "alpi",
+   "Animali e piante delle Alpi",
+   "🏔️"
+  ],
+  [
+   "piante",
+   "Le piante e la fotosintesi",
+   "🌱"
+  ],
+  [
+   "fiori",
+   "Fiori, frutti e semi",
+   "🌸"
+  ],
+  [
+   "funghi",
+   "I funghi",
+   "🍄"
+  ],
+  [
+   "proteggere",
+   "Proteggere la natura",
+   "🌍"
+  ]
+ ],
+ "civica": [
+  [
+   "simboli",
+   "Feste e simboli della Repubblica",
+   "🇮🇹"
+  ],
+  [
+   "costituzione",
+   "La Costituzione",
+   "📜"
+  ],
+  [
+   "stato",
+   "Lo Stato e i suoi poteri",
+   "🏛️"
+  ],
+  [
+   "comune",
+   "Comune e Regione",
+   "🏘️"
+  ],
+  [
+   "europa-onu",
+   "Europa e ONU",
+   "🌍"
+  ],
+  [
+   "diritti",
+   "I diritti dei bambini",
+   "🧒"
+  ],
+  [
+   "convivenza",
+   "Convivenza, gentilezza e inclusione",
+   "💛"
+  ],
+  [
+   "emergenze",
+   "Emergenze e sicurezza",
+   "🚨"
+  ],
+  [
+   "strada",
+   "Sicurezza in strada",
+   "🚦"
+  ],
+  [
+   "rifiuti",
+   "Rifiuti e riciclo",
+   "♻️"
+  ],
+  [
+   "ambiente",
+   "Ambiente e sviluppo sostenibile",
+   "🌱"
+  ],
+  [
+   "online",
+   "Sicuri online",
+   "💻"
+  ]
+ ],
+ "tecno": [
+  [
+   "computer",
+   "Il computer",
+   "💻"
+  ],
+  [
+   "coding",
+   "Coding e algoritmi",
+   "🧩"
+  ],
+  [
+   "internet",
+   "Internet e sicurezza digitale",
+   "🌐"
+  ],
+  [
+   "robot",
+   "Robot e intelligenza artificiale",
+   "🤖"
+  ],
+  [
+   "elettricita",
+   "Circuiti ed elettricità",
+   "💡"
+  ],
+  [
+   "energia",
+   "Energia",
+   "☀️"
+  ],
+  [
+   "macchine",
+   "Macchine semplici e meccanismi",
+   "⚙️"
+  ],
+  [
+   "materiali",
+   "I materiali",
+   "🧱"
+  ],
+  [
+   "riciclo",
+   "Riciclare i materiali",
+   "♻️"
+  ],
+  [
+   "inventori",
+   "Inventori e invenzioni",
+   "🔭"
+  ],
+  [
+   "oggetti",
+   "Come funzionano le cose",
+   "🔧"
+  ],
+  [
+   "costruzioni",
+   "Costruzioni e disegno tecnico",
+   "📐"
+  ],
+  [
+   "torino",
+   "Torino, città della tecnica",
+   "🚗"
+  ]
+ ],
+ "arte": [
+  [
+   "colori",
+   "I colori",
+   "🎨"
+  ],
+  [
+   "generi",
+   "Ritratti, paesaggi e nature morte",
+   "🖼️"
+  ],
+  [
+   "linguaggio",
+   "Linee, forme, luce e prospettiva",
+   "📏"
+  ],
+  [
+   "tecniche",
+   "Tecniche e strumenti",
+   "🖌️"
+  ],
+  [
+   "scultura",
+   "Scultura e ceramica",
+   "🗿"
+  ],
+  [
+   "immagini",
+   "Stampa, foto, fumetti e cartoni",
+   "📷"
+  ],
+  [
+   "antica",
+   "L'arte antica",
+   "🏺"
+  ],
+  [
+   "medioevo",
+   "L'arte del Medioevo",
+   "⛪"
+  ],
+  [
+   "rinascimento",
+   "Il Rinascimento",
+   "🌟"
+  ],
+  [
+   "barocco",
+   "Caravaggio, Bernini e il Seicento",
+   "🕯️"
+  ],
+  [
+   "moderna",
+   "L'arte moderna",
+   "🌻"
+  ],
+  [
+   "torino",
+   "Musei e arte a Torino",
+   "🏰"
+  ]
+ ],
+ "musica": [
+  [
+   "leggere",
+   "Leggere la musica",
+   "🎼"
+  ],
+  [
+   "ritmo",
+   "Ritmo, tempo e volume",
+   "🥁"
+  ],
+  [
+   "suono",
+   "Il suono",
+   "🔊"
+  ],
+  [
+   "strumenti",
+   "Gli strumenti",
+   "🎻"
+  ],
+  [
+   "orchestra",
+   "L'orchestra",
+   "🎶"
+  ],
+  [
+   "voce",
+   "Voce, canto e canzoni",
+   "🎤"
+  ],
+  [
+   "opera",
+   "L'opera lirica",
+   "🎭"
+  ],
+  [
+   "compositori",
+   "Grandi compositori",
+   "🎹"
+  ],
+  [
+   "inni",
+   "Gli inni",
+   "🇮🇹"
+  ],
+  [
+   "mondo",
+   "Generi, danze e musica nello sport",
+   "💃"
+  ]
+ ],
+ "media": [
+  [
+   "potenze",
+   "Le potenze",
+   "🔺"
+  ],
+  [
+   "divisibilita",
+   "Numeri primi, divisibilità, MCD e mcm",
+   "➗"
+  ],
+  [
+   "espressioni",
+   "Espressioni e proprietà",
+   "🧮"
+  ],
+  [
+   "frazioni",
+   "Le frazioni",
+   "🍕"
+  ],
+  [
+   "insiemi",
+   "Gli insiemi",
+   "⭕"
+  ],
+  [
+   "geometria",
+   "Rette, angoli e triangoli",
+   "📐"
+  ],
+  [
+   "misure",
+   "Le misure",
+   "📏"
+  ],
+  [
+   "scienze",
+   "Metodo scientifico, materia e atomi",
+   "🔬"
+  ],
+  [
+   "viventi",
+   "Cellule e classificazione dei viventi",
+   "🦠"
+  ],
+  [
+   "grammatica",
+   "Analisi grammaticale e logica",
+   "✍️"
+  ],
+  [
+   "epica",
+   "Epica, miti e favole",
+   "🛡️"
+  ],
+  [
+   "medioevo",
+   "Il Medioevo",
+   "🏰"
+  ],
+  [
+   "europa",
+   "Geografia d'Europa",
+   "🇪🇺"
+  ],
+  [
+   "inglese",
+   "L'inglese delle medie",
+   "🇬🇧"
+  ],
+  [
+   "studio",
+   "Organizzarsi alle medie",
+   "🎒"
+  ]
+ ],
+ "soldi": [
+  [
+   "storia",
+   "La storia dei soldi",
+   "🐚"
+  ],
+  [
+   "euro",
+   "Monete e banconote in euro",
+   "💶"
+  ],
+  [
+   "sicurezza-banconote",
+   "Banconote vere e false",
+   "🔍"
+  ],
+  [
+   "contare",
+   "Contare monete e centesimi",
+   "🪙"
+  ],
+  [
+   "spesa",
+   "Fare la spesa e il resto",
+   "🛒"
+  ],
+  [
+   "sconti",
+   "Sconti e offerte",
+   "🏷️"
+  ],
+  [
+   "risparmio",
+   "Risparmiare, condividere e fare un piano",
+   "🐷"
+  ],
+  [
+   "bisogni",
+   "Bisogni e desideri",
+   "💭"
+  ],
+  [
+   "banca",
+   "Banca e interesse",
+   "🏦"
+  ],
+  [
+   "online",
+   "Soldi online e nei videogiochi",
+   "🎮"
+  ]
+ ],
+ "lavo": [
+  [
+   "microbi",
+   "Microbi buoni e cattivi",
+   "🦠"
+  ],
+  [
+   "mani",
+   "Lavarsi le mani",
+   "🧼"
+  ],
+  [
+   "denti",
+   "Denti puliti",
+   "🪥"
+  ],
+  [
+   "sudore",
+   "Sudore e doccia",
+   "🚿"
+  ],
+  [
+   "piscina",
+   "Igiene in piscina",
+   "🏊"
+  ],
+  [
+   "capelli",
+   "Capelli e pidocchi",
+   "💇"
+  ],
+  [
+   "unghie",
+   "Unghie, piedi, orecchie e occhi",
+   "👂"
+  ],
+  [
+   "starnuti",
+   "Starnuti e fazzoletti",
+   "🤧"
+  ],
+  [
+   "cucina",
+   "Igiene in cucina",
+   "🍎"
+  ],
+  [
+   "crescere",
+   "Crescere: la pubertà",
+   "🌸"
+  ]
+ ],
+ "vesto": [
+  [
+   "strati",
+   "Vestirsi a strati per il freddo",
+   "🧥"
+  ],
+  [
+   "sole",
+   "Proteggersi dal sole",
+   "🧢"
+  ],
+  [
+   "sport",
+   "Vestiti per lo sport",
+   "⛸️"
+  ],
+  [
+   "tessuti",
+   "Le fibre dei tessuti",
+   "🧶"
+  ],
+  [
+   "etichette",
+   "Etichette e lavaggio",
+   "🏷️"
+  ],
+  [
+   "stile",
+   "Stile e scelte sostenibili",
+   "✨"
+  ],
+  [
+   "crescere",
+   "Crescere e sentirsi bene",
+   "🌸"
+  ],
+  [
+   "social",
+   "Foto e social",
+   "📱"
+  ]
+ ],
+ "sp-patt": [
+  [
+   "attrezzatura",
+   "Pattini e lame",
+   "⛸️"
+  ],
+  [
+   "primi-passi",
+   "I primi passi sul ghiaccio",
+   "🐧"
+  ],
+  [
+   "fili",
+   "I fili della lama",
+   "〰️"
+  ],
+  [
+   "salti",
+   "I salti",
+   "🦘"
+  ],
+  [
+   "trottole",
+   "Le trottole",
+   "🌀"
+  ],
+  [
+   "passi",
+   "Spirali, passi e virate",
+   "💃"
+  ],
+  [
+   "gare",
+   "Gare, giudici e programmi",
+   "🏆"
+  ],
+  [
+   "specialita",
+   "Coppia, danza e sincronizzato",
+   "👯"
+  ],
+  [
+   "velocita",
+   "Pattinaggio di velocità",
+   "💨"
+  ],
+  [
+   "altri-ghiaccio",
+   "Hockey, curling e altri sport",
+   "🥌"
+  ],
+  [
+   "pista",
+   "Il ghiaccio e la pista",
+   "🧊"
+  ],
+  [
+   "storia",
+   "Storia e campioni",
+   "📜"
+  ]
+ ],
+ "sp-aerea": [
+  [
+   "attrezzi",
+   "Gli attrezzi aerei",
+   "🎪"
+  ],
+  [
+   "sicurezza",
+   "Sicurezza in palestra",
+   "🛡️"
+  ],
+  [
+   "tecnica",
+   "Salire, scendere e fare prese",
+   "🧗"
+  ],
+  [
+   "figure",
+   "Le figure e le posizioni",
+   "🤸‍♀️"
+  ],
+  [
+   "corpo",
+   "Muscoli e forza",
+   "💪"
+  ],
+  [
+   "flessibilita",
+   "Flessibilità e allungamenti",
+   "🧘"
+  ],
+  [
+   "equilibrio",
+   "Equilibrio e sensazioni",
+   "🌀"
+  ],
+  [
+   "mente",
+   "Coraggio e concentrazione",
+   "🧠"
+  ],
+  [
+   "danza-ginnastica",
+   "Danza e ginnastica",
+   "🩰"
+  ],
+  [
+   "circo",
+   "Il mondo del circo",
+   "🤡"
+  ],
+  [
+   "curiosita",
+   "Curiosità",
+   "🦇"
+  ]
+ ],
+ "sp-nuoto": [
+  [
+   "stili",
+   "I quattro stili",
+   "🏊‍♀️"
+  ],
+  [
+   "crawl",
+   "Lo stile libero (crawl)",
+   "🌊"
+  ],
+  [
+   "dorso",
+   "Il dorso",
+   "🙃"
+  ],
+  [
+   "rana",
+   "La rana",
+   "🐸"
+  ],
+  [
+   "delfino",
+   "Il delfino",
+   "🐬"
+  ],
+  [
+   "galleggiare",
+   "Galleggiare e respirare",
+   "🎈"
+  ],
+  [
+   "gare",
+   "Le gare",
+   "🏁"
+  ],
+  [
+   "campioni",
+   "Campioni del nuoto",
+   "🥇"
+  ],
+  [
+   "acqua-sport",
+   "Altri sport d'acqua",
+   "🤽"
+  ],
+  [
+   "attrezzi",
+   "Attrezzi e costume",
+   "🥽"
+  ],
+  [
+   "piscina",
+   "Regole e igiene in piscina",
+   "🧴"
+  ],
+  [
+   "sicurezza",
+   "Sicuri al mare e al lago",
+   "🚩"
+  ],
+  [
+   "scienza",
+   "La scienza dell'acqua",
+   "🔬"
+  ]
+ ],
+ "sp-corpo": [
+  [
+   "benefici",
+   "Perché il movimento fa bene",
+   "❤️"
+  ],
+  [
+   "capacita",
+   "Le capacità motorie",
+   "🤸"
+  ],
+  [
+   "allenarsi",
+   "Allenarsi bene",
+   "⏱️"
+  ],
+  [
+   "muscoli",
+   "Muscoli, ossa e cuore",
+   "💪"
+  ],
+  [
+   "mangiare",
+   "Mangiare e bere per lo sport",
+   "🍌"
+  ],
+  [
+   "sonno",
+   "Sonno, postura e pause",
+   "😴"
+  ],
+  [
+   "sicurezza",
+   "Sicurezza e piccoli infortuni",
+   "🩹"
+  ],
+  [
+   "fairplay",
+   "Fair play e squadra",
+   "🤝"
+  ],
+  [
+   "olimpiadi",
+   "Olimpiadi e Paralimpiadi",
+   "🏅"
+  ],
+  [
+   "atletica",
+   "Atletica e ginnastica",
+   "🏃‍♀️"
+  ],
+  [
+   "sport-squadra",
+   "Gli sport di squadra",
+   "⚽"
+  ],
+  [
+   "altri-sport",
+   "Tanti altri sport",
+   "🎾"
+  ],
+  [
+   "mente",
+   "La mente dello sportivo",
+   "🧠"
+  ]
+ ],
+ "roblox": [
+  [
+   "cose",
+   "Che cos'è Roblox",
+   "🧱"
+  ],
+  [
+   "giochi",
+   "Tipi di giochi",
+   "🎮"
+  ],
+  [
+   "giocare-bene",
+   "Giocare meglio",
+   "🏃"
+  ],
+  [
+   "sicurezza",
+   "Sicuri su Roblox",
+   "🛡️"
+  ],
+  [
+   "robux",
+   "Robux e acquisti",
+   "💰"
+  ],
+  [
+   "sportivi",
+   "Rispetto e lealtà",
+   "🤝"
+  ],
+  [
+   "studio",
+   "Costruire con Roblox Studio",
+   "🛠️"
+  ],
+  [
+   "lua",
+   "Il linguaggio Lua e Luau",
+   "🌙"
+  ],
+  [
+   "programmare",
+   "Programmare in Luau",
+   "💻"
+  ]
+ ]
+}

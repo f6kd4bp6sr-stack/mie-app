@@ -1,0 +1,53 @@
+[
+{
+"id": 11,
+"q_old": "Che cos'è una bracciata?",
+"why": "Nella rana e nel delfino la bracciata usa entrambe le braccia insieme",
+"set": {
+"ok": "Un movimento completo delle braccia nel nuoto"
+}
+},
+{
+"id": 29,
+"q_old": "Perché i polmoni pieni d'aria aiutano a galleggiare?",
+"why": "L'aria non ci spinge su: rende il corpo più leggero rispetto all'acqua",
+"set": {
+"ok": "L'aria è leggera e ci aiuta a restare a galla",
+"e": "Con i polmoni pieni il corpo è più leggero rispetto all'acqua; quando butti fuori l'aria, scendi un po'."
+}
+},
+{
+"id": 49,
+"q_old": "Chi scoprì la spinta dei liquidi, secondo la storia, facendo il bagno?",
+"why": "La storia del bagno e di «Eureka» è una leggenda, va presentata come tale",
+"set": {
+"q": "Secondo una famosa leggenda, quale scienziato greco ebbe un'idea geniale facendo il bagno e gridò «Eureka!»?",
+"e": "È una leggenda raccontata molti secoli dopo; di sicuro Archimede studiò e descrisse la spinta che i liquidi danno ai corpi immersi."
+}
+},
+{
+"id": 56,
+"q_old": "Che cosa vuol dire «misti» nel nuoto?",
+"why": "La sbagliata è quasi giusta: esistono davvero staffette miste con maschi e femmine",
+"set": {
+"wrong": [
+"Una gara in cui si nuota solo a rana",
+"Una gara di tuffi"
+]
+}
+},
+{
+"id": 4,
+"q_old": "Chi ha vinto più ori olimpici nella storia?",
+"why": "i record possono cambiare: domanda su un fatto storico",
+"set": {
+"q": "Quale nuotatore americano vinse 8 medaglie d'oro alle Olimpiadi di Pechino 2008?",
+"ok": "Michael Phelps",
+"wrong": [
+"Usain Bolt",
+"Roger Federer"
+],
+"e": "Michael Phelps: 8 ori in una sola Olimpiade, a Pechino nel 2008. Si allenava tantissimo, con costanza, ogni giorno."
+}
+}
+]

@@ -1,0 +1,146 @@
+[
+ {
+  "id": 42,
+  "q_old": "Che cosa fa un’ape in palestra?",
+  "why": "Spiegazione non spiegava il gioco di parole",
+  "set": {
+   "e": "La zumba è un ballo da palestra, e la parola comincia con «zum»: proprio il suono del ronzio delle api, zzzum! Un'ape che fa zumba ronza e balla insieme."
+  }
+ },
+ {
+  "id": 68,
+  "q_old": "Qual è il colmo per un'astronoma?",
+  "why": "Esattezza: la Luna non si vede tutte le notti (luna nuova)",
+  "set": {
+   "e": "«Essere nella luna» vuol dire essere distratti. E l'astronoma la Luna la osserva davvero con il telescopio, in tantissime notti!"
+  }
+ },
+ {
+  "id": 79,
+  "q_old": "Perché l'elefante non usa il computer?",
+  "why": "Prudenza: che gli elefanti temano i topi è una credenza mai dimostrata, non sicuramente falsa",
+  "set": {
+   "e": "«Mouse» in inglese vuol dire topo. E secondo una vecchia credenza, mai dimostrata davvero, gli elefanti hanno paura dei topi."
+  }
+ },
+ {
+  "id": 88,
+  "q_old": "Qual è il colmo per una giraffa?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Essere nei guai fino al collo» vuol dire avere tantissimi problemi, e il collo della giraffa è lunghissimo… quindi i guai sarebbero davvero tanti!"
+  }
+ },
+ {
+  "id": 89,
+  "q_old": "Qual è il colmo per un pesce?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Non sapere che pesci prendere» vuol dire non sapere cosa decidere, e detto da un pesce diventa doppiamente buffo."
+  }
+ },
+ {
+  "id": 100,
+  "q_old": "Qual è il colmo per un gatto?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Eravamo in quattro gatti» vuol dire che c'era pochissima gente, ma per un gatto sarebbe una festa piena di amici!"
+  }
+ },
+ {
+  "id": 128,
+  "q_old": "Ha le lancette ma non lancia mai niente. Che cos'è?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Lancette» sembra venire da «lanciare», ma in realtà vuol dire «piccole lance», per la loro forma a punta: girano e basta, senza lanciare niente!"
+  }
+ },
+ {
+  "id": 144,
+  "q_old": "Che cosa fa un verbo quando va in vacanza?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Infinito» è il modo del verbo come «nuotare» o «pattinare», ma vuol dire anche senza fine: una vacanza lunghissima!"
+  }
+ },
+ {
+  "id": 146,
+  "q_old": "Perché il sale non prende mai l'ascensore?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Sale» è il nome di quello che metti nella pasta, ma è anche il verbo salire: «lui sale» le scale."
+  }
+ },
+ {
+  "id": 164,
+  "q_old": "Qual è il colmo per una lucciola?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Prendere lucciole per lanterne» vuol dire sbagliarsi e confondere una cosa con un'altra. Se lo fa proprio una lucciola, è davvero il massimo!"
+  }
+ },
+ {
+  "id": 172,
+  "q_old": "Dove non si perde mai una nuotatrice?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Perdersi in un bicchier d'acqua» vuol dire andare in confusione per una cosa facilissima. Una nuotatrice, che nuota in una piscina enorme, non si perde certo in un bicchiere!"
+  }
+ },
+ {
+  "id": 183,
+  "q_old": "Che cosa dice sempre la mamma drago al suo draghetto?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Non giocare con il fuoco» vuol dire non fare cose rischiose, ma per un draghetto che sputa fuoco è difficilissimo!"
+  }
+ },
+ {
+  "id": 184,
+  "q_old": "Perché il draghetto è l'amico più fidato del mondo?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Mettere la mano sul fuoco» per qualcuno vuol dire fidarsi completamente di lui. Un drago, poi, il fuoco ce l'ha sempre a portata di mano!"
+  }
+ },
+ {
+  "id": 190,
+  "q_old": "Che cosa dice l'ape quando arriva sul suo fiore preferito?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Dolcezza» è un modo affettuoso di chiamare qualcuno, ma il fiore ha anche il nettare dolce che l'ape usa per fare il miele."
+  }
+ },
+ {
+  "id": 191,
+  "q_old": "Perché il biscotto è andato dal dottore?",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Sentirsi a pezzi» vuol dire essere stanchissimi, ma un biscotto può proprio rompersi in tanti pezzetti."
+  }
+ },
+ {
+  "id": 200,
+  "q_old": "Maestra: «Pierino, perché sei entrato in classe con l'ombrello?»",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Una pioggia di domande» vuol dire tantissime domande, ma Pierino ha pensato a una pioggia vera e si è riparato con l'ombrello."
+  }
+ },
+ {
+  "id": 202,
+  "q_old": "Maestra: «Pierino, perché hai portato il cuscino a scuola?»",
+  "why": "Italiano: maiuscola a inizio frase",
+  "set": {
+   "e": "«Da sogno» vuol dire bellissima, ma Pierino ha pensato che per sognare bisogna dormire, e si è portato il cuscino."
+  }
+ },
+ {
+  "id": 212,
+  "q_old": "Un mattone pesa un chilo più mezzo mattone. Quanto pesa un mattone intero?",
+  "why": "Spiegazione non mostrava il ragionamento",
+  "set": {
+   "e": "Il mattone ha due metà: una pesa un chilo, l'altra è «mezzo mattone». Quindi ogni metà pesa un chilo e il mattone intero pesa due chili. Sembra un chilo e mezzo, ma non lo è!"
+  }
+ }
+]

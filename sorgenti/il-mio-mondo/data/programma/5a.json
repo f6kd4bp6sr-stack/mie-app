@@ -1,0 +1,80 @@
+{
+ "_info": "Classe 5ª primaria — temi tipici (Indicazioni nazionali 2012, Linee guida ed. civica 2024). Per ogni tema: parole chiave cercate in domanda, risposta e spiegazione.",
+ "ita": {
+  "soggetto e predicato": ["soggetto", "predicato"],
+  "complementi": ["complemento"],
+  "verbo: modi e tempi": ["indicativo", "congiuntivo", "condizionale", "imperativo", "infinito", "gerundio", "participio", "trapassato", "futuro anteriore"],
+  "forma attiva e passiva": ["passiv", "forma attiva"],
+  "nomi, articoli, aggettivi": ["aggettiv", "articol", "nome proprio", "nome comune"],
+  "pronomi, avverbi, preposizioni, congiunzioni": ["pronom", "avverb", "preposizion", "congiunzion"],
+  "ortografia": ["apostrof", "accento", "si scrive", "doppia"],
+  "lessico": ["sinonim", "contrari", "prefiss", "suffiss"],
+  "tipi di testo": ["testo narrativo", "testo descrittivo", "testo informativo", "regolativo", "argomentativo", "poetico", "poesia", "riassunt"]
+ },
+ "eng": {
+  "tempo atmosferico": ["weather", "sunny", "rainy", "windy", "cloudy"],
+  "vestiti": ["clothes", "jumper", "scarf", "trousers", "shoes"],
+  "cibo": ["food", "breakfast", "lunch", "dinner", "egg", "juice"],
+  "mestieri": ["doctor", "teacher", "farmer", "firefighter", "vet"],
+  "l'ora": ["o'clock", "half past", "quarter", "what time"],
+  "mesi, giorni, ordinali": ["january", "monday", "first", "third", "september"],
+  "present simple e routine": ["get up", "brush", "every day", "does", "goes"],
+  "there is/are, can, have got": ["there is", "there are", "can ", "have got", "has got"],
+  "preposizioni e famiglia": ["under", "behind", "between", "next to", "cousin", "aunt", "uncle"]
+ },
+ "storia": {
+  "Egizi, Mesopotamia, Fenici, Ebrei": ["egizi", "sumeri", "babilones", "fenici", "ebrei"],
+  "Cretesi e Micenei": ["cretes", "micene", "minoss"],
+  "Greci: polis, Atene, Sparta": ["polis", "atene", "sparta"],
+  "Persiani e guerre persiane": ["persian", "maratona", "termopili"],
+  "Alessandro Magno ed ellenismo": ["alessandro", "ellenis", "macedon"],
+  "popoli italici ed Etruschi": ["etrusch", "italic", "sanniti", "veneti", "umbri"],
+  "Roma: monarchia e repubblica": ["romolo", "repubblica", "consol", "senato", "patrizi", "plebe"],
+  "Roma: impero e fine (476)": ["impero", "augusto", "476", "odoacre"],
+  "Cristianesimo": ["cristian", "costantino", "teodosio"],
+  "linea del tempo": ["a.c.", "d.c.", "secolo"]
+ },
+ "geo": {
+  "regioni e capoluoghi": ["regione", "capoluogo"],
+  "statuto speciale": ["statuto speciale"],
+  "Italia fisica": ["alpi", "appennin", "pianura", "fiume", "lago"],
+  "coordinate": ["latitudine", "longitudine", "parallel", "meridian"],
+  "settori economici": ["primario", "secondario", "terziario"],
+  "Europa e UE": ["unione europea", "europa"],
+  "carte e scala": ["scala", "carta fisica", "carta politica", "legenda"]
+ },
+ "sci-corpo": {
+  "cellule, tessuti, organi": ["cellul", "tessut"],
+  "apparato digerente": ["digest", "stomaco", "intestin", "fegato"],
+  "apparato respiratorio": ["polmon", "respir", "alveol", "diaframma"],
+  "apparato circolatorio": ["cuore", "sangue", "arteri", "vene", "circolazion"],
+  "scheletro e muscoli": ["oss", "scheletr", "muscol"],
+  "sistema nervoso": ["cervello", "nerv", "neuron"],
+  "i cinque sensi": ["vista", "udito", "olfatto", "gusto", "tatto", "occhio", "orecchio"],
+  "alimentazione e salute": ["alimentazion", "vitamin", "proteine", "igiene"]
+ },
+ "sci-energia": {
+  "forme e fonti di energia": ["energia", "rinnovabil", "solare", "eolic"],
+  "luce": ["luce", "ombra", "riflessi"],
+  "suono": ["suono", "vibra", "eco"],
+  "calore e temperatura": ["calore", "temperatura", "termometro"],
+  "elettricità e magnetismo": ["elettric", "magnet", "circuito"],
+  "materia e stati": ["solido", "liquido", "gassoso", "evapora"]
+ },
+ "sci-spazio": {
+  "sistema solare": ["pianeta", "sole", "sistema solare"],
+  "Terra: rotazione, rivoluzione, stagioni": ["rotazione", "rivoluzione", "stagion"],
+  "Luna": ["luna", "eclissi", "fasi"],
+  "stelle e universo": ["stell", "galassia", "anno luce"]
+ },
+ "civica": {
+  "Costituzione": ["costituzione", "articolo"],
+  "Stato: Parlamento, Governo, Presidente": ["parlamento", "governo", "presidente"],
+  "Comune e Regione": ["comune", "sindaco", "regione"],
+  "diritti dell'infanzia": ["diritt", "infanzia", "onu"],
+  "ambiente e Agenda 2030": ["ambiente", "riciclo", "2030", "raccolta differenziata"],
+  "educazione stradale": ["strad", "pedon", "semaforo", "casco"],
+  "cittadinanza digitale": ["password", "internet", "online", "digitale"],
+  "educazione finanziaria": ["risparmi", "soldi", "euro"]
+ }
+}

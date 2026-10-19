@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Prima di Roblox, la fisica",
+    "x": "Prima di Roblox, David Baszucki ed Erik Cassel lavoravano a Knowledge Revolution, un’azienda che creava programmi educativi per simulare la fisica: oggetti che cadono, rotolano e si scontrano.",
+    "ic": "🧪",
+    "q": "Che programmi creava Knowledge Revolution?",
+    "ok": "Simulazioni di fisica educative",
+    "wrong": [
+      "Videogiochi di calcio",
+      "Programmi per la musica"
+    ],
+    "src": "en.wikipedia.org – Roblox"
+  },
+  {
+    "t": "Il numero della gravità",
+    "x": "In Roblox Studio la gravità di base vale 196,2: è la proprietà Gravity del Workspace, misurata in stud al secondo al quadrato. Curiosità: 196,2 è proprio 20 × 9,81, il numero della gravità terrestre in metri!",
+    "ic": "🌍",
+    "q": "Quanto vale di base la gravità nel Workspace di Roblox?",
+    "ok": "196,2",
+    "wrong": [
+      "9,81",
+      "1.000"
+    ],
+    "src": "create.roblox.com/docs – Workspace.Gravity"
+  },
+  {
+    "t": "Un gioco sulla Luna",
+    "x": "Per simulare la Luna si può cambiare la gravità: 196,2 × 1,62 ÷ 9,81 fa circa 32,4. Con meno gravità i personaggi saltano molto più in alto, come gli astronauti sulla Luna!",
+    "ic": "🌙",
+    "q": "Con una gravità più bassa, che cosa succede ai salti?",
+    "ok": "Si salta più in alto",
+    "wrong": [
+      "Non si salta più",
+      "Si salta più in basso"
+    ],
+    "src": "create.roblox.com/docs – Workspace.Gravity (esempio)"
+  },
+  {
+    "t": "Colori con tre numeri",
+    "x": "In Roblox i colori si creano mescolando rosso, verde e blu. Con Color3.fromRGB ogni numero va da 0 a 255: Color3.fromRGB(255, 0, 0) è rosso pieno! Con Color3.new invece i numeri vanno da 0 a 1.",
+    "ic": "🎨",
+    "q": "Quale colore dà Color3.fromRGB(255, 0, 0)?",
+    "ok": "Rosso",
+    "wrong": [
+      "Verde",
+      "Blu"
+    ],
+    "src": "create.roblox.com/docs – Color3"
+  },
+  {
+    "t": "Che cos’è un CFrame?",
+    "x": "CFrame è l’abbreviazione di «Coordinate Frame»: in Roblox dice insieme dove si trova un oggetto e come è girato. Posizione + rotazione in una parola sola!",
+    "ic": "🧭",
+    "q": "Che cosa dice un CFrame?",
+    "ok": "Posizione e rotazione",
+    "wrong": [
+      "Colore e materiale",
+      "Nome e prezzo"
+    ],
+    "src": "create.roblox.com/docs – CFrames"
+  },
+  {
+    "t": "Tween, i passi in mezzo",
+    "x": "«Tween» viene dall’inglese «in-between», «in mezzo»: TweenService calcola da solo tutti i passaggi tra l’inizio e la fine, così un oggetto si muove, cresce o cambia colore in modo fluido.",
+    "ic": "🎞️",
+    "q": "Che cosa fa TweenService?",
+    "ok": "Crea passaggi fluidi",
+    "wrong": [
+      "Cancella gli oggetti",
+      "Cambia la password"
+    ],
+    "src": "create.roblox.com/docs – UI animation (tweening)"
+  },
+  {
+    "t": "Aspetta un attimo!",
+    "x": "task.wait(2) fa aspettare lo script 2 secondi prima di andare avanti: il numero tra parentesi sono secondi. Come quando conti «uno, due» prima di saltare!",
+    "ic": "⏳",
+    "q": "Che cosa fa task.wait(3)?",
+    "ok": "Aspetta 3 secondi",
+    "wrong": [
+      "Ripete 3 volte",
+      "Crea 3 parti"
+    ],
+    "src": "create.roblox.com/docs – task library"
+  },
+  {
+    "t": "Diverso si scrive ~=",
+    "x": "In Luau «diverso da» si scrive ~= . Per esempio punti ~= 0 vuol dire «i punti non sono zero». Trucco: la tilde ~ è un’onda che spazza via l’uguale!",
+    "ic": "〰️",
+    "q": "Come si scrive «diverso da» in Luau?",
+    "ok": "~=",
+    "wrong": [
+      "=>",
+      "=="
+    ],
+    "src": "luau.org – Grammar"
+  },
+  {
+    "t": "La colla dei due puntini",
+    "x": "In Luau, per attaccare due testi si usano due puntini: «Ciao » .. «Luna» diventa «Ciao Luna». I due puntini .. sono come una goccia di colla tra le parole!",
+    "ic": "🔗",
+    "q": "Che cosa fanno i due puntini .. in Luau?",
+    "ok": "Uniscono due testi",
+    "wrong": [
+      "Dividono due numeri",
+      "Chiudono il gioco"
+    ],
+    "src": "luau.org – Grammar"
+  },
+  {
+    "t": "Il cancelletto che conta",
+    "x": "In Luau il simbolo # davanti a una tabella dice quanti elementi contiene: se frutti = {\"mela\", \"pera\"}, allora #frutti vale 2. Il cancelletto conta per te!",
+    "ic": "#️⃣",
+    "q": "Se lista = {10, 20, 30}, quanto vale #lista?",
+    "ok": "3",
+    "wrong": [
+      "30",
+      "60"
+    ],
+    "src": "luau.org – Grammar"
+  },
+  {
+    "t": "La scorciatoia +=",
+    "x": "In Luau puoi scrivere punti += 1 invece di punti = punti + 1: fa la stessa cosa, ma è più corto! Il Lua originale questa scorciatoia non ce l’ha: è un’aggiunta di Luau.",
+    "ic": "➕",
+    "q": "Se punti vale 5, quanto vale dopo punti += 1?",
+    "ok": "6",
+    "wrong": [
+      "1",
+      "51"
+    ],
+    "src": "luau.org – Syntax (compound assignments)"
+  },
+  {
+    "t": "La finestrella nel testo",
+    "x": "Con gli apici inversi ` in Luau puoi mettere una variabile dentro un testo: `Ciao {nome}!` scrive il nome al posto delle graffe. Le parentesi graffe sono come una finestrella nel testo!",
+    "ic": "🪟",
+    "q": "In `Hai {punti} punti`, che cosa compare al posto di {punti}?",
+    "ok": "Il valore di punti",
+    "wrong": [
+      "Le graffe con la parola",
+      "Niente, resta vuoto"
+    ],
+    "src": "luau.org – Syntax (string interpolation)"
+  },
+  {
+    "t": "La riga --!strict",
+    "x": "Scrivendo --!strict in cima a uno script, Luau controlla i tipi con più attenzione e trova prima certi errori, come sommare un testo a un numero. Senza niente usa la modalità più tollerante, nonstrict.",
+    "ic": "🔍",
+    "q": "A che cosa serve scrivere --!strict?",
+    "ok": "A trovare prima gli errori",
+    "wrong": [
+      "A far correre il personaggio",
+      "A cambiare i colori"
+    ],
+    "src": "luau.org – Type checking"
+  },
+  {
+    "t": "Continue: avanti il prossimo!",
+    "x": "Dentro un ciclo di Luau, continue salta il resto del giro e passa subito al giro dopo; break invece esce dal ciclo. Trucco: continue = «avanti il prossimo!», break = «basta!».",
+    "ic": "⏭️",
+    "q": "Che cosa fa continue in un ciclo?",
+    "ok": "Passa subito al giro dopo",
+    "wrong": [
+      "Ferma il gioco per sempre",
+      "Ripete lo stesso giro"
+    ],
+    "src": "luau.org – Syntax (continue)"
+  },
+  {
+    "t": "Divisione senza virgola",
+    "x": "In Luau // fa la divisione «senza virgola»: 7 // 2 dà 3, perché il 2 nel 7 sta 3 volte. Con una barra sola invece 7 / 2 dà 3.5. Due barre, niente decimali!",
+    "ic": "➗",
+    "q": "Quanto fa 7 // 2 in Luau?",
+    "ok": "3",
+    "wrong": [
+      "3.5",
+      "14"
+    ],
+    "src": "luau.org – Grammar"
+  }
+]

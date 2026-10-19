@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Una canzone per Léotard",
+    "x": "Nel 1867 nacque una canzone inglese ispirata a Jules Léotard: «The Daring Young Man on the Flying Trapeze», il giovane coraggioso sul trapezio volante. Un acrobata diventato canzone!",
+    "ic": "🎵",
+    "q": "Che cosa fu ispirato a Léotard nel 1867?",
+    "ok": "Una canzone",
+    "wrong": [
+      "Un castello",
+      "Un francobollo"
+    ],
+    "src": "en.wikipedia.org (Jules Léotard)"
+  },
+  {
+    "t": "Prove sopra la piscina",
+    "x": "Da ragazzo Léotard provava trapezi, corde e anelli appesi sopra la piscina del papà a Tolosa. Aveva anche studiato legge, ma scelse di volare!",
+    "ic": "🏊",
+    "q": "Dove si allenava da ragazzo Jules Léotard?",
+    "ok": "Sopra la piscina del papà",
+    "wrong": [
+      "Su una montagna",
+      "Dentro una chiesa"
+    ],
+    "src": "en.wikipedia.org (Jules Léotard)"
+  },
+  {
+    "t": "La ragazza del triplo",
+    "x": "Nel 1897 a Sydney, in Australia, Lena Jordan, di 16 anni, fu la prima persona registrata a fare un triplo salto (tre capriole in aria) in un numero acrobatico. Una ragazza da record!",
+    "ic": "🤸‍♀️",
+    "q": "Chi fu la prima persona registrata a fare un triplo salto, nel 1897?",
+    "ok": "Lena Jordan",
+    "wrong": [
+      "Jules Léotard",
+      "Philip Astley"
+    ],
+    "src": "en.wikipedia.org (Lena Jordan)"
+  },
+  {
+    "t": "Quattro capriole in volo",
+    "x": "Nel 1982 Miguel Vázquez, messicano di 17 anni, fece il primo quadruplo salto dal trapezio volante: quattro capriole e poi la presa del fratello Juan, il catcher!",
+    "ic": "🎪",
+    "q": "Chi prese al volo Miguel Vázquez nel suo quadruplo salto?",
+    "ok": "Suo fratello Juan",
+    "wrong": [
+      "Un clown",
+      "Nessuno"
+    ],
+    "src": "guinnessworldrecords.com"
+  },
+  {
+    "t": "Tessuti giovani giovani",
+    "x": "I tessuti aerei sono un'arte recente: si sono diffusi negli anni Novanta, in Francia e con il Cirque du Soleil. Chi li abbia inventati non si sa con certezza!",
+    "ic": "🎀",
+    "q": "Quando si sono diffusi i tessuti aerei?",
+    "ok": "Negli anni Novanta",
+    "wrong": [
+      "Ai tempi dei Romani",
+      "Nel Medioevo"
+    ],
+    "src": "en.wikipedia.org (Aerial silk)"
+  },
+  {
+    "t": "Dai trampoli al Sole",
+    "x": "Il Cirque du Soleil nacque nel 1984 in Québec da artisti di strada che camminavano sui trampoli. Nei suoi spettacoli non ci sono animali: solo acrobati, musica e luci.",
+    "ic": "☀️",
+    "q": "Che cosa NON c'è negli spettacoli del Cirque du Soleil?",
+    "ok": "Animali ammaestrati",
+    "wrong": [
+      "Acrobati",
+      "Musica"
+    ],
+    "src": "en.wikipedia.org (Cirque du Soleil)"
+  },
+  {
+    "t": "Il Clown d'oro",
+    "x": "Nel 1974 il principe Ranieri di Monaco fondò il Festival del Circo di Monte-Carlo. Il premio più importante è una statuetta: il Clown d'oro, come un Oscar del circo!",
+    "ic": "🏆",
+    "q": "Come si chiama il premio più importante del Festival di Monte-Carlo?",
+    "ok": "Il Clown d'oro",
+    "wrong": [
+      "Il Leone d'oro",
+      "La Coppa del Sole"
+    ],
+    "src": "en.wikipedia.org (Festival di Monte-Carlo)"
+  },
+  {
+    "t": "Una scuola di circo a Torino",
+    "x": "A Torino c'è la FLIC Scuola di Circo, nata nel 2002 dalla Reale Società Ginnastica: è considerata la prima scuola professionale di circo contemporaneo in Italia.",
+    "ic": "🏫",
+    "q": "In quale città c'è la FLIC Scuola di Circo?",
+    "ok": "Torino",
+    "wrong": [
+      "Palermo",
+      "Venezia"
+    ],
+    "src": "fedec.eu"
+  },
+  {
+    "t": "Il cervello che non gira",
+    "x": "Uno studio dell'Imperial College (2013) ha scoperto che il cervello delle ballerine, con anni di allenamento, impara a sentire meno i capogiri dopo le piroette. Ci si abitua piano piano!",
+    "ic": "🧠",
+    "q": "Che cosa impara il cervello delle ballerine allenate?",
+    "ok": "A sentire meno i capogiri",
+    "wrong": [
+      "A non sentire la musica",
+      "A dormire girando"
+    ],
+    "src": "imperial.ac.uk; focus.it"
+  },
+  {
+    "t": "Il trapezio è un pendolo",
+    "x": "Il trapezio oscilla come un pendolo: con corde più lunghe va avanti e indietro più lentamente, e il peso di chi è sopra non cambia il ritmo. Lo scoprì Galileo studiando i pendoli!",
+    "ic": "⏱️",
+    "q": "Che cosa rende più lenta l'oscillazione di un pendolo?",
+    "ok": "Corde più lunghe",
+    "wrong": [
+      "Un peso più leggero",
+      "Un peso più pesante"
+    ],
+    "src": "en.wikipedia.org (Pendulum)"
+  },
+  {
+    "t": "Il circo dei Romani",
+    "x": "Il Circo Massimo di Roma non era un circo come i nostri: era una pista lunga più di 600 metri, usata soprattutto per le corse dei carri, con posto per oltre 150.000 spettatori!",
+    "ic": "🏛️",
+    "q": "A che cosa serviva soprattutto il Circo Massimo?",
+    "ok": "Alle corse dei carri",
+    "wrong": [
+      "Ai numeri col trapezio",
+      "Alle gare di nuoto"
+    ],
+    "src": "en.wikipedia.org (Circus Maximus)"
+  },
+  {
+    "t": "Un tavolino nel nome",
+    "x": "La parola trapezio viene dal greco «trapezion», che vuol dire «tavolino». Poi è diventato il nome di una figura geometrica, e infine di un attrezzo del circo!",
+    "ic": "🪑",
+    "q": "Che cosa vuol dire la parola greca «trapezion»?",
+    "ok": "Tavolino",
+    "wrong": [
+      "Altalena",
+      "Uccello"
+    ],
+    "src": "etymonline.com"
+  },
+  {
+    "t": "Acrobati di 3.500 anni fa",
+    "x": "Sull'isola di Creta, a Cnosso, un affresco di circa 3.500 anni fa mostra giovani acrobati che saltano sopra un toro. Oggi è al Museo di Heraklion.",
+    "ic": "🐂",
+    "q": "Che cosa mostra l'affresco di Cnosso?",
+    "ok": "Acrobati che saltano un toro",
+    "wrong": [
+      "Un trapezio volante",
+      "Una scuola di danza"
+    ],
+    "src": "en.wikipedia.org (Bull-Leaping Fresco)"
+  },
+  {
+    "t": "Acrobati cinesi antichissimi",
+    "x": "In Cina l'acrobatica è antichissima: più di 2.000 anni fa, sotto la dinastia Han, c'erano spettacoli chiamati «baixi», con acrobazie, giocoleria e danza.",
+    "ic": "🐉",
+    "q": "Come si chiamavano gli antichi spettacoli cinesi con acrobazie?",
+    "ok": "Baixi",
+    "wrong": [
+      "Kabuki",
+      "Flamenco"
+    ],
+    "src": "en.wikipedia.org (Chinese acrobatics)"
+  },
+  {
+    "t": "Piccola ma fortissima",
+    "x": "Lillian Leitzel, star del circo, era alta circa un metro e 45. In un suo numero girava appesa a un braccio tantissime volte, e il pubblico contava ad alta voce!",
+    "ic": "💪",
+    "q": "Che cosa faceva il pubblico durante il numero di Lillian Leitzel?",
+    "ok": "Contava ad alta voce",
+    "wrong": [
+      "Cantava una canzone",
+      "Restava al buio"
+    ],
+    "src": "en.wikipedia.org (Lillian Leitzel)"
+  }
+]

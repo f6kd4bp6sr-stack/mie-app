@@ -1,0 +1,182 @@
+[
+ {
+  "t": "La volpe con tutte le lettere",
+  "x": "«The quick brown fox jumps over the lazy dog» (la veloce volpe marrone salta sopra il cane pigro) contiene tutte le 26 lettere dell'alfabeto inglese! Si usa per provare tastiere e caratteri.",
+  "ic": "🦊",
+  "q": "Quante lettere ha l'alfabeto inglese?",
+  "ok": "26",
+  "wrong": [
+   "21",
+   "24"
+  ],
+  "src": "Verifica delle lettere fatta al computer"
+ },
+ {
+  "t": "La E è la regina",
+  "x": "La lettera più usata in inglese è la «e»: la trovi in the, he, she, be, me… Prova a scrivere una frase inglese senza nessuna «e»: è difficilissimo!",
+  "ic": "👑",
+  "q": "Qual è la lettera più usata in inglese?",
+  "ok": "La e",
+  "wrong": [
+   "La a",
+   "La z"
+  ],
+  "src": "Guinness World Records"
+ },
+ {
+  "t": "Goodbye è una benedizione",
+  "x": "«Goodbye» è nato come forma accorciata di «God be with you», cioè «Dio sia con te». Col tempo le parole si sono schiacciate insieme fino a diventare un semplice «arrivederci»!",
+  "ic": "👋",
+  "q": "Da quale frase viene «goodbye»?",
+  "ok": "God be with you",
+  "wrong": [
+   "Good boy, bye",
+   "Go and buy"
+  ],
+  "src": "Merriam-Webster (goodbye)"
+ },
+ {
+  "t": "Il giorno del dio del tuono",
+  "x": "«Thursday» (giovedì) vuol dire «giorno di Thor», il dio del tuono dei popoli germanici e nordici. In italiano «giovedì» e in spagnolo «jueves» vengono invece da Giove, il re degli dèi dei Romani!",
+  "ic": "⚡",
+  "q": "Da quale dio prende il nome «Thursday»?",
+  "ok": "Thor",
+  "wrong": [
+   "Giove",
+   "Marte"
+  ],
+  "src": "Etymonline (Thursday)"
+ },
+ {
+  "t": "Eleven: «uno avanzato»",
+  "x": "«Eleven» (11) viene da un'antica parola che voleva dire «uno avanzato», cioè uno in più dopo il dieci. E «twelve» (12) voleva dire «due avanzati»!",
+  "ic": "🔟",
+  "q": "Che cosa voleva dire anticamente «eleven»?",
+  "ok": "Uno avanzato dopo dieci",
+  "wrong": [
+   "Dieci più dieci",
+   "Il numero della squadra"
+  ],
+  "src": "Etymonline (eleven)"
+ },
+ {
+  "t": "I pattini vengono dall'Olanda",
+  "x": "«Skate» viene dall'olandese «schaats». Secondo i dizionari, pattini e parola arrivarono in Inghilterra intorno al 1660, portati da inglesi che avevano vissuto in Olanda, dove si pattinava sui canali ghiacciati.",
+  "ic": "⛸️",
+  "q": "Da quale lingua viene la parola inglese «skate»?",
+  "ok": "Dall'olandese",
+  "wrong": [
+   "Dal francese",
+   "Dal russo"
+  ],
+  "src": "Etymonline (skate)"
+ },
+ {
+  "t": "OK è nato per scherzo",
+  "x": "«OK» nacque nel 1839 nei giornali di Boston come abbreviazione scherzosa di «oll korrect», cioè «all correct» (tutto giusto) scritto apposta male. Oggi lo capiscono quasi ovunque!",
+  "ic": "👌",
+  "q": "Che cosa voleva dire «OK» all'inizio?",
+  "ok": "All correct, tutto giusto",
+  "wrong": [
+   "Old king, vecchio re",
+   "Only kids, solo bambini"
+  ],
+  "src": "Merriam-Webster (OK)"
+ },
+ {
+  "t": "L'ombrello parla italiano",
+  "x": "«Umbrella» (ombrello) e «volcano» (vulcano) sono parole che l'inglese ha preso dall'italiano! «Umbrella» viene da «ombra»: all'inizio serviva per ripararsi dal sole, non dalla pioggia.",
+  "ic": "☂️",
+  "q": "Da quale lingua l'inglese ha preso «umbrella»?",
+  "ok": "Dall'italiano",
+  "wrong": [
+   "Dal tedesco",
+   "Dal greco moderno"
+  ],
+  "src": "Etymonline (umbrella, volcano)"
+ },
+ {
+  "t": "Il conte Sandwich",
+  "x": "Il «sandwich» prende il nome da John Montagu, conte di Sandwich, nel Settecento. Si racconta che lo mangiasse per non smettere di giocare a carte, ma forse lo mangiava alla scrivania mentre lavorava.",
+  "ic": "🥪",
+  "q": "Da chi prende il nome il sandwich?",
+  "ok": "Dal conte di Sandwich",
+  "wrong": [
+   "Da un cuoco francese",
+   "Da un re spagnolo"
+  ],
+  "src": "Britannica (sandwich)"
+ },
+ {
+  "t": "Lo spagnolo domanda due volte",
+  "x": "In spagnolo le domande hanno il punto interrogativo anche all'inizio, capovolto: «¿Cómo estás?». Anche l'esclamazione: «¡Hola!». In inglese e in italiano invece si mette solo alla fine.",
+  "ic": "❓",
+  "q": "Come si scrive «Come stai?» in spagnolo?",
+  "ok": "¿Cómo estás?",
+  "wrong": [
+   "Cómo estás¿",
+   "?Cómo estás?"
+  ],
+  "src": "RAE, Diccionario panhispánico de dudas"
+ },
+ {
+  "t": "Un solo «the» per tutto",
+  "x": "In italiano ci sono il, lo, la, i, gli, le; in spagnolo el, la, los, las. In inglese basta una parola sola: «the»! The cat, the girls, the ice: maschile, femminile, singolare o plurale.",
+  "ic": "1️⃣",
+  "q": "Come si dice «le ragazze» in inglese?",
+  "ok": "The girls",
+  "wrong": [
+   "Las girls",
+   "Le girls"
+  ],
+  "src": "Cambridge Dictionary (the)"
+ },
+ {
+  "t": "Cani che parlano tante lingue",
+  "x": "Il cane italiano fa «bau», quello inglese «woof» e quello spagnolo «guau»! Il suono è lo stesso, ma ogni lingua lo scrive a modo suo. In spagnolo «¡guau!» vuol dire anche «wow!».",
+  "ic": "🐶",
+  "q": "Come abbaia il cane in inglese?",
+  "ok": "Woof",
+  "wrong": [
+   "Guau",
+   "Miao"
+  ],
+  "src": "Merriam-Webster (woof); RAE (guau)"
+ },
+ {
+  "t": "Emoji è una parola giapponese",
+  "x": "«Emoji» non viene dall'inglese ma dal giapponese: «e» vuol dire immagine e «moji» vuol dire carattere, lettera. Quindi un emoji è una «lettera-disegno», come questa ⛸️!",
+  "ic": "😀",
+  "q": "Da quale lingua viene la parola «emoji»?",
+  "ok": "Dal giapponese",
+  "wrong": [
+   "Dall'inglese",
+   "Dal cinese"
+  ],
+  "src": "Merriam-Webster (emoji)"
+ },
+ {
+  "t": "La dozzina del fornaio",
+  "x": "«A dozen» vuol dire una dozzina: 12. Ma «a baker's dozen», la dozzina del fornaio, vale 13! Si dice che i fornai aggiungessero un pane in più per essere sicuri di non darne troppo pochi.",
+  "ic": "🥖",
+  "q": "Quanto vale «a baker's dozen»?",
+  "ok": "13",
+  "wrong": [
+   "12",
+   "24"
+  ],
+  "src": "Merriam-Webster (baker's dozen)"
+ },
+ {
+  "t": "Camera è una stanza... o no?",
+  "x": "In inglese «camera» vuol dire macchina fotografica, non camera da letto (che è «bedroom»)! Però il nome viene dal latino «camera», stanza: le prime macchine erano una «camera oscura».",
+  "ic": "📷",
+  "q": "Che cosa vuol dire «camera» in inglese?",
+  "ok": "Macchina fotografica",
+  "wrong": [
+   "Camera da letto",
+   "Cameriere"
+  ],
+  "src": "Merriam-Webster (camera)"
+ }
+]

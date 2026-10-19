@@ -1,0 +1,122 @@
+[
+ {
+  "id": 0,
+  "q_old": "Quale salto del pattinaggio parte andando in avanti?",
+  "why": "Anche il salto del valzer stacca in avanti: «unico» va limitato ai sei salti principali",
+  "set": {
+   "e": "Tra i sei salti principali, l’Axel è l’unico che stacca in avanti: per questo ha mezzo giro in più."
+  }
+ },
+ {
+  "id": 1,
+  "q_old": "Come si chiamano i dentini davanti alla lama?",
+  "why": "«Spingere» col puntale contraddice la tecnica corretta (si spinge col filo interno)",
+  "set": {
+   "e": "Nei salti col puntale lo si pianta nel ghiaccio per staccarsi. Per pattinare, invece, non si spinge mai con il puntale ma di lato, con il filo interno."
+  }
+ },
+ {
+  "id": 4,
+  "q_old": "Come si chiama la posizione su una gamba sola con l’altra tesa indietro?",
+  "why": "Anche la trottola ad angelo è su una gamba con l'altra tesa indietro: distrattore discutibile",
+  "set": {
+   "q": "Come si chiama la posizione in cui si scivola su una gamba sola, con l’altra alta e tesa indietro?",
+   "wrong": [
+    "La trottola bassa",
+    "Lo spazzaneve"
+   ]
+  }
+ },
+ {
+  "id": 9,
+  "q_old": "Dove va il peso sulla lama?",
+  "why": "Indicazione del punto di appoggio imprecisa: meglio la regola semplice del peso sopra la lama, al centro",
+  "set": {
+   "ok": "Sopra la lama, al centro del piede",
+   "e": "Il peso sta sopra la lama, al centro: né sul puntale né sul tallone. Ginocchia piegate e così sei in equilibrio."
+  }
+ },
+ {
+  "id": 11,
+  "q_old": "Come si allaccia lo scarponcino sulla caviglia?",
+  "why": "Domanda poco chiara («più stretto» di cosa?) e spiegazione con dettagli incerti",
+  "set": {
+   "q": "Come vanno i lacci dello scarponcino all’altezza della caviglia?",
+   "ok": "Ben stretti, ma senza far male",
+   "wrong": [
+    "Lentissimi",
+    "Non si allacciano"
+   ],
+   "e": "Sulla caviglia i lacci vanno ben stretti, sulle dita più comodi: il piede sta fermo dentro lo scarponcino. Fatti aiutare da un adulto o dall’allenatrice."
+  }
+ },
+ {
+  "id": 13,
+  "q_old": "Nel pattinaggio di velocità si gareggia…",
+  "why": "Su pista lunga si corre in coppia contro il cronometro (vedi id 118), non «per arrivare primi»; lame non perfettamente dritte",
+  "set": {
+   "ok": "Su una pista ovale, per essere i più veloci",
+   "e": "Vince chi fa il tempo migliore. Le lame sono lunghe e sottili, quasi dritte."
+  }
+ },
+ {
+  "id": 30,
+  "q_old": "Se cadi sul ghiaccio, che cosa fai?",
+  "why": "«Subito» non è prudente se ci si è fatte male",
+  "set": {
+   "ok": "Ti rialzi con calma, se non ti sei fatta male",
+   "wrong": [
+    "Resti sdraiata in mezzo alla pista",
+    "Ti togli i pattini lì"
+   ],
+   "e": "In ginocchio, un piede tra le mani, poi l’altro, e su! Se ti sei fatta male resta ferma e chiama l’allenatrice."
+  }
+ },
+ {
+  "id": 46,
+  "q_old": "Di che paese era Axel Paulsen?",
+  "why": "«Inventò» è un'attribuzione forte: è documentato che lo eseguì per primo",
+  "set": {
+   "e": "Fu il primo a eseguire questo salto, nel 1882."
+  }
+ },
+ {
+  "id": 50,
+  "q_old": "Come sono le lame dei pattini da velocità?",
+  "why": "Le lame da velocità hanno una leggera curvatura: «dritte» è impreciso",
+  "set": {
+   "ok": "Lunghe e sottili, senza puntale",
+   "e": "Sono molto più lunghe di quelle da artistico e quasi dritte: servono per andare veloci."
+  }
+ },
+ {
+  "id": 92,
+  "q_old": "Qual è spesso il primo salto che si impara?",
+  "why": "Spesso si impara prima anche il saltello a due piedi (bunny hop): non sempre il valzer è il primo",
+  "set": {
+   "e": "Il salto del valzer è uno dei primi piccoli voli che si imparano: leggero come un passo di danza a tre tempi, un, due, tre!"
+  }
+ },
+ {
+  "id": 125,
+  "q_old": "Di quale pietra è fatta la stele del curling?",
+  "why": "Duplica l'id 15 (pietra di granito); «stele» termine poco usato",
+  "set": {
+   "q": "Nel curling, quante pietre lancia ogni squadra in ogni turno di gioco?",
+   "ok": "Otto, due per ogni giocatore",
+   "wrong": [
+    "Una sola",
+    "Cento"
+   ],
+   "e": "Ogni squadra ha otto pietre: ognuno dei quattro giocatori ne lancia due. Alla fine del turno si guarda chi è più vicino al centro della casa."
+  }
+ },
+ {
+  "id": 138,
+  "q_old": "Come resta ghiacciata una pista al coperto?",
+  "why": "Il liquido nei tubi è freddissimo ma resta liquido, non «gelato»",
+  "set": {
+   "e": "Sotto la pista corrono tanti tubi con un liquido freddissimo che non gela: è come un frigorifero gigante sdraiato sotto i tuoi pattini."
+  }
+ }
+]

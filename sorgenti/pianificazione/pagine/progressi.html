@@ -1,0 +1,1124 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Pianificazione">
+<meta name="theme-color" content="#f3f4f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1216" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="data:image/png;base64,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">
+<title>Progressi</title>
+<style>
+:root{
+  --bg:#f3f4f7; --card:#fff; --ink:#15181d; --muted:#6b7280; --line:#e4e6eb; --seg:#eef0f3; --accent:#1f5fae;
+  --good:#2e7d5b; --good-bg:#e3f3ea; --mid:#b7791f; --mid-bg:#fdf1dc; --bad:#c2410c; --bad-bg:#fde8dc; --none:#9aa1ab; --none-bg:#eef0f3;
+  --c1:#3b6fd8; --c2:#d9631e; --c3:#2e7d5b; --c4:#8a4fd1; --c5:#c2347a; --c6:#0e8a8a;
+}
+@media (prefers-color-scheme: dark){ :root{
+  --bg:#0f1216; --card:#1a1e24; --ink:#eef0f3; --muted:#9aa2ad; --line:#2a3038; --seg:#232830; --accent:#6ea3ea;
+  --good:#5cc494; --good-bg:#173226; --mid:#e7b35a; --mid-bg:#3a2c12; --bad:#ff9a6b; --bad-bg:#3d2116; --none:#6b7380; --none-bg:#232830;
+  --c1:#7ea6f0; --c2:#ff9a5c; --c3:#5cc494; --c4:#b48cf0; --c5:#f07ab3; --c6:#4fd0d0; } }
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none!important}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif}
+body{padding:env(safe-area-inset-top) env(safe-area-inset-right) calc(30px + env(safe-area-inset-bottom)) env(safe-area-inset-left)}
+main{max-width:1100px;margin:0 auto;padding:12px 16px 24px}
+h1{font-size:28px;margin:12px 2px 2px;letter-spacing:-.02em}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:22px 4px 8px;font-weight:700}
+h3{margin:0;font-size:18px}
+.sub{color:var(--muted);margin:0 2px 12px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:12px}
+.appsw{display:flex;justify-content:center;gap:4px;margin:10px auto 0;padding:4px;background:var(--seg);border-radius:999px;width:max-content;max-width:calc(100% - 32px)}
+.appsw a{display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;font-weight:700;font-size:15px;color:var(--muted);text-decoration:none;white-space:nowrap}
+.appsw a.on{background:var(--card);color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.12)}
+button,.btn{font:inherit;border:0;border-radius:10px;padding:10px 14px;background:var(--seg);color:var(--ink);cursor:pointer;font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.btn.primary,button.primary{background:var(--accent);color:#fff}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.lbl{font-size:13px;color:var(--muted)}
+.kpi{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.kpi div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.kpi b{display:block;font-size:28px;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi span{font-size:12px;color:var(--muted)}
+.ev{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:700px){ .ev{grid-template-columns:1fr} }
+.evc{border-radius:16px;padding:14px 16px;border:2px solid}
+.evc.good{background:var(--good-bg);border-color:var(--good)} .evc.bad{background:var(--bad-bg);border-color:var(--bad)}
+.evc h3{font-size:17px;margin-bottom:6px} .evc.good h3{color:var(--good)} .evc.bad h3{color:var(--bad)}
+.evc ul{margin:0;padding-left:20px} .evc li{margin:5px 0}
+.evc li small{color:var(--muted);display:block}
+.subj{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.sj{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;border-top:5px solid var(--c)}
+.sj h3{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.badge{font-size:12px;font-weight:800;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.badge.good{background:var(--good-bg);color:var(--good)} .badge.mid{background:var(--mid-bg);color:var(--mid)} .badge.bad{background:var(--bad-bg);color:var(--bad)} .badge.none{background:var(--none-bg);color:var(--none)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:15px}
+.row:last-child{border-bottom:0}
+.row>span:first-child{flex:0 0 auto;white-space:nowrap}
+.row .v{font-weight:700;font-variant-numeric:tabular-nums;text-align:right;font-size:14px}
+.row .v .sep{color:var(--muted);font-weight:400}
+.bar{height:7px;border-radius:4px;background:var(--seg);overflow:hidden;margin-top:4px}
+.bar i{display:block;height:100%;background:var(--c)}
+.tabs-grid{display:grid;grid-template-columns:repeat(9,1fr);gap:5px;margin:8px 0 4px}
+.tabs-grid div{border-radius:9px;text-align:center;padding:6px 0;font-weight:800;font-size:13px;line-height:1.15}
+.tabs-grid div small{display:block;font-size:11px;font-weight:700;opacity:.85}
+.t-good{background:var(--good-bg);color:var(--good)} .t-mid{background:var(--mid-bg);color:var(--mid)} .t-bad{background:var(--bad-bg);color:var(--bad)} .t-none{background:var(--none-bg);color:var(--none)}
+.dys{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;margin:10px 0 6px}
+.dy{background:var(--seg);border-radius:10px;padding:5px 2px;text-align:center;min-width:0;border-bottom:4px solid transparent}
+.dy small{display:block;font-size:10px;color:var(--muted);white-space:nowrap}
+.dy span{display:block;font-size:20px;line-height:1.3}
+.dy i{display:block;font-style:normal;font-size:7px;letter-spacing:-1px;color:var(--muted);min-height:9px}
+.dy em{display:block;font-style:normal;font-size:11px;min-height:14px}
+.dy.up{border-color:var(--good)} .dy.mid{border-color:var(--mid)} .dy.tired{border-color:var(--c1)} .dy.down{border-color:var(--bad);background:var(--bad-bg)}
+@media (max-width:620px){ .dys{grid-template-columns:repeat(7,1fr)} }
+.mbar{display:flex;height:10px;border-radius:6px;overflow:hidden;background:var(--seg);margin:8px 0 6px}
+.mbar i{display:block;height:100%}
+.dpage{border-left:4px solid var(--line);padding:8px 12px;margin-top:10px;background:var(--seg);border-radius:0 12px 12px 0}
+.dpage.up{border-color:var(--good)} .dpage.mid{border-color:var(--mid)} .dpage.tired{border-color:var(--c1)} .dpage.down{border-color:var(--bad)}
+.dph{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;font-size:14px}
+.dpage p{margin:6px 0 0;white-space:pre-wrap;font-size:15px}
+.dold summary{cursor:pointer;margin-top:12px;font-weight:700;color:var(--accent)}
+.heat{display:grid;grid-template-rows:repeat(7,14px);grid-auto-flow:column;grid-auto-columns:14px;gap:3px;margin:8px 0 4px}
+.heat i{border-radius:3px;background:var(--seg)} .heat i.on{background:var(--good)} .heat i.x{background:transparent}
+.mchart{width:100%;max-width:760px;height:auto;display:block;margin:10px 0 4px}
+.mtab{overflow-x:auto;margin-top:12px}.mtab table{border-collapse:separate;border-spacing:4px;font-size:13px}.mtab th{text-align:left;font-weight:700;white-space:nowrap;padding:2px 6px}.mtab thead th{text-align:center;color:var(--muted)}.mtab td{text-align:center;border-radius:8px;padding:4px 8px;font-weight:800;min-width:46px}
+.stbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:4px 2px 14px}
+.stchip{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:var(--seg);font-size:14px;font-weight:600}
+.stchip.ok{background:var(--good-bg);color:var(--good)}.stchip.warn{background:var(--bad-bg);color:var(--bad)}
+.stbar button{padding:7px 12px;font-size:14px}
+#setup{margin-bottom:6px}
+.brief{border-left:5px solid var(--accent)}
+.brief .big{font-size:20px;font-weight:800;line-height:1.35;margin:0 0 6px}
+.brief ul{margin:6px 0 0;padding-left:20px}.brief li{margin:4px 0}
+.cena{border-top:1px solid var(--line);padding:8px 0}.cena summary{cursor:pointer;font-weight:700}.cena summary small{color:var(--muted);font-weight:600;margin-left:4px}.cena div{margin-top:4px;color:var(--good);font-weight:700}
+details.more>summary{cursor:pointer;font-weight:700;color:var(--accent);margin:18px 4px 8px}
+.empty{text-align:center;padding:30px 16px;border:2px dashed var(--line);border-radius:16px;color:var(--muted)}
+.empty b{display:block;color:var(--ink);font-size:18px;margin-bottom:6px}
+.note{background:var(--seg);border-radius:12px;padding:10px 12px;font-size:14px;color:var(--muted)}
+.trend{font-size:12px;font-weight:800;margin-left:6px}
+.trend.up{color:var(--good)} .trend.down{color:var(--bad)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:50}
+.toast.show{opacity:1}
+.dbars{display:grid;gap:4px;margin:8px 0 4px}.dbar{display:grid;grid-template-columns:72px 1fr 92px;gap:8px;align-items:center;font-size:13px}.dbar .dl{color:var(--mut,#7a8290)}.dbar .dn{text-align:right;font-variant-numeric:tabular-nums}.dt{display:flex;height:12px;border-radius:6px;background:rgba(127,127,127,.12);overflow:hidden}.dt .ok{background:#3aa66b}.dt .ko{background:#e06a5a}
+.lnkwarn{margin-top:8px;padding:10px 12px;border-radius:10px;background:#fff4e8;border:1px solid #f0a35e;color:#33241a}.lnkwarn ol{margin:6px 0 0;padding-left:20px}.lnkwarn li{margin:4px 0}@media(prefers-color-scheme:dark){.lnkwarn{background:#3a2a1c;border-color:#b8743c;color:#f3e3d3}}
+</style>
+</head>
+<body>
+<!--@NAV-->
+<main>
+  <h1 id="title">I progressi</h1>
+  <div class="stbar" id="stbar"></div>
+  <div id="setup" hidden>
+  <div class="card" id="pair">
+    <b>📲 Collega con un QR</b> <span class="lbl">(iPad della bimba)</span>
+    <div class="lbl" id="pairSt">Il modo più semplice: la chiave GitHub si scrive solo qui; sull’iPad della bimba basta inquadrare un QR.</div>
+    <details id="pairBox" style="margin-top:6px"><summary class="lbl" style="cursor:pointer"><b>Prepara il QR di collegamento (anche per una chiave nuova)</b></summary>
+      <ol class="lbl" style="padding-left:20px;margin:6px 0">
+        <li>Crea la chiave: <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> → spunta solo <b>gist</b>, scadenza <b>No expiration</b> → <b>Generate token</b> → copia la chiave.</li>
+        <li>Incollala qui sotto, scegli un codice (almeno 6 caratteri; se c’è già un collegamento usa lo stesso) e tocca <b>Prepara il QR</b>.</li>
+        <li>Sull’iPad della bimba: <b>🐉 Io → 💾 Salvataggi → 📷 Collegati con il QR</b> e inquadra questo schermo.</li>
+      </ol>
+      <div class="btns"><input id="pairTok" type="password" placeholder="Chiave GitHub (inizia con ghp_)" autocomplete="off" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line,#ccc);background:transparent;color:inherit"></div>
+      <div class="btns"><input id="pairCode" placeholder="Codice (almeno 6 caratteri)" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line,#ccc);background:transparent;color:inherit"><button id="pairGo" class="primary">Prepara il QR</button></div>
+      <div id="pairQR" style="text-align:center"></div>
+      <div class="lbl">🔒 Il QR contiene la chiave: mostralo solo all’iPad della bimba. Si chiude da solo dopo 3 minuti. La chiave resta su questo iPad (non va nelle copie) e sull’iPad della bimba.</div>
+    </details>
+  </div>
+  <div class="card" id="lnk">
+    <b>🔗 Collegamento automatico con «Il mio mondo»</b>
+    <div class="lbl" id="lnkSt">Non collegato: i dati arrivano solo caricando i file.</div>
+    <div id="lnkSet">
+      <div class="lbl" style="margin-top:6px">Una volta sola: sull’iPad di «Il mio mondo» apri <b>🐉 Io</b> → riquadro <b>💾 Salvataggi</b> → <b>🔗 Oppure collega a mano con la chiave GitHub</b>, incolla la chiave GitHub, scegli un codice (almeno 6 caratteri) e tocca «Collega»; poi scrivi qui lo stesso codice. Da quel momento l’iPad invia i progressi da solo, cifrati, ogni volta che l’app si apre e almeno una volta al giorno, e questa pagina li scarica da sola.</div>
+      <details style="margin-top:8px"><summary class="lbl" style="cursor:pointer"><b>Come creare la chiave GitHub (5 minuti, una volta sola)</b></summary>
+        <ol class="lbl" style="padding-left:20px;margin:6px 0">
+          <li>In Safari apri <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> ed entra con il tuo account GitHub.</li>
+          <li>In «Note» lascia <i>mie-app progressi</i>; in «Expiration» scegli <b>No expiration</b> (o un anno, e poi la rinnovi).</li>
+          <li>Spunta <b>solo</b> la casella <b>gist</b>; tutto il resto vuoto.</li>
+          <li>Tocca <b>Generate token</b> e copia la chiave (inizia con <i>ghp_</i>): si vede una volta sola. Mandala all’iPad con AirDrop o Note e incollala in «🔗 Oppure collega a mano con la chiave GitHub».</li>
+        </ol>
+        <div class="lbl">La chiave può solo scrivere note private («gist») sul tuo GitHub: non dà accesso al resto. I progressi viaggiano cifrati: senza il codice MM1 nessuno li può leggere.</div>
+      </details>
+      <div class="btns" style="margin-top:8px"><input id="lnkCode" placeholder="Scrivi il tuo codice (o incolla quello MM1-…)" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line,#ccc);background:transparent;color:inherit"><button id="lnkGo" class="primary">Collega</button></div>
+    </div>
+    <div class="btns" id="lnkOn" hidden style="margin-top:8px"><button id="lnkNow">🔄 Aggiorna ora</button><button id="lnkOff">Scollega</button></div>
+  </div>
+
+  <div class="card">
+    <b>📥 Carica i dati a mano</b>
+    <div class="lbl"><b>Il modo più semplice:</b> sull’iPad apri <b>🐉 Io</b> → riquadro 💾 Salvataggi → <b>📱 Mostra il QR</b>, poi qui tocca <b>📷 Leggi il QR dall’iPad</b> e inquadralo (niente internet, niente chiavi). In alternativa, sull’iPad di «Il mio mondo» ci sono due modi: <b>🐉 Io → 💾 Salvataggi → 💾 Copia su iCloud</b> crea la copia completa (<i>drago-progressi-…json</i>: utilizzo, materie, tabelline, risposte); <b>🐉 Io → 📊 Progressi → 📤 Condividi</b> manda il file <i>progressi-…csv</i> con le risposte giuste e sbagliate per materia. Salvali in File / iCloud Drive (o inviali con AirDrop) e aprili qui con «Carica la copia»: vanno bene tutti e due, e il CSV aggiorna le percentuali della copia già caricata. I dati restano solo su questo dispositivo.</div>
+    <div class="btns">
+      <label class="btn primary" style="cursor:pointer">📂 Carica la copia<input type="file" id="fIn" accept="application/json,.json,text/csv,.csv,text/plain" hidden></label>
+      <button id="fQR">📷 Leggi il QR dall’iPad</button>
+      <label class="btn" style="cursor:pointer">📸 Fotografa il QR<input type="file" id="fQRp" accept="image/*" capture="environment" hidden></label>
+      <button id="fLocal" hidden>📱 Leggi da questo iPad</button>
+      <button id="fClear" hidden>Togli i dati</button>
+    </div>
+    <div class="lbl" id="srcInfo" style="margin-top:8px"></div>
+  </div>
+  </div>
+
+  <div id="out"></div>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pad=n=>String(n).padStart(2,"0");
+const iso=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const today=()=>iso(new Date());
+const daysAgo=s=>Math.round((new Date(today()+"T12:00")-new Date(s+"T12:00"))/864e5);
+const fmt=(s,o)=>new Date(s+(s.length===10?"T12:00":"")).toLocaleDateString("it-IT",o||{day:"numeric",month:"short",year:"numeric"});
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),2000);}
+
+/* ---------- archivio locale: ultimo file caricato + storico dei riepiloghi (per l'andamento) ---------- */
+const KEY="prog-vale-v1", HKEY="prog-vale-hist-v1";
+let dbp=null;
+const idb=()=>dbp||(dbp=new Promise((res,rej)=>{try{const r=indexedDB.open("licenze-marco",1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains("kv"))r.result.createObjectStore("kv")};r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)}catch(e){rej(e)}}));
+const kv=async(mode,key,val)=>{const db=await idb();return new Promise((res,rej)=>{const tx=db.transaction("kv",mode),st=tx.objectStore("kv");const q=mode==="readonly"?st.get(key):(val===undefined?st.delete(key):st.put(val,key));let out;q.onsuccess=()=>{out=q.result};tx.oncomplete=()=>res(out);tx.onerror=()=>rej(tx.error)})};
+function lsGet(k){try{return JSON.parse(localStorage.getItem(k)||"null")}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+async function saveAll(pack,hist){lsSet(KEY,pack);lsSet(HKEY,hist);try{await kv("readwrite","progressi",JSON.stringify({pack,hist}))}catch(e){}}
+async function loadAll(){let pack=lsGet(KEY),hist=lsGet(HKEY)||[];
+  if(!pack){try{const r=await kv("readonly","progressi");if(r){const o=JSON.parse(r);pack=o.pack;hist=o.hist||[];lsSet(KEY,pack);lsSet(HKEY,hist)}}catch(e){}}
+  return {pack,hist};}
+
+/* ---------- lettura del file di «Il mio mondo» ---------- */
+function normalize(o){
+  // formati accettati: {app:'il-mio-mondo' (o i file di prima «mondo-…»), saved, state:{data,t}}  ·  {data,t}  ·  oggetto chiave→valore
+  if(!o||typeof o!=="object") throw new Error("file non valido");
+  let data=null,saved=o.saved||null;
+  if(o.state&&o.state.data) data=o.state.data;
+  else if(o.data&&typeof o.data==="object") data=o.data;
+  else if(o.dragon||o.days||o["math-done"]) data=o;
+  if(!data) throw new Error("nel file non ci sono i dati di «Il mio mondo»");
+  return {saved:saved||new Date().toISOString(),loaded:new Date().toISOString(),data};
+}
+function fromThisDevice(){ // stesso indirizzo: se «Il mio mondo» è usato su questo dispositivo nello stesso Safari
+  const P="vale2-",data={};
+  try{for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith(P)&&!k.startsWith(P+"__")){try{data[k.slice(P.length)]=JSON.parse(localStorage.getItem(k))}catch(e){}}}}catch(e){}
+  return Object.keys(data).length?data:null;
+}
+
+/* ---------- materie e argomenti di «Il mio mondo» ---------- */
+const MATH=[["tab","⚡","Tabelline"],["fraz","🍕","Frazioni, decimali, %"],["prob","🕵️","Problemi"],["geo","📐","Aree e perimetri"],["media","🎒","Verso la media"],["ore","🕐","L’orologio"]];
+const SCI=[["corpo","🫀","Il corpo umano"],["spazio","🪐","Sistema solare"],["energia","⚡","Energia e materia"],["animali","🦊","Animali e ambienti"]];
+const SCOPRI={ita:["📖","Italiano",1],storia:["🏛️","Storia",1],geo:["🗺️","Geografia",1],eng:["🇬🇧","Inglese",1],parlo:["🇬🇧","Parlo inglese",1],arte:["🎨","Arte",0],musica:["🎵","Musica",0],civica:["🤝","Ed. civica",0],tecno:["💡","Tecnologia",0],media:["🎒","Verso la 1ª media",0],roblox:["🧱","Roblox",0],soldi:["🐷","Soldi e risparmio",0],lavo:["🧼","Perché mi lavo",0],vesto:["👗","Come mi vesto",0]};
+const SPORTN={patt:["⛸️","Pattinaggio"],aerea:["🤸","Ginnastica aerea"],nuoto:["🏊","Nuoto"],corpo:["💪","Corpo in movimento"]};
+function unitLabel(u){if(u==="mate")return "🔢 Matematica";if(SCOPRI[u])return SCOPRI[u][0]+" "+SCOPRI[u][1];
+  if(u.startsWith("sci-")){const t=SCI.find(x=>x[0]===u.slice(4));if(t)return t[1]+" "+t[2];}
+  if(u.startsWith("sp-")){const t=SPORTN[u.slice(3)];if(t)return t[0]+" "+t[1];}return u;}
+/* percorso a tappe e ripasso a intervalli: dal dato completo (copia) o dal riepilogo (collegamento) */
+function pathSummary(P,ref){
+  if(!P||typeof P!=="object")return null;
+  if(P.sum)return {per:P.sum,tappe:+P.tappe||0,units:+P.units||0,ref:P.ref||ref};
+  if(!P.srs)return null; const per={};
+  Object.keys(P.srs).forEach(k=>{const r=P.srs[k]||{},b=+r.b||0;if(b<=0)return;const e=per[r.u||"?"]||(per[r.u||"?"]={l:0,s:0,d:0});e.l++;if(b>=4)e.s++;if(r.d&&r.d<=ref)e.d++;});
+  const U=P.u||{};return {per,tappe:Object.values(U).reduce((a,us)=>a+Object.keys((us&&us.done)||{}).length,0),units:Object.keys(U).length,ref};
+}
+const SPORT={patt:["⛸️","Pattinaggio"],aerea:["🎪","Ginnastica aerea"],nuoto:["🏊","Nuoto"],corpo:["💪","Corpo in movimento"]};
+const GAMES={cuoca:["👩‍🍳","La cuoca pasticciona"],simon:["🎵","Segui la musica"],gone:["🔍","Cosa è sparito?"],colors:["🎨","Colori pazzi"]};
+const deckSeen=(D,k)=>{const d=D["deck-"+k];if(!d||!d.total)return null;const left=Array.isArray(d.q)?d.q.length:0;return {seen:left===0&&Array.isArray(d.last)&&d.last.length?d.total:d.total-left,total:d.total};};
+const misN=(D,k)=>Array.isArray(D["mis-"+k])?D["mis-"+k].length:0;
+
+/* ---------- analisi ---------- */
+function analyze(pack){
+  const D=pack.data||(pack.state&&pack.state.data)||{}, ref=(pack.saved||pack.loaded).slice(0,10);
+  const ago=s=>Math.round((new Date(ref+"T12:00")-new Date(s+"T12:00"))/864e5);
+  const days=(Array.isArray(D.days)?D.days:[]).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x)).sort();
+  const last7=days.filter(d=>ago(d)<7&&ago(d)>=0).length, last30=days.filter(d=>ago(d)<30&&ago(d)>=0).length;
+  const lastUse=days[days.length-1]||null;
+  let streak=0;{const set=new Set(days);let d=new Date((lastUse||ref)+"T12:00");while(set.has(iso(d))){streak++;d.setDate(d.getDate()-1);}}
+  const diary=D.diary&&typeof D.diary==="object"?Object.keys(D.diary).length:0;
+  const name=D.child&&D.child.name?String(D.child.name).trim():"";
+  const md=D["math-done"]||{}, sd=D["sci-done"]||{}, gd=D["games-done"]||{}, tb=D["tab-best"]||{};
+  const prog=D.prog&&typeof D.prog==="object"?D.prog:null; // registro risposte, se l'app lo salva: {materia:{ok,ko}}
+  const S=[]; // schede materia
+  const good=[], bad=[];
+  const acc=k=>{if(!prog||!prog[k])return null;const ok=+prog[k].ok||0,ko=+prog[k].ko||0;return ok+ko?{p:ok/(ok+ko),n:ok+ko}:null;};
+  const accRow=(k)=>{const a=acc(k);return a?`<div class="row"><span>Risposte giuste</span><span class="v">${Math.round(a.p*100)}% <span class="lbl">su ${a.n}</span></span></div>`:"";};
+  const RANK={good:0,mid:1,bad:2};
+  const accSt=k=>{const a=acc(k);if(!a||a.n<5)return null;return a.p>=.85?"good":a.p>=.6?"mid":"bad";};
+  const mix=(st,...ks)=>{const ss=ks.map(accSt).filter(Boolean);if(!ss.length)return st;const w=ss.sort((a,b)=>RANK[b]-RANK[a])[0];if(st==="none")return w;return RANK[w]>RANK[st]?w:st;};
+  const accEval=(k,label)=>{const a=acc(k);if(!a||a.n<10)return;if(a.p<.6)bad.push([`${label}: ${Math.round(a.p*100)}% di risposte giuste`,`su ${a.n} risposte`]);else if(a.p>=.85)good.push([`${label}: ${Math.round(a.p*100)}% di risposte giuste`,`su ${a.n} risposte`]);};
+
+  const PU=pathSummary(D.path,ref), pl=id=>PU&&PU.per[id]?PU.per[id].l:0, pathTxt=id=>{const e=PU&&PU.per[id];return e?` · percorso ${e.l} imparate`:"";};
+  // MATEMATICA
+  {let rows="",tot=0,mathNever=[];
+   MATH.forEach(([id,ic,n])=>{const c=+md[id]||0;tot+=c;if(!c)mathNever.push(n);rows+=`<div class="row"><span>${ic} ${esc(n)}</span><span class="v">${c?c+(c===1?" volta":" volte"):"—"}</span></div>`;});
+   let grid="",tbBad=[],tbGood=[],tbNever=[];
+   for(let t=2;t<=10;t++){const b=tb[t]!=null?+tb[t]:null;let cls="t-none";if(b!=null){cls=b>=9?"t-good":b>=7?"t-mid":"t-bad";if(b<=6)tbBad.push(t);if(b>=9)tbGood.push(t);}else tbNever.push(t);
+     grid+=`<div class="${cls}">×${t}<small>${b!=null?b+"/10":"mai"}</small></div>`;}
+   const clock=+D["clock-level"]||0;
+   if(tbBad.length) bad.push([`Tabelline da ripassare: ${tbBad.map(t=>"×"+t).join(", ")}`,"6 o meno giuste su 10 al primo tentativo (record migliore)"]);
+   if(tbNever.length&&tbNever.length<9) bad.push([`Tabelline mai allenate da sola: ${tbNever.map(t=>"×"+t).join(", ")}`,"compaiono solo nei giri misti"]);
+   if(tbGood.length) good.push([`Tabelline sicure: ${tbGood.map(t=>"×"+t).join(", ")}`,"9 o 10 giuste su 10 al primo tentativo"]);
+   if(mathNever.length&&!pl("mate")) bad.push([`Matematica mai provata: ${mathNever.join(", ")}`,""]);
+   if(pl("mate")) rows=`<div class="row"><span>🧭 Percorso a tappe</span><span class="v">${pl("mate")} nozioni imparate</span></div>`+rows;
+   const topM=MATH.map(([id,,n])=>[n,+md[id]||0]).sort((a,b)=>b[1]-a[1])[0]; if(topM&&topM[1]>=3) good.push([`Matematica più allenata: ${topM[0]}`,`${topM[1]} volte`]);
+   if(clock>=3) good.push([`Orologio: livello ${clock} di 4`,"legge bene le ore"]); else if((+md.ore||0)>=2&&clock<=1) bad.push(["Orologio: ancora al livello 1",`provato ${md.ore} volte`]);
+   accEval("mate","Matematica");
+   const st=mix(tot===0&&!pl("mate")?"none":pl("mate")&&!tbBad.length?"good":mathNever.length>=3||tbBad.length>=3?"bad":mathNever.length||tbBad.length?"mid":"good","mate");
+   S.push({c:"var(--c1)",t:"🔢 Matematica",st,html:accRow("mate")+rows+`<div class="lbl" style="margin-top:10px">Tabelline: record di risposte giuste al primo tentativo (su 10)</div><div class="tabs-grid">${grid}</div>`+(clock?`<div class="row"><span>🕐 Livello orologio</span><span class="v">${clock} / 4</span></div>`:"")});}
+
+  // SCIENZE
+  {let rows="",done=0,never=[];
+   SCI.forEach(([id,ic,n])=>{const ok=!!sd[id],q=deckSeen(D,"q-sci-"+id),f=deckSeen(D,"f-sci-"+id),m=misN(D,"sci-"+id);if(ok)done++;if(!ok&&!q&&!f&&!pl("sci-"+id))never.push(n);
+     rows+=`<div class="row"><span>${ic} ${esc(n)} ${ok?"✓":""}</span><span class="v">${q?`quiz ${q.seen}/${q.total}`:"quiz —"} · ${f?`curiosità ${f.seen}/${f.total}`:"curiosità —"}${m?` · esperimenti ${m}`:""}${pathTxt("sci-"+id)}</span></div>`;});
+   if(never.length) bad.push([`Scienze mai aperte: ${never.join(", ")}`,""]);
+   if(done>=2) good.push([`Scienze: ${done} argomenti su ${SCI.length} completati`,""]);
+   accEval("scienze","Scienze");
+   S.push({c:"var(--c3)",t:"🔬 Scienze",st:mix(done===0&&never.length===SCI.length?"none":never.length>=2?"bad":never.length?"mid":"good","scienze"),html:accRow("scienze")+rows});}
+
+  // SCOPRI (materie scolastiche)
+  {const ids=new Set(Object.keys(SCOPRI));Object.keys(D).forEach(k=>{const m=k.match(/^deck-[qf]-sc-([a-z]+)$/);if(m)ids.add(m[1]);});
+   let rows="",core=[],other=[],explored=0;
+   Object.keys(prog||{}).forEach(k=>{if(!["mate","scienze","sport"].includes(k))ids.add(k);});
+   [...ids].forEach(id=>{const meta=SCOPRI[id]||["📘",id,0];const a=acc(id); if(a)accEval(id,meta[1]);const q=deckSeen(D,"q-sc-"+id),f=deckSeen(D,"f-sc-"+id),m=misN(D,"scopri-"+id);
+     const score=(q?q.seen:0)+(f?f.seen:0)+m*2+(a?a.n:0)+pl(id); if(score)explored++;
+     if(!score&&meta[2])core.push(meta[1]); else if(!score)other.push(meta[1]);
+     if(score>=12) good.push([`${meta[1]}: esplorata a fondo`,[q&&q.seen?q.seen+" domande":"",f&&f.seen?f.seen+" curiosità":"",m?m+" missioni":"",a?a.n+" risposte":"",pl(id)?pl(id)+" nozioni nel percorso":""].filter(Boolean).join(", ")]);
+     rows+=`<div class="row"><span>${meta[0]} ${esc(meta[1])}</span><span class="v">${a?Math.round(a.p*100)+"% · ":""}${q?`sfide ${q.seen}/${q.total}`:"sfide —"} · ${f?`curiosità ${f.seen}`:"curiosità —"} · missioni ${m}${pathTxt(id)}</span></div>`;});
+   if(core.length) bad.push([`Materie di base mai esplorate: ${core.join(", ")}`,"nessuna sfida, curiosità o missione"]);
+   if(other.length) bad.push([`Altre materie non ancora aperte: ${other.join(", ")}`,""]);
+   S.push({c:"var(--c2)",t:"🌍 Scopri · materie",st:mix(explored===0?"none":core.length>=2?"bad":core.length||other.length>3?"mid":"good",...ids),html:rows});}
+
+  // SPORT, GIOCHI, METODO
+  {let rows="",any=0;Object.entries(SPORT).forEach(([id,[ic,n]])=>{const q=deckSeen(D,"q-sp-"+id),f=deckSeen(D,"f-sp-"+id);if(q||f||pl("sp-"+id))any++;rows+=`<div class="row"><span>${ic} ${n}</span><span class="v">${q?`quiz ${q.seen}/${q.total}`:"quiz —"} · ${f?`curiosità ${f.seen}`:"curiosità —"}${pathTxt("sp-"+id)}</span></div>`;});
+   const mv=+D["moves-done"]||0; rows+=`<div class="row"><span>🤸 Pause movimento fatte</span><span class="v">${mv}</span></div>`; rows=accRow("sport")+rows; accEval("sport","Sport");
+   if(mv>=5) good.push([`Movimento: ${mv} pause attive fatte`,""]);
+   S.push({c:"var(--c5)",t:"🤸 Sport e movimento",st:mix(any||mv?"good":"none","sport"),html:rows});}
+  {let rows="",tot=0;Object.entries(GAMES).forEach(([id,[ic,n]])=>{const c=+gd[id]||0;tot+=c;rows+=`<div class="row"><span>${ic} ${n}</span><span class="v">${c?c+" vinte":"—"}</span></div>`;});
+   if(D["simon-best"]) rows+=`<div class="row"><span>🎵 Record «Segui la musica» (memoria)</span><span class="v">${D["simon-best"]} note</span></div>`;
+   if(D["cuoca-level"]) rows+=`<div class="row"><span>👩‍🍳 Livello «Cuoca pasticciona» (attenzione)</span><span class="v">${D["cuoca-level"]}</span></div>`;
+   if(+D["simon-best"]>=7) good.push([`Memoria di lavoro: ${D["simon-best"]} note di fila`,"gioco «Segui la musica»"]);
+   S.push({c:"var(--c6)",t:"🎮 Giochi di attenzione e memoria",st:tot?"good":"none",html:rows});}
+  {const steps=Array.isArray(D["m-steps"])?D["m-steps"].length:0,frasi=Array.isArray(D["m-frasi"])?D["m-frasi"].length:0,pow=Array.isArray(D["m-open"])?D["m-open"].length:0;
+   const rows=`<div class="row"><span>📅 Pagine di diario scritte</span><span class="v">${diary}</span></div><div class="row"><span>🧠 Passi del metodo di studio spuntati</span><span class="v">${steps}</span></div><div class="row"><span>💪 Superpoteri aperti</span><span class="v">${pow}</span></div><div class="row"><span>✍️ Frasi della forza salvate</span><span class="v">${frasi}</span></div>`;
+   if(diary>=5) good.push([`Diario: ${diary} pagine scritte`,"buona abitudine a raccontarsi"]);
+   S.push({c:"var(--c4)",t:"🧠 Metodo di studio e diario",st:diary||steps?"good":"none",html:rows});}
+
+  if(!days.length&&prog){ // solo il CSV: tengo solo le evidenze sulle risposte
+    const keep=x=>/risposte giuste/.test(x[0]); for(const a of [good,bad]){const k=a.filter(keep);a.length=0;a.push(...k);} }
+  // UTILIZZO
+  if(lastUse&&ago(lastUse)>=7) bad.push([`App non usata da ${ago(lastUse)} giorni`,`ultimo utilizzo ${fmt(lastUse)}`]);
+  if(days.length&&last7<3) bad.push([`Uso discontinuo: ${last7} giorni negli ultimi 7`,"meglio poco ma tutti i giorni"]);
+  if(last7>=5) good.push([`Costanza: ${last7} giorni su 7`,`serie attuale ${streak} giorni di fila`]);
+  const path=pathSummary(D.path,ref);
+  if(path){let l=0,so=0,du=0;Object.values(path.per).forEach(e=>{l+=e.l;so+=e.s;du+=e.d;});path.l=l;path.s=so;path.d=du;
+    if(du>=25)bad.push([`Ripasso arretrato: ${du} nozioni da ripassare`,"il ripasso a intervalli funziona se si fa nei giorni giusti"]);
+    if(so>=30)good.push([`${so} nozioni consolidate`,"ricordate anche a distanza di due settimane o più"]);}
+  const pd=D["path-day"]&&D["path-day"].d===ref?D["path-day"]:null;
+  const gems=D.gems&&typeof D.gems==="object"?D.gems:null;
+  const figs=D.coll&&D.coll.f?Object.values(D.coll.f).reduce((a,x)=>a+(Array.isArray(x)?x.length:0),0):(D.coll&&D.coll.figs!=null?+D.coll.figs:null);
+  const piggy=D.piggy&&D.piggy.n!=null?+D.piggy.n:null;
+  const di=diaryInfo(D,ref);
+  if(di.streak>=3) bad.unshift([`Diario: si sente giù da ${di.streak} pagine di fila`,"vedi «Diario · come sta»"]);
+  else if(di.strong.length) bad.unshift([`Diario: ${di.strong.length===1?"un’emozione difficile segnata":"emozioni difficili segnate"} «tanto» o «tantissimo» negli ultimi 7 giorni`,"vedi «Diario · come sta»"]);
+  return {di,D,days,last7,last30,lastUse,streak,diary,name,S,good,bad,prog:!!prog,ref,path,pd,gems,figs,piggy,energy:D.dragon&&D.dragon.energy||0,dragon:D.dragon&&D.dragon.name||""};
+}
+function summary(A){ // riepilogo numerico per l'andamento tra un caricamento e l'altro
+  const D=A.D,md=D["math-done"]||{};
+  return {d:A.ref,days:A.days.length,energy:A.energy,math:Object.values(md).reduce((a,b)=>a+(+b||0),0),sci:Object.keys(D["sci-done"]||{}).length,
+    tab:Object.values(D["tab-best"]||{}).reduce((a,b)=>a+(+b||0),0),diary:A.diary,good:A.good.length,bad:A.bad.length};
+}
+
+/* ---------- risposte giorno per giorno (registro «prog-days») ---------- */
+function daysCard(h,ref){
+  if(!h||typeof h!=="object"||!Object.keys(h).length)return "";
+  const end=new Date((ref||today())+"T12:00");let rows="",max=1,sum={ok:0,ko:0},list=[];
+  for(let i=13;i>=0;i--){const d=new Date(end);d.setDate(d.getDate()-i);const k=iso(d),v=h[k]||{};let ok=0,ko=0;Object.values(v).forEach(r=>{ok+=+r.ok||0;ko+=+r.ko||0;});list.push([k,ok,ko]);max=Math.max(max,ok+ko);sum.ok+=ok;sum.ko+=ko;}
+  rows=list.map(([k,ok,ko])=>`<div class="dbar"><span class="dl">${new Date(k+"T12:00").toLocaleDateString("it-IT",{weekday:"short",day:"numeric"})}</span><span class="dt"><i class="ok" style="width:${ok/max*100}%"></i><i class="ko" style="width:${ko/max*100}%"></i></span><span class="dn">${ok+ko?`${ok} ✓ · ${ko} ✗`:"—"}</span></div>`).join("");
+  const n=sum.ok+sum.ko;
+  return `<div class="card" style="margin-top:12px"><b>Risposte degli ultimi 14 giorni</b>${n?` <span class="lbl">· ${sum.ok} giuste, ${sum.ko} sbagliate (${Math.round(sum.ok/n*100)}%)</span>`:""}<div class="dbars">${rows}</div><div class="lbl">Verde = giuste, rosso = sbagliate, giorno per giorno.</div></div>`;
+}
+
+function pathCard(A){
+  const P=A.path; if(!P&&!A.pd&&!A.gems&&A.figs==null&&A.piggy==null)return "";
+  let h=`<h2>Percorso e memoria</h2><div class="kpi">`;
+  if(P)h+=(P.l?`<div><b>${P.l}</b><span>nozioni imparate nel percorso</span></div>`:"")+(P.s?`<div><b>${P.s}</b><span>consolidate (ricordate dopo 2+ settimane)</span></div>`:"")+(P.d?`<div><b>${P.d}</b><span>da ripassare${P.d>=25?" · arretrato":""}</span></div>`:"")+(P.tappe?`<div><b>${P.tappe}</b><span>tappe completate</span></div>`:"");
+  if(A.pd)h+=`<div><b>${A.pd.done||(A.pd.nuove>=12&&A.pd.rip>=(A.pd.ripGoal||0))?"✅":"…"}</b><span>obiettivo di oggi: ${+A.pd.nuove||0} nuove, ${+A.pd.rip||0} ripassi</span></div>`;
+  if(A.gems&&+A.gems.tot)h+=`<div><b>${+A.gems.tot||0}</b><span>gemme guadagnate (${+A.gems.n||0} da spendere)</span></div>`;
+  if(A.figs)h+=`<div><b>${A.figs}<span class="lbl">/300</span></b><span>figurine dell’album</span></div>`;
+  if(A.piggy)h+=`<div><b>${A.piggy}</b><span>nel salvadanaio</span></div>`;
+  h+=`</div>`;if(h.endsWith('<div class="kpi"></div>'))h=h.replace(/<div class="kpi"><\/div>$/,"");
+  if(P&&Object.keys(P.per).length){const rows=Object.entries(P.per).sort((a,b)=>b[1].l-a[1].l).map(([u,e])=>`<div class="row"><span>${esc(unitLabel(u))}</span><span class="v">${e.l} imparate · ${e.s} consolidate${e.d?` · <b style="color:var(--bad,#c2410c)">${e.d} da ripassare</b>`:""}</span></div>`).join("");
+    h+=`<div class="card" style="margin-top:12px"><b>Materia per materia nel percorso</b>${rows}<div class="lbl">«Consolidate» = la nozione è stata ricordata più volte di fila e il prossimo ripasso è tra due settimane o più.</div></div>`;}
+  return h;
+}
+
+/* ---------- 📅 diario: come sta (emozioni, presenze e pagine scritte) ---------- */
+const MOODS={felice:["😄","Felice","up"],serena:["😊","Serena","up"],orgogliosa:["🤩","Orgogliosa","up"],carica:["💪","Carica","up"],cosi:["😐","Così così","mid"],stanca:["😴","Stanca","tired"],triste:["😢","Triste","down"],arrabbiata:["😠","Arrabbiata","down"],preoccupata:["😟","Preoccupata","down"]};
+const MK={up:["Serena / felice","var(--good)"],mid:["Così così","var(--mid)"],tired:["Stanca","var(--c1)"],down:["Giù (triste, arrabbiata, preoccupata)","var(--bad)"]};
+const FORZA=["","pochissimo","un po’","abbastanza","tanto","tantissimo"];
+function diaryInfo(D,ref){
+  const dd=D.diary&&typeof D.diary==="object"?D.diary:{};
+  const ago=k=>Math.round((new Date(ref+"T12:00")-new Date(k+"T12:00"))/864e5);
+  const E=Object.keys(dd).filter(k=>/^\d{4}-\d{2}-\d{2}$/.test(k)&&ago(k)>=0).sort().map(k=>{const v=dd[k];
+    if(!v||typeof v!=="object")return {d:k,old:1};
+    return {d:k,m:MOODS[v.m]?v.m:null,f:Math.min(5,Math.max(1,Math.round(+v.f||3))),p:v.p==="P"||v.p==="A"?v.p:null,w:typeof v.w==="string"?v.w.trim():""};});
+  const withM=E.filter(e=>e.m);
+  // giù di fila, come nell'app: pagine con un'emozione «giù», con buchi di al massimo 2 giorni
+  let streak=0,prev=null;
+  for(const e of withM.slice().reverse()){if(prev&&ago(e.d)-ago(prev)>2)break;if(MOODS[e.m][2]!=="down")break;streak++;prev=e.d;}
+  const lastM=withM.length?withM[withM.length-1].d:null; if(!lastM||ago(lastM)>3)streak=0;
+  const strong=withM.filter(e=>MOODS[e.m][2]==="down"&&e.f>=4&&ago(e.d)<7);
+  const l30=E.filter(e=>!e.old&&ago(e.d)<30), cnt={up:0,mid:0,tired:0,down:0}, per={};
+  l30.forEach(e=>{if(!e.m)return;cnt[MOODS[e.m][2]]++;per[e.m]=(per[e.m]||0)+1;});
+  const pres={P:l30.filter(e=>e.p==="P").length,A:l30.filter(e=>e.p==="A").length};
+  return {E,streak,strong,l30,cnt,per,pres,old:E.filter(e=>e.old).length,texts:E.filter(e=>e.w).length,ago};
+}
+function diaryCard(A){
+  const I=A.di; if(!I||!I.E.length)return "";
+  const day=k=>new Date(k+"T12:00").toLocaleDateString("it-IT",{weekday:"short",day:"numeric",month:"short"});
+  let h=`<h2>📅 Diario · come sta</h2>`;
+  if(I.streak>=3||I.strong.length){
+    const li=[];
+    if(I.streak>=3)li.push(`<li><b>Si sente giù da ${I.streak} pagine di fila</b><small>ultima: ${esc(day(I.E.filter(e=>e.m).slice(-1)[0].d))}</small></li>`);
+    I.strong.slice(-4).reverse().forEach(e=>li.push(`<li><b>${MOODS[e.m][0]} ${esc(MOODS[e.m][1])} · «${FORZA[e.f]}»</b><small>${esc(day(e.d))}${e.w?" · «"+esc(e.w.length>90?e.w.slice(0,90)+"…":e.w)+"»":""}</small></li>`));
+    h+=`<div class="evc bad" style="margin-bottom:12px"><h3>⚠️ Da guardare con attenzione</h3><ul>${li.join("")}</ul></div>`;
+  }
+  const tot=I.cnt.up+I.cnt.mid+I.cnt.tired+I.cnt.down;
+  h+=`<div class="kpi"><div><b>${I.l30.length}</b><span>pagine negli ultimi 30 giorni</span></div>`+
+    Object.keys(MK).filter(k=>I.cnt[k]).map(k=>`<div><b style="color:${MK[k][1]}">${I.cnt[k]}</b><span>${esc(MK[k][0])}</span></div>`).join("")+
+    (I.pres.P?`<div><b>${I.pres.P}</b><span>presenze a scuola segnate (30 gg)</span></div>`:"")+(I.pres.A?`<div><b>${I.pres.A}</b><span>assenze segnate (30 gg)</span></div>`:"")+`</div>`;
+  // ultimi 14 giorni
+  const end=new Date(A.ref+"T12:00"),map={};I.E.forEach(e=>map[e.d]=e);let cells="";
+  for(let i=13;i>=0;i--){const d=new Date(end);d.setDate(d.getDate()-i);const k=iso(d),e=map[k];
+    cells+=`<div class="dy${e&&e.m?" "+MOODS[e.m][2]:""}" title="${esc(day(k))}${e&&e.m?" · "+MOODS[e.m][1]+" ("+FORZA[e.f]+")":""}"><small>${d.toLocaleDateString("it-IT",{weekday:"narrow"})} ${d.getDate()}</small><span>${e&&e.m?MOODS[e.m][0]:e?"📝":"·"}</span><i>${e&&e.m?"●".repeat(e.f):""}</i><em>${e&&e.p==="P"?"🏫":e&&e.p==="A"?"🏠":""}</em></div>`;}
+  h+=`<div class="card" style="margin-top:12px"><b>Ultimi 14 giorni</b><div class="dys">${cells}</div>`+
+    (tot?`<div class="mbar">${Object.keys(MK).map(k=>I.cnt[k]?`<i style="width:${I.cnt[k]/tot*100}%;background:${MK[k][1]}" title="${esc(MK[k][0])}: ${I.cnt[k]}"></i>`:"").join("")}</div>`:"")+
+    `<div class="lbl">I pallini dicono quanto forte (da 1 «pochissimo» a 5 «tantissimo»). 🏫 presente · 🏠 assente. La barra: emozioni degli ultimi 30 giorni.</div>`+
+    (Object.keys(I.per).length?`<div class="lbl" style="margin-top:6px">Le più frequenti: ${Object.entries(I.per).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([m,n])=>MOODS[m][0]+" "+esc(MOODS[m][1].toLowerCase())+" "+n).join(" · ")}</div>`:"")+`</div>`;
+  // le pagine
+  const pages=I.E.filter(e=>!e.old&&(e.w||e.m||e.p)).slice().reverse();
+  const pg=e=>`<div class="dpage${e.m?" "+MOODS[e.m][2]:""}"><div class="dph"><b>${esc(day(e.d))}</b>${e.m?`<span>${MOODS[e.m][0]} ${esc(MOODS[e.m][1])} · ${FORZA[e.f]}</span>`:""}${e.p?`<span class="lbl">${e.p==="P"?"🏫 a scuola":"🏠 assente"}</span>`:""}</div>${e.w?`<p>${esc(e.w)}</p>`:`<p class="lbl">Nessun testo scritto.</p>`}</div>`;
+  const recent=pages.filter(e=>I.ago(e.d)<30), older=pages.filter(e=>I.ago(e.d)>=30);
+  h+=`<div class="card"><b>Le pagine del diario</b> <span class="lbl">· ${I.texts} con testo</span>${recent.length?recent.map(pg).join(""):`<p class="lbl">Nessuna pagina negli ultimi 30 giorni.</p>`}`+
+    (older.length?`<details class="dold"><summary>Pagine più vecchie (${older.length})</summary>${older.map(pg).join("")}</details>`:"")+
+    (I.old?`<div class="lbl" style="margin-top:8px">${I.old} ${I.old===1?"pagina arrivata":"pagine arrivate"} prima di questo aggiornamento: si vede solo la data. Con il prossimo invio dall’iPad arrivano anche emozioni e testi.</div>`:"")+
+    `<div class="lbl" style="margin-top:8px">I testi arrivano con il collegamento automatico, cifrato. Con il QR arrivano solo emozioni e presenze.</div></div>`;
+  return h;
+}
+
+/* ---------- 🎬 video guardati (premio dell'app) ---------- */
+function videoCard(A){
+  const L=A.D&&A.D["vid-log"]; if(!L||typeof L!=="object"||!Object.keys(L).length)return "";
+  const rows=Object.entries(L).map(([k,v])=>({d:k.split("|")[0],id:k.split("|")[1],t:v&&v.t||"",u:v&&v.u||"",f:!!(v&&v.f)})).sort((a,b)=>b.d<a.d?-1:b.d>a.d?1:0);
+  const ref7=new Date(Date.now()-7*864e5).toISOString().slice(0,10), w=rows.filter(r=>r.d>=ref7), full=rows.filter(r=>r.f).length;
+  let h=`<h2>🎬 Video</h2><div class="kpi"><div><b>${w.length}</b><span>video negli ultimi 7 giorni</span></div><div><b>${rows.length}</b><span>video in tutto</span></div><div><b>${full}</b><span>guardati fino alla fine</span></div></div>`;
+  h+=`<div class="card" style="margin-top:12px"><b>Ultimi video</b>`+rows.slice(0,15).map(r=>`<div class="row"><span>${esc(r.t)}${r.u?` <span class="lbl">· ${esc(unitLabel(r.u))}</span>`:""}</span><span class="v">${new Date(r.d+"T12:00").toLocaleDateString("it-IT",{weekday:"short",day:"numeric",month:"short"})} ${r.f?"✅":"⏸️"} <a href="https://www.youtube.com/watch?v=${encodeURIComponent(r.id)}" target="_blank" rel="noopener noreferrer">▶</a></span></div>`).join("")+`<div class="lbl">✅ = guardato fino alla fine · ⏸️ = chiuso prima. Per nascondere un video: sull’iPad, sezione Video → 👨‍👧 Genitore (PIN).</div></div>`;
+  return h;
+}
+
+/* ---------- 📈 andamento mese per mese (giorni di studio e risposte giuste) ---------- */
+const MESI_B=["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"];
+function monthCard(A){
+  const h=A.D["prog-days"]||{},M={};
+  const m=k=>M[k]||(M[k]={days:0,ok:0,ko:0,per:{}});
+  A.days.forEach(d=>m(d.slice(0,7)).days++);
+  Object.entries(h).forEach(([d,v])=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(d))return;const x=m(d.slice(0,7));Object.entries(v||{}).forEach(([k,r])=>{const ok=+r.ok||0,ko=+r.ko||0;x.ok+=ok;x.ko+=ko;const y=x.per[k]||(x.per[k]={ok:0,ko:0});y.ok+=ok;y.ko+=ko;});});
+  const keys=Object.keys(M).filter(k=>M[k].days||M[k].ok+M[k].ko).sort().slice(-12);
+  if(keys.length<2)return "";
+  const lab=k=>MESI_B[+k.slice(5,7)-1]+(k.slice(5,7)==="01"||k===keys[0]?" "+k.slice(2,4):"");
+  const W=640,H=200,pl=34,pr=34,pt=14,pb=28,cw=(W-pl-pr)/keys.length,maxD=31;
+  const pc=k=>{const x=M[k],n=x.ok+x.ko;return n>=10?Math.round(x.ok/n*100):null;};
+  let bars="",pts=[],txt="";
+  keys.forEach((k,i)=>{const x=M[k],bh=(H-pt-pb)*x.days/maxD,cx=pl+cw*i+cw/2;
+    bars+=`<rect x="${(cx-cw*0.3).toFixed(1)}" y="${(H-pb-bh).toFixed(1)}" width="${(cw*0.6).toFixed(1)}" height="${bh.toFixed(1)}" rx="4" fill="var(--accent)" opacity=".75"><title>${lab(k)}: ${x.days} giorni</title></rect>`+
+      (x.days?`<text x="${cx.toFixed(1)}" y="${(bh>20?H-pb-6:H-pb-bh-4).toFixed(1)}" text-anchor="middle" font-size="12" font-weight="700" fill="${bh>20?"#fff":"var(--muted)"}">${x.days}</text>`:"");
+    txt+=`<text x="${cx.toFixed(1)}" y="${H-8}" text-anchor="middle" font-size="12" fill="var(--muted)">${lab(k)}</text>`;
+    const p=pc(k);if(p!=null)pts.push([cx,pt+(H-pt-pb)*(1-p/100),p,k]);});
+  const line=pts.length>1?`<polyline fill="none" stroke="var(--good)" stroke-width="3" stroke-linejoin="round" points="${pts.map(q=>q[0].toFixed(1)+","+q[1].toFixed(1)).join(" ")}"/>`:"";
+  const dots=pts.map(q=>`<circle cx="${q[0].toFixed(1)}" cy="${q[1].toFixed(1)}" r="4.5" fill="var(--good)"><title>${lab(q[3])}: ${q[2]}% giuste</title></circle><text x="${q[0].toFixed(1)}" y="${(q[1]-8).toFixed(1)}" text-anchor="middle" font-size="11" font-weight="700" fill="var(--good)">${q[2]}%</text>`).join("");
+  const grid=[0,50,100].map(v=>{const y=pt+(H-pt-pb)*(1-v/100);return `<line x1="${pl}" x2="${W-pr}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="${W-pr+4}" y="${y+4}" font-size="10" fill="var(--good)">${v}%</text>`;}).join("");
+  // materie: % giuste mese per mese (solo con almeno 10 risposte)
+  const subs=[...new Set(keys.flatMap(k=>Object.keys(M[k].per)))].filter(s=>keys.some(k=>{const y=M[k].per[s];return y&&y.ok+y.ko>=10;}));
+  const cell=(k,s)=>{const y=M[k].per[s];if(!y||y.ok+y.ko<10)return `<td class="lbl">·</td>`;const p=Math.round(y.ok/(y.ok+y.ko)*100);return `<td class="${p>=85?"t-good":p>=60?"t-mid":"t-bad"}">${p}%</td>`;};
+  const tab=subs.length?`<div class="mtab"><table><thead><tr><th></th>${keys.map(k=>`<th>${lab(k)}</th>`).join("")}</tr></thead><tbody>${subs.map(s=>`<tr><th>${esc(subjName(s))}</th>${keys.map(k=>cell(k,s)).join("")}</tr>`).join("")}</tbody></table></div><div class="lbl">Risposte giuste per materia (mesi con almeno 10 risposte).</div>`:"";
+  const a=M[keys[keys.length-1]],b=M[keys[keys.length-2]],pa=pc(keys[keys.length-1]),pb2=pc(keys[keys.length-2]);
+  const MN=["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"],mn=k=>MN[+k.slice(5,7)-1],ka=keys[keys.length-1],kb=keys[keys.length-2];
+  const cmp=`${mn(ka).charAt(0).toUpperCase()+mn(ka).slice(1)}${ka===A.ref.slice(0,7)?" (finora)":""}: ${a.days} ${a.days===1?"giorno":"giorni"} di studio${pa!=null?", "+pa+"% giuste":""} · ${mn(kb)}: ${b.days} giorni${pb2!=null?", "+pb2+"%":""}`;
+  return `<h2>📈 Mese per mese</h2><div class="card"><b>${esc(cmp)}</b>
+    <svg class="mchart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Giorni di studio e risposte giuste mese per mese">${grid}${bars}${line}${dots}${txt}</svg>
+    <div class="lbl"><span style="color:var(--accent)">■</span> giorni di studio nel mese · <span style="color:var(--good)">●</span> percentuale di risposte giuste</div>${tab}</div>`;
+}
+
+/* ---------- vista ---------- */
+/*@VCENA*/
+const NEVER=/mai provata|mai aperte|mai esplorate|non ancora aperte|mai allenate/;
+const SUBJ={mate:"🔢 Matematica",scienze:"🔬 Scienze",sport:"🤸 Sport",parlo:"🇬🇧 Parlo inglese"};
+const subjName=k=>SUBJ[k]||(SCOPRI[k]?SCOPRI[k][0]+" "+SCOPRI[k][1]:unitLabel(k));
+function weekStats(h,ref,from,to){const out={ok:0,ko:0,days:0,per:{}};if(!h)return out;const end=new Date(ref+"T12:00");
+  for(let i=from;i<to;i++){const d=new Date(end);d.setDate(d.getDate()-i);const v=h[iso(d)];if(!v)continue;let n=0;Object.entries(v).forEach(([k,r])=>{const ok=+r.ok||0,ko=+r.ko||0;n+=ok+ko;out.ok+=ok;out.ko+=ko;const x=out.per[k]||(out.per[k]={ok:0,ko:0});x.ok+=ok;x.ko+=ko;});if(n)out.days++;}
+  return out;}
+function brief(A){
+  const h=A.D["prog-days"],w=weekStats(h,A.ref,0,7),p=weekStats(h,A.ref,7,14),n=w.ok+w.ko,pn=p.ok+p.ko,pc=n?Math.round(w.ok/n*100):null,ppc=pn?Math.round(p.ok/pn*100):null;
+  const L=Object.entries(w.per).map(([k,v])=>({k,n:v.ok+v.ko,pc:Math.round(v.ok/Math.max(1,v.ok+v.ko)*100)})).filter(x=>x.n>=5);
+  const best=L.slice().sort((a,b)=>b.pc-a.pc)[0],weak=L.slice().sort((a,b)=>a.pc-b.pc)[0];
+  const lines=[];
+  lines.push(`<b>${A.last7} ${A.last7===1?"giorno":"giorni"} su 7</b> con «Il mio mondo»${A.streak>1?` · ${A.streak} di fila`:""}`);
+  if(n)lines.push(`<b>${n} risposte</b>, ${pc}% giuste${ppc!=null?` <span class="trend ${pc>=ppc?"up":"down"}">${pc>=ppc?"+":""}${pc-ppc} punti rispetto alla settimana prima</span>`:""}`);
+  if(best&&weak&&best.k!==weak.k&&weak.pc<80)lines.push(`Va meglio in <b>${esc(subjName(best.k))}</b> (${best.pc}%), da rinforzare <b>${esc(subjName(weak.k))}</b> (${weak.pc}%)`);
+  else if(best)lines.push(`Va bene in <b>${esc(subjName(best.k))}</b> (${best.pc}%)`);
+  if(A.path&&A.path.d>=10)lines.push(`${A.path.d} nozioni da ripassare nel percorso`);
+  if(A.lastUse&&daysAgo(A.lastUse)>=3)lines.push(`⚠️ Non apre l’app da ${daysAgo(A.lastUse)} giorni`);
+  const di=A.di,alert=di&&(di.streak>=3||di.strong.length);
+  // domande da fare a cena: materie studiate nella settimana, prima quella più debole
+  const studied=[...new Set((weak?[weak.k]:[]).concat(Object.keys(w.per)).map(k=>k==="parlo"?"eng":k))].filter(k=>VCENA[k]);
+  if(!studied.length)studied.push("soldi");
+  const seed=+A.ref.replace(/-/g,""),cena=studied.slice(0,2).map(k=>({k,q:VCENA[k][seed%VCENA[k].length]}));
+  return `<div class="card brief"><h3 style="margin-bottom:6px">📌 In breve · ultimi 7 giorni</h3>
+    ${alert?`<div class="evc bad" style="margin:4px 0 10px;padding:8px 12px"><b>⚠️ Diario: ${di.streak>=3?"si sente giù da "+di.streak+" pagine di fila":"emozione difficile «tanto» negli ultimi 7 giorni"}</b> · <a href="#diario">vedi sotto</a></div>`:""}
+    <ul>${lines.map(x=>`<li>${x}</li>`).join("")}</ul>
+    <div class="lbl" style="margin-top:10px"><b>🍽️ A cena chiedile</b> (tocca per la risposta)</div>${cena.map(c=>`<details class="cena"><summary>${esc(c.q[0])} <small>${esc(subjName(c.k))}</small></summary><div>${esc(c.q[1])}</div></details>`).join("")}
+    <div class="btns"><button id="shareSum">📤 Condividi il riepilogo</button></div></div>`;
+}
+function summaryText(A){ // testo da mandare (senza i testi del diario)
+  const h=A.D["prog-days"],w=weekStats(h,A.ref,0,7),n=w.ok+w.ko;
+  const L=[`I progressi${A.name?" di "+A.name:""} · settimana fino al ${fmt(A.ref,{day:"numeric",month:"long"})}`,`Giorni di studio: ${A.last7}/7`];
+  if(n)L.push(`Risposte: ${n}, ${Math.round(w.ok/n*100)}% giuste`);
+  Object.entries(w.per).map(([k,v])=>[k,v.ok+v.ko,Math.round(v.ok/Math.max(1,v.ok+v.ko)*100)]).filter(x=>x[1]).sort((a,b)=>b[1]-a[1]).forEach(([k,c,pc])=>L.push(`· ${subjName(k)}: ${c} risposte, ${pc}%`));
+  if(A.path&&A.path.l)L.push(`Nozioni imparate nel percorso: ${A.path.l}`);
+  const g=A.good.slice(0,3).map(x=>"+ "+x[0]),b=A.bad.filter(x=>!/^Diario/.test(x[0])).slice(0,3).map(x=>"− "+x[0]);
+  return L.concat(g,b).join("\n");
+}
+function tidySubjects(root){ // nelle schede per materia: via le righe a zero o mai aperte
+  root.querySelectorAll(".sj .row").forEach(r=>{const v=r.querySelector(".v");if(!v)return;
+    const parts=v.innerHTML.split(" · ").filter(x=>!/—\s*$/.test(x.replace(/<[^>]+>/g,"").trim())&&!/^(missioni|esperimenti) 0$/.test(x.trim()));
+    const t=parts.join(" · ").replace(/<[^>]+>/g,"").trim();
+    if(!parts.length||!/[1-9]/.test(t))r.remove();else v.innerHTML=parts.join(" · ");});
+  root.querySelectorAll(".sj").forEach(c=>{const g=c.querySelector(".tabs-grid");if(g&&!g.querySelector(":not(.t-none)"))(g.previousElementSibling&&g.previousElementSibling.remove(),g.remove());
+    if(!c.querySelector(".row")&&!c.querySelector(".tabs-grid"))c.remove();});
+}
+function paintStatus(){
+  const el=$("stbar");if(!el)return;const pk=STATE&&STATE.pack,on=!!(LINK&&LINK.gist),g=lsGet("prog-gh-v1");
+  const age=on&&LINK.sent?(Date.now()-new Date(LINK.sent).getTime())/36e5:null;
+  let chip;
+  if(on&&(LINK.err&&!/aspetto il primo/.test(LINK.err)))chip=`<span class="stchip warn">⚠️ ${esc(LINK.err)}</span>`;
+  else if(g&&g.ok===false)chip=`<span class="stchip warn">⚠️ La chiave GitHub non funziona più</span>`;
+  else if(on&&age!=null&&age>36)chip=`<span class="stchip warn">⚠️ L’iPad non invia da ${Math.floor(age/24)} ${Math.floor(age/24)===1?"giorno":"giorni"}</span>`;
+  else if(on)chip=`<span class="stchip ok">✅ Arrivano da soli dall’iPad · ultimo invio ${esc(whenTxt(LINK.sent))}</span>`;
+  else if(pk)chip=`<span class="stchip">📥 Dati del ${fmt(pk.saved,{day:"numeric",month:"short"})}${pk.from?" · "+esc(pk.from):""}</span>`;
+  else chip=`<span class="stchip">Nessun dato ancora</span>`;
+  const warn=/warn/.test(chip),setup=$("setup");
+  el.innerHTML=chip+(on?`<button id="stNow">🔄 Aggiorna</button>`:"")+`<button id="stSet" aria-expanded="${!setup.hidden}">⚙️ ${setup.hidden?"Collegamento e caricamento":"Chiudi il collegamento"}</button>`;
+  $("stSet").onclick=()=>{setup.hidden=!setup.hidden;paintStatus();if(!setup.hidden)setup.scrollIntoView({behavior:"smooth",block:"start"});};
+  if($("stNow"))$("stNow").onclick=()=>pull(true);
+  const need=warn||(!pk&&!on);
+  if(need&&!paintStatus.auto){paintStatus.auto=1;setup.hidden=false;el.querySelector("#stSet").textContent="⚙️ Chiudi il collegamento";}
+  else if(!need&&paintStatus.auto===1){paintStatus.auto=2;setup.hidden=true;el.querySelector("#stSet").textContent="⚙️ Collegamento e caricamento";}
+}
+function render(pack,hist){
+  const out=$("out");
+  $("fClear").hidden=!pack;
+  if(!pack){ $("srcInfo").textContent=""; $("title").textContent="I progressi";
+    out.innerHTML=`<div class="empty"><b>Ancora nessun dato</b>Collega l’iPad di «Il mio mondo» con il QR (in «⚙️ Collegamento e caricamento»): poi i progressi arrivano da soli.</div>`; paintStatus(); return; }
+  const A=analyze(pack);
+  A.bad=A.bad.filter(x=>!NEVER.test(x[0]));
+  $("title").textContent=A.name?"I progressi di "+A.name:"I progressi";
+  $("srcInfo").textContent="Dati del "+fmt(pack.saved,{weekday:"long",day:"numeric",month:"long",year:"numeric"})+(pack.progAt?" · risposte aggiornate il "+fmt(pack.progAt,{day:"numeric",month:"long"}):"")+(pack.from?" · "+pack.from:"");
+  const prev=hist.filter(h=>h.d<A.ref).slice(-1)[0], now=summary(A);
+  const tr=(k,inv)=>{if(!prev||prev[k]==null)return "";const d=now[k]-prev[k];if(!d)return "";const up=inv?d<0:d>0;return `<span class="trend ${up?"up":"down"}">${d>0?"+":""}${d}</span>`;};
+  const set=new Set(A.days),end=new Date(A.ref+"T12:00"),start=new Date(end);start.setDate(start.getDate()-55);const lead=(start.getDay()+6)%7;
+  let heat='<i class="x"></i>'.repeat(lead);for(let d=new Date(start);d<=end;d.setDate(d.getDate()+1)){const k=iso(d);heat+=`<i class="${set.has(k)?"on":""}" title="${fmt(k)}"></i>`;}
+  const li=a=>a.length?`<ul>${a.map(([t,s])=>`<li>${esc(t)}${s?`<small>${esc(s)}</small>`:""}</li>`).join("")}</ul>`:`<p class="lbl" style="margin:0">Niente da segnalare.</p>`;
+  const stTxt={good:"Bene",mid:"Da curare",bad:"Da rinforzare",none:"Non usata"};
+  const k=(v,t)=>v?`<div><b>${v}</b><span>${t}</span></div>`:"";
+  const subj=A.S.filter(x=>x.st!=="none");
+  out.innerHTML=`
+  ${A.days.length||A.D["prog-days"]?brief(A):""}
+  ${A.good.length||A.bad.length?`<h2>In evidenza</h2><div class="ev">${A.good.length?`<div class="evc good"><h3>✅ Punti di forza</h3>${li(A.good)}</div>`:""}${A.bad.length?`<div class="evc bad"><h3>⚠️ Da rinforzare</h3>${li(A.bad)}</div>`:""}</div>`:""}
+  <div id="diario">${diaryCard(A)}</div>
+  ${A.days.length?`<h2>Utilizzo</h2><div class="kpi">${k(A.days.length+tr("days"),"giorni di utilizzo in totale")}${k(A.last7?A.last7+'<span class="lbl">/7</span>':"","giorni negli ultimi 7")}${k(A.last30,"giorni negli ultimi 30")}${k(A.streak>1?A.streak:"","giorni di fila (serie attuale)")}${k(A.lastUse?(daysAgo(A.lastUse)===0?"oggi":fmt(A.lastUse,{day:"numeric",month:"short"})):"","ultimo utilizzo")}${k(A.energy?A.energy+tr("energy"):"","energia del drago"+(A.dragon?" «"+esc(A.dragon)+"»":""))}</div>`:""}
+  ${daysCard(A.D["prog-days"],A.ref)}
+  ${A.days.length?`<div class="card" style="margin-top:12px"><b>Giorni di utilizzo · ultime 8 settimane</b><div class="heat">${heat}</div><div class="lbl">Ogni quadratino è un giorno (righe: lunedì → domenica). Verde = app usata.</div></div>`:""}
+  ${monthCard(A)}
+  ${pathCard(A)}
+  ${subj.length?`<h2>Materia per materia</h2><div class="subj">${subj.map(s=>`<div class="sj" style="--c:${s.c}"><h3><span>${s.t}</span><span class="badge ${s.st}">${stTxt[s.st]}</span></h3>${s.html}</div>`).join("")}</div>`:""}
+  ${videoCard(A)}
+  ${prev?`<p class="lbl" style="margin:8px 4px">Confronto con la copia del ${fmt(prev.d)}: matematica ${now.math-prev.math>=0?"+":""}${now.math-prev.math} esercizi, scienze ${now.sci-prev.sci>=0?"+":""}${now.sci-prev.sci} argomenti, diario ${now.diary-prev.diary>=0?"+":""}${now.diary-prev.diary} pagine.</p>`:""}
+  <details class="more"><summary>ℹ️ Come leggere questi dati</summary><div class="note">${A.prog?"Le percentuali di risposte giuste vengono dal registro delle risposte di «Il mio mondo».":"Le carenze si basano sulle tabelline, sui livelli e sulla costanza: le risposte dei quiz arriveranno quando l’app le invia."} Qui compare solo quello che ha già usato: materie e giochi mai aperti non sono elencati. I numeri «x/y» delle sfide indicano quante domande diverse sono già uscite rispetto al totale disponibile.</div></details>`;
+  tidySubjects(out);
+  const sh=$("shareSum");if(sh)sh.onclick=async()=>{const t=summaryText(A);try{if(navigator.share){await navigator.share({title:"I progressi",text:t});return;}}catch(e){if(e&&e.name==="AbortError")return;}
+    try{await navigator.clipboard.writeText(t);toast("Riepilogo copiato");}catch(e){toast("Non riesco a copiare");}};
+  paintStatus();
+}
+
+/* ---------- avvio ---------- */
+let STATE={pack:null,hist:[]};
+/* i dati non si perdono mai: ogni nuovo arrivo si UNISCE a quelli già salvati (i contatori tengono il valore più alto,
+   i giorni si sommano). Così un iPad reinstallato o un'app aggiornata non cancellano lo storico. */
+const LATEST=new Set(["gems","piggy","path-day","quests","dragon"]);
+function mergeVal(o,n,key){
+  if(n===undefined||n===null)return o;if(o===undefined||o===null)return n;
+  if(typeof o==="number"&&typeof n==="number")return Math.max(o,n);
+  if(Array.isArray(o)&&Array.isArray(n)){if(o.every(x=>typeof x!=="object")&&n.every(x=>typeof x!=="object"))return [...new Set(o.concat(n))].sort();return n.length>=o.length?n:o;}
+  if(typeof o==="object"&&typeof n==="object"&&!Array.isArray(o)&&!Array.isArray(n)){const r=Object.assign({},o);Object.keys(n).forEach(k=>{r[k]=mergeVal(o[k],n[k],k);});return r;}
+  return n;
+}
+function mergeData(od,nd){
+  const r=Object.assign({},od||{});
+  Object.keys(nd||{}).forEach(k=>{
+    if(LATEST.has(k)){r[k]=nd[k];return;}
+    if(k==="dragon"&&od&&od.dragon){r[k]=Object.assign({},nd[k],{energy:Math.max(+od.dragon.energy||0,+nd[k].energy||0)});return;}
+    if(k==="path"&&od&&od.path&&nd.path){const sumL=x=>Object.values((x&&x.sum)||{}).reduce((a,e)=>a+(+e.l||0),0);r[k]=sumL(nd.path)>=sumL(od.path)?nd.path:Object.assign({},od.path,{ref:nd.path.ref});return;}
+    r[k]=mergeVal(od?od[k]:undefined,nd[k],k);
+  });
+  if(od&&od.dragon&&nd&&nd.dragon)r.dragon=Object.assign({},nd.dragon,{energy:Math.max(+od.dragon.energy||0,+nd.dragon.energy||0)});
+  return r;
+}
+async function archive(pack){try{const r=await kv("readonly","progressi-archivio");const a=r?JSON.parse(r):[];a.push({at:new Date().toISOString(),pack});await kv("readwrite","progressi-archivio",JSON.stringify(a.slice(-20)));}catch(e){}}
+try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist();}catch(e){}
+async function accept(pack,from,quiet){
+  archive(pack);
+  if(STATE.pack&&STATE.pack.data&&pack.data){const keepSaved=pack.saved;pack={saved:keepSaved,loaded:pack.loaded,data:mergeData(STATE.pack.data,pack.data)};}
+  pack.from=from; const A=analyze(pack); const s=summary(A);
+  const hist=(STATE.hist||[]).filter(h=>h.d!==s.d); hist.push(s); hist.sort((a,b)=>a.d<b.d?-1:1);
+  STATE={pack,hist:hist.slice(-60)}; await saveAll(STATE.pack,STATE.hist); render(STATE.pack,STATE.hist); if(!quiet)toast("Progressi aggiornati");
+}
+/* ---------- 📷 QR di «Il mio mondo»: i progressi arrivano inquadrando lo schermo dell'iPad ---------- */
+/* tiny-inflate (MIT, Devon Govett): decompressione di riserva se il browser non ha DecompressionStream */
+const tinyInflate=(function(){
+var TINF_OK = 0;
+var TINF_DATA_ERROR = -3;
+
+function Tree() {
+  this.table = new Uint16Array(16);   /* table of code length counts */
+  this.trans = new Uint16Array(288);  /* code -> symbol translation table */
+}
+
+function Data(source, dest) {
+  this.source = source;
+  this.sourceIndex = 0;
+  this.tag = 0;
+  this.bitcount = 0;
+  
+  this.dest = dest;
+  this.destLen = 0;
+  
+  this.ltree = new Tree();  /* dynamic length/symbol tree */
+  this.dtree = new Tree();  /* dynamic distance tree */
+}
+
+/* --------------------------------------------------- *
+ * -- uninitialized global data (static structures) -- *
+ * --------------------------------------------------- */
+
+var sltree = new Tree();
+var sdtree = new Tree();
+
+/* extra bits and base tables for length codes */
+var length_bits = new Uint8Array(30);
+var length_base = new Uint16Array(30);
+
+/* extra bits and base tables for distance codes */
+var dist_bits = new Uint8Array(30);
+var dist_base = new Uint16Array(30);
+
+/* special ordering of code length codes */
+var clcidx = new Uint8Array([
+  16, 17, 18, 0, 8, 7, 9, 6,
+  10, 5, 11, 4, 12, 3, 13, 2,
+  14, 1, 15
+]);
+
+/* used by tinf_decode_trees, avoids allocations every call */
+var code_tree = new Tree();
+var lengths = new Uint8Array(288 + 32);
+
+/* ----------------------- *
+ * -- utility functions -- *
+ * ----------------------- */
+
+/* build extra bits and base tables */
+function tinf_build_bits_base(bits, base, delta, first) {
+  var i, sum;
+
+  /* build bits table */
+  for (i = 0; i < delta; ++i) bits[i] = 0;
+  for (i = 0; i < 30 - delta; ++i) bits[i + delta] = i / delta | 0;
+
+  /* build base table */
+  for (sum = first, i = 0; i < 30; ++i) {
+    base[i] = sum;
+    sum += 1 << bits[i];
+  }
+}
+
+/* build the fixed huffman trees */
+function tinf_build_fixed_trees(lt, dt) {
+  var i;
+
+  /* build fixed length tree */
+  for (i = 0; i < 7; ++i) lt.table[i] = 0;
+
+  lt.table[7] = 24;
+  lt.table[8] = 152;
+  lt.table[9] = 112;
+
+  for (i = 0; i < 24; ++i) lt.trans[i] = 256 + i;
+  for (i = 0; i < 144; ++i) lt.trans[24 + i] = i;
+  for (i = 0; i < 8; ++i) lt.trans[24 + 144 + i] = 280 + i;
+  for (i = 0; i < 112; ++i) lt.trans[24 + 144 + 8 + i] = 144 + i;
+
+  /* build fixed distance tree */
+  for (i = 0; i < 5; ++i) dt.table[i] = 0;
+
+  dt.table[5] = 32;
+
+  for (i = 0; i < 32; ++i) dt.trans[i] = i;
+}
+
+/* given an array of code lengths, build a tree */
+var offs = new Uint16Array(16);
+
+function tinf_build_tree(t, lengths, off, num) {
+  var i, sum;
+
+  /* clear code length count table */
+  for (i = 0; i < 16; ++i) t.table[i] = 0;
+
+  /* scan symbol lengths, and sum code length counts */
+  for (i = 0; i < num; ++i) t.table[lengths[off + i]]++;
+
+  t.table[0] = 0;
+
+  /* compute offset table for distribution sort */
+  for (sum = 0, i = 0; i < 16; ++i) {
+    offs[i] = sum;
+    sum += t.table[i];
+  }
+
+  /* create code->symbol translation table (symbols sorted by code) */
+  for (i = 0; i < num; ++i) {
+    if (lengths[off + i]) t.trans[offs[lengths[off + i]]++] = i;
+  }
+}
+
+/* ---------------------- *
+ * -- decode functions -- *
+ * ---------------------- */
+
+/* get one bit from source stream */
+function tinf_getbit(d) {
+  /* check if tag is empty */
+  if (!d.bitcount--) {
+    /* load next tag */
+    d.tag = d.source[d.sourceIndex++];
+    d.bitcount = 7;
+  }
+
+  /* shift bit out of tag */
+  var bit = d.tag & 1;
+  d.tag >>>= 1;
+
+  return bit;
+}
+
+/* read a num bit value from a stream and add base */
+function tinf_read_bits(d, num, base) {
+  if (!num)
+    return base;
+
+  while (d.bitcount < 24) {
+    d.tag |= d.source[d.sourceIndex++] << d.bitcount;
+    d.bitcount += 8;
+  }
+
+  var val = d.tag & (0xffff >>> (16 - num));
+  d.tag >>>= num;
+  d.bitcount -= num;
+  return val + base;
+}
+
+/* given a data stream and a tree, decode a symbol */
+function tinf_decode_symbol(d, t) {
+  while (d.bitcount < 24) {
+    d.tag |= d.source[d.sourceIndex++] << d.bitcount;
+    d.bitcount += 8;
+  }
+  
+  var sum = 0, cur = 0, len = 0;
+  var tag = d.tag;
+
+  /* get more bits while code value is above sum */
+  do {
+    cur = 2 * cur + (tag & 1);
+    tag >>>= 1;
+    ++len;
+
+    sum += t.table[len];
+    cur -= t.table[len];
+  } while (cur >= 0);
+  
+  d.tag = tag;
+  d.bitcount -= len;
+
+  return t.trans[sum + cur];
+}
+
+/* given a data stream, decode dynamic trees from it */
+function tinf_decode_trees(d, lt, dt) {
+  var hlit, hdist, hclen;
+  var i, num, length;
+
+  /* get 5 bits HLIT (257-286) */
+  hlit = tinf_read_bits(d, 5, 257);
+
+  /* get 5 bits HDIST (1-32) */
+  hdist = tinf_read_bits(d, 5, 1);
+
+  /* get 4 bits HCLEN (4-19) */
+  hclen = tinf_read_bits(d, 4, 4);
+
+  for (i = 0; i < 19; ++i) lengths[i] = 0;
+
+  /* read code lengths for code length alphabet */
+  for (i = 0; i < hclen; ++i) {
+    /* get 3 bits code length (0-7) */
+    var clen = tinf_read_bits(d, 3, 0);
+    lengths[clcidx[i]] = clen;
+  }
+
+  /* build code length tree */
+  tinf_build_tree(code_tree, lengths, 0, 19);
+
+  /* decode code lengths for the dynamic trees */
+  for (num = 0; num < hlit + hdist;) {
+    var sym = tinf_decode_symbol(d, code_tree);
+
+    switch (sym) {
+      case 16:
+        /* copy previous code length 3-6 times (read 2 bits) */
+        var prev = lengths[num - 1];
+        for (length = tinf_read_bits(d, 2, 3); length; --length) {
+          lengths[num++] = prev;
+        }
+        break;
+      case 17:
+        /* repeat code length 0 for 3-10 times (read 3 bits) */
+        for (length = tinf_read_bits(d, 3, 3); length; --length) {
+          lengths[num++] = 0;
+        }
+        break;
+      case 18:
+        /* repeat code length 0 for 11-138 times (read 7 bits) */
+        for (length = tinf_read_bits(d, 7, 11); length; --length) {
+          lengths[num++] = 0;
+        }
+        break;
+      default:
+        /* values 0-15 represent the actual code lengths */
+        lengths[num++] = sym;
+        break;
+    }
+  }
+
+  /* build dynamic trees */
+  tinf_build_tree(lt, lengths, 0, hlit);
+  tinf_build_tree(dt, lengths, hlit, hdist);
+}
+
+/* ----------------------------- *
+ * -- block inflate functions -- *
+ * ----------------------------- */
+
+/* given a stream and two trees, inflate a block of data */
+function tinf_inflate_block_data(d, lt, dt) {
+  while (1) {
+    var sym = tinf_decode_symbol(d, lt);
+
+    /* check for end of block */
+    if (sym === 256) {
+      return TINF_OK;
+    }
+
+    if (sym < 256) {
+      d.dest[d.destLen++] = sym;
+    } else {
+      var length, dist, offs;
+      var i;
+
+      sym -= 257;
+
+      /* possibly get more bits from length code */
+      length = tinf_read_bits(d, length_bits[sym], length_base[sym]);
+
+      dist = tinf_decode_symbol(d, dt);
+
+      /* possibly get more bits from distance code */
+      offs = d.destLen - tinf_read_bits(d, dist_bits[dist], dist_base[dist]);
+
+      /* copy match */
+      for (i = offs; i < offs + length; ++i) {
+        d.dest[d.destLen++] = d.dest[i];
+      }
+    }
+  }
+}
+
+/* inflate an uncompressed block of data */
+function tinf_inflate_uncompressed_block(d) {
+  var length, invlength;
+  var i;
+  
+  /* unread from bitbuffer */
+  while (d.bitcount > 8) {
+    d.sourceIndex--;
+    d.bitcount -= 8;
+  }
+
+  /* get length */
+  length = d.source[d.sourceIndex + 1];
+  length = 256 * length + d.source[d.sourceIndex];
+
+  /* get one's complement of length */
+  invlength = d.source[d.sourceIndex + 3];
+  invlength = 256 * invlength + d.source[d.sourceIndex + 2];
+
+  /* check length */
+  if (length !== (~invlength & 0x0000ffff))
+    return TINF_DATA_ERROR;
+
+  d.sourceIndex += 4;
+
+  /* copy block */
+  for (i = length; i; --i)
+    d.dest[d.destLen++] = d.source[d.sourceIndex++];
+
+  /* make sure we start next block on a byte boundary */
+  d.bitcount = 0;
+
+  return TINF_OK;
+}
+
+/* inflate stream from source to dest */
+function tinf_uncompress(source, dest) {
+  var d = new Data(source, dest);
+  var bfinal, btype, res;
+
+  do {
+    /* read final block flag */
+    bfinal = tinf_getbit(d);
+
+    /* read block type (2 bits) */
+    btype = tinf_read_bits(d, 2, 0);
+
+    /* decompress block */
+    switch (btype) {
+      case 0:
+        /* decompress uncompressed block */
+        res = tinf_inflate_uncompressed_block(d);
+        break;
+      case 1:
+        /* decompress block with fixed huffman trees */
+        res = tinf_inflate_block_data(d, sltree, sdtree);
+        break;
+      case 2:
+        /* decompress block with dynamic huffman trees */
+        tinf_decode_trees(d, d.ltree, d.dtree);
+        res = tinf_inflate_block_data(d, d.ltree, d.dtree);
+        break;
+      default:
+        res = TINF_DATA_ERROR;
+    }
+
+    if (res !== TINF_OK)
+      throw new Error('Data error');
+
+  } while (!bfinal);
+
+  if (d.destLen < d.dest.length) {
+    if (typeof d.dest.slice === 'function')
+      return d.dest.slice(0, d.destLen);
+    else
+      return d.dest.subarray(0, d.destLen);
+  }
+  
+  return d.dest;
+}
+
+/* -------------------- *
+ * -- initialization -- *
+ * -------------------- */
+
+/* build fixed huffman trees */
+tinf_build_fixed_trees(sltree, sdtree);
+
+/* build extra bits and base tables */
+tinf_build_bits_base(length_bits, length_base, 4, 3);
+tinf_build_bits_base(dist_bits, dist_base, 2, 1);
+
+/* fix a special case */
+length_bits[28] = 0;
+length_base[28] = 258;
+
+return tinf_uncompress;
+
+})();
+async function qrDecode(txt){
+  const m=String(txt||"").match(/mm2([zj])=(?:(\d+)\.)?([A-Za-z0-9_-]+)/);if(!m)throw new Error("questo QR non è di «Il mio mondo»");
+  let b=m[3].replace(/-/g,"+").replace(/_/g,"/");while(b.length%4)b+="=";const bin=atob(b),u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);
+  let js=null;
+  if(m[1]==="z"){
+    if(window.DecompressionStream){try{js=await new Response(new Blob([u]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).text();}catch(e){js=null;}}
+    if(js===null){if(!m[2])throw new Error("rifai il QR dall’iPad aggiornato");const out=new Uint8Array(+m[2]);tinyInflate(u,out);js=new TextDecoder().decode(out);}
+  }else js=new TextDecoder().decode(u);
+  return normalize(JSON.parse(js));
+}
+function qrFromCanvas(x,w,h){const r=jsQR(x.getImageData(0,0,w,h).data,w,h,{inversionAttempts:"attemptBoth"});return r&&r.data&&/mm2[zj]=/.test(r.data)?r.data:null;}
+async function qrFromPhoto(file){
+  try{await loadJsQR();}catch(e){toast("Non riesco a caricare il lettore: "+e.message);return;}
+  const url=URL.createObjectURL(file);const img=new Image();img.src=url;try{await img.decode();}catch(e){toast("Foto non leggibile");return;}
+  for(const W of [1400,1000,700]){const sc=Math.min(1,W/img.naturalWidth),w=Math.round(img.naturalWidth*sc),h=Math.round(img.naturalHeight*sc);const c=document.createElement("canvas");c.width=w;c.height=h;const x=c.getContext("2d",{willReadFrequently:true});x.drawImage(img,0,0,w,h);const d=qrFromCanvas(x,w,h);if(d){URL.revokeObjectURL(url);return qrImport(d);}}
+  URL.revokeObjectURL(url);toast("Nella foto non trovo il QR: avvicinati e riprova");
+}
+async function qrImport(txt){try{const pack=await qrDecode(txt);await accept(pack,"QR dell’iPad");toast("Progressi letti dal QR ✅");}catch(e){toast("QR non letto: "+e.message);}}
+function loadJsQR(){return new Promise((res,rej)=>{if(window.jsQR)return res();const s=document.createElement("script");s.src="jsqr.js";s.onload=()=>res();s.onerror=()=>rej(new Error("serve internet la prima volta"));document.head.appendChild(s);});}
+async function scanQR(){
+  try{await loadJsQR();}catch(e){toast("Non riesco a caricare il lettore: "+e.message);return;}
+  const ov=document.createElement("div");ov.style.cssText="position:fixed;inset:0;z-index:9999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px";
+  ov.innerHTML='<video playsinline muted style="max-width:100%;max-height:70vh;border-radius:16px"></video><div style="color:#fff;font:600 17px system-ui;text-align:center">Inquadra il QR che l’iPad mostra in<br>🐉 Io → 💾 Salvataggi → 📱 Mostra il QR</div><button class="primary" id="qrStop">Chiudi</button>';
+  document.body.appendChild(ov);const v=ov.querySelector("video");let stream=null,done=false;
+  const stop=()=>{done=true;try{stream&&stream.getTracks().forEach(t=>t.stop());}catch(e){}ov.remove();};
+  ov.querySelector("#qrStop").onclick=stop;
+  try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"},audio:false});}catch(e){stop();$("fQRp").click();return;}
+  v.srcObject=stream;await v.play().catch(()=>{});
+  const c=document.createElement("canvas"),x=c.getContext("2d",{willReadFrequently:true});
+  const tick=()=>{if(done)return;if(v.videoWidth){const w=Math.min(1000,v.videoWidth),h=Math.round(v.videoHeight*w/v.videoWidth);c.width=w;c.height=h;x.drawImage(v,0,0,w,h);const d=qrFromCanvas(x,w,h);if(d){stop();qrImport(d);return;}}requestAnimationFrame(tick);};
+  tick();
+}
+$("fQR").onclick=scanQR;
+$("fQRp").onchange=e=>{const f=e.target.files&&e.target.files[0];e.target.value="";if(f)qrFromPhoto(f);};
+(function(){ if(/mm2[zj]=/.test(location.hash)){ const h=location.hash; history.replaceState(null,"",location.pathname); setTimeout(()=>qrImport(h),400); } })();
+function parseCSV(t){ // file «progressi-…csv» di «Il mio mondo»: materia;id;giuste;sbagliate;totale;percentuale_giuste
+  const lines=t.replace(/^\uFEFF/,"").split(/\r?\n/).filter(x=>x.trim());
+  if(!lines.length||!/^materia;id;giuste;sbagliate/i.test(lines[0]))throw new Error("non è il file dei progressi");
+  const prog={},days={};let blk="tot";
+  lines.slice(1).forEach(l=>{if(/^giorno;/i.test(l)){blk="day";return;}const c=l.split(";");
+    if(blk==="tot"){if(c.length>=4&&c[1])prog[c[1].trim()]={ok:+c[2]||0,ko:+c[3]||0};}
+    else if(c.length>=5&&/^\d{4}-\d\d-\d\d$/.test(c[0])){const d=days[c[0]]||(days[c[0]]={});d[c[2].trim()]={ok:+c[3]||0,ko:+c[4]||0};}});
+  if(!Object.keys(prog).length)throw new Error("nel file non ci sono risposte");prog.__days=days;return prog;}
+$("fIn").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{
+    const t=String(r.result);
+    if(/\.csv$/i.test(f.name)||/^\uFEFF?materia;/i.test(t)){
+      const prog=parseCSV(t), now=new Date().toISOString();
+      const base=STATE.pack?JSON.parse(JSON.stringify(STATE.pack)):{saved:now,loaded:now,data:{}};
+      const pd=prog.__days;delete prog.__days; base.data.prog=prog; if(pd&&Object.keys(pd).length)base.data["prog-days"]=pd; base.progAt=now; if(!STATE.pack) base.saved=now;
+      accept(base,STATE.pack?(STATE.pack.from||"copia")+" + risposte da «"+f.name+"»":"risposte da «"+f.name+"»");
+    } else accept(normalize(JSON.parse(t)),"file «"+f.name+"»");
+  }catch(err){toast("File non valido: "+err.message)}};r.readAsText(f);e.target.value="";};
+const local=fromThisDevice(); if(local){$("fLocal").hidden=false;$("fLocal").onclick=()=>accept({saved:new Date().toISOString(),loaded:new Date().toISOString(),data:local},"letti da questo iPad");}
+$("fClear").onclick=async()=>{STATE={pack:null,hist:[]};try{localStorage.removeItem(KEY);localStorage.removeItem(HKEY)}catch(e){}try{await kv("readwrite","progressi")}catch(e){}render(null,[]);};
+loadAll().then(o=>{STATE={pack:o.pack,hist:o.hist||[]};render(STATE.pack,STATE.hist);setTimeout(()=>pull(false),300);});
+/* ---------- collegamento automatico (gist cifrato scritto dall'iPad di «Il mio mondo») ---------- */
+const LKEY="prog-link-v1";
+const unb64=s=>{s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const b=atob(s),a=new Uint8Array(b.length);for(let i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;};
+function parseCode(c){const m=String(c||"").trim().match(/^MM1-([0-9a-f]{20,40})-([A-Za-z0-9_-]{40,46})$/);if(m)return{gist:m[1],key:m[2]};const n=String(c||"").trim().toLowerCase().replace(/\s+/g,"");return n.length>=6?{short:n}:null;}
+/* codice scelto dal genitore: stessa chiave e stessa etichetta calcolate sull'iPad */
+async function deriveLink(n){
+  const base=await crypto.subtle.importKey("raw",new TextEncoder().encode(n),"PBKDF2",false,["deriveBits"]);
+  const bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:new TextEncoder().encode("mie-app-mondo-v2"),iterations:310000,hash:"SHA-256"},base,256);
+  let s="";new Uint8Array(bits).forEach(x=>s+=String.fromCharCode(x));const key=btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+  const h=await crypto.subtle.digest("SHA-256",new TextEncoder().encode("tag:mie-app-mondo:"+n));const tag=Array.from(new Uint8Array(h)).slice(0,10).map(x=>("0"+x.toString(16)).slice(-2)).join("");
+  return{key,tag};}
+async function shortLink(n){const {key,tag}=await deriveLink(n);
+  const owner=(location.hostname.match(/^([^.]+)\.github\.io$/)||[])[1]||"f6kd4bp6sr-stack";
+  const r=await fetch("https://api.github.com/users/"+owner+"/gists?per_page=100",{cache:"no-store",headers:{Accept:"application/vnd.github+json"}});
+  if(!r.ok)throw new Error(r.status===403?"troppi controlli in un’ora, riprova più tardi":"errore "+r.status);
+  const hit=(await r.json()).find(g=>g.description==="mie-app-mondo "+tag);
+  if(!hit)throw new Error("codice non trovato: sull’iPad collega «Il mio mondo» con lo stesso codice, poi riprova");
+  return{gist:hit.id,key};
+}
+async function decrypt(key,txt){const o=JSON.parse(txt);if(o.app!=="mondo-sync")throw new Error("contenuto non riconosciuto");
+  const k=await crypto.subtle.importKey("raw",unb64(key),"AES-GCM",false,["decrypt"]);
+  const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:unb64(o.iv)},k,unb64(o.ct));return JSON.parse(new TextDecoder().decode(pt));}
+let LINK=lsGet(LKEY), pulling=false;
+function whenTxt(t){if(!t)return "mai";const d=new Date(t);return (d.toDateString()===new Date().toDateString()?"oggi":d.toLocaleDateString("it-IT",{weekday:"short",day:"numeric",month:"short"}))+" alle "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});}
+function paintLink(){
+  setTimeout(()=>{try{paintStatus();}catch(e){}},0);
+  const on=!!(LINK&&LINK.gist);$("lnkSet").hidden=on;$("lnkOn").hidden=!on;
+  if(!on){$("lnkSt").textContent="Non collegato: i dati arrivano solo caricando i file.";return;}
+  const age=LINK.sent?(Date.now()-new Date(LINK.sent).getTime())/36e5:null;
+  $("lnkSt").innerHTML=(LINK.err?`⚠️ ${esc(LINK.err)}<br>`:"")+`✅ Collegato. Ultimo invio dall’iPad: <b>${whenTxt(LINK.sent)}</b> · controllato ${whenTxt(LINK.checked)}`+
+    (age!=null&&age>36?`<div class="lnkwarn"><b>⚠️ L’iPad non invia da ${Math.floor(age/24)} ${Math.floor(age/24)===1?"giorno":"giorni"}.</b> Perché succede e cosa fare:<ol><li>«Il mio mondo» non è stato aperto con internet: aprilo e aspetta 10 secondi.</li><li><b>La chiave GitHub è scaduta</b> (la causa più comune): sull’iPad della bimba vai in <b>🐉 Io</b> → riquadro <b>💾 Salvataggi</b>. Se vedi ⚠️, crea una chiave nuova e prepara il QR qui sotto (<b>📲 Collega con un QR</b>), poi sull’iPad della bimba tocca <b>📷 Collegati con il QR</b>. In alternativa: <b>🔑 Nuova chiave</b> e incollala a mano.</li><li>Se in quel riquadro non c’è più «Invio automatico attivo», ricollega con il QR (stesso codice).</li></ol></div>`:"");
+}
+async function pull(manual){
+  if(!LINK||!LINK.gist||pulling)return; pulling=true;
+  try{
+    const r=await fetch("https://api.github.com/gists/"+LINK.gist,{cache:"no-store",headers:{Accept:"application/vnd.github+json"}});
+    if(!r.ok)throw new Error(r.status===404?"collegamento non trovato: rifai il collegamento":r.status===403?"troppi controlli in un’ora, riprova più tardi":"errore "+r.status);
+    const g=await r.json(),f=g.files&&g.files["mondo.json"];if(!f)throw new Error("nessun dato inviato ancora");
+    let txt=f.content;if(f.truncated&&f.raw_url)txt=await (await fetch(f.raw_url,{cache:"no-store"})).text();
+    if(/"wait":1/.test(txt))throw new Error("collegato: aspetto il primo invio dall’iPad della bimba");
+    const pack=normalize(await decrypt(LINK.key,txt));
+    LINK.checked=new Date().toISOString();LINK.err="";
+    const isNew=!STATE.pack||STATE.pack.from!=="collegamento automatico"||pack.saved!==STATE.pack.saved;
+    LINK.sent=pack.saved;lsSet(LKEY,LINK);
+    if(isNew)await accept(pack,"collegamento automatico",!manual);
+    else if(manual)toast("Già aggiornato");
+  }catch(e){LINK.err=e.name==="OperationError"?"il codice non corrisponde: ricopialo dall’iPad":String(e.message||e);LINK.checked=new Date().toISOString();lsSet(LKEY,LINK);if(manual)toast("Non riuscito: "+LINK.err);}
+  finally{pulling=false;paintLink();}
+}
+$("lnkGo").onclick=async()=>{let c=parseCode($("lnkCode").value);if(!c){toast("Codice non valido: scrivi il codice scelto (almeno 6 caratteri) o quello MM1-");return;}
+  if(c.short){toast("Cerco i dati del codice…");try{c=await shortLink(c.short);}catch(e){toast("Non riuscito: "+e.message);return;}}
+  LINK={gist:c.gist,key:c.key};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});$("lnkCode").value="";paintLink();pull(true);};
+$("lnkNow").onclick=()=>pull(true);
+$("lnkOff").onclick=()=>{if($("lnkOff").dataset.sure){LINK=null;try{localStorage.removeItem(LKEY)}catch(e){}kv("readwrite","progressi-link").catch(()=>{});delete $("lnkOff").dataset.sure;$("lnkOff").textContent="Scollega";paintLink();}else{$("lnkOff").dataset.sure=1;$("lnkOff").textContent="Tocca ancora per scollegare";}};
+(async()=>{if(!LINK){try{const r=await kv("readonly","progressi-link");if(r){LINK=JSON.parse(r);lsSet(LKEY,LINK);}}catch(e){}}paintLink();})();
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")pull(false);});
+setInterval(()=>pull(false),30*60e3);
+window.__pull=pull;
+/* ---------- 📲 collegamento con QR e controllo della chiave (la chiave resta su questo iPad, fuori dalle copie) ---------- */
+const GKEY="prog-gh-v1", GH="https://api.github.com";
+const b64u=s=>btoa(unescape(encodeURIComponent(s))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+async function ghCheck(token){
+  const r=await fetch(GH+"/user",{cache:"no-store",headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json"}});
+  if(r.status===401)return{ok:false,why:"la chiave GitHub non è valida o è scaduta"};
+  if(!r.ok)return{ok:null,why:"GitHub non risponde ("+r.status+")"};
+  const u=await r.json(),sc=r.headers.get("x-oauth-scopes"),exp=r.headers.get("github-authentication-token-expiration");
+  if(sc!=null&&!/\bgist\b/.test(sc))return{ok:false,why:"alla chiave manca il permesso «gist»",login:u.login};
+  return{ok:true,login:u.login,exp:exp?new Date(exp.replace(" UTC","Z").replace(" ","T")).toISOString():""};}
+function ghPaint(){const g=lsGet(GKEY),el=$("pairSt");if(!el)return;
+  if(!g){el.textContent="Il modo più semplice: la chiave GitHub si scrive solo qui; sull’iPad della bimba basta inquadrare un QR.";return;}
+  const days=g.exp?Math.floor((new Date(g.exp)-Date.now())/864e5):null;
+  el.innerHTML=g.ok===false?`<b style="color:#c2410c">⚠️ ${esc(g.why||"la chiave non funziona")}.</b> Creane una nuova e prepara un nuovo QR qui sotto: sull’iPad della bimba basta inquadrarlo.`
+    :`🔑 Chiave di <b>${esc(g.login||"GitHub")}</b> · controllata ${whenTxt(g.checked)}${days!=null?(days<=10?` · <b style="color:#c2410c">scade tra ${Math.max(0,days)} giorni</b>: prepara un QR con una chiave nuova`:` · scade il ${new Date(g.exp).toLocaleDateString("it-IT")}`):""} · se smette di funzionare te lo dico qui e in Oggi`;}
+async function ghDaily(force){const g=lsGet(GKEY);if(!g||!g.token||navigator.onLine===false)return;if(!force&&g.checked&&Date.now()-new Date(g.checked).getTime()<20*36e5)return;
+  try{const r=await ghCheck(g.token);if(r.ok===null)return;Object.assign(g,r,{checked:new Date().toISOString()});lsSet(GKEY,g);}catch(e){}ghPaint();}
+let pairTimer=null;
+$("pairGo").onclick=async()=>{const t=$("pairTok").value.trim(),code=$("pairCode").value.trim().toLowerCase().replace(/\s+/g,""),box=$("pairQR");
+  if(!/^(ghp_|github_pat_)/.test(t)){toast("Incolla la chiave GitHub (inizia con ghp_)");return;}
+  if(code.length<6){toast("Il codice deve avere almeno 6 caratteri");return;}
+  box.innerHTML='<p class="lbl">⏳ Controllo la chiave…</p>';
+  try{
+    const chk=await ghCheck(t);if(!chk.ok)throw new Error(chk.why);
+    const {key,tag}=await deriveLink(code),desc="mie-app-mondo "+tag,H={Authorization:"Bearer "+t,Accept:"application/vnd.github+json","Content-Type":"application/json"};
+    let id=null;const l=await fetch(GH+"/gists?per_page=100",{cache:"no-store",headers:H});if(l.ok){const hit=(await l.json()).find(g=>g.description===desc);if(hit)id=hit.id;}
+    if(!id){const r=await fetch(GH+"/gists",{method:"POST",headers:H,body:JSON.stringify({description:desc,public:true,files:{"mondo.json":{content:JSON.stringify({app:"mondo-sync",v:1,wait:1})}}})});
+      if(!r.ok)throw new Error(r.status===403||r.status===404?"alla chiave manca il permesso «gist»":"GitHub ha risposto "+r.status);id=(await r.json()).id;}
+    lsSet(GKEY,Object.assign({token:t,code,checked:new Date().toISOString()},chk));
+    LINK={gist:id,key,code};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();ghPaint();
+    await new Promise((res,rej)=>{if(window.qrcode)return res();const s=document.createElement("script");s.src="qrcode.js";s.onload=res;s.onerror=()=>rej(new Error("serve internet la prima volta"));document.head.appendChild(s);});
+    const q=qrcode(0,"M");q.addData("MMQR1."+b64u(JSON.stringify({t,g:id,k:key,c:code})));q.make();
+    box.innerHTML=`<div style="background:#fff;display:inline-block;padding:14px;border-radius:14px;margin:10px 0">${q.createSvgTag({cellSize:6,margin:2,scalable:false})}</div><div class="btns" style="justify-content:center"><button id="pairHide">Chiudi il QR</button></div><p class="lbl">Sull’iPad della bimba: 🐉 Io → 💾 Salvataggi → 📷 Collegati con il QR.</p>`;
+    $("pairTok").value="";const hide=()=>{clearTimeout(pairTimer);box.innerHTML="";};$("pairHide").onclick=hide;clearTimeout(pairTimer);pairTimer=setTimeout(hide,180000);
+  }catch(e){box.innerHTML=`<p class="lbl" style="color:#c2410c">⚠️ ${esc(e.message||String(e))}</p>`;}
+};
+(()=>{const g=lsGet(GKEY);if(g&&g.code)$("pairCode").value=g.code;else if(LINK&&LINK.code)$("pairCode").value=LINK.code;ghPaint();setTimeout(()=>ghDaily(false),1200);})();
+
+window.__analyze=analyze; window.__normalize=normalize;
+
+})();
+</script>
+<script>window.APP_VERSION="1076903edb";window.APP_BUILD="2026-10-03T20:30+02:00";</script>
+<!--@BARRA-->
+</body>
+</html>

@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Il Capo provvisorio dello Stato",
+    "x": "Il 27 dicembre 1947 la Costituzione fu firmata da Enrico De Nicola, Capo provvisorio dello Stato, insieme a Umberto Terracini e Alcide De Gasperi. Entrò in vigore il 1° gennaio 1948!",
+    "ic": "✒️",
+    "q": "Quale Capo provvisorio dello Stato firmò la Costituzione?",
+    "ok": "Enrico De Nicola",
+    "wrong": [
+      "Giuseppe Garibaldi",
+      "Vittorio Emanuele II"
+    ],
+    "src": "Senato.it, Costituzione"
+  },
+  {
+    "t": "Un inno da ragazzo",
+    "x": "Goffredo Mameli scrisse il testo dell'Inno nel 1847, a Genova, a soli 20 anni! La musica la compose Michele Novaro a Torino.",
+    "ic": "🎶",
+    "q": "Quanti anni aveva Mameli quando scrisse l'Inno?",
+    "ok": "20",
+    "wrong": [
+      "60",
+      "8"
+    ],
+    "src": "quirinale.it"
+  },
+  {
+    "t": "Inno per legge",
+    "x": "Il Canto degli Italiani si usa come inno dal 1946, ma una legge lo ha riconosciuto ufficialmente come inno nazionale solo nel 2017!",
+    "ic": "📜",
+    "q": "In che anno una legge ha riconosciuto l'Inno di Mameli?",
+    "ok": "2017",
+    "wrong": [
+      "1861",
+      "1946"
+    ],
+    "src": "normattiva.it"
+  },
+  {
+    "t": "La famiglia ONU",
+    "x": "L'ONU nacque nel 1945 con 51 Paesi; oggi ne conta 193. L'ultimo arrivato è il Sud Sudan, nel 2011.",
+    "ic": "🌐",
+    "q": "Quanti Paesi fanno parte dell'ONU oggi?",
+    "ok": "193",
+    "wrong": [
+      "12",
+      "51"
+    ],
+    "src": "un.org"
+  },
+  {
+    "t": "Sei lingue",
+    "x": "L'ONU ha 6 lingue ufficiali: arabo, cinese, inglese, francese, russo e spagnolo. Tu ne stai studiando due su sei!",
+    "ic": "🗣️",
+    "q": "Quale di queste è una lingua ufficiale dell'ONU?",
+    "ok": "Lo spagnolo",
+    "wrong": [
+      "L'italiano",
+      "Il tedesco"
+    ],
+    "src": "un.org"
+  },
+  {
+    "t": "Il primo semaforo",
+    "x": "Il primo semaforo del mondo fu acceso a Londra nel 1868, davanti al Parlamento. Di giorno usava braccia mobili, di notte luci a gas rosse e verdi, mosse da un poliziotto!",
+    "ic": "🚦",
+    "q": "Dove fu acceso il primo semaforo?",
+    "ok": "A Londra, nel 1868",
+    "wrong": [
+      "A Roma, nel 1950",
+      "A Torino, nel 2000"
+    ],
+    "src": "historyhit.com"
+  },
+  {
+    "t": "Un Presidente piemontese",
+    "x": "Luigi Einaudi, nato a Carrù, in provincia di Cuneo, fu eletto Presidente della Repubblica nel 1948. Un piemontese al Quirinale!",
+    "ic": "🇮🇹",
+    "q": "In quale regione nacque il Presidente Luigi Einaudi?",
+    "ok": "Piemonte",
+    "wrong": [
+      "Sicilia",
+      "Veneto"
+    ],
+    "src": "fondazioneeinaudi.it"
+  },
+  {
+    "t": "Senatori a vita",
+    "x": "Chi è stato Presidente della Repubblica diventa senatore di diritto e a vita, salvo rinuncia. Lo dice l'articolo 59 della Costituzione.",
+    "ic": "🪑",
+    "q": "Che cosa diventa un ex Presidente della Repubblica?",
+    "ok": "Senatore a vita",
+    "wrong": [
+      "Sindaco di Roma",
+      "Re d'Italia"
+    ],
+    "src": "Costituzione, art. 59 (brocardi.it)"
+  },
+  {
+    "t": "Almeno 50 anni",
+    "x": "Per diventare Presidente della Repubblica bisogna avere almeno 50 anni e godere dei diritti civili e politici (articolo 84). Per votare ne bastano 18!",
+    "ic": "🎂",
+    "q": "Quanti anni servono almeno per diventare Presidente della Repubblica?",
+    "ok": "50",
+    "wrong": [
+      "18",
+      "30"
+    ],
+    "src": "Costituzione, art. 84 (brocardi.it)"
+  },
+  {
+    "t": "La fascia del sindaco",
+    "x": "Il distintivo del sindaco è la fascia tricolore, con lo stemma della Repubblica e quello del Comune, da portare a tracolla. Se la vedi a una cerimonia, di solito c'è il sindaco!",
+    "ic": "🎗️",
+    "q": "Qual è il distintivo del sindaco?",
+    "ok": "La fascia tricolore",
+    "wrong": [
+      "Una corona d'oro",
+      "Un cappello rosso"
+    ],
+    "src": "TUEL art. 50 (studiocataldi.it)"
+  },
+  {
+    "t": "Vetro infinito",
+    "x": "Il vetro si può riciclare moltissime volte senza perdere qualità, in teoria all'infinito: un barattolo può tornare bottiglia, poi ancora barattolo... Per questo va sempre nel contenitore del vetro.",
+    "ic": "♻️",
+    "q": "Quante volte si può riciclare il vetro?",
+    "ok": "Moltissime volte, in teoria all'infinito",
+    "wrong": [
+      "Una volta sola",
+      "Mai"
+    ],
+    "src": "CoReVe"
+  },
+  {
+    "t": "Un record per i bambini",
+    "x": "La Convenzione ONU sui diritti dell'infanzia è il trattato sui diritti umani più ratificato della storia: quasi tutti i Paesi del mondo l'hanno accettata!",
+    "ic": "🧒",
+    "q": "Che record ha la Convenzione sui diritti dell'infanzia?",
+    "ok": "È il trattato più ratificato",
+    "wrong": [
+      "È la legge più corta",
+      "È la più antica del mondo"
+    ],
+    "src": "unicef.org"
+  },
+  {
+    "t": "Il compleanno del Tricolore",
+    "x": "Il 7 gennaio è la Festa del Tricolore: quel giorno, nel 1797, a Reggio Emilia, la Repubblica Cispadana adottò la bandiera verde, bianca e rossa. La festa esiste dal 1996.",
+    "ic": "🎉",
+    "q": "Quando si festeggia il Tricolore?",
+    "ok": "Il 7 gennaio",
+    "wrong": [
+      "Il 25 dicembre",
+      "Il 1° aprile"
+    ],
+    "src": "agi.it"
+  },
+  {
+    "t": "Maggiorenni a 21",
+    "x": "Fino al 1975 in Italia si diventava maggiorenni, e si votava per la Camera, a 21 anni. Una legge del 1975 ha abbassato la maggiore età a 18!",
+    "ic": "🗳️",
+    "q": "Prima del 1975, a quanti anni si diventava maggiorenni?",
+    "ok": "21",
+    "wrong": [
+      "14",
+      "30"
+    ],
+    "src": "scuola.simone.it"
+  },
+  {
+    "t": "Il palazzo di Bernini",
+    "x": "Palazzo Montecitorio, dove si riunisce la Camera dei deputati, fu progettato da Gian Lorenzo Bernini nel 1653 e finito decenni dopo da Carlo Fontana.",
+    "ic": "🏛️",
+    "q": "Chi progettò Palazzo Montecitorio?",
+    "ok": "Gian Lorenzo Bernini",
+    "wrong": [
+      "Leonardo da Vinci",
+      "Giotto"
+    ],
+    "src": "turismoroma.it"
+  }
+]

@@ -1,0 +1,442 @@
+[
+ {
+  "id": 10,
+  "q_old": "Come si chiamano le note in ordine?",
+  "why": "spiegazione troppo corta; indizio di lunghezza",
+  "set": {
+   "e": "Sono 7: do, re, mi, fa, sol, la, si. Dopo il si si ricomincia dal do, più in alto, come una scala che sale gradino dopo gradino.",
+   "wrong": [
+    "La, le, li, lo, lu, ma, me",
+    "Uno, due, tre, quattro, cinque"
+   ]
+  }
+ },
+ {
+  "id": 11,
+  "q_old": "Chi diede il nome a gran parte delle note, secondo la tradizione?",
+  "why": "spiegazione troppo corta; indizio di lunghezza",
+  "set": {
+   "e": "Guido d'Arezzo, un monaco di circa mille anni fa, usò le prime sillabe dei versi di un inno latino: ut, re, mi, fa, sol, la. Poi l'ut diventò do.",
+   "wrong": [
+    "Wolfgang Mozart",
+    "Giuseppe Verdi"
+   ]
+  }
+ },
+ {
+  "id": 12,
+  "q_old": "Che cos'è la chiave di violino?",
+  "why": "indizio di lunghezza; spiegazione corta",
+  "set": {
+   "wrong": [
+    "Una chiave per aprire la custodia del violino",
+    "Il simbolo che indica la fine di un brano"
+   ],
+   "e": "Si chiama anche chiave di sol: il suo ricciolo gira intorno alla seconda linea e dice «qui c'è il sol». Da lì trovi tutte le altre note."
+  }
+ },
+ {
+  "id": 13,
+  "q_old": "Che cos'è il ritmo?",
+  "why": "spiegazione mancante/corta; indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Il volume alto o basso della musica",
+    "Il nome che si dà a una canzone"
+   ],
+   "e": "Il ritmo è l'alternarsi di suoni lunghi e brevi: è il battito della musica. Prova a battere le mani su una canzone e lo senti subito!"
+  }
+ },
+ {
+  "id": 14,
+  "q_old": "Che cosa indica il tempo di una musica?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Il tempo dice quanto va veloce la musica: «allegro» è veloce, «adagio» è lento. Come camminare piano o correre a ritmo.",
+   "wrong": [
+    "Il colore dei suoni",
+    "Il titolo del brano"
+   ]
+  }
+ },
+ {
+  "id": 15,
+  "q_old": "Che cosa vuol dire «forte» in musica?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "«Forte» vuol dire a volume alto e si scrive f; «piano» vuol dire a volume basso e si scrive p. Trucco: f come fanfara, p come pisolino."
+  }
+ },
+ {
+  "id": 16,
+  "q_old": "Da dove prende il nome il pianoforte?",
+  "why": "spiegazione non spiega il nome",
+  "set": {
+   "e": "Prima del pianoforte il clavicembalo suonava sempre uguale; lo strumento di Bartolomeo Cristofori poteva suonare sia piano sia forte, secondo come premi i tasti."
+  }
+ },
+ {
+  "id": 17,
+  "q_old": "Chi inventò il pianoforte, intorno al 1700?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Bartolomeo Cristofori era un costruttore di strumenti padovano che lavorava a Firenze: inventò i martelletti che colpiscono le corde."
+  }
+ },
+ {
+  "id": 18,
+  "q_old": "Chi era Antonio Stradivari?",
+  "why": "spiegazione mancante/corta",
+  "set": {
+   "wrong": [
+    "Un famosissimo cantante d'opera",
+    "Un famoso direttore d'orchestra"
+   ],
+   "e": "Stradivari viveva a Cremona e costruiva violini più di 300 anni fa: i suoi strumenti sono così belli che si suonano ancora oggi nei concerti."
+  }
+ },
+ {
+  "id": 19,
+  "q_old": "In quale città lombarda c'è una grande tradizione di violini?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "A Cremona lavoravano Amati e Stradivari, e ancora oggi ci sono tante botteghe di liutai, cioè costruttori di violini."
+  }
+ },
+ {
+  "id": 20,
+  "q_old": "La tromba è uno strumento…",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "La tromba è un ottone a fiato: il suono nasce dalle labbra che vibrano nel bocchino, come quando fai una pernacchia!"
+  }
+ },
+ {
+  "id": 21,
+  "q_old": "Il tamburo è uno strumento…",
+  "why": "spiegazione mancante/corta",
+  "set": {
+   "e": "Il tamburo si suona colpendolo con le mani o con le bacchette: la pelle tesa vibra e fa «bum», come il battito di un grande cuore."
+  }
+ },
+ {
+  "id": 22,
+  "q_old": "L'arpa è uno strumento…",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "L'arpa ha tante corde che si pizzicano con le dita: il suono scende leggero, come gocce d'acqua che cadono."
+  }
+ },
+ {
+  "id": 23,
+  "q_old": "Il violoncello si suona…",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Il violoncello è più grande del violino: si suona seduti, appoggiato a terra su un puntale, e ha una voce più grave e calda.",
+   "wrong": [
+    "In piedi, appeso al collo",
+    "Soffiando nel bocchino"
+   ]
+  }
+ },
+ {
+  "id": 24,
+  "q_old": "Quale strumento ad arco è il più grande?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Il contrabbasso è più alto di un adulto e si suona in piedi o su uno sgabello: ha la voce più grave di tutti gli archi."
+  }
+ },
+ {
+  "id": 25,
+  "q_old": "Lo xilofono ha le lamine di…",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Xilo in greco vuol dire legno: lo xilofono ha lamine di legno. Il metallofono, invece, ha lamine di metallo."
+  }
+ },
+ {
+  "id": 26,
+  "q_old": "Che cos'è un coro?",
+  "why": "indizio di lunghezza; spiegazione corta",
+  "set": {
+   "wrong": [
+    "Un gruppo di persone che ballano insieme",
+    "Un gruppo di strumenti che suonano insieme"
+   ],
+   "e": "Nel coro tante voci cantano insieme, anche voci diverse, acute e gravi: insieme formano un unico grande suono."
+  }
+ },
+ {
+  "id": 27,
+  "q_old": "Come si chiama la voce femminile più acuta?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Il soprano è la voce femminile più acuta, che sale altissima. Il tenore e il basso, invece, sono voci maschili."
+  }
+ },
+ {
+  "id": 28,
+  "q_old": "Che cos'è un'opera lirica?",
+  "why": "indizio di lunghezza; spiegazione corta",
+  "set": {
+   "wrong": [
+    "Un film di cartoni animati senza suoni",
+    "Un libro di poesie letto ad alta voce"
+   ],
+   "e": "Nell'opera lirica la storia si racconta cantando, con costumi e orchestra. È nata in Italia intorno al 1600."
+  }
+ },
+ {
+  "id": 29,
+  "q_old": "Chi ha composto l'opera «La Traviata»?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Giuseppe Verdi è uno dei più grandi compositori d'opera: oltre alla Traviata scrisse Nabucco, Aida e Rigoletto.",
+   "wrong": [
+    "Wolfgang Mozart",
+    "Antonio Vivaldi"
+   ]
+  }
+ },
+ {
+  "id": 30,
+  "q_old": "Chi ha composto «Le quattro stagioni»?",
+  "why": "spiegazione mancante/corta; indizio di lunghezza",
+  "set": {
+   "e": "Vivaldi, veneziano, scrisse quattro concerti per violino: in Primavera si sentono gli uccellini, in Inverno sembra di battere i denti dal freddo!",
+   "wrong": [
+    "Ludwig van Beethoven",
+    "Giuseppe Verdi"
+   ]
+  }
+ },
+ {
+  "id": 35,
+  "q_old": "Come si chiama il più famoso teatro d'opera di Milano?",
+  "why": "spiegazione mancante/corta",
+  "set": {
+   "e": "La Scala di Milano è uno dei teatri d'opera più famosi al mondo. Il San Carlo è a Napoli e il Regio a Torino."
+  }
+ },
+ {
+  "id": 36,
+  "q_old": "Come si chiama l'inno nazionale italiano?",
+  "why": "indizio di lunghezza: risposta accorciata",
+  "set": {
+   "ok": "Il Canto degli Italiani",
+   "wrong": [
+    "Il Va' pensiero di Verdi",
+    "La canzone O sole mio"
+   ],
+   "e": "Il Canto degli Italiani è chiamato anche Inno di Mameli o «Fratelli d'Italia»: parole di Goffredo Mameli, musica di Michele Novaro."
+  }
+ },
+ {
+  "id": 39,
+  "q_old": "Quante corde ha di solito una chitarra?",
+  "why": "distrattore «12 sempre» confuso (esistono chitarre a 12 corde)",
+  "set": {
+   "wrong": [
+    "4",
+    "9"
+   ]
+  }
+ },
+ {
+  "id": 40,
+  "q_old": "Quante corde ha un violino?",
+  "why": "spiegazione mancante/corta",
+  "set": {
+   "e": "Il violino ha 4 corde che si suonano con l'archetto: sol, re, la, mi. Trucco: sono poche, come le zampe di un gattino!"
+  }
+ },
+ {
+  "id": 41,
+  "q_old": "Di che cosa è fatto di solito l'archetto del violino?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "L'archetto ha una bacchetta di legno e crini di cavallo, strofinati con la colofonia, una resina che li fa «aggrappare» alle corde."
+  }
+ },
+ {
+  "id": 42,
+  "q_old": "Che cos'è un'orchestra sinfonica?",
+  "why": "indizio di lunghezza: risposta accorciata",
+  "set": {
+   "ok": "Un grande gruppo di archi, legni, ottoni e percussioni",
+   "wrong": [
+    "Un piccolo gruppo di sole chitarre elettriche",
+    "Un grande gruppo di cantanti senza strumenti"
+   ],
+   "e": "L'orchestra sinfonica può avere più di 80 musicisti, divisi in famiglie: archi, legni, ottoni e percussioni, guidati dal direttore."
+  }
+ },
+ {
+  "id": 44,
+  "q_old": "Che cos'è una pausa in musica?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Un suono lunghissimo scritto sul pentagramma",
+    "Un momento in cui il pubblico applaude"
+   ],
+   "e": "La pausa è un silenzio scritto, con una durata precisa: anche il silenzio fa parte della musica, come il respiro tra le parole."
+  }
+ },
+ {
+  "id": 47,
+  "q_old": "Che cos'è un ritornello?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "La prima nota di una canzone",
+    "L'ultima parola di una canzone"
+   ],
+   "e": "Il ritornello «ritorna» più volte nella canzone: per questo è la parte che tutti ricordano e cantano insieme."
+  }
+ },
+ {
+  "id": 48,
+  "q_old": "Perché cantare aiuta a ricordare?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Perché la voce scalda la testa",
+    "Perché cantando si dorme meglio"
+   ],
+   "e": "Ritmo e melodia fanno da ganci per la memoria: per questo si imparano tante cose con le canzoni, come l'alfabeto o le tabelline."
+  }
+ },
+ {
+  "id": 49,
+  "q_old": "Quale musica accompagna il pattinaggio artistico?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "ok": "Musica scelta per il programma",
+   "wrong": [
+    "Nessuna, si pattina in silenzio",
+    "Solo l'inno della propria nazione"
+   ]
+  }
+ },
+ {
+  "id": 50,
+  "q_old": "Chi ha composto la musica del balletto «Il lago dei cigni»?",
+  "why": "spiegazione arricchita; indizio di lunghezza",
+  "set": {
+   "e": "Čajkovskij era un compositore russo: nel Lago dei cigni una principessa è trasformata in cigno e le ballerine si muovono come ali bianche.",
+   "wrong": [
+    "Giuseppe Verdi",
+    "Antonio Vivaldi"
+   ]
+  }
+ },
+ {
+  "id": 51,
+  "q_old": "Chi ha composto «Lo schiaccianoci»?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Čajkovskij scrisse Lo schiaccianoci, un balletto ambientato la notte di Natale: per questo si vede spesso nei teatri a dicembre."
+  }
+ },
+ {
+  "id": 52,
+  "q_old": "Che cos'è il jazz?",
+  "why": "indizio di lunghezza; spiegazione corta",
+  "set": {
+   "ok": "Un genere nato negli Stati Uniti, con tanta improvvisazione",
+   "wrong": [
+    "Un tipo di opera lirica nata in Italia",
+    "Un tipo di danza nata in Spagna"
+   ],
+   "e": "Il jazz è nato a New Orleans, più di cent'anni fa, da musicisti afroamericani. Improvvisare vuol dire inventare la musica mentre suoni!"
+  }
+ },
+ {
+  "id": 53,
+  "q_old": "Che cos'è un DJ?",
+  "why": "spiegazione mancante/corta",
+  "set": {
+   "e": "Il DJ sceglie e mescola musica registrata con console e computer, unendo una canzone all'altra perché la festa non si fermi mai."
+  }
+ },
+ {
+  "id": 54,
+  "q_old": "Come si chiama chi scrive musica?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "Chi scrive musica è un compositore: «comporre» vuol dire mettere insieme le note. Chi la suona, invece, è un musicista."
+  }
+ },
+ {
+  "id": 55,
+  "q_old": "Quale strumento suona un batterista?",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "La batteria è un insieme di tamburi e piatti: il batterista usa mani e piedi insieme, come un giocoliere del ritmo."
+  }
+ },
+ {
+  "id": 56,
+  "q_old": "Che cos'è l'eco?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Un suono che si spegne subito",
+    "Un suono che diventa sempre più acuto"
+   ],
+   "e": "L'eco è un suono che rimbalza su una parete di roccia e torna indietro, come una palla. Prova a gridare «ciao» in montagna!"
+  }
+ },
+ {
+  "id": 57,
+  "q_old": "I suoni acuti sono…",
+  "why": "spiegazione arricchita",
+  "set": {
+   "e": "I suoni acuti sono alti e sottili, come il fischio di un uccellino o un fischietto."
+  }
+ },
+ {
+  "id": 58,
+  "q_old": "I suoni gravi sono…",
+  "why": "spiegazione mancante/corta",
+  "set": {
+   "e": "I suoni gravi sono bassi e profondi: il rombo del tuono o la voce di un contrabbasso. Li senti quasi nella pancia!"
+  }
+ },
+ {
+  "id": 59,
+  "q_old": "Che cos'è una ninna nanna?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Una canzone veloce per svegliarsi presto",
+    "Una marcia per far camminare i soldati"
+   ],
+   "e": "La ninna nanna ha un ritmo lento e cullante, come una culla che dondola: per questo aiuta i bimbi ad addormentarsi."
+  }
+ },
+ {
+  "id": 89,
+  "q_old": "Che cosa sono i timpani?",
+  "why": "indizio di lunghezza",
+  "set": {
+   "wrong": [
+    "Piccoli flauti di legno molto acuti",
+    "Grandi campane di vetro colorato"
+   ]
+  }
+ },
+ {
+  "id": 90,
+  "q_old": "Il triangolo fa parte della famiglia delle…",
+  "why": "distrattore «Ance» non è una famiglia di strumenti",
+  "set": {
+   "wrong": [
+    "Corde",
+    "Legni"
+   ]
+  }
+ }
+]

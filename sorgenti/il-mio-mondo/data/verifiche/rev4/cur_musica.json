@@ -1,0 +1,182 @@
+[
+  {
+    "t": "La nota per accordare tutti",
+    "x": "La norma internazionale ISO 16 (1975) dice che il La per accordare vibra 440 volte al secondo (440 Hz). Molte orchestre lo alzano appena un po'. Immagina il La che fa 440 saltelli ogni secondo!",
+    "ic": "🎵",
+    "q": "Secondo la norma ISO 16, quante volte al secondo vibra il La per accordare?",
+    "ok": "440",
+    "wrong": [
+      "44",
+      "4.400"
+    ],
+    "src": "en.wikipedia.org – A440 (pitch standard)"
+  },
+  {
+    "t": "Il flauto di 35.000 anni",
+    "x": "Nel 2008, nella grotta di Hohle Fels in Germania, si è trovato un flauto fatto con un osso d’ala di grifone, un grande avvoltoio: ha 5 fori e più di 35.000 anni! È uno degli strumenti più antichi del mondo.",
+    "ic": "🦴",
+    "q": "Con che cosa era fatto il flauto di Hohle Fels?",
+    "ok": "Un osso di avvoltoio",
+    "wrong": [
+      "Una canna di bambù",
+      "Un ramo di salice"
+    ],
+    "src": "sciencedaily.com (Università di Tubinga, 2009); en.wikipedia.org – Hohle Fels"
+  },
+  {
+    "t": "Musica senza toccare",
+    "x": "Il theremin si suona senza toccarlo! Lo inventò il russo Lev Termen nel 1920: una mano vicino a un’antenna cambia la nota, l’altra mano vicino alla seconda antenna regola il volume. Musica magica nell’aria!",
+    "ic": "🪄",
+    "q": "Come si suona il theremin?",
+    "ok": "Muovendo le mani nell’aria",
+    "wrong": [
+      "Soffiando in un tubo",
+      "Pizzicando le corde"
+    ],
+    "src": "en.wikipedia.org – Theremin"
+  },
+  {
+    "t": "I bicchieri che cantano",
+    "x": "Lo scienziato americano Benjamin Franklin nel 1761 inventò l’armonica a bicchieri: coppe di vetro che girano e «cantano» sotto le dita bagnate. Anche Mozart scrisse musica per questo strumento!",
+    "ic": "🥛",
+    "q": "Chi inventò l’armonica a bicchieri?",
+    "ok": "Benjamin Franklin",
+    "wrong": [
+      "Thomas Edison",
+      "Galileo Galilei"
+    ],
+    "src": "en.wikipedia.org – Glass harmonica"
+  },
+  {
+    "t": "Il suono del signor Sax",
+    "x": "Il sassofono porta il nome del suo inventore: il belga Adolphe Sax, che lo brevettò nel 1846. Sax + fono (suono) = «il suono di Sax»!",
+    "ic": "🎷",
+    "q": "Da dove viene il nome del sassofono?",
+    "ok": "Dal suo inventore, Adolphe Sax",
+    "wrong": [
+      "Da un fiume del Belgio",
+      "Da un uccello africano"
+    ],
+    "src": "en.wikipedia.org – Saxophone"
+  },
+  {
+    "t": "Il nonno dei pianoforti",
+    "x": "Il pianoforte più antico rimasto al mondo è del 1720 ed è stato costruito da Bartolomeo Cristofori. Oggi si trova al Metropolitan Museum di New York: ha più di 300 anni!",
+    "ic": "🎹",
+    "q": "Dove si trova il pianoforte più antico del mondo?",
+    "ok": "A New York, in un museo",
+    "wrong": [
+      "A Roma, nel Colosseo",
+      "A Parigi, in una stazione"
+    ],
+    "src": "metmuseum.org – Grand Piano, Bartolomeo Cristofori, 1720"
+  },
+  {
+    "t": "Bocciato… e poi famoso",
+    "x": "Nel 1832 il giovane Giuseppe Verdi non fu ammesso al Conservatorio di Milano. Non si arrese: studiò con un maestro privato e diventò famosissimo. Oggi quel Conservatorio porta proprio il suo nome!",
+    "ic": "💪",
+    "q": "Che cosa porta oggi il nome di Verdi, che all’inizio non lo aveva ammesso?",
+    "ok": "Il Conservatorio di Milano",
+    "wrong": [
+      "Lo stadio di San Siro",
+      "La stazione di Milano"
+    ],
+    "src": "it.wikipedia.org – Giuseppe Verdi"
+  },
+  {
+    "t": "Un piatto per Rossini",
+    "x": "Un famoso piatto di carne è dedicato al compositore Gioachino Rossini: il «tournedos alla Rossini». Quale cuoco l’abbia inventato non si sa con certezza. Musica e cucina, che coppia!",
+    "ic": "🍽️",
+    "q": "Che cos’è il «tournedos alla Rossini»?",
+    "ok": "Un piatto di carne",
+    "wrong": [
+      "Un’opera lirica",
+      "Un passo di danza"
+    ],
+    "src": "en.wikipedia.org – Tournedos Rossini"
+  },
+  {
+    "t": "Quattro linee invece di cinque",
+    "x": "Il pentagramma ha 5 linee, ma il canto gregoriano si scrive ancora oggi su 4 linee, come faceva Guido d’Arezzo circa mille anni fa. Trucco: tetra = 4, penta = 5!",
+    "ic": "📜",
+    "q": "Su quante linee si scrive ancora oggi il canto gregoriano?",
+    "ok": "4",
+    "wrong": [
+      "5",
+      "6"
+    ],
+    "src": "en.wikipedia.org – Staff (music)"
+  },
+  {
+    "t": "Il metronomo e Beethoven",
+    "x": "Il metronomo fu brevettato nel 1815 da Johann Maelzel, ma il meccanismo l’aveva ideato Dietrich Winkel. Beethoven fu il primo grande compositore a scrivere sugli spartiti i numeri del metronomo.",
+    "ic": "⏱️",
+    "q": "Chi fu il primo grande compositore a usare le indicazioni del metronomo?",
+    "ok": "Beethoven",
+    "wrong": [
+      "Vivaldi",
+      "Bach"
+    ],
+    "src": "en.wikipedia.org – Metronome"
+  },
+  {
+    "t": "Le note in spagnolo",
+    "x": "In spagnolo le note si chiamano come in italiano: do, re, mi, fa, sol, la, si. E «sol» in spagnolo vuol dire anche «sole»! Canta «sol» e pensa a un sole che splende.",
+    "ic": "☀️",
+    "q": "Che cosa vuol dire anche la parola spagnola «sol»?",
+    "ok": "Sole",
+    "wrong": [
+      "Sale",
+      "Solo"
+    ],
+    "src": "dle.rae.es – sol (Real Academia Española)"
+  },
+  {
+    "t": "La pulce che salta",
+    "x": "In hawaiano «ukulele» vuol dire più o meno «pulce che salta», forse per le dita che saltellano sulle corde. Nacque alle Hawaii verso il 1880 da piccole chitarre portate da emigrati portoghesi.",
+    "ic": "🏝️",
+    "q": "Che cosa vuol dire più o meno «ukulele»?",
+    "ok": "Pulce che salta",
+    "wrong": [
+      "Onda del mare",
+      "Fiore rosso"
+    ],
+    "src": "en.wikipedia.org – Ukulele"
+  },
+  {
+    "t": "L’orchestra che balla",
+    "x": "«Orchestra» viene da un verbo greco che vuol dire «danzare»: nel teatro antico l’orchestra era lo spazio davanti alla scena dove il coro cantava e ballava. Oggi è il gruppo di musicisti!",
+    "ic": "💃",
+    "q": "Che cosa vuol dire il verbo greco da cui viene «orchestra»?",
+    "ok": "Danzare",
+    "wrong": [
+      "Suonare",
+      "Dormire"
+    ],
+    "src": "treccani.it – Vocabolario, orchestra"
+  },
+  {
+    "t": "Le stagioni con le poesie",
+    "x": "Vivaldi pubblicò «Le quattro stagioni» nel 1725 insieme a quattro poesie, i sonetti, forse scritte da lui. Nel sonetto dell’Inverno si parla perfino di denti che battono dal freddo!",
+    "ic": "🍂",
+    "q": "Che cosa accompagna «Le quattro stagioni» di Vivaldi?",
+    "ok": "Quattro poesie, i sonetti",
+    "wrong": [
+      "Quattro dipinti famosi",
+      "Quattro balli in costume"
+    ],
+    "src": "en.wikipedia.org – The Four Seasons (Vivaldi)"
+  },
+  {
+    "t": "Chi inventò il diapason?",
+    "x": "Il diapason fu inventato nel 1711 dall’inglese John Shore, trombettista e liutista della corte reale. Una forchetta di metallo che dà sempre la stessa nota: un’idea di più di 300 anni fa!",
+    "ic": "🍴",
+    "q": "Che mestiere faceva John Shore, inventore del diapason?",
+    "ok": "Il musicista di corte",
+    "wrong": [
+      "Il fabbro del villaggio",
+      "Il cuoco del re"
+    ],
+    "src": "en.wikipedia.org – Tuning fork"
+  }
+]

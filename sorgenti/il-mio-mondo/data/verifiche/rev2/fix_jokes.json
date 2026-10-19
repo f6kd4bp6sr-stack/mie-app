@@ -1,0 +1,109 @@
+[
+ {
+  "id": 8,
+  "q_old": "Qual è il colmo per un fornaio?",
+  "why": "La spiegazione non collega il modo di dire al fornaio",
+  "set": {
+   "e": "«Essere un pezzo di pane» vuol dire essere una persona buonissima. E il fornaio il pane lo fa tutto il giorno!"
+  }
+ },
+ {
+  "id": 10,
+  "q_old": "Qual è il colmo per un drago?",
+  "why": "La risposta ha una frase in più rivolta a chi ascolta, difficile da raccontare a voce",
+  "set": {
+   "ok": "Fare solo fuochi di paglia! 🐉",
+   "e": "Un «fuoco di paglia» è una cosa che comincia con tanto entusiasmo ma finisce subito, come la paglia che brucia in un attimo. Un drago dovrebbe avere il fuoco più forte di tutti!"
+  }
+ },
+ {
+  "id": 19,
+  "q_old": "Qual è il colmo per una nuotatrice?",
+  "why": "La spiegazione non collega il modo di dire alla nuotatrice",
+  "set": {
+   "e": "«Fare un tuffo nel passato» vuol dire ricordare cose di tanto tempo fa. E la nuotatrice si tuffa davvero, ma in piscina!"
+  }
+ },
+ {
+  "id": 21,
+  "q_old": "Qual è il colmo per un dentista?",
+  "why": "La spiegazione non collega il modo di dire al dentista",
+  "set": {
+   "e": "«Avere il dente avvelenato» vuol dire essere arrabbiati con qualcuno. E il dentista lavora proprio con i denti!"
+  }
+ },
+ {
+  "id": 25,
+  "q_old": "Qual è il colmo per un sub?",
+  "why": "La spiegazione non collega il modo di dire al sub",
+  "set": {
+   "e": "«Avere l'acqua alla gola» vuol dire essere in difficoltà o avere pochissimo tempo. E il sub sta sott'acqua davvero!"
+  }
+ },
+ {
+  "id": 27,
+  "q_old": "Qual è il colmo per un attore?",
+  "why": "La spiegazione non collega il modo di dire all'attore",
+  "set": {
+   "e": "«Fare scena muta» vuol dire restare senza parole, per esempio durante un'interrogazione. Ma l'attore in scena dovrebbe parlare!"
+  }
+ },
+ {
+  "id": 29,
+  "q_old": "Qual è il colmo per un barbiere?",
+  "why": "La spiegazione non collega il modo di dire al barbiere",
+  "set": {
+   "e": "«Fare il pelo e il contropelo» vuol dire criticare ogni piccolo dettaglio. E il barbiere la barba la fa davvero, anche contropelo!"
+  }
+ },
+ {
+  "id": 31,
+  "q_old": "Qual è il colmo per un cartolaio?",
+  "why": "La spiegazione non collega il modo di dire al cartolaio",
+  "set": {
+   "e": "«Fare carte false» vuol dire fare di tutto per ottenere qualcosa. E il cartolaio vende proprio la carta!"
+  }
+ },
+ {
+  "id": 33,
+  "q_old": "Qual è il colmo per una ginnasta?",
+  "why": "La spiegazione non collega il modo di dire alla ginnasta",
+  "set": {
+   "e": "«Fare i salti mortali» vuol dire impegnarsi tantissimo. E la ginnasta i salti mortali li fa davvero in palestra!"
+  }
+ },
+ {
+  "id": 45,
+  "q_old": "Maestra: «Pierino, coniuga il verbo camminare, più veloce!»",
+  "why": "La spiegazione è sbagliata: Pierino non comincia a correre, coniuga il verbo correre",
+  "set": {
+   "e": "La maestra voleva che coniugasse «camminare» più in fretta, ma Pierino ha pensato: camminare più veloce vuol dire correre! E ha coniugato «correre»."
+  }
+ },
+ {
+  "id": 57,
+  "q_old": "Qual è il pesce più divertente?",
+  "why": "La spiegazione dà solo un'informazione sul pesce e non spiega il gioco di parole",
+  "set": {
+   "e": "Il pagliaccio è quello del circo che fa ridere tutti, e c'è davvero un pesce che si chiama pesce pagliaccio!"
+  }
+ },
+ {
+  "id": 58,
+  "q_old": "Perché il polpo è bravissimo a contare?",
+  "why": "Non c'è nessun gioco di parole: avere otto braccia non c'entra con il contare",
+  "set": {
+   "q": "Che cosa dice il polpo a un amico che ha bisogno di aiuto?",
+   "ok": "Ti do una mano… anzi, otto! 🐙",
+   "e": "«Dare una mano» vuol dire aiutare qualcuno. Il polpo ha otto braccia, quindi può aiutare otto volte di più!"
+  }
+ },
+ {
+  "id": 148,
+  "q_old": "Perché il nuotatore non perde mai la calma?",
+  "why": "La domanda non c'entra con la risposta: stare a galla vuol dire cavarsela, non restare calmi",
+  "set": {
+   "q": "Perché il nuotatore se la cava sempre, anche quando le cose vanno male?"
+  }
+ }
+]

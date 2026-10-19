@@ -1,0 +1,6 @@
+[
+{"id": 19, "q_old": "Chi ha scolpito il David di marmo che si trova a Firenze?", "why": "Altezza errata: la statua è alta circa 4 metri, oltre 5 solo con il basamento", "set": {"e": "La statua è alta più di 4 metri; con il basamento supera i 5 metri."}},
+{"id": 47, "q_old": "Quale materiale usa uno scultore per una statua di bronzo?", "why": "Domanda chiede un materiale ma la risposta è un procedimento", "set": {"q": "Come si realizza di solito una statua di bronzo?"}},
+{"id": 56, "q_old": "Che cos'è un'icona bizantina?", "why": "Falso che gli smartphone abbiano preso il nome dalle icone; sono le icone delle app", "set": {"e": "Icona viene dal greco e vuol dire immagine: anche le icone delle app sul telefono prendono il nome da qui!"}},
+{"id": 70, "q_old": "Che cosa indica la lettera B su una matita?", "why": "B non sta per morbida: viene dall'inglese black, H da hard", "set": {"e": "B indica una mina morbida e scura (da black, nero in inglese), H una mina dura e chiara (da hard, duro). Trucco: B come Buio, tracce più scure!"}}
+]

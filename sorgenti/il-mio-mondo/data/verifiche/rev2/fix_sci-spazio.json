@@ -1,0 +1,5 @@
+[
+{"id": 10, "q_old": "Come si chiama la nostra galassia?", "why": "frase sgrammaticata («una delle sue miliardi»)", "set": {"e": "La Via Lattea: il Sole è solo una delle sue centinaia di miliardi di stelle."}},
+{"id": 37, "q_old": "In Italia, a gennaio, che stagione è?", "why": "date dell'inverno imprecise (fino a marzo intero)", "set": {"e": "L'inverno astronomico va dal 21 dicembre circa al 20 marzo circa: gennaio è in pieno inverno."}},
+{"id": 61, "q_old": "In che anno Jurij Gagarin volò nello spazio?", "why": "«la vide tutta azzurra» è un abbellimento non verificabile", "set": {"e": "Il 12 aprile 1961 Gagarin fece il primo volo umano nello spazio: un giro intorno alla Terra durato meno di due ore."}}
+]

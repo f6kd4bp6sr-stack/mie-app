@@ -1,0 +1,5 @@
+    ['🔭', 'Sbircio', 'Guardo titolo, immagini e parole in grassetto. Mi chiedo: di cosa parlerà?'],
+    ['📖', 'Leggo un pezzetto', 'Leggo solo un paragrafo alla volta, non tutta la pagina.'],
+    ['🙈', 'Chiudo il libro e racconto', 'Dico ad alta voce cosa mi ricordo, con parole mie. Poi controllo cosa mi mancava.'],
+    ['🎨', 'Disegno o canto', 'Faccio un disegnino, una mappa, o invento una rima o una canzoncina.'],
+    ['👩‍🏫', 'Faccio la maestra', 'Spiego l’argomento a mamma, a papà o al mio peluche preferito.']

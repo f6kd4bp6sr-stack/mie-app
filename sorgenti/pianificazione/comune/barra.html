@@ -1,0 +1,259 @@
+<script>
+/* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
+   - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
+   - se c'è una versione nuova salva i dati e ricarica, ma mai mentre si sta compilando qualcosa o durante una seduta;
+   - in fondo a ogni sezione una riga sola (dati salvati, copia, versione); toccandola si aprono i dettagli:
+     copie, «Salva copia su File / iCloud», «☁️ Copia automatica», versione e «Cerca aggiornamenti». */
+(function(){
+  "use strict";
+  var V=window.APP_VERSION||"", BUILT=window.APP_BUILD||"";
+  var st={state:"idle",last:null,remote:null,pending:false};
+  function visible(id){var e=document.getElementById(id);if(!e||e.hidden)return false;if(e.classList&&e.classList.contains("hide"))return false;return getComputedStyle(e).display!=="none";}
+  function busy(){var a=document.activeElement;return visible("sheet")||visible("modal")||visible("player")||!!(a&&/INPUT|SELECT|TEXTAREA/.test(a.tagName)&&a.type!=="file");}
+  function fmtBuilt(){if(!BUILT)return "";try{return new Date(BUILT).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});}catch(e){return "";}}
+  var TXT={idle:"",checking:"controllo in corso…",ok:"è l’ultima versione",new:"nuova versione trovata: aggiorno…",wait:"nuova versione pronta: si installa appena chiudi la finestra aperta",offline:"senza internet: controllo al prossimo collegamento"};
+  function paint(){
+    var bars=document.querySelectorAll(".updbar");
+    for(var i=0;i<bars.length;i++){var b=bars[i];
+      var sv=b.querySelector(".u-sv"); if(sv)sv.innerHTML=svTxt();
+      var ln=b.querySelector(".u-line"); if(ln)ln.innerHTML=lineTxt();
+      b.querySelector(".u-st").textContent=TXT[st.state]+(st.last&&st.state==="ok"?" (verificato alle "+st.last.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})+")":"");
+      b.dataset.st=st.state;}
+    var ss=document.getElementById("setSv"); if(ss)ss.innerHTML=svTxt();   // ⚙️ Impostazioni di Pianificazione
+  }
+  function bar(){
+    if(document.querySelector(".updbar"))return;
+    var css=document.createElement("style");
+    css.textContent=".updbar{max-width:1180px;margin:22px auto 10px;padding:0 16px;font-size:13px;color:#7a8290;text-align:center}"+
+      ".updbar .u-line{font:inherit;border:0;background:none;color:inherit;cursor:pointer;padding:8px 14px;border-radius:999px;max-width:100%}"+
+      ".updbar .u-line:hover,.updbar.open .u-line{background:rgba(127,127,127,.13)}"+
+      ".updbar .u-more{display:none;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;margin-top:6px}.updbar.open .u-more{display:flex}"+
+      ".updbar b{font-variant-numeric:tabular-nums}.updbar .u-more button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:6px 12px;background:rgba(127,127,127,.16);color:inherit;cursor:pointer}"+
+      ".updbar[data-st=ok] .u-st{color:#2e8b57}.updbar[data-st=new] .u-st,.updbar[data-st=wait] .u-st{color:#c2410c;font-weight:700}";
+    document.head.appendChild(css);
+    var d=document.createElement("div");d.className="updbar";
+    d.innerHTML="<button type=\"button\" class=\"u-line\" aria-expanded=\"false\"></button><div class=\"u-more\"><span class=\"u-sv\" style=\"flex-basis:100%\"></span><button type=\"button\" class=\"u-bk\">💾 Salva copia su File / iCloud</button><button type=\"button\" class=\"u-cb\">☁️ Copia automatica</button><span>Versione <b>"+V+"</b>"+(BUILT?" del "+fmtBuilt():"")+"</span><span class=\"u-st\"></span><button type=\"button\" class=\"u-up\">Cerca aggiornamenti</button></div>";
+    d.querySelector(".u-line").addEventListener("click",function(){var o=d.classList.toggle("open");this.setAttribute("aria-expanded",String(o));});
+    d.querySelector(".u-bk").addEventListener("click",exportAll);d.querySelector(".u-cb").addEventListener("click",cbPanel);
+    d.querySelector(".u-up").addEventListener("click",function(){check(true);});
+    // nelle sezioni con più pagine la barra va in fondo al documento, sopra la barra delle schede
+    document.body.insertBefore(d,document.querySelector("nav.tabs")||null);
+    paint();
+  }
+  /* ---------- salvataggio automatico comune a tutte le sezioni ----------
+     Ogni sezione salva subito le proprie modifiche sul dispositivo. Qui, da qualsiasi sezione:
+     copia giornaliera completa (Pianificazione + Licenze + Tai Chi + Progressi) negli ultimi 30 giorni e copia su File / iCloud. */
+  function lsJ(k){try{return JSON.parse(localStorage.getItem(k)||"null");}catch(e){return null;}}
+  function dumpAll(){
+    var S=lsJ("licenze-marco-v1"), tc={}, n=0;
+    try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.indexOf("tc_")===0){tc[k]=localStorage.getItem(k);n++;}}}catch(e){}
+    var pack=lsJ("prog-vale-v1"), link=lsJ("prog-link-v1");
+    var pg=pack||link?{pack:pack,hist:lsJ("prog-vale-hist-v1")||[],link:link}:null;
+    var pn=lsJ("pn-v1");
+    if(!S&&!n&&!pg&&!pn)return null;
+    var o={}; if(S)for(var x in S)o[x]=S[x]; o.taichi=tc; o.progressi=pg; if(pn)o.pianifica=pn; o.app="le-mie-app"; return o;
+  }
+  function kvDb(){return new Promise(function(res,rej){try{var r=indexedDB.open("licenze-marco",1);r.onupgradeneeded=function(){if(!r.result.objectStoreNames.contains("kv"))r.result.createObjectStore("kv");};r.onsuccess=function(){res(r.result);};r.onerror=function(){rej(r.error);};}catch(e){rej(e);}});}
+  function today(){var d=new Date();return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);}
+  var snapBusy=false;
+  function snapAll(){
+    if(snapBusy)return; var o=dumpAll(); if(!o)return; snapBusy=true;
+    kvDb().then(function(db){return new Promise(function(res){
+      var tx=db.transaction("kv","readwrite"),st=tx.objectStore("kv"),k="snap-"+today();
+      st.put(JSON.stringify(o),k);
+      var q=st.getAllKeys(); q.onsuccess=function(){var ks=q.result.map(String).filter(function(x){return x.indexOf("snap-")===0&&x.indexOf("~")<0;});if(ks.indexOf(k)<0)ks.push(k);ks.sort();ks.slice(0,Math.max(0,ks.length-30)).forEach(function(old){st.delete(old);});};
+      tx.oncomplete=function(){try{localStorage.setItem("pn-lastSnap",new Date().toISOString());}catch(e){}res();paint();};tx.onerror=function(){res();};
+    });}).catch(function(){}).then(function(){snapBusy=false;});
+  }
+  function exportAll(){
+    var b=document.getElementById("bExport"); if(b){b.click();setTimeout(paint,1500);return;}   // in Licenze usa il pulsante della pagina
+    var o=dumpAll(); if(!o){alertBar("Ancora nessun dato da salvare");return;}
+    if(window.__pfCache)o.pratFiles=window.__pfCache;
+    var data=JSON.stringify(o,null,1), fn="pianificazione-copia-"+today()+".json";
+    var done=function(){var t=new Date().toISOString();try{localStorage.setItem("pn-lastBackup",t);localStorage.setItem("tc_lastBackup",JSON.stringify(t));}catch(e){}paint();};
+    try{var f=new File([data],fn,{type:"application/json"});if(navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f],title:"Copia Pianificazione"}).then(done,function(){});return;}}catch(e){}
+    try{var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([data],{type:"application/json"}));a.download=fn;document.body.appendChild(a);a.click();a.remove();done();}catch(e){}
+  }
+  function alertBar(t){var e=document.querySelector(".updbar .u-sv");if(e)e.textContent=t;}
+  function when(t){if(!t)return "mai";var d=new Date(t),o=new Date();return d.toDateString()===o.toDateString()?"oggi "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"}):d.toLocaleDateString("it-IT",{day:"numeric",month:"short"});}
+  function lastBk(){var bk=null;try{bk=localStorage.getItem("pn-lastBackup");var S=lsJ("licenze-marco-v1");if(S&&S.lastBackup&&(!bk||S.lastBackup>bk))bk=S.lastBackup;}catch(e){}return bk;}
+  /* la riga sola in fondo: ✓ se i dati hanno una copia recente (automatica o su File/iCloud negli ultimi 7 giorni) */
+  function lineTxt(){var c=lsJ(CB),bk=lastBk(),old=!bk||(Date.now()-new Date(bk).getTime())>7*864e5,cloud=c&&c.gist&&!c.err&&c.last;
+    var warn=c&&c.gist&&c.err?"⚠️ Copia automatica: "+c.err:(!cloud&&old?"⚠️ Fai una copia su File / iCloud (o attiva ☁️ la copia automatica)":"");
+    var up=st.state==="new"||st.state==="wait"?" · <b style=\"color:#c2410c\">"+TXT[st.state]+"</b>":"";
+    return (warn?"<b style=\"color:#c2410c\">"+esc(warn)+"</b>":"✓ Dati salvati"+(cloud?" · ☁️ copia "+when(c.last):" · copia "+when(bk)))+up+" · versione "+esc(V.slice(0,6))+" ›";}
+  function svTxt(){var sn=null,bk=lastBk();try{sn=localStorage.getItem("pn-lastSnap");}catch(e){}
+    var old=!bk||(Date.now()-new Date(bk).getTime())>7*864e5;
+    var c=lsJ(CB),cb=c&&c.gist?(c.err?"<span style=\"color:#c2410c;font-weight:700\">⚠️ "+esc(c.err)+"</span>":when(c.last)):"<span style=\"color:#c2410c\">non attiva</span>";
+    return "💾 Salvataggio automatico attivo · copia del giorno: "+when(sn)+" · copia su File/iCloud: <span"+(old&&!(c&&c.last&&!c.err)?" style=\"color:#c2410c;font-weight:700\"":"")+">"+when(bk)+"</span> · ☁️ copia automatica: "+cb;}
+  function esc(t){return String(t==null?"":t).replace(/[&<>"]/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch];});}
+
+
+  /* ---------- 📎 file delle pratiche: entrano nelle copie (letti in anticipo, così il salvataggio parte subito al tocco) ---------- */
+  function pfIds(){var pn=lsJ("pn-v1"),out=[];((pn&&pn.prat)||[]).concat(pn&&pn.pens?[pn.pens]:[]).forEach(function(x){(x.files||[]).forEach(function(f){out.push(f.id);});});return out;}   // file di Pratiche e Pensione
+  function b64Blob(b){return new Promise(function(res){var r=new FileReader();r.onload=function(){res(String(r.result).split(",")[1]||"");};r.onerror=function(){res("");};r.readAsDataURL(b);});}
+  async function pfDump(){var ids=pfIds();if(!ids.length)return null;var db=await kvDb(),out={};
+    for(var i=0;i<ids.length;i++){var id=ids[i];var blob=await new Promise(function(res){try{var q=db.transaction("kv").objectStore("kv").get("pf-"+id);q.onsuccess=function(){res(q.result);};q.onerror=function(){res(null);};}catch(e){res(null);}});
+      if(blob&&blob.size!=null)out[id]={type:blob.type||"",b64:await b64Blob(blob)};}
+    return Object.keys(out).length?out:null;}
+  async function pfRestore(m){if(!m||typeof m!=="object")return 0;var db=await kvDb(),n=0;
+    await new Promise(function(res){var tx=db.transaction("kv","readwrite"),st=tx.objectStore("kv");Object.keys(m).forEach(function(id){var x=m[id];try{var bin=atob(x.b64),a=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)a[i]=bin.charCodeAt(i);st.put(new Blob([a],{type:x.type||""}),"pf-"+id);n++;}catch(e){}});tx.oncomplete=res;tx.onerror=res;});return n;}
+  function pfRefresh(){pfDump().then(function(m){window.__pfCache=m;}).catch(function(){});}
+  window.__pfRefresh=pfRefresh; window.__pratFilesRestore=pfRestore;
+  setTimeout(pfRefresh,1200);
+
+  /* ---------- ☁️ copia automatica cifrata su GitHub (gist privato, con la chiave GitHub già usata per i Progressi) ----------
+     Una volta al giorno (e dopo le modifiche, al massimo ogni 3 ore) tutta Pianificazione — Licenze, Tai Chi, Progressi,
+     Calendario, Scadenze, Pratiche con i loro file, Benessere (e i Conti, conservati anche se nascosti) — viene cifrata qui sull'iPad con la «parola della copia»
+     e salvata su GitHub. Senza la parola nessuno la può leggere. Su un iPad nuovo: ☁️ Copia automatica → Ripristina. */
+  var CB="pn-copia-cloud", API="https://api.github.com", DESC="Pianificazione · copia cifrata (non modificare)", PART=900000;
+  function cbCfg(){return lsJ(CB);} function cbSet(c){try{if(c)localStorage.setItem(CB,JSON.stringify(c));else localStorage.removeItem(CB);}catch(e){}}
+  function ghTok(){var g=lsJ("prog-gh-v1");return (g&&g.token)||"";}
+  function u8b64(a){var s="";for(var i=0;i<a.length;i+=32768)s+=String.fromCharCode.apply(null,a.subarray(i,i+32768));return btoa(s);}
+  function b64u8(s){var b=atob(s),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;}
+  async function derive(pass,saltB64){var base=await crypto.subtle.importKey("raw",new TextEncoder().encode(pass),"PBKDF2",false,["deriveBits"]);
+    var bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:b64u8(saltB64),iterations:310000,hash:"SHA-256"},base,256);return u8b64(new Uint8Array(bits));}
+  async function encTxt(keyB64,txt){var k=await crypto.subtle.importKey("raw",b64u8(keyB64),"AES-GCM",false,["encrypt"]),iv=crypto.getRandomValues(new Uint8Array(12));
+    var ct=await crypto.subtle.encrypt({name:"AES-GCM",iv:iv},k,new TextEncoder().encode(txt));return {iv:u8b64(iv),ct:u8b64(new Uint8Array(ct))};}
+  async function decTxt(keyB64,ivB64,ctB64){var k=await crypto.subtle.importKey("raw",b64u8(keyB64),"AES-GCM",false,["decrypt"]);
+    return new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:b64u8(ivB64)},k,b64u8(ctB64)));}
+  function hdr(tok){return {"Authorization":"Bearer "+tok,"Accept":"application/vnd.github+json","Content-Type":"application/json"};}
+  function hsh(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return String(h)+":"+s.length;}
+  var cbBusy=false;
+  async function cbPush(force){
+    var c=cbCfg(),tok=ghTok(); if(!c||!c.gist||!c.key||cbBusy)return false; if(!tok){c.err="manca la chiave GitHub";cbSet(c);paint();return false;}
+    if(navigator.onLine===false)return false;
+    var o=dumpAll(); if(!o)return false; var files=window.__pfCache||null; if(files)o.pratFiles=files;
+    var js=JSON.stringify(o),h=hsh(js),age=Date.now()-new Date(c.last||0).getTime();
+    if(!force&&((c.h===h&&age<20*36e5)||(c.h!==h&&age<3*36e5&&c.last)))return true;
+    cbBusy=true;
+    try{
+      var nofiles=false; if(js.length>8.5e6&&o.pratFiles){delete o.pratFiles;js=JSON.stringify(o);nofiles=true;}
+      var e=await encTxt(c.key,js),n=Math.max(1,Math.ceil(e.ct.length/PART)),F={};
+      for(var i=0;i<n;i++)F["copia-"+(i+1)+".part"]={content:e.ct.slice(i*PART,(i+1)*PART)};
+      for(var j=n+1;j<=(c.parts||0);j++)F["copia-"+j+".part"]=null;
+      var saved=new Date().toISOString();
+      F["copia.json"]={content:JSON.stringify({app:"pianificazione-copia",v:1,saved:saved,salt:c.salt,iv:e.iv,parts:n})};
+      var r=await fetch(API+"/gists/"+c.gist,{method:"PATCH",headers:hdr(tok),body:JSON.stringify({files:F}),cache:"no-store"});
+      c=cbCfg()||c;
+      if(!r.ok){c.err=r.status===401?"la chiave GitHub non è valida o è scaduta":r.status===404?"spazio della copia non trovato":"errore "+r.status;cbSet(c);paint();return false;}
+      c.last=saved;c.h=h;c.parts=n;c.size=e.ct.length;c.nofiles=nofiles;c.err="";cbSet(c);paint();return true;
+    }catch(err){c=cbCfg()||c;c.err="copia non riuscita";cbSet(c);paint();return false;}
+    finally{cbBusy=false;}
+  }
+  async function cbEnable(tok,pass){
+    var salt=u8b64(crypto.getRandomValues(new Uint8Array(16))),key=await derive(pass,salt);
+    var r=await fetch(API+"/gists",{method:"POST",headers:hdr(tok),body:JSON.stringify({description:DESC,public:false,files:{"copia.json":{content:JSON.stringify({app:"pianificazione-copia",v:1,wait:1,salt:salt})}}})});
+    if(!r.ok)throw new Error(r.status===401?"la chiave GitHub non è valida":r.status===403||r.status===404?"la chiave GitHub non ha il permesso «gist»":"errore "+r.status);
+    var g=await r.json(); cbSet({gist:g.id,key:key,salt:salt,on:1});
+    var gh=lsJ("prog-gh-v1")||{}; if(!gh.token){gh.token=tok;gh.ok=true;gh.checked=new Date().toISOString();try{localStorage.setItem("prog-gh-v1",JSON.stringify(gh));}catch(e){}}
+    await new Promise(function(res){pfDump().then(function(m){window.__pfCache=m;res();},res);});
+    return cbPush(true);
+  }
+  async function cbFind(tok){
+    for(var page=1;page<=5;page++){var r=await fetch(API+"/gists?per_page=100&page="+page,{headers:hdr(tok),cache:"no-store"});if(!r.ok)throw new Error(r.status===401?"la chiave GitHub non è valida":"errore "+r.status);
+      var L=await r.json();var g=L.find(function(x){return x.description===DESC;});if(g)return g.id;if(L.length<100)break;}
+    return null;}
+  async function cbRead(tok,gist,pass,keyKnown){
+    var r=await fetch(API+"/gists/"+gist,{headers:hdr(tok),cache:"no-store"});if(!r.ok)throw new Error("copia non trovata ("+r.status+")");
+    var g=await r.json(),f=g.files||{},txt=async function(x){if(!x)return "";if(x.truncated&&x.raw_url)return await (await fetch(x.raw_url,{cache:"no-store"})).text();return x.content;};
+    var H=JSON.parse(await txt(f["copia.json"])); if(H.wait||!H.parts)throw new Error("la copia è ancora vuota");
+    var key=keyKnown||await derive(pass,H.salt),ct="";for(var i=1;i<=H.parts;i++)ct+=await txt(f["copia-"+i+".part"]);
+    var js; try{js=await decTxt(key,H.iv,ct);}catch(e){throw new Error("la parola della copia non è giusta");}
+    return {o:JSON.parse(js),saved:H.saved,key:key,salt:H.salt};}
+  async function cbRestoreAll(o){
+    // prima una copia di sicurezza della situazione attuale (si ritrova in Licenze → copie giornaliere)
+    try{var cur=dumpAll();if(cur){var db0=await kvDb();var n=new Date();await new Promise(function(res){var tx=db0.transaction("kv","readwrite");tx.objectStore("kv").put(JSON.stringify(cur),"snap-"+today()+"~prima-del-ripristino-"+("0"+n.getHours()).slice(-2)+("0"+n.getMinutes()).slice(-2));tx.oncomplete=res;tx.onerror=res;});}}catch(e){}
+    var db=await kvDb(),put=function(k,v){return new Promise(function(res){var tx=db.transaction("kv","readwrite");tx.objectStore("kv").put(v,k);tx.oncomplete=res;tx.onerror=res;});};
+    var tc=o.taichi;delete o.taichi;if(tc&&typeof tc==="object"){for(var k in tc)if(k.indexOf("tc_")===0)try{localStorage.setItem(k,tc[k]);}catch(e){} await put("taichi",JSON.stringify({savedAt:new Date().toISOString(),keys:tc}));}
+    var pg=o.progressi;delete o.progressi;if(pg){if(pg.link&&pg.link.gist){try{localStorage.setItem("prog-link-v1",JSON.stringify(pg.link));}catch(e){} await put("progressi-link",JSON.stringify(pg.link));}
+      if(pg.pack){try{localStorage.setItem("prog-vale-v1",JSON.stringify(pg.pack));localStorage.setItem("prog-vale-hist-v1",JSON.stringify(pg.hist||[]));}catch(e){} await put("progressi",JSON.stringify({pack:pg.pack,hist:pg.hist||[]}));}}
+    var pn=o.pianifica;delete o.pianifica;if(pn){try{localStorage.setItem("pn-v1",JSON.stringify(pn));}catch(e){} await put("pianifica",JSON.stringify(pn));}
+    var pf=o.pratFiles;delete o.pratFiles;if(pf)await pfRestore(pf);
+    delete o.app; if(o.bal){o.savedAt=new Date().toISOString();var t=JSON.stringify(o);try{localStorage.setItem("licenze-marco-v1",t);}catch(e){} await put("stato",t);}
+  }
+  function cbPanel(){
+    var old=document.getElementById("cbPanel");if(old)old.remove();
+    var c=cbCfg(),tok=ghTok(),ov=document.createElement("div");ov.id="cbPanel";
+    ov.style.cssText="position:fixed;inset:0;z-index:9999;background:rgba(10,12,16,.55);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:calc(env(safe-area-inset-top) + 24px) 14px 24px";
+    var box="background:#fff;color:#15181d;max-width:560px;width:100%;border-radius:18px;padding:18px 18px 14px;font:16px/1.45 -apple-system,system-ui,sans-serif;box-shadow:0 20px 50px rgba(0,0,0,.3)";
+    var inp="width:100%;box-sizing:border-box;font:inherit;padding:10px 12px;border:1px solid #d5d9e0;border-radius:10px;margin:4px 0 8px";
+    var btn="font:inherit;font-weight:700;border:0;border-radius:12px;padding:10px 14px;cursor:pointer;margin:4px 6px 0 0";
+    var pri=btn+";background:#1f5fae;color:#fff",sec=btn+";background:#e6e8ee;color:#15181d",dang=btn+";background:#fdecea;color:#b3261e";
+    var h="<div style=\""+box+"\"><div style=\"display:flex;align-items:center\"><b style=\"font-size:20px;flex:1\">☁️ Copia automatica</b><button id=\"cbX\" style=\""+sec+"\">Chiudi</button></div>";
+    if(c&&c.gist){
+      h+="<p style=\"margin:8px 0\">"+(c.err?"⚠️ <b>"+esc(c.err)+"</b><br>":"✅ <b>Attiva.</b> ")+"Ultima copia: <b>"+when(c.last)+"</b>"+(c.size?" · "+Math.max(1,Math.round(c.size*0.75/1024))+" KB":"")+(c.nofiles?"<br>I file delle pratiche sono troppi per la copia automatica: restano nella copia su File/iCloud.":"")+"</p>"+
+        "<p style=\"margin:0 0 8px;color:#6b7280;font-size:14px\">Contiene tutto: Licenze, Calendario, Scadenze, Pensione e Pratiche con i loro file, Benessere, Tai Chi e Progressi. È cifrata con la tua parola della copia: senza, nessuno la legge (nemmeno GitHub).</p>"+
+        "<button id=\"cbNow\" style=\""+pri+"\">Fai la copia adesso</button><button id=\"cbRes\" style=\""+sec+"\">Ripristina da questa copia</button><button id=\"cbOff\" style=\""+dang+"\">Disattiva</button>";
+    }else{
+      h+="<p style=\"margin:8px 0\">Ogni giorno, da sola, una copia completa e <b>cifrata</b> va su GitHub (in uno spazio privato), con la chiave GitHub che usi già per i Progressi. Se l’iPad si rompe o lo cambi, ritrovi tutto.</p>"+
+        "<label style=\"font-weight:700;font-size:14px\">Chiave GitHub"+(tok?" (già salvata)":"")+"</label><input id=\"cbTok\" type=\"password\" placeholder=\""+(tok?"già salvata: lascia vuoto":"inizia con ghp_")+"\" autocomplete=\"off\" style=\""+inp+"\">"+
+        "<label style=\"font-weight:700;font-size:14px\">Parola della copia (almeno 8 caratteri)</label><input id=\"cbP1\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
+        "<label style=\"font-weight:700;font-size:14px\">Ripeti la parola</label><input id=\"cbP2\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
+        "<p style=\"margin:0 0 6px;color:#b3261e;font-size:14px\"><b>Scrivila in un posto sicuro:</b> serve per ripristinare. Se la perdi, la copia non si può più aprire.</p>"+
+        "<button id=\"cbOn\" style=\""+pri+"\">Attiva la copia automatica</button><button id=\"cbRes\" style=\""+sec+"\">Ho già una copia: ripristina</button>";
+    }
+    h+="<div id=\"cbMsg\" style=\"margin-top:10px;font-weight:700\"></div></div>";
+    ov.innerHTML=h;document.body.appendChild(ov);
+    var msg=function(t,bad){var m=document.getElementById("cbMsg");m.textContent=t;m.style.color=bad?"#b3261e":"#2e7d5b";};
+    document.getElementById("cbX").onclick=function(){ov.remove();paint();};
+    var bOn=document.getElementById("cbOn");if(bOn)bOn.onclick=async function(){var t=document.getElementById("cbTok").value.trim()||tok,p1=document.getElementById("cbP1").value,p2=document.getElementById("cbP2").value;
+      if(!/^(ghp_|github_pat_)/.test(t))return msg("Serve la chiave GitHub (inizia con ghp_)",1);if(p1.length<8)return msg("La parola deve avere almeno 8 caratteri",1);if(p1!==p2)return msg("Le due parole non coincidono",1);
+      msg("Preparo la copia…");try{var ok=await cbEnable(t,p1);msg(ok?"✅ Copia automatica attiva: prima copia fatta.":"Attivata, ma la prima copia non è riuscita: riprovo da sola.",!ok);setTimeout(cbPanel,1600);}catch(e){msg("Non riuscito: "+e.message,1);}};
+    var bNow=document.getElementById("cbNow");if(bNow)bNow.onclick=async function(){msg("Copia in corso…");pfRefresh();setTimeout(async function(){var ok=await cbPush(true);msg(ok?"✅ Copia fatta":"Non riuscita: "+((cbCfg()||{}).err||""),!ok);},600);};
+    var bOff=document.getElementById("cbOff");if(bOff)bOff.onclick=function(){if(!confirm("Disattivare la copia automatica su questo iPad? La copia già salvata resta su GitHub."))return;cbSet(null);cbPanel();};
+    document.getElementById("cbRes").onclick=async function(){
+      var cc=cbCfg(),t=(document.getElementById("cbTok")&&document.getElementById("cbTok").value.trim())||ghTok();
+      if(!t){t=prompt("Chiave GitHub (inizia con ghp_):")||"";t=t.trim();}if(!t)return;
+      var pass="";if(!(cc&&cc.key)){pass=(document.getElementById("cbP1")&&document.getElementById("cbP1").value)||prompt("Parola della copia:")||"";if(!pass)return;}
+      msg("Cerco la copia…");
+      try{var gist=cc&&cc.gist||await cbFind(t);if(!gist)return msg("Su questo account GitHub non c’è una copia di Pianificazione",1);
+        var R=await cbRead(t,gist,pass,cc&&cc.key);
+        if(!confirm("Ripristinare la copia del "+new Date(R.saved).toLocaleString("it-IT",{day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"})+"? I dati di questo iPad vengono sostituiti (prima ne salvo una copia tra le copie giornaliere)."))return msg("");
+        msg("Ripristino…");await cbRestoreAll(R.o);
+        var gh=lsJ("prog-gh-v1")||{};if(!gh.token){gh.token=t;try{localStorage.setItem("prog-gh-v1",JSON.stringify(gh));}catch(e){}}
+        cbSet({gist:gist,key:R.key,salt:R.salt,on:1,last:R.saved});msg("✅ Ripristinato: ricarico…");setTimeout(function(){location.reload();},900);
+      }catch(e){msg("Non riuscito: "+e.message,1);}};
+  }
+  window.__cbPush=cbPush; window.__cbPanel=cbPanel; window.__svTxt=svTxt;
+  setTimeout(function(){cbPush(false);},6000);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(function(){cbPush(false);},4000);});
+
+  function apply(v){
+    try{if(typeof window.__flush==="function")window.__flush();}catch(e){}
+    setTimeout(function(){location.replace(location.pathname+"?v="+encodeURIComponent(v));},350);
+  }
+  function check(manual){
+    if(!/^https?:/.test(location.protocol))return;
+    st.state="checking";paint();
+    if(window.__swreg)window.__swreg.update().catch(function(){});
+    fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json();}).then(function(v){
+      st.last=new Date();st.remote=v&&v.v;
+      if(st.remote&&st.remote!==V){
+        if(manual||!busy()){st.state="new";paint();apply(st.remote);}
+        else{st.state="wait";st.pending=true;paint();}
+      }else{st.state="ok";paint();}
+    }).catch(function(){st.state="offline";paint();});
+  }
+  setInterval(function(){if(st.pending&&!busy()){st.pending=false;st.state="new";paint();apply(st.remote);}},5000);
+  if(location.search.indexOf("v=")>=0&&history.replaceState){try{history.replaceState(null,"",location.pathname+location.hash);}catch(e){}}
+  setTimeout(snapAll,3000);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")snapAll();else paint();});
+  window.addEventListener("pagehide",snapAll);
+  setInterval(snapAll,15*60*1000);
+  window.__snapAll=snapAll;
+  window.__exportAll=exportAll;
+  if(window.claude||window.top!==window){ // dentro Claude: niente aggiornamento automatico, solo la versione
+    if(document.readyState!=="loading")bar();else document.addEventListener("DOMContentLoaded",bar);
+    return;
+  }
+  if(document.readyState!=="loading")bar();else document.addEventListener("DOMContentLoaded",bar);
+  if("serviceWorker" in navigator&&/^https?:/.test(location.protocol)){
+    navigator.serviceWorker.register("sw.js").then(function(reg){window.__swreg=reg;}).catch(function(){});
+  }
+  check(false);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check(false);});
+  window.addEventListener("pageshow",function(e){if(e.persisted)check(false);});
+  setInterval(function(){check(false);},30*60*1000);
+})();
+</script>

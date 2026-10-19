@@ -1,0 +1,5 @@
+[
+{"id": 28, "q_old": "Che cosa misura la bilancia?", "why": "kg e g misurano la massa, non il peso in senso scientifico: alle medie lo distingueranno", "set": {"ok": "Quanto pesa un oggetto, cioè la sua massa", "e": "La bilancia indica la massa in chilogrammi e grammi; nel linguaggio di tutti i giorni la chiamiamo peso."}},
+{"id": 144, "q_old": "Quale scienziato italiano inventò il barometro?", "why": "data incerta (1643 o 1644) e il barometro non «dice» il tempo, aiuta a prevederlo", "set": {"e": "Evangelista Torricelli, allievo di Galileo, nel Seicento misurò per primo la pressione dell'aria: i cambiamenti di pressione aiutano a prevedere il tempo."}},
+{"id": 154, "q_old": "Con limoni, chiodi zincati e monete di rame si può…", "why": "un solo limone non basta ad accendere un LED: servono più limoni collegati in fila", "set": {"e": "I due metalli e il succo di limone formano una piccola pila, come quella di Volta: collegando in fila più limoni, con un adulto, si può accendere un minuscolo LED!"}}
+]

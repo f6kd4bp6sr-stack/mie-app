@@ -1,0 +1,182 @@
+[
+  {
+    "t": "Tre cuori e sangue blu",
+    "x": "Il polpo ha tre cuori: due spingono il sangue nelle branchie e uno nel resto del corpo. E il suo sangue è blu, perché trasporta l'ossigeno con il rame invece che con il ferro come noi!",
+    "ic": "🐙",
+    "q": "Di che colore è il sangue del polpo?",
+    "ok": "Blu",
+    "wrong": [
+      "Verde",
+      "Giallo"
+    ],
+    "src": "BBC Science Focus"
+  },
+  {
+    "t": "Stella senza cervello",
+    "x": "La stella marina non ha cervello e non ha sangue: al posto del sangue usa l'acqua di mare, che scorre in tubicini dentro il corpo e muove i suoi piedini. Ha però un occhietto in punta a ogni braccio!",
+    "ic": "⭐",
+    "q": "Che cosa usa la stella marina al posto del sangue?",
+    "ok": "Acqua di mare",
+    "wrong": [
+      "Succo di alghe",
+      "Sabbia bagnata"
+    ],
+    "src": "NOAA Ocean Service"
+  },
+  {
+    "t": "Denti di ricambio",
+    "x": "Lo squalo ha file di denti di scorta dietro quelli che usa: quando un dente cade, quello dietro avanza e prende il suo posto, come su un nastro trasportatore. Nella vita può cambiarne migliaia!",
+    "ic": "🦈",
+    "q": "Che cosa succede quando uno squalo perde un dente?",
+    "ok": "Uno di scorta prende il suo posto",
+    "wrong": [
+      "Resta senza per sempre",
+      "Ricresce dopo dieci anni"
+    ],
+    "src": "Natural History Museum (Londra); The Conversation"
+  },
+  {
+    "t": "Lontre mano nella mano",
+    "x": "Le lontre marine dormono galleggiando sulla schiena. A volte si tengono per le zampe o si avvolgono nelle alghe, così la corrente non le porta via mentre riposano. Che squadra!",
+    "ic": "🦦",
+    "q": "Perché le lontre marine a volte dormono tenendosi per le zampe?",
+    "ok": "Per non allontanarsi con la corrente",
+    "wrong": [
+      "Per scaldarsi le orecchie",
+      "Per contare le stelle"
+    ],
+    "src": "Discover Magazine"
+  },
+  {
+    "t": "Collo lungo, vertebre poche",
+    "x": "La giraffa ha nel collo 7 vertebre, proprio come noi! La differenza è che ognuna delle sue è lunghissima, fino a circa 25 centimetri. Stesso numero, misure da gigante.",
+    "ic": "🦒",
+    "q": "Quante vertebre ha la giraffa nel collo?",
+    "ok": "7, come noi",
+    "wrong": [
+      "70, molte più di noi",
+      "2, molte meno di noi"
+    ],
+    "src": "Snopes; Save Giraffes Now"
+  },
+  {
+    "t": "Rosa per merito del cibo",
+    "x": "I fenicotteri nascono grigi o bianchi: diventano rosa grazie ai pigmenti (carotenoidi) di alghe e gamberetti che mangiano. Niente pappa colorata, niente rosa! Come le carote che colorano.",
+    "ic": "🦩",
+    "q": "Perché i fenicotteri diventano rosa?",
+    "ok": "Per i pigmenti del cibo che mangiano",
+    "wrong": [
+      "Perché prendono il sole",
+      "Perché si vergognano"
+    ],
+    "src": "Riverbanks Zoo; Science Notes"
+  },
+  {
+    "t": "Il piccolo orso d'acqua",
+    "x": "Il tardigrado, o «orsetto d’acqua», di solito misura meno di un millimetro, ma resiste a freddo, caldo e siccità: si secca come un barilotto e aspetta. Alcuni sono sopravvissuti persino fuori da un satellite nello spazio!",
+    "ic": "🐻",
+    "q": "Dove sono sopravvissuti alcuni tardigradi?",
+    "ok": "Fuori da un satellite nello spazio",
+    "wrong": [
+      "Dentro un vulcano acceso",
+      "Nel cuore del Sole"
+    ],
+    "src": "Live Science"
+  },
+  {
+    "t": "Mezzo cervello dorme",
+    "x": "Il delfino dorme con metà cervello alla volta: una metà riposa, l'altra resta sveglia per farlo salire a respirare e stare attento. Spesso tiene anche un occhio aperto!",
+    "ic": "🐬",
+    "q": "Come dorme il delfino?",
+    "ok": "Con metà cervello alla volta",
+    "wrong": [
+      "Solo a testa in giù",
+      "Non dorme mai"
+    ],
+    "src": "Smithsonian Magazine; National Geographic"
+  },
+  {
+    "t": "Strisce come impronte",
+    "x": "Non esistono due zebre con le stesse strisce: il disegno di ognuna è unico, come le nostre impronte digitali. I ricercatori le riconoscono proprio dalle foto delle strisce!",
+    "ic": "🦓",
+    "q": "Che cosa hanno di speciale le strisce delle zebre?",
+    "ok": "Ogni zebra ha un disegno unico",
+    "wrong": [
+      "Sono tutte uguali",
+      "Cambiano ogni giorno"
+    ],
+    "src": "PBS Nature; San Diego Zoo Wildlife Alliance"
+  },
+  {
+    "t": "Il gufo gira la testa",
+    "x": "I gufi non possono muovere gli occhi, che sono fissi come due tubi. In compenso girano la testa fino a circa 270 gradi, cioè tre quarti di giro! Ma il giro completo è una leggenda.",
+    "ic": "🦉",
+    "q": "Fino a quanto può girare la testa un gufo?",
+    "ok": "Circa tre quarti di giro",
+    "wrong": [
+      "Due giri completi",
+      "Solo un pochino"
+    ],
+    "src": "National Geographic; Guinness World Records"
+  },
+  {
+    "t": "Papà pinguino cova",
+    "x": "Nel pinguino imperatore è il papà a covare: tiene l'uovo sulle zampe, sotto una piega calda della pancia, per circa due mesi nell'inverno dell'Antartide, quasi senza mangiare. Un vero supereroe!",
+    "ic": "🐧",
+    "q": "Chi cova l'uovo del pinguino imperatore?",
+    "ok": "Il papà, sulle zampe",
+    "wrong": [
+      "La mamma, in una tana",
+      "Nessuno, lo copre la neve"
+    ],
+    "src": "National Geographic"
+  },
+  {
+    "t": "Papà cavalluccio partorisce",
+    "x": "Nel cavalluccio marino la mamma depone le uova in una tasca sulla pancia del papà. Lui le porta finché nascono e poi «partorisce» i piccoli cavallucci! È uno dei pochissimi casi in natura.",
+    "ic": "🐴",
+    "q": "Chi porta le uova del cavalluccio marino fino alla nascita?",
+    "ok": "Il papà, in una tasca",
+    "wrong": [
+      "La mamma, sulla schiena",
+      "Le alghe, sul fondo"
+    ],
+    "src": "National Geographic; UT Marine Science Institute"
+  },
+  {
+    "t": "Il colibrì va in retromarcia",
+    "x": "Il colibrì batte le ali così velocemente che può restare fermo a mezz'aria davanti a un fiore e perfino volare all'indietro! È l'unico gruppo di uccelli capace di farlo davvero a lungo.",
+    "ic": "🐦",
+    "q": "Che cosa sa fare di speciale il colibrì in volo?",
+    "ok": "Volare all'indietro",
+    "wrong": [
+      "Volare sott'acqua",
+      "Volare senza muovere le ali"
+    ],
+    "src": "Encyclopaedia Britannica; Smithsonian National Zoo (hummingbirds)"
+  },
+  {
+    "t": "L'axolotl si ripara",
+    "x": "L'axolotl è un anfibio messicano che sembra sempre sorridere. Se perde una zampa, gliela ricresce intera, ossa comprese! Sa riparare anche parti del cuore e del midollo spinale. In natura però è in pericolo.",
+    "ic": "🦎",
+    "q": "Che cosa sa fare l'axolotl se perde una zampa?",
+    "ok": "Farla ricrescere intera",
+    "wrong": [
+      "Camminare sulle mani",
+      "Cambiare colore"
+    ],
+    "src": "MBL – Marine Biological Laboratory"
+  },
+  {
+    "t": "Assaggiare con i piedi",
+    "x": "Le farfalle hanno i sensori del gusto sulle zampe! Quando si posano su una foglia, «assaggiano» se è giusta per deporre le uova. Immagina di sentire il sapore della pizza camminandoci sopra!",
+    "ic": "🦋",
+    "q": "Con che cosa sentono il sapore le farfalle?",
+    "ok": "Con le zampe",
+    "wrong": [
+      "Con le ali",
+      "Con gli occhi"
+    ],
+    "src": "Carleton University; RSPB"
+  }
+]
