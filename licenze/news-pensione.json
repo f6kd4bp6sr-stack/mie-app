@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-19T16:58:00+02:00",
+ "updated": "2026-10-19T22:58:00+02:00",
  "voci": [
   {
    "id": "n20261016-usic",
@@ -203,35 +203,35 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "MEF",
    "url": "https://www.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "non raggiungibile"
   },
   {
@@ -245,28 +245,28 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Ministero del Lavoro",
    "url": "https://www.lavoro.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ISTAT",
    "url": "https://www.istat.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
@@ -294,14 +294,14 @@
    "n": "Camera dei deputati",
    "url": "https://www.camera.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Senato",
    "url": "https://www.senato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
@@ -315,35 +315,35 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
    "n": "COISP",
    "url": "https://coisp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
@@ -420,7 +420,7 @@
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
@@ -434,7 +434,7 @@
    "n": "ForzeArmate.org",
    "url": "https://forzearmate.org/",
    "tipo": "testata",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
@@ -448,7 +448,7 @@
    "n": "PensioniOggi",
    "url": "https://www.pensionioggi.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-19T22:58:00+02:00",
    "esito": "ok"
   },
   {
@@ -516,6 +516,11 @@
    "at": "2026-10-19T16:58:00+02:00",
    "notizie": 0,
    "note": "giro delle 17 (il giro delle 13 non risulta nel registro): nessuna notizia nuova dal giro delle 23 (COISP Flash 42 del 19/10 chiede fondi per la previdenza dedicata nella manovra, dichiarazione sindacale già coperta dalle voci sul tavolo; USIF, SILF e SINAFI senza novità su contratto o pensione; INPS: ultimo messaggio n. 3281 del 15/10). Gazzetta ferma alla S.G. n. 242 del 17/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 atteso in Parlamento entro il 20/10, non ancora presentato. Tassi di mercato invariati (BTP: chiusura del 16/10; in apertura del 19/10 il decennale è intorno al 4,5%); conti deposito ricontrollati, tassi invariati. BTP Valore in collocamento dal 19 al 23/10. Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, SIAP"
+  },
+  {
+   "at": "2026-10-19T22:58:00+02:00",
+   "notizie": 0,
+   "note": "giro delle 23: nessuna notizia nuova dal giro delle 17 (SILF 19/10 sugli alloggi di Foggia, non riguarda contratto o pensione; USIF, SINAFI, SIULP e Infodifesa senza novità; INPS: ultimo messaggio n. 3281 del 15/10). Gazzetta ferma alla S.G. n. 242 del 17/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora approvato dal Consiglio dei ministri. Tassi di mercato: BTP aggiornati al 19/10 (2 anni 3,49%, 5 anni 3,96%, 10 anni 4,52%); BTP Valore: primo giorno 3,4 miliardi più 1,2 miliardi del Valore Insieme, aggiunto ISIN. Conti deposito invariati dal giro delle 17. Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA; non ricontrollati in questo giro Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
   }
  ],
  "mercati": [
@@ -540,8 +545,8 @@
   {
    "id": "btp2",
    "t": "BTP a 2 anni (rendimento lordo)",
-   "valore": 3.45,
-   "d": "2026-10-16",
+   "valore": 3.49,
+   "d": "2026-10-19",
    "fonte": "Trading Economics",
    "url": "https://it.tradingeconomics.com/italy/government-bond-yield",
    "unita": "%"
@@ -549,8 +554,8 @@
   {
    "id": "btp5",
    "t": "BTP a 5 anni (rendimento lordo)",
-   "valore": 3.92,
-   "d": "2026-10-16",
+   "valore": 3.96,
+   "d": "2026-10-19",
    "fonte": "Trading Economics",
    "url": "https://it.tradingeconomics.com/italy/government-bond-yield",
    "unita": "%"
@@ -558,20 +563,21 @@
   {
    "id": "btp10",
    "t": "BTP a 10 anni (rendimento lordo)",
-   "valore": 4.48,
-   "d": "2026-10-16",
+   "valore": 4.52,
+   "d": "2026-10-19",
    "fonte": "Trading Economics",
    "url": "https://it.tradingeconomics.com/italy/government-bond-yield",
-   "unita": "%"
+   "unita": "%",
+   "nota": "rendimentibtp.it, BTP 1/10/2036 4%: prezzo 95,85 il 19/10 (lordo a scadenza circa 4,5%)"
   },
   {
    "id": "btpv",
    "t": "BTP Valore ottobre 2026, 5 anni (rendimento lordo a scadenza, circa)",
    "valore": 4.1,
-   "d": "2026-10-16",
-   "fonte": "Milano Finanza",
-   "url": "https://www.milanofinanza.it/news/btp-valore-ottobre-2026-ai-raggi-x-quanto-rendono-davvero-i-rischi-e-come-usarli-in-portafoglio-202610161506541622",
-   "nota": "collocamento 19–23 ottobre 2026; cedole minime 3,7% (anni 1–2), 4,1% (3–4), 4,7% (5)",
+   "d": "2026-10-19",
+   "fonte": "Teleborsa",
+   "url": "https://www.teleborsa.it/News/2026/10/19/btp-valore-il-doppio-collocamento-chiude-il-primo-giorno-a-4-6-miliardi-di-euro-239.html",
+   "nota": "collocamento 19–23 ottobre 2026 (fino alle 13 del 23, salvo chiusura anticipata), scadenza 27/10/2031; cedole minime 3,7% (anni 1–2), 4,1% (3–4), 4,7% (5), rivedibili solo al rialzo; primo giorno 3.417 milioni (BTP Valore) e 1.188 milioni (BTP Valore Insieme, cedola unica minima 22,25% a scadenza)",
    "unita": "%"
   },
   {
@@ -723,10 +729,11 @@
    "tasso": 4.1,
    "anni": 5,
    "gar": "rimborso a 100 alla scadenza (rischio Italia)",
-   "d": "2026-10-16",
-   "fonte": "Milano Finanza",
-   "url": "https://www.milanofinanza.it/news/btp-valore-ottobre-2026-ai-raggi-x-quanto-rendono-davvero-i-rischi-e-come-usarli-in-portafoglio-202610161506541622",
-   "nota": "collocamento 19–23 ottobre 2026; cedole minime 3,7% (anni 1–2), 4,1% (3–4), 4,7% (5); rendimento lordo a scadenza circa 4,1%"
+   "d": "2026-10-19",
+   "fonte": "SoldiOnline",
+   "url": "https://www.soldionline.it/notizie/obbligazioni-italia/btp-valore-ottobre-2031-caratteristiche-calendario",
+   "nota": "collocamento 19–23 ottobre 2026, scadenza 27/10/2031; cedole trimestrali minime 3,7% (anni 1–2), 4,1% (3–4), 4,7% (5), rivedibili solo al rialzo; rendimento lordo a scadenza circa 4,1%. Esiste anche il BTP Valore Insieme (IT0005735227, cedola unica minima 22,25% alla scadenza)",
+   "isin": "IT0005735201"
   },
   {
    "id": "btp36",
@@ -736,10 +743,10 @@
    "tasso": 4.5,
    "anni": 10,
    "gar": "rimborso a 100 alla scadenza (rischio Italia)",
-   "d": "2026-10-18",
+   "d": "2026-10-19",
    "fonte": "rendimentibtp.it",
    "url": "https://www.rendimentibtp.it/btp/10anni",
-   "nota": "prezzo 96,49; rendimento netto indicato 3,95% (lordo circa 4,5%)"
+   "nota": "prezzo 95,85 (19/10, 14:41); rendimento netto indicato 4,03% (lordo circa 4,5%)"
   },
   {
    "id": "xeon",
