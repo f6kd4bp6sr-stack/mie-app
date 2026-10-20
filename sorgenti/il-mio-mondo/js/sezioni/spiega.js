@@ -31,9 +31,42 @@ function spLayout(d) {
   else { const top = Math.ceil(N / 2), bot = N - top, row = (n, y) => { const xs = n === 3 ? [135, 400, 665] : n === 2 ? [215, 585] : n === 1 ? [400] : [110, 300, 500, 690]; xs.slice(0, n).forEach(x => P.push([x, y])); }; row(top, 84); row(bot, 516); }
   return P;
 }
+/* linea del tempo: gli avvenimenti («anno») sopra la freccia, i periodi («periodo»: [inizio, fine]) come fasce sotto; anni negativi = a.C. */
+function spLineSVG(d, opts) {
+  const vis = n => !opts.shown || opts.shown.has(n.id);
+  const ys = []; d.nodi.forEach(n => { if (n.anno != null) ys.push(n.anno); if (n.periodo) ys.push(...n.periodo); });
+  const y0 = Math.min(...ys), y1 = Math.max(...ys), X = y => 70 + (y - y0) / Math.max(1, y1 - y0) * 660, AX = 300, W = 190, H = 92;
+  const yr = y => (y < 0 ? -y + ' a.C.' : y + ' d.C.');
+  const box = (n, i, cx, cy) => { const c = SP_COL[i % SP_COL.length], hid = opts.hide === n.id, lit = opts.lit && opts.lit.has(n.id);
+    const name = hid ? ['❓ …'] : spWrap((n.ic ? n.ic + ' ' : '') + n.n, 17), sub = hid ? ['scegli la parola giusta'] : spWrap(n.sotto || '', 26), t0 = cy - (name.length + sub.length - 1) * 9.5 + 4;
+    return '<g class="sp-node' + (hid ? ' hid' : '') + (lit ? ' lit' : '') + (opts.focus === n.id ? ' foc' : '') + '"><rect x="' + (cx - W / 2) + '" y="' + (cy - H / 2) + '" width="' + W + '" height="' + H + '" rx="18" fill="' + (hid ? '#f2f2f2' : c[0]) + '" stroke="' + (hid ? '#9aa3b2' : c[1]) + '"/>' +
+      name.map((t, k) => '<text class="nn" x="' + cx + '" y="' + (t0 + k * 21).toFixed(0) + '" fill="#2b2f3a">' + esc(t) + '</text>').join('') +
+      sub.map((t, k) => '<text class="ns" x="' + cx + '" y="' + (t0 + name.length * 21 + k * 16 - 2).toFixed(0) + '" fill="' + (hid ? '#5b6475' : c[2]) + '">' + esc(t) + '</text>').join('') +
+      (lit ? '<text class="nl" x="' + (cx + W / 2 - 8) + '" y="' + (cy - H / 2 + 6) + '">💡</text>' : '') + '</g>'; };
+  let bands = '', marks = '', boxes = '', lastX = -999, row = 0; const ticks = new Set(), tlab = {};
+  d.nodi.forEach((n, i) => {
+    if (!vis(n)) return;
+    const c = SP_COL[i % SP_COL.length];
+    if (n.periodo) {
+      const a = X(n.periodo[0]), b = X(n.periodo[1]), cx = Math.max(W / 2 + 6, Math.min(800 - W / 2 - 6, (a + b) / 2)), cy = row++ % 2 ? 515 : 410;
+      bands += '<rect class="sp-band" x="' + a.toFixed(0) + '" y="' + (AX - 13) + '" width="' + (b - a).toFixed(0) + '" height="26" rx="6" fill="' + c[1] + '" opacity=".75"/>';
+      marks += '<path class="sp-conn" d="M' + ((a + b) / 2).toFixed(0) + ' ' + (AX + 13) + ' L' + cx.toFixed(0) + ' ' + (cy - H / 2) + '"/>';
+      ticks.add(n.periodo[0]); ticks.add(n.periodo[1]); boxes += box(n, i, cx, cy);
+    } else if (n.anno != null) {
+      let cx = Math.max(W / 2 + 6, Math.min(800 - W / 2 - 6, X(n.anno))); if (cx - lastX < W + 8) cx = Math.min(800 - W / 2 - 6, lastX + W + 8); lastX = cx;
+      marks += '<path class="sp-conn" d="M' + X(n.anno).toFixed(0) + ' ' + (AX - 16) + ' L' + cx.toFixed(0) + ' ' + (190 + H / 2) + '"/><circle cx="' + X(n.anno).toFixed(0) + '" cy="' + AX + '" r="9" fill="' + c[1] + '" stroke="#fff" stroke-width="3"/>';
+      ticks.add(n.anno); if (n.tacca) tlab[n.anno] = n.tacca; boxes += box(n, i, cx, 190);
+    }
+  });
+  const tk = [...ticks].sort((a, b) => a - b).map((y, k) => '<text class="sp-yr" x="' + X(y).toFixed(0) + '" y="' + (AX + (k % 2 ? 50 : 34)) + '">' + esc(tlab[y] || yr(y)) + '</text>').join('');
+  return '<svg class="sp-map" viewBox="0 0 800 600" role="img" aria-label="Linea del tempo: ' + esc(d.centro.n) + '"><defs><marker id="sp-ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2b2f3a"/></marker></defs>' +
+    '<text class="sp-lt" x="400" y="52">' + esc((d.centro.ic ? d.centro.ic + ' ' : '') + d.centro.n) + '</text>' + (d.centro.sotto ? '<text class="sp-ls" x="400" y="80">' + esc(d.centro.sotto) + '</text>' : '') +
+    '<path d="M30 ' + AX + ' L780 ' + AX + '" stroke="#2b2f3a" stroke-width="4" marker-end="url(#sp-ar2)"/>' + bands + marks + tk + boxes + '</svg>';
+}
 /* opts: shown (Set di id visibili, null = tutti), lit (Set accesi), hide (id con ❓), focus (id evidenziato) */
 function spMapSVG(d, opts) {
   opts = opts || {};
+  if (d.tipo === 'linea') return spLineSVG(d, opts);
   const P = spLayout(d), C = [400, 300], cyc = d.tipo === 'ciclo', W = cyc ? 210 : 228, H = 92;
   const vis = n => !opts.shown || opts.shown.has(n.id);
   const edge = (a, b, wa, ha, wb, hb) => { // segmento tra i bordi di due rettangoli
@@ -101,7 +134,7 @@ function spPaint() {
   } else if (S.ph === 'ritrova') {
     const r = d.ritrova[S.j], n = d.nodi.find(x => x.id === r.nodo);
     map = spMapSVG(d, { hide: r.nodo, lit: S.lit });
-    const phrase = d.tipo === 'ciclo' ? (n.da || '') : d.centro.n + ' · ' + (n.da || '');
+    const phrase = d.tipo === 'ciclo' || d.tipo === 'linea' ? (n.da || '') : d.centro.n + ' · ' + (n.da || '');
     side = '<div class="sp-card"><h3>🧩 Ritrova la parola che manca · ' + (S.j + 1) + ' di ' + d.ritrova.length + '</h3><p class="sp-text">' + esc(phrase) + ' <b>…?</b></p><div class="sp-choices">' +
       shuffle(r.scelte.map((t, k) => ({ t, ok: k === 0 }))).map(c => '<button type="button" class="btn ghost sp-ch" data-ok="' + (c.ok ? 1 : 0) + '">' + esc(c.t) + '</button>').join('') + '</div><p class="sp-mini" id="sp-fb">Ripensa al racconto: che cosa c’era qui?</p></div>';
   } else if (S.ph === 'pronta') {

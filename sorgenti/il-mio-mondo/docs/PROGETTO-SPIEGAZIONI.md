@@ -1,6 +1,6 @@
 # Il mio mondo — progetto «Capire prima di rispondere» (spiegazioni e mappe concettuali)
 
-Stato: **pilota realizzato il 20 ottobre 2026** (6 argomenti). Motore: `js/sezioni/spiega.js`. Prima di allargare alle altre materie, va provato con la bimba.
+Stato: **pilota realizzato il 20 ottobre 2026** (6 argomenti + 2 dalla scheda di scuola sulla Grecia: «La civiltà greca: dove e quando» con la linea del tempo, e «Le polis, città-stato», con 18 domande nuove). Motore: `js/sezioni/spiega.js`. Prima di allargare alle altre materie, va provato con la bimba.
 
 ## Scelte del genitore
 - **Spiegazione**: la prima volta che si apre un argomento si parte dal racconto e dalla mappa; dopo è a scelta, con il tasto «Rivedi la spiegazione».
@@ -40,6 +40,7 @@ Stato: **pilota realizzato il 20 ottobre 2026** (6 argomenti). Motore: `js/sezio
 - **Disegno con etichette**: per esempio cuore, fiore, vulcano.
 - **Tabella di confronto**: per esempio vertebrati, tipi di testo.
 - **Passi in fila**: procedure di matematica.
+- Realizzate: raggiera, ciclo e **linea del tempo** (`tipo: "linea"`: avvenimenti con `anno`, periodi con `periodo: [inizio, fine]`, anni negativi = a.C., `tacca` per scrivere per esempio «VIII sec. a.C.» sotto la freccia).
 
 ## Collegamenti tra materie
 Sotto la mappa compaiono i «🔗 Collegamenti»: 2-3 argomenti di altre materie, cioè id di argomenti esistenti in `argomenti.json`. Per esempio: Antico Egitto → Geografia «Fiumi e laghi», Arte «L'arte antica», Tecnologia «I materiali».
