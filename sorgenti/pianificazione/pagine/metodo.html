@@ -45,6 +45,23 @@ h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute
 .week .big{font-size:40px;line-height:1}
 .steps{display:flex;gap:6px;margin-top:10px}.steps i{flex:1;height:6px;border-radius:3px;background:var(--seg)}.steps i.on{background:var(--m)}.steps i.done{background:var(--m);opacity:.4}
 .sf{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.motto{font-style:italic;color:var(--m);font-weight:650}
+.mc{font:inherit;color:var(--ink);border-radius:18px;padding:16px;cursor:pointer;display:grid;gap:8px;align-content:start;text-align:left;min-height:170px;border:2px solid var(--line);background:var(--card)}
+.mc.back{place-items:center;align-content:center;text-align:center;border:0;color:#fff;background:repeating-linear-gradient(45deg,rgba(255,255,255,.09) 0 10px,transparent 10px 20px),var(--m)}
+.mc.back.l1{background-color:var(--l1)}.mc.back.l1,.mc.back.l2,.mc.back.l3{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.12) 0 10px,transparent 10px 20px)}.mc.back.l2{background-color:var(--l2)}.mc.back.l3{background-color:var(--l3)}
+.mc.back .lv{font-size:44px;line-height:1}.mc.back b{font-size:18px}.mc.back .lbl{color:rgba(255,255,255,.85)}
+.mc.front{animation:flip .35s ease-out}.mc.front.on{border-color:var(--m);background:var(--m-bg)}
+@keyframes flip{from{transform:rotateY(80deg);opacity:.3}to{transform:none;opacity:1}}
+.mc .nm{font-size:18px}.mc .t{font-size:16px;line-height:1.35}.mc .bo{font-size:14px;color:var(--muted);font-style:italic}.mc .h{display:flex;gap:6px;flex-wrap:wrap}
+.cur{padding:4px 0 10px;border-top:1px solid var(--line)}.cur:first-of-type{border-top:0}.card>.cur:first-child{border-top:0}.cur .ct{font-size:17px}.cur p{margin:6px 0}.cur .trad{color:var(--m)}
+.qq{font-size:17px;font-weight:650;margin:0 0 10px}.qo{display:block;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:14px;padding:11px 14px;margin:0 0 8px;cursor:pointer}
+.qo.ok{border-color:var(--ok);background:var(--ok-bg)}.qo.no{border-color:var(--warn);background:var(--warn-bg)}.qo.dim{opacity:.55}.qo .qr{display:block;margin-top:4px;font-size:14.5px}
+.fpick{margin-top:12px;font-size:21px;font-weight:700;background:var(--m-bg);color:var(--ink);border-radius:16px;padding:16px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.star{font:inherit;font-size:22px;background:none;border:0;cursor:pointer;color:var(--muted);padding:0 4px}.star.on{color:#e0a100}
+.medg{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.med{background:var(--card);border-radius:16px;padding:14px;box-shadow:var(--shadow);display:grid;gap:4px;opacity:.55;filter:grayscale(1)}.med.on{opacity:1;filter:none;box-shadow:inset 0 4px 0 var(--m),var(--shadow)}
+.med .mi{font-size:34px}.med small{color:var(--muted)}
+details.bib>summary{cursor:pointer;list-style:none}details.bib>summary::-webkit-details-marker{display:none}
 .sfc{text-align:left;font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px;cursor:pointer;display:grid;gap:8px;align-content:start}
 .sfc.on{border-color:var(--m);background:var(--m-bg)}
 .sfc .t{font-size:16.5px;font-weight:650;line-height:1.35}
@@ -124,7 +141,7 @@ const AB=MD.abilita,ABI=Object.fromEntries(AB.map((a,i)=>[a.id,i])),SF=Object.fr
 const KEY="pn-v1";
 function kv(mode,key,val){return new Promise((res,rej)=>{try{const r=indexedDB.open("licenze-marco",1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains("kv"))r.result.createObjectStore("kv");};
   r.onsuccess=()=>{try{const tx=r.result.transaction("kv",mode),st=tx.objectStore("kv");const q=mode==="readonly"?st.get(key):st.put(val,key);q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error);}catch(e){rej(e);}};r.onerror=()=>rej(r.error);}catch(e){rej(e);}});}
-const normM=m=>{m=m&&typeof m==="object"?m:{};m.g=m.g&&typeof m.g==="object"?m.g:{};m.inc=Array.isArray(m.inc)?m.inc:[];m.occ=m.occ&&typeof m.occ==="object"?m.occ:{};m.lette=m.lette||{};return m;};
+const normM=m=>{m=m&&typeof m==="object"?m:{};m.g=m.g&&typeof m.g==="object"?m.g:{};m.inc=Array.isArray(m.inc)?m.inc:[];m.occ=m.occ&&typeof m.occ==="object"?m.occ:{};m.lette=m.lette||{};m.quiz=m.quiz&&m.quiz.ans?m.quiz:{ans:{}};m.quiz.pick=m.quiz.pick||{};m.fav=m.fav||{};m.med=m.med||{};return m;};
 let M=normM((lsJ(KEY)||{}).met);
 let saveT=null;
 function save(){const P=lsJ(KEY)||{ver:1};P.met=M;P.savedAt=new Date().toISOString();const t=JSON.stringify(P); // riparto sempre dall'ultima versione salvata: le altre sezioni restano intatte
@@ -148,70 +165,134 @@ function propose(s,rnd){
 }
 function dayG(s){let g=M.g[s];if(!g){g=M.g[s]={ab:weekInfo(s).ab.id,p:propose(s)};save();}return g;}
 function occPrimo(s){const v=OCC&&(OCC.voci||[]).find(x=>"occ:"+x.id===s);return v?`<span class="lbl">${esc(v.primo)}</span>`:"";}
-function sfTxt(g){if(!g||!g.s)return "";if(g.s.startsWith("occ:"))return g.txt||"";return (SF[g.s]||{}).t||"";}
+function sfTxt(g){if(!g||!g.s)return "";if(g.s.startsWith("occ:"))return g.txt||"";const x=SF[g.s];return x?x.nome+": "+x.t:"";}
 
 /* ---------- interfaccia ---------- */
-const TABS=[["oggi","🎯 Oggi"],["regole","📘 Regole d'oro"],["inc","🍽️ Incontri"],["diario","📝 Com'è andata"],["vol","🤲 Volontariato"]];
-let tab=(()=>{const h=(location.hash||"").slice(1);if(TABS.some(t=>t[0]===h))return h;try{const v=localStorage.getItem("pn-metv");return TABS.some(t=>t[0]===v)?v:"oggi";}catch(e){return "oggi";}})();
-let incEdit=null,incOpen=false;
+const TABS=[["oggi","🃏 Oggi"],["sapevi","🧠 Lo sapevi?"],["quiz","🎭 Che cosa faresti?"],["frasi","💬 Frasi di scorta"],["medaglie","🏅 Medaglie"],["inc","🍽️ Incontri"],["diario","📝 Com'è andata"],["vol","🤲 Volontariato"]];
+let tab=(()=>{const ok=v=>TABS.some(t=>t[0]===v),h=(location.hash||"").slice(1);if(ok(h))return h;try{const v=localStorage.getItem("pn-metv");return ok(v)?v:"oggi";}catch(e){return "oggi";}})();
+let incEdit=null,incOpen=false,quizCur=null,quizAns=null,frCat="tutte",frPick=null;
 function setTab(t){tab=t;try{localStorage.setItem("pn-metv",t);}catch(e){}history.replaceState(null,"","#"+t);render();scrollTo({top:0});}
 function render(){
   $("intro").textContent=MD.intro;
   $("tabs").innerHTML=TABS.map(([k,n])=>`<button data-tab="${k}" class="${tab===k?"on":""}">${n}</button>`).join("");
-  $("main").innerHTML=tab==="oggi"?vOggi():tab==="regole"?vRegole():tab==="inc"?vInc():tab==="diario"?vDiario():vVol();
-  bind();
+  $("main").innerHTML=({oggi:vOggi,sapevi:vSapevi,quiz:vQuiz,frasi:vFrasi,medaglie:vMedaglie,inc:vInc,diario:vDiario,vol:vVol}[tab]||vOggi)();
+  bind();medalCheck();
 }
-const livP=l=>`<span class="pill l${l}">${["","🌱 facile","🌿 media","🔥 coraggiosa"][l]}</span>`;
+const LIVI=["","🌱","🌿","🦁"];
+const livP=l=>`<span class="pill l${l}">${LIVI[l]} ${esc(MD.livelli[l])}</span>`;
 const sitP=s=>`<span class="pill">${esc(MD.situazioni[s]||s)}</span>`;
 function faces(cur,attr){return `<div class="faces">${FACCE.map((f,i)=>`<button ${attr}="${i+1}" class="${+cur===i+1?"on":""}" aria-label="${f[1]}">${f[0]}</button>`).join("")}</div>`;}
+const dayN=s=>diff("2026-01-05",s);
 
 function vOggi(){
   const t=today(),W=weekInfo(t),g=dayG(t),wd=(parse(t).getDay()+6)%7;
-  let o=`<div class="card"><div class="week"><span class="big">${W.ab.ic}</span><div><div class="lbl">Settimana ${W.n} di 4${W.ciclo?` · giro ${W.ciclo+1}, sfide più impegnative`:""}</div><h3 style="margin:2px 0">${esc(W.ab.n)}</h3><div class="lbl">${esc(W.ab.sotto)}</div></div></div>
+  let o=`<div class="card"><div class="week"><span class="big">${W.ab.ic}</span><div><div class="lbl">Settimana ${W.n} di 4${W.ciclo?` · giro ${W.ciclo+1}: si alza l'asticella`:""}</div><h3 style="margin:2px 0">${esc(W.ab.n)}</h3><div class="motto">«${esc(W.ab.motto)}»</div></div></div>
     <div class="steps">${AB.map((a,i)=>`<i class="${i===W.n-1?"on":i<W.n-1?"done":""}" title="${esc(a.n)}"></i>`).join("")}</div></div>`;
-  // la sfida
-  if(g.s&&g.ok){o+=`<div class="card"><h3>🎯 La sfida di oggi</h3><div class="done"><span class="tick">✅</span><div class="grow"><b>${esc(sfTxt(g))}</b><div class="lbl">Fatta! Com'è andata?</div>${faces(g.f,"data-gf")}
-      <div class="form"><label class="wide">Una riga: che cosa ha funzionato, che cosa hai notato<input id="gT" maxlength="200" value="${esc(g.t||"")}" placeholder="es. ha sorriso subito, abbiamo parlato dieci minuti"></label></div>
+  // la missione
+  if(g.s&&g.ok){const x=SF[g.s];o+=`<div class="card"><h3>🃏 Missione compiuta!</h3><div class="done"><span class="tick">✅</span><div class="grow"><b>${esc(x?x.nome:"🤲 Primo passo")}</b><div>${esc(x?x.t:g.txt)}</div><div class="lbl" style="margin-top:6px">Com'è andata?</div>${faces(g.f,"data-gf")}
+      <div class="form"><label class="wide">Il rapporto in una riga (anche le figuracce valgono)<input id="gT" maxlength="200" value="${esc(g.t||"")}" placeholder="es. ha sorriso subito; oppure: mi ha guardato come un alieno"></label></div>
       <div class="btns"><button class="btn pri sm" data-a="gsave">Salva</button><button class="btn sm" data-a="gundo">Non l'ho ancora fatta</button></div></div></div></div>`;}
-  else{o+=`<div class="card"><h3>🎯 La sfida di oggi <span class="lbl" style="font-weight:600">${g.s?"la tua scelta":"scegline una"}</span></h3><div class="sf">`+
-      g.p.map(id=>{const x=SF[id];if(!x)return "";return `<button class="sfc${g.s===id?" on":""}" data-pick="${id}"><span class="h">${livP(x.liv)}${sitP(x.sit)}</span><span class="t">${esc(x.t)}</span></button>`;}).join("")+
-      (g.s&&g.s.startsWith("occ:")?`<button class="sfc on" data-pick="${esc(g.s)}"><span class="h"><span class="pill l3">🔥 coraggiosa</span>${sitP("vol")}</span><span class="t">${esc(g.txt)}</span>${occPrimo(g.s)}</button>`:"")+
-      `</div><div class="btns">${g.s?`<button class="btn ok" data-a="gdone">✓ Fatta</button>`:""}<button class="btn sm" data-a="gnew">🔄 Altre tre</button></div>
-      <p class="lbl" style="margin:10px 0 0">Saltare un giorno va benissimo: non ci sono serie da tenere né punti da perdere.</p></div>`;}
-  // la regola del giorno
-  const sc=MD.schede.filter(x=>x.ab===W.ab.id),r=sc[(diff(startOf(),t)%7+7)%7%sc.length];
-  if(r)o+=`<div class="card plain"><h3>📘 La regola di oggi <button class="lnk" data-tab="regole" style="margin-left:auto">Tutte le regole ›</button></h3>${schedaH(r)}</div>`;
+  else{const rev=new Set(g.rev||[]);
+    o+=`<div class="card"><h3>🃏 Pesca la missione di oggi</h3><p class="lbl" style="margin:0 0 10px">Tre carte coperte, tre livelli. Girane una: è la tua missione. Se non ti convince, girane un'altra.</p><div class="sf">`+
+      g.p.map(id=>{const x=SF[id];if(!x)return "";if(!rev.has(id)&&g.s!==id)return `<button class="mc back l${x.liv}" data-pick="${id}"><span class="lv">${LIVI[x.liv]}</span><b>${esc(MD.livelli[x.liv])}</b><span class="lbl">tocca per girare</span></button>`;
+        return `<button class="mc front${g.s===id?" on":""}" data-pick="${id}"><span class="h">${livP(x.liv)}${sitP(x.sit)}</span><b class="nm">${esc(x.nome)}</b><span class="t">${esc(x.t)}</span>${x.bonus?`<span class="bo">✨ Bonus: ${esc(x.bonus)}</span>`:""}</button>`;}).join("")+
+      (g.s&&g.s.startsWith("occ:")?`<button class="mc front on" data-pick="${esc(g.s)}"><span class="h">${livP(3)}${sitP("vol")}</span><b class="nm">🤲 Primo passo</b><span class="t">${esc(g.txt)}</span>${occPrimo(g.s)}</button>`:"")+
+      `</div><div class="btns">${g.s?`<button class="btn ok" data-a="gdone">✓ Missione compiuta</button>`:""}<button class="btn sm" data-a="gnew">🔀 Rimescola il mazzo</button></div>
+      <p class="lbl" style="margin:10px 0 0">Saltare un giorno va benissimo: niente serie da tenere, nessuno ti toglie punti.</p></div>`;}
+  // lo sapevi del giorno
+  const L=[{intro:1}].concat(MD.schede.filter(x=>x.ab===W.ab.id)),c=L[((dayN(t))%L.length+L.length)%L.length];
+  o+=`<div class="card plain"><h3>🧠 Lo sapevi? <button class="lnk" data-tab="sapevi" style="margin-left:auto">Tutte le curiosità ›</button></h3>${c.intro?curioIntro():curioH(c)}</div>`;
+  // il quiz del giorno
+  o+=`<div class="card plain"><h3>🎭 Che cosa faresti? <button class="lnk" data-tab="quiz" style="margin-left:auto">Altre situazioni ›</button></h3>${quizH(g.q&&QZ[g.q]?g.q:(g.q=quizDay(t),save(),g.q),"oggi")}</div>`;
   // incontri vicini
   const up=M.inc.filter(i=>i.d&&i.d>=t&&i.d<=add(t,7)).sort((a,b)=>a.d<b.d?-1:1),late=M.inc.filter(i=>i.d&&i.d<t&&!i.f);
   if(up.length||late.length)o+=`<div class="card plain"><h3>🍽️ Incontri <button class="lnk" data-tab="inc" style="margin-left:auto">Apri ›</button></h3>`+
     late.map(i=>`<div class="row"><span class="fc">📝</span><div class="grow"><b>${esc(i.chi)}</b><small>${cap(fmt(i.d))} · com'è andata? Scrivilo in Incontri</small></div></div>`).join("")+
     up.map(i=>`<div class="row"><span class="fc">🍽️</span><div class="grow"><b>${esc(i.chi)}</b><small>${i.d===t?"oggi":cap(fmt(i.d))}${i.o?" · "+esc(i.o):""}${i.dove?" · "+esc(i.dove):""}</small>${(i.dom||[]).filter(Boolean).length?`<small>Domande pronte: ${(i.dom||[]).filter(Boolean).map(esc).join(" · ")}</small>`:""}</div></div>`).join("")+`</div>`;
-  // riepilogo (la domenica e il lunedì: la settimana appena passata)
   if(wd===6||wd===0)o+=riepilogo(wd===6?monday(t):monday(add(t,-1)));
-  o+=`<p class="lbl" style="margin:18px 4px">💡 ${esc(MD.intro_base)}</p>`;
   return o;
 }
 function riepilogo(m){
   const days=[...Array(7)].map((_,i)=>add(m,i)).filter(s=>s<=today()),G=days.map(s=>M.g[s]).filter(g=>g&&g.s&&g.ok);
   const inc=M.inc.filter(i=>i.d>=m&&i.d<=add(m,6)&&i.f),n=[0,0,0];G.concat(inc).forEach(x=>{if(x.f)n[x.f-1]++;});
   const righe=G.filter(g=>g.t).map(g=>g.t).concat(inc.filter(i=>i.t).map(i=>i.t)),W=weekInfo(m);
-  return `<div class="card"><h3>🗓️ Riepilogo della settimana · ${W.ab.ic} ${esc(W.ab.n)}</h3>
-    <div class="kpi"><div><b>${G.length}</b><span>sfide fatte</span></div><div><b>${inc.length}</b><span>incontri</span></div><div><b>${FACCE.map((f,i)=>n[i]?f[0]+" "+n[i]:"").filter(Boolean).join("  ")||"—"}</b><span>com'è andata</span></div></div>
-    ${righe.length?`<p class="lbl" style="margin:8px 0 4px">Quello che hai scritto:</p>${righe.slice(-5).map(r=>`<div class="row"><span class="fc">✍️</span><div class="grow">${esc(r)}</div></div>`).join("")}`:`<p class="lbl">Ogni sfida fatta è un passo, anche se è andata così così: conta averci provato.</p>`}
-    <p class="lbl" style="margin:10px 0 0">Ricorda: dopo una chiacchierata, di solito sei piaciuto più di quanto pensi.</p></div>`;
+  const voto=G.length>=5?"Settimana da leoni. 🦁":G.length>=3?"Bella settimana: si vede il ritmo.":G.length?"Un inizio è un inizio: conta più di zero.":"Settimana tranquilla. Il mazzo ti aspetta.";
+  return `<div class="card"><h3>🗓️ Il bilancio della settimana · ${W.ab.ic} ${esc(W.ab.n)}</h3><p style="margin:0 0 6px"><b>${voto}</b></p>
+    <div class="kpi"><div><b>${G.length}</b><span>missioni compiute</span></div><div><b>${inc.length}</b><span>incontri</span></div><div><b>${FACCE.map((f,i)=>n[i]?f[0]+" "+n[i]:"").filter(Boolean).join("  ")||"—"}</b><span>com'è andata</span></div></div>
+    ${righe.length?`<p class="lbl" style="margin:8px 0 4px">Dai tuoi rapporti:</p>${righe.slice(-5).map(r=>`<div class="row"><span class="fc">✍️</span><div class="grow">${esc(r)}</div></div>`).join("")}`:""}
+    <p class="lbl" style="margin:10px 0 0">Promemoria scientifico: dopo una chiacchierata, di solito sei piaciuto più di quanto pensi.</p></div>`;
 }
+
+/* ---------- 🧠 Lo sapevi? (la scienza resta dietro «Da dove viene?») ---------- */
 const FT={studio:"📄 studio",articolo:"📰 spiegato in breve",libro:"📘 libro"};
 function fonteH(f){return `<div class="fo"><span class="k">${FT[f.t]||"fonte"}</span>${esc(f.c)}${f.url?` <a href="${esc(f.url)}" target="_blank" rel="noopener">${f.url.includes("doi.org")?"DOI ›":"Apri ›"}</a>`:""}</div>`;}
-function appH(a){if(!a)return "";return `<details class="app"><summary>🔎 Approfondisci: lo studio, come provarci, le fonti</summary>
+function appH(a,lid,x){if(!a)return "";return `<details class="app" data-lid="${lid}"><summary>🔎 Da dove viene? Lo studio, come provarci, le fonti</summary>
+  ${x?`<h4>📏 La regola</h4><p>${esc(x.princ)}</p><p class="es">${esc(x.es)}</p>`:""}
   <h4>🧪 Che cosa hanno scoperto</h4><p>${esc(a.come)}</p>
   <h4>✅ Prova così</h4><ol>${(a.prova||[]).map(p=>`<li>${esc(p)}</li>`).join("")}</ol>
   <h4>⚠️ Attenzione</h4><p>${esc(a.att)}</p>
   <h4>📚 Fonti <span class="lbl" style="font-weight:600">(in inglese)</span></h4>${(a.fonti||[]).map(fonteH).join("")}</details>`;}
-function schedaH(x){return `<div class="sch"><b class="t">${esc(x.tit)}</b><p style="margin:6px 0">${esc(x.princ)}</p><p class="es">${esc(x.es)}</p><span class="fr">💬 «${esc(x.frase)}»</span><div class="bs">📚 ${esc(x.base)}</div>${appH(x.app)}</div>`;}
+function curioH(x){const c=x.curio;return `<div class="cur"><b class="ct">${esc(c.tit)}</b><p>${esc(c.fatto)}</p><p class="trad">👉 <b>Tradotto:</b> ${esc(c.trad)}</p><span class="fr">💬 «${esc(x.frase)}»</span>${appH(x.app,x.id,x)}</div>`;}
+function curioIntro(){const c=MD.intro_curio;return `<div class="cur"><b class="ct">${esc(c.tit)}</b><p>${esc(c.fatto)}</p><p class="trad">👉 <b>Tradotto:</b> ${esc(c.trad)}</p>${appH(MD.intro_app,"intro")}</div>`;}
 function bibH(){const L=[],seen=new Set();[MD.intro_app].concat(MD.schede.map(s=>s.app)).forEach(a=>(a&&a.fonti||[]).forEach(f=>{if(!seen.has(f.c)){seen.add(f.c);L.push(f);}}));
-  L.sort((a,b)=>a.c.localeCompare(b.c,"it"));return `<div class="card plain bib"><h3>📚 Tutte le fonti (${L.length})</h3><p class="lbl" style="margin:0 0 6px">Studi pubblicati su riviste scientifiche con revisione, più qualche articolo che li spiega in breve. I link portano alla pagina dell'editore (DOI) o all'articolo.</p>${L.map(fonteH).join("")}</div>`;}
-function vRegole(){const W=weekInfo(today());
-  return `<div class="card plain"><h3>💡 Perché vale la pena provarci</h3><p style="margin:0">${esc(MD.intro_base)}</p>${appH(MD.intro_app)}</div>`+AB.map(a=>`<div class="card${a.id===W.ab.id?"":" plain"}"><h3>${a.ic} ${esc(a.n)}${a.id===W.ab.id?` <span class="pill m">questa settimana</span>`:""}</h3><div class="lbl" style="margin-bottom:6px">${esc(a.sotto)}</div>${MD.schede.filter(x=>x.ab===a.id).map(schedaH).join("")}</div>`).join("")+bibH();}
+  L.sort((a,b)=>a.c.localeCompare(b.c,"it"));return `<details class="card plain bib"><summary><h3 style="display:inline">📚 Tutte le fonti (${L.length})</h3></summary><p class="lbl" style="margin:6px 0">Studi pubblicati su riviste scientifiche con revisione, più qualche articolo che li spiega in breve.</p>${L.map(fonteH).join("")}</details>`;}
+function vSapevi(){const W=weekInfo(today()),n=Object.keys(M.lette).length;
+  return `<div class="card"><h3>🧠 Lo sapevi?</h3><p style="margin:0">Curiosità vere dalla psicologia delle relazioni, con la traduzione pratica. Sotto ognuna, «Da dove viene?» apre lo studio e le fonti.</p><p class="lbl" style="margin:6px 0 0">Approfondimenti aperti: ${n} di ${MD.schede.length+1}</p></div>
+    <div class="card plain">${curioIntro()}</div>`+AB.map(a=>`<div class="card${a.id===W.ab.id?"":" plain"}"><h3>${a.ic} ${esc(a.n)}${a.id===W.ab.id?` <span class="pill m">questa settimana</span>`:""}</h3>${MD.schede.filter(x=>x.ab===a.id).map(curioH).join("")}</div>`).join("")+bibH();}
+
+/* ---------- 🎭 Che cosa faresti? ---------- */
+const QZ=Object.fromEntries(MD.quiz.map(q=>[q.id,q]));
+function quizDay(s){const A=M.quiz.ans,L=MD.quiz,st=((dayN(s))%L.length+L.length)%L.length;for(let k=0;k<L.length;k++){const q=L[(st+k)%L.length];if(!(q.id in A))return q.id;}return L[st].id;}
+function quizH(id,where){const q=QZ[id];if(!q)return "";const a=quizAns&&quizAns.id===id?quizAns.i:where==="oggi"&&id in M.quiz.pick?M.quiz.pick[id]:null,done=a!=null;
+  const sch=q.sch==="intro"?{curio:MD.intro_curio}:MD.schede.find(x=>x.id===q.sch);
+  return `<div class="qz"><p class="qq">${esc(q.q)}</p>${q.op.map((op,i)=>`<button class="qo${done?(op.ok?" ok":i===a?" no":" dim"):""}" data-qa="${id}:${i}"${done?" disabled":""}><b>${"ABC"[i]})</b> ${esc(op.t)}${done&&(op.ok||i===a)?`<span class="qr">${op.ok?"✅ ":"❌ "}${esc(op.r)}</span>`:""}</button>`).join("")}
+    ${done&&sch?`<p class="lbl" style="margin:8px 0 0">🧠 Il perché: <b>${esc(sch.curio.tit)}</b> · <button class="lnk" data-tab="sapevi">Lo sapevi? ›</button></p>`:""}
+    ${done&&where==="quiz"?`<div class="btns"><button class="btn pri" data-a="qnext">Prossima situazione ›</button></div>`:""}</div>`;}
+function vQuiz(){const A=M.quiz.ans,ok=Object.values(A).filter(v=>v===1).length,n=Object.keys(A).length;
+  if(!quizCur||!QZ[quizCur])quizCur=MD.quiz.find(q=>!(q.id in A))?.id||MD.quiz[0].id;
+  return `<div class="card"><h3>🎭 Che cosa faresti?</h3><p style="margin:0">Situazioni di tutti i giorni, tre risposte: una giusta e due… memorabili. Conta la prima risposta.</p>
+    <div class="kpi"><div><b>${ok}</b><span>giuste al primo colpo</span></div><div><b>${n} / ${MD.quiz.length}</b><span>situazioni affrontate</span></div></div></div>
+    <div class="card plain">${quizH(quizCur,"quiz")}</div>`;}
+
+/* ---------- 💬 Frasi di scorta ---------- */
+const ALLF=()=>MD.frasi.flatMap(c=>c.f.map(f=>({c,f})));
+function vFrasi(){const fav=Object.keys(M.fav);
+  let o=`<div class="card"><h3>💬 Frasi di scorta</h3><p style="margin:0">Il kit di pronto soccorso per le chiacchiere: quando il discorso si spegne, ne peschi una. Tocca ☆ per tenere le tue preferite.</p><p class="lbl" style="margin:4px 0 0">${esc(MD.frasi_nota||"")}</p>
+    <div class="btns">${[["tutte","🎲 Tutte"]].concat(MD.frasi.map(c=>[c.id,c.ic+" "+c.n])).map(([k,n])=>`<button class="btn sm${frCat===k?" pri":""}" data-fc="${k}">${esc(n)}</button>`).join("")}</div>
+    <div class="btns"><button class="btn pri" data-a="fpick">🎲 Pesca una frase</button></div>
+    ${frPick?`<div class="fpick">«${esc(frPick)}»<button class="star${M.fav[frPick]?" on":""}" data-fav="${esc(frPick)}" aria-label="preferita">${M.fav[frPick]?"★":"☆"}</button></div>`:""}</div>`;
+  if(fav.length)o+=`<div class="card plain"><h3>⭐ Le tue preferite</h3>${fav.map(f=>frRow(f)).join("")}</div>`;
+  o+=MD.frasi.filter(c=>frCat==="tutte"||frCat===c.id).map(c=>`<div class="card plain"><h3>${c.ic} ${esc(c.n)}</h3>${c.f.map(frRow).join("")}</div>`).join("");
+  return o;}
+function frRow(f){return `<div class="row"><div class="grow">«${esc(f)}»</div><button class="star${M.fav[f]?" on":""}" data-fav="${esc(f)}" aria-label="preferita">${M.fav[f]?"★":"☆"}</button></div>`;}
+
+/* ---------- 🏅 Medaglie ---------- */
+function stats(){const s={ab:{aprire:0,viva:0,vivo:0,calore:0},leoni:0,vol:0,fig:0,week:{},tot:0};
+  Object.entries(M.g).forEach(([d,g])=>{if(!g||!g.s||!g.ok)return;s.tot++;const x=SF[g.s],ab=x?x.ab:g.ab;if(s.ab[ab]!=null)s.ab[ab]++;if(!x||x.liv===3)s.leoni++;if(g.s.startsWith("occ:")||(x&&x.sit==="vol"))s.vol++;if(+g.f===3)s.fig++;const m=monday(d);s.week[m]=(s.week[m]||0)+1;});
+  s.inc=M.inc.filter(i=>i.chi).length;s.quiz=Object.values(M.quiz.ans).filter(v=>v===1).length;s.lette=Object.keys(M.lette).length;s.fav=Object.keys(M.fav).length;
+  s.wmax=Math.max(0,...Object.values(s.week));s.giro=Object.values(s.ab).every(n=>n>0)?1:0;return s;}
+const MED=[
+ {id:"rompi",ic:"🧊",n:"Rompighiaccio",v:s=>s.ab.aprire,t:[1,5,15],gr:["di primo pelo","patentato","artico"],d:"missioni di 👋 Aprire"},
+ {id:"epoi",ic:"🔁",n:"Maestro del «E poi?»",v:s=>s.ab.viva,t:[1,5,15],gr:["apprendista","diplomato","emerito"],d:"missioni di 💬 Tenere viva la chiacchierata"},
+ {id:"fantasmi",ic:"👻",n:"Acchiappafantasmi",v:s=>s.ab.vivo,t:[1,5,15],gr:["dilettante","esperto","leggendario"],d:"missioni di 🔁 Farsi vivo: amicizie riportate in vita"},
+ {id:"termo",ic:"🔥",n:"Termosifone umano",v:s=>s.ab.calore,t:[1,5,15],gr:["tiepido","caldo","bollente"],d:"missioni di 😊 Calore"},
+ {id:"leone",ic:"🦁",n:"Cuor di leone",v:s=>s.leoni,t:[1,5,15],gr:["cucciolo","adulto","re della foresta"],d:"missioni «Da leoni»"},
+ {id:"saggio",ic:"🎭",n:"Saggio del bar",v:s=>s.quiz,t:[5,12,MD.quiz.length],gr:["chiacchierone","filosofo","oracolo"],d:"risposte giuste al primo colpo in «Che cosa faresti?»"},
+ {id:"casa",ic:"🍽️",n:"Padrone di casa",v:s=>s.inc,t:[1,3,10],gr:["alle prime armi","navigato","da manuale"],d:"incontri preparati"},
+ {id:"topo",ic:"🧠",n:"Topo di biblioteca",v:s=>s.lette,t:[3,10,MD.schede.length+1],gr:["curioso","studioso","professore"],d:"«Da dove viene?» aperti"},
+ {id:"coll",ic:"💬",n:"Collezionista di frasi",v:s=>s.fav,t:[3,10],gr:["principiante","con l'album pieno"],d:"frasi di scorta tra le preferite"},
+ {id:"primo",ic:"🤲",n:"Primo passo",v:s=>s.vol,t:[1,5],gr:["",", volontario nell'anima"],d:"missioni di volontariato"},
+ {id:"sett",ic:"📅",n:"Settimana piena",v:s=>s.wmax,t:[5,7],gr:["","sette su sette"],d:"missioni nella stessa settimana"},
+ {id:"fig",ic:"😅",n:"Coraggio da vendere",v:s=>s.fig,t:[1,3],gr:["","incassatore professionista"],d:"missioni andate storte (😕) e affrontate lo stesso: conta averci provato"},
+ {id:"giro",ic:"🏁",n:"Giro completo",v:s=>s.giro,t:[1],gr:[""],d:"almeno una missione in tutte e 4 le abilità"}];
+const ROM=["","I","II","III"];
+const tierOf=(m,s)=>m.t.filter(x=>m.v(s)>=x).length;
+const medName=(m,k)=>m.n+(m.gr[k-1]?(m.gr[k-1].startsWith(",")?m.gr[k-1]:" "+m.gr[k-1]):"");
+function medalCheck(){const s=stats();let ch=false;MED.forEach(m=>{const k=tierOf(m,s);if(k>(M.med[m.id]||0)){M.med[m.id]=k;ch=true;toast("🏅 Nuova medaglia: "+m.ic+" "+medName(m,k));}});if(ch)save();}
+function vMedaglie(){const s=stats(),got=MED.filter(m=>tierOf(m,s)>0).length;
+  return `<div class="card"><h3>🏅 Medaglie</h3><p style="margin:0">Non servono a niente, e proprio per questo fanno piacere. Ne hai ${got} su ${MED.length}.</p></div><div class="medg">`+
+    MED.map(m=>{const k=tierOf(m,s),v=m.v(s),nx=m.t[k];return `<div class="med${k?" on":""}"><span class="mi">${m.ic}</span><b>${esc(k?medName(m,k):m.n)}</b>${m.t.length>1?`<span class="pill${k?" m":""}">${k?"grado "+ROM[k]:"da conquistare"}</span>`:k?`<span class="pill m">conquistata</span>`:`<span class="pill">da conquistare</span>`}
+      <small>${esc(m.d)}</small><small>${nx!=null?`${Math.min(v,nx)} / ${nx}${k?" per il grado "+ROM[k+1]:""}`:"✨ al massimo"}</small></div>`;}).join("")+`</div>`;}
 
 function vInc(){
   const t=today(),E=incEdit?M.inc.find(i=>i.id===incEdit):null,L=M.inc.slice().sort((a,b)=>(b.d||"")<(a.d||"")?-1:1);
@@ -238,11 +319,11 @@ function incCard(i,past){
     ${past||i.d===today()?`<div style="margin-top:8px"><b>Com'è andata?</b>${faces(i.f,"data-if=\""+i.id+"\" data-iv")}<div class="form"><label class="wide">Una riga<input data-it="${i.id}" maxlength="200" value="${esc(i.t||"")}" placeholder="che cosa ha funzionato"></label><label class="wide">Da chiedere la prossima volta («Com'è andata poi?»)<input data-ir="${i.id}" maxlength="200" value="${esc(i.ric||"")}" placeholder="es. l'esame del figlio, il viaggio in Puglia"></label></div></div>`:""}</div>`;}
 
 function vDiario(){
-  const L=[];Object.entries(M.g).forEach(([d,g])=>{if(g&&g.s&&g.ok)L.push({d,ic:"🎯",t:sfTxt(g),f:g.f,r:g.t});});
+  const L=[];Object.entries(M.g).forEach(([d,g])=>{if(g&&g.s&&g.ok)L.push({d,ic:"🃏",t:sfTxt(g),f:g.f,r:g.t});});
   M.inc.forEach(i=>{if(i.d&&(i.f||i.t))L.push({d:i.d,ic:"🍽️",t:"Incontro: "+i.chi,f:i.f,r:i.t,ric:i.ric});});
   L.sort((a,b)=>a.d<b.d?1:-1);
   const t=today();let o=riepilogo(monday(t));
-  if(!L.length)return o+`<p class="empty">Qui compariranno le sfide fatte e gli incontri, con una riga su com'è andata.</p>`;
+  if(!L.length)return o+`<p class="empty">Qui compariranno le missioni compiute e gli incontri, con il tuo rapporto in una riga. Figuracce comprese.</p>`;
   let wk="";o+=L.map(x=>{const m=monday(x.d),h=m!==wk?`<h2>Settimana del ${parse(m).toLocaleDateString("it-IT",{day:"numeric",month:"long"})} · ${weekInfo(m).ab.ic} ${esc(weekInfo(m).ab.n)}</h2>`:"";wk=m;
     return h+`<div class="card plain" style="padding:12px 16px"><div class="row" style="border:0;padding:0"><span class="fc">${x.f?FACCE[x.f-1][0]:x.ic}</span><div class="grow"><b>${esc(x.t)}</b><small>${cap(fmt(x.d))}</small>${x.r?`<div style="margin-top:4px">✍️ ${esc(x.r)}</div>`:""}${x.ric?`<small>Da chiedere la prossima volta: ${esc(x.ric)}</small>`:""}</div></div></div>`;}).join("");
   return o;
@@ -256,7 +337,7 @@ const ST=[["","—"],["interessa","⭐ mi interessa"],["contattato","📞 ho con
 function vVol(){
   if(!OCC)return `<div class="card plain"><p class="empty">Sto scaricando le occasioni… serve internet la prima volta.</p></div>`;
   const AT=Object.fromEntries(AB.map(a=>[a.id,a]));
-  let o=`<div class="card"><h3>🤲 Volontariato a Torino</h3><p style="margin:0">Fare volontariato vuol dire incontrare persone nuove ogni volta, con uno scopo comune: è la palestra più naturale per il Metodo. Qui ci sono realtà con molto contatto umano, con il primo passo da fare.</p>
+  let o=`<div class="card"><h3>🤲 Volontariato a Torino</h3><p style="margin:0">Fare volontariato vuol dire incontrare persone nuove ogni volta, con uno scopo comune: è la palestra più naturale per il Metodo (e le missioni «Da leoni» ringraziano). Qui ci sono realtà con molto contatto umano, con il primo passo da fare.</p>
     <p class="lbl" style="margin:8px 0 0">Controllate sulle pagine ufficiali · ultimo aggiornamento ${OCC.updated?new Date(OCC.updated).toLocaleDateString("it-IT",{day:"numeric",month:"long",year:"numeric"}):"—"} · solo informazioni, nessun consiglio.</p></div>`;
   const an=(OCC.annunci||[]).filter(a=>!a.scade||a.scade>=today());
   if(an.length)o+=`<h2>📣 Annunci</h2>`+an.map(a=>`<div class="card plain occ"><h3>${esc(a.n)}</h3><p>${esc(a.cosa||"")}</p>${a.primo?`<div class="primo"><b>Primo passo:</b> ${esc(a.primo)}</div>`:""}<div class="lbl">${a.scade?"Fino al "+fmt(a.scade,{day:"numeric",month:"long"})+" · ":""}Fonte: <a class="lnk" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fonte||"pagina")}</a></div></div>`).join("");
@@ -265,7 +346,7 @@ function vVol(){
     <p>${esc(v.cosa)}</p><p><b>Impegno:</b> ${esc(v.impegno)}</p><p><b>Requisiti:</b> ${esc(v.requisiti)}</p>
     <div class="primo"><b>Primo passo:</b> ${esc(v.primo)}</div>
     <div class="form"><label>Per me<select data-ost="${esc(v.id)}">${ST.map(([k,n])=>`<option value="${k}"${(my.st||"")===k?" selected":""}>${n}</option>`).join("")}</select></label><label>Nota<input data-onote="${esc(v.id)}" maxlength="160" value="${esc(my.n||"")}" placeholder="facoltativa"></label></div>
-    <div class="btns"><button class="btn sm" data-osf="${esc(v.id)}">🎯 Il primo passo è la sfida di oggi</button></div>
+    <div class="btns"><button class="btn sm" data-osf="${esc(v.id)}">🃏 Il primo passo è la missione di oggi</button></div>
     <div class="lbl" style="margin-top:8px">Fonte: <a class="lnk" href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.fonte)}</a> · controllato il ${fmt(v.ctrl,{day:"numeric",month:"long",year:"numeric"})}</div></div>`;}).join("");
   return o+`<p class="lbl" style="margin:14px 4px">Le tue scelte e le note restano su questo iPad.</p>`;
 }
@@ -273,7 +354,11 @@ function vVol(){
 /* ---------- azioni ---------- */
 function bind(){
   document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
-  document.querySelectorAll("[data-pick]").forEach(b=>b.onclick=()=>{const g=dayG(today()),id=b.dataset.pick;g.s=g.s===id&&!id.startsWith("occ:")?null:id;if(!g.s)delete g.txt;else if(SF[g.s])g.txt=SF[g.s].t;save();render();});
+  document.querySelectorAll("[data-pick]").forEach(b=>b.onclick=()=>{const g=dayG(today()),id=b.dataset.pick;if(g.s===id)return;g.rev=Array.from(new Set((g.rev||[]).concat(id)));g.s=id;if(SF[id])g.txt=SF[id].nome;save();render();});
+  document.querySelectorAll("[data-qa]").forEach(b=>b.onclick=()=>{const [id,i]=b.dataset.qa.split(":"),q=QZ[id];if(!q)return;quizAns={id,i:+i};M.quiz.pick[id]=+i;if(!(id in M.quiz.ans))M.quiz.ans[id]=q.op[+i].ok?1:0;save();render();});
+  document.querySelectorAll("[data-fc]").forEach(b=>b.onclick=()=>{frCat=b.dataset.fc;frPick=null;render();});
+  document.querySelectorAll("[data-fav]").forEach(b=>b.onclick=()=>{const f=b.dataset.fav;if(M.fav[f])delete M.fav[f];else M.fav[f]=1;save();render();});
+  document.querySelectorAll("details[data-lid]").forEach(d=>d.ontoggle=()=>{if(d.open&&!M.lette[d.dataset.lid]){M.lette[d.dataset.lid]=1;save();medalCheck();}});
   document.querySelectorAll("[data-gf]").forEach(b=>b.onclick=()=>{const g=dayG(today());g.f=+b.dataset.gf;save();render();});
   document.querySelectorAll("[data-iv]").forEach(b=>b.onclick=()=>{const i=M.inc.find(x=>x.id===b.dataset.if);if(i){i.f=+b.dataset.iv;save();render();}});
   document.querySelectorAll("[data-it]").forEach(e=>e.onchange=()=>{const i=M.inc.find(x=>x.id===e.dataset.it);if(i){i.t=e.value.trim();save();toast("Salvato");}});
@@ -282,12 +367,14 @@ function bind(){
   document.querySelectorAll("[data-qi]").forEach(b=>b.onclick=()=>{const q=MD.domande_idee[+b.dataset.qi];for(const k of [0,1,2]){const e=$("iQ"+k);if(e&&!e.value){e.value=q;return;}}toast("Le 3 domande sono già piene");});
   document.querySelectorAll("[data-ost]").forEach(e=>e.onchange=()=>{const m=M.occ[e.dataset.ost]||(M.occ[e.dataset.ost]={});m.st=e.value;m.at=today();save();toast("Salvato");});
   document.querySelectorAll("[data-onote]").forEach(e=>e.onchange=()=>{const m=M.occ[e.dataset.onote]||(M.occ[e.dataset.onote]={});m.n=e.value.trim();save();toast("Salvato");});
-  document.querySelectorAll("[data-osf]").forEach(b=>b.onclick=()=>{const v=(OCC.voci||[]).find(x=>x.id===b.dataset.osf);if(!v)return;const g=dayG(today());if(g.ok&&!confirm("Hai già fatto la sfida di oggi: la sostituisco con questo primo passo?"))return;g.s="occ:"+v.id;g.txt="Fai il primo passo con "+v.n;g.ok=false;delete g.f;delete g.t;save();setTab("oggi");toast("🎯 È la sfida di oggi");});
+  document.querySelectorAll("[data-osf]").forEach(b=>b.onclick=()=>{const v=(OCC.voci||[]).find(x=>x.id===b.dataset.osf);if(!v)return;const g=dayG(today());if(g.ok&&!confirm("Hai già compiuto la missione di oggi: la sostituisco con questo primo passo?"))return;g.s="occ:"+v.id;g.txt="Fai il primo passo con "+v.n;g.rev=g.rev||[];g.ok=false;delete g.f;delete g.t;save();setTab("oggi");toast("🃏 È la missione di oggi");});
   document.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>act(b.dataset.a));
 }
 function act(a){const t=today();
-  if(a==="gnew"){const g=dayG(t);g.p=propose(t,true);if(g.s&&!g.s.startsWith("occ:"))g.s=null;save();return render();}
-  if(a==="gdone"){const g=dayG(t);g.ok=true;g.at=new Date().toISOString();save();toast("✅ Fatta, bravo!");return render();}
+  if(a==="gnew"){const g=dayG(t);g.p=propose(t,true);g.rev=[];if(g.s&&!g.s.startsWith("occ:")){g.s=null;delete g.txt;}save();toast("🔀 Mazzo rimescolato");return render();}
+  if(a==="qnext"){const A=M.quiz.ans,L=MD.quiz,i=L.findIndex(q=>q.id===quizCur);let nx=L.slice(i+1).concat(L.slice(0,i+1)).find(q=>!(q.id in A));if(!nx)nx=L[(i+1)%L.length];quizCur=nx.id;quizAns=null;return render();}
+  if(a==="fpick"){const L=ALLF().filter(x=>frCat==="tutte"||x.c.id===frCat);let p=L[Math.floor(Math.random()*L.length)].f;if(L.length>1)while(p===frPick)p=L[Math.floor(Math.random()*L.length)].f;frPick=p;return render();}
+  if(a==="gdone"){const g=dayG(t);g.ok=true;g.at=new Date().toISOString();save();toast(["✅ Missione compiuta!","✅ Bravo, agente della simpatia!","✅ Fatto: il mondo è un po' più cordiale."][Math.floor(Math.random()*3)]);return render();}
   if(a==="gundo"){const g=dayG(t);g.ok=false;save();return render();}
   if(a==="gsave"){const g=dayG(t);g.t=($("gT").value||"").trim();save();toast("Salvato");return render();}
   if(a==="inew"){incEdit=null;incOpen=true;return render();}
