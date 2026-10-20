@@ -127,5 +127,284 @@
    "sw0efu": "dei",
    "8czciw": "nilo"
   }
+ },
+ "grecia": {
+  "tipo": "linea",
+  "centro": {
+   "n": "La civiltà greca",
+   "ic": "⏳",
+   "sotto": "sulle coste e sulle isole del mar Egeo"
+  },
+  "nodi": [
+   {
+    "id": "inizio",
+    "anno": -1000,
+    "n": "fiorisce la civiltà greca",
+    "ic": "🌊",
+    "sotto": "intorno al 1000 a.C.",
+    "da": "intorno al 1000 a.C.",
+    "tacca": "1000 a.C. circa"
+   },
+   {
+    "id": "polis",
+    "anno": -750,
+    "n": "nascono le polis",
+    "ic": "🏛️",
+    "sotto": "le città-stato, nell'VIII secolo a.C.",
+    "da": "nell'VIII secolo a.C.",
+    "tacca": "VIII sec. a.C."
+   },
+   {
+    "id": "romani",
+    "anno": -146,
+    "n": "arrivano i Romani",
+    "ic": "🦅",
+    "sotto": "nel 146 a.C. conquistano la Grecia",
+    "da": "nel 146 a.C."
+   },
+   {
+    "id": "arcaico",
+    "periodo": [
+     -1000,
+     -480
+    ],
+    "n": "il periodo arcaico",
+    "ic": "🏺",
+    "sotto": "dalle origini al 480 a.C.",
+    "da": "dalle origini al 480 a.C. c'è"
+   },
+   {
+    "id": "classico",
+    "periodo": [
+     -480,
+     -323
+    ],
+    "n": "il periodo classico",
+    "ic": "🦉",
+    "sotto": "dal 480 al 323 a.C.",
+    "da": "dal 480 al 323 a.C. c'è"
+   },
+   {
+    "id": "ellenistico",
+    "periodo": [
+     -323,
+     -146
+    ],
+    "n": "il periodo ellenistico",
+    "ic": "🐎",
+    "sotto": "dal 323 al 146 a.C.",
+    "da": "dal 323 al 146 a.C. c'è"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La civiltà greca fiorisce dal 1000 a.C. circa. I Greci vivono sulle coste e sulle isole del mar Egeo: il mare è la loro strada.",
+    "v": "La civiltà greca fiorisce dal mille avanti Cristo, circa. I Greci vivono sulle coste e sulle isole del mar Egeo: il mare è la loro strada.",
+    "nodi": [
+     "inizio"
+    ]
+   },
+   {
+    "t": "Nell'VIII secolo a.C., cioè tra l'800 e il 700 a.C., nascono le polis: le città-stato greche, come Atene e Sparta.",
+    "v": "Nell'ottavo secolo avanti Cristo, cioè tra l'ottocento e il settecento avanti Cristo, nascono le polis: le città-stato greche, come Atene e Sparta.",
+    "nodi": [
+     "polis"
+    ]
+   },
+   {
+    "t": "Gli storici dividono la storia greca in 3 periodi. Il primo è il periodo arcaico: dalle origini fino al 480 a.C.",
+    "v": "Gli storici dividono la storia greca in tre periodi. Il primo è il periodo arcaico: dalle origini fino al quattrocentottanta avanti Cristo.",
+    "nodi": [
+     "arcaico"
+    ]
+   },
+   {
+    "t": "Poi viene il periodo classico, dal 480 al 323 a.C.: è il tempo del Partenone di Atene e dei grandi filosofi.",
+    "v": "Poi viene il periodo classico, dal quattrocentottanta al trecentoventitré avanti Cristo: è il tempo del Partenone di Atene e dei grandi filosofi.",
+    "nodi": [
+     "classico"
+    ]
+   },
+   {
+    "t": "Nel 323 a.C. muore Alessandro Magno, il re che aveva conquistato un impero fino all'India. Comincia il periodo ellenistico: la cultura greca si diffonde in Oriente.",
+    "v": "Nel trecentoventitré avanti Cristo muore Alessandro Magno, il re che aveva conquistato un impero fino all'India. Comincia il periodo ellenistico: la cultura greca si diffonde in Oriente.",
+    "nodi": [
+     "ellenistico"
+    ]
+   },
+   {
+    "t": "Nel 146 a.C. la Grecia viene conquistata dai Romani. Ma la cultura greca continua a vivere: i Romani la studiano e la imitano.",
+    "v": "Nel centoquarantasei avanti Cristo la Grecia viene conquistata dai Romani. Ma la cultura greca continua a vivere: i Romani la studiano e la imitano.",
+    "nodi": [
+     "romani"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "classico",
+    "scelte": [
+     "il periodo classico",
+     "il periodo arcaico",
+     "il periodo ellenistico"
+    ]
+   },
+   {
+    "nodo": "romani",
+    "scelte": [
+     "arrivano i Romani",
+     "arrivano gli Egizi",
+     "arrivano i dinosauri"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "storia:polis",
+   "storia:alessandro",
+   "arte:antica"
+  ],
+  "domande": {
+   "m0agft4": "inizio",
+   "f6gb0or": "inizio",
+   "vhw0tu4": "romani",
+   "lw7aggi": "arcaico",
+   "2stz0ae": "arcaico",
+   "v6spm7i": "classico",
+   "3gqpaxv": "ellenistico",
+   "h9g5ou7": "classico",
+   "g90qiwa": "polis"
+  }
+ },
+ "polis": {
+  "centro": {
+   "n": "La polis",
+   "ic": "🏛️",
+   "sotto": "la città-stato greca"
+  },
+  "nodi": [
+   {
+    "id": "quando",
+    "n": "tra l'800 e il 700 a.C.",
+    "ic": "⏳",
+    "sotto": "nell'VIII secolo a.C.",
+    "da": "nasce"
+   },
+   {
+    "id": "tante",
+    "n": "tante città-stato",
+    "ic": "🗺️",
+    "sotto": "come Atene, Sparta e Corinto: nessun regno unico",
+    "da": "è una fra"
+   },
+   {
+    "id": "autonomia",
+    "n": "le sue leggi",
+    "ic": "📜",
+    "sotto": "e anche la sua organizzazione e la sua moneta",
+    "da": "è autonoma: ha"
+   },
+   {
+    "id": "territorio",
+    "n": "un territorio",
+    "ic": "🌾",
+    "sotto": "la città e i campi intorno",
+    "da": "occupa"
+   },
+   {
+    "id": "comune",
+    "n": "lingua e religione",
+    "ic": "🤝",
+    "sotto": "il greco e gli stessi dei",
+    "da": "ha in comune con le altre"
+   },
+   {
+    "id": "comunita",
+    "n": "una comunità di cittadini",
+    "ic": "👥",
+    "sotto": "così diceva Aristotele",
+    "da": "è soprattutto"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Nell'VIII secolo a.C., cioè tra l'800 e il 700 a.C., in Grecia nasce un modo nuovo di vivere insieme: la polis.",
+    "v": "Nell'ottavo secolo avanti Cristo, cioè tra l'ottocento e il settecento avanti Cristo, in Grecia nasce un modo nuovo di vivere insieme: la polis.",
+    "nodi": [
+     "quando"
+    ]
+   },
+   {
+    "t": "Polis vuol dire città-stato. La Grecia non diventa un unico regno: ogni città è come un piccolo Stato, per esempio Atene, Sparta e Corinto.",
+    "nodi": [
+     "tante"
+    ]
+   },
+   {
+    "t": "Ogni polis è autonoma: ha le sue leggi, la sua organizzazione e anche la sua moneta.",
+    "nodi": [
+     "autonomia"
+    ]
+   },
+   {
+    "t": "Ogni polis ha un territorio ben definito: la città, con case, templi e la piazza principale, l'agorà, e intorno i campi da coltivare.",
+    "nodi": [
+     "territorio"
+    ]
+   },
+   {
+    "t": "Le polis sono diverse tra loro, ma hanno in comune la lingua greca e la religione, con gli stessi dei.",
+    "nodi": [
+     "comune"
+    ]
+   },
+   {
+    "t": "Per i Greci la polis era soprattutto la comunità dei cittadini. Il filosofo Aristotele scrisse: «La polis è una comunità di cittadini».",
+    "nodi": [
+     "comunita"
+    ]
+   },
+   {
+    "t": "Per questo non dicevano «vado ad Atene», ma «vado dagli Ateniesi»: contavano le persone, non solo le strade e le mura.",
+    "nodi": [
+     "comunita"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "comunita",
+    "scelte": [
+     "una comunità di cittadini",
+     "un deserto",
+     "un vulcano"
+    ]
+   },
+   {
+    "nodo": "autonomia",
+    "scelte": [
+     "le sue leggi",
+     "le leggi di Roma",
+     "le leggi dell'Egitto"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "storia:grecia",
+   "storia:greci",
+   "civica:comune"
+  ],
+  "domande": {
+   "j9sv7pf": "tante",
+   "14s8pl2": "tante",
+   "yb5f80x": "tante",
+   "7vz9d0z": "quando",
+   "yyic2vu": "comune",
+   "904gwkl": "autonomia",
+   "drc2vv4": "territorio",
+   "18d83j9": "territorio",
+   "ha9bied": "comunita",
+   "8fwpjcu": "comunita",
+   "oc6r4cn": "comunita"
+  }
  }
 }
