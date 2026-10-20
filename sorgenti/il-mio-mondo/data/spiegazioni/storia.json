@@ -273,7 +273,8 @@
    "3gqpaxv": "ellenistico",
    "h9g5ou7": "classico",
    "g90qiwa": "polis"
-  }
+  },
+  "cartina": "grecia"
  },
  "polis": {
   "centro": {
@@ -405,6 +406,7 @@
    "ha9bied": "comunita",
    "8fwpjcu": "comunita",
    "oc6r4cn": "comunita"
-  }
+  },
+  "cartina": "grecia"
  }
 }
