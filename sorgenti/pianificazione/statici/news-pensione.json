@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-20T17:00:00+02:00",
+ "updated": "2026-10-20T23:00:00+02:00",
  "voci": [
   {
    "id": "n20261020-manovra",
@@ -223,35 +223,35 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "MEF",
    "url": "https://www.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
-   "esito": "non raggiungibile"
+   "ultimo": "2026-10-20T23:00:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -265,28 +265,28 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Ministero del Lavoro",
    "url": "https://www.lavoro.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ISTAT",
    "url": "https://www.istat.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -335,28 +335,28 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -440,7 +440,7 @@
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -496,7 +496,7 @@
    "n": "QuiFinanza",
    "url": "https://quifinanza.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -510,7 +510,7 @@
    "n": "Milano Finanza",
    "url": "https://www.milanofinanza.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-20T23:00:00+02:00",
    "esito": "ok"
   }
  ],
@@ -579,6 +579,11 @@
    "at": "2026-10-20T17:00:00+02:00",
    "notizie": 0,
    "note": "giro delle 17: nessuna notizia nuova dal giro delle 13 (USIF, SILF e SINAFI senza novità su contratto o pensione dopo il 18/10; SIULP e ForzeArmate.org fermi agli articoli già annotati; INPS: ultimo messaggio n. 3281 del 15/10). Gazzetta ferma alla S.G. n. 243 del 19/10, DPR non ancora pubblicato (atteso nella prima metà di novembre secondo SIULP e ASPMI); coefficienti 2027-2028 non usciti (Ministero del Lavoro fermo al decreto del 20/11/2024); tasso 2026 non ancora comunicato; quota F.A.F. 2027 attesa nel 2028. Legge di bilancio 2027 non ancora approvata dal Consiglio dei ministri. Tassi di mercato: BTP 10 anni corretto a 4,56% alla chiusura del 19/10 (Borsa Italiana; Trading Economics 4,57%); 2 e 5 anni invariati (nessuna seconda fonte sulla chiusura); BTP Valore: aggiornata la raccolta del secondo giorno. Conti deposito non ricontrollati (verificati alle 13). Scheda invariata. Non raggiungibili: Governo, MEF, Difesa, Corte dei conti"
+  },
+  {
+   "at": "2026-10-20T23:00:00+02:00",
+   "notizie": 0,
+   "note": "giro delle 23: nessuna notizia nuova dal giro delle 17 (USIF, SILF e SINAFI senza novità su contratto o pensione dopo il 18/10; SIULP fermo alla previsione del DPR in Gazzetta entro la prima metà di novembre; Infodifesa senza articoli nuovi; INPS: ultimo messaggio n. 3281 del 15/10). Gazzetta ferma alla S.G. n. 243 del 19/10, DPR non ancora pubblicato; tasso 2026 non ancora comunicato (Ministero del Lavoro fermo al 2025), coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Legge di bilancio 2027: nessuna approvazione in Consiglio dei ministri il 20/10, confermato lo slittamento verso il 28 ottobre. Tassi di mercato invariati: chiusura dei BTP del 20/10 non verificata (Milano Finanza 4,53% senza orario, Trading Economics 4,60%: non coincidono), restano i valori del 19/10; conti deposito non ricontrollati (verificati alle 13); prodotti invariati. Scheda invariata. Non raggiungibili: Governo; non ricontrollati in questo giro Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
   }
  ],
  "mercati": [
