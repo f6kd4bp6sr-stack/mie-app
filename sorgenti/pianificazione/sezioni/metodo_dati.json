@@ -1,0 +1,528 @@
+{
+ "abilita": [
+  {
+   "id": "aprire",
+   "ic": "👋",
+   "n": "Aprire",
+   "sotto": "salutare per primo, usare il nome, partire da quello che c'è intorno"
+  },
+  {
+   "id": "viva",
+   "ic": "💬",
+   "n": "Tenere viva la chiacchierata",
+   "sotto": "la seconda domanda, ascoltare davvero, raccontare qualcosa di sé"
+  },
+  {
+   "id": "vivo",
+   "ic": "🔁",
+   "n": "Farsi vivo",
+   "sotto": "un messaggio senza motivo, «com'è andata poi?», un grazie"
+  },
+  {
+   "id": "calore",
+   "ic": "😊",
+   "n": "Calore",
+   "sotto": "complimenti precisi, entusiasmo per le buone notizie, meno formalità"
+  }
+ ],
+ "situazioni": {
+  "nuove": "👤 persone nuove",
+  "colleghi": "🧑‍💼 colleghi ed ex colleghi",
+  "famiglia": "🏡 famiglia e amici",
+  "gruppi": "👥 gruppi",
+  "vol": "🤲 volontariato"
+ },
+ "livelli": {
+  "1": "facile",
+  "2": "media",
+  "3": "coraggiosa"
+ },
+ "intro": "Piacere agli altri non è solo un talento: è fatto anche di piccole abitudini che si allenano. E c'è una buona notizia: dopo una chiacchierata, di solito piacciamo all'altro più di quanto pensiamo.",
+ "intro_base": "Boothby e colleghi (2018) lo chiamano «liking gap»: dopo una conversazione tra sconosciuti, ognuno in media sottovaluta quanto è piaciuto all'altro.",
+ "schede": [
+  {
+   "id": "a1",
+   "ab": "aprire",
+   "tit": "Saluta per primo",
+   "princ": "Un saluto per primo, con un sorriso e guardando negli occhi, dice «mi fa piacere vederti» prima di ogni parola.",
+   "es": "Al bar, prima di ordinare: «Buongiorno! Come va stamattina?»",
+   "frase": "Buongiorno, come va oggi?",
+   "base": "Sandstrom e Dunn (2014): chi al bar scambiava due parole sincere con chi serviva usciva più di buon umore di chi andava di fretta."
+  },
+  {
+   "id": "a2",
+   "ab": "aprire",
+   "tit": "Usa il nome",
+   "princ": "Sentire il proprio nome fa sentire riconosciuti. Quando ti presentano qualcuno, ripeti subito il nome e usalo ancora una volta mentre parlate.",
+   "es": "«Piacere, Laura! Da quanto vieni qui?» E più avanti, salutando: «Ciao Laura, a presto!»",
+   "frase": "Scusa, mi ripeti il nome? Ci tengo a ricordarlo.",
+   "base": "Dire subito il nome, provare a richiamarlo a mente dopo qualche minuto e collegarlo a qualcosa (il posto, un dettaglio) aiuta a ricordarlo: lo mostrano gli studi sulla memoria dei nomi."
+  },
+  {
+   "id": "a3",
+   "ab": "aprire",
+   "tit": "Parti da quello che avete intorno",
+   "princ": "Non serve una frase brillante: basta un'osservazione su quello che condividete in quel momento (il posto, l'attesa, l'evento) e una domanda.",
+   "es": "In fila: «C'è sempre così tanta gente il sabato?»",
+   "frase": "È la prima volta che vieni qui?",
+   "base": "Epley e Schroeder (2014): chi sui mezzi pubblici attaccava discorso con uno sconosciuto faceva un viaggio più piacevole di chi restava in silenzio. Si temeva di essere respinti, ma nessun partecipante lo fu."
+  },
+  {
+   "id": "v1",
+   "ab": "viva",
+   "tit": "La seconda domanda",
+   "princ": "Dopo una risposta, fai una domanda proprio su quello che l'altro ha appena detto. È il segno più chiaro che lo stai ascoltando.",
+   "es": "«Sono stato in montagna.» «Ah sì? Dove? Che cosa ti è piaciuto di più?»",
+   "frase": "E poi com'è andata?",
+   "base": "Huang e colleghi (Harvard, 2017): chi faceva più domande di approfondimento piaceva di più alle persone con cui parlava."
+  },
+  {
+   "id": "v2",
+   "ab": "viva",
+   "tit": "Ascolta senza preparare la risposta",
+   "princ": "Mentre l'altro parla, ascolta invece di pensare a cosa dirai. Poi ripeti con parole tue quello che hai capito, senza spostare subito il discorso su di te.",
+   "es": "«Quindi il trasloco ti ha sfinito, ma la casa nuova ti piace?»",
+   "frase": "Quindi, se ho capito bene…",
+   "base": "È il cuore dell'«ascolto attivo»: in uno studio (Weger e colleghi, 2014) chi si sentiva riformulare ciò che aveva detto si sentiva più capito di chi riceveva consigli o un semplice «capisco»."
+  },
+  {
+   "id": "v3",
+   "ab": "viva",
+   "tit": "Racconta qualcosa di te",
+   "princ": "Una chiacchierata è uno scambio: dopo aver ascoltato, racconta un tuo pezzetto simile, poi ripassa la parola. La confidenza cresce un passo alla volta, da tutte e due le parti.",
+   "es": "«Anch'io ho cambiato casa due anni fa: il peggio sono stati gli scatoloni dei libri! A te che cosa è pesato di più?»",
+   "frase": "Mi è successa una cosa simile…",
+   "base": "Aron e colleghi (1997): due sconosciuti che, a turno, rispondevano a domande sempre più personali si sentivano molto più vicini di chi faceva solo chiacchiere superficiali."
+  },
+  {
+   "id": "f1",
+   "ab": "vivo",
+   "tit": "Un messaggio senza motivo",
+   "princ": "Non serve un'occasione per farsi sentire: «ho pensato a te» basta, ed è proprio la sorpresa che fa piacere.",
+   "es": "«Ciao! Sono passato davanti alla pizzeria dove andavamo e mi sei venuto in mente. Come stai?»",
+   "frase": "Mi sei venuto in mente: come stai?",
+   "base": "Liu e colleghi (2022): chi riceve un messaggio inatteso lo apprezza più di quanto immagini chi lo manda, soprattutto se non vi sentite da tempo."
+  },
+  {
+   "id": "f2",
+   "ab": "vivo",
+   "tit": "Com'è andata poi?",
+   "princ": "Ricordati di una cosa importante che l'altro ti ha raccontato (un esame, un viaggio, un trasloco) e chiedine notizie dopo. Annota in «Com'è andata» solo quello che ti serve per chiedere notizie.",
+   "es": "«Allora, com'è andato poi il colloquio di tuo figlio?»",
+   "frase": "Com'è andata poi con…?",
+   "base": "Sentirsi capiti, apprezzati e seguiti con attenzione è al centro dei legami stretti: Harry Reis e Phillip Shaver (1988) lo chiamano «responsività»."
+  },
+  {
+   "id": "f3",
+   "ab": "vivo",
+   "tit": "Grazie e auguri",
+   "princ": "Un grazie preciso, anche dopo tanto tempo, o gli auguri in un giorno importante tengono vivi i legami.",
+   "es": "«Ripensavo a quando mi hai aiutato col trasloco: grazie ancora, per me è stato importante.»",
+   "frase": "Volevo dirti grazie per…",
+   "base": "Kumar ed Epley (2018): chi scrive un ringraziamento sottovaluta quanto farà piacere a chi lo riceve e sopravvaluta l'imbarazzo che proverà."
+  },
+  {
+   "id": "c1",
+   "ab": "calore",
+   "tit": "Il complimento preciso",
+   "princ": "Un complimento sincero su una cosa concreta (una scelta, un impegno, un lavoro ben fatto) vale più di tanti complimenti generici.",
+   "es": "«Hai organizzato la cena benissimo: si vede che ci hai messo cura.»",
+   "frase": "Mi piace come hai…",
+   "base": "Zhao ed Epley (2021): chi fa un complimento sottovaluta quanto farà piacere e crede di mettere l'altro in imbarazzo più di quanto accada."
+  },
+  {
+   "id": "c2",
+   "ab": "calore",
+   "tit": "Entusiasmo per le buone notizie",
+   "princ": "Quando qualcuno ti racconta una cosa bella, mostra gioia e fai domande. Una risposta tiepida («ah, bene») spegne la conversazione.",
+   "es": "«Diventi nonno? Ma è bellissimo! Quando nasce? Come vi sentite?»",
+   "frase": "Che bella notizia! Raccontami tutto.",
+   "base": "Gable e colleghi (2004): nelle coppie in cui si risponde alle buone notizie dell'altro con entusiasmo e interesse (la «risposta attiva e costruttiva») i rapporti risultano più intimi e soddisfacenti."
+  },
+  {
+   "id": "c3",
+   "ab": "calore",
+   "tit": "Meno formale, più vero",
+   "princ": "Quando conosciamo qualcuno, notiamo prima di tutto se sembra ben disposto. Un sorriso, un tono morbido e un pizzico di ironia su te stesso abbassano le difese.",
+   "es": "Invece di un «Salve» con la mano rigida, un «Ciao, piacere!» con un sorriso. E se sbagli strada: «Ecco, il mio famoso senso dell'orientamento!»",
+   "frase": "Se ti va, possiamo darci del tu.",
+   "base": "Fiske, Cuddy e Glick (2007): di una persona giudichiamo prima il calore e poi la competenza, e il calore pesa di più."
+  }
+ ],
+ "sfide": [
+  {
+   "id": "ap1n",
+   "ab": "aprire",
+   "liv": 1,
+   "sit": "nuove",
+   "t": "Saluta per primo il barista o il negoziante e chiedigli come va la giornata."
+  },
+  {
+   "id": "ap1c",
+   "ab": "aprire",
+   "liv": 1,
+   "sit": "colleghi",
+   "t": "Saluta per nome, con un sorriso, tre colleghi o ex colleghi che incontri oggi."
+  },
+  {
+   "id": "ap1f",
+   "ab": "aprire",
+   "liv": 1,
+   "sit": "famiglia",
+   "t": "Quando rientri a casa, saluta per primo ognuno e chiedi: «Com'è andata oggi?»"
+  },
+  {
+   "id": "ap1g",
+   "ab": "aprire",
+   "liv": 1,
+   "sit": "gruppi",
+   "t": "Quando arrivi in un gruppo (una riunione, un corso, una sala d'attesa), saluta tu per primo."
+  },
+  {
+   "id": "ap2n",
+   "ab": "aprire",
+   "liv": 2,
+   "sit": "nuove",
+   "t": "In fila o in attesa, fai a uno sconosciuto un'osservazione su quello che avete intorno, poi una domanda."
+  },
+  {
+   "id": "ap2c",
+   "ab": "aprire",
+   "liv": 2,
+   "sit": "colleghi",
+   "t": "Fai due parole con un collega che conosci poco: «Da quanto sei qui? Di che cosa ti occupi?»"
+  },
+  {
+   "id": "ap2f",
+   "ab": "aprire",
+   "liv": 2,
+   "sit": "famiglia",
+   "t": "Al prossimo incontro o telefonata di famiglia, inizia tu la conversazione con il parente con cui parli di meno: «Raccontami, che cosa fai di bello in questo periodo?»"
+  },
+  {
+   "id": "ap2g",
+   "ab": "aprire",
+   "liv": 2,
+   "sit": "gruppi",
+   "t": "In un gruppo, presentati a una persona nuova e usa il suo nome almeno una volta."
+  },
+  {
+   "id": "ap3n",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "nuove",
+   "t": "Inizia una vera chiacchierata con un vicino di casa con cui finora vi siete solo salutati."
+  },
+  {
+   "id": "ap3c",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "colleghi",
+   "t": "Proponi un caffè a un collega che conosci poco."
+  },
+  {
+   "id": "ap3f",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "famiglia",
+   "t": "Con un amico di un amico o un parente acquisito che conosci poco, inizia tu una vera chiacchierata partendo da un interesse comune."
+  },
+  {
+   "id": "ap3g",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "gruppi",
+   "t": "Vai a un incontro aperto (una presentazione, una festa di quartiere) e parla con almeno due persone."
+  },
+  {
+   "id": "ap3v",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "vol",
+   "t": "Chiama Vol.To (011 81 38 711) o scrivi a centroservizi@volontariatotorino.it per fissare il colloquio di orientamento gratuito."
+  },
+  {
+   "id": "vi1n",
+   "ab": "viva",
+   "liv": 1,
+   "sit": "nuove",
+   "t": "In una chiacchierata breve, fai almeno una seconda domanda su quello che ti hanno risposto."
+  },
+  {
+   "id": "vi1c",
+   "ab": "viva",
+   "liv": 1,
+   "sit": "colleghi",
+   "t": "Chiedi a un collega com'è andato il fine settimana (o la giornata di ieri), poi fai una seconda domanda su un dettaglio."
+  },
+  {
+   "id": "vi1f",
+   "ab": "viva",
+   "liv": 1,
+   "sit": "famiglia",
+   "t": "A tavola chiedi: «Qual è stata la cosa più bella di oggi?» e ascolta la risposta fino in fondo."
+  },
+  {
+   "id": "vi1g",
+   "ab": "viva",
+   "liv": 1,
+   "sit": "gruppi",
+   "t": "In gruppo, quando qualcuno racconta qualcosa, rilancia con una domanda invece di cambiare argomento."
+  },
+  {
+   "id": "vi2n",
+   "ab": "viva",
+   "liv": 2,
+   "sit": "nuove",
+   "t": "In una conversazione, ripeti una volta con parole tue quello che hai capito: «Quindi, se ho capito bene…»"
+  },
+  {
+   "id": "vi2c",
+   "ab": "viva",
+   "liv": 2,
+   "sit": "colleghi",
+   "t": "Con un collega, racconta un tuo piccolo episodio simile al suo e poi ripassagli la parola."
+  },
+  {
+   "id": "vi2f",
+   "ab": "viva",
+   "liv": 2,
+   "sit": "famiglia",
+   "t": "Chiedi a un familiare di raccontarti un suo ricordo (un viaggio, il primo lavoro) e fagli tre domande."
+  },
+  {
+   "id": "vi2g",
+   "ab": "viva",
+   "liv": 2,
+   "sit": "gruppi",
+   "t": "In gruppo, coinvolgi chi parla poco: «E tu che cosa ne pensi?»"
+  },
+  {
+   "id": "vi3n",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "nuove",
+   "t": "Tieni viva per almeno dieci minuti una chiacchierata con una persona appena conosciuta, alternando domande e racconti."
+  },
+  {
+   "id": "vi3c",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "colleghi",
+   "t": "In pausa con un collega, non parlate di lavoro: scopri una sua passione."
+  },
+  {
+   "id": "vi3f",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "famiglia",
+   "t": "Passa una serata senza telefono con una persona di famiglia: solo domande, ascolto e racconti."
+  },
+  {
+   "id": "vi3g",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "gruppi",
+   "t": "A una cena con più persone, fai almeno una domanda a ciascuno, così che tutti abbiano spazio per raccontare qualcosa."
+  },
+  {
+   "id": "vi3v",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "vol",
+   "t": "Partecipa, o iscriviti, a una serata informativa di un'associazione di volontariato e fai due domande a un volontario."
+  },
+  {
+   "id": "fv1n",
+   "ab": "vivo",
+   "liv": 1,
+   "sit": "nuove",
+   "t": "Se hai conosciuto qualcuno di recente e hai il suo numero, mandagli due righe: «È stato un piacere conoscerti.»"
+  },
+  {
+   "id": "fv1c",
+   "ab": "vivo",
+   "liv": 1,
+   "sit": "colleghi",
+   "t": "Manda un messaggio a un ex collega: «Mi sei venuto in mente, come stai?»"
+  },
+  {
+   "id": "fv1f",
+   "ab": "vivo",
+   "liv": 1,
+   "sit": "famiglia",
+   "t": "Manda una foto o un ricordo a un familiare o a un amico lontano, con due righe."
+  },
+  {
+   "id": "fv1g",
+   "ab": "vivo",
+   "liv": 1,
+   "sit": "gruppi",
+   "t": "In una chat di gruppo, scrivi un messaggio caloroso o rispondi a qualcuno chiamandolo per nome."
+  },
+  {
+   "id": "fv2n",
+   "ab": "vivo",
+   "liv": 2,
+   "sit": "nuove",
+   "t": "Torna nel negozio o nel bar dove hai parlato con qualcuno e riprendi il discorso dell'ultima volta."
+  },
+  {
+   "id": "fv2c",
+   "ab": "vivo",
+   "liv": 2,
+   "sit": "colleghi",
+   "t": "Chiedi a un collega notizie di una cosa che ti aveva raccontato: «Com'è andata poi con…?»"
+  },
+  {
+   "id": "fv2f",
+   "ab": "vivo",
+   "liv": 2,
+   "sit": "famiglia",
+   "t": "Telefona a un familiare o a un amico per chiedere com'è andata una cosa importante per lui o per lei."
+  },
+  {
+   "id": "fv2g",
+   "ab": "vivo",
+   "liv": 2,
+   "sit": "gruppi",
+   "t": "Proponi tu al gruppo una data per rivedervi."
+  },
+  {
+   "id": "fv3n",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "nuove",
+   "t": "Invita a prendere un caffè una persona conosciuta di recente."
+  },
+  {
+   "id": "fv3c",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "colleghi",
+   "t": "Scrivi oggi agli ex colleghi che non vedi da tempo e proponi una data per un pranzo o una pizza."
+  },
+  {
+   "id": "fv3f",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "famiglia",
+   "t": "Scrivi a un familiare o a un amico un grazie preciso per qualcosa che ha fatto per te, anche tanto tempo fa."
+  },
+  {
+   "id": "fv3g",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "gruppi",
+   "t": "Occupati tu del prossimo ritrovo del gruppo: data, posto e messaggio a tutti."
+  },
+  {
+   "id": "fv3v",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "vol",
+   "t": "Scrivi o telefona all'associazione di volontariato che ti ha incuriosito per chiedere come cominciare."
+  },
+  {
+   "id": "ca1n",
+   "ab": "calore",
+   "liv": 1,
+   "sit": "nuove",
+   "t": "Fai un complimento preciso a chi ti serve (al bar, in negozio) per una cosa fatta bene."
+  },
+  {
+   "id": "ca1c",
+   "ab": "calore",
+   "liv": 1,
+   "sit": "colleghi",
+   "t": "Ringrazia un collega per una cosa concreta che ha fatto, dicendogli perché ti è stata utile."
+  },
+  {
+   "id": "ca1f",
+   "ab": "calore",
+   "liv": 1,
+   "sit": "famiglia",
+   "t": "Fai a un familiare un complimento preciso su una scelta o su un impegno, non sull'aspetto."
+  },
+  {
+   "id": "ca1g",
+   "ab": "calore",
+   "liv": 1,
+   "sit": "gruppi",
+   "t": "In un incontro di gruppo, guarda negli occhi e sorridi a chi parla, mentre parla."
+  },
+  {
+   "id": "ca2n",
+   "ab": "calore",
+   "liv": 2,
+   "sit": "nuove",
+   "t": "Proponi di darvi del tu a una persona che vedi spesso."
+  },
+  {
+   "id": "ca2c",
+   "ab": "calore",
+   "liv": 2,
+   "sit": "colleghi",
+   "t": "Chiedi a un collega se c'è qualcosa di bello in arrivo e, se te lo racconta, rispondi con entusiasmo e fagli due domande."
+  },
+  {
+   "id": "ca2f",
+   "ab": "calore",
+   "liv": 2,
+   "sit": "famiglia",
+   "t": "Chiedi a un familiare: «Qual è stata la cosa più bella di questa settimana?» e rispondi con entusiasmo: «Che bello! Raccontami tutto.»"
+  },
+  {
+   "id": "ca2g",
+   "ab": "calore",
+   "liv": 2,
+   "sit": "gruppi",
+   "t": "In gruppo, ridi di te stesso una volta, con leggerezza, per un piccolo errore o una tua abitudine."
+  },
+  {
+   "id": "ca3n",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "nuove",
+   "t": "Offri il tuo aiuto a uno sconosciuto in una piccola cosa (un'indicazione, una borsa pesante), chiedendo prima se gli serve, e scambiate due parole."
+  },
+  {
+   "id": "ca3c",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "colleghi",
+   "t": "Scrivi a un collega o ex collega che cosa hai apprezzato di lui o di lei lavorando insieme."
+  },
+  {
+   "id": "ca3f",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "famiglia",
+   "t": "Scrivi a mano un biglietto a una persona di famiglia: che cosa ti piace di lei e perché."
+  },
+  {
+   "id": "ca3g",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "gruppi",
+   "t": "In un gruppo, presenta tu due persone che non si conoscono, dicendo una cosa bella di ognuna."
+  },
+  {
+   "id": "ca3v",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "vol",
+   "t": "Partecipa per almeno un'ora a un'iniziativa di volontariato aperta a tutti (una raccolta, un evento) e ringrazia di persona un volontario per quello che fa."
+  }
+ ],
+ "domande_idee": [
+  "Che cosa ti ha tenuto impegnato ultimamente?",
+  "C'è qualcosa che aspetti con piacere nei prossimi mesi?",
+  "Com'è andata poi con…?",
+  "Qual è stata la cosa più bella di questo periodo?",
+  "Stai leggendo o guardando qualcosa che ti piace?",
+  "Che cosa ti piace fare in una giornata libera?",
+  "Se domani potessi partire per un viaggio, dove andresti?",
+  "Com'è cambiato il quartiere da quando ci abiti?"
+ ]
+}

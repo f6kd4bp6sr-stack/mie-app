@@ -16,7 +16,7 @@
 /* Colori per sezione: ogni sezione ha il suo (riquadri, schede, chip del calendario) */
 :root{--chp:#a8740a;--bg:#f4f5f9;--card:#ffffff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);
   --cal:#2563eb;--cal-bg:#e8f0fe;--scad:#d6342c;--scad-bg:#fdeceb;--prat:#e8770e;--prat-bg:#fff0e0;--fam:#7c3aed;--fam-bg:#f1eafe;--ben:#0d9488;--ben-bg:#ddf4f1;
-  --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;--inv:#15803d;--inv-bg:#dcf2e3;
+  --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;--inv:#15803d;--inv-bg:#dcf2e3;--met:#b86e00;--met-bg:#fff1dc;
   --accent:var(--cal);--ok:#2e7d5b;--ok-bg:#e1f3e9;--warn:var(--scad);--warn-bg:var(--scad-bg);--soon:#b7791f;--soon-bg:#fdf1dc;--lp:var(--lic);--lp-bg:var(--lic-bg);--euro:#1f5fae;--euro-bg:#e3edf9}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -138,7 +138,7 @@ a.btn{text-decoration:none;display:inline-block}
 .cc{display:block;font-size:11.5px;font-weight:700;line-height:1.25;border-radius:6px;padding:1px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:var(--seg);color:var(--ink)}
 .cc.scad{background:var(--soon-bg);color:var(--soon)}.cc.scad.warn{background:var(--scad-bg);color:var(--scad)}.cc.scad.proj{opacity:.7}
 .cc.pay{background:var(--euro-bg);color:var(--euro)}.cc.pay.in{background:var(--ok-bg);color:var(--ok)}
-.cc.fam{background:var(--fam-bg);color:var(--fam)}.cc.prat{background:var(--prat-bg);color:var(--prat)}.cc.ipad{background:var(--ipad-bg);color:var(--ipad)}.cc.lic{background:var(--lic-bg);color:var(--lic)}.cc.pens{background:var(--pens-bg);color:var(--pens)}.cc.more{background:none;color:var(--muted)}
+.cc.fam{background:var(--fam-bg);color:var(--fam)}.cc.met{background:var(--met-bg);color:var(--met)}.cc.prat{background:var(--prat-bg);color:var(--prat)}.cc.ipad{background:var(--ipad-bg);color:var(--ipad)}.cc.lic{background:var(--lic-bg);color:var(--lic)}.cc.pens{background:var(--pens-bg);color:var(--pens)}.cc.more{background:none;color:var(--muted)}
 .mc .mi{margin-top:auto;font-size:13px;line-height:1;min-height:14px}.mc .vs{font-style:normal}
 .cal-leg{margin:8px 2px}.lg{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px}.lg.lic{background:var(--lic-bg);box-shadow:inset 0 0 0 1px var(--lic)}.lg.we{background:var(--seg);box-shadow:inset 0 0 0 1px var(--line)}
 .lgu{display:inline-block;width:12px;border-bottom:3px solid var(--scad)}
@@ -173,10 +173,10 @@ a.btn{text-decoration:none;display:inline-block}
 .setl .row{cursor:default}
 @media (prefers-color-scheme:dark){:root{--chp:#b58424;--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--shadow:0 1px 2px rgba(0,0,0,.4);
   --cal:#5b8cff;--cal-bg:#18264a;--scad:#ff6b5f;--scad-bg:#3b1a18;--prat:#ff9a3d;--prat-bg:#3a2612;--fam:#a98bff;--fam-bg:#271f3d;--ben:#2cc5b6;--ben-bg:#12302d;
-  --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
+  --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--met:#f0a43a;--met-bg:#3a2a12;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
   .warnbox{background:#3a2a1c;border-color:#b8743c}}
 </style>
-<script>window.APP_VERSION="7dd21c7b79";window.APP_BUILD="2026-10-18T17:36+02:00";</script>
+<script>window.APP_VERSION="4aab48574e";window.APP_BUILD="2026-10-20T20:40+02:00";</script>
 </head>
 <body>
 <style id="lockCss">
@@ -278,22 +278,22 @@ html.locked #lockScr{display:grid}
 })();
 </script>
 <style id="tema">/* ===== Tema comune di Pianificazione (inserito dal build in ogni pagina, dopo lo stile della pagina) =====
-   Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🐉 Progressi rosa.
+   Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🤝 Metodo ambra · 🐉 Progressi rosa.
    Le sezioni dentro Pianificazione hanno i loro colori (pagine/index.html). */
-:root{--app-pian:#2563eb;--app-lic:#c0532b;--app-tc:#0d9488;--app-prog:#d63384}
-@media (prefers-color-scheme:dark){:root{--app-pian:#5b8cff;--app-lic:#f08a5d;--app-tc:#2cc5b6;--app-prog:#ff6fae}}
+:root{--app-pian:#2563eb;--app-lic:#c0532b;--app-tc:#0d9488;--app-met:#b86e00;--app-prog:#d63384}
+@media (prefers-color-scheme:dark){:root{--app-pian:#5b8cff;--app-lic:#f08a5d;--app-tc:#2cc5b6;--app-met:#f0a43a;--app-prog:#ff6fae}}
 .appsw{display:flex;justify-content:flex-start;gap:6px;margin:12px auto 4px;padding:0 16px;background:none;border-radius:0;width:auto;max-width:1180px;overflow-x:auto;scrollbar-width:none;box-shadow:none}
 .appsw::-webkit-scrollbar{display:none}
 .appsw a:first-child{margin-left:auto}.appsw a:last-child{margin-right:auto}
 .appsw a{--c:var(--app-pian);display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font-weight:700;font-size:14.5px;color:var(--c);text-decoration:none;white-space:nowrap;background:transparent;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--c) 35%,transparent)}
 .appsw a.on{background:var(--c);color:#fff;box-shadow:0 2px 8px color-mix(in srgb,var(--c) 35%,transparent)}
-.appsw a[data-a=lic]{--c:var(--app-lic)}.appsw a[data-a=tc]{--c:var(--app-tc)}.appsw a[data-a=prog]{--c:var(--app-prog)}
+.appsw a[data-a=lic]{--c:var(--app-lic)}.appsw a[data-a=tc]{--c:var(--app-tc)}.appsw a[data-a=met]{--c:var(--app-met)}.appsw a[data-a=prog]{--c:var(--app-prog)}
 /* Licenze e Progressi: riquadri morbidi con la riga del colore dell'app */
 body[data-app=lic],body[data-app=prog]{background:#f4f5f9}
 body[data-app=lic] .card,body[data-app=prog] .card{border:0;border-radius:18px;box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05)}
 body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog)}
 @media (prefers-color-scheme:dark){body[data-app=lic],body[data-app=prog]{background:#0f1115}body[data-app=lic] .card,body[data-app=prog] .card{box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(0,0,0,.4)}}
-</style><script>document.body.setAttribute("data-app","pian")</script><nav class="appsw" aria-label="App"><a data-a="pian" class="on" href="./" aria-current="page">🏠 Pianificazione</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="prog" href="progressi.html">🐉 Progressi</a></nav>
+</style><script>document.body.setAttribute("data-app","pian")</script><nav class="appsw" aria-label="App"><a data-a="pian" class="on" href="./" aria-current="page">🏠 Pianificazione</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="met" href="metodo.html">🤝 Metodo</a><a data-a="prog" href="progressi.html">🐉 Progressi</a></nav>
 <div class="wrap">
   <nav class="sect" id="side" aria-label="Sezioni"></nav>
   <main id="main"></main>
@@ -1050,11 +1050,13 @@ function dayData(s,V){
   if(typeof pensOn==="function")pensOn(s).forEach(a=>it.push({ic:"🎖️",t:a.t,c:"pens",k:"pens",id:a.id}));
   if(typeof cassaOn==="function")cassaOn(s).forEach(x=>it.push(x));
   if(typeof pratOn==="function")pratOn(s).forEach(x=>it.push({ic:"🗂️",t:x.passo.t,c:"prat",k:"prat",id:x.id,sub:x.t}));
+  ((P.met&&P.met.inc)||[]).filter(i=>i&&i.d===s).forEach(i=>it.push({ic:"🍽️",t:"Incontro: "+(i.chi||""),o:i.o||"",c:"met",k:"met",sub:i.dove||""}));
   calOn(s).forEach(e=>it.push({ic:calIc(e),t:e.t,o:e.o||"",f:e.f||"",c:"ipad",k:"ipad",sub:[e.cal,e.loc].filter(Boolean).join(" · ")}));
   const dn=(P.dn||{})[s];
   it.sort((a,b)=>(a.o||"99")<(b.o||"99")?-1:(a.o||"99")>(b.o||"99")?1:0);
   const V2=V||valeCal(),vd=V2.diary[s];
-  return{S,L,it,dn,ben:benDay(s),tc:tcOn(s),vstudy:V2.days.has(s),vmood:vd&&typeof vd==="object"&&VMOOD[vd.m]?vd:null};
+  const mg=((P.met&&P.met.g)||{})[s];
+  return{S,L,it,dn,met:mg&&mg.s?mg:null,ben:benDay(s),tc:tcOn(s),vstudy:V2.days.has(s),vmood:vd&&typeof vd==="object"&&VMOOD[vd.m]?vd:null};
 }
 const offDay=L=>L&&(L.k!=="LAV"||(L.c&&L.c!=="P"&&L.c!=="OUT"));
 
@@ -1085,7 +1087,7 @@ function vCal(){
 }
 function cellChips(D,max){const it=D.it.filter(x=>x.k!=="hol"),n=it.length,sh=it.slice(0,max);
   return sh.map(x=>`<span class="cc ${x.c}" title="${esc((x.o?x.o+" ":"")+x.t)}">${x.ic} ${esc(x.k==="att"||x.k==="fev"?x.t.replace(/^[^:]{1,20}:\s*/,""):x.t)}</span>`).join("")+(n>max?`<span class="cc more">+${n-max}</span>`:"")+`<span class="md">${it.slice(0,5).map(x=>`<i class="${x.c.split(" ")[0]}"></i>`).join("")}</span>`;}
-function cellIcons(D){return (D.vmood?VMOOD[D.vmood.m][0]:"")+(D.tc.length?"🧘":"")+(D.ben.umore?UMORE[D.ben.umore-1]:"")+(D.dn?"📝":"");}
+function cellIcons(D){return (D.vmood?VMOOD[D.vmood.m][0]:"")+(D.tc.length?"🧘":"")+(D.met&&D.met.ok?"🤝":"")+(D.ben.umore?UMORE[D.ben.umore-1]:"")+(D.dn?"📝":"");}
 function calMonthView(){
   const d=parse(calD),y=d.getFullYear(),m=d.getMonth(),first=iso(new Date(y,m,1)),last=iso(new Date(y,m+1,0)),t=today(),V=valeCal();
   let s=monday(first),cells="";
@@ -1095,7 +1097,7 @@ function calMonthView(){
       <span class="mn"><b>${parse(s).getDate()}</b>${lab?`<em class="code">${lab}</em>`:""}${HOL[s]?`<em class="holn">${esc(HOL[s])}</em>`:""}</span>${cellChips(D,3)}<span class="mi">${cellIcons(D)}${D.vstudy?"<i class='vs' title='Ha studiato'>🐉</i>":""}</span></button>`;
     s=add(s,1);}
   return `<div class="cal-mo"><div><div class="mgrid">${GIORNI.map(g=>`<div class="mh">${g.slice(0,3)}</div>`).join("")}${cells}</div>
-    <p class="lbl cal-leg"><span class="lg lic"></span> licenza / a casa · <span class="lg we"></span> fine settimana e festivi · 🐉 Il mio mondo · 🧘 Tai Chi · 📝 nota</p></div>
+    <p class="lbl cal-leg"><span class="lg lic"></span> licenza / a casa · <span class="lg we"></span> fine settimana e festivi · 🐉 Il mio mondo · 🧘 Tai Chi · 🤝 sfida del Metodo · 📝 nota</p></div>
     <div class="cal-side">${dayEditor(calSel,true)}</div></div>`;
 }
 function calWeekView(){const m=monday(calD),t=today(),V=valeCal();
@@ -1151,6 +1153,10 @@ function dayEditor(s,compact){
         <label>Passi<input data-bf="passi" type="number" inputmode="numeric" step="100" min="0" value="${esc(D.ben.passi||"")}"></label>
         <label>Energia (1–5)<select data-bf="energia"><option value="">—</option>${[1,2,3,4,5].map(n=>`<option${+D.ben.energia===n?" selected":""}>${n}</option>`).join("")}</select></label>
         <label class="wide">Nota su come stai<input data-bf="note" maxlength="200" value="${esc(D.ben.note||"")}" placeholder="facoltativa"></label></div></details></div></div>`;}
+  // 🤝 Metodo: la sfida del giorno (si sceglie e si segna nella pagina Metodo)
+  if(s<=t){const g=D.met,F=["🙂","😐","😕"];
+    if(g)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>${g.ok?"✓ ":""}Sfida: ${esc(g.txt||"")}</b><small>${g.ok?[g.f?F[g.f-1]:"",g.t?"«"+esc(g.t)+"»":"fatta"].filter(Boolean).join(" "):"da fare"}</small></div><a class="lnk" href="metodo.html#oggi">Metodo ›</a></div>`;
+    else if(s===t)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>Sfida del giorno</b><small>Scegline una fra tre nel Metodo</small></div><a class="lnk" href="metodo.html#oggi">Scegli ›</a></div>`;}
   // il mio mondo
   if(D.vstudy||D.vmood){const v=D.vmood;
     o+=`<div class="row"><span class="pill">🐉</span><div class="grow"><b>Il mio mondo</b><small>${D.vstudy?"ha studiato":"non ha studiato"}${v?" · diario: "+VMOOD[v.m][0]+" "+VMOOD[v.m][1]+(v.f?" ("+["","pochissimo","un po’","abbastanza","tanto","tantissimo"][Math.min(5,+v.f||0)]+")":""):""}</small>${v&&v.w?`<small class="vw${VDOWN.has(v.m)?" down":""}">«${esc(v.w)}»</small>`:""}</div><a class="lnk" href="progressi.html">Progressi ›</a></div>`;}

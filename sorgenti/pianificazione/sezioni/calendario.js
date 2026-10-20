@@ -48,11 +48,13 @@ function dayData(s,V){
   if(typeof pensOn==="function")pensOn(s).forEach(a=>it.push({ic:"🎖️",t:a.t,c:"pens",k:"pens",id:a.id}));
   if(typeof cassaOn==="function")cassaOn(s).forEach(x=>it.push(x));
   if(typeof pratOn==="function")pratOn(s).forEach(x=>it.push({ic:"🗂️",t:x.passo.t,c:"prat",k:"prat",id:x.id,sub:x.t}));
+  ((P.met&&P.met.inc)||[]).filter(i=>i&&i.d===s).forEach(i=>it.push({ic:"🍽️",t:"Incontro: "+(i.chi||""),o:i.o||"",c:"met",k:"met",sub:i.dove||""}));
   calOn(s).forEach(e=>it.push({ic:calIc(e),t:e.t,o:e.o||"",f:e.f||"",c:"ipad",k:"ipad",sub:[e.cal,e.loc].filter(Boolean).join(" · ")}));
   const dn=(P.dn||{})[s];
   it.sort((a,b)=>(a.o||"99")<(b.o||"99")?-1:(a.o||"99")>(b.o||"99")?1:0);
   const V2=V||valeCal(),vd=V2.diary[s];
-  return{S,L,it,dn,ben:benDay(s),tc:tcOn(s),vstudy:V2.days.has(s),vmood:vd&&typeof vd==="object"&&VMOOD[vd.m]?vd:null};
+  const mg=((P.met&&P.met.g)||{})[s];
+  return{S,L,it,dn,met:mg&&mg.s?mg:null,ben:benDay(s),tc:tcOn(s),vstudy:V2.days.has(s),vmood:vd&&typeof vd==="object"&&VMOOD[vd.m]?vd:null};
 }
 const offDay=L=>L&&(L.k!=="LAV"||(L.c&&L.c!=="P"&&L.c!=="OUT"));
 
@@ -83,7 +85,7 @@ function vCal(){
 }
 function cellChips(D,max){const it=D.it.filter(x=>x.k!=="hol"),n=it.length,sh=it.slice(0,max);
   return sh.map(x=>`<span class="cc ${x.c}" title="${esc((x.o?x.o+" ":"")+x.t)}">${x.ic} ${esc(x.k==="att"||x.k==="fev"?x.t.replace(/^[^:]{1,20}:\s*/,""):x.t)}</span>`).join("")+(n>max?`<span class="cc more">+${n-max}</span>`:"")+`<span class="md">${it.slice(0,5).map(x=>`<i class="${x.c.split(" ")[0]}"></i>`).join("")}</span>`;}
-function cellIcons(D){return (D.vmood?VMOOD[D.vmood.m][0]:"")+(D.tc.length?"🧘":"")+(D.ben.umore?UMORE[D.ben.umore-1]:"")+(D.dn?"📝":"");}
+function cellIcons(D){return (D.vmood?VMOOD[D.vmood.m][0]:"")+(D.tc.length?"🧘":"")+(D.met&&D.met.ok?"🤝":"")+(D.ben.umore?UMORE[D.ben.umore-1]:"")+(D.dn?"📝":"");}
 function calMonthView(){
   const d=parse(calD),y=d.getFullYear(),m=d.getMonth(),first=iso(new Date(y,m,1)),last=iso(new Date(y,m+1,0)),t=today(),V=valeCal();
   let s=monday(first),cells="";
@@ -93,7 +95,7 @@ function calMonthView(){
       <span class="mn"><b>${parse(s).getDate()}</b>${lab?`<em class="code">${lab}</em>`:""}${HOL[s]?`<em class="holn">${esc(HOL[s])}</em>`:""}</span>${cellChips(D,3)}<span class="mi">${cellIcons(D)}${D.vstudy?"<i class='vs' title='Ha studiato'>🐉</i>":""}</span></button>`;
     s=add(s,1);}
   return `<div class="cal-mo"><div><div class="mgrid">${GIORNI.map(g=>`<div class="mh">${g.slice(0,3)}</div>`).join("")}${cells}</div>
-    <p class="lbl cal-leg"><span class="lg lic"></span> licenza / a casa · <span class="lg we"></span> fine settimana e festivi · 🐉 Il mio mondo · 🧘 Tai Chi · 📝 nota</p></div>
+    <p class="lbl cal-leg"><span class="lg lic"></span> licenza / a casa · <span class="lg we"></span> fine settimana e festivi · 🐉 Il mio mondo · 🧘 Tai Chi · 🤝 sfida del Metodo · 📝 nota</p></div>
     <div class="cal-side">${dayEditor(calSel,true)}</div></div>`;
 }
 function calWeekView(){const m=monday(calD),t=today(),V=valeCal();
@@ -149,6 +151,10 @@ function dayEditor(s,compact){
         <label>Passi<input data-bf="passi" type="number" inputmode="numeric" step="100" min="0" value="${esc(D.ben.passi||"")}"></label>
         <label>Energia (1–5)<select data-bf="energia"><option value="">—</option>${[1,2,3,4,5].map(n=>`<option${+D.ben.energia===n?" selected":""}>${n}</option>`).join("")}</select></label>
         <label class="wide">Nota su come stai<input data-bf="note" maxlength="200" value="${esc(D.ben.note||"")}" placeholder="facoltativa"></label></div></details></div></div>`;}
+  // 🤝 Metodo: la sfida del giorno (si sceglie e si segna nella pagina Metodo)
+  if(s<=t){const g=D.met,F=["🙂","😐","😕"];
+    if(g)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>${g.ok?"✓ ":""}Sfida: ${esc(g.txt||"")}</b><small>${g.ok?[g.f?F[g.f-1]:"",g.t?"«"+esc(g.t)+"»":"fatta"].filter(Boolean).join(" "):"da fare"}</small></div><a class="lnk" href="metodo.html#oggi">Metodo ›</a></div>`;
+    else if(s===t)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>Sfida del giorno</b><small>Scegline una fra tre nel Metodo</small></div><a class="lnk" href="metodo.html#oggi">Scegli ›</a></div>`;}
   // il mio mondo
   if(D.vstudy||D.vmood){const v=D.vmood;
     o+=`<div class="row"><span class="pill">🐉</span><div class="grow"><b>Il mio mondo</b><small>${D.vstudy?"ha studiato":"non ha studiato"}${v?" · diario: "+VMOOD[v.m][0]+" "+VMOOD[v.m][1]+(v.f?" ("+["","pochissimo","un po’","abbastanza","tanto","tantissimo"][Math.min(5,+v.f||0)]+")":""):""}</small>${v&&v.w?`<small class="vw${VDOWN.has(v.m)?" down":""}">«${esc(v.w)}»</small>`:""}</div><a class="lnk" href="progressi.html">Progressi ›</a></div>`;}

@@ -335,22 +335,22 @@ html.locked #lockScr{display:grid}
 })();
 </script>
 <style id="tema">/* ===== Tema comune di Pianificazione (inserito dal build in ogni pagina, dopo lo stile della pagina) =====
-   Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🐉 Progressi rosa.
+   Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🤝 Metodo ambra · 🐉 Progressi rosa.
    Le sezioni dentro Pianificazione hanno i loro colori (pagine/index.html). */
-:root{--app-pian:#2563eb;--app-lic:#c0532b;--app-tc:#0d9488;--app-prog:#d63384}
-@media (prefers-color-scheme:dark){:root{--app-pian:#5b8cff;--app-lic:#f08a5d;--app-tc:#2cc5b6;--app-prog:#ff6fae}}
+:root{--app-pian:#2563eb;--app-lic:#c0532b;--app-tc:#0d9488;--app-met:#b86e00;--app-prog:#d63384}
+@media (prefers-color-scheme:dark){:root{--app-pian:#5b8cff;--app-lic:#f08a5d;--app-tc:#2cc5b6;--app-met:#f0a43a;--app-prog:#ff6fae}}
 .appsw{display:flex;justify-content:flex-start;gap:6px;margin:12px auto 4px;padding:0 16px;background:none;border-radius:0;width:auto;max-width:1180px;overflow-x:auto;scrollbar-width:none;box-shadow:none}
 .appsw::-webkit-scrollbar{display:none}
 .appsw a:first-child{margin-left:auto}.appsw a:last-child{margin-right:auto}
 .appsw a{--c:var(--app-pian);display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font-weight:700;font-size:14.5px;color:var(--c);text-decoration:none;white-space:nowrap;background:transparent;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--c) 35%,transparent)}
 .appsw a.on{background:var(--c);color:#fff;box-shadow:0 2px 8px color-mix(in srgb,var(--c) 35%,transparent)}
-.appsw a[data-a=lic]{--c:var(--app-lic)}.appsw a[data-a=tc]{--c:var(--app-tc)}.appsw a[data-a=prog]{--c:var(--app-prog)}
+.appsw a[data-a=lic]{--c:var(--app-lic)}.appsw a[data-a=tc]{--c:var(--app-tc)}.appsw a[data-a=met]{--c:var(--app-met)}.appsw a[data-a=prog]{--c:var(--app-prog)}
 /* Licenze e Progressi: riquadri morbidi con la riga del colore dell'app */
 body[data-app=lic],body[data-app=prog]{background:#f4f5f9}
 body[data-app=lic] .card,body[data-app=prog] .card{border:0;border-radius:18px;box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05)}
 body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog)}
 @media (prefers-color-scheme:dark){body[data-app=lic],body[data-app=prog]{background:#0f1115}body[data-app=lic] .card,body[data-app=prog] .card{box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(0,0,0,.4)}}
-</style><script>document.body.setAttribute("data-app","tc")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" class="on" href="taichi.html" aria-current="page">🧘 Tai Chi</a><a data-a="prog" href="progressi.html">🐉 Progressi</a></nav>
+</style><script>document.body.setAttribute("data-app","tc")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" class="on" href="taichi.html" aria-current="page">🧘 Tai Chi</a><a data-a="met" href="metodo.html">🤝 Metodo</a><a data-a="prog" href="progressi.html">🐉 Progressi</a></nav>
 <main>
   <!-- OGGI -->
   <section data-tab="oggi" class="on">
@@ -1573,7 +1573,7 @@ else document.getElementById('heroFig').innerHTML=still(EXM.apertura,1,false);
 })();
 window.__flush=()=>{ try{ TCM.flush(); }catch(e){} };
 </script>
-<script>window.APP_VERSION="7dd21c7b79";window.APP_BUILD="2026-10-18T17:36+02:00";</script>
+<script>window.APP_VERSION="4aab48574e";window.APP_BUILD="2026-10-20T20:40+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
