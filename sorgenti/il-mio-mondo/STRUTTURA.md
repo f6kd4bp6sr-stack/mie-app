@@ -21,12 +21,14 @@ app/
 │   ├── sezioni/        routine, giochi, matematica, scienze, sport, scopri, diario, orologio, schede,
 │   │                   teatro (la mia parte), festa (compleanno: vigilia, festa, 10 sorprese, capsula),
 │   │                   disegno (tela libera, percorso in 5 tappe, Il mio museo)
+│   │                   spiega (racconto + mappa concettuale, Le mie mappe), cartina (cartine interattive)
 │   └── percorso/       percorso e lezioni, tappe di matematica di 5ª, negozio, collezioni, video
 ├── tools/controlla.py  controllo automatico (parte da solo a ogni build; con errori non si pubblica)
 ├── tools/sorgenti_pubbliche.py  copia le sorgenti in /sorgenti/il-mio-mondo/ del repository (senza revisioni di lavoro, con controllo dei dati personali)
 ├── README.md           memoria dell'app: indirizzo, dati sul dispositivo, collegamenti, regole
 ├── data/
-│   ├── spiegazioni/    racconto + mappa concettuale per argomento (pilota: 6), controllati da tools/controlla.py
+│   ├── spiegazioni/    racconto + mappa concettuale per argomento (pilota: 8), controllati da tools/controlla.py
+│   ├── cartine/        cartine interattive (grecia.json: coste Natural Earth semplificate + 13 luoghi)
 │   ├── domande/argomenti.json  nomi e icone degli argomenti di ogni materia (ogni domanda ha il campo «arg»)
 │   ├── domande/quiz/   ★ FONTE UNICA delle domande: un file per materia, una scheda per domanda
 │   │                   _codici.txt = registro dei codici (non modificare), _ritirati.txt = codici tolti apposta

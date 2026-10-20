@@ -42,6 +42,12 @@ Stato: **pilota realizzato il 20 ottobre 2026** (6 argomenti + 2 dalla scheda di
 - **Passi in fila**: procedure di matematica.
 - Realizzate: raggiera, ciclo e **linea del tempo** (`tipo: "linea"`: avvenimenti con `anno`, periodi con `periodo: [inizio, fine]`, anni negativi = a.C., `tacca` per scrivere per esempio «VIII sec. a.C.» sotto la freccia).
 
+## Cartine interattive (realizzato)
+- `data/cartine/<id>.json`: coste vere semplificate (Natural Earth, pubblico dominio), luoghi con tipo, posizione e testo, etichette dei mari e delle regioni. Motore `js/sezioni/cartina.js`.
+- Una spiegazione la apre con il campo `"cartina": "<id>"`: compare il tasto «🗺️ Cartina» in alto e una scheda «Guarda dove» a fine racconto.
+- Due modi: **🔎 Esplora** (tocca un luogo, leggi o ascolta che cosa era) e **🎯 Trova il luogo** (6 luoghi a caso; dopo 2 errori il punto giusto lampeggia; conta solo la prima risposta).
+- Prima cartina: **La Grecia antica** (Atene, Sparta, Corinto, Tebe, Argo, Mileto, Efeso, Mitilene, Corcira, Delfi, Olimpia, Cnosso, Monte Olimpo), usata da «La civiltà greca» e «Le polis». Micene e Calcide escluse: troppo vicine ad Argo e Tebe per toccarle col dito. Revisione indipendente fatta (corretto il testo su Atene: votavano solo i cittadini maschi adulti).
+
 ## Collegamenti tra materie
 Sotto la mappa compaiono i «🔗 Collegamenti»: 2-3 argomenti di altre materie, cioè id di argomenti esistenti in `argomenti.json`. Per esempio: Antico Egitto → Geografia «Fiumi e laghi», Arte «L'arte antica», Tecnologia «I materiali».
 

@@ -117,6 +117,7 @@ function spOpen(key, ret) {
 }
 function spClose() { try { speechSynthesis.cancel(); } catch (e) {} try { Mic.clear(); } catch (e) {} const ov = $('sp-ov'); if (ov) ov.hidden = true; document.body.classList.remove('in-lesson'); SP = null; }
 function spSteps(on) { return '<div class="sp-steps">' + [['racconto', '1 Racconto'], ['ritrova', '2 Mappa'], ['domande', '3 Domande'], ['io', '4 Lo racconto io']].map(s => '<span class="' + (s[0] === on ? 'on' : '') + '">' + s[1] + '</span>').join('') + '</div>'; }
+function spCta(d) { return d.cartina ? '<button type="button" class="sp-cta" data-ct="' + esc(d.cartina) + '">🗺️ Guarda dove: la cartina interattiva <span style="margin-left:auto">→</span></button>' : ''; }
 function spLinks(d) {
   const L = (d.collegamenti || []).map(r => { const t = spTitle(r); return t.u ? '<button type="button" class="sp-link" data-go="' + esc(r) + '">' + esc(t.u.ic + ' ' + t.u.name + ' · ' + (t.ic ? t.ic + ' ' : '') + t.n) + ' <span>→</span></button>' : ''; }).join('');
   return L ? '<div class="sp-card"><h3>🔗 Collegamenti</h3><p class="sp-mini">Argomenti collegati, anche da altre materie.</p>' + L + '</div>' : '';
@@ -140,18 +141,20 @@ function spPaint() {
   } else if (S.ph === 'pronta') {
     step = 'domande';
     map = spMapSVG(d, { lit: S.lit });
-    side = '<div class="sp-card"><h3>🌟 Bravissima!</h3><p class="sp-text">Ora qualche domanda per fissare i ricordi. Ogni risposta giusta accende un pezzo della mappa 💡.</p><button type="button" class="btn" id="sp-go" data-focus>▶ Alle domande</button></div>' + spLinks(d);
+    side = '<div class="sp-card"><h3>🌟 Bravissima!</h3><p class="sp-text">Ora qualche domanda per fissare i ricordi. Ogni risposta giusta accende un pezzo della mappa 💡.</p><button type="button" class="btn" id="sp-go" data-focus>▶ Alle domande</button></div>' + spCta(d) + spLinks(d);
   } else if (S.ph === 'fine') {
     step = 'io';
     map = spMapSVG(d, { lit: S.lit });
     const nw = (S.nuovi || []).map(id => (d.nodi.find(x => x.id === id) || {}).n).filter(Boolean);
     side = '<div class="sp-card"><h3>💡 La tua mappa si accende</h3><p class="sp-text">' + (nw.length ? 'Si ' + (nw.length === 1 ? 'è acceso: ' : 'sono accesi: ') + esc(nw.join(', ')) + '.' : 'Ogni volta che rispondi giusto, la mappa si accende un po’ di più.') + '</p></div>' +
       '<div class="sp-card" id="sp-rec"></div>' +
-      '<div class="sp-row"><button type="button" class="btn ghost" id="sp-mia">✏️ Fai la tua mappa</button><button type="button" class="btn" id="sp-end" data-focus>Fine</button></div>' + spLinks(d);
+      '<div class="sp-row"><button type="button" class="btn ghost" id="sp-mia">✏️ Fai la tua mappa</button><button type="button" class="btn" id="sp-end" data-focus>Fine</button></div>' + spCta(d) + spLinks(d);
   }
-  ov.innerHTML = '<div class="sp-top"><button type="button" class="ls-x" id="sp-x" aria-label="Chiudi">✕</button><b class="sp-ttl">' + esc((S.T.u ? S.T.u.ic + ' ' + S.T.u.name + ' · ' : '') + (S.T.ic ? S.T.ic + ' ' : '') + S.T.n) + '</b>' + spSteps(step) + '</div>' +
+  ov.innerHTML = '<div class="sp-top"><button type="button" class="ls-x" id="sp-x" aria-label="Chiudi">✕</button><b class="sp-ttl">' + esc((S.T.u ? S.T.u.ic + ' ' + S.T.u.name + ' · ' : '') + (S.T.ic ? S.T.ic + ' ' : '') + S.T.n) + '</b>' + (d.cartina ? '<button type="button" class="btn small ghost" id="sp-ct">🗺️ Cartina</button>' : '') + spSteps(step) + '</div>' +
     '<div class="sp-body"><div class="sp-mapbox">' + map + '</div><div class="sp-side">' + side + '</div></div>';
   $('sp-x').addEventListener('click', spClose);
+  if ($('sp-ct')) $('sp-ct').addEventListener('click', () => ctOpen(d.cartina));
+  ov.querySelectorAll('[data-ct]').forEach(b => b.addEventListener('click', () => ctOpen(b.dataset.ct)));
   ov.querySelectorAll('.sp-link').forEach(b => b.addEventListener('click', () => { const r = b.dataset.go; spClose(); spGoTopic(r); }));
   if (S.ph === 'racconto') {
     const sl = d.racconto[S.i];
