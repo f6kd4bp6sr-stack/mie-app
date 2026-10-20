@@ -79,6 +79,8 @@
   .ct-et { font-style: italic; font-weight: 700; fill: #4f6e8a; text-anchor: middle; font-size: 20px; pointer-events: none; } .ct-et.terra { fill: #8a7550; font-size: 18px; }
   .ct-lab { font-size: 17px; font-weight: 900; fill: #2b2f3a; paint-order: stroke; stroke: #fff; stroke-width: 4px; pointer-events: none; }
   .ct-pt { cursor: pointer; } .ct-hit { fill: transparent; }
+  .ct-zr { cursor: pointer; } .ct-zr rect { fill: rgba(255,255,255,.12); stroke: #3fa9f5; stroke-width: 3; stroke-dasharray: 10 7; } .ct-zt { font-size: 16px; font-weight: 900; fill: #1f78c1; text-anchor: end; paint-order: stroke; stroke: #fff; stroke-width: 4px; pointer-events: none; }
+  .ct-et { text-anchor: middle; }
   .ct-pt.sel circle:not(.ct-hit), .ct-pt.sel rect, .ct-pt.sel path { stroke: #ffd23f; stroke-width: 5; }
   .ct-pt.ok circle:not(.ct-hit), .ct-pt.ok rect, .ct-pt.ok path { fill: #58c46b; }
   .ct-pt.no { opacity: .55; }
