@@ -9,6 +9,11 @@ r, l = '/home/claude/mie-app/licenze/news-pensione.json', '/home/claude/pian/sta
 if os.path.exists(r):
     up = lambda f: json.load(open(f, encoding='utf-8')).get('updated', '')
     if not os.path.exists(l) or up(r) > up(l): shutil.copy(r, l); print('novità: presa la versione pubblicata')
+# il volontariato del Metodo lo ricontrolla l'attività una volta a settimana: vince l'aggiornamento più recente
+r, l = '/home/claude/mie-app/licenze/occasioni-torino.json', '/home/claude/pian/statici/occasioni-torino.json'
+if os.path.exists(r):
+    up = lambda f: json.load(open(f, encoding='utf-8')).get('updated', '')
+    if not os.path.exists(l) or up(r) > up(l): shutil.copy(r, l); print('volontariato: presa la versione pubblicata')
 # la scheda cifrata la aggiorna anche l'attività: vince la revisione più alta
 r, l = '/home/claude/mie-app/licenze/scheda-pensione.cifrata.json', '/home/claude/pian/statici/scheda-pensione.cifrata.json'
 if os.path.exists(r):

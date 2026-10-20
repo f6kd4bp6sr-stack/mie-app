@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Pianificazione">
+<meta name="theme-color" content="#f4f5f9">
+<meta name="robots" content="noindex, nofollow">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<title>Metodo</title>
+<style>
+:root{--m:#b86e00;--m-bg:#fff1dc;--bg:#f4f5f9;--card:#fff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--ok:#2e7d5b;--ok-bg:#e1f3e9;--warn:#d6342c;--warn-bg:#fdeceb;
+  --shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);--l1:#2e7d5b;--l1-bg:#e1f3e9;--l2:#1f5fae;--l2-bg:#e3edf9;--l3:#b8336a;--l3-bg:#fbe6ef}
+@media (prefers-color-scheme:dark){:root{--m:#f0a43a;--m-bg:#3a2a12;--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--ok:#5cc494;--ok-bg:#173226;--warn:#ff8a80;--warn-bg:#3d1c1a;
+  --shadow:0 1px 2px rgba(0,0,0,.4);--l1:#5cc494;--l1-bg:#173226;--l2:#7ea6f0;--l2-bg:#1b2a44;--l3:#f07ab3;--l3-bg:#3d1a2b}
+  .mtabs button.on,.btn.pri{color:#1b1306}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;padding-bottom:calc(40px + env(safe-area-inset-bottom))}
+[hidden]{display:none!important}
+.wrap{max-width:1100px;margin:0 auto;padding:8px 16px 0}
+h1{font-size:28px;margin:10px 2px 2px;letter-spacing:-.02em}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:22px 4px 8px;font-weight:800}
+.sub{color:var(--muted);margin:0 2px 14px;font-size:15px}
+.mtabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 0 16px}.mtabs::-webkit-scrollbar{display:none}
+.mtabs button{border:0;font:inherit;font-weight:700;font-size:15.5px;background:var(--card);color:var(--ink);padding:10px 15px;border-radius:14px;box-shadow:var(--shadow);white-space:nowrap;cursor:pointer}
+.mtabs button.on{background:var(--m);color:#fff}
+.card{background:var(--card);border-radius:18px;padding:16px;margin-bottom:14px;box-shadow:inset 0 4px 0 var(--m),var(--shadow)}
+.card.plain{box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:17px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.lbl{color:var(--muted);font-size:13.5px}
+.pill{display:inline-block;font-size:12.5px;font-weight:800;padding:2px 9px;border-radius:999px;background:var(--seg);color:var(--ink);white-space:nowrap}
+.pill.m{background:var(--m-bg);color:var(--m)}.pill.ok{background:var(--ok-bg);color:var(--ok)}
+.pill.l1{background:var(--l1-bg);color:var(--l1)}.pill.l2{background:var(--l2-bg);color:var(--l2)}.pill.l3{background:var(--l3-bg);color:var(--l3)}
+.btn{font:inherit;border:0;border-radius:12px;padding:10px 14px;font-weight:700;background:var(--seg);color:var(--ink);cursor:pointer}
+.btn.pri{background:var(--m);color:#fff}.btn.ok{background:var(--ok);color:#fff}.btn.danger{background:var(--warn-bg);color:var(--warn)}
+.btn.sm{padding:6px 10px;font-size:14px;border-radius:10px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.lnk{font:inherit;font-size:14px;font-weight:700;color:var(--m);background:none;border:0;cursor:pointer;padding:0;text-decoration:none}
+.week{display:flex;gap:14px;align-items:center}
+.week .big{font-size:40px;line-height:1}
+.steps{display:flex;gap:6px;margin-top:10px}.steps i{flex:1;height:6px;border-radius:3px;background:var(--seg)}.steps i.on{background:var(--m)}.steps i.done{background:var(--m);opacity:.4}
+.sf{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.sfc{text-align:left;font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:16px;padding:14px;cursor:pointer;display:grid;gap:8px;align-content:start}
+.sfc.on{border-color:var(--m);background:var(--m-bg)}
+.sfc .t{font-size:16.5px;font-weight:650;line-height:1.35}
+.sfc .h{display:flex;gap:6px;flex-wrap:wrap}
+.done{display:flex;gap:12px;align-items:flex-start}
+.done .tick{font-size:30px;line-height:1}
+.faces{display:flex;gap:8px;margin-top:6px}
+.faces button{font-size:28px;border:2px solid var(--line);border-radius:14px;background:var(--card);padding:4px 10px;cursor:pointer}
+.faces button.on{border-color:var(--m);background:var(--m-bg)}
+.form{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:10px}
+.form label{display:grid;gap:4px;font-size:13px;font-weight:700;color:var(--muted)}
+.form .wide{grid-column:1/-1}
+.form input,.form textarea,.form select{font:inherit;font-size:16px;border:1px solid var(--line);border-radius:10px;padding:9px 10px;background:var(--card);color:var(--ink);width:100%;min-height:42px}
+.form textarea{resize:vertical}
+.sch{border-top:1px solid var(--line);padding:12px 0}.sch:first-of-type{border-top:0;padding-top:4px}
+.sch b.t{font-size:16.5px}
+.sch .es{font-style:italic;margin:6px 0;color:var(--ink)}
+.sch .fr{display:inline-block;background:var(--m-bg);color:var(--m);font-weight:700;border-radius:10px;padding:4px 10px;margin:2px 0 6px}
+.sch .bs{font-size:13.5px;color:var(--muted)}
+.row{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}.row:first-of-type{border-top:0}
+.row .grow{flex:1;min-width:0}.row small{display:block;color:var(--muted)}
+.row .fc{font-size:24px;line-height:1.2}
+.empty{color:var(--muted);margin:4px 0}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:8px 0}
+.kpi div{background:var(--seg);border-radius:14px;padding:10px 12px}.kpi b{display:block;font-size:24px}.kpi span{font-size:13px;color:var(--muted)}
+.occ .meta{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 8px}
+.occ p{margin:6px 0}
+.occ .primo{background:var(--m-bg);border-radius:12px;padding:10px 12px;margin:8px 0}
+.toast{position:fixed;left:50%;bottom:calc(60px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);background:#16191f;color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;opacity:0;transition:.25s;pointer-events:none;z-index:50}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (max-width:600px){h1{font-size:24px}.mtabs button{font-size:14.5px;padding:9px 12px}}
+</style>
+<script>window.APP_VERSION="4aab48574e";window.APP_BUILD="2026-10-20T20:40+02:00";</script>
+</head>
+<body>
+<style id="lockCss">
+html.locked body>*:not(#lockScr){visibility:hidden!important}
+#lockScr{position:fixed;inset:0;z-index:2147483000;display:none;place-items:center;background:#f3f4f7;font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;color:#15181d;padding:24px}
+html.locked #lockScr{display:grid}
+#lockScr .lk{max-width:380px;width:100%;text-align:center;display:grid;gap:14px}
+#lockScr .lk-i{font-size:64px}
+#lockScr h1{margin:0;font-size:26px}
+#lockScr p{margin:0;color:#6b7280}
+#lockScr button{font:inherit;font-weight:800;text-transform:none;letter-spacing:0;border:0;border-radius:14px;padding:14px 18px;cursor:pointer}
+#lockScr .go{background:#1f5fae;color:#fff;font-size:18px}
+#lockScr .alt{background:#e6e8ee;color:#15181d}
+#lockScr input{font:inherit;font-size:22px;text-align:center;letter-spacing:6px;border:1px solid #e4e6eb;border-radius:12px;padding:10px;width:100%;box-sizing:border-box}
+#lockScr .err{color:#b3261e;font-weight:700;min-height:1.3em}
+@media (prefers-color-scheme:dark){#lockScr{background:#0f1216;color:#eef0f3}#lockScr .alt{background:#242a32;color:#eef0f3}#lockScr input{background:#12161b;color:#eef0f3;border-color:#2a3038}}
+</style>
+<div id="lockScr" role="dialog" aria-modal="true" aria-label="App bloccata"><div class="lk">
+  <div class="lk-i">🔒</div><h1>Pianificazione</h1><p id="lkMsg">Sblocca con Face ID per continuare.</p>
+  <button type="button" class="go" id="lkGo">Sblocca con Face ID</button>
+  <div id="lkPinBox" hidden><input id="lkPin" type="password" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="codice di riserva"><div class="err" id="lkErr"></div><button type="button" class="go" id="lkPinGo">Entra</button></div>
+  <button type="button" class="alt" id="lkAlt">Usa il codice di riserva</button>
+</div></div>
+<script>
+/* ================= BLOCCO CON FACE ID (comune a tutte le pagine di Pianificazione) =================
+   - usa una passkey del dispositivo (WebAuthn): l'iPad chiede Face ID, o il codice dell'iPad se il volto non viene riconosciuto;
+   - nessun server: la chiave pubblica resta su questo dispositivo e la firma si verifica qui;
+   - codice di riserva (4–8 cifre) se la passkey non fosse disponibile;
+   - si riblocca dopo 5 minuti fuori dall'app. I dati restano dove sono: il blocco protegge l'apertura, non cifra i dati. */
+/* chiavi di Pianificazione con il prefisso dell'app (prima erano «mie-app-…», nome condiviso con il sito): spostate una volta sola */
+(function(){try{[["mie-app-lastSnap","pn-lastSnap"],["mie-app-lastBackup","pn-lastBackup"],["mie-app-copia-cloud","pn-copia-cloud"]].forEach(function(p){var v=localStorage.getItem(p[0]);if(v!=null){if(localStorage.getItem(p[1])==null)localStorage.setItem(p[1],v);localStorage.removeItem(p[0]);}});}catch(e){}})();
+(function(){
+  "use strict";
+  var KEY="pn-lock", SES="pn-unlocked", IDLE=5*60*1000;
+  function cfg(){try{return JSON.parse(localStorage.getItem(KEY)||"null");}catch(e){return null;}}
+  var C=cfg(), root=document.documentElement;
+  function unlocked(){try{var t=+sessionStorage.getItem(SES)||0;return t&&Date.now()-t<IDLE;}catch(e){return false;}}
+  function mark(){try{sessionStorage.setItem(SES,String(Date.now()));}catch(e){}}
+  if(C&&C.on&&!unlocked())root.classList.add("locked");
+  var b64=function(buf){var s="",a=new Uint8Array(buf);for(var i=0;i<a.length;i++)s+=String.fromCharCode(a[i]);return btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");};
+  var unb64=function(s){s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";var r=atob(s),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a;};
+  function rnd(n){var a=new Uint8Array(n);crypto.getRandomValues(a);return a;}
+  async function sha(t){var h=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));return b64(h);}
+  // firma ES256 (DER) → formato grezzo r|s per WebCrypto
+  function der2raw(d){var i=2;if(d[1]&0x80)i+=d[1]&0x7f;function int(){i++;var l=d[i++];var v=d.slice(i,i+l);i+=l;while(v.length>32&&v[0]===0)v=v.slice(1);var o=new Uint8Array(32);o.set(v,32-v.length);return o;}var r=int(),s=int(),out=new Uint8Array(64);out.set(r,0);out.set(s,32);return out;}
+  async function verify(pkB64,authData,clientJSON,sig){
+    try{var key=await crypto.subtle.importKey("spki",unb64(pkB64),{name:"ECDSA",namedCurve:"P-256"},false,["verify"]);
+      var ch=new Uint8Array(await crypto.subtle.digest("SHA-256",clientJSON)),ad=new Uint8Array(authData),data=new Uint8Array(ad.length+ch.length);data.set(ad,0);data.set(ch,ad.length);
+      return await crypto.subtle.verify({name:"ECDSA",hash:"SHA-256"},key,der2raw(new Uint8Array(sig)),data);}catch(e){return null;}
+  }
+  function done(){mark();root.classList.remove("locked");try{window.dispatchEvent(new Event("pn-unlocked"));}catch(e){}}
+  function msg(t){var e=document.getElementById("lkMsg");if(e)e.textContent=t;}
+  var busy=false;
+  async function faceId(){
+    C=cfg(); if(!C||!C.id){showPin();return;}
+    if(busy)return; busy=true; msg("Guarda l’iPad…");
+    try{
+      var chal=rnd(32);
+      var a=await navigator.credentials.get({publicKey:{challenge:chal,rpId:location.hostname,allowCredentials:[{type:"public-key",id:unb64(C.id)}],userVerification:"required",timeout:60000}});
+      var r=a.response,cj=JSON.parse(new TextDecoder().decode(r.clientDataJSON));
+      if(cj.type!=="webauthn.get"||cj.challenge!==b64(chal))throw new Error("risposta non valida");
+      var flags=new Uint8Array(r.authenticatorData)[32];if(!(flags&4))throw new Error("verifica del volto non fatta");
+      if(C.pk){var ok=await verify(C.pk,r.authenticatorData,r.clientDataJSON,r.signature);if(ok===false)throw new Error("firma non valida");}
+      done();
+    }catch(e){msg(e&&e.name==="NotAllowedError"?"Tocca «Sblocca con Face ID» per riprovare, o usa il codice di riserva.":"Non riuscito: riprova o usa il codice di riserva.");}
+    busy=false;
+  }
+  function showPin(){var b=document.getElementById("lkPinBox");if(b){b.hidden=false;var i=document.getElementById("lkPin");if(i)i.focus();}}
+  async function pin(){var v=(document.getElementById("lkPin").value||"").trim();C=cfg();
+    if(C&&C.pin&&await sha("pn-pin:"+v)===C.pin){done();document.getElementById("lkPin").value="";document.getElementById("lkErr").textContent="";}
+    else{document.getElementById("lkErr").textContent="Codice sbagliato";}}
+  function wire(){
+    var g=document.getElementById("lkGo");if(!g)return;
+    g.onclick=faceId;document.getElementById("lkAlt").onclick=showPin;document.getElementById("lkPinGo").onclick=pin;
+    document.getElementById("lkPin").onkeydown=function(e){if(e.key==="Enter")pin();};
+    if(root.classList.contains("locked"))faceId();
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",wire);else wire();
+  // si riblocca dopo 5 minuti fuori dall'app
+  document.addEventListener("visibilitychange",function(){C=cfg();if(!C||!C.on)return;
+    if(document.visibilityState==="hidden"){if(!root.classList.contains("locked"))mark();}else if(!unlocked()){root.classList.add("locked");msg("Sblocca con Face ID per continuare.");faceId();}});
+  setInterval(function(){if(!root.classList.contains("locked")&&document.visibilityState==="visible")mark();},30000);
+
+  /* ---------- attivazione (usata dalla pagina Pianificazione → 🔒 Blocco) ---------- */
+  window.__pnLock={
+    cfg:cfg,
+    available:async function(){try{return !!(window.PublicKeyCredential&&await PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable());}catch(e){return false;}},
+    enable:async function(pinCode){
+      if(!/^\d{4,8}$/.test(pinCode||""))throw new Error("Il codice di riserva deve avere da 4 a 8 cifre");
+      var c=await navigator.credentials.create({publicKey:{challenge:rnd(32),rp:{name:"Pianificazione",id:location.hostname},
+        user:{id:rnd(16),name:"pianificazione",displayName:"Pianificazione"},pubKeyCredParams:[{type:"public-key",alg:-7}],
+        authenticatorSelection:{authenticatorAttachment:"platform",userVerification:"required",residentKey:"preferred"},timeout:60000,attestation:"none"}});
+      var pk=null;try{pk=c.response.getPublicKey?b64(c.response.getPublicKey()):null;}catch(e){}
+      localStorage.setItem(KEY,JSON.stringify({on:true,id:b64(c.rawId),pk:pk,pin:await sha("pn-pin:"+pinCode),at:new Date().toISOString()}));mark();return true;
+    },
+    disable:function(){localStorage.removeItem(KEY);try{sessionStorage.removeItem(SES);}catch(e){}},
+    lockNow:function(){try{sessionStorage.removeItem(SES);}catch(e){}if(cfg())root.classList.add("locked");msg("Sblocca con Face ID per continuare.");}
+  };
+})();
+</script>
+<style id="tema">/* ===== Tema comune di Pianificazione (inserito dal build in ogni pagina, dopo lo stile della pagina) =====
+   Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🤝 Metodo ambra · 🐉 Progressi rosa.
+   Le sezioni dentro Pianificazione hanno i loro colori (pagine/index.html). */
+:root{--app-pian:#2563eb;--app-lic:#c0532b;--app-tc:#0d9488;--app-met:#b86e00;--app-prog:#d63384}
+@media (prefers-color-scheme:dark){:root{--app-pian:#5b8cff;--app-lic:#f08a5d;--app-tc:#2cc5b6;--app-met:#f0a43a;--app-prog:#ff6fae}}
+.appsw{display:flex;justify-content:flex-start;gap:6px;margin:12px auto 4px;padding:0 16px;background:none;border-radius:0;width:auto;max-width:1180px;overflow-x:auto;scrollbar-width:none;box-shadow:none}
+.appsw::-webkit-scrollbar{display:none}
+.appsw a:first-child{margin-left:auto}.appsw a:last-child{margin-right:auto}
+.appsw a{--c:var(--app-pian);display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font-weight:700;font-size:14.5px;color:var(--c);text-decoration:none;white-space:nowrap;background:transparent;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--c) 35%,transparent)}
+.appsw a.on{background:var(--c);color:#fff;box-shadow:0 2px 8px color-mix(in srgb,var(--c) 35%,transparent)}
+.appsw a[data-a=lic]{--c:var(--app-lic)}.appsw a[data-a=tc]{--c:var(--app-tc)}.appsw a[data-a=met]{--c:var(--app-met)}.appsw a[data-a=prog]{--c:var(--app-prog)}
+/* Licenze e Progressi: riquadri morbidi con la riga del colore dell'app */
+body[data-app=lic],body[data-app=prog]{background:#f4f5f9}
+body[data-app=lic] .card,body[data-app=prog] .card{border:0;border-radius:18px;box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05)}
+body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog)}
+@media (prefers-color-scheme:dark){body[data-app=lic],body[data-app=prog]{background:#0f1115}body[data-app=lic] .card,body[data-app=prog] .card{box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(0,0,0,.4)}}
+</style><script>document.body.setAttribute("data-app","met")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="met" class="on" href="metodo.html" aria-current="page">🤝 Metodo</a><a data-a="prog" href="progressi.html">🐉 Progressi</a></nav>
+<div class="wrap">
+  <h1>🤝 Metodo</h1>
+  <p class="sub" id="intro"></p>
+  <nav class="mtabs" id="tabs" aria-label="Parti del Metodo"></nav>
+  <main id="main"></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+/* ================= 🤝 METODO =================
+   Allenamento a stare con gli altri: 4 abilità, una a settimana (👋 Aprire · 💬 Tenere viva la chiacchierata · 🔁 Farsi vivo · 😊 Calore);
+   ogni giorno 3 sfide (facile, media, coraggiosa) in situazioni diverse; Regole d'oro; Preparo un incontro; Com'è andata con il
+   riepilogo della domenica; Volontariato a Torino (file pubblico occasioni-torino.json, aggiornato dall'attività programmata).
+   I contenuti (schede e sfide) sono in sezioni/metodo_dati.json, controllati a ogni build da strumenti/verifica_metodo.py.
+   I dati personali (sfide scelte, note, incontri) restano su questo dispositivo: localStorage «pn-v1» → «met» + database «licenze-marco»
+   voce «pianifica», quindi entrano nelle copie giornaliere e nella copia su iCloud. Nessun dato personale nel codice. */
+"use strict";
+const MD={"abilita":[{"id":"aprire","ic":"👋","n":"Aprire","sotto":"salutare per primo, usare il nome, partire da quello che c'è intorno"},{"id":"viva","ic":"💬","n":"Tenere viva la chiacchierata","sotto":"la seconda domanda, ascoltare davvero, raccontare qualcosa di sé"},{"id":"vivo","ic":"🔁","n":"Farsi vivo","sotto":"un messaggio senza motivo, «com'è andata poi?», un grazie"},{"id":"calore","ic":"😊","n":"Calore","sotto":"complimenti precisi, entusiasmo per le buone notizie, meno formalità"}],"situazioni":{"nuove":"👤 persone nuove","colleghi":"🧑‍💼 colleghi ed ex colleghi","famiglia":"🏡 famiglia e amici","gruppi":"👥 gruppi","vol":"🤲 volontariato"},"livelli":{"1":"facile","2":"media","3":"coraggiosa"},"intro":"Piacere agli altri non è solo un talento: è fatto anche di piccole abitudini che si allenano. E c'è una buona notizia: dopo una chiacchierata, di solito piacciamo all'altro più di quanto pensiamo.","intro_base":"Boothby e colleghi (2018) lo chiamano «liking gap»: dopo una conversazione tra sconosciuti, ognuno in media sottovaluta quanto è piaciuto all'altro.","schede":[{"id":"a1","ab":"aprire","tit":"Saluta per primo","princ":"Un saluto per primo, con un sorriso e guardando negli occhi, dice «mi fa piacere vederti» prima di ogni parola.","es":"Al bar, prima di ordinare: «Buongiorno! Come va stamattina?»","frase":"Buongiorno, come va oggi?","base":"Sandstrom e Dunn (2014): chi al bar scambiava due parole sincere con chi serviva usciva più di buon umore di chi andava di fretta."},{"id":"a2","ab":"aprire","tit":"Usa il nome","princ":"Sentire il proprio nome fa sentire riconosciuti. Quando ti presentano qualcuno, ripeti subito il nome e usalo ancora una volta mentre parlate.","es":"«Piacere, Laura! Da quanto vieni qui?» E più avanti, salutando: «Ciao Laura, a presto!»","frase":"Scusa, mi ripeti il nome? Ci tengo a ricordarlo.","base":"Dire subito il nome, provare a richiamarlo a mente dopo qualche minuto e collegarlo a qualcosa (il posto, un dettaglio) aiuta a ricordarlo: lo mostrano gli studi sulla memoria dei nomi."},{"id":"a3","ab":"aprire","tit":"Parti da quello che avete intorno","princ":"Non serve una frase brillante: basta un'osservazione su quello che condividete in quel momento (il posto, l'attesa, l'evento) e una domanda.","es":"In fila: «C'è sempre così tanta gente il sabato?»","frase":"È la prima volta che vieni qui?","base":"Epley e Schroeder (2014): chi sui mezzi pubblici attaccava discorso con uno sconosciuto faceva un viaggio più piacevole di chi restava in silenzio. Si temeva di essere respinti, ma nessun partecipante lo fu."},{"id":"v1","ab":"viva","tit":"La seconda domanda","princ":"Dopo una risposta, fai una domanda proprio su quello che l'altro ha appena detto. È il segno più chiaro che lo stai ascoltando.","es":"«Sono stato in montagna.» «Ah sì? Dove? Che cosa ti è piaciuto di più?»","frase":"E poi com'è andata?","base":"Huang e colleghi (Harvard, 2017): chi faceva più domande di approfondimento piaceva di più alle persone con cui parlava."},{"id":"v2","ab":"viva","tit":"Ascolta senza preparare la risposta","princ":"Mentre l'altro parla, ascolta invece di pensare a cosa dirai. Poi ripeti con parole tue quello che hai capito, senza spostare subito il discorso su di te.","es":"«Quindi il trasloco ti ha sfinito, ma la casa nuova ti piace?»","frase":"Quindi, se ho capito bene…","base":"È il cuore dell'«ascolto attivo»: in uno studio (Weger e colleghi, 2014) chi si sentiva riformulare ciò che aveva detto si sentiva più capito di chi riceveva consigli o un semplice «capisco»."},{"id":"v3","ab":"viva","tit":"Racconta qualcosa di te","princ":"Una chiacchierata è uno scambio: dopo aver ascoltato, racconta un tuo pezzetto simile, poi ripassa la parola. La confidenza cresce un passo alla volta, da tutte e due le parti.","es":"«Anch'io ho cambiato casa due anni fa: il peggio sono stati gli scatoloni dei libri! A te che cosa è pesato di più?»","frase":"Mi è successa una cosa simile…","base":"Aron e colleghi (1997): due sconosciuti che, a turno, rispondevano a domande sempre più personali si sentivano molto più vicini di chi faceva solo chiacchiere superficiali."},{"id":"f1","ab":"vivo","tit":"Un messaggio senza motivo","princ":"Non serve un'occasione per farsi sentire: «ho pensato a te» basta, ed è proprio la sorpresa che fa piacere.","es":"«Ciao! Sono passato davanti alla pizzeria dove andavamo e mi sei venuto in mente. Come stai?»","frase":"Mi sei venuto in mente: come stai?","base":"Liu e colleghi (2022): chi riceve un messaggio inatteso lo apprezza più di quanto immagini chi lo manda, soprattutto se non vi sentite da tempo."},{"id":"f2","ab":"vivo","tit":"Com'è andata poi?","princ":"Ricordati di una cosa importante che l'altro ti ha raccontato (un esame, un viaggio, un trasloco) e chiedine notizie dopo. Annota in «Com'è andata» solo quello che ti serve per chiedere notizie.","es":"«Allora, com'è andato poi il colloquio di tuo figlio?»","frase":"Com'è andata poi con…?","base":"Sentirsi capiti, apprezzati e seguiti con attenzione è al centro dei legami stretti: Harry Reis e Phillip Shaver (1988) lo chiamano «responsività»."},{"id":"f3","ab":"vivo","tit":"Grazie e auguri","princ":"Un grazie preciso, anche dopo tanto tempo, o gli auguri in un giorno importante tengono vivi i legami.","es":"«Ripensavo a quando mi hai aiutato col trasloco: grazie ancora, per me è stato importante.»","frase":"Volevo dirti grazie per…","base":"Kumar ed Epley (2018): chi scrive un ringraziamento sottovaluta quanto farà piacere a chi lo riceve e sopravvaluta l'imbarazzo che proverà."},{"id":"c1","ab":"calore","tit":"Il complimento preciso","princ":"Un complimento sincero su una cosa concreta (una scelta, un impegno, un lavoro ben fatto) vale più di tanti complimenti generici.","es":"«Hai organizzato la cena benissimo: si vede che ci hai messo cura.»","frase":"Mi piace come hai…","base":"Zhao ed Epley (2021): chi fa un complimento sottovaluta quanto farà piacere e crede di mettere l'altro in imbarazzo più di quanto accada."},{"id":"c2","ab":"calore","tit":"Entusiasmo per le buone notizie","princ":"Quando qualcuno ti racconta una cosa bella, mostra gioia e fai domande. Una risposta tiepida («ah, bene») spegne la conversazione.","es":"«Diventi nonno? Ma è bellissimo! Quando nasce? Come vi sentite?»","frase":"Che bella notizia! Raccontami tutto.","base":"Gable e colleghi (2004): nelle coppie in cui si risponde alle buone notizie dell'altro con entusiasmo e interesse (la «risposta attiva e costruttiva») i rapporti risultano più intimi e soddisfacenti."},{"id":"c3","ab":"calore","tit":"Meno formale, più vero","princ":"Quando conosciamo qualcuno, notiamo prima di tutto se sembra ben disposto. Un sorriso, un tono morbido e un pizzico di ironia su te stesso abbassano le difese.","es":"Invece di un «Salve» con la mano rigida, un «Ciao, piacere!» con un sorriso. E se sbagli strada: «Ecco, il mio famoso senso dell'orientamento!»","frase":"Se ti va, possiamo darci del tu.","base":"Fiske, Cuddy e Glick (2007): di una persona giudichiamo prima il calore e poi la competenza, e il calore pesa di più."}],"sfide":[{"id":"ap1n","ab":"aprire","liv":1,"sit":"nuove","t":"Saluta per primo il barista o il negoziante e chiedigli come va la giornata."},{"id":"ap1c","ab":"aprire","liv":1,"sit":"colleghi","t":"Saluta per nome, con un sorriso, tre colleghi o ex colleghi che incontri oggi."},{"id":"ap1f","ab":"aprire","liv":1,"sit":"famiglia","t":"Quando rientri a casa, saluta per primo ognuno e chiedi: «Com'è andata oggi?»"},{"id":"ap1g","ab":"aprire","liv":1,"sit":"gruppi","t":"Quando arrivi in un gruppo (una riunione, un corso, una sala d'attesa), saluta tu per primo."},{"id":"ap2n","ab":"aprire","liv":2,"sit":"nuove","t":"In fila o in attesa, fai a uno sconosciuto un'osservazione su quello che avete intorno, poi una domanda."},{"id":"ap2c","ab":"aprire","liv":2,"sit":"colleghi","t":"Fai due parole con un collega che conosci poco: «Da quanto sei qui? Di che cosa ti occupi?»"},{"id":"ap2f","ab":"aprire","liv":2,"sit":"famiglia","t":"Al prossimo incontro o telefonata di famiglia, inizia tu la conversazione con il parente con cui parli di meno: «Raccontami, che cosa fai di bello in questo periodo?»"},{"id":"ap2g","ab":"aprire","liv":2,"sit":"gruppi","t":"In un gruppo, presentati a una persona nuova e usa il suo nome almeno una volta."},{"id":"ap3n","ab":"aprire","liv":3,"sit":"nuove","t":"Inizia una vera chiacchierata con un vicino di casa con cui finora vi siete solo salutati."},{"id":"ap3c","ab":"aprire","liv":3,"sit":"colleghi","t":"Proponi un caffè a un collega che conosci poco."},{"id":"ap3f","ab":"aprire","liv":3,"sit":"famiglia","t":"Con un amico di un amico o un parente acquisito che conosci poco, inizia tu una vera chiacchierata partendo da un interesse comune."},{"id":"ap3g","ab":"aprire","liv":3,"sit":"gruppi","t":"Vai a un incontro aperto (una presentazione, una festa di quartiere) e parla con almeno due persone."},{"id":"ap3v","ab":"aprire","liv":3,"sit":"vol","t":"Chiama Vol.To (011 81 38 711) o scrivi a centroservizi@volontariatotorino.it per fissare il colloquio di orientamento gratuito."},{"id":"vi1n","ab":"viva","liv":1,"sit":"nuove","t":"In una chiacchierata breve, fai almeno una seconda domanda su quello che ti hanno risposto."},{"id":"vi1c","ab":"viva","liv":1,"sit":"colleghi","t":"Chiedi a un collega com'è andato il fine settimana (o la giornata di ieri), poi fai una seconda domanda su un dettaglio."},{"id":"vi1f","ab":"viva","liv":1,"sit":"famiglia","t":"A tavola chiedi: «Qual è stata la cosa più bella di oggi?» e ascolta la risposta fino in fondo."},{"id":"vi1g","ab":"viva","liv":1,"sit":"gruppi","t":"In gruppo, quando qualcuno racconta qualcosa, rilancia con una domanda invece di cambiare argomento."},{"id":"vi2n","ab":"viva","liv":2,"sit":"nuove","t":"In una conversazione, ripeti una volta con parole tue quello che hai capito: «Quindi, se ho capito bene…»"},{"id":"vi2c","ab":"viva","liv":2,"sit":"colleghi","t":"Con un collega, racconta un tuo piccolo episodio simile al suo e poi ripassagli la parola."},{"id":"vi2f","ab":"viva","liv":2,"sit":"famiglia","t":"Chiedi a un familiare di raccontarti un suo ricordo (un viaggio, il primo lavoro) e fagli tre domande."},{"id":"vi2g","ab":"viva","liv":2,"sit":"gruppi","t":"In gruppo, coinvolgi chi parla poco: «E tu che cosa ne pensi?»"},{"id":"vi3n","ab":"viva","liv":3,"sit":"nuove","t":"Tieni viva per almeno dieci minuti una chiacchierata con una persona appena conosciuta, alternando domande e racconti."},{"id":"vi3c","ab":"viva","liv":3,"sit":"colleghi","t":"In pausa con un collega, non parlate di lavoro: scopri una sua passione."},{"id":"vi3f","ab":"viva","liv":3,"sit":"famiglia","t":"Passa una serata senza telefono con una persona di famiglia: solo domande, ascolto e racconti."},{"id":"vi3g","ab":"viva","liv":3,"sit":"gruppi","t":"A una cena con più persone, fai almeno una domanda a ciascuno, così che tutti abbiano spazio per raccontare qualcosa."},{"id":"vi3v","ab":"viva","liv":3,"sit":"vol","t":"Partecipa, o iscriviti, a una serata informativa di un'associazione di volontariato e fai due domande a un volontario."},{"id":"fv1n","ab":"vivo","liv":1,"sit":"nuove","t":"Se hai conosciuto qualcuno di recente e hai il suo numero, mandagli due righe: «È stato un piacere conoscerti.»"},{"id":"fv1c","ab":"vivo","liv":1,"sit":"colleghi","t":"Manda un messaggio a un ex collega: «Mi sei venuto in mente, come stai?»"},{"id":"fv1f","ab":"vivo","liv":1,"sit":"famiglia","t":"Manda una foto o un ricordo a un familiare o a un amico lontano, con due righe."},{"id":"fv1g","ab":"vivo","liv":1,"sit":"gruppi","t":"In una chat di gruppo, scrivi un messaggio caloroso o rispondi a qualcuno chiamandolo per nome."},{"id":"fv2n","ab":"vivo","liv":2,"sit":"nuove","t":"Torna nel negozio o nel bar dove hai parlato con qualcuno e riprendi il discorso dell'ultima volta."},{"id":"fv2c","ab":"vivo","liv":2,"sit":"colleghi","t":"Chiedi a un collega notizie di una cosa che ti aveva raccontato: «Com'è andata poi con…?»"},{"id":"fv2f","ab":"vivo","liv":2,"sit":"famiglia","t":"Telefona a un familiare o a un amico per chiedere com'è andata una cosa importante per lui o per lei."},{"id":"fv2g","ab":"vivo","liv":2,"sit":"gruppi","t":"Proponi tu al gruppo una data per rivedervi."},{"id":"fv3n","ab":"vivo","liv":3,"sit":"nuove","t":"Invita a prendere un caffè una persona conosciuta di recente."},{"id":"fv3c","ab":"vivo","liv":3,"sit":"colleghi","t":"Scrivi oggi agli ex colleghi che non vedi da tempo e proponi una data per un pranzo o una pizza."},{"id":"fv3f","ab":"vivo","liv":3,"sit":"famiglia","t":"Scrivi a un familiare o a un amico un grazie preciso per qualcosa che ha fatto per te, anche tanto tempo fa."},{"id":"fv3g","ab":"vivo","liv":3,"sit":"gruppi","t":"Occupati tu del prossimo ritrovo del gruppo: data, posto e messaggio a tutti."},{"id":"fv3v","ab":"vivo","liv":3,"sit":"vol","t":"Scrivi o telefona all'associazione di volontariato che ti ha incuriosito per chiedere come cominciare."},{"id":"ca1n","ab":"calore","liv":1,"sit":"nuove","t":"Fai un complimento preciso a chi ti serve (al bar, in negozio) per una cosa fatta bene."},{"id":"ca1c","ab":"calore","liv":1,"sit":"colleghi","t":"Ringrazia un collega per una cosa concreta che ha fatto, dicendogli perché ti è stata utile."},{"id":"ca1f","ab":"calore","liv":1,"sit":"famiglia","t":"Fai a un familiare un complimento preciso su una scelta o su un impegno, non sull'aspetto."},{"id":"ca1g","ab":"calore","liv":1,"sit":"gruppi","t":"In un incontro di gruppo, guarda negli occhi e sorridi a chi parla, mentre parla."},{"id":"ca2n","ab":"calore","liv":2,"sit":"nuove","t":"Proponi di darvi del tu a una persona che vedi spesso."},{"id":"ca2c","ab":"calore","liv":2,"sit":"colleghi","t":"Chiedi a un collega se c'è qualcosa di bello in arrivo e, se te lo racconta, rispondi con entusiasmo e fagli due domande."},{"id":"ca2f","ab":"calore","liv":2,"sit":"famiglia","t":"Chiedi a un familiare: «Qual è stata la cosa più bella di questa settimana?» e rispondi con entusiasmo: «Che bello! Raccontami tutto.»"},{"id":"ca2g","ab":"calore","liv":2,"sit":"gruppi","t":"In gruppo, ridi di te stesso una volta, con leggerezza, per un piccolo errore o una tua abitudine."},{"id":"ca3n","ab":"calore","liv":3,"sit":"nuove","t":"Offri il tuo aiuto a uno sconosciuto in una piccola cosa (un'indicazione, una borsa pesante), chiedendo prima se gli serve, e scambiate due parole."},{"id":"ca3c","ab":"calore","liv":3,"sit":"colleghi","t":"Scrivi a un collega o ex collega che cosa hai apprezzato di lui o di lei lavorando insieme."},{"id":"ca3f","ab":"calore","liv":3,"sit":"famiglia","t":"Scrivi a mano un biglietto a una persona di famiglia: che cosa ti piace di lei e perché."},{"id":"ca3g","ab":"calore","liv":3,"sit":"gruppi","t":"In un gruppo, presenta tu due persone che non si conoscono, dicendo una cosa bella di ognuna."},{"id":"ca3v","ab":"calore","liv":3,"sit":"vol","t":"Partecipa per almeno un'ora a un'iniziativa di volontariato aperta a tutti (una raccolta, un evento) e ringrazia di persona un volontario per quello che fa."}],"domande_idee":["Che cosa ti ha tenuto impegnato ultimamente?","C'è qualcosa che aspetti con piacere nei prossimi mesi?","Com'è andata poi con…?","Qual è stata la cosa più bella di questo periodo?","Stai leggendo o guardando qualcosa che ti piace?","Che cosa ti piace fare in una giornata libera?","Se domani potessi partire per un viaggio, dove andresti?","Com'è cambiato il quartiere da quando ci abiti?"]};
+const $=id=>document.getElementById(id);
+const pad=n=>String(n).padStart(2,"0");
+const iso=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const parse=s=>{const a=s.split("-").map(Number);return new Date(a[0],a[1]-1,a[2],12);};
+const add=(s,n)=>{const d=parse(s);d.setDate(d.getDate()+n);return iso(d);};
+const today=()=>iso(new Date());
+const diff=(a,b)=>Math.round((parse(b)-parse(a))/864e5);
+const monday=s=>{const d=parse(s);d.setDate(d.getDate()-(d.getDay()+6)%7);return iso(d);};
+const fmt=(s,o)=>parse(s).toLocaleDateString("it-IT",o||{weekday:"long",day:"numeric",month:"long"});
+const cap=s=>s?s[0].toUpperCase()+s.slice(1):s;
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const lsJ=k=>{try{return JSON.parse(localStorage.getItem(k)||"null");}catch(e){return null;}};
+function toast(t){const e=$("toast");e.textContent=t;e.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("on"),1800);}
+const FACCE=[["🙂","bene"],["😐","così così"],["😕","non è andata"]];
+const AB=MD.abilita,ABI=Object.fromEntries(AB.map((a,i)=>[a.id,i])),SF=Object.fromEntries(MD.sfide.map(x=>[x.id,x]));
+
+/* ---------- dati (pn-v1 → met) ---------- */
+const KEY="pn-v1";
+function kv(mode,key,val){return new Promise((res,rej)=>{try{const r=indexedDB.open("licenze-marco",1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains("kv"))r.result.createObjectStore("kv");};
+  r.onsuccess=()=>{try{const tx=r.result.transaction("kv",mode),st=tx.objectStore("kv");const q=mode==="readonly"?st.get(key):st.put(val,key);q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error);}catch(e){rej(e);}};r.onerror=()=>rej(r.error);}catch(e){rej(e);}});}
+const normM=m=>{m=m&&typeof m==="object"?m:{};m.g=m.g&&typeof m.g==="object"?m.g:{};m.inc=Array.isArray(m.inc)?m.inc:[];m.occ=m.occ&&typeof m.occ==="object"?m.occ:{};m.lette=m.lette||{};return m;};
+let M=normM((lsJ(KEY)||{}).met);
+let saveT=null;
+function save(){const P=lsJ(KEY)||{ver:1};P.met=M;P.savedAt=new Date().toISOString();const t=JSON.stringify(P); // riparto sempre dall'ultima versione salvata: le altre sezioni restano intatte
+  try{localStorage.setItem(KEY,t);}catch(e){toast("⚠️ Memoria piena: non salvato");return;}clearTimeout(saveT);saveT=setTimeout(()=>kv("readwrite","pianifica",t).catch(()=>{}),300);}
+async function recover(){if(lsJ(KEY))return;try{const t=await kv("readonly","pianifica");if(t){localStorage.setItem(KEY,t);M=normM(JSON.parse(t).met);render();}}catch(e){}}
+try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist();}catch(e){}
+
+/* ---------- il percorso: un'abilità a settimana, poi si riparte con sfide più impegnative ---------- */
+function startOf(){if(!M.start){M.start=monday(today());save();}return M.start;}
+function weekInfo(s){const w=Math.max(0,Math.floor(diff(startOf(),s)/7));return{w,ab:AB[w%4],n:w%4+1,ciclo:Math.floor(w/4)};}
+const hash=s=>{let h=2166136261;for(const c of s)h=Math.imul(h^c.charCodeAt(0),16777619);return h>>>0;};
+const SITS=["nuove","colleghi","famiglia","gruppi"];
+function propose(s,rnd){
+  const W=weekInfo(s),lv=W.ciclo?[2,3,3]:[1,2,3],recent=new Set();
+  for(let i=1;i<=14;i++){const g=M.g[add(s,-i)];if(g&&g.s)recent.add(g.s);}
+  let seed=rnd?Math.floor(Math.random()*1e9):hash(s+W.ab.id);const out=[],used=new Set();
+  lv.forEach((l,k)=>{let pool=MD.sfide.filter(x=>x.ab===W.ab.id&&x.liv===l&&!out.includes(x.id));
+    const fresh=pool.filter(x=>!recent.has(x.id)&&!used.has(x.sit));if(fresh.length)pool=fresh;else{const f2=pool.filter(x=>!used.has(x.sit));if(f2.length)pool=f2;}
+    if(!pool.length)return;const x=pool[(seed>>>(k*5))%pool.length];out.push(x.id);used.add(x.sit);});
+  return out;
+}
+function dayG(s){let g=M.g[s];if(!g){g=M.g[s]={ab:weekInfo(s).ab.id,p:propose(s)};save();}return g;}
+function occPrimo(s){const v=OCC&&(OCC.voci||[]).find(x=>"occ:"+x.id===s);return v?`<span class="lbl">${esc(v.primo)}</span>`:"";}
+function sfTxt(g){if(!g||!g.s)return "";if(g.s.startsWith("occ:"))return g.txt||"";return (SF[g.s]||{}).t||"";}
+
+/* ---------- interfaccia ---------- */
+const TABS=[["oggi","🎯 Oggi"],["regole","📘 Regole d'oro"],["inc","🍽️ Incontri"],["diario","📝 Com'è andata"],["vol","🤲 Volontariato"]];
+let tab=(()=>{const h=(location.hash||"").slice(1);if(TABS.some(t=>t[0]===h))return h;try{const v=localStorage.getItem("pn-metv");return TABS.some(t=>t[0]===v)?v:"oggi";}catch(e){return "oggi";}})();
+let incEdit=null,incOpen=false;
+function setTab(t){tab=t;try{localStorage.setItem("pn-metv",t);}catch(e){}history.replaceState(null,"","#"+t);render();scrollTo({top:0});}
+function render(){
+  $("intro").textContent=MD.intro;
+  $("tabs").innerHTML=TABS.map(([k,n])=>`<button data-tab="${k}" class="${tab===k?"on":""}">${n}</button>`).join("");
+  $("main").innerHTML=tab==="oggi"?vOggi():tab==="regole"?vRegole():tab==="inc"?vInc():tab==="diario"?vDiario():vVol();
+  bind();
+}
+const livP=l=>`<span class="pill l${l}">${["","🌱 facile","🌿 media","🔥 coraggiosa"][l]}</span>`;
+const sitP=s=>`<span class="pill">${esc(MD.situazioni[s]||s)}</span>`;
+function faces(cur,attr){return `<div class="faces">${FACCE.map((f,i)=>`<button ${attr}="${i+1}" class="${+cur===i+1?"on":""}" aria-label="${f[1]}">${f[0]}</button>`).join("")}</div>`;}
+
+function vOggi(){
+  const t=today(),W=weekInfo(t),g=dayG(t),wd=(parse(t).getDay()+6)%7;
+  let o=`<div class="card"><div class="week"><span class="big">${W.ab.ic}</span><div><div class="lbl">Settimana ${W.n} di 4${W.ciclo?` · giro ${W.ciclo+1}, sfide più impegnative`:""}</div><h3 style="margin:2px 0">${esc(W.ab.n)}</h3><div class="lbl">${esc(W.ab.sotto)}</div></div></div>
+    <div class="steps">${AB.map((a,i)=>`<i class="${i===W.n-1?"on":i<W.n-1?"done":""}" title="${esc(a.n)}"></i>`).join("")}</div></div>`;
+  // la sfida
+  if(g.s&&g.ok){o+=`<div class="card"><h3>🎯 La sfida di oggi</h3><div class="done"><span class="tick">✅</span><div class="grow"><b>${esc(sfTxt(g))}</b><div class="lbl">Fatta! Com'è andata?</div>${faces(g.f,"data-gf")}
+      <div class="form"><label class="wide">Una riga: che cosa ha funzionato, che cosa hai notato<input id="gT" maxlength="200" value="${esc(g.t||"")}" placeholder="es. ha sorriso subito, abbiamo parlato dieci minuti"></label></div>
+      <div class="btns"><button class="btn pri sm" data-a="gsave">Salva</button><button class="btn sm" data-a="gundo">Non l'ho ancora fatta</button></div></div></div></div>`;}
+  else{o+=`<div class="card"><h3>🎯 La sfida di oggi <span class="lbl" style="font-weight:600">${g.s?"la tua scelta":"scegline una"}</span></h3><div class="sf">`+
+      g.p.map(id=>{const x=SF[id];if(!x)return "";return `<button class="sfc${g.s===id?" on":""}" data-pick="${id}"><span class="h">${livP(x.liv)}${sitP(x.sit)}</span><span class="t">${esc(x.t)}</span></button>`;}).join("")+
+      (g.s&&g.s.startsWith("occ:")?`<button class="sfc on" data-pick="${esc(g.s)}"><span class="h"><span class="pill l3">🔥 coraggiosa</span>${sitP("vol")}</span><span class="t">${esc(g.txt)}</span>${occPrimo(g.s)}</button>`:"")+
+      `</div><div class="btns">${g.s?`<button class="btn ok" data-a="gdone">✓ Fatta</button>`:""}<button class="btn sm" data-a="gnew">🔄 Altre tre</button></div>
+      <p class="lbl" style="margin:10px 0 0">Saltare un giorno va benissimo: non ci sono serie da tenere né punti da perdere.</p></div>`;}
+  // la regola del giorno
+  const sc=MD.schede.filter(x=>x.ab===W.ab.id),r=sc[(diff(startOf(),t)%7+7)%7%sc.length];
+  if(r)o+=`<div class="card plain"><h3>📘 La regola di oggi <button class="lnk" data-tab="regole" style="margin-left:auto">Tutte le regole ›</button></h3>${schedaH(r)}</div>`;
+  // incontri vicini
+  const up=M.inc.filter(i=>i.d&&i.d>=t&&i.d<=add(t,7)).sort((a,b)=>a.d<b.d?-1:1),late=M.inc.filter(i=>i.d&&i.d<t&&!i.f);
+  if(up.length||late.length)o+=`<div class="card plain"><h3>🍽️ Incontri <button class="lnk" data-tab="inc" style="margin-left:auto">Apri ›</button></h3>`+
+    late.map(i=>`<div class="row"><span class="fc">📝</span><div class="grow"><b>${esc(i.chi)}</b><small>${cap(fmt(i.d))} · com'è andata? Scrivilo in Incontri</small></div></div>`).join("")+
+    up.map(i=>`<div class="row"><span class="fc">🍽️</span><div class="grow"><b>${esc(i.chi)}</b><small>${i.d===t?"oggi":cap(fmt(i.d))}${i.o?" · "+esc(i.o):""}${i.dove?" · "+esc(i.dove):""}</small>${(i.dom||[]).filter(Boolean).length?`<small>Domande pronte: ${(i.dom||[]).filter(Boolean).map(esc).join(" · ")}</small>`:""}</div></div>`).join("")+`</div>`;
+  // riepilogo (la domenica e il lunedì: la settimana appena passata)
+  if(wd===6||wd===0)o+=riepilogo(wd===6?monday(t):monday(add(t,-1)));
+  o+=`<p class="lbl" style="margin:18px 4px">💡 ${esc(MD.intro_base)}</p>`;
+  return o;
+}
+function riepilogo(m){
+  const days=[...Array(7)].map((_,i)=>add(m,i)).filter(s=>s<=today()),G=days.map(s=>M.g[s]).filter(g=>g&&g.s&&g.ok);
+  const inc=M.inc.filter(i=>i.d>=m&&i.d<=add(m,6)&&i.f),n=[0,0,0];G.concat(inc).forEach(x=>{if(x.f)n[x.f-1]++;});
+  const righe=G.filter(g=>g.t).map(g=>g.t).concat(inc.filter(i=>i.t).map(i=>i.t)),W=weekInfo(m);
+  return `<div class="card"><h3>🗓️ Riepilogo della settimana · ${W.ab.ic} ${esc(W.ab.n)}</h3>
+    <div class="kpi"><div><b>${G.length}</b><span>sfide fatte</span></div><div><b>${inc.length}</b><span>incontri</span></div><div><b>${FACCE.map((f,i)=>n[i]?f[0]+" "+n[i]:"").filter(Boolean).join("  ")||"—"}</b><span>com'è andata</span></div></div>
+    ${righe.length?`<p class="lbl" style="margin:8px 0 4px">Quello che hai scritto:</p>${righe.slice(-5).map(r=>`<div class="row"><span class="fc">✍️</span><div class="grow">${esc(r)}</div></div>`).join("")}`:`<p class="lbl">Ogni sfida fatta è un passo, anche se è andata così così: conta averci provato.</p>`}
+    <p class="lbl" style="margin:10px 0 0">Ricorda: dopo una chiacchierata, di solito sei piaciuto più di quanto pensi.</p></div>`;
+}
+function schedaH(x){return `<div class="sch"><b class="t">${esc(x.tit)}</b><p style="margin:6px 0">${esc(x.princ)}</p><p class="es">${esc(x.es)}</p><span class="fr">💬 «${esc(x.frase)}»</span><div class="bs">📚 ${esc(x.base)}</div></div>`;}
+function vRegole(){const W=weekInfo(today());
+  return `<p class="lbl" style="margin:0 4px 12px">${esc(MD.intro_base)}</p>`+AB.map(a=>`<div class="card${a.id===W.ab.id?"":" plain"}"><h3>${a.ic} ${esc(a.n)}${a.id===W.ab.id?` <span class="pill m">questa settimana</span>`:""}</h3><div class="lbl" style="margin-bottom:6px">${esc(a.sotto)}</div>${MD.schede.filter(x=>x.ab===a.id).map(schedaH).join("")}</div>`).join("");}
+
+function vInc(){
+  const t=today(),E=incEdit?M.inc.find(i=>i.id===incEdit):null,L=M.inc.slice().sort((a,b)=>(b.d||"")<(a.d||"")?-1:1);
+  const up=L.filter(i=>!i.d||i.d>=t).reverse(),past=L.filter(i=>i.d&&i.d<t);
+  let o=`<div class="card"><h3>🍽️ Preparo un incontro</h3><p class="lbl" style="margin:0">Prima di una cena, un ritrovo o una telefonata importante: che cosa sai della persona, 3 domande da fare, una storia da raccontare. Il giorno dell'incontro lo trovi nel Calendario.</p>
+    ${incOpen||E?incForm(E):`<div class="btns"><button class="btn pri" data-a="inew">➕ Nuovo incontro</button></div>`}</div>`;
+  o+=`<h2>In programma</h2>`+(up.length?up.map(i=>incCard(i,false)).join(""):`<p class="empty">Nessun incontro in programma.</p>`);
+  if(past.length)o+=`<h2>Passati</h2>`+past.map(i=>incCard(i,true)).join("");
+  return o;
+}
+function incForm(E){const e=E||{dom:["","",""]};
+  return `<div class="form"><label>Chi vedrai<input id="iChi" maxlength="60" value="${esc(e.chi||"")}" placeholder="es. un ex collega, i vicini"></label>
+    <label>Quando<input id="iD" type="date" value="${esc(e.d||today())}"></label><label>Ora<input id="iO" type="time" value="${esc(e.o||"")}"></label><label>Dove<input id="iDove" maxlength="60" value="${esc(e.dove||"")}" placeholder="facoltativo"></label>
+    <label class="wide">Che cosa so di questa persona (interessi, famiglia, cose che sta vivendo)<textarea id="iSo" rows="2" maxlength="400">${esc(e.so||"")}</textarea></label>
+    ${[0,1,2].map(k=>`<label class="wide">Domanda ${k+1}<input id="iQ${k}" maxlength="140" value="${esc((e.dom||[])[k]||"")}"></label>`).join("")}
+    <div class="wide"><details><summary class="lnk">💡 Idee di domande</summary><div class="btns">${MD.domande_idee.map((q,k)=>`<button class="btn sm" data-qi="${k}">${esc(q)}</button>`).join("")}</div></details></div>
+    <label class="wide">Una storia breve da raccontare<textarea id="iSt" rows="2" maxlength="400" placeholder="una cosa bella o buffa che ti è successa">${esc(e.storia||"")}</textarea></label>
+    <div class="btns wide"><button class="btn pri" data-a="isave">${E?"Salva le modifiche":"Salva l'incontro"}</button><button class="btn" data-a="icancel">Annulla</button>${E?`<button class="btn danger" data-a="idel">Togli</button>`:""}</div></div>`;}
+function incCard(i,past){
+  return `<div class="card plain"><h3>${past?"📝":"🍽️"} ${esc(i.chi)} <span class="pill${past?"":" m"}">${i.d?cap(fmt(i.d,{weekday:"short",day:"numeric",month:"short"})):"senza data"}${i.o?" · "+esc(i.o):""}</span><button class="lnk" data-iedit="${i.id}" style="margin-left:auto">Modifica</button></h3>
+    ${i.dove?`<div class="lbl">📍 ${esc(i.dove)}</div>`:""}${i.so?`<p style="margin:6px 0"><b>Che cosa so:</b> ${esc(i.so)}</p>`:""}
+    ${(i.dom||[]).filter(Boolean).length?`<p style="margin:6px 0"><b>Domande:</b></p>${(i.dom||[]).filter(Boolean).map(q=>`<div class="lbl">❓ ${esc(q)}</div>`).join("")}`:""}
+    ${i.storia?`<p style="margin:6px 0"><b>Da raccontare:</b> ${esc(i.storia)}</p>`:""}
+    ${past||i.d===today()?`<div style="margin-top:8px"><b>Com'è andata?</b>${faces(i.f,"data-if=\""+i.id+"\" data-iv")}<div class="form"><label class="wide">Una riga<input data-it="${i.id}" maxlength="200" value="${esc(i.t||"")}" placeholder="che cosa ha funzionato"></label><label class="wide">Da chiedere la prossima volta («Com'è andata poi?»)<input data-ir="${i.id}" maxlength="200" value="${esc(i.ric||"")}" placeholder="es. l'esame del figlio, il viaggio in Puglia"></label></div></div>`:""}</div>`;}
+
+function vDiario(){
+  const L=[];Object.entries(M.g).forEach(([d,g])=>{if(g&&g.s&&g.ok)L.push({d,ic:"🎯",t:sfTxt(g),f:g.f,r:g.t});});
+  M.inc.forEach(i=>{if(i.d&&(i.f||i.t))L.push({d:i.d,ic:"🍽️",t:"Incontro: "+i.chi,f:i.f,r:i.t,ric:i.ric});});
+  L.sort((a,b)=>a.d<b.d?1:-1);
+  const t=today();let o=riepilogo(monday(t));
+  if(!L.length)return o+`<p class="empty">Qui compariranno le sfide fatte e gli incontri, con una riga su com'è andata.</p>`;
+  let wk="";o+=L.map(x=>{const m=monday(x.d),h=m!==wk?`<h2>Settimana del ${parse(m).toLocaleDateString("it-IT",{day:"numeric",month:"long"})} · ${weekInfo(m).ab.ic} ${esc(weekInfo(m).ab.n)}</h2>`:"";wk=m;
+    return h+`<div class="card plain" style="padding:12px 16px"><div class="row" style="border:0;padding:0"><span class="fc">${x.f?FACCE[x.f-1][0]:x.ic}</span><div class="grow"><b>${esc(x.t)}</b><small>${cap(fmt(x.d))}</small>${x.r?`<div style="margin-top:4px">✍️ ${esc(x.r)}</div>`:""}${x.ric?`<small>Da chiedere la prossima volta: ${esc(x.ric)}</small>`:""}</div></div></div>`;}).join("");
+  return o;
+}
+
+/* ---------- 🤲 volontariato (file pubblico, aggiornato una volta a settimana) ---------- */
+const OKEY="pn-occ";let OCC=lsJ(OKEY),occBusy=false;
+async function occPull(){if(occBusy||navigator.onLine===false)return;occBusy=true;
+  try{const r=await fetch("occasioni-torino.json",{cache:"no-store"});if(r.ok){const o=await r.json();if(o&&o.app==="pianificazione-occasioni"){OCC=o;try{localStorage.setItem(OKEY,JSON.stringify(o));}catch(e){}if(tab==="vol")render();}}}catch(e){}occBusy=false;}
+const ST=[["","—"],["interessa","⭐ mi interessa"],["contattato","📞 ho contattato"],["iniziato","🤲 ho iniziato"],["no","✖️ non fa per me"]];
+function vVol(){
+  if(!OCC)return `<div class="card plain"><p class="empty">Sto scaricando le occasioni… serve internet la prima volta.</p></div>`;
+  const AT=Object.fromEntries(AB.map(a=>[a.id,a]));
+  let o=`<div class="card"><h3>🤲 Volontariato a Torino</h3><p style="margin:0">Fare volontariato vuol dire incontrare persone nuove ogni volta, con uno scopo comune: è la palestra più naturale per il Metodo. Qui ci sono realtà con molto contatto umano, con il primo passo da fare.</p>
+    <p class="lbl" style="margin:8px 0 0">Controllate sulle pagine ufficiali · ultimo aggiornamento ${OCC.updated?new Date(OCC.updated).toLocaleDateString("it-IT",{day:"numeric",month:"long",year:"numeric"}):"—"} · solo informazioni, nessun consiglio.</p></div>`;
+  const an=(OCC.annunci||[]).filter(a=>!a.scade||a.scade>=today());
+  if(an.length)o+=`<h2>📣 Annunci</h2>`+an.map(a=>`<div class="card plain occ"><h3>${esc(a.n)}</h3><p>${esc(a.cosa||"")}</p>${a.primo?`<div class="primo"><b>Primo passo:</b> ${esc(a.primo)}</div>`:""}<div class="lbl">${a.scade?"Fino al "+fmt(a.scade,{day:"numeric",month:"long"})+" · ":""}Fonte: <a class="lnk" href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.fonte||"pagina")}</a></div></div>`).join("");
+  o+=(OCC.voci||[]).map(v=>{const my=M.occ[v.id]||{};return `<div class="card plain occ"><h3>${esc(v.n)}</h3>
+    <div class="meta">${v.contatto==="alto"?`<span class="pill m">👥 molto contatto con le persone</span>`:`<span class="pill">👥 contatto medio</span>`}${(v.ab||[]).map(a=>AT[a]?`<span class="pill">allena ${AT[a].ic} ${esc(AT[a].n)}</span>`:"").join("")}</div>
+    <p>${esc(v.cosa)}</p><p><b>Impegno:</b> ${esc(v.impegno)}</p><p><b>Requisiti:</b> ${esc(v.requisiti)}</p>
+    <div class="primo"><b>Primo passo:</b> ${esc(v.primo)}</div>
+    <div class="form"><label>Per me<select data-ost="${esc(v.id)}">${ST.map(([k,n])=>`<option value="${k}"${(my.st||"")===k?" selected":""}>${n}</option>`).join("")}</select></label><label>Nota<input data-onote="${esc(v.id)}" maxlength="160" value="${esc(my.n||"")}" placeholder="facoltativa"></label></div>
+    <div class="btns"><button class="btn sm" data-osf="${esc(v.id)}">🎯 Il primo passo è la sfida di oggi</button></div>
+    <div class="lbl" style="margin-top:8px">Fonte: <a class="lnk" href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.fonte)}</a> · controllato il ${fmt(v.ctrl,{day:"numeric",month:"long",year:"numeric"})}</div></div>`;}).join("");
+  return o+`<p class="lbl" style="margin:14px 4px">Le tue scelte e le note restano su questo iPad.</p>`;
+}
+
+/* ---------- azioni ---------- */
+function bind(){
+  document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
+  document.querySelectorAll("[data-pick]").forEach(b=>b.onclick=()=>{const g=dayG(today()),id=b.dataset.pick;g.s=g.s===id&&!id.startsWith("occ:")?null:id;if(!g.s)delete g.txt;else if(SF[g.s])g.txt=SF[g.s].t;save();render();});
+  document.querySelectorAll("[data-gf]").forEach(b=>b.onclick=()=>{const g=dayG(today());g.f=+b.dataset.gf;save();render();});
+  document.querySelectorAll("[data-iv]").forEach(b=>b.onclick=()=>{const i=M.inc.find(x=>x.id===b.dataset.if);if(i){i.f=+b.dataset.iv;save();render();}});
+  document.querySelectorAll("[data-it]").forEach(e=>e.onchange=()=>{const i=M.inc.find(x=>x.id===e.dataset.it);if(i){i.t=e.value.trim();save();toast("Salvato");}});
+  document.querySelectorAll("[data-ir]").forEach(e=>e.onchange=()=>{const i=M.inc.find(x=>x.id===e.dataset.ir);if(i){i.ric=e.value.trim();save();toast("Salvato");}});
+  document.querySelectorAll("[data-iedit]").forEach(b=>b.onclick=()=>{incEdit=b.dataset.iedit;incOpen=true;render();});
+  document.querySelectorAll("[data-qi]").forEach(b=>b.onclick=()=>{const q=MD.domande_idee[+b.dataset.qi];for(const k of [0,1,2]){const e=$("iQ"+k);if(e&&!e.value){e.value=q;return;}}toast("Le 3 domande sono già piene");});
+  document.querySelectorAll("[data-ost]").forEach(e=>e.onchange=()=>{const m=M.occ[e.dataset.ost]||(M.occ[e.dataset.ost]={});m.st=e.value;m.at=today();save();toast("Salvato");});
+  document.querySelectorAll("[data-onote]").forEach(e=>e.onchange=()=>{const m=M.occ[e.dataset.onote]||(M.occ[e.dataset.onote]={});m.n=e.value.trim();save();toast("Salvato");});
+  document.querySelectorAll("[data-osf]").forEach(b=>b.onclick=()=>{const v=(OCC.voci||[]).find(x=>x.id===b.dataset.osf);if(!v)return;const g=dayG(today());if(g.ok&&!confirm("Hai già fatto la sfida di oggi: la sostituisco con questo primo passo?"))return;g.s="occ:"+v.id;g.txt="Fai il primo passo con "+v.n;g.ok=false;delete g.f;delete g.t;save();setTab("oggi");toast("🎯 È la sfida di oggi");});
+  document.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>act(b.dataset.a));
+}
+function act(a){const t=today();
+  if(a==="gnew"){const g=dayG(t);g.p=propose(t,true);if(g.s&&!g.s.startsWith("occ:"))g.s=null;save();return render();}
+  if(a==="gdone"){const g=dayG(t);g.ok=true;g.at=new Date().toISOString();save();toast("✅ Fatta, bravo!");return render();}
+  if(a==="gundo"){const g=dayG(t);g.ok=false;save();return render();}
+  if(a==="gsave"){const g=dayG(t);g.t=($("gT").value||"").trim();save();toast("Salvato");return render();}
+  if(a==="inew"){incEdit=null;incOpen=true;return render();}
+  if(a==="icancel"){incEdit=null;incOpen=false;return render();}
+  if(a==="isave"){const chi=$("iChi").value.trim();if(!chi)return toast("Scrivi chi vedrai");
+    const o={chi,d:$("iD").value||"",o:$("iO").value||"",dove:$("iDove").value.trim(),so:$("iSo").value.trim(),dom:[0,1,2].map(k=>$("iQ"+k).value.trim()),storia:$("iSt").value.trim()};
+    if(incEdit){Object.assign(M.inc.find(i=>i.id===incEdit),o);}else M.inc.push(Object.assign({id:uid(),creato:t},o));
+    incEdit=null;incOpen=false;save();toast("🍽️ Incontro salvato");return render();}
+  if(a==="idel"){if(!confirm("Togliere questo incontro?"))return;M.inc=M.inc.filter(i=>i.id!==incEdit);incEdit=null;incOpen=false;save();return render();}
+}
+window.addEventListener("pageshow",e=>{if(e.persisted){M=normM((lsJ(KEY)||{}).met);render();}});
+const busy=()=>incOpen||/INPUT|TEXTAREA|SELECT/.test((document.activeElement||{}).tagName||"");
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"){if(!busy()){M=normM((lsJ(KEY)||{}).met);render();}occPull();}});
+render();recover();occPull();
+</script>
+<script>
+/* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
+   - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
+   - se c'è una versione nuova salva i dati e ricarica, ma mai mentre si sta compilando qualcosa o durante una seduta;
+   - in fondo a ogni sezione una riga sola (dati salvati, copia, versione); toccandola si aprono i dettagli:
+     copie, «Salva copia su File / iCloud», «☁️ Copia automatica», versione e «Cerca aggiornamenti». */
+(function(){
+  "use strict";
+  var V=window.APP_VERSION||"", BUILT=window.APP_BUILD||"";
+  var st={state:"idle",last:null,remote:null,pending:false};
+  function visible(id){var e=document.getElementById(id);if(!e||e.hidden)return false;if(e.classList&&e.classList.contains("hide"))return false;return getComputedStyle(e).display!=="none";}
+  function busy(){var a=document.activeElement;return visible("sheet")||visible("modal")||visible("player")||!!(a&&/INPUT|SELECT|TEXTAREA/.test(a.tagName)&&a.type!=="file");}
+  function fmtBuilt(){if(!BUILT)return "";try{return new Date(BUILT).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});}catch(e){return "";}}
+  var TXT={idle:"",checking:"controllo in corso…",ok:"è l’ultima versione",new:"nuova versione trovata: aggiorno…",wait:"nuova versione pronta: si installa appena chiudi la finestra aperta",offline:"senza internet: controllo al prossimo collegamento"};
+  function paint(){
+    var bars=document.querySelectorAll(".updbar");
+    for(var i=0;i<bars.length;i++){var b=bars[i];
+      var sv=b.querySelector(".u-sv"); if(sv)sv.innerHTML=svTxt();
+      var ln=b.querySelector(".u-line"); if(ln)ln.innerHTML=lineTxt();
+      b.querySelector(".u-st").textContent=TXT[st.state]+(st.last&&st.state==="ok"?" (verificato alle "+st.last.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"})+")":"");
+      b.dataset.st=st.state;}
+    var ss=document.getElementById("setSv"); if(ss)ss.innerHTML=svTxt();   // ⚙️ Impostazioni di Pianificazione
+  }
+  function bar(){
+    if(document.querySelector(".updbar"))return;
+    var css=document.createElement("style");
+    css.textContent=".updbar{max-width:1180px;margin:22px auto 10px;padding:0 16px;font-size:13px;color:#7a8290;text-align:center}"+
+      ".updbar .u-line{font:inherit;border:0;background:none;color:inherit;cursor:pointer;padding:8px 14px;border-radius:999px;max-width:100%}"+
+      ".updbar .u-line:hover,.updbar.open .u-line{background:rgba(127,127,127,.13)}"+
+      ".updbar .u-more{display:none;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:center;margin-top:6px}.updbar.open .u-more{display:flex}"+
+      ".updbar b{font-variant-numeric:tabular-nums}.updbar .u-more button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:6px 12px;background:rgba(127,127,127,.16);color:inherit;cursor:pointer}"+
+      ".updbar[data-st=ok] .u-st{color:#2e8b57}.updbar[data-st=new] .u-st,.updbar[data-st=wait] .u-st{color:#c2410c;font-weight:700}";
+    document.head.appendChild(css);
+    var d=document.createElement("div");d.className="updbar";
+    d.innerHTML="<button type=\"button\" class=\"u-line\" aria-expanded=\"false\"></button><div class=\"u-more\"><span class=\"u-sv\" style=\"flex-basis:100%\"></span><button type=\"button\" class=\"u-bk\">💾 Salva copia su File / iCloud</button><button type=\"button\" class=\"u-cb\">☁️ Copia automatica</button><span>Versione <b>"+V+"</b>"+(BUILT?" del "+fmtBuilt():"")+"</span><span class=\"u-st\"></span><button type=\"button\" class=\"u-up\">Cerca aggiornamenti</button></div>";
+    d.querySelector(".u-line").addEventListener("click",function(){var o=d.classList.toggle("open");this.setAttribute("aria-expanded",String(o));});
+    d.querySelector(".u-bk").addEventListener("click",exportAll);d.querySelector(".u-cb").addEventListener("click",cbPanel);
+    d.querySelector(".u-up").addEventListener("click",function(){check(true);});
+    // nelle sezioni con più pagine la barra va in fondo al documento, sopra la barra delle schede
+    document.body.insertBefore(d,document.querySelector("nav.tabs")||null);
+    paint();
+  }
+  /* ---------- salvataggio automatico comune a tutte le sezioni ----------
+     Ogni sezione salva subito le proprie modifiche sul dispositivo. Qui, da qualsiasi sezione:
+     copia giornaliera completa (Pianificazione + Licenze + Tai Chi + Progressi) negli ultimi 30 giorni e copia su File / iCloud. */
+  function lsJ(k){try{return JSON.parse(localStorage.getItem(k)||"null");}catch(e){return null;}}
+  function dumpAll(){
+    var S=lsJ("licenze-marco-v1"), tc={}, n=0;
+    try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.indexOf("tc_")===0){tc[k]=localStorage.getItem(k);n++;}}}catch(e){}
+    var pack=lsJ("prog-vale-v1"), link=lsJ("prog-link-v1");
+    var pg=pack||link?{pack:pack,hist:lsJ("prog-vale-hist-v1")||[],link:link}:null;
+    var pn=lsJ("pn-v1");
+    if(!S&&!n&&!pg&&!pn)return null;
+    var o={}; if(S)for(var x in S)o[x]=S[x]; o.taichi=tc; o.progressi=pg; if(pn)o.pianifica=pn; o.app="le-mie-app"; return o;
+  }
+  function kvDb(){return new Promise(function(res,rej){try{var r=indexedDB.open("licenze-marco",1);r.onupgradeneeded=function(){if(!r.result.objectStoreNames.contains("kv"))r.result.createObjectStore("kv");};r.onsuccess=function(){res(r.result);};r.onerror=function(){rej(r.error);};}catch(e){rej(e);}});}
+  function today(){var d=new Date();return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);}
+  var snapBusy=false;
+  function snapAll(){
+    if(snapBusy)return; var o=dumpAll(); if(!o)return; snapBusy=true;
+    kvDb().then(function(db){return new Promise(function(res){
+      var tx=db.transaction("kv","readwrite"),st=tx.objectStore("kv"),k="snap-"+today();
+      st.put(JSON.stringify(o),k);
+      var q=st.getAllKeys(); q.onsuccess=function(){var ks=q.result.map(String).filter(function(x){return x.indexOf("snap-")===0&&x.indexOf("~")<0;});if(ks.indexOf(k)<0)ks.push(k);ks.sort();ks.slice(0,Math.max(0,ks.length-30)).forEach(function(old){st.delete(old);});};
+      tx.oncomplete=function(){try{localStorage.setItem("pn-lastSnap",new Date().toISOString());}catch(e){}res();paint();};tx.onerror=function(){res();};
+    });}).catch(function(){}).then(function(){snapBusy=false;});
+  }
+  function exportAll(){
+    var b=document.getElementById("bExport"); if(b){b.click();setTimeout(paint,1500);return;}   // in Licenze usa il pulsante della pagina
+    var o=dumpAll(); if(!o){alertBar("Ancora nessun dato da salvare");return;}
+    if(window.__pfCache)o.pratFiles=window.__pfCache;
+    var data=JSON.stringify(o,null,1), fn="pianificazione-copia-"+today()+".json";
+    var done=function(){var t=new Date().toISOString();try{localStorage.setItem("pn-lastBackup",t);localStorage.setItem("tc_lastBackup",JSON.stringify(t));}catch(e){}paint();};
+    try{var f=new File([data],fn,{type:"application/json"});if(navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f],title:"Copia Pianificazione"}).then(done,function(){});return;}}catch(e){}
+    try{var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([data],{type:"application/json"}));a.download=fn;document.body.appendChild(a);a.click();a.remove();done();}catch(e){}
+  }
+  function alertBar(t){var e=document.querySelector(".updbar .u-sv");if(e)e.textContent=t;}
+  function when(t){if(!t)return "mai";var d=new Date(t),o=new Date();return d.toDateString()===o.toDateString()?"oggi "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"}):d.toLocaleDateString("it-IT",{day:"numeric",month:"short"});}
+  function lastBk(){var bk=null;try{bk=localStorage.getItem("pn-lastBackup");var S=lsJ("licenze-marco-v1");if(S&&S.lastBackup&&(!bk||S.lastBackup>bk))bk=S.lastBackup;}catch(e){}return bk;}
+  /* la riga sola in fondo: ✓ se i dati hanno una copia recente (automatica o su File/iCloud negli ultimi 7 giorni) */
+  function lineTxt(){var c=lsJ(CB),bk=lastBk(),old=!bk||(Date.now()-new Date(bk).getTime())>7*864e5,cloud=c&&c.gist&&!c.err&&c.last;
+    var warn=c&&c.gist&&c.err?"⚠️ Copia automatica: "+c.err:(!cloud&&old?"⚠️ Fai una copia su File / iCloud (o attiva ☁️ la copia automatica)":"");
+    var up=st.state==="new"||st.state==="wait"?" · <b style=\"color:#c2410c\">"+TXT[st.state]+"</b>":"";
+    return (warn?"<b style=\"color:#c2410c\">"+esc(warn)+"</b>":"✓ Dati salvati"+(cloud?" · ☁️ copia "+when(c.last):" · copia "+when(bk)))+up+" · versione "+esc(V.slice(0,6))+" ›";}
+  function svTxt(){var sn=null,bk=lastBk();try{sn=localStorage.getItem("pn-lastSnap");}catch(e){}
+    var old=!bk||(Date.now()-new Date(bk).getTime())>7*864e5;
+    var c=lsJ(CB),cb=c&&c.gist?(c.err?"<span style=\"color:#c2410c;font-weight:700\">⚠️ "+esc(c.err)+"</span>":when(c.last)):"<span style=\"color:#c2410c\">non attiva</span>";
+    return "💾 Salvataggio automatico attivo · copia del giorno: "+when(sn)+" · copia su File/iCloud: <span"+(old&&!(c&&c.last&&!c.err)?" style=\"color:#c2410c;font-weight:700\"":"")+">"+when(bk)+"</span> · ☁️ copia automatica: "+cb;}
+  function esc(t){return String(t==null?"":t).replace(/[&<>"]/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[ch];});}
+
+
+  /* ---------- 📎 file delle pratiche: entrano nelle copie (letti in anticipo, così il salvataggio parte subito al tocco) ---------- */
+  function pfIds(){var pn=lsJ("pn-v1"),out=[];((pn&&pn.prat)||[]).concat(pn&&pn.pens?[pn.pens]:[]).forEach(function(x){(x.files||[]).forEach(function(f){out.push(f.id);});});return out;}   // file di Pratiche e Pensione
+  function b64Blob(b){return new Promise(function(res){var r=new FileReader();r.onload=function(){res(String(r.result).split(",")[1]||"");};r.onerror=function(){res("");};r.readAsDataURL(b);});}
+  async function pfDump(){var ids=pfIds();if(!ids.length)return null;var db=await kvDb(),out={};
+    for(var i=0;i<ids.length;i++){var id=ids[i];var blob=await new Promise(function(res){try{var q=db.transaction("kv").objectStore("kv").get("pf-"+id);q.onsuccess=function(){res(q.result);};q.onerror=function(){res(null);};}catch(e){res(null);}});
+      if(blob&&blob.size!=null)out[id]={type:blob.type||"",b64:await b64Blob(blob)};}
+    return Object.keys(out).length?out:null;}
+  async function pfRestore(m){if(!m||typeof m!=="object")return 0;var db=await kvDb(),n=0;
+    await new Promise(function(res){var tx=db.transaction("kv","readwrite"),st=tx.objectStore("kv");Object.keys(m).forEach(function(id){var x=m[id];try{var bin=atob(x.b64),a=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)a[i]=bin.charCodeAt(i);st.put(new Blob([a],{type:x.type||""}),"pf-"+id);n++;}catch(e){}});tx.oncomplete=res;tx.onerror=res;});return n;}
+  function pfRefresh(){pfDump().then(function(m){window.__pfCache=m;}).catch(function(){});}
+  window.__pfRefresh=pfRefresh; window.__pratFilesRestore=pfRestore;
+  setTimeout(pfRefresh,1200);
+
+  /* ---------- ☁️ copia automatica cifrata su GitHub (gist privato, con la chiave GitHub già usata per i Progressi) ----------
+     Una volta al giorno (e dopo le modifiche, al massimo ogni 3 ore) tutta Pianificazione — Licenze, Tai Chi, Progressi,
+     Calendario, Scadenze, Pratiche con i loro file, Benessere (e i Conti, conservati anche se nascosti) — viene cifrata qui sull'iPad con la «parola della copia»
+     e salvata su GitHub. Senza la parola nessuno la può leggere. Su un iPad nuovo: ☁️ Copia automatica → Ripristina. */
+  var CB="pn-copia-cloud", API="https://api.github.com", DESC="Pianificazione · copia cifrata (non modificare)", PART=900000;
+  function cbCfg(){return lsJ(CB);} function cbSet(c){try{if(c)localStorage.setItem(CB,JSON.stringify(c));else localStorage.removeItem(CB);}catch(e){}}
+  function ghTok(){var g=lsJ("prog-gh-v1");return (g&&g.token)||"";}
+  function u8b64(a){var s="";for(var i=0;i<a.length;i+=32768)s+=String.fromCharCode.apply(null,a.subarray(i,i+32768));return btoa(s);}
+  function b64u8(s){var b=atob(s),a=new Uint8Array(b.length);for(var i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;}
+  async function derive(pass,saltB64){var base=await crypto.subtle.importKey("raw",new TextEncoder().encode(pass),"PBKDF2",false,["deriveBits"]);
+    var bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:b64u8(saltB64),iterations:310000,hash:"SHA-256"},base,256);return u8b64(new Uint8Array(bits));}
+  async function encTxt(keyB64,txt){var k=await crypto.subtle.importKey("raw",b64u8(keyB64),"AES-GCM",false,["encrypt"]),iv=crypto.getRandomValues(new Uint8Array(12));
+    var ct=await crypto.subtle.encrypt({name:"AES-GCM",iv:iv},k,new TextEncoder().encode(txt));return {iv:u8b64(iv),ct:u8b64(new Uint8Array(ct))};}
+  async function decTxt(keyB64,ivB64,ctB64){var k=await crypto.subtle.importKey("raw",b64u8(keyB64),"AES-GCM",false,["decrypt"]);
+    return new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:b64u8(ivB64)},k,b64u8(ctB64)));}
+  function hdr(tok){return {"Authorization":"Bearer "+tok,"Accept":"application/vnd.github+json","Content-Type":"application/json"};}
+  function hsh(s){var h=0;for(var i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return String(h)+":"+s.length;}
+  var cbBusy=false;
+  async function cbPush(force){
+    var c=cbCfg(),tok=ghTok(); if(!c||!c.gist||!c.key||cbBusy)return false; if(!tok){c.err="manca la chiave GitHub";cbSet(c);paint();return false;}
+    if(navigator.onLine===false)return false;
+    var o=dumpAll(); if(!o)return false; var files=window.__pfCache||null; if(files)o.pratFiles=files;
+    var js=JSON.stringify(o),h=hsh(js),age=Date.now()-new Date(c.last||0).getTime();
+    if(!force&&((c.h===h&&age<20*36e5)||(c.h!==h&&age<3*36e5&&c.last)))return true;
+    cbBusy=true;
+    try{
+      var nofiles=false; if(js.length>8.5e6&&o.pratFiles){delete o.pratFiles;js=JSON.stringify(o);nofiles=true;}
+      var e=await encTxt(c.key,js),n=Math.max(1,Math.ceil(e.ct.length/PART)),F={};
+      for(var i=0;i<n;i++)F["copia-"+(i+1)+".part"]={content:e.ct.slice(i*PART,(i+1)*PART)};
+      for(var j=n+1;j<=(c.parts||0);j++)F["copia-"+j+".part"]=null;
+      var saved=new Date().toISOString();
+      F["copia.json"]={content:JSON.stringify({app:"pianificazione-copia",v:1,saved:saved,salt:c.salt,iv:e.iv,parts:n})};
+      var r=await fetch(API+"/gists/"+c.gist,{method:"PATCH",headers:hdr(tok),body:JSON.stringify({files:F}),cache:"no-store"});
+      c=cbCfg()||c;
+      if(!r.ok){c.err=r.status===401?"la chiave GitHub non è valida o è scaduta":r.status===404?"spazio della copia non trovato":"errore "+r.status;cbSet(c);paint();return false;}
+      c.last=saved;c.h=h;c.parts=n;c.size=e.ct.length;c.nofiles=nofiles;c.err="";cbSet(c);paint();return true;
+    }catch(err){c=cbCfg()||c;c.err="copia non riuscita";cbSet(c);paint();return false;}
+    finally{cbBusy=false;}
+  }
+  async function cbEnable(tok,pass){
+    var salt=u8b64(crypto.getRandomValues(new Uint8Array(16))),key=await derive(pass,salt);
+    var r=await fetch(API+"/gists",{method:"POST",headers:hdr(tok),body:JSON.stringify({description:DESC,public:false,files:{"copia.json":{content:JSON.stringify({app:"pianificazione-copia",v:1,wait:1,salt:salt})}}})});
+    if(!r.ok)throw new Error(r.status===401?"la chiave GitHub non è valida":r.status===403||r.status===404?"la chiave GitHub non ha il permesso «gist»":"errore "+r.status);
+    var g=await r.json(); cbSet({gist:g.id,key:key,salt:salt,on:1});
+    var gh=lsJ("prog-gh-v1")||{}; if(!gh.token){gh.token=tok;gh.ok=true;gh.checked=new Date().toISOString();try{localStorage.setItem("prog-gh-v1",JSON.stringify(gh));}catch(e){}}
+    await new Promise(function(res){pfDump().then(function(m){window.__pfCache=m;res();},res);});
+    return cbPush(true);
+  }
+  async function cbFind(tok){
+    for(var page=1;page<=5;page++){var r=await fetch(API+"/gists?per_page=100&page="+page,{headers:hdr(tok),cache:"no-store"});if(!r.ok)throw new Error(r.status===401?"la chiave GitHub non è valida":"errore "+r.status);
+      var L=await r.json();var g=L.find(function(x){return x.description===DESC;});if(g)return g.id;if(L.length<100)break;}
+    return null;}
+  async function cbRead(tok,gist,pass,keyKnown){
+    var r=await fetch(API+"/gists/"+gist,{headers:hdr(tok),cache:"no-store"});if(!r.ok)throw new Error("copia non trovata ("+r.status+")");
+    var g=await r.json(),f=g.files||{},txt=async function(x){if(!x)return "";if(x.truncated&&x.raw_url)return await (await fetch(x.raw_url,{cache:"no-store"})).text();return x.content;};
+    var H=JSON.parse(await txt(f["copia.json"])); if(H.wait||!H.parts)throw new Error("la copia è ancora vuota");
+    var key=keyKnown||await derive(pass,H.salt),ct="";for(var i=1;i<=H.parts;i++)ct+=await txt(f["copia-"+i+".part"]);
+    var js; try{js=await decTxt(key,H.iv,ct);}catch(e){throw new Error("la parola della copia non è giusta");}
+    return {o:JSON.parse(js),saved:H.saved,key:key,salt:H.salt};}
+  async function cbRestoreAll(o){
+    // prima una copia di sicurezza della situazione attuale (si ritrova in Licenze → copie giornaliere)
+    try{var cur=dumpAll();if(cur){var db0=await kvDb();var n=new Date();await new Promise(function(res){var tx=db0.transaction("kv","readwrite");tx.objectStore("kv").put(JSON.stringify(cur),"snap-"+today()+"~prima-del-ripristino-"+("0"+n.getHours()).slice(-2)+("0"+n.getMinutes()).slice(-2));tx.oncomplete=res;tx.onerror=res;});}}catch(e){}
+    var db=await kvDb(),put=function(k,v){return new Promise(function(res){var tx=db.transaction("kv","readwrite");tx.objectStore("kv").put(v,k);tx.oncomplete=res;tx.onerror=res;});};
+    var tc=o.taichi;delete o.taichi;if(tc&&typeof tc==="object"){for(var k in tc)if(k.indexOf("tc_")===0)try{localStorage.setItem(k,tc[k]);}catch(e){} await put("taichi",JSON.stringify({savedAt:new Date().toISOString(),keys:tc}));}
+    var pg=o.progressi;delete o.progressi;if(pg){if(pg.link&&pg.link.gist){try{localStorage.setItem("prog-link-v1",JSON.stringify(pg.link));}catch(e){} await put("progressi-link",JSON.stringify(pg.link));}
+      if(pg.pack){try{localStorage.setItem("prog-vale-v1",JSON.stringify(pg.pack));localStorage.setItem("prog-vale-hist-v1",JSON.stringify(pg.hist||[]));}catch(e){} await put("progressi",JSON.stringify({pack:pg.pack,hist:pg.hist||[]}));}}
+    var pn=o.pianifica;delete o.pianifica;if(pn){try{localStorage.setItem("pn-v1",JSON.stringify(pn));}catch(e){} await put("pianifica",JSON.stringify(pn));}
+    var pf=o.pratFiles;delete o.pratFiles;if(pf)await pfRestore(pf);
+    delete o.app; if(o.bal){o.savedAt=new Date().toISOString();var t=JSON.stringify(o);try{localStorage.setItem("licenze-marco-v1",t);}catch(e){} await put("stato",t);}
+  }
+  function cbPanel(){
+    var old=document.getElementById("cbPanel");if(old)old.remove();
+    var c=cbCfg(),tok=ghTok(),ov=document.createElement("div");ov.id="cbPanel";
+    ov.style.cssText="position:fixed;inset:0;z-index:9999;background:rgba(10,12,16,.55);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:calc(env(safe-area-inset-top) + 24px) 14px 24px";
+    var box="background:#fff;color:#15181d;max-width:560px;width:100%;border-radius:18px;padding:18px 18px 14px;font:16px/1.45 -apple-system,system-ui,sans-serif;box-shadow:0 20px 50px rgba(0,0,0,.3)";
+    var inp="width:100%;box-sizing:border-box;font:inherit;padding:10px 12px;border:1px solid #d5d9e0;border-radius:10px;margin:4px 0 8px";
+    var btn="font:inherit;font-weight:700;border:0;border-radius:12px;padding:10px 14px;cursor:pointer;margin:4px 6px 0 0";
+    var pri=btn+";background:#1f5fae;color:#fff",sec=btn+";background:#e6e8ee;color:#15181d",dang=btn+";background:#fdecea;color:#b3261e";
+    var h="<div style=\""+box+"\"><div style=\"display:flex;align-items:center\"><b style=\"font-size:20px;flex:1\">☁️ Copia automatica</b><button id=\"cbX\" style=\""+sec+"\">Chiudi</button></div>";
+    if(c&&c.gist){
+      h+="<p style=\"margin:8px 0\">"+(c.err?"⚠️ <b>"+esc(c.err)+"</b><br>":"✅ <b>Attiva.</b> ")+"Ultima copia: <b>"+when(c.last)+"</b>"+(c.size?" · "+Math.max(1,Math.round(c.size*0.75/1024))+" KB":"")+(c.nofiles?"<br>I file delle pratiche sono troppi per la copia automatica: restano nella copia su File/iCloud.":"")+"</p>"+
+        "<p style=\"margin:0 0 8px;color:#6b7280;font-size:14px\">Contiene tutto: Licenze, Calendario, Scadenze, Pensione e Pratiche con i loro file, Benessere, Tai Chi e Progressi. È cifrata con la tua parola della copia: senza, nessuno la legge (nemmeno GitHub).</p>"+
+        "<button id=\"cbNow\" style=\""+pri+"\">Fai la copia adesso</button><button id=\"cbRes\" style=\""+sec+"\">Ripristina da questa copia</button><button id=\"cbOff\" style=\""+dang+"\">Disattiva</button>";
+    }else{
+      h+="<p style=\"margin:8px 0\">Ogni giorno, da sola, una copia completa e <b>cifrata</b> va su GitHub (in uno spazio privato), con la chiave GitHub che usi già per i Progressi. Se l’iPad si rompe o lo cambi, ritrovi tutto.</p>"+
+        "<label style=\"font-weight:700;font-size:14px\">Chiave GitHub"+(tok?" (già salvata)":"")+"</label><input id=\"cbTok\" type=\"password\" placeholder=\""+(tok?"già salvata: lascia vuoto":"inizia con ghp_")+"\" autocomplete=\"off\" style=\""+inp+"\">"+
+        "<label style=\"font-weight:700;font-size:14px\">Parola della copia (almeno 8 caratteri)</label><input id=\"cbP1\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
+        "<label style=\"font-weight:700;font-size:14px\">Ripeti la parola</label><input id=\"cbP2\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
+        "<p style=\"margin:0 0 6px;color:#b3261e;font-size:14px\"><b>Scrivila in un posto sicuro:</b> serve per ripristinare. Se la perdi, la copia non si può più aprire.</p>"+
+        "<button id=\"cbOn\" style=\""+pri+"\">Attiva la copia automatica</button><button id=\"cbRes\" style=\""+sec+"\">Ho già una copia: ripristina</button>";
+    }
+    h+="<div id=\"cbMsg\" style=\"margin-top:10px;font-weight:700\"></div></div>";
+    ov.innerHTML=h;document.body.appendChild(ov);
+    var msg=function(t,bad){var m=document.getElementById("cbMsg");m.textContent=t;m.style.color=bad?"#b3261e":"#2e7d5b";};
+    document.getElementById("cbX").onclick=function(){ov.remove();paint();};
+    var bOn=document.getElementById("cbOn");if(bOn)bOn.onclick=async function(){var t=document.getElementById("cbTok").value.trim()||tok,p1=document.getElementById("cbP1").value,p2=document.getElementById("cbP2").value;
+      if(!/^(ghp_|github_pat_)/.test(t))return msg("Serve la chiave GitHub (inizia con ghp_)",1);if(p1.length<8)return msg("La parola deve avere almeno 8 caratteri",1);if(p1!==p2)return msg("Le due parole non coincidono",1);
+      msg("Preparo la copia…");try{var ok=await cbEnable(t,p1);msg(ok?"✅ Copia automatica attiva: prima copia fatta.":"Attivata, ma la prima copia non è riuscita: riprovo da sola.",!ok);setTimeout(cbPanel,1600);}catch(e){msg("Non riuscito: "+e.message,1);}};
+    var bNow=document.getElementById("cbNow");if(bNow)bNow.onclick=async function(){msg("Copia in corso…");pfRefresh();setTimeout(async function(){var ok=await cbPush(true);msg(ok?"✅ Copia fatta":"Non riuscita: "+((cbCfg()||{}).err||""),!ok);},600);};
+    var bOff=document.getElementById("cbOff");if(bOff)bOff.onclick=function(){if(!confirm("Disattivare la copia automatica su questo iPad? La copia già salvata resta su GitHub."))return;cbSet(null);cbPanel();};
+    document.getElementById("cbRes").onclick=async function(){
+      var cc=cbCfg(),t=(document.getElementById("cbTok")&&document.getElementById("cbTok").value.trim())||ghTok();
+      if(!t){t=prompt("Chiave GitHub (inizia con ghp_):")||"";t=t.trim();}if(!t)return;
+      var pass="";if(!(cc&&cc.key)){pass=(document.getElementById("cbP1")&&document.getElementById("cbP1").value)||prompt("Parola della copia:")||"";if(!pass)return;}
+      msg("Cerco la copia…");
+      try{var gist=cc&&cc.gist||await cbFind(t);if(!gist)return msg("Su questo account GitHub non c’è una copia di Pianificazione",1);
+        var R=await cbRead(t,gist,pass,cc&&cc.key);
+        if(!confirm("Ripristinare la copia del "+new Date(R.saved).toLocaleString("it-IT",{day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"})+"? I dati di questo iPad vengono sostituiti (prima ne salvo una copia tra le copie giornaliere)."))return msg("");
+        msg("Ripristino…");await cbRestoreAll(R.o);
+        var gh=lsJ("prog-gh-v1")||{};if(!gh.token){gh.token=t;try{localStorage.setItem("prog-gh-v1",JSON.stringify(gh));}catch(e){}}
+        cbSet({gist:gist,key:R.key,salt:R.salt,on:1,last:R.saved});msg("✅ Ripristinato: ricarico…");setTimeout(function(){location.reload();},900);
+      }catch(e){msg("Non riuscito: "+e.message,1);}};
+  }
+  window.__cbPush=cbPush; window.__cbPanel=cbPanel; window.__svTxt=svTxt;
+  setTimeout(function(){cbPush(false);},6000);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(function(){cbPush(false);},4000);});
+
+  function apply(v){
+    try{if(typeof window.__flush==="function")window.__flush();}catch(e){}
+    setTimeout(function(){location.replace(location.pathname+"?v="+encodeURIComponent(v));},350);
+  }
+  function check(manual){
+    if(!/^https?:/.test(location.protocol))return;
+    st.state="checking";paint();
+    if(window.__swreg)window.__swreg.update().catch(function(){});
+    fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json();}).then(function(v){
+      st.last=new Date();st.remote=v&&v.v;
+      if(st.remote&&st.remote!==V){
+        if(manual||!busy()){st.state="new";paint();apply(st.remote);}
+        else{st.state="wait";st.pending=true;paint();}
+      }else{st.state="ok";paint();}
+    }).catch(function(){st.state="offline";paint();});
+  }
+  setInterval(function(){if(st.pending&&!busy()){st.pending=false;st.state="new";paint();apply(st.remote);}},5000);
+  if(location.search.indexOf("v=")>=0&&history.replaceState){try{history.replaceState(null,"",location.pathname+location.hash);}catch(e){}}
+  setTimeout(snapAll,3000);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")snapAll();else paint();});
+  window.addEventListener("pagehide",snapAll);
+  setInterval(snapAll,15*60*1000);
+  window.__snapAll=snapAll;
+  window.__exportAll=exportAll;
+  if(window.claude||window.top!==window){ // dentro Claude: niente aggiornamento automatico, solo la versione
+    if(document.readyState!=="loading")bar();else document.addEventListener("DOMContentLoaded",bar);
+    return;
+  }
+  if(document.readyState!=="loading")bar();else document.addEventListener("DOMContentLoaded",bar);
+  if("serviceWorker" in navigator&&/^https?:/.test(location.protocol)){
+    navigator.serviceWorker.register("sw.js").then(function(reg){window.__swreg=reg;}).catch(function(){});
+  }
+  check(false);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check(false);});
+  window.addEventListener("pageshow",function(e){if(e.persisted)check(false);});
+  setInterval(function(){check(false);},30*60*1000);
+})();
+</script>
+</body>
+</html>

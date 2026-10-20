@@ -11,6 +11,7 @@ pian/
 │   │                  e benessere), 🗂️ Pratiche, ⚙️ Impostazioni (blocco, Calendario dell'iPad, copie); 💶 Conti nascosta (CONTI_ON)
 │   ├── licenze.html   📅 Licenze (prima era index.html)
 │   ├── taichi.html    🧘 Tai Chi
+│   ├── metodo.html    🤝 Metodo: Oggi (3 sfide), Regole d'oro, Incontri, Com'è andata, Volontariato (`pn-v1` → `met`)
 │   └── progressi.html 🐉 Progressi di «Il mio mondo»
 ├── comune/blocco.html blocco con Face ID (passkey WebAuthn) inserito in testa a ogni pagina; sposta le vecchie chiavi mie-app-… in pn-…
 ├── comune/tema.css   tema comune: colore di ogni app nel menu in alto, riquadri morbidi di Licenze e Progressi
@@ -23,13 +24,15 @@ pian/
 │                     attività fisse della famiglia (ogni 1 o 2 settimane, fino a, pause)
 ├── sezioni/pensione.js 🎖️ Pensione (`pn-v1` → `pens`): adempimenti (nel Calendario e nel file .ics), leve, cifre stimate/reali,
 │                     incassi, 💶 cassa da oggi a giugno 2029 (`pens.mov` entrate e uscite una tantum o ricorrenti, anche nel Calendario e nel file .ics; `pens.cassa`: `ini` partenza, `saldi` saldo vero di fine mese, `punti` saldi veri a una data, `spunte`, `sposta`), documenti (`pf-…`); si carica dal file privato «scheda pensione»
-├── strumenti/         NOVITA.md (istruzioni dell'agente delle 13 · 17 · 23), verifica_novita.py (controllo delle novità),
+├── strumenti/         NOVITA.md (istruzioni dell'agente delle 13 · 17 · 23, anche volontariato del lunedì), verifica_novita.py (controllo delle novità), verifica_metodo.py (contenuti del Metodo, a ogni build), verifica_occasioni.py,
 │                     scheda_cifrata.py (apre, chiude e verifica la scheda cifrata; chiave solo in SCHEDA_CHIAVE)
+├── statici/occasioni-torino.json  volontariato a Torino per il Metodo (pubblico; lo ricontrolla l'attività il lunedì; strumenti/verifica_occasioni.py)
 ├── statici/news-pensione.json  novità pubbliche su contratto e pensione GdF (aggiornate alle 13, 17 e 23 con fonti e registro dei controlli; non cambiano la versione)
 ├── statici/scheda-pensione.cifrata.json  scheda pensione CIFRATA (AES-256-GCM, chiave casuale mai nel repository): l'iPad la scarica,
 │                     la apre con la chiave `pn-scheda-chiave` e la unisce da sola (spunte, note, importi reali restano); non cambia la versione
 ├── sezioni/investimenti.js 🌱 Investimenti (`pn-v1` → `inv`: prof, ris, som, deb, sim, ipo): legge Cassa e scheda della Pensione,
 │                     tassi da `news-pensione.json` → `mercati` (aggiornati dall’attività) o scritti a mano
+├── sezioni/metodo_dati.json  🤝 Metodo: 4 abilità, 12 schede, sfide (livello 1-3, situazione), idee di domande; inserito nella pagina dal build
 ├── sezioni/pratiche.js 🗂️ Pratiche (`pn-v1` → `prat`): stato, prossimo passo, documenti, contatti, diario, note;
 │                     file allegati nel database `licenze-marco`, chiavi `pf-…` (non vanno nella copia su iCloud)
 ├── docs/             ricerca sui formati di esportazione delle banche

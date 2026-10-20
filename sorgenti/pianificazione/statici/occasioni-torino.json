@@ -1,0 +1,153 @@
+{
+ "app": "pianificazione-occasioni",
+ "updated": "2026-10-20T21:20+02:00",
+ "nota": "Volontariato a Torino con molto contatto con le persone. Solo informazioni pubbliche, con fonte e data del controllo; niente consigli. Esclusi i gruppi legati al lavoro e alla categoria.",
+ "voci": [
+  {
+   "id": "volto",
+   "n": "Vol.To — Volontariato Torino",
+   "tipo": "orientamento",
+   "contatto": "medio",
+   "cosa": "Centro servizi che mette in contatto i cittadini con oltre 1.350 associazioni di Torino e dell'area metropolitana: bacheca degli annunci e colloquio di orientamento gratuito.",
+   "impegno": "Nessuno: è il punto di partenza per scegliere.",
+   "requisiti": "Nessuno.",
+   "primo": "Chiama lo 011 81 38 711 (numero verde 800 59 00 00) o scrivi a centroservizi@volontariatotorino.it: il colloquio si fa per telefono, WhatsApp o videochiamata, oppure, su richiesta, in sede (via Giolitti 21).",
+   "ab": [
+    "aprire"
+   ],
+   "fonte": "Vol.To",
+   "url": "https://volontariatotorino.it/diventa-volontario/",
+   "ctrl": "2026-10-20"
+  },
+  {
+   "id": "senior-civico",
+   "n": "Senior Civico — Comune di Torino",
+   "tipo": "civico",
+   "contatto": "alto",
+   "cosa": "Volontariato civico per chi è in pensione o ha più di 65 anni: biblioteche e musei, doposcuola e integrazione nelle scuole, cura di giardini, parchi e sentieri, supporto a eventi culturali e sportivi.",
+   "impegno": "Si concorda in base alle esigenze e alla disponibilità; attività continuative o temporanee.",
+   "requisiti": "Avere compiuto 65 anni o essere in pensione; conoscenze ed esperienze adatte all'attività scelta.",
+   "primo": "Telefona allo 011 011 23834 o scrivi a seniorcivico@comune.torino.it per un colloquio conoscitivo, poi compila il modulo online. Ufficio in via Bazzi 4. Gratuito; l'iscrizione diventa effettiva entro 10 giorni.",
+   "ab": [
+    "viva",
+    "calore"
+   ],
+   "fonte": "Comune di Torino",
+   "url": "https://www.comune.torino.it/servizi/volontariato-come-senior-civico",
+   "ctrl": "2026-10-20"
+  },
+  {
+   "id": "biblioteche",
+   "n": "Volontariato nelle Biblioteche civiche",
+   "tipo": "civico",
+   "contatto": "alto",
+   "cosa": "Attività nelle biblioteche civiche torinesi con i progetti di volontariato civico della Città: «Senior Civico» per pensionati e over 65, «Tu e la tua biblioteca» per i volontari civici.",
+   "impegno": "Secondo il progetto scelto.",
+   "requisiti": "Senior Civico: 65 anni o pensione. «Tu e la tua biblioteca»: dai 18 ai 65 anni, non in pensione.",
+   "primo": "Per Senior Civico: Ufficio Senior Civico, 011 011 23834. Per «Tu e la tua biblioteca»: volontariato.bct@comune.torino.it, 011 011 29853.",
+   "ab": [
+    "viva"
+   ],
+   "fonte": "Biblioteche civiche torinesi",
+   "url": "https://bct.comune.torino.it/volontariato-in-biblioteca",
+   "ctrl": "2026-10-20"
+  },
+  {
+   "id": "touring",
+   "n": "Touring Club — «Aperti per Voi»",
+   "tipo": "accoglienza",
+   "contatto": "alto",
+   "cosa": "I volontari accolgono i visitatori e tengono aperti due luoghi di Torino: la chiesa dello Spirito Santo e i Giardini Reali.",
+   "impegno": "Qualche ora del proprio tempo; la frequenza non è indicata. Annuncio del 2023: verifica che le iscrizioni siano ancora aperte.",
+   "requisiti": "Non indicati sulla pagina.",
+   "primo": "Compila il modulo di iscrizione dei volontari di Torino sul sito del Touring Club: l'associazione ti ricontatta con le informazioni.",
+   "ab": [
+    "aprire",
+    "calore"
+   ],
+   "fonte": "Touring Club Italiano",
+   "url": "https://www.touringclub.it/notizie/aperti-per-voi/diventa-volontario-touring-a-torino",
+   "ctrl": "2026-10-20"
+  },
+  {
+   "id": "avo",
+   "n": "AVO Torino — Volontari ospedalieri",
+   "tipo": "compagnia",
+   "contatto": "alto",
+   "cosa": "Ascolto e vicinanza ai ricoverati negli ospedali di Torino (tra cui Molinette, CTO, Sant'Anna, Regina Margherita, Mauriziano, San Giovanni Bosco, Martini) e in alcune RSA.",
+   "impegno": "3 ore a settimana.",
+   "requisiti": "Dai 18 ai 75 anni; corso base obbligatorio (7 incontri, martedì e venerdì verso le 17-19) e tirocinio con un tutor.",
+   "primo": "Iscriviti in segreteria per il colloquio conoscitivo: corso Unione Sovietica 228/D, 011 318 7634, info@avotorino.it.",
+   "ab": [
+    "viva",
+    "calore"
+   ],
+   "fonte": "AVO Torino",
+   "url": "https://www.avotorino.it/diventa-volontario/",
+   "ctrl": "2026-10-20"
+  },
+  {
+   "id": "reti-anziani",
+   "n": "Reti solidali per le persone anziane",
+   "tipo": "compagnia",
+   "contatto": "alto",
+   "cosa": "Associazioni che offrono compagnia, ascolto, accompagnamento a visite e passeggiate, aiuto pratico e attività ricreative alle persone anziane. Il Comune indica, tra le altre, SEA, Anteas, Auser, Anvolt, CPD, la cooperativa Il Punto e Radio Soccorso Sociale.",
+   "impegno": "Si concorda con l'associazione scelta.",
+   "requisiti": "La pagina descrive i servizi, non il volontariato: chiedi a ogni associazione se cerca volontari e con quali requisiti.",
+   "primo": "Scegli un'associazione dalla pagina del Comune e contattala dal suo sito, oppure chiedi a Vol.To di orientarti.",
+   "ab": [
+    "viva",
+    "calore"
+   ],
+   "fonte": "Comune di Torino",
+   "url": "https://www.comune.torino.it/schede-informative/reti-solidali-per-supporto-alle-persone-anziane",
+   "ctrl": "2026-10-20"
+  },
+  {
+   "id": "croce-verde",
+   "n": "Croce Verde Torino",
+   "tipo": "soccorso",
+   "contatto": "alto",
+   "cosa": "Soccorso e trasporto sanitario, ma anche ruoli non sanitari: trasporto di persone con mobilità ridotta verso visite mediche, teleassistenza, Nucleo di Protezione Civile, accoglienza dei nuovi volontari.",
+   "impegno": "Turni in una squadra. Squadra diurna dal lunedì al venerdì (6-13 o 13-20), adatta anche ai pensionati.",
+   "requisiti": "Maggiore età; certificato di sana e robusta costituzione rilasciato da un centro convenzionato; patente B senza sospensioni; certificato del casellario senza carichi pendenti; corso di formazione.",
+   "primo": "Partecipa a una serata informativa (di solito alle 21 nella sede di via Dorè 4) e compila la domanda. Informazioni: volontariato@croceverde.org, 011 549 000.",
+   "ab": [
+    "aprire"
+   ],
+   "fonte": "Croce Verde Torino",
+   "url": "https://www.croceverde.org/volontari/diventa-volontario/",
+   "ctrl": "2026-10-20"
+  }
+ ],
+ "annunci": [
+  {
+   "id": "inascolto-rsa",
+   "n": "Compagnia agli anziani in RSA — progetto «InAscolto»",
+   "cosa": "Outsider ODV cerca volontari per fare compagnia agli anziani della RSA Alchemica, in via San Marino 10: mezza giornata, una volta a settimana o ogni due settimane, dal lunedì al venerdì, dopo un colloquio e una formazione iniziale.",
+   "primo": "Candidati con il modulo dell'annuncio sul sito di Vol.To.",
+   "d": "2026-09-01",
+   "fonte": "Vol.To, bacheca del volontariato",
+   "url": "https://volontariatotorino.it/bacheca-del-volontariato/volontari-per-attivita-di-compagnia-in-rsa-con-il-progetto-inascolto/"
+  },
+  {
+   "id": "molinette-accoglienza",
+   "n": "Accoglienza all'ospedale Molinette",
+   "cosa": "L'Associazione Volontari Amici dei Malati ODV cerca volontari per orientare chi arriva per le visite e aiutare con ticket e firme (Neurologia, Radioterapia, Oculistica, Centro prelievi): uno o più turni a settimana, soprattutto al mattino. Servono maggiore età, capacità di relazione e costanza.",
+   "primo": "Candidati con il modulo dell'annuncio sul sito di Vol.To.",
+   "d": "2026-01-04",
+   "fonte": "Vol.To, bacheca del volontariato",
+   "url": "https://volontariatotorino.it/bacheca-del-volontariato/volontari-per-attivita-di-accoglienza-presso-lospedale-molinette/"
+  }
+ ],
+ "controlli": [
+  {
+   "at": "2026-10-20T20:40+02:00",
+   "note": "prima stesura: 6 voci controllate sulle pagine ufficiali"
+  },
+  {
+   "at": "2026-10-20T21:20+02:00",
+   "note": "revisione indipendente: corrette biblioteche, Croce Verde, Senior Civico, reti; aggiunte AVO e 2 annunci della bacheca Vol.To"
+  }
+ ]
+}

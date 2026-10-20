@@ -2,7 +2,7 @@
 - pagine/*.html: le sezioni; il segnaposto <!--@BARRA--> riceve la barra comune (comune/barra.html)
 - statici/: file copiati così come sono
 L'indirizzo pubblicato resta /mie-app/licenze/ (icona sulla Home e dati salvati non cambiano)."""
-import os, shutil, sys, hashlib, re, glob, base64
+import os, shutil, sys, hashlib, re, glob, base64, json
 D = os.path.dirname(os.path.abspath(__file__)) + '/'
 OUT = D + 'out/licenze/'
 KEEP_VERSION = '--stessa-versione' in sys.argv
@@ -11,7 +11,7 @@ for _f in os.listdir(OUT): os.remove(OUT + _f)
 barra = open(D + 'comune/barra.html', encoding='utf-8').read()
 blocco = open(D + 'comune/blocco.html', encoding='utf-8').read()
 tema = open(D + 'comune/tema.css', encoding='utf-8').read()
-NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi', 'tc'), ('progressi.html', '🐉 Progressi', 'prog')]
+NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi', 'tc'), ('metodo.html', '🤝 Metodo', 'met'), ('progressi.html', '🐉 Progressi', 'prog')]
 pages = {}
 for p in sorted(glob.glob(D + 'pagine/*.html')):
     s = open(p, encoding='utf-8').read()
@@ -27,6 +27,13 @@ _lic = pages['licenze.html']
 _dati = '\n'.join(re.search(r'const %s=.*?;(?=\s*(?:const|let|function|/\*|\n))' % n, _lic, re.S).group(0) for n in ('HOL', 'DEF', 'PROV_START'))
 _cena = re.search(r'const VCENA=\{.*?\]\]\};', pages['index.html'], re.S).group(0)
 pages['progressi.html'] = pages['progressi.html'].replace('/*@VCENA*/', _cena)
+# 🤝 Metodo: schede e sfide da sezioni/metodo_dati.json, controllate prima di pubblicare
+sys.path.insert(0, D + 'strumenti'); import verifica_metodo
+_err = verifica_metodo.controlla(D + 'sezioni/metodo_dati.json')
+if _err: sys.exit('Metodo, contenuti da sistemare:\n- ' + '\n- '.join(_err))
+_md = json.dumps(json.load(open(D + 'sezioni/metodo_dati.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+assert pages['metodo.html'].count('/*@METODO_DATI*/null') == 1
+pages['metodo.html'] = pages['metodo.html'].replace('/*@METODO_DATI*/null', _md)
 pages['index.html'] = pages['index.html'].replace('/*@LICENZE_DATI*/', _dati).replace('/*@FOGLI*/', open(D + 'comune/fogli.js', encoding='utf-8').read()).replace('/*@CONTI*/', open(D + 'sezioni/conti.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/conti_stat.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/calendario.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pratiche.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pensione.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/investimenti.js', encoding='utf-8').read())
 for f in os.listdir(D + 'statici'):
     shutil.copy(D + 'statici/' + f, OUT + f)
@@ -37,7 +44,7 @@ else:
     h = hashlib.md5()
     for k in sorted(pages): h.update(re.sub(r'window\.APP_VERSION="[^"]*";window\.APP_BUILD="[^"]*";', '', pages[k]).encode())
     for f in sorted(os.listdir(D + 'statici')):
-        if f not in ('version.json', 'sw.js', 'news-pensione.json', 'scheda-pensione.cifrata.json'): h.update(open(D + 'statici/' + f, 'rb').read())  # le novità cambiano ogni giorno senza cambiare versione
+        if f not in ('version.json', 'sw.js', 'news-pensione.json', 'scheda-pensione.cifrata.json', 'occasioni-torino.json'): h.update(open(D + 'statici/' + f, 'rb').read())  # le novità cambiano ogni giorno senza cambiare versione
     ver = h.hexdigest()[:10]
     import datetime
     built = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=2))).strftime('%Y-%m-%dT%H:%M+02:00')

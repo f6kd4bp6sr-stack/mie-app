@@ -1,6 +1,6 @@
 # Pianificazione — memoria dell'app
 
-App per iPad del genitore: calendario di casa e di lavoro, licenze fino al congedo, pratiche, Tai Chi e progressi di «Il mio mondo».
+App per iPad del genitore: calendario di casa e di lavoro, licenze fino al congedo, pratiche, Tai Chi, 🤝 Metodo (stare con gli altri) e progressi di «Il mio mondo».
 
 | | |
 |---|---|
@@ -11,13 +11,14 @@ App per iPad del genitore: calendario di casa e di lavoro, licenze fino al conge
 
 ## Le pagine
 - 🏠 **Pianificazione** (`pagine/index.html`): 📆 Calendario (Giorno · Settimana · Mese · Anno · Scadenze; il giorno contiene benessere e Tai Chi, oggi anche il riepilogo), 🎖️ Pensione (`sezioni/pensione.js`: adempimenti, leve, cifre e incassi, cassa, documenti; dati solo dal file privato «scheda pensione», mai nel codice; 📰 Novità dal file pubblico `news-pensione.json`, aggiornato alle 13, alle 17 e alle 23 da un'attività programmata con le regole di `strumenti/NOVITA.md`; ricalcolo, cedolino, contatti e testi, linea del tempo; 💶 Cassa da oggi a giugno 2029 con stipendi, pensione e incassi automatici, entrate e uscite tue anche ricorrenti (nel Calendario), spunte, saldo vero a qualsiasi data, grafico dell’andamento (storico del conto Fineco dai Conti nascosti + previsione, periodo possibile degli incassi), perequazione della pensione ogni gennaio, tasse da mettere in conto, ritardo degli incassi, movimenti collegati agli investimenti; 🔄 la scheda si aggiorna da sola dal file pubblico **cifrato** `scheda-pensione.cifrata.json`, chiave solo sull'iPad e nell'attività programmata, strumento `strumenti/scheda_cifrata.py`), 🌱 Investimenti (`sezioni/investimenti.js`, dati in `pn-v1` → `inv`: profilo con 7 domande, riserva di sicurezza, somme in arrivo con le strategie a confronto, debiti da estinguere o no, simulatore, tassi di mercato dal blocco `mercati` e catalogo della 🔎 Ricerca dal blocco `prodotti` di `news-pensione.json`; calcoli con ipotesi, non consigli), 🗂️ Pratiche, ⚙️ Impostazioni (blocco con Face ID, Calendario dell'iPad, copie).
+- 🤝 **Metodo** (`pagine/metodo.html`): allenamento a essere più socievole. 4 abilità, una a settimana (👋 Aprire, 💬 Tenere viva la chiacchierata, 🔁 Farsi vivo, 😊 Calore), poi si riparte con sfide più impegnative; ogni giorno 3 sfide (facile, media, coraggiosa) in situazioni diverse, una da scegliere e segnare (anche dal Calendario); 📘 Regole d'oro (12 schede con principio, esempio, frase pronta e ricerca su cui si basano); 🍽️ Preparo un incontro (nel Calendario il giorno stesso); 📝 Com'è andata con il riepilogo della domenica; 🤲 Volontariato a Torino dal file pubblico `occasioni-torino.json`, ricontrollato il lunedì dall'attività programmata (regole in `strumenti/NOVITA.md`, controllo `strumenti/verifica_occasioni.py`). Contenuti in `sezioni/metodo_dati.json`, controllati a ogni build da `strumenti/verifica_metodo.py`; dati personali solo in `pn-v1` → `met`.
 - 📅 **Licenze** (`pagine/licenze.html`), 🧘 **Tai Chi** (`pagine/taichi.html`), 🐉 **Progressi** di «Il mio mondo» (`pagine/progressi.html`).
 - 💶 **Conti** (`sezioni/conti.js`): **nascosta** ma conservata. In `pagine/index.html` basta `const CONTI_ON=true` per farla tornare (menu, pagamenti nel Calendario, riquadro di oggi, file per il Calendario dell'iPad). I dati dei Conti restano nelle copie.
 
 ## Dati sul dispositivo (solo di questa app)
 | Dove | Chiavi |
 |---|---|
-| localStorage | `pn-v1` (Calendario, Scadenze, Pensione, Pratiche, Famiglia, Benessere, Conti), `pn-calv`, `pn-icsnag`, `pn-lock`, `pn-lastSnap`, `pn-lastBackup`, `pn-copia-cloud`, `pn-news`, `pn-scheda-chiave` (chiave della scheda cifrata, fuori dalle copie), `pn-scheda-meta`; Licenze `licenze-marco-v1`; Tai Chi `tc_*`; Progressi `prog-*` |
+| localStorage | `pn-v1` (Calendario, Scadenze, Pensione, Pratiche, Famiglia, Benessere, Conti, Metodo `met`), `pn-calv`, `pn-metv` (scheda aperta del Metodo), `pn-occ` (copia del volontariato), `pn-icsnag`, `pn-lock`, `pn-lastSnap`, `pn-lastBackup`, `pn-copia-cloud`, `pn-news`, `pn-scheda-chiave` (chiave della scheda cifrata, fuori dalle copie), `pn-scheda-meta`; Licenze `licenze-marco-v1`; Tai Chi `tc_*`; Progressi `prog-*` |
 | IndexedDB | `licenze-marco` → `kv`: `stato`, `pianifica`, `taichi`, `progressi`, `progressi-link`, `snap-<data>` (copie giornaliere, 30 giorni), `pf-<id>` (file di Pratiche e Pensione) |
 | OPFS | `licenze-stato.json` |
 
