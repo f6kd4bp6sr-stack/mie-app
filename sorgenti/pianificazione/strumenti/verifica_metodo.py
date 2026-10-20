@@ -12,6 +12,26 @@ def parole(s):
     return len(re.findall(r"\S+", s or ''))
 
 
+def controlla_app(ap, w):
+    """approfondimento di una scheda: come funziona lo studio, che cosa provare, attenzione, fonti complete"""
+    err = []
+    if not ap.get('come'): err.append(w + ': manca «come»')
+    elif parole(ap['come']) > 85: err.append('%s: «come» troppo lungo (%d parole, massimo 85)' % (w, parole(ap['come'])))
+    p = ap.get('prova') or []
+    if not 2 <= len(p) <= 4: err.append(w + ': «prova» deve avere da 2 a 4 passi')
+    for s in p:
+        if parole(s) > 22: err.append(w + ': un passo di «prova» è troppo lungo')
+    if not ap.get('att'): err.append(w + ': manca «att» (attenzione)')
+    fo = ap.get('fonti') or []
+    if not fo: err.append(w + ': mancano le fonti')
+    if fo and not any(f.get('t') in ('studio', 'libro') for f in fo): err.append(w + ': serve almeno uno studio originale')
+    for f in fo:
+        if not re.search(r'\(\d{4}\)', f.get('c', '')) and not (f.get('t') == 'articolo' and '(s.d.)' in f.get('c', '')): err.append(w + ': citazione senza anno: ' + f.get('c', '')[:40])
+        if f.get('t') not in ('studio', 'articolo', 'libro'): err.append(w + ': tipo di fonte sconosciuto')
+        if f.get('t') != 'libro' and not str(f.get('url', '')).startswith('https://'): err.append(w + ': fonte senza link https: ' + f.get('c', '')[:40])
+    return err
+
+
 def controlla(path):
     err = []
     try:
@@ -39,6 +59,11 @@ def controlla(path):
         for k, mx in (('tit', 8), ('princ', 45), ('es', 40), ('frase', 14), ('base', 50)):
             if not x.get(k): err.append(w + ': manca ' + k)
             elif parole(x[k]) > mx: err.append('%s: «%s» troppo lungo (%d parole, massimo %d)' % (w, k, parole(x[k]), mx))
+        ap = x.get('app') or {}
+        if not ap: err.append(w + ': manca l\'approfondimento (app)')
+        else: err += controlla_app(ap, w)
+    if not d.get('intro_app'): err.append('manca intro_app')
+    else: err += controlla_app(d['intro_app'], 'intro')
     for a in ab:
         n = sum(1 for x in d.get('schede', []) if x.get('ab') == a)
         if n < 3: err.append('abilità %s: servono almeno 3 schede (ce ne sono %d)' % (a, n))

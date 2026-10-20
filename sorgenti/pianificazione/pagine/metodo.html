@@ -64,6 +64,11 @@ h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute
 .sch .es{font-style:italic;margin:6px 0;color:var(--ink)}
 .sch .fr{display:inline-block;background:var(--m-bg);color:var(--m);font-weight:700;border-radius:10px;padding:4px 10px;margin:2px 0 6px}
 .sch .bs{font-size:13.5px;color:var(--muted)}
+details.app{margin-top:8px;border-radius:12px;background:var(--seg);padding:8px 12px}details.app>summary{cursor:pointer;font-weight:700;color:var(--m);list-style:none}details.app>summary::-webkit-details-marker{display:none}
+details.app>summary::before{content:"▸ "}details.app[open]>summary::before{content:"▾ "}
+details.app h4{margin:10px 0 4px;font-size:14px}details.app p,details.app ol,details.app ul{margin:4px 0;font-size:15px}details.app ol,details.app ul{padding-left:22px}
+.fo{font-size:14px;line-height:1.4;margin:4px 0}.fo a{color:var(--m);font-weight:700;text-decoration:none;word-break:break-word}.fo .k{display:inline-block;font-size:11.5px;font-weight:800;border-radius:6px;padding:0 6px;margin-right:4px;background:var(--card);color:var(--muted)}
+.bib .fo{padding:8px 0;border-top:1px solid var(--line)}.bib .fo:first-of-type{border-top:0}
 .row{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}.row:first-of-type{border-top:0}
 .row .grow{flex:1;min-width:0}.row small{display:block;color:var(--muted)}
 .row .fc{font-size:24px;line-height:1.2}
@@ -195,9 +200,18 @@ function riepilogo(m){
     ${righe.length?`<p class="lbl" style="margin:8px 0 4px">Quello che hai scritto:</p>${righe.slice(-5).map(r=>`<div class="row"><span class="fc">✍️</span><div class="grow">${esc(r)}</div></div>`).join("")}`:`<p class="lbl">Ogni sfida fatta è un passo, anche se è andata così così: conta averci provato.</p>`}
     <p class="lbl" style="margin:10px 0 0">Ricorda: dopo una chiacchierata, di solito sei piaciuto più di quanto pensi.</p></div>`;
 }
-function schedaH(x){return `<div class="sch"><b class="t">${esc(x.tit)}</b><p style="margin:6px 0">${esc(x.princ)}</p><p class="es">${esc(x.es)}</p><span class="fr">💬 «${esc(x.frase)}»</span><div class="bs">📚 ${esc(x.base)}</div></div>`;}
+const FT={studio:"📄 studio",articolo:"📰 spiegato in breve",libro:"📘 libro"};
+function fonteH(f){return `<div class="fo"><span class="k">${FT[f.t]||"fonte"}</span>${esc(f.c)}${f.url?` <a href="${esc(f.url)}" target="_blank" rel="noopener">${f.url.includes("doi.org")?"DOI ›":"Apri ›"}</a>`:""}</div>`;}
+function appH(a){if(!a)return "";return `<details class="app"><summary>🔎 Approfondisci: lo studio, come provarci, le fonti</summary>
+  <h4>🧪 Che cosa hanno scoperto</h4><p>${esc(a.come)}</p>
+  <h4>✅ Prova così</h4><ol>${(a.prova||[]).map(p=>`<li>${esc(p)}</li>`).join("")}</ol>
+  <h4>⚠️ Attenzione</h4><p>${esc(a.att)}</p>
+  <h4>📚 Fonti <span class="lbl" style="font-weight:600">(in inglese)</span></h4>${(a.fonti||[]).map(fonteH).join("")}</details>`;}
+function schedaH(x){return `<div class="sch"><b class="t">${esc(x.tit)}</b><p style="margin:6px 0">${esc(x.princ)}</p><p class="es">${esc(x.es)}</p><span class="fr">💬 «${esc(x.frase)}»</span><div class="bs">📚 ${esc(x.base)}</div>${appH(x.app)}</div>`;}
+function bibH(){const L=[],seen=new Set();[MD.intro_app].concat(MD.schede.map(s=>s.app)).forEach(a=>(a&&a.fonti||[]).forEach(f=>{if(!seen.has(f.c)){seen.add(f.c);L.push(f);}}));
+  L.sort((a,b)=>a.c.localeCompare(b.c,"it"));return `<div class="card plain bib"><h3>📚 Tutte le fonti (${L.length})</h3><p class="lbl" style="margin:0 0 6px">Studi pubblicati su riviste scientifiche con revisione, più qualche articolo che li spiega in breve. I link portano alla pagina dell'editore (DOI) o all'articolo.</p>${L.map(fonteH).join("")}</div>`;}
 function vRegole(){const W=weekInfo(today());
-  return `<p class="lbl" style="margin:0 4px 12px">${esc(MD.intro_base)}</p>`+AB.map(a=>`<div class="card${a.id===W.ab.id?"":" plain"}"><h3>${a.ic} ${esc(a.n)}${a.id===W.ab.id?` <span class="pill m">questa settimana</span>`:""}</h3><div class="lbl" style="margin-bottom:6px">${esc(a.sotto)}</div>${MD.schede.filter(x=>x.ab===a.id).map(schedaH).join("")}</div>`).join("");}
+  return `<div class="card plain"><h3>💡 Perché vale la pena provarci</h3><p style="margin:0">${esc(MD.intro_base)}</p>${appH(MD.intro_app)}</div>`+AB.map(a=>`<div class="card${a.id===W.ab.id?"":" plain"}"><h3>${a.ic} ${esc(a.n)}${a.id===W.ab.id?` <span class="pill m">questa settimana</span>`:""}</h3><div class="lbl" style="margin-bottom:6px">${esc(a.sotto)}</div>${MD.schede.filter(x=>x.ab===a.id).map(schedaH).join("")}</div>`).join("")+bibH();}
 
 function vInc(){
   const t=today(),E=incEdit?M.inc.find(i=>i.id===incEdit):null,L=M.inc.slice().sort((a,b)=>(b.d||"")<(a.d||"")?-1:1);
