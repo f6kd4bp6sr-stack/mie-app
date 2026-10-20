@@ -46,7 +46,11 @@ Stato: **pilota realizzato il 20 ottobre 2026** (6 argomenti + 2 dalla scheda di
 - `data/cartine/<id>.json`: coste vere semplificate (Natural Earth, pubblico dominio), luoghi con tipo, posizione e testo, etichette dei mari e delle regioni. Motore `js/sezioni/cartina.js`.
 - Una spiegazione la apre con il campo `"cartina": "<id>"`: compare il tasto «🗺️ Cartina» in alto e una scheda «Guarda dove» a fine racconto.
 - Due modi: **🔎 Esplora** (tocca un luogo, leggi o ascolta che cosa era) e **🎯 Trova il luogo** (6 luoghi a caso; dopo 2 errori il punto giusto lampeggia; conta solo la prima risposta).
-- Prima cartina: **La Grecia antica** (Atene, Sparta, Corinto, Tebe, Argo, Mileto, Efeso, Mitilene, Corcira, Delfi, Olimpia, Cnosso, Monte Olimpo), usata da «La civiltà greca» e «Le polis». Micene e Calcide escluse: troppo vicine ad Argo e Tebe per toccarle col dito. Revisione indipendente fatta (corretto il testo su Atene: votavano solo i cittadini maschi adulti).
+- Prima cartina: **La Grecia antica**, usata da «La civiltà greca» e «Le polis»: 22 luoghi presi dalla cartina della maestra (più Olimpia e il Monte Olimpo). Campo `zona`: ingrandimento della Grecia centrale con coste più dettagliate; i luoghi con `"z":1` (Micene, Calcide, Eretria, Megara) si vedono solo lì, e nel gioco la cartina si ingrandisce da sola quando servono.
+- Revisione indipendente fatta (corretto il testo su Atene: votavano solo i cittadini maschi adulti).
+
+## I fogli della maestra sono la base
+I contenuti sulla Grecia seguono i fogli «A spasso nelle polis» e «Dove e quando?» (confronto fatto da un revisore esterno il 20 ottobre 2026): civiltà greca dal 1000 a.C. circa al 146 a.C.; periodo arcaico fino al 480, classico 480-323, **ellenistico 300-146 a.C.** (Alessandro muore nel 323; il racconto dice «verso il 300 a.C. comincia…»); polis «intorno all'VIII secolo a.C., verso il 700 a.C.»; 3 caratteristiche della polis: **autonomia, territorio, comunità**. Per i prossimi argomenti: chiedere le schede di scuola e confrontarle prima di pubblicare.
 
 ## Collegamenti tra materie
 Sotto la mappa compaiono i «🔗 Collegamenti»: 2-3 argomenti di altre materie, cioè id di argomenti esistenti in `argomenti.json`. Per esempio: Antico Egitto → Geografia «Fiumi e laghi», Arte «L'arte antica», Tecnologia «I materiali».

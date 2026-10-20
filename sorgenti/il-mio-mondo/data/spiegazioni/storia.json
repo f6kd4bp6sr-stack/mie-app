@@ -147,12 +147,12 @@
    },
    {
     "id": "polis",
-    "anno": -750,
+    "anno": -700,
     "n": "nascono le polis",
     "ic": "🏛️",
-    "sotto": "le città-stato, nell'VIII secolo a.C.",
-    "da": "nell'VIII secolo a.C.",
-    "tacca": "VIII sec. a.C."
+    "sotto": "le città-stato, intorno all'VIII secolo a.C.",
+    "da": "intorno al 700 a.C.",
+    "tacca": "700 a.C. circa"
    },
    {
     "id": "romani",
@@ -187,13 +187,13 @@
    {
     "id": "ellenistico",
     "periodo": [
-     -323,
+     -300,
      -146
     ],
     "n": "il periodo ellenistico",
     "ic": "🐎",
-    "sotto": "dal 323 al 146 a.C.",
-    "da": "dal 323 al 146 a.C. c'è"
+    "sotto": "dal 300 al 146 a.C.",
+    "da": "dal 300 al 146 a.C. c'è"
    }
   ],
   "racconto": [
@@ -205,8 +205,8 @@
     ]
    },
    {
-    "t": "Nell'VIII secolo a.C., cioè tra l'800 e il 700 a.C., nascono le polis: le città-stato greche, come Atene e Sparta.",
-    "v": "Nell'ottavo secolo avanti Cristo, cioè tra l'ottocento e il settecento avanti Cristo, nascono le polis: le città-stato greche, come Atene e Sparta.",
+    "t": "Intorno all'VIII secolo a.C., verso il 700 a.C., nascono le polis: le città-stato greche, come Atene e Sparta.",
+    "v": "Intorno all'ottavo secolo avanti Cristo, verso il settecento avanti Cristo, nascono le polis: le città-stato greche, come Atene e Sparta.",
     "nodi": [
      "polis"
     ]
@@ -226,8 +226,8 @@
     ]
    },
    {
-    "t": "Nel 323 a.C. muore Alessandro Magno, il re che aveva conquistato un impero fino all'India. Comincia il periodo ellenistico: la cultura greca si diffonde in Oriente.",
-    "v": "Nel trecentoventitré avanti Cristo muore Alessandro Magno, il re che aveva conquistato un impero fino all'India. Comincia il periodo ellenistico: la cultura greca si diffonde in Oriente.",
+    "t": "Nel 323 a.C. muore Alessandro Magno, il re che aveva conquistato un impero fino all'India. Verso il 300 a.C. comincia il periodo ellenistico: la cultura greca si diffonde in Oriente.",
+    "v": "Nel trecentoventitré avanti Cristo muore Alessandro Magno, il re che aveva conquistato un impero fino all'India. Verso il trecento avanti Cristo comincia il periodo ellenistico: la cultura greca si diffonde in Oriente.",
     "nodi": [
      "ellenistico"
     ]
@@ -272,7 +272,9 @@
    "v6spm7i": "classico",
    "3gqpaxv": "ellenistico",
    "h9g5ou7": "classico",
-   "g90qiwa": "polis"
+   "g90qiwa": "polis",
+   "dgbi7si": "ellenistico",
+   "psybuh5": "polis"
   },
   "cartina": "grecia"
  },
@@ -285,9 +287,9 @@
   "nodi": [
    {
     "id": "quando",
-    "n": "tra l'800 e il 700 a.C.",
+    "n": "verso il 700 a.C.",
     "ic": "⏳",
-    "sotto": "nell'VIII secolo a.C.",
+    "sotto": "intorno all'VIII secolo a.C.",
     "da": "nasce"
    },
    {
@@ -322,50 +324,51 @@
     "id": "comunita",
     "n": "una comunità di cittadini",
     "ic": "👥",
-    "sotto": "così diceva Aristotele",
+    "sotto": "con cultura, tradizioni e riti religiosi propri",
     "da": "è soprattutto"
    }
   ],
   "racconto": [
    {
-    "t": "Nell'VIII secolo a.C., cioè tra l'800 e il 700 a.C., in Grecia nasce un modo nuovo di vivere insieme: la polis.",
-    "v": "Nell'ottavo secolo avanti Cristo, cioè tra l'ottocento e il settecento avanti Cristo, in Grecia nasce un modo nuovo di vivere insieme: la polis.",
+    "t": "Intorno all'VIII secolo a.C., verso il 700 a.C., in Grecia nasce un modo nuovo di organizzarsi e vivere insieme: la polis.",
+    "v": "Intorno all'ottavo secolo avanti Cristo, verso il settecento avanti Cristo, in Grecia nasce un modo nuovo di organizzarsi e vivere insieme: la polis.",
     "nodi": [
      "quando"
     ]
    },
    {
-    "t": "Polis vuol dire città-stato. La Grecia non diventa un unico regno: ogni città è come un piccolo Stato, per esempio Atene, Sparta e Corinto.",
+    "t": "Polis vuol dire città-stato. La Grecia non diventa un unico regno: ogni città è come un piccolo Stato, con un suo stile di vita, come Atene, Sparta e Corinto.",
     "nodi": [
      "tante"
     ]
    },
    {
-    "t": "Ogni polis è autonoma: ha le sue leggi, la sua organizzazione e anche la sua moneta.",
-    "nodi": [
-     "autonomia"
-    ]
-   },
-   {
-    "t": "Ogni polis ha un territorio ben definito: la città, con case, templi e la piazza principale, l'agorà, e intorno i campi da coltivare.",
-    "nodi": [
-     "territorio"
-    ]
-   },
-   {
-    "t": "Le polis sono diverse tra loro, ma hanno in comune la lingua greca e la religione, con gli stessi dei.",
+    "t": "Le polis sono diverse tra loro, ma tutte hanno in comune la lingua greca e la religione, con gli stessi dei.",
     "nodi": [
      "comune"
     ]
    },
    {
-    "t": "Per i Greci la polis era soprattutto la comunità dei cittadini. Il filosofo Aristotele scrisse: «La polis è una comunità di cittadini».",
+    "t": "La polis non era solo strade e mura, ma i cittadini. Il filosofo Aristotele scrisse: «La polis è una comunità di cittadini». Si diceva «vado dagli Ateniesi», non «ad Atene».",
     "nodi": [
      "comunita"
     ]
    },
    {
-    "t": "Per questo non dicevano «vado ad Atene», ma «vado dagli Ateniesi»: contavano le persone, non solo le strade e le mura.",
+    "t": "Le caratteristiche principali della polis sono 3. La prima è l'autonomia: ogni polis ha le sue leggi, la sua organizzazione e la sua moneta.",
+    "v": "Le caratteristiche principali della polis sono tre. La prima è l'autonomia: ogni polis ha le sue leggi, la sua organizzazione e la sua moneta.",
+    "nodi": [
+     "autonomia"
+    ]
+   },
+   {
+    "t": "La seconda è il territorio, ben definito: la città, con case, templi e la piazza principale, l'agorà, e intorno i campi da coltivare.",
+    "nodi": [
+     "territorio"
+    ]
+   },
+   {
+    "t": "La terza è la comunità: i cittadini si sentono parte della loro polis. Hanno una loro cultura, le loro tradizioni e i loro riti religiosi.",
     "nodi": [
      "comunita"
     ]
@@ -405,7 +408,12 @@
    "18d83j9": "territorio",
    "ha9bied": "comunita",
    "8fwpjcu": "comunita",
-   "oc6r4cn": "comunita"
+   "oc6r4cn": "comunita",
+   "868ajy0": "autonomia",
+   "t97pwt3": "comunita",
+   "09a8wth": "tante",
+   "qlpadlm": "tante",
+   "9giejhg": "tante"
   },
   "cartina": "grecia"
  }
