@@ -59,6 +59,10 @@ def controlla(path):
         for k, mx in (('tit', 8), ('princ', 45), ('es', 40), ('frase', 14), ('base', 50)):
             if not x.get(k): err.append(w + ': manca ' + k)
             elif parole(x[k]) > mx: err.append('%s: «%s» troppo lungo (%d parole, massimo %d)' % (w, k, parole(x[k]), mx))
+        cu = x.get('curio') or {}
+        for k, mx in (('tit', 9), ('fatto', 45), ('trad', 16)):
+            if not cu.get(k): err.append('%s: manca curio.%s' % (w, k))
+            elif parole(cu[k]) > mx: err.append('%s: curio.%s troppo lungo' % (w, k))
         ap = x.get('app') or {}
         if not ap: err.append(w + ': manca l\'approfondimento (app)')
         else: err += controlla_app(ap, w)
@@ -76,11 +80,30 @@ def controlla(path):
         if x.get('liv') not in LIVELLI: err.append(w + ': livello deve essere 1, 2 o 3')
         if x.get('sit') not in sit: err.append(w + ': situazione sconosciuta')
         if not x.get('t'): err.append(w + ': manca il testo')
+        if not x.get('nome'): err.append(w + ': manca il nome in codice')
+        if not x.get('bonus'): err.append(w + ': manca il bonus')
+        elif parole(x['bonus']) > 22: err.append(w + ': bonus troppo lungo')
         elif parole(x['t']) > 28: err.append('%s: troppo lunga (%d parole, massimo 28)' % (w, parole(x['t'])))
     for a in ab:
         for l in LIVELLI:
             s = {x['sit'] for x in d.get('sfide', []) if x.get('ab') == a and x.get('liv') == l}
             if len(s) < 3: err.append('abilità %s, livello %d: servono sfide in almeno 3 situazioni (ce ne sono %d)' % (a, l, len(s)))
+    sch = {x.get('id') for x in d.get('schede', [])} | {'intro'}
+    if not d.get('intro_curio'): err.append('manca intro_curio')
+    qi = set()
+    for q in d.get('quiz', []):
+        w = 'quiz %s' % q.get('id')
+        if q.get('id') in qi: err.append(w + ': id ripetuto')
+        qi.add(q.get('id'))
+        op = q.get('op') or []
+        if len(op) != 3: err.append(w + ': servono 3 risposte')
+        if sum(1 for o in op if o.get('ok')) != 1: err.append(w + ': serve una e una sola risposta giusta')
+        if any(not o.get('t') or not o.get('r') for o in op): err.append(w + ': ogni risposta vuole testo e commento')
+        if q.get('sch') not in sch: err.append(w + ': scheda collegata sconosciuta')
+    if len(d.get('quiz', [])) < 10: err.append('servono almeno 10 situazioni nel quiz')
+    for c in d.get('frasi', []):
+        if len(c.get('f', [])) < 4: err.append('frasi «%s»: servono almeno 4 frasi' % c.get('n'))
+    if len(d.get('frasi', [])) < 4: err.append('servono almeno 4 gruppi di frasi di scorta')
     q = d.get('domande_idee', [])
     if len(q) < 5: err.append('servono almeno 5 idee di domande')
     testo = json.dumps(d, ensure_ascii=False)

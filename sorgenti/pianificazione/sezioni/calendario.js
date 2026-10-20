@@ -95,7 +95,7 @@ function calMonthView(){
       <span class="mn"><b>${parse(s).getDate()}</b>${lab?`<em class="code">${lab}</em>`:""}${HOL[s]?`<em class="holn">${esc(HOL[s])}</em>`:""}</span>${cellChips(D,3)}<span class="mi">${cellIcons(D)}${D.vstudy?"<i class='vs' title='Ha studiato'>🐉</i>":""}</span></button>`;
     s=add(s,1);}
   return `<div class="cal-mo"><div><div class="mgrid">${GIORNI.map(g=>`<div class="mh">${g.slice(0,3)}</div>`).join("")}${cells}</div>
-    <p class="lbl cal-leg"><span class="lg lic"></span> licenza / a casa · <span class="lg we"></span> fine settimana e festivi · 🐉 Il mio mondo · 🧘 Tai Chi · 🤝 sfida del Metodo · 📝 nota</p></div>
+    <p class="lbl cal-leg"><span class="lg lic"></span> licenza / a casa · <span class="lg we"></span> fine settimana e festivi · 🐉 Il mio mondo · 🧘 Tai Chi · 🤝 missione del Metodo · 📝 nota</p></div>
     <div class="cal-side">${dayEditor(calSel,true)}</div></div>`;
 }
 function calWeekView(){const m=monday(calD),t=today(),V=valeCal();
@@ -153,8 +153,8 @@ function dayEditor(s,compact){
         <label class="wide">Nota su come stai<input data-bf="note" maxlength="200" value="${esc(D.ben.note||"")}" placeholder="facoltativa"></label></div></details></div></div>`;}
   // 🤝 Metodo: la sfida del giorno (si sceglie e si segna nella pagina Metodo)
   if(s<=t){const g=D.met,F=["🙂","😐","😕"];
-    if(g)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>${g.ok?"✓ ":""}Sfida: ${esc(g.txt||"")}</b><small>${g.ok?[g.f?F[g.f-1]:"",g.t?"«"+esc(g.t)+"»":"fatta"].filter(Boolean).join(" "):"da fare"}</small></div><a class="lnk" href="metodo.html#oggi">Metodo ›</a></div>`;
-    else if(s===t)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>Sfida del giorno</b><small>Scegline una fra tre nel Metodo</small></div><a class="lnk" href="metodo.html#oggi">Scegli ›</a></div>`;}
+    if(g)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>${g.ok?"✓ ":""}Missione: ${esc(g.txt||"")}</b><small>${g.ok?[g.f?F[g.f-1]:"",g.t?"«"+esc(g.t)+"»":"fatta"].filter(Boolean).join(" "):"da fare"}</small></div><a class="lnk" href="metodo.html#oggi">Metodo ›</a></div>`;
+    else if(s===t)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>Missione del giorno</b><small>Tre carte coperte ti aspettano nel Metodo</small></div><a class="lnk" href="metodo.html#oggi">Pesca ›</a></div>`;}
   // il mio mondo
   if(D.vstudy||D.vmood){const v=D.vmood;
     o+=`<div class="row"><span class="pill">🐉</span><div class="grow"><b>Il mio mondo</b><small>${D.vstudy?"ha studiato":"non ha studiato"}${v?" · diario: "+VMOOD[v.m][0]+" "+VMOOD[v.m][1]+(v.f?" ("+["","pochissimo","un po’","abbastanza","tanto","tantissimo"][Math.min(5,+v.f||0)]+")":""):""}</small>${v&&v.w?`<small class="vw${VDOWN.has(v.m)?" down":""}">«${esc(v.w)}»</small>`:""}</div><a class="lnk" href="progressi.html">Progressi ›</a></div>`;}
