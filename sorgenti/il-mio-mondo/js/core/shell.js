@@ -121,7 +121,7 @@ renderTabs = function () {
 ['esplora', 'io', 'teatro', 'materia'].forEach(id => { if (!$('p-' + id)) { const s = document.createElement('section'); s.id = 'p-' + id; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); } });
 
 /* ---------- 🏠 CASA: tutte le sezioni, subito ---------- */
-const HOME_DO = [['disegno', '🎨', 'Disegno'], ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], ['mate', '🔢', 'Officina dei numeri'], ['scienze', '🔬', 'Laboratorio'], ['scopri', '🌍', 'Scopri il mondo'], ['teatro', '🎭', 'Teatro'], ['sport', '🤸‍♀️', 'Pausa movimento'], ['vita', '🧼', 'Io e il mio corpo'], ['routine', '☀️', 'Le mie routine'], ['metodo', '🧠', 'Il mio metodo'], ['io', '🐉', 'Io e il mio drago']];
+const HOME_DO = [['disegno', '🎨', 'Disegno'], ['mappe', '🗺️', 'Le mie mappe'], ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], ['mate', '🔢', 'Officina dei numeri'], ['scienze', '🔬', 'Laboratorio'], ['scopri', '🌍', 'Scopri il mondo'], ['teatro', '🎭', 'Teatro'], ['sport', '🤸‍♀️', 'Pausa movimento'], ['vita', '🧼', 'Io e il mio corpo'], ['routine', '☀️', 'Le mie routine'], ['metodo', '🧠', 'Il mio metodo'], ['io', '🐉', 'Io e il mio drago']];
 /* materie non di scuola: in fondo alla Casa */
 const HOME_VITA = ['media', 'soldi', 'lavo', 'vesto', 'sp-patt', 'sp-aerea', 'sp-nuoto', 'sp-corpo', 'roblox'];
 PAGES.home = el => {

@@ -1,0 +1,139 @@
+{
+ "cuore": {
+  "centro": {
+   "n": "Il sangue",
+   "ic": "🩸",
+   "sotto": "circa 5 litri in un adulto"
+  },
+  "nodi": [
+   {
+    "id": "cuore",
+    "n": "il cuore",
+    "ic": "❤️",
+    "sotto": "un muscolo con 4 cavità",
+    "da": "è spinto da un muscolo:"
+   },
+   {
+    "id": "arterie",
+    "n": "le arterie",
+    "ic": "➡️",
+    "sotto": "dal cuore al corpo",
+    "da": "esce dal cuore attraverso"
+   },
+   {
+    "id": "vene",
+    "n": "le vene",
+    "ic": "⬅️",
+    "sotto": "dal corpo al cuore",
+    "da": "torna al cuore attraverso"
+   },
+   {
+    "id": "capillari",
+    "n": "i capillari",
+    "ic": "🕸️",
+    "sotto": "i vasi più sottili",
+    "da": "passa anche attraverso"
+   },
+   {
+    "id": "rossi",
+    "n": "i globuli rossi",
+    "ic": "🔴",
+    "sotto": "portano l'ossigeno",
+    "da": "contiene"
+   },
+   {
+    "id": "difese",
+    "n": "globuli bianchi e piastrine",
+    "ic": "🛡️",
+    "sotto": "difendono e chiudono le ferite",
+    "da": "contiene anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il cuore è un muscolo grande più o meno come il tuo pugno. Sta al centro del petto, un po' a sinistra, e batte giorno e notte.",
+    "nodi": [
+     "cuore"
+    ]
+   },
+   {
+    "t": "Dentro ha 4 cavità: due atri sopra e due ventricoli sotto. Le valvole fanno andare il sangue in una sola direzione.",
+    "nodi": [
+     "cuore"
+    ]
+   },
+   {
+    "t": "Il cuore spinge il sangue nelle arterie, che lo portano in tutto il corpo. Le vene lo riportano al cuore: nelle vene il sangue è rosso scuro.",
+    "nodi": [
+     "arterie",
+     "vene"
+    ]
+   },
+   {
+    "t": "Le arterie si dividono in vasi sottilissimi, i capillari, che arrivano vicino a ogni parte del corpo. Poi i capillari si riuniscono e formano le vene.",
+    "nodi": [
+     "capillari"
+    ]
+   },
+   {
+    "t": "Nel sangue ci sono i globuli rossi: portano l'ossigeno dai polmoni a tutto il corpo.",
+    "nodi": [
+     "rossi"
+    ]
+   },
+   {
+    "t": "I globuli bianchi difendono il corpo dai microbi. Le piastrine, se ti tagli, fanno un tappo e fermano il sangue.",
+    "nodi": [
+     "difese"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "arterie",
+    "scelte": [
+     "le arterie",
+     "i nervi",
+     "i tendini"
+    ]
+   },
+   {
+    "nodo": "rossi",
+    "scelte": [
+     "i globuli rossi",
+     "i denti",
+     "le unghie"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "sci-corpo:respiro",
+   "sp-corpo:muscoli",
+   "sp-corpo:benefici"
+  ],
+  "domande": {
+   "1w4vm2u": "cuore",
+   "1h35nid": "cuore",
+   "zvf9r": "cuore",
+   "1ec657o": "cuore",
+   "1t0qrjs": "cuore",
+   "esb31p": "cuore",
+   "1s6cop": "cuore",
+   "ltanuy": "arterie",
+   "3yd63k": "arterie",
+   "16i0rip": "vene",
+   "se7qrd": "vene",
+   "1jfbwe7": "capillari",
+   "aqxu0e": "rossi",
+   "17fkgdy": "rossi",
+   "adx0j2": "rossi",
+   "14cl2a4": "difese",
+   "pe2rdz": "difese",
+   "1nwcowz": "arterie",
+   "1eyffq0": "cuore",
+   "lq62na": "cuore",
+   "kwjofi": "cuore",
+   "om8khg": "cuore"
+  }
+ }
+}

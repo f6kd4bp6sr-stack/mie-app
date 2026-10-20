@@ -6,6 +6,8 @@ Interfaccia semplice (scelta del genitore, ottobre 2026): una sola 🏠 Casa con
 
 Argomenti: ogni domanda di `data/domande/quiz/*.json` ha il campo `arg`; i nomi degli argomenti di ogni materia sono in `data/domande/argomenti.json` ([id, nome, icona]). Le lezioni sono gli argomenti (scelta libera, non più in fila); in Casa c'è la ricerca per parola in tutte le materie con la lezione mista. Ogni domanda nuova deve avere il suo `arg`: il controllo automatico lo verifica.
 
+Spiegazioni con racconto e mappa concettuale (pilota di 6 argomenti): `data/spiegazioni/<materia>.json`, motore in `js/sezioni/spiega.js`, progetto in `docs/PROGETTO-SPIEGAZIONI.md`. Dati sul dispositivo: `vale2-spiega` (argomenti già visti e nodi accesi), `vale2-mappe` (le mappe costruite da lei, solo testo).
+
 | | |
 |---|---|
 | Indirizzo | https://f6kd4bp6sr-stack.github.io/mie-app/ (non cambia: icona sulla Home e dati restano) |

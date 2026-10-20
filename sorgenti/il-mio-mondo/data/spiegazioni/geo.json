@@ -1,0 +1,132 @@
+{
+ "acque": {
+  "centro": {
+   "n": "Fiumi e laghi",
+   "ic": "🏞️",
+   "sotto": "le acque d'Italia"
+  },
+  "nodi": [
+   {
+    "id": "sorgente",
+    "n": "la sorgente",
+    "ic": "⛰️",
+    "sotto": "dove nasce il fiume",
+    "da": "dove nasce un fiume c'è"
+   },
+   {
+    "id": "affluente",
+    "n": "gli affluenti",
+    "ic": "🔀",
+    "sotto": "fiumi che entrano in un altro",
+    "da": "un fiume riceve"
+   },
+   {
+    "id": "foce",
+    "n": "la foce",
+    "ic": "🌊",
+    "sotto": "dove finisce: mare o lago",
+    "da": "dove finisce un fiume c'è"
+   },
+   {
+    "id": "delta",
+    "n": "un delta",
+    "ic": "🔱",
+    "sotto": "una foce divisa in tanti rami",
+    "da": "a volte un fiume forma"
+   },
+   {
+    "id": "po",
+    "n": "il Po",
+    "ic": "🏆",
+    "sotto": "il più lungo d'Italia",
+    "da": "il più lungo è"
+   },
+   {
+    "id": "laghi",
+    "n": "i grandi laghi",
+    "ic": "🛶",
+    "sotto": "scavati da antichi ghiacciai",
+    "da": "al nord ci sono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Di solito un fiume nasce in montagna, da una sorgente o da un ghiacciaio. Poi scende verso valle e diventa sempre più grande.",
+    "nodi": [
+     "sorgente"
+    ]
+   },
+   {
+    "t": "Lungo la strada riceve altri fiumi, che si chiamano affluenti. A Torino, per esempio, la Dora Riparia si getta nel Po.",
+    "nodi": [
+     "affluente"
+    ]
+   },
+   {
+    "t": "Il punto dove il fiume finisce, nel mare o in un lago, si chiama foce.",
+    "nodi": [
+     "foce"
+    ]
+   },
+   {
+    "t": "Se la foce si divide in tanti rami, si chiama delta. Lo fa il Po, quando arriva nel mare Adriatico.",
+    "nodi": [
+     "delta"
+    ]
+   },
+   {
+    "t": "Il Po è il fiume più lungo d'Italia: nasce dal Monviso, in Piemonte, e attraversa tutta la Pianura Padana.",
+    "nodi": [
+     "po"
+    ]
+   },
+   {
+    "t": "I grandi laghi del nord, come il Garda, il Maggiore e il lago di Como, furono scavati da antichi ghiacciai. Il più grande è il Garda.",
+    "nodi": [
+     "laghi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "foce",
+    "scelte": [
+     "la foce",
+     "la sorgente",
+     "la vetta"
+    ]
+   },
+   {
+    "nodo": "affluente",
+    "scelte": [
+     "gli affluenti",
+     "i golfi",
+     "le isole"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "geo:montagne",
+   "geo:piemonte",
+   "sci-energia:acqua"
+  ],
+  "domande": {
+   "11twkgf": "sorgente",
+   "99wp45": "affluente",
+   "4ujnni": "affluente",
+   "vn01aw": "foce",
+   "dh037f": "delta",
+   "1e0wp71": "delta",
+   "kc0hte": "po",
+   "1nzk37m": "po",
+   "bhtxjf": "laghi",
+   "zl9cwp": "laghi",
+   "qzt4fz": "laghi",
+   "1hccez2": "affluente",
+   "a70az9": "affluente",
+   "15ub9hn": "po",
+   "19181np": "laghi",
+   "3jcjc0": "laghi"
+  }
+ }
+}

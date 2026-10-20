@@ -1,0 +1,125 @@
+{
+ "frase": {
+  "centro": {
+   "n": "La frase",
+   "ic": "💬",
+   "sotto": "un pensiero completo"
+  },
+  "nodi": [
+   {
+    "id": "soggetto",
+    "n": "il soggetto",
+    "ic": "👤",
+    "sotto": "chi fa l'azione o di chi si parla",
+    "da": "ha un protagonista:"
+   },
+   {
+    "id": "verbale",
+    "n": "il predicato verbale",
+    "ic": "⚡",
+    "sotto": "il verbo che dice che cosa fa",
+    "da": "ha un predicato:"
+   },
+   {
+    "id": "nominale",
+    "n": "il predicato nominale",
+    "ic": "🟰",
+    "sotto": "essere + nome o aggettivo",
+    "da": "oppure"
+   },
+   {
+    "id": "sottinteso",
+    "n": "il soggetto sottinteso",
+    "ic": "🫥",
+    "sotto": "non si vede: lo dice il verbo",
+    "da": "a volte ha"
+   },
+   {
+    "id": "attributo",
+    "n": "l'attributo",
+    "ic": "🎨",
+    "sotto": "aggettivo vicino a un nome",
+    "da": "può avere"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Quasi ogni frase ha un protagonista: il soggetto. È chi fa l'azione, oppure la persona o la cosa di cui si parla. In «Giulia canta» il soggetto è Giulia.",
+    "nodi": [
+     "soggetto"
+    ]
+   },
+   {
+    "t": "Il predicato dice che cosa fa il soggetto. In «Luca corre» il predicato è «corre»: è un predicato verbale.",
+    "nodi": [
+     "verbale"
+    ]
+   },
+   {
+    "t": "A volte il verbo essere unisce il soggetto a un nome o a un aggettivo: «Il cielo è azzurro». Questo è il predicato nominale.",
+    "nodi": [
+     "nominale"
+    ]
+   },
+   {
+    "t": "Ma attenzione: se «è» vuol dire «si trova», come in «Il cane è in giardino», è un predicato verbale.",
+    "nodi": [
+     "verbale"
+    ]
+   },
+   {
+    "t": "Il soggetto può anche non vedersi: in «Andiamo al parco» è «noi», sottinteso. Lo capisci dalla fine del verbo.",
+    "nodi": [
+     "sottinteso"
+    ]
+   },
+   {
+    "t": "Attenzione: il soggetto non è sempre all'inizio! In «Al parco giocano i bambini» il soggetto è «i bambini».",
+    "nodi": [
+     "soggetto"
+    ]
+   },
+   {
+    "t": "L'attributo è un aggettivo attaccato a un nome: in «La gatta nera dorme», «nera» è un attributo.",
+    "nodi": [
+     "attributo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "soggetto",
+    "scelte": [
+     "il soggetto",
+     "il titolo",
+     "il perimetro"
+    ]
+   },
+   {
+    "nodo": "attributo",
+    "scelte": [
+     "l'attributo",
+     "il denominatore",
+     "il ritornello"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "ita:complementi",
+   "ita:aggettivi",
+   "ita:verbi"
+  ],
+  "domande": {
+   "1d42nbx": "soggetto",
+   "63zsjq": "soggetto",
+   "13uq3rm": "soggetto",
+   "12mw2f2": "verbale",
+   "6b11q4": "verbale",
+   "1ryf31j": "nominale",
+   "ei378w": "nominale",
+   "uhsqlj": "nominale",
+   "1px6aro": "sottinteso",
+   "1l37wqr": "attributo"
+  }
+ }
+}

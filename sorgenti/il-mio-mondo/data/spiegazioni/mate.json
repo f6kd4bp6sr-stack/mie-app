@@ -1,0 +1,119 @@
+{
+ "5": {
+  "centro": {
+   "n": "Le frazioni",
+   "ic": "🍕",
+   "sotto": "parti uguali di un intero"
+  },
+  "nodi": [
+   {
+    "id": "intero",
+    "n": "l'intero",
+    "ic": "⭕",
+    "sotto": "per esempio una pizza intera",
+    "da": "il punto di partenza è"
+   },
+   {
+    "id": "parti",
+    "n": "parti uguali",
+    "ic": "🔪",
+    "sotto": "tutte della stessa grandezza",
+    "da": "l'intero si divide in"
+   },
+   {
+    "id": "denominatore",
+    "n": "il denominatore",
+    "ic": "⬇️",
+    "sotto": "sotto: in quante parti divido",
+    "da": "il numero sotto è"
+   },
+   {
+    "id": "numeratore",
+    "n": "il numeratore",
+    "ic": "⬆️",
+    "sotto": "sopra: quante parti prendo",
+    "da": "il numero sopra è"
+   },
+   {
+    "id": "dinumero",
+    "n": "frazione di un numero",
+    "ic": "🧮",
+    "sotto": "divido per il denominatore, moltiplico per il numeratore",
+    "da": "si calcola la"
+   },
+   {
+    "id": "confronta",
+    "n": "confrontare",
+    "ic": "⚖️",
+    "sotto": "stesso denominatore: vince il numeratore più grande",
+    "da": "si possono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Una pizza intera è l'intero. Se la tagli per dividerla con gli amici, ottieni delle parti.",
+    "nodi": [
+     "intero"
+    ]
+   },
+   {
+    "t": "Per fare una frazione le parti devono essere tutte uguali. Se una fetta è più grande delle altre, non vale!",
+    "nodi": [
+     "parti"
+    ]
+   },
+   {
+    "t": "Nella frazione 3/4, il numero sotto è il denominatore: dice in quante parti uguali hai diviso l'intero. Qui sono 4.",
+    "nodi": [
+     "denominatore"
+    ],
+    "v": "Nella frazione tre quarti, il numero sotto è il denominatore: dice in quante parti uguali hai diviso l'intero. Qui sono 4."
+   },
+   {
+    "t": "Il numero sopra è il numeratore: dice quante parti prendi. Qui sono 3. Quindi 3/4 vuol dire 3 fette su 4.",
+    "nodi": [
+     "numeratore"
+    ],
+    "v": "Il numero sopra è il numeratore: dice quante parti prendi. Qui sono 3. Quindi tre quarti vuol dire 3 fette su 4."
+   },
+   {
+    "t": "Per trovare 3/4 di 20: prima dividi per il numero sotto, 20 : 4 = 5. Poi moltiplichi per il numero sopra, 5 × 3 = 15.",
+    "nodi": [
+     "dinumero"
+    ],
+    "v": "Per trovare tre quarti di 20: prima dividi 20 per 4, il numero sotto, e fa 5. Poi moltiplichi 5 per 3, il numero sopra, e fa 15."
+   },
+   {
+    "t": "Se due frazioni hanno lo stesso denominatore, è più grande quella con il numeratore più grande: 3/5 è più di 2/5.",
+    "nodi": [
+     "confronta"
+    ],
+    "v": "Se due frazioni hanno lo stesso denominatore, è più grande quella con il numeratore più grande: tre quinti è più di due quinti."
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "denominatore",
+    "scelte": [
+     "il denominatore",
+     "il numeratore",
+     "il risultato"
+    ]
+   },
+   {
+    "nodo": "numeratore",
+    "scelte": [
+     "il numeratore",
+     "il denominatore",
+     "l'intero"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "mate:6",
+   "media:frazioni",
+   "soldi:sconti"
+  ],
+  "tutte": "dinumero"
+ }
+}

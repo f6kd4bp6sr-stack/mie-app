@@ -74,6 +74,58 @@ def run(write=True):
             if x.get('arg') not in ARG_IDS.get(u, set()): err.append(f'{where}: argomento «{x.get("arg", "")}» mancante o sconosciuto (data/domande/argomenti.json)')
             txt = ' '.join([x.get('q', ''), *opts, x.get('k', ''), x.get('e', '')]).lower()
             if guarda(txt, GUARD_SALUTE): err.append(f'{where}: termine vietato')
+    # spiegazioni con racconto e mappa (data/domande/../spiegazioni/<materia>.json)
+    SPD = D + 'data/spiegazioni/'
+    qids = {u: {x['id'] for x in L if 'id' in x} for u, L in units.items()}
+    qarg = {u: {x['id']: x.get('arg') for x in L if 'id' in x} for u, L in units.items()}
+    for f in sorted(glob.glob(SPD + '*.json')):
+        u = f.split('/')[-1][:-5]
+        try: S = json.load(open(f, encoding='utf-8'))
+        except Exception as e: err.append(f'spiegazioni/{u}: JSON non valido ({e})'); continue
+        for t, d in S.items():
+            w = f'spiegazioni {u}:{t}'
+            if u == 'mate':
+                if not t.isdigit(): err.append(f'{w}: per la matematica la chiave è il numero della tappa')
+            elif t not in ARG_IDS.get(u, set()): err.append(f'{w}: argomento inesistente')
+            nodi = d.get('nodi', []); ids = [n.get('id') for n in nodi]
+            if not (4 <= len(nodi) <= 6): err.append(f'{w}: servono da 4 a 6 nodi')
+            if len(set(ids)) != len(ids): err.append(f'{w}: nodi con lo stesso id')
+            for n in nodi:
+                if not n.get('n') or not n.get('da'): err.append(f'{w}: nodo «{n.get("id")}» senza nome o senza parola sulla freccia')
+            if not d.get('centro', {}).get('n'): err.append(f'{w}: manca il centro')
+            rac = d.get('racconto', [])
+            if not (4 <= len(rac) <= 7): err.append(f'{w}: il racconto deve avere da 4 a 7 schermate')
+            nel = set()
+            for k, sl in enumerate(rac):
+                if words(sl.get('t', '')) > 30: err.append(f'{w}: schermata {k + 1} oltre 30 parole')
+                for n in sl.get('nodi', []):
+                    if n not in ids: err.append(f'{w}: schermata {k + 1} cita il nodo inesistente «{n}»')
+                    nel.add(n)
+                if guarda(sl.get('t', '').lower(), GUARD_SALUTE): err.append(f'{w}: termine vietato')
+            for n in ids:
+                if n not in nel: err.append(f'{w}: il nodo «{n}» non compare nel racconto')
+            cov = set()
+            for r in d.get('ritrova', []):
+                if r.get('nodo') not in ids: err.append(f'{w}: ritrova su un nodo inesistente')
+                sc = [str(x).strip().lower() for x in r.get('scelte', [])]
+                if len(sc) != 3 or len(set(sc)) != 3: err.append(f'{w}: ritrova vuole 3 scelte diverse')
+                cov.add(r.get('nodo'))
+            for q, n in (d.get('domande') or {}).items():
+                if q not in qids.get(u, set()): err.append(f'{w}: domanda «{q}» inesistente')
+                elif qarg[u][q] != t: err.append(f'{w}: la domanda «{q}» è di un altro argomento')
+                if n not in ids: err.append(f'{w}: la domanda «{q}» punta al nodo inesistente «{n}»')
+                cov.add(n)
+            if d.get('tutte'):
+                if d['tutte'] not in ids: err.append(f'{w}: «tutte» punta a un nodo inesistente')
+                cov.add(d['tutte'])
+            for n in ids:
+                if n not in cov: warn.append(f'{w}: il nodo «{n}» non ha né domande né ritrova')
+            for c in d.get('collegamenti', []):
+                cu, _, ct = str(c).partition(':')
+                if cu == 'mate': ok = ct.isdigit()
+                else: ok = ct in ARG_IDS.get(cu, set())
+                if not ok: err.append(f'{w}: collegamento «{c}» inesistente')
+                if cu == u and ct == t: err.append(f'{w}: collegamento a se stesso')
     # registro dei codici: un codice registrato non può sparire
     reg_f, rit_f = QDIR + '_codici.txt', QDIR + '_ritirati.txt'
     reg = set(open(reg_f).read().split()) if os.path.exists(reg_f) else set()
