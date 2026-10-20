@@ -367,7 +367,10 @@ function endLesson() {
     '<button type="button" class="btn" id="ls-end" style="--bc:var(--c4)">Continua</button></div>';
   if (typeof figShow === 'function') figShow($('ls-fig'), figUnlock(L.u ? L.u.id : null));
   $('ls-end').addEventListener('click', () => {
-    LESSON = null; box.hidden = true; document.body.classList.remove('in-lesson'); go('home');
+    LESSON = null; box.hidden = true; document.body.classList.remove('in-lesson');
+    /* argomento con la mappa: dopo le domande la mappa si accende (spiega.js) */
+    if (L.spKey && typeof spDopo === 'function') { go('materia'); setTimeout(() => spDopo(L), 250); return; }
+    go('home');
     if (goalTxt) setTimeout(goalParty, 400);
     else if (dg.ms >= GOAL.minuti * 60000 && !dg.pausa) { dg.pausa = true; store.set('path-day', dg); setTimeout(pauseTip, 400); }
   });

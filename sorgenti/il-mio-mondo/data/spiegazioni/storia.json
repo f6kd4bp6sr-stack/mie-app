@@ -1,0 +1,131 @@
+{
+ "egizi": {
+  "centro": {
+   "n": "L'antico Egitto",
+   "ic": "🏜️",
+   "sotto": "circa 5000 anni fa"
+  },
+  "nodi": [
+   {
+    "id": "nilo",
+    "n": "il Nilo",
+    "ic": "🌊",
+    "sotto": "le piene lasciano fango fertile",
+    "da": "viveva grazie a un fiume:"
+   },
+   {
+    "id": "faraoni",
+    "n": "i faraoni",
+    "ic": "👑",
+    "sotto": "i re dell'antico Egitto",
+    "da": "aveva come re"
+   },
+   {
+    "id": "dei",
+    "n": "tanti dei",
+    "ic": "☀️",
+    "sotto": "Ra era il dio del Sole",
+    "da": "pregava"
+   },
+   {
+    "id": "piramidi",
+    "n": "le piramidi",
+    "ic": "🔺",
+    "sotto": "tombe di alcuni faraoni",
+    "da": "costruiva"
+   },
+   {
+    "id": "mummie",
+    "n": "la mummificazione",
+    "ic": "🏺",
+    "sotto": "per conservare i corpi",
+    "da": "conservava i corpi con"
+   },
+   {
+    "id": "scrittura",
+    "n": "i geroglifici",
+    "ic": "📜",
+    "sotto": "incisi sulla pietra e scritti sul papiro",
+    "da": "scriveva con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Circa 5000 anni fa, lungo il fiume Nilo, nacque una grande civiltà: l'antico Egitto. Tutto intorno c'era il deserto.",
+    "nodi": [
+     "nilo"
+    ]
+   },
+   {
+    "t": "Ogni anno il Nilo si gonfiava: era la piena. Quando l'acqua si ritirava, lasciava un fango fertile, perfetto per coltivare.",
+    "nodi": [
+     "nilo"
+    ]
+   },
+   {
+    "t": "Gli Egizi erano governati da un re potentissimo, il faraone. Pregavano tanti dei: Ra era il dio del Sole.",
+    "nodi": [
+     "faraoni",
+     "dei"
+    ]
+   },
+   {
+    "t": "Per alcuni faraoni furono costruite tombe enormi: le piramidi. Le più famose sono quelle di Giza, vicino alla Grande Sfinge.",
+    "nodi": [
+     "piramidi"
+    ]
+   },
+   {
+    "t": "Gli Egizi credevano in una vita dopo la morte. Per questo conservavano i corpi con la mummificazione.",
+    "nodi": [
+     "mummie"
+    ]
+   },
+   {
+    "t": "Scrivevano con i geroglifici, piccoli disegni. Li incidevano sulla pietra di templi e tombe. Gli scribi li scrivevano anche sul papiro, fogli fatti con una pianta del Nilo.",
+    "nodi": [
+     "scrittura"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "mummie",
+    "scelte": [
+     "la mummificazione",
+     "il fuoco",
+     "la neve"
+    ]
+   },
+   {
+    "nodo": "nilo",
+    "scelte": [
+     "il Nilo",
+     "il Tevere",
+     "il Tamigi"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "geo:acque",
+   "arte:antica",
+   "geo:mondo"
+  ],
+  "domande": {
+   "9fywzh": "nilo",
+   "1svr2ll": "nilo",
+   "1x1hmwd": "faraoni",
+   "1wl3v7z": "faraoni",
+   "10k7mcw": "dei",
+   "1ce5fe9": "piramidi",
+   "vt1hhw": "piramidi",
+   "1qhzxg3": "mummie",
+   "fsgyw9": "scrittura",
+   "1ndcqba": "scrittura",
+   "shts9t": "scrittura",
+   "4j1hss": "scrittura",
+   "sw0efu": "dei",
+   "8czciw": "nilo"
+  }
+ }
+}

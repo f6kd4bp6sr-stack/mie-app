@@ -1,0 +1,129 @@
+{
+ "acqua": {
+  "tipo": "ciclo",
+  "centro": {
+   "n": "Il ciclo dell'acqua",
+   "ic": "💧",
+   "sotto": "l'acqua viaggia sempre"
+  },
+  "nodi": [
+   {
+    "id": "sole",
+    "n": "il Sole",
+    "ic": "☀️",
+    "sotto": "scalda l'acqua",
+    "da": "tutto parte dal"
+   },
+   {
+    "id": "evaporazione",
+    "n": "l'evaporazione",
+    "ic": "♨️",
+    "sotto": "l'acqua diventa vapore e sale",
+    "da": "poi viene"
+   },
+   {
+    "id": "piante",
+    "n": "la traspirazione",
+    "ic": "🌿",
+    "sotto": "vapore che esce dalle foglie",
+    "da": "e anche"
+   },
+   {
+    "id": "nuvole",
+    "n": "le nuvole",
+    "ic": "☁️",
+    "sotto": "il vapore si raffredda: condensazione",
+    "da": "in alto si formano"
+   },
+   {
+    "id": "pioggia",
+    "n": "le precipitazioni",
+    "ic": "🌧️",
+    "sotto": "pioggia, neve o grandine",
+    "da": "poi cadono"
+   },
+   {
+    "id": "ritorno",
+    "n": "fiumi, mari e falde",
+    "ic": "🌊",
+    "sotto": "l'acqua torna giù",
+    "da": "e l'acqua torna in"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'acqua della Terra non sparisce: viaggia sempre, in un grande giro chiamato ciclo dell'acqua. A farlo girare è il Sole.",
+    "nodi": [
+     "sole"
+    ]
+   },
+   {
+    "t": "Il Sole scalda l'acqua di mari, laghi e fiumi. Un po' d'acqua diventa vapore, invisibile, e sale nell'aria: è l'evaporazione.",
+    "nodi": [
+     "evaporazione"
+    ]
+   },
+   {
+    "t": "Anche le piante mandano vapore nell'aria, dalle foglie: si chiama traspirazione.",
+    "nodi": [
+     "piante"
+    ]
+   },
+   {
+    "t": "In alto l'aria è più fredda. Il vapore si raffredda e torna in goccioline piccolissime: nascono le nuvole. È la condensazione.",
+    "nodi": [
+     "nuvole"
+    ]
+   },
+   {
+    "t": "Quando le gocce diventano grandi e pesanti, cadono: è la pioggia. Se fa freddo cade la neve. Durante i temporali, anche d'estate, può cadere la grandine.",
+    "nodi": [
+     "pioggia"
+    ]
+   },
+   {
+    "t": "L'acqua torna nei fiumi e nel mare; una parte filtra sottoterra, nelle falde. Quasi tutta l'acqua della Terra sta nei mari ed è salata.",
+    "nodi": [
+     "ritorno"
+    ]
+   },
+   {
+    "t": "Poi il Sole scalda di nuovo l'acqua, e il giro ricomincia!",
+    "nodi": [
+     "sole"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "evaporazione",
+    "scelte": [
+     "l'evaporazione",
+     "la digestione",
+     "la moltiplicazione"
+    ]
+   },
+   {
+    "nodo": "pioggia",
+    "scelte": [
+     "le precipitazioni",
+     "i sassi",
+     "le conchiglie"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "sci-energia:stati",
+   "sci-spazio:meteo",
+   "geo:acque"
+  ],
+  "domande": {
+   "i8wkk4": "sole",
+   "k87jli": "piante",
+   "h39p0x": "nuvole",
+   "5ms2bk": "ritorno",
+   "1bns9d2": "ritorno",
+   "lxx0e3": "ritorno"
+  }
+ }
+}

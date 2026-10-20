@@ -26,6 +26,7 @@ app/
 ├── tools/sorgenti_pubbliche.py  copia le sorgenti in /sorgenti/il-mio-mondo/ del repository (senza revisioni di lavoro, con controllo dei dati personali)
 ├── README.md           memoria dell'app: indirizzo, dati sul dispositivo, collegamenti, regole
 ├── data/
+│   ├── spiegazioni/    racconto + mappa concettuale per argomento (pilota: 6), controllati da tools/controlla.py
 │   ├── domande/argomenti.json  nomi e icone degli argomenti di ogni materia (ogni domanda ha il campo «arg»)
 │   ├── domande/quiz/   ★ FONTE UNICA delle domande: un file per materia, una scheda per domanda
 │   │                   _codici.txt = registro dei codici (non modificare), _ritirati.txt = codici tolti apposta
