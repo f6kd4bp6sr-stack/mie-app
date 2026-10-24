@@ -28,7 +28,7 @@ Spiegazioni con racconto e mappa concettuale (22 argomenti): `data/spiegazioni/<
 Nome, compleanno, aspetto, copione del teatro, capsula del tempo e dati della classe (🗓️ La mia classe) restano solo sull'iPad e nelle sue copie: **non vanno mai nel repository**.
 
 ## Collegamento con Pianificazione
-L'app carica `licenze/mondo-sync.js` (pubblicato da Pianificazione) e invia ai genitori, cifrati, contatori dello studio, percorso e diario. Permessi di rete: solo `https://api.github.com` (`connect-src`). La copia completa automatica è cifrata in un gist privato (`copia.json` + `copia-N.part`).
+L'app carica `licenze/mondo-sync.js` (pubblicato da Pianificazione) e invia ai genitori, cifrati, contatori dello studio, percorso e diario. Dal 24/10/2026 (versione 2): gist **segreto**, chiave casuale di 256 bit dal QR `MMQR1.{t,g,k,v:2}` (`msync-cfg.v = 2`); un collegamento vecchio fa cancellare il suo gist pubblico e si mette in «da rinnovare» (`need`), senza più inviare niente. Permessi di rete: solo `https://api.github.com` (`connect-src`). La copia completa automatica è cifrata in un gist privato (`copia.json` + `copia-N.part`).
 
 ## Costruire e pubblicare
 `python3 build.py` (con il controllo automatico `tools/controlla.py`) → cartella `mondo-out`; `sh deploy.sh "messaggio"` pubblica i file della cartella principale e copia queste sorgenti in `/sorgenti/il-mio-mondo/`. Non tocca `/licenze/`, `/semestre/` né `/sorgenti/semestre/`.
