@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="07e4db6eaf";</script>
+<script>window.APP_VERSION="d2ca847bbc";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -1052,6 +1052,16 @@
 .cl-lab input { font: inherit; font-size: 17px; padding: 10px 12px; border-radius: 12px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); }
 #cl-add { margin-top: 10px; }
 .cl-foot { max-width: 760px; margin: 18px 0 8px; }
+.cl-det { border-color: color-mix(in srgb, #ff9f1a 45%, var(--line)); background: color-mix(in srgb, #ff9f1a 6%, var(--surface)); }
+.cl-scopri { color: #b35c00; border-color: color-mix(in srgb, #ff9f1a 50%, var(--line)); background: color-mix(in srgb, #ff9f1a 12%, var(--surface)); }
+.cl-nota { color: #7a3fa0; border-color: color-mix(in srgb, #a879ff 45%, var(--line)); background: color-mix(in srgb, #a879ff 10%, var(--surface)); }
+.cl-tipi { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 2px; }
+.cl-lab small { color: var(--ink-soft); font-weight: 700; }
+.dn-row { display: grid; gap: 3px; width: 100%; text-align: left; font: inherit; background: var(--surface-2, #f4f6f8); border: 2px solid var(--line); border-radius: 14px; padding: 9px 12px; margin: 6px 0; cursor: pointer; color: var(--ink); }
+.dn-row small { color: var(--ink-soft); font-weight: 800; } .dn-row span { font-weight: 700; }
+.dn-row.trip { border-color: color-mix(in srgb, #58c46b 45%, var(--line)); }
+.df-note textarea, .cl-lab textarea { width: 100%; box-sizing: border-box; border: 2px solid var(--line); border-radius: 18px; padding: 12px 14px; font: inherit; font-weight: 700; font-size: 17px; background: var(--surface-2); color: var(--ink); resize: vertical; }
+.df-note { border-top: 2px dashed var(--line); padding-top: 12px; }
   /* =================== 🎂 FESTA DI COMPLEANNO =================== */
   body.fs-lock { overflow: hidden; }
   .fs { position: fixed; inset: 0; z-index: 86; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
@@ -8762,6 +8772,44 @@ function firstSchoolDayAfter(s) {
 }
 const diary = () => store.get('diary', {});
 const moodOf = id => MOODS.find(m => m.id === id);
+/* 📝 la nota del giorno: una domanda diversa ogni giorno per pensarci su (si può cambiare con 🔄) */
+const NOTE_Q = ['Oggi ho imparato che…', 'Una cosa che oggi ho fatto da sola…', 'La parte più bella della giornata è stata…', 'Una cosa difficile che ho provato a fare…',
+  'Oggi sono stata gentile con qualcuno quando…', 'Qualcuno è stato gentile con me quando…', 'Una domanda che mi è venuta oggi…', 'Domani voglio provare a…',
+  'Una cosa che mi ha fatto ridere…', 'Oggi ho parlato con qualcuno di…', 'Se potessi rifare una cosa di oggi, cambierei…', 'Una cosa di cui sono fiera…',
+  'Una volta che ho dato una mano…', 'Oggi dico grazie per…', 'Fuori ho notato… (il cielo, le piante, gli animali)', 'Che cosa mi ha dato energia oggi?',
+  'Una cosa che voglio raccontare a mamma o papà…', 'Una cosa nuova che ho scoperto su di me…'];
+const noteQOf = (key, shift) => NOTE_Q[(Math.floor(fromIso(key) / 86400000) + (shift || 0)) % NOTE_Q.length];
+/* 🚌 il racconto di un'uscita o di un appuntamento: 4 domande guida, salvato nel giorno dell'uscita (campo ev) */
+const TRIP_Q = ['Che cosa abbiamo fatto?', 'La cosa che mi è piaciuta di più…', 'Una cosa nuova che ho imparato…', 'Una domanda che mi è venuta…'];
+const tripNote = (day, id) => ((diary()[day] || {}).ev || {})[id] || null;
+function openTripNote(day, id, title, onDone) {
+  const old = tripNote(day, id), a = (old && old.a) || [];
+  openModal('<div class="big" style="font-size:24px">📝 Com’è andata?</div><p style="font-weight:800;margin:4px 0">' + esc(title) + ' · ' + esc(fmtDay(day)) + '</p><p class="df-ask">Rispondi solo a quello che vuoi, con parole tue. ' + esc(D.name) + ' è curioso!</p>' +
+    '<p class="note-s">Con almeno 5 parole ' + esc(D.name) + ' prende +3 🔥.</p>' + TRIP_Q.map((q, k) => '<label class="cl-lab">' + esc(q) + '<textarea id="tn-' + k + '" rows="2" maxlength="300">' + esc(a[k] || '') + '</textarea></label>').join('') +
+    '<div class="sp-row"><button type="button" class="btn ghost" id="tn-x">Chiudi</button><button type="button" class="btn" id="tn-ok" style="--bc:var(--c1)">Salva nel diario</button></div>', ['var(--c1)', 'var(--c1-soft)']);
+  $('tn-x').addEventListener('click', closeModal);
+  $('tn-ok').addEventListener('click', () => {
+    const ans = TRIP_Q.map((q, k) => $('tn-' + k).value.trim().slice(0, 300));
+    if (!ans.some(Boolean)) { floatText($('tn-ok'), 'Scrivi almeno una risposta'); return; }
+    const words = ans.join(' ').split(/\s+/).filter(Boolean).length;
+    const all = diary(), e = all[day] || {}; e.ev = e.ev || {};
+    const first = !e.ev[id] || !e.ev[id].r;
+    const paid = first && words >= 5;
+    e.ev[id] = { t: title, a: ans, r: paid || !first ? 1 : 0 }; all[day] = e; store.set('diary', all);
+    if (paid) gain(3, $('tn-ok'));
+    ding(); closeModal();
+    toastV2(D.name + ': grazie per avermelo raccontato! Scrivere aiuta a ricordare. 🐉');
+    if (onDone) onDone();
+  });
+}
+/* tutte le note scritte, dalla più recente */
+function diaryNotes() {
+  const dd = diary(), out = [];
+  Object.keys(dd).sort().reverse().forEach(k => { const e = dd[k];
+    Object.keys(e.ev || {}).forEach(id => out.push({ day: k, id, kind: 'trip', t: e.ev[id].t, x: e.ev[id].a.filter(Boolean).join(' · ') }));
+    if (e.nx) out.push({ day: k, kind: 'day', t: e.nq || 'La nota del giorno', x: e.nx }); });
+  return out;
+}
 function downStreak() {
   const dd = diary(), t = todayIso();
   const keys = Object.keys(dd).filter(k => k <= t && dd[k].m).sort().reverse();
@@ -8778,7 +8826,8 @@ function downStreak() {
 /* ---------- Scheda per scrivere un giorno nel diario ---------- */
 function dayForm(box, key, onSaved) {
   const dd = diary();
-  const e = Object.assign({ p: null, m: null, f: 3, w: '' }, dd[key] || {});
+  const e = Object.assign({ p: null, m: null, f: 3, w: '', nx: '' }, dd[key] || {});
+  let qShift = 0; if (!e.nq) e.nq = noteQOf(key);
   const school = isSchoolDay(key), h = holOf(key), isToday = key === todayIso();
   const streak = downStreak();
   const render = () => {
@@ -8796,20 +8845,27 @@ function dayForm(box, key, onSaved) {
         '<div class="df-sec"><label class="df-l" for="df-why">Perché? ' + sayBtn(m.ask) + '</label><p class="df-ask">' + esc(m.ask) + '</p>' +
         (strong ? '<div class="explain" style="background:var(--c6-soft);text-align:left"><b>Dillo forte! 💜</b> Prova a scrivere tre cose: <b>che cosa è successo</b>, <b>che cosa senti nel corpo</b> (pancia stretta? lacrime? cuore veloce?) e <b>che cosa ti farebbe stare meglio</b>. Poi leggilo ad alta voce a mamma o papà.</div>' : '') +
         '<textarea id="df-why" maxlength="500" rows="' + (strong ? 6 : 3) + '" placeholder="' + (strong ? 'Oggi mi sento… perché… Nel corpo sento… Mi aiuterebbe…' : 'Scrivi qui con parole tue…') + '">' + esc(e.w) + '</textarea></div>' : '') +
-      '<div class="row center" style="margin-top:14px"><button type="button" class="btn" id="df-save" style="--bc:var(--c1)"' + (e.m || e.p ? '' : ' disabled') + '>Salva nel diario</button></div>';
+      '<div class="df-sec df-note"><div class="df-l">📝 La mia nota <span class="df-hint">per pensarci su · non servono i nomi</span></div><p class="df-ask">' + esc(e.nq) + ' <button type="button" class="btn small ghost" id="df-nq" aria-label="Un’altra domanda">🔄</button></p>' +
+        '<textarea id="df-nx" maxlength="600" rows="3" placeholder="Scrivi qui con parole tue…">' + esc(e.nx) + '</textarea></div>' +
+      '<div class="row center" style="margin-top:14px"><button type="button" class="btn" id="df-save" style="--bc:var(--c1)">Salva nel diario</button></div>';
     box.querySelectorAll('[data-p]').forEach(b => b.addEventListener('click', () => { e.p = e.p === b.dataset.p ? null : b.dataset.p; keep(); render(); }));
     box.querySelectorAll('[data-m]').forEach(b => b.addEventListener('click', () => { keep(); e.m = b.dataset.m; render(); }));
     box.querySelectorAll('[data-f]').forEach(b => b.addEventListener('click', () => { keep(); e.f = +b.dataset.f; render(); }));
     box.querySelector('#df-save').addEventListener('click', save);
+    box.querySelector('#df-nq').addEventListener('click', () => { keep(); if (!e.nx.trim()) { qShift++; e.nq = noteQOf(key, qShift * 7); render(); } else floatText(box.querySelector('#df-nq'), 'Hai già scritto: tieni questa!'); });
   };
-  const keep = () => { const t = box.querySelector('#df-why'); if (t) e.w = t.value; };
+  const keep = () => { const t = box.querySelector('#df-why'); if (t) e.w = t.value; const n = box.querySelector('#df-nx'); if (n) e.nx = n.value; };
   function save() {
-    keep(); e.w = e.w.trim().slice(0, 500);
-    const all = diary();
+    keep(); e.w = e.w.trim().slice(0, 500); e.nx = e.nx.trim().slice(0, 600);
+    if (!e.m && !e.p && !e.nx) { floatText(box.querySelector('#df-save'), 'Scegli come ti senti o scrivi la nota'); return; }
+    const all = diary(), cur = all[key] || {};
+    if (cur.ev) e.ev = cur.ev;
     const words = e.w.split(/\s+/).filter(Boolean).length;
     let bonus = 0;
     if (e.m && !e.r) { bonus += 2; e.r = 1; }
     if (words >= 4 && !e.rw) { bonus += 3; e.rw = 1; }
+    if (e.nx.split(/\s+/).filter(Boolean).length >= 5 && !e.rn) { bonus += 3; e.rn = 1; }
+    if (!e.nx) delete e.nq;
     all[key] = e; store.set('diary', all);
     const btn = box.querySelector('#df-save');
     if (bonus) gain(bonus, btn);
@@ -8820,7 +8876,7 @@ function dayForm(box, key, onSaved) {
 }
 function dragonReply(e) {
   const m = moodOf(e.m), nm = D.name;
-  if (!m) return 'Segnato! Grazie, ' + NAME + '.';
+  if (!m) return e.nx ? 'Che bella nota! Rileggerla tra qualche mese sarà come aprire una scatola di ricordi.' : 'Segnato! Grazie, ' + NAME + '.';
   if (m.k === 'up') return 'Evviva! ' + nm + ' fa una capriola di gioia. Quando racconti le cose belle, le vivi due volte!';
   if (m.k === 'mid') return 'Grazie di avermelo detto. Anche le giornate normali sono importanti: domani sarà una pagina nuova.';
   if (m.k === 'tired') return 'Anche i draghi si stancano! Stasera nanna presto: il sonno ricarica il corpo e il cervello.';
@@ -8859,7 +8915,9 @@ PAGES.diario = el => {
         (st >= 3 ? '<div class="card" style="--kc:var(--c6);--ks:var(--c6-soft)">' + secHead('💜', 'Da ' + st + ' giorni ti senti giù', 'Succede a tutti. Adesso però è il momento di dirlo più forte.', 'var(--c6-soft)') +
           '<ul class="feel-list"><li><b>Dillo ad alta voce</b> a mamma, papà o alla maestra: «Da qualche giorno mi sento… perché…».</li><li><b>Disegna</b> la tua emozione: che colore ha? che forma?</li><li><b>Scrivi una lettera a ' + esc(D.name) + '</b> nel campo «Perché?», più lunga del solito.</li><li><b>Fai 3 respiri del drago</b> e una pausa movimento: il corpo aiuta la testa.</li></ul>' +
           '<p style="font-weight:800;margin:8px 0 0">Non devi tenerti tutto dentro: chi ti vuole bene vuole saperlo. 🤗</p></div>' : '') +
-        '<div class="den mini-den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '"><div style="width:110px;flex:none">' + dragonSVG(lv, D.color, 'bob') + '</div><div style="min-width:0"><b>' + esc(D.name) + ' ascolta</b><p>Ogni emozione che racconti dà <b>+2 🔥</b>, e se scrivi anche il perché <b>+3 🔥</b> in più. Felice o triste vale uguale: conta il coraggio di dirlo.</p></div></div>' +
+        '<div class="den mini-den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '"><div style="width:110px;flex:none">' + dragonSVG(lv, D.color, 'bob') + '</div><div style="min-width:0"><b>' + esc(D.name) + ' ascolta</b><p>Ogni emozione che racconti dà <b>+2 🔥</b>, se scrivi anche il perché <b>+3 🔥</b>, la <b>📝 nota del giorno</b> altri <b>+3 🔥</b> e il racconto di un’uscita <b>+3 🔥</b>. Felice o triste vale uguale: conta il coraggio di dirlo.</p></div></div>' +
+        '<div class="card" id="d-trips-card" hidden>' + secHead('🚌', 'Com’è andata?', 'Racconta le uscite e gli appuntamenti della classe', 'var(--c4-soft)') + '<div id="d-trips"></div></div>' +
+        '<div class="card">' + secHead('📒', 'Le mie note', 'Quello che hai scritto per pensarci su', 'var(--c2-soft)') + '<div id="d-notes"></div></div>' +
         '<div class="card">' + secHead('🧠', 'Le emozioni sono normali', 'Toccane una per scoprire di più', 'var(--c5-soft)') + '<div id="d-facts"></div></div>' +
       '</div>' +
     '</div>' +
@@ -8877,7 +8935,17 @@ PAGES.diario = el => {
 
   renderFacts($('d-facts'), FEEL_FACTS, 'feel');
   const reply = r => { $('d-reply').innerHTML = '<div class="explain" style="background:var(--c3-soft);text-align:left;margin-top:12px"><b>' + esc(D.name) + ':</b> ' + esc(r) + ' ' + sayBtn(r) + '</div>'; };
-  const startForm = () => dayForm($('d-form'), t, e => { if (e.m && moodOf(e.m).k === 'up') confetti(window.innerWidth / 2, window.innerHeight / 3, 24); drawCal(); stats(); reply(dragonReply(e)); });
+  const startForm = () => dayForm($('d-form'), t, e => { if (e.m && moodOf(e.m).k === 'up') confetti(window.innerWidth / 2, window.innerHeight / 3, 24); drawCal(); stats(); notes(); reply(dragonReply(e)); });
+  function notes() {
+    const L = diaryNotes();
+    $('d-notes').innerHTML = L.length ? L.slice(0, 8).map(n => '<button type="button" class="dn-row" data-nd="' + n.day + '"' + (n.kind === 'trip' ? ' data-nid="' + esc(n.id) + '" data-nt="' + esc(n.t) + '"' : '') + '><small>' + esc(fmtDay(n.day)) + ' · ' + (n.kind === 'trip' ? '🚌 ' : '📝 ') + esc(n.t) + '</small><span>' + esc(n.x.length > 140 ? n.x.slice(0, 140) + '…' : n.x) + '</span></button>').join('') + (L.length > 8 ? '<p class="note-s">' + (L.length === 9 ? 'E un’altra' : 'E altre ' + (L.length - 8)) + ' nel calendario (📝 sui giorni).</p>' : '')
+      : '<p class="note-s">Ancora nessuna nota. Ogni giorno nel diario c’è una domanda per pensarci su: rispondi con parole tue!</p>';
+    $('d-notes').querySelectorAll('[data-nd]').forEach(b => b.addEventListener('click', () => b.dataset.nid ? openTripNote(b.dataset.nd, b.dataset.nid, b.dataset.nt, notes) : openDay(b.dataset.nd)));
+    const P = typeof clPending === 'function' ? clPending() : [];
+    $('d-trips-card').hidden = !P.length;
+    $('d-trips').innerHTML = P.map(x => '<button type="button" class="dn-row trip" data-pd="' + x.day + '" data-pid="' + esc(x.id) + '" data-pt="' + esc(x.t) + '"><small>' + esc(fmtDay(x.day)) + '</small><span>' + esc((x.ic || '🚌') + ' ' + x.t) + ' → scrivi com’è andata</span></button>').join('');
+    $('d-trips').querySelectorAll('[data-pd]').forEach(b => b.addEventListener('click', () => openTripNote(b.dataset.pd, b.dataset.pid, b.dataset.pt, () => { notes(); drawCal(); })));
+  }
   startForm();
   if (dd[t] && dd[t].m) reply(dragonReply(dd[t]));
 
@@ -8892,7 +8960,7 @@ PAGES.diario = el => {
     for (let d = 1; d <= new Date(y, mo + 1, 0).getDate(); d++) {
       const s = y + '-' + pad(mo + 1) + '-' + pad(d), ho = holOf(s), e = all[s], w = new Date(y, mo, d).getDay();
       const cls = ['cal-d', isSchoolDay(s) ? 'school' : ho ? (ho.fest ? 'fest' : 'vac') : (w === 0 || w === 6) ? 'we' : 'off', s === t ? 'today' : '', s > t ? 'future' : ''].join(' ');
-      const mark = (e && e.m ? moodOf(e.m).ic : '') + (e && e.p === 'P' ? '<small>✅</small>' : e && e.p === 'A' ? '<small>🏠</small>' : '');
+      const mark = (e && e.m ? moodOf(e.m).ic : '') + (e && e.p === 'P' ? '<small>✅</small>' : e && e.p === 'A' ? '<small>🏠</small>' : '') + (e && (e.nx || (e.ev && Object.keys(e.ev).length)) ? '<small>📝</small>' : '');
       const tip = fmtDay(s) + (ho ? ', ' + ho.n : '') + (s === SCHOOL.start ? ', primo giorno di scuola' : '') + (s === SCHOOL.end ? ', ultimo giorno di scuola' : '');
       h += '<button type="button" class="' + cls + '" data-d="' + s + '" aria-label="' + esc(tip) + '"><span class="n">' + d + '</span>' +
         '<span class="mk">' + (mark || (bdayMD() && s.slice(5) === bdayMD() ? '🎂' : s === SCHOOL.start ? '🎒' : s === SCHOOL.end ? '🎉' : ho && s === ho.s ? ho.ic : '')) + '</span></button>';
@@ -8935,14 +9003,15 @@ PAGES.diario = el => {
   $('c-prev').addEventListener('click', () => { calMonth = calMonth[1] === 0 ? [calMonth[0] - 1, 11] : [calMonth[0], calMonth[1] - 1]; drawCal(); stats(); });
   $('c-next').addEventListener('click', () => { calMonth = calMonth[1] === 11 ? [calMonth[0] + 1, 0] : [calMonth[0], calMonth[1] + 1]; drawCal(); stats(); });
   $('c-sat').addEventListener('change', ev => { store.set('sat-school', ev.target.checked); PAGES.diario(el); });
-  drawCal(); stats(); hols();
+  drawCal(); stats(); hols(); notes();
 };
 
 /* scheda sulla Casa */
 function homeDiaryCard() {
   const t = todayIso(), { cur, next } = nextHoliday(t), e = diary()[t];
   const line = cur ? cur.ic + ' Sei in vacanza: ' + cur.n + '!' : next ? next.ic + ' ' + (daysBetween(t, next.s) === 1 ? 'Domani: ' + next.n + '!' : 'Mancano ' + daysBetween(t, next.s) + ' giorni a: ' + next.n) : '📅 Diario';
-  const sub = e && e.m ? 'Oggi ti senti ' + moodOf(e.m).n.toLowerCase() + ' ' + moodOf(e.m).ic + ' · tocca per il diario' : 'Come ti senti oggi? Raccontalo a ' + D.name + ' 💬';
+  const P = typeof clPending === 'function' ? clPending() : [];
+  const sub = P.length ? '🚌 Com’è andata: ' + P[0].t + '? Scrivilo nel diario' : e && e.m && !e.nx ? '📝 ' + noteQOf(t) : e && e.m ? 'Oggi ti senti ' + moodOf(e.m).n.toLowerCase() + ' ' + moodOf(e.m).ic + ' · tocca per il diario' : 'Come ti senti oggi? Raccontalo a ' + D.name + ' 💬';
   return '<button type="button" class="today" id="h-diary" style="--ts:var(--c1-soft);border-color:var(--c1)"><span class="ic" aria-hidden="true">📅</span><span class="tx">' + esc(line) + '<small>' + esc(sub) + '</small></span><span class="st" aria-hidden="true">→</span></button>';
 }
 
@@ -13179,15 +13248,56 @@ function ctTap(id, g) {
    (la parte dopo # non arriva mai al server); poi si possono aggiungere e togliere appuntamenti a mano.
    Forma dei dati: { v: 1, anno, eventi: [{ id, t, d: 'AAAA-MM-GG', ic, note, vai }], uscite: [{ t, ic, note, vai }],
    progetti: [{ g, ic, voci: [{ t, note, vai }] }], motto: { t, voci: [] } }
-   «vai» apre un argomento dell'app collegato (materia:argomento). */
+   «vai» apre un argomento dell'app collegato (materia:argomento).
+   Autonomia: è lei a completare le uscite («🕵️ da scoprire»: chiede alla maestra quando e dove, e lo scrive), ad aggiungere
+   verifiche e appuntamenti e, dopo, a raccontare nel 📅 Diario com'è andata (openTripNote). Campi scritti da lei:
+   d (quando), dove, porta (che cosa portare), mio (voce aggiunta da lei). Un link nuovo non cancella quello che ha scritto. */
 if (!$('p-classe')) { const s = document.createElement('section'); s.id = 'p-classe'; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); }
 const clData = () => { const c = store.get('classe', null); return c && typeof c === 'object' ? c : null; };
+const clSlug = t => 'u-' + String(t).toLowerCase().normalize('NFD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
+const clId = (x, kind) => x.id || (kind === 'u' ? clSlug(x.t) : 'e-' + clSlug(x.t).slice(2));
+/* tutte le voci con una data (appuntamenti + uscite di cui ha scoperto la data), con il loro posto nei dati */
+function clDated(C) {
+  const L = [];
+  (C.eventi || []).forEach((e, i) => { const d = clDay(e.d); if (d) L.push(Object.assign({}, e, { day: d, id: clId(e, 'e'), k: 'eventi', i })); });
+  (C.uscite || []).forEach((u, i) => { const d = clDay(u.d); if (d) L.push(Object.assign({ ic: '🚌' }, u, { day: d, id: clId(u, 'u'), k: 'uscite', i })); });
+  return L.sort((a, b) => a.day - b.day);
+}
+/* il racconto «Com’è andata?» si chiede per uscite, spettacoli e sport, non per verifiche e compiti */
+const clRacconta = x => x.k === 'uscite' || !['📝', '📚'].includes(x.ic);
+const clIsoOf = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+/* per il Diario: uscite e appuntamenti passati da poco (oggi e ultimi 14 giorni) senza ancora il racconto */
+function clPending() {
+  const C = clData(); if (!C) return [];
+  const t = clDay(todayIso());
+  return clDated(C).filter(x => clRacconta(x) && x.day <= t && Math.round((t - x.day) / 86400000) <= 14 && !x.noNote && !tripNote(clIsoOf(x.day), x.id)).map(x => ({ day: clIsoOf(x.day), id: x.id, t: x.t, ic: x.ic })).reverse();
+}
+/* per le novità del drago: il drago chiede a lei */
+function clNews() {
+  const C = clData(); if (!C) return [];
+  const N = [], t = clDay(todayIso()), D2 = clDated(C);
+  const tom = D2.find(x => Math.round((x.day - t) / 86400000) === 1);
+  if (tom) N.push({ k: 'cl-dom', ic: '🎒', t: 'Domani: ' + tom.t, s: tom.porta ? 'Da portare: ' + tom.porta : 'Preparalo stasera!', go: () => go('classe') });
+  const P = clPending(); if (P.length) N.push({ k: 'cl-note', ic: '📝', t: 'Com’è andata «' + P[0].t + '»?', s: 'Raccontalo nel diario', go: () => openTripNote(P[0].day, P[0].id, P[0].t) });
+  const U = (C.uscite || []).filter(u => !clDay(u.d));
+  if (U.length) { const u = U[Math.floor(clDay(todayIso()) / 86400000) % U.length]; N.push({ k: 'cl-det', ic: '🕵️', t: 'Missione detective: quando sarà «' + u.t + '»?', s: 'Chiedilo alla maestra e scrivilo tu (+3 💎)', go: () => go('classe') }); }
+  return N;
+}
 const clDay = s => { const m = String(s || '').match(/^(\d{4})-(\d\d)-(\d\d)$/); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; };
 function clDecode(b64) {
   const s = b64.replace(/-/g, '+').replace(/_/g, '/'), bin = atob(s + '==='.slice((s.length + 3) % 4));
   const bytes = Uint8Array.from(bin, c => c.charCodeAt(0));
   const o = JSON.parse(new TextDecoder().decode(bytes));
   if (!o || typeof o !== 'object' || o.v !== 1) throw new Error('formato');
+  return o;
+}
+/* un link nuovo tiene quello che ha scritto lei: le sue voci e quando, dove e che cosa portare delle uscite */
+function clMerge(o, old) {
+  if (!old) return o;
+  const mine = (old.eventi || []).filter(e => e.mio), ids = new Set((o.eventi || []).map(e => clId(e, 'e')));
+  o.eventi = (o.eventi || []).concat(mine.filter(e => !ids.has(clId(e, 'e'))));
+  (o.eventi || []).forEach(e => { const p = (old.eventi || []).find(x => clId(x, 'e') === clId(e, 'e')); if (p) ['dove', 'porta'].forEach(k => { if (p[k] && !e[k]) e[k] = p[k]; }); });
+  (o.uscite || []).forEach(u => { const p = (old.uscite || []).find(x => clId(x, 'u') === clId(u, 'u')); if (p) ['d', 'dove', 'porta', 'gem'].forEach(k => { if (p[k] && !u[k]) u[k] = p[k]; }); });
   return o;
 }
 /* link speciale: chiede conferma, salva sull'iPad e toglie i dati dall'indirizzo */
@@ -13200,7 +13310,7 @@ function clImport(code) {
     const n = (o.eventi || []).length + (o.uscite || []).length + (o.progetti || []).reduce((a, g) => a + (g.voci || []).length, 0);
     openModal('<div style="font-size:50px">🗓️</div><div class="big" style="font-size:24px">La mia classe</div><p style="font-weight:700">Salvo su questo iPad ' + n + ' voci: progetti, uscite e date' + (o.anno ? ' dell’anno ' + esc(o.anno) : '') + '.' + (clData() ? ' Le voci di prima vengono sostituite.' : '') + '</p><div class="sp-row"><button type="button" class="btn ghost" id="cl-no">Annulla</button><button type="button" class="btn" id="cl-si" data-focus>✅ Salva</button></div>');
     $('cl-no').addEventListener('click', closeModal);
-    $('cl-si').addEventListener('click', () => { store.set('classe', o); closeModal(); go('classe'); });
+    $('cl-si').addEventListener('click', () => { store.set('classe', clMerge(o, clData())); closeModal(); go('classe'); });
   }, 700);
 }
 clImport(); window.addEventListener('hashchange', () => clImport());
@@ -13218,31 +13328,56 @@ PAGES.classe = el => {
     el.innerHTML = head + '<div class="cl-card"><p>Qui mamma o papà possono mettere i progetti e le uscite della classe, con le date importanti.</p><p class="cl-mini">Si caricano con il link speciale che papà apre su questo iPad. Puoi anche cominciare da sola.</p><button type="button" class="v2-btn" id="cl-add" style="max-width:420px">➕ Aggiungi un appuntamento</button></div>' + clFoot;
     $('cl-add').addEventListener('click', () => clAddForm()); $('cl-paste').addEventListener('click', clPaste); return;
   }
-  const ev = (C.eventi || []).map(e => Object.assign({}, e, { day: clDay(e.d) })).filter(e => e.day).sort((a, b) => a.day - b.day);
+  const ev = clDated(C), todo = (C.uscite || []).map((u, i) => ({ u, i })).filter(x => !clDay(x.u.d));
   const next = ev.filter(e => e.day >= today), past = ev.filter(e => e.day < today);
   const when = e => { const n = Math.round((e.day - today) / 86400000); return n === 0 ? 'oggi!' : n === 1 ? 'domani' : n > 0 ? 'tra ' + n + ' giorni' : ''; };
   const date = e => e.day.getDate() + ' ' + MESI[e.day.getMonth()];
-  const evRow = (e, old) => '<div class="cl-ev' + (old ? ' old' : '') + '"><span class="cl-ic">' + esc(e.ic || '📌') + '</span><div class="cl-tx"><b>' + esc(e.t) + '</b><small>' + date(e) + (old ? '' : ' · <em>' + when(e) + '</em>') + (e.note ? ' · ' + esc(e.note) : '') + '</small>' + clVai(e.vai) + '</div>' + (e.mio ? '<button type="button" class="cl-del" data-del="' + esc(e.id) + '" aria-label="Togli">✕</button>' : '') + '</div>';
+  const evRow = (e, old) => { const day = clIsoOf(e.day), canTn = clRacconta(e) && (old || (e.day - today) === 0), tn = canTn ? tripNote(day, e.id) : null;
+    return '<div class="cl-ev' + (old ? ' old' : '') + '"><span class="cl-ic">' + esc(e.ic || '📌') + '</span><div class="cl-tx"><b>' + esc(e.t) + '</b><small>' + date(e) + (old ? '' : ' · <em>' + when(e) + '</em>') + (e.note ? ' · ' + esc(e.note) : '') + '</small>' +
+      (e.dove ? '<small>📍 ' + esc(e.dove) + '</small>' : '') + (e.porta ? '<small>🎒 Da portare: ' + esc(e.porta) + '</small>' : '') + clVai(e.vai) +
+      (canTn ? '<button type="button" class="cl-vai cl-nota" data-tn="' + day + '|' + esc(e.id) + '" data-tt="' + esc(e.t) + '">' + (tn ? '📝 Il mio racconto ✓' : '📝 Com’è andata? Scrivilo nel diario') + '</button>' : '') + '</div>' +
+      '<button type="button" class="cl-del" data-ed="' + e.k + '|' + e.i + '" aria-label="Modifica">✏️</button>' + (e.mio && e.k === 'eventi' ? '<button type="button" class="cl-del" data-del="' + esc(e.id) + '" aria-label="Togli">✕</button>' : '') + '</div>'; };
   el.innerHTML = head +
     (next[0] ? '<div class="cl-hero"><span>' + esc(next[0].ic || '📌') + '</span><div><small>Il prossimo appuntamento</small><b>' + esc(next[0].t) + '</b><em>' + date(next[0]) + ' · ' + when(next[0]) + '</em></div></div>' : '') +
     '<div class="cl-card"><h2>📆 Le date</h2>' + (next.length ? next.map(e => evRow(e)).join('') : '<p class="cl-mini">Nessuna data in arrivo.</p>') +
       '<button type="button" class="btn ghost small" id="cl-add">➕ Aggiungi un appuntamento</button>' +
       (past.length ? '<details class="cl-past"><summary>Già fatti (' + past.length + ')</summary>' + past.reverse().map(e => evRow(e, true)).join('') + '</details>' : '') + '</div>' +
-    ((C.uscite || []).length ? '<div class="cl-card"><h2>🚌 Le uscite dell’anno</h2><p class="cl-mini">Le date arrivano durante l’anno.</p>' + C.uscite.map(u => '<div class="cl-ev"><span class="cl-ic">' + esc(u.ic || '🚌') + '</span><div class="cl-tx"><b>' + esc(u.t) + '</b>' + (u.note ? '<small>' + esc(u.note) + '</small>' : '') + clVai(u.vai) + '</div></div>').join('') + '</div>' : '') +
+    (todo.length ? '<div class="cl-card cl-det"><h2>🕵️ Da scoprire</h2><p class="cl-mini">Sei tu la detective della classe: chiedi alla maestra <b>quando</b> e <b>dove</b> andrete, poi scrivilo qui. Ogni scoperta vale +3 💎.</p>' + todo.map(x => '<div class="cl-ev"><span class="cl-ic">' + esc(x.u.ic || '🚌') + '</span><div class="cl-tx"><b>' + esc(x.u.t) + '</b>' + (x.u.note ? '<small>' + esc(x.u.note) + '</small>' : '') + clVai(x.u.vai) + '<button type="button" class="cl-vai cl-scopri" data-ed="uscite|' + x.i + '">✏️ Ho scoperto quando!</button></div></div>').join('') + '</div>' : '') +
     ((C.progetti || []).length ? '<div class="cl-card"><h2>🧩 I progetti</h2>' + C.progetti.map(g => '<h3>' + esc((g.ic ? g.ic + ' ' : '') + g.g) + '</h3>' + (g.voci || []).map(v => '<div class="cl-pr"><b>' + esc(v.t) + '</b>' + (v.note ? '<small>' + esc(v.note) + '</small>' : '') + clVai(v.vai) + '</div>').join('')).join('') + '</div>' : '') +
     (C.motto ? '<div class="cl-card cl-motto"><h2>🧭 ' + esc(C.motto.t || 'Tutto funziona se…') + '</h2>' + (C.motto.sotto ? '<p>' + esc(C.motto.sotto) + '</p>' : '') + '<div class="cl-chips">' + (C.motto.voci || []).map(v => '<span>' + esc(v) + '</span>').join('') + '</div></div>' : '') + clFoot;
   $('cl-add').addEventListener('click', () => clAddForm()); $('cl-paste').addEventListener('click', clPaste);
   el.querySelectorAll('[data-vai]').forEach(b => b.addEventListener('click', () => spGoTopic(b.dataset.vai)));
+  el.querySelectorAll('[data-ed]').forEach(b => b.addEventListener('click', () => { const [k, i] = b.dataset.ed.split('|'); clAddForm(k, +i); }));
+  el.querySelectorAll('[data-tn]').forEach(b => b.addEventListener('click', () => { const [d, id] = b.dataset.tn.split('|'); openTripNote(d, id, b.dataset.tt, () => PAGES.classe(el)); }));
   el.querySelectorAll('[data-del]').forEach(b => b.addEventListener('click', () => { const c = clData(); c.eventi = (c.eventi || []).filter(e => e.id !== b.dataset.del); store.set('classe', c); PAGES.classe(el); }));
 };
-function clAddForm() {
-  openModal('<div class="big" style="font-size:22px">➕ Nuovo appuntamento</div><label class="cl-lab">Che cosa?<input id="cl-t" maxlength="60" placeholder="es. Verifica di storia"></label><label class="cl-lab">Quando?<input id="cl-d" type="date"></label><label class="cl-lab">Una nota (se vuoi)<input id="cl-n" maxlength="80" placeholder="es. portare il quaderno"></label><div class="sp-row"><button type="button" class="btn ghost" id="cl-x">Annulla</button><button type="button" class="btn" id="cl-ok">Salva</button></div>');
+/* ➕ nuovo appuntamento o ✏️ completa una voce (k = 'eventi' | 'uscite', i = posizione): lo scrive lei */
+const CL_TIPI = [['📝', 'verifica'], ['📚', 'compiti'], ['🚌', 'uscita'], ['🎭', 'spettacolo'], ['🏐', 'sport'], ['📌', 'altro']];
+function clAddForm(k, i) {
+  const C0 = clData(), x = k && C0 && C0[k] ? C0[k][i] : null, isU = k === 'uscite', disc = isU && x && !clDay(x.d);
+  let ic = x ? x.ic || (isU ? '🚌' : '📌') : '📝';
+  openModal('<div class="big" style="font-size:22px">' + (disc ? '🕵️ Hai scoperto quando?' : x ? '✏️ ' + esc(x.t) : '➕ Nuovo appuntamento') + '</div>' +
+    (disc ? '<p style="font-weight:700;margin:4px 0">' + esc(x.ic || '🚌') + ' ' + esc(x.t) + '</p>' : '') +
+    (x && isU ? '' : '<label class="cl-lab">✏️ Che cosa?<input id="cl-t" maxlength="60" placeholder="es. Verifica di storia" value="' + esc(x ? x.t : '') + '"></label>' +
+      '<div class="cl-tipi">' + CL_TIPI.map(t => '<button type="button" class="chip" data-ic="' + t[0] + '" aria-pressed="' + (t[0] === ic) + '">' + t[0] + ' ' + t[1] + '</button>').join('') + '</div>') +
+    '<label class="cl-lab">📅 Quando?<input id="cl-d" type="date" value="' + esc(x && x.d ? x.d : '') + '"></label>' +
+    '<label class="cl-lab">📍 Dove? <small>(se lo sai)</small><input id="cl-w" maxlength="60" placeholder="es. al museo, in palestra" value="' + esc(x && x.dove ? x.dove : '') + '"></label>' +
+    '<label class="cl-lab">🎒 Che cosa porto? <small>(se serve)</small><input id="cl-p" maxlength="80" placeholder="es. pranzo al sacco, quaderno" value="' + esc(x && x.porta ? x.porta : '') + '"></label>' +
+    (x && isU ? '' : '<label class="cl-lab">Una nota (se vuoi)<input id="cl-n" maxlength="80" value="' + esc(x && x.note ? x.note : '') + '"></label>') +
+    '<div class="sp-row"><button type="button" class="btn ghost" id="cl-x">Annulla</button><button type="button" class="btn" id="cl-ok">Salva</button></div>');
+  document.querySelectorAll('.cl-tipi [data-ic]').forEach(b => b.addEventListener('click', () => { ic = b.dataset.ic; document.querySelectorAll('.cl-tipi [data-ic]').forEach(c => c.setAttribute('aria-pressed', c === b)); }));
   $('cl-x').addEventListener('click', closeModal);
   $('cl-ok').addEventListener('click', () => {
-    const t = $('cl-t').value.trim(), d = $('cl-d').value; if (!t || !clDay(d)) { floatText($('cl-ok'), 'Scrivi che cosa e quando'); return; }
+    const t = $('cl-t') ? $('cl-t').value.trim() : x.t, d = $('cl-d').value, dove = $('cl-w').value.trim(), porta = $('cl-p').value.trim();
+    if (!t || (!clDay(d) && !(x && isU))) { floatText($('cl-ok'), 'Scrivi che cosa e quando'); return; }
     const c = clData() || { v: 1, eventi: [] }; c.eventi = c.eventi || [];
-    c.eventi.push({ id: 'm' + Date.now().toString(36), t, d, ic: '📌', note: $('cl-n').value.trim(), mio: true });
-    store.set('classe', c); closeModal(); go('classe');
+    if (x) { const y = c[k][i]; if (!isU) { y.t = t; y.ic = ic; y.note = $('cl-n').value.trim(); } if (clDay(d)) y.d = d; else delete y.d; y.dove = dove; y.porta = porta; if (isU && !y.id) y.id = clSlug(y.t); }
+    else c.eventi.push({ id: 'm' + Date.now().toString(36), t, d, ic, note: $('cl-n').value.trim(), dove, porta, mio: true });
+    store.set('classe', c);
+    const btn = $('cl-ok');
+    const prize = disc && clDay(d) && !x.gem; if (prize) { c[k][i].gem = 1; store.set('classe', c); Gems.add(3); try { cheer(btn, 'Brava detective!'); } catch (e) {} }
+    ding(); closeModal(); go('classe');
+    if (prize) toastV2('🕵️ Scoperta! +3 💎 — ' + D.name + ' la mette tra le date della classe.');
   });
 }
 
@@ -13289,6 +13424,10 @@ function newsItems() {
   const pg = Piggy.get(); if (pg.hist && pg.hist[0] && pg.hist[0].d === todayIso()) N.push({ k: 'pig', ic: '🐷', t: 'Il salvadanaio è cresciuto di ' + pg.hist[0].it + ' 💎', s: 'È l’interesse di chi risparmia', go: () => openShop() });
   const nx = nextUnitNeed && nextUnitNeed(); if (nx && nx.need <= 5) N.push({ k: 'unit', ic: '🔓', t: 'Quasi aperta: ' + nx.u.ic + ' ' + nx.u.name, s: 'Mancano ' + nx.need + (nx.need === 1 ? ' nozione' : ' nozioni'), go: () => go('home') });
   if (typeof vidOpen === 'function' && vidOpen()) { const v = vidState(); if (v.tickets > 0 && v.today < VID_MAX_DAY) N.push({ k: 'vid', ic: '🎬', t: v.tickets === 1 ? 'Hai un biglietto per un video' : 'Hai ' + v.tickets + ' biglietti per i video', s: 'Un premio per le tue lezioni', go: () => openVideos() }); }
+  /* 🗓️ La mia classe: il drago chiede a lei (date da scoprire, zaino per domani, com'è andata) */
+  if (typeof clNews === 'function') { try { N.push(...clNews()); } catch (e) {} }
+  /* 📝 la nota del giorno nel diario, dal pomeriggio */
+  try { const de = diary()[todayIso()]; if (new Date().getHours() >= 15 && !(de && de.nx)) N.push({ k: 'nota', ic: '📝', t: 'La nota di oggi: ' + noteQOf(todayIso()), s: 'Scrivila nel diario (+3 🔥)', go: () => go('diario') }); } catch (e) {}
   const b = birthday(); if (b && b.days <= 1) N.push({ k: 'bday', ic: '🎂', t: b.days === 0 ? 'Oggi è il tuo compleanno! Auguri!' : 'Domani è il tuo compleanno!', s: D.name + ' ha preparato una festa', go: b.days === 0 && typeof festaOpen === 'function' ? () => festaOpen() : null });
   return N;
 }

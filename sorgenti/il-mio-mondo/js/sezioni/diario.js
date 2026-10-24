@@ -76,6 +76,44 @@ function firstSchoolDayAfter(s) {
 }
 const diary = () => store.get('diary', {});
 const moodOf = id => MOODS.find(m => m.id === id);
+/* 📝 la nota del giorno: una domanda diversa ogni giorno per pensarci su (si può cambiare con 🔄) */
+const NOTE_Q = ['Oggi ho imparato che…', 'Una cosa che oggi ho fatto da sola…', 'La parte più bella della giornata è stata…', 'Una cosa difficile che ho provato a fare…',
+  'Oggi sono stata gentile con qualcuno quando…', 'Qualcuno è stato gentile con me quando…', 'Una domanda che mi è venuta oggi…', 'Domani voglio provare a…',
+  'Una cosa che mi ha fatto ridere…', 'Oggi ho parlato con qualcuno di…', 'Se potessi rifare una cosa di oggi, cambierei…', 'Una cosa di cui sono fiera…',
+  'Una volta che ho dato una mano…', 'Oggi dico grazie per…', 'Fuori ho notato… (il cielo, le piante, gli animali)', 'Che cosa mi ha dato energia oggi?',
+  'Una cosa che voglio raccontare a mamma o papà…', 'Una cosa nuova che ho scoperto su di me…'];
+const noteQOf = (key, shift) => NOTE_Q[(Math.floor(fromIso(key) / 86400000) + (shift || 0)) % NOTE_Q.length];
+/* 🚌 il racconto di un'uscita o di un appuntamento: 4 domande guida, salvato nel giorno dell'uscita (campo ev) */
+const TRIP_Q = ['Che cosa abbiamo fatto?', 'La cosa che mi è piaciuta di più…', 'Una cosa nuova che ho imparato…', 'Una domanda che mi è venuta…'];
+const tripNote = (day, id) => ((diary()[day] || {}).ev || {})[id] || null;
+function openTripNote(day, id, title, onDone) {
+  const old = tripNote(day, id), a = (old && old.a) || [];
+  openModal('<div class="big" style="font-size:24px">📝 Com’è andata?</div><p style="font-weight:800;margin:4px 0">' + esc(title) + ' · ' + esc(fmtDay(day)) + '</p><p class="df-ask">Rispondi solo a quello che vuoi, con parole tue. ' + esc(D.name) + ' è curioso!</p>' +
+    '<p class="note-s">Con almeno 5 parole ' + esc(D.name) + ' prende +3 🔥.</p>' + TRIP_Q.map((q, k) => '<label class="cl-lab">' + esc(q) + '<textarea id="tn-' + k + '" rows="2" maxlength="300">' + esc(a[k] || '') + '</textarea></label>').join('') +
+    '<div class="sp-row"><button type="button" class="btn ghost" id="tn-x">Chiudi</button><button type="button" class="btn" id="tn-ok" style="--bc:var(--c1)">Salva nel diario</button></div>', ['var(--c1)', 'var(--c1-soft)']);
+  $('tn-x').addEventListener('click', closeModal);
+  $('tn-ok').addEventListener('click', () => {
+    const ans = TRIP_Q.map((q, k) => $('tn-' + k).value.trim().slice(0, 300));
+    if (!ans.some(Boolean)) { floatText($('tn-ok'), 'Scrivi almeno una risposta'); return; }
+    const words = ans.join(' ').split(/\s+/).filter(Boolean).length;
+    const all = diary(), e = all[day] || {}; e.ev = e.ev || {};
+    const first = !e.ev[id] || !e.ev[id].r;
+    const paid = first && words >= 5;
+    e.ev[id] = { t: title, a: ans, r: paid || !first ? 1 : 0 }; all[day] = e; store.set('diary', all);
+    if (paid) gain(3, $('tn-ok'));
+    ding(); closeModal();
+    toastV2(D.name + ': grazie per avermelo raccontato! Scrivere aiuta a ricordare. 🐉');
+    if (onDone) onDone();
+  });
+}
+/* tutte le note scritte, dalla più recente */
+function diaryNotes() {
+  const dd = diary(), out = [];
+  Object.keys(dd).sort().reverse().forEach(k => { const e = dd[k];
+    Object.keys(e.ev || {}).forEach(id => out.push({ day: k, id, kind: 'trip', t: e.ev[id].t, x: e.ev[id].a.filter(Boolean).join(' · ') }));
+    if (e.nx) out.push({ day: k, kind: 'day', t: e.nq || 'La nota del giorno', x: e.nx }); });
+  return out;
+}
 function downStreak() {
   const dd = diary(), t = todayIso();
   const keys = Object.keys(dd).filter(k => k <= t && dd[k].m).sort().reverse();
@@ -92,7 +130,8 @@ function downStreak() {
 /* ---------- Scheda per scrivere un giorno nel diario ---------- */
 function dayForm(box, key, onSaved) {
   const dd = diary();
-  const e = Object.assign({ p: null, m: null, f: 3, w: '' }, dd[key] || {});
+  const e = Object.assign({ p: null, m: null, f: 3, w: '', nx: '' }, dd[key] || {});
+  let qShift = 0; if (!e.nq) e.nq = noteQOf(key);
   const school = isSchoolDay(key), h = holOf(key), isToday = key === todayIso();
   const streak = downStreak();
   const render = () => {
@@ -110,20 +149,27 @@ function dayForm(box, key, onSaved) {
         '<div class="df-sec"><label class="df-l" for="df-why">Perché? ' + sayBtn(m.ask) + '</label><p class="df-ask">' + esc(m.ask) + '</p>' +
         (strong ? '<div class="explain" style="background:var(--c6-soft);text-align:left"><b>Dillo forte! 💜</b> Prova a scrivere tre cose: <b>che cosa è successo</b>, <b>che cosa senti nel corpo</b> (pancia stretta? lacrime? cuore veloce?) e <b>che cosa ti farebbe stare meglio</b>. Poi leggilo ad alta voce a mamma o papà.</div>' : '') +
         '<textarea id="df-why" maxlength="500" rows="' + (strong ? 6 : 3) + '" placeholder="' + (strong ? 'Oggi mi sento… perché… Nel corpo sento… Mi aiuterebbe…' : 'Scrivi qui con parole tue…') + '">' + esc(e.w) + '</textarea></div>' : '') +
-      '<div class="row center" style="margin-top:14px"><button type="button" class="btn" id="df-save" style="--bc:var(--c1)"' + (e.m || e.p ? '' : ' disabled') + '>Salva nel diario</button></div>';
+      '<div class="df-sec df-note"><div class="df-l">📝 La mia nota <span class="df-hint">per pensarci su · non servono i nomi</span></div><p class="df-ask">' + esc(e.nq) + ' <button type="button" class="btn small ghost" id="df-nq" aria-label="Un’altra domanda">🔄</button></p>' +
+        '<textarea id="df-nx" maxlength="600" rows="3" placeholder="Scrivi qui con parole tue…">' + esc(e.nx) + '</textarea></div>' +
+      '<div class="row center" style="margin-top:14px"><button type="button" class="btn" id="df-save" style="--bc:var(--c1)">Salva nel diario</button></div>';
     box.querySelectorAll('[data-p]').forEach(b => b.addEventListener('click', () => { e.p = e.p === b.dataset.p ? null : b.dataset.p; keep(); render(); }));
     box.querySelectorAll('[data-m]').forEach(b => b.addEventListener('click', () => { keep(); e.m = b.dataset.m; render(); }));
     box.querySelectorAll('[data-f]').forEach(b => b.addEventListener('click', () => { keep(); e.f = +b.dataset.f; render(); }));
     box.querySelector('#df-save').addEventListener('click', save);
+    box.querySelector('#df-nq').addEventListener('click', () => { keep(); if (!e.nx.trim()) { qShift++; e.nq = noteQOf(key, qShift * 7); render(); } else floatText(box.querySelector('#df-nq'), 'Hai già scritto: tieni questa!'); });
   };
-  const keep = () => { const t = box.querySelector('#df-why'); if (t) e.w = t.value; };
+  const keep = () => { const t = box.querySelector('#df-why'); if (t) e.w = t.value; const n = box.querySelector('#df-nx'); if (n) e.nx = n.value; };
   function save() {
-    keep(); e.w = e.w.trim().slice(0, 500);
-    const all = diary();
+    keep(); e.w = e.w.trim().slice(0, 500); e.nx = e.nx.trim().slice(0, 600);
+    if (!e.m && !e.p && !e.nx) { floatText(box.querySelector('#df-save'), 'Scegli come ti senti o scrivi la nota'); return; }
+    const all = diary(), cur = all[key] || {};
+    if (cur.ev) e.ev = cur.ev;
     const words = e.w.split(/\s+/).filter(Boolean).length;
     let bonus = 0;
     if (e.m && !e.r) { bonus += 2; e.r = 1; }
     if (words >= 4 && !e.rw) { bonus += 3; e.rw = 1; }
+    if (e.nx.split(/\s+/).filter(Boolean).length >= 5 && !e.rn) { bonus += 3; e.rn = 1; }
+    if (!e.nx) delete e.nq;
     all[key] = e; store.set('diary', all);
     const btn = box.querySelector('#df-save');
     if (bonus) gain(bonus, btn);
@@ -134,7 +180,7 @@ function dayForm(box, key, onSaved) {
 }
 function dragonReply(e) {
   const m = moodOf(e.m), nm = D.name;
-  if (!m) return 'Segnato! Grazie, ' + NAME + '.';
+  if (!m) return e.nx ? 'Che bella nota! Rileggerla tra qualche mese sarà come aprire una scatola di ricordi.' : 'Segnato! Grazie, ' + NAME + '.';
   if (m.k === 'up') return 'Evviva! ' + nm + ' fa una capriola di gioia. Quando racconti le cose belle, le vivi due volte!';
   if (m.k === 'mid') return 'Grazie di avermelo detto. Anche le giornate normali sono importanti: domani sarà una pagina nuova.';
   if (m.k === 'tired') return 'Anche i draghi si stancano! Stasera nanna presto: il sonno ricarica il corpo e il cervello.';
@@ -173,7 +219,9 @@ PAGES.diario = el => {
         (st >= 3 ? '<div class="card" style="--kc:var(--c6);--ks:var(--c6-soft)">' + secHead('💜', 'Da ' + st + ' giorni ti senti giù', 'Succede a tutti. Adesso però è il momento di dirlo più forte.', 'var(--c6-soft)') +
           '<ul class="feel-list"><li><b>Dillo ad alta voce</b> a mamma, papà o alla maestra: «Da qualche giorno mi sento… perché…».</li><li><b>Disegna</b> la tua emozione: che colore ha? che forma?</li><li><b>Scrivi una lettera a ' + esc(D.name) + '</b> nel campo «Perché?», più lunga del solito.</li><li><b>Fai 3 respiri del drago</b> e una pausa movimento: il corpo aiuta la testa.</li></ul>' +
           '<p style="font-weight:800;margin:8px 0 0">Non devi tenerti tutto dentro: chi ti vuole bene vuole saperlo. 🤗</p></div>' : '') +
-        '<div class="den mini-den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '"><div style="width:110px;flex:none">' + dragonSVG(lv, D.color, 'bob') + '</div><div style="min-width:0"><b>' + esc(D.name) + ' ascolta</b><p>Ogni emozione che racconti dà <b>+2 🔥</b>, e se scrivi anche il perché <b>+3 🔥</b> in più. Felice o triste vale uguale: conta il coraggio di dirlo.</p></div></div>' +
+        '<div class="den mini-den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '"><div style="width:110px;flex:none">' + dragonSVG(lv, D.color, 'bob') + '</div><div style="min-width:0"><b>' + esc(D.name) + ' ascolta</b><p>Ogni emozione che racconti dà <b>+2 🔥</b>, se scrivi anche il perché <b>+3 🔥</b>, la <b>📝 nota del giorno</b> altri <b>+3 🔥</b> e il racconto di un’uscita <b>+3 🔥</b>. Felice o triste vale uguale: conta il coraggio di dirlo.</p></div></div>' +
+        '<div class="card" id="d-trips-card" hidden>' + secHead('🚌', 'Com’è andata?', 'Racconta le uscite e gli appuntamenti della classe', 'var(--c4-soft)') + '<div id="d-trips"></div></div>' +
+        '<div class="card">' + secHead('📒', 'Le mie note', 'Quello che hai scritto per pensarci su', 'var(--c2-soft)') + '<div id="d-notes"></div></div>' +
         '<div class="card">' + secHead('🧠', 'Le emozioni sono normali', 'Toccane una per scoprire di più', 'var(--c5-soft)') + '<div id="d-facts"></div></div>' +
       '</div>' +
     '</div>' +
@@ -191,7 +239,17 @@ PAGES.diario = el => {
 
   renderFacts($('d-facts'), FEEL_FACTS, 'feel');
   const reply = r => { $('d-reply').innerHTML = '<div class="explain" style="background:var(--c3-soft);text-align:left;margin-top:12px"><b>' + esc(D.name) + ':</b> ' + esc(r) + ' ' + sayBtn(r) + '</div>'; };
-  const startForm = () => dayForm($('d-form'), t, e => { if (e.m && moodOf(e.m).k === 'up') confetti(window.innerWidth / 2, window.innerHeight / 3, 24); drawCal(); stats(); reply(dragonReply(e)); });
+  const startForm = () => dayForm($('d-form'), t, e => { if (e.m && moodOf(e.m).k === 'up') confetti(window.innerWidth / 2, window.innerHeight / 3, 24); drawCal(); stats(); notes(); reply(dragonReply(e)); });
+  function notes() {
+    const L = diaryNotes();
+    $('d-notes').innerHTML = L.length ? L.slice(0, 8).map(n => '<button type="button" class="dn-row" data-nd="' + n.day + '"' + (n.kind === 'trip' ? ' data-nid="' + esc(n.id) + '" data-nt="' + esc(n.t) + '"' : '') + '><small>' + esc(fmtDay(n.day)) + ' · ' + (n.kind === 'trip' ? '🚌 ' : '📝 ') + esc(n.t) + '</small><span>' + esc(n.x.length > 140 ? n.x.slice(0, 140) + '…' : n.x) + '</span></button>').join('') + (L.length > 8 ? '<p class="note-s">' + (L.length === 9 ? 'E un’altra' : 'E altre ' + (L.length - 8)) + ' nel calendario (📝 sui giorni).</p>' : '')
+      : '<p class="note-s">Ancora nessuna nota. Ogni giorno nel diario c’è una domanda per pensarci su: rispondi con parole tue!</p>';
+    $('d-notes').querySelectorAll('[data-nd]').forEach(b => b.addEventListener('click', () => b.dataset.nid ? openTripNote(b.dataset.nd, b.dataset.nid, b.dataset.nt, notes) : openDay(b.dataset.nd)));
+    const P = typeof clPending === 'function' ? clPending() : [];
+    $('d-trips-card').hidden = !P.length;
+    $('d-trips').innerHTML = P.map(x => '<button type="button" class="dn-row trip" data-pd="' + x.day + '" data-pid="' + esc(x.id) + '" data-pt="' + esc(x.t) + '"><small>' + esc(fmtDay(x.day)) + '</small><span>' + esc((x.ic || '🚌') + ' ' + x.t) + ' → scrivi com’è andata</span></button>').join('');
+    $('d-trips').querySelectorAll('[data-pd]').forEach(b => b.addEventListener('click', () => openTripNote(b.dataset.pd, b.dataset.pid, b.dataset.pt, () => { notes(); drawCal(); })));
+  }
   startForm();
   if (dd[t] && dd[t].m) reply(dragonReply(dd[t]));
 
@@ -206,7 +264,7 @@ PAGES.diario = el => {
     for (let d = 1; d <= new Date(y, mo + 1, 0).getDate(); d++) {
       const s = y + '-' + pad(mo + 1) + '-' + pad(d), ho = holOf(s), e = all[s], w = new Date(y, mo, d).getDay();
       const cls = ['cal-d', isSchoolDay(s) ? 'school' : ho ? (ho.fest ? 'fest' : 'vac') : (w === 0 || w === 6) ? 'we' : 'off', s === t ? 'today' : '', s > t ? 'future' : ''].join(' ');
-      const mark = (e && e.m ? moodOf(e.m).ic : '') + (e && e.p === 'P' ? '<small>✅</small>' : e && e.p === 'A' ? '<small>🏠</small>' : '');
+      const mark = (e && e.m ? moodOf(e.m).ic : '') + (e && e.p === 'P' ? '<small>✅</small>' : e && e.p === 'A' ? '<small>🏠</small>' : '') + (e && (e.nx || (e.ev && Object.keys(e.ev).length)) ? '<small>📝</small>' : '');
       const tip = fmtDay(s) + (ho ? ', ' + ho.n : '') + (s === SCHOOL.start ? ', primo giorno di scuola' : '') + (s === SCHOOL.end ? ', ultimo giorno di scuola' : '');
       h += '<button type="button" class="' + cls + '" data-d="' + s + '" aria-label="' + esc(tip) + '"><span class="n">' + d + '</span>' +
         '<span class="mk">' + (mark || (bdayMD() && s.slice(5) === bdayMD() ? '🎂' : s === SCHOOL.start ? '🎒' : s === SCHOOL.end ? '🎉' : ho && s === ho.s ? ho.ic : '')) + '</span></button>';
@@ -249,14 +307,15 @@ PAGES.diario = el => {
   $('c-prev').addEventListener('click', () => { calMonth = calMonth[1] === 0 ? [calMonth[0] - 1, 11] : [calMonth[0], calMonth[1] - 1]; drawCal(); stats(); });
   $('c-next').addEventListener('click', () => { calMonth = calMonth[1] === 11 ? [calMonth[0] + 1, 0] : [calMonth[0], calMonth[1] + 1]; drawCal(); stats(); });
   $('c-sat').addEventListener('change', ev => { store.set('sat-school', ev.target.checked); PAGES.diario(el); });
-  drawCal(); stats(); hols();
+  drawCal(); stats(); hols(); notes();
 };
 
 /* scheda sulla Casa */
 function homeDiaryCard() {
   const t = todayIso(), { cur, next } = nextHoliday(t), e = diary()[t];
   const line = cur ? cur.ic + ' Sei in vacanza: ' + cur.n + '!' : next ? next.ic + ' ' + (daysBetween(t, next.s) === 1 ? 'Domani: ' + next.n + '!' : 'Mancano ' + daysBetween(t, next.s) + ' giorni a: ' + next.n) : '📅 Diario';
-  const sub = e && e.m ? 'Oggi ti senti ' + moodOf(e.m).n.toLowerCase() + ' ' + moodOf(e.m).ic + ' · tocca per il diario' : 'Come ti senti oggi? Raccontalo a ' + D.name + ' 💬';
+  const P = typeof clPending === 'function' ? clPending() : [];
+  const sub = P.length ? '🚌 Com’è andata: ' + P[0].t + '? Scrivilo nel diario' : e && e.m && !e.nx ? '📝 ' + noteQOf(t) : e && e.m ? 'Oggi ti senti ' + moodOf(e.m).n.toLowerCase() + ' ' + moodOf(e.m).ic + ' · tocca per il diario' : 'Come ti senti oggi? Raccontalo a ' + D.name + ' 💬';
   return '<button type="button" class="today" id="h-diary" style="--ts:var(--c1-soft);border-color:var(--c1)"><span class="ic" aria-hidden="true">📅</span><span class="tx">' + esc(line) + '<small>' + esc(sub) + '</small></span><span class="st" aria-hidden="true">→</span></button>';
 }
 

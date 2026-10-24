@@ -41,6 +41,10 @@ function newsItems() {
   const pg = Piggy.get(); if (pg.hist && pg.hist[0] && pg.hist[0].d === todayIso()) N.push({ k: 'pig', ic: '🐷', t: 'Il salvadanaio è cresciuto di ' + pg.hist[0].it + ' 💎', s: 'È l’interesse di chi risparmia', go: () => openShop() });
   const nx = nextUnitNeed && nextUnitNeed(); if (nx && nx.need <= 5) N.push({ k: 'unit', ic: '🔓', t: 'Quasi aperta: ' + nx.u.ic + ' ' + nx.u.name, s: 'Mancano ' + nx.need + (nx.need === 1 ? ' nozione' : ' nozioni'), go: () => go('home') });
   if (typeof vidOpen === 'function' && vidOpen()) { const v = vidState(); if (v.tickets > 0 && v.today < VID_MAX_DAY) N.push({ k: 'vid', ic: '🎬', t: v.tickets === 1 ? 'Hai un biglietto per un video' : 'Hai ' + v.tickets + ' biglietti per i video', s: 'Un premio per le tue lezioni', go: () => openVideos() }); }
+  /* 🗓️ La mia classe: il drago chiede a lei (date da scoprire, zaino per domani, com'è andata) */
+  if (typeof clNews === 'function') { try { N.push(...clNews()); } catch (e) {} }
+  /* 📝 la nota del giorno nel diario, dal pomeriggio */
+  try { const de = diary()[todayIso()]; if (new Date().getHours() >= 15 && !(de && de.nx)) N.push({ k: 'nota', ic: '📝', t: 'La nota di oggi: ' + noteQOf(todayIso()), s: 'Scrivila nel diario (+3 🔥)', go: () => go('diario') }); } catch (e) {}
   const b = birthday(); if (b && b.days <= 1) N.push({ k: 'bday', ic: '🎂', t: b.days === 0 ? 'Oggi è il tuo compleanno! Auguri!' : 'Domani è il tuo compleanno!', s: D.name + ' ha preparato una festa', go: b.days === 0 && typeof festaOpen === 'function' ? () => festaOpen() : null });
   return N;
 }
