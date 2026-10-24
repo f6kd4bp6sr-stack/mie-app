@@ -1,0 +1,140 @@
+{
+ "scala": {
+  "tipo": "scala",
+  "centro": {
+   "n": "Le potenze di dieci",
+   "ic": "🔭",
+   "sotto": "dal piccolissimo al grandissimo, dieci volte alla volta"
+  },
+  "nodi": [
+   {
+    "id": "nucleo",
+    "n": "il nucleo dell’atomo",
+    "ic": "⚛️",
+    "sotto": "il cuore dell’atomo",
+    "da": "a 10⁻¹⁵ metri trovi",
+    "tacca": "10⁻¹⁵ m"
+   },
+   {
+    "id": "atomo",
+    "n": "l’atomo",
+    "ic": "🔹",
+    "sotto": "i mattoncini di tutte le cose",
+    "da": "a 10⁻¹⁰ metri trovi",
+    "tacca": "10⁻¹⁰ m"
+   },
+   {
+    "id": "cellula",
+    "n": "la cellula",
+    "ic": "🦠",
+    "sotto": "di solito si vede solo al microscopio",
+    "da": "a 10⁻⁵ metri trovi",
+    "tacca": "10⁻⁵ m"
+   },
+   {
+    "id": "tu",
+    "n": "tu!",
+    "ic": "🧒",
+    "sotto": "la scala umana: circa un metro",
+    "da": "a 1 metro trovi",
+    "tacca": "10⁰ m = 1 m"
+   },
+   {
+    "id": "terra",
+    "n": "la Terra",
+    "ic": "🌍",
+    "sotto": "quasi 13 000 km da parte a parte",
+    "da": "a 10⁷ metri trovi",
+    "tacca": "10⁷ m"
+   },
+   {
+    "id": "galassia",
+    "n": "la Via Lattea",
+    "ic": "🌌",
+    "sotto": "la nostra galassia",
+    "da": "a 10²¹ metri trovi",
+    "tacca": "10²¹ m"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Partiamo da te! Sei alta quasi un metro e mezzo: è la scala umana, la misura delle cose che vedi ogni giorno.",
+    "nodi": [
+     "tu"
+    ]
+   },
+   {
+    "t": "Facciamo un gioco: a ogni passo tutto diventa dieci volte più grande. Dieci per dieci fa cento: si scrive 10², con un piccolo 2 in alto.",
+    "v": "Facciamo un gioco: a ogni passo tutto diventa dieci volte più grande. Dieci per dieci fa cento: si scrive dieci alla seconda.",
+    "nodi": []
+   },
+   {
+    "t": "Dopo sette passi si arriva a 10⁷ metri, cioè diecimila chilometri. È la misura della Terra: da una parte all’altra fa quasi 13 000 chilometri.",
+    "v": "Dopo sette passi si arriva a dieci alla settima metri, cioè diecimila chilometri. È la misura della Terra: da una parte all’altra fa quasi tredicimila chilometri.",
+    "nodi": [
+     "terra"
+    ]
+   },
+   {
+    "t": "Avanti così, dopo 21 passi: 10²¹ metri, un 1 seguito da 21 zeri. È la Via Lattea, la nostra galassia, con centinaia di miliardi di stelle!",
+    "v": "Avanti così, dopo ventuno passi: dieci alla ventuno metri, un uno seguito da ventuno zeri. È la Via Lattea, la nostra galassia, con centinaia di miliardi di stelle!",
+    "nodi": [
+     "galassia"
+    ]
+   },
+   {
+    "t": "Ora torniamo indietro, verso il piccolissimo. Con il segno meno si rimpicciolisce: 10⁻¹ metri è un decimo di metro. A 10⁻⁵ metri c’è una cellula.",
+    "v": "Ora torniamo indietro, verso il piccolissimo. Con il segno meno si rimpicciolisce: dieci alla meno uno metri è un decimo di metro. A dieci alla meno cinque metri c’è una cellula.",
+    "nodi": [
+     "cellula"
+    ]
+   },
+   {
+    "t": "Ancora più giù, a 10⁻¹⁰ metri, ci sono gli atomi, i mattoncini di tutte le cose. Al centro c’è il nucleo: circa centomila volte più piccolo dell’atomo!",
+    "v": "Ancora più giù, a dieci alla meno dieci metri, ci sono gli atomi, i mattoncini di tutte le cose. Al centro c’è il nucleo: circa centomila volte più piccolo dell’atomo!",
+    "nodi": [
+     "atomo",
+     "nucleo"
+    ]
+   },
+   {
+    "t": "Nel 1977 i designer Charles e Ray Eames fecero il film «Powers of Ten»: parte da un picnic, sale fino ai confini dell’universo e scende fin dentro un atomo.",
+    "nodi": []
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "terra",
+    "scelte": [
+     "la Terra",
+     "l’atomo",
+     "la cellula"
+    ]
+   },
+   {
+    "nodo": "cellula",
+    "scelte": [
+     "la cellula",
+     "la Via Lattea",
+     "la Terra"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "sci-spazio:universo",
+   "sci-corpo:cellule",
+   "media:potenze",
+   "media:scienze"
+  ],
+  "domande": {
+   "bejbe55": "tu",
+   "cnicf4r": "tu",
+   "b9ufoa9": "galassia",
+   "2v5lsp9": "atomo",
+   "547j6px": "terra",
+   "2in5ppj": "galassia",
+   "8yqa25z": "cellula",
+   "8nx63wo": "nucleo"
+  }
+ }
+}

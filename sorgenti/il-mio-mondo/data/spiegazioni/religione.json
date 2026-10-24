@@ -1,0 +1,213 @@
+{
+ "natale": {
+  "centro": {
+   "n": "Il Natale",
+   "ic": "🎄",
+   "sotto": "25 dicembre"
+  },
+  "nodi": [
+   {
+    "id": "nascita",
+    "n": "la nascita di Gesù",
+    "ic": "👶",
+    "sotto": "a Betlemme, secondo i Vangeli",
+    "da": "festeggia"
+   },
+   {
+    "id": "avvento",
+    "n": "l’Avvento",
+    "ic": "🕯️",
+    "sotto": "le quattro settimane di attesa",
+    "da": "si prepara con"
+   },
+   {
+    "id": "pace",
+    "n": "pace in terra",
+    "ic": "✨",
+    "sotto": "l’annuncio degli angeli ai pastori",
+    "da": "porta il messaggio:"
+   },
+   {
+    "id": "presepe",
+    "n": "il presepe",
+    "ic": "🏠",
+    "sotto": "il primo a Greccio, nel 1223",
+    "da": "si ricorda con"
+   },
+   {
+    "id": "magi",
+    "n": "i Magi",
+    "ic": "⭐",
+    "sotto": "arrivano il 6 gennaio, all’Epifania",
+    "da": "si conclude con"
+   },
+   {
+    "id": "doni",
+    "n": "oro, incenso e mirra",
+    "ic": "🎁",
+    "sotto": "i doni dei Magi",
+    "da": "racconta i doni:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Natale vuol dire «nascita». Il 25 dicembre quasi tutti i cristiani festeggiano la nascita di Gesù, che secondo i Vangeli nacque a Betlemme e fu deposto in una mangiatoia.",
+    "nodi": [
+     "nascita"
+    ]
+   },
+   {
+    "t": "Le quattro settimane prima di Natale si chiamano Avvento, cioè «venuta»: è il tempo dell’attesa. Ogni domenica si accende una candela in più.",
+    "nodi": [
+     "avvento"
+    ]
+   },
+   {
+    "t": "Il Vangelo di Luca racconta che un angelo annunciò la nascita ai pastori. Poi tanti angeli lodarono Dio dicendo: «… pace in terra agli uomini».",
+    "nodi": [
+     "pace"
+    ]
+   },
+   {
+    "t": "Nel 1223, a Greccio, san Francesco d’Assisi preparò il primo presepe: una mangiatoia con il fieno, un bue e un asinello veri. Da allora si fa in tante case.",
+    "nodi": [
+     "presepe"
+    ]
+   },
+   {
+    "t": "Il Vangelo di Matteo racconta dei Magi, guidati da una stella. Portarono in dono oro, incenso e mirra. Li ricordiamo il 6 gennaio, all’Epifania.",
+    "nodi": [
+     "magi",
+     "doni"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "pace",
+    "scelte": [
+     "pace in terra",
+     "neve sui monti",
+     "tanti regali"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "religione:religioni",
+   "civica:pace",
+   "arte:medioevo"
+  ],
+  "domande": {
+   "47itnp5": "nascita",
+   "cmtslta": "nascita",
+   "8669tam": "avvento",
+   "6mwzcsh": "presepe",
+   "6k5av95": "doni",
+   "1dxabmb": "magi"
+  }
+ },
+ "religioni": {
+  "centro": {
+   "n": "Le religioni del mondo",
+   "ic": "🌍",
+   "sotto": "tante fedi, un mondo solo"
+  },
+  "nodi": [
+   {
+    "id": "ebraismo",
+    "n": "l’ebraismo",
+    "ic": "✡️",
+    "sotto": "la Torah, la sinagoga, il sabato",
+    "da": "la più antica delle tre:"
+   },
+   {
+    "id": "cristianesimo",
+    "n": "il cristianesimo",
+    "ic": "✝️",
+    "sotto": "Gesù, i Vangeli, la chiesa",
+    "da": "con i Vangeli:"
+   },
+   {
+    "id": "islam",
+    "n": "l’islam",
+    "ic": "☪️",
+    "sotto": "Maometto, il Corano, la moschea",
+    "da": "con il Corano:"
+   },
+   {
+    "id": "induismo",
+    "n": "l’induismo",
+    "ic": "🪔",
+    "sotto": "nato in India; Diwali, festa delle luci",
+    "da": "tra le più antiche:"
+   },
+   {
+    "id": "buddhismo",
+    "n": "il buddhismo",
+    "ic": "☸️",
+    "sotto": "il Buddha e la meditazione",
+    "da": "con il Buddha:"
+   },
+   {
+    "id": "rispetto",
+    "n": "il rispetto",
+    "ic": "🤝",
+    "sotto": "la libertà di religione è nella Costituzione",
+    "da": "tra tutti serve"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Tre religioni ricordano Abramo come padre nella fede e credono in un solo Dio. La più antica delle tre è l’ebraismo: il suo libro è la Torah.",
+    "nodi": [
+     "ebraismo"
+    ]
+   },
+   {
+    "t": "Il cristianesimo è nato da Gesù. I cristiani leggono la Bibbia, in particolare i Vangeli, e si riuniscono in chiesa. La domenica ricorda la risurrezione di Gesù.",
+    "nodi": [
+     "cristianesimo"
+    ]
+   },
+   {
+    "t": "L’islam è nato in Arabia con il profeta Maometto. I musulmani leggono il Corano, pregano nella moschea e nel mese di Ramadan digiunano di giorno.",
+    "nodi": [
+     "islam"
+    ]
+   },
+   {
+    "t": "L’induismo è nato in India ed è tra le religioni più antiche. In autunno si festeggia Diwali, la festa delle luci, con lumini accesi ovunque.",
+    "nodi": [
+     "induismo"
+    ]
+   },
+   {
+    "t": "Il buddhismo nasce dagli insegnamenti di Siddharta, chiamato Buddha, cioè «il risvegliato». Insegna a meditare e a essere gentili con ogni essere vivente.",
+    "nodi": [
+     "buddhismo"
+    ]
+   },
+   {
+    "t": "In Italia la Costituzione garantisce a tutti la libertà di religione. Conoscere le feste e le idee degli altri aiuta a rispettarsi e a fare amicizia.",
+    "nodi": [
+     "rispetto"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "religione:natale",
+   "civica:convivenza",
+   "civica:costituzione",
+   "storia:ebrei-fenici"
+  ],
+  "domande": {
+   "89zed2z": "ebraismo",
+   "cedr9hf": "ebraismo",
+   "dwhnwed": "islam",
+   "6ox57yz": "induismo",
+   "acthg5c": "buddhismo",
+   "3f08tr6": "cristianesimo",
+   "61kivdw": "rispetto"
+  }
+ }
+}

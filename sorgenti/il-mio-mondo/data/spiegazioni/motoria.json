@@ -1,0 +1,298 @@
+{
+ "coordinazione": {
+  "centro": {
+   "n": "La coordinazione",
+   "ic": "🤸",
+   "sotto": "corpo e cervello che lavorano insieme"
+  },
+  "nodi": [
+   {
+    "id": "cervello",
+    "n": "cervello",
+    "ic": "🧠",
+    "sotto": "manda gli ordini ai muscoli",
+    "da": "parte dal"
+   },
+   {
+    "id": "equilibrio",
+    "n": "l’equilibrio",
+    "ic": "🧍",
+    "sotto": "restare in piedi senza cadere",
+    "da": "serve per"
+   },
+   {
+    "id": "ritmo",
+    "n": "il ritmo",
+    "ic": "🥁",
+    "sotto": "muoversi al tempo giusto",
+    "da": "serve per"
+   },
+   {
+    "id": "spazio",
+    "n": "orientarsi nello spazio",
+    "ic": "🧭",
+    "sotto": "sapere dove sei e dove vai",
+    "da": "aiuta a"
+   },
+   {
+    "id": "reazione",
+    "n": "la reazione",
+    "ic": "⚡",
+    "sotto": "rispondere in fretta a un segnale",
+    "da": "rende veloce"
+   },
+   {
+    "id": "allenare",
+    "n": "l’allenamento",
+    "ic": "🔁",
+    "sotto": "ripetendo, il gesto diventa facile",
+    "da": "migliora con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Quando lanci una palla, il cervello manda ordini ai muscoli attraverso i nervi. Se tutto lavora insieme al momento giusto, il gesto riesce: è la coordinazione.",
+    "nodi": [
+     "cervello"
+    ]
+   },
+   {
+    "t": "Per l’equilibrio lavorano il cervelletto, l’orecchio interno e gli occhi: ti aiutano a restare in piedi su una gamba sola o su una trave.",
+    "nodi": [
+     "equilibrio"
+    ]
+   },
+   {
+    "t": "Il ritmo è muoversi al tempo giusto, come quando salti la corda o batti le mani seguendo una canzone.",
+    "nodi": [
+     "ritmo"
+    ]
+   },
+   {
+    "t": "Orientarsi vuol dire sapere dove sei rispetto ai compagni e alla palla. La reazione è partire in fretta quando arriva un segnale, come un fischio.",
+    "nodi": [
+     "spazio",
+     "reazione"
+    ]
+   },
+   {
+    "t": "La coordinazione si allena: ogni volta che ripeti un gesto, il cervello lo impara meglio. Per questo in palestra si gioca, si prova e si riprova.",
+    "nodi": [
+     "allenare"
+    ]
+   }
+  ],
+  "domande": {
+   "9dr2ux1": "cervello",
+   "4v4hp5x": "cervello",
+   "9pv73m6": "equilibrio",
+   "9qkqdm9": "ritmo",
+   "8j6m5yo": "reazione",
+   "3tnc5fz": "spazio",
+   "6go5ade": "allenare"
+  },
+  "collegamenti": [
+   "sci-corpo:nervi",
+   "sci-corpo:muscoli",
+   "sp-corpo:capacita",
+   "musica:ritmo"
+  ]
+ },
+ "pallavolo": {
+  "centro": {
+   "n": "La pallavolo",
+   "ic": "🏐",
+   "sotto": "due squadre e una rete"
+  },
+  "nodi": [
+   {
+    "id": "nascita",
+    "n": "1895, Stati Uniti",
+    "ic": "🇺🇸",
+    "sotto": "la inventò William G. Morgan",
+    "da": "è nata nel"
+   },
+   {
+    "id": "squadre",
+    "n": "6 giocatori",
+    "ic": "👥",
+    "sotto": "per squadra, in campo",
+    "da": "si gioca con"
+   },
+   {
+    "id": "tocchi",
+    "n": "3 tocchi",
+    "ic": "✋",
+    "sotto": "al massimo, poi la palla passa la rete",
+    "da": "ogni squadra ha"
+   },
+   {
+    "id": "fondamentali",
+    "n": "i fondamentali",
+    "ic": "🏐",
+    "sotto": "battuta, bagher, palleggio, schiacciata, muro",
+    "da": "si impara con"
+   },
+   {
+    "id": "punti",
+    "n": "25 punti",
+    "ic": "🏆",
+    "sotto": "per vincere un set, con 2 di vantaggio",
+    "da": "un set si vince a"
+   },
+   {
+    "id": "squadra",
+    "n": "gioco di squadra",
+    "ic": "🤝",
+    "sotto": "nessuno tocca due volte di fila (tranne dopo un muro)",
+    "da": "vive del"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La pallavolo nacque nel 1895 negli Stati Uniti. La inventò William G. Morgan, un insegnante di educazione fisica, per giocare in palestra d’inverno.",
+    "nodi": [
+     "nascita"
+    ]
+   },
+   {
+    "t": "Due squadre di 6 giocatori stanno ai lati di una rete. Bisogna far cadere la palla nel campo degli altri, senza che riescano a prenderla.",
+    "nodi": [
+     "squadre"
+    ]
+   },
+   {
+    "t": "Ogni squadra può toccare la palla al massimo tre volte prima di rimandarla. Lo stesso giocatore non può toccarla due volte di fila (tranne dopo un muro): serve la squadra!",
+    "nodi": [
+     "tocchi",
+     "squadra"
+    ]
+   },
+   {
+    "t": "I gesti base si chiamano fondamentali: la battuta per cominciare, il bagher con le braccia unite, il palleggio con le dita, la schiacciata e il muro.",
+    "nodi": [
+     "fondamentali"
+    ]
+   },
+   {
+    "t": "Un set si vince arrivando a 25 punti, con almeno due punti di vantaggio. Vince la partita chi conquista per primo tre set.",
+    "nodi": [
+     "punti"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "motoria:basket",
+   "motoria:coordinazione",
+   "sp-corpo:sport-squadra"
+  ],
+  "domande": {
+   "1vs1wzz": "nascita",
+   "b5uuzf8": "squadre",
+   "1bqgl73": "tocchi",
+   "1z4qfyn": "fondamentali",
+   "23xah08": "fondamentali",
+   "8nf1cq5": "punti",
+   "a32dk6w": "squadra"
+  }
+ },
+ "basket": {
+  "centro": {
+   "n": "Il basket",
+   "ic": "🏀",
+   "sotto": "la pallacanestro"
+  },
+  "nodi": [
+   {
+    "id": "nascita",
+    "n": "1891, Stati Uniti",
+    "ic": "🧺",
+    "sotto": "lo inventò James Naismith",
+    "da": "è nato nel"
+   },
+   {
+    "id": "squadre",
+    "n": "5 giocatori",
+    "ic": "👥",
+    "sotto": "per squadra, in campo",
+    "da": "si gioca con"
+   },
+   {
+    "id": "canestro",
+    "n": "canestro",
+    "ic": "🏀",
+    "sotto": "a 3,05 metri da terra",
+    "da": "si tira nel"
+   },
+   {
+    "id": "punti",
+    "n": "1, 2 o 3 punti",
+    "ic": "🔢",
+    "sotto": "tiro libero, tiro da vicino, tiro da lontano",
+    "da": "ogni canestro vale"
+   },
+   {
+    "id": "palleggio",
+    "n": "il palleggio",
+    "ic": "⛹️",
+    "sotto": "per muoversi con la palla",
+    "da": "si avanza con"
+   },
+   {
+    "id": "passi",
+    "n": "niente «passi»",
+    "ic": "🚫",
+    "sotto": "non si cammina con la palla in mano",
+    "da": "regola:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il basket nacque nel 1891 negli Stati Uniti. James Naismith, un insegnante canadese, appese in palestra due cesti per le pesche: i primi canestri!",
+    "nodi": [
+     "nascita"
+    ]
+   },
+   {
+    "t": "Due squadre di 5 giocatori cercano di mandare la palla nel canestro degli altri. Oggi il canestro è un anello a 3 metri e 5 centimetri da terra.",
+    "v": "Due squadre di cinque giocatori cercano di mandare la palla nel canestro degli altri. Oggi il canestro è un anello a tre metri e cinque centimetri da terra.",
+    "nodi": [
+     "squadre",
+     "canestro"
+    ]
+   },
+   {
+    "t": "Un canestro normale vale 2 punti. Da lontano, oltre la linea dei tre punti, ne vale 3. Il tiro libero, dopo un fallo, vale 1.",
+    "nodi": [
+     "punti"
+    ]
+   },
+   {
+    "t": "Per muoversi con la palla bisogna palleggiare, cioè farla rimbalzare a terra. Se cammini con la palla in mano fai «passi» e la palla va agli altri.",
+    "nodi": [
+     "palleggio",
+     "passi"
+    ]
+   },
+   {
+    "t": "Per i bambini c’è il minibasket, con canestri più bassi e palloni più piccoli: così tutti possono giocare e fare canestro.",
+    "nodi": []
+   }
+  ],
+  "collegamenti": [
+   "motoria:pallavolo",
+   "motoria:coordinazione",
+   "sp-corpo:sport-squadra"
+  ],
+  "domande": {
+   "8ps17d2": "nascita",
+   "1bngciw": "nascita",
+   "bvy7z9i": "squadre",
+   "ac35ymp": "canestro",
+   "6ei5t0a": "punti",
+   "ceuxfzv": "punti",
+   "1qjm224": "passi",
+   "bxeusts": "palleggio"
+  }
+ }
+}

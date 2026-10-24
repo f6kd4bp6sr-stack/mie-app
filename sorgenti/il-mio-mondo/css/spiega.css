@@ -90,3 +90,6 @@
   .ct-leg { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 14px; margin: 4px 0; }
   .ct-leg i { width: 16px; height: 16px; border-radius: 50%; background: var(--c); border: 2px solid #fff; box-shadow: 0 0 0 1px #ccc; } .ct-leg i.antica { border-radius: 3px; } .ct-leg i.monte { border-radius: 0; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
   .sp-cta { display: flex; width: 100%; align-items: center; gap: 10px; font: inherit; font-weight: 900; font-size: 16px; color: var(--ink); background: #e3f1ff; border: 2px solid #3fa9f5; border-radius: 16px; padding: 12px; cursor: pointer; }
+/* 👀 argomenti da guardare insieme: domande per parlarne */
+.sp-chiedi { margin: 4px 0 10px 18px; padding: 0; font-weight: 700; line-height: 1.45; }
+.sp-chiedi li { margin: 4px 0; }

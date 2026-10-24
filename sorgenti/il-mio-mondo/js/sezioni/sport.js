@@ -160,7 +160,7 @@ const EXTRA_SUBJECTS = [
       ['Quante sono le note musicali?', ['7', '5', '12'], 0],
       ['Quale di questi è uno strumento a corde?', ['Il violino', 'Il flauto', 'Il tamburo'], 0]
     ] },
-  { id: 'civica', name: 'Ed. civica', ic: '🤝', c: 'var(--c4)', s: 'var(--c4-soft)', topic: 'Regole, diritti e ambiente',
+  { id: 'civica', name: 'Cittadinanza attiva', ic: '🤝', c: 'var(--c4)', s: 'var(--c4-soft)', topic: 'Regole, diritti e ambiente',
     motto: 'Vivere insieme è come una squadra: ognuno ha diritti, doveri e un ruolo importante.',
     facts: [
       ['Quando è nata la Costituzione italiana?', 'È entrata in vigore il 1° gennaio 1948. È la legge più importante del nostro Paese.'],

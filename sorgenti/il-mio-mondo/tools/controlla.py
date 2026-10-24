@@ -2,6 +2,7 @@
 Si esegue da solo a ogni build (build.py). Se trova ERRORI il build si ferma: niente viene pubblicato.
 - ogni domanda: codice (id) unico, 3 risposte diverse e non vuote, riga chiave fino a 12 parole, spiegazione presente
 - i codici non spariscono mai (registro data/domande/quiz/_codici.txt): una domanda tolta va scritta in _ritirati.txt
+- spiegazioni: mappa (raggiera, ciclo, linea, scala), racconto breve, argomenti «da guardare insieme» senza domande
 - nessun termine vietato (diagnosi o bisogni speciali di chi studia non vanno mai nominati)
 - rapporto: data/_gen/rapporto.md con il conteggio per materia e la copertura del programma (data/programma/*.json)
 """
@@ -76,6 +77,7 @@ def run(write=True):
             if guarda(txt, GUARD_SALUTE): err.append(f'{where}: termine vietato')
     # spiegazioni con racconto e mappa (data/domande/../spiegazioni/<materia>.json)
     SPD = D + 'data/spiegazioni/'
+    _DIS = open(D + 'data/domande/disegno.js', encoding='utf-8').read() if os.path.exists(D + 'data/domande/disegno.js') else ''
     qids = {u: {x['id'] for x in L if 'id' in x} for u, L in units.items()}
     qarg = {u: {x['id']: x.get('arg') for x in L if 'id' in x} for u, L in units.items()}
     for f in sorted(glob.glob(SPD + '*.json')):
@@ -93,6 +95,19 @@ def run(write=True):
             for n in nodi:
                 if not n.get('n') or not n.get('da'): err.append(f'{w}: nodo «{n.get("id")}» senza nome o senza parola sulla freccia')
             if not d.get('centro', {}).get('n'): err.append(f'{w}: manca il centro')
+            if d.get('disegno') and ("id: '" + d['disegno'] + "'") not in _DIS: err.append(f'{w}: progetto di disegno «{d["disegno"]}» inesistente')
+            tipo = d.get('tipo', 'raggiera')
+            if tipo not in ('raggiera', 'ciclo', 'linea', 'scala'): err.append(f'{w}: tipo di mappa sconosciuto «{tipo}»')
+            if tipo == 'scala':
+                for n in nodi:
+                    if not n.get('tacca'): err.append(f'{w}: nella scala ogni nodo vuole la sua misura («tacca»)')
+            # 👀 da guardare insieme: niente domande, solo racconto e mappa
+            nq = sum(1 for x in units.get(u, []) if x.get('arg') == t)
+            if d.get('solo'):
+                if nq or d.get('domande'): err.append(f'{w}: un argomento «da guardare insieme» non ha domande')
+                if words(d.get('insieme', '')) > 40: err.append(f'{w}: il testo «insieme» supera 40 parole')
+                if len(d.get('chiedi', [])) > 3: err.append(f'{w}: al massimo 3 domande per parlarne')
+            elif not nq and u != 'mate': warn.append(f'{w}: nessuna domanda: segnalo come «solo» se è da guardare insieme')
             rac = d.get('racconto', [])
             if not (4 <= len(rac) <= 7): err.append(f'{w}: il racconto deve avere da 4 a 7 schermate')
             nel = set()
@@ -118,7 +133,7 @@ def run(write=True):
             if d.get('tutte'):
                 if d['tutte'] not in ids: err.append(f'{w}: «tutte» punta a un nodo inesistente')
                 cov.add(d['tutte'])
-            for n in ids:
+            for n in ([] if d.get('solo') else ids):
                 if n not in cov: warn.append(f'{w}: il nodo «{n}» non ha né domande né ritrova')
             for c in d.get('collegamenti', []):
                 cu, _, ct = str(c).partition(':')

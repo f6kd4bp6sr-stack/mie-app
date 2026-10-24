@@ -6,7 +6,11 @@ Interfaccia semplice (scelta del genitore, ottobre 2026): una sola 🏠 Casa con
 
 Argomenti: ogni domanda di `data/domande/quiz/*.json` ha il campo `arg`; i nomi degli argomenti di ogni materia sono in `data/domande/argomenti.json` ([id, nome, icona]). Le lezioni sono gli argomenti (scelta libera, non più in fila); in Casa c'è la ricerca per parola in tutte le materie con la lezione mista. Ogni domanda nuova deve avere il suo `arg`: il controllo automatico lo verifica.
 
-Spiegazioni con racconto e mappa concettuale (pilota di 6 argomenti): `data/spiegazioni/<materia>.json`, motore in `js/sezioni/spiega.js`, progetto in `docs/PROGETTO-SPIEGAZIONI.md`. Cartine interattive: `data/cartine/<id>.json` (coste Natural Earth, pubblico dominio, semplificate; luoghi con posizione e testo), motore `js/sezioni/cartina.js`; una spiegazione la apre con il campo `"cartina"`. Dati sul dispositivo: `vale2-spiega` (argomenti già visti e nodi accesi), `vale2-mappe` (le mappe costruite da lei, solo testo).
+Progetto pilota «Seguendo la classe» (riunione di classe, ottobre 2026): la 🏠 Casa ha due parti, **🏫 La mia scuola** (le materie del programma di 5ª, come in classe, compresi 🏐 Motoria e 🕊️ Religione; poi 🗓️ La mia classe e 🎒 Verso la 1ª media) e **🌟 Fuori scuola** (sport, Roblox, soldi, igiene, vestiti e «Fare e scoprire»). I contenuti nuovi seguono il programma reale della classe: Cittadinanza attiva (cura di sé e dell'altro, Costituzione, pace, inclusione, 27 gennaio, 21 marzo, internet sicuro), Motoria (coordinazione, pallavolo, basket; poi corpo umano e giochi dei Romani), Zagazoo, Bruno Munari, Infinitamente grande e infinitamente piccolo. Gli argomenti delicati sono «👀 da guardare insieme»: solo racconto e mappa, niente domande (campo `"solo": true`).
+
+🗓️ La mia classe (`js/sezioni/classe.js`): progetti, uscite e date della classe in `vale2-classe`, **solo sull'iPad** (e nelle sue copie). Si caricano una volta con un link speciale `…/mie-app/#classe=<dati>` preparato per il genitore (la parte dopo # non arriva al server e l'app la toglie subito dall'indirizzo); poi si aggiungono e tolgono appuntamenti a mano. Nomi di insegnanti e scuola, date delle uscite e indirizzi non vanno mai nel codice.
+
+Spiegazioni con racconto e mappa concettuale (22 argomenti): `data/spiegazioni/<materia>.json`, motore in `js/sezioni/spiega.js`, progetto in `docs/PROGETTO-SPIEGAZIONI.md`. Cartine interattive: `data/cartine/<id>.json` (coste Natural Earth, pubblico dominio, semplificate; luoghi con posizione e testo), motore `js/sezioni/cartina.js`; una spiegazione la apre con il campo `"cartina"`. Dati sul dispositivo: `vale2-spiega` (argomenti già visti e nodi accesi), `vale2-mappe` (le mappe costruite da lei, solo testo).
 
 | | |
 |---|---|
@@ -21,7 +25,7 @@ Spiegazioni con racconto e mappa concettuale (pilota di 6 argomenti): `data/spie
 | localStorage | `vale2-…` (tutto lo stato: drago, percorso, diario, festa, capsula, teatro, disegno: progetti fatti e quadri del museo con anteprima piccola…), `msync-cfg` (collegamento con i genitori), `mondo-copia` (stato della copia automatica), `mondo-pre-migra` |
 | IndexedDB | `il-mio-mondo` (copie), `mondo-sfondo` (sfondo scelto), `mondo-disegni` (disegni a grandezza piena, livelli per continuare, bozza della tela: restano solo sull'iPad, nella copia vanno le anteprime) |
 
-Nome, compleanno, aspetto, copione del teatro e capsula del tempo restano solo sull'iPad e nelle sue copie: **non vanno mai nel repository**.
+Nome, compleanno, aspetto, copione del teatro, capsula del tempo e dati della classe (🗓️ La mia classe) restano solo sull'iPad e nelle sue copie: **non vanno mai nel repository**.
 
 ## Collegamento con Pianificazione
 L'app carica `licenze/mondo-sync.js` (pubblicato da Pianificazione) e invia ai genitori, cifrati, contatori dello studio, percorso e diario. Permessi di rete: solo `https://api.github.com` (`connect-src`). La copia completa automatica è cifrata in un gist privato (`copia.json` + `copia-N.part`).

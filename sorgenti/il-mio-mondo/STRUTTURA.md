@@ -21,19 +21,20 @@ app/
 │   ├── sezioni/        routine, giochi, matematica, scienze, sport, scopri, diario, orologio, schede,
 │   │                   teatro (la mia parte), festa (compleanno: vigilia, festa, 10 sorprese, capsula),
 │   │                   disegno (tela libera, percorso in 5 tappe, Il mio museo)
-│   │                   spiega (racconto + mappa concettuale, Le mie mappe), cartina (cartine interattive)
+│   │                   spiega (racconto + mappa concettuale, Le mie mappe), cartina (cartine interattive),
+│   │                   classe (🗓️ La mia classe: progetti, uscite e date, solo sull'iPad)
 │   └── percorso/       percorso e lezioni, tappe di matematica di 5ª, negozio, collezioni, video
 ├── tools/controlla.py  controllo automatico (parte da solo a ogni build; con errori non si pubblica)
 ├── tools/sorgenti_pubbliche.py  copia le sorgenti in /sorgenti/il-mio-mondo/ del repository (senza revisioni di lavoro, con controllo dei dati personali)
 ├── README.md           memoria dell'app: indirizzo, dati sul dispositivo, collegamenti, regole
 ├── data/
-│   ├── spiegazioni/    racconto + mappa concettuale per argomento (pilota: 8), controllati da tools/controlla.py
+│   ├── spiegazioni/    racconto + mappa concettuale per argomento (22; mappe raggiera, ciclo, linea, scala; «solo» = da guardare insieme), controllati da tools/controlla.py
 │   ├── cartine/        cartine interattive (grecia.json: coste Natural Earth semplificate + 13 luoghi)
 │   ├── domande/argomenti.json  nomi e icone degli argomenti di ogni materia (ogni domanda ha il campo «arg»)
 │   ├── domande/quiz/   ★ FONTE UNICA delle domande: un file per materia, una scheda per domanda
 │   │                   _codici.txt = registro dei codici (non modificare), _ritirati.txt = codici tolti apposta
 │   ├── domande/        altri contenuti (curiosità, missioni, barzellette, Roblox, soldi, video, aiuti, teatro,
-│   │                   disegno: 25 progetti guidati con le guide da ricalcare)
+│   │                   disegno: 26 progetti guidati con le guide da ricalcare; motoria.js e religione.js: le due materie nuove)
 │   ├── programma/      mappa del programma per anno (5a.json; poi 1m.json, 2m.json, 3m.json)
 │   ├── testi/          testi lunghi delle materie (inseriti al build)
 │   ├── verifiche/      revisioni indipendenti (rev2…rev6): correzioni, figurine, istruzioni ai revisori (nel repository solo fix_, factfix_, cur_)
@@ -43,7 +44,7 @@ app/
 └── (le versioni vecchie sono state cancellate il 17 ottobre 2026)
 ```
 
-Regole: niente dati personali della bambina nel codice (nome, compleanno e copione del teatro restano solo sull'iPad); ogni contenuto nuovo passa da autore → revisore indipendente → controllo automatico.
+Regole: niente dati personali della bambina nel codice (nome, compleanno, copione del teatro e dati della classe restano solo sull'iPad); ogni contenuto nuovo passa da autore → revisore indipendente → controllo automatico.
 
 ## Una domanda (data/domande/quiz/<materia>.json)
 ```

@@ -40,6 +40,9 @@ Stato: **pilota realizzato il 20 ottobre 2026** (6 argomenti + 2 dalla scheda di
 - **Disegno con etichette**: per esempio cuore, fiore, vulcano.
 - **Tabella di confronto**: per esempio vertebrati, tipi di testo.
 - **Passi in fila**: procedure di matematica.
+- **Scala delle grandezze** (`tipo: "scala"`, realizzata): i nodi in fila dal più piccolo al più grande, uno sopra e uno sotto la freccia, ognuno con la sua misura in `tacca` (per esempio «10⁻¹⁰ m»). Prima: «Le potenze di dieci» (Sistema solare).
+- **👀 Da guardare insieme** (`"solo": true`, realizzato): argomenti delicati senza domande (27 gennaio, 21 marzo). Solo racconto e mappa; alla fine un testo per il genitore (`insieme`, massimo 40 parole) e fino a 3 domande per parlarne (`chiedi`). Il controllo automatico vieta le domande su questi argomenti.
+- **Disegno collegato** (`"disegno": "<id progetto>"`): a fine spiegazione compare «🎨 Disegna tu» (per esempio l'albero di Munari).
 - Realizzate: raggiera, ciclo e **linea del tempo** (`tipo: "linea"`: avvenimenti con `anno`, periodi con `periodo: [inizio, fine]`, anni negativi = a.C., `tacca` per scrivere per esempio «VIII sec. a.C.» sotto la freccia).
 
 ## Cartine interattive (realizzato)
@@ -82,3 +85,8 @@ Un file per materia: `data/spiegazioni/<materia>.json`. Ogni argomento è una ch
 - **Contenuti**: niente dati personali; nessuna percentuale sullo schermo della bimba.
 - **Le sue mappe** sono solo testo (idee, frecce, parole): stanno nell'iPad (`vale2-mappe`) e vanno anche nella copia automatica.
 - **Formato reale** (realizzato): ogni nodo ha `id`, `n`, `ic`, `sotto` e `da` (la parola sulla freccia dal centro; nel tipo «ciclo» dal nodo precedente). Esempio completo in `data/spiegazioni/storia.json`. La parola `da` non deve finire con un articolo, perché il nome del nodo ce l'ha già.
+
+## Progetto pilota «Seguendo la classe» (ottobre 2026)
+- Base: la riunione di classe (programmazione didattica, Educazione alla cittadinanza attiva, progetti, uscite) e i materiali della maestra (Bruno Munari, «Infinitamente grande, infinitamente piccolo»).
+- Prima ondata (14 argomenti, revisore indipendente + controllo automatico): Le potenze di dieci (scala), Bruno Munari (+ disegno «L'albero di Munari»), Zagazoo, Cura di sé e dell'altro, La pace, Convivenza e inclusione, Sicuri online, 27 gennaio e 21 marzo (da guardare insieme), Motoria: coordinazione, pallavolo, basket; Religione: Natale, Le grandi religioni del mondo.
+- Prossime: Motoria del secondo quadrimestre (corpo umano, giochi dei Romani), le Operine (musica), Torino romana, Costituzione con la mappa.

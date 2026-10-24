@@ -233,6 +233,11 @@
    "autori",
    "Libri e autori",
    "📚"
+  ],
+  [
+   "zagazoo",
+   "Zagazoo, di Quentin Blake",
+   "📕"
   ]
  ],
  "eng": [
@@ -555,6 +560,11 @@
    "🌌"
   ],
   [
+   "scala",
+   "Dal piccolissimo al grandissimo",
+   "🔭"
+  ],
+  [
    "comete",
    "Comete, asteroidi e stelle cadenti",
    "☄️"
@@ -697,6 +707,26 @@
    "convivenza",
    "Convivenza, gentilezza e inclusione",
    "💛"
+  ],
+  [
+   "cura",
+   "Cura di sé e dell’altro",
+   "🫶"
+  ],
+  [
+   "pace",
+   "La pace",
+   "🕊️"
+  ],
+  [
+   "memoria",
+   "27 gennaio: Giorno della Memoria",
+   "🕯️"
+  ],
+  [
+   "legalita",
+   "21 marzo: memoria delle vittime innocenti delle mafie",
+   "🌼"
   ],
   [
    "emergenze",
@@ -846,6 +876,11 @@
    "moderna",
    "L'arte moderna",
    "🌻"
+  ],
+  [
+   "munari",
+   "Bruno Munari",
+   "🌳"
   ],
   [
    "torino",
@@ -1426,6 +1461,35 @@
    "programmare",
    "Programmare in Luau",
    "💻"
+  ]
+ ],
+ "motoria": [
+  [
+   "coordinazione",
+   "Movimento e coordinazione",
+   "🤸"
+  ],
+  [
+   "pallavolo",
+   "La pallavolo",
+   "🏐"
+  ],
+  [
+   "basket",
+   "Il basket",
+   "🏀"
+  ]
+ ],
+ "religione": [
+  [
+   "natale",
+   "Il Natale",
+   "🎄"
+  ],
+  [
+   "religioni",
+   "Le grandi religioni del mondo",
+   "🌍"
   ]
  ]
 }
