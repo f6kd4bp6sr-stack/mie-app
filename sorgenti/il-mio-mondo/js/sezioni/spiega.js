@@ -63,10 +63,34 @@ function spLineSVG(d, opts) {
     '<text class="sp-lt" x="400" y="52">' + esc((d.centro.ic ? d.centro.ic + ' ' : '') + d.centro.n) + '</text>' + (d.centro.sotto ? '<text class="sp-ls" x="400" y="80">' + esc(d.centro.sotto) + '</text>' : '') +
     '<path d="M30 ' + AX + ' L780 ' + AX + '" stroke="#2b2f3a" stroke-width="4" marker-end="url(#sp-ar2)"/>' + bands + marks + tk + boxes + '</svg>';
 }
+/* scala delle grandezze («scala»): i nodi in fila dal più piccolo al più grande, un riquadro sopra e uno sotto la freccia;
+   «tacca» è la misura scritta sulla freccia (per esempio 10⁻¹⁰ m) */
+function spScalaSVG(d, opts) {
+  const vis = n => !opts.shown || opts.shown.has(n.id), N = d.nodi.length, AX = 300, W = 200, H = 92;
+  const X = i => 80 + i * 640 / Math.max(1, N - 1);
+  let marks = '', boxes = '', tk = '';
+  d.nodi.forEach((n, i) => {
+    if (!vis(n)) return;
+    const c = SP_COL[i % SP_COL.length], hid = opts.hide === n.id, lit = opts.lit && opts.lit.has(n.id), up = i % 2 === 0;
+    const x = X(i), cx = Math.max(W / 2 + 6, Math.min(800 - W / 2 - 6, x)), cy = up ? 150 : 450;
+    marks += '<path class="sp-conn" d="M' + x.toFixed(0) + ' ' + (up ? AX - 12 : AX + 12) + ' L' + cx.toFixed(0) + ' ' + (up ? cy + H / 2 : cy - H / 2) + '"/><circle cx="' + x.toFixed(0) + '" cy="' + AX + '" r="9" fill="' + c[1] + '" stroke="#fff" stroke-width="3"/>';
+    if (n.tacca) tk += '<text class="sp-yr" x="' + x.toFixed(0) + '" y="' + (up ? AX + 34 : AX - 22) + '">' + esc(n.tacca) + '</text>';
+    const name = hid ? ['❓ …'] : spWrap((n.ic ? n.ic + ' ' : '') + n.n, 18), sub = hid ? ['scegli la parola giusta'] : spWrap(n.sotto || '', 27), t0 = cy - (name.length + sub.length - 1) * 9.5 + 4;
+    boxes += '<g class="sp-node' + (hid ? ' hid' : '') + (lit ? ' lit' : '') + (opts.focus === n.id ? ' foc' : '') + '" data-n="' + esc(n.id) + '"><rect x="' + (cx - W / 2) + '" y="' + (cy - H / 2) + '" width="' + W + '" height="' + H + '" rx="18" fill="' + (hid ? '#f2f2f2' : c[0]) + '" stroke="' + (hid ? '#9aa3b2' : c[1]) + '"/>' +
+      name.map((t, k) => '<text class="nn" x="' + cx + '" y="' + (t0 + k * 21).toFixed(0) + '" fill="' + (hid ? '#5b6475' : '#2b2f3a') + '">' + esc(t) + '</text>').join('') +
+      sub.map((t, k) => '<text class="ns" x="' + cx + '" y="' + (t0 + name.length * 21 + k * 16 - 2).toFixed(0) + '" fill="' + (hid ? '#5b6475' : c[2]) + '">' + esc(t) + '</text>').join('') +
+      (lit ? '<text class="nl" x="' + (cx + W / 2 - 8) + '" y="' + (cy - H / 2 + 6) + '">💡</text>' : '') + '</g>';
+  });
+  return '<svg class="sp-map" viewBox="0 0 800 600" role="img" aria-label="Scala delle grandezze: ' + esc(d.centro.n) + '"><defs><marker id="sp-ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2b2f3a"/></marker></defs>' +
+    '<text class="sp-lt" x="400" y="44">' + esc((d.centro.ic ? d.centro.ic + ' ' : '') + d.centro.n) + '</text>' + (d.centro.sotto ? '<text class="sp-ls" x="400" y="70">' + esc(d.centro.sotto) + '</text>' : '') +
+    '<path d="M30 ' + AX + ' L780 ' + AX + '" stroke="#2b2f3a" stroke-width="4" marker-end="url(#sp-ar3)"/>' + marks + tk + boxes +
+    '<text class="sp-ls" x="40" y="580" style="text-anchor:start">◀ più piccolo</text><text class="sp-ls" x="760" y="580" style="text-anchor:end">più grande ▶</text></svg>';
+}
 /* opts: shown (Set di id visibili, null = tutti), lit (Set accesi), hide (id con ❓), focus (id evidenziato) */
 function spMapSVG(d, opts) {
   opts = opts || {};
   if (d.tipo === 'linea') return spLineSVG(d, opts);
+  if (d.tipo === 'scala') return spScalaSVG(d, opts);
   const P = spLayout(d), C = [400, 300], cyc = d.tipo === 'ciclo', W = cyc ? 210 : 228, H = 92;
   const vis = n => !opts.shown || opts.shown.has(n.id);
   const edge = (a, b, wa, ha, wb, hb) => { // segmento tra i bordi di due rettangoli
@@ -110,14 +134,15 @@ const spVoice = sl => sl.v || sl.t;  /* «v»: come leggerlo a voce (per esempio
 function spOpen(key, ret) {
   const d = spData(key); if (!d) return;
   const T = spTitle(key);
-  SP = { key, d, ret, T, ph: 'racconto', i: 0, j: 0, shown: new Set(), lit: spLit(key) };
+  const tp = T.u && T.u.topics ? T.u.topics.find(x => key === T.u.id + ':' + x.id) : null;
+  SP = { key, d, ret, T, ph: 'racconto', i: 0, j: 0, shown: new Set(), lit: spLit(key), solo: !!(d.solo || (tp && tp.solo)) };
   let ov = $('sp-ov'); if (!ov) { ov = document.createElement('div'); ov.id = 'sp-ov'; ov.className = 'sp-ov'; document.body.appendChild(ov); }
   ov.hidden = false; document.body.classList.add('in-lesson');
   spPaint();
 }
 function spClose() { try { speechSynthesis.cancel(); } catch (e) {} try { Mic.clear(); } catch (e) {} const ov = $('sp-ov'); if (ov) ov.hidden = true; document.body.classList.remove('in-lesson'); SP = null; }
-function spSteps(on) { return '<div class="sp-steps">' + [['racconto', '1 Racconto'], ['ritrova', '2 Mappa'], ['domande', '3 Domande'], ['io', '4 Lo racconto io']].map(s => '<span class="' + (s[0] === on ? 'on' : '') + '">' + s[1] + '</span>').join('') + '</div>'; }
-function spCta(d) { return d.cartina ? '<button type="button" class="sp-cta" data-ct="' + esc(d.cartina) + '">🗺️ Guarda dove: la cartina interattiva <span style="margin-left:auto">→</span></button>' : ''; }
+function spSteps(on, solo) { if (solo) return '<div class="sp-steps">' + [['racconto', '1 Racconto'], ['insieme', '2 Ne parliamo insieme']].map(s => '<span class="' + (s[0] === on ? 'on' : '') + '">' + s[1] + '</span>').join('') + '</div>'; return '<div class="sp-steps">' + [['racconto', '1 Racconto'], ['ritrova', '2 Mappa'], ['domande', '3 Domande'], ['io', '4 Lo racconto io']].map(s => '<span class="' + (s[0] === on ? 'on' : '') + '">' + s[1] + '</span>').join('') + '</div>'; }
+function spCta(d) { const p = d.disegno && typeof dsProj === 'function' ? dsProj(d.disegno) : null; return (d.cartina ? '<button type="button" class="sp-cta" data-ct="' + esc(d.cartina) + '">🗺️ Guarda dove: la cartina interattiva <span style="margin-left:auto">→</span></button>' : '') + (p ? '<button type="button" class="sp-cta" data-ds="' + esc(p.id) + '">🎨 Disegna tu: ' + esc(p.n) + ' <span style="margin-left:auto">→</span></button>' : ''); }
 function spLinks(d) {
   const L = (d.collegamenti || []).map(r => { const t = spTitle(r); return t.u ? '<button type="button" class="sp-link" data-go="' + esc(r) + '">' + esc(t.u.ic + ' ' + t.u.name + ' · ' + (t.ic ? t.ic + ' ' : '') + t.n) + ' <span>→</span></button>' : ''; }).join('');
   return L ? '<div class="sp-card"><h3>🔗 Collegamenti</h3><p class="sp-mini">Argomenti collegati, anche da altre materie.</p>' + L + '</div>' : '';
@@ -135,9 +160,15 @@ function spPaint() {
   } else if (S.ph === 'ritrova') {
     const r = d.ritrova[S.j], n = d.nodi.find(x => x.id === r.nodo);
     map = spMapSVG(d, { hide: r.nodo, lit: S.lit });
-    const phrase = d.tipo === 'ciclo' || d.tipo === 'linea' ? (n.da || '') : d.centro.n + ' · ' + (n.da || '');
+    const phrase = d.tipo === 'ciclo' || d.tipo === 'linea' || d.tipo === 'scala' ? (n.da || '') : d.centro.n + ' · ' + (n.da || '');
     side = '<div class="sp-card"><h3>🧩 Ritrova la parola che manca · ' + (S.j + 1) + ' di ' + d.ritrova.length + '</h3><p class="sp-text">' + esc(phrase) + ' <b>…?</b></p><div class="sp-choices">' +
       shuffle(r.scelte.map((t, k) => ({ t, ok: k === 0 }))).map(c => '<button type="button" class="btn ghost sp-ch" data-ok="' + (c.ok ? 1 : 0) + '">' + esc(c.t) + '</button>').join('') + '</div><p class="sp-mini" id="sp-fb">Ripensa al racconto: che cosa c’era qui?</p></div>';
+  } else if (S.ph === 'pronta' && S.solo) {
+    step = 'insieme';
+    map = spMapSVG(d, { lit: S.lit });
+    side = '<div class="sp-card"><h3>👀 Da guardare insieme</h3><p class="sp-text">' + esc(d.insieme || 'Questo argomento non ha domande. Guarda la mappa con mamma o papà e raccontatevi che cosa ne pensate.') + '</p>' +
+      (d.chiedi && d.chiedi.length ? '<p class="sp-mini">Per parlarne insieme:</p><ul class="sp-chiedi">' + d.chiedi.map(q => '<li>' + esc(q) + '</li>').join('') + '</ul>' : '') +
+      '<div class="sp-row"><button type="button" class="btn ghost" id="sp-rid">↺ Riascolta</button><button type="button" class="btn" id="sp-end" data-focus>Fine</button></div></div>' + spCta(d) + spLinks(d);
   } else if (S.ph === 'pronta') {
     step = 'domande';
     map = spMapSVG(d, { lit: S.lit });
@@ -150,11 +181,12 @@ function spPaint() {
       '<div class="sp-card" id="sp-rec"></div>' +
       '<div class="sp-row"><button type="button" class="btn ghost" id="sp-mia">✏️ Fai la tua mappa</button><button type="button" class="btn" id="sp-end" data-focus>Fine</button></div>' + spCta(d) + spLinks(d);
   }
-  ov.innerHTML = '<div class="sp-top"><button type="button" class="ls-x" id="sp-x" aria-label="Chiudi">✕</button><b class="sp-ttl">' + esc((S.T.u ? S.T.u.ic + ' ' + S.T.u.name + ' · ' : '') + (S.T.ic ? S.T.ic + ' ' : '') + S.T.n) + '</b>' + (d.cartina ? '<button type="button" class="btn small ghost" id="sp-ct">🗺️ Cartina</button>' : '') + spSteps(step) + '</div>' +
+  ov.innerHTML = '<div class="sp-top"><button type="button" class="ls-x" id="sp-x" aria-label="Chiudi">✕</button><b class="sp-ttl">' + esc((S.T.u ? S.T.u.ic + ' ' + S.T.u.name + ' · ' : '') + (S.T.ic ? S.T.ic + ' ' : '') + S.T.n) + '</b>' + (d.cartina ? '<button type="button" class="btn small ghost" id="sp-ct">🗺️ Cartina</button>' : '') + spSteps(step, S.solo) + '</div>' +
     '<div class="sp-body"><div class="sp-mapbox">' + map + '</div><div class="sp-side">' + side + '</div></div>';
   $('sp-x').addEventListener('click', spClose);
   if ($('sp-ct')) $('sp-ct').addEventListener('click', () => ctOpen(d.cartina));
   ov.querySelectorAll('[data-ct]').forEach(b => b.addEventListener('click', () => ctOpen(b.dataset.ct)));
+  ov.querySelectorAll('[data-ds]').forEach(b => b.addEventListener('click', () => { const id = b.dataset.ds; spClose(); go('disegno'); dsEditor({ pid: id }); }));
   ov.querySelectorAll('.sp-link').forEach(b => b.addEventListener('click', () => { const r = b.dataset.go; spClose(); spGoTopic(r); }));
   if (S.ph === 'racconto') {
     const sl = d.racconto[S.i];
@@ -175,6 +207,10 @@ function spPaint() {
         setTimeout(() => { S.j++; if (S.j >= d.ritrova.length) S.ph = 'pronta'; spPaint(); }, 900);
       } else { b.classList.add('wrong'); b.disabled = true; try { oops(); } catch (e) {} $('sp-fb').textContent = 'Non ancora: ripensa al racconto e riprova.'; }
     }));
+  } else if (S.ph === 'pronta' && S.solo) {
+    const st = spState(); st.visto[S.key] = todayIso(); spSave(st);
+    $('sp-end').addEventListener('click', spClose);
+    $('sp-rid').addEventListener('click', () => { S.ph = 'racconto'; S.i = 0; S.shown = new Set(); spPaint(); spSay(spVoice(d.racconto[0])); });
   } else if (S.ph === 'pronta') {
     $('sp-go').addEventListener('click', () => { const ret = S.ret, key = S.key; const st = spState(); st.visto[key] = todayIso(); spSave(st); spClose(); startLesson(ret.uid, ret.k, { spOk: true }); });
   } else if (S.ph === 'fine') {
@@ -221,6 +257,8 @@ function spGoTopic(ref) {
   startLesson = function (uid, k, opts) {
     opts = opts || {};
     const u = uid ? unitById(uid) : null, nodes = u ? unitNodes(u) : null, key = spKeyOf(u, nodes ? nodes[k] : null);
+    const tp = u && nodes ? topicOf(u, nodes[k]) : null;
+    if (key && spData(key) && tp && tp.solo) return spOpen(key, { uid, k });
     if (key && spData(key) && !opts.spOk && !opts.mix && !opts.daily && !spState().visto[key]) return spOpen(key, { uid, k });
     st0(uid, k, opts);
     if (LESSON && key && spData(key) && LESSON.u === u && LESSON.k === k) { LESSON.spKey = key; LESSON.spOk = []; }

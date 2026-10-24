@@ -121,5 +121,129 @@
    "1px6aro": "sottinteso",
    "1l37wqr": "attributo"
   }
+ },
+ "zagazoo": {
+  "centro": {
+   "n": "Zagazoo",
+   "ic": "📕",
+   "sotto": "di Quentin Blake"
+  },
+  "nodi": [
+   {
+    "id": "pacco",
+    "n": "un pacco",
+    "ic": "📦",
+    "sotto": "dentro c’è una creaturina rosa",
+    "da": "arriva in"
+   },
+   {
+    "id": "avvoltoio",
+    "n": "un avvoltoio che urla",
+    "ic": "🦅",
+    "sotto": "poi un elefantino e un cinghiale",
+    "da": "si trasforma in"
+   },
+   {
+    "id": "drago",
+    "n": "un drago sputafuoco",
+    "ic": "🐉",
+    "sotto": "poi un pipistrello che strilla",
+    "da": "diventa"
+   },
+   {
+    "id": "peloso",
+    "n": "una creatura pelosa",
+    "ic": "🦍",
+    "sotto": "che cresce, cresce e cresce",
+    "da": "poi è"
+   },
+   {
+    "id": "giovane",
+    "n": "un giovane gentile",
+    "ic": "🙂",
+    "sotto": "che si innamora di Mirabelle",
+    "da": "alla fine è"
+   },
+   {
+    "id": "genitori",
+    "n": "George e Bella",
+    "ic": "👫",
+    "sotto": "anche loro cambiano: diventano pellicani",
+    "da": "è il figlio di"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "George e Bella sono una coppia felice. Un giorno il postino porta un pacco: dentro c’è una creaturina rosa. Si chiama Zagazoo!",
+    "nodi": [
+     "genitori",
+     "pacco"
+    ]
+   },
+   {
+    "t": "Una mattina Zagazoo si trasforma: diventa un avvoltoio che urla giorno e notte. Poi un elefantino che rovescia tutto, e poi un cinghiale tutto infangato.",
+    "nodi": [
+     "avvoltoio"
+    ]
+   },
+   {
+    "t": "Poi diventa un drago che sputa fuoco e un pipistrello che strilla. George e Bella sono sempre più stanchi e non sanno che cosa fare.",
+    "nodi": [
+     "drago"
+    ]
+   },
+   {
+    "t": "Poi Zagazoo diventa una grande creatura pelosa, che cresce, cresce e cresce. George e Bella si chiedono: quando finirà?",
+    "nodi": [
+     "peloso"
+    ]
+   },
+   {
+    "t": "Un giorno, però, Zagazoo è diventato un giovane gentile ed educato. Si innamora di Mirabelle e insieme vanno a trovare George e Bella.",
+    "nodi": [
+     "giovane"
+    ]
+   },
+   {
+    "t": "Sorpresa: anche George e Bella sono cambiati, sono diventati due pellicani! Crescere cambia i figli, ma cambia anche i genitori.",
+    "nodi": [
+     "genitori"
+    ]
+   },
+   {
+    "t": "L’ha scritto e disegnato Quentin Blake, l’illustratore dei libri di Roald Dahl. In Italia ha vinto il Premio Andersen 2017 come miglior albo illustrato.",
+    "nodi": []
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "drago",
+    "scelte": [
+     "un drago sputafuoco",
+     "una farfalla",
+     "un orsacchiotto"
+    ]
+   },
+   {
+    "nodo": "peloso",
+    "scelte": [
+     "una creatura pelosa",
+     "un sasso",
+     "un pesciolino"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "ita:autori",
+   "ita:testi",
+   "arte:immagini"
+  ],
+  "domande": {
+   "7tdnnj7": "pacco",
+   "5js5uc4": "avvoltoio",
+   "c7px02l": "giovane",
+   "c4yqzi3": "genitori",
+   "9swv0z4": "genitori"
+  }
  }
 }

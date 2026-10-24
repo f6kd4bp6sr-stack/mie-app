@@ -81,6 +81,16 @@ const DIS_PROG = [
       { t: 'Ultimi dettagli: occhio, narice e una fila di spine a triangolo sulla schiena.', g: [['c', 860, 245, 14], ['c', 1000, 280, 6], ['p', 'M349 498 L332 459 L373 471 M381 465 L376 422 L415 443 M424 438 L431 394 L466 422 M545 411 L565 371 L585 411']] },
       { t: 'Colora il tuo drago con i colori che preferisci.', g: [['dot', 560, 580, '#2e9e44', 'drago']], tool: 'secchiello', col: 'verde' }
     ] },
+  /* 🌳 dal libro «Disegnare un albero» di Bruno Munari (Arte → Bruno Munari) */
+  { id: 'd107', f: 'linee', lv: 2, ic: '🌳', n: 'L’albero di Munari', tool: 'matita', col: 'nero', impara: 'la regola di Munari: ogni ramo è più sottile del ramo da cui nasce',
+    passi: [
+      { t: 'Disegna il tronco: largo in basso, un po’ più stretto in alto.', g: [['p', 'M640 880 L625 600 L575 600 L560 880 Z'], ['txt', 720, 760, 'tronco']] },
+      { t: 'Il tronco si divide in due rami. Regola di Munari: ogni ramo è più sottile del ramo da cui nasce.', g: [['p', 'M620 588 L486 389 L460 404 L580 612 Z'], ['p', 'M620 612 L740 404 L714 389 L580 588 Z']] },
+      { t: 'Ogni ramo si divide ancora in due, e i nuovi rami sono ancora più sottili.', g: [['p', 'M479 385 L331 311 L323 327 L467 408 Z'], ['p', 'M486 396 L476 231 L458 232 L460 397 Z'], ['p', 'M740 397 L742 232 L724 231 L714 396 Z'], ['p', 'M733 408 L877 327 L869 311 L721 385 Z']] },
+      { t: 'Ancora una volta: due rametti sottili da ogni ramo.', g: [['p', 'M327 312 L217 315 L217 324 L327 327 Z'], ['p', 'M333 315 L269 225 L262 230 L321 323 Z'], ['p', 'M474 228 L416 134 L408 139 L461 235 Z'], ['p', 'M474 235 L519 135 L511 131 L460 228 Z'], ['p', 'M740 228 L689 131 L681 135 L726 235 Z'], ['p', 'M739 235 L792 139 L784 134 L726 228 Z'], ['p', 'M879 323 L938 230 L931 225 L867 315 Z'], ['p', 'M873 327 L983 324 L983 315 L873 312 Z']] },
+      { t: 'Continua tu: rametti sempre più sottili, anche un po’ storti, come nella natura. Nessun albero è uguale a un altro!', g: [['txt', 600, 70, 'sempre più sottili…']] },
+      { t: 'Colora: il tronco marrone e, sulle punte, tante foglie piccole.', g: [['dot', 600, 760, '#8b5a2b', 'tronco'], ['dot', 412, 136, '#2e9e44', 'foglie'], ['dot', 788, 136, '#9bd770', 'foglie']], tool: 'pastello', col: 'verde' }
+    ] },
   /* ---------- 🎨 FASE 2: il colore ---------- */
   { id: 'd201', f: 'colore', lv: 1, ic: '🎡', n: 'La ruota dei colori', tool: 'secchiello', col: 'giallo', impara: 'colori primari e secondari',
     base: [['c', 600, 450, 330], ['l', 600, 450, 600, 120], ['l', 600, 450, 886, 285], ['l', 600, 450, 886, 615], ['l', 600, 450, 600, 780], ['l', 600, 450, 314, 615], ['l', 600, 450, 314, 285]],

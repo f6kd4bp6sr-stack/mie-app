@@ -19,7 +19,7 @@ const Gems = {
 /* ---------- unità del percorso ---------- */
 const PATH_DECO = { base: ['🌳', '🌼', '🍄', '🌷', '🦋', '🌲'], bosco: ['🌲', '🦊', '🍄', '🌳', '🦔', '🐿️'], mare: ['🐚', '🐠', '🌊', '🦀', '🐬', '⛵'], spazio: ['🪐', '⭐', '🚀', '🌙', '☄️', '👽'], ghiaccio: ['❄️', '⛄', '🐧', '⛸️', '🏔️', '🦭'] };
 /* prima le materie di scuola (programma di 5ª), poi gli extra che si aprono come premio */
-const PATH_ORDER = ['mate', 'ita', 'eng', 'parlo', 'storia', 'geo', 'sci-corpo', 'sci-energia', 'sci-spazio', 'sci-animali', 'civica', 'lavo', 'vesto', 'soldi', 'tecno', 'media', 'arte', 'musica', 'sp-patt', 'sp-aerea', 'sp-nuoto', 'sp-corpo', 'roblox'];
+const PATH_ORDER = ['mate', 'ita', 'eng', 'parlo', 'storia', 'geo', 'sci-corpo', 'sci-energia', 'sci-spazio', 'sci-animali', 'civica', 'lavo', 'vesto', 'soldi', 'tecno', 'media', 'arte', 'musica', 'motoria', 'religione', 'sp-patt', 'sp-aerea', 'sp-nuoto', 'sp-corpo', 'roblox'];
 const EXTRA_UNITS = ['sp-patt', 'sp-aerea', 'sp-nuoto', 'sp-corpo', 'roblox'];
 let __units = null;
 function pathUnits() {
@@ -40,7 +40,10 @@ function pathUnits() {
     const T = A.map(a => ({ id: a[0], n: a[1], ic: a[2], items: [] })), by = {}; T.forEach(t => by[t.id] = t);
     x.items.forEach(it => { let t = by[it.arg]; if (!t) { t = by.__altro || (by.__altro = { id: '__altro', n: 'Altre curiosità', ic: '✨', items: [] }); } t.items.push(it); });
     if (by.__altro) T.push(by.__altro);
-    x.topics = T.filter(t => t.items.length); });
+    /* argomenti «da guardare insieme»: senza domande ma con la spiegazione (data/spiegazioni, campo solo) */
+    const SP = (typeof SPIEGA !== 'undefined' && SPIEGA[x.id]) || {};
+    T.forEach(t => { if (!t.items.length && SP[t.id]) t.solo = true; });
+    x.topics = T.filter(t => t.items.length || t.solo); });
   return (__units = u);
 }
 /* righe chiave brevi (la spiegazione lunga resta dietro «Perché?»), correzioni e domande nuove di 5ª */
@@ -154,8 +157,8 @@ function chunkLearned(u, i) {
 function nodeState(u, nodes, k) {
   const us = (pState().u[u.id] || { done: {} });
   const node = nodes[k], id = nodeKey(node);
-  const done = !!us.done[id], tp = topicOf(u, node);
-  const conquered = tp ? topicLearned(u, tp) >= Math.min(8, tp.items.length) : node.t === 'lez' && chunkLearned(u, node.i) >= (u.math ? CHUNK : Math.min(8, u.items.slice(node.i * CHUNK, node.i * CHUNK + CHUNK).length));
+  const tp = topicOf(u, node), done = !!us.done[id] || !!(tp && tp.solo && typeof spState === 'function' && spState().visto[u.id + ':' + tp.id]);
+  const conquered = tp ? tp.items.length > 0 && topicLearned(u, tp) >= Math.min(8, tp.items.length) : node.t === 'lez' && chunkLearned(u, node.i) >= (u.math ? CHUNK : Math.min(8, u.items.slice(node.i * CHUNK, node.i * CHUNK + CHUNK).length));
   const open = true; /* tutte le lezioni aperte da subito (scelta del genitore) */
   return { done, conquered, open, id };
 }

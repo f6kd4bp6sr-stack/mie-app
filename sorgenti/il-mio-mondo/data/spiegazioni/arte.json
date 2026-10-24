@@ -1,0 +1,129 @@
+{
+ "munari": {
+  "centro": {
+   "n": "Bruno Munari",
+   "ic": "🎨",
+   "sotto": "Milano, 1907–1998"
+  },
+  "nodi": [
+   {
+    "id": "natura",
+    "n": "osservare la natura",
+    "ic": "🌾",
+    "sotto": "da bambino visse in campagna",
+    "da": "imparò da piccolo a"
+   },
+   {
+    "id": "macchine",
+    "n": "le macchine inutili",
+    "ic": "🌀",
+    "sotto": "sculture leggere che girano nell’aria",
+    "da": "costruì"
+   },
+   {
+    "id": "libri",
+    "n": "libri da guardare e toccare",
+    "ic": "📚",
+    "sotto": "Libri illeggibili e Prelibri",
+    "da": "inventò"
+   },
+   {
+    "id": "design",
+    "n": "oggetti di design",
+    "ic": "💡",
+    "sotto": "lampade e mobili; il Compasso d’Oro",
+    "da": "progettò"
+   },
+   {
+    "id": "albero",
+    "n": "disegnare un albero",
+    "ic": "🌳",
+    "sotto": "ogni ramo è più sottile di quello prima",
+    "da": "insegnò a"
+   },
+   {
+    "id": "giocare",
+    "n": "laboratori per bambini",
+    "ic": "🧩",
+    "sotto": "nel 1977, alla Pinacoteca di Brera",
+    "da": "aprì"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Bruno Munari nacque a Milano nel 1907, ma da bambino visse in campagna, a Badia Polesine, in Veneto. Lì imparò a osservare la natura con curiosità.",
+    "nodi": [
+     "natura"
+    ]
+   },
+   {
+    "t": "Da grande fu artista, grafico e designer. Negli anni Trenta costruì le «macchine inutili»: sculture appese e leggere che girano con un soffio d’aria.",
+    "nodi": [
+     "macchine"
+    ]
+   },
+   {
+    "t": "Inventò libri speciali: i Libri illeggibili, senza parole, fatti di carte colorate e buchi, e i Prelibri, piccoli libri da toccare per chi non sa ancora leggere.",
+    "nodi": [
+     "libri"
+    ]
+   },
+   {
+    "t": "Progettò anche oggetti di tutti i giorni, come lampade e mobili. Per il suo design vinse più volte il Compasso d’Oro, un premio molto importante.",
+    "nodi": [
+     "design"
+    ]
+   },
+   {
+    "t": "Nel libro «Disegnare un albero» spiega una regola semplice: il tronco si divide in rami, e ogni ramo è più sottile di quello da cui nasce.",
+    "nodi": [
+     "albero"
+    ]
+   },
+   {
+    "t": "Nel 1977, alla Pinacoteca di Brera, a Milano, aprì un laboratorio d’arte per bambini dentro un museo, «Giocare con l’arte». Per lui imparare voleva dire fare, toccare e sperimentare.",
+    "nodi": [
+     "giocare"
+    ]
+   },
+   {
+    "t": "Morì a Milano nel 1998, a 90 anni. Amava un antico proverbio cinese: «Se ascolto dimentico, se vedo ricordo, se faccio capisco».",
+    "nodi": []
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "albero",
+    "scelte": [
+     "disegnare un albero",
+     "guidare un aereo",
+     "suonare il violino"
+    ]
+   },
+   {
+    "nodo": "macchine",
+    "scelte": [
+     "le macchine inutili",
+     "le automobili da corsa",
+     "i grattacieli"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:moderna",
+   "arte:linguaggio",
+   "arte:tecniche",
+   "geo:regioni"
+  ],
+  "disegno": "d107",
+  "domande": {
+   "41tfhrb": "natura",
+   "4uu5jel": "macchine",
+   "orw7eu2": "libri",
+   "d8pg1hv": "albero",
+   "4mf5y3k": "giocare",
+   "8b2sbsg": "design",
+   "6x7kzn2": "giocare"
+  }
+ }
+}

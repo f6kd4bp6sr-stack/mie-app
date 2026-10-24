@@ -1,0 +1,593 @@
+{
+ "cura": {
+  "centro": {
+   "n": "Prendersi cura",
+   "ic": "🫶",
+   "sotto": "di sé, degli altri e delle cose di tutti"
+  },
+  "nodi": [
+   {
+    "id": "corpo",
+    "n": "il proprio corpo",
+    "ic": "🛌",
+    "sotto": "dormire, muoversi, lavarsi, mangiare vario",
+    "da": "di sé:"
+   },
+   {
+    "id": "emozioni",
+    "n": "le proprie emozioni",
+    "ic": "💭",
+    "sotto": "dare un nome a quello che senti",
+    "da": "di sé:"
+   },
+   {
+    "id": "aiuto",
+    "n": "chiedere aiuto",
+    "ic": "🙋",
+    "sotto": "non è debolezza: è coraggio",
+    "da": "sapere"
+   },
+   {
+    "id": "ascolto",
+    "n": "ascoltare gli altri",
+    "ic": "👂",
+    "sotto": "senza interrompere, aspettando il turno",
+    "da": "dell’altro:"
+   },
+   {
+    "id": "gentilezza",
+    "n": "la gentilezza",
+    "ic": "💛",
+    "sotto": "un piccolo gesto cambia una giornata",
+    "da": "dell’altro:"
+   },
+   {
+    "id": "cose",
+    "n": "le cose di tutti",
+    "ic": "🏫",
+    "sotto": "aula, giardino, libri, città",
+    "da": "del mondo:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Prendersi cura vuol dire fare attenzione: a se stessi, agli altri e alle cose di tutti. È il cuore della cittadinanza attiva.",
+    "nodi": []
+   },
+   {
+    "t": "Cura di sé è dormire abbastanza, muoversi, lavarsi e mangiare vario. Ma è anche ascoltare le emozioni e dare loro un nome: «sono triste», «sono felice».",
+    "nodi": [
+     "corpo",
+     "emozioni"
+    ]
+   },
+   {
+    "t": "Quando qualcosa non va, chiedere aiuto a un adulto di fiducia non è debolezza: è coraggio. Anche i grandi chiedono aiuto.",
+    "nodi": [
+     "aiuto"
+    ]
+   },
+   {
+    "t": "Cura dell’altro è ascoltare senza interrompere e fare piccoli gesti gentili, come invitare a giocare chi è da solo.",
+    "nodi": [
+     "ascolto",
+     "gentilezza"
+    ]
+   },
+   {
+    "t": "Ci sono poi le cose di tutti: l’aula, il giardino, i libri, le strade. Chi le tratta bene le regala anche agli altri.",
+    "nodi": [
+     "cose"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "aiuto",
+    "scelte": [
+     "chiedere aiuto",
+     "fare tutto da soli",
+     "non dire niente"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "civica:convivenza",
+   "lavo:mani",
+   "sci-corpo:salute",
+   "sp-corpo:sonno"
+  ],
+  "domande": {
+   "m4gljfu": "corpo",
+   "9awzrns": "emozioni",
+   "3dek2xa": "aiuto",
+   "8mi2186": "ascolto",
+   "39pjmvk": "cose",
+   "3hcq0rp": "gentilezza"
+  }
+ },
+ "pace": {
+  "centro": {
+   "n": "La pace",
+   "ic": "🕊️",
+   "sotto": "vivere insieme senza guerre"
+  },
+  "nodi": [
+   {
+    "id": "costituzione",
+    "n": "l’articolo 11",
+    "ic": "📜",
+    "sotto": "l’Italia ripudia la guerra",
+    "da": "è scritta nella Costituzione:"
+   },
+   {
+    "id": "onu",
+    "n": "l’ONU",
+    "ic": "🌐",
+    "sotto": "nata nel 1945, dopo la guerra",
+    "da": "la difende nel mondo"
+   },
+   {
+    "id": "simboli",
+    "n": "la colomba con l’ulivo",
+    "ic": "🕊️",
+    "sotto": "e la bandiera arcobaleno",
+    "da": "ha come simbolo"
+   },
+   {
+    "id": "giornata",
+    "n": "il 21 settembre",
+    "ic": "📅",
+    "sotto": "Giornata internazionale della pace",
+    "da": "si festeggia"
+   },
+   {
+    "id": "litigi",
+    "n": "risolvere i litigi",
+    "ic": "🤝",
+    "sotto": "con le parole, non con le mani",
+    "da": "comincia a scuola:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Pace vuol dire vivere insieme senza guerre, rispettandosi anche quando non si è d’accordo. Dopo la Seconda guerra mondiale molti capirono quanto è preziosa.",
+    "nodi": []
+   },
+   {
+    "t": "La Costituzione italiana lo dice nell’articolo 11: l’Italia ripudia la guerra. Vuol dire che la rifiuta per risolvere i contrasti tra i popoli.",
+    "nodi": [
+     "costituzione"
+    ]
+   },
+   {
+    "t": "Nel 1945 nacque l’ONU, l’Organizzazione delle Nazioni Unite, per aiutare i Paesi a parlarsi invece di combattere. Ogni 21 settembre celebra la Giornata internazionale della pace.",
+    "nodi": [
+     "onu",
+     "giornata"
+    ]
+   },
+   {
+    "t": "Il simbolo della pace è una colomba con un ramoscello d’ulivo, dal racconto di Noè. In Italia si usa anche la bandiera arcobaleno.",
+    "nodi": [
+     "simboli"
+    ]
+   },
+   {
+    "t": "La pace comincia anche in classe: quando nasce un litigio ci si calma, si ascolta l’altro e si cerca insieme una soluzione, con le parole.",
+    "nodi": [
+     "litigi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "litigi",
+    "scelte": [
+     "risolvere i litigi",
+     "vincere sempre",
+     "alzare la voce"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "civica:costituzione",
+   "civica:europa-onu",
+   "religione:religioni"
+  ],
+  "domande": {
+   "8ja13dg": "costituzione",
+   "cc3bga0": "simboli",
+   "bn213zd": "simboli",
+   "6p37vfj": "giornata",
+   "a7kgxjl": "onu",
+   "bjs0mww": "litigi"
+  }
+ },
+ "memoria": {
+  "solo": true,
+  "centro": {
+   "n": "Il Giorno della Memoria",
+   "ic": "🕯️",
+   "sotto": "27 gennaio"
+  },
+  "nodi": [
+   {
+    "id": "data",
+    "n": "il 27 gennaio 1945",
+    "ic": "📅",
+    "sotto": "si aprono i cancelli di Auschwitz",
+    "da": "ricorda"
+   },
+   {
+    "id": "shoah",
+    "n": "la Shoah",
+    "ic": "🕯️",
+    "sotto": "la persecuzione degli ebrei",
+    "da": "ricorda"
+   },
+   {
+    "id": "leggi",
+    "n": "le leggi razziali",
+    "ic": "📜",
+    "sotto": "1938: bambini ebrei cacciati da scuola",
+    "da": "anche in Italia:"
+   },
+   {
+    "id": "testimoni",
+    "n": "i testimoni",
+    "ic": "🗣️",
+    "sotto": "come Liliana Segre",
+    "da": "ascoltiamo"
+   },
+   {
+    "id": "ricordare",
+    "n": "ricordare",
+    "ic": "🌱",
+    "sotto": "per non restare indifferenti",
+    "da": "serve a"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il 27 gennaio è il Giorno della Memoria. Ricorda il 27 gennaio 1945, quando i soldati sovietici arrivarono ad Auschwitz e aprirono i cancelli del campo.",
+    "nodi": [
+     "data"
+    ]
+   },
+   {
+    "t": "Nella Seconda guerra mondiale i nazisti, e in Italia anche i fascisti, perseguitarono gli ebrei e altri, solo per quello che erano. Milioni di ebrei furono uccisi: si chiama Shoah.",
+    "nodi": [
+     "shoah"
+    ]
+   },
+   {
+    "t": "Anche in Italia, nel 1938, le leggi razziali tolsero i diritti agli ebrei. Molti bambini ebrei non poterono più andare nella loro scuola.",
+    "nodi": [
+     "leggi"
+    ]
+   },
+   {
+    "t": "Liliana Segre aveva 13 anni quando fu portata ad Auschwitz. Tornò, e da grande ha raccontato la sua storia agli studenti. Dal 2018 è senatrice a vita.",
+    "nodi": [
+     "testimoni"
+    ]
+   },
+   {
+    "t": "Ricordare serve a riconoscere le ingiustizie e a non restare indifferenti. Per questo, a scuola, il 27 gennaio si leggono storie e si ascoltano i testimoni.",
+    "nodi": [
+     "ricordare"
+    ]
+   }
+  ],
+  "insieme": "È una storia triste e importante. Guardatela insieme con calma: si possono fare tutte le domande che si vogliono.",
+  "chiedi": [
+   "Che cosa vuol dire, per te, restare indifferenti?",
+   "Perché è importante ascoltare chi racconta la propria storia?"
+  ],
+  "collegamenti": [
+   "civica:diritti",
+   "civica:costituzione",
+   "civica:legalita"
+  ]
+ },
+ "legalita": {
+  "solo": true,
+  "centro": {
+   "n": "Il 21 marzo",
+   "ic": "🌼",
+   "sotto": "memoria e impegno contro le mafie"
+  },
+  "nodi": [
+   {
+    "id": "giornata",
+    "n": "una giornata di memoria",
+    "ic": "🌼",
+    "sotto": "per le vittime innocenti delle mafie",
+    "da": "è"
+   },
+   {
+    "id": "mafie",
+    "n": "mafie",
+    "ic": "⛓️",
+    "sotto": "gruppi che usano paura e violenza",
+    "da": "ricorda le vittime delle"
+   },
+   {
+    "id": "nomi",
+    "n": "i nomi",
+    "ic": "📣",
+    "sotto": "letti ad alta voce, uno per uno",
+    "da": "si leggono"
+   },
+   {
+    "id": "coraggio",
+    "n": "chi ha avuto coraggio",
+    "ic": "⚖️",
+    "sotto": "come Giovanni Falcone e Paolo Borsellino",
+    "da": "ricorda"
+   },
+   {
+    "id": "legalita",
+    "n": "la legalità",
+    "ic": "🤝",
+    "sotto": "rispettare le regole, insieme",
+    "da": "si costruisce con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il 21 marzo, quando comincia la primavera, in Italia si ricordano le vittime innocenti delle mafie. La primavera è un segno di speranza.",
+    "nodi": [
+     "giornata"
+    ]
+   },
+   {
+    "t": "Le mafie sono gruppi di persone che vogliono comandare con la paura e la violenza, senza rispettare le leggi. Fanno del male a tutta la comunità.",
+    "nodi": [
+     "mafie"
+    ]
+   },
+   {
+    "t": "Quel giorno, in tante piazze, si leggono ad alta voce i nomi delle vittime, uno per uno, perché nessuno venga dimenticato.",
+    "nodi": [
+     "nomi"
+    ]
+   },
+   {
+    "t": "C’è chi ha avuto il coraggio di opporsi, come i magistrati Giovanni Falcone e Paolo Borsellino. Ricordarli insegna che le regole proteggono tutti.",
+    "nodi": [
+     "coraggio"
+    ]
+   },
+   {
+    "t": "La giornata è nata grazie all’associazione Libera, fondata da don Luigi Ciotti. Dal 2017 una legge la riconosce come giornata nazionale.",
+    "nodi": [
+     "legalita"
+    ]
+   }
+  ],
+  "insieme": "È un tema serio: guardatelo insieme. Potete parlare di che cosa vuol dire rispettare le regole e avere coraggio.",
+  "chiedi": [
+   "Che cosa vuol dire, per te, avere coraggio?",
+   "Quali regole, a scuola o in città, proteggono tutti?"
+  ],
+  "collegamenti": [
+   "civica:stato",
+   "civica:costituzione",
+   "civica:memoria"
+  ]
+ },
+ "convivenza": {
+  "centro": {
+   "n": "Convivenza e inclusione",
+   "ic": "💛",
+   "sotto": "tutti possono partecipare"
+  },
+  "nodi": [
+   {
+    "id": "inclusione",
+    "n": "l’inclusione",
+    "ic": "🧩",
+    "sotto": "fare in modo che tutti partecipino",
+    "da": "vuol dire"
+   },
+   {
+    "id": "empatia",
+    "n": "l’empatia",
+    "ic": "💭",
+    "sotto": "capire come si sente un altro",
+    "da": "comincia con"
+   },
+   {
+    "id": "gentilezza",
+    "n": "la gentilezza",
+    "ic": "💛",
+    "sotto": "per favore, grazie, scusa",
+    "da": "cresce con"
+   },
+   {
+    "id": "spazi",
+    "n": "spazi per tutti",
+    "ic": "♿",
+    "sotto": "rampe, percorsi tattili, lingua dei segni",
+    "da": "ha bisogno di"
+   },
+   {
+    "id": "bullismo",
+    "n": "no al bullismo",
+    "ic": "🛑",
+    "sotto": "stare vicino a chi è preso di mira",
+    "da": "dice"
+   },
+   {
+    "id": "regole",
+    "n": "le regole",
+    "ic": "📋",
+    "sotto": "per stare bene insieme",
+    "da": "si regge su"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Inclusione vuol dire fare in modo che tutti possano partecipare: a scuola, nel gioco, in città. Nessuno deve restare fuori.",
+    "nodi": [
+     "inclusione"
+    ]
+   },
+   {
+    "t": "Tutto comincia con l’empatia: provare a capire come si sente un altro, mettendosi nei suoi panni.",
+    "nodi": [
+     "empatia"
+    ]
+   },
+   {
+    "t": "La gentilezza ha parole semplici: per favore, grazie, scusa. Il 13 novembre si celebra la Giornata mondiale della gentilezza.",
+    "nodi": [
+     "gentilezza"
+    ]
+   },
+   {
+    "t": "Una città inclusiva ha rampe accanto alle scale, percorsi in rilievo per chi non vede, interpreti della lingua dei segni per chi non sente.",
+    "nodi": [
+     "spazi"
+    ]
+   },
+   {
+    "t": "Se qualcuno viene preso di mira più volte, è bullismo. Non si ride: si sta vicino a chi è in difficoltà e si avvisa un adulto.",
+    "nodi": [
+     "bullismo"
+    ]
+   },
+   {
+    "t": "Per stare bene insieme servono regole condivise: proteggono tutti, i più forti e i più fragili.",
+    "nodi": [
+     "regole"
+    ]
+   }
+  ],
+  "domande": {
+   "1ipqv46": "inclusione",
+   "1ug9paj": "empatia",
+   "1ubvhvq": "gentilezza",
+   "wk0cdc": "gentilezza",
+   "95fkbw": "spazi",
+   "138a9tw": "spazi",
+   "n3j5zd": "spazi",
+   "cjx39": "spazi",
+   "118l91g": "bullismo",
+   "9mxx0y": "bullismo",
+   "1k5g6x4": "regole",
+   "19m3058": "regole"
+  },
+  "collegamenti": [
+   "civica:cura",
+   "civica:diritti",
+   "civica:online"
+  ]
+ },
+ "online": {
+  "centro": {
+   "n": "Sicuri online",
+   "ic": "💻",
+   "sotto": "internet con la testa"
+  },
+  "nodi": [
+   {
+    "id": "dati",
+    "n": "i dati personali",
+    "ic": "🔒",
+    "sotto": "indirizzo, password e telefono restano segreti",
+    "da": "proteggi"
+   },
+   {
+    "id": "adulto",
+    "n": "un adulto di fiducia",
+    "ic": "🙋",
+    "sotto": "se qualcosa ti mette a disagio",
+    "da": "parlane con"
+   },
+   {
+    "id": "trappole",
+    "n": "le trappole",
+    "ic": "🎣",
+    "sotto": "premi falsi e link strani",
+    "da": "riconosci"
+   },
+   {
+    "id": "bufale",
+    "n": "bufale",
+    "ic": "📰",
+    "sotto": "controlla prima di credere",
+    "da": "non credere alle"
+   },
+   {
+    "id": "rispetto",
+    "n": "il rispetto",
+    "ic": "💬",
+    "sotto": "niente offese: sarebbe cyberbullismo",
+    "da": "usa"
+   },
+   {
+    "id": "foto",
+    "n": "le foto",
+    "ic": "📷",
+    "sotto": "possono restare in rete per sempre",
+    "da": "pensaci prima di pubblicare"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Internet è un posto meraviglioso per imparare e giocare, ma come in città servono attenzione e regole. Se ne parla anche a scuola.",
+    "nodi": []
+   },
+   {
+    "t": "Alcune cose restano segrete: password, indirizzo di casa, numero di telefono. La password si dice solo ai tuoi genitori.",
+    "nodi": [
+     "dati"
+    ]
+   },
+   {
+    "t": "Se un messaggio dice «Hai vinto un premio, clicca qui!» è quasi sempre una trappola. Non clicchi e lo dici a un adulto.",
+    "nodi": [
+     "trappole"
+    ]
+   },
+   {
+    "t": "Online girano anche notizie false, le bufale. Prima di crederci o di condividerle, si controlla con un adulto o su fonti serie.",
+    "nodi": [
+     "bufale"
+    ]
+   },
+   {
+    "t": "Anche online si parla con rispetto: le regole di buona educazione si chiamano netiquette. Offendere qualcuno in rete è cyberbullismo.",
+    "nodi": [
+     "rispetto"
+    ]
+   },
+   {
+    "t": "Una foto pubblicata può restare in rete per sempre, e per le foto degli altri serve il permesso. Se qualcosa ti mette a disagio, parlane subito con un adulto.",
+    "nodi": [
+     "foto",
+     "adulto"
+    ]
+   }
+  ],
+  "domande": {
+   "10jzpzv": "dati",
+   "yxo7sx": "dati",
+   "hzq7cs": "adulto",
+   "p7k3nr": "trappole",
+   "owrldj": "bufale",
+   "xxpi7t": "rispetto",
+   "1rcef3h": "rispetto",
+   "itc5v6": "foto",
+   "hm2rjr": "foto"
+  },
+  "collegamenti": [
+   "tecno:internet",
+   "civica:convivenza",
+   "civica:cura"
+  ]
+ }
+}
