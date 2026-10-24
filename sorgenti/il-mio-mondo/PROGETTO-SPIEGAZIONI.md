@@ -49,11 +49,11 @@ Stato: **pilota realizzato il 20 ottobre 2026** (6 argomenti + 2 dalla scheda di
 - `data/cartine/<id>.json`: coste vere semplificate (Natural Earth, pubblico dominio), luoghi con tipo, posizione e testo, etichette dei mari e delle regioni. Motore `js/sezioni/cartina.js`.
 - Una spiegazione la apre con il campo `"cartina": "<id>"`: compare il tasto «🗺️ Cartina» in alto e una scheda «Guarda dove» a fine racconto.
 - Due modi: **🔎 Esplora** (tocca un luogo, leggi o ascolta che cosa era) e **🎯 Trova il luogo** (6 luoghi a caso; dopo 2 errori il punto giusto lampeggia; conta solo la prima risposta).
-- Prima cartina: **La Grecia antica**, usata da «La civiltà greca» e «Le polis»: 22 luoghi presi dalla cartina della maestra (più Olimpia e il Monte Olimpo). Campo `zona`: ingrandimento della Grecia centrale con coste più dettagliate; i luoghi con `"z":1` (Micene, Calcide, Eretria, Megara) si vedono solo lì, e nel gioco la cartina si ingrandisce da sola quando servono.
+- Prima cartina: **La Grecia antica**, usata da «La civiltà greca» e «Le polis»: 22 luoghi presi dalla cartina di scuola (più Olimpia e il Monte Olimpo). Campo `zona`: ingrandimento della Grecia centrale con coste più dettagliate; i luoghi con `"z":1` (Micene, Calcide, Eretria, Megara) si vedono solo lì, e nel gioco la cartina si ingrandisce da sola quando servono.
 - Revisione indipendente fatta (corretto il testo su Atene: votavano solo i cittadini maschi adulti).
 
-## I fogli della maestra sono la base
-I contenuti sulla Grecia seguono i fogli «A spasso nelle polis» e «Dove e quando?» (confronto fatto da un revisore esterno il 20 ottobre 2026): civiltà greca dal 1000 a.C. circa al 146 a.C.; periodo arcaico fino al 480, classico 480-323, **ellenistico 300-146 a.C.** (Alessandro muore nel 323; il racconto dice «verso il 300 a.C. comincia…»); polis «intorno all'VIII secolo a.C., verso il 700 a.C.»; 3 caratteristiche della polis: **autonomia, territorio, comunità**. Per i prossimi argomenti: chiedere le schede di scuola e confrontarle prima di pubblicare.
+## Le schede di scuola sono la base
+I contenuti sulla Grecia seguono le schede di scuola (confronto fatto da un revisore esterno il 20 ottobre 2026): civiltà greca dal 1000 a.C. circa al 146 a.C.; periodo arcaico fino al 480, classico 480-323, **ellenistico 300-146 a.C.** (Alessandro muore nel 323; il racconto dice «verso il 300 a.C. comincia…»); polis «intorno all'VIII secolo a.C., verso il 700 a.C.»; 3 caratteristiche della polis: **autonomia, territorio, comunità**. Per i prossimi argomenti: chiedere le schede di scuola e confrontarle prima di pubblicare.
 
 ## Collegamenti tra materie
 Sotto la mappa compaiono i «🔗 Collegamenti»: 2-3 argomenti di altre materie, cioè id di argomenti esistenti in `argomenti.json`. Per esempio: Antico Egitto → Geografia «Fiumi e laghi», Arte «L'arte antica», Tecnologia «I materiali».
@@ -83,10 +83,10 @@ Un file per materia: `data/spiegazioni/<materia>.json`. Ogni argomento è una ch
   - le frasi siano brevi (≤ 30 parole per schermata; il campo «v» dà il testo da leggere a voce, per esempio «tre quarti» invece di 3/4);
   - non ci siano termini vietati.
 - **Contenuti**: niente dati personali; nessuna percentuale sullo schermo della bimba.
-- **Le sue mappe** sono solo testo (idee, frecce, parole): stanno nell'iPad (`vale2-mappe`) e vanno anche nella copia automatica.
+- **Le sue mappe** sono solo testo (idee, frecce, parole): stanno nell'iPad (`mm2-mappe`) e vanno anche nella copia automatica.
 - **Formato reale** (realizzato): ogni nodo ha `id`, `n`, `ic`, `sotto` e `da` (la parola sulla freccia dal centro; nel tipo «ciclo» dal nodo precedente). Esempio completo in `data/spiegazioni/storia.json`. La parola `da` non deve finire con un articolo, perché il nome del nodo ce l'ha già.
 
 ## Progetto pilota «Seguendo la classe» (ottobre 2026)
-- Base: la riunione di classe (programmazione didattica, Educazione alla cittadinanza attiva, progetti, uscite) e i materiali della maestra (Bruno Munari, «Infinitamente grande, infinitamente piccolo»).
+- Base: il programma della classe (programmazione didattica, Educazione alla cittadinanza attiva, progetti, uscite) e le schede di scuola (Bruno Munari, «Infinitamente grande, infinitamente piccolo»).
 - Prima ondata (14 argomenti, revisore indipendente + controllo automatico): Le potenze di dieci (scala), Bruno Munari (+ disegno «L'albero di Munari»), Zagazoo, Cura di sé e dell'altro, La pace, Convivenza e inclusione, Sicuri online, 27 gennaio e 21 marzo (da guardare insieme), Motoria: coordinazione, pallavolo, basket; Religione: Natale, Le grandi religioni del mondo.
 - Prossime: Motoria del secondo quadrimestre (corpo umano, giochi dei Romani), le Operine (musica), Torino romana, Costituzione con la mappa.

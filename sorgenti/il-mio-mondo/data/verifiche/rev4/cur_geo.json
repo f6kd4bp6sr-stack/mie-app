@@ -1,182 +1,182 @@
 [
-  {
-    "t": "Il lago dei record",
-    "x": "Il lago Bajkal, in Russia, è il più profondo e il più antico del mondo: circa 1700 m e 25 milioni di anni! Contiene circa il 20% dell'acqua dolce non ghiacciata della Terra.",
-    "ic": "💧",
-    "q": "Qual è il lago più profondo del mondo?",
-    "ok": "Il Bajkal",
-    "wrong": [
-      "Il lago di Garda",
-      "Il lago Maggiore"
-    ],
-    "src": "whc.unesco.org"
-  },
-  {
-    "t": "11 orologi diversi",
-    "x": "La Russia è così larga che ha 11 fusi orari: quando all'estremo ovest si va a dormire, all'estremo est è già mattina!",
-    "ic": "⏰",
-    "q": "Quanti fusi orari ha la Russia?",
-    "ok": "11",
-    "wrong": [
-      "1",
-      "3"
-    ],
-    "src": "timeanddate.com"
-  },
-  {
-    "t": "Un deserto di ghiaccio",
-    "x": "L'Antartide è coperta di ghiaccio, ma è un deserto: ci cade pochissima pioggia o neve. Trucco: deserto non vuol dire caldo, vuol dire secco!",
-    "ic": "🐧",
-    "q": "Perché l'Antartide è un deserto?",
-    "ok": "Ci cade pochissima pioggia o neve",
-    "wrong": [
-      "È piena di sabbia",
-      "È molto calda"
-    ],
-    "src": "nasa.gov"
-  },
-  {
-    "t": "Più alto dell'Everest?",
-    "x": "Il vulcano Mauna Kea, alle Hawaii, misurato dal fondo dell'oceano è alto circa 10.200 m: più dell'Everest! Ma gran parte del monte è sott'acqua.",
-    "ic": "🌋",
-    "q": "Misurato dal fondo del mare, quale monte supera l'Everest?",
-    "ok": "Il Mauna Kea",
-    "wrong": [
-      "Il Monte Bianco",
-      "Il Vesuvio"
-    ],
-    "src": "usgs.gov"
-  },
-  {
-    "t": "Più larga della Luna",
-    "x": "L'Australia, da est a ovest, è larga quasi 4000 km; la Luna ha un diametro di circa 3474 km. L'Australia è più larga! Ma la Luna ha una superficie molto più grande.",
-    "ic": "🦘",
-    "q": "Che cosa è più largo?",
-    "ok": "L'Australia, da est a ovest",
-    "wrong": [
-      "La Luna, di sicuro",
-      "Sono larghe uguali"
-    ],
-    "src": "NASA Moon fact sheet"
-  },
-  {
-    "t": "Lo Stato mini",
-    "x": "La Città del Vaticano è lo Stato più piccolo del mondo: circa 0,44 km². Pensa: sta tutto dentro la città di Roma!",
-    "ic": "🗝️",
-    "q": "Qual è lo Stato più piccolo del mondo?",
-    "ok": "La Città del Vaticano",
-    "wrong": [
-      "San Marino",
-      "Il Principato di Monaco"
-    ],
-    "src": "britannica.com"
-  },
-  {
-    "t": "Un fiume, 10 bandiere",
-    "x": "Il Danubio tocca 10 Paesi: Germania, Austria, Slovacchia, Ungheria, Croazia, Serbia, Bulgaria, Romania, Moldavia e Ucraina. Un fiume, dieci bandiere!",
-    "ic": "🚢",
-    "q": "Quanti Paesi tocca il Danubio?",
-    "ok": "10",
-    "wrong": [
-      "2",
-      "25"
-    ],
-    "src": "britannica.com"
-  },
-  {
-    "t": "Una foresta sotto Venezia",
-    "x": "Venezia poggia su milioni di pali di legno piantati nel fango della laguna. Sott'acqua, senza ossigeno, il legno non marcisce: una foresta capovolta sotto la città!",
-    "ic": "🛶",
-    "q": "Su che cosa poggia Venezia?",
-    "ok": "Su pali di legno nel fango",
-    "wrong": [
-      "Su barche ancorate",
-      "Su blocchi di ghiaccio"
-    ],
-    "src": "ilmeteo.net"
-  },
-  {
-    "t": "Nessun ponte",
-    "x": "Il Rio delle Amazzoni è lunghissimo, ma nessun ponte lo attraversa! Scorre tra foreste poco abitate, cambia larghezza con le piogge e la gente usa le barche.",
-    "ic": "🌉",
-    "q": "Quanti ponti attraversano il Rio delle Amazzoni?",
-    "ok": "Nessuno",
-    "wrong": [
-      "Uno ogni chilometro",
-      "Mille"
-    ],
-    "src": "livescience.com"
-  },
-  {
-    "t": "Il Sahara verde",
-    "x": "Tra circa 14.500 e 5000 anni fa il Sahara era verde, con praterie e savana! Poi le piogge diminuirono ed è diventato deserto.",
-    "ic": "🌿",
-    "q": "Com'era il Sahara migliaia di anni fa?",
-    "ok": "Verde, con praterie",
-    "wrong": [
-      "Coperto di ghiaccio",
-      "Tutto sott'acqua"
-    ],
-    "src": "noaa.gov"
-  },
-  {
-    "t": "Ecuador = Equatore",
-    "x": "In spagnolo «ecuador» vuol dire «equatore»: lo Stato dell'Ecuador si chiama così perché l'Equatore lo attraversa! C'è un monumento chiamato «Mitad del Mundo», metà del mondo.",
-    "ic": "🌎",
-    "q": "Che cosa vuol dire «ecuador» in spagnolo?",
-    "ok": "Equatore",
-    "wrong": [
-      "Montagna",
-      "Vulcano"
-    ],
-    "src": "britannica.com"
-  },
-  {
-    "t": "L'isola gigante",
-    "x": "La Groenlandia è l'isola più grande del mondo. E l'Australia? È ancora più grande, ma si conta come continente, non come isola!",
-    "ic": "🏝️",
-    "q": "Qual è l'isola più grande del mondo?",
-    "ok": "La Groenlandia",
-    "wrong": [
-      "La Sicilia",
-      "L'Islanda"
-    ],
-    "src": "britannica.com"
-  },
-  {
-    "t": "Un mare... morto",
-    "x": "Il Mar Morto è quasi 10 volte più salato dell'oceano: niente pesci, ci vivono solo microbi. Le sue rive sono il punto più basso delle terre emerse, centinaia di metri sotto il livello del mare.",
-    "ic": "🧂",
-    "q": "Perché il Mar Morto si chiama così?",
-    "ok": "Ci vivono solo microbi",
-    "wrong": [
-      "È pieno di squali",
-      "È sempre ghiacciato"
-    ],
-    "src": "Wikipedia «Dead Sea» (salinità 9,6 volte)"
-  },
-  {
-    "t": "Canarini e Canarie",
-    "x": "I canarini prendono il nome dalle Isole Canarie, spagnole, al largo dell'Africa: non il contrario! Il nome delle isole forse viene dal latino «canis», cane, ma non è sicuro.",
-    "ic": "🐤",
-    "q": "Da dove prendono il nome i canarini?",
-    "ok": "Dalle Isole Canarie",
-    "wrong": [
-      "Dal verbo cantare",
-      "Dal colore giallo"
-    ],
-    "src": "etymonline.com"
-  },
-  {
-    "t": "Il sole di mezzanotte",
-    "x": "Nel nord della Norvegia, d'estate, il Sole non tramonta per settimane: è il «sole di mezzanotte»! Alle isole Svalbard dura da aprile ad agosto.",
-    "ic": "☀️",
-    "q": "Che cos'è il «sole di mezzanotte»?",
-    "ok": "Il Sole che d'estate non tramonta",
-    "wrong": [
-      "Una luna molto luminosa",
-      "Un fuoco d'artificio"
-    ],
-    "src": "visitnorway.com"
-  }
+ {
+  "t": "Il lago dei record",
+  "x": "Il lago Bajkal, in Russia, è il più profondo e il più antico del mondo: circa 1700 m e 25 milioni di anni! Contiene circa il 20% dell'acqua dolce non ghiacciata della Terra.",
+  "ic": "💧",
+  "q": "Qual è il lago più profondo del mondo?",
+  "ok": "Il Bajkal",
+  "wrong": [
+   "Il lago di Garda",
+   "Il lago Maggiore"
+  ],
+  "src": "whc.unesco.org"
+ },
+ {
+  "t": "11 orologi diversi",
+  "x": "La Russia è così larga che ha 11 fusi orari: quando all'estremo ovest si va a dormire, all'estremo est è già mattina!",
+  "ic": "⏰",
+  "q": "Quanti fusi orari ha la Russia?",
+  "ok": "11",
+  "wrong": [
+   "1",
+   "3"
+  ],
+  "src": "timeanddate.com"
+ },
+ {
+  "t": "Un deserto di ghiaccio",
+  "x": "L'Antartide è coperta di ghiaccio, ma è un deserto: ci cade pochissima pioggia o neve. Trucco: deserto non vuol dire caldo, vuol dire secco!",
+  "ic": "🐧",
+  "q": "Perché l'Antartide è un deserto?",
+  "ok": "Ci cade pochissima pioggia o neve",
+  "wrong": [
+   "È piena di sabbia",
+   "È molto calda"
+  ],
+  "src": "nasa.gov"
+ },
+ {
+  "t": "Più alto dell'Everest?",
+  "x": "Il vulcano Mauna Kea, alle Hawaii, misurato dal fondo dell'oceano è alto circa 10.200 m: più dell'Everest! Ma gran parte del monte è sott'acqua.",
+  "ic": "🌋",
+  "q": "Misurato dal fondo del mare, quale monte supera l'Everest?",
+  "ok": "Il Mauna Kea",
+  "wrong": [
+   "Il Monte Bianco",
+   "Il Vesuvio"
+  ],
+  "src": "usgs.gov"
+ },
+ {
+  "t": "Più larga della Luna",
+  "x": "L'Australia, da est a ovest, è larga quasi 4000 km; la Luna ha un diametro di circa 3474 km. L'Australia è più larga! Ma la Luna ha una superficie molto più grande.",
+  "ic": "🦘",
+  "q": "Che cosa è più largo?",
+  "ok": "L'Australia, da est a ovest",
+  "wrong": [
+   "La Luna, di sicuro",
+   "Sono larghe uguali"
+  ],
+  "src": "NASA Moon fact sheet"
+ },
+ {
+  "t": "Lo Stato mini",
+  "x": "La Città del Vaticano è lo Stato più piccolo del mondo: circa 0,44 km². Pensa: sta tutto dentro la città di Roma!",
+  "ic": "🗝️",
+  "q": "Qual è lo Stato più piccolo del mondo?",
+  "ok": "La Città del Vaticano",
+  "wrong": [
+   "San Marino",
+   "Il Principato di Monaco"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "Un fiume, 10 bandiere",
+  "x": "Il Danubio tocca 10 Paesi: Germania, Austria, Slovacchia, Ungheria, Croazia, Serbia, Bulgaria, Romania, Moldavia e Ucraina. Un fiume, dieci bandiere!",
+  "ic": "🚢",
+  "q": "Quanti Paesi tocca il Danubio?",
+  "ok": "10",
+  "wrong": [
+   "2",
+   "25"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "Una foresta sotto Venezia",
+  "x": "Venezia poggia su milioni di pali di legno piantati nel fango della laguna. Sott'acqua, senza ossigeno, il legno non marcisce: una foresta capovolta sotto la città!",
+  "ic": "🛶",
+  "q": "Su che cosa poggia Venezia?",
+  "ok": "Su pali di legno nel fango",
+  "wrong": [
+   "Su barche ancorate",
+   "Su blocchi di ghiaccio"
+  ],
+  "src": "ilmeteo.net"
+ },
+ {
+  "t": "Nessun ponte",
+  "x": "Il Rio delle Amazzoni è lunghissimo, ma nessun ponte lo attraversa! Scorre tra foreste poco abitate, cambia larghezza con le piogge e la gente usa le barche.",
+  "ic": "🌉",
+  "q": "Quanti ponti attraversano il Rio delle Amazzoni?",
+  "ok": "Nessuno",
+  "wrong": [
+   "Uno ogni chilometro",
+   "Mille"
+  ],
+  "src": "livescience.com"
+ },
+ {
+  "t": "Il Sahara verde",
+  "x": "Tra circa 14.500 e 5000 anni fa il Sahara era verde, con praterie e savana! Poi le piogge diminuirono ed è diventato deserto.",
+  "ic": "🌿",
+  "q": "Com'era il Sahara migliaia di anni fa?",
+  "ok": "Verde, con praterie",
+  "wrong": [
+   "Coperto di ghiaccio",
+   "Tutto sott'acqua"
+  ],
+  "src": "noaa.gov"
+ },
+ {
+  "t": "Ecuador = Equatore",
+  "x": "In spagnolo «ecuador» vuol dire «equatore»: lo Stato dell'Ecuador si chiama così perché l'Equatore lo attraversa! C'è un monumento chiamato «Mitad del Mundo», metà del mondo.",
+  "ic": "🌎",
+  "q": "Che cosa vuol dire «ecuador» in spagnolo?",
+  "ok": "Equatore",
+  "wrong": [
+   "Montagna",
+   "Vulcano"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "L'isola gigante",
+  "x": "La Groenlandia è l'isola più grande del mondo. E l'Australia? È ancora più grande, ma si conta come continente, non come isola!",
+  "ic": "🏝️",
+  "q": "Qual è l'isola più grande del mondo?",
+  "ok": "La Groenlandia",
+  "wrong": [
+   "La Sicilia",
+   "L'Islanda"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "Un mare... morto",
+  "x": "Il Mar Morto è quasi 10 volte più salato dell'oceano: niente pesci, ci vivono solo microbi. Le sue rive sono il punto più basso delle terre emerse, centinaia di metri sotto il livello del mare.",
+  "ic": "🧂",
+  "q": "Perché il Mar Morto si chiama così?",
+  "ok": "Ci vivono solo microbi",
+  "wrong": [
+   "È pieno di squali",
+   "È sempre ghiacciato"
+  ],
+  "src": "Wikipedia «Dead Sea» (salinità 9,6 volte)"
+ },
+ {
+  "t": "Canarini e Canarie",
+  "x": "I canarini prendono il nome dalle Isole Canarie, spagnole, al largo dell'Africa: non il contrario! Il nome delle isole forse viene dal latino «canis», cane, ma non è sicuro.",
+  "ic": "🐤",
+  "q": "Da dove prendono il nome i canarini?",
+  "ok": "Dalle Isole Canarie",
+  "wrong": [
+   "Dal verbo cantare",
+   "Dal colore giallo"
+  ],
+  "src": "etymonline.com"
+ },
+ {
+  "t": "Il sole di mezzanotte",
+  "x": "Nel nord della Norvegia, d'estate, il Sole non tramonta per settimane: è il «sole di mezzanotte»! Alle isole Svalbard dura da aprile ad agosto.",
+  "ic": "☀️",
+  "q": "Che cos'è il «sole di mezzanotte»?",
+  "ok": "Il Sole che d'estate non tramonta",
+  "wrong": [
+   "Una luna molto luminosa",
+   "Un fuoco d'artificio"
+  ],
+  "src": "visitnorway.com"
+ }
 ]

@@ -6,7 +6,7 @@ const DATA_VER = 2;
   let v = store.get('data-ver', 1);
   if (v >= DATA_VER) return;
   try {
-    const dump = {}; for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith('vale2-') && true) dump[k] = localStorage.getItem(k); }
+    const dump = {}; for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith('mm2-') && true) dump[k] = localStorage.getItem(k); }
     localStorage.setItem('mondo-pre-migra', JSON.stringify({ from: v, at: new Date().toISOString(), data: dump }));
   } catch (e) {}
   /* v1 → v2: le domande hanno un codice fisso uguale al vecchio, nessuna conversione necessaria */

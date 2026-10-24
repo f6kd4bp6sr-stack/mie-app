@@ -8,9 +8,12 @@ const pick = a => a[Math.floor(Math.random() * a.length)];
 const rnd = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
 /* ---------- Memoria: copia locale + salvataggio nel tuo account Claude (quando disponibile) ---------- */
 const store = (() => {
-  const P = 'vale2-', mem = {}, stamp = {};
+  const P = 'mm2-', OLD = atob('dmFsZTIt'), mem = {}, stamp = {};  /* OLD: prefisso dei salvataggi fino al 24/10/2026 */
   let ls = null;
   try { const k = P + '__probe'; localStorage.setItem(k, '1'); localStorage.removeItem(k); ls = localStorage; } catch (e) { ls = null; }
+  /* prefisso neutro (24/10/2026): le chiavi vecchie si spostano una alla volta, senza perdere niente */
+  if (ls) { try { const ks = []; for (let i = 0; i < ls.length; i++) { const k = ls.key(i); if (k && k.startsWith(OLD)) ks.push(k); }
+    ks.forEach(k => { const nk = P + k.slice(OLD.length), v = ls.getItem(k); if (v != null && ls.getItem(nk) == null) ls.setItem(nk, v); if (ls.getItem(nk) === v || ls.getItem(nk) != null) ls.removeItem(k); }); } catch (e) {} }
   if (ls) {
     for (let i = 0; i < ls.length; i++) { const k = ls.key(i); if (k && k.startsWith(P) && k !== P + '__t') { try { mem[k.slice(P.length)] = JSON.parse(ls.getItem(k)); } catch (e) {} } }
     try { Object.assign(stamp, JSON.parse(ls.getItem(P + '__t') || '{}')); } catch (e) {}

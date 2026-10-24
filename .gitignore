@@ -1,0 +1,16 @@
+# file che non devono mai finire nel repository pubblico
+*.bak
+*.orig
+*.log
+*.env
+.env*
+*.pyc
+__pycache__/
+node_modules/
+.DS_Store
+*-copia-*.json
+drago-progressi-*.json
+semestre-filtro-copia-*.json
+*.chiaro.json
+scheda-pensione.json
+rapport*.md

@@ -1,4 +1,18 @@
 [
-{"id":2,"title_old":"Cos’è un palindromo?","why":"«anna» è un nome proprio scritto minuscolo: sostituito con «ala»","set":["Cos’è un palindromo?","Una parola che si legge uguale anche al contrario: «ala», «osso», «radar». Ne trovi un’altra?"]},
-{"id":10,"title_old":"Chi era Dante Alighieri?","why":"Impreciso: Dante nacque a Firenze (1265) ma fu esiliato e morì a Ravenna (1321) (Treccani)","set":["Chi era Dante Alighieri?","Il poeta della Divina Commedia, nato a Firenze nel 1265 e morto a Ravenna nel 1321, più di 700 anni fa. È chiamato «padre della lingua italiana»."]}
+ {
+  "id": 2,
+  "title_old": "Cos’è un palindromo?",
+  "set": [
+   "Cos’è un palindromo?",
+   "Una parola che si legge uguale anche al contrario: «ala», «osso», «radar». Ne trovi un’altra?"
+  ]
+ },
+ {
+  "id": 10,
+  "title_old": "Chi era Dante Alighieri?",
+  "set": [
+   "Chi era Dante Alighieri?",
+   "Il poeta della Divina Commedia, nato a Firenze nel 1265 e morto a Ravenna nel 1321, più di 700 anni fa. È chiamato «padre della lingua italiana»."
+  ]
+ }
 ]

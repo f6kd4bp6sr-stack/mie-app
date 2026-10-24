@@ -1,182 +1,182 @@
 [
-  {
-    "t": "La tabellina del 9 sulle dita",
-    "x": "Apri le 10 dita e abbassa il dito numero 4: a sinistra restano 3 dita, a destra 6. Risultato: 9 × 4 = 36! Funziona per tutta la tabellina del 9, da 1 a 10. Prova con 9 × 7!",
-    "ic": "🖐️",
-    "q": "Con il trucco delle dita, quanto fa 9 × 7?",
-    "ok": "63",
-    "wrong": [
-      "56",
-      "72"
-    ],
-    "src": "Calcolo verificato (aritmetica)"
-  },
-  {
-    "t": "Il trucco dell'11",
-    "x": "Per fare 23 × 11 separa le cifre e metti in mezzo la loro somma: 2 (2+3) 3 = 253! Funziona con i numeri di due cifre se la somma è meno di 10. Prova: 45 × 11 = 4 (9) 5 = 495.",
-    "ic": "✌️",
-    "q": "Con il trucco dell'11, quanto fa 36 × 11?",
-    "ok": "396",
-    "wrong": [
-      "369",
-      "336"
-    ],
-    "src": "Calcolo verificato (aritmetica)"
-  },
-  {
-    "t": "Il numero a specchio",
-    "x": "111.111.111 × 111.111.111 = 12.345.678.987.654.321! Il risultato sale da 1 a 9 e poi scende di nuovo a 1, come una montagna di cifre. Si legge uguale da destra e da sinistra: è un numero palindromo!",
-    "ic": "🪞",
-    "q": "Qual è la cifra al centro di 111.111.111 × 111.111.111?",
-    "ok": "9",
-    "wrong": [
-      "1",
-      "5"
-    ],
-    "src": "Calcolo verificato con computer"
-  },
-  {
-    "t": "Un miliardo di secondi",
-    "x": "Un milione di secondi sono circa 11 giorni e mezzo. Un miliardo di secondi invece sono quasi 32 anni! Un miliardo è mille volte un milione: una differenza gigantesca, anche se le parole si somigliano.",
-    "ic": "⏱️",
-    "q": "Più o meno quanto tempo è un miliardo di secondi?",
-    "ok": "Quasi 32 anni",
-    "wrong": [
-      "Circa 11 giorni",
-      "Circa 3 mesi"
-    ],
-    "src": "Calcolo verificato (1.000.000.000 : 31.557.600 s in un anno)"
-  },
-  {
-    "t": "Il bambino che sommò fino a 100",
-    "x": "Si racconta (forse è un po' leggenda) che Gauss, da bambino, sommò in un lampo i numeri da 1 a 100. Il trucco è vero: 1+100, 2+99, 3+98… fanno sempre 101, e le coppie sono 50. 50 × 101 = 5050!",
-    "ic": "➕",
-    "q": "Quanto fa la somma dei numeri da 1 a 100?",
-    "ok": "5050",
-    "wrong": [
-      "5000",
-      "10100"
-    ],
-    "src": "Calcolo verificato; aneddoto tradizionale su C. F. Gauss"
-  },
-  {
-    "t": "I numeri perfetti",
-    "x": "Il 6 è un numero «perfetto»: i suoi divisori più piccoli di lui (1, 2, 3) sommati fanno proprio 6! Anche 28 lo è: 1+2+4+7+14 = 28. Il successivo è 496: sono rarissimi!",
-    "ic": "💎",
-    "q": "Perché 6 si chiama numero perfetto?",
-    "ok": "1 + 2 + 3 fa proprio 6",
-    "wrong": [
-      "Perché è pari",
-      "Perché 6 × 6 fa 36"
-    ],
-    "src": "Calcolo verificato (divisori di 6, 28, 496)"
-  },
-  {
-    "t": "Le api, campionesse di geometria",
-    "x": "Le celle delle api sono esagoni. Nel 1999 il matematico Thomas Hales ha dimostrato che, per dividere una superficie in pezzi uguali, l'esagono usa meno «bordo» di tutte le altre forme. Meno bordo, meno cera!",
-    "ic": "🐝",
-    "q": "Che forma hanno le celle dell'alveare?",
-    "ok": "Esagoni",
-    "wrong": [
-      "Quadrati",
-      "Triangoli"
-    ],
-    "src": "Teorema dell'alveare, T. C. Hales (1999)"
-  },
-  {
-    "t": "Il googol, inventato da un bambino",
-    "x": "Un 1 seguito da 100 zeri si chiama «googol». Il nome lo inventò Milton Sirotta, un bambino di 9 anni, nipote del matematico Edward Kasner, che gli aveva chiesto un nome per un numero enorme!",
-    "ic": "🔢",
-    "q": "Quanti zeri ci sono dopo l'1 in un googol?",
-    "ok": "100",
-    "wrong": [
-      "10",
-      "1000"
-    ],
-    "src": "MathWorld/Wikipedia «Googol» (data discordante 1920/1938)"
-  },
-  {
-    "t": "Chi inventò il segno =",
-    "x": "Il segno «=» lo inventò Robert Recorde, un matematico gallese, nel 1557. Scelse due righe parallele uguali perché, scrisse, nessuna cosa può essere più uguale di due righe uguali!",
-    "ic": "🟰",
-    "q": "Perché Recorde scelse due righe parallele per il segno uguale?",
-    "ok": "Due righe uguali sono il massimo dell'uguale",
-    "wrong": [
-      "Erano facili da cancellare",
-      "Erano le iniziali del suo nome"
-    ],
-    "src": "The Whetstone of Witte (1557); Wikipedia «Equals sign»"
-  },
-  {
-    "t": "Bastano 4 colori",
-    "x": "Per colorare qualsiasi carta geografica, in modo che due regioni confinanti non abbiano mai lo stesso colore, bastano 4 colori! Il problema nacque nel 1852 e fu risolto solo nel 1976, con l'aiuto di un computer.",
-    "ic": "🗺️",
-    "q": "Quanti colori bastano per colorare qualsiasi carta geografica?",
-    "ok": "4",
-    "wrong": [
-      "3",
-      "7"
-    ],
-    "src": "Britannica (four-color map problem)"
-  },
-  {
-    "t": "Il 14 marzo è la festa della matematica",
-    "x": "Dal 2020 l'UNESCO festeggia il 14 marzo la Giornata internazionale della matematica. Perché proprio quel giorno? Negli USA la data si scrive 3/14, come 3,14: le prime cifre di pi greco (π)!",
-    "ic": "🥧",
-    "q": "Perché la festa della matematica è il 14 marzo?",
-    "ok": "Ricorda 3,14, cioè pi greco",
-    "wrong": [
-      "È il compleanno di Pitagora",
-      "È il primo giorno di primavera"
-    ],
-    "src": "UNESCO / IMAGINARY (International Day of Mathematics)"
-  },
-  {
-    "t": "Il metro misurato sulla Terra",
-    "x": "Nel 1791 in Francia decisero che il metro sarebbe stato la decimilionesima parte della distanza tra il Polo Nord e l'Equatore. Quindi dal Polo all'Equatore ci sono circa 10 milioni di metri: 10.000 km!",
-    "ic": "🌍",
-    "q": "Quanto è lunga, più o meno, la strada dal Polo Nord all'Equatore?",
-    "ok": "Circa 10.000 km",
-    "wrong": [
-      "Circa 1.000 km",
-      "Circa 100.000 km"
-    ],
-    "src": "Focus (storia del metro); Académie des sciences 1791"
-  },
-  {
-    "t": "I Romani senza lo zero",
-    "x": "I numeri romani (I, V, X, L, C, D, M) non hanno lo zero! Lo zero nacque in India e arrivò in Europa grazie agli Arabi e a Fibonacci. Infatti 2026 in numeri romani è MMXXVI: nessuno zero!",
-    "ic": "🏛️",
-    "q": "Quale numero manca nei numeri romani?",
-    "ok": "Lo zero",
-    "wrong": [
-      "Il cinque",
-      "Il mille"
-    ],
-    "src": "Studenti.it (storia dello zero)"
-  },
-  {
-    "t": "Il girasole conta con Fibonacci",
-    "x": "Guarda i semi di un girasole: formano spirali in due direzioni. Spesso sono 34 da una parte e 55 dall'altra: due numeri della serie di Fibonacci (1, 1, 2, 3, 5, 8, 13, 21, 34, 55…). Spesso, non sempre!",
-    "ic": "🌻",
-    "q": "Nella serie di Fibonacci, che numero viene dopo 21 e 34?",
-    "ok": "55",
-    "wrong": [
-      "44",
-      "68"
-    ],
-    "src": "Plus Magazine, Università di Cambridge (Turing's Sunflowers)"
-  },
-  {
-    "t": "Quanta acqua in una piscina olimpica?",
-    "x": "Una piscina olimpica è lunga 50 m e larga 25 m. Se è profonda 2 m: 50 × 25 × 2 = 2.500 metri cubi, cioè 2,5 milioni di litri! Ci vorrebbero 5 milioni di bottiglie da mezzo litro.",
-    "ic": "🏊‍♀️",
-    "q": "Quanto è lunga una piscina olimpica?",
-    "ok": "50 metri",
-    "wrong": [
-      "25 metri",
-      "100 metri"
-    ],
-    "src": "World Aquatics (misure piscina olimpica); calcolo verificato"
-  }
+ {
+  "t": "La tabellina del 9 sulle dita",
+  "x": "Apri le 10 dita e abbassa il dito numero 4: a sinistra restano 3 dita, a destra 6. Risultato: 9 × 4 = 36! Funziona per tutta la tabellina del 9, da 1 a 10. Prova con 9 × 7!",
+  "ic": "🖐️",
+  "q": "Con il trucco delle dita, quanto fa 9 × 7?",
+  "ok": "63",
+  "wrong": [
+   "56",
+   "72"
+  ],
+  "src": "Calcolo verificato (aritmetica)"
+ },
+ {
+  "t": "Il trucco dell'11",
+  "x": "Per fare 23 × 11 separa le cifre e metti in mezzo la loro somma: 2 (2+3) 3 = 253! Funziona con i numeri di due cifre se la somma è meno di 10. Prova: 45 × 11 = 4 (9) 5 = 495.",
+  "ic": "✌️",
+  "q": "Con il trucco dell'11, quanto fa 36 × 11?",
+  "ok": "396",
+  "wrong": [
+   "369",
+   "336"
+  ],
+  "src": "Calcolo verificato (aritmetica)"
+ },
+ {
+  "t": "Il numero a specchio",
+  "x": "111.111.111 × 111.111.111 = 12.345.678.987.654.321! Il risultato sale da 1 a 9 e poi scende di nuovo a 1, come una montagna di cifre. Si legge uguale da destra e da sinistra: è un numero palindromo!",
+  "ic": "🪞",
+  "q": "Qual è la cifra al centro di 111.111.111 × 111.111.111?",
+  "ok": "9",
+  "wrong": [
+   "1",
+   "5"
+  ],
+  "src": "Calcolo verificato con computer"
+ },
+ {
+  "t": "Un miliardo di secondi",
+  "x": "Un milione di secondi sono circa 11 giorni e mezzo. Un miliardo di secondi invece sono quasi 32 anni! Un miliardo è mille volte un milione: una differenza gigantesca, anche se le parole si somigliano.",
+  "ic": "⏱️",
+  "q": "Più o meno quanto tempo è un miliardo di secondi?",
+  "ok": "Quasi 32 anni",
+  "wrong": [
+   "Circa 11 giorni",
+   "Circa 3 mesi"
+  ],
+  "src": "Calcolo verificato (1.000.000.000 : 31.557.600 s in un anno)"
+ },
+ {
+  "t": "Il bambino che sommò fino a 100",
+  "x": "Si racconta (forse è un po' leggenda) che Gauss, da bambino, sommò in un lampo i numeri da 1 a 100. Il trucco è vero: 1+100, 2+99, 3+98… fanno sempre 101, e le coppie sono 50. 50 × 101 = 5050!",
+  "ic": "➕",
+  "q": "Quanto fa la somma dei numeri da 1 a 100?",
+  "ok": "5050",
+  "wrong": [
+   "5000",
+   "10100"
+  ],
+  "src": "Calcolo verificato; aneddoto tradizionale su C. F. Gauss"
+ },
+ {
+  "t": "I numeri perfetti",
+  "x": "Il 6 è un numero «perfetto»: i suoi divisori più piccoli di lui (1, 2, 3) sommati fanno proprio 6! Anche 28 lo è: 1+2+4+7+14 = 28. Il successivo è 496: sono rarissimi!",
+  "ic": "💎",
+  "q": "Perché 6 si chiama numero perfetto?",
+  "ok": "1 + 2 + 3 fa proprio 6",
+  "wrong": [
+   "Perché è pari",
+   "Perché 6 × 6 fa 36"
+  ],
+  "src": "Calcolo verificato (divisori di 6, 28, 496)"
+ },
+ {
+  "t": "Le api, campionesse di geometria",
+  "x": "Le celle delle api sono esagoni. Nel 1999 il matematico Thomas Hales ha dimostrato che, per dividere una superficie in pezzi uguali, l'esagono usa meno «bordo» di tutte le altre forme. Meno bordo, meno cera!",
+  "ic": "🐝",
+  "q": "Che forma hanno le celle dell'alveare?",
+  "ok": "Esagoni",
+  "wrong": [
+   "Quadrati",
+   "Triangoli"
+  ],
+  "src": "Teorema dell'alveare, T. C. Hales (1999)"
+ },
+ {
+  "t": "Il googol, inventato da un bambino",
+  "x": "Un 1 seguito da 100 zeri si chiama «googol». Il nome lo inventò Milton Sirotta, un bambino di 9 anni, nipote del matematico Edward Kasner, che gli aveva chiesto un nome per un numero enorme!",
+  "ic": "🔢",
+  "q": "Quanti zeri ci sono dopo l'1 in un googol?",
+  "ok": "100",
+  "wrong": [
+   "10",
+   "1000"
+  ],
+  "src": "MathWorld/Wikipedia «Googol» (data discordante 1920/1938)"
+ },
+ {
+  "t": "Chi inventò il segno =",
+  "x": "Il segno «=» lo inventò Robert Recorde, un matematico gallese, nel 1557. Scelse due righe parallele uguali perché, scrisse, nessuna cosa può essere più uguale di due righe uguali!",
+  "ic": "🟰",
+  "q": "Perché Recorde scelse due righe parallele per il segno uguale?",
+  "ok": "Due righe uguali sono il massimo dell'uguale",
+  "wrong": [
+   "Erano facili da cancellare",
+   "Erano le iniziali del suo nome"
+  ],
+  "src": "The Whetstone of Witte (1557); Wikipedia «Equals sign»"
+ },
+ {
+  "t": "Bastano 4 colori",
+  "x": "Per colorare qualsiasi carta geografica, in modo che due regioni confinanti non abbiano mai lo stesso colore, bastano 4 colori! Il problema nacque nel 1852 e fu risolto solo nel 1976, con l'aiuto di un computer.",
+  "ic": "🗺️",
+  "q": "Quanti colori bastano per colorare qualsiasi carta geografica?",
+  "ok": "4",
+  "wrong": [
+   "3",
+   "7"
+  ],
+  "src": "Britannica (four-color map problem)"
+ },
+ {
+  "t": "Il 14 marzo è la festa della matematica",
+  "x": "Dal 2020 l'UNESCO festeggia il 14 marzo la Giornata internazionale della matematica. Perché proprio quel giorno? Negli USA la data si scrive 3/14, come 3,14: le prime cifre di pi greco (π)!",
+  "ic": "🥧",
+  "q": "Perché la festa della matematica è il 14 marzo?",
+  "ok": "Ricorda 3,14, cioè pi greco",
+  "wrong": [
+   "È il compleanno di Pitagora",
+   "È il primo giorno di primavera"
+  ],
+  "src": "UNESCO / IMAGINARY (International Day of Mathematics)"
+ },
+ {
+  "t": "Il metro misurato sulla Terra",
+  "x": "Nel 1791 in Francia decisero che il metro sarebbe stato la decimilionesima parte della distanza tra il Polo Nord e l'Equatore. Quindi dal Polo all'Equatore ci sono circa 10 milioni di metri: 10.000 km!",
+  "ic": "🌍",
+  "q": "Quanto è lunga, più o meno, la strada dal Polo Nord all'Equatore?",
+  "ok": "Circa 10.000 km",
+  "wrong": [
+   "Circa 1.000 km",
+   "Circa 100.000 km"
+  ],
+  "src": "Focus (storia del metro); Académie des sciences 1791"
+ },
+ {
+  "t": "I Romani senza lo zero",
+  "x": "I numeri romani (I, V, X, L, C, D, M) non hanno lo zero! Lo zero nacque in India e arrivò in Europa grazie agli Arabi e a Fibonacci. Infatti 2026 in numeri romani è MMXXVI: nessuno zero!",
+  "ic": "🏛️",
+  "q": "Quale numero manca nei numeri romani?",
+  "ok": "Lo zero",
+  "wrong": [
+   "Il cinque",
+   "Il mille"
+  ],
+  "src": "Studenti.it (storia dello zero)"
+ },
+ {
+  "t": "Il girasole conta con Fibonacci",
+  "x": "Guarda i semi di un girasole: formano spirali in due direzioni. Spesso sono 34 da una parte e 55 dall'altra: due numeri della serie di Fibonacci (1, 1, 2, 3, 5, 8, 13, 21, 34, 55…). Spesso, non sempre!",
+  "ic": "🌻",
+  "q": "Nella serie di Fibonacci, che numero viene dopo 21 e 34?",
+  "ok": "55",
+  "wrong": [
+   "44",
+   "68"
+  ],
+  "src": "Plus Magazine, Università di Cambridge (Turing's Sunflowers)"
+ },
+ {
+  "t": "Quanta acqua in una piscina olimpica?",
+  "x": "Una piscina olimpica è lunga 50 m e larga 25 m. Se è profonda 2 m: 50 × 25 × 2 = 2.500 metri cubi, cioè 2,5 milioni di litri! Ci vorrebbero 5 milioni di bottiglie da mezzo litro.",
+  "ic": "🏊‍♀️",
+  "q": "Quanto è lunga una piscina olimpica?",
+  "ok": "50 metri",
+  "wrong": [
+   "25 metri",
+   "100 metri"
+  ],
+  "src": "World Aquatics (misure piscina olimpica); calcolo verificato"
+ }
 ]

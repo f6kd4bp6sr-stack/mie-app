@@ -1,6 +1,6 @@
 /* ================= LA BAMBINA ANIMATA DELLE PAUSE MOVIMENTO =================
    Manichino snodato (busto, testa, braccia e gambe a due segmenti) disegnato in SVG:
-   una bambina di 10 anni con capelli lunghi castani, maglietta e leggings.
+   un personaggio stilizzato con capelli lunghi, maglietta e leggings.
    Due viste: di fronte (prof 0) e di profilo, rivolta a sinistra (prof 1).
    Angoli in gradi: 0 = verso il basso, positivo = verso destra dello schermo, 180 = in alto.
    Di profilo «destra dello schermo» = dietro la schiena, «sinistra» = davanti.
