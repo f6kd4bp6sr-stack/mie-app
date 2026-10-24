@@ -6,20 +6,10 @@ import json, re, sys, datetime, base64
 TEMI = {'contratto', 'previdenza', 'inps', 'fondi'}
 TAG = {'dpr', 'aumenti', 'arretrati', 'fesi', 'moltiplicatore', 'ausiliaria', 'coefficienti', 'tasso', 'tfs', 'scatti', 'faf', 'premio', 'fiscale', 'requisiti', 'quotaA'}
 # niente dati personali in un file pubblico: solo impronte, le parole non sono nel codice
-import hashlib as _hl, re as _re
-def guarda(testo, regole):
-    """Vero se il testo contiene un termine da non pubblicare. Il confronto è per impronte (hash):
-    le parole stesse non compaiono nel codice pubblico."""
-    w = _re.findall(r"[0-9a-zà-ÿ]+", str(testo).lower()); H = {tuple(r[:4]): r[4] for r in regole}; C = {tuple(r[:3]) for r in regole}
-    for i in range(len(w)):
-        for n, L, e in C:
-            if i + n > len(w): continue
-            s = ' '.join(w[i:i + n])
-            if len(s) < L or (e and len(s) != L): continue
-            k = (n, L, e, _hl.blake2b(s[:L].encode(), digest_size=8, key=b'mie-app-guardia').hexdigest())
-            if k in H and not (H[k] and i + n < len(w) and w[i + n].startswith(H[k])): return True
-    return False
-GUARD = [[1, 9, 1, "80ae5209ad7a7456", "tere"], [1, 7, 1, "c0123f8c83a83527", ""], [1, 6, 0, "fe5ed81eead6c480", ""], [1, 7, 1, "6ecf1ca9e5c13710", ""], [1, 5, 1, "debdc10cec49b50b", ""], [4, 8, 1, "e682bab68f1748f1", ""], [1, 5, 1, "485bc6dc5359cd9e", ""], [1, 6, 0, "cf916918a4e53fb5", ""], [1, 7, 1, "50e6ad855d6f693e", ""], [1, 4, 1, "0965105e44659ce2", ""], [1, 9, 0, "1232ff47c6f9ef8f", ""], [3, 21, 0, "8ca88b76e83f722f", ""]]
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), 'tools'))
+from guardia import guarda  # impronte con chiave segreta: tools/guardia.py
+GUARD = [[1, 9, 1, "cc2818bd0e2f6b13", "4:c4785a1339db913d"], [1, 7, 1, "82460a55f9b142a4", ""], [1, 6, 0, "fa19f4c42e2070fb", ""], [1, 7, 1, "a3a2f0a68650b540", ""], [1, 5, 1, "955c1ac3a0091fca", ""], [4, 8, 1, "32891f88dd4c9697", ""], [1, 5, 1, "0233900121cc0328", ""], [1, 6, 0, "921c1ef4ff595230", ""], [1, 7, 1, "011d6f16608445c5", ""], [1, 4, 1, "cee06d995a56a537", ""], [1, 9, 0, "114db3c7cd1b4074", ""], [3, 21, 0, "1d2c1ad5207a93ee", ""]]  # impronte con chiave segreta (tools/guardia.py)
 def err(m): sys.exit('ERRORE: ' + m)
 f = sys.argv[1]; raw = open(f, encoding='utf-8').read(); o = json.loads(raw)
 if o.get('app') != 'pianificazione-novita': err('campo app')
@@ -63,7 +53,7 @@ for x in P:
     if x.get('isin') and not re.match(r'^[A-Z]{2}[A-Z0-9]{9}[0-9]$', x['isin']): err('prodotti: ISIN ' + x['id'])
     if not re.match(r'^\d{4}-\d{2}-\d{2}$', x['d']) or x['d'] > today: err('prodotti: data ' + x['id'])
     if not x['url'].startswith('https://'): err('prodotti: url ' + x['id'])
-if guarda(raw, GUARD): err('termine personale nel file pubblico')
+if guarda(raw, GUARD, obbligatoria=False): err('termine personale nel file pubblico')
 TIPI = {'ufficiale', 'sindacato GdF', 'sindacato polizia', 'sindacato militari', 'testata'}
 for x in o.get('fonti', []):
     if not x.get('n') or not str(x.get('url', '')).startswith('https://') or x.get('tipo') not in TIPI: err('fonte non valida: ' + str(x.get('n')))

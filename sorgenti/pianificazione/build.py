@@ -53,20 +53,10 @@ else:
     sw = open(D + 'statici/sw.js').read()
     sw = re.sub(r'Versione [0-9a-f]+', 'Versione ' + ver, sw); sw = re.sub(r"const CACHE = 'licenze-[0-9a-f]+'", "const CACHE = 'licenze-%s'" % ver, sw)
     open(OUT + 'sw.js', 'w').write(sw)
-import hashlib as _hl, re as _re
-def guarda(testo, regole):
-    """Vero se il testo contiene un termine da non pubblicare. Il confronto è per impronte (hash):
-    le parole stesse non compaiono nel codice pubblico."""
-    w = _re.findall(r"[0-9a-zà-ÿ]+", str(testo).lower()); H = {tuple(r[:4]): r[4] for r in regole}; C = {tuple(r[:3]) for r in regole}
-    for i in range(len(w)):
-        for n, L, e in C:
-            if i + n > len(w): continue
-            s = ' '.join(w[i:i + n])
-            if len(s) < L or (e and len(s) != L): continue
-            k = (n, L, e, _hl.blake2b(s[:L].encode(), digest_size=8, key=b'mie-app-guardia').hexdigest())
-            if k in H and not (H[k] and i + n < len(w) and w[i + n].startswith(H[k])): return True
-    return False
-GUARD_SALUTE = [[1, 4, 1, "0965105e44659ce2", ""], [1, 9, 0, "1232ff47c6f9ef8f", ""], [3, 21, 0, "8ca88b76e83f722f", ""]]  # i tre termini controllati da sempre nel file pubblicato
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'tools'))
+from guardia import guarda  # impronte con chiave segreta: tools/guardia.py
+GUARD_SALUTE = [[1, 4, 1, "cee06d995a56a537", ""], [1, 9, 0, "114db3c7cd1b4074", ""], [3, 21, 0, "1d2c1ad5207a93ee", ""]]  # impronte con chiave segreta (tools/guardia.py)
 for k, s in pages.items():
     if guarda(s, GUARD_SALUTE): sys.exit('termine vietato in ' + k)
     open(OUT + k, 'w', encoding='utf-8').write(s)
