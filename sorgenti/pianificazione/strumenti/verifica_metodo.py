@@ -100,7 +100,6 @@ def controlla(path):
         if sum(1 for o in op if o.get('ok')) != 1: err.append(w + ': serve una e una sola risposta giusta')
         if any(not o.get('t') or not o.get('r') for o in op): err.append(w + ': ogni risposta vuole testo e commento')
         if q.get('sch') not in sch: err.append(w + ': scheda collegata sconosciuta')
-    if len(d.get('quiz', [])) < 10: err.append('servono almeno 10 situazioni nel quiz')
     for c in d.get('frasi', []):
         if len(c.get('f', [])) < 4: err.append('frasi «%s»: servono almeno 4 frasi' % c.get('n'))
     if len(d.get('frasi', [])) < 4: err.append('servono almeno 4 gruppi di frasi di scorta')

@@ -11,7 +11,7 @@ pian/
 │   │                  e benessere), 🗂️ Pratiche, ⚙️ Impostazioni (blocco, Calendario dell'iPad, copie); 💶 Conti nascosta (CONTI_ON)
 │   ├── licenze.html   📅 Licenze (prima era index.html)
 │   ├── taichi.html    🧘 Tai Chi
-│   ├── metodo.html    🤝 Metodo: Oggi (3 carte da girare), Lo sapevi?, Che cosa faresti?, Frasi di scorta, Medaglie, Incontri, Com'è andata, Volontariato (`pn-v1` → `met`)
+│   ├── metodo.html    🤝 Metodo: Oggi (3 carte da girare), Lo sapevi?, Frasi di scorta, Volontariato; finestre apri/chiudi (`pn-v1` → `met`)
 │   └── progressi.html 🐉 Progressi di «Il mio mondo»
 ├── comune/blocco.html blocco con Face ID (passkey WebAuthn) inserito in testa a ogni pagina; sposta le vecchie chiavi mie-app-… in pn-…
 ├── comune/tema.css   tema comune: colore di ogni app nel menu in alto, riquadri morbidi di Licenze e Progressi
@@ -32,7 +32,7 @@ pian/
 │                     la apre con la chiave `pn-scheda-chiave` e la unisce da sola (spunte, note, importi reali restano); non cambia la versione
 ├── sezioni/investimenti.js 🌱 Investimenti (`pn-v1` → `inv`: prof, ris, som, deb, sim, ipo): legge Cassa e scheda della Pensione,
 │                     tassi da `news-pensione.json` → `mercati` (aggiornati dall’attività) o scritti a mano
-├── sezioni/metodo_dati.json  🤝 Metodo: 4 abilità con motto, 16 schede (curiosità + scienza con fonti), 52 missioni (nome in codice, bonus, livello, situazione), quiz, frasi di scorta; inserito nella pagina dal build
+├── sezioni/metodo_dati.json  🤝 Metodo: 4 abilità con motto, 30 schede (curiosità + scienza con fonti), oltre 100 missioni (nome in codice, bonus, livello, situazione), 12 gruppi di frasi di scorta; inserito nella pagina dal build
 ├── sezioni/pratiche.js 🗂️ Pratiche (`pn-v1` → `prat`): stato, prossimo passo, documenti, contatti, diario, note;
 │                     file allegati nel database `licenze-marco`, chiavi `pf-…` (non vanno nella copia su iCloud)
 ├── docs/             ricerca sui formati di esportazione delle banche
