@@ -56,7 +56,7 @@ A ogni giro aggiorna i 14 valori di `mercati` (stessi `id`, numeri in percentual
 - `btp2`, `btp5`, `btp10` rendimenti lordi dei BTP a 2, 5 e 10 anni: ultima chiusura (Trading Economics, Borsa Italiana, rendimentibtp.it; due fonti che coincidono entro 0,05 punti);
 - `btpv` emissione retail del MEF in corso o più recente (BTP Valore, BTP Italia, BTP Più…): rendimento lordo a scadenza e, nella `nota`, nome, date di collocamento e cedole minime — dt.mef.gov.it o una testata che lo riporta;
 - `cdl`, `cd12`, `cd24`, `cd36` miglior tasso lordo dei conti deposito libero e vincolati 12/24/36 mesi di banche italiane aderenti al Fondo Interbancario (siti di confronto come conti-deposito.net, facile.it; nella `nota` «promozionale» quando lo è);
-- `bbva0`, `bbva10`, `bbva50`, `bbvac` tassi lordi del conto corrente BBVA per i clienti già aperti (base = 25% del tasso BCE, saldo medio da 10.000 € e da 50.000 €, con una condizione mensile): pagina ufficiale bbva.it «conto corrente con remunerazione», cambiano a inizio trimestre; nella `nota` di `bbvac` l’eventuale promozione per i nuovi clienti.
+- `bbva0`, `bbva10`, `bbva50`, `bbvac` tassi lordi del conto corrente BBVA per i correntisti (base = 25% del tasso BCE, saldo medio da 10.000 € e da 50.000 €, con una condizione mensile): pagina ufficiale bbva.it «conto corrente con remunerazione», cambiano a inizio trimestre; nella `nota` di `bbvac` l’eventuale promozione per i nuovi clienti.
 Doppia verifica come per le notizie; se un valore non si può verificare, lascia quello di prima (con la sua data). Niente consigli: sono solo numeri con data e fonte.
 
 ## 🔎 Prodotti per la ricerca (`prodotti`, sezione 🌱 Investimenti → Ricerca)
@@ -64,7 +64,7 @@ Elenco breve (massimo 40) di prodotti **semplici**: conti deposito (`dep`), cont
 A ogni giro: aggiorna i tassi dei depositi in elenco e segnali scaduti con `chiuso`; quando il MEF annuncia o chiude un’emissione retail (BTP Valore, BTP Italia, BTP Più…) aggiungila o aggiorna tassi definitivi e date; una volta al mese ricontrolla TER e nome degli ETF. Mai prodotti complessi (certificati, leva, derivati, criptovalute, polizze), mai consigli: solo dati con data e fonte. La verifica controlla schema, ISIN e date.
 
 ## 🔄 Scheda pensione cifrata (dopo le novità, a ogni giro)
-`licenze/scheda-pensione.cifrata.json` è la scheda personale di Marco **cifrata** (AES-256-GCM). L'iPad la scarica e la unisce da sola: le sue spunte, note, importi reali, esito e documenti restano comunque. La chiave è **solo** nel testo dell'attività programmata: passala con `SCHEDA_CHIAVE`, non scriverla mai in un file, in un commit, in una notizia o nell'output.
+`licenze/scheda-pensione.cifrata.json` è la scheda personale del proprietario **cifrata** (AES-256-GCM). L'iPad la scarica e la unisce da sola: le sue spunte, note, importi reali, esito e documenti restano comunque. La chiave è **solo** nel testo dell'attività programmata: passala con `SCHEDA_CHIAVE`, non scriverla mai in un file, in un commit, in una notizia o nell'output.
 
 1. Apri in una cartella temporanea fuori dal repository: `T=$(mktemp -d); python3 sorgenti/pianificazione/strumenti/scheda_cifrata.py apri licenze/scheda-pensione.cifrata.json $T/s.json`.
 2. Cambia la scheda **solo** per un fatto nuovo e verificato (regola 1) da una fonte ufficiale, o da un sindacato quando l'ufficiale non c'è ancora (scrivilo nella nota: «secondo …»). Che cosa si può cambiare:

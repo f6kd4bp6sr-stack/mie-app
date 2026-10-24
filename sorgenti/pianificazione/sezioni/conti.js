@@ -1,5 +1,5 @@
 /* ================= 💶 CONTI =================
-   Conti e carte di più banche (Fineco, BNL, N26, BBVA…), importazione dei movimenti dai file della banca
+   Conti e carte di più banche, importazione dei movimenti dai file della banca
    (CSV, XLSX, XLS: letti sull'iPad, mai inviati), categorie e budget, grafici, ricorrenti, rate e trattenute,
    proiezione «Dopo il congedo». Tutti gli importi sono quelli inseriti o importati dall'utente. */
 const FREQ={m:["ogni mese",1],b:["ogni 2 mesi",2],t:["ogni 3 mesi",3],s:["ogni 6 mesi",6],a:["ogni anno",12]};
@@ -20,7 +20,7 @@ const AIUTO_BANCA={
 const KCATS=[
   ["casa","🏠","Casa e utenze",/verisure|internet telefono|utenze|casa e|affitto|mutuo|condomin|enel|iren|hera|a2a|edison|engie|sorgenia|acea|smat|tari\b|tim\b|telecom|fastweb|vodafone|iliad|windtre|wind tre|sky wifi|gas\b|luce\b/],
   ["spesa","🛒","Spesa",/alimentari|supermercat|conad|coop\b|esselunga|carrefour|lidl|eurospin|\bpam\b|ipercoop|iper\b|bennet|penny|\bmd\b|aldi|famila|crai|despar|supermerc|unes|in'?s\b|simply/],
-  ["auto","🚗","Auto e carburante",/carburant|arval|unipol|\beni\b|enilive|q8|\bip\b|tamoil|esso|\bapi\b|shell|telepass|autostrad|parchegg|leasys|ald\b|arval|ayvens|noleggio|assicuraz|revisione|gommist|officina|carrozz|bollo auto|aci\b/],
+  ["auto","🚗","Auto e carburante",/carburant|unipol|\beni\b|enilive|q8|\bip\b|tamoil|esso|\bapi\b|shell|telepass|autostrad|parchegg|leasys|ald\b|ayvens|noleggio|assicuraz|revisione|gommist|officina|carrozz|bollo auto|aci\b/],
   ["rate","📑","Rate, mutui e finanziamenti",/mutui|finanziament|prestito|leasing|unicredit|findomestic|agos|compass|cofidis|\brata\b/],
   ["trasporti","🚌","Trasporti",/\bgtt\b|trenitalia|italo|uber|taxi|bus\b|metro|frecciarossa|flixbus/],
   ["salute","🩺","Salute",/salute e benessere|farmac|ospedal|\basl\b|dentist|medic|ottica|analisi|ticket|sanitar|clinica|parafarm/],
@@ -47,7 +47,7 @@ function C(){const c=P.conti;["acc","mov","ric","rules","banks"].forEach(k=>{if(
 const cents=n=>Math.round((+n||0)*100);
 const normDesc=s=>String(s||"").toLowerCase().replace(/\s+/g," ").replace(/[^a-z0-9àèéìòù ]/g,"").trim();
 function movHash(acc,d,signed,desc){return acc+"|"+d+"|"+cents(signed)+"|"+normDesc(desc).slice(0,24);}
-/* bonifici verso o da sé stessi (es. Fineco → N26): giroconti, non spese. Il nome è letto dal file della banca e resta sull'iPad */
+/* bonifici verso o da sé stessi (da un conto a un altro): giroconti, non spese. Il nome è letto dal file della banca e resta sull'iPad */
 function isOwn(desc,signed){const n=(C().own||"").toLowerCase().split(/\s+/).filter(w=>w.length>2);if(n.length<2)return false;const d=String(desc||"").toLowerCase();
   // uscita: il beneficiario sono io; entrata: l'ordinante sono io (lo stipendio ha me come beneficiario, ma non è un giroconto)
   const m=signed<0?d.match(/benef\w*:?\s*(.+?)(?:\s+(?:iban|ib|bic|causale|note)\b|·|$)/):d.match(/\bord(?:inante)?\.?:?\s*(.+?)(?:\s+ben\w*\b|·|$)/);
@@ -167,7 +167,7 @@ let CT=(()=>{try{return sessionStorage.getItem("pn-ct")||"pan";}catch(e){return 
 const CTABS=[["pan","Panoramica"],["mov","Movimenti"],["imp","📥 Importa"],["acc","Conti e carte"],["bud","Budget"],["ric","Ricorrenti e rate"],["proj","Dopo il congedo"],["stat","📊 Statistiche"],["risp","💡 Risparmio"]];
 function vConti(){const c=C();
   let o=`<div class="${c.hide?"hidden-amt":""}"><h1>💶 Conti</h1><div class="btns" style="margin:0 0 12px">${CTABS.map(([k,t])=>`<button class="btn sm${k===CT?" pri":""}" data-ct="${k}">${t}</button>`).join("")}<button class="btn sm" id="cHide" style="margin-left:auto">${c.hide?"👁 Mostra":"🙈 Nascondi"} cifre</button></div>`;
-  if(!c.acc.length&&CT!=="acc"&&CT!=="ric"&&CT!=="proj")o+=`<div class="card"><h3>👋 Comincia da qui</h3><p class="lbl">Aggiungi i tuoi conti e le tue carte (Fineco, BNL, N26, BBVA…): poi potrai importare i movimenti dai file della banca.</p><div class="btns"><button class="btn pri" data-ct="acc">Aggiungi conti e carte</button></div></div>`;
+  if(!c.acc.length&&CT!=="acc"&&CT!=="ric"&&CT!=="proj")o+=`<div class="card"><h3>👋 Comincia da qui</h3><p class="lbl">Aggiungi i tuoi conti e le tue carte (per esempio il conto principale e la carta): poi potrai importare i movimenti dai file della banca.</p><div class="btns"><button class="btn pri" data-ct="acc">Aggiungi conti e carte</button></div></div>`;
   o+=({pan:cPan,mov:cMov,imp:cImp,acc:cAcc,bud:cBud,ric:cRic,proj:cProj,stat:cStat,risp:cRisp}[CT]||cPan)();
   return o+"</div>";}
 function cPan(){const c=C(),t=today(),ym=t.slice(0,7),a=monthActual(ym),np=nextPayments(30),bud=Object.entries(c.bud).filter(([k,v])=>+v>0);
@@ -208,7 +208,7 @@ function accForm(a){const c=C(),id=a?"e":"a",bk=a?a.bank:"fineco",tp=a?a.tipo:"c
   return `<div class="form">
     <label>Banca<select id="${id}B">${allBanks().map(b=>`<option value="${b.id}"${b.id===bk?" selected":""}>${esc(b.n)}</option>`).join("")}</select></label>
     <label>Tipo<select id="${id}T">${Object.entries(TIPI_ACC).map(([k,v])=>`<option value="${k}"${k===tp?" selected":""}>${v}</option>`).join("")}</select></label>
-    <label>Nome<input id="${id}N" maxlength="40" value="${a?esc(a.n):""}" placeholder="es. Fineco conto"></label>
+    <label>Nome<input id="${id}N" maxlength="40" value="${a?esc(a.n):""}" placeholder="es. Conto principale"></label>
     <label>Ultime 4 cifre (carte)<input id="${id}4" maxlength="4" inputmode="numeric" pattern="[0-9]*" value="${a&&a.l4?esc(a.l4):""}" placeholder="es. 1234"></label>
     ${a?`<label>Saldo iniziale €<input id="eS" type="text" inputmode="decimal" value="${String(Math.round((+a.s0||0)*100)/100).replace(".",",")}"></label><label>Saldo alla data<input id="eD" type="date" value="${a.d0||""}"></label>`:`<label>Saldo di oggi €<input id="aS" type="text" inputmode="decimal" placeholder="0,00"></label>`}
     <label>Carta addebitata su<select id="${id}L"><option value="">—</option>${accActive().filter(x=>x.tipo==="conto"&&(!a||x.id!==a.id)).map(x=>`<option value="${x.id}"${a&&a.link===x.id?" selected":""}>${esc(x.n)}</option>`).join("")}</select></label>
@@ -222,7 +222,7 @@ function cAcc(){const c=C(),act=accActive(),arch=c.acc.filter(a=>a.arch);
   return `<div class="card"><h3>I tuoi conti e carte</h3>${act.length?act.map(row).join(""):'<p class="empty">Nessun conto ancora.</p>'}</div>
   ${arch.length?`<details class="card"${arch.some(a=>a.id===ACC_ED)?" open":""}><summary><b>📦 Archiviati (${arch.length})</b></summary>${arch.map(row).join("")}</details>`:""}
   <div class="card"><h3>➕ Aggiungi conto o carta</h3>${accForm(null)}
-    <div class="btns"><button class="btn pri" id="aAddAcc">Aggiungi</button><button class="btn" id="aPreset">Crea Fineco, BNL, N26 e BBVA (conto + carta)</button></div>
+    <div class="btns"><button class="btn pri" id="aAddAcc">Aggiungi</button></div>
     <p class="lbl">Le carte di debito (N26, bancomat) addebitano ogni spesa sul conto: basta importare il conto. Per le carte di credito importa il file della carta: l’addebito mensile sul conto viene escluso dai totali, così non conti la spesa due volte. Per la carta di credito il saldo è il debito del periodo (negativo). Per un <b>portafoglio</b> (PayPal, Satispay…): se importi anche i suoi movimenti, spunta «le ricariche sono giroconti», così le spese si contano una volta sola.</p></div>
   <div class="card"><h3>🏦 Le tue banche</h3><p class="lbl">Aggiungi qualsiasi banca o servizio con un nome e un colore: compare nell’elenco delle banche.</p>
     ${c.banks.length?c.banks.map(b=>`<div class="row"><span class="pill" style="background:${b.col};color:#fff">${esc(b.n)}</span><div class="grow"><small>${c.acc.filter(a=>a.bank===b.id).length} conti</small></div><input type="color" data-bcol="${b.id}" value="${b.col}" aria-label="Colore" style="width:44px;height:34px;border:0;background:none"><button class="btn sm" data-bren="${b.id}">Rinomina</button><button class="btn sm" data-bdel="${b.id}">Togli</button></div>`).join(""):'<p class="empty">Nessuna banca aggiunta.</p>'}
@@ -291,9 +291,6 @@ function bindConti(){const c=C();if(typeof bindStat==="function")bindStat();
   document.querySelectorAll("[data-bcol]").forEach(i=>i.onchange=()=>{const b=c.banks.find(x=>x.id===i.dataset.bcol);if(b){b.col=i.value;save();render();}});
   document.querySelectorAll("[data-bren]").forEach(x=>x.onclick=()=>{const b=c.banks.find(y=>y.id===x.dataset.bren);const v=b&&prompt("Nuovo nome per «"+b.n+"»:",b.n);if(v&&v.trim()){b.n=v.trim();save();render();}});
   document.querySelectorAll("[data-bdel]").forEach(x=>x.onclick=()=>{const id=x.dataset.bdel,n=c.acc.filter(a=>a.bank===id).length;if(n){toast("Ci sono "+n+" conti di questa banca: cambiali o toglili prima");return;}c.banks=c.banks.filter(b=>b.id!==id);delete c.bmap[id];save();render();});
-  if($("aPreset"))$("aPreset").onclick=()=>{if(c.acc.length&&!confirm("Aggiungere i conti di Fineco, BNL, N26 e BBVA a quelli che hai già?"))return;
-    [["fineco","Fineco"],["bnl","BNL"],["n26","N26"],["bbva","BBVA"]].forEach(([b,nm])=>{const id=uid();c.acc.push({id,n:nm+" conto",bank:b,tipo:"conto",s0:0,d0:today()});if(b!=="n26")c.acc.push({id:uid(),n:nm+" carta di credito",bank:b,tipo:"credito",link:id,s0:0,d0:today()});});
-    save();render();toast("Creati: imposta i saldi con «Riconcilia»");};
   document.querySelectorAll("[data-adel]").forEach(b=>b.onclick=()=>{const n=c.mov.filter(m=>m.acc===b.dataset.adel).length;if(!confirm("Togliere questo conto"+(n?" e i suoi "+n+" movimenti":"")+"?"))return;c.acc=c.acc.filter(a=>a.id!==b.dataset.adel);c.mov=c.mov.filter(m=>m.acc!==b.dataset.adel);save();render();});
   document.querySelectorAll("[data-arec]").forEach(b=>b.onclick=()=>{const a=c.acc.find(x=>x.id===b.dataset.arec);const v=prompt("Saldo di oggi secondo la banca per «"+a.n+"» (€):",String(Math.round(accBal(a)*100)/100).replace(".",","));if(v==null)return;const n=num(v);if(n==null){toast("Importo non valido");return;}
     const delta=n-accBal(a);a.s0=(+a.s0||0)+delta;a.rec=1;save();render();toast(Math.abs(delta)<0.005?"✓ Torna al centesimo":"Allineato (differenza "+euro(delta)+")");});

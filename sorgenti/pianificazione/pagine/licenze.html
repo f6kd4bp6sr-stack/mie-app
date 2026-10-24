@@ -359,7 +359,7 @@ details[open] summary::after{transform:rotate(90deg)}
       <div class="row"><label for="b_rl26">Recupero festivi 2026</label><input type="number" min="0" id="b_rl26"></div>
       <div class="row"><label for="b_rl27">Recupero festivi 2027</label><input type="number" min="0" id="b_rl27"></div>
       <div class="row"><label>Orario abituale</label><span><input type="time" id="defIn"> – <input type="time" id="defOut"></span></div>
-      <p class="lbl" style="margin:10px 0 0"><b>LP</b> = licenza anni precedenti: nel 2026 scala la 2025; dal 2027 scala il residuo 2025 e poi la 2026. <b>LO</b> = licenza dell'anno in corso: nel 2026 scala la 2026, nel 2027 solo il rateo 2027. L'RL scala prima i recuperi 2026, poi quelli 2027. Tutte le licenze scadono il 31/05/2027.</p>
+      <p class="lbl" style="margin:10px 0 0"><b>LP</b> = licenza anni precedenti: nel 2026 scala la 2025; dal 2027 scala il residuo 2025 e poi la 2026. <b>LO</b> = licenza dell'anno in corso: nel 2026 scala la 2026, nel 2027 solo il rateo 2027. L'RL scala prima i recuperi 2026, poi quelli 2027. Tutte le licenze scadono alla data di fine scritta nelle impostazioni.</p>
     </details>
   </div>
   </div></div>
@@ -1009,7 +1009,7 @@ function planBridgeDays(){
 }
 const PLANS={
   A:{t:"Ponti + lunedì e venerdì",d:"Tutti i ponti delle festività, poi ogni lunedì e venerdì in licenza (weekend di 4 giorni). Il resto nelle ultime settimane di maggio."},
-  B:{t:"Ponti + pausa lunga finale",d:"Tutti i ponti delle festività, poi un unico blocco continuo che termina il giorno prima del 31/05."},
+  B:{t:"Ponti + pausa lunga finale",d:"Tutti i ponti delle festività, poi un unico blocco continuo che termina il giorno prima della data di fine."},
   C:{t:"Solo blocco finale",d:"Presenza continua fino al blocco unico di fine periodo, come nel foglio Excel originale. Nessun ponte."}
 };
 function buildPlan(type){
@@ -1235,9 +1235,9 @@ function tcRestore(tc){ if(!tc||typeof tc!=="object") return; try{ for(const k i
 /* ---------- dati di Pianificazione (Oggi, Scadenze, Famiglia, Conti, Benessere): inclusi nelle copie ---------- */
 function pnDump(){ try{ return JSON.parse(localStorage.getItem("pn-v1")||"null"); }catch(e){ return null; } }
 function pnRestore(pn){ if(!pn||typeof pn!=="object") return; try{ localStorage.setItem("pn-v1",JSON.stringify(pn)); }catch(e){} idbKV("readwrite","pianifica",JSON.stringify(pn)).catch(()=>{}); }
-function progDump(){ try{ const pack=JSON.parse(localStorage.getItem("prog-vale-v1")||"null"), link=JSON.parse(localStorage.getItem("prog-link-v1")||"null"); return pack||link?{pack,hist:JSON.parse(localStorage.getItem("prog-vale-hist-v1")||"[]"),link}:null; }catch(e){ return null; } }
+function progDump(){ try{ const pack=JSON.parse(localStorage.getItem("prog-mm-v1")||"null"), link=JSON.parse(localStorage.getItem("prog-link-v1")||"null"); return pack||link?{pack,hist:JSON.parse(localStorage.getItem("prog-mm-hist-v1")||"[]"),link}:null; }catch(e){ return null; } }
 function progRestore(pg){ if(!pg) return; if(pg.link&&pg.link.gist){ try{ localStorage.setItem("prog-link-v1",JSON.stringify(pg.link)); }catch(e){} idbKV("readwrite","progressi-link",JSON.stringify(pg.link)).catch(()=>{}); }
-  if(!pg.pack) return; try{ localStorage.setItem("prog-vale-v1",JSON.stringify(pg.pack)); localStorage.setItem("prog-vale-hist-v1",JSON.stringify(pg.hist||[])); }catch(e){}
+  if(!pg.pack) return; try{ localStorage.setItem("prog-mm-v1",JSON.stringify(pg.pack)); localStorage.setItem("prog-mm-hist-v1",JSON.stringify(pg.hist||[])); }catch(e){}
   idbKV("readwrite","progressi",JSON.stringify({pack:pg.pack,hist:pg.hist||[]})).catch(()=>{}); }
 function lastBk(){ let a=S.lastBackup||""; try{ const b=localStorage.getItem("pn-lastBackup")||""; if(b>a) a=b; }catch(e){} return a||null; }
 function markBk(){ S.lastBackup=new Date().toISOString(); try{ localStorage.setItem("pn-lastBackup",S.lastBackup); }catch(e){} save(); }
@@ -1332,7 +1332,8 @@ $("rApply").onclick=()=>{
   save();renderP2();toast(n+" giorni aggiornati");
 };
 $("bExport").onclick=async()=>{
-  const data=JSON.stringify(Object.assign({},S,{taichi:tcDump(),progressi:progDump(),pianifica:pnDump()},window.__pfCache?{pratFiles:window.__pfCache}:{}),null,1), filename="pianificazione-copia-"+today()+".json";
+  const pgD=progDump(); if(pgD) pgD.link=null;  /* niente chiave del collegamento nella copia su file */
+  const data=JSON.stringify(Object.assign({},S,{taichi:tcDump(),progressi:pgD,pianifica:pnDump()},window.__pfCache?{pratFiles:window.__pfCache}:{}),null,1), filename="pianificazione-copia-"+today()+".json";
   let dl=null; try{ if(window.claude&&window.claude.use) dl=await window.claude.use("downloads"); }catch(e){}
   if(dl){ try{ await dl.save({filename,data}); markBk(); toast("Copia esportata"); }catch(e){ if(!(e&&e.code==="cancelled")) toast("Esportazione non riuscita"); } return; }
   try{
@@ -1345,7 +1346,7 @@ $("bExport").onclick=async()=>{
     const blob=new Blob([data],{type:"application/json"});
     const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=filename;
     document.body.appendChild(a);a.click();a.remove(); markBk();
-  }catch(e){ try{navigator.clipboard.writeText(data).then(()=>toast("Copia negli appunti"),()=>toast("Non riesco a salvare né a copiare la copia: riprova"));}catch(_){toast("Non riesco a salvare la copia: riprova");} }
+  }catch(e){ toast("Non riesco a salvare la copia: riprova"); }
 };
 $("bImport").onchange=e=>{
   const f=e.target.files[0]; if(!f)return;

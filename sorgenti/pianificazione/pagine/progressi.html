@@ -118,7 +118,7 @@ details.more>summary{cursor:pointer;font-weight:700;color:var(--accent);margin:1
     <div class="lbl" id="pairSt">Il modo più semplice: la chiave GitHub si scrive solo qui; sull’iPad della bimba basta inquadrare un QR.</div>
     <details id="pairBox" style="margin-top:6px"><summary class="lbl" style="cursor:pointer"><b>Prepara il QR di collegamento (anche per una chiave nuova)</b></summary>
       <ol class="lbl" style="padding-left:20px;margin:6px 0">
-        <li>Crea la chiave: <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> → spunta solo <b>gist</b>, scadenza <b>No expiration</b> → <b>Generate token</b> → copia la chiave.</li>
+        <li>Crea la chiave: <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> → spunta solo <b>gist</b>, scadenza <b>1 anno</b> (l’app avvisa prima che scada) → <b>Generate token</b> → copia la chiave.</li>
         <li>Incollala qui sotto e tocca <b>Prepara il QR</b>: l’app crea uno spazio privato su GitHub con una chiave casuale lunga (e cancella gli spazi vecchi pubblici).</li>
         <li>Sull’iPad della bimba: <b>🐉 Io → 💾 Salvataggi → 📷 Collegati con il QR</b> e inquadra questo schermo.</li>
       </ol>
@@ -136,7 +136,7 @@ details.more>summary{cursor:pointer;font-weight:700;color:var(--accent);margin:1
       <details style="margin-top:8px"><summary class="lbl" style="cursor:pointer"><b>Come creare la chiave GitHub (5 minuti, una volta sola)</b></summary>
         <ol class="lbl" style="padding-left:20px;margin:6px 0">
           <li>In Safari apri <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> ed entra con il tuo account GitHub.</li>
-          <li>In «Note» lascia <i>mie-app progressi</i>; in «Expiration» scegli <b>No expiration</b> (o un anno, e poi la rinnovi).</li>
+          <li>In «Note» lascia <i>mie-app progressi</i>; in «Expiration» scegli <b>1 anno</b> (l’app ti avvisa prima che scada; poi prepari un QR nuovo).</li>
           <li>Spunta <b>solo</b> la casella <b>gist</b>; tutto il resto vuoto.</li>
           <li>Tocca <b>Generate token</b> e copia la chiave (inizia con <i>ghp_</i>): si vede una volta sola. Mandala all’iPad con AirDrop o Note e incollala in «🔗 Oppure collega a mano con la chiave GitHub».</li>
         </ol>
@@ -178,7 +178,7 @@ const fmt=(s,o)=>new Date(s+(s.length===10?"T12:00":"")).toLocaleDateString("it-
 function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),2000);}
 
 /* ---------- archivio locale: ultimo file caricato + storico dei riepiloghi (per l'andamento) ---------- */
-const KEY="prog-vale-v1", HKEY="prog-vale-hist-v1";
+const KEY="prog-mm-v1", HKEY="prog-mm-hist-v1";
 let dbp=null;
 const idb=()=>dbp||(dbp=new Promise((res,rej)=>{try{const r=indexedDB.open("licenze-marco",1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains("kv"))r.result.createObjectStore("kv")};r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)}catch(e){rej(e)}}));
 const kv=async(mode,key,val)=>{const db=await idb();return new Promise((res,rej)=>{const tx=db.transaction("kv",mode),st=tx.objectStore("kv");const q=mode==="readonly"?st.get(key):(val===undefined?st.delete(key):st.put(val,key));let out;q.onsuccess=()=>{out=q.result};tx.oncomplete=()=>res(out);tx.onerror=()=>rej(tx.error)})};
@@ -201,7 +201,7 @@ function normalize(o){
   return {saved:saved||new Date().toISOString(),loaded:new Date().toISOString(),data};
 }
 function fromThisDevice(){ // stesso indirizzo: se «Il mio mondo» è usato su questo dispositivo nello stesso Safari
-  const P="vale2-",data={};
+  const P="mm2-",data={};
   try{for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith(P)&&!k.startsWith(P+"__")){try{data[k.slice(P.length)]=JSON.parse(localStorage.getItem(k))}catch(e){}}}}catch(e){}
   return Object.keys(data).length?data:null;
 }
@@ -1023,7 +1023,7 @@ const LKEY="prog-link-v1";
 const unb64=s=>{s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const b=atob(s),a=new Uint8Array(b.length);for(let i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;};
 /* collegamento sicuro (versione 2): spazio privato e chiave casuale lunga, passati nel QR o nel codice MM2-<spazio>-<chiave> */
 function parseCode(c){const m=String(c||"").trim().match(/^MM2-([0-9a-f]{20,40})-([A-Za-z0-9_-]{40,46})$/);return m?{gist:m[1],key:m[2],v:2}:null;}
-const linkOld=L=>!!(L&&L.gist&&L.v!==2);
+const linkOld=L=>!!(L&&(L.renew||(L.gist&&L.v!==2)));
 /* cancella dal GitHub del genitore gli spazi vecchi pubblici di «Il mio mondo» (chiave ricavata da un codice corto) */
 async function wipeOldGists(token){let n=0;const H={Authorization:"Bearer "+token,Accept:"application/vnd.github+json"};
   try{for(let page=1;page<=5;page++){const l=await fetch("https://api.github.com/gists?per_page=100&page="+page,{cache:"no-store",headers:H});if(!l.ok)break;const arr=await l.json();
@@ -1064,7 +1064,7 @@ async function pull(manual){
 $("lnkGo").onclick=async()=>{let c=parseCode($("lnkCode").value);if(!c){toast("Codice non valido: incolla il codice MM2-… dell’iPad (i codici corti non sono più usati: sono poco sicuri)");return;}
   LINK={gist:c.gist,key:c.key,v:2};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});$("lnkCode").value="";paintLink();pull(true);};
 $("lnkNow").onclick=()=>pull(true);
-$("lnkOff").onclick=()=>{if($("lnkOff").dataset.sure){LINK=null;try{localStorage.removeItem(LKEY)}catch(e){}kv("readwrite","progressi-link").catch(()=>{});delete $("lnkOff").dataset.sure;$("lnkOff").textContent="Scollega";paintLink();}else{$("lnkOff").dataset.sure=1;$("lnkOff").textContent="Tocca ancora per scollegare";}};
+$("lnkOff").onclick=async()=>{if($("lnkOff").dataset.sure){const g0=lsGet(GKEY);if(LINK&&LINK.gist&&g0&&g0.token){try{await fetch(GH+"/gists/"+LINK.gist,{method:"DELETE",headers:{Authorization:"Bearer "+g0.token,Accept:"application/vnd.github+json"}});}catch(e){}}LINK=null;try{localStorage.removeItem(LKEY)}catch(e){}kv("readwrite","progressi-link").catch(()=>{});delete $("lnkOff").dataset.sure;$("lnkOff").textContent="Scollega";paintLink();}else{$("lnkOff").dataset.sure=1;$("lnkOff").textContent="Tocca ancora per scollegare";}};
 (async()=>{if(!LINK){try{const r=await kv("readonly","progressi-link");if(r){LINK=JSON.parse(r);lsSet(LKEY,LINK);}}catch(e){}}paintLink();})();
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")pull(false);});
 setInterval(()=>pull(false),30*60e3);
@@ -1097,7 +1097,7 @@ $("pairGo").onclick=async()=>{const t=$("pairTok").value.trim()||((lsGet(GKEY)||
     const desc="mie-app-mondo2 "+Array.from(rb(10)).map(x=>("0"+x.toString(16)).slice(-2)).join(""),H={Authorization:"Bearer "+t,Accept:"application/vnd.github+json","Content-Type":"application/json"};
     const r=await fetch(GH+"/gists",{method:"POST",headers:H,body:JSON.stringify({description:desc,public:false,files:{"mondo.json":{content:JSON.stringify({app:"mondo-sync",v:1,wait:1})}}})});
     if(!r.ok)throw new Error(r.status===403||r.status===404?"alla chiave manca il permesso «gist»":"GitHub ha risposto "+r.status);const id=(await r.json()).id;
-    const wiped=await wipeOldGists(t);
+    const wiped=await wipeOldGists(t)+(LINK&&LINK.gist&&LINK.gist!==id?await fetch(GH+"/gists/"+LINK.gist,{method:"DELETE",headers:H}).then(x=>x.ok||x.status===204?1:0).catch(()=>0):0);
     lsSet(GKEY,Object.assign({token:t,checked:new Date().toISOString()},chk));
     LINK={gist:id,key,v:2};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();ghPaint();
     await new Promise((res,rej)=>{if(window.qrcode)return res();const s=document.createElement("script");s.src="qrcode.js";s.onload=res;s.onerror=()=>rej(new Error("serve internet la prima volta"));document.head.appendChild(s);});
@@ -1108,7 +1108,9 @@ $("pairGo").onclick=async()=>{const t=$("pairTok").value.trim()||((lsGet(GKEY)||
 };
 (()=>{ghPaint();setTimeout(()=>ghDaily(false),1200);
   /* collegamento vecchio: con la chiave già salvata si cancellano subito gli spazi pubblici */
-  const g=lsGet(GKEY);if(linkOld(LINK)&&g&&g.token&&navigator.onLine!==false)wipeOldGists(g.token).then(n=>{if(n)toast("🔒 Cancellati "+n+" spazi vecchi pubblici: prepara il QR nuovo");});})();
+  const g=lsGet(GKEY),forget=()=>{LINK={renew:1};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();};
+  if(linkOld(LINK)&&LINK.key&&!(g&&g.token))forget();
+  if(linkOld(LINK)&&LINK.key&&g&&g.token&&navigator.onLine!==false)wipeOldGists(g.token).then(n=>{LINK={renew:1};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();if(n)toast("🔒 Cancellati "+n+" spazi vecchi pubblici: prepara il QR nuovo");});})();
 
 window.__analyze=analyze; window.__normalize=normalize;
 

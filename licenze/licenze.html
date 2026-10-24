@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com https://gist.githubusercontent.com; worker-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -274,7 +274,7 @@ details[open] summary::after{transform:rotate(90deg)}
 </style>
 </head>
 <body>
-<style id="lockCss">
+<script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
 html.locked body>*:not(#lockScr){visibility:hidden!important}
 #lockScr{position:fixed;inset:0;z-index:2147483000;display:none;place-items:center;background:#f3f4f7;font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;color:#15181d;padding:24px}
 html.locked #lockScr{display:grid}
@@ -473,7 +473,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
       <div class="row"><label for="b_rl26">Recupero festivi 2026</label><input type="number" min="0" id="b_rl26"></div>
       <div class="row"><label for="b_rl27">Recupero festivi 2027</label><input type="number" min="0" id="b_rl27"></div>
       <div class="row"><label>Orario abituale</label><span><input type="time" id="defIn"> – <input type="time" id="defOut"></span></div>
-      <p class="lbl" style="margin:10px 0 0"><b>LP</b> = licenza anni precedenti: nel 2026 scala la 2025; dal 2027 scala il residuo 2025 e poi la 2026. <b>LO</b> = licenza dell'anno in corso: nel 2026 scala la 2026, nel 2027 solo il rateo 2027. L'RL scala prima i recuperi 2026, poi quelli 2027. Tutte le licenze scadono il 31/05/2027.</p>
+      <p class="lbl" style="margin:10px 0 0"><b>LP</b> = licenza anni precedenti: nel 2026 scala la 2025; dal 2027 scala il residuo 2025 e poi la 2026. <b>LO</b> = licenza dell'anno in corso: nel 2026 scala la 2026, nel 2027 solo il rateo 2027. L'RL scala prima i recuperi 2026, poi quelli 2027. Tutte le licenze scadono alla data di fine scritta nelle impostazioni.</p>
     </details>
   </div>
   </div></div>
@@ -1123,7 +1123,7 @@ function planBridgeDays(){
 }
 const PLANS={
   A:{t:"Ponti + lunedì e venerdì",d:"Tutti i ponti delle festività, poi ogni lunedì e venerdì in licenza (weekend di 4 giorni). Il resto nelle ultime settimane di maggio."},
-  B:{t:"Ponti + pausa lunga finale",d:"Tutti i ponti delle festività, poi un unico blocco continuo che termina il giorno prima del 31/05."},
+  B:{t:"Ponti + pausa lunga finale",d:"Tutti i ponti delle festività, poi un unico blocco continuo che termina il giorno prima della data di fine."},
   C:{t:"Solo blocco finale",d:"Presenza continua fino al blocco unico di fine periodo, come nel foglio Excel originale. Nessun ponte."}
 };
 function buildPlan(type){
@@ -1349,9 +1349,9 @@ function tcRestore(tc){ if(!tc||typeof tc!=="object") return; try{ for(const k i
 /* ---------- dati di Pianificazione (Oggi, Scadenze, Famiglia, Conti, Benessere): inclusi nelle copie ---------- */
 function pnDump(){ try{ return JSON.parse(localStorage.getItem("pn-v1")||"null"); }catch(e){ return null; } }
 function pnRestore(pn){ if(!pn||typeof pn!=="object") return; try{ localStorage.setItem("pn-v1",JSON.stringify(pn)); }catch(e){} idbKV("readwrite","pianifica",JSON.stringify(pn)).catch(()=>{}); }
-function progDump(){ try{ const pack=JSON.parse(localStorage.getItem("prog-vale-v1")||"null"), link=JSON.parse(localStorage.getItem("prog-link-v1")||"null"); return pack||link?{pack,hist:JSON.parse(localStorage.getItem("prog-vale-hist-v1")||"[]"),link}:null; }catch(e){ return null; } }
+function progDump(){ try{ const pack=JSON.parse(localStorage.getItem("prog-mm-v1")||"null"), link=JSON.parse(localStorage.getItem("prog-link-v1")||"null"); return pack||link?{pack,hist:JSON.parse(localStorage.getItem("prog-mm-hist-v1")||"[]"),link}:null; }catch(e){ return null; } }
 function progRestore(pg){ if(!pg) return; if(pg.link&&pg.link.gist){ try{ localStorage.setItem("prog-link-v1",JSON.stringify(pg.link)); }catch(e){} idbKV("readwrite","progressi-link",JSON.stringify(pg.link)).catch(()=>{}); }
-  if(!pg.pack) return; try{ localStorage.setItem("prog-vale-v1",JSON.stringify(pg.pack)); localStorage.setItem("prog-vale-hist-v1",JSON.stringify(pg.hist||[])); }catch(e){}
+  if(!pg.pack) return; try{ localStorage.setItem("prog-mm-v1",JSON.stringify(pg.pack)); localStorage.setItem("prog-mm-hist-v1",JSON.stringify(pg.hist||[])); }catch(e){}
   idbKV("readwrite","progressi",JSON.stringify({pack:pg.pack,hist:pg.hist||[]})).catch(()=>{}); }
 function lastBk(){ let a=S.lastBackup||""; try{ const b=localStorage.getItem("pn-lastBackup")||""; if(b>a) a=b; }catch(e){} return a||null; }
 function markBk(){ S.lastBackup=new Date().toISOString(); try{ localStorage.setItem("pn-lastBackup",S.lastBackup); }catch(e){} save(); }
@@ -1446,7 +1446,8 @@ $("rApply").onclick=()=>{
   save();renderP2();toast(n+" giorni aggiornati");
 };
 $("bExport").onclick=async()=>{
-  const data=JSON.stringify(Object.assign({},S,{taichi:tcDump(),progressi:progDump(),pianifica:pnDump()},window.__pfCache?{pratFiles:window.__pfCache}:{}),null,1), filename="pianificazione-copia-"+today()+".json";
+  const pgD=progDump(); if(pgD) pgD.link=null;  /* niente chiave del collegamento nella copia su file */
+  const data=JSON.stringify(Object.assign({},S,{taichi:tcDump(),progressi:pgD,pianifica:pnDump()},window.__pfCache?{pratFiles:window.__pfCache}:{}),null,1), filename="pianificazione-copia-"+today()+".json";
   let dl=null; try{ if(window.claude&&window.claude.use) dl=await window.claude.use("downloads"); }catch(e){}
   if(dl){ try{ await dl.save({filename,data}); markBk(); toast("Copia esportata"); }catch(e){ if(!(e&&e.code==="cancelled")) toast("Esportazione non riuscita"); } return; }
   try{
@@ -1459,7 +1460,7 @@ $("bExport").onclick=async()=>{
     const blob=new Blob([data],{type:"application/json"});
     const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=filename;
     document.body.appendChild(a);a.click();a.remove(); markBk();
-  }catch(e){ try{navigator.clipboard.writeText(data).then(()=>toast("Copia negli appunti"),()=>toast("Non riesco a salvare né a copiare la copia: riprova"));}catch(_){toast("Non riesco a salvare la copia: riprova");} }
+  }catch(e){ toast("Non riesco a salvare la copia: riprova"); }
 };
 $("bImport").onchange=e=>{
   const f=e.target.files[0]; if(!f)return;
@@ -1499,7 +1500,7 @@ setSaveStat("init");
 window.__flush=()=>{ try{ flushAll(); }catch(e){} };
 })();
 </script>
-<script>window.APP_VERSION="06178397a2";window.APP_BUILD="2026-10-24T17:54+02:00";</script>
+<script>window.APP_VERSION="3431ee5b83";window.APP_BUILD="2026-10-24T18:15+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
@@ -1549,8 +1550,8 @@ window.__flush=()=>{ try{ flushAll(); }catch(e){} };
   function dumpAll(){
     var S=lsJ("licenze-marco-v1"), tc={}, n=0;
     try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.indexOf("tc_")===0){tc[k]=localStorage.getItem(k);n++;}}}catch(e){}
-    var pack=lsJ("prog-vale-v1"), link=lsJ("prog-link-v1");
-    var pg=pack||link?{pack:pack,hist:lsJ("prog-vale-hist-v1")||[],link:link}:null;
+    var pack=lsJ("prog-mm-v1"), link=lsJ("prog-link-v1");
+    var pg=pack||link?{pack:pack,hist:lsJ("prog-mm-hist-v1")||[],link:link}:null;
     var pn=lsJ("pn-v1");
     if(!S&&!n&&!pg&&!pn)return null;
     var o={}; if(S)for(var x in S)o[x]=S[x]; o.taichi=tc; o.progressi=pg; if(pn)o.pianifica=pn; o.app="le-mie-app"; return o;
@@ -1570,6 +1571,8 @@ window.__flush=()=>{ try{ flushAll(); }catch(e){} };
   function exportAll(){
     var b=document.getElementById("bExport"); if(b){b.click();setTimeout(paint,1500);return;}   // in Licenze usa il pulsante della pagina
     var o=dumpAll(); if(!o){alertBar("Ancora nessun dato da salvare");return;}
+    /* la copia su file non porta mai la chiave del collegamento con «Il mio mondo» */
+    if(o.progressi)o.progressi.link=null;
     if(window.__pfCache)o.pratFiles=window.__pfCache;
     var data=JSON.stringify(o,null,1), fn="pianificazione-copia-"+today()+".json";
     var done=function(){var t=new Date().toISOString();try{localStorage.setItem("pn-lastBackup",t);localStorage.setItem("tc_lastBackup",JSON.stringify(t));}catch(e){}paint();};
@@ -1669,7 +1672,7 @@ window.__flush=()=>{ try{ flushAll(); }catch(e){} };
     var db=await kvDb(),put=function(k,v){return new Promise(function(res){var tx=db.transaction("kv","readwrite");tx.objectStore("kv").put(v,k);tx.oncomplete=res;tx.onerror=res;});};
     var tc=o.taichi;delete o.taichi;if(tc&&typeof tc==="object"){for(var k in tc)if(k.indexOf("tc_")===0)try{localStorage.setItem(k,tc[k]);}catch(e){} await put("taichi",JSON.stringify({savedAt:new Date().toISOString(),keys:tc}));}
     var pg=o.progressi;delete o.progressi;if(pg){if(pg.link&&pg.link.gist){try{localStorage.setItem("prog-link-v1",JSON.stringify(pg.link));}catch(e){} await put("progressi-link",JSON.stringify(pg.link));}
-      if(pg.pack){try{localStorage.setItem("prog-vale-v1",JSON.stringify(pg.pack));localStorage.setItem("prog-vale-hist-v1",JSON.stringify(pg.hist||[]));}catch(e){} await put("progressi",JSON.stringify({pack:pg.pack,hist:pg.hist||[]}));}}
+      if(pg.pack){try{localStorage.setItem("prog-mm-v1",JSON.stringify(pg.pack));localStorage.setItem("prog-mm-hist-v1",JSON.stringify(pg.hist||[]));}catch(e){} await put("progressi",JSON.stringify({pack:pg.pack,hist:pg.hist||[]}));}}
     var pn=o.pianifica;delete o.pianifica;if(pn){try{localStorage.setItem("pn-v1",JSON.stringify(pn));}catch(e){} await put("pianifica",JSON.stringify(pn));}
     var pf=o.pratFiles;delete o.pratFiles;if(pf)await pfRestore(pf);
     delete o.app; if(o.bal){o.savedAt=new Date().toISOString();var t=JSON.stringify(o);try{localStorage.setItem("licenze-marco-v1",t);}catch(e){} await put("stato",t);}
@@ -1690,7 +1693,7 @@ window.__flush=()=>{ try{ flushAll(); }catch(e){} };
     }else{
       h+="<p style=\"margin:8px 0\">Ogni giorno, da sola, una copia completa e <b>cifrata</b> va su GitHub (in uno spazio privato), con la chiave GitHub che usi già per i Progressi. Se l’iPad si rompe o lo cambi, ritrovi tutto.</p>"+
         "<label style=\"font-weight:700;font-size:14px\">Chiave GitHub"+(tok?" (già salvata)":"")+"</label><input id=\"cbTok\" type=\"password\" placeholder=\""+(tok?"già salvata: lascia vuoto":"inizia con ghp_")+"\" autocomplete=\"off\" style=\""+inp+"\">"+
-        "<label style=\"font-weight:700;font-size:14px\">Parola della copia (almeno 8 caratteri)</label><input id=\"cbP1\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
+        "<label style=\"font-weight:700;font-size:14px\">Parola della copia (almeno 12 caratteri)</label><input id=\"cbP1\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
         "<label style=\"font-weight:700;font-size:14px\">Ripeti la parola</label><input id=\"cbP2\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
         "<p style=\"margin:0 0 6px;color:#b3261e;font-size:14px\"><b>Scrivila in un posto sicuro:</b> serve per ripristinare. Se la perdi, la copia non si può più aprire.</p>"+
         "<button id=\"cbOn\" style=\""+pri+"\">Attiva la copia automatica</button><button id=\"cbRes\" style=\""+sec+"\">Ho già una copia: ripristina</button>";
@@ -1700,7 +1703,7 @@ window.__flush=()=>{ try{ flushAll(); }catch(e){} };
     var msg=function(t,bad){var m=document.getElementById("cbMsg");m.textContent=t;m.style.color=bad?"#b3261e":"#2e7d5b";};
     document.getElementById("cbX").onclick=function(){ov.remove();paint();};
     var bOn=document.getElementById("cbOn");if(bOn)bOn.onclick=async function(){var t=document.getElementById("cbTok").value.trim()||tok,p1=document.getElementById("cbP1").value,p2=document.getElementById("cbP2").value;
-      if(!/^(ghp_|github_pat_)/.test(t))return msg("Serve la chiave GitHub (inizia con ghp_)",1);if(p1.length<8)return msg("La parola deve avere almeno 8 caratteri",1);if(p1!==p2)return msg("Le due parole non coincidono",1);
+      if(!/^(ghp_|github_pat_)/.test(t))return msg("Serve la chiave GitHub (inizia con ghp_)",1);if(p1.length<12)return msg("La parola deve avere almeno 12 caratteri",1);if(p1!==p2)return msg("Le due parole non coincidono",1);
       msg("Preparo la copia…");try{var ok=await cbEnable(t,p1);msg(ok?"✅ Copia automatica attiva: prima copia fatta.":"Attivata, ma la prima copia non è riuscita: riprovo da sola.",!ok);setTimeout(cbPanel,1600);}catch(e){msg("Non riuscito: "+e.message,1);}};
     var bNow=document.getElementById("cbNow");if(bNow)bNow.onclick=async function(){msg("Copia in corso…");pfRefresh();setTimeout(async function(){var ok=await cbPush(true);msg(ok?"✅ Copia fatta":"Non riuscita: "+((cbCfg()||{}).err||""),!ok);},600);};
     var bOff=document.getElementById("cbOff");if(bOff)bOff.onclick=function(){if(!confirm("Disattivare la copia automatica su questo iPad? La copia già salvata resta su GitHub."))return;cbSet(null);cbPanel();};

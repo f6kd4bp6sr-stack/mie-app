@@ -282,7 +282,7 @@ function valeWeekData(d,prev){const out={},t=today(),from=add(t,-14);
   const pd=d["prog-days"]||{},pdx={};Object.keys(pd).filter(x=>x>=from).forEach(x=>pdx[x]=pd[x]);out.pdays=pdx;
   const su={};try{Object.entries((d.path&&d.path.sum)||{}).forEach(([u,e])=>{const k=VUNIT(u),x=su[k]||(su[k]={l:0,d:0});x.l+=+e.l||0;x.d+=+e.d||0;});}catch(e){}out.su=su;
   const h=(prev&&Array.isArray(prev.hist)?prev.hist:[]).filter(x=>x.d>=add(t,-30)&&x.d!==t);h.push({d:t,su:Object.fromEntries(Object.entries(su).map(([k,v])=>[k,v.l]))});out.hist=h.slice(-31);return out;}
-function valeWeek(){let w=lsJ(VIN);const p=lsJ("prog-vale-v1");
+function valeWeek(){let w=lsJ(VIN);const p=lsJ("prog-mm-v1");
   if((!w||!w.pdays)&&p){const d=(p.state&&p.state.data)||p.data||{};w=Object.assign({saved:p.saved},valeSum(d),valeWeekData(d,null));}
   if(!w||!w.pdays)return null;const t=today(),from=add(t,-6),per={};let ok=0,ko=0;const days=new Set((w.days||[]).filter(x=>x>=from));
   Object.entries(w.pdays).forEach(([day,m])=>{if(day<from)return;days.add(day);Object.entries(m||{}).forEach(([k,v])=>{const x=per[k]||(per[k]={ok:0,ko:0});x.ok+=+v.ok||0;x.ko+=+v.ko||0;ok+=+v.ok||0;ko+=+v.ko||0;});});
@@ -297,7 +297,7 @@ function valeWeek(){let w=lsJ(VIN);const p=lsJ("prog-vale-v1");
   if(pickQ.length<2&&VCENA.soldi&&!pickQ.some(q=>q.k==="soldi"))pickQ.push({k:"soldi",q:VCENA.soldi[seed%VCENA.soldi.length]});
   return{giorni:days.size,ok,ko,nuove,nu,best:best&&best!==weak?best:null,weak:weak&&weak.pc<80?weak:null,rip:rip?{k:rip[0],n:rip[1].d}:null,cena:pickQ,saved:w.saved};}
 function valeInfo(){
-  const p=lsJ("prog-vale-v1"),inb=lsJ(VIN),L=lsJ("prog-link-v1");let o=null;
+  const p=lsJ("prog-mm-v1"),inb=lsJ(VIN),L=lsJ("prog-link-v1");let o=null;
   if(p){const d=(p.state&&p.state.data)||p.data||{};o=Object.assign({saved:p.saved},valeSum(d));}
   if(inb&&inb.saved&&(!o||String(inb.saved)>String(o.saved||"")))o={saved:inb.saved,l:inb.l,days:inb.days||[]};
   const ok2=!!(L&&L.gist&&L.v===2),err2=L&&L.gist&&L.v!==2?"collegamento da rinnovare per sicurezza: in Progressi prepara un QR nuovo":inb&&inb.err;
@@ -305,7 +305,7 @@ function valeInfo(){
   o.w=(o.days||[]).filter(x=>String(x)>=add(today(),-7)).length;o.linked=ok2;o.err=inb&&inb.err;
   if(L&&L.gist&&L.v!==2)o.err=err2;o.age=o.saved?(Date.now()-new Date(o.saved).getTime())/864e5:null;return o;}
 /* «Il mio mondo»: Oggi scarica da sola l'ultimo invio cifrato dell'iPad (stesso collegamento della sezione Progressi; massimo ogni 10 minuti) */
-const VIN="prog-vale-in";let valeBusy=false;
+const VIN="prog-mm-in";let valeBusy=false;
 const vub=s=>{s=String(s).replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const b=atob(s),a=new Uint8Array(b.length);for(let i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;};
 /* chiave GitHub (salvata da Progressi → 📲 Collega con un QR): controllo una volta al giorno */
 async function ghDaily(){const g=lsJ("prog-gh-v1");if(!g||!g.token||navigator.onLine===false)return;if(g.checked&&Date.now()-new Date(g.checked).getTime()<20*36e5)return;
