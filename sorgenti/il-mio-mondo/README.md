@@ -39,5 +39,6 @@ Dettagli dei file: `STRUTTURA.md`.
 
 ## Regole
 - Non insegnare cose errate: ogni contenuto nuovo passa da autore → revisore indipendente → controllo automatico.
-- Nessun dato personale della bambina nel codice: il sito è pubblico.
+- Nessun dato personale della bambina nel codice: il sito è pubblico. La copia su file (💾 Copia su iCloud) non contiene mai il collegamento con i genitori (chiave GitHub e chiave di cifratura).
+- Controllo dei dati da non pubblicare: `tools/guardia.py` confronta impronte fatte con una **chiave segreta** che non è nel repository (variabile `GUARDIA_CHIAVE` o file `~/.mie-guardia-chiave`; la chiave è nel documento privato del progetto). Senza chiave la pubblicazione a mano si ferma; il controllo delle novità dell'attività programmata la salta con un avviso.
 - Per sezioni nuove si chiede prima come procedere.

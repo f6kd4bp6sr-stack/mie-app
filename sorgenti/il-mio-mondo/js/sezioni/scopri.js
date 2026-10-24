@@ -69,8 +69,11 @@ PAGES.metodo = el => {
       now ? stepsDone.add(i) : stepsDone.delete(i);
       store.set('m-steps', [...stepsDone]);
       if (now) {
-        ding(); gain(1, b);
-        if (stepsDone.size === M_STEPS.length) { cheer(b, 'Metodo completato, ' + NAME + '!'); fanfare(); gain(3, b); } else cheer(b);
+        /* premio una volta sola per passo (anche dopo «ricomincia») */
+        const paid = new Set(store.get('m-steps-paid', [])), first = !paid.has(i); paid.add(i);
+        ding(); if (first) gain(1, b);
+        if (stepsDone.size === M_STEPS.length) { cheer(b, 'Metodo completato, ' + NAME + '!'); fanfare(); if (!paid.has('all')) { paid.add('all'); gain(3, b); } } else cheer(b);
+        store.set('m-steps-paid', [...paid]);
       }
     });
     li.appendChild(b); ul.appendChild(li);
@@ -150,7 +153,10 @@ PAGES.metodo = el => {
       b.innerHTML = '<span class="when">' + g[1] + (cal.done.includes(i) ? ' ✓' : '') + '</span><span class="date">' + esc(fmt(d)) + '</span><span class="hw">' + g[2] + '</span>';
       b.addEventListener('click', () => {
         const k = cal.done.indexOf(i);
-        if (k === -1) { cal.done.push(i); ding(); gain(2, b); cheer(b, cal.done.length === 4 ? 'Ricordo fissato per sempre!' : null); }
+        if (k === -1) {
+          if (d > new Date()) { floatText(b, 'Questo ripasso è nel futuro: aspetta quel giorno!'); return; }
+          cal.done.push(i); cal.paid = cal.paid || []; ding(); if (!cal.paid.includes(i)) { cal.paid.push(i); gain(2, b); } cheer(b, cal.done.length === 4 ? 'Ricordo fissato per sempre!' : null);
+        }
         else cal.done.splice(k, 1);
         store.set('m-cal', cal); drawCal();
       });

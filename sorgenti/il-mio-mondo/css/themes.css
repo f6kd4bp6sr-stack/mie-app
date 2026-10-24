@@ -230,3 +230,4 @@
 .dn-row.trip { border-color: color-mix(in srgb, #58c46b 45%, var(--line)); }
 .df-note textarea, .cl-lab textarea { width: 100%; box-sizing: border-box; border: 2px solid var(--line); border-radius: 18px; padding: 12px 14px; font: inherit; font-weight: 700; font-size: 17px; background: var(--surface-2); color: var(--ink); resize: vertical; }
 .df-note { border-top: 2px dashed var(--line); padding-top: 12px; }
+.cl-vai, .cl-del { min-height: 44px; } .cl-del { min-width: 44px; }

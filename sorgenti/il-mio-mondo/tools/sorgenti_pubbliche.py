@@ -7,20 +7,10 @@ dst = '/home/claude/mie-app/sorgenti/' + name
 assert name in ('il-mio-mondo', 'pianificazione'), 'solo le mie app: «semestre» ha le sue sorgenti'
 SKIP_DIRS = {'.git', '__pycache__', 'out', 'archivio', '_gen', 'verifiche'}
 KEEP = ['data/verifiche/rev2/fix_*.json', 'data/verifiche/rev3/fix_*.json', 'data/verifiche/rev3/factfix_*.json', 'data/verifiche/rev4/cur_*.json']
-import hashlib as _hl, re as _re
-def guarda(testo, regole):
-    """Vero se il testo contiene un termine da non pubblicare. Il confronto è per impronte (hash):
-    le parole stesse non compaiono nel codice pubblico."""
-    w = _re.findall(r"[0-9a-zà-ÿ]+", str(testo).lower()); H = {tuple(r[:4]): r[4] for r in regole}; C = {tuple(r[:3]) for r in regole}
-    for i in range(len(w)):
-        for n, L, e in C:
-            if i + n > len(w): continue
-            s = ' '.join(w[i:i + n])
-            if len(s) < L or (e and len(s) != L): continue
-            k = (n, L, e, _hl.blake2b(s[:L].encode(), digest_size=8, key=b'mie-app-guardia').hexdigest())
-            if k in H and not (H[k] and i + n < len(w) and w[i + n].startswith(H[k])): return True
-    return False
-GUARD = [[1, 9, 1, "80ae5209ad7a7456", "tere"], [1, 4, 1, "0965105e44659ce2", ""], [1, 9, 0, "1232ff47c6f9ef8f", ""], [3, 21, 0, "8ca88b76e83f722f", ""]]  # nome della bambina (non la cosmonauta Tereškova) e termini di salute
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from guardia import guarda  # impronte con chiave segreta: tools/guardia.py
+GUARD = [[1, 9, 1, "cc2818bd0e2f6b13", "4:c4785a1339db913d"], [1, 4, 1, "cee06d995a56a537", ""], [1, 9, 0, "114db3c7cd1b4074", ""], [3, 21, 0, "1d2c1ad5207a93ee", ""]]  # impronte con chiave segreta (tools/guardia.py)
 files = []
 for root, dirs, fs in os.walk(src):
     dirs[:] = [d for d in dirs if d not in SKIP_DIRS]

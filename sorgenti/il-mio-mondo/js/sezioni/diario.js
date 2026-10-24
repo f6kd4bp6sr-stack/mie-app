@@ -86,7 +86,7 @@ const noteQOf = (key, shift) => NOTE_Q[(Math.floor(fromIso(key) / 86400000) + (s
 /* 🚌 il racconto di un'uscita o di un appuntamento: 4 domande guida, salvato nel giorno dell'uscita (campo ev) */
 const TRIP_Q = ['Che cosa abbiamo fatto?', 'La cosa che mi è piaciuta di più…', 'Una cosa nuova che ho imparato…', 'Una domanda che mi è venuta…'];
 const tripNote = (day, id) => ((diary()[day] || {}).ev || {})[id] || null;
-function openTripNote(day, id, title, onDone) {
+function openTripNote(day, id, title, onDone, noPrize) {
   const old = tripNote(day, id), a = (old && old.a) || [];
   openModal('<div class="big" style="font-size:24px">📝 Com’è andata?</div><p style="font-weight:800;margin:4px 0">' + esc(title) + ' · ' + esc(fmtDay(day)) + '</p><p class="df-ask">Rispondi solo a quello che vuoi, con parole tue. ' + esc(D.name) + ' è curioso!</p>' +
     '<p class="note-s">Con almeno 5 parole ' + esc(D.name) + ' prende +3 🔥.</p>' + TRIP_Q.map((q, k) => '<label class="cl-lab">' + esc(q) + '<textarea id="tn-' + k + '" rows="2" maxlength="300">' + esc(a[k] || '') + '</textarea></label>').join('') +
@@ -98,7 +98,7 @@ function openTripNote(day, id, title, onDone) {
     const words = ans.join(' ').split(/\s+/).filter(Boolean).length;
     const all = diary(), e = all[day] || {}; e.ev = e.ev || {};
     const first = !e.ev[id] || !e.ev[id].r;
-    const paid = first && words >= 5;
+    const paid = first && words >= 5 && !noPrize && daysBetween(day, todayIso()) <= 14;
     e.ev[id] = { t: title, a: ans, r: paid || !first ? 1 : 0 }; all[day] = e; store.set('diary', all);
     if (paid) gain(3, $('tn-ok'));
     ding(); closeModal();
@@ -166,9 +166,12 @@ function dayForm(box, key, onSaved) {
     if (cur.ev) e.ev = cur.ev;
     const words = e.w.split(/\s+/).filter(Boolean).length;
     let bonus = 0;
-    if (e.m && !e.r) { bonus += 2; e.r = 1; }
-    if (words >= 4 && !e.rw) { bonus += 3; e.rw = 1; }
-    if (e.nx.split(/\s+/).filter(Boolean).length >= 5 && !e.rn) { bonus += 3; e.rn = 1; }
+    /* premi solo per oggi e ieri: scrivere i giorni passati va benissimo, ma senza 🔥 */
+    const fresh = daysBetween(key, todayIso()) <= 1;
+    if (!fresh) { if (e.m) e.r = 1; e.rw = e.rw || 0; }
+    if (fresh && e.m && !e.r) { bonus += 2; e.r = 1; }
+    if (fresh && words >= 4 && !e.rw) { bonus += 3; e.rw = 1; }
+    if (fresh && e.nx.split(/\s+/).filter(Boolean).length >= 5 && !e.rn) { bonus += 3; e.rn = 1; }
     if (!e.nx) delete e.nq;
     all[key] = e; store.set('diary', all);
     const btn = box.querySelector('#df-save');
@@ -190,9 +193,11 @@ function dragonReply(e) {
 }
 
 /* ---------- Pagina ---------- */
-let calMonth = null;
+let calMonth = null, diaryDay = null;
+/* il diario rimasto aperto dopo mezzanotte si aggiorna al giorno nuovo */
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && current === 'diario' && diaryDay && diaryDay !== todayIso() && $('p-diario')) PAGES.diario($('p-diario')); });
 PAGES.diario = el => {
-  const t = todayIso(), dd = diary();
+  const t = todayIso(), dd = diary(); diaryDay = t;
   if (!calMonth) { const d = fromIso(t < SCHOOL.start ? SCHOOL.start : t > '2027-09-12' ? '2027-06-01' : t); calMonth = [d.getFullYear(), d.getMonth()]; }
   const { cur, next } = nextHoliday(t);
   const c = dcol(), lv = levelOf(D.energy);

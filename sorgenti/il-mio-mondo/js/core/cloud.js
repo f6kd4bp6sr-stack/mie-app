@@ -87,7 +87,7 @@ document.addEventListener('visibilitychange', () => { if (document.visibilitySta
 window.addEventListener('pagehide', () => { if (pending.size) flush(); });
 cloudConnect(false);
 
-/* ---------- Stato visibile e diagnosi ---------- */
+/* ---------- Stato visibile e controlli ---------- */
 const SYNC_TXT = {
   start: ['💾 Salvato su questo iPad', 'ok'],
   ok: ['☁️ Salvato su questo iPad e nel tuo account', 'ok'],
@@ -493,7 +493,8 @@ async function openSnapshots() {
    Safari non permette a un sito di scrivere file senza un tocco: l'app prepara tutto e chiede un solo tocco al giorno.
    Nel foglio di condivisione si sceglie «Salva su File» → iCloud Drive (l'iPad ricorda la cartella). */
 function backupFile() {
-  const st = snapData();
+  /* la copia su file non contiene mai il collegamento con i genitori (chiave GitHub e chiave di cifratura) */
+  const st = snapData(); if (st && st.data) { delete st.data['link-cfg']; if (st.t) delete st.t['link-cfg']; }
   const data = JSON.stringify({ app: APP_ID, saved: new Date().toISOString(), state: st });
   const d = new Date(), fn = 'drago-progressi-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + '.json';
   return { data, fn };

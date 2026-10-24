@@ -186,7 +186,7 @@ function spPaint() {
   $('sp-x').addEventListener('click', spClose);
   if ($('sp-ct')) $('sp-ct').addEventListener('click', () => ctOpen(d.cartina));
   ov.querySelectorAll('[data-ct]').forEach(b => b.addEventListener('click', () => ctOpen(b.dataset.ct)));
-  ov.querySelectorAll('[data-ds]').forEach(b => b.addEventListener('click', () => { const id = b.dataset.ds; spClose(); go('disegno'); dsEditor({ pid: id }); }));
+  ov.querySelectorAll('[data-ds]').forEach(b => b.addEventListener('click', () => { const id = b.dataset.ds; const st = spState(); if (SP && !st.visto[SP.key]) { st.visto[SP.key] = todayIso(); spSave(st); } spClose(); go('disegno'); dsEditor({ pid: id }); }));
   ov.querySelectorAll('.sp-link').forEach(b => b.addEventListener('click', () => { const r = b.dataset.go; spClose(); spGoTopic(r); }));
   if (S.ph === 'racconto') {
     const sl = d.racconto[S.i];
@@ -311,7 +311,8 @@ const MP_COL = ['#3fa9f5', '#ff9a3c', '#58c46b', '#a879ff', '#ff6b6b', '#e0b100'
 let MP = null;
 function mpNew(center, words) {
   const m = { id: Date.now().toString(36), t: center || 'La mia mappa', d: todayIso(), n: [{ id: 'c', x: 600, y: 400, t: center || 'La mia idea', c: 1 }], l: [], words: (words || []).slice(0, 8) };
-  const L = mpAll(); L.unshift(m); mpSaveAll(L.slice(0, 60));
+  const L = mpAll(); if (L.length >= 60) { openModal('<div style="font-size:44px">🗺️</div><p style="font-weight:800">Hai già 60 mappe! Per farne una nuova, cancellane prima una vecchia in Le mie mappe.</p><button type="button" class="btn" id="mp-full" data-focus>Ok</button>'); $('mp-full').addEventListener('click', closeModal); return; }
+  L.unshift(m); mpSaveAll(L);
   mpOpen(m.id);
 }
 function mpOpen(id) {

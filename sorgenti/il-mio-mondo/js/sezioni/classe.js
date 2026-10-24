@@ -26,7 +26,7 @@ const clIsoOf = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2
 function clPending() {
   const C = clData(); if (!C) return [];
   const t = clDay(todayIso());
-  return clDated(C).filter(x => clRacconta(x) && x.day <= t && Math.round((t - x.day) / 86400000) <= 14 && !x.noNote && !tripNote(clIsoOf(x.day), x.id)).map(x => ({ day: clIsoOf(x.day), id: x.id, t: x.t, ic: x.ic })).reverse();
+  return clDated(C).filter(x => clRacconta(x) && x.day <= t && Math.round((t - x.day) / 86400000) <= 14 && !x.noNote && !tripNote(clIsoOf(x.day), x.id)).map(x => ({ day: clIsoOf(x.day), id: x.id, t: x.t, ic: x.ic, np: !!(x.mio && x.c && x.c > x.d) })).reverse();
 }
 /* per le novità del drago: il drago chiede a lei */
 function clNews() {
@@ -34,7 +34,7 @@ function clNews() {
   const N = [], t = clDay(todayIso()), D2 = clDated(C);
   const tom = D2.find(x => Math.round((x.day - t) / 86400000) === 1);
   if (tom) N.push({ k: 'cl-dom', ic: '🎒', t: 'Domani: ' + tom.t, s: tom.porta ? 'Da portare: ' + tom.porta : 'Preparalo stasera!', go: () => go('classe') });
-  const P = clPending(); if (P.length) N.push({ k: 'cl-note', ic: '📝', t: 'Com’è andata «' + P[0].t + '»?', s: 'Raccontalo nel diario', go: () => openTripNote(P[0].day, P[0].id, P[0].t) });
+  const P = clPending(); if (P.length) N.push({ k: 'cl-note', ic: '📝', t: 'Com’è andata «' + P[0].t + '»?', s: 'Raccontalo nel diario', go: () => openTripNote(P[0].day, P[0].id, P[0].t, null, P[0].np) });
   const U = (C.uscite || []).filter(u => !clDay(u.d));
   if (U.length) { const u = U[Math.floor(clDay(todayIso()) / 86400000) % U.length]; N.push({ k: 'cl-det', ic: '🕵️', t: 'Missione detective: quando sarà «' + u.t + '»?', s: 'Chiedilo alla maestra e scrivilo tu (+3 💎)', go: () => go('classe') }); }
   return N;
@@ -45,7 +45,16 @@ function clDecode(b64) {
   const bytes = Uint8Array.from(bin, c => c.charCodeAt(0));
   const o = JSON.parse(new TextDecoder().decode(bytes));
   if (!o || typeof o !== 'object' || o.v !== 1) throw new Error('formato');
-  return o;
+  /* controllo dei dati: solo voci con un titolo, solo testi brevi */
+  const str = (x, n) => typeof x === 'string' ? x.slice(0, n || 120) : '';
+  const voce = x => x && typeof x === 'object' && str(x.t) ? Object.assign({}, x, { t: str(x.t), ic: str(x.ic, 8), note: str(x.note), dove: str(x.dove, 60), porta: str(x.porta, 80), vai: str(x.vai, 40), d: /^\d{4}-\d\d-\d\d$/.test(x.d || '') ? x.d : undefined }) : null;
+  const L = a => Array.isArray(a) ? a.map(voce).filter(Boolean) : [];
+  const out = { v: 1, anno: str(o.anno, 12), eventi: L(o.eventi).filter(e => e.d), uscite: L(o.uscite),
+    progetti: (Array.isArray(o.progetti) ? o.progetti : []).filter(g => g && str(g.g)).map(g => ({ g: str(g.g), ic: str(g.ic, 8), voci: L(g.voci) })) };
+  if (o.motto && typeof o.motto === 'object') out.motto = { t: str(o.motto.t), sotto: str(o.motto.sotto, 200), voci: (Array.isArray(o.motto.voci) ? o.motto.voci : []).map(v => str(v, 30)).filter(Boolean) };
+  /* codici fissi: il racconto nel diario resta attaccato alla voce anche se lei la modifica */
+  out.eventi.forEach(e => { e.id = str(e.id, 40) || clId(e, 'e'); }); out.uscite.forEach(u => { u.id = str(u.id, 40) || clId(u, 'u'); });
+  return out;
 }
 /* un link nuovo tiene quello che ha scritto lei: le sue voci e quando, dove e che cosa portare delle uscite */
 function clMerge(o, old) {
@@ -60,14 +69,19 @@ function clMerge(o, old) {
 function clImport(code) {
   const m = code ? [0, code] : String(location.hash || '').match(/^#classe=([A-Za-z0-9_-]+)$/); if (!m) return;
   if (!code) try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
-  let o; try { o = clDecode(m[1]); } catch (e) { setTimeout(() => { openModal('<div style="font-size:44px">⚠️</div><p style="font-weight:800">Il link della classe non si legge: chiedi a papà di rimandarlo.</p><button type="button" class="btn" id="cl-ko" data-focus>Ok</button>'); $('cl-ko').addEventListener('click', closeModal); }, 600); return; }
-  setTimeout(() => {
-    closeModal();
+  let o; try { o = clDecode(m[1]); } catch (e) {
+    const bad = () => { const md = $('modal'); if (!D || (md && md.dataset.lock)) return setTimeout(bad, 1500); openModal('<div style="font-size:44px">⚠️</div><p style="font-weight:800">Il link della classe non si legge: chiedi a papà di rimandarlo.</p><button type="button" class="btn" id="cl-ko" data-focus>Ok</button>'); $('cl-ko').addEventListener('click', closeModal); };
+    setTimeout(bad, 600); return; }
+  const ask = () => {
+    /* prima nasce il drago: la finestra bloccata del primo avvio non si chiude mai */
+    const md = $('modal'); if (!D || (md && md.dataset.lock) || (!code && md && !md.hidden)) return setTimeout(ask, 1500);
+    if (code) closeModal();
     const n = (o.eventi || []).length + (o.uscite || []).length + (o.progetti || []).reduce((a, g) => a + (g.voci || []).length, 0);
-    openModal('<div style="font-size:50px">🗓️</div><div class="big" style="font-size:24px">La mia classe</div><p style="font-weight:700">Salvo su questo iPad ' + n + ' voci: progetti, uscite e date' + (o.anno ? ' dell’anno ' + esc(o.anno) : '') + '.' + (clData() ? ' Le voci di prima vengono sostituite.' : '') + '</p><div class="sp-row"><button type="button" class="btn ghost" id="cl-no">Annulla</button><button type="button" class="btn" id="cl-si" data-focus>✅ Salva</button></div>');
+    openModal('<div style="font-size:50px">🗓️</div><div class="big" style="font-size:24px">La mia classe</div><p style="font-weight:700">Salvo su questo iPad ' + (n === 1 ? '1 voce' : n + ' voci') + ': progetti, uscite e date' + (o.anno ? ' dell’anno ' + esc(o.anno) : '') + '.' + (clData() ? ' Le date, i luoghi e le voci che hai scritto tu restano.' : '') + '</p><div class="sp-row"><button type="button" class="btn ghost" id="cl-no">Annulla</button><button type="button" class="btn" id="cl-si" data-focus>✅ Salva</button></div>');
     $('cl-no').addEventListener('click', closeModal);
     $('cl-si').addEventListener('click', () => { store.set('classe', clMerge(o, clData())); closeModal(); go('classe'); });
-  }, 700);
+  };
+  setTimeout(ask, 700);
 }
 clImport(); window.addEventListener('hashchange', () => clImport());
 /* 🔗 per il genitore: sull'iPad l'app sulla Home non vede i dati di Safari, quindi il link si può anche incollare qui */
@@ -91,20 +105,20 @@ PAGES.classe = el => {
   const evRow = (e, old) => { const day = clIsoOf(e.day), canTn = clRacconta(e) && (old || (e.day - today) === 0), tn = canTn ? tripNote(day, e.id) : null;
     return '<div class="cl-ev' + (old ? ' old' : '') + '"><span class="cl-ic">' + esc(e.ic || '📌') + '</span><div class="cl-tx"><b>' + esc(e.t) + '</b><small>' + date(e) + (old ? '' : ' · <em>' + when(e) + '</em>') + (e.note ? ' · ' + esc(e.note) : '') + '</small>' +
       (e.dove ? '<small>📍 ' + esc(e.dove) + '</small>' : '') + (e.porta ? '<small>🎒 Da portare: ' + esc(e.porta) + '</small>' : '') + clVai(e.vai) +
-      (canTn ? '<button type="button" class="cl-vai cl-nota" data-tn="' + day + '|' + esc(e.id) + '" data-tt="' + esc(e.t) + '">' + (tn ? '📝 Il mio racconto ✓' : '📝 Com’è andata? Scrivilo nel diario') + '</button>' : '') + '</div>' +
+      (canTn ? '<button type="button" class="cl-vai cl-nota" data-tn="' + day + '|' + esc(e.id) + '" data-tt="' + esc(e.t) + '" data-np="' + (e.mio && e.c && e.c > e.d ? 1 : 0) + '">' + (tn ? '📝 Il mio racconto ✓' : '📝 Com’è andata? Scrivilo nel diario') + '</button>' : '') + '</div>' +
       '<button type="button" class="cl-del" data-ed="' + e.k + '|' + e.i + '" aria-label="Modifica">✏️</button>' + (e.mio && e.k === 'eventi' ? '<button type="button" class="cl-del" data-del="' + esc(e.id) + '" aria-label="Togli">✕</button>' : '') + '</div>'; };
   el.innerHTML = head +
     (next[0] ? '<div class="cl-hero"><span>' + esc(next[0].ic || '📌') + '</span><div><small>Il prossimo appuntamento</small><b>' + esc(next[0].t) + '</b><em>' + date(next[0]) + ' · ' + when(next[0]) + '</em></div></div>' : '') +
     '<div class="cl-card"><h2>📆 Le date</h2>' + (next.length ? next.map(e => evRow(e)).join('') : '<p class="cl-mini">Nessuna data in arrivo.</p>') +
       '<button type="button" class="btn ghost small" id="cl-add">➕ Aggiungi un appuntamento</button>' +
-      (past.length ? '<details class="cl-past"><summary>Già fatti (' + past.length + ')</summary>' + past.reverse().map(e => evRow(e, true)).join('') + '</details>' : '') + '</div>' +
+      (past.length ? '<details class="cl-past"' + (typeof clPending === 'function' && clPending().length ? ' open' : '') + '><summary>Già fatti (' + past.length + ')</summary>' + past.reverse().map(e => evRow(e, true)).join('') + '</details>' : '') + '</div>' +
     (todo.length ? '<div class="cl-card cl-det"><h2>🕵️ Da scoprire</h2><p class="cl-mini">Sei tu la detective della classe: chiedi alla maestra <b>quando</b> e <b>dove</b> andrete, poi scrivilo qui. Ogni scoperta vale +3 💎.</p>' + todo.map(x => '<div class="cl-ev"><span class="cl-ic">' + esc(x.u.ic || '🚌') + '</span><div class="cl-tx"><b>' + esc(x.u.t) + '</b>' + (x.u.note ? '<small>' + esc(x.u.note) + '</small>' : '') + clVai(x.u.vai) + '<button type="button" class="cl-vai cl-scopri" data-ed="uscite|' + x.i + '">✏️ Ho scoperto quando!</button></div></div>').join('') + '</div>' : '') +
     ((C.progetti || []).length ? '<div class="cl-card"><h2>🧩 I progetti</h2>' + C.progetti.map(g => '<h3>' + esc((g.ic ? g.ic + ' ' : '') + g.g) + '</h3>' + (g.voci || []).map(v => '<div class="cl-pr"><b>' + esc(v.t) + '</b>' + (v.note ? '<small>' + esc(v.note) + '</small>' : '') + clVai(v.vai) + '</div>').join('')).join('') + '</div>' : '') +
     (C.motto ? '<div class="cl-card cl-motto"><h2>🧭 ' + esc(C.motto.t || 'Tutto funziona se…') + '</h2>' + (C.motto.sotto ? '<p>' + esc(C.motto.sotto) + '</p>' : '') + '<div class="cl-chips">' + (C.motto.voci || []).map(v => '<span>' + esc(v) + '</span>').join('') + '</div></div>' : '') + clFoot;
   $('cl-add').addEventListener('click', () => clAddForm()); $('cl-paste').addEventListener('click', clPaste);
   el.querySelectorAll('[data-vai]').forEach(b => b.addEventListener('click', () => spGoTopic(b.dataset.vai)));
   el.querySelectorAll('[data-ed]').forEach(b => b.addEventListener('click', () => { const [k, i] = b.dataset.ed.split('|'); clAddForm(k, +i); }));
-  el.querySelectorAll('[data-tn]').forEach(b => b.addEventListener('click', () => { const [d, id] = b.dataset.tn.split('|'); openTripNote(d, id, b.dataset.tt, () => PAGES.classe(el)); }));
+  el.querySelectorAll('[data-tn]').forEach(b => b.addEventListener('click', () => { const [d, id] = b.dataset.tn.split('|'); openTripNote(d, id, b.dataset.tt, () => PAGES.classe(el), b.dataset.np === '1'); }));
   el.querySelectorAll('[data-del]').forEach(b => b.addEventListener('click', () => { const c = clData(); c.eventi = (c.eventi || []).filter(e => e.id !== b.dataset.del); store.set('classe', c); PAGES.classe(el); }));
 };
 /* ➕ nuovo appuntamento o ✏️ completa una voce (k = 'eventi' | 'uscite', i = posizione): lo scrive lei */
@@ -114,12 +128,12 @@ function clAddForm(k, i) {
   let ic = x ? x.ic || (isU ? '🚌' : '📌') : '📝';
   openModal('<div class="big" style="font-size:22px">' + (disc ? '🕵️ Hai scoperto quando?' : x ? '✏️ ' + esc(x.t) : '➕ Nuovo appuntamento') + '</div>' +
     (disc ? '<p style="font-weight:700;margin:4px 0">' + esc(x.ic || '🚌') + ' ' + esc(x.t) + '</p>' : '') +
-    (x && isU ? '' : '<label class="cl-lab">✏️ Che cosa?<input id="cl-t" maxlength="60" placeholder="es. Verifica di storia" value="' + esc(x ? x.t : '') + '"></label>' +
+    (x && (isU || !x.mio) ? '' : '<label class="cl-lab">✏️ Che cosa?<input id="cl-t" maxlength="60" placeholder="es. Verifica di storia" value="' + esc(x ? x.t : '') + '"></label>' +
       '<div class="cl-tipi">' + CL_TIPI.map(t => '<button type="button" class="chip" data-ic="' + t[0] + '" aria-pressed="' + (t[0] === ic) + '">' + t[0] + ' ' + t[1] + '</button>').join('') + '</div>') +
     '<label class="cl-lab">📅 Quando?<input id="cl-d" type="date" value="' + esc(x && x.d ? x.d : '') + '"></label>' +
     '<label class="cl-lab">📍 Dove? <small>(se lo sai)</small><input id="cl-w" maxlength="60" placeholder="es. al museo, in palestra" value="' + esc(x && x.dove ? x.dove : '') + '"></label>' +
     '<label class="cl-lab">🎒 Che cosa porto? <small>(se serve)</small><input id="cl-p" maxlength="80" placeholder="es. pranzo al sacco, quaderno" value="' + esc(x && x.porta ? x.porta : '') + '"></label>' +
-    (x && isU ? '' : '<label class="cl-lab">Una nota (se vuoi)<input id="cl-n" maxlength="80" value="' + esc(x && x.note ? x.note : '') + '"></label>') +
+    (x && (isU || !x.mio) ? '' : '<label class="cl-lab">Una nota (se vuoi)<input id="cl-n" maxlength="80" value="' + esc(x && x.note ? x.note : '') + '"></label>') +
     '<div class="sp-row"><button type="button" class="btn ghost" id="cl-x">Annulla</button><button type="button" class="btn" id="cl-ok">Salva</button></div>');
   document.querySelectorAll('.cl-tipi [data-ic]').forEach(b => b.addEventListener('click', () => { ic = b.dataset.ic; document.querySelectorAll('.cl-tipi [data-ic]').forEach(c => c.setAttribute('aria-pressed', c === b)); }));
   $('cl-x').addEventListener('click', closeModal);
@@ -127,8 +141,8 @@ function clAddForm(k, i) {
     const t = $('cl-t') ? $('cl-t').value.trim() : x.t, d = $('cl-d').value, dove = $('cl-w').value.trim(), porta = $('cl-p').value.trim();
     if (!t || (!clDay(d) && !(x && isU))) { floatText($('cl-ok'), 'Scrivi che cosa e quando'); return; }
     const c = clData() || { v: 1, eventi: [] }; c.eventi = c.eventi || [];
-    if (x) { const y = c[k][i]; if (!isU) { y.t = t; y.ic = ic; y.note = $('cl-n').value.trim(); } if (clDay(d)) y.d = d; else delete y.d; y.dove = dove; y.porta = porta; if (isU && !y.id) y.id = clSlug(y.t); }
-    else c.eventi.push({ id: 'm' + Date.now().toString(36), t, d, ic, note: $('cl-n').value.trim(), dove, porta, mio: true });
+    if (x) { const y = c[k][i]; if (!isU && y.mio) { y.t = t; y.ic = ic; y.note = $('cl-n').value.trim(); } if (!y.id) y.id = clId(y, isU ? 'u' : 'e'); if (clDay(d)) y.d = d; else delete y.d; y.dove = dove; y.porta = porta; if (isU && !y.id) y.id = clSlug(y.t); }
+    else c.eventi.push({ id: 'm' + Date.now().toString(36), t, d, ic, note: $('cl-n').value.trim(), dove, porta, mio: true, c: todayIso() });
     store.set('classe', c);
     const btn = $('cl-ok');
     const prize = disc && clDay(d) && !x.gem; if (prize) { c[k][i].gem = 1; store.set('classe', c); Gems.add(3); try { cheer(btn, 'Brava detective!'); } catch (e) {} }

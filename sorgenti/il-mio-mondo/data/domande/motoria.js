@@ -10,7 +10,7 @@ SCOPRI.push({
  "motto": "In palestra non vince chi è più forte: vince chi impara a muoversi insieme agli altri, con il ritmo giusto.",
  "facts": [
   ["Cervello allenatore", "Ogni movimento parte dal cervello: manda ordini ai muscoli attraverso i nervi. Ripetendo un gesto, il cervello lo impara e lo fa sempre meglio."],
-  ["Il cervelletto", "Dietro la testa, sotto il cervello, c'è il cervelletto: aiuta a tenere l'equilibrio e a rendere i movimenti precisi."],
+  ["Il cervelletto", "Nella parte di dietro della testa, sotto il cervello, c'è il cervelletto: aiuta a tenere l'equilibrio e a rendere i movimenti precisi."],
   ["Pallavolo: tre tocchi", "Nella pallavolo ogni squadra può toccare la palla al massimo tre volte prima di mandarla dall'altra parte della rete."],
   ["Basket: il canestro", "Nel basket il canestro è a 3 metri e 5 centimetri da terra: la stessa altezza per tutti i campionati dei grandi."],
   ["Nati in America", "Il basket è nato nel 1891 e la pallavolo nel 1895, tutti e due negli Stati Uniti, in palestre dove si giocava d'inverno al coperto."]
