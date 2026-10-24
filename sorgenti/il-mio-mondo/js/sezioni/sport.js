@@ -145,7 +145,7 @@ const EXTRA_SUBJECTS = [
   { id: 'musica', name: 'Musica', ic: '🎼', c: 'var(--c6)', s: 'var(--c6-soft)', topic: 'Note, ritmo e strumenti',
     motto: 'La musica è il tuo superpotere: ti aiuta a ricordare, a muoverti e a pattinare!',
     facts: [
-      ['Da dove vengono i nomi delle note?', 'Da un antico canto latino: un monaco italiano, Guido d’Arezzo, usò le prime sillabe dei versi. Così sono nate re, mi, fa, sol e la; il do e il si sono arrivati qualche secolo più tardi.'],
+      ['Da dove vengono i nomi delle note?', 'Da un antico canto latino: un monaco italiano, Guido d’Arezzo, usò le prime sillabe dei versi. Così sono nate ut, re, mi, fa, sol e la; più tardi «ut» è diventato «do» ed è arrivato il si.'],
       ['Quanti tasti ha un pianoforte?', '88! 52 bianchi e 36 neri.'],
       ['Quanti anni aveva Mozart quando compose i primi brani?', 'Circa 5 anni! Da bambino suonava già in giro per l’Europa.'],
       ['Musica e pattinaggio?', 'Nel pattinaggio artistico ogni esercizio si fa sulla musica: i movimenti seguono il ritmo, come in un balletto sul ghiaccio.']
@@ -157,7 +157,7 @@ const EXTRA_SUBJECTS = [
     ],
     quiz: [
       ['Quante linee ha il pentagramma?', ['5', '7', '3'], 0],
-      ['Quante sono le note musicali?', ['7', '5', '12'], 0],
+      ['Quante sono le note musicali?', ['7', '5', '10'], 0],
       ['Quale di questi è uno strumento a corde?', ['Il violino', 'Il flauto', 'Il tamburo'], 0]
     ] },
   { id: 'civica', name: 'Cittadinanza attiva', ic: '🤝', c: 'var(--c4)', s: 'var(--c4-soft)', topic: 'Regole, diritti e ambiente',

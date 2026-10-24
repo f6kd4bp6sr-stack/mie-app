@@ -175,7 +175,7 @@
     ]
    },
    {
-    "t": "Un set si vince arrivando a 25 punti, con almeno due punti di vantaggio. Vince la partita chi conquista per primo tre set.",
+    "t": "Un set si vince arrivando a 25 punti, con almeno due punti di vantaggio; il quinto si gioca a 15. Vince la partita chi conquista per primo tre set.",
     "nodi": [
      "punti"
     ]

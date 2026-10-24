@@ -3,7 +3,7 @@ Si esegue da solo a ogni build (build.py). Se trova ERRORI il build si ferma: ni
 - ogni domanda: codice (id) unico, 3 risposte diverse e non vuote, riga chiave fino a 12 parole, spiegazione presente
 - i codici non spariscono mai (registro data/domande/quiz/_codici.txt): una domanda tolta va scritta in _ritirati.txt
 - spiegazioni: mappa (raggiera, ciclo, linea, scala), racconto breve, argomenti «da guardare insieme» senza domande
-- nessun termine vietato (diagnosi o bisogni speciali di chi studia non vanno mai nominati)
+- nessun termine da non pubblicare (elenco a impronte con chiave segreta, tools/guardia.py)
 - rapporto: data/_gen/rapporto.md con il conteggio per materia e la copertura del programma (data/programma/*.json)
 """
 import glob, json, os, re, sys
@@ -14,20 +14,10 @@ import json as _j
 _A = _j.load(open(D + 'data/domande/argomenti.json', encoding='utf-8')) if os.path.exists(D + 'data/domande/argomenti.json') else {}
 ARG_IDS = {u: {t[0] for t in L} for u, L in _A.items()}
 # termini che non devono comparire nei contenuti: solo impronte, le parole non sono nel codice pubblico
-import hashlib as _hl, re as _re
-def guarda(testo, regole):
-    """Vero se il testo contiene un termine da non pubblicare. Il confronto è per impronte (hash):
-    le parole stesse non compaiono nel codice pubblico."""
-    w = _re.findall(r"[0-9a-zà-ÿ]+", str(testo).lower()); H = {tuple(r[:4]): r[4] for r in regole}; C = {tuple(r[:3]) for r in regole}
-    for i in range(len(w)):
-        for n, L, e in C:
-            if i + n > len(w): continue
-            s = ' '.join(w[i:i + n])
-            if len(s) < L or (e and len(s) != L): continue
-            k = (n, L, e, _hl.blake2b(s[:L].encode(), digest_size=8, key=b'mie-app-guardia').hexdigest())
-            if k in H and not (H[k] and i + n < len(w) and w[i + n].startswith(H[k])): return True
-    return False
-GUARD_SALUTE = [[1, 4, 1, "0965105e44659ce2", ""], [1, 9, 0, "1232ff47c6f9ef8f", ""], [3, 21, 0, "8ca88b76e83f722f", ""], [1, 3, 1, "b81787cefac3e952", ""], [1, 3, 1, "e181db99c5742a9e", ""], [2, 13, 0, "de4d39d7e6fd8695", ""], [2, 13, 0, "f44cfd342de4d587", ""], [1, 7, 0, "9bec2f147bccf70b", ""], [1, 13, 0, "ebf625af53f6b6d7", ""], [2, 19, 0, "f6944af4606cf312", ""]]
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from guardia import guarda  # impronte con chiave segreta: tools/guardia.py
+GUARD_SALUTE = [[1, 4, 1, "cee06d995a56a537", ""], [1, 9, 0, "114db3c7cd1b4074", ""], [3, 21, 0, "1d2c1ad5207a93ee", ""], [1, 3, 1, "4a09cc2c8b726798", ""], [1, 3, 1, "00dce94d056fe6f8", ""], [2, 13, 0, "03267d6e86ec0cbb", ""], [2, 13, 0, "4317506eb099605b", ""], [1, 7, 0, "ad6138077f1f8a4e", ""], [1, 13, 0, "95d6081731a75a76", ""], [2, 19, 0, "d541b4e74d6fe990", ""]]  # impronte con chiave segreta (tools/guardia.py)
 words = lambda s: len(str(s).split())
 
 
@@ -89,6 +79,7 @@ def run(write=True):
             if u == 'mate':
                 if not t.isdigit(): err.append(f'{w}: per la matematica la chiave è il numero della tappa')
             elif t not in ARG_IDS.get(u, set()): err.append(f'{w}: argomento inesistente')
+            if guarda(json.dumps(d, ensure_ascii=False), GUARD_SALUTE): err.append(f'{w}: termine vietato (racconto, mappa, «insieme» o «chiedi»)')
             nodi = d.get('nodi', []); ids = [n.get('id') for n in nodi]
             if not (4 <= len(nodi) <= 6): err.append(f'{w}: servono da 4 a 6 nodi')
             if len(set(ids)) != len(ids): err.append(f'{w}: nodi con lo stesso id')
@@ -141,6 +132,9 @@ def run(write=True):
                 else: ok = ct in ARG_IDS.get(cu, set())
                 if not ok: err.append(f'{w}: collegamento «{c}» inesistente')
                 if cu == u and ct == t: err.append(f'{w}: collegamento a se stesso')
+    # curiosità, missioni e testi delle materie (data/domande/*.js)
+    for f in sorted(glob.glob(D + 'data/domande/*.js')):
+        if guarda(open(f, encoding='utf-8').read(), GUARD_SALUTE): err.append(f'{os.path.basename(f)}: termine vietato')
     # registro dei codici: un codice registrato non può sparire
     reg_f, rit_f = QDIR + '_codici.txt', QDIR + '_ritirati.txt'
     reg = set(open(reg_f).read().split()) if os.path.exists(reg_f) else set()

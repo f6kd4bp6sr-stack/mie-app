@@ -137,20 +137,12 @@ ver = hashlib.md5(full.encode()).hexdigest()[:10]
 idx = full.replace('<link rel="apple-touch-icon" href="'+uri+'">\n', pwa_head).replace('</body>', pwa_sw+'<script>/* collegamento genitori: sempre la versione più recente */(function(){if(document.querySelector("script[data-msync]"))return;var s=document.createElement("script");s.dataset.msync=1;s.src="licenze/mondo-sync.js?t="+Date.now();s.defer=true;document.head.appendChild(s);})();</script>\n</body>').replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<script>window.APP_VERSION="'+ver+'";</script>', 1)
 import shutil; shutil.copyfile(D+'docs/LEGGIMI.html', P+'LEGGIMI.html')  # guida: la fonte è docs/LEGGIMI.html
 open(P+'version.json','w').write('{"v": "'+ver+'"}')
-import hashlib as _hl, re as _re
-def guarda(testo, regole):
-    """Vero se il testo contiene un termine da non pubblicare. Il confronto è per impronte (hash):
-    le parole stesse non compaiono nel codice pubblico."""
-    w = _re.findall(r"[0-9a-zà-ÿ]+", str(testo).lower()); H = {tuple(r[:4]): r[4] for r in regole}; C = {tuple(r[:3]) for r in regole}
-    for i in range(len(w)):
-        for n, L, e in C:
-            if i + n > len(w): continue
-            s = ' '.join(w[i:i + n])
-            if len(s) < L or (e and len(s) != L): continue
-            k = (n, L, e, _hl.blake2b(s[:L].encode(), digest_size=8, key=b'mie-app-guardia').hexdigest())
-            if k in H and not (H[k] and i + n < len(w) and w[i + n].startswith(H[k])): return True
-    return False
-GUARD_SALUTE = [[1, 4, 1, "0965105e44659ce2", ""], [1, 9, 0, "1232ff47c6f9ef8f", ""], [3, 21, 0, "8ca88b76e83f722f", ""]]  # i tre termini controllati da sempre nel file pubblicato
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'tools'))
+from guardia import guarda  # impronte con chiave segreta: tools/guardia.py
+# tutte le regole: quelle del controllo dei contenuti (tools/controlla.py) e quelle delle sorgenti pubbliche (tools/sorgenti_pubbliche.py)
+_g = lambda f, n: eval(re.search('^' + n + r' = (\[\[.*?\]\])', open(D + 'tools/' + f, encoding='utf-8').read(), re.M).group(1))
+GUARD_SALUTE = _g('controlla.py', 'GUARD_SALUTE') + _g('sorgenti_pubbliche.py', 'GUARD')
 if guarda(idx, GUARD_SALUTE): print('TERMINE VIETATO nel file pubblicato: stop'); sys.exit(1)
 open(P+'index.html','w',encoding='utf-8').write(idx)
 open(P+'manifest.webmanifest','w').write(json.dumps({
