@@ -1,7 +1,9 @@
 /* «Il mio mondo» → sezione Progressi: invio automatico e cifrato dei progressi.
    - Si attiva solo dopo il collegamento fatto da un genitore (📊 Progressi → 🔗 Per i genitori).
    - Invia i contatori dello studio e il diario (emozioni, presenze e testi); niente nome, niente aspetto o voce;
-     cifrati sull'iPad con una chiave che resta nel «codice di collegamento»: chi non ha il codice vede solo dati illeggibili.
+     cifrati sull'iPad con una chiave casuale lunga (256 bit) che passa solo nel QR del genitore: chi non ha il QR vede solo dati illeggibili.
+   - Sicurezza (versione 2, 24/10/2026): lo spazio su GitHub è PRIVATO (gist segreto), la descrizione non contiene niente che dipenda
+     dalla chiave; i collegamenti vecchi (spazio pubblico, chiave ricavata da un codice corto) vengono cancellati da soli e si rifà il QR.
    - Invio: all'apertura, quando l'app va in secondo piano e ogni 30 minuti; almeno una volta al giorno anche senza novità. */
 (function () {
   "use strict";
@@ -52,15 +54,37 @@
     if (data.dragon && typeof data.dragon === "object") data.dragon = { name: data.dragon.name || "", energy: data.dragon.energy || 0 };
     return data;
   }
-  /* codice scelto dal genitore (es. mm13105): da lì nascono la chiave di cifratura e l'etichetta per ritrovare i dati */
-  function normCode(c) { return String(c || "").trim().toLowerCase().replace(/\s+/g, ""); }
-  async function codeKey(c) {
-    var base = await crypto.subtle.importKey("raw", new TextEncoder().encode(normCode(c)), "PBKDF2", false, ["deriveBits"]);
-    var bits = await crypto.subtle.deriveBits({ name: "PBKDF2", salt: new TextEncoder().encode("mie-app-mondo-v2"), iterations: 310000, hash: "SHA-256" }, base, 256);
-    return b64(bits);
+  /* chiave casuale (256 bit) ed etichetta casuale: niente si ricava da un codice */
+  function randKey() { return b64(crypto.getRandomValues(new Uint8Array(32))); }
+  function randTag() { return Array.from(crypto.getRandomValues(new Uint8Array(10))).map(function (x) { return ("0" + x.toString(16)).slice(-2); }).join(""); }
+  var DESC2 = "mie-app-mondo2 ", OLD_DESC = "mie-app-mondo ";
+  /* collegamento vecchio = spazio pubblico o chiave ricavata da un codice corto */
+  function isOld(c) { return !!(c && c.gist && c.v !== 2); }
+  /* cancella dal GitHub del genitore gli spazi vecchi pubblici di «Il mio mondo» (e lo spazio indicato) */
+  async function wipeOld(token, gist) {
+    var n = 0, H = headers(token);
+    if (gist) { try { var d = await fetch(API + "/gists/" + gist, { method: "DELETE", headers: H }); if (d.ok || d.status === 204) n++; } catch (e) {} }
+    try {
+      for (var page = 1; page <= 5; page++) {
+        var l = await fetch(API + "/gists?per_page=100&page=" + page, { headers: H, cache: "no-store" }); if (!l.ok) break;
+        var arr = await l.json();
+        for (var i = 0; i < arr.length; i++) { var g = arr[i]; if (g.id !== gist && g.public && String(g.description || "").indexOf(OLD_DESC) === 0) { try { var r = await fetch(API + "/gists/" + g.id, { method: "DELETE", headers: H }); if (r.ok || r.status === 204) n++; } catch (e) {} } }
+        if (arr.length < 100) break;
+      }
+    } catch (e) {}
+    return n;
   }
-  async function codeTag(c) { var h = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("tag:mie-app-mondo:" + normCode(c))); return Array.from(new Uint8Array(h)).slice(0, 10).map(function (x) { return ("0" + x.toString(16)).slice(-2); }).join(""); }
-  window.__mondoCode = { norm: normCode, key: codeKey, tag: codeTag };
+  var migrating = false;
+  async function migrate() {
+    var c = cfg(); if (!isOld(c) || migrating) return;
+    migrating = true;
+    try {
+      if (c.token) await wipeOld(c.token, c.gist);
+      setCfg({ token: c.token || "", v: 2, need: 1, err: "per sicurezza il collegamento va rinnovato: serve un QR nuovo dal genitore" });
+      paint(); if (window.onMondoSync) try { window.onMondoSync(); } catch (e) {}
+    } finally { migrating = false; }
+  }
+  window.__mondoWipeOld = wipeOld;
   function hash(s) { var h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return String(h); }
 
   async function encrypt(keyStr, obj) {
@@ -75,6 +99,8 @@
   async function push(force) {
     var c = cfg(); if (!c || busy) return false;
     if (navigator.onLine === false) return false;
+    if (isOld(c)) { await migrate(); return false; }
+    if (c.need || !c.gist || !c.key) return false;
     var data = collect(), js = JSON.stringify(data), h = hash(js), now = Date.now();
     if (!force && c.h === h && now - (c.last || 0) < 12 * 3600e3) return true;   // nessuna novità: almeno un invio ogni 12 ore
     if (!force && now - (c.last || 0) < 60e3) return true;
@@ -91,23 +117,21 @@
     } catch (e) { return false; } finally { busy = false; }
   }
 
-  async function connect(token, myCode) {
-    var nc = normCode(myCode);
-    if (nc.length < 6) throw new Error("il codice deve avere almeno 6 caratteri");
-    var keyStr = await codeKey(nc), tag = await codeTag(nc), desc = "mie-app-mondo " + tag;
+  async function connect(token) {
+    var keyStr = randKey(), desc = DESC2 + randTag();
     var content = await encrypt(keyStr, { app: "il-mio-mondo", saved: new Date().toISOString(), state: { data: collect() } });
     var f = {}; f[FILE] = { content: content };
-    // se esiste già uno spazio con lo stesso codice, si riusa
     var id = null;
-    try { var l = await fetch(API + "/gists?per_page=100", { headers: headers(token), cache: "no-store" }); if (l.ok) { var arr = await l.json(); var hit = arr.find(function (g) { return g.description === desc; }); if (hit) id = hit.id; } else if (l.status === 401) throw new Error("la chiave GitHub non è valida"); } catch (e) { if (/chiave/.test(e.message)) throw e; }
+    try { var l = await fetch(API + "/user", { headers: headers(token), cache: "no-store" }); if (l.status === 401) throw new Error("la chiave GitHub non è valida"); } catch (e) { if (/chiave/.test(e.message)) throw e; }
     var r = id ? await fetch(API + "/gists/" + id, { method: "PATCH", headers: headers(token), body: JSON.stringify({ files: f }) })
-               : await fetch(API + "/gists", { method: "POST", headers: headers(token), body: JSON.stringify({ description: desc, public: true, files: f }) });
+               : await fetch(API + "/gists", { method: "POST", headers: headers(token), body: JSON.stringify({ description: desc, public: false, files: f }) });
     if (!r.ok) throw new Error(r.status === 401 ? "la chiave GitHub non è valida" : r.status === 403 || r.status === 404 ? "la chiave non ha il permesso «gist»" : "errore " + r.status);
     var g = await r.json();
-    setCfg({ token: token, gist: g.id, key: keyStr, code: nc, owner: (g.owner && g.owner.login) || "", last: Date.now(), h: "", err: "" });
+    var old = cfg(); if (isOld(old) && old.token) await wipeOld(old.token, old.gist);
+    setCfg({ token: token, gist: g.id, key: keyStr, v: 2, owner: (g.owner && g.owner.login) || "", last: Date.now(), h: "", err: "" });
     return code();
   }
-  function code() { var c = cfg(); return !c ? "" : c.code ? c.code : "MM1-" + c.gist + "-" + c.key; }
+  function code() { var c = cfg(); return !c || !c.gist || !c.key ? "" : "MM2-" + c.gist + "-" + c.key; }
 
   /* ---------- pannello per i genitori (dentro 📊 Progressi) ---------- */
   var box = null;
@@ -115,24 +139,21 @@
   function paint() {
     if (!box) return;
     var c = cfg(), el = box.querySelector(".ms-body");
-    if (!c) {
+    if (!c || c.need || !c.gist) {
       el.innerHTML = '<p>Collega questi progressi alla sezione <b>🐉 Progressi</b> del genitore: si aggiornerà da sola, almeno una volta al giorno.</p>' +
         '<p style="font-size:14px">Serve una chiave GitHub con il solo permesso <b>gist</b> (istruzioni nella sezione Progressi). Si inserisce una volta sola.</p>' +
         '<input type="password" class="ms-tok" placeholder="Incolla la chiave GitHub" autocomplete="off" style="width:100%;font:inherit;padding:10px;border-radius:12px;border:2px solid #ccc;box-sizing:border-box">' +
-        '<p style="font-size:14px;margin:10px 0 4px"><b>Il tuo codice</b> (almeno 6 caratteri, lo stesso da scrivere nella sezione Progressi):</p>' +
-        '<input type="text" class="ms-mycode" placeholder="es. il codice che scegli tu" autocomplete="off" autocapitalize="off" spellcheck="false" style="width:100%;font:inherit;padding:10px;border-radius:12px;border:2px solid #ccc;box-sizing:border-box">' +
         '<div class="ms-row"><button type="button" class="btn ms-go">🔗 Collega</button></div><p class="ms-msg" style="font-size:14px"></p>';
       el.querySelector(".ms-go").onclick = async function () {
-        var t = el.querySelector(".ms-tok").value.trim(), mc = el.querySelector(".ms-mycode").value, m = el.querySelector(".ms-msg");
+        var t = el.querySelector(".ms-tok").value.trim(), m = el.querySelector(".ms-msg");
         if (!t) { m.textContent = "Incolla prima la chiave."; return; }
-        if (normCode(mc).length < 6) { m.textContent = "Scrivi il tuo codice (almeno 6 caratteri)."; return; }
         m.textContent = "Collegamento in corso…";
-        try { await connect(t, mc); paint(); } catch (e) { m.textContent = "Non riuscito: " + e.message + "."; }
+        try { await connect(t); paint(); } catch (e) { m.textContent = "Non riuscito: " + e.message + "."; }
       };
       return;
     }
     el.innerHTML = '<p><b>' + (c.err ? "⚠️ Ultimo invio non riuscito: " + c.err : "✅ Collegato") + '</b><br>Ultimo invio: ' + when(c.last) + '</p>' +
-      '<p style="font-size:14px">' + (c.code ? 'Codice da scrivere nella sezione Progressi (una volta sola):' : 'Codice di collegamento da inserire nella sezione Progressi (una volta sola):') + '</p>' +
+      '<p style="font-size:14px">Codice di collegamento da inserire nella sezione Progressi (una volta sola):</p>' +
       '<textarea readonly class="ms-code" onclick="this.setSelectionRange(0,this.value.length)" style="width:100%;height:84px;font:15px ui-monospace,monospace;border-radius:12px;padding:8px;box-sizing:border-box;-webkit-user-select:text;user-select:text">' + code() + '</textarea>' +
       '<div class="ms-row"><button type="button" class="btn ms-copy">📋 Copia</button><button type="button" class="btn ms-share">📤 Invia</button><button type="button" class="btn ms-now">🔄 Invia ora</button></div>' +
       '<div class="ms-row"><button type="button" class="btn ghost ms-off">Scollega</button></div><p class="ms-msg" style="font-size:14px"></p>';
@@ -189,7 +210,7 @@
   }
   window.__mondoSyncPush = push;
   window.__mondoSyncOpen = openPanel;
-  window.__mondoSyncApi = { cfg: cfg, connect: connect, push: push, code: code, off: function () { setCfg(null); } };
-  window.__mondoSyncLinked = function () { return !!cfg(); };
+  window.__mondoSyncApi = { cfg: cfg, connect: connect, push: push, code: code, wipeOld: wipeOld, isOld: isOld, off: function () { setCfg(null); } };
+  window.__mondoSyncLinked = function () { var c = cfg(); return !!(c && c.gist && c.v === 2 && !c.need); };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();

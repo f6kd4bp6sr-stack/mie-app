@@ -24,7 +24,7 @@ App per iPad del genitore: calendario di casa e di lavoro, licenze fino al conge
 
 Le chiavi `mie-app-lastSnap`, `mie-app-lastBackup`, `mie-app-copia-cloud` (nome condiviso con il sito) vengono spostate da sole nelle nuove `pn-…` alla prima apertura (`comune/blocco.html`).
 
-Da «Il mio mondo» Pianificazione **legge soltanto**: l'invio cifrato dell'iPad della bimba (gist `mie-app-mondo <tag>`) e, sullo stesso iPad, le chiavi `vale2-…`. Il file `statici/mondo-sync.js` (pubblicato in `/licenze/`) è caricato da «Il mio mondo» per l'invio: non va spostato.
+Da «Il mio mondo» Pianificazione **legge soltanto**: l'invio cifrato dell'iPad della bimba (gist **segreto** `mie-app-mondo2 <etichetta casuale>`, chiave AES casuale di 256 bit passata solo nel QR `MMQR1.{t,g,k,v:2}` o nel codice `MM2-<gist>-<chiave>`; i collegamenti vecchi `mie-app-mondo <tag>`, pubblici e con chiave ricavata da un codice corto, vengono cancellati da soli e vanno rifatti con un QR nuovo) e, sullo stesso iPad, le chiavi `vale2-…`. Il file `statici/mondo-sync.js` (pubblicato in `/licenze/`) è caricato da «Il mio mondo» per l'invio: non va spostato.
 
 ## Copie
 - Copia giornaliera completa nel database del dispositivo, copia su File / iCloud (`pianificazione-copia-<data>.json`).

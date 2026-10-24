@@ -233,11 +233,11 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
     <details id="pairBox" style="margin-top:6px"><summary class="lbl" style="cursor:pointer"><b>Prepara il QR di collegamento (anche per una chiave nuova)</b></summary>
       <ol class="lbl" style="padding-left:20px;margin:6px 0">
         <li>Crea la chiave: <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> → spunta solo <b>gist</b>, scadenza <b>No expiration</b> → <b>Generate token</b> → copia la chiave.</li>
-        <li>Incollala qui sotto, scegli un codice (almeno 6 caratteri; se c’è già un collegamento usa lo stesso) e tocca <b>Prepara il QR</b>.</li>
+        <li>Incollala qui sotto e tocca <b>Prepara il QR</b>: l’app crea uno spazio privato su GitHub con una chiave casuale lunga (e cancella gli spazi vecchi pubblici).</li>
         <li>Sull’iPad della bimba: <b>🐉 Io → 💾 Salvataggi → 📷 Collegati con il QR</b> e inquadra questo schermo.</li>
       </ol>
       <div class="btns"><input id="pairTok" type="password" placeholder="Chiave GitHub (inizia con ghp_)" autocomplete="off" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line,#ccc);background:transparent;color:inherit"></div>
-      <div class="btns"><input id="pairCode" placeholder="Codice (almeno 6 caratteri)" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line,#ccc);background:transparent;color:inherit"><button id="pairGo" class="primary">Prepara il QR</button></div>
+      <div class="btns"><button id="pairGo" class="primary">Prepara il QR</button></div>
       <div id="pairQR" style="text-align:center"></div>
       <div class="lbl">🔒 Il QR contiene la chiave: mostralo solo all’iPad della bimba. Si chiude da solo dopo 3 minuti. La chiave resta su questo iPad (non va nelle copie) e sull’iPad della bimba.</div>
     </details>
@@ -246,7 +246,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
     <b>🔗 Collegamento automatico con «Il mio mondo»</b>
     <div class="lbl" id="lnkSt">Non collegato: i dati arrivano solo caricando i file.</div>
     <div id="lnkSet">
-      <div class="lbl" style="margin-top:6px">Una volta sola: sull’iPad di «Il mio mondo» apri <b>🐉 Io</b> → riquadro <b>💾 Salvataggi</b> → <b>🔗 Oppure collega a mano con la chiave GitHub</b>, incolla la chiave GitHub, scegli un codice (almeno 6 caratteri) e tocca «Collega»; poi scrivi qui lo stesso codice. Da quel momento l’iPad invia i progressi da solo, cifrati, ogni volta che l’app si apre e almeno una volta al giorno, e questa pagina li scarica da sola.</div>
+      <div class="lbl" style="margin-top:6px">Una volta sola: sull’iPad di «Il mio mondo» apri <b>🐉 Io</b> → riquadro <b>💾 Salvataggi</b> → <b>🔗 Oppure collega a mano con la chiave GitHub</b>, incolla la chiave GitHub, e tocca «Collega»; poi copia qui il codice lungo MM2-… che compare sull’iPad (più semplice: usa il QR qui sopra). Da quel momento l’iPad invia i progressi da solo, cifrati, ogni volta che l’app si apre e almeno una volta al giorno, e questa pagina li scarica da sola.</div>
       <details style="margin-top:8px"><summary class="lbl" style="cursor:pointer"><b>Come creare la chiave GitHub (5 minuti, una volta sola)</b></summary>
         <ol class="lbl" style="padding-left:20px;margin:6px 0">
           <li>In Safari apri <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> ed entra con il tuo account GitHub.</li>
@@ -254,9 +254,9 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
           <li>Spunta <b>solo</b> la casella <b>gist</b>; tutto il resto vuoto.</li>
           <li>Tocca <b>Generate token</b> e copia la chiave (inizia con <i>ghp_</i>): si vede una volta sola. Mandala all’iPad con AirDrop o Note e incollala in «🔗 Oppure collega a mano con la chiave GitHub».</li>
         </ol>
-        <div class="lbl">La chiave può solo scrivere note private («gist») sul tuo GitHub: non dà accesso al resto. I progressi viaggiano cifrati: senza il codice MM1 nessuno li può leggere.</div>
+        <div class="lbl">La chiave può solo scrivere note private («gist») sul tuo GitHub: non dà accesso al resto. I progressi viaggiano cifrati in uno spazio privato: senza la chiave del QR (o del codice MM2) nessuno li può leggere.</div>
       </details>
-      <div class="btns" style="margin-top:8px"><input id="lnkCode" placeholder="Scrivi il tuo codice (o incolla quello MM1-…)" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line,#ccc);background:transparent;color:inherit"><button id="lnkGo" class="primary">Collega</button></div>
+      <div class="btns" style="margin-top:8px"><input id="lnkCode" placeholder="Incolla il codice MM2-… dell’iPad" autocomplete="off" autocapitalize="off" spellcheck="false" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line,#ccc);background:transparent;color:inherit"><button id="lnkGo" class="primary">Collega</button></div>
     </div>
     <div class="btns" id="lnkOn" hidden style="margin-top:8px"><button id="lnkNow">🔄 Aggiorna ora</button><button id="lnkOff">Scollega</button></div>
   </div>
@@ -1145,22 +1145,15 @@ loadAll().then(o=>{STATE={pack:o.pack,hist:o.hist||[]};render(STATE.pack,STATE.h
 /* ---------- collegamento automatico (gist cifrato scritto dall'iPad di «Il mio mondo») ---------- */
 const LKEY="prog-link-v1";
 const unb64=s=>{s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const b=atob(s),a=new Uint8Array(b.length);for(let i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;};
-function parseCode(c){const m=String(c||"").trim().match(/^MM1-([0-9a-f]{20,40})-([A-Za-z0-9_-]{40,46})$/);if(m)return{gist:m[1],key:m[2]};const n=String(c||"").trim().toLowerCase().replace(/\s+/g,"");return n.length>=6?{short:n}:null;}
-/* codice scelto dal genitore: stessa chiave e stessa etichetta calcolate sull'iPad */
-async function deriveLink(n){
-  const base=await crypto.subtle.importKey("raw",new TextEncoder().encode(n),"PBKDF2",false,["deriveBits"]);
-  const bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt:new TextEncoder().encode("mie-app-mondo-v2"),iterations:310000,hash:"SHA-256"},base,256);
-  let s="";new Uint8Array(bits).forEach(x=>s+=String.fromCharCode(x));const key=btoa(s).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
-  const h=await crypto.subtle.digest("SHA-256",new TextEncoder().encode("tag:mie-app-mondo:"+n));const tag=Array.from(new Uint8Array(h)).slice(0,10).map(x=>("0"+x.toString(16)).slice(-2)).join("");
-  return{key,tag};}
-async function shortLink(n){const {key,tag}=await deriveLink(n);
-  const owner=(location.hostname.match(/^([^.]+)\.github\.io$/)||[])[1]||"f6kd4bp6sr-stack";
-  const r=await fetch("https://api.github.com/users/"+owner+"/gists?per_page=100",{cache:"no-store",headers:{Accept:"application/vnd.github+json"}});
-  if(!r.ok)throw new Error(r.status===403?"troppi controlli in un’ora, riprova più tardi":"errore "+r.status);
-  const hit=(await r.json()).find(g=>g.description==="mie-app-mondo "+tag);
-  if(!hit)throw new Error("codice non trovato: sull’iPad collega «Il mio mondo» con lo stesso codice, poi riprova");
-  return{gist:hit.id,key};
-}
+/* collegamento sicuro (versione 2): spazio privato e chiave casuale lunga, passati nel QR o nel codice MM2-<spazio>-<chiave> */
+function parseCode(c){const m=String(c||"").trim().match(/^MM2-([0-9a-f]{20,40})-([A-Za-z0-9_-]{40,46})$/);return m?{gist:m[1],key:m[2],v:2}:null;}
+const linkOld=L=>!!(L&&L.gist&&L.v!==2);
+/* cancella dal GitHub del genitore gli spazi vecchi pubblici di «Il mio mondo» (chiave ricavata da un codice corto) */
+async function wipeOldGists(token){let n=0;const H={Authorization:"Bearer "+token,Accept:"application/vnd.github+json"};
+  try{for(let page=1;page<=5;page++){const l=await fetch("https://api.github.com/gists?per_page=100&page="+page,{cache:"no-store",headers:H});if(!l.ok)break;const arr=await l.json();
+    for(const g of arr){if(g.public&&String(g.description||"").startsWith("mie-app-mondo ")){try{const r=await fetch("https://api.github.com/gists/"+g.id,{method:"DELETE",headers:H});if(r.ok||r.status===204)n++;}catch(e){}}}
+    if(arr.length<100)break;}}catch(e){}
+  return n;}
 async function decrypt(key,txt){const o=JSON.parse(txt);if(o.app!=="mondo-sync")throw new Error("contenuto non riconosciuto");
   const k=await crypto.subtle.importKey("raw",unb64(key),"AES-GCM",false,["decrypt"]);
   const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:unb64(o.iv)},k,unb64(o.ct));return JSON.parse(new TextDecoder().decode(pt));}
@@ -1168,14 +1161,15 @@ let LINK=lsGet(LKEY), pulling=false;
 function whenTxt(t){if(!t)return "mai";const d=new Date(t);return (d.toDateString()===new Date().toDateString()?"oggi":d.toLocaleDateString("it-IT",{weekday:"short",day:"numeric",month:"short"}))+" alle "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});}
 function paintLink(){
   setTimeout(()=>{try{paintStatus();}catch(e){}},0);
-  const on=!!(LINK&&LINK.gist);$("lnkSet").hidden=on;$("lnkOn").hidden=!on;
+  const on=!!(LINK&&LINK.gist)&&!linkOld(LINK);$("lnkSet").hidden=on;$("lnkOn").hidden=!on;
+  if(linkOld(LINK)){$("lnkSt").innerHTML="🔒 <b>Collegamento da rinnovare per sicurezza.</b> Lo spazio vecchio era pubblico: viene cancellato. Apri «📲 Collega con un QR», prepara il QR e inquadralo con l’iPad della bimba.";return;}
   if(!on){$("lnkSt").textContent="Non collegato: i dati arrivano solo caricando i file.";return;}
   const age=LINK.sent?(Date.now()-new Date(LINK.sent).getTime())/36e5:null;
   $("lnkSt").innerHTML=(LINK.err?`⚠️ ${esc(LINK.err)}<br>`:"")+`✅ Collegato. Ultimo invio dall’iPad: <b>${whenTxt(LINK.sent)}</b> · controllato ${whenTxt(LINK.checked)}`+
     (age!=null&&age>36?`<div class="lnkwarn"><b>⚠️ L’iPad non invia da ${Math.floor(age/24)} ${Math.floor(age/24)===1?"giorno":"giorni"}.</b> Perché succede e cosa fare:<ol><li>«Il mio mondo» non è stato aperto con internet: aprilo e aspetta 10 secondi.</li><li><b>La chiave GitHub è scaduta</b> (la causa più comune): sull’iPad della bimba vai in <b>🐉 Io</b> → riquadro <b>💾 Salvataggi</b>. Se vedi ⚠️, crea una chiave nuova e prepara il QR qui sotto (<b>📲 Collega con un QR</b>), poi sull’iPad della bimba tocca <b>📷 Collegati con il QR</b>. In alternativa: <b>🔑 Nuova chiave</b> e incollala a mano.</li><li>Se in quel riquadro non c’è più «Invio automatico attivo», ricollega con il QR (stesso codice).</li></ol></div>`:"");
 }
 async function pull(manual){
-  if(!LINK||!LINK.gist||pulling)return; pulling=true;
+  if(!LINK||!LINK.gist||pulling||linkOld(LINK))return; pulling=true;
   try{
     const r=await fetch("https://api.github.com/gists/"+LINK.gist,{cache:"no-store",headers:{Accept:"application/vnd.github+json"}});
     if(!r.ok)throw new Error(r.status===404?"collegamento non trovato: rifai il collegamento":r.status===403?"troppi controlli in un’ora, riprova più tardi":"errore "+r.status);
@@ -1191,9 +1185,8 @@ async function pull(manual){
   }catch(e){LINK.err=e.name==="OperationError"?"il codice non corrisponde: ricopialo dall’iPad":String(e.message||e);LINK.checked=new Date().toISOString();lsSet(LKEY,LINK);if(manual)toast("Non riuscito: "+LINK.err);}
   finally{pulling=false;paintLink();}
 }
-$("lnkGo").onclick=async()=>{let c=parseCode($("lnkCode").value);if(!c){toast("Codice non valido: scrivi il codice scelto (almeno 6 caratteri) o quello MM1-");return;}
-  if(c.short){toast("Cerco i dati del codice…");try{c=await shortLink(c.short);}catch(e){toast("Non riuscito: "+e.message);return;}}
-  LINK={gist:c.gist,key:c.key};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});$("lnkCode").value="";paintLink();pull(true);};
+$("lnkGo").onclick=async()=>{let c=parseCode($("lnkCode").value);if(!c){toast("Codice non valido: incolla il codice MM2-… dell’iPad (i codici corti non sono più usati: sono poco sicuri)");return;}
+  LINK={gist:c.gist,key:c.key,v:2};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});$("lnkCode").value="";paintLink();pull(true);};
 $("lnkNow").onclick=()=>pull(true);
 $("lnkOff").onclick=()=>{if($("lnkOff").dataset.sure){LINK=null;try{localStorage.removeItem(LKEY)}catch(e){}kv("readwrite","progressi-link").catch(()=>{});delete $("lnkOff").dataset.sure;$("lnkOff").textContent="Scollega";paintLink();}else{$("lnkOff").dataset.sure=1;$("lnkOff").textContent="Tocca ancora per scollegare";}};
 (async()=>{if(!LINK){try{const r=await kv("readonly","progressi-link");if(r){LINK=JSON.parse(r);lsSet(LKEY,LINK);}}catch(e){}}paintLink();})();
@@ -1218,31 +1211,34 @@ function ghPaint(){const g=lsGet(GKEY),el=$("pairSt");if(!el)return;
 async function ghDaily(force){const g=lsGet(GKEY);if(!g||!g.token||navigator.onLine===false)return;if(!force&&g.checked&&Date.now()-new Date(g.checked).getTime()<20*36e5)return;
   try{const r=await ghCheck(g.token);if(r.ok===null)return;Object.assign(g,r,{checked:new Date().toISOString()});lsSet(GKEY,g);}catch(e){}ghPaint();}
 let pairTimer=null;
-$("pairGo").onclick=async()=>{const t=$("pairTok").value.trim(),code=$("pairCode").value.trim().toLowerCase().replace(/\s+/g,""),box=$("pairQR");
+$("pairGo").onclick=async()=>{const t=$("pairTok").value.trim()||((lsGet(GKEY)||{}).token||""),box=$("pairQR");
   if(!/^(ghp_|github_pat_)/.test(t)){toast("Incolla la chiave GitHub (inizia con ghp_)");return;}
-  if(code.length<6){toast("Il codice deve avere almeno 6 caratteri");return;}
   box.innerHTML='<p class="lbl">⏳ Controllo la chiave…</p>';
   try{
     const chk=await ghCheck(t);if(!chk.ok)throw new Error(chk.why);
-    const {key,tag}=await deriveLink(code),desc="mie-app-mondo "+tag,H={Authorization:"Bearer "+t,Accept:"application/vnd.github+json","Content-Type":"application/json"};
-    let id=null;const l=await fetch(GH+"/gists?per_page=100",{cache:"no-store",headers:H});if(l.ok){const hit=(await l.json()).find(g=>g.description===desc);if(hit)id=hit.id;}
-    if(!id){const r=await fetch(GH+"/gists",{method:"POST",headers:H,body:JSON.stringify({description:desc,public:true,files:{"mondo.json":{content:JSON.stringify({app:"mondo-sync",v:1,wait:1})}}})});
-      if(!r.ok)throw new Error(r.status===403||r.status===404?"alla chiave manca il permesso «gist»":"GitHub ha risposto "+r.status);id=(await r.json()).id;}
-    lsSet(GKEY,Object.assign({token:t,code,checked:new Date().toISOString()},chk));
-    LINK={gist:id,key,code};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();ghPaint();
+    /* chiave casuale (256 bit) ed etichetta casuale; spazio PRIVATO */
+    const rb=n=>crypto.getRandomValues(new Uint8Array(n)),key=btoa(String.fromCharCode(...rb(32))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+    const desc="mie-app-mondo2 "+Array.from(rb(10)).map(x=>("0"+x.toString(16)).slice(-2)).join(""),H={Authorization:"Bearer "+t,Accept:"application/vnd.github+json","Content-Type":"application/json"};
+    const r=await fetch(GH+"/gists",{method:"POST",headers:H,body:JSON.stringify({description:desc,public:false,files:{"mondo.json":{content:JSON.stringify({app:"mondo-sync",v:1,wait:1})}}})});
+    if(!r.ok)throw new Error(r.status===403||r.status===404?"alla chiave manca il permesso «gist»":"GitHub ha risposto "+r.status);const id=(await r.json()).id;
+    const wiped=await wipeOldGists(t);
+    lsSet(GKEY,Object.assign({token:t,checked:new Date().toISOString()},chk));
+    LINK={gist:id,key,v:2};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();ghPaint();
     await new Promise((res,rej)=>{if(window.qrcode)return res();const s=document.createElement("script");s.src="qrcode.js";s.onload=res;s.onerror=()=>rej(new Error("serve internet la prima volta"));document.head.appendChild(s);});
-    const q=qrcode(0,"M");q.addData("MMQR1."+b64u(JSON.stringify({t,g:id,k:key,c:code})));q.make();
-    box.innerHTML=`<div style="background:#fff;display:inline-block;padding:14px;border-radius:14px;margin:10px 0">${q.createSvgTag({cellSize:6,margin:2,scalable:false})}</div><div class="btns" style="justify-content:center"><button id="pairHide">Chiudi il QR</button></div><p class="lbl">Sull’iPad della bimba: 🐉 Io → 💾 Salvataggi → 📷 Collegati con il QR.</p>`;
+    const q=qrcode(0,"M");q.addData("MMQR1."+b64u(JSON.stringify({t,g:id,k:key,v:2})));q.make();
+    box.innerHTML=`<div style="background:#fff;display:inline-block;padding:14px;border-radius:14px;margin:10px 0">${q.createSvgTag({cellSize:6,margin:2,scalable:false})}</div><div class="btns" style="justify-content:center"><button id="pairHide">Chiudi il QR</button></div><p class="lbl">Sull’iPad della bimba: 🐉 Io → 💾 Salvataggi → 📷 Collegati con il QR.${wiped?` 🗑️ Cancellati ${wiped} spazi vecchi pubblici.`:""}</p>`;
     $("pairTok").value="";const hide=()=>{clearTimeout(pairTimer);box.innerHTML="";};$("pairHide").onclick=hide;clearTimeout(pairTimer);pairTimer=setTimeout(hide,180000);
   }catch(e){box.innerHTML=`<p class="lbl" style="color:#c2410c">⚠️ ${esc(e.message||String(e))}</p>`;}
 };
-(()=>{const g=lsGet(GKEY);if(g&&g.code)$("pairCode").value=g.code;else if(LINK&&LINK.code)$("pairCode").value=LINK.code;ghPaint();setTimeout(()=>ghDaily(false),1200);})();
+(()=>{ghPaint();setTimeout(()=>ghDaily(false),1200);
+  /* collegamento vecchio: con la chiave già salvata si cancellano subito gli spazi pubblici */
+  const g=lsGet(GKEY);if(linkOld(LINK)&&g&&g.token&&navigator.onLine!==false)wipeOldGists(g.token).then(n=>{if(n)toast("🔒 Cancellati "+n+" spazi vecchi pubblici: prepara il QR nuovo");});})();
 
 window.__analyze=analyze; window.__normalize=normalize;
 
 })();
 </script>
-<script>window.APP_VERSION="9cb448b68e";window.APP_BUILD="2026-10-24T16:57+02:00";</script>
+<script>window.APP_VERSION="06178397a2";window.APP_BUILD="2026-10-24T17:54+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
