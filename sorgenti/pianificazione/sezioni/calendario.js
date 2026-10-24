@@ -28,7 +28,7 @@ function licOver(S){ // giorni di licenza oltre i saldi (stesso ordine di consum
   return over;}
 
 /* ---- «Il mio mondo»: giorni di studio e diario (dai Progressi) ---- */
-function valeCal(){const p=lsJ("prog-vale-v1"),inb=lsJ(VIN),d=p?((p.state&&p.state.data)||p.data||{}):{};
+function valeCal(){const p=lsJ("prog-mm-v1"),inb=lsJ(VIN),d=p?((p.state&&p.state.data)||p.data||{}):{};
   const days=new Set([].concat(Array.isArray(d.days)?d.days:[],inb&&Array.isArray(inb.days)?inb.days:[]).map(x=>{const m=String(x).match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);return m?m[1]+"-"+m[2].padStart(2,"0")+"-"+m[3].padStart(2,"0"):String(x);}));
   return{days,diary:d.diary&&typeof d.diary==="object"?d.diary:{}};}
 const VMOOD={felice:["😄","felice"],serena:["😊","serena"],orgogliosa:["🤩","orgogliosa"],carica:["💪","carica"],cosi:["😐","così così"],stanca:["😴","stanca"],triste:["😢","triste"],arrabbiata:["😠","arrabbiata"],preoccupata:["😟","preoccupata"]};

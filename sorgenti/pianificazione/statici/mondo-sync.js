@@ -1,7 +1,8 @@
 /* «Il mio mondo» → sezione Progressi: invio automatico e cifrato dei progressi.
    - Si attiva solo dopo il collegamento fatto da un genitore (📊 Progressi → 🔗 Per i genitori).
-   - Invia i contatori dello studio e il diario (emozioni, presenze e testi); niente nome, niente aspetto o voce;
-     cifrati sull'iPad con una chiave casuale lunga (256 bit) che passa solo nel QR del genitore: chi non ha il QR vede solo dati illeggibili.
+   - Invia i contatori dello studio e il diario (emozioni, presenze e testi); nello stesso spazio, se attiva, va anche la copia completa
+     dell'app (nome, compleanno, classe e tutto il resto, per ripristinare un iPad nuovo). Tutto è
+     cifrato sull'iPad con una chiave casuale lunga (256 bit) che passa solo nel QR del genitore: chi non ha il QR vede solo dati illeggibili.
    - Sicurezza (versione 2, 24/10/2026): lo spazio su GitHub è PRIVATO (gist segreto), la descrizione non contiene niente che dipenda
      dalla chiave; i collegamenti vecchi (spazio pubblico, chiave ricavata da un codice corto) vengono cancellati da soli e si rifà il QR.
    - Invio: all'apertura, quando l'app va in secondo piano e ogni 30 minuti; almeno una volta al giorno anche senza novità. */
@@ -18,7 +19,7 @@
   function unb64(s) { s = s.replace(/-/g, "+").replace(/_/g, "/"); while (s.length % 4) s += "="; var b = atob(s), a = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; }
 
   function collect() {
-    var P = "vale2-", data = {};
+    var P = "mm2-", data = {};
     try {
       for (var i = 0; i < localStorage.length; i++) {
         var k = localStorage.key(i); if (!k || k.indexOf(P) !== 0) continue;
@@ -62,8 +63,8 @@
   function isOld(c) { return !!(c && c.gist && c.v !== 2); }
   /* cancella dal GitHub del genitore gli spazi vecchi pubblici di «Il mio mondo» (e lo spazio indicato) */
   async function wipeOld(token, gist) {
-    var n = 0, H = headers(token);
-    if (gist) { try { var d = await fetch(API + "/gists/" + gist, { method: "DELETE", headers: H }); if (d.ok || d.status === 204) n++; } catch (e) {} }
+    var n = 0, H = headers(token); wipeOld.okGist = !gist;
+    if (gist) { try { var d = await fetch(API + "/gists/" + gist, { method: "DELETE", headers: H }); if (d.ok || d.status === 204 || d.status === 404) { n++; wipeOld.okGist = true; } } catch (e) {} }
     try {
       for (var page = 1; page <= 5; page++) {
         var l = await fetch(API + "/gists?per_page=100&page=" + page, { headers: H, cache: "no-store" }); if (!l.ok) break;
@@ -79,8 +80,9 @@
     var c = cfg(); if (!isOld(c) || migrating) return;
     migrating = true;
     try {
-      if (c.token) await wipeOld(c.token, c.gist);
-      setCfg({ token: c.token || "", v: 2, need: 1, err: "per sicurezza il collegamento va rinnovato: serve un QR nuovo dal genitore" });
+      var ok = false; if (c.token) { await wipeOld(c.token, c.gist); ok = !!wipeOld.okGist; }
+      /* se la cancellazione non è riuscita (chiave scaduta, niente rete) l'id resta in «oldGist» e si riprova al QR nuovo */
+      setCfg({ token: c.token || "", v: 2, need: 1, wiped: ok, oldGist: ok ? "" : c.gist, err: "per sicurezza il collegamento va rinnovato: serve un QR nuovo dal genitore" });
       paint(); if (window.onMondoSync) try { window.onMondoSync(); } catch (e) {}
     } finally { migrating = false; }
   }
@@ -127,7 +129,7 @@
                : await fetch(API + "/gists", { method: "POST", headers: headers(token), body: JSON.stringify({ description: desc, public: false, files: f }) });
     if (!r.ok) throw new Error(r.status === 401 ? "la chiave GitHub non è valida" : r.status === 403 || r.status === 404 ? "la chiave non ha il permesso «gist»" : "errore " + r.status);
     var g = await r.json();
-    var old = cfg(); if (isOld(old) && old.token) await wipeOld(old.token, old.gist);
+    var old = cfg(); if (old) await wipeOld(token, old.gist && old.gist !== g.id ? old.gist : (old.oldGist || ""));
     setCfg({ token: token, gist: g.id, key: keyStr, v: 2, owner: (g.owner && g.owner.login) || "", last: Date.now(), h: "", err: "" });
     return code();
   }
@@ -176,7 +178,7 @@
     };
     el.querySelector(".ms-share").onclick = function () { if (navigator.share) navigator.share({ title: "Codice di collegamento", text: code() }).catch(function () {}); else m.textContent = "Usa «Copia»."; };
     el.querySelector(".ms-now").onclick = async function () { m.textContent = "Invio…"; var ok = await push(true); m.textContent = ok ? "Inviato " + when(Date.now()) + "." : "Invio non riuscito: controlla internet."; };
-    el.querySelector(".ms-off").onclick = function () { if (el.dataset.sure) { setCfg(null); delete el.dataset.sure; paint(); } else { el.dataset.sure = 1; m.textContent = "Tocca di nuovo «Scollega» per confermare."; } };
+    el.querySelector(".ms-off").onclick = async function () { if (el.dataset.sure) { await off(); delete el.dataset.sure; paint(); } else { el.dataset.sure = 1; m.textContent = "Tocca di nuovo «Scollega» per confermare."; } };
   }
   function openPanel() {
     if (!box) {
@@ -210,7 +212,9 @@
   }
   window.__mondoSyncPush = push;
   window.__mondoSyncOpen = openPanel;
-  window.__mondoSyncApi = { cfg: cfg, connect: connect, push: push, code: code, wipeOld: wipeOld, isOld: isOld, off: function () { setCfg(null); } };
+  /* «Scollega»: lo spazio su GitHub si cancella, poi si dimentica il collegamento */
+  async function off() { var c = cfg(); if (c && c.token) await wipeOld(c.token, c.gist || c.oldGist || ""); setCfg(null); }
+  window.__mondoSyncApi = { cfg: cfg, connect: connect, push: push, code: code, wipeOld: wipeOld, isOld: isOld, off: off };
   window.__mondoSyncLinked = function () { var c = cfg(); return !!(c && c.gist && c.v === 2 && !c.need); };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
 })();

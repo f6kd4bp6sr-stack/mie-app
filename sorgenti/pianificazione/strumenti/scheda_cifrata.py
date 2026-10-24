@@ -1,7 +1,7 @@
 """Scheda pensione cifrata: il file pubblico che l'iPad scarica e unisce da solo.
 
 Il file `scheda-pensione.cifrata.json` sta nel repository pubblico ma è cifrato (AES-256-GCM)
-con una chiave casuale di 32 byte che NON è mai nel repository: sta sull'iPad di Marco
+con una chiave casuale di 32 byte che NON è mai nel repository: sta sull'iPad del proprietario
 (localStorage «pn-scheda-chiave») e nell'attività programmata. Senza chiave è illeggibile.
 
 La chiave si passa solo con la variabile d'ambiente SCHEDA_CHIAVE (base64url) e non viene mai stampata.

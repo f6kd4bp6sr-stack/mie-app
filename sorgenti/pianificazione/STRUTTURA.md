@@ -19,11 +19,11 @@ pian/
 ├── sezioni/conti.js  Conti (NASCOSTA, codice conservato): banche e carte, importazione, categorie, budget, rate, proiezione
 ├── sezioni/conti_stat.js  statistiche e risparmio dei Conti
 ├── sezioni/calendario.js 📆 Calendario: viste Giorno/Settimana/Mese/Anno; un giorno si modifica da qui e la modifica
-│                     va nella sezione di origine (Licenze `licenze-marco-v1` + database `stato`, Scadenze, Conti,
+│                     va nella sezione di origine (Licenze `licenze-…-v1` + database `stato`, Scadenze, Conti,
 │                     Famiglia, Benessere, Tai Chi `tc_sessions`); istruzioni del Calendario iPad dietro un pulsante;
 │                     attività fisse della famiglia (ogni 1 o 2 settimane, fino a, pause)
 ├── sezioni/pensione.js 🎖️ Pensione (`pn-v1` → `pens`): adempimenti (nel Calendario e nel file .ics), leve, cifre stimate/reali,
-│                     incassi, 💶 cassa da oggi a giugno 2029 (`pens.mov` entrate e uscite una tantum o ricorrenti, anche nel Calendario e nel file .ics; `pens.cassa`: `ini` partenza, `saldi` saldo vero di fine mese, `punti` saldi veri a una data, `spunte`, `sposta`), documenti (`pf-…`); si carica dal file privato «scheda pensione»
+│                     incassi, 💶 cassa da oggi a due anni dopo la decorrenza (`pens.mov` entrate e uscite una tantum o ricorrenti, anche nel Calendario e nel file .ics; `pens.cassa`: `ini` partenza, `saldi` saldo vero di fine mese, `punti` saldi veri a una data, `spunte`, `sposta`), documenti (`pf-…`); si carica dal file privato «scheda pensione»
 ├── strumenti/         NOVITA.md (istruzioni dell'agente delle 13 · 17 · 23, anche volontariato del lunedì), verifica_novita.py (controllo delle novità), verifica_metodo.py (contenuti del Metodo, a ogni build), verifica_occasioni.py,
 │                     scheda_cifrata.py (apre, chiude e verifica la scheda cifrata; chiave solo in SCHEDA_CHIAVE)
 ├── statici/occasioni-torino.json  volontariato a Torino per il Metodo (pubblico; lo ricontrolla l'attività il lunedì; strumenti/verifica_occasioni.py)
@@ -34,7 +34,7 @@ pian/
 │                     tassi da `news-pensione.json` → `mercati` (aggiornati dall’attività) o scritti a mano
 ├── sezioni/metodo_dati.json  🤝 Metodo: 4 abilità con motto, 30 schede (curiosità + scienza con fonti), oltre 100 missioni (nome in codice, bonus, livello, situazione), 12 gruppi di frasi di scorta; inserito nella pagina dal build
 ├── sezioni/pratiche.js 🗂️ Pratiche (`pn-v1` → `prat`): stato, prossimo passo, documenti, contatti, diario, note;
-│                     file allegati nel database `licenze-marco`, chiavi `pf-…` (non vanno nella copia su iCloud)
+│                     file allegati nel database `licenze-…`, chiavi `pf-…` (non vanno nella copia su iCloud)
 ├── docs/             ricerca sui formati di esportazione delle banche
 ├── comune/barra.html  riga in fondo a ogni pagina (si apre al tocco): aggiornamenti, copie giornaliere, copia su File/iCloud, copia automatica
 ├── tools/sorgenti_pubbliche.py  copia queste sorgenti in /sorgenti/pianificazione/ del repository (con controllo dei dati personali)
@@ -42,7 +42,7 @@ pian/
 ```
 Segnaposto nelle pagine: `<!--@NAV-->` (menu), `<!--@BARRA-->` (barra comune), `/*@LICENZE_DATI*/` (festivi e valori iniziali presi dalla pagina Licenze), `/*@FOGLI*/` (comune/fogli.js), `/*@CONTI*/` (sezioni/conti.js + conti_stat.js + calendario.js + pratiche.js + pensione.js), `/*@VCENA*/` in progressi (domande per la cena, prese da index.html).
 
-Dati sul dispositivo: Licenze `licenze-marco-v1`, Tai Chi `tc_*`, Progressi `prog-*` (con il diario di «Il mio mondo»), Pianificazione `pn-v1` (note dei giorni in `dn`), vista del calendario `pn-calv`, copie `pn-lastSnap`, `pn-lastBackup`, `pn-copia-cloud`, blocco `pn-lock`; copia nel database `licenze-marco` (kv). Tutte le sezioni entrano nelle copie giornaliere e nel file su iCloud.
+Dati sul dispositivo: Licenze `licenze-…-v1`, Tai Chi `tc_*`, Progressi `prog-*` (con il diario di «Il mio mondo»), Pianificazione `pn-v1` (note dei giorni in `dn`), vista del calendario `pn-calv`, copie `pn-lastSnap`, `pn-lastBackup`, `pn-copia-cloud`, blocco `pn-lock`; copia nel database `licenze-…` (kv). Tutte le sezioni entrano nelle copie giornaliere e nel file su iCloud.
 Regola: nessun dato personale nel codice (il sito è pubblico).
 
 Collegamento della scheda: `#sk=<chiave>` salva la chiave della scheda cifrata su questo iPad, la toglie subito dall'indirizzo e apre Pensione → Documenti.

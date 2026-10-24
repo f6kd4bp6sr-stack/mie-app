@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com https://gist.githubusercontent.com; worker-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -108,7 +108,7 @@ details.more>summary{cursor:pointer;font-weight:700;color:var(--accent);margin:1
 </style>
 </head>
 <body>
-<style id="lockCss">
+<script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
 html.locked body>*:not(#lockScr){visibility:hidden!important}
 #lockScr{position:fixed;inset:0;z-index:2147483000;display:none;place-items:center;background:#f3f4f7;font:16px/1.4 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;color:#15181d;padding:24px}
 html.locked #lockScr{display:grid}
@@ -232,7 +232,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
     <div class="lbl" id="pairSt">Il modo più semplice: la chiave GitHub si scrive solo qui; sull’iPad della bimba basta inquadrare un QR.</div>
     <details id="pairBox" style="margin-top:6px"><summary class="lbl" style="cursor:pointer"><b>Prepara il QR di collegamento (anche per una chiave nuova)</b></summary>
       <ol class="lbl" style="padding-left:20px;margin:6px 0">
-        <li>Crea la chiave: <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> → spunta solo <b>gist</b>, scadenza <b>No expiration</b> → <b>Generate token</b> → copia la chiave.</li>
+        <li>Crea la chiave: <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> → spunta solo <b>gist</b>, scadenza <b>1 anno</b> (l’app avvisa prima che scada) → <b>Generate token</b> → copia la chiave.</li>
         <li>Incollala qui sotto e tocca <b>Prepara il QR</b>: l’app crea uno spazio privato su GitHub con una chiave casuale lunga (e cancella gli spazi vecchi pubblici).</li>
         <li>Sull’iPad della bimba: <b>🐉 Io → 💾 Salvataggi → 📷 Collegati con il QR</b> e inquadra questo schermo.</li>
       </ol>
@@ -250,7 +250,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
       <details style="margin-top:8px"><summary class="lbl" style="cursor:pointer"><b>Come creare la chiave GitHub (5 minuti, una volta sola)</b></summary>
         <ol class="lbl" style="padding-left:20px;margin:6px 0">
           <li>In Safari apri <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> ed entra con il tuo account GitHub.</li>
-          <li>In «Note» lascia <i>mie-app progressi</i>; in «Expiration» scegli <b>No expiration</b> (o un anno, e poi la rinnovi).</li>
+          <li>In «Note» lascia <i>mie-app progressi</i>; in «Expiration» scegli <b>1 anno</b> (l’app ti avvisa prima che scada; poi prepari un QR nuovo).</li>
           <li>Spunta <b>solo</b> la casella <b>gist</b>; tutto il resto vuoto.</li>
           <li>Tocca <b>Generate token</b> e copia la chiave (inizia con <i>ghp_</i>): si vede una volta sola. Mandala all’iPad con AirDrop o Note e incollala in «🔗 Oppure collega a mano con la chiave GitHub».</li>
         </ol>
@@ -292,7 +292,7 @@ const fmt=(s,o)=>new Date(s+(s.length===10?"T12:00":"")).toLocaleDateString("it-
 function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove("show"),2000);}
 
 /* ---------- archivio locale: ultimo file caricato + storico dei riepiloghi (per l'andamento) ---------- */
-const KEY="prog-vale-v1", HKEY="prog-vale-hist-v1";
+const KEY="prog-mm-v1", HKEY="prog-mm-hist-v1";
 let dbp=null;
 const idb=()=>dbp||(dbp=new Promise((res,rej)=>{try{const r=indexedDB.open("licenze-marco",1);r.onupgradeneeded=()=>{if(!r.result.objectStoreNames.contains("kv"))r.result.createObjectStore("kv")};r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)}catch(e){rej(e)}}));
 const kv=async(mode,key,val)=>{const db=await idb();return new Promise((res,rej)=>{const tx=db.transaction("kv",mode),st=tx.objectStore("kv");const q=mode==="readonly"?st.get(key):(val===undefined?st.delete(key):st.put(val,key));let out;q.onsuccess=()=>{out=q.result};tx.oncomplete=()=>res(out);tx.onerror=()=>rej(tx.error)})};
@@ -315,7 +315,7 @@ function normalize(o){
   return {saved:saved||new Date().toISOString(),loaded:new Date().toISOString(),data};
 }
 function fromThisDevice(){ // stesso indirizzo: se «Il mio mondo» è usato su questo dispositivo nello stesso Safari
-  const P="vale2-",data={};
+  const P="mm2-",data={};
   try{for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith(P)&&!k.startsWith(P+"__")){try{data[k.slice(P.length)]=JSON.parse(localStorage.getItem(k))}catch(e){}}}}catch(e){}
   return Object.keys(data).length?data:null;
 }
@@ -1147,7 +1147,7 @@ const LKEY="prog-link-v1";
 const unb64=s=>{s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const b=atob(s),a=new Uint8Array(b.length);for(let i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;};
 /* collegamento sicuro (versione 2): spazio privato e chiave casuale lunga, passati nel QR o nel codice MM2-<spazio>-<chiave> */
 function parseCode(c){const m=String(c||"").trim().match(/^MM2-([0-9a-f]{20,40})-([A-Za-z0-9_-]{40,46})$/);return m?{gist:m[1],key:m[2],v:2}:null;}
-const linkOld=L=>!!(L&&L.gist&&L.v!==2);
+const linkOld=L=>!!(L&&(L.renew||(L.gist&&L.v!==2)));
 /* cancella dal GitHub del genitore gli spazi vecchi pubblici di «Il mio mondo» (chiave ricavata da un codice corto) */
 async function wipeOldGists(token){let n=0;const H={Authorization:"Bearer "+token,Accept:"application/vnd.github+json"};
   try{for(let page=1;page<=5;page++){const l=await fetch("https://api.github.com/gists?per_page=100&page="+page,{cache:"no-store",headers:H});if(!l.ok)break;const arr=await l.json();
@@ -1188,7 +1188,7 @@ async function pull(manual){
 $("lnkGo").onclick=async()=>{let c=parseCode($("lnkCode").value);if(!c){toast("Codice non valido: incolla il codice MM2-… dell’iPad (i codici corti non sono più usati: sono poco sicuri)");return;}
   LINK={gist:c.gist,key:c.key,v:2};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});$("lnkCode").value="";paintLink();pull(true);};
 $("lnkNow").onclick=()=>pull(true);
-$("lnkOff").onclick=()=>{if($("lnkOff").dataset.sure){LINK=null;try{localStorage.removeItem(LKEY)}catch(e){}kv("readwrite","progressi-link").catch(()=>{});delete $("lnkOff").dataset.sure;$("lnkOff").textContent="Scollega";paintLink();}else{$("lnkOff").dataset.sure=1;$("lnkOff").textContent="Tocca ancora per scollegare";}};
+$("lnkOff").onclick=async()=>{if($("lnkOff").dataset.sure){const g0=lsGet(GKEY);if(LINK&&LINK.gist&&g0&&g0.token){try{await fetch(GH+"/gists/"+LINK.gist,{method:"DELETE",headers:{Authorization:"Bearer "+g0.token,Accept:"application/vnd.github+json"}});}catch(e){}}LINK=null;try{localStorage.removeItem(LKEY)}catch(e){}kv("readwrite","progressi-link").catch(()=>{});delete $("lnkOff").dataset.sure;$("lnkOff").textContent="Scollega";paintLink();}else{$("lnkOff").dataset.sure=1;$("lnkOff").textContent="Tocca ancora per scollegare";}};
 (async()=>{if(!LINK){try{const r=await kv("readonly","progressi-link");if(r){LINK=JSON.parse(r);lsSet(LKEY,LINK);}}catch(e){}}paintLink();})();
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")pull(false);});
 setInterval(()=>pull(false),30*60e3);
@@ -1221,7 +1221,7 @@ $("pairGo").onclick=async()=>{const t=$("pairTok").value.trim()||((lsGet(GKEY)||
     const desc="mie-app-mondo2 "+Array.from(rb(10)).map(x=>("0"+x.toString(16)).slice(-2)).join(""),H={Authorization:"Bearer "+t,Accept:"application/vnd.github+json","Content-Type":"application/json"};
     const r=await fetch(GH+"/gists",{method:"POST",headers:H,body:JSON.stringify({description:desc,public:false,files:{"mondo.json":{content:JSON.stringify({app:"mondo-sync",v:1,wait:1})}}})});
     if(!r.ok)throw new Error(r.status===403||r.status===404?"alla chiave manca il permesso «gist»":"GitHub ha risposto "+r.status);const id=(await r.json()).id;
-    const wiped=await wipeOldGists(t);
+    const wiped=await wipeOldGists(t)+(LINK&&LINK.gist&&LINK.gist!==id?await fetch(GH+"/gists/"+LINK.gist,{method:"DELETE",headers:H}).then(x=>x.ok||x.status===204?1:0).catch(()=>0):0);
     lsSet(GKEY,Object.assign({token:t,checked:new Date().toISOString()},chk));
     LINK={gist:id,key,v:2};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();ghPaint();
     await new Promise((res,rej)=>{if(window.qrcode)return res();const s=document.createElement("script");s.src="qrcode.js";s.onload=res;s.onerror=()=>rej(new Error("serve internet la prima volta"));document.head.appendChild(s);});
@@ -1232,13 +1232,15 @@ $("pairGo").onclick=async()=>{const t=$("pairTok").value.trim()||((lsGet(GKEY)||
 };
 (()=>{ghPaint();setTimeout(()=>ghDaily(false),1200);
   /* collegamento vecchio: con la chiave già salvata si cancellano subito gli spazi pubblici */
-  const g=lsGet(GKEY);if(linkOld(LINK)&&g&&g.token&&navigator.onLine!==false)wipeOldGists(g.token).then(n=>{if(n)toast("🔒 Cancellati "+n+" spazi vecchi pubblici: prepara il QR nuovo");});})();
+  const g=lsGet(GKEY),forget=()=>{LINK={renew:1};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();};
+  if(linkOld(LINK)&&LINK.key&&!(g&&g.token))forget();
+  if(linkOld(LINK)&&LINK.key&&g&&g.token&&navigator.onLine!==false)wipeOldGists(g.token).then(n=>{LINK={renew:1};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();if(n)toast("🔒 Cancellati "+n+" spazi vecchi pubblici: prepara il QR nuovo");});})();
 
 window.__analyze=analyze; window.__normalize=normalize;
 
 })();
 </script>
-<script>window.APP_VERSION="06178397a2";window.APP_BUILD="2026-10-24T17:54+02:00";</script>
+<script>window.APP_VERSION="3431ee5b83";window.APP_BUILD="2026-10-24T18:15+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
@@ -1288,8 +1290,8 @@ window.__analyze=analyze; window.__normalize=normalize;
   function dumpAll(){
     var S=lsJ("licenze-marco-v1"), tc={}, n=0;
     try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.indexOf("tc_")===0){tc[k]=localStorage.getItem(k);n++;}}}catch(e){}
-    var pack=lsJ("prog-vale-v1"), link=lsJ("prog-link-v1");
-    var pg=pack||link?{pack:pack,hist:lsJ("prog-vale-hist-v1")||[],link:link}:null;
+    var pack=lsJ("prog-mm-v1"), link=lsJ("prog-link-v1");
+    var pg=pack||link?{pack:pack,hist:lsJ("prog-mm-hist-v1")||[],link:link}:null;
     var pn=lsJ("pn-v1");
     if(!S&&!n&&!pg&&!pn)return null;
     var o={}; if(S)for(var x in S)o[x]=S[x]; o.taichi=tc; o.progressi=pg; if(pn)o.pianifica=pn; o.app="le-mie-app"; return o;
@@ -1309,6 +1311,8 @@ window.__analyze=analyze; window.__normalize=normalize;
   function exportAll(){
     var b=document.getElementById("bExport"); if(b){b.click();setTimeout(paint,1500);return;}   // in Licenze usa il pulsante della pagina
     var o=dumpAll(); if(!o){alertBar("Ancora nessun dato da salvare");return;}
+    /* la copia su file non porta mai la chiave del collegamento con «Il mio mondo» */
+    if(o.progressi)o.progressi.link=null;
     if(window.__pfCache)o.pratFiles=window.__pfCache;
     var data=JSON.stringify(o,null,1), fn="pianificazione-copia-"+today()+".json";
     var done=function(){var t=new Date().toISOString();try{localStorage.setItem("pn-lastBackup",t);localStorage.setItem("tc_lastBackup",JSON.stringify(t));}catch(e){}paint();};
@@ -1408,7 +1412,7 @@ window.__analyze=analyze; window.__normalize=normalize;
     var db=await kvDb(),put=function(k,v){return new Promise(function(res){var tx=db.transaction("kv","readwrite");tx.objectStore("kv").put(v,k);tx.oncomplete=res;tx.onerror=res;});};
     var tc=o.taichi;delete o.taichi;if(tc&&typeof tc==="object"){for(var k in tc)if(k.indexOf("tc_")===0)try{localStorage.setItem(k,tc[k]);}catch(e){} await put("taichi",JSON.stringify({savedAt:new Date().toISOString(),keys:tc}));}
     var pg=o.progressi;delete o.progressi;if(pg){if(pg.link&&pg.link.gist){try{localStorage.setItem("prog-link-v1",JSON.stringify(pg.link));}catch(e){} await put("progressi-link",JSON.stringify(pg.link));}
-      if(pg.pack){try{localStorage.setItem("prog-vale-v1",JSON.stringify(pg.pack));localStorage.setItem("prog-vale-hist-v1",JSON.stringify(pg.hist||[]));}catch(e){} await put("progressi",JSON.stringify({pack:pg.pack,hist:pg.hist||[]}));}}
+      if(pg.pack){try{localStorage.setItem("prog-mm-v1",JSON.stringify(pg.pack));localStorage.setItem("prog-mm-hist-v1",JSON.stringify(pg.hist||[]));}catch(e){} await put("progressi",JSON.stringify({pack:pg.pack,hist:pg.hist||[]}));}}
     var pn=o.pianifica;delete o.pianifica;if(pn){try{localStorage.setItem("pn-v1",JSON.stringify(pn));}catch(e){} await put("pianifica",JSON.stringify(pn));}
     var pf=o.pratFiles;delete o.pratFiles;if(pf)await pfRestore(pf);
     delete o.app; if(o.bal){o.savedAt=new Date().toISOString();var t=JSON.stringify(o);try{localStorage.setItem("licenze-marco-v1",t);}catch(e){} await put("stato",t);}
@@ -1429,7 +1433,7 @@ window.__analyze=analyze; window.__normalize=normalize;
     }else{
       h+="<p style=\"margin:8px 0\">Ogni giorno, da sola, una copia completa e <b>cifrata</b> va su GitHub (in uno spazio privato), con la chiave GitHub che usi già per i Progressi. Se l’iPad si rompe o lo cambi, ritrovi tutto.</p>"+
         "<label style=\"font-weight:700;font-size:14px\">Chiave GitHub"+(tok?" (già salvata)":"")+"</label><input id=\"cbTok\" type=\"password\" placeholder=\""+(tok?"già salvata: lascia vuoto":"inizia con ghp_")+"\" autocomplete=\"off\" style=\""+inp+"\">"+
-        "<label style=\"font-weight:700;font-size:14px\">Parola della copia (almeno 8 caratteri)</label><input id=\"cbP1\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
+        "<label style=\"font-weight:700;font-size:14px\">Parola della copia (almeno 12 caratteri)</label><input id=\"cbP1\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
         "<label style=\"font-weight:700;font-size:14px\">Ripeti la parola</label><input id=\"cbP2\" type=\"password\" autocomplete=\"new-password\" style=\""+inp+"\">"+
         "<p style=\"margin:0 0 6px;color:#b3261e;font-size:14px\"><b>Scrivila in un posto sicuro:</b> serve per ripristinare. Se la perdi, la copia non si può più aprire.</p>"+
         "<button id=\"cbOn\" style=\""+pri+"\">Attiva la copia automatica</button><button id=\"cbRes\" style=\""+sec+"\">Ho già una copia: ripristina</button>";
@@ -1439,7 +1443,7 @@ window.__analyze=analyze; window.__normalize=normalize;
     var msg=function(t,bad){var m=document.getElementById("cbMsg");m.textContent=t;m.style.color=bad?"#b3261e":"#2e7d5b";};
     document.getElementById("cbX").onclick=function(){ov.remove();paint();};
     var bOn=document.getElementById("cbOn");if(bOn)bOn.onclick=async function(){var t=document.getElementById("cbTok").value.trim()||tok,p1=document.getElementById("cbP1").value,p2=document.getElementById("cbP2").value;
-      if(!/^(ghp_|github_pat_)/.test(t))return msg("Serve la chiave GitHub (inizia con ghp_)",1);if(p1.length<8)return msg("La parola deve avere almeno 8 caratteri",1);if(p1!==p2)return msg("Le due parole non coincidono",1);
+      if(!/^(ghp_|github_pat_)/.test(t))return msg("Serve la chiave GitHub (inizia con ghp_)",1);if(p1.length<12)return msg("La parola deve avere almeno 12 caratteri",1);if(p1!==p2)return msg("Le due parole non coincidono",1);
       msg("Preparo la copia…");try{var ok=await cbEnable(t,p1);msg(ok?"✅ Copia automatica attiva: prima copia fatta.":"Attivata, ma la prima copia non è riuscita: riprovo da sola.",!ok);setTimeout(cbPanel,1600);}catch(e){msg("Non riuscito: "+e.message,1);}};
     var bNow=document.getElementById("cbNow");if(bNow)bNow.onclick=async function(){msg("Copia in corso…");pfRefresh();setTimeout(async function(){var ok=await cbPush(true);msg(ok?"✅ Copia fatta":"Non riuscita: "+((cbCfg()||{}).err||""),!ok);},600);};
     var bOff=document.getElementById("cbOff");if(bOff)bOff.onclick=function(){if(!confirm("Disattivare la copia automatica su questo iPad? La copia già salvata resta su GitHub."))return;cbSet(null);cbPanel();};
