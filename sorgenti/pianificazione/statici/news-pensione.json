@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-24T17:00:00+02:00",
+ "updated": "2026-10-24T22:55:00+02:00",
  "voci": [
   {
    "id": "n20261023-straordinari",
@@ -282,21 +282,21 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
@@ -310,7 +310,7 @@
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
@@ -324,28 +324,28 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Ministero del Lavoro",
    "url": "https://www.lavoro.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
    "n": "ISTAT",
    "url": "https://www.istat.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
@@ -366,21 +366,21 @@
    "n": "Corte dei conti",
    "url": "https://www.corteconti.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
-   "esito": "non raggiungibile"
+   "ultimo": "2026-10-24T22:55:00+02:00",
+   "esito": "ok"
   },
   {
    "n": "Camera dei deputati",
    "url": "https://www.camera.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Senato",
    "url": "https://www.senato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
@@ -394,28 +394,28 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-24T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-24T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-24T17:00:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T22:55:00+02:00",
    "esito": "ok"
   },
   {
@@ -695,6 +695,11 @@
    "at": "2026-10-24T17:00:00+02:00",
    "notizie": 1,
    "note": "giro delle 17: una notizia nuova, l'art. 8 del D.L. 23/10/2026 n. 193 (G.U. S.G. n. 247 del 23/10): 50 milioni per il 2026 per gli straordinari già svolti dalle Forze di polizia, 9 alla Guardia di Finanza (testo riportato da Al.Si.P.Pe., confermato da IlFaroOnline e Corriere Nazionale). Gazzetta ferma alla S.G. n. 247 del 23/10: DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Legge di bilancio 2027: Consiglio dei ministri ancora atteso tra il 27 e il 28/10 (BusinessOnline 24/10), nessuna misura nuova per il comparto. USIF (ultime 22/10 e 24/10), SILF (22/10) e SINAFI senza novità su contratto o pensione; INPS: ultimo messaggio n. 3422 del 23/10. Tassi di mercato invariati (sabato, mercati chiusi; BTP 2 anni senza seconda fonte); prodotti invariati. Scheda invariata. Non raggiungibili: Governo; non ricontrollati in questo giro MEF, ISTAT, Ministero del Lavoro, Camera, Senato, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-10-24T22:55:00+02:00",
+   "notizie": 0,
+   "note": "giro delle 23: nessuna notizia nuova dal giro delle 17. Gazzetta ferma alla S.G. n. 247 del 23/10: DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Legge di bilancio 2027 non ancora approvata dal Consiglio dei ministri. USIF (ultime 22/10 e 24/10), SILF (ultima 23/10) e SINAFI (ultima 22/10) senza novità su contratto o pensione; SIULP Flash 43 del 24/10 senza novità; INPS: ultimo messaggio n. 3422 del 23/10; Ministero del Lavoro: nessuna notizia previdenziale dopo il 21/10. Tassi di mercato invariati (sabato, mercati chiusi); prodotti invariati. Scheda invariata. Non raggiungibili: Governo; non ricontrollati in questo giro MEF, Difesa, Polizia di Stato, Agenzia delle Entrate"
   }
  ],
  "mercati": [
