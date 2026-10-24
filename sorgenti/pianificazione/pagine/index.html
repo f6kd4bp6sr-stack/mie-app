@@ -300,9 +300,10 @@ function valeInfo(){
   const p=lsJ("prog-vale-v1"),inb=lsJ(VIN),L=lsJ("prog-link-v1");let o=null;
   if(p){const d=(p.state&&p.state.data)||p.data||{};o=Object.assign({saved:p.saved},valeSum(d));}
   if(inb&&inb.saved&&(!o||String(inb.saved)>String(o.saved||"")))o={saved:inb.saved,l:inb.l,days:inb.days||[]};
-  if(!o)return L&&L.gist?{linked:true,err:inb&&inb.err}:null;
-  o.w=(o.days||[]).filter(x=>String(x)>=add(today(),-7)).length;o.linked=!!(L&&L.gist);o.err=inb&&inb.err;
-  o.age=o.saved?(Date.now()-new Date(o.saved).getTime())/864e5:null;return o;}
+  const ok2=!!(L&&L.gist&&L.v===2),err2=L&&L.gist&&L.v!==2?"collegamento da rinnovare per sicurezza: in Progressi prepara un QR nuovo":inb&&inb.err;
+  if(!o)return L&&L.gist?{linked:ok2,err:err2}:null;
+  o.w=(o.days||[]).filter(x=>String(x)>=add(today(),-7)).length;o.linked=ok2;o.err=inb&&inb.err;
+  if(L&&L.gist&&L.v!==2)o.err=err2;o.age=o.saved?(Date.now()-new Date(o.saved).getTime())/864e5:null;return o;}
 /* «Il mio mondo»: Oggi scarica da sola l'ultimo invio cifrato dell'iPad (stesso collegamento della sezione Progressi; massimo ogni 10 minuti) */
 const VIN="prog-vale-in";let valeBusy=false;
 const vub=s=>{s=String(s).replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const b=atob(s),a=new Uint8Array(b.length);for(let i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;};
@@ -314,7 +315,7 @@ async function ghDaily(){const g=lsJ("prog-gh-v1");if(!g||!g.token||navigator.on
 function ghWarn(){const g=lsJ("prog-gh-v1");if(!g)return "";if(g.ok===false)return `<div class="warnbox">⚠️ ${esc(g.why||"La chiave GitHub non funziona")}: in <a href="progressi.html">Progressi</a> → 📲 Collega con un QR, prepara un QR con una chiave nuova.</div>`;
   const d=g.exp?Math.floor((new Date(g.exp)-Date.now())/864e5):null;return d!=null&&d<=10?`<div class="warnbox">⏳ La chiave GitHub scade tra ${Math.max(0,d)} giorni: in <a href="progressi.html">Progressi</a> prepara un QR con una chiave nuova.</div>`:"";}
 async function valePull(force){
-  const L=lsJ("prog-link-v1");if(!L||!L.gist||!L.key||valeBusy||navigator.onLine===false)return;
+  const L=lsJ("prog-link-v1");if(!L||!L.gist||!L.key||L.v!==2||valeBusy||navigator.onLine===false)return;  /* collegamento vecchio (spazio pubblico): si rinnova in Progressi */
   const inb=lsJ(VIN)||{};if(!force&&inb.checked&&Date.now()-new Date(inb.checked).getTime()<10*60e3)return;
   valeBusy=true;const before=JSON.stringify(inb);
   try{
