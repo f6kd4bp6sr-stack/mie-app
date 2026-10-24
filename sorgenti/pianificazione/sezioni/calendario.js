@@ -48,7 +48,6 @@ function dayData(s,V){
   if(typeof pensOn==="function")pensOn(s).forEach(a=>it.push({ic:"🎖️",t:a.t,c:"pens",k:"pens",id:a.id}));
   if(typeof cassaOn==="function")cassaOn(s).forEach(x=>it.push(x));
   if(typeof pratOn==="function")pratOn(s).forEach(x=>it.push({ic:"🗂️",t:x.passo.t,c:"prat",k:"prat",id:x.id,sub:x.t}));
-  ((P.met&&P.met.inc)||[]).filter(i=>i&&i.d===s).forEach(i=>it.push({ic:"🍽️",t:"Incontro: "+(i.chi||""),o:i.o||"",c:"met",k:"met",sub:i.dove||""}));
   calOn(s).forEach(e=>it.push({ic:calIc(e),t:e.t,o:e.o||"",f:e.f||"",c:"ipad",k:"ipad",sub:[e.cal,e.loc].filter(Boolean).join(" · ")}));
   const dn=(P.dn||{})[s];
   it.sort((a,b)=>(a.o||"99")<(b.o||"99")?-1:(a.o||"99")>(b.o||"99")?1:0);
@@ -152,8 +151,8 @@ function dayEditor(s,compact){
         <label>Energia (1–5)<select data-bf="energia"><option value="">—</option>${[1,2,3,4,5].map(n=>`<option${+D.ben.energia===n?" selected":""}>${n}</option>`).join("")}</select></label>
         <label class="wide">Nota su come stai<input data-bf="note" maxlength="200" value="${esc(D.ben.note||"")}" placeholder="facoltativa"></label></div></details></div></div>`;}
   // 🤝 Metodo: la sfida del giorno (si sceglie e si segna nella pagina Metodo)
-  if(s<=t){const g=D.met,F=["🙂","😐","😕"];
-    if(g)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>${g.ok?"✓ ":""}Missione: ${esc(g.txt||"")}</b><small>${g.ok?[g.f?F[g.f-1]:"",g.t?"«"+esc(g.t)+"»":"fatta"].filter(Boolean).join(" "):"da fare"}</small></div><a class="lnk" href="metodo.html#oggi">Metodo ›</a></div>`;
+  if(s<=t){const g=D.met;
+    if(g)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>${g.ok?"✓ ":""}Missione: ${esc(g.txt||"")}</b><small>${g.ok?"compiuta":"da fare"}</small></div><a class="lnk" href="metodo.html#oggi">Metodo ›</a></div>`;
     else if(s===t)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>Missione del giorno</b><small>Tre carte coperte ti aspettano nel Metodo</small></div><a class="lnk" href="metodo.html#oggi">Pesca ›</a></div>`;}
   // il mio mondo
   if(D.vstudy||D.vmood){const v=D.vmood;

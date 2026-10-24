@@ -1,6 +1,6 @@
 {
  "app": "pianificazione-occasioni",
- "updated": "2026-10-20T21:20+02:00",
+ "updated": "2026-10-24T09:10+02:00",
  "nota": "Volontariato a Torino con molto contatto con le persone. Solo informazioni pubbliche, con fonte e data del controllo; niente consigli. Esclusi i gruppi legati al lavoro e alla categoria.",
  "voci": [
   {
@@ -118,9 +118,205 @@
    "fonte": "Croce Verde Torino",
    "url": "https://www.croceverde.org/volontari/diventa-volontario/",
    "ctrl": "2026-10-20"
+  },
+  {
+   "id": "gruppo-abele",
+   "n": "Gruppo Abele — volontariato",
+   "tipo": "accoglienza",
+   "contatto": "alto",
+   "cosa": "Accoglienza e centralino in sede (San Paolo); aiuto compiti per primaria e istituto professionale (Barriera di Milano, San Paolo); italiano per donne straniere; casa di prima accoglienza per senza dimora; Drop-In di strada; laboratori genitori-figli; eventi saltuari (colletta alimentare, banco farmaceutico).",
+   "impegno": "Chiesta «costanza e continuità»; ore minime non indicate. Esempi: accoglienza lun-ven soprattutto 12-14; aiuto compiti ven 16.30-18.30 (primaria) o mer 14-16 (professionale); italiano lun/mer o mar/gio 9-12; eventi su chiamata.",
+   "requisiti": "Nessun limite d'età esplicito: il modulo prevede fasce fino a 70-80 anni; solo gli spazi 0-3 anni chiedono 18-30 anni. Corsi non indicati sulla pagina.",
+   "primo": "Compila il modulo online della pagina indicando l'attività preferita e la disponibilità (giorni, orari, periodi). Sede della Fondazione: corso Trapani 95, Torino.",
+   "ab": [
+    "calore",
+    "aprire"
+   ],
+   "fonte": "Gruppo Abele",
+   "url": "https://www.gruppoabele.org/it-schede-16-volontariato",
+   "ctrl": "2026-10-24"
+  },
+  {
+   "id": "banco-alimentare",
+   "n": "Banco Alimentare del Piemonte",
+   "tipo": "raccolta",
+   "contatto": "medio",
+   "cosa": "Volontariato tutto l'anno nella sede piemontese (sede principale a Moncalieri), oppure solo nel giorno della Colletta Alimentare: nei supermercati aderenti si invitano le persone a donare parte della spesa per chi è in difficoltà.",
+   "impegno": "Tutto l'anno: ore e giorni non indicati sulla pagina. Colletta: sabato 14 novembre 2026.",
+   "requisiti": "Non indicati sulla pagina.",
+   "primo": "Chiama la segreteria del Banco Alimentare del Piemonte, corso Roma 24/ter, Moncalieri: 011 68 22 901 o 011 68 22 416 (lun-ven 8-12 e 13-16.30), segreteria@piemonte.bancoalimentare.it. Oppure scegli la sede Piemonte nella pagina «Diventa volontario».",
+   "ab": [
+    "vivo",
+    "aprire"
+   ],
+   "fonte": "Banco Alimentare",
+   "url": "https://www.bancoalimentare.it/diventa-volontario",
+   "ctrl": "2026-10-24"
+  },
+  {
+   "id": "cottolengo-avc",
+   "n": "Volontari al Cottolengo — AVC",
+   "tipo": "accoglienza",
+   "contatto": "alto",
+   "cosa": "Volontariato alla Piccola Casa della Divina Provvidenza (Cottolengo) con l'Associazione Volontariato Cottolenghino. Tra i 30 servizi elencati: accoglienza, animazione, assistenza, centro di ascolto, mensa, musica e canto, palestra, portineria, segreteria, cucito, giardinaggio.",
+   "impegno": "Non indicato sulla pagina.",
+   "requisiti": "Età non indicata. Corso preparatorio: l'edizione 2026 si è tenuta dal 26 gennaio all'11 febbraio; le date 2027 non sono ancora pubblicate.",
+   "primo": "Contatta l'Ufficio Volontariato, via Cottolengo 14, Torino: 011 522 5185, volontariato.cottolenghino@avc-odv.org (mar e gio 9-12 e 14.30-17, mer 9-12). Sul sito si scarica la «Domanda per fare il volontario».",
+   "ab": [
+    "calore",
+    "viva"
+   ],
+   "fonte": "AVC — Associazione Volontariato Cottolenghino",
+   "url": "https://www.avc-odv.org/contatti/",
+   "ctrl": "2026-10-24"
+  },
+  {
+   "id": "casaoz",
+   "n": "CasaOz",
+   "tipo": "accoglienza",
+   "contatto": "medio",
+   "cosa": "I volontari affiancano lo staff di CasaOz (corso Moncalieri 262, Torino) per costruire insieme una «Quotidianità che Cura». La pagina non descrive le singole mansioni: si definiscono nel colloquio di conoscenza.",
+   "impegno": "Non indicato sulla pagina.",
+   "requisiti": "Età e corsi obbligatori non indicati. Percorso: primo incontro di conoscenza, poi formazione iniziale.",
+   "primo": "Compila il modulo della pagina: lo staff ti ricontatta per il colloquio. Telefono 011 661 5680 o 328 542 7175, info@fondazioneoz.org.",
+   "ab": [
+    "calore",
+    "viva"
+   ],
+   "fonte": "CasaOz",
+   "url": "https://casaoz.org/diventa-volontario/",
+   "ctrl": "2026-10-24"
+  },
+  {
+   "id": "faro",
+   "n": "Fondazione FARO — cure palliative",
+   "tipo": "compagnia",
+   "contatto": "alto",
+   "cosa": "Assistenza in hospice e a domicilio: presenza discreta accanto a malati e famiglie, attività ricreative e momenti comunitari in hospice, aiuto pratico ai familiari, accompagnamento alle terapie, consegna di farmaci a casa. In alternativa: eventi, raccolta fondi, supporto organizzativo.",
+   "impegno": "Ore e turni non indicati sulla pagina.",
+   "requisiti": "Selezione attenta e «rigoroso percorso formativo»; età e durata del percorso non indicate.",
+   "primo": "Compila il modulo online scegliendo la sede (Torino, Carignano, Lanzo, Chivasso/San Mauro) e il tipo di volontariato, oppure scrivi a volontari@fondazionefaro.it o chiama lo 011 888 272. Sede: via Oddino Morgari 12, Torino.",
+   "ab": [
+    "calore"
+   ],
+   "fonte": "Fondazione FARO",
+   "url": "https://fondazionefaro.it/diventa-volontario/",
+   "ctrl": "2026-10-24"
+  },
+  {
+   "id": "san-vincenzo",
+   "n": "Società di San Vincenzo De Paoli — Torino",
+   "tipo": "ascolto",
+   "contatto": "alto",
+   "cosa": "Visite a persone e famiglie a casa, nelle case di riposo, negli ospedali e nei centri di accoglienza; distribuzione alimentare vissuta come momento d'incontro; ascolto e sostegno; progetti su lavoro, abbigliamento (Progetto Abito) e casa.",
+   "impegno": "«Continuativo, volontario e gratuito»; ore non indicate sulla pagina.",
+   "requisiti": "Non indicati sulla pagina (è un'organizzazione di laici cattolici).",
+   "primo": "Chiama la segreteria del Consiglio Centrale di Torino, corso Matteotti 11: 011 562 1986 (lun-gio 9-12 e 14-16, ven 9-12), oppure scrivi a torino@sanvincenzoitalia.it chiedendo come diventare volontario.",
+   "ab": [
+    "calore",
+    "viva"
+   ],
+   "fonte": "San Vincenzo Torino",
+   "url": "https://www.sanvincenzotorino.it/cosa-facciamo/",
+   "ctrl": "2026-10-24"
+  },
+  {
+   "id": "emergency-torino",
+   "n": "Emergency — Gruppo di Torino",
+   "tipo": "civico",
+   "contatto": "medio",
+   "cosa": "Informazione e sensibilizzazione: conferenze, incontri nelle scuole e nei luoghi di lavoro, raccolta fondi. A Torino c'è anche l'Infopoint di corso Valdocco 3.",
+   "impegno": "Secondo la propria disponibilità; ore non indicate sulla pagina.",
+   "requisiti": "Condividere valori e principi di Emergency; senso di responsabilità negli impegni presi; saper lavorare in gruppo.",
+   "primo": "Scrivi a torino@volontari.emergency.it o chiama il 329 292 7708 (recapito di un volontario, non una sede aperta al pubblico). Oppure passa all'Infopoint, corso Valdocco 3 (lun 10.30-14.30, mar-sab 10.30-18.30), 011 454 6456.",
+   "ab": [
+    "aprire",
+    "vivo"
+   ],
+   "fonte": "Emergency",
+   "url": "https://www.emergency.it/volontariato-2/",
+   "ctrl": "2026-10-24"
+  },
+  {
+   "id": "uisp-torino",
+   "n": "UISP Torino — sport per tutti",
+   "tipo": "sport",
+   "contatto": "medio",
+   "cosa": "Comitato di sport sociale: i volontari aiutano nelle attività dell'associazione, con ruolo e mansioni concordati. Il sito presenta progetti come «Vivicittà in carcere» e attività nella RSA Casa Serena, ma la pagina non dice quali siano aperti ai volontari.",
+   "impegno": "Nessun monte ore minimo; ruolo concordato su tempo e attitudini, inserimento graduale con supporto individuale e formazione.",
+   "requisiti": "Non indicati sulla pagina.",
+   "primo": "Scrivi a torino@uisp.it con nome, telefono, email, tempo disponibile, motivazione, due righe su di te e l'ambito che ti interessa. Comitato: via Nizza 102, Torino, 011 677 115.",
+   "ab": [
+    "vivo",
+    "aprire"
+   ],
+   "fonte": "UISP Torino",
+   "url": "https://www.uisp.it/torino2/pagina/diventa-volontario",
+   "ctrl": "2026-10-24"
+  },
+  {
+   "id": "special-olympics",
+   "n": "Special Olympics — volontari agli eventi",
+   "tipo": "sport",
+   "contatto": "alto",
+   "cosa": "I volontari sono il sostegno concreto degli eventi sportivi Special Olympics e condividono con gli atleti le giornate di gara: coinvolgimento «fisico ed emotivo». Il programma si rivolge soprattutto ai giovani, ma il sito dice che tutti possono partecipare.",
+   "impegno": "Legato ai singoli eventi; ore non indicate sulla pagina.",
+   "requisiti": "Nessuna esperienza richiesta; aperto a «persone di ogni età», senza limiti indicati.",
+   "primo": "Iscriviti al Programma Volontari con il pulsante «Iscriviti» della pagina (rimanda al modulo su sisoi.it), oppure scrivi al referente provinciale, torino@specialolympics.it (Piemonte: piemonte@specialolympics.it).",
+   "ab": [
+    "vivo",
+    "calore"
+   ],
+   "fonte": "Special Olympics Italia",
+   "url": "https://specialolympics.it/panoramica-mettiti-in-gioco/",
+   "ctrl": "2026-10-24"
+  },
+  {
+   "id": "cri-torino",
+   "n": "Croce Rossa Italiana — Comitato di Torino",
+   "tipo": "soccorso",
+   "contatto": "medio",
+   "cosa": "Prevenzione sanitaria, supporto alle persone fragili, emergenze e grandi eventi. Nell'inclusione sociale: beni di prima necessità (cibo, vestiario) e orientamento per persone in grave emarginazione, raccolte alimentari nei supermercati, recupero delle eccedenze.",
+   "impegno": "Non indicato sulla pagina (si parla di formazione continua e lavoro di squadra).",
+   "requisiti": "Non indicati sulla pagina del Comitato.",
+   "primo": "Registrati come aspirante volontario sul portale Gaia della Croce Rossa (gaia.cri.it), poi contatta il Comitato: via Bologna 171, Torino, 011 244 5411, torino@cri.it.",
+   "ab": [
+    "vivo"
+   ],
+   "fonte": "CRI Comitato di Torino",
+   "url": "https://www.critorino.it/volontari/",
+   "ctrl": "2026-10-24"
   }
  ],
  "annunci": [
+  {
+   "id": "colletta-2026",
+   "n": "Giornata nazionale della Colletta Alimentare 2026",
+   "cosa": "Sabato 14 novembre 2026 (trentesima edizione): i volontari presidiano i supermercati aderenti e invitano chi fa la spesa a donare prodotti per le persone in difficoltà.",
+   "primo": "Iscriviti con il modulo della Colletta sul sito del Banco Alimentare. Informazioni: volontari.colletta@bancoalimentare.it o 02 8965 8459 (lun-ven 10-13). Per Torino: segreteria del Banco Alimentare del Piemonte, 011 68 22 901.",
+   "d": "2026-11-14",
+   "scade": "2026-11-14",
+   "fonte": "Banco Alimentare",
+   "url": "https://www.bancoalimentare.it/colletta-alimentare"
+  },
+  {
+   "id": "doposcuola-aurora",
+   "n": "Sostegno allo studio per ragazzi di origine straniera — Aurora",
+   "cosa": "2PR Prevenzione e Promozione ODV, via La Salle 15/h (Aurora): ogni volontario segue 1-2 ragazzi delle medie (11-15 anni) nei compiti e nel metodo di studio, dal lunedì al venerdì 15-17. Servono empatia, pazienza, attitudine all'insegnamento e apertura verso culture diverse.",
+   "primo": "Candidati con il modulo dell'annuncio sul sito di Vol.To: lo Sportello di Orientamento ti ricontatta.",
+   "d": "2026-09-01",
+   "fonte": "Vol.To, bacheca del volontariato",
+   "url": "https://volontariatotorino.it/bacheca-del-volontariato/volontari-e-per-sostenere-nello-studio-ragazzi-e-di-origine-straniera/"
+  },
+  {
+   "id": "cene-via-ghedini",
+   "n": "Una cena al mese per la casa di accoglienza di via Ghedini",
+   "cosa": "Il Forum Interregionale Permanente del Volontariato Piemonte e Valle d'Aosta ODV cerca chi cucini una cena al mese a casa propria e la porti alla Casa di Accoglienza Notturna di via Ghedini 6, per le donne ospitate; il Forum sostiene le spese per l'acquisto degli alimenti. Un sabato al mese c'è una cena condivisa, facoltativa.",
+   "primo": "Candidati con il modulo dell'annuncio sul sito di Vol.To: lo Sportello di Orientamento ti ricontatta.",
+   "d": "2026-09-23",
+   "fonte": "Vol.To, bacheca del volontariato",
+   "url": "https://volontariatotorino.it/bacheca-del-volontariato/volontari-con-la-passione-per-la-cucina-per-preparare-cene-per-persone-in-situazioni-di-fragilita/"
+  },
   {
    "id": "inascolto-rsa",
    "n": "Compagnia agli anziani in RSA — progetto «InAscolto»",
@@ -148,6 +344,10 @@
   {
    "at": "2026-10-20T21:20+02:00",
    "note": "revisione indipendente: corrette biblioteche, Croce Verde, Senior Civico, reti; aggiunte AVO e 2 annunci della bacheca Vol.To"
+  },
+  {
+   "at": "2026-10-24T09:10+02:00",
+   "note": "aggiunte 10 realtà e 3 annunci verificati sulle pagine ufficiali; ricontrollate da un revisore indipendente"
   }
  ]
 }

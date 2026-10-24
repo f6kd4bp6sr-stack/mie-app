@@ -175,6 +175,131 @@
    }
   },
   {
+   "id": "a5",
+   "ab": "aprire",
+   "tit": "Farsi vedere conta",
+   "princ": "Più vediamo una faccia, più ci sta simpatica, anche senza parlarci. Frequentare spesso gli stessi posti (il bar, il mercato, la bocciofila) prepara il terreno.",
+   "es": "Fare la spesa sempre il sabato mattina, allo stesso banco del mercato.",
+   "frase": "Ci vediamo sabato, come sempre!",
+   "base": "Moreland e Beach (1992): una studentessa vista più volte a lezione, senza mai parlare con nessuno, veniva giudicata più simpatica.",
+   "curio": {
+    "tit": "La faccia nota piace di più",
+    "fatto": "In un'aula universitaria quattro ragazze sono venute a lezione 0, 5, 10 o 15 volte, senza parlare con nessuno. A fine corso, più erano venute, più gli studenti le trovavano simpatiche.",
+    "trad": "Prima di parlare, fatti vedere: sempre allo stesso bar."
+   },
+   "app": {
+    "come": "Quattro collaboratrici dei ricercatori, simili d'aspetto, hanno frequentato un corso molto numeroso un numero diverso di volte, sedute in vista e senza parlare con nessuno. A fine corso gli studenti guardavano le loro foto: quelle viste più spesso sembravano più simpatiche e attraenti, anche se quasi nessuno ricordava di averle viste. È l'«effetto della semplice esposizione», reso famoso dagli esperimenti di Zajonc (1968).",
+    "prova": [
+     "Scegli un posto fisso e torna sempre alla stessa ora.",
+     "Saluta le facce che rivedi, anche solo con un cenno.",
+     "Dopo qualche volta, aggiungi due parole."
+    ],
+    "att": "L'effetto è piccolo e vale soprattutto con persone neutre o già gradite: non trasforma un'antipatia in simpatia.",
+    "fonti": [
+     {
+      "c": "Moreland, R. L., & Beach, S. R. (1992). Exposure effects in the classroom: The development of affinity among students. Journal of Experimental Social Psychology, 28(3), 255–276.",
+      "t": "studio",
+      "url": "https://doi.org/10.1016/0022-1031(92)90055-O"
+     },
+     {
+      "c": "Zajonc, R. B. (1968). Attitudinal effects of mere exposure. Journal of Personality and Social Psychology, 9(2, Pt. 2), 1–27.",
+      "t": "studio",
+      "url": "https://doi.org/10.1037/h0025848"
+     }
+    ]
+   }
+  },
+  {
+   "id": "a6",
+   "ab": "aprire",
+   "tit": "Nessuno ti guarda così tanto",
+   "princ": "Pensiamo che gli altri notino ogni nostro errore o ogni macchia sulla camicia: in realtà ci guardano molto meno di quanto crediamo. Saperlo toglie un po' di paura di sbagliare.",
+   "es": "Ti si incastra una parola mentre ti presenti? Sorridi e vai avanti: quasi nessuno ci fa caso.",
+   "frase": "Scusa, mi sono incartato: ricomincio!",
+   "base": "Gilovich e colleghi (2000): chi indossava una maglietta imbarazzante pensava che l'avesse notata circa metà dei presenti; in realtà se n'era accorto circa un quarto.",
+   "curio": {
+    "tit": "L'effetto riflettore",
+    "fatto": "Studenti con una maglietta imbarazzante pensavano che metà della stanza l'avesse notata. In realtà se n'era accorto circa un quarto dei presenti. Il riflettore che senti addosso è molto più piccolo.",
+    "trad": "Sbaglia pure con serenità: il pubblico è distratto."
+   },
+   "app": {
+    "come": "Ai partecipanti veniva chiesto di indossare una maglietta con la faccia di un cantante poco alla moda e di entrare per poco in una stanza dove c'erano altri studenti. Poi dovevano stimare quanti l'avessero notata: in media pensavano circa la metà, mentre in realtà erano molti meno. Lo stesso succedeva con le piccole gaffe durante una discussione di gruppo.",
+    "prova": [
+     "Quando sbagli, sorridi e vai avanti.",
+     "Chiediti: «Me ne accorgerei, se lo facesse un altro?»",
+     "Trasforma l'errore in una battuta su di te."
+    ],
+    "att": "Non vuol dire che nessuno ti nota: vuol dire che gli altri sono occupati soprattutto con se stessi, proprio come te.",
+    "fonti": [
+     {
+      "c": "Gilovich, T., Medvec, V. H., & Savitsky, K. (2000). The spotlight effect in social judgment: An egocentric bias in estimates of the salience of one's own actions and appearance. Journal of Personality and Social Psychology, 78(2), 211–222.",
+      "t": "studio",
+      "url": "https://doi.org/10.1037/0022-3514.78.2.211"
+     }
+    ]
+   }
+  },
+  {
+   "id": "a7",
+   "ab": "aprire",
+   "tit": "Una settimana di caccia al tesoro",
+   "princ": "Parlare con gli sconosciuti si impara: dopo qualche giorno di prove, la paura cala e ci si sente più capaci di conversare. È proprio l'idea delle missioni di questa pagina.",
+   "es": "Una missione al giorno per una settimana: il barista, il vicino in fila, la signora con il cane.",
+   "frase": "Posso chiederle una cosa?",
+   "base": "Sandstrom, Boothby e Cooney (2022): dopo cinque giorni di «caccia al tesoro» con missioni per parlare con sconosciuti, i partecipanti temevano meno di essere respinti.",
+   "curio": {
+    "tit": "Le missioni funzionano (lo dice uno studio)",
+    "fatto": "In un esperimento, alcuni studenti hanno ricevuto per cinque giorni da un'app missioni per parlare con sconosciuti, un po' come qui. Alla fine temevano meno di essere respinti, e l'effetto c'era ancora una settimana dopo.",
+    "trad": "Una missione al giorno toglie la paura di torno."
+   },
+   "app": {
+    "come": "Per cinque giorni un gruppo di studenti universitari, nel Regno Unito e negli Stati Uniti, riceveva da un'app missioni da caccia al tesoro: trovare uno sconosciuto con una certa caratteristica (per esempio qualcuno con il cappello o che beve un caffè) e parlarci. Un altro gruppo doveva solo osservare quelle persone, senza parlarci. Chi aveva parlato temeva meno il rifiuto e si sentiva più capace di portare avanti una conversazione, anche una settimana dopo la fine.",
+    "prova": [
+     "Una sola missione al giorno, anche piccola.",
+     "Dopo, nota com'è andata davvero rispetto a quanto temevi.",
+     "Aumenta il livello quando ti senti pronto."
+    ],
+    "att": "Lo studio è stato fatto con studenti universitari nel Regno Unito e negli Stati Uniti: con adulti più grandi i dettagli possono cambiare, ma l'idea di allenarsi un po' alla volta regge.",
+    "fonti": [
+     {
+      "c": "Sandstrom, G. M., Boothby, E. J., & Cooney, G. (2022). Talking to strangers: A week-long intervention reduces psychological barriers to social connection. Journal of Experimental Social Psychology, 102, 104356.",
+      "t": "studio",
+      "url": "https://doi.org/10.1016/j.jesp.2022.104356"
+     }
+    ]
+   }
+  },
+  {
+   "id": "a8",
+   "ab": "aprire",
+   "tit": "Il punto in comune",
+   "princ": "Ci piace chi sentiamo simile a noi. Trovare presto un punto in comune (un posto, una passione, un ricordo) accorcia le distanze.",
+   "es": "«Anche lei va al mercato di Porta Palazzo? Qual è il suo banco preferito?»",
+   "frase": "Ah, anche tu? Allora dobbiamo parlarne!",
+   "base": "Montoya e colleghi (2008): mettendo insieme oltre 300 studi, sentirsi simili all'altro va con una maggiore attrazione, soprattutto quando la somiglianza è percepita.",
+   "curio": {
+    "tit": "Anche tu? Allora parliamone",
+    "fatto": "Mettendo insieme oltre 300 studi, i ricercatori hanno visto che ci piace di più chi sentiamo simile a noi. Conta soprattutto la somiglianza che percepiamo: a volte basta scoprire un punto in comune.",
+    "trad": "Cerca l'«anche tu?» nei primi cinque minuti."
+   },
+   "app": {
+    "come": "La meta-analisi ha riunito i risultati di centinaia di studi sull'attrazione tra persone. Tra chi non si conosceva ancora, anche la somiglianza reale (opinioni, gusti) aumentava l'attrazione; nelle relazioni già avviate contava soprattutto sentirsi simili, cioè la somiglianza percepita.",
+    "prova": [
+     "Fai domande su gusti e abitudini, non solo sul lavoro.",
+     "Quando trovi un punto in comune, dillo ad alta voce.",
+     "Approfondiscilo con una seconda domanda."
+    ],
+    "att": "Non inventare somiglianze che non ci sono: si sente subito. E anche le differenze, raccontate con curiosità, fanno conversazione.",
+    "fonti": [
+     {
+      "c": "Montoya, R. M., Horton, R. S., & Kirchner, J. (2008). Is actual similarity necessary for attraction? A meta-analysis of actual and perceived similarity. Journal of Social and Personal Relationships, 25(6), 889–922.",
+      "t": "studio",
+      "url": "https://doi.org/10.1177/0265407508096700"
+     }
+    ]
+   }
+  },
+  {
    "id": "v1",
    "ab": "viva",
    "tit": "La seconda domanda",
@@ -325,6 +450,101 @@
    }
   },
   {
+   "id": "v5",
+   "ab": "viva",
+   "tit": "Le domande profonde spaventano più del dovuto",
+   "princ": "Pensiamo che con chi conosciamo poco si possa parlare solo del tempo. In realtà anche gli sconosciuti apprezzano una domanda più personale, e la conversazione riesce meglio del previsto.",
+   "es": "«Che cosa ti ha reso contento quest'anno?» al posto di «Brutto tempo, eh?»",
+   "frase": "Posso farti una domanda un po' diversa dal solito?",
+   "base": "Kardas, Kumar ed Epley (2022): le persone si aspettavano che le conversazioni profonde con sconosciuti fossero più imbarazzanti e meno piacevoli di come poi sono state.",
+   "curio": {
+    "tit": "Il tempo è sopravvalutato (come argomento)",
+    "fatto": "In una serie di esperimenti, coppie di sconosciuti rispondevano a domande più personali del solito. Prima pensavano che sarebbe stato imbarazzante; poi è risultato più piacevole e meno imbarazzante del previsto.",
+    "trad": "Ogni tanto salta il meteo e vai al sodo, con garbo."
+   },
+   "app": {
+    "come": "Coppie di sconosciuti rispondevano a domande superficiali oppure profonde. Prima prevedevano che le domande profonde sarebbero state più imbarazzanti e meno piacevoli, anche perché pensavano che all'altro interessasse poco. Dopo, le conversazioni profonde risultavano più piacevoli e creavano più vicinanza di quanto si aspettassero.",
+    "prova": [
+     "Prepara una domanda «un gradino più su» del solito.",
+     "Falla dopo un po' di chiacchiere leggere.",
+     "Rispondi anche tu, con sincerità."
+    ],
+    "att": "Profondo non vuol dire invadente: niente domande su salute, soldi o guai di famiglia a chi conosci appena.",
+    "fonti": [
+     {
+      "c": "Kardas, M., Kumar, A., & Epley, N. (2022). Overly shallow?: Miscalibrated expectations create a barrier to deeper conversation. Journal of Personality and Social Psychology, 122(3), 367–398.",
+      "t": "studio",
+      "url": "https://doi.org/10.1037/pspa0000281"
+     }
+    ]
+   }
+  },
+  {
+   "id": "v6",
+   "ab": "viva",
+   "tit": "Chiedere un consiglio fa bella figura",
+   "princ": "Temiamo che chiedere un consiglio ci faccia sembrare meno capaci. Spesso succede il contrario: chi chiede un consiglio a chi se ne intende sembra più competente, e l'altro si sente stimato.",
+   "es": "«Tu che di vini te ne intendi: per una cena con amici che cosa porteresti?»",
+   "frase": "Tu che te ne intendi: che cosa mi consigli?",
+   "base": "Brooks, Gino e Schweitzer (2015): chi chiedeva un consiglio veniva giudicato più competente, soprattutto se il compito era difficile e il consiglio era chiesto proprio a chi giudicava.",
+   "curio": {
+    "tit": "Il consiglio che ti fa sembrare più bravo",
+    "fatto": "Chiedere un consiglio sembra un segno di debolezza, ma negli esperimenti succedeva il contrario: chi lo chiedeva sembrava più competente, soprattutto se la domanda era difficile. E chi riceve la domanda si sente stimato.",
+    "trad": "«Tu che te ne intendi…» apre molte conversazioni."
+   },
+   "app": {
+    "come": "Nei loro esperimenti i partecipanti lavoravano a un compito con un partner (in realtà simulato) che chiedeva o non chiedeva un consiglio. Chi lo chiedeva era giudicato più competente; l'effetto era più forte quando il compito era difficile e quando il consiglio era chiesto proprio a chi poi dava il giudizio, perché lo faceva sentire apprezzato.",
+    "prova": [
+     "Pensa a una cosa in cui l'altro è bravo.",
+     "Chiedi un consiglio preciso, non generico.",
+     "Poi fagli sapere com'è andata."
+    ],
+    "att": "Funziona se la domanda è sincera e su una cosa in cui l'altro se ne intende: su cose banali o facilissime l'effetto sparisce.",
+    "fonti": [
+     {
+      "c": "Brooks, A. W., Gino, F., & Schweitzer, M. E. (2015). Smart people ask for (my) advice: Seeking advice boosts perceptions of competence. Management Science, 61(6), 1421–1435.",
+      "t": "studio",
+      "url": "https://doi.org/10.1287/mnsc.2014.2054"
+     }
+    ]
+   }
+  },
+  {
+   "id": "v7",
+   "ab": "viva",
+   "tit": "Più sostanza, più felicità",
+   "princ": "Le chiacchiere leggere vanno benissimo per cominciare, ma sono le conversazioni con un po' di sostanza (idee, esperienze, progetti) a lasciare il segno.",
+   "es": "Dal «Che caldo oggi» a «Tu come passi l'estate, di solito?»",
+   "frase": "E tu che cosa ne pensi, davvero?",
+   "base": "Mehl e colleghi (2010): le persone più felici passavano più tempo a parlare con altri e avevano più conversazioni di sostanza; uno studio più ampio (2018) ha confermato il legame con le conversazioni di sostanza.",
+   "curio": {
+    "tit": "Il registratore della felicità",
+    "fatto": "Un piccolo registratore ha catturato frammenti delle giornate di alcuni studenti: i più felici parlavano di più con gli altri, con meno chiacchiere leggere e più conversazioni di sostanza. Uno studio più ampio ha confermato il legame con la sostanza.",
+    "trad": "Il meteo per cominciare, poi un argomento vero."
+   },
+   "app": {
+    "come": "I partecipanti portavano con sé per alcuni giorni un registratore che si accendeva da solo per pochi secondi, a intervalli. I ricercatori hanno contato il tempo passato da soli, a parlare, in chiacchiere leggere o in conversazioni di sostanza. I più felici erano più spesso in compagnia e avevano più conversazioni di sostanza. Uno studio più grande ha confermato il legame con le conversazioni di sostanza; le chiacchiere leggere non risultavano né positive né negative.",
+    "prova": [
+     "Dopo i convenevoli, porta il discorso su un'esperienza o un'idea.",
+     "Chiedi «perché?» e «come mai?»",
+     "Racconta anche tu una cosa che ti sta a cuore."
+    ],
+    "att": "È un legame, non una prova di causa: forse chi è felice cerca conversazioni più profonde, o il contrario. Provarci comunque non costa niente.",
+    "fonti": [
+     {
+      "c": "Mehl, M. R., Vazire, S., Holleran, S. E., & Clark, C. S. (2010). Eavesdropping on happiness: Well-being is related to having less small talk and more substantive conversations. Psychological Science, 21(4), 539–541.",
+      "t": "studio",
+      "url": "https://doi.org/10.1177/0956797610362675"
+     },
+     {
+      "c": "Milek, A., Butler, E. A., Tackman, A. M., Kaplan, D. M., Raison, C. L., Sbarra, D. A., Vazire, S., & Mehl, M. R. (2018). “Eavesdropping on happiness” revisited: A pooled, multisample replication of the association between life satisfaction and observed daily conversation quantity and quality. Psychological Science, 29(9), 1451–1462.",
+      "t": "studio",
+      "url": "https://doi.org/10.1177/0956797618774252"
+     }
+    ]
+   }
+  },
+  {
    "id": "f1",
    "ab": "vivo",
    "tit": "Un messaggio senza motivo",
@@ -459,6 +679,100 @@
    }
   },
   {
+   "id": "f5",
+   "ab": "vivo",
+   "tit": "Le relazioni fanno bene alla salute",
+   "princ": "Coltivare le relazioni non è solo piacevole: è legato anche a una vita più lunga. Farsi vivi con regolarità è una piccola abitudine che conta.",
+   "es": "Una telefonata al cugino la domenica, un caffè con l'ex collega, una passeggiata con il vicino.",
+   "frase": "Ci sentiamo domenica, come sempre?",
+   "base": "Holt-Lunstad e colleghi (2010): in una meta-analisi di 148 studi, le persone con relazioni sociali più solide avevano circa il 50% di probabilità in più di essere ancora in vita alla fine del periodo studiato.",
+   "curio": {
+    "tit": "L'amicizia allunga la vita",
+    "fatto": "Mettendo insieme 148 studi su oltre 300.000 persone, i ricercatori hanno visto che chi ha relazioni sociali più solide ha circa il 50% di probabilità in più di essere ancora in vita alla fine degli studi. Un effetto paragonabile a quello di smettere di fumare.",
+    "trad": "Una telefonata a un amico è anche un investimento sulla salute."
+   },
+   "app": {
+    "come": "La meta-analisi ha riunito studi che seguivano le persone per anni (in media più di sette), misurando all'inizio quanto erano inserite in relazioni e reti sociali. Chi aveva relazioni più solide aveva circa il 50% di probabilità in più di sopravvivere nel periodo dello studio, e il risultato valeva a tutte le età, per uomini e donne e qualunque fosse lo stato di salute iniziale. Gli autori paragonano la forza di questo legame a quella di fattori noti come il fumo e l'alcol.",
+    "prova": [
+     "Scegli due persone da sentire ogni settimana.",
+     "Metti un promemoria fisso nel Calendario.",
+     "Preferisci la voce o un incontro a un semplice messaggio, quando puoi."
+    ],
+    "att": "Sono studi osservazionali: mostrano un legame forte, non una ricetta precisa. E conta la qualità dei rapporti, non il numero di contatti in rubrica.",
+    "fonti": [
+     {
+      "c": "Holt-Lunstad, J., Smith, T. B., & Layton, J. B. (2010). Social relationships and mortality risk: A meta-analytic review. PLoS Medicine, 7(7), e1000316.",
+      "t": "studio",
+      "url": "https://doi.org/10.1371/journal.pmed.1000316"
+     }
+    ]
+   }
+  },
+  {
+   "id": "f6",
+   "ab": "vivo",
+   "tit": "Lo studio che dura dal 1938",
+   "princ": "Chi arriva più sereno e in salute alla vecchiaia non è il più ricco o il più famoso, ma chi ha buoni rapporti. E i rapporti, come la forma fisica, si mantengono con l'esercizio.",
+   "es": "Dedicare ogni settimana un'ora alle persone a cui tieni, come si fa con la palestra.",
+   "frase": "Ci teniamo a vederci: fissiamo una data?",
+   "base": "Waldinger e Schulz (2023): nello studio di Harvard che segue le stesse persone dal 1938, la soddisfazione nei rapporti a 50 anni prevedeva la salute a 80 meglio del colesterolo.",
+   "curio": {
+    "tit": "Lo studio più lungo sulla felicità",
+    "fatto": "Dal 1938 l'Università di Harvard segue le stesse persone, e oggi anche i loro figli. La lezione principale: chi a 50 anni era più soddisfatto dei propri rapporti era più in salute a 80. Più del colesterolo.",
+    "trad": "Gli amici si allenano come i muscoli: un po' ogni settimana."
+   },
+   "app": {
+    "come": "Lo studio è iniziato con due gruppi di giovani uomini: studenti di Harvard e ragazzi dei quartieri poveri di Boston, intervistati e visitati regolarmente per tutta la vita; poi si è esteso a mogli e figli. Robert Waldinger, l'attuale direttore, e Marc Schulz hanno raccolto i risultati in un libro: la qualità dei rapporti è tra i fattori più legati alla salute e alla felicità nel tempo.",
+    "prova": [
+     "Pensa a chi vorresti accanto tra dieci anni.",
+     "Dedica a quelle persone un momento fisso ogni settimana.",
+     "Ricuci un rapporto che si è raffreddato: un messaggio basta per cominciare."
+    ],
+    "att": "All'inizio lo studio comprendeva solo uomini bianchi americani: i risultati vanno letti insieme ad altri studi, che però vanno nella stessa direzione.",
+    "fonti": [
+     {
+      "c": "Waldinger, R., & Schulz, M. (2023). The good life: Lessons from the world's longest scientific study of happiness. Simon & Schuster.",
+      "t": "libro"
+     },
+     {
+      "c": "Waldinger, R. J., & Schulz, M. S. (2010). What's love got to do with it? Social functioning, perceived health, and daily happiness in married octogenarians. Psychology and Aging, 25(2), 422–431.",
+      "t": "studio",
+      "url": "https://doi.org/10.1037/a0019087"
+     }
+    ]
+   }
+  },
+  {
+   "id": "f7",
+   "ab": "vivo",
+   "tit": "Aiutare fa bene a chi aiuta",
+   "princ": "Il volontariato regala nuove relazioni, uno scopo e una routine. Per chi esce dal lavoro è uno dei modi più naturali per incontrare persone nuove ogni settimana.",
+   "es": "Un turno fisso il martedì mattina in biblioteca, con gli stessi compagni di turno.",
+   "frase": "Che cosa fa un volontario nuovo il primo giorno?",
+   "base": "Jenkinson e colleghi (2013): negli studi che seguono le persone nel tempo, chi fa volontariato ha meno depressione, più soddisfazione e una mortalità più bassa; gli esperimenti veri e propri sono però ancora pochi.",
+   "curio": {
+    "tit": "Il turno che fa bene",
+    "fatto": "Una grande rassegna di studi ha trovato che chi fa volontariato tende a essere meno depresso e più soddisfatto della vita; negli studi che seguono le persone per anni, il rischio di morte era più basso di circa un quinto.",
+    "trad": "Il turno del martedì fa bene anche a te."
+   },
+   "app": {
+    "come": "La rassegna sistematica ha riunito esperimenti e studi che seguono nel tempo persone volontarie e non volontarie. Negli studi di lungo periodo il volontariato era legato a meno sintomi depressivi, più soddisfazione e benessere, e a un rischio di morte più basso di circa il 22%. Negli esperimenti, più piccoli, i risultati erano meno chiari.",
+    "prova": [
+     "Scegli un'attività con molto contatto con le persone.",
+     "Comincia con un turno fisso, anche piccolo.",
+     "Dai un nome a ogni faccia che incontri."
+    ],
+    "att": "Sono soprattutto studi osservazionali: forse chi sta già bene fa più volontariato. Gli esperimenti veri sono pochi e meno chiari.",
+    "fonti": [
+     {
+      "c": "Jenkinson, C. E., Dickens, A. P., Jones, K., Thompson-Coon, J., Taylor, R. S., Rogers, M., Bambra, C. L., Lang, I., & Richards, S. H. (2013). Is volunteering a public health intervention? A systematic review and meta-analysis of the health and survival of volunteers. BMC Public Health, 13, 773.",
+      "t": "studio",
+      "url": "https://doi.org/10.1186/1471-2458-13-773"
+     }
+    ]
+   }
+  },
+  {
    "id": "c1",
    "ab": "calore",
    "tit": "Il complimento preciso",
@@ -586,6 +900,136 @@
     "tit": "La gentilezza rende più del previsto",
     "fatto": "Chi fa un piccolo gesto gentile, come offrire una cioccolata calda a uno sconosciuto, sottovaluta quanto farà piacere. E in un esperimento chi l'aveva ricevuto è stato poi più generoso con altri.",
     "trad": "Ogni tanto il caffè offrilo tu."
+   }
+  },
+  {
+   "id": "c5",
+   "ab": "calore",
+   "tit": "Si ride in compagnia",
+   "princ": "Non serve essere comici: si ride soprattutto in compagnia, e quasi mai per le barzellette. Ridere insieme di piccole cose è il segnale che si sta bene.",
+   "es": "«Questo ascensore ha più anni di noi due messi insieme!»",
+   "frase": "Questa me la segno!",
+   "base": "Provine (1989, 1993): si ride circa 30 volte di più in compagnia che da soli, e la maggior parte delle risate segue frasi normalissime, non battute.",
+   "curio": {
+    "tit": "Le barzellette sono sopravvalutate",
+    "fatto": "Annotando oltre mille risate nella vita di tutti i giorni, uno psicologo ha scoperto che solo una piccola parte seguiva una battuta vera: quasi sempre si rideva dopo frasi normalissime. E si ride circa 30 volte di più in compagnia che da soli.",
+    "trad": "Non serve il repertorio: basta la compagnia."
+   },
+   "app": {
+    "come": "Robert Provine e i suoi studenti hanno annotato oltre 1.200 episodi di risate ascoltate in luoghi pubblici, segnando che cosa era stato detto appena prima: solo il 10–20% circa era una battuta. In un altro studio, con dei diari, le persone ridevano molto più spesso quando erano in compagnia che quando erano da sole.",
+    "prova": [
+     "Lasciati andare alle risate leggere, senza forzarle.",
+     "Ridi delle situazioni, non delle persone.",
+     "Racconta un piccolo episodio buffo della tua giornata."
+    ],
+    "att": "Ridere con gli altri, mai degli altri: la risata che esclude qualcuno fa l'effetto opposto.",
+    "fonti": [
+     {
+      "c": "Provine, R. R., & Fischer, K. R. (1989). Laughing, smiling, and talking: Relation to sleeping and social context in humans. Ethology, 83(4), 295–305.",
+      "t": "studio",
+      "url": "https://doi.org/10.1111/j.1439-0310.1989.tb00536.x"
+     },
+     {
+      "c": "Provine, R. R. (1993). Laughter punctuates speech: Linguistic, social and gender contexts of laughter. Ethology, 95(4), 291–298.",
+      "t": "studio",
+      "url": "https://doi.org/10.1111/j.1439-0310.1993.tb00478.x"
+     }
+    ]
+   }
+  },
+  {
+   "id": "c6",
+   "ab": "calore",
+   "tit": "La gaffe che rende simpatici",
+   "princ": "Una persona brava che fa una piccola gaffe sembra più umana. Non serve essere impeccabili: un piccolo errore, preso con il sorriso, avvicina.",
+   "es": "Rovesci il caffè durante una riunione: «Ecco, questo era il mio numero di prestigio.»",
+   "frase": "Ecco il mio numero di prestigio!",
+   "base": "Aronson e colleghi (1966): un concorrente bravissimo che si rovesciava addosso il caffè piaceva di più; lo stesso errore, invece, rendeva meno simpatico chi era sembrato mediocre.",
+   "curio": {
+    "tit": "L'effetto caffè rovesciato",
+    "fatto": "In un esperimento degli anni Sessanta, gli studenti ascoltavano un concorrente bravissimo a un quiz che alla fine si rovesciava il caffè addosso: piaceva più di quello impeccabile. Si chiama «pratfall effect», l'effetto del capitombolo.",
+    "trad": "Una gaffe presa con il sorriso fa più simpatia della perfezione."
+   },
+   "app": {
+    "come": "Gli studenti ascoltavano la registrazione di un candidato a un quiz universitario, molto bravo oppure mediocre; in alcune versioni, alla fine, si sentiva il candidato rovesciarsi addosso il caffè. Il candidato bravo con la gaffe risultava il più simpatico, quello mediocre con la gaffe il meno simpatico. Le repliche successive hanno trovato effetti meno netti, che dipendono anche da chi ascolta.",
+    "prova": [
+     "Quando sbagli in piccolo, ridici su per primo.",
+     "Non nascondere la gaffe: dichiarala con leggerezza.",
+     "Poi torna a fare bene quello che stavi facendo."
+    ],
+    "att": "Funziona solo con gaffe piccole e se per il resto sei affidabile: non vale come scusa per gli errori veri.",
+    "fonti": [
+     {
+      "c": "Aronson, E., Willerman, B., & Floyd, J. (1966). The effect of a pratfall on increasing interpersonal attractiveness. Psychonomic Science, 4(6), 227–228.",
+      "t": "studio",
+      "url": "https://doi.org/10.3758/BF03342263"
+     }
+    ]
+   }
+  },
+  {
+   "id": "c7",
+   "ab": "calore",
+   "tit": "La bella imperfezione",
+   "princ": "Ammettere un errore, chiedere aiuto o dire «mi sono emozionato» ci sembra una debolezza. Gli altri, invece, lo vedono soprattutto come coraggio e sincerità.",
+   "es": "«Ieri ti ho risposto male: ho sbagliato, scusami.»",
+   "frase": "Ho sbagliato io, scusami.",
+   "base": "Bruk, Scholl e Bless (2018): mostrarsi vulnerabili (ammettere un errore, chiedere aiuto) sembra peggio a chi lo fa che a chi guarda, che lo giudica in modo più positivo.",
+   "curio": {
+    "tit": "L'effetto «bel pasticcio»",
+    "fatto": "In una serie di esperimenti, le persone giudicavano più negativo mostrarsi vulnerabili loro stesse (ammettere uno sbaglio, chiedere aiuto) che vederlo fare a un altro. Quando lo fa un altro, ci sembra coraggio. Gli psicologi l'hanno chiamato «beautiful mess», bel pasticcio.",
+    "trad": "Il tuo «ho sbagliato», agli altri, sembra coraggio."
+   },
+   "app": {
+    "come": "I partecipanti immaginavano situazioni in cui si mostravano vulnerabili, come ammettere un errore o chiedere aiuto, oppure in cui lo faceva un'altra persona. Giudicavano la propria vulnerabilità più negativamente, come debolezza, e quella degli altri più positivamente, come coraggio e sincerità. In sette esperimenti l'effetto si è visto sempre; in uno, più realistico, i partecipanti si aspettavano davvero di dover improvvisare una canzone davanti a una giuria, o di fare da giurati.",
+    "prova": [
+     "Quando sbagli, dillo presto e semplicemente.",
+     "Chiedi aiuto per una cosa piccola e concreta.",
+     "Ringrazia chi ti ascolta."
+    ],
+    "att": "Vale per la sincerità misurata: confidare problemi pesanti a chi conosci appena può mettere a disagio.",
+    "fonti": [
+     {
+      "c": "Bruk, A., Scholl, S. G., & Bless, H. (2018). Beautiful mess effect: Self–other differences in evaluation of showing vulnerability. Journal of Personality and Social Psychology, 115(2), 192–205.",
+      "t": "studio",
+      "url": "https://doi.org/10.1037/pspa0000120"
+     }
+    ]
+   }
+  },
+  {
+   "id": "c8",
+   "ab": "calore",
+   "tit": "La gratitudine che lega",
+   "princ": "La gratitudine non è solo buona educazione: ci fa notare le persone che si prendono cura di noi, ci ricorda quanto valgono e ci lega a loro.",
+   "es": "«Grazie per avermi accompagnato dal meccanico: mi hai salvato la mattinata.»",
+   "frase": "Grazie, mi hai proprio salvato la giornata.",
+   "base": "Algoe, Haidt e Gable (2008): più gratitudine provavano le nuove arrivate in un'associazione studentesca verso chi le aveva accolte, più il loro legame era forte un mese dopo.",
+   "curio": {
+    "tit": "Trova, ricorda, lega",
+    "fatto": "Secondo la psicologa Sara Algoe la gratitudine ha tre compiti: ci fa trovare le persone giuste, ci ricorda quanto valgono e ci lega a loro. In uno studio, la gratitudine provata durante una settimana di accoglienza prevedeva un legame più stretto un mese dopo.",
+    "trad": "Il grazie è la colla delle amicizie."
+   },
+   "app": {
+    "come": "Lo studio ha seguito le ragazze appena entrate in tre associazioni studentesche femminili di un'università americana, durante una settimana in cui le più anziane le accoglievano con piccoli regali ed eventi organizzati per loro. Più gratitudine provavano le nuove arrivate, più giudicavano buono il rapporto un mese dopo; un legame simile, ma più debole, si vedeva anche nelle risposte delle ragazze più anziane. Algoe ha poi riassunto il ruolo della gratitudine con tre verbi: trovare, ricordare, legare.",
+    "prova": [
+     "Ringrazia per una cosa precisa, appena succede.",
+     "Nomina la qualità dell'altro: «sei stato gentile».",
+     "Ricordala anche dopo: «ripensavo a quando mi hai aiutato»."
+    ],
+    "att": "Un grazie di circostanza vale poco: conta riconoscere la persona, non solo il favore.",
+    "fonti": [
+     {
+      "c": "Algoe, S. B., Haidt, J., & Gable, S. L. (2008). Beyond reciprocity: Gratitude and relationships in everyday life. Emotion, 8(3), 425–429.",
+      "t": "studio",
+      "url": "https://doi.org/10.1037/1528-3542.8.3.425"
+     },
+     {
+      "c": "Algoe, S. B. (2012). Find, remind, and bind: The functions of gratitude in everyday relationships. Social and Personality Psychology Compass, 6(6), 455–469.",
+      "t": "studio",
+      "url": "https://doi.org/10.1111/j.1751-9004.2012.00439.x"
+     }
+    ]
    }
   }
  ],
@@ -1066,6 +1510,474 @@
    "t": "Partecipa almeno per un'ora a un'iniziativa di volontariato aperta a tutti e ringrazia di persona un volontario per quello che fa.",
    "nome": "🤲 Un'ora per gli altri",
    "bonus": "Scoprirai che il grazie torna indietro."
+  },
+  {
+   "id": "ap1n2",
+   "ab": "aprire",
+   "liv": 1,
+   "sit": "nuove",
+   "nome": "🍎 La domanda al banco",
+   "t": "Al mercato o in un negozio, saluta per primo e fai una domanda sulla merce: «Da dove arrivano queste mele?»",
+   "bonus": "Se ti racconta la storia di quello che vende, prenditi il tempo di ascoltarla."
+  },
+  {
+   "id": "ap1c2",
+   "ab": "aprire",
+   "liv": 1,
+   "sit": "colleghi",
+   "nome": "📬 Il saluto di corridoio",
+   "t": "Saluta con un sorriso un collega che incroci sempre e con cui non hai mai parlato.",
+   "bonus": "Domani aggiungi «Come va?»: è la seconda puntata."
+  },
+  {
+   "id": "ap1f2",
+   "ab": "aprire",
+   "liv": 1,
+   "sit": "famiglia",
+   "nome": "🤗 Giro di saluti",
+   "t": "Al prossimo incontro di famiglia, saluta tu per primo ognuno, anche i parenti acquisiti e i ragazzi, chiamandoli per nome.",
+   "bonus": "Se qualcuno ti chiede «come mai così allegro?», rispondi: «Mi fa piacere vedervi.»"
+  },
+  {
+   "id": "ap1g2",
+   "ab": "aprire",
+   "liv": 1,
+   "sit": "gruppi",
+   "nome": "🪑 La sedia giusta",
+   "t": "In una sala d'attesa, a un corso o a una riunione, siediti vicino a qualcuno invece che nell'angolo libero.",
+   "bonus": "Un sorriso quando ti siedi vale come presentazione."
+  },
+  {
+   "id": "ap2n2",
+   "ab": "aprire",
+   "liv": 2,
+   "sit": "nuove",
+   "nome": "🐕 Il cane come scusa",
+   "t": "Fai un complimento a chi porta a spasso un cane e chiedi come si chiama (il cane).",
+   "bonus": "Se la chiacchierata va, chiedi anche il nome del padrone."
+  },
+  {
+   "id": "ap2c2",
+   "ab": "aprire",
+   "liv": 2,
+   "sit": "colleghi",
+   "nome": "🍽️ Pranzo con vista nuova",
+   "t": "In mensa o al bar, siediti con colleghi con cui di solito non mangi.",
+   "bonus": "Chiedi da dove vengono: ogni collega ha una geografia da raccontare."
+  },
+  {
+   "id": "ap2f2",
+   "ab": "aprire",
+   "liv": 2,
+   "sit": "famiglia",
+   "nome": "🥖 Il vicino di tavola",
+   "t": "A un pranzo o a una festa di famiglia, siediti accanto alla persona che conosci meno (un parente acquisito, l'amico di un nipote) e apri tu la conversazione.",
+   "bonus": "Fatti dire una cosa che non sapevi di lui o di lei."
+  },
+  {
+   "id": "ap2g2",
+   "ab": "aprire",
+   "liv": 2,
+   "sit": "gruppi",
+   "nome": "🎯 Il primo a parlare",
+   "t": "In un gruppo nuovo, sii tu a fare la prima domanda a qualcuno.",
+   "bonus": "Chi rompe il silenzio, di solito, viene ricordato con simpatia."
+  },
+  {
+   "id": "ap3n2",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "nuove",
+   "nome": "🧳 Il turista smarrito",
+   "t": "Se vedi qualcuno che consulta la mappa con aria persa, chiedigli se ha bisogno di un'indicazione.",
+   "bonus": "Consiglia anche un buon caffè lì vicino: ambasciatore di Torino per un giorno."
+  },
+  {
+   "id": "ap3c2",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "colleghi",
+   "nome": "🤝 Il nuovo arrivato",
+   "t": "Presentati a un collega appena arrivato (o all'ultimo arrivato del gruppo) e offriti di spiegargli qualcosa.",
+   "bonus": "Ricordati com'era il tuo primo giorno."
+  },
+  {
+   "id": "ap3f2",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "famiglia",
+   "nome": "🍰 Benvenuto in famiglia",
+   "t": "Fai sentire il benvenuto a chi è entrato da poco in famiglia o nella tua compagnia: presentati tu e chiedigli qualcosa di sé.",
+   "bonus": "La volta dopo salutalo per nome: per chi è nuovo vale più di un regalo."
+  },
+  {
+   "id": "ap3g2",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "gruppi",
+   "nome": "🎭 Lezione di prova",
+   "t": "Partecipa a una lezione di prova di un corso mai fatto (ballo, coro, bocce, cucina) e parla con almeno una persona.",
+   "bonus": "Chiedi da quanto lo frequenta: avrai subito un aneddoto."
+  },
+  {
+   "id": "ap3v2",
+   "ab": "aprire",
+   "liv": 3,
+   "sit": "vol",
+   "nome": "🗺️ Giro di ricognizione",
+   "t": "Vai di persona a vedere un'associazione di volontariato (una sede, un evento aperto, un banchetto) e presentati.",
+   "bonus": "Porta una domanda pronta: «Che cosa fa un volontario nuovo il primo giorno?»"
+  },
+  {
+   "id": "vi1n2",
+   "ab": "viva",
+   "liv": 1,
+   "sit": "nuove",
+   "nome": "🌤️ Oltre il meteo",
+   "t": "Quando qualcuno ti parla del tempo, rilancia con una domanda su di lui: «E tu come passi le giornate così?»",
+   "bonus": "Il meteo è l'antipasto, non il pranzo."
+  },
+  {
+   "id": "vi1c2",
+   "ab": "viva",
+   "liv": 1,
+   "sit": "colleghi",
+   "nome": "☕ La pausa curiosa",
+   "t": "In pausa caffè, chiedi a un collega che cosa ha in programma per il fine settimana.",
+   "bonus": "Ricordatelo: lunedì gli chiedi com'è andata."
+  },
+  {
+   "id": "vi1f2",
+   "ab": "viva",
+   "liv": 1,
+   "sit": "famiglia",
+   "nome": "🎬 Il consiglio della settimana",
+   "t": "Chiedi a un familiare che cosa ha visto, letto o ascoltato di bello ultimamente, e perché gli è piaciuto.",
+   "bonus": "Se ti consiglia qualcosa, provalo davvero e diglielo."
+  },
+  {
+   "id": "vi1g2",
+   "ab": "viva",
+   "liv": 1,
+   "sit": "gruppi",
+   "nome": "👂 Il sale della conversazione",
+   "t": "In una conversazione di gruppo, fai almeno due domande agli altri prima di raccontare qualcosa di tuo.",
+   "bonus": "Si chiama dosare: come il sale."
+  },
+  {
+   "id": "vi2n2",
+   "ab": "viva",
+   "liv": 2,
+   "sit": "nuove",
+   "nome": "🎓 Lezione gratuita",
+   "t": "Chiedi a qualcuno di spiegarti una cosa che sa fare bene (il suo lavoro, un hobby).",
+   "bonus": "Le persone si illuminano quando insegnano."
+  },
+  {
+   "id": "vi2c2",
+   "ab": "viva",
+   "liv": 2,
+   "sit": "colleghi",
+   "nome": "🧭 Il consiglio richiesto",
+   "t": "Chiedi a un collega un consiglio su una cosa in cui è bravo.",
+   "bonus": "Chiedere un consiglio fa sentire l'altro stimato, e te più competente."
+  },
+  {
+   "id": "vi2f2",
+   "ab": "viva",
+   "liv": 2,
+   "sit": "famiglia",
+   "nome": "🔦 La domanda di sostanza",
+   "t": "A cena con la famiglia o con un amico, fai una domanda più profonda del solito: «Di che cosa sei più contento quest'anno?»",
+   "bonus": "Con gli sconosciuti va meglio del previsto, dice uno studio: figurati in famiglia."
+  },
+  {
+   "id": "vi2g2",
+   "ab": "viva",
+   "liv": 2,
+   "sit": "gruppi",
+   "nome": "🧶 Il filo comune",
+   "t": "In un gruppo, scopri una cosa in comune tra due persone e falla notare: «Ma allora anche voi…?»",
+   "bonus": "Hai appena cucito una conversazione."
+  },
+  {
+   "id": "vi3n2",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "nuove",
+   "nome": "🚂 Il compagno di viaggio",
+   "t": "In treno, in fila o in sala d'attesa, porta avanti una vera chiacchierata con uno sconosciuto per almeno cinque minuti.",
+   "bonus": "Se scendi alla tua fermata con un sorriso, missione compiuta."
+  },
+  {
+   "id": "vi3c2",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "colleghi",
+   "nome": "📖 La storia del collega",
+   "t": "Chiedi a un collega o ex collega come ha cominciato a fare il suo lavoro, e ascolta tutta la storia.",
+   "bonus": "Chiedi anche qual è stato il momento più strano."
+  },
+  {
+   "id": "vi3f2",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "famiglia",
+   "nome": "🕰️ La storia dietro la foto",
+   "t": "Prendi una vecchia foto di famiglia e fatti raccontare da un parente chi c'è, dove e quando, con almeno tre domande.",
+   "bonus": "Rileggigli la storia la volta dopo: scoprirai che si ricorda un altro pezzo."
+  },
+  {
+   "id": "vi3g2",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "gruppi",
+   "nome": "🍷 L'aperitivo senza telefono",
+   "t": "A un aperitivo o a una cena di gruppo, proponi: «Telefoni in tasca fino al caffè?»",
+   "bonus": "Se accettano, hai vinto la serata. Se ridono, hai vinto lo stesso."
+  },
+  {
+   "id": "vi3v2",
+   "ab": "viva",
+   "liv": 3,
+   "sit": "vol",
+   "nome": "🙋 Il volontario esperto",
+   "t": "Chiedi a un volontario che conosci (o che incontri) che cosa gli ha dato di più il volontariato.",
+   "bonus": "Ascolta senza interrompere: spesso è la risposta più bella della settimana."
+  },
+  {
+   "id": "fv1n2",
+   "ab": "vivo",
+   "liv": 1,
+   "sit": "nuove",
+   "nome": "👋 Ci rivediamo",
+   "t": "Quando rivedi una persona conosciuta di recente, salutala per nome.",
+   "bonus": "Se ricordi anche una cosa che ti aveva detto, è un colpo da maestro."
+  },
+  {
+   "id": "fv1c2",
+   "ab": "vivo",
+   "liv": 1,
+   "sit": "colleghi",
+   "nome": "🎂 Auguri sinceri",
+   "t": "Segna nel Calendario i compleanni (o gli onomastici) di tre colleghi o ex colleghi e, se uno cade in questi giorni, mandagli due righe.",
+   "bonus": "Personalizza: «Auguri, e spero che la bici nuova funzioni!» batte «Auguri!!!»"
+  },
+  {
+   "id": "fv1f2",
+   "ab": "vivo",
+   "liv": 1,
+   "sit": "famiglia",
+   "nome": "🎵 Ti ho pensato",
+   "t": "Manda a un familiare o a un amico una canzone, un articolo o una foto che ti ha fatto pensare a lui.",
+   "bonus": "Aggiungi una riga sul perché."
+  },
+  {
+   "id": "fv1g2",
+   "ab": "vivo",
+   "liv": 1,
+   "sit": "gruppi",
+   "nome": "🗳️ Il sondaggio del gruppo",
+   "t": "Nella chat di un gruppo, fai una domanda leggera a tutti: «Qual è il miglior posto per un caffè in zona?»",
+   "bonus": "Le domande facili risvegliano anche le chat più addormentate."
+  },
+  {
+   "id": "fv2n2",
+   "ab": "vivo",
+   "liv": 2,
+   "sit": "nuove",
+   "nome": "🔁 Promessa mantenuta",
+   "t": "Se hai detto a qualcuno «ti mando quel link» o «ti faccio sapere», fallo oggi.",
+   "bonus": "Le piccole promesse mantenute costruiscono la fiducia più in fretta di quelle grandi."
+  },
+  {
+   "id": "fv2c2",
+   "ab": "vivo",
+   "liv": 2,
+   "sit": "colleghi",
+   "nome": "🧾 Il grazie a distanza",
+   "t": "Scrivi a un ex collega per ringraziarlo di una cosa che ti ha insegnato.",
+   "bonus": "Cita un episodio preciso: «Ti ricordi quando mi hai spiegato…?»"
+  },
+  {
+   "id": "fv2f2",
+   "ab": "vivo",
+   "liv": 2,
+   "sit": "famiglia",
+   "nome": "📅 L'appuntamento fisso",
+   "t": "Proponi a un familiare o a un amico un appuntamento fisso: una telefonata la domenica, un caffè il giovedì.",
+   "bonus": "Le abitudini tengono vive le amicizie meglio delle buone intenzioni."
+  },
+  {
+   "id": "fv2g2",
+   "ab": "vivo",
+   "liv": 2,
+   "sit": "gruppi",
+   "nome": "📸 L'album condiviso",
+   "t": "Dopo un ritrovo di gruppo, manda a tutti le foto con una frase calda.",
+   "bonus": "Scegli quelle in cui vengono bene gli altri, non tu."
+  },
+  {
+   "id": "fv3n2",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "nuove",
+   "nome": "🚶 Il caffè che diventa abitudine",
+   "t": "Proponi a una persona conosciuta da poco di rivedervi ogni settimana per qualcosa (una passeggiata, un caffè, un corso).",
+   "bonus": "Le amicizie crescono con le ore insieme: questa è la scorciatoia."
+  },
+  {
+   "id": "fv3c2",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "colleghi",
+   "nome": "📞 La telefonata lunga",
+   "t": "Telefona (non scrivere) a un ex collega che non senti da più di un anno.",
+   "bonus": "Se risponde la segreteria, lascia un messaggio allegro: vale lo stesso."
+  },
+  {
+   "id": "fv3f2",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "famiglia",
+   "nome": "✉️ La lettera di carta",
+   "t": "Scrivi una lettera o una cartolina vera a un parente o a un amico lontano.",
+   "bonus": "Nell'epoca delle chat, una busta nella cassetta delle lettere è un piccolo evento."
+  },
+  {
+   "id": "fv3g2",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "gruppi",
+   "nome": "🧭 Il gruppo nuovo",
+   "t": "Scegli un gruppo con incontri fissi (cammino, lettura, coro, bocce), contatta gli organizzatori e segna nel Calendario il primo incontro.",
+   "bonus": "Al primo incontro presentati ad almeno una persona; al secondo salutala per nome."
+  },
+  {
+   "id": "fv3v2",
+   "ab": "vivo",
+   "liv": 3,
+   "sit": "vol",
+   "nome": "🗓️ Il turno fisso",
+   "t": "Se hai iniziato un volontariato, fissa un giorno della settimana e scrivilo nel Calendario.",
+   "bonus": "La costanza trasforma i compagni di turno in amici."
+  },
+  {
+   "id": "ca1n2",
+   "ab": "calore",
+   "liv": 1,
+   "sit": "nuove",
+   "nome": "🙏 Grazie negli occhi",
+   "t": "Oggi ringrazia tre persone che ti servono (alla cassa, al bar, sull'autobus) guardandole negli occhi e sorridendo.",
+   "bonus": "Se il nome è scritto sul cartellino, usalo: punti extra."
+  },
+  {
+   "id": "ca1c2",
+   "ab": "calore",
+   "liv": 1,
+   "sit": "colleghi",
+   "nome": "👏 L'applauso meritato",
+   "t": "Fai notare a un collega, davanti agli altri, una cosa che ha fatto bene.",
+   "bonus": "Le lodi in pubblico, le critiche in privato: regola antica e sempre valida."
+  },
+  {
+   "id": "ca1f2",
+   "ab": "calore",
+   "liv": 1,
+   "sit": "famiglia",
+   "nome": "🫖 Il caffè servito",
+   "t": "Prepara un caffè o un tè a un familiare senza che te lo chieda.",
+   "bonus": "Il vassoio d'argento è facoltativo."
+  },
+  {
+   "id": "ca1g2",
+   "ab": "calore",
+   "liv": 1,
+   "sit": "gruppi",
+   "nome": "😄 La risata condivisa",
+   "t": "In un gruppo, ridi di gusto a una battuta di un altro (se ti fa ridere davvero).",
+   "bonus": "La risata è contagiosa: lo dice la scienza, e anche la zia al pranzo di Natale."
+  },
+  {
+   "id": "ca2n2",
+   "ab": "calore",
+   "liv": 2,
+   "sit": "nuove",
+   "nome": "🌷 Il complimento al negozio",
+   "t": "Fai un complimento preciso a chi gestisce un negozio o un bar per come lo tiene.",
+   "bonus": "«Si vede che ci tiene» è la frase magica."
+  },
+  {
+   "id": "ca2c2",
+   "ab": "calore",
+   "liv": 2,
+   "sit": "colleghi",
+   "nome": "📝 Il bigliettino",
+   "t": "Lascia un bigliettino (o un messaggio) di ringraziamento a un collega per un aiuto ricevuto.",
+   "bonus": "Breve, preciso, firmato: tre ingredienti."
+  },
+  {
+   "id": "ca2f2",
+   "ab": "calore",
+   "liv": 2,
+   "sit": "famiglia",
+   "nome": "🎁 Il ricordo affettuoso",
+   "t": "Racconta a un familiare un bel ricordo che hai di lui o di lei.",
+   "bonus": "Comincia con «Ti ricordi quella volta che…?»"
+  },
+  {
+   "id": "ca2g2",
+   "ab": "calore",
+   "liv": 2,
+   "sit": "gruppi",
+   "nome": "🥂 Il brindisi al festeggiato",
+   "t": "In un gruppo, fai festeggiare a tutti un successo di qualcuno: «Brindiamo a…!»",
+   "bonus": "Il festeggiato arrossisce, gli altri sorridono: tutti contenti."
+  },
+  {
+   "id": "ca3n2",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "nuove",
+   "nome": "🦁 Il complimento allo sconosciuto",
+   "t": "Fai un complimento sincero e preciso a uno sconosciuto, non sull'aspetto: un cane ben educato, una bici curata, un bel gesto che hai visto.",
+   "bonus": "Poi saluta e vai: il complimento più bello è quello che non chiede niente in cambio."
+  },
+  {
+   "id": "ca3c2",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "colleghi",
+   "nome": "🏅 La lode che arriva in alto",
+   "t": "Scrivi due righe al responsabile di un collega o ex collega per dire che cosa ha fatto bene e perché ti è stato utile.",
+   "bonus": "Mandane una copia anche a lui: la lode che arriva al capo vale doppio."
+  },
+  {
+   "id": "ca3f2",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "famiglia",
+   "nome": "📸 La sorpresa su misura",
+   "t": "Organizza una piccola sorpresa per un familiare (la sua torta preferita, una gita, un album di foto).",
+   "bonus": "Il segreto è il dettaglio che solo tu conosci."
+  },
+  {
+   "id": "ca3g2",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "gruppi",
+   "nome": "🎤 Il brindisi breve",
+   "t": "A un pranzo o a una cena di gruppo, fai un brindisi di tre frasi con una cosa bella su chi ha organizzato.",
+   "bonus": "Tre frasi, non trenta: il pubblico ringrazia."
+  },
+  {
+   "id": "ca3v2",
+   "ab": "calore",
+   "liv": 3,
+   "sit": "vol",
+   "nome": "☀️ I nomi del turno",
+   "t": "Durante un'attività di volontariato, impara il nome di almeno due persone che aiuti o con cui fai il turno.",
+   "bonus": "La prossima volta salutale per nome: ti ricorderanno."
   }
  ],
  "domande_idee": [
@@ -1111,426 +2023,6 @@
   "fatto": "Dopo una chiacchierata tra sconosciuti, in media pensiamo di essere piaciuti meno di quanto siamo piaciuti davvero. Gli psicologi lo chiamano «liking gap».",
   "trad": "Quella frase venuta male l'hai notata soprattutto tu."
  },
- "quiz": [
-  {
-   "id": "q1",
-   "sch": "v1",
-   "q": "A cena il tuo vicino di posto dice: «Sono appena tornato dal Portogallo.» Tu:",
-   "op": [
-    {
-     "t": "«Io in Portogallo non ci sono mai stato.»",
-     "ok": 0,
-     "r": "Conversazione deceduta alle 21:14. Causa: muro."
-    },
-    {
-     "t": "«Bello. Mi passi il sale?»",
-     "ok": 0,
-     "r": "Il sale arriva, la conversazione no."
-    },
-    {
-     "t": "«Che cosa ti ha sorpreso di più?»",
-     "ok": 1,
-     "r": "Domanda di approfondimento: chi le fa piace di più. Ora preparati alle foto."
-    }
-   ]
-  },
-  {
-   "id": "q2",
-   "sch": "a2",
-   "q": "Ti presentano Roberta. Dopo tre minuti il nome è già evaporato. Tu:",
-   "op": [
-    {
-     "t": "La chiami «cara» per tutta la sera.",
-     "ok": 0,
-     "r": "Strategia diffusa. Lei se ne accorge."
-    },
-    {
-     "t": "«Scusa, mi ripeti il nome? Ci tengo a ricordarlo.»",
-     "ok": 1,
-     "r": "Capita a tutti, e chiederlo con un sorriso fa piacere. Poi richiamalo a mente tra qualche minuto."
-    },
-    {
-     "t": "Speri che qualcuno la chiami ad alta voce.",
-     "ok": 0,
-     "r": "Funziona solo alle Poste, col numerino."
-    }
-   ]
-  },
-  {
-   "id": "q3",
-   "sch": "a3",
-   "q": "In fila da venti minuti. La signora davanti a te sospira. Tu:",
-   "op": [
-    {
-     "t": "Sospiri più forte: gara di sospiri.",
-     "ok": 0,
-     "r": "Pareggio. Nessuno vince."
-    },
-    {
-     "t": "«Oggi si sono dati appuntamento tutti qui, eh?»",
-     "ok": 1,
-     "r": "Un commento su quello che condividete: il modo più semplice per aprire."
-    },
-    {
-     "t": "Fingi una telefonata importantissima.",
-     "ok": 0,
-     "r": "La fila resta lunga uguale, ma più solitaria."
-    }
-   ]
-  },
-  {
-   "id": "q4",
-   "sch": "c2",
-   "q": "Tuo cugino: «Ho trovato lavoro a Milano!» Tu:",
-   "op": [
-    {
-     "t": "«Milano? Con quella nebbia?»",
-     "ok": 0,
-     "r": "La nebbia ce l'abbiamo anche noi. E lui ci è rimasto male."
-    },
-    {
-     "t": "«Ah, bene.»",
-     "ok": 0,
-     "r": "Risposta tiepida: la notizia muore lì."
-    },
-    {
-     "t": "«Ma è fantastico! Che lavoro? Quando inizi?»",
-     "ok": 1,
-     "r": "Entusiasmo e domande: così l'altro si sente capito e ha voglia di raccontarti ancora."
-    }
-   ]
-  },
-  {
-   "id": "q5",
-   "sch": "v4",
-   "q": "La chiacchierata sul pianerottolo con il vicino è stata piacevole, ma devi andare. Tu:",
-   "op": [
-    {
-     "t": "Guardi l'orologio ogni trenta secondi finché capisce.",
-     "ok": 0,
-     "r": "Capisce. E si offende un po'."
-    },
-    {
-     "t": "«Che bello parlarti! Devo scappare, ma poi mi racconti il resto.»",
-     "ok": 1,
-     "r": "Chiudere con calore e lasciare un aggancio: buon ricordo garantito."
-    },
-    {
-     "t": "Inventi che ti sta bollendo il latte.",
-     "ok": 0,
-     "r": "Sul pianerottolo? Poco credibile. E una scusa chiude la porta, invece di lasciarla aperta."
-    }
-   ]
-  },
-  {
-   "id": "q6",
-   "sch": "f1",
-   "q": "Ti viene in mente un vecchio amico che non senti da due anni. Tu:",
-   "op": [
-    {
-     "t": "Pensi «chissà se si ricorda di me» e lasci perdere.",
-     "ok": 0,
-     "r": "Probabilmente si ricorda, e sarebbe contento di sentirti."
-    },
-    {
-     "t": "Gli scrivi: «Mi sei venuto in mente, come stai?»",
-     "ok": 1,
-     "r": "Un messaggio inatteso fa più piacere di quanto pensi chi lo manda."
-    },
-    {
-     "t": "Aspetti il suo compleanno, tra undici mesi.",
-     "ok": 0,
-     "r": "C'è una scorciatoia: si chiama «oggi»."
-    }
-   ]
-  },
-  {
-   "id": "q7",
-   "sch": "v2",
-   "q": "Un'amica ti racconta che il trasloco l'ha sfinita. Tu:",
-   "op": [
-    {
-     "t": "«Dovevi chiamare una ditta, te l'avevo detto.»",
-     "ok": 0,
-     "r": "Consiglio non richiesto e pure in ritardo: doppio errore."
-    },
-    {
-     "t": "«Quindi ti ha proprio sfinita… Qual è stata la parte peggiore?»",
-     "ok": 1,
-     "r": "Riformulare e invitare a raccontare fa sentire capiti più di un consiglio."
-    },
-    {
-     "t": "«Io ho traslocato in un giorno solo.»",
-     "ok": 0,
-     "r": "Medaglia d'oro nei traslochi, medaglia di legno nell'ascolto."
-    }
-   ]
-  },
-  {
-   "id": "q8",
-   "sch": "c1",
-   "q": "Il collega ha preparato una presentazione chiara e ordinata. Tu:",
-   "op": [
-    {
-     "t": "Pensi che è stato bravo, e te lo tieni per te.",
-     "ok": 0,
-     "r": "Il complimento rimasto in testa non scalda nessuno."
-    },
-    {
-     "t": "«Bella presentazione, ma la slide 7…»",
-     "ok": 0,
-     "r": "Il «ma» si è mangiato il complimento."
-    },
-    {
-     "t": "«Mi è piaciuto come hai spiegato i numeri: chiarissimo.»",
-     "ok": 1,
-     "r": "Preciso e sincero: farà più piacere di quanto immagini."
-    }
-   ]
-  },
-  {
-   "id": "q9",
-   "sch": "v1",
-   "q": "Un conoscente ti racconta della sua passione per la pesca. Tu della pesca sai zero. Tu:",
-   "op": [
-    {
-     "t": "Annuisci e pensi alla spesa.",
-     "ok": 0,
-     "r": "Se ne accorge dopo dieci secondi."
-    },
-    {
-     "t": "«Io preferisco il calcio.»",
-     "ok": 0,
-     "r": "Grazie per l'informazione. Fine."
-    },
-    {
-     "t": "«Non ne so niente: qual è il momento più bello di una giornata di pesca?»",
-     "ok": 1,
-     "r": "Ammettere di non sapere e chiedere è il modo migliore per farlo parlare di ciò che ama."
-    }
-   ]
-  },
-  {
-   "id": "q10",
-   "sch": "c3",
-   "q": "Primo giorno a un corso. Ti presenti:",
-   "op": [
-    {
-     "t": "«Buongiorno. Piacere.» Stretta di mano da notaio.",
-     "ok": 0,
-     "r": "Corretto, ma la temperatura è di 4 gradi."
-    },
-    {
-     "t": "«Ciao, piacere! Sono nuovo: mi sono già perso due volte per trovare l'aula.»",
-     "ok": 1,
-     "r": "Calore e un pizzico di autoironia: gli altri si rilassano subito."
-    },
-    {
-     "t": "Non ti presenti: tanto lo scopriranno.",
-     "ok": 0,
-     "r": "Lo scopriranno, sì. Tra tre settimane."
-    }
-   ]
-  },
-  {
-   "id": "q11",
-   "sch": "a4",
-   "q": "Il giornalaio ti saluta ogni mattina da anni, ma non sai come si chiama. Tu:",
-   "op": [
-    {
-     "t": "Continui così: ormai è tardi per chiederlo.",
-     "ok": 0,
-     "r": "Non è mai tardi. È solo un po' buffo, e va benissimo."
-    },
-    {
-     "t": "«Dopo tutti questi anni mi vergogno a chiederlo: come si chiama?»",
-     "ok": 1,
-     "r": "Dare un nome alla faccia: le chiacchiere con i conoscenti fanno bene all'umore."
-    },
-    {
-     "t": "Lo chiami «capo».",
-     "ok": 0,
-     "r": "Lui ti chiama «dottore». Siete pari."
-    }
-   ]
-  },
-  {
-   "id": "q12",
-   "sch": "f2",
-   "q": "Un mese fa un amico ti aveva detto che aspettava un'operazione al ginocchio. Lo rivedi. Tu:",
-   "op": [
-    {
-     "t": "Parli del tempo.",
-     "ok": 0,
-     "r": "Lui si chiede se l'avevi ascoltato."
-    },
-    {
-     "t": "«Com'è andata poi con il ginocchio?»",
-     "ok": 1,
-     "r": "Ricordarsi e chiedere notizie dimostra che ci tieni."
-    },
-    {
-     "t": "«Io ho mal di schiena da mesi, sai?»",
-     "ok": 0,
-     "r": "Gara di acciacchi: perdete tutti e due."
-    }
-   ]
-  },
-  {
-   "id": "q13",
-   "sch": "f4",
-   "q": "Vorresti nuovi amici. Che cosa funziona di più?",
-   "op": [
-    {
-     "t": "Andare ogni sera in un posto diverso.",
-     "ok": 0,
-     "r": "Tante facce, nessuna che ti riconosce."
-    },
-    {
-     "t": "Frequentare la stessa attività ogni settimana e fermarti a chiacchierare dopo.",
-     "ok": 1,
-     "r": "Le amicizie crescono con le ore passate insieme, meglio se tra chiacchiere e risate."
-    },
-    {
-     "t": "Aspettare che ti chiamino.",
-     "ok": 0,
-     "r": "Strategia del divano. Risultato garantito: niente."
-    }
-   ]
-  },
-  {
-   "id": "q14",
-   "sch": "v1",
-   "q": "A una cena di gruppo c'è una persona che non ha ancora detto una parola. Tu:",
-   "op": [
-    {
-     "t": "Lasci stare: se vuole parlare, parlerà.",
-     "ok": 0,
-     "r": "Forse. O forse aspettava solo un invito."
-    },
-    {
-     "t": "Le fai una domanda facile: «E tu, come conosci i padroni di casa?»",
-     "ok": 1,
-     "r": "Una domanda facile è un invito, non un'interrogazione: chi fa domande piace di più, e spesso chi taceva ha le storie migliori."
-    },
-    {
-     "t": "Racconti la tua barzelletta più lunga per riempire il silenzio.",
-     "ok": 0,
-     "r": "Il silenzio è riempito. Anche la pazienza degli altri."
-    }
-   ]
-  },
-  {
-   "id": "q15",
-   "sch": "c4",
-   "q": "Al bar c'è il collega che ieri ti ha dato una mano. Tu:",
-   "op": [
-    {
-     "t": "Lo saluti con un cenno e paghi il tuo.",
-     "ok": 0,
-     "r": "Corretto, ma hai perso un'occasione da un euro e venti."
-    },
-    {
-     "t": "«Il caffè lo offro io: grazie per ieri.»",
-     "ok": 1,
-     "r": "Un piccolo gesto gentile fa più piacere di quanto pensi, e mette di buon umore anche te."
-    },
-    {
-     "t": "Gli dici che la prossima volta offre lui.",
-     "ok": 0,
-     "r": "Contabilità precisa, simpatia zero."
-    }
-   ]
-  },
-  {
-   "id": "q16",
-   "sch": "intro",
-   "q": "Esci da una chiacchierata e pensi: «Che figura, ho parlato troppo». Probabilmente:",
-   "op": [
-    {
-     "t": "Hai fatto una figura peggiore di quanto pensi.",
-     "ok": 0,
-     "r": "Statisticamente improbabile."
-    },
-    {
-     "t": "Sei piaciuto più di quanto credi.",
-     "ok": 1,
-     "r": "È il «liking gap»: in media ci sottovalutiamo."
-    },
-    {
-     "t": "L'altro ti ha già cancellato dalla rubrica.",
-     "ok": 0,
-     "r": "Ma no. Respira."
-    }
-   ]
-  },
-  {
-   "id": "q17",
-   "sch": "a1",
-   "q": "Entri in un negozio dove non sei mai stato. Tu:",
-   "op": [
-    {
-     "t": "Entri in silenzio e cerchi da solo per dieci minuti.",
-     "ok": 0,
-     "r": "Missione compiuta, ma in solitaria."
-    },
-    {
-     "t": "«Buongiorno! Mi può aiutare? Cerco…»",
-     "ok": 1,
-     "r": "Saluto e sorriso: anche uno scambio breve e sincero mette di buon umore."
-    },
-    {
-     "t": "Chiedi «Avete…?» senza salutare.",
-     "ok": 0,
-     "r": "Ti rispondono, ma il termometro segna gelo."
-    }
-   ]
-  },
-  {
-   "id": "q18",
-   "sch": "v3",
-   "q": "Un collega ti racconta che ha iniziato un corso di cucina. Tu:",
-   "op": [
-    {
-     "t": "«Io non so cuocere neanche un uovo.»",
-     "ok": 0,
-     "r": "Onesto, ma la conversazione resta senza sale."
-    },
-    {
-     "t": "«Anch'io ho provato a fare il pane: un disastro! Tu che cosa hai imparato finora?»",
-     "ok": 1,
-     "r": "Un tuo pezzetto, breve, e poi la parola torna a lui: la reciprocità avvicina."
-    },
-    {
-     "t": "«Cucinare è roba da ristoranti.»",
-     "ok": 0,
-     "r": "E il collega torna ai fornelli, da solo."
-    }
-   ]
-  },
-  {
-   "id": "q19",
-   "sch": "f4",
-   "q": "Hai letto di un'associazione che cerca volontari per fare compagnia agli anziani. Tu:",
-   "op": [
-    {
-     "t": "«Prima o poi chiamo.»",
-     "ok": 0,
-     "r": "«Prima o poi» è il posto dove le buone idee vanno a dormire."
-    },
-    {
-     "t": "Chiami oggi e chiedi un colloquio.",
-     "ok": 1,
-     "r": "Il primo passo è il più corto. E un'attività fissa è il terreno migliore per nuove amicizie."
-    },
-    {
-     "t": "Mandi il link a un amico: «Fallo tu.»",
-     "ok": 0,
-     "r": "Generoso. Ma la missione era tua."
-    }
-   ]
-  }
- ],
  "frasi": [
   {
    "id": "rompi",
@@ -1543,7 +2035,10 @@
     "Qual è il tuo posto preferito per un caffè, qui intorno?",
     "Come mai hai scelto questo corso?",
     "Che bel cane: come si chiama?",
-    "Secondo te oggi piove o ci risparmia?"
+    "Secondo te oggi piove o ci risparmia?",
+    "Bella giornata per una passeggiata, vero?",
+    "Abiti qui in zona?",
+    "C'è sempre tanta gente qui: è sempre così?"
    ]
   },
   {
@@ -1557,7 +2052,10 @@
     "Che cosa ti ha sorpreso?",
     "Raccontami meglio questa storia.",
     "E adesso che cosa ti aspetti?",
-    "Qual è stata la parte più difficile?"
+    "Qual è stata la parte più difficile?",
+    "Come ti è venuta l'idea?",
+    "Che cosa hai imparato da quell'esperienza?",
+    "Ma dai! E com'è finita?"
    ]
   },
   {
@@ -1572,7 +2070,10 @@
     "Qual è il piatto che ti riesce meglio?",
     "C'è qualcosa che aspetti con piacere nei prossimi mesi?",
     "Com'è cambiato il quartiere da quando ci abiti?",
-    "Qual è stata la cosa più bella di questo periodo?"
+    "Qual è stata la cosa più bella di questo periodo?",
+    "Qual è il posto di Torino che preferisci?",
+    "Qual è una cosa che hai imparato a fare da poco?",
+    "Qual è la cosa più strana che ti è capitata questa settimana?"
    ]
   },
   {
@@ -1585,7 +2086,9 @@
     "Com'è andata poi con…?",
     "Ti va un caffè una di queste mattine?",
     "Ho ritrovato questa foto di qualche anno fa: te la ricordi?",
-    "Volevo dirti grazie per…"
+    "Volevo dirti grazie per…",
+    "Ti va di sentirci al telefono uno di questi giorni?",
+    "Allora, quand'è che ci prendiamo quel caffè?"
    ]
   },
   {
@@ -1598,7 +2101,9 @@
     "Questa me la devi insegnare.",
     "Hai avuto un'ottima idea a…",
     "Mi hai fatto venire voglia di provarci anch'io.",
-    "Grazie: mi hai proprio aiutato."
+    "Grazie: mi hai proprio aiutato.",
+    "Hai un talento per…",
+    "Ti vedo contento: che bello!"
    ]
   },
   {
@@ -1610,7 +2115,77 @@
     "Ti lascio andare, ma poi mi racconti com'è finita.",
     "Che bella chiacchierata: alla prossima!",
     "Sono contento di averti conosciuto.",
-    "Ci vediamo la settimana prossima?"
+    "Ci vediamo la settimana prossima?",
+    "Grazie del tempo, mi ha fatto bene.",
+    "Salutami tutti a casa!"
+   ]
+  },
+  {
+   "id": "nomi",
+   "ic": "📛",
+   "n": "Per i nomi",
+   "f": [
+    "Scusa, mi ripeti il nome? Ci tengo a ricordarlo.",
+    "Piacere, io sono… e tu?",
+    "Ho una memoria da pesce rosso per i nomi: me lo ridici?",
+    "Come si scrive? Così me lo ricordo meglio.",
+    "Che bel nome: c'è una storia dietro?"
+   ]
+  },
+  {
+   "id": "feste",
+   "ic": "🎉",
+   "n": "Alle feste e nei gruppi",
+   "f": [
+    "Come conosci i padroni di casa?",
+    "Che cosa ti ha portato qui stasera?",
+    "Hai già assaggiato quella torta? Ne vale la pena?",
+    "Ti presento…: anche lei è appassionata di…",
+    "Qual è stata la parte più bella della giornata, per te?"
+   ]
+  },
+  {
+   "id": "telefono",
+   "ic": "📞",
+   "n": "Al telefono",
+   "f": [
+    "Ti disturbo? Ti rubo solo due minuti.",
+    "Ti ho chiamato perché mi andava di sentirti.",
+    "Raccontami: che cosa c'è di nuovo?",
+    "Allora ci aggiorniamo presto, d'accordo?"
+   ]
+  },
+  {
+   "id": "ricevere",
+   "ic": "🙏",
+   "n": "Per ricevere un complimento",
+   "f": [
+    "Grazie, mi fa davvero piacere!",
+    "Grazie! Ci ho messo un po' di impegno.",
+    "Grazie, detto da te vale doppio.",
+    "Grazie per averlo notato."
+   ]
+  },
+  {
+   "id": "scuse",
+   "ic": "🤗",
+   "n": "Per scusarsi con garbo",
+   "f": [
+    "Hai ragione, ho sbagliato: scusami.",
+    "Mi spiace per il ritardo, grazie di avermi aspettato.",
+    "Scusa, ti ho interrotto: continua pure.",
+    "Ieri sono stato brusco: scusami, non te lo meritavi."
+   ]
+  },
+  {
+   "id": "no",
+   "ic": "🙅",
+   "n": "Per dire di no con gentilezza",
+   "f": [
+    "Grazie dell'invito! Stavolta non riesco, ma la prossima ci sono.",
+    "Mi piacerebbe, ma questa settimana sono pieno: facciamo la prossima?",
+    "Grazie, preferisco di no; però mi fa piacere che tu me l'abbia chiesto.",
+    "Oggi passo, ma tienimi presente per la prossima volta!"
    ]
   }
  ],
