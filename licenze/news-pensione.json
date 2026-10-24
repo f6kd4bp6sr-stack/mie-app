@@ -1,8 +1,27 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-24T13:08:00+02:00",
+ "updated": "2026-10-24T17:00:00+02:00",
  "voci": [
+  {
+   "id": "n20261023-straordinari",
+   "d": "2026-10-23",
+   "titolo": "D.L. 193/2026: 50 milioni per gli straordinari già svolti dalle Forze di polizia, 9 alla Guardia di Finanza",
+   "sintesi": "Il decreto-legge 23 ottobre 2026, n. 193 (misure per autotrasporto, agricoltura e pesca), pubblicato nella G.U. S.G. n. 247 del 23/10 e in vigore dal 24/10, all'art. 8 («Misure in favore dell'ordine e della sicurezza pubblica») autorizza per il 2026 50 milioni di euro per pagare le prestazioni di lavoro straordinario già svolte dal personale delle Forze di polizia, in deroga all'art. 23, comma 2, del D.Lgs. 75/2017: Polizia di Stato 24 milioni, Carabinieri 15, Guardia di Finanza 9, Polizia Penitenziaria 2. Secondo il testo riportato da Al.Si.P.Pe. (24/10), confermato da IlFaroOnline e Corriere Nazionale; comunicato del Governo non raggiungibile.",
+   "fonte": "Al.Si.P.Pe. (testo del D.L. 193/2026)",
+   "url": "https://www.alsippe.it/2026/10/24/60108/",
+   "fonti2": [
+    "https://www.ilfaroonline.it/2026/10/24/decreto-autotrasporto-50-milioni-per-pagare-gli-straordinari-delle-forze-di-polizia/655602",
+    "https://www.corrierenazionale.net/2026/10/24/disposizioni-urgenti-per-il-carovita-e-la-pubblica-sicurezza/"
+   ],
+   "temi": [
+    "contratto"
+   ],
+   "tocca": [
+    "arretrati"
+   ],
+   "effetto": "Per la pensione per ora non cambia nulla: è un finanziamento una tantum per il 2026 degli straordinari già svolti, non un aumento stabile degli stipendi."
+  },
   {
    "id": "n20261021-tasso",
    "d": "2026-10-21",
@@ -263,21 +282,21 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -291,7 +310,7 @@
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -305,7 +324,7 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -326,7 +345,7 @@
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -375,21 +394,21 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -452,7 +471,7 @@
    "n": "Al.Si.P.Pe.",
    "url": "https://www.alsippe.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-18T12:58:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -494,7 +513,7 @@
    "n": "ForzeArmate.org",
    "url": "https://forzearmate.org/",
    "tipo": "testata",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-10-24T17:00:00+02:00",
    "esito": "ok"
   },
   {
@@ -580,6 +599,20 @@
    "tipo": "sindacato militari",
    "ultimo": "2026-10-24T13:08:00+02:00",
    "esito": "ok"
+  },
+  {
+   "n": "IlFaroOnline",
+   "url": "https://www.ilfaroonline.it/",
+   "tipo": "testata",
+   "ultimo": "2026-10-24T17:00:00+02:00",
+   "esito": "ok"
+  },
+  {
+   "n": "Corriere Nazionale",
+   "url": "https://www.corrierenazionale.net/",
+   "tipo": "testata",
+   "ultimo": "2026-10-24T17:00:00+02:00",
+   "esito": "ok"
   }
  ],
  "controlli": [
@@ -657,6 +690,11 @@
    "at": "2026-10-24T13:08:00+02:00",
    "notizie": 2,
    "note": "giro delle 13 (nessun giro registrato dal 20/10 alle 23): due notizie nuove, i coefficienti di trasformazione 2027-2028 (decreto direttoriale del 16/10, pubblicato dal Ministero del Lavoro il 20/10: a 60 anni 4,475%) e il tasso di capitalizzazione 2026 ufficiale (21/10: 1,063359), entrambi passati a «uscito» in attesa; aggiornate la voce sulla manovra (AGI 23/10: Consiglio dei ministri atteso il 27-28/10) e la voce sulla stima del tasso. Gazzetta fino alla S.G. n. 247 del 23/10: DPR di recepimento non ancora pubblicato; quota F.A.F. 2027 attesa nel 2028. USIF (22/10 tavolo in Funzione Pubblica sulle norme sindacali; 24/10 vittime del dovere), SILF e SINAFI senza novità su contratto o pensione; SIULP Flash 43 del 24/10 senza novità; INPS: messaggi fino al n. 3422 del 23/10 e circolare n. 108 del 22/10, nessuno sul comparto. Tassi di mercato: BTP 5 anni 4,05% e 10 anni 4,56% alla chiusura del 23/10, 2 anni invariato (nessuna seconda fonte); BTP Valore chiuso con 16,6 miliardi e cedole definitive 3,75/4,20/4,75%; miglior deposito libero 3,25% (Banca AideXa, aggiunto ai prodotti); vincolati invariati; BCE e inflazione invariate; BBVA non ricontrollato (cambia a inizio trimestre). Scheda rev. 8: coefficiente 2027 ufficiale e tasso 2026 annotati. Non raggiungibili: Governo, MEF (comunicato BTP Valore); non ricontrollati in questo giro Camera, Senato, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-10-24T17:00:00+02:00",
+   "notizie": 1,
+   "note": "giro delle 17: una notizia nuova, l'art. 8 del D.L. 23/10/2026 n. 193 (G.U. S.G. n. 247 del 23/10): 50 milioni per il 2026 per gli straordinari già svolti dalle Forze di polizia, 9 alla Guardia di Finanza (testo riportato da Al.Si.P.Pe., confermato da IlFaroOnline e Corriere Nazionale). Gazzetta ferma alla S.G. n. 247 del 23/10: DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Legge di bilancio 2027: Consiglio dei ministri ancora atteso tra il 27 e il 28/10 (BusinessOnline 24/10), nessuna misura nuova per il comparto. USIF (ultime 22/10 e 24/10), SILF (22/10) e SINAFI senza novità su contratto o pensione; INPS: ultimo messaggio n. 3422 del 23/10. Tassi di mercato invariati (sabato, mercati chiusi; BTP 2 anni senza seconda fonte); prodotti invariati. Scheda invariata. Non raggiungibili: Governo; non ricontrollati in questo giro MEF, ISTAT, Ministero del Lavoro, Camera, Senato, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
   }
  ],
  "mercati": [
