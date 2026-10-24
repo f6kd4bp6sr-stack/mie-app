@@ -1,5 +1,5 @@
-// Il mio mondo: funziona anche senza internet. Versione 8c96f539a5
-const CACHE = 'mondo-8c96f539a5';
+// Il mio mondo: funziona anche senza internet. Versione 7f5b5a46a4
+const CACHE = 'mondo-7f5b5a46a4';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 const SCOPE = new URL(self.registration.scope).pathname;
@@ -14,6 +14,6 @@ self.addEventListener('fetch', e => {
   if (rel.includes('/')) return; // altre app nelle sottocartelle (licenze, semestre, sorgenti…): non toccarle
   if (rel.endsWith('version.json')) return; // sempre dalla rete
   // pagina dell'app: prima la rete (per gli aggiornamenti), se manca internet la copia salvata; le altre pagine (guida) dalla rete
-  if (e.request.mode === 'navigate') { if (rel !== '' && rel !== 'index.html') return; e.respondWith(fetch(e.request, { cache: 'no-store' }).then(r => { if (r.ok) { const cp = r.clone(); caches.open(CACHE).then(c => c.put('./index.html', cp)); return r; } return caches.match('./index.html').then(h => h || r); }).catch(() => caches.match('./index.html'))); return; }
-  e.respondWith(caches.match(e.request).then(hit => hit || fetch(e.request).then(r => { if (r.ok || r.type === 'opaque') { const cp = r.clone(); caches.open(CACHE).then(c => c.put(e.request, cp)); } return r; })));
+  if (e.request.mode === 'navigate') { if (rel !== '' && rel !== 'index.html') return; e.respondWith(fetch(e.request, { cache: 'no-store' }).then(r => { if (r.ok) { const cp = r.clone(); caches.open(CACHE).then(c => c.put('./index.html', cp)); return r; } return caches.open(CACHE).then(c => c.match('./index.html')).then(h => h || r); }).catch(() => caches.open(CACHE).then(c => c.match('./index.html')))); return; }
+  e.respondWith(caches.open(CACHE).then(c => c.match(e.request)).then(hit => hit || fetch(e.request).then(r => { if (r.ok || r.type === 'opaque') { const cp = r.clone(); caches.open(CACHE).then(c => c.put(e.request, cp)); } return r; })));
 });

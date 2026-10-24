@@ -17,7 +17,7 @@ ARG_IDS = {u: {t[0] for t in L} for u, L in _A.items()}
 import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
 from guardia import guarda  # impronte con chiave segreta: tools/guardia.py
-GUARD_SALUTE = [[1, 4, 1, "cee06d995a56a537", ""], [1, 9, 0, "114db3c7cd1b4074", ""], [3, 21, 0, "1d2c1ad5207a93ee", ""], [1, 3, 1, "4a09cc2c8b726798", ""], [1, 3, 1, "00dce94d056fe6f8", ""], [2, 13, 0, "03267d6e86ec0cbb", ""], [2, 13, 0, "4317506eb099605b", ""], [1, 7, 0, "ad6138077f1f8a4e", ""], [1, 13, 0, "95d6081731a75a76", ""], [2, 19, 0, "d541b4e74d6fe990", ""]]  # impronte con chiave segreta (tools/guardia.py)
+REGOLE = [[1, 8, 1, "17d316fb6aaea33f", "3:7023d4088b10f675"], [2, 4, 1, "d4eb37f3cce424a7", "5:bdb91dfc0ed25b91"], [1, 3, 1, "00dce94d056fe6f8", ""], [1, 24, 1, "1739f0243d3f2c13", "3:887ba3cab007b13d"], [2, 10, 1, "f1a8dda78463004c", ""], [2, 8, 0, "96c49a4255e63b65", ""], [3, 16, 1, "cb73f87f58d68ba1", ""], [1, 8, 1, "71329b55344e6cbe", "5:cc41954e778612ef"], [2, 10, 1, "263b981f6db9673f", ""], [2, 14, 0, "e28b442a9db9aa96", "6:ac977d350ebd9564"], [1, 15, 0, "49e9276fa4f28371", "3:3a8b748e89ecd63c"], [3, 16, 0, "c7f876c4c0fb50ff", "6:8f43a20a16030014"], [1, 26, 1, "f085758f13a94e72", ""], [1, 6, 1, "34f6e758db748466", ""], [1, 23, 1, "e925b6a5e2599cfc", ""], [1, 16, 1, "65ccfd26a6d02e17", ""], [3, 22, 1, "032e72623e0fc6d3", "3:df256fb32f1c8011"], [1, 14, 1, "0a89a3329073622a", "4:22484374032354d6"], [1, 4, 1, "cee06d995a56a537", ""], [2, 13, 0, "03267d6e86ec0cbb", ""], [1, 22, 1, "602824a9ab4266a6", "3:0f916d4894bc562b"], [2, 19, 1, "05649204bb97fb04", ""], [1, 9, 0, "114db3c7cd1b4074", ""], [2, 6, 1, "a20956b008da2b3c", ""], [1, 12, 0, "454066fe658202db", ""], [1, 17, 1, "886a53b73e42139a", ""], [1, 9, 0, "88a23aad31aec233", "6:71f3533a00f68eb2"], [3, 26, 1, "efd16299610d9ac2", ""], [3, 8, 0, "f34ea7798ad64919", "5:20ef8a726813536d"], [1, 7, 0, "ad6138077f1f8a4e", ""], [3, 25, 0, "57f79438518d2fc2", ""], [1, 8, 0, "92e6b0fb3e18cf29", ""], [2, 13, 0, "4317506eb099605b", ""], [1, 23, 0, "47e6a8ae6decbf00", "5:b67fbb849d5ec775"], [1, 18, 1, "7790327a52d59355", ""], [2, 12, 1, "45538852ff5dfc2c", ""], [2, 14, 0, "540d79984e97811b", ""], [3, 17, 1, "bf7187794fefbade", ""], [3, 21, 0, "1d2c1ad5207a93ee", ""], [1, 3, 1, "4a09cc2c8b726798", ""], [1, 13, 0, "95d6081731a75a76", ""], [1, 25, 0, "b41d6d22570de03b", "6:4438e8712069adaf"], [2, 26, 1, "82ec80f6bf1a3f9b", "4:b7a0d29c954ed470"], [1, 8, 1, "0a36874017e6c1ce", ""], [1, 16, 0, "be7d4fce0820e1b6", "3:adf34b2bebda3784"], [2, 19, 0, "d541b4e74d6fe990", ""]]  # impronte con chiave segreta, mescolate a impronte casuali (tools/guardia.py)
 words = lambda s: len(str(s).split())
 
 
@@ -64,7 +64,7 @@ def run(write=True):
             # argomento: ogni domanda ne ha uno, scritto in data/domande/argomenti.json
             if x.get('arg') not in ARG_IDS.get(u, set()): err.append(f'{where}: argomento «{x.get("arg", "")}» mancante o sconosciuto (data/domande/argomenti.json)')
             txt = ' '.join([x.get('q', ''), *opts, x.get('k', ''), x.get('e', '')]).lower()
-            if guarda(txt, GUARD_SALUTE): err.append(f'{where}: termine vietato')
+            if guarda(txt, REGOLE): err.append(f'{where}: termine vietato')
     # spiegazioni con racconto e mappa (data/domande/../spiegazioni/<materia>.json)
     SPD = D + 'data/spiegazioni/'
     _DIS = open(D + 'data/domande/disegno.js', encoding='utf-8').read() if os.path.exists(D + 'data/domande/disegno.js') else ''
@@ -79,7 +79,7 @@ def run(write=True):
             if u == 'mate':
                 if not t.isdigit(): err.append(f'{w}: per la matematica la chiave è il numero della tappa')
             elif t not in ARG_IDS.get(u, set()): err.append(f'{w}: argomento inesistente')
-            if guarda(json.dumps(d, ensure_ascii=False), GUARD_SALUTE): err.append(f'{w}: termine vietato (racconto, mappa, «insieme» o «chiedi»)')
+            if guarda(json.dumps(d, ensure_ascii=False), REGOLE): err.append(f'{w}: termine vietato (racconto, mappa, «insieme» o «chiedi»)')
             nodi = d.get('nodi', []); ids = [n.get('id') for n in nodi]
             if not (4 <= len(nodi) <= 6): err.append(f'{w}: servono da 4 a 6 nodi')
             if len(set(ids)) != len(ids): err.append(f'{w}: nodi con lo stesso id')
@@ -107,7 +107,7 @@ def run(write=True):
                 for n in sl.get('nodi', []):
                     if n not in ids: err.append(f'{w}: schermata {k + 1} cita il nodo inesistente «{n}»')
                     nel.add(n)
-                if guarda(sl.get('t', '').lower(), GUARD_SALUTE): err.append(f'{w}: termine vietato')
+                if guarda(sl.get('t', '').lower(), REGOLE): err.append(f'{w}: termine vietato')
             for n in ids:
                 if n not in nel: err.append(f'{w}: il nodo «{n}» non compare nel racconto')
             cov = set()
@@ -134,7 +134,7 @@ def run(write=True):
                 if cu == u and ct == t: err.append(f'{w}: collegamento a se stesso')
     # curiosità, missioni e testi delle materie (data/domande/*.js)
     for f in sorted(glob.glob(D + 'data/domande/*.js')):
-        if guarda(open(f, encoding='utf-8').read(), GUARD_SALUTE): err.append(f'{os.path.basename(f)}: termine vietato')
+        if guarda(open(f, encoding='utf-8').read(), REGOLE): err.append(f'{os.path.basename(f)}: termine vietato')
     # registro dei codici: un codice registrato non può sparire
     reg_f, rit_f = QDIR + '_codici.txt', QDIR + '_ritirati.txt'
     reg = set(open(reg_f).read().split()) if os.path.exists(reg_f) else set()

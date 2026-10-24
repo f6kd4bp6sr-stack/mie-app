@@ -1,182 +1,182 @@
 [
-  {
-    "t": "Ciao, sono tuo schiavo!",
-    "x": "«Ciao» viene dal veneziano «s'ciavo», cioè «(sono vostro) schiavo»: un modo molto gentile per dire «ai vostri ordini». Oggi è una parola amichevole che si usa in tutto il mondo!",
-    "ic": "👋",
-    "q": "Da quale dialetto viene la parola «ciao»?",
-    "ok": "Dal veneziano",
-    "wrong": [
-      "Dal napoletano",
-      "Dal siciliano"
-    ],
-    "src": "Treccani, Vocabolario (ciao)"
-  },
-  {
-    "t": "La scuola era tempo libero",
-    "x": "«Scuola» viene dal greco «scholé», che indicava il tempo libero usato con piacere per pensare e imparare. Per gli antichi Greci studiare era un modo bello di usare il tempo libero!",
-    "ic": "🏫",
-    "q": "Che cosa indicava la parola greca «scholé»?",
-    "ok": "Il tempo libero per pensare",
-    "wrong": [
-      "Il banco degli alunni",
-      "La punizione"
-    ],
-    "src": "Treccani, Vocabolario (scuola)"
-  },
-  {
-    "t": "La crusca e il frullone",
-    "x": "L'Accademia della Crusca, a Firenze, studia la lingua italiana da più di 400 anni. Il nome è uno scherzo: come il frullone separa la farina dalla crusca, loro separano le parole buone dalle cattive!",
-    "ic": "🌾",
-    "q": "Che cosa vuol dire il nome «Crusca» per l'Accademia?",
-    "ok": "Separare le parole buone dalle cattive",
-    "wrong": [
-      "Mangiare pane a merenda",
-      "Coltivare grano in campagna"
-    ],
-    "src": "Accademia della Crusca (Origini e fondazione)"
-  },
-  {
-    "t": "Un indovinello antichissimo",
-    "x": "Uno dei testi più antichi vicini all'italiano è un indovinello scritto a Verona più di 1100 anni fa: buoi che arano un campo bianco e seminano semi neri. Soluzione: le dita che scrivono con l'inchiostro sulla pagina!",
-    "ic": "🐂",
-    "q": "Nell'indovinello veronese, che cosa sono i «semi neri»?",
-    "ok": "L'inchiostro",
-    "wrong": [
-      "Il carbone",
-      "Le olive"
-    ],
-    "src": "Geopop; Biblioteca Capitolare di Verona"
-  },
-  {
-    "t": "«Sao ko kelle terre»",
-    "x": "Nel 960, a Capua, un testimone in tribunale disse «Sao ko kelle terre…» («So che quelle terre…»). È il primo documento ufficiale in volgare italiano che conosciamo: l'italiano ha un «certificato di nascita»!",
-    "ic": "📜",
-    "q": "In che anno fu scritto il Placito di Capua?",
-    "ok": "Nel 960",
-    "wrong": [
-      "Nel 1492",
-      "Nel 1861"
-    ],
-    "src": "Finestre sull'Arte; Biblioteca di Montecassino"
-  },
-  {
-    "t": "Frate Sole e sora Luna",
-    "x": "Intorno al 1224 san Francesco d'Assisi scrisse il «Cantico delle creature», in volgare, chiamando «frate» il Sole e il vento e «sora» (sorella) la Luna e l'acqua. È uno dei primi grandi testi della letteratura italiana.",
-    "ic": "☀️",
-    "q": "Come chiama la Luna san Francesco nel Cantico?",
-    "ok": "Sora Luna",
-    "wrong": [
-      "Frate Luna",
-      "Madre Luna"
-    ],
-    "src": "Avvenire; Cantico delle creature (1224)"
-  },
-  {
-    "t": "«Divina» è arrivata dopo",
-    "x": "Dante intitolò il suo poema solo «Commedia». La parola «Divina» comparve nel titolo molto più tardi, in un'edizione stampata a Venezia nel 1555: era così ammirata da sembrare… divina!",
-    "ic": "📖",
-    "q": "Che titolo diede Dante al suo poema?",
-    "ok": "Commedia",
-    "wrong": [
-      "Divina Commedia",
-      "Inferno e Paradiso"
-    ],
-    "src": "University of Notre Dame, Dante collection (ed. Giolito 1555)"
-  },
-  {
-    "t": "Parole arrivate dall'arabo",
-    "x": "Molte parole italiane vengono dall'arabo: «zucchero» da «sukkar» e «magazzino» da «makhāzin», luoghi dove si conservano le cose. Ogni volta che addolcisci il tè, parli un po' arabo!",
-    "ic": "🍬",
-    "q": "Da quale lingua viene la parola «zucchero»?",
-    "ok": "Dall'arabo",
-    "wrong": [
-      "Dal tedesco",
-      "Dal giapponese"
-    ],
-    "src": "Treccani, Vocabolario (zucchero, magazzino)"
-  },
-  {
-    "t": "La matita era una pietra",
-    "x": "«Matita» viene da «amatita», cioè «ematite», un minerale che un tempo si usava per disegnare. Oggi le matite hanno la grafite, ma il nome ricorda ancora la pietra antica!",
-    "ic": "✏️",
-    "q": "Da quale minerale prende il nome la matita?",
-    "ok": "Dall'ematite",
-    "wrong": [
-      "Dal diamante",
-      "Dal marmo"
-    ],
-    "src": "Treccani, Vocabolario (matita)"
-  },
-  {
-    "t": "La virgola è una bacchettina",
-    "x": "«Virgola» viene dal latino «virgula», che vuol dire «piccola verga», cioè bacchettina. Guardala: sembra proprio un bastoncino un po' storto messo tra le parole!",
-    "ic": "🪄",
-    "q": "Che cosa vuol dire il latino «virgula»?",
-    "ok": "Piccola bacchetta",
-    "wrong": [
-      "Piccola pausa",
-      "Piccola onda"
-    ],
-    "src": "Treccani, Vocabolario (virgola)"
-  },
-  {
-    "t": "Chiocciola o arroba?",
-    "x": "In italiano il simbolo @ si chiama «chiocciola», perché si arrotola come il guscio di una lumaca. In spagnolo si chiama «arroba», il nome di un'antica unità di peso di circa 11 kg!",
-    "ic": "🐌",
-    "q": "Come si chiama il simbolo @ in spagnolo?",
-    "ok": "Arroba",
-    "wrong": [
-      "Caracol",
-      "Arriba"
-    ],
-    "src": "RAE, Diccionario (arroba)"
-  },
-  {
-    "t": "Pèsca o pésca?",
-    "x": "«Pesca» si scrive uguale ma si dice in due modi: «pèsca», con la e aperta, è il frutto; «pésca», con la e chiusa, è andare a pescare. Mangi una pèsca mentre fai la pésca!",
-    "ic": "🍑",
-    "q": "Con la e aperta, «pèsca» è…",
-    "ok": "Il frutto",
-    "wrong": [
-      "Andare a pescare",
-      "Una lotteria"
-    ],
-    "src": "Treccani, Vocabolario (pesca)"
-  },
-  {
-    "t": "L'italiano abita anche in Svizzera",
-    "x": "L'italiano non si parla solo in Italia: è una delle quattro lingue nazionali della Svizzera, insieme a tedesco, francese e romancio. In Ticino quasi tutti parlano italiano!",
-    "ic": "🇨🇭",
-    "q": "In quale regione svizzera si parla soprattutto italiano?",
-    "ok": "In Ticino",
-    "wrong": [
-      "A Ginevra",
-      "A Zurigo"
-    ],
-    "src": "Confederazione Svizzera, aboutswitzerland.eda.admin.ch"
-  },
-  {
-    "t": "La musica parla italiano",
-    "x": "In tutto il mondo, sugli spartiti, i musicisti leggono parole italiane: «piano» (piano piano), «forte», «allegro», «crescendo». Anche il pianoforte si chiama così perché suona sia piano sia forte!",
-    "ic": "🎹",
-    "q": "Sugli spartiti, che cosa vuol dire «forte»?",
-    "ok": "Suonare con un suono forte",
-    "wrong": [
-      "Suonare molto veloce",
-      "Smettere di suonare"
-    ],
-    "src": "Treccani, Vocabolario (pianoforte, forte)"
-  },
-  {
-    "t": "Una frase con tutte le lettere",
-    "x": "«Pranzo d'acqua fa volti sghembi» contiene tutte le 21 lettere dell'alfabeto italiano! Una frase così si chiama «pangramma», dal greco «tutte le lettere». Prova a inventarne una tu!",
-    "ic": "🔤",
-    "q": "Che cos'è un pangramma?",
-    "ok": "Una frase con tutte le lettere",
-    "wrong": [
-      "Una frase senza vocali",
-      "Una frase che rima"
-    ],
-    "src": "Verifica delle lettere fatta al computer"
-  }
+ {
+  "t": "Ciao, sono tuo schiavo!",
+  "x": "«Ciao» viene dal veneziano «s'ciavo», cioè «(sono vostro) schiavo»: un modo molto gentile per dire «ai vostri ordini». Oggi è una parola amichevole che si usa in tutto il mondo!",
+  "ic": "👋",
+  "q": "Da quale dialetto viene la parola «ciao»?",
+  "ok": "Dal veneziano",
+  "wrong": [
+   "Dal napoletano",
+   "Dal siciliano"
+  ],
+  "src": "Treccani, Vocabolario (ciao)"
+ },
+ {
+  "t": "La scuola era tempo libero",
+  "x": "«Scuola» viene dal greco «scholé», che indicava il tempo libero usato con piacere per pensare e imparare. Per gli antichi Greci studiare era un modo bello di usare il tempo libero!",
+  "ic": "🏫",
+  "q": "Che cosa indicava la parola greca «scholé»?",
+  "ok": "Il tempo libero per pensare",
+  "wrong": [
+   "Il banco degli alunni",
+   "La punizione"
+  ],
+  "src": "Treccani, Vocabolario (scuola)"
+ },
+ {
+  "t": "La crusca e il frullone",
+  "x": "L'Accademia della Crusca, a Firenze, studia la lingua italiana da più di 400 anni. Il nome è uno scherzo: come il frullone separa la farina dalla crusca, loro separano le parole buone dalle cattive!",
+  "ic": "🌾",
+  "q": "Che cosa vuol dire il nome «Crusca» per l'Accademia?",
+  "ok": "Separare le parole buone dalle cattive",
+  "wrong": [
+   "Mangiare pane a merenda",
+   "Coltivare grano in campagna"
+  ],
+  "src": "Accademia della Crusca (Origini e fondazione)"
+ },
+ {
+  "t": "Un indovinello antichissimo",
+  "x": "Uno dei testi più antichi vicini all'italiano è un indovinello scritto a Verona più di 1100 anni fa: buoi che arano un campo bianco e seminano semi neri. Soluzione: le dita che scrivono con l'inchiostro sulla pagina!",
+  "ic": "🐂",
+  "q": "Nell'indovinello veronese, che cosa sono i «semi neri»?",
+  "ok": "L'inchiostro",
+  "wrong": [
+   "Il carbone",
+   "Le olive"
+  ],
+  "src": "Geopop; Biblioteca Capitolare di Verona"
+ },
+ {
+  "t": "«Sao ko kelle terre»",
+  "x": "Nel 960, a Capua, un testimone in tribunale disse «Sao ko kelle terre…» («So che quelle terre…»). È il primo documento ufficiale in volgare italiano che conosciamo: l'italiano ha un «certificato di nascita»!",
+  "ic": "📜",
+  "q": "In che anno fu scritto il Placito di Capua?",
+  "ok": "Nel 960",
+  "wrong": [
+   "Nel 1492",
+   "Nel 1861"
+  ],
+  "src": "Finestre sull'Arte; Biblioteca di Montecassino"
+ },
+ {
+  "t": "Frate Sole e sora Luna",
+  "x": "Intorno al 1224 san Francesco d'Assisi scrisse il «Cantico delle creature», in volgare, chiamando «frate» il Sole e il vento e «sora» (sorella) la Luna e l'acqua. È uno dei primi grandi testi della letteratura italiana.",
+  "ic": "☀️",
+  "q": "Come chiama la Luna san Francesco nel Cantico?",
+  "ok": "Sora Luna",
+  "wrong": [
+   "Frate Luna",
+   "Madre Luna"
+  ],
+  "src": "Avvenire; Cantico delle creature (1224)"
+ },
+ {
+  "t": "«Divina» è arrivata dopo",
+  "x": "Dante intitolò il suo poema solo «Commedia». La parola «Divina» comparve nel titolo molto più tardi, in un'edizione stampata a Venezia nel 1555: era così ammirata da sembrare… divina!",
+  "ic": "📖",
+  "q": "Che titolo diede Dante al suo poema?",
+  "ok": "Commedia",
+  "wrong": [
+   "Divina Commedia",
+   "Inferno e Paradiso"
+  ],
+  "src": "University of Notre Dame, Dante collection (ed. Giolito 1555)"
+ },
+ {
+  "t": "Parole arrivate dall'arabo",
+  "x": "Molte parole italiane vengono dall'arabo: «zucchero» da «sukkar» e «magazzino» da «makhāzin», luoghi dove si conservano le cose. Ogni volta che addolcisci il tè, parli un po' arabo!",
+  "ic": "🍬",
+  "q": "Da quale lingua viene la parola «zucchero»?",
+  "ok": "Dall'arabo",
+  "wrong": [
+   "Dal tedesco",
+   "Dal giapponese"
+  ],
+  "src": "Treccani, Vocabolario (zucchero, magazzino)"
+ },
+ {
+  "t": "La matita era una pietra",
+  "x": "«Matita» viene da «amatita», cioè «ematite», un minerale che un tempo si usava per disegnare. Oggi le matite hanno la grafite, ma il nome ricorda ancora la pietra antica!",
+  "ic": "✏️",
+  "q": "Da quale minerale prende il nome la matita?",
+  "ok": "Dall'ematite",
+  "wrong": [
+   "Dal diamante",
+   "Dal marmo"
+  ],
+  "src": "Treccani, Vocabolario (matita)"
+ },
+ {
+  "t": "La virgola è una bacchettina",
+  "x": "«Virgola» viene dal latino «virgula», che vuol dire «piccola verga», cioè bacchettina. Guardala: sembra proprio un bastoncino un po' storto messo tra le parole!",
+  "ic": "🪄",
+  "q": "Che cosa vuol dire il latino «virgula»?",
+  "ok": "Piccola bacchetta",
+  "wrong": [
+   "Piccola pausa",
+   "Piccola onda"
+  ],
+  "src": "Treccani, Vocabolario (virgola)"
+ },
+ {
+  "t": "Chiocciola o arroba?",
+  "x": "In italiano il simbolo @ si chiama «chiocciola», perché si arrotola come il guscio di una lumaca. In spagnolo si chiama «arroba», il nome di un'antica unità di peso di circa 11 kg!",
+  "ic": "🐌",
+  "q": "Come si chiama il simbolo @ in spagnolo?",
+  "ok": "Arroba",
+  "wrong": [
+   "Caracol",
+   "Arriba"
+  ],
+  "src": "RAE, Diccionario (arroba)"
+ },
+ {
+  "t": "Pèsca o pésca?",
+  "x": "«Pesca» si scrive uguale ma si dice in due modi: «pèsca», con la e aperta, è il frutto; «pésca», con la e chiusa, è andare a pescare. Mangi una pèsca mentre fai la pésca!",
+  "ic": "🍑",
+  "q": "Con la e aperta, «pèsca» è…",
+  "ok": "Il frutto",
+  "wrong": [
+   "Andare a pescare",
+   "Una lotteria"
+  ],
+  "src": "Treccani, Vocabolario (pesca)"
+ },
+ {
+  "t": "L'italiano abita anche in Svizzera",
+  "x": "L'italiano non si parla solo in Italia: è una delle quattro lingue nazionali della Svizzera, insieme a tedesco, francese e romancio. In Ticino quasi tutti parlano italiano!",
+  "ic": "🇨🇭",
+  "q": "In quale regione svizzera si parla soprattutto italiano?",
+  "ok": "In Ticino",
+  "wrong": [
+   "A Ginevra",
+   "A Zurigo"
+  ],
+  "src": "Confederazione Svizzera, aboutswitzerland.eda.admin.ch"
+ },
+ {
+  "t": "La musica parla italiano",
+  "x": "In tutto il mondo, sugli spartiti, i musicisti leggono parole italiane: «piano» (piano piano), «forte», «allegro», «crescendo». Anche il pianoforte si chiama così perché suona sia piano sia forte!",
+  "ic": "🎹",
+  "q": "Sugli spartiti, che cosa vuol dire «forte»?",
+  "ok": "Suonare con un suono forte",
+  "wrong": [
+   "Suonare molto veloce",
+   "Smettere di suonare"
+  ],
+  "src": "Treccani, Vocabolario (pianoforte, forte)"
+ },
+ {
+  "t": "Una frase con tutte le lettere",
+  "x": "«Pranzo d'acqua fa volti sghembi» contiene tutte le 21 lettere dell'alfabeto italiano! Una frase così si chiama «pangramma», dal greco «tutte le lettere». Prova a inventarne una tu!",
+  "ic": "🔤",
+  "q": "Che cos'è un pangramma?",
+  "ok": "Una frase con tutte le lettere",
+  "wrong": [
+   "Una frase senza vocali",
+   "Una frase che rima"
+  ],
+  "src": "Verifica delle lettere fatta al computer"
+ }
 ]

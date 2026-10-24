@@ -142,8 +142,8 @@ _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 
 from guardia import guarda  # impronte con chiave segreta: tools/guardia.py
 # tutte le regole: quelle del controllo dei contenuti (tools/controlla.py) e quelle delle sorgenti pubbliche (tools/sorgenti_pubbliche.py)
 _g = lambda f, n: eval(re.search('^' + n + r' = (\[\[.*?\]\])', open(D + 'tools/' + f, encoding='utf-8').read(), re.M).group(1))
-GUARD_SALUTE = _g('controlla.py', 'GUARD_SALUTE') + _g('sorgenti_pubbliche.py', 'GUARD')
-if guarda(idx, GUARD_SALUTE): print('TERMINE VIETATO nel file pubblicato: stop'); sys.exit(1)
+REGOLE = _g('controlla.py', 'REGOLE') + _g('sorgenti_pubbliche.py', 'REGOLE')
+if guarda(idx, REGOLE): print('TERMINE VIETATO nel file pubblicato: stop'); sys.exit(1)
 open(P+'index.html','w',encoding='utf-8').write(idx)
 open(P+'manifest.webmanifest','w').write(json.dumps({
   "name": "Il mio mondo", "short_name": "Il mio mondo", "start_url": "./", "scope": "./",
@@ -167,8 +167,8 @@ self.addEventListener('fetch', e => {
   if (rel.includes('/')) return; // altre app nelle sottocartelle (licenze, semestre, sorgenti…): non toccarle
   if (rel.endsWith('version.json')) return; // sempre dalla rete
   // pagina dell'app: prima la rete (per gli aggiornamenti), se manca internet la copia salvata; le altre pagine (guida) dalla rete
-  if (e.request.mode === 'navigate') { if (rel !== '' && rel !== 'index.html') return; e.respondWith(fetch(e.request, { cache: 'no-store' }).then(r => { if (r.ok) { const cp = r.clone(); caches.open(CACHE).then(c => c.put('./index.html', cp)); return r; } return caches.match('./index.html').then(h => h || r); }).catch(() => caches.match('./index.html'))); return; }
-  e.respondWith(caches.match(e.request).then(hit => hit || fetch(e.request).then(r => { if (r.ok || r.type === 'opaque') { const cp = r.clone(); caches.open(CACHE).then(c => c.put(e.request, cp)); } return r; })));
+  if (e.request.mode === 'navigate') { if (rel !== '' && rel !== 'index.html') return; e.respondWith(fetch(e.request, { cache: 'no-store' }).then(r => { if (r.ok) { const cp = r.clone(); caches.open(CACHE).then(c => c.put('./index.html', cp)); return r; } return caches.open(CACHE).then(c => c.match('./index.html')).then(h => h || r); }).catch(() => caches.open(CACHE).then(c => c.match('./index.html')))); return; }
+  e.respondWith(caches.open(CACHE).then(c => c.match(e.request)).then(hit => hit || fetch(e.request).then(r => { if (r.ok || r.type === 'opaque') { const cp = r.clone(); caches.open(CACHE).then(c => c.put(e.request, cp)); } return r; })));
 });
 ''' % (ver, ver))
 print('pwa ok', ver)

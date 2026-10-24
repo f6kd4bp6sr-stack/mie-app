@@ -42,12 +42,14 @@ async function cloudConnect(fromButton) {
   snap.docs.forEach(d => {
     const b = d.data(); if (!b || typeof b.k !== 'string') return;
     if (b.k === '__snap') { CLOUD_SNAPS.push({ d: b.d, t: b.t, v: b.v }); return; }
-    if (b.k.startsWith('__')) return;
+    if (b.k.startsWith('__') || b.k === 'link-cfg') return;
     cloudT[b.k] = b.t || 0;
     if ((b.t || 0) > (store._stamp[b.k] || 0)) { try { store.set(b.k, JSON.parse(b.v), true, b.t); changed = true; } catch (e) {} }
   });
-  store._push = k => { if (k.startsWith('__')) return; pending.add(k); schedule(250); };
-  Object.keys(store._mem).forEach(k => { if (!k.startsWith('__') && (store._stamp[k] || 1) > (cloudT[k] || 0)) pending.add(k); });
+  /* il collegamento con i genitori (chiave GitHub e chiave di cifratura) non va mai nel database dell'account */
+  store._push = k => { if (k.startsWith('__') || k === 'link-cfg') return; pending.add(k); schedule(250); };
+  try { col.doc(docId('link-cfg')).delete().catch(() => {}); } catch (e) {}
+  Object.keys(store._mem).forEach(k => { if (!k.startsWith('__') && k !== 'link-cfg' && (store._stamp[k] || 1) > (cloudT[k] || 0)) pending.add(k); });
   // prova di scrittura e rilettura: il cloud è «ok» solo se quello che scrivo torna indietro uguale
   const probe = { k: '__probe', t: Date.now(), v: JSON.stringify(Date.now()) };
   try {
@@ -187,7 +189,7 @@ async function linkPaint() {
   if (c) {
     el2.innerHTML = '<div class="bk-lk" style="margin-top:8px"><span>🔗 <b>Invio automatico attivo</b> · 🔒 spazio privato · ' + (c.err ? '<b class="lk-err">⚠️ ' + esc(c.err) + '</b> · ultimo invio riuscito ' + when(c.last) : 'ultimo invio ' + when(c.last)) + '</span>' +
       '<button type="button" class="btn small ghost" id="lk-now">Invia ora</button><button type="button" class="btn small ghost" id="lk-qr2">📷 Nuovo QR</button><button type="button" class="btn small ghost" id="lk-key">🔑 Nuova chiave</button><button type="button" class="btn small ghost" id="lk-off">Scollega</button></div>' +
-      '<div class="bk-lk-set" id="lk-keybox"' + (window.__lkKey || c.err ? '' : ' hidden') + '><small>La chiave GitHub è scaduta o non funziona? Creane una nuova (permesso <b>gist</b>, scadenza <b>No expiration</b>) e incollala qui: codice e collegamento restano gli stessi, i genitori non devono rifare niente.</small>' +
+      '<div class="bk-lk-set" id="lk-keybox"' + (window.__lkKey || c.err ? '' : ' hidden') + '><small>La chiave GitHub è scaduta o non funziona? Creane una nuova (permesso <b>gist</b>, scadenza <b>1 anno</b> (l’app avvisa prima che scada)) e incollala qui: codice e collegamento restano gli stessi, i genitori non devono rifare niente.</small>' +
       '<input type="password" id="lk-newtok" placeholder="Nuova chiave GitHub (inizia con ghp_)" autocomplete="off"><button type="button" class="btn small" id="lk-savetok">Salva la chiave</button><div id="lk-msg2" class="bk-lk-msg"></div></div>';
     window.__lkKey = false;
     $('lk-now').addEventListener('click', async () => { $('lk-now').textContent = '⏳'; await A.push(true); linkPaint(); });
@@ -202,9 +204,9 @@ async function linkPaint() {
       if (ok) { linkPaint(); refreshLinkWarn(); if (typeof toastV2 === 'function') toastV2('✅ Chiave salvata: i progressi ripartono'); }
       else { m.textContent = 'Non riuscito: ' + ((A.cfg() || {}).err || 'controlla internet') + '.'; $('lk-savetok').disabled = false; }
     });
-    $('lk-off').addEventListener('click', () => { const b = $('lk-off'); if (b.dataset.sure) { A.off(); store.set('link-cfg', null); linkPaint(); } else { b.dataset.sure = 1; b.textContent = 'Tocca ancora'; } });
+    $('lk-off').addEventListener('click', async () => { const b = $('lk-off'); if (b.dataset.sure) { b.textContent = '⏳'; await A.off(); store.set('link-cfg', null); linkPaint(); refreshLinkWarn(); } else { b.dataset.sure = 1; b.textContent = 'Tocca ancora'; } });
   } else {
-    el2.innerHTML = (c0 && c0.need ? '<div class="bk-lk lk-err" style="margin-top:8px"><span>🔒 <b>Per sicurezza il collegamento va rinnovato.</b> Lo spazio vecchio su GitHub è stato cancellato: serve un QR nuovo dal genitore.</span></div>' : '') +
+    el2.innerHTML = (c0 && c0.need ? '<div class="bk-lk lk-err" style="margin-top:8px"><span>🔒 <b>Per sicurezza il collegamento va rinnovato.</b> ' + (c0.wiped ? 'Lo spazio vecchio su GitHub è stato cancellato' : 'Lo spazio vecchio su GitHub si cancella appena colleghi il QR nuovo') + ': serve un QR nuovo dal genitore.</span></div>' : '') +
       '<div class="bk-lk" style="margin-top:8px"><span>🔗 <b>Invio automatico ai genitori</b>: in Pianificazione → Progressi un genitore prepara un QR; qui lo inquadri e basta.</span><button type="button" class="btn small" id="lk-scan">📷 Collegati con il QR</button></div>' +
       '<details class="bk-lk-set"><summary>🔗 Oppure collega a mano con la chiave GitHub</summary>' +
       '<input type="password" id="lk-tok" placeholder="Chiave GitHub (permesso gist)" autocomplete="off">' +
@@ -250,7 +252,7 @@ async function linkApply(txt) {
   if (j.v !== 2) { openModal('<div style="font-size:50px">🔒</div><div class="big" style="font-size:24px">QR vecchio</div><p style="font-weight:700">Questo QR è della versione vecchia, meno sicura. Chiedi a mamma o papà di prepararne uno nuovo in Pianificazione → Progressi.</p><button type="button" class="btn" id="qs-ok" data-focus>Ok</button>'); $('qs-ok').addEventListener('click', closeModal); return; }
   let old = null; try { old = JSON.parse(localStorage.getItem('msync-cfg') || 'null'); } catch (e) {}
   /* gli spazi vecchi pubblici si cancellano subito con la chiave nuova */
-  try { await linkLoad(); const A0 = window.__mondoSyncApi; if (A0 && A0.wipeOld) await A0.wipeOld(j.t, old && old.gist && old.v !== 2 ? old.gist : ''); } catch (e) {}
+  try { await linkLoad(); const A0 = window.__mondoSyncApi; if (A0 && A0.wipeOld) await A0.wipeOld(j.t, old && old.gist && old.gist !== j.g ? old.gist : (old && old.oldGist) || ''); } catch (e) {}
   try { localStorage.setItem('msync-cfg', JSON.stringify({ token: j.t, gist: j.g, key: j.k, v: 2, owner: '', last: old && old.gist === j.g ? old.last : 0, h: '', err: '' })); } catch (e) {}
   keepLink();
   const fresh = !D || !(D.energy > 0);
@@ -276,7 +278,7 @@ function wireLinkWarn() { const w = $('io-lkw'); if (!w) return; w.addEventListe
 /* ---------- 📱 QR per i genitori: i progressi passano inquadrando lo schermo ---------- */
 const QR_BASE = 'https://f6kd4bp6sr-stack.github.io/mie-app/licenze/progressi.html#';
 function qrData(days) {
-  const P = 'vale2-', KEEP = ['days', 'prog', 'math-done', 'sci-done', 'games-done', 'tab-best', 'simon-best', 'clock-level', 'cuoca-level', 'moves-done', 'path-day', 'gems', 'piggy', 'diff-level'], d = {};
+  const P = 'mm2-', KEEP = ['days', 'prog', 'math-done', 'sci-done', 'games-done', 'tab-best', 'simon-best', 'clock-level', 'cuoca-level', 'moves-done', 'path-day', 'gems', 'piggy', 'diff-level'], d = {};
   KEEP.forEach(k => { const v = store.get(k, undefined); if (v !== undefined) d[k] = v; });
   const ref = iso(addDays(new Date(), -days));
   const pd = store.get('prog-days', {}); d['prog-days'] = {}; Object.keys(pd).filter(x => x >= ref).forEach(x => d['prog-days'][x] = pd[x]);
@@ -308,7 +310,7 @@ async function openQR() {
   openModal('<div class="big" style="font-size:26px">📱 Per i genitori</div>' +
     (svg ? '<div class="qr-box">' + svg + '</div><p style="font-weight:700">Apri <b>Progressi</b> sul telefono o sull’iPad del genitore, tocca <b>📷 Leggi il QR</b> e inquadra questo codice. Va bene anche la fotocamera dell’iPhone.</p>'
          : '<p style="font-weight:800">I dati sono troppi per un QR: usa 📤 Condividi in 🐉 Io → 📊 Progressi.</p>') +
-    '<p style="font-size:14px;color:var(--ink-soft);font-weight:700">Dentro ci sono solo i contatori dello studio: niente diario, niente nome. Non passa da internet.</p>' +
+    '<p style="font-size:14px;color:var(--ink-soft);font-weight:700">Dentro ci sono i contatori dello studio, le emozioni e le presenze del diario e il nome del drago: niente testi del diario, niente nome della bimba. Non passa da internet.</p>' +
     '<div class="row center"><button type="button" class="btn ghost" id="qr-x" data-focus>Chiudi</button></div>', ['var(--c5)', 'var(--c5-soft)']);
   $('qr-x').addEventListener('click', closeModal);
 }
@@ -332,7 +334,7 @@ function wireBackup() {
     try {
       const j = JSON.parse(await f.text());
       if (!isAppFile(j) || !j.state || !j.state.data) throw new Error('bad');
-      Object.keys(j.state.data).forEach(k => { if (!k.startsWith('__')) store.set(k, j.state.data[k], false, Date.now()); });
+      Object.keys(j.state.data).forEach(k => { if (!k.startsWith('__') && k !== 'link-cfg') store.set(k, j.state.data[k], false, Date.now()); });
       D = store.get('dragon', null); CHILD = store.get('child', null) || {}; applyChild(); updateBar(); go('home'); floatText($('p-home'), 'Ripristinato! ✅');
     } catch (e) { openModal('<div class="big">Ops!</div><p style="font-weight:800">Questo file non è una copia di sicurezza dell’app.</p><button type="button" class="btn" id="bk-ok" data-focus>Ok</button>'); $('bk-ok').addEventListener('click', closeModal); }
     fi.value = '';
@@ -462,7 +464,8 @@ async function cloudSnapshot() {
   if (!CLOUD) return;
   const day = todayIso();
   if (store.get('__cloudSnapDay', '') === day) return;
-  const v = JSON.stringify(snapData());
+  const sd = snapData(); if (sd && sd.data) { delete sd.data['link-cfg']; if (sd.t) delete sd.t['link-cfg']; }
+  const v = JSON.stringify(sd);
   if (v.length > 240000) return;
   try {
     await withRetry(() => CLOUD.col.doc('snap_' + day).set({ k: '__snap', d: day, t: Date.now(), v: v }), 2);
@@ -487,7 +490,7 @@ async function openSnapshots() {
     $('sn-yes').addEventListener('click', () => {
       dailySnapshot();
       const st = x.get(); const now = Date.now();
-      Object.keys(st.data).forEach(k => { if (!k.startsWith('__')) store.set(k, st.data[k], false, now); });
+      Object.keys(st.data).forEach(k => { if (!k.startsWith('__') && k !== 'link-cfg') store.set(k, st.data[k], false, now); });
       closeModal(); D = store.get('dragon', null); CHILD = store.get('child', null) || {}; applyChild(); updateBar(); go('home'); floatText($('p-home'), 'Ripristinato! ✅');
     });
   }));
@@ -588,7 +591,7 @@ function restoreFromFile() {
       try {
         const j = JSON.parse(await f.text());
         if (!isAppFile(j) || !j.state || !j.state.data) throw new Error('bad');
-        Object.keys(j.state.data).forEach(k => { if (!k.startsWith('__')) store.set(k, j.state.data[k], false, Date.now()); });
+        Object.keys(j.state.data).forEach(k => { if (!k.startsWith('__') && k !== 'link-cfg') store.set(k, j.state.data[k], false, Date.now()); });
         D = store.get('dragon', null); CHILD = store.get('child', null) || {}; applyChild(); closeModal(); updateBar(); go('home'); floatText($('p-home'), 'Bentornata! ✅');
       } catch (e) { alert('Questo file non è una copia dei progressi dell\u2019app.'); }
       fi.value = '';

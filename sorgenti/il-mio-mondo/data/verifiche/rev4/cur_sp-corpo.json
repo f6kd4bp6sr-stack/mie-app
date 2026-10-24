@@ -1,182 +1,182 @@
 [
-  {
-    "t": "Il muscolo più piccolo",
-    "x": "Il muscolo più piccolo del corpo si chiama stapedio: è nell'orecchio ed è lungo poco più di 1 millimetro! Aiuta a smorzare le vibrazioni dei suoni troppo forti.",
-    "ic": "👂",
-    "q": "Dove si trova lo stapedio, il muscolo più piccolo?",
-    "ok": "Nell'orecchio",
-    "wrong": [
-      "Nel piede",
-      "Nella pancia"
-    ],
-    "src": "en.wikipedia.org (Stapedius)"
-  },
-  {
-    "t": "Il muscolo più grande",
-    "x": "Il muscolo più grande del corpo è il grande gluteo, nel sedere! È lui che ti rialza quando sei accovacciata e ti aiuta a correre e saltare.",
-    "ic": "🍑",
-    "q": "Qual è il muscolo più grande del corpo?",
-    "ok": "Il grande gluteo",
-    "wrong": [
-      "Il bicipite",
-      "Il cuore"
-    ],
-    "src": "loc.gov; en.wikipedia.org"
-  },
-  {
-    "t": "Chi è il più forte?",
-    "x": "Il muscolo più forte? Non c'è un solo campione: per il suo peso vince il massetere (masticare), per la forza il soleo del polpaccio, e il cuore è il più instancabile!",
-    "ic": "🏅",
-    "q": "Quale muscolo è il più instancabile del corpo?",
-    "ok": "Il cuore",
-    "wrong": [
-      "Il mignolo",
-      "L'orecchio"
-    ],
-    "src": "loc.gov (Everyday Mysteries)"
-  },
-  {
-    "t": "Il piccolo cervello",
-    "x": "Il cervelletto, dietro la testa, occupa circa un decimo del cervello ma ha la maggior parte dei suoi neuroni! Rende i movimenti precisi e aiuta a impararli: il regista dei salti.",
-    "ic": "🎬",
-    "q": "Che cosa fa il cervelletto?",
-    "ok": "Rende i movimenti precisi",
-    "wrong": [
-      "Fa battere il cuore",
-      "Fa crescere i capelli"
-    ],
-    "src": "en.wikipedia.org (Cerebellum)"
-  },
-  {
-    "t": "Perché gira la testa",
-    "x": "Nell'orecchio hai 3 piccoli canali pieni di liquido. Quando giri e ti fermi, il liquido continua a muoversi un attimo: il cervello pensa che giri ancora ed ecco il capogiro!",
-    "ic": "😵‍💫",
-    "q": "Che cosa c'è nei canali dell'orecchio che sentono le rotazioni?",
-    "ok": "Un liquido",
-    "wrong": [
-      "Aria calda",
-      "Sabbia"
-    ],
-    "src": "en.wikipedia.org (Semicircular canals)"
-  },
-  {
-    "t": "Mani e piedi pieni di ossa",
-    "x": "Ogni mano ha 27 ossa e ogni piede 26: in tutto 106! Più della metà delle 206 ossa di un adulto sta in mani e piedi. Per questo si muovono in tanti modi.",
-    "ic": "🦶",
-    "q": "Quante ossa ha una mano?",
-    "ok": "27",
-    "wrong": [
-      "5",
-      "100"
-    ],
-    "src": "en.wikipedia.org (Hand, Foot)"
-  },
-  {
-    "t": "Ossa sempre nuove",
-    "x": "Le ossa sono vive e si ricostruiscono di continuo: in circa 10 anni gran parte dello scheletro di un adulto viene rinnovata. Come una casa che rifà i mattoni pian piano!",
-    "ic": "🦴",
-    "q": "Ogni quanto si rinnova gran parte dello scheletro di un adulto?",
-    "ok": "Circa ogni 10 anni",
-    "wrong": [
-      "Ogni giorno",
-      "Mai"
-    ],
-    "src": "ncbi.nlm.nih.gov (Surgeon General)"
-  },
-  {
-    "t": "Le zone che ti fanno crescere",
-    "x": "Alle estremità delle ossa lunghe ci sono le cartilagini di accrescimento: lì l'osso si allunga e tu diventi più alta. Si chiudono verso la fine dell'adolescenza.",
-    "ic": "📏",
-    "q": "Dove crescono in lunghezza le ossa?",
-    "ok": "Alle estremità, nelle cartilagini",
-    "wrong": [
-      "Al centro dell'osso",
-      "Nella pelle"
-    ],
-    "src": "en.wikipedia.org (Epiphyseal plate)"
-  },
-  {
-    "t": "Fibre rosse e fibre bianche",
-    "x": "I muscoli hanno fibre lente, rosse, che resistono a lungo, e fibre rapide, bianche, per gli scatti. Il rosso viene dalla mioglobina, che tiene l'ossigeno. Maratona o salto?",
-    "ic": "🔴",
-    "q": "A che cosa servono soprattutto le fibre rapide?",
-    "ok": "Agli scatti veloci",
-    "wrong": [
-      "A dormire meglio",
-      "A digerire"
-    ],
-    "src": "en.wikipedia.org (Skeletal muscle)"
-  },
-  {
-    "t": "Il condizionatore naturale",
-    "x": "Il sudore ti rinfresca perché, evaporando dalla pelle, si porta via il calore. Sul palmo della mano ci sono centinaia di ghiandole del sudore in ogni centimetro quadrato!",
-    "ic": "💧",
-    "q": "Come ci rinfresca il sudore?",
-    "ok": "Evaporando dalla pelle",
-    "wrong": [
-      "Diventando ghiaccio",
-      "Facendoci tremare"
-    ],
-    "src": "en.wikipedia.org (Sweat gland)"
-  },
-  {
-    "t": "Un cuore che non si ferma",
-    "x": "Il cuore batte circa 100.000 volte al giorno, anche mentre dormi! Senza che tu ci pensi, pompa il sangue in tutto il corpo, come un tamburo instancabile.",
-    "ic": "❤️",
-    "q": "Quante volte batte circa il cuore in un giorno?",
-    "ok": "Circa 100.000",
-    "wrong": [
-      "Circa 100",
-      "Circa 10"
-    ],
-    "src": "livescience.com"
-  },
-  {
-    "t": "Il brivido scalda",
-    "x": "Quando hai freddo e tremi, sono i muscoli che fanno tante piccole contrazioni veloci: muovendosi producono calore. Il brivido è una stufetta naturale!",
-    "ic": "🥶",
-    "q": "Perché quando hai freddo tremi?",
-    "ok": "I muscoli producono calore",
-    "wrong": [
-      "Le ossa si restringono",
-      "Il cuore si ferma"
-    ],
-    "src": "en.wikipedia.org (Shivering)"
-  },
-  {
-    "t": "Si cresce dormendo",
-    "x": "Gran parte dell'ormone della crescita viene liberata di notte, soprattutto durante il sonno profondo. Dormire bene aiuta davvero a crescere: la notte è il cantiere del corpo!",
-    "ic": "😴",
-    "q": "Quando si produce molto ormone della crescita?",
-    "ok": "Nel sonno profondo",
-    "wrong": [
-      "Mentre si mangia",
-      "Guardando la TV"
-    ],
-    "src": "en.wikipedia.org (Growth hormone)"
-  },
-  {
-    "t": "Destri e mancini",
-    "x": "Nel mondo circa 9 persone su 10 usano di più la mano destra e circa 1 su 10 la sinistra. Anche un piede di solito è il preferito: tu con quale calci?",
-    "ic": "✋",
-    "q": "Quante persone circa sono mancine?",
-    "ok": "Circa 1 su 10",
-    "wrong": [
-      "Circa 9 su 10",
-      "Nessuna"
-    ],
-    "src": "en.wikipedia.org (Handedness)"
-  },
-  {
-    "t": "Più alti nello spazio",
-    "x": "Nello spazio, senza la gravità che schiaccia la colonna, gli astronauti diventano fino al 3% più alti! Tornati sulla Terra, dopo un po' di tempo tornano alla loro altezza.",
-    "ic": "🚀",
-    "q": "Che cosa succede all'altezza degli astronauti nello spazio?",
-    "ok": "Diventano un po' più alti",
-    "wrong": [
-      "Diventano più bassi",
-      "Non cambia mai"
-    ],
-    "src": "space.com"
-  }
+ {
+  "t": "Il muscolo più piccolo",
+  "x": "Il muscolo più piccolo del corpo si chiama stapedio: è nell'orecchio ed è lungo poco più di 1 millimetro! Aiuta a smorzare le vibrazioni dei suoni troppo forti.",
+  "ic": "👂",
+  "q": "Dove si trova lo stapedio, il muscolo più piccolo?",
+  "ok": "Nell'orecchio",
+  "wrong": [
+   "Nel piede",
+   "Nella pancia"
+  ],
+  "src": "en.wikipedia.org (Stapedius)"
+ },
+ {
+  "t": "Il muscolo più grande",
+  "x": "Il muscolo più grande del corpo è il grande gluteo, nel sedere! È lui che ti rialza quando sei accovacciata e ti aiuta a correre e saltare.",
+  "ic": "🍑",
+  "q": "Qual è il muscolo più grande del corpo?",
+  "ok": "Il grande gluteo",
+  "wrong": [
+   "Il bicipite",
+   "Il cuore"
+  ],
+  "src": "loc.gov; en.wikipedia.org"
+ },
+ {
+  "t": "Chi è il più forte?",
+  "x": "Il muscolo più forte? Non c'è un solo campione: per il suo peso vince il massetere (masticare), per la forza il soleo del polpaccio, e il cuore è il più instancabile!",
+  "ic": "🏅",
+  "q": "Quale muscolo è il più instancabile del corpo?",
+  "ok": "Il cuore",
+  "wrong": [
+   "Il mignolo",
+   "L'orecchio"
+  ],
+  "src": "loc.gov (Everyday Mysteries)"
+ },
+ {
+  "t": "Il piccolo cervello",
+  "x": "Il cervelletto, dietro la testa, occupa circa un decimo del cervello ma ha la maggior parte dei suoi neuroni! Rende i movimenti precisi e aiuta a impararli: il regista dei salti.",
+  "ic": "🎬",
+  "q": "Che cosa fa il cervelletto?",
+  "ok": "Rende i movimenti precisi",
+  "wrong": [
+   "Fa battere il cuore",
+   "Fa crescere i capelli"
+  ],
+  "src": "en.wikipedia.org (Cerebellum)"
+ },
+ {
+  "t": "Perché gira la testa",
+  "x": "Nell'orecchio hai 3 piccoli canali pieni di liquido. Quando giri e ti fermi, il liquido continua a muoversi un attimo: il cervello pensa che giri ancora ed ecco il capogiro!",
+  "ic": "😵‍💫",
+  "q": "Che cosa c'è nei canali dell'orecchio che sentono le rotazioni?",
+  "ok": "Un liquido",
+  "wrong": [
+   "Aria calda",
+   "Sabbia"
+  ],
+  "src": "en.wikipedia.org (Semicircular canals)"
+ },
+ {
+  "t": "Mani e piedi pieni di ossa",
+  "x": "Ogni mano ha 27 ossa e ogni piede 26: in tutto 106! Più della metà delle 206 ossa di un adulto sta in mani e piedi. Per questo si muovono in tanti modi.",
+  "ic": "🦶",
+  "q": "Quante ossa ha una mano?",
+  "ok": "27",
+  "wrong": [
+   "5",
+   "100"
+  ],
+  "src": "en.wikipedia.org (Hand, Foot)"
+ },
+ {
+  "t": "Ossa sempre nuove",
+  "x": "Le ossa sono vive e si ricostruiscono di continuo: in circa 10 anni gran parte dello scheletro di un adulto viene rinnovata. Come una casa che rifà i mattoni pian piano!",
+  "ic": "🦴",
+  "q": "Ogni quanto si rinnova gran parte dello scheletro di un adulto?",
+  "ok": "Circa ogni 10 anni",
+  "wrong": [
+   "Ogni giorno",
+   "Mai"
+  ],
+  "src": "ncbi.nlm.nih.gov (Surgeon General)"
+ },
+ {
+  "t": "Le zone che ti fanno crescere",
+  "x": "Alle estremità delle ossa lunghe ci sono le cartilagini di accrescimento: lì l'osso si allunga e tu diventi più alta. Si chiudono verso la fine dell'adolescenza.",
+  "ic": "📏",
+  "q": "Dove crescono in lunghezza le ossa?",
+  "ok": "Alle estremità, nelle cartilagini",
+  "wrong": [
+   "Al centro dell'osso",
+   "Nella pelle"
+  ],
+  "src": "en.wikipedia.org (Epiphyseal plate)"
+ },
+ {
+  "t": "Fibre rosse e fibre bianche",
+  "x": "I muscoli hanno fibre lente, rosse, che resistono a lungo, e fibre rapide, bianche, per gli scatti. Il rosso viene dalla mioglobina, che tiene l'ossigeno. Maratona o salto?",
+  "ic": "🔴",
+  "q": "A che cosa servono soprattutto le fibre rapide?",
+  "ok": "Agli scatti veloci",
+  "wrong": [
+   "A dormire meglio",
+   "A digerire"
+  ],
+  "src": "en.wikipedia.org (Skeletal muscle)"
+ },
+ {
+  "t": "Il condizionatore naturale",
+  "x": "Il sudore ti rinfresca perché, evaporando dalla pelle, si porta via il calore. Sul palmo della mano ci sono centinaia di ghiandole del sudore in ogni centimetro quadrato!",
+  "ic": "💧",
+  "q": "Come ci rinfresca il sudore?",
+  "ok": "Evaporando dalla pelle",
+  "wrong": [
+   "Diventando ghiaccio",
+   "Facendoci tremare"
+  ],
+  "src": "en.wikipedia.org (Sweat gland)"
+ },
+ {
+  "t": "Un cuore che non si ferma",
+  "x": "Il cuore batte circa 100.000 volte al giorno, anche mentre dormi! Senza che tu ci pensi, pompa il sangue in tutto il corpo, come un tamburo instancabile.",
+  "ic": "❤️",
+  "q": "Quante volte batte circa il cuore in un giorno?",
+  "ok": "Circa 100.000",
+  "wrong": [
+   "Circa 100",
+   "Circa 10"
+  ],
+  "src": "livescience.com"
+ },
+ {
+  "t": "Il brivido scalda",
+  "x": "Quando hai freddo e tremi, sono i muscoli che fanno tante piccole contrazioni veloci: muovendosi producono calore. Il brivido è una stufetta naturale!",
+  "ic": "🥶",
+  "q": "Perché quando hai freddo tremi?",
+  "ok": "I muscoli producono calore",
+  "wrong": [
+   "Le ossa si restringono",
+   "Il cuore si ferma"
+  ],
+  "src": "en.wikipedia.org (Shivering)"
+ },
+ {
+  "t": "Si cresce dormendo",
+  "x": "Gran parte dell'ormone della crescita viene liberata di notte, soprattutto durante il sonno profondo. Dormire bene aiuta davvero a crescere: la notte è il cantiere del corpo!",
+  "ic": "😴",
+  "q": "Quando si produce molto ormone della crescita?",
+  "ok": "Nel sonno profondo",
+  "wrong": [
+   "Mentre si mangia",
+   "Guardando la TV"
+  ],
+  "src": "en.wikipedia.org (Growth hormone)"
+ },
+ {
+  "t": "Destri e mancini",
+  "x": "Nel mondo circa 9 persone su 10 usano di più la mano destra e circa 1 su 10 la sinistra. Anche un piede di solito è il preferito: tu con quale calci?",
+  "ic": "✋",
+  "q": "Quante persone circa sono mancine?",
+  "ok": "Circa 1 su 10",
+  "wrong": [
+   "Circa 9 su 10",
+   "Nessuna"
+  ],
+  "src": "en.wikipedia.org (Handedness)"
+ },
+ {
+  "t": "Più alti nello spazio",
+  "x": "Nello spazio, senza la gravità che schiaccia la colonna, gli astronauti diventano fino al 3% più alti! Tornati sulla Terra, dopo un po' di tempo tornano alla loro altezza.",
+  "ic": "🚀",
+  "q": "Che cosa succede all'altezza degli astronauti nello spazio?",
+  "ok": "Diventano un po' più alti",
+  "wrong": [
+   "Diventano più bassi",
+   "Non cambia mai"
+  ],
+  "src": "space.com"
+ }
 ]

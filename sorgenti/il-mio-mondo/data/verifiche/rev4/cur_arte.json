@@ -1,182 +1,182 @@
 [
-  {
-    "t": "Il furto della Gioconda",
-    "x": "Nel 1911 la Gioconda fu rubata dal Louvre da Vincenzo Peruggia, un ex operaio del museo. Fu ritrovata nel 1913 a Firenze. Il furto la rese famosissima!",
-    "ic": "🕵️",
-    "q": "Che cosa rese famosissima la Gioconda nel 1911?",
-    "ok": "Un furto al Louvre",
-    "wrong": [
-      "Un restauro sbagliato",
-      "Un film famoso"
-    ],
-    "src": "history.com"
-  },
-  {
-    "t": "Tanti Urli",
-    "x": "Esistono più versioni dell'«Urlo» di Edvard Munch: due del 1893, una del 1895 e una del 1910. Una è al Museo Nazionale di Oslo. Lo stesso grido, più volte!",
-    "ic": "😱",
-    "q": "Quante versioni dell'«Urlo» realizzò Munch?",
-    "ok": "Più di una",
-    "wrong": [
-      "Una sola",
-      "Nessuna, è una foto"
-    ],
-    "src": "britannica.com"
-  },
-  {
-    "t": "Statua marrone",
-    "x": "La Statua della Libertà è rivestita di rame: all'inizio era color rame, come una monetina! Col tempo l'aria ha formato una patina verde: in circa 30 anni è diventata tutta verde.",
-    "ic": "🗽",
-    "q": "Di che colore era all'inizio la Statua della Libertà?",
-    "ok": "Marrone rame",
-    "wrong": [
-      "Verde",
-      "Bianca"
-    ],
-    "src": "History.com «Why did the Statue of Liberty change color?»"
-  },
-  {
-    "t": "Pennellate da gigante",
-    "x": "La Torre Eiffel viene ridipinta in media ogni 7 anni, quasi tutta a mano col pennello! Ogni volta servono circa 60 tonnellate di vernice.",
-    "ic": "🗼",
-    "q": "Ogni quanto si ridipinge la Torre Eiffel, in media?",
-    "ok": "Circa ogni 7 anni",
-    "wrong": [
-      "Ogni settimana",
-      "Mai"
-    ],
-    "src": "toureiffel.paris"
-  },
-  {
-    "t": "Una sola firma",
-    "x": "La Pietà di San Pietro è l'unica opera firmata da Michelangelo: il nome è inciso sulla fascia sul petto della Madonna. La finì a circa 24 anni!",
-    "ic": "✍️",
-    "q": "Qual è l'unica opera firmata da Michelangelo?",
-    "ok": "La Pietà",
-    "wrong": [
-      "Il David",
-      "La Gioconda"
-    ],
-    "src": "museivaticani.va"
-  },
-  {
-    "t": "Il marmo scartato",
-    "x": "Il blocco del David era stato iniziato e poi lasciato da altri scultori, anche perché il marmo non era di ottima qualità. Michelangelo ne fece un capolavoro! Dal 1873 l'originale è alla Galleria dell'Accademia.",
-    "ic": "🗿",
-    "q": "Dove si trova oggi il David originale?",
-    "ok": "Alla Galleria dell'Accademia",
-    "wrong": [
-      "In cima al Duomo",
-      "Al Louvre di Parigi"
-    ],
-    "src": "britannica.com"
-  },
-  {
-    "t": "Non è un affresco",
-    "x": "Leonardo non dipinse l'«Ultima Cena» con la vera tecnica dell'affresco: scelse il muro asciutto, per lavorare piano e correggere. Per questo il dipinto è delicatissimo.",
-    "ic": "🍞",
-    "q": "Perché Leonardo dipinse sul muro asciutto?",
-    "ok": "Per lavorare piano e correggere",
-    "wrong": [
-      "Perché aveva fretta",
-      "Perché non c'era acqua"
-    ],
-    "src": "cenacolovinciano.org"
-  },
-  {
-    "t": "Facce di frutta",
-    "x": "Giuseppe Arcimboldo, pittore milanese del Cinquecento, dipingeva ritratti fatti di frutta, verdura, fiori e animali! Lavorò per gli imperatori Massimiliano II e Rodolfo II.",
-    "ic": "🍐",
-    "q": "Con che cosa componeva i volti Arcimboldo?",
-    "ok": "Frutta, verdura e fiori",
-    "wrong": [
-      "Solo puntini neri",
-      "Pezzi di vetro"
-    ],
-    "src": "britannica.com"
-  },
-  {
-    "t": "Il quadro che si tagliò",
-    "x": "Nel 2018, appena venduto all'asta, il quadro «Girl with Balloon» di Banksy si tagliò a strisce a metà: nella cornice c'era un tritadocumenti! Ora si chiama «Love is in the Bin».",
-    "ic": "🎈",
-    "q": "Che cosa c'era nascosto nella cornice?",
-    "ok": "Un tritadocumenti",
-    "wrong": [
-      "Un altoparlante",
-      "Una seconda tela"
-    ],
-    "src": "npr.org"
-  },
-  {
-    "t": "Frida e la scimmietta",
-    "x": "La pittrice messicana Frida Kahlo dipinse tanti autoritratti. In uno del 1937 è legata con un nastro rosa alla sua scimmietta Fulang-Chang!",
-    "ic": "🐒",
-    "q": "Chi è Fulang-Chang nel quadro di Frida Kahlo?",
-    "ok": "La sua scimmietta",
-    "wrong": [
-      "Suo fratello",
-      "Un pappagallo"
-    ],
-    "src": "moma.org"
-  },
-  {
-    "t": "Il cantiere infinito",
-    "x": "La Sagrada Família di Barcellona, la grande chiesa di Gaudí, è in costruzione dal 1882: più di 140 anni di lavori, e non è ancora finita!",
-    "ic": "⛪",
-    "q": "Da quando si costruisce la Sagrada Família?",
-    "ok": "Dal 1882",
-    "wrong": [
-      "Dal 2020",
-      "Dal 100 a.C."
-    ],
-    "src": "sagradafamilia.org"
-  },
-  {
-    "t": "La scala impossibile",
-    "x": "Nella litografia «Salita e discesa» (1960) di M.C. Escher, file di persone camminano su una scala che torna sempre al punto di partenza: sali, sali... e non arrivi mai! È un'illusione.",
-    "ic": "🪜",
-    "q": "Che cosa ha di strano la scala di Escher?",
-    "ok": "Torna sempre al punto di partenza",
-    "wrong": [
-      "È fatta tutta d'oro",
-      "È lunga un chilometro"
-    ],
-    "src": "nga.gov"
-  },
-  {
-    "t": "Una piramide a Parigi",
-    "x": "La piramide di vetro davanti al Louvre fu inaugurata nel 1989, progettata dall'architetto I. M. Pei. È l'ingresso del museo della Gioconda!",
-    "ic": "💎",
-    "q": "Che cosa c'è davanti al Louvre dal 1989?",
-    "ok": "Una piramide di vetro",
-    "wrong": [
-      "Una sfinge di pietra",
-      "Un faro"
-    ],
-    "src": "presse.louvre.fr"
-  },
-  {
-    "t": "Questa non è una pipa",
-    "x": "René Magritte dipinse una pipa e sotto scrisse «Ceci n'est pas une pipe»: «Questa non è una pipa». Ha ragione: è solo il disegno di una pipa! Un quadro-indovinello.",
-    "ic": "🤔",
-    "q": "Che cosa voleva dire Magritte?",
-    "ok": "Un'immagine non è l'oggetto vero",
-    "wrong": [
-      "Che odiava le pipe",
-      "Che la pipa era rotta"
-    ],
-    "src": "lacma.org"
-  },
-  {
-    "t": "La grotta dei ragazzi",
-    "x": "La grotta di Lascaux, in Francia, piena di pitture preistoriche, fu scoperta il 12 settembre 1940 da quattro ragazzi. Esplorare può portare a scoperte storiche!",
-    "ic": "🔦",
-    "q": "Chi scoprì la grotta di Lascaux?",
-    "ok": "Quattro ragazzi",
-    "wrong": [
-      "Un re francese",
-      "Un astronauta"
-    ],
-    "src": "lascaux.fr"
-  }
+ {
+  "t": "Il furto della Gioconda",
+  "x": "Nel 1911 la Gioconda fu rubata dal Louvre da Vincenzo Peruggia, un ex operaio del museo. Fu ritrovata nel 1913 a Firenze. Il furto la rese famosissima!",
+  "ic": "🕵️",
+  "q": "Che cosa rese famosissima la Gioconda nel 1911?",
+  "ok": "Un furto al Louvre",
+  "wrong": [
+   "Un restauro sbagliato",
+   "Un film famoso"
+  ],
+  "src": "history.com"
+ },
+ {
+  "t": "Tanti Urli",
+  "x": "Esistono più versioni dell'«Urlo» di Edvard Munch: due del 1893, una del 1895 e una del 1910. Una è al Museo Nazionale di Oslo. Lo stesso grido, più volte!",
+  "ic": "😱",
+  "q": "Quante versioni dell'«Urlo» realizzò Munch?",
+  "ok": "Più di una",
+  "wrong": [
+   "Una sola",
+   "Nessuna, è una foto"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "Statua marrone",
+  "x": "La Statua della Libertà è rivestita di rame: all'inizio era color rame, come una monetina! Col tempo l'aria ha formato una patina verde: in circa 30 anni è diventata tutta verde.",
+  "ic": "🗽",
+  "q": "Di che colore era all'inizio la Statua della Libertà?",
+  "ok": "Marrone rame",
+  "wrong": [
+   "Verde",
+   "Bianca"
+  ],
+  "src": "History.com «Why did the Statue of Liberty change color?»"
+ },
+ {
+  "t": "Pennellate da gigante",
+  "x": "La Torre Eiffel viene ridipinta in media ogni 7 anni, quasi tutta a mano col pennello! Ogni volta servono circa 60 tonnellate di vernice.",
+  "ic": "🗼",
+  "q": "Ogni quanto si ridipinge la Torre Eiffel, in media?",
+  "ok": "Circa ogni 7 anni",
+  "wrong": [
+   "Ogni settimana",
+   "Mai"
+  ],
+  "src": "toureiffel.paris"
+ },
+ {
+  "t": "Una sola firma",
+  "x": "La Pietà di San Pietro è l'unica opera firmata da Michelangelo: il nome è inciso sulla fascia sul petto della Madonna. La finì a circa 24 anni!",
+  "ic": "✍️",
+  "q": "Qual è l'unica opera firmata da Michelangelo?",
+  "ok": "La Pietà",
+  "wrong": [
+   "Il David",
+   "La Gioconda"
+  ],
+  "src": "museivaticani.va"
+ },
+ {
+  "t": "Il marmo scartato",
+  "x": "Il blocco del David era stato iniziato e poi lasciato da altri scultori, anche perché il marmo non era di ottima qualità. Michelangelo ne fece un capolavoro! Dal 1873 l'originale è alla Galleria dell'Accademia.",
+  "ic": "🗿",
+  "q": "Dove si trova oggi il David originale?",
+  "ok": "Alla Galleria dell'Accademia",
+  "wrong": [
+   "In cima al Duomo",
+   "Al Louvre di Parigi"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "Non è un affresco",
+  "x": "Leonardo non dipinse l'«Ultima Cena» con la vera tecnica dell'affresco: scelse il muro asciutto, per lavorare piano e correggere. Per questo il dipinto è delicatissimo.",
+  "ic": "🍞",
+  "q": "Perché Leonardo dipinse sul muro asciutto?",
+  "ok": "Per lavorare piano e correggere",
+  "wrong": [
+   "Perché aveva fretta",
+   "Perché non c'era acqua"
+  ],
+  "src": "cenacolovinciano.org"
+ },
+ {
+  "t": "Facce di frutta",
+  "x": "Giuseppe Arcimboldo, pittore milanese del Cinquecento, dipingeva ritratti fatti di frutta, verdura, fiori e animali! Lavorò per gli imperatori Massimiliano II e Rodolfo II.",
+  "ic": "🍐",
+  "q": "Con che cosa componeva i volti Arcimboldo?",
+  "ok": "Frutta, verdura e fiori",
+  "wrong": [
+   "Solo puntini neri",
+   "Pezzi di vetro"
+  ],
+  "src": "britannica.com"
+ },
+ {
+  "t": "Il quadro che si tagliò",
+  "x": "Nel 2018, appena venduto all'asta, il quadro «Girl with Balloon» di Banksy si tagliò a strisce a metà: nella cornice c'era un tritadocumenti! Ora si chiama «Love is in the Bin».",
+  "ic": "🎈",
+  "q": "Che cosa c'era nascosto nella cornice?",
+  "ok": "Un tritadocumenti",
+  "wrong": [
+   "Un altoparlante",
+   "Una seconda tela"
+  ],
+  "src": "npr.org"
+ },
+ {
+  "t": "Frida e la scimmietta",
+  "x": "La pittrice messicana Frida Kahlo dipinse tanti autoritratti. In uno del 1937 è legata con un nastro rosa alla sua scimmietta Fulang-Chang!",
+  "ic": "🐒",
+  "q": "Chi è Fulang-Chang nel quadro di Frida Kahlo?",
+  "ok": "La sua scimmietta",
+  "wrong": [
+   "Suo fratello",
+   "Un pappagallo"
+  ],
+  "src": "moma.org"
+ },
+ {
+  "t": "Il cantiere infinito",
+  "x": "La Sagrada Família di Barcellona, la grande chiesa di Gaudí, è in costruzione dal 1882: più di 140 anni di lavori, e non è ancora finita!",
+  "ic": "⛪",
+  "q": "Da quando si costruisce la Sagrada Família?",
+  "ok": "Dal 1882",
+  "wrong": [
+   "Dal 2020",
+   "Dal 100 a.C."
+  ],
+  "src": "sagradafamilia.org"
+ },
+ {
+  "t": "La scala impossibile",
+  "x": "Nella litografia «Salita e discesa» (1960) di M.C. Escher, file di persone camminano su una scala che torna sempre al punto di partenza: sali, sali... e non arrivi mai! È un'illusione.",
+  "ic": "🪜",
+  "q": "Che cosa ha di strano la scala di Escher?",
+  "ok": "Torna sempre al punto di partenza",
+  "wrong": [
+   "È fatta tutta d'oro",
+   "È lunga un chilometro"
+  ],
+  "src": "nga.gov"
+ },
+ {
+  "t": "Una piramide a Parigi",
+  "x": "La piramide di vetro davanti al Louvre fu inaugurata nel 1989, progettata dall'architetto I. M. Pei. È l'ingresso del museo della Gioconda!",
+  "ic": "💎",
+  "q": "Che cosa c'è davanti al Louvre dal 1989?",
+  "ok": "Una piramide di vetro",
+  "wrong": [
+   "Una sfinge di pietra",
+   "Un faro"
+  ],
+  "src": "presse.louvre.fr"
+ },
+ {
+  "t": "Questa non è una pipa",
+  "x": "René Magritte dipinse una pipa e sotto scrisse «Ceci n'est pas une pipe»: «Questa non è una pipa». Ha ragione: è solo il disegno di una pipa! Un quadro-indovinello.",
+  "ic": "🤔",
+  "q": "Che cosa voleva dire Magritte?",
+  "ok": "Un'immagine non è l'oggetto vero",
+  "wrong": [
+   "Che odiava le pipe",
+   "Che la pipa era rotta"
+  ],
+  "src": "lacma.org"
+ },
+ {
+  "t": "La grotta dei ragazzi",
+  "x": "La grotta di Lascaux, in Francia, piena di pitture preistoriche, fu scoperta il 12 settembre 1940 da quattro ragazzi. Esplorare può portare a scoperte storiche!",
+  "ic": "🔦",
+  "q": "Chi scoprì la grotta di Lascaux?",
+  "ok": "Quattro ragazzi",
+  "wrong": [
+   "Un re francese",
+   "Un astronauta"
+  ],
+  "src": "lascaux.fr"
+ }
 ]

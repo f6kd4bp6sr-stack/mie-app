@@ -1,3 +1,10 @@
 [
-{"id":2,"title_old":"Su quale pianeta il giorno dura più di un anno?","why":"Impreciso: su Venere la rotazione (siderale, ~243 giorni) dura più dell'anno (~225 giorni), ma il giorno solare (alba-alba) dura ~117 giorni, cioè MENO di un anno (fonte NASA, Venus Facts).","set":["Quale pianeta gira su se stesso più lentamente che intorno al Sole?","Venere! Gira su se stesso così piano che un giro completo su se stesso dura più del suo giro intorno al Sole: circa 243 giorni contro 225."]}
+ {
+  "id": 2,
+  "title_old": "Su quale pianeta il giorno dura più di un anno?",
+  "set": [
+   "Quale pianeta gira su se stesso più lentamente che intorno al Sole?",
+   "Venere! Gira su se stesso così piano che un giro completo su se stesso dura più del suo giro intorno al Sole: circa 243 giorni contro 225."
+  ]
+ }
 ]
