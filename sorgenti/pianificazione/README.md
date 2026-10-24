@@ -36,6 +36,7 @@ Da «Il mio mondo» Pianificazione **legge soltanto**: l'invio cifrato dell'iPad
 Dettagli dei file e dei segnaposto: `STRUTTURA.md`.
 
 ## Regole
+- Controllo dei dati da non pubblicare: `tools/guardia.py` confronta impronte fatte con una **chiave segreta** che non è nel repository (variabile `GUARDIA_CHIAVE` o file `~/.mie-guardia-chiave`; la chiave è nel documento privato del progetto). Senza chiave la pubblicazione a mano si ferma; il controllo delle novità dell'attività programmata la salta con un avviso.
 - Nessun dato personale nel codice: il sito è pubblico. La scheda pensione entra nel repository solo cifrata; la chiave e la scheda in chiaro mai.
 - Prima di variazioni all'app si propongono sezioni nuove o varianti strutturali.
 - I contenuti sui soldi sono fatti e strategie, non consigli.
