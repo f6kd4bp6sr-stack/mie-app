@@ -180,11 +180,12 @@ async function linkPaint() {
   $('lk-qr').addEventListener('click', openQR);
   const ok = await linkLoad(); const gh = $('lk-gh'); if (!gh) return;
   if (!ok) return;
-  const A = window.__mondoSyncApi, c = A.cfg();
+  const A = window.__mondoSyncApi, c0 = A.cfg(), c = c0 && c0.gist && c0.v === 2 && !c0.need ? c0 : null;
+  if (c0 && A.isOld && A.isOld(c0)) A.push(false).then(() => setTimeout(linkPaint, 400));
   const el2 = gh;
   const when = t => !t ? 'mai' : new Date(t).toLocaleString('it-IT', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
   if (c) {
-    el2.innerHTML = '<div class="bk-lk" style="margin-top:8px"><span>🔗 <b>Invio automatico attivo</b> · codice <b>' + esc(A.code()) + '</b> · ' + (c.err ? '<b class="lk-err">⚠️ ' + esc(c.err) + '</b> · ultimo invio riuscito ' + when(c.last) : 'ultimo invio ' + when(c.last)) + '</span>' +
+    el2.innerHTML = '<div class="bk-lk" style="margin-top:8px"><span>🔗 <b>Invio automatico attivo</b> · 🔒 spazio privato · ' + (c.err ? '<b class="lk-err">⚠️ ' + esc(c.err) + '</b> · ultimo invio riuscito ' + when(c.last) : 'ultimo invio ' + when(c.last)) + '</span>' +
       '<button type="button" class="btn small ghost" id="lk-now">Invia ora</button><button type="button" class="btn small ghost" id="lk-qr2">📷 Nuovo QR</button><button type="button" class="btn small ghost" id="lk-key">🔑 Nuova chiave</button><button type="button" class="btn small ghost" id="lk-off">Scollega</button></div>' +
       '<div class="bk-lk-set" id="lk-keybox"' + (window.__lkKey || c.err ? '' : ' hidden') + '><small>La chiave GitHub è scaduta o non funziona? Creane una nuova (permesso <b>gist</b>, scadenza <b>No expiration</b>) e incollala qui: codice e collegamento restano gli stessi, i genitori non devono rifare niente.</small>' +
       '<input type="password" id="lk-newtok" placeholder="Nuova chiave GitHub (inizia con ghp_)" autocomplete="off"><button type="button" class="btn small" id="lk-savetok">Salva la chiave</button><div id="lk-msg2" class="bk-lk-msg"></div></div>';
@@ -203,18 +204,17 @@ async function linkPaint() {
     });
     $('lk-off').addEventListener('click', () => { const b = $('lk-off'); if (b.dataset.sure) { A.off(); store.set('link-cfg', null); linkPaint(); } else { b.dataset.sure = 1; b.textContent = 'Tocca ancora'; } });
   } else {
-    el2.innerHTML = '<div class="bk-lk" style="margin-top:8px"><span>🔗 <b>Invio automatico ai genitori</b>: in Pianificazione → Progressi un genitore prepara un QR; qui lo inquadri e basta.</span><button type="button" class="btn small" id="lk-scan">📷 Collegati con il QR</button></div>' +
+    el2.innerHTML = (c0 && c0.need ? '<div class="bk-lk lk-err" style="margin-top:8px"><span>🔒 <b>Per sicurezza il collegamento va rinnovato.</b> Lo spazio vecchio su GitHub è stato cancellato: serve un QR nuovo dal genitore.</span></div>' : '') +
+      '<div class="bk-lk" style="margin-top:8px"><span>🔗 <b>Invio automatico ai genitori</b>: in Pianificazione → Progressi un genitore prepara un QR; qui lo inquadri e basta.</span><button type="button" class="btn small" id="lk-scan">📷 Collegati con il QR</button></div>' +
       '<details class="bk-lk-set"><summary>🔗 Oppure collega a mano con la chiave GitHub</summary>' +
       '<input type="password" id="lk-tok" placeholder="Chiave GitHub (permesso gist)" autocomplete="off">' +
-      '<input type="text" id="lk-code" placeholder="Il tuo codice (almeno 6 caratteri)" autocomplete="off" autocapitalize="off" spellcheck="false">' +
       '<button type="button" class="btn small" id="lk-go">Collega</button><div id="lk-msg" class="bk-lk-msg"></div></details>';
     $('lk-scan').addEventListener('click', linkScan);
     $('lk-go').addEventListener('click', async () => {
-      const t = $('lk-tok').value.trim(), k = $('lk-code').value, m = $('lk-msg');
+      const t = $('lk-tok').value.trim(), m = $('lk-msg');
       if (!t) { m.textContent = 'Incolla la chiave GitHub.'; return; }
-      if (String(k).trim().length < 6) { m.textContent = 'Scrivi il tuo codice (almeno 6 caratteri).'; return; }
       m.textContent = 'Collegamento in corso…'; $('lk-go').disabled = true;
-      try { await A.connect(t, k); keepLink(); linkPaint(); } catch (e) { m.textContent = 'Non riuscito: ' + e.message + '.'; $('lk-go').disabled = false; }
+      try { await A.connect(t); keepLink(); linkPaint(); refreshLinkWarn(); } catch (e) { m.textContent = 'Non riuscito: ' + e.message + '.'; $('lk-go').disabled = false; }
     });
   }
 }
@@ -247,8 +247,11 @@ async function linkApply(txt) {
   let j = null;
   try { let b = txt.slice(6).replace(/-/g, '+').replace(/_/g, '/'); while (b.length % 4) b += '='; j = JSON.parse(decodeURIComponent(escape(atob(b)))); } catch (e) {}
   if (!j || !j.t || !j.g || !j.k) { toastV2('QR non riconosciuto'); return; }
+  if (j.v !== 2) { openModal('<div style="font-size:50px">🔒</div><div class="big" style="font-size:24px">QR vecchio</div><p style="font-weight:700">Questo QR è della versione vecchia, meno sicura. Chiedi a mamma o papà di prepararne uno nuovo in Pianificazione → Progressi.</p><button type="button" class="btn" id="qs-ok" data-focus>Ok</button>'); $('qs-ok').addEventListener('click', closeModal); return; }
   let old = null; try { old = JSON.parse(localStorage.getItem('msync-cfg') || 'null'); } catch (e) {}
-  try { localStorage.setItem('msync-cfg', JSON.stringify({ token: j.t, gist: j.g, key: j.k, code: j.c || '', owner: '', last: old && old.gist === j.g ? old.last : 0, h: '', err: '' })); } catch (e) {}
+  /* gli spazi vecchi pubblici si cancellano subito con la chiave nuova */
+  try { await linkLoad(); const A0 = window.__mondoSyncApi; if (A0 && A0.wipeOld) await A0.wipeOld(j.t, old && old.gist && old.v !== 2 ? old.gist : ''); } catch (e) {}
+  try { localStorage.setItem('msync-cfg', JSON.stringify({ token: j.t, gist: j.g, key: j.k, v: 2, owner: '', last: old && old.gist === j.g ? old.last : 0, h: '', err: '' })); } catch (e) {}
   keepLink();
   const fresh = !D || !(D.energy > 0);
   if (fresh) { try { const R = await mcRead(); if (R) { linkPaint(); refreshLinkWarn(); mcOffer(R); return; } } catch (e) {} }
@@ -260,6 +263,7 @@ async function linkApply(txt) {
 /* ⚠️ avviso in 🐉 Io quando i progressi non arrivano ai genitori (chiave scaduta, collegamento rotto) */
 function linkWarn() {
   let c = null; try { c = JSON.parse(localStorage.getItem('msync-cfg') || 'null'); } catch (e) {}
+  if (c && c.need) return '<button type="button" class="v2-card v2-next lk-warn" id="io-lkw"><span>🔒</span><div><b>Collegamento con i genitori da rinnovare</b><small>Per sicurezza serve un QR nuovo: in Pianificazione → Progressi → 📲 Collega con un QR, poi qui 📷 Collegati con il QR.</small></div></button>';
   if (!c || !c.gist) return '';
   const age = c.last ? (Date.now() - c.last) / 864e5 : 99;
   if (!c.err && (age < 1.5 || navigator.onLine === false)) return '';
@@ -659,7 +663,7 @@ const mcHdr = c => ({ Authorization: 'Bearer ' + c.token, Accept: 'application/v
 function mcData() { const st = snapData(); delete st.data['link-cfg']; delete st.t['link-cfg']; return JSON.stringify({ app: APP_ID, saved: new Date().toISOString(), state: st }); }
 let mcBusy = false;
 async function mcPush(force) {
-  const c = mcCfg(); if (!c || !c.gist || !c.key || !c.token || mcBusy || navigator.onLine === false || !D) return false;
+  const c = mcCfg(); if (!c || c.v !== 2 || c.need || !c.gist || !c.key || !c.token || mcBusy || navigator.onLine === false || !D) return false;
   const st = mcState(), data = mcData(), h = mcHash(data.replace(/"saved":"[^"]*"/, '')), age = Date.now() - (st.last || 0);
   if (!force && ((st.h === h && age < 20 * 36e5) || (st.h !== h && st.last && age < 4 * 36e5))) return true;
   if (data.length > 8.5e6) { st.err = 'copia troppo grande'; mcSave(st); mcPaint(); return false; }
@@ -679,7 +683,7 @@ async function mcPush(force) {
   finally { mcBusy = false; }
 }
 async function mcRead() {
-  const c = mcCfg(); if (!c || !c.gist || !c.key) return null;
+  const c = mcCfg(); if (!c || c.v !== 2 || !c.gist || !c.key) return null;
   const r = await fetch('https://api.github.com/gists/' + c.gist, { headers: c.token ? mcHdr(c) : { Accept: 'application/vnd.github+json' }, cache: 'no-store' });
   if (!r.ok) throw new Error('errore ' + r.status);
   const f = (await r.json()).files || {}; if (!f['copia.json']) return null;
