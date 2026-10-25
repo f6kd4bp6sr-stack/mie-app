@@ -30,6 +30,7 @@ pian/
 ├── statici/news-pensione.json  novità pubbliche su contratto e pensione GdF (aggiornate alle 13, 17 e 23 con fonti e registro dei controlli; non cambiano la versione)
 ├── statici/scheda-pensione.cifrata.json  scheda pensione CIFRATA (AES-256-GCM, chiave casuale mai nel repository): l'iPad la scarica,
 │                     la apre con la chiave `pn-scheda-chiave` e la unisce da sola (spunte, note, importi reali restano); non cambia la versione
+├── sezioni/diario.js 📓 Diario del passaggio (`pn-diario-v1`, fuori da `pn-v1`: settimane, idee, prove, insieme, tappe, lettera); domande in `sezioni/diario_domande.json` (autore + revisore); solo nella copia automatica cifrata, mai nella copia su file
 ├── sezioni/investimenti.js 🌱 Investimenti (`pn-v1` → `inv`: prof, ris, som, deb, sim, ipo): legge Cassa e scheda della Pensione,
 │                     tassi da `news-pensione.json` → `mercati` (aggiornati dall’attività) o scritti a mano
 ├── sezioni/metodo_dati.json  🤝 Metodo: 4 abilità con motto, 30 schede (curiosità + scienza con fonti), oltre 100 missioni (nome in codice, bonus, livello, situazione), 12 gruppi di frasi di scorta; inserito nella pagina dal build
