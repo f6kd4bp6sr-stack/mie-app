@@ -128,5 +128,1504 @@
    "19181np": "laghi",
    "3jcjc0": "laghi"
   }
+ },
+ "carte": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le carte geografiche",
+   "ic": "🧭",
+   "sotto": "la Terra disegnata in piccolo"
+  },
+  "nodi": [
+   {
+    "id": "punti",
+    "n": "i punti cardinali",
+    "ic": "🧭",
+    "sotto": "nord, est, sud, ovest",
+    "da": "si orientano con"
+   },
+   {
+    "id": "scala",
+    "n": "la scala",
+    "ic": "📏",
+    "sotto": "quante volte la realtà è rimpicciolita",
+    "da": "rimpiccioliscono la realtà con"
+   },
+   {
+    "id": "legenda",
+    "n": "la legenda",
+    "ic": "🔣",
+    "sotto": "il dizionario dei simboli",
+    "da": "spiegano i simboli con"
+   },
+   {
+    "id": "fisica",
+    "n": "fisiche",
+    "ic": "⛰️",
+    "sotto": "monti, pianure e acque a colori",
+    "da": "possono essere"
+   },
+   {
+    "id": "politica",
+    "n": "politiche o tematiche",
+    "ic": "🗺️",
+    "sotto": "confini e città, o un solo argomento",
+    "da": "possono essere anche"
+   },
+   {
+    "id": "tipi",
+    "n": "pianta della città",
+    "ic": "🏙️",
+    "sotto": "dal planisfero di tutta la Terra",
+    "da": "vanno dal planisfero alla"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I quattro punti cardinali sono nord, est, sud e ovest. Il Sole sorge a est e tramonta a ovest. A mezzogiorno, in Italia, il Sole è a sud.",
+    "nodi": [
+     "punti"
+    ]
+   },
+   {
+    "t": "Sulle carte il nord è in alto. La rosa dei venti è un disegno con i punti cardinali. Settentrione, cioè nord, viene dalle sette stelle del Grande Carro.",
+    "nodi": [
+     "punti"
+    ]
+   },
+   {
+    "t": "La scala dice quante volte la realtà è stata rimpicciolita. Con la scala 1:100.000, 1 cm sulla carta corrisponde a 1 km vero.",
+    "v": "La scala dice quante volte la realtà è stata rimpicciolita. Con la scala uno a centomila, un centimetro sulla carta corrisponde a un chilometro vero.",
+    "nodi": [
+     "scala"
+    ]
+   },
+   {
+    "t": "La legenda spiega il significato dei simboli: è il piccolo dizionario della carta.",
+    "nodi": [
+     "legenda"
+    ]
+   },
+   {
+    "t": "La carta fisica mostra monti, pianure e acque: marrone per i monti, verde per le pianure, azzurro per l'acqua, più scuro dove il mare è profondo.",
+    "nodi": [
+     "fisica"
+    ]
+   },
+   {
+    "t": "La carta politica mostra confini e città; la carta tematica parla di un solo argomento. Il planisfero mostra tutta la Terra; la pianta mostra le vie di una città.",
+    "nodi": [
+     "politica",
+     "tipi"
+    ]
+   },
+   {
+    "t": "La scala grafica è un segmento diviso in parti uguali. Un planisfero è a piccola scala: pochi dettagli. La pianta di una città è a grande scala.",
+    "nodi": [
+     "scala",
+     "tipi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "legenda",
+    "scelte": [
+     "la legenda",
+     "la ricetta",
+     "la pagella"
+    ]
+   }
+  ],
+  "domande": {
+   "efeswf": "punti",
+   "51j671": "punti",
+   "fmo9wd": "scala",
+   "1iudfbb": "fisica",
+   "ia24k4": "politica",
+   "11s1uxu": "punti",
+   "ujtjzg": "punti",
+   "1dpnvbo": "legenda",
+   "iln24i": "fisica",
+   "eoa6y9": "scala",
+   "lph2am": "tipi",
+   "13wrvz3": "fisica",
+   "1a8iv8w": "punti",
+   "2ska9r": "politica",
+   "1b1qe7z": "tipi",
+   "o3ev67": "scala",
+   "z4jfja": "scala",
+   "2evyxp": "punti"
+  },
+  "collegamenti": [
+   "geo:coordinate",
+   "geo:mondo",
+   "sci-spazio:terra"
+  ]
+ },
+ "coordinate": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il reticolato geografico",
+   "ic": "🌐",
+   "sotto": "linee immaginarie sulla Terra"
+  },
+  "nodi": [
+   {
+    "id": "equatore",
+    "n": "l'Equatore",
+    "ic": "🟰",
+    "sotto": "divide l'emisfero nord dal sud",
+    "da": "ha al centro"
+   },
+   {
+    "id": "paralleli",
+    "n": "paralleli",
+    "ic": "⭕",
+    "sotto": "cerchi che non si incontrano mai",
+    "da": "ha cerchi chiamati"
+   },
+   {
+    "id": "meridiani",
+    "n": "meridiani",
+    "ic": "🍊",
+    "sotto": "linee da un polo all'altro",
+    "da": "ha linee chiamate"
+   },
+   {
+    "id": "greenwich",
+    "n": "Greenwich",
+    "ic": "🔭",
+    "sotto": "il meridiano zero, a Londra",
+    "da": "fa partire i meridiani da"
+   },
+   {
+    "id": "misure",
+    "n": "latitudine e longitudine",
+    "ic": "📐",
+    "sotto": "distanze misurate in gradi",
+    "da": "serve a misurare"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Sulla Terra immaginiamo delle linee. L'Equatore gira a metà strada tra i due poli e divide la Terra in emisfero nord ed emisfero sud.",
+    "nodi": [
+     "equatore"
+    ]
+   },
+   {
+    "t": "I paralleli sono cerchi paralleli all'Equatore: non si incontrano mai. Il parallelo più lungo è proprio l'Equatore.",
+    "nodi": [
+     "paralleli"
+    ]
+   },
+   {
+    "t": "I meridiani sono linee che vanno da un polo all'altro, come gli spicchi di un'arancia. Il meridiano 0° passa per Greenwich, oggi un quartiere di Londra.",
+    "v": "I meridiani sono linee che vanno da un polo all'altro, come gli spicchi di un'arancia. Il meridiano zero gradi passa per Greenwich, oggi un quartiere di Londra.",
+    "nodi": [
+     "meridiani",
+     "greenwich"
+    ]
+   },
+   {
+    "t": "La latitudine è la distanza di un luogo dall'Equatore, verso nord o verso sud. All'Equatore è 0°, al Polo Nord è 90° Nord.",
+    "v": "La latitudine è la distanza di un luogo dall'Equatore, verso nord o verso sud. All'Equatore è zero gradi, al Polo Nord è novanta gradi Nord.",
+    "nodi": [
+     "misure",
+     "equatore"
+    ]
+   },
+   {
+    "t": "La longitudine è la distanza dal meridiano di Greenwich, verso est o verso ovest. Anche lei si misura in gradi.",
+    "nodi": [
+     "misure",
+     "greenwich"
+    ]
+   },
+   {
+    "t": "L'Italia è a nord dell'Equatore, circa a metà strada verso il Polo Nord: sta nell'emisfero nord.",
+    "nodi": [
+     "equatore"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "paralleli",
+    "scelte": [
+     "paralleli",
+     "fulmini",
+     "arcobaleni"
+    ]
+   }
+  ],
+  "domande": {
+   "knzwdk": "misure",
+   "15za1tj": "misure",
+   "17jnzqj": "greenwich",
+   "1dn3pp": "equatore",
+   "bohn6p": "misure",
+   "1246xwo": "equatore",
+   "dx31pz": "equatore",
+   "qj4gpg": "meridiani",
+   "x0jyql": "paralleli"
+  },
+  "collegamenti": [
+   "geo:carte",
+   "geo:mondo",
+   "sci-spazio:terra"
+  ]
+ },
+ "regioni": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'Italia",
+   "ic": "🗺️",
+   "sotto": "venti regioni"
+  },
+  "nodi": [
+   {
+    "id": "venti",
+    "n": "20 regioni",
+    "ic": "🧩",
+    "sotto": "poi province e comuni",
+    "da": "è divisa in"
+   },
+   {
+    "id": "speciali",
+    "n": "statuto speciale",
+    "ic": "⭐",
+    "sotto": "per lingua, storia o posizione",
+    "da": "ha 5 regioni a"
+   },
+   {
+    "id": "record",
+    "n": "la Sicilia",
+    "ic": "🏆",
+    "sotto": "la più piccola è la Valle d'Aosta",
+    "da": "ha come regione più grande"
+   },
+   {
+    "id": "stivale",
+    "n": "uno stivale",
+    "ic": "👢",
+    "sotto": "punta, tacco e sperone",
+    "da": "ha la forma di"
+   },
+   {
+    "id": "mare",
+    "n": "mare",
+    "ic": "🏞️",
+    "sotto": "una è l'Umbria, il cuore verde",
+    "da": "ha 5 regioni senza"
+   },
+   {
+    "id": "confini",
+    "n": "altri Stati",
+    "ic": "🚧",
+    "sotto": "Francia, Svizzera, Austria, Slovenia",
+    "da": "ha regioni che confinano con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'Italia ha 20 regioni. Di solito si dividono in province o città metropolitane, e poi in comuni. Il Molise confina con Abruzzo, Lazio, Campania e Puglia.",
+    "v": "L'Italia ha venti regioni. Di solito si dividono in province o città metropolitane, e poi in comuni. Il Molise confina con Abruzzo, Lazio, Campania e Puglia.",
+    "nodi": [
+     "venti"
+    ]
+   },
+   {
+    "t": "Cinque regioni sono a statuto speciale: Valle d'Aosta, Trentino-Alto Adige, Friuli-Venezia Giulia, Sicilia e Sardegna. Tre sono al confine nord, due sono isole.",
+    "nodi": [
+     "speciali"
+    ]
+   },
+   {
+    "t": "Hanno lo statuto speciale per lingua, storia o posizione. In Valle d'Aosta si parla anche francese; in Trentino-Alto Adige, formato dalle province autonome di Trento e Bolzano, anche tedesco.",
+    "nodi": [
+     "speciali"
+    ]
+   },
+   {
+    "t": "La Sicilia è la regione più grande; la Valle d'Aosta la più piccola. La Lombardia è la più abitata. Il punto più a nord è in Trentino-Alto Adige.",
+    "nodi": [
+     "record"
+    ]
+   },
+   {
+    "t": "L'Italia sembra uno stivale. La punta è la Calabria, il tacco è il Salento, in Puglia, e lo sperone è il Gargano. In Basilicata ci sono i Sassi di Matera.",
+    "nodi": [
+     "stivale"
+    ]
+   },
+   {
+    "t": "Cinque regioni non hanno il mare: Valle d'Aosta, Piemonte, Lombardia, Trentino-Alto Adige e Umbria. L'Umbria, al centro, è il cuore verde d'Italia.",
+    "nodi": [
+     "mare"
+    ]
+   },
+   {
+    "t": "La Valle d'Aosta ha una sola regione vicina: il Piemonte. La Liguria confina con la Francia. Il Friuli-Venezia Giulia confina con la Slovenia. San Marino è tra Emilia-Romagna e Marche.",
+    "nodi": [
+     "confini"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "stivale",
+    "scelte": [
+     "uno stivale",
+     "una ciambella",
+     "una stella"
+    ]
+   }
+  ],
+  "domande": {
+   "3f5yu9": "venti",
+   "5qdt74": "speciali",
+   "2ovs1": "speciali",
+   "1qzokp6": "speciali",
+   "19m2ave": "speciali",
+   "cqs04h": "record",
+   "1032pms": "speciali",
+   "g9u3uf": "record",
+   "149e31v": "record",
+   "1en0zql": "speciali",
+   "el0mwq": "confini",
+   "51nizo": "stivale",
+   "1sueoms": "record",
+   "9f2gfn": "mare",
+   "l8e26w": "mare",
+   "16p5dkp": "confini",
+   "v9z46s": "confini",
+   "ooa8uf": "confini",
+   "1putc6x": "venti",
+   "1bqirvs": "venti",
+   "1tprob4": "mare",
+   "f0bh5g": "stivale",
+   "1iufnog": "stivale",
+   "r9ihle": "speciali"
+  },
+  "collegamenti": [
+   "geo:capoluoghi",
+   "geo:confini",
+   "geo:piemonte",
+   "civica:comune"
+  ]
+ },
+ "capoluoghi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I capoluoghi",
+   "ic": "🏙️",
+   "sotto": "le città che guidano le regioni"
+  },
+  "nodi": [
+   {
+    "id": "roma",
+    "n": "Roma",
+    "ic": "🏛️",
+    "sotto": "anche capoluogo del Lazio",
+    "da": "comprendono la capitale,"
+   },
+   {
+    "id": "torino",
+    "n": "Torino",
+    "ic": "🎬",
+    "sotto": "capoluogo del Piemonte, con la Mole",
+    "da": "comprendono la prima capitale,"
+   },
+   {
+    "id": "nord",
+    "n": "Milano, Venezia, Genova e altri",
+    "ic": "🏔️",
+    "sotto": "Aosta, Trento, Trieste, Bologna",
+    "da": "al nord sono"
+   },
+   {
+    "id": "centro",
+    "n": "Firenze, Perugia e Ancona",
+    "ic": "🌻",
+    "sotto": "Toscana, Umbria e Marche",
+    "da": "al centro sono"
+   },
+   {
+    "id": "sud",
+    "n": "Napoli, Bari, L'Aquila e altri",
+    "ic": "🌋",
+    "sotto": "Campobasso, Potenza, Catanzaro",
+    "da": "al sud sono"
+   },
+   {
+    "id": "isole",
+    "n": "Palermo e Cagliari",
+    "ic": "🏝️",
+    "sotto": "Sicilia e Sardegna",
+    "da": "nelle isole sono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Ogni regione ha un capoluogo. Roma è la capitale d'Italia ed è anche il capoluogo del Lazio. La chiamano la città eterna.",
+    "nodi": [
+     "roma"
+    ]
+   },
+   {
+    "t": "Torino è il capoluogo del Piemonte, dove la Dora Riparia incontra il Po. È stata la prima capitale d'Italia, dal 1861 al 1865. Qui c'è la Mole Antonelliana.",
+    "v": "Torino è il capoluogo del Piemonte, dove la Dora Riparia incontra il Po. È stata la prima capitale d'Italia, dal milleottocentosessantuno al milleottocentosessantacinque. Qui c'è la Mole Antonelliana.",
+    "nodi": [
+     "torino"
+    ]
+   },
+   {
+    "t": "Al nord: Aosta per la Valle d'Aosta, Milano per la Lombardia, Trento per il Trentino-Alto Adige, Venezia per il Veneto, costruita su isolette in una laguna.",
+    "nodi": [
+     "nord"
+    ]
+   },
+   {
+    "t": "Poi Trieste per il Friuli-Venezia Giulia, Genova per la Liguria, con il faro della Lanterna, e Bologna per l'Emilia-Romagna.",
+    "nodi": [
+     "nord"
+    ]
+   },
+   {
+    "t": "Al centro: Firenze per la Toscana, con la cupola del Brunelleschi, Perugia per l'Umbria e Ancona per le Marche.",
+    "nodi": [
+     "centro"
+    ]
+   },
+   {
+    "t": "Al sud: L'Aquila per l'Abruzzo, vicino al Gran Sasso, Campobasso per il Molise, Napoli per la Campania e Bari per la Puglia.",
+    "nodi": [
+     "sud"
+    ]
+   },
+   {
+    "t": "Potenza per la Basilicata, il capoluogo di regione più alto. Catanzaro per la Calabria. Nelle isole: Palermo per la Sicilia e Cagliari per la Sardegna.",
+    "nodi": [
+     "sud",
+     "isole"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "isole",
+    "scelte": [
+     "Palermo e Cagliari",
+     "Parigi e Londra",
+     "New York e Tokyo"
+    ]
+   }
+  ],
+  "domande": {
+   "uqg3f7": "torino",
+   "tdj4w": "roma",
+   "1w0liyc": "torino",
+   "sankx6": "nord",
+   "14ym7gs": "nord",
+   "1pntwrs": "centro",
+   "lq7ndl": "sud",
+   "1ythj8d": "isole",
+   "1xpoao4": "isole",
+   "y4bjer": "nord",
+   "bdqwlk": "nord",
+   "1hjfswx": "sud",
+   "9lc6r3": "nord",
+   "1krab12": "nord",
+   "slktsp": "sud",
+   "7zyn7u": "torino",
+   "kbii0h": "roma",
+   "hgb0cj": "centro",
+   "1rkrv8": "nord",
+   "s1zdy4": "nord",
+   "sm6wk7": "nord",
+   "yzd4fn": "centro",
+   "gucdqd": "centro",
+   "eo49aq": "sud",
+   "1pf683f": "sud",
+   "9b370s": "sud",
+   "1pppgby": "sud"
+  },
+  "collegamenti": [
+   "geo:regioni",
+   "geo:piemonte",
+   "storia:torino",
+   "geo:europa"
+  ]
+ },
+ "confini": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'Italia",
+   "ic": "🇮🇹",
+   "sotto": "una penisola nel Mediterraneo"
+  },
+  "nodi": [
+   {
+    "id": "alpi",
+    "n": "Francia, Svizzera, Austria e Slovenia",
+    "ic": "🏔️",
+    "sotto": "il confine corre lungo le Alpi",
+    "da": "confina a nord con"
+   },
+   {
+    "id": "stati",
+    "n": "San Marino e Vaticano",
+    "ic": "🏰",
+    "sotto": "due Stati indipendenti",
+    "da": "ha dentro di sé"
+   },
+   {
+    "id": "mari",
+    "n": "quattro mari",
+    "ic": "🌊",
+    "sotto": "Ligure, Tirreno, Ionio, Adriatico",
+    "da": "è bagnata da"
+   },
+   {
+    "id": "ligure",
+    "n": "mar Ligure",
+    "ic": "⚓",
+    "sotto": "con Genova al centro",
+    "da": "in Liguria è bagnata dal"
+   },
+   {
+    "id": "adriatico",
+    "n": "mar Adriatico",
+    "ic": "🚤",
+    "sotto": "tra l'Italia e i Balcani",
+    "da": "a Venezia è bagnata dal"
+   },
+   {
+    "id": "ionio",
+    "n": "mar Ionio",
+    "ic": "🐚",
+    "sotto": "il Tirreno invece è a ovest",
+    "da": "in Calabria, a est, è bagnata dal"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "A nord l'Italia confina con quattro Stati: da ovest a est, Francia, Svizzera, Austria e Slovenia. Il confine corre lungo le Alpi.",
+    "nodi": [
+     "alpi"
+    ]
+   },
+   {
+    "t": "Dentro l'Italia ci sono due piccoli Stati indipendenti: San Marino e la Città del Vaticano, che si trova dentro Roma.",
+    "nodi": [
+     "stati"
+    ]
+   },
+   {
+    "t": "L'Italia è bagnata da quattro mari principali: Ligure, Tirreno, Ionio e Adriatico. Fanno tutti parte del mar Mediterraneo.",
+    "nodi": [
+     "mari"
+    ]
+   },
+   {
+    "t": "Il mar Ligure bagna la Liguria, con Genova al centro. Il Tirreno bagna la costa a ovest, dalla Toscana alla Calabria.",
+    "nodi": [
+     "ligure"
+    ]
+   },
+   {
+    "t": "Il mar Adriatico sta tra l'Italia e i Balcani e bagna Venezia. Il mar Ionio bagna la Calabria a est.",
+    "nodi": [
+     "adriatico",
+     "ionio"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "stati",
+    "scelte": [
+     "San Marino e Vaticano",
+     "Parigi e Madrid",
+     "Marte e Venere"
+    ]
+   }
+  ],
+  "domande": {
+   "1r652xa": "stati",
+   "4e2m5a": "alpi",
+   "pbhtq1": "mari",
+   "21tddg": "ligure",
+   "j3lii4": "adriatico",
+   "1qgnwxv": "ionio"
+  },
+  "collegamenti": [
+   "geo:regioni",
+   "geo:coste",
+   "geo:europa",
+   "geo:montagne"
+  ]
+ },
+ "montagne": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Montagne e vulcani",
+   "ic": "⛰️",
+   "sotto": "le alture d'Italia"
+  },
+  "nodi": [
+   {
+    "id": "alpi",
+    "n": "le Alpi",
+    "ic": "🏔️",
+    "sotto": "Monte Bianco e Cervino",
+    "da": "a nord formano"
+   },
+   {
+    "id": "dolomiti",
+    "n": "le Dolomiti",
+    "ic": "🌄",
+    "sotto": "i Monti Pallidi",
+    "da": "a nord-est comprendono"
+   },
+   {
+    "id": "appennini",
+    "n": "gli Appennini",
+    "ic": "🦴",
+    "sotto": "la vetta: il Corno Grande",
+    "da": "lungo la penisola formano"
+   },
+   {
+    "id": "vesuvio",
+    "n": "il Vesuvio",
+    "ic": "🌋",
+    "sotto": "nel 79 d.C. seppellì Pompei",
+    "da": "vicino a Napoli comprendono"
+   },
+   {
+    "id": "etna",
+    "n": "l'Etna",
+    "ic": "🔥",
+    "sotto": "il vulcano attivo più alto d'Europa",
+    "da": "in Sicilia comprendono"
+   },
+   {
+    "id": "stromboli",
+    "n": "lo Stromboli",
+    "ic": "💡",
+    "sotto": "il faro del Mediterraneo",
+    "da": "nelle Eolie comprendono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "A nord l'Italia ha le Alpi. La vetta più alta è il Monte Bianco, circa 4800 metri, al confine con la Francia.",
+    "v": "A nord l'Italia ha le Alpi. La vetta più alta è il Monte Bianco, circa quattromilaottocento metri, al confine con la Francia.",
+    "nodi": [
+     "alpi"
+    ]
+   },
+   {
+    "t": "Tra Valle d'Aosta e Svizzera c'è il Cervino, una piramide di roccia. A nord-est ci sono le Dolomiti, i Monti Pallidi: al tramonto diventano rosa.",
+    "nodi": [
+     "alpi",
+     "dolomiti"
+    ]
+   },
+   {
+    "t": "Gli Appennini attraversano l'Italia da nord a sud, come una spina dorsale. La vetta più alta è il Corno Grande, sul Gran Sasso, in Abruzzo.",
+    "nodi": [
+     "appennini"
+    ]
+   },
+   {
+    "t": "Vicino a Napoli c'è il Vesuvio: nel 79 d.C. la sua eruzione seppellì Pompei.",
+    "v": "Vicino a Napoli c'è il Vesuvio: nel settantanove dopo Cristo la sua eruzione seppellì Pompei.",
+    "nodi": [
+     "vesuvio"
+    ]
+   },
+   {
+    "t": "In Sicilia c'è l'Etna, alto più di 3300 metri: è il vulcano attivo più alto d'Europa.",
+    "v": "In Sicilia c'è l'Etna, alto più di tremilatrecento metri: è il vulcano attivo più alto d'Europa.",
+    "nodi": [
+     "etna"
+    ]
+   },
+   {
+    "t": "Nelle isole Eolie c'è lo Stromboli. Lancia fontane di lava quasi di continuo: è il faro del Mediterraneo.",
+    "nodi": [
+     "stromboli"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "dolomiti",
+    "scelte": [
+     "le Dolomiti",
+     "le nuvole",
+     "le onde"
+    ]
+   }
+  ],
+  "domande": {
+   "inrgr5": "appennini",
+   "zrgaco": "vesuvio",
+   "i3ws2k": "etna",
+   "1til5id": "alpi",
+   "1n6pwp4": "alpi",
+   "ktzfk0": "dolomiti",
+   "1ys4zl7": "appennini",
+   "18blr49": "stromboli"
+  },
+  "collegamenti": [
+   "geo:confini",
+   "geo:piemonte",
+   "sci-spazio:dentro-terra",
+   "storia:impero"
+  ]
+ },
+ "coste": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'Italia",
+   "ic": "🏝️",
+   "sotto": "pianure, coste e isole"
+  },
+  "nodi": [
+   {
+    "id": "pianure",
+    "n": "la Pianura Padana",
+    "ic": "🌾",
+    "sotto": "poi il Tavoliere delle Puglie",
+    "da": "ha come pianura più grande"
+   },
+   {
+    "id": "forme",
+    "n": "una penisola",
+    "ic": "🥾",
+    "sotto": "con istmi e promontori",
+    "da": "è"
+   },
+   {
+    "id": "mare",
+    "n": "golfi e lagune",
+    "ic": "🌊",
+    "sotto": "il mare che entra nella terra",
+    "da": "ha coste con"
+   },
+   {
+    "id": "isole",
+    "n": "Sicilia, Sardegna ed Elba",
+    "ic": "🏝️",
+    "sotto": "e arcipelaghi come le Eolie",
+    "da": "ha grandi isole:"
+   },
+   {
+    "id": "stretti",
+    "n": "stretti",
+    "ic": "⛴️",
+    "sotto": "Messina e Bocche di Bonifacio",
+    "da": "ha passaggi di mare chiamati"
+   },
+   {
+    "id": "tipi",
+    "n": "alte o basse",
+    "ic": "🪨",
+    "sotto": "rocciose in Liguria, sabbiose in Romagna",
+    "da": "ha coste"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La pianura più grande d'Italia è la Pianura Padana, che prende il nome dal Po. La seconda è il Tavoliere delle Puglie, piatto come un tavolo.",
+    "nodi": [
+     "pianure"
+    ]
+   },
+   {
+    "t": "L'Italia è una penisola: una terra circondata dall'acqua su tre lati. Un istmo è una striscia di terra tra due mari.",
+    "nodi": [
+     "forme"
+    ]
+   },
+   {
+    "t": "Un promontorio è una costa alta che sporge nel mare, come il Gargano. Un golfo invece è un tratto di mare che entra nella terra.",
+    "nodi": [
+     "forme",
+     "mare"
+    ]
+   },
+   {
+    "t": "Venezia sorge in una laguna: acqua bassa, separata dal mare da strisce di sabbia.",
+    "nodi": [
+     "mare"
+    ]
+   },
+   {
+    "t": "La Sicilia è l'isola più grande d'Italia, poi viene la Sardegna, poi l'isola d'Elba. Un gruppo di isole, come le Eolie, si chiama arcipelago.",
+    "nodi": [
+     "isole"
+    ]
+   },
+   {
+    "t": "Lo stretto di Messina separa la Sicilia dalla Calabria. Le Bocche di Bonifacio separano la Sardegna dalla Corsica, che è francese.",
+    "nodi": [
+     "stretti"
+    ]
+   },
+   {
+    "t": "Le coste della Liguria sono alte e rocciose; quelle dell'Adriatico, come in Romagna, basse e sabbiose. A ovest di Genova c'è la Riviera di Ponente.",
+    "nodi": [
+     "tipi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "isole",
+    "scelte": [
+     "Sicilia, Sardegna ed Elba",
+     "Marte, Venere e Giove",
+     "Parigi, Londra e Berlino"
+    ]
+   }
+  ],
+  "domande": {
+   "17sski8": "isole",
+   "1em8w1p": "pianure",
+   "1b5e0cf": "pianure",
+   "6c662v": "forme",
+   "1p4w4o2": "isole",
+   "nhxn4y": "mare",
+   "9w9uov": "mare",
+   "ovj987": "forme",
+   "1qd8v6p": "stretti",
+   "qj9bib": "isole",
+   "298yow": "isole",
+   "1f5eu2t": "stretti",
+   "izo4j0": "tipi",
+   "ruaa7e": "tipi",
+   "1b9pnm5": "tipi",
+   "a06x4j": "forme"
+  },
+  "collegamenti": [
+   "geo:confini",
+   "geo:montagne",
+   "geo:acque",
+   "geo:regioni"
+  ]
+ },
+ "clima": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il clima d'Italia",
+   "ic": "🌦️",
+   "sotto": "tanti climi in un solo Paese"
+  },
+  "nodi": [
+   {
+    "id": "mediterraneo",
+    "n": "mediterraneo",
+    "ic": "☀️",
+    "sotto": "estati calde e secche, inverni miti",
+    "da": "sulle coste è"
+   },
+   {
+    "id": "mare",
+    "n": "mare",
+    "ic": "🌊",
+    "sotto": "si scalda e si raffredda lentamente",
+    "da": "è reso più mite dal"
+   },
+   {
+    "id": "padano",
+    "n": "continentale",
+    "ic": "🌫️",
+    "sotto": "inverni freddi con nebbia, estati afose",
+    "da": "in Pianura Padana è"
+   },
+   {
+    "id": "alpino",
+    "n": "alpino",
+    "ic": "❄️",
+    "sotto": "inverni nevosi, estati fresche",
+    "da": "sulle Alpi è"
+   },
+   {
+    "id": "venti",
+    "n": "Scirocco e Bora",
+    "ic": "🌬️",
+    "sotto": "uno caldo, l'altra fredda",
+    "da": "cambia con venti come"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "In Italia non c'è un solo clima. Sulle coste e sulle isole il clima è mediterraneo: estati calde e secche, inverni miti.",
+    "nodi": [
+     "mediterraneo"
+    ]
+   },
+   {
+    "t": "Il mare rende il clima più mite perché si scalda e si raffredda lentamente: d'estate rinfresca, d'inverno cede calore.",
+    "nodi": [
+     "mare"
+    ]
+   },
+   {
+    "t": "In Pianura Padana il clima è continentale: inverni freddi con nebbia, estati calde e afose.",
+    "nodi": [
+     "padano"
+    ]
+   },
+   {
+    "t": "Sulle Alpi gli inverni sono freddi e nevosi e le estati fresche. Più si sale, più l'aria è fresca.",
+    "nodi": [
+     "alpino"
+    ]
+   },
+   {
+    "t": "Anche i venti cambiano il tempo. Lo Scirocco arriva da sud-est, caldo e umido. La Bora soffia fredda e fortissima su Trieste, da nord-est.",
+    "nodi": [
+     "venti"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "alpino",
+    "scelte": [
+     "alpino",
+     "desertico",
+     "tropicale"
+    ]
+   }
+  ],
+  "domande": {
+   "1b91cu0": "padano",
+   "76qhs9": "venti",
+   "t21tm4": "mediterraneo",
+   "179epiw": "alpino",
+   "1ds81uv": "mare",
+   "11zglxs": "venti"
+  },
+  "collegamenti": [
+   "geo:montagne",
+   "geo:coste",
+   "sci-spazio:meteo",
+   "sci-spazio:atmosfera"
+  ]
+ },
+ "lavoro": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il lavoro",
+   "ic": "🏭",
+   "sotto": "tre grandi settori"
+  },
+  "nodi": [
+   {
+    "id": "primario",
+    "n": "primario",
+    "ic": "🌾",
+    "sotto": "agricoltura, allevamento e pesca",
+    "da": "ha il settore"
+   },
+   {
+    "id": "materie",
+    "n": "materie prime",
+    "ic": "🪵",
+    "sotto": "materiali presi dalla natura",
+    "da": "parte dalle"
+   },
+   {
+    "id": "secondario",
+    "n": "secondario",
+    "ic": "🏭",
+    "sotto": "industria e artigianato",
+    "da": "ha il settore"
+   },
+   {
+    "id": "terziario",
+    "n": "terziario",
+    "ic": "🏥",
+    "sotto": "i servizi",
+    "da": "ha il settore"
+   },
+   {
+    "id": "oggi",
+    "n": "settore dei servizi",
+    "ic": "📊",
+    "sotto": "circa 7 lavoratori su 10",
+    "da": "oggi è soprattutto nel"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I lavori si dividono in tre settori. Il settore primario prende i prodotti direttamente dalla natura: agricoltura, allevamento e pesca. Contadini e pescatori lavorano qui.",
+    "nodi": [
+     "primario"
+    ]
+   },
+   {
+    "t": "Dalla natura arrivano le materie prime: legno, cotone, latte, minerali. Il settore secondario le trasforma in prodotti: è l'industria con le sue fabbriche, e l'artigianato.",
+    "nodi": [
+     "materie",
+     "secondario"
+    ]
+   },
+   {
+    "t": "Anche il muratore lavora nel secondario: con mattoni e cemento costruisce le case. Una fabbrica di automobili è nel secondario.",
+    "nodi": [
+     "secondario"
+    ]
+   },
+   {
+    "t": "Il settore terziario non produce oggetti: offre servizi. Ci lavorano insegnanti, medici, allenatori, commessi, autisti, e chi lavora nel turismo e negli alberghi.",
+    "nodi": [
+     "terziario"
+    ]
+   },
+   {
+    "t": "Oggi in Italia circa 7 lavoratori su 10 lavorano nei servizi. Un tempo, invece, la maggior parte lavorava nei campi.",
+    "v": "Oggi in Italia circa sette lavoratori su dieci lavorano nei servizi. Un tempo, invece, la maggior parte lavorava nei campi.",
+    "nodi": [
+     "oggi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "materie",
+    "scelte": [
+     "materie prime",
+     "sogni e fantasie",
+     "nuvole di zucchero"
+    ]
+   }
+  ],
+  "domande": {
+   "b2ymar": "secondario",
+   "smy9rt": "terziario",
+   "1ke8m1j": "secondario",
+   "1wyi856": "terziario",
+   "wwi0lf": "oggi",
+   "1rq8dwc": "terziario",
+   "3w90j4": "primario",
+   "12itsmv": "secondario",
+   "8k2dx7": "terziario",
+   "1isfyqa": "primario",
+   "13ub33o": "materie"
+  },
+  "collegamenti": [
+   "geo:piemonte",
+   "tecno:materiali",
+   "tecno:torino"
+  ]
+ },
+ "piemonte": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il Piemonte",
+   "ic": "🏔️",
+   "sotto": "una regione del nord-ovest"
+  },
+  "nodi": [
+   {
+    "id": "nome",
+    "n": "ai piedi dei monti",
+    "ic": "⛰️",
+    "sotto": "circondato da Alpi e Appennini",
+    "da": "vuol dire"
+   },
+   {
+    "id": "province",
+    "n": "8 province",
+    "ic": "🧩",
+    "sotto": "Cuneo è la Granda",
+    "da": "ha"
+   },
+   {
+    "id": "confini",
+    "n": "Francia e Svizzera",
+    "ic": "🚇",
+    "sotto": "il traforo del Frejus va in Francia",
+    "da": "confina con"
+   },
+   {
+    "id": "monti",
+    "n": "Monviso e Gran Paradiso",
+    "ic": "🐐",
+    "sotto": "il Re di Pietra e il primo parco nazionale",
+    "da": "ha montagne come"
+   },
+   {
+    "id": "campagne",
+    "n": "riso e vigneti",
+    "ic": "🍇",
+    "sotto": "Vercelli, Novara, Langhe, Roero, Monferrato",
+    "da": "coltiva"
+   },
+   {
+    "id": "alba",
+    "n": "il tartufo bianco d'Alba",
+    "ic": "🍄",
+    "sotto": "nelle Langhe",
+    "da": "è famoso nel mondo per"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Piemonte vuol dire ai piedi dei monti: la regione è circondata da montagne su tre lati, le Alpi e gli Appennini.",
+    "nodi": [
+     "nome"
+    ]
+   },
+   {
+    "t": "Ha 8 province, contando la Città metropolitana di Torino. La più grande è quella di Cuneo, detta la Granda.",
+    "v": "Ha otto province, contando la Città metropolitana di Torino. La più grande è quella di Cuneo, detta la Granda.",
+    "nodi": [
+     "province"
+    ]
+   },
+   {
+    "t": "Confina con la Francia a ovest e con la Svizzera a nord. Il traforo del Frejus collega la Valle di Susa alla Francia.",
+    "nodi": [
+     "confini"
+    ]
+   },
+   {
+    "t": "Il Monviso è il Re di Pietra: ai suoi piedi nasce il Po. Il parco del Gran Paradiso, nato nel 1922, è il primo parco nazionale d'Italia.",
+    "v": "Il Monviso è il Re di Pietra: ai suoi piedi nasce il Po. Il parco del Gran Paradiso, nato nel millenovecentoventidue, è il primo parco nazionale d'Italia.",
+    "nodi": [
+     "monti"
+    ]
+   },
+   {
+    "t": "Nelle campagne di Vercelli e Novara si coltiva il riso. Le colline di Langhe, Roero e Monferrato sono Patrimonio UNESCO per i vigneti.",
+    "v": "Nelle campagne di Vercelli e Novara si coltiva il riso. Le colline di Langhe, Roero e Monferrato sono Patrimonio Unesco per i vigneti.",
+    "nodi": [
+     "campagne"
+    ]
+   },
+   {
+    "t": "Ad Alba, nelle Langhe, ogni autunno c'è la Fiera del tartufo bianco, famosa in tutto il mondo.",
+    "nodi": [
+     "alba"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "campagne",
+    "scelte": [
+     "riso e vigneti",
+     "banane e ananas",
+     "caffè e cacao"
+    ]
+   }
+  ],
+  "domande": {
+   "la56gx": "province",
+   "1b00smn": "nome",
+   "1006va1": "confini",
+   "f6abr": "monti",
+   "f8n28w": "monti",
+   "1ms63yq": "province",
+   "13ilygg": "campagne",
+   "196a2oj": "campagne",
+   "194koo8": "confini",
+   "1l14ntd": "alba"
+  },
+  "collegamenti": [
+   "geo:regioni",
+   "geo:capoluoghi",
+   "storia:torino",
+   "tecno:torino"
+  ]
+ },
+ "europa": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'Europa",
+   "ic": "🇪🇺",
+   "sotto": "un continente e un'Unione"
+  },
+  "nodi": [
+   {
+    "id": "capitali",
+    "n": "Parigi, Madrid, Berlino e Londra",
+    "ic": "🏙️",
+    "sotto": "e Bruxelles per l'Unione",
+    "da": "ha capitali come"
+   },
+   {
+    "id": "fiumi",
+    "n": "Danubio, Senna e Tamigi",
+    "ic": "🌊",
+    "sotto": "Vienna, Parigi, Londra",
+    "da": "è attraversata da fiumi come"
+   },
+   {
+    "id": "natura",
+    "n": "Pirenei, fiordi e geyser",
+    "ic": "🏔️",
+    "sotto": "Spagna, Norvegia, Islanda",
+    "da": "ha paesaggi come"
+   },
+   {
+    "id": "nascita",
+    "n": "Roma",
+    "ic": "✍️",
+    "sotto": "nel 1957, sei Paesi fondatori",
+    "da": "si è unita con i Trattati di"
+   },
+   {
+    "id": "ue",
+    "n": "l'Unione Europea",
+    "ic": "🤝",
+    "sotto": "27 Paesi",
+    "da": "oggi ha"
+   },
+   {
+    "id": "simboli",
+    "n": "bandiera, inno ed euro",
+    "ic": "⭐",
+    "sotto": "12 stelle e l'Inno alla gioia",
+    "da": "ha come simboli"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Parigi è la capitale della Francia, sulla Senna, con la Torre Eiffel. Madrid è al centro della Spagna. Berlino è la capitale della Germania.",
+    "nodi": [
+     "capitali",
+     "fiumi"
+    ]
+   },
+   {
+    "t": "Londra, sul Tamigi, è la capitale del Regno Unito. Il Danubio attraversa quattro capitali: Vienna, Bratislava, Budapest e Belgrado.",
+    "nodi": [
+     "capitali",
+     "fiumi"
+    ]
+   },
+   {
+    "t": "Spagna e Portogallo sono sulla penisola iberica. I Pirenei separano la Francia dalla Spagna. La Norvegia ha i fiordi; l'Islanda ha vulcani, ghiacciai e geyser.",
+    "nodi": [
+     "natura"
+    ]
+   },
+   {
+    "t": "Nel 1957 sei Paesi, tra cui l'Italia, firmano a Roma i Trattati da cui nasce l'Europa unita.",
+    "v": "Nel millenovecentocinquantasette sei Paesi, tra cui l'Italia, firmano a Roma i Trattati da cui nasce l'Europa unita.",
+    "nodi": [
+     "nascita"
+    ]
+   },
+   {
+    "t": "Oggi l'Unione Europea ha 27 Paesi. Il Regno Unito ne è uscito nel 2020. La Svizzera, che confina con l'Italia a nord, non ne fa parte.",
+    "v": "Oggi l'Unione Europea ha ventisette Paesi. Il Regno Unito ne è uscito nel duemilaventi. La Svizzera, che confina con l'Italia a nord, non ne fa parte.",
+    "nodi": [
+     "ue"
+    ]
+   },
+   {
+    "t": "Molte istituzioni dell'Unione lavorano a Bruxelles, capitale del Belgio. In tanti Paesi dell'Unione si usa la stessa moneta: l'euro.",
+    "nodi": [
+     "capitali",
+     "simboli"
+    ]
+   },
+   {
+    "t": "La bandiera europea ha 12 stelle d'oro: non contano i Paesi. L'inno è l'Inno alla gioia di Beethoven. Il 9 maggio è la Festa dell'Europa.",
+    "v": "La bandiera europea ha dodici stelle d'oro: non contano i Paesi. L'inno è l'Inno alla gioia di Beethoven. Il nove maggio è la Festa dell'Europa.",
+    "nodi": [
+     "simboli"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "natura",
+    "scelte": [
+     "Pirenei, fiordi e geyser",
+     "giungle e canguri",
+     "piramidi e cammelli"
+    ]
+   }
+  ],
+  "domande": {
+   "16jt0kl": "capitali",
+   "ptc2p7": "capitali",
+   "napes5": "capitali",
+   "1sdqkj2": "capitali",
+   "1i4fjdv": "ue",
+   "1b7c94a": "nascita",
+   "m0mmn": "ue",
+   "nbhvqf": "simboli",
+   "j0vdil": "simboli",
+   "12veqi0": "ue",
+   "l7u7qw": "fiumi",
+   "1dis4ul": "fiumi",
+   "1abayzz": "fiumi",
+   "1uyx9t7": "natura",
+   "151n6i7": "natura",
+   "1vu536r": "natura",
+   "135aiaw": "natura",
+   "i3bq4k": "simboli",
+   "hyim3": "simboli",
+   "1ag51lf": "capitali",
+   "zd9gwd": "nascita"
+  },
+  "collegamenti": [
+   "geo:confini",
+   "geo:mondo",
+   "civica:europa-onu",
+   "media:europa"
+  ]
+ },
+ "mondo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il mondo",
+   "ic": "🌍",
+   "sotto": "continenti, oceani e ambienti"
+  },
+  "nodi": [
+   {
+    "id": "continenti",
+    "n": "Asia, Africa e Antartide",
+    "ic": "🗺️",
+    "sotto": "il più grande e il più freddo",
+    "da": "ha continenti come"
+   },
+   {
+    "id": "oceani",
+    "n": "oceani",
+    "ic": "🌊",
+    "sotto": "Pacifico, Atlantico, Artico",
+    "da": "è coperto in gran parte da"
+   },
+   {
+    "id": "record",
+    "n": "Everest, Sahara e Rio delle Amazzoni",
+    "ic": "🏆",
+    "sotto": "monte, deserto caldo e fiume",
+    "da": "ha record come"
+   },
+   {
+    "id": "passaggi",
+    "n": "canali e stretti",
+    "ic": "⛴️",
+    "sotto": "Suez, Panama, Gibilterra",
+    "da": "ha passaggi per le navi:"
+   },
+   {
+    "id": "ambienti",
+    "n": "savane, foreste e coralli",
+    "ic": "🦒",
+    "sotto": "anche oasi e macchia mediterranea",
+    "da": "ha ambienti caldi o miti:"
+   },
+   {
+    "id": "freddi",
+    "n": "tundra e taiga",
+    "ic": "🦌",
+    "sotto": "orsi polari al nord",
+    "da": "ha ambienti freddi come"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'Asia è il continente più grande: lì c'è l'Everest, la montagna più alta, circa 8849 metri. L'Antartide è il continente più freddo, coperto di ghiaccio.",
+    "v": "L'Asia è il continente più grande: lì c'è l'Everest, la montagna più alta, circa ottomilaottocentoquarantanove metri. L'Antartide è il continente più freddo, coperto di ghiaccio.",
+    "nodi": [
+     "continenti",
+     "record"
+    ]
+   },
+   {
+    "t": "L'Egitto è in Africa. Nel nord dell'Africa c'è il Sahara, il deserto caldo più grande del mondo. Sulle coste del Mediterraneo cresce la macchia: arbusti sempreverdi.",
+    "nodi": [
+     "continenti",
+     "record",
+     "ambienti"
+    ]
+   },
+   {
+    "t": "L'oceano più grande è il Pacifico. L'Atlantico separa l'Europa dall'America. L'Artico, il più piccolo, circonda il Polo Nord ed è coperto di ghiaccio.",
+    "nodi": [
+     "oceani"
+    ]
+   },
+   {
+    "t": "In Sud America il Rio delle Amazzoni è il fiume che trasporta più acqua. Attraversa la foresta pluviale amazzonica: vicino all'Equatore piove e fa caldo tutto l'anno.",
+    "nodi": [
+     "record",
+     "ambienti"
+    ]
+   },
+   {
+    "t": "Il canale di Suez collega il Mediterraneo al mar Rosso. Il canale di Panama collega l'Atlantico al Pacifico. Lo stretto di Gibilterra separa l'Europa dall'Africa.",
+    "nodi": [
+     "passaggi"
+    ]
+   },
+   {
+    "t": "La savana è una prateria calda con pochi alberi. L'oasi è un luogo con acqua nel deserto. La barriera corallina è costruita da piccoli animali, i coralli.",
+    "nodi": [
+     "ambienti"
+    ]
+   },
+   {
+    "t": "Vicino al Polo Nord c'è la tundra, con muschi e licheni; più a sud la taiga, con abeti e pini. Gli orsi polari vivono al nord, i pinguini al sud.",
+    "nodi": [
+     "freddi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "freddi",
+    "scelte": [
+     "tundra e taiga",
+     "spiagge tropicali",
+     "deserti di sabbia"
+    ]
+   }
+  ],
+  "domande": {
+   "1kowamp": "continenti",
+   "jgfe4q": "oceani",
+   "6y2wi6": "continenti",
+   "10z44n": "record",
+   "1lwnfm": "record",
+   "1a6h3uq": "continenti",
+   "1t3lbou": "passaggi",
+   "xfn1sh": "passaggi",
+   "yz2yjm": "oceani",
+   "mc1dee": "oceani",
+   "1jjw33": "freddi",
+   "9ixdme": "passaggi",
+   "14puruo": "record",
+   "od5fzj": "ambienti",
+   "1mihacj": "freddi",
+   "omtvnk": "freddi",
+   "1g1kaiu": "ambienti",
+   "1pcs89q": "ambienti",
+   "flnp1o": "ambienti",
+   "2nhrpl": "ambienti"
+  },
+  "collegamenti": [
+   "geo:europa",
+   "geo:coordinate",
+   "sci-spazio:terra",
+   "geo:acque"
+  ]
  }
 }

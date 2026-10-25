@@ -135,5 +135,1633 @@
    "kwjofi": "cuore",
    "om8khg": "cuore"
   }
+ },
+ "cellule": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le cellule",
+   "ic": "🔬",
+   "sotto": "i mattoncini di tutti gli esseri viventi"
+  },
+  "nodi": [
+   {
+    "id": "micro",
+    "n": "il microscopio",
+    "ic": "🔎",
+    "sotto": "sono piccolissime: a occhio nudo di solito non si vedono",
+    "da": "di solito si vedono solo con"
+   },
+   {
+    "id": "membrana",
+    "n": "membrana cellulare",
+    "ic": "🫧",
+    "sotto": "la pellicola che fa da portinaio",
+    "da": "sono avvolte dalla"
+   },
+   {
+    "id": "citoplasma",
+    "n": "citoplasma",
+    "ic": "💧",
+    "sotto": "un liquido gelatinoso",
+    "da": "sono riempite dal"
+   },
+   {
+    "id": "nucleo",
+    "n": "il nucleo, con il DNA",
+    "ic": "🧬",
+    "sotto": "le istruzioni della vita",
+    "da": "hanno al centro"
+   },
+   {
+    "id": "divisione",
+    "n": "una cellula si divide in due",
+    "ic": "➗",
+    "sotto": "così cresci e ripari le ferite",
+    "da": "si moltiplicano così:"
+   },
+   {
+    "id": "tessuti",
+    "n": "tessuti, organi e apparati",
+    "ic": "🧱",
+    "sotto": "cellula, tessuto, organo, apparato",
+    "da": "si uniscono e formano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Tutti gli esseri viventi sono fatti di cellule: sono i loro mattoncini. Nel tuo corpo ce ne sono moltissime, decine di migliaia di miliardi!",
+    "nodi": [
+     "tessuti"
+    ]
+   },
+   {
+    "t": "Le cellule sono piccolissime. Di solito non si vedono a occhio nudo: serve il microscopio, che le ingrandisce centinaia di volte.",
+    "nodi": [
+     "micro"
+    ]
+   },
+   {
+    "t": "Ogni cellula è avvolta da una sottile pellicola, la membrana cellulare. Fa da portinaio: decide che cosa entra e che cosa esce.",
+    "nodi": [
+     "membrana"
+    ]
+   },
+   {
+    "t": "Dentro c'è il citoplasma, un liquido gelatinoso. Al centro c'è il nucleo: custodisce il DNA, le istruzioni della vita.",
+    "nodi": [
+     "citoplasma",
+     "nucleo"
+    ]
+   },
+   {
+    "t": "Le nuove cellule nascono così: una cellula si divide in due, poi in quattro, e avanti. Così cresci e ripari una sbucciatura.",
+    "nodi": [
+     "divisione"
+    ]
+   },
+   {
+    "t": "Un tessuto è un insieme di cellule simili che fanno lo stesso lavoro. Più tessuti formano un organo, come lo stomaco.",
+    "nodi": [
+     "tessuti"
+    ]
+   },
+   {
+    "t": "Più organi che lavorano insieme per uno scopo formano un apparato. Dal più piccolo al più grande: cellula, tessuto, organo, apparato!",
+    "nodi": [
+     "tessuti"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "citoplasma",
+    "scelte": [
+     "citoplasma",
+     "sabbia",
+     "aranciata"
+    ]
+   },
+   {
+    "nodo": "micro",
+    "scelte": [
+     "il microscopio",
+     "il cucchiaio",
+     "la sveglia"
+    ]
+   }
+  ],
+  "domande": {
+   "13w1ddi": "tessuti",
+   "oe8sbe": "tessuti",
+   "1kcjrej": "tessuti",
+   "mn24tu": "citoplasma",
+   "51eu8b": "divisione",
+   "101r81c": "tessuti",
+   "h5fial": "nucleo",
+   "dsgqp3": "micro",
+   "1ulu4f4": "membrana"
+  },
+  "collegamenti": [
+   "sci-spazio:scala",
+   "media:viventi",
+   "sci-corpo:ossa"
+  ]
+ },
+ "ossa": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le ossa",
+   "ic": "🦴",
+   "sotto": "206 in un adulto"
+  },
+  "nodi": [
+   {
+    "id": "vive",
+    "n": "il midollo osseo",
+    "ic": "🏭",
+    "sotto": "fa le cellule del sangue: le ossa sono vive",
+    "da": "dentro hanno"
+   },
+   {
+    "id": "testa",
+    "n": "il cranio",
+    "ic": "💀",
+    "sotto": "con la mandibola e i tre ossicini dell'orecchio",
+    "da": "nella testa formano"
+   },
+   {
+    "id": "tronco",
+    "n": "colonna e gabbia toracica",
+    "ic": "🪜",
+    "sotto": "vertebre, 12 paia di costole e lo sterno",
+    "da": "nel tronco formano"
+   },
+   {
+    "id": "braccia",
+    "n": "omero, radio e ulna",
+    "ic": "💪",
+    "sotto": "con clavicola, scapola e 27 ossa in ogni mano",
+    "da": "nelle braccia sono"
+   },
+   {
+    "id": "gambe",
+    "n": "femore, tibia e perone",
+    "ic": "🦵",
+    "sotto": "con la rotula e 26 ossa in ogni piede",
+    "da": "nelle gambe sono"
+   },
+   {
+    "id": "artic",
+    "n": "articolazioni",
+    "ic": "🔩",
+    "sotto": "con cartilagine e legamenti",
+    "da": "si incontrano e si piegano nelle"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Un adulto ha 206 ossa. I neonati ne hanno di più: crescendo, alcune si saldano insieme. Le ossa sono vive: crescono e si riparano.",
+    "nodi": [
+     "vive"
+    ]
+   },
+   {
+    "t": "Dentro le ossa c'è il midollo osseo, che produce le cellule del sangue. Il calcio, che trovi in latte e formaggi, rende forti ossa e denti.",
+    "nodi": [
+     "vive"
+    ]
+   },
+   {
+    "t": "Il cranio protegge il cervello; nei neonati le sue ossa non sono ancora unite. La mandibola si muove quando mastichi. Nell'orecchio: martello, incudine e staffa, l'osso più piccolo.",
+    "nodi": [
+     "testa"
+    ]
+   },
+   {
+    "t": "La colonna vertebrale è fatta di vertebre, che proteggono il midollo spinale. Le sette del collo sono le vertebre cervicali. Di notte i dischi tra le vertebre si rigonfiano.",
+    "nodi": [
+     "tronco"
+    ]
+   },
+   {
+    "t": "Abbiamo 12 paia di costole: con lo sterno formano la gabbia toracica, che protegge cuore e polmoni. La clavicola va dalla spalla allo sterno; dietro c'è la scapola.",
+    "nodi": [
+     "tronco",
+     "braccia"
+    ]
+   },
+   {
+    "t": "Braccio: omero, poi radio e ulna. Mano: 27 ossa; quelle delle dita sono le falangi. Gamba: femore, il più lungo, poi tibia e perone. Piede: 26 ossa.",
+    "nodi": [
+     "braccia",
+     "gambe"
+    ]
+   },
+   {
+    "t": "Le ossa si incontrano nelle articolazioni, come ginocchio, gomito e caviglia. Le riveste la cartilagine, liscia; i legamenti le tengono unite. Davanti al ginocchio c'è la rotula.",
+    "nodi": [
+     "artic",
+     "gambe"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "artic",
+    "scelte": [
+     "articolazioni",
+     "nuvole",
+     "matite"
+    ]
+   },
+   {
+    "nodo": "vive",
+    "scelte": [
+     "il midollo osseo",
+     "il gelato",
+     "la sabbia"
+    ]
+   }
+  ],
+  "domande": {
+   "iij2l9": "vive",
+   "12nijl4": "testa",
+   "qxetiw": "tronco",
+   "vg5t8k": "artic",
+   "h3r5j": "gambe",
+   "q6ysou": "gambe",
+   "12sx9j6": "tronco",
+   "jftf80": "vive",
+   "1n2hfb8": "vive",
+   "ev6cfo": "gambe",
+   "16l3lg1": "artic",
+   "6o3suh": "testa",
+   "1e6h3sd": "testa",
+   "ym9oce": "testa",
+   "1le7wib": "braccia",
+   "z5lvdp": "tronco",
+   "pezef4": "braccia",
+   "1as32g4": "braccia",
+   "1ug88db": "gambe",
+   "odkgis": "vive",
+   "16m9xck": "testa",
+   "io207b": "artic",
+   "1euinue": "artic",
+   "1sqm89x": "tronco",
+   "merckj": "braccia",
+   "1wm5lxm": "tronco",
+   "16f3gle": "tronco",
+   "1d14iao": "braccia",
+   "1lh4zrn": "braccia"
+  },
+  "collegamenti": [
+   "sci-corpo:muscoli",
+   "sci-corpo:cibo",
+   "sp-corpo:muscoli"
+  ]
+ },
+ "muscoli": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I muscoli",
+   "ic": "💪",
+   "sotto": "tirano le ossa e ci fanno muovere"
+  },
+  "nodi": [
+   {
+    "id": "tendini",
+    "n": "i tendini",
+    "ic": "🪢",
+    "sotto": "come il tendine d'Achille",
+    "da": "sono attaccati alle ossa con"
+   },
+   {
+    "id": "tirano",
+    "n": "si accorciano e tirano",
+    "ic": "↔️",
+    "sotto": "sanno solo tirare, mai spingere",
+    "da": "per muovere un osso"
+   },
+   {
+    "id": "coppia",
+    "n": "bicipite e tricipite",
+    "ic": "🤝",
+    "sotto": "il bicipite piega, il tricipite distende",
+    "da": "lavorano in coppia, come"
+   },
+   {
+    "id": "grandi",
+    "n": "il grande gluteo e il polpaccio",
+    "ic": "🦵",
+    "sotto": "il grande gluteo è il muscolo più grande",
+    "da": "comprendono"
+   },
+   {
+    "id": "volontari",
+    "n": "volontari o involontari",
+    "ic": "🎮",
+    "sotto": "quelli di braccia e gambe li comandi tu",
+    "da": "possono essere"
+   },
+   {
+    "id": "calore",
+    "n": "calore",
+    "ic": "🔥",
+    "sotto": "quando tremi dal freddo",
+    "da": "producono anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I muscoli servono a muovere il corpo. Sono attaccati alle ossa con i tendini: il tendine d'Achille unisce il polpaccio al tallone.",
+    "nodi": [
+     "tendini"
+    ]
+   },
+   {
+    "t": "Per muovere un osso, il muscolo si accorcia e tira. I muscoli sanno solo tirare, mai spingere: per questo lavorano in coppia.",
+    "nodi": [
+     "tirano"
+    ]
+   },
+   {
+    "t": "Nel braccio il bicipite, davanti, piega il gomito. Il tricipite, dietro, distende il braccio.",
+    "nodi": [
+     "coppia"
+    ]
+   },
+   {
+    "t": "Il muscolo più grande del corpo è il grande gluteo, nel sedere. Il polpaccio sta dietro la gamba, sotto il ginocchio.",
+    "nodi": [
+     "grandi"
+    ]
+   },
+   {
+    "t": "Un crampo è un muscolo che si contrae da solo e fa male. Capita spesso al polpaccio: allungarlo piano di solito aiuta.",
+    "nodi": [
+     "grandi"
+    ]
+   },
+   {
+    "t": "I muscoli di braccia e gambe li comandi tu: sono volontari. Quelli dello stomaco lavorano da soli: sono involontari. Il pollice, poi, afferra come una pinza.",
+    "nodi": [
+     "volontari"
+    ]
+   },
+   {
+    "t": "Quando hai molto freddo, i muscoli fanno tanti piccoli movimenti velocissimi: tremi. Così producono calore.",
+    "nodi": [
+     "calore"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "tendini",
+    "scelte": [
+     "i tendini",
+     "le nuvole",
+     "i bottoni"
+    ]
+   }
+  ],
+  "domande": {
+   "1d67fb0": "tirano",
+   "1gcn116": "tendini",
+   "1cwdjpo": "coppia",
+   "pvrz49": "grandi",
+   "v39ws1": "grandi",
+   "1ath82f": "tirano",
+   "3u3qvc": "coppia",
+   "2fq3te": "volontari",
+   "1gghf7x": "grandi",
+   "1mb8afw": "volontari",
+   "vru40p": "calore"
+  },
+  "collegamenti": [
+   "sci-corpo:ossa",
+   "sp-corpo:muscoli",
+   "sp-corpo:allenarsi"
+  ]
+ },
+ "respiro": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'aria che respiri",
+   "ic": "🫁",
+   "sotto": "porta l'ossigeno al sangue"
+  },
+  "nodi": [
+   {
+    "id": "naso",
+    "n": "naso",
+    "ic": "👃",
+    "sotto": "filtra, scalda e inumidisce l'aria",
+    "da": "entra dal"
+   },
+   {
+    "id": "gola",
+    "n": "gola: faringe e laringe",
+    "ic": "🗣️",
+    "sotto": "con l'epiglottide e le corde vocali",
+    "da": "passa per la"
+   },
+   {
+    "id": "trachea",
+    "n": "trachea e bronchi",
+    "ic": "🌳",
+    "sotto": "un albero a testa in giù, fino ai bronchioli",
+    "da": "scende lungo"
+   },
+   {
+    "id": "polmoni",
+    "n": "polmoni, fino agli alveoli",
+    "ic": "🫁",
+    "sotto": "lì l'ossigeno passa nel sangue",
+    "da": "arriva nei"
+   },
+   {
+    "id": "diaframma",
+    "n": "diaframma",
+    "ic": "⬇️",
+    "sotto": "il muscolo sotto i polmoni",
+    "da": "viene tirata dentro dal"
+   },
+   {
+    "id": "scarto",
+    "n": "l'anidride carbonica",
+    "ic": "💨",
+    "sotto": "lo scarto prodotto dalle cellule",
+    "da": "quando esce porta via"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Respirando prendi dall'aria l'ossigeno. Naso, trachea e polmoni fanno parte dell'apparato respiratorio: portano l'aria dentro e fuori dal corpo.",
+    "nodi": [
+     "naso",
+     "polmoni"
+    ]
+   },
+   {
+    "t": "È meglio respirare con il naso: peli e muco filtrano l'aria, che si scalda e si inumidisce. Lo starnuto è un soffio velocissimo che libera il naso.",
+    "nodi": [
+     "naso"
+    ]
+   },
+   {
+    "t": "Poi l'aria passa nella faringe, dove passa anche il cibo, e nella laringe, con le corde vocali. L'epiglottide è un coperchio: chiude la trachea quando deglutisci.",
+    "nodi": [
+     "gola"
+    ]
+   },
+   {
+    "t": "La trachea è un tubo con anelli di cartilagine. Si divide in due bronchi, che si dividono in rami più sottili, i bronchioli: un albero a testa in giù!",
+    "nodi": [
+     "trachea"
+    ]
+   },
+   {
+    "t": "Abbiamo 2 polmoni; il sinistro è un po' più piccolo, per lasciare spazio al cuore. Negli alveoli polmonari, sacchettini minuscoli, l'ossigeno passa nel sangue.",
+    "nodi": [
+     "polmoni"
+    ]
+   },
+   {
+    "t": "Sotto i polmoni c'è un muscolo, il diaframma. Quando inspiri si abbassa e fa spazio ai polmoni; poi espiri. Il singhiozzo? Piccole contrazioni improvvise del diaframma!",
+    "nodi": [
+     "diaframma"
+    ]
+   },
+   {
+    "t": "Le cellule producono uno scarto, l'anidride carbonica: la butti fuori espirando. Quando fai sport i muscoli chiedono più ossigeno, e respiri più in fretta.",
+    "nodi": [
+     "scarto",
+     "polmoni"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "diaframma",
+    "scelte": [
+     "diaframma",
+     "cappello",
+     "ombrello"
+    ]
+   }
+  ],
+  "domande": {
+   "u6v2nt": "polmoni",
+   "193p6q8": "naso",
+   "wkclsq": "polmoni",
+   "1budi5i": "scarto",
+   "1vj7y1a": "diaframma",
+   "vzjte6": "polmoni",
+   "rovodq": "trachea",
+   "9q66vr": "naso",
+   "827f9b": "polmoni",
+   "1f4r6qp": "diaframma",
+   "1iddjz2": "diaframma",
+   "1sv17wy": "gola",
+   "t7f20r": "polmoni",
+   "1mihspt": "gola",
+   "1d6j232": "trachea",
+   "1mes2dp": "trachea",
+   "fqxgv7": "naso",
+   "ys09ap": "diaframma",
+   "17ppzw3": "gola",
+   "gcafy4": "scarto",
+   "pvszlo": "polmoni"
+  },
+  "collegamenti": [
+   "sci-corpo:cuore",
+   "sci-spazio:atmosfera",
+   "sp-nuoto:galleggiare"
+  ]
+ },
+ "digestione": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il cibo",
+   "ic": "🍽️",
+   "sotto": "diventa sostanze semplici e utili"
+  },
+  "nodi": [
+   {
+    "id": "bocca",
+    "n": "bocca",
+    "ic": "👄",
+    "sotto": "denti e saliva: si forma il bolo",
+    "da": "comincia a essere digerito in"
+   },
+   {
+    "id": "esofago",
+    "n": "l'esofago",
+    "ic": "⬇️",
+    "sotto": "la peristalsi lo spinge fino allo stomaco",
+    "da": "scende lungo"
+   },
+   {
+    "id": "stomaco",
+    "n": "stomaco",
+    "ic": "🌀",
+    "sotto": "con i succhi gastrici diventa chimo",
+    "da": "si mescola nello"
+   },
+   {
+    "id": "aiutanti",
+    "n": "fegato e pancreas",
+    "ic": "🧪",
+    "sotto": "bile e succhi digestivi",
+    "da": "si digerisce con l'aiuto di"
+   },
+   {
+    "id": "tenue",
+    "n": "intestino tenue",
+    "ic": "🧶",
+    "sotto": "lungo diversi metri, pieno di villi",
+    "da": "passa nel sangue dall'"
+   },
+   {
+    "id": "crasso",
+    "n": "intestino crasso",
+    "ic": "🚽",
+    "sotto": "recupera l'acqua, poi gli scarti escono",
+    "da": "finisce nell'"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La digestione trasforma il cibo in sostanze semplici e utili, che il sangue porta a tutte le cellule. Comincia in bocca: i denti masticano e la saliva ammorbidisce.",
+    "nodi": [
+     "bocca"
+    ]
+   },
+   {
+    "t": "Il cibo masticato diventa una pallina, il bolo alimentare. L'esofago collega la bocca allo stomaco: con un movimento a onde, la peristalsi, spinge giù il bolo.",
+    "nodi": [
+     "bocca",
+     "esofago"
+    ]
+   },
+   {
+    "t": "Nello stomaco il cibo si mescola con i succhi gastrici, come in una piccola lavatrice. Il bolo diventa una poltiglia: il chimo.",
+    "nodi": [
+     "stomaco"
+    ]
+   },
+   {
+    "t": "Il fegato produce la bile, che aiuta a digerire i grassi; la cistifellea la conserva. Il pancreas, dietro lo stomaco, produce succhi digestivi e insulina.",
+    "nodi": [
+     "aiutanti"
+    ]
+   },
+   {
+    "t": "Poi il chimo passa nel duodeno, la prima parte dell'intestino tenue. Lì arrivano la bile e i succhi del pancreas.",
+    "nodi": [
+     "tenue",
+     "aiutanti"
+    ]
+   },
+   {
+    "t": "L'intestino tenue è lungo diversi metri, tutto arrotolato. I villi intestinali, piccolissime sporgenze, assorbono il nutrimento: così passa nel sangue.",
+    "nodi": [
+     "tenue"
+    ]
+   },
+   {
+    "t": "Quello che non viene digerito va nell'intestino crasso, che assorbe soprattutto l'acqua. Poi gli scarti escono dal corpo.",
+    "nodi": [
+     "crasso"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "stomaco",
+    "scelte": [
+     "stomaco",
+     "naso",
+     "ginocchio"
+    ]
+   }
+  ],
+  "domande": {
+   "zuv63x": "bocca",
+   "1ua4874": "bocca",
+   "bqtmlo": "esofago",
+   "1slott7": "aiutanti",
+   "wsntaq": "stomaco",
+   "xw88bt": "stomaco",
+   "75ud3w": "aiutanti",
+   "1uqljmm": "tenue",
+   "1joai6k": "tenue",
+   "3fevrx": "crasso",
+   "nra934": "tenue",
+   "1wa62w8": "esofago",
+   "1i4t6g4": "crasso",
+   "1i64tit": "bocca",
+   "tj75mr": "tenue",
+   "g90j2i": "tenue",
+   "g5eu37": "aiutanti"
+  },
+  "collegamenti": [
+   "sci-corpo:denti",
+   "sci-corpo:cibo",
+   "sci-corpo:cellule"
+  ]
+ },
+ "denti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I denti",
+   "ic": "🦷",
+   "sotto": "tagliano, strappano e masticano"
+  },
+  "nodi": [
+   {
+    "id": "latte",
+    "n": "20 denti da latte",
+    "ic": "🍼",
+    "sotto": "poi cadono, spinti da quelli definitivi",
+    "da": "da bambini sono"
+   },
+   {
+    "id": "adulto",
+    "n": "circa 32",
+    "ic": "🧑",
+    "sotto": "contando anche i denti del giudizio",
+    "da": "da grandi sono"
+   },
+   {
+    "id": "incisivi",
+    "n": "gli incisivi",
+    "ic": "✂️",
+    "sotto": "tagliano il cibo",
+    "da": "davanti sono"
+   },
+   {
+    "id": "canini",
+    "n": "i canini",
+    "ic": "🐶",
+    "sotto": "appuntiti, strappano il cibo",
+    "da": "di lato sono"
+   },
+   {
+    "id": "molari",
+    "n": "i molari",
+    "ic": "⚙️",
+    "sotto": "triturano e masticano",
+    "da": "in fondo sono"
+   },
+   {
+    "id": "smalto",
+    "n": "smalto",
+    "ic": "🛡️",
+    "sotto": "la sostanza più dura del corpo",
+    "da": "sono coperti dallo"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I bambini hanno 20 denti da latte. Sotto ognuno cresce un dente definitivo, che lo spinge: per questo i denti da latte cadono.",
+    "nodi": [
+     "latte"
+    ]
+   },
+   {
+    "t": "Un adulto con tutti i denti ne ha circa 32, contando anche i denti del giudizio.",
+    "nodi": [
+     "adulto"
+    ]
+   },
+   {
+    "t": "Ogni dente ha il suo lavoro. Gli incisivi, davanti, tagliano. I canini, appuntiti, strappano. I molari, in fondo, triturano e masticano.",
+    "nodi": [
+     "incisivi",
+     "canini",
+     "molari"
+    ]
+   },
+   {
+    "t": "I denti sono coperti dallo smalto: è la sostanza più dura del corpo, più dura di qualsiasi osso.",
+    "nodi": [
+     "smalto"
+    ]
+   },
+   {
+    "t": "I batteri mangiano lo zucchero rimasto sui denti e producono acidi. Così nasce la carie: un buco nel dente.",
+    "nodi": [
+     "smalto"
+    ]
+   },
+   {
+    "t": "Per proteggerli, lavati i denti almeno 2 volte al giorno, mattina e sera. Ogni volta spazzola per circa due minuti.",
+    "nodi": [
+     "smalto"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "molari",
+    "scelte": [
+     "i molari",
+     "i bottoni",
+     "le nuvole"
+    ]
+   }
+  ],
+  "domande": {
+   "st02kx": "latte",
+   "dge4fw": "incisivi",
+   "nfck6z": "molari",
+   "1ml3hd4": "smalto",
+   "1v07j1i": "adulto",
+   "9br53p": "smalto",
+   "e22fbt": "smalto",
+   "cn6smz": "canini",
+   "15lrhz9": "smalto",
+   "140s68f": "latte"
+  },
+  "collegamenti": [
+   "sci-corpo:digestione",
+   "lavo:denti",
+   "sci-corpo:cibo"
+  ]
+ },
+ "nervi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il sistema nervoso",
+   "ic": "🧠",
+   "sotto": "manda e riceve messaggi"
+  },
+  "nodi": [
+   {
+    "id": "cervello",
+    "n": "cervello",
+    "ic": "🧠",
+    "sotto": "due emisferi, destro e sinistro",
+    "da": "è comandato dal"
+   },
+   {
+    "id": "cervelletto",
+    "n": "cervelletto e tronco encefalico",
+    "ic": "⚖️",
+    "sotto": "equilibrio; respiro e battito",
+    "da": "ha anche"
+   },
+   {
+    "id": "midollo",
+    "n": "il midollo spinale",
+    "ic": "🦴",
+    "sotto": "dentro la colonna vertebrale",
+    "da": "comprende"
+   },
+   {
+    "id": "nervi",
+    "n": "i nervi",
+    "ic": "📞",
+    "sotto": "portano messaggi tra cervello e corpo",
+    "da": "si collega a tutto il corpo con"
+   },
+   {
+    "id": "neuroni",
+    "n": "neuroni",
+    "ic": "✨",
+    "sotto": "si passano segnali elettrici",
+    "da": "è fatto di cellule chiamate"
+   },
+   {
+    "id": "riflessi",
+    "n": "i riflessi",
+    "ic": "⚡",
+    "sotto": "risposte velocissime, senza pensarci",
+    "da": "risponde in fretta con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Cervello, midollo spinale e nervi formano il sistema nervoso: manda e riceve messaggi. Il cervello comanda tutto il corpo.",
+    "nodi": [
+     "cervello",
+     "midollo",
+     "nervi"
+    ]
+   },
+   {
+    "t": "Il cervello è diviso in due metà, gli emisferi. I collegamenti si incrociano: l'emisfero sinistro comanda soprattutto il lato destro del corpo, e viceversa.",
+    "nodi": [
+     "cervello"
+    ]
+   },
+   {
+    "t": "Il cervelletto serve all'equilibrio e ai movimenti precisi. Il tronco encefalico, alla base del cervello, controlla respiro e battito, anche mentre dormi.",
+    "nodi": [
+     "cervelletto"
+    ]
+   },
+   {
+    "t": "Dentro la colonna vertebrale corre il midollo spinale, protetto dalle vertebre. I nervi portano messaggi tra cervello e corpo, come fili del telefono.",
+    "nodi": [
+     "midollo",
+     "nervi"
+    ]
+   },
+   {
+    "t": "Le cellule del sistema nervoso sono i neuroni. I messaggi viaggiano come piccolissimi segnali elettrici, da un neurone all'altro.",
+    "nodi": [
+     "neuroni"
+    ]
+   },
+   {
+    "t": "Se tocchi una cosa che scotta, togli subito la mano: è un riflesso, una risposta veloce senza doverci pensare. Risponde il midollo spinale, senza aspettare il cervello.",
+    "nodi": [
+     "riflessi"
+    ]
+   },
+   {
+    "t": "Ripetere un esercizio rafforza i collegamenti tra i neuroni. E usiamo solo il 10% del cervello? No, è un mito: lo usiamo tutto!",
+    "v": "Ripetere un esercizio rafforza i collegamenti tra i neuroni. E usiamo solo il dieci per cento del cervello? No, è un mito: lo usiamo tutto!",
+    "nodi": [
+     "neuroni",
+     "cervello"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "neuroni",
+    "scelte": [
+     "neuroni",
+     "sassolini",
+     "biscotti"
+    ]
+   }
+  ],
+  "domande": {
+   "z7elpp": "cervello",
+   "1eqsqh6": "nervi",
+   "qlyu3t": "cervello",
+   "r8xghj": "cervelletto",
+   "jvz52q": "neuroni",
+   "1mjbq0f": "cervello",
+   "19bo0s2": "midollo",
+   "1qhh5ln": "neuroni",
+   "1c4prky": "riflessi",
+   "dj2z2x": "nervi",
+   "x2m3rh": "cervello",
+   "1de75p8": "cervelletto",
+   "iddwl6": "neuroni"
+  },
+  "collegamenti": [
+   "sci-corpo:sensi",
+   "sci-corpo:ossa",
+   "sp-corpo:mente"
+  ]
+ },
+ "sensi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I cinque sensi",
+   "ic": "👁️",
+   "sotto": "cinque finestre aperte sul mondo"
+  },
+  "nodi": [
+   {
+    "id": "vista",
+    "n": "la vista",
+    "ic": "👁️",
+    "sotto": "occhi: cornea, iride, pupilla, cristallino, retina",
+    "da": "includono"
+   },
+   {
+    "id": "udito",
+    "n": "l'udito",
+    "ic": "👂",
+    "sotto": "orecchie: timpano, coclea, e anche l'equilibrio",
+    "da": "includono"
+   },
+   {
+    "id": "olfatto",
+    "n": "l'olfatto",
+    "ic": "👃",
+    "sotto": "naso: lavora in coppia con il gusto",
+    "da": "includono"
+   },
+   {
+    "id": "gusto",
+    "n": "il gusto",
+    "ic": "👅",
+    "sotto": "lingua: le papille gustative",
+    "da": "includono"
+   },
+   {
+    "id": "tatto",
+    "n": "il tatto",
+    "ic": "✋",
+    "sotto": "pelle: più sensibile su polpastrelli e labbra",
+    "da": "includono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I cinque sensi sono: vista con gli occhi, udito con le orecchie, olfatto con il naso, gusto con la lingua e tatto con la pelle.",
+    "nodi": [
+     "vista",
+     "udito",
+     "olfatto",
+     "gusto",
+     "tatto"
+    ]
+   },
+   {
+    "t": "Davanti all'occhio c'è la cornea, trasparente. L'iride è la parte colorata. Al centro c'è la pupilla, un forellino nero: con tanta luce diventa più piccola, al buio si allarga.",
+    "nodi": [
+     "vista"
+    ]
+   },
+   {
+    "t": "Il cristallino, una piccola lente, mette a fuoco. L'immagine arriva sulla retina, in fondo all'occhio, e il nervo ottico la porta al cervello.",
+    "nodi": [
+     "vista"
+    ]
+   },
+   {
+    "t": "Le lacrime tengono l'occhio pulito e umido. E non guardare mai il Sole direttamente: può danneggiare gli occhi!",
+    "nodi": [
+     "vista"
+    ]
+   },
+   {
+    "t": "I suoni fanno vibrare il timpano. Nell'orecchio interno c'è la coclea, a forma di chiocciola. L'orecchio aiuta anche l'equilibrio. In montagna cambia la pressione dell'aria: le orecchie si tappano.",
+    "nodi": [
+     "udito"
+    ]
+   },
+   {
+    "t": "Sulla lingua ci sono le papille gustative: sentono dolce, salato, aspro, amaro e umami. Con il naso chiuso il cibo ha meno sapore: gusto e olfatto lavorano insieme.",
+    "nodi": [
+     "gusto",
+     "olfatto"
+    ]
+   },
+   {
+    "t": "La pelle è l'organo del tatto: è più sensibile su polpastrelli e labbra. Le persone non vedenti leggono con le dita il Braille, a puntini in rilievo.",
+    "nodi": [
+     "tatto"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "udito",
+    "scelte": [
+     "l'udito",
+     "il colore",
+     "la pioggia"
+    ]
+   }
+  ],
+  "domande": {
+   "oveigu": "gusto",
+   "d9ok6n": "tatto",
+   "1htp6hq": "olfatto",
+   "70n4op": "tatto",
+   "icaxdu": "vista",
+   "10en04s": "vista",
+   "17o75j": "udito",
+   "hdt337": "vista",
+   "13cx7l7": "vista",
+   "yirj5y": "udito",
+   "1t7eqvc": "olfatto",
+   "1qorf9r": "gusto",
+   "1feths2": "tatto",
+   "qo3ve5": "tatto",
+   "1hiynbu": "vista",
+   "16j5ate": "gusto",
+   "ny4zp7": "vista",
+   "6033a8": "vista",
+   "e5yp10": "udito",
+   "1etuqgu": "vista",
+   "12u79kf": "vista",
+   "m44my3": "udito"
+  },
+  "collegamenti": [
+   "sci-corpo:nervi",
+   "sci-corpo:pelle",
+   "musica:suono"
+  ]
+ },
+ "pelle": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La pelle",
+   "ic": "✋",
+   "sotto": "l'organo più grande del corpo"
+  },
+  "nodi": [
+   {
+    "id": "epidermide",
+    "n": "l'epidermide",
+    "ic": "🧻",
+    "sotto": "lo strato più esterno, sempre nuovo",
+    "da": "fuori ha"
+   },
+   {
+    "id": "melanina",
+    "n": "melanina",
+    "ic": "🎨",
+    "sotto": "protegge dal sole, ma serve anche la crema",
+    "da": "prende colore dalla"
+   },
+   {
+    "id": "cheratina",
+    "n": "capelli e unghie",
+    "ic": "💅",
+    "sotto": "fatti di cheratina",
+    "da": "fa crescere"
+   },
+   {
+    "id": "impronte",
+    "n": "le impronte digitali",
+    "ic": "🔍",
+    "sotto": "uniche per ognuno",
+    "da": "sui polpastrelli ha"
+   },
+   {
+    "id": "oca",
+    "n": "la pelle d'oca",
+    "ic": "🥶",
+    "sotto": "piccoli muscoli fanno alzare i peli",
+    "da": "col freddo fa venire"
+   },
+   {
+    "id": "ombelico",
+    "n": "l'ombelico",
+    "ic": "🔘",
+    "sotto": "il segno del cordone ombelicale",
+    "da": "sulla pancia ha"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La pelle è l'organo più grande di tutto il corpo: ti avvolge tutta. Lo strato più esterno è l'epidermide, che si rinnova sempre.",
+    "nodi": [
+     "epidermide"
+    ]
+   },
+   {
+    "t": "Il colore della pelle viene dalla melanina, che protegge dal sole. Ma i raggi UV scottano: per proteggere la pelle si mette la crema solare.",
+    "v": "Il colore della pelle viene dalla melanina, che protegge dal sole. Ma i raggi ultravioletti scottano: per proteggere la pelle si mette la crema solare.",
+    "nodi": [
+     "melanina"
+    ]
+   },
+   {
+    "t": "Capelli e unghie sono fatti di cheratina. Ogni capello nasce da un piccolo follicolo, nella pelle della testa.",
+    "nodi": [
+     "cheratina"
+    ]
+   },
+   {
+    "t": "Il capello fuori dalla pelle non ha nervi: per questo tagliarlo non fa male. Le unghie delle mani crescono più in fretta di quelle dei piedi.",
+    "nodi": [
+     "cheratina"
+    ]
+   },
+   {
+    "t": "Sui polpastrelli ci sono piccoli disegni: le impronte digitali. Sono uniche per ognuno: nemmeno due gemelli le hanno uguali.",
+    "nodi": [
+     "impronte"
+    ]
+   },
+   {
+    "t": "Col freddo, minuscoli muscoli alla base dei peli si contraggono: i peli si alzano ed ecco la pelle d'oca.",
+    "nodi": [
+     "oca"
+    ]
+   },
+   {
+    "t": "L'ombelico è il segno lasciato dal cordone ombelicale. Prima di nascere, da quel tubicino arrivavano cibo e ossigeno.",
+    "nodi": [
+     "ombelico"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "impronte",
+    "scelte": [
+     "le impronte digitali",
+     "le impronte del gatto",
+     "le orme sulla neve"
+    ]
+   }
+  ],
+  "domande": {
+   "1b8t2v3": "impronte",
+   "bz377q": "cheratina",
+   "1wdfsqt": "ombelico",
+   "3xp5og": "epidermide",
+   "1pd0t8l": "epidermide",
+   "17kreag": "melanina",
+   "1fyo451": "melanina",
+   "qsgt1u": "cheratina",
+   "1dwafmk": "cheratina",
+   "1a8hdwz": "oca",
+   "1pv4hlv": "cheratina"
+  },
+  "collegamenti": [
+   "sci-corpo:sensi",
+   "vesto:sole",
+   "lavo:unghie"
+  ]
+ },
+ "reni": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I reni",
+   "ic": "💧",
+   "sotto": "due, a forma di fagiolo"
+  },
+  "nodi": [
+   {
+    "id": "due",
+    "n": "due",
+    "ic": "🫘",
+    "sotto": "ai lati della schiena",
+    "da": "di solito sono"
+   },
+   {
+    "id": "filtro",
+    "n": "il sangue",
+    "ic": "🩸",
+    "sotto": "come un colino: tengono ciò che serve",
+    "da": "filtrano"
+   },
+   {
+    "id": "pipi",
+    "n": "la pipì",
+    "ic": "💛",
+    "sotto": "con gli scarti e un po' d'acqua",
+    "da": "producono"
+   },
+   {
+    "id": "vescica",
+    "n": "vescica",
+    "ic": "🎈",
+    "sotto": "un palloncino elastico che la raccoglie",
+    "da": "mandano la pipì nella"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Di solito abbiamo due reni, a forma di fagiolo. Si trovano ai lati della schiena, un po' sopra la vita.",
+    "nodi": [
+     "due"
+    ]
+   },
+   {
+    "t": "I reni filtrano il sangue, come un colino: tengono quello che serve e tolgono gli scarti.",
+    "nodi": [
+     "filtro"
+    ]
+   },
+   {
+    "t": "Con gli scarti e un po' d'acqua, i reni producono la pipì.",
+    "nodi": [
+     "pipi"
+    ]
+   },
+   {
+    "t": "La pipì scende in due tubicini, gli ureteri, e arriva nella vescica: un palloncino elastico che la raccoglie prima che esca.",
+    "nodi": [
+     "vescica"
+    ]
+   },
+   {
+    "t": "Quando la vescica è piena, manda un messaggio al cervello: è ora di andare in bagno!",
+    "nodi": [
+     "vescica"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "due",
+    "scelte": [
+     "due",
+     "dieci",
+     "cento"
+    ]
+   },
+   {
+    "nodo": "pipi",
+    "scelte": [
+     "la pipì",
+     "il latte",
+     "la saliva"
+    ]
+   }
+  ],
+  "domande": {
+   "1t54748": "pipi",
+   "138dbr7": "filtro",
+   "cs7w7m": "vescica",
+   "3l8rva": "due"
+  },
+  "collegamenti": [
+   "sci-corpo:cuore",
+   "sci-corpo:digestione",
+   "sci-corpo:salute"
+  ]
+ },
+ "salute": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il corpo sano",
+   "ic": "🧼",
+   "sotto": "igiene, sonno e difese"
+  },
+  "nodi": [
+   {
+    "id": "mani",
+    "n": "mani pulite",
+    "ic": "🧼",
+    "sotto": "con il sapone, almeno 20 secondi",
+    "da": "si difende dai microbi con"
+   },
+   {
+    "id": "vaccini",
+    "n": "i vaccini",
+    "ic": "💉",
+    "sotto": "allenano le difese del corpo",
+    "da": "si protegge con"
+   },
+   {
+    "id": "sonno",
+    "n": "un buon sonno",
+    "ic": "😴",
+    "sotto": "di notte arriva l'ormone della crescita",
+    "da": "ha bisogno di"
+   },
+   {
+    "id": "ormoni",
+    "n": "ormoni",
+    "ic": "📨",
+    "sotto": "come l'adrenalina, che prepara all'azione",
+    "da": "usa messaggeri chiamati"
+   },
+   {
+    "id": "temperatura",
+    "n": "tra 36 e 37 °C",
+    "ic": "🌡️",
+    "sotto": "il sudore lo raffredda",
+    "da": "ha una temperatura"
+   },
+   {
+    "id": "acqua",
+    "n": "acqua",
+    "ic": "🚰",
+    "sotto": "per più di metà",
+    "da": "è fatto soprattutto di"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Ci si lava le mani per togliere i microbi, soprattutto prima di mangiare e dopo il bagno. Strofina con il sapone per almeno 20 secondi.",
+    "nodi": [
+     "mani"
+    ]
+   },
+   {
+    "t": "Anche frutta e verdura si lavano: via terra, sporco e microbi. Quando tossisci o starnutisci, copriti con l'interno del gomito.",
+    "nodi": [
+     "mani"
+    ]
+   },
+   {
+    "t": "I vaccini allenano le difese del corpo: gli insegnano a riconoscere un germe.",
+    "nodi": [
+     "vaccini"
+    ]
+   },
+   {
+    "t": "Mentre dormi, il corpo produce l'ormone della crescita. Spegni tablet e televisione un po' prima di dormire: la loro luce disturba il sonno.",
+    "nodi": [
+     "sonno"
+    ]
+   },
+   {
+    "t": "Gli ormoni sono messaggeri del corpo. L'adrenalina, per esempio, ti prepara all'azione: prima di una gara il cuore batte forte.",
+    "nodi": [
+     "ormoni"
+    ]
+   },
+   {
+    "t": "La temperatura normale del corpo è tra 36 e 37 °C. Quando corri sudi: il sudore evapora e raffredda il corpo.",
+    "v": "La temperatura normale del corpo è tra trentasei e trentasette gradi. Quando corri sudi: il sudore evapora e raffredda il corpo.",
+    "nodi": [
+     "temperatura"
+    ]
+   },
+   {
+    "t": "Il corpo umano è fatto per più di metà di acqua: per questo è importante bere durante la giornata.",
+    "nodi": [
+     "acqua"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "acqua",
+    "scelte": [
+     "acqua",
+     "sabbia",
+     "cioccolato"
+    ]
+   }
+  ],
+  "domande": {
+   "zo1ghn": "temperatura",
+   "16ns4sh": "mani",
+   "1huwwoc": "temperatura",
+   "dgbd61": "mani",
+   "9cbfo4": "mani",
+   "fqlljh": "vaccini",
+   "m8frtd": "acqua",
+   "mxiij4": "sonno",
+   "b9b2qu": "sonno",
+   "11588ti": "mani",
+   "18uc9je": "ormoni"
+  },
+  "collegamenti": [
+   "lavo:mani",
+   "lavo:starnuti",
+   "sp-corpo:sonno"
+  ]
+ },
+ "cibo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Mangiare sano",
+   "ic": "🥕",
+   "sotto": "un po' di tutto, ogni giorno"
+  },
+  "nodi": [
+   {
+    "id": "piramide",
+    "n": "la piramide alimentare",
+    "ic": "🔺",
+    "sotto": "alla base frutta, verdura e cereali",
+    "da": "vuol dire seguire"
+   },
+   {
+    "id": "carboidrati",
+    "n": "i carboidrati",
+    "ic": "🍝",
+    "sotto": "pasta, pane e riso",
+    "da": "dà energia con"
+   },
+   {
+    "id": "proteine",
+    "n": "le proteine",
+    "ic": "🫘",
+    "sotto": "legumi, pesce, uova, carne e latticini",
+    "da": "costruisce i muscoli con"
+   },
+   {
+    "id": "vitamine",
+    "n": "tante vitamine",
+    "ic": "🍊",
+    "sotto": "nella frutta e nella verdura",
+    "da": "porta"
+   },
+   {
+    "id": "fibre",
+    "n": "le fibre",
+    "ic": "🧹",
+    "sotto": "in frutta, verdura e legumi",
+    "da": "aiuta l'intestino con"
+   },
+   {
+    "id": "calcio",
+    "n": "il calcio",
+    "ic": "🥛",
+    "sotto": "in latte, yogurt e formaggi",
+    "da": "rinforza le ossa con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Per mangiare sano aiuta la piramide alimentare. Alla base, da mangiare più spesso, ci sono frutta, verdura e cereali. In cima i dolci, ogni tanto.",
+    "nodi": [
+     "piramide"
+    ]
+   },
+   {
+    "t": "Ai bambini si consigliano di solito cinque pasti al giorno, con due spuntini. E mai saltare la colazione!",
+    "nodi": [
+     "piramide"
+    ]
+   },
+   {
+    "t": "Pasta, pane e riso contengono carboidrati, che danno energia. Le proteine servono a costruire e riparare i muscoli: sono in legumi, pesce, uova e carne.",
+    "nodi": [
+     "carboidrati",
+     "proteine"
+    ]
+   },
+   {
+    "t": "Lenticchie, ceci, fagioli e piselli sono legumi, pieni di proteine. Le fibre di frutta, verdura e legumi aiutano l'intestino a funzionare.",
+    "nodi": [
+     "proteine",
+     "fibre"
+    ]
+   },
+   {
+    "t": "Frutta e verdura sono piene di vitamine. Arance e kiwi hanno tanta vitamina C. Carote e zucca contengono sostanze che diventano vitamina A, utile alla vista.",
+    "nodi": [
+     "vitamine"
+    ]
+   },
+   {
+    "t": "Con l'aiuto del sole, la pelle produce la vitamina D, amica delle ossa. Latte e formaggi sono ricchi di calcio, che rende forti ossa e denti.",
+    "nodi": [
+     "vitamine",
+     "calcio"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "calcio",
+    "scelte": [
+     "il calcio",
+     "il sale da cucina",
+     "lo zucchero"
+    ]
+   }
+  ],
+  "domande": {
+   "1kwe1e8": "vitamine",
+   "81wqka": "piramide",
+   "1uvd4t3": "proteine",
+   "3i3q76": "carboidrati",
+   "jvs7ur": "vitamine",
+   "15yia57": "vitamine",
+   "1r8g09g": "fibre",
+   "1iu0dou": "proteine",
+   "2yb1k7": "piramide",
+   "1n4xbnr": "calcio",
+   "b5bdzh": "vitamine"
+  },
+  "collegamenti": [
+   "sp-corpo:mangiare",
+   "sci-corpo:digestione",
+   "sci-corpo:denti"
+  ]
+ },
+ "incidenti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Contro i piccoli incidenti",
+   "ic": "🩹",
+   "sotto": "chiama sempre un adulto"
+  },
+  "nodi": [
+   {
+    "id": "emergenza",
+    "n": "il 112",
+    "ic": "📞",
+    "sotto": "il numero unico per le emergenze",
+    "da": "se è grave, chiama"
+   },
+   {
+    "id": "bernoccolo",
+    "n": "qualcosa di freddo in un panno",
+    "ic": "🧊",
+    "sotto": "mai il ghiaccio sulla pelle nuda",
+    "da": "su un bernoccolo, metti"
+   },
+   {
+    "id": "scottatura",
+    "n": "acqua fresca corrente",
+    "ic": "🚿",
+    "sotto": "non ghiacciata, e niente burro",
+    "da": "su una scottatura, usa"
+   },
+   {
+    "id": "naso",
+    "n": "la testa un po' in avanti",
+    "ic": "👃",
+    "sotto": "e stringi la parte morbida del naso",
+    "da": "se esce sangue dal naso, tieni"
+   },
+   {
+    "id": "vasca",
+    "n": "non si corre",
+    "ic": "🚫",
+    "sotto": "il pavimento bagnato fa scivolare",
+    "da": "a bordo vasca"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Se succede un piccolo incidente, chiama sempre un adulto. In un'emergenza vera si chiama il 112, il numero unico per le emergenze in Italia.",
+    "nodi": [
+     "emergenza"
+    ]
+   },
+   {
+    "t": "Su un bernoccolo appena preso metti qualcosa di freddo avvolto in un panno. Il ghiaccio non va mai sulla pelle nuda.",
+    "nodi": [
+     "bernoccolo"
+    ]
+   },
+   {
+    "t": "Se ti scotti un dito, mettilo sotto acqua fresca corrente, non ghiacciata, per circa venti minuti. Il burro è un vecchio rimedio sbagliato!",
+    "nodi": [
+     "scottatura"
+    ]
+   },
+   {
+    "t": "Se ti esce sangue dal naso, tieni la testa un po' in avanti e stringi la parte morbida del naso. La testa all'indietro è un errore!",
+    "nodi": [
+     "naso"
+    ]
+   },
+   {
+    "t": "A bordo vasca non si corre: il pavimento bagnato fa scivolare. In piscina si cammina piano.",
+    "nodi": [
+     "vasca"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "emergenza",
+    "scelte": [
+     "il 112",
+     "il 7",
+     "il 1000"
+    ]
+   }
+  ],
+  "domande": {
+   "qvkkvh": "emergenza",
+   "1pmisuc": "bernoccolo",
+   "b2sxuv": "scottatura",
+   "1ft5ueb": "naso",
+   "133unza": "vasca"
+  },
+  "collegamenti": [
+   "civica:emergenze",
+   "sp-corpo:sicurezza",
+   "sp-nuoto:piscina"
+  ]
  }
 }

@@ -1,0 +1,1551 @@
+{
+ "computer": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il computer",
+   "ic": "💻",
+   "sotto": "una macchina che segue istruzioni"
+  },
+  "nodi": [
+   {
+    "id": "hw",
+    "n": "l'hardware",
+    "ic": "🖥️",
+    "sotto": "le parti che puoi toccare: schermo, mouse",
+    "da": "ha come corpo"
+   },
+   {
+    "id": "tastiera",
+    "n": "la tastiera",
+    "ic": "⌨️",
+    "sotto": "QWERTY; Bloc Maiusc scrive in maiuscolo",
+    "da": "si usa con"
+   },
+   {
+    "id": "cpu",
+    "n": "il processore",
+    "ic": "🧠",
+    "sotto": "la CPU, il cervello del computer",
+    "da": "ha come cervello"
+   },
+   {
+    "id": "sw",
+    "n": "il software",
+    "ic": "📀",
+    "sotto": "i programmi e il sistema operativo",
+    "da": "funziona con"
+   },
+   {
+    "id": "binario",
+    "n": "il codice binario",
+    "ic": "0️⃣",
+    "sotto": "solo 0 e 1; 8 bit fanno un byte",
+    "da": "scrive tutto con"
+   },
+   {
+    "id": "file",
+    "n": "file e cartelle",
+    "ic": "🗂️",
+    "sotto": "sul disco o su una chiavetta USB",
+    "da": "conserva"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il computer è una macchina che segue istruzioni. Le parti che puoi toccare, come schermo, mouse e tastiera, sono l'hardware: le parti fisiche.",
+    "nodi": [
+     "hw"
+    ]
+   },
+   {
+    "t": "Tastiera e mouse fanno entrare i comandi; il mouse muove il puntatore. Lo schermo è un dispositivo di uscita: mostra immagini fatte di pixel, puntini colorati.",
+    "nodi": [
+     "hw",
+     "tastiera"
+    ]
+   },
+   {
+    "t": "La tastiera si chiama QWERTY, dalle prime lettere in alto a sinistra. Ctrl + C copia, Ctrl + V incolla, Ctrl + Z annulla l'ultima azione.",
+    "v": "La tastiera si chiama QWERTY, dalle prime lettere in alto a sinistra. Control più C copia, control più V incolla, control più Z annulla l'ultima azione.",
+    "nodi": [
+     "tastiera"
+    ]
+   },
+   {
+    "t": "Il cervello del computer è il processore, o CPU: esegue le istruzioni dei programmi, miliardi di operazioni al secondo.",
+    "v": "Il cervello del computer è il processore, o ci pi u: esegue le istruzioni dei programmi, miliardi di operazioni al secondo.",
+    "nodi": [
+     "cpu"
+    ]
+   },
+   {
+    "t": "I programmi sono il software: non si toccano. Il più importante è il sistema operativo, che fa funzionare tutto il computer e mostra le icone.",
+    "nodi": [
+     "sw"
+    ]
+   },
+   {
+    "t": "Dentro, il computer usa il codice binario: solo due cifre, 0 e 1. Ogni cifra è un bit, e 8 bit formano un byte.",
+    "v": "Dentro, il computer usa il codice binario: solo due cifre, zero e uno. Ogni cifra è un bit, e otto bit formano un byte.",
+    "nodi": [
+     "binario"
+    ]
+   },
+   {
+    "t": "Salva spesso il lavoro! I file restano nel disco anche a computer spento e si ordinano in cartelle. Quelli cancellati vanno prima nel cestino.",
+    "nodi": [
+     "file"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "binario",
+    "scelte": [
+     "il codice binario",
+     "la ricetta della torta",
+     "il semaforo"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "tecno:coding",
+   "tecno:internet",
+   "tecno:robot"
+  ],
+  "domande": {
+   "1edhteb": "binario",
+   "1vfowyd": "binario",
+   "piq0vy": "binario",
+   "zhkzft": "tastiera",
+   "9gkdwg": "tastiera",
+   "1p85vtw": "tastiera",
+   "1pu2yst": "tastiera",
+   "tm8v6": "tastiera",
+   "102jvah": "hw",
+   "8m7x6m": "hw",
+   "xqnkis": "hw",
+   "erpt4x": "hw",
+   "1ynwyh4": "sw",
+   "1hyw6h8": "sw",
+   "azsh40": "sw",
+   "1q8dmwq": "cpu",
+   "15pljlo": "file",
+   "11surm0": "file",
+   "p14ztb": "file",
+   "1wmhe9l": "file",
+   "1xj1dao": "file",
+   "1o1ucsv": "file"
+  }
+ },
+ "coding": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il coding",
+   "ic": "🧩",
+   "sotto": "scrivere istruzioni per il computer"
+  },
+  "nodi": [
+   {
+    "id": "algoritmo",
+    "n": "un algoritmo",
+    "ic": "📋",
+    "sotto": "passi precisi in ordine: una sequenza",
+    "da": "comincia con"
+   },
+   {
+    "id": "scratch",
+    "n": "linguaggi come Scratch",
+    "ic": "🐱",
+    "sotto": "blocchi colorati e bandierina verde",
+    "da": "si scrive in"
+   },
+   {
+    "id": "ciclo",
+    "n": "il ciclo",
+    "ic": "🔁",
+    "sotto": "ripete più volte delle istruzioni",
+    "da": "ripete i passi con"
+   },
+   {
+    "id": "condizione",
+    "n": "la condizione «se… allora»",
+    "ic": "🔀",
+    "sotto": "il programma sceglie che cosa fare",
+    "da": "sceglie con"
+   },
+   {
+    "id": "variabile",
+    "n": "la variabile",
+    "ic": "📦",
+    "sotto": "una scatola con un nome e un valore",
+    "da": "ricorda i numeri con"
+   },
+   {
+    "id": "bug",
+    "n": "i bug",
+    "ic": "🐞",
+    "sotto": "gli errori nei programmi",
+    "da": "deve correggere"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Fare coding vuol dire scrivere istruzioni per il computer. Prima si pensa un algoritmo: passi precisi, in ordine, per risolvere un problema. Anche una ricetta è un algoritmo!",
+    "nodi": [
+     "algoritmo"
+    ]
+   },
+   {
+    "t": "Istruzioni una dopo l'altra, in ordine, formano una sequenza. Se cambi l'ordine, cambia il risultato.",
+    "nodi": [
+     "algoritmo"
+    ]
+   },
+   {
+    "t": "I programmi si scrivono in un linguaggio di programmazione, come Scratch o Python. In Scratch incastri blocchi colorati, clicchi la bandierina verde e il gatto arancione si muove.",
+    "nodi": [
+     "scratch"
+    ]
+   },
+   {
+    "t": "Il ciclo ripete più volte delle istruzioni. «Ripeti 4 volte: avanti di 10, gira di 90 gradi» disegna un quadrato!",
+    "v": "Il ciclo ripete più volte delle istruzioni. «Ripeti quattro volte: avanti di dieci, gira di novanta gradi» disegna un quadrato!",
+    "nodi": [
+     "ciclo"
+    ]
+   },
+   {
+    "t": "Con la condizione «se… allora» il programma sceglie: se piove, allora prendo l'ombrello. La variabile è una scatola con un nome e un valore, come i punti.",
+    "nodi": [
+     "condizione",
+     "variabile"
+    ]
+   },
+   {
+    "t": "Un errore in un programma si chiama bug, che in inglese vuol dire insetto. Nel 1947 dentro un computer fu trovata una vera falena!",
+    "nodi": [
+     "bug"
+    ]
+   },
+   {
+    "t": "Nel 1843 Ada Lovelace scrisse istruzioni per una macchina calcolatrice che non fu mai completata. Per molti è la prima programmatrice della storia.",
+    "nodi": [
+     "algoritmo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "ciclo",
+    "scelte": [
+     "il ciclo",
+     "la pioggia",
+     "il panino"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "tecno:computer",
+   "tecno:robot",
+   "roblox:programmare"
+  ],
+  "domande": {
+   "1aueybd": "algoritmo",
+   "1uu5107": "algoritmo",
+   "c35ci6": "algoritmo",
+   "17i85ld": "scratch",
+   "u010oa": "scratch",
+   "1x2hywo": "scratch",
+   "163octz": "scratch",
+   "7i6e0r": "scratch",
+   "1vhrv70": "ciclo",
+   "1yrl6vg": "ciclo",
+   "d4au1o": "condizione",
+   "13bl9ay": "variabile",
+   "tp2lrd": "bug"
+  }
+ },
+ "internet": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Internet",
+   "ic": "🌐",
+   "sotto": "una rete che collega computer di tutto il mondo"
+  },
+  "nodi": [
+   {
+    "id": "web",
+    "n": "il World Wide Web",
+    "ic": "🕸️",
+    "sotto": "pagine, link, browser e motori di ricerca",
+    "da": "ospita"
+   },
+   {
+    "id": "wifi",
+    "n": "il Wi-Fi",
+    "ic": "📶",
+    "sotto": "una rete senza fili, con le onde radio",
+    "da": "arriva in casa con"
+   },
+   {
+    "id": "email",
+    "n": "l'e-mail",
+    "ic": "✉️",
+    "sotto": "un messaggio elettronico; @ si legge chiocciola",
+    "da": "fa viaggiare"
+   },
+   {
+    "id": "app",
+    "n": "app e cloud",
+    "ic": "📱",
+    "sotto": "programmi per tablet; file su computer lontani",
+    "da": "offre"
+   },
+   {
+    "id": "sicurezza",
+    "n": "prudenza",
+    "ic": "🔒",
+    "sotto": "password, antivirus, backup e un adulto vicino",
+    "da": "si usa con"
+   },
+   {
+    "id": "pause",
+    "n": "pause e riposo",
+    "ic": "😴",
+    "sotto": "pause, giusta distanza, schermi spenti la sera",
+    "da": "chiede anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Internet è una rete enorme che collega computer di tutto il mondo. Il Wi-Fi è una rete senza fili: con le onde radio porta internet a tablet e telefoni.",
+    "nodi": [
+     "wifi"
+    ]
+   },
+   {
+    "t": "Internet esisteva già quando Tim Berners-Lee inventò il World Wide Web, al CERN di Ginevra, tra il 1989 e il 1991: pagine collegate da link.",
+    "nodi": [
+     "web"
+    ]
+   },
+   {
+    "t": "Le pagine si aprono con un browser. Un motore di ricerca trova le pagine che parlano delle parole che scrivi: cerca sempre con un adulto vicino.",
+    "nodi": [
+     "web"
+    ]
+   },
+   {
+    "t": "L'e-mail è un messaggio elettronico. Negli indirizzi c'è il simbolo @, che in italiano si chiama «chiocciola».",
+    "v": "L'e-mail è un messaggio elettronico. Negli indirizzi c'è un simbolo speciale, che in italiano si chiama «chiocciola».",
+    "nodi": [
+     "email"
+    ]
+   },
+   {
+    "t": "Le app sono programmi per telefono o tablet. Salvare un file nel cloud vuol dire metterlo su computer lontani, raggiungibili via internet.",
+    "nodi": [
+     "app"
+    ]
+   },
+   {
+    "t": "Una password sicura è lunga, con lettere, numeri e simboli. L'antivirus blocca i programmi dannosi; il backup è una copia di sicurezza. Prima di scaricare, chiedi a un adulto.",
+    "nodi": [
+     "sicurezza"
+    ]
+   },
+   {
+    "t": "Il lucchetto vicino all'indirizzo indica una connessione protetta. Con il tablet fai pause e tieni lo schermo alla giusta distanza dagli occhi. La sera spegnilo un po' prima di dormire.",
+    "nodi": [
+     "sicurezza",
+     "pause"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "wifi",
+    "scelte": [
+     "il Wi-Fi",
+     "il fiume",
+     "la forchetta"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "civica:online",
+   "tecno:computer",
+   "roblox:sicurezza"
+  ],
+  "domande": {
+   "7wu51t": "web",
+   "la9a5g": "web",
+   "15bv57m": "web",
+   "153sn67": "web",
+   "ep7z5z": "web",
+   "1qa1pdl": "wifi",
+   "1fziqw1": "email",
+   "iq4jgv": "email",
+   "ttznhv": "app",
+   "1o29zl": "app",
+   "1weeame": "sicurezza",
+   "k4ugzl": "sicurezza",
+   "zg01ex": "sicurezza",
+   "ogx3qz": "sicurezza",
+   "1ekjxa8": "sicurezza",
+   "1n59qc": "pause",
+   "18i21wm": "pause"
+  }
+ },
+ "robot": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il robot",
+   "ic": "🤖",
+   "sotto": "una macchina che fa compiti in automatico"
+  },
+  "nodi": [
+   {
+    "id": "programma",
+    "n": "un programma",
+    "ic": "📜",
+    "sotto": "le istruzioni da seguire",
+    "da": "segue"
+   },
+   {
+    "id": "sensori",
+    "n": "i sensori",
+    "ic": "👁️",
+    "sotto": "sentono luce, suoni e ostacoli",
+    "da": "capisce che cosa ha intorno con"
+   },
+   {
+    "id": "motori",
+    "n": "i motori",
+    "ic": "⚙️",
+    "sotto": "muovono ruote e braccia",
+    "da": "si muove con"
+   },
+   {
+    "id": "drone",
+    "n": "il drone",
+    "ic": "🚁",
+    "sotto": "vola senza pilota a bordo",
+    "da": "ha un cugino volante:"
+   },
+   {
+    "id": "ia",
+    "n": "l'intelligenza artificiale",
+    "ic": "✨",
+    "sotto": "impara da tanti esempi, ma può sbagliare",
+    "da": "a volte usa"
+   },
+   {
+    "id": "nome",
+    "n": "una parola ceca",
+    "ic": "🎭",
+    "sotto": "«robota», lavoro faticoso",
+    "da": "prende il nome da"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Un robot è una macchina che fa compiti in automatico, seguendo un programma. Molti lavorano nelle fabbriche, per esempio per montare le auto.",
+    "nodi": [
+     "programma"
+    ]
+   },
+   {
+    "t": "Per capire che cosa ha intorno, il robot usa i sensori: sentono la luce, i suoni e gli ostacoli, come i nostri sensi.",
+    "nodi": [
+     "sensori"
+    ]
+   },
+   {
+    "t": "Per muovere ruote e braccia, il robot usa i motori: sono come i suoi muscoli.",
+    "nodi": [
+     "motori"
+    ]
+   },
+   {
+    "t": "Il drone è un piccolo velivolo senza pilota a bordo, guidato a distanza. Vola con le eliche e fa riprese dall'alto.",
+    "nodi": [
+     "drone"
+    ]
+   },
+   {
+    "t": "L'intelligenza artificiale sono programmi che imparano da tantissimi esempi. Non pensano e non provano emozioni come noi, e possono sbagliare: va sempre controllata.",
+    "nodi": [
+     "ia"
+    ]
+   },
+   {
+    "t": "La parola robot viene dal ceco: comparve nel 1920 in un'opera teatrale di Karel Čapek. In ceco «robota» vuol dire lavoro faticoso.",
+    "v": "La parola robot viene dal ceco: comparve nel 1920 in un'opera teatrale di Karel Ciàpek. In ceco «robota» vuol dire lavoro faticoso.",
+    "nodi": [
+     "nome"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "motori",
+    "scelte": [
+     "i motori",
+     "le farfalle",
+     "i biscotti"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "tecno:coding",
+   "tecno:elettricita",
+   "sci-corpo:sensi"
+  ],
+  "domande": {
+   "um1181": "programma",
+   "90578b": "sensori",
+   "1nvnyke": "ia",
+   "1m93ipp": "motori",
+   "dzimv0": "drone",
+   "s0aavk": "nome"
+  }
+ },
+ "elettricita": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il circuito elettrico",
+   "ic": "💡",
+   "sotto": "la strada della corrente"
+  },
+  "nodi": [
+   {
+    "id": "chiuso",
+    "n": "un giro chiuso",
+    "ic": "🔄",
+    "sotto": "se il giro si apre, la luce si spegne",
+    "da": "deve fare"
+   },
+   {
+    "id": "interruttore",
+    "n": "l'interruttore",
+    "ic": "🔘",
+    "sotto": "apre o chiude il circuito",
+    "da": "si comanda con"
+   },
+   {
+    "id": "rame",
+    "n": "fili di rame",
+    "ic": "🟠",
+    "sotto": "il rame conduce, la plastica isola",
+    "da": "usa"
+   },
+   {
+    "id": "serie",
+    "n": "lampadine in serie",
+    "ic": "🔗",
+    "sotto": "se una si brucia, si spengono tutte",
+    "da": "può avere"
+   },
+   {
+    "id": "misure",
+    "n": "volt e watt",
+    "ic": "🔢",
+    "sotto": "nomi presi da Volta e da Watt",
+    "da": "si misura in"
+   },
+   {
+    "id": "pericolo",
+    "n": "regole di sicurezza",
+    "ic": "⚠️",
+    "sotto": "mai niente nelle prese!",
+    "da": "richiede"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La corrente elettrica scorre in un circuito. Perché la lampadina si accenda, il circuito deve essere chiuso: un giro completo, come una pista ad anello.",
+    "nodi": [
+     "chiuso"
+    ]
+   },
+   {
+    "t": "L'interruttore apre o chiude il circuito: se è chiuso, la luce si accende; se è aperto, si spegne.",
+    "nodi": [
+     "interruttore"
+    ]
+   },
+   {
+    "t": "I fili elettrici sono di rame, che conduce bene l'elettricità. Sono ricoperti di plastica, che è isolante: non lascia passare la corrente.",
+    "nodi": [
+     "rame"
+    ]
+   },
+   {
+    "t": "In un circuito in serie c'è un'unica strada per la corrente: se una lampadina si brucia, si spengono anche le altre.",
+    "nodi": [
+     "serie"
+    ]
+   },
+   {
+    "t": "Il volt prende il nome da Alessandro Volta: su una pila trovi scritto 1,5 V. Il watt, da James Watt, misura la potenza di una lampadina.",
+    "v": "Il volt prende il nome da Alessandro Volta: su una pila trovi scritto uno virgola cinque volt. Il watt, da James Watt, misura la potenza di una lampadina.",
+    "nodi": [
+     "misure"
+    ]
+   },
+   {
+    "t": "Sull'etichetta energetica le classi vanno dalla A alla G: la A consuma pochissima energia, la G consuma di più.",
+    "nodi": [
+     "misure"
+    ]
+   },
+   {
+    "t": "La corrente di casa è molto più forte di quella delle pile: non infilare mai oggetti nelle prese. È pericolosissimo!",
+    "nodi": [
+     "pericolo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "chiuso",
+    "scelte": [
+     "un giro chiuso",
+     "un buco nel muro",
+     "una scatola di biscotti"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "tecno:energia",
+   "tecno:inventori",
+   "tecno:materiali"
+  ],
+  "domande": {
+   "1x0ov37": "chiuso",
+   "y72xkn": "rame",
+   "1thu3a7": "rame",
+   "169nsde": "interruttore",
+   "1igyhho": "pericolo",
+   "1q9qb9o": "serie",
+   "4tzxwm": "misure",
+   "17kft5f": "misure",
+   "1fo7vyl": "misure"
+  }
+ },
+ "energia": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'energia",
+   "ic": "⚡",
+   "sotto": "fa muovere, scaldare e illuminare"
+  },
+  "nodi": [
+   {
+    "id": "rinnovabili",
+    "n": "fonti rinnovabili",
+    "ic": "🌱",
+    "sotto": "sole, vento e acqua non finiscono",
+    "da": "può venire da"
+   },
+   {
+    "id": "fossili",
+    "n": "petrolio e carbone",
+    "ic": "🛢️",
+    "sotto": "prima o poi finiscono e inquinano",
+    "da": "si ricava ancora da"
+   },
+   {
+    "id": "fotovoltaico",
+    "n": "pannelli fotovoltaici",
+    "ic": "☀️",
+    "sotto": "trasformano la luce in elettricità",
+    "da": "si raccoglie con"
+   },
+   {
+    "id": "termico",
+    "n": "pannelli termici",
+    "ic": "🚿",
+    "sotto": "scaldano l'acqua con il sole",
+    "da": "scalda l'acqua con"
+   },
+   {
+    "id": "eolico",
+    "n": "pale eoliche",
+    "ic": "🌬️",
+    "sotto": "girano con il vento",
+    "da": "nasce dal vento con"
+   },
+   {
+    "id": "idro",
+    "n": "centrali idroelettriche",
+    "ic": "💧",
+    "sotto": "l'acqua che scende fa girare le turbine",
+    "da": "nasce dall'acqua nelle"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'energia fa muovere, scaldare e illuminare. Sole, vento e acqua sono energie rinnovabili: si rinnovano di continuo e non finiscono.",
+    "nodi": [
+     "rinnovabili"
+    ]
+   },
+   {
+    "t": "Petrolio e carbone, invece, prima o poi finiscono. E inquinano molto di più.",
+    "nodi": [
+     "fossili"
+    ]
+   },
+   {
+    "t": "Il pannello solare fotovoltaico trasforma la luce del Sole in elettricità, senza fumo e senza rumore. Il pannello termico, invece, scalda l'acqua di casa.",
+    "nodi": [
+     "fotovoltaico",
+     "termico"
+    ]
+   },
+   {
+    "t": "Il vento fa girare le pale eoliche, come girandole giganti: muovono un generatore che produce elettricità.",
+    "nodi": [
+     "eolico"
+    ]
+   },
+   {
+    "t": "Nelle centrali idroelettriche l'acqua delle dighe scende con forza e fa girare le turbine, che producono elettricità.",
+    "nodi": [
+     "idro"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "fossili",
+    "scelte": [
+     "petrolio e carbone",
+     "gelato e panna",
+     "sassi e conchiglie"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "tecno:elettricita",
+   "civica:ambiente",
+   "sci-spazio:sole"
+  ],
+  "domande": {
+   "c79tzf": "fotovoltaico",
+   "y4rmsn": "eolico",
+   "jp3fae": "rinnovabili",
+   "xr7r0v": "idro",
+   "flehp2": "termico"
+  }
+ },
+ "macchine": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Macchine e meccanismi",
+   "ic": "⚙️",
+   "sotto": "aiutano a fare meno fatica"
+  },
+  "nodi": [
+   {
+    "id": "leva",
+    "n": "la leva",
+    "ic": "🪵",
+    "sotto": "ruota su un perno: il fulcro",
+    "da": "usano"
+   },
+   {
+    "id": "carrucola",
+    "n": "la carrucola",
+    "ic": "🪢",
+    "sotto": "una ruota con una corda",
+    "da": "sollevano pesi con"
+   },
+   {
+    "id": "piano",
+    "n": "il piano inclinato",
+    "ic": "📐",
+    "sotto": "una rampa: meno fatica",
+    "da": "spingono in alto con"
+   },
+   {
+    "id": "ingranaggi",
+    "n": "gli ingranaggi",
+    "ic": "⚙️",
+    "sotto": "ruote dentate che si fanno girare",
+    "da": "trasmettono il movimento con"
+   },
+   {
+    "id": "bici",
+    "n": "bicicletta",
+    "ic": "🚲",
+    "sotto": "catena, pignone e battistrada",
+    "da": "si trovano nella"
+   },
+   {
+    "id": "motore",
+    "n": "il motore elettrico",
+    "ic": "🔌",
+    "sotto": "trasforma l'elettricità in movimento",
+    "da": "si muovono con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La leva è una sbarra che ruota su un perno, il fulcro. Ad Archimede si attribuisce la frase: «Datemi un punto d'appoggio e solleverò il mondo».",
+    "nodi": [
+     "leva"
+    ]
+   },
+   {
+    "t": "La carrucola è una ruota con una corda: tiri giù e il peso sale. Il piano inclinato è una rampa: spingere su costa meno fatica che sollevare.",
+    "nodi": [
+     "carrucola",
+     "piano"
+    ]
+   },
+   {
+    "t": "Le ruote dentate, o ingranaggi, si incastrano con i denti e si fanno girare. Se una ruota grande muove una piccola, la piccola gira più veloce.",
+    "nodi": [
+     "ingranaggi"
+    ]
+   },
+   {
+    "t": "Nella bicicletta la catena porta il movimento dei pedali alla ruota dietro. I disegni in rilievo delle gomme, il battistrada, fanno più presa.",
+    "nodi": [
+     "bici"
+    ]
+   },
+   {
+    "t": "Il motore elettrico trasforma l'elettricità in movimento: c'è nei frullatori, nei ventilatori e nelle auto elettriche.",
+    "nodi": [
+     "motore"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "leva",
+    "scelte": [
+     "la leva",
+     "la nuvola",
+     "il cuscino"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "tecno:oggetti",
+   "storia:pensatori",
+   "tecno:inventori"
+  ],
+  "domande": {
+   "d4yhan": "ingranaggi",
+   "10n8lln": "ingranaggi",
+   "193iy9z": "bici",
+   "2hzow6": "bici",
+   "nkw39k": "carrucola",
+   "11x4lw5": "piano",
+   "p4xyr6": "leva",
+   "o8w1z9": "motore"
+  }
+ },
+ "materiali": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I materiali",
+   "ic": "🧱",
+   "sotto": "tutto è fatto di materiali"
+  },
+  "nodi": [
+   {
+    "id": "naturali",
+    "n": "naturali",
+    "ic": "🌳",
+    "sotto": "dagli alberi, dalle piante, dagli animali",
+    "da": "possono essere"
+   },
+   {
+    "id": "uomo",
+    "n": "prodotti dall'uomo",
+    "ic": "🏭",
+    "sotto": "plastica, vetro e carta",
+    "da": "possono essere anche"
+   },
+   {
+    "id": "metalli",
+    "n": "i metalli",
+    "ic": "🔩",
+    "sotto": "ferro, alluminio, rame, mercurio",
+    "da": "comprendono"
+   },
+   {
+    "id": "leghe",
+    "n": "leghe",
+    "ic": "⚗️",
+    "sotto": "acciaio e bronzo",
+    "da": "si mescolano nelle"
+   },
+   {
+    "id": "proprieta",
+    "n": "proprietà diverse",
+    "ic": "✨",
+    "sotto": "elastici, impermeabili, isolanti",
+    "da": "hanno"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Tutto è fatto di materiali. Alcuni sono naturali: il legno viene dagli alberi, la lana dalla pecora, il cotone da una pianta.",
+    "nodi": [
+     "naturali"
+    ]
+   },
+   {
+    "t": "Anche il sughero è naturale: è la corteccia della quercia da sughero, che poi ricresce. La gomma naturale nasce dal lattice di un albero.",
+    "nodi": [
+     "naturali"
+    ]
+   },
+   {
+    "t": "Altri materiali li produce l'uomo. La plastica di solito si ricava dal petrolio, il vetro soprattutto da sabbia fusa, la carta dalla cellulosa del legno.",
+    "nodi": [
+     "uomo"
+    ]
+   },
+   {
+    "t": "Poi ci sono i metalli. La calamita attira il ferro, ma non l'alluminio. La «carta stagnola» oggi è di alluminio. Il mercurio è liquido a temperatura ambiente.",
+    "nodi": [
+     "metalli"
+    ]
+   },
+   {
+    "t": "Unendo metalli e altre sostanze si fanno le leghe. Ferro e un po' di carbonio fanno l'acciaio, più forte; rame e stagno fanno il bronzo.",
+    "nodi": [
+     "leghe"
+    ]
+   },
+   {
+    "t": "Ogni materiale ha le sue proprietà. Elastico: deformato, torna com'era. Impermeabile: non fa passare l'acqua. Isolante: lascia passare poco calore, come l'aria del doppio vetro.",
+    "nodi": [
+     "proprieta"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "metalli",
+    "scelte": [
+     "i metalli",
+     "i biscotti",
+     "le farfalle"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "tecno:riciclo",
+   "vesto:tessuti",
+   "sci-spazio:rocce"
+  ],
+  "domande": {
+   "el26qf": "naturali",
+   "1jf88pm": "naturali",
+   "wu86do": "naturali",
+   "1xy5xie": "naturali",
+   "m8qcdf": "naturali",
+   "1psx2q1": "uomo",
+   "bo3ef6": "uomo",
+   "1yrewsy": "uomo",
+   "mv4075": "metalli",
+   "236zh8": "metalli",
+   "1a5mmzd": "metalli",
+   "a407r8": "leghe",
+   "an2tfl": "leghe",
+   "sv5yci": "proprieta",
+   "fwuxom": "proprieta",
+   "4j9hzg": "proprieta"
+  }
+ },
+ "riciclo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il riciclo",
+   "ic": "♻️",
+   "sotto": "i rifiuti diventano oggetti nuovi"
+  },
+  "nodi": [
+   {
+    "id": "raccolta",
+    "n": "la raccolta differenziata",
+    "ic": "🗑️",
+    "sotto": "ogni materiale nel suo contenitore",
+    "da": "comincia con"
+   },
+   {
+    "id": "alluminio",
+    "n": "le lattine di alluminio",
+    "ic": "🥫",
+    "sotto": "si fondono, con molta meno energia",
+    "da": "rifonde"
+   },
+   {
+    "id": "vetro",
+    "n": "il vetro",
+    "ic": "🍾",
+    "sotto": "si ricicla tantissime volte",
+    "da": "rimodella"
+   },
+   {
+    "id": "carta",
+    "n": "la carta",
+    "ic": "📄",
+    "sotto": "si risparmiano alberi, acqua ed energia",
+    "da": "ripulisce e rimpasta"
+   },
+   {
+    "id": "plastica",
+    "n": "le bottiglie di plastica",
+    "ic": "🧴",
+    "sotto": "diventano fibre per il pile",
+    "da": "sminuzza"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il riciclo trasforma i rifiuti in oggetti nuovi. Comincia a casa, con la raccolta differenziata: ogni materiale va nel suo contenitore.",
+    "nodi": [
+     "raccolta"
+    ]
+   },
+   {
+    "t": "Le lattine di alluminio si fondono e diventano metallo nuovo, con molta meno energia che produrlo da zero. E si possono riciclare tantissime volte.",
+    "nodi": [
+     "alluminio"
+    ]
+   },
+   {
+    "t": "Anche il vetro si può fondere e rimodellare tantissime volte, senza perdere qualità: un barattolo può diventare una bottiglia.",
+    "nodi": [
+     "vetro"
+    ]
+   },
+   {
+    "t": "Riciclando la carta si tagliano meno alberi e si risparmiano acqua ed energia.",
+    "nodi": [
+     "carta"
+    ]
+   },
+   {
+    "t": "Le bottiglie di plastica, sminuzzate e fuse, possono diventare fibre per tessuti in pile: una felpa nata da una bottiglia!",
+    "nodi": [
+     "plastica"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "raccolta",
+    "scelte": [
+     "la raccolta differenziata",
+     "il fuoco nel cortile",
+     "il mare"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "civica:rifiuti",
+   "tecno:materiali",
+   "civica:ambiente"
+  ],
+  "domande": {
+   "13n48wk": "alluminio",
+   "6ecjtu": "vetro",
+   "t54rga": "carta",
+   "1nng6mw": "plastica"
+  }
+ },
+ "inventori": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Inventori e invenzioni",
+   "ic": "🔭",
+   "sotto": "idee che hanno cambiato il mondo"
+  },
+  "nodi": [
+   {
+    "id": "libri",
+    "n": "libri e film",
+    "ic": "📚",
+    "sotto": "Gutenberg e i fratelli Lumière",
+    "da": "diffondono"
+   },
+   {
+    "id": "energia",
+    "n": "luce ed energia",
+    "ic": "💡",
+    "sotto": "Volta, Watt, Edison, Diesel",
+    "da": "portano"
+   },
+   {
+    "id": "distanza",
+    "n": "comunicare a distanza",
+    "ic": "📻",
+    "sotto": "Meucci, Marconi, il codice Morse",
+    "da": "aiutano a"
+   },
+   {
+    "id": "viaggi",
+    "n": "viaggiare e volare",
+    "ic": "✈️",
+    "sotto": "draisina, mongolfiera, fratelli Wright",
+    "da": "ci fanno"
+   },
+   {
+    "id": "casa",
+    "n": "oggetti di ogni giorno",
+    "ic": "☕",
+    "sotto": "clessidra, moka, velcro",
+    "da": "creano anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Verso il 1450, a Magonza, Gutenberg inventò in Europa la stampa a caratteri mobili: lettere di metallo da comporre e riusare. I libri si stamparono in tante copie.",
+    "nodi": [
+     "libri"
+    ]
+   },
+   {
+    "t": "Nel 1800 Alessandro Volta, di Como, inventò la pila. La macchina a vapore, migliorata da James Watt, nell'Ottocento muoveva fabbriche, treni e navi.",
+    "nodi": [
+     "energia"
+    ]
+   },
+   {
+    "t": "Antonio Meucci costruì apparecchi per parlare a distanza; il brevetto del telefono, nel 1876, lo ebbe Bell. Il codice Morse, fatto di punti e linee, viaggiava col telegrafo.",
+    "nodi": [
+     "distanza"
+    ]
+   },
+   {
+    "t": "Verso il 1879 Thomas Edison rese pratica la lampadina a incandescenza. Alla fine dell'Ottocento l'ingegnere tedesco Rudolf Diesel inventò il motore che porta il suo nome.",
+    "nodi": [
+     "energia"
+    ]
+   },
+   {
+    "t": "Nel 1895, a Parigi, i fratelli Lumière presentarono il cinematografo. Nel 1901 le onde radio di Guglielmo Marconi attraversarono l'Atlantico; nel 1909 vinse il premio Nobel.",
+    "nodi": [
+     "libri",
+     "distanza"
+    ]
+   },
+   {
+    "t": "Nel 1817 Karl Drais inventò la draisina, una bici senza pedali. La mongolfiera vola con l'aria calda. Nel 1903 i fratelli Wright fecero volare il primo aereo a motore.",
+    "nodi": [
+     "viaggi"
+    ]
+   },
+   {
+    "t": "Anche gli oggetti di casa hanno una storia: la clessidra misura il tempo con la sabbia, la moka Bialetti è del 1933, il velcro imita le palline spinose della bardana.",
+    "nodi": [
+     "casa"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "casa",
+    "scelte": [
+     "oggetti di ogni giorno",
+     "stelle cadenti",
+     "onde del mare"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "tecno:elettricita",
+   "tecno:oggetti",
+   "arte:immagini"
+  ],
+  "domande": {
+   "1cp7c66": "distanza",
+   "g9js7v": "distanza",
+   "1tnbo74": "distanza",
+   "10u59x2": "distanza",
+   "2j35gu": "energia",
+   "16gd8jm": "energia",
+   "1hrgsl8": "energia",
+   "12rwoow": "energia",
+   "1banfio": "libri",
+   "1hkswdp": "libri",
+   "13rlicu": "viaggi",
+   "i4vnwk": "viaggi",
+   "ppaqru": "viaggi",
+   "r35kqv": "casa",
+   "19jw0ci": "casa",
+   "11n9ugo": "casa"
+  }
+ },
+ "oggetti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Gli oggetti di ogni giorno",
+   "ic": "🔧",
+   "sotto": "dentro c'è sempre un'idea"
+  },
+  "nodi": [
+   {
+    "id": "onde",
+    "n": "vibrazioni e onde radio",
+    "ic": "📡",
+    "sotto": "telefono a bicchieri e radio",
+    "da": "trasmettono suoni con"
+   },
+   {
+    "id": "luce",
+    "n": "la luce",
+    "ic": "🔦",
+    "sotto": "codice a barre, codice QR, fibra ottica",
+    "da": "leggono e portano dati con"
+   },
+   {
+    "id": "calore",
+    "n": "il calore",
+    "ic": "🌡️",
+    "sotto": "frigorifero e termostato",
+    "da": "controllano"
+   },
+   {
+    "id": "satelliti",
+    "n": "i satelliti",
+    "ic": "🛰️",
+    "sotto": "il GPS sa dove ti trovi",
+    "da": "trovano la strada con"
+   },
+   {
+    "id": "chip",
+    "n": "i microchip",
+    "ic": "🔲",
+    "sotto": "circuiti piccolissimi; il touchscreen",
+    "da": "funzionano con"
+   },
+   {
+    "id": "speciali",
+    "n": "macchine speciali",
+    "ic": "🖨️",
+    "sotto": "stampante 3D e rasaghiaccio",
+    "da": "a volte richiedono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Nel telefono a bicchieri la voce fa vibrare il fondo del bicchiere e il filo teso porta la vibrazione. La radio, invece, usa le onde radio, invisibili.",
+    "nodi": [
+     "onde"
+    ]
+   },
+   {
+    "t": "Alla cassa un lettore legge con la luce il codice a barre. Il codice QR, nato in Giappone, si legge col telefono: usalo solo con un adulto.",
+    "v": "Alla cassa un lettore legge con la luce il codice a barre. Il codice cu erre, nato in Giappone, si legge col telefono: usalo solo con un adulto.",
+    "nodi": [
+     "luce"
+    ]
+   },
+   {
+    "t": "Nella fibra ottica, fili di vetro sottilissimi, viaggia la luce: porta internet velocissimo.",
+    "nodi": [
+     "luce"
+    ]
+   },
+   {
+    "t": "Il frigorifero non crea il freddo: toglie il calore dall'interno e lo porta fuori. Il termostato tiene la temperatura che hai scelto.",
+    "nodi": [
+     "calore"
+    ]
+   },
+   {
+    "t": "Il GPS riceve segnali dai satelliti in orbita e calcola dove ti trovi: così il navigatore indica la strada.",
+    "nodi": [
+     "satelliti"
+    ]
+   },
+   {
+    "t": "Un microchip è un circuito elettronico piccolissimo. Nel 1971 l'italiano Federico Faggin guidò il progetto del primo microprocessore commerciale. Il touchscreen si comanda col dito.",
+    "nodi": [
+     "chip"
+    ]
+   },
+   {
+    "t": "La stampante 3D costruisce oggetti strato su strato. Il rasaghiaccio rende liscio il ghiaccio: il primo lo costruì Frank Zamboni nel 1949.",
+    "v": "La stampante tre di costruisce oggetti strato su strato. Il rasaghiaccio rende liscio il ghiaccio: il primo lo costruì Frank Zamboni nel 1949.",
+    "nodi": [
+     "speciali"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "satelliti",
+    "scelte": [
+     "i satelliti",
+     "i cuscini",
+     "le pozzanghere"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "tecno:computer",
+   "tecno:internet",
+   "musica:suono"
+  ],
+  "domande": {
+   "yilj6l": "onde",
+   "n6ey18": "onde",
+   "1854u8v": "satelliti",
+   "11hm54y": "calore",
+   "1ye7d7a": "calore",
+   "t7w2og": "speciali",
+   "13yblco": "speciali",
+   "1b9brqh": "chip",
+   "1j5jpqm": "chip",
+   "uify06": "luce",
+   "ohtph1": "luce",
+   "1t4fufd": "luce"
+  }
+ },
+ "costruzioni": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il disegno tecnico",
+   "ic": "📐",
+   "sotto": "disegni precisi, con le misure"
+  },
+  "nodi": [
+   {
+    "id": "misure",
+    "n": "misure esatte",
+    "ic": "📏",
+    "sotto": "per costruire davvero",
+    "da": "mostra"
+   },
+   {
+    "id": "strumenti",
+    "n": "strumenti precisi",
+    "ic": "🧰",
+    "sotto": "squadre, compasso, goniometro, livella",
+    "da": "si fa con"
+   },
+   {
+    "id": "matite",
+    "n": "matite dure",
+    "ic": "✏️",
+    "sotto": "H è dura, B è morbida",
+    "da": "preferisce"
+   },
+   {
+    "id": "viste",
+    "n": "pianta e prospetto",
+    "ic": "🏠",
+    "sotto": "dall'alto e di fronte",
+    "da": "disegna la casa in"
+   },
+   {
+    "id": "strutture",
+    "n": "ponti e grattacieli",
+    "ic": "🌉",
+    "sotto": "cavi d'acciaio e strutture flessibili",
+    "da": "serve a costruire"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il disegno tecnico è un disegno preciso, con le misure esatte: così l'oggetto si può costruire davvero.",
+    "nodi": [
+     "misure"
+    ]
+   },
+   {
+    "t": "Si usano due squadre con un angolo retto: una ha due angoli di 45°, l'altra di 30° e 60°. Il compasso disegna cerchi, il goniometro misura gli angoli.",
+    "v": "Si usano due squadre con un angolo retto: una ha due angoli di quarantacinque gradi, l'altra di trenta e sessanta gradi. Il compasso disegna cerchi, il goniometro misura gli angoli.",
+    "nodi": [
+     "strumenti"
+    ]
+   },
+   {
+    "t": "Per il disegno tecnico vanno bene le matite H, con la mina più dura: fanno linee sottili. Le matite B sono più morbide e scure.",
+    "nodi": [
+     "matite"
+    ]
+   },
+   {
+    "t": "La pianta mostra la casa vista dall'alto, senza tetto. Il prospetto mostra la facciata vista di fronte.",
+    "nodi": [
+     "viste"
+    ]
+   },
+   {
+    "t": "In cantiere la livella a bolla controlla se una superficie è in piano: la bolla deve stare proprio al centro.",
+    "nodi": [
+     "strumenti"
+    ]
+   },
+   {
+    "t": "Un ponte sospeso è appeso a grandi cavi d'acciaio, come il Golden Gate. I grattacieli hanno strutture forti e un po' flessibili: col vento si piegano appena.",
+    "nodi": [
+     "strutture"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "viste",
+    "scelte": [
+     "pianta e prospetto",
+     "pane e marmellata",
+     "pioggia e grandine"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "media:geometria",
+   "arte:linguaggio",
+   "tecno:macchine"
+  ],
+  "domande": {
+   "pi5hml": "strutture",
+   "1nggok1": "strutture",
+   "14r2s4r": "misure",
+   "1ilge4a": "strumenti",
+   "1jwqwzc": "strumenti",
+   "cpk0s5": "strumenti",
+   "ihem0o": "strumenti",
+   "179el": "viste",
+   "2guf61": "viste",
+   "n6d41u": "matite"
+  }
+ },
+ "torino": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Torino",
+   "ic": "🚗",
+   "sotto": "una città della tecnica"
+  },
+  "nodi": [
+   {
+    "id": "fiat",
+    "n": "nascere la FIAT",
+    "ic": "🚗",
+    "sotto": "Fabbrica Italiana Automobili Torino, 1899",
+    "da": "vede"
+   },
+   {
+    "id": "fabbriche",
+    "n": "grandi fabbriche",
+    "ic": "🏭",
+    "sotto": "il Lingotto e Mirafiori",
+    "da": "costruisce"
+   },
+   {
+    "id": "olivetti",
+    "n": "la Olivetti di Ivrea",
+    "ic": "⌨️",
+    "sotto": "macchine per scrivere e computer, dal 1908",
+    "da": "ha vicino"
+   },
+   {
+    "id": "trasporti",
+    "n": "trasporti speciali",
+    "ic": "🚇",
+    "sotto": "metro senza conducente, cremagliera, ascensore della Mole",
+    "da": "viaggia con"
+   },
+   {
+    "id": "mauto",
+    "n": "MAUTO",
+    "ic": "🏎️",
+    "sotto": "il Museo nazionale dell'Automobile",
+    "da": "racconta le auto al"
+   },
+   {
+    "id": "poli",
+    "n": "Politecnico",
+    "ic": "🎓",
+    "sotto": "ingegneria e architettura",
+    "da": "forma ingegneri al"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La FIAT nacque a Torino nel 1899. La sigla vuol dire Fabbrica Italiana Automobili Torino: da allora Torino è conosciuta come città dell'automobile.",
+    "nodi": [
+     "fiat"
+    ]
+   },
+   {
+    "t": "Il Lingotto era una fabbrica FIAT con una pista di prova sul tetto: oggi ospita negozi, uffici e una pinacoteca. Nel 1939 aprì Mirafiori, nel sud di Torino.",
+    "nodi": [
+     "fabbriche"
+    ]
+   },
+   {
+    "t": "Nel 1957 uscì la Nuova Fiat 500: piccola, tonda, adatta alle città. Diventò un simbolo dell'Italia nel mondo.",
+    "nodi": [
+     "fiat"
+    ]
+   },
+   {
+    "t": "Nel 1908 a Ivrea, vicino a Torino, nacque la Olivetti: prima macchine per scrivere, poi calcolatrici e computer.",
+    "nodi": [
+     "olivetti"
+    ]
+   },
+   {
+    "t": "La metropolitana, aperta nel 2006, viaggia senza conducente. La tranvia Sassi-Superga sale con una cremagliera. L'ascensore della Mole sale nel vuoto della cupola, fino a 85 metri.",
+    "nodi": [
+     "trasporti"
+    ]
+   },
+   {
+    "t": "Al MAUTO, il Museo nazionale dell'Automobile, ci sono auto di ogni epoca. Al Politecnico si studia per diventare ingegneri e architetti.",
+    "v": "Al Mauto, il Museo nazionale dell'Automobile, ci sono auto di ogni epoca. Al Politecnico si studia per diventare ingegneri e architetti.",
+    "nodi": [
+     "mauto",
+     "poli"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "olivetti",
+    "scelte": [
+     "la Olivetti di Ivrea",
+     "la pizzeria di Napoli",
+     "il porto di Genova"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "geo:piemonte",
+   "arte:torino",
+   "storia:torino"
+  ],
+  "domande": {
+   "3l01b8": "fiat",
+   "1jbznwg": "fiat",
+   "1favvdx": "fiat",
+   "m38zj1": "fiat",
+   "yh5bx1": "fabbriche",
+   "1bep0pn": "fabbriche",
+   "4afnlt": "olivetti",
+   "1jdmo22": "trasporti",
+   "zitnlz": "trasporti",
+   "1mg5s9m": "trasporti",
+   "1o09p5z": "mauto",
+   "mwqx7b": "poli"
+  }
+ }
+}

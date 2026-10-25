@@ -416,5 +416,2137 @@
    "9giejhg": "tante"
   },
   "cartina": "grecia"
+ },
+ "tempo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La storia",
+   "ic": "🕰️",
+   "sotto": "il racconto del passato"
+  },
+  "nodi": [
+   {
+    "id": "cristo",
+    "n": "nascita di Gesù",
+    "ic": "✝️",
+    "sotto": "prima: a.C. · dopo: d.C.",
+    "da": "conta gli anni dalla"
+   },
+   {
+    "id": "misure",
+    "n": "decenni, secoli e millenni",
+    "ic": "📏",
+    "sotto": "10, 100 e 1000 anni",
+    "da": "misura il tempo in"
+   },
+   {
+    "id": "secoli",
+    "n": "numeri romani",
+    "ic": "🔢",
+    "sotto": "il 476 d.C. è nel V secolo",
+    "da": "scrive i secoli in"
+   },
+   {
+    "id": "fonti",
+    "n": "fonti",
+    "ic": "🏺",
+    "sotto": "oggetti, scritti, immagini e racconti",
+    "da": "si scopre grazie alle"
+   },
+   {
+    "id": "studiosi",
+    "n": "archeologi e storici",
+    "ic": "🔍",
+    "sotto": "scavano e studiano i resti",
+    "da": "è studiata da"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Per contare gli anni partiamo dalla nascita di Gesù. Gli anni prima sono avanti Cristo, a.C.; quelli dopo sono dopo Cristo, d.C.",
+    "v": "Per contare gli anni partiamo dalla nascita di Gesù. Gli anni prima sono avanti Cristo; quelli dopo sono dopo Cristo.",
+    "nodi": [
+     "cristo"
+    ]
+   },
+   {
+    "t": "Gli anni a.C. si contano all'indietro, come un conto alla rovescia. Per questo il 500 a.C. viene prima del 200 a.C.",
+    "v": "Gli anni avanti Cristo si contano all'indietro, come un conto alla rovescia. Per questo il cinquecento avanti Cristo viene prima del duecento avanti Cristo.",
+    "nodi": [
+     "cristo"
+    ]
+   },
+   {
+    "t": "Attenzione: l'anno zero non esiste. Subito dopo l'anno 1 a.C. viene l'anno 1 d.C.",
+    "v": "Attenzione: l'anno zero non esiste. Subito dopo l'anno uno avanti Cristo viene l'anno uno dopo Cristo.",
+    "nodi": [
+     "cristo"
+    ]
+   },
+   {
+    "t": "Dieci anni sono un decennio, cento anni sono un secolo, mille anni sono un millennio. Le parole ti dicono il numero!",
+    "nodi": [
+     "misure"
+    ]
+   },
+   {
+    "t": "I secoli si scrivono in numeri romani. Trucco, se l'anno non finisce con 00: togli le ultime due cifre e aggiungi 1. Il 476 d.C. è nel V secolo.",
+    "v": "I secoli si scrivono in numeri romani. Trucco, se l'anno non finisce con doppio zero: togli le ultime due cifre e aggiungi uno. Il quattrocentosettantasei dopo Cristo è nel quinto secolo.",
+    "nodi": [
+     "secoli"
+    ]
+   },
+   {
+    "t": "Come conosciamo il passato? Grazie alle fonti: oggetti, scritti, immagini e racconti. Un vaso antico è una fonte materiale, perché si può toccare.",
+    "nodi": [
+     "fonti"
+    ]
+   },
+   {
+    "t": "Gli archeologi scavano piano piano e studiano i resti lasciati dagli uomini. Gli storici leggono le fonti e raccontano che cosa è successo.",
+    "nodi": [
+     "studiosi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "fonti",
+    "scelte": [
+     "fonti",
+     "favole",
+     "sogni"
+    ]
+   },
+   {
+    "nodo": "studiosi",
+    "scelte": [
+     "archeologi e storici",
+     "cuochi e pasticceri",
+     "piloti e astronauti"
+    ]
+   }
+  ],
+  "domande": {
+   "16qit56": "cristo",
+   "1q8xldc": "cristo",
+   "wuje4k": "cristo",
+   "wi9nr7": "misure",
+   "x6aw8i": "misure",
+   "1vvyfwu": "secoli",
+   "1j1qts1": "fonti",
+   "a6r25p": "studiosi"
+  },
+  "collegamenti": [
+   "storia:preistoria",
+   "storia:vita-romana",
+   "storia:grecia"
+  ]
+ },
+ "preistoria": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La preistoria",
+   "ic": "🦴",
+   "sotto": "il tempo prima della scrittura"
+  },
+  "nodi": [
+   {
+    "id": "paleo",
+    "n": "il Paleolitico",
+    "ic": "🪨",
+    "sotto": "pietra antica: nomadi cacciatori",
+    "da": "comincia con"
+   },
+   {
+    "id": "grotte",
+    "n": "le pitture nelle grotte",
+    "ic": "🐎",
+    "sotto": "animali dipinti, come a Lascaux",
+    "da": "ci lascia"
+   },
+   {
+    "id": "neo",
+    "n": "il Neolitico",
+    "ic": "🌾",
+    "sotto": "agricoltura, allevamento e villaggi",
+    "da": "continua con"
+   },
+   {
+    "id": "palafitte",
+    "n": "le palafitte",
+    "ic": "🛖",
+    "sotto": "case su pali vicino all'acqua",
+    "da": "costruisce"
+   },
+   {
+    "id": "otzi",
+    "n": "Ötzi",
+    "ic": "🧊",
+    "sotto": "l'uomo venuto dal ghiaccio, a Bolzano",
+    "da": "ci fa conoscere"
+   },
+   {
+    "id": "fine",
+    "n": "l'invenzione della scrittura",
+    "ic": "✍️",
+    "sotto": "circa 5000 anni fa",
+    "da": "finisce con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La preistoria è un tempo lunghissimo: dura milioni di anni. Finisce con l'invenzione della scrittura, circa 5000 anni fa.",
+    "v": "La preistoria è un tempo lunghissimo: dura milioni di anni. Finisce con l'invenzione della scrittura, circa cinquemila anni fa.",
+    "nodi": [
+     "fine"
+    ]
+   },
+   {
+    "t": "Il primo periodo è il Paleolitico, cioè età della pietra antica. Gli uomini scheggiano le pietre e vivono da nomadi: cacciano e raccolgono frutti.",
+    "nodi": [
+     "paleo"
+    ]
+   },
+   {
+    "t": "E i dinosauri? Erano già estinti da circa 66 milioni di anni: molto prima che arrivassero gli esseri umani.",
+    "v": "E i dinosauri? Erano già estinti da circa sessantasei milioni di anni: molto prima che arrivassero gli esseri umani.",
+    "nodi": [
+     "paleo"
+    ]
+   },
+   {
+    "t": "Gli uomini dipingono animali sulle pareti delle grotte. Nella grotta di Lascaux, in Francia, ci sono cavalli, tori e cervi.",
+    "nodi": [
+     "grotte"
+    ]
+   },
+   {
+    "t": "Circa 10.000 anni fa comincia il Neolitico, l'età della pietra nuova. Gli uomini coltivano, allevano animali e costruiscono villaggi.",
+    "v": "Circa diecimila anni fa comincia il Neolitico, l'età della pietra nuova. Gli uomini coltivano, allevano animali e costruiscono villaggi.",
+    "nodi": [
+     "neo"
+    ]
+   },
+   {
+    "t": "Alcuni villaggi hanno le palafitte: case su pali piantati nei laghi o nelle paludi. Ne sono state trovate anche al lago di Viverone, in Piemonte.",
+    "nodi": [
+     "palafitte"
+    ]
+   },
+   {
+    "t": "Ötzi visse più di 5000 anni fa. Fu ritrovato nel 1991 in un ghiacciaio delle Alpi. Oggi è conservato nel museo di Bolzano.",
+    "v": "Ötzi visse più di cinquemila anni fa. Fu ritrovato nel millenovecentonovantuno in un ghiacciaio delle Alpi. Oggi è conservato nel museo di Bolzano.",
+    "nodi": [
+     "otzi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "paleo",
+    "scelte": [
+     "il Paleolitico",
+     "il Medioevo",
+     "il Rinascimento"
+    ]
+   },
+   {
+    "nodo": "neo",
+    "scelte": [
+     "il Neolitico",
+     "il Medioevo",
+     "l'età dei robot"
+    ]
+   }
+  ],
+  "domande": {
+   "akha3f": "fine",
+   "14p0qjj": "paleo",
+   "nnrrem": "neo",
+   "bhooel": "paleo",
+   "1tbtnm0": "otzi",
+   "1j74fi": "paleo",
+   "17t8lz8": "palafitte",
+   "1q4hopj": "grotte"
+  },
+  "collegamenti": [
+   "storia:tempo",
+   "storia:mesopotamia",
+   "arte:antica"
+  ]
+ },
+ "mesopotamia": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La Mesopotamia",
+   "ic": "🏺",
+   "sotto": "la terra tra i fiumi"
+  },
+  "nodi": [
+   {
+    "id": "fiumi",
+    "n": "il Tigri e l'Eufrate",
+    "ic": "🌊",
+    "sotto": "oggi soprattutto in Iraq",
+    "da": "sta tra due fiumi:"
+   },
+   {
+    "id": "scrittura",
+    "n": "la scrittura cuneiforme",
+    "ic": "✍️",
+    "sotto": "dei Sumeri, su tavolette d'argilla",
+    "da": "inventa"
+   },
+   {
+    "id": "ziggurat",
+    "n": "le ziggurat",
+    "ic": "🛕",
+    "sotto": "templi a gradoni",
+    "da": "costruisce"
+   },
+   {
+    "id": "leggi",
+    "n": "il codice di Hammurabi",
+    "ic": "📜",
+    "sotto": "re di Babilonia",
+    "da": "ha uno dei primi codici di leggi:"
+   },
+   {
+    "id": "invenzioni",
+    "n": "la ruota e il conto per 60",
+    "ic": "☸️",
+    "sotto": "60 minuti in un'ora",
+    "da": "usa tra i primi"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Mesopotamia vuol dire terra tra i fiumi. I due fiumi sono il Tigri e l'Eufrate. Oggi quella terra è soprattutto in Iraq.",
+    "nodi": [
+     "fiumi"
+    ]
+   },
+   {
+    "t": "Le piene dei fiumi rendono la terra fertile. Qui nascono alcune delle prime città del mondo, con contadini, artigiani e mercanti.",
+    "nodi": [
+     "fiumi"
+    ]
+   },
+   {
+    "t": "I Sumeri inventano la scrittura cuneiforme. Con una cannuccia appuntita premono segni a forma di cuneo su tavolette d'argilla morbida.",
+    "nodi": [
+     "scrittura"
+    ]
+   },
+   {
+    "t": "Nelle città più importanti c'è una ziggurat: una grande torre a gradoni, come una torta a piani. In cima c'è il tempio del dio protettore.",
+    "nodi": [
+     "ziggurat"
+    ]
+   },
+   {
+    "t": "Hammurabi, re di Babilonia, fa incidere le sue leggi su una stele di pietra. È uno dei primi codici di leggi. Oggi è al Louvre, a Parigi.",
+    "nodi": [
+     "leggi"
+    ]
+   },
+   {
+    "t": "I popoli della Mesopotamia usano tra i primi la ruota. E contano a gruppi di 60: per questo un'ora ha 60 minuti.",
+    "v": "I popoli della Mesopotamia usano tra i primi la ruota. E contano a gruppi di sessanta: per questo un'ora ha sessanta minuti.",
+    "nodi": [
+     "invenzioni"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "fiumi",
+    "scelte": [
+     "il Tigri e l'Eufrate",
+     "il Po e il Tevere",
+     "il Tamigi e la Senna"
+    ]
+   },
+   {
+    "nodo": "ziggurat",
+    "scelte": [
+     "le ziggurat",
+     "i grattacieli",
+     "gli igloo"
+    ]
+   }
+  ],
+  "domande": {
+   "7lpi46": "scrittura",
+   "14l8end": "fiumi",
+   "1j6dxzc": "leggi",
+   "lbja80": "scrittura",
+   "8ir4fd": "ziggurat",
+   "xgoqur": "fiumi",
+   "mg19l5": "invenzioni",
+   "cqhvuh": "invenzioni",
+   "z8ooct": "leggi"
+  },
+  "collegamenti": [
+   "storia:preistoria",
+   "storia:egizi",
+   "storia:ebrei-fenici",
+   "geo:mondo"
+  ]
+ },
+ "indo-cina": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le civiltà dell'Asia antica",
+   "ic": "🐉",
+   "sotto": "India e Cina"
+  },
+  "nodi": [
+   {
+    "id": "fiumi",
+    "n": "l'Indo e il Fiume Giallo",
+    "ic": "🌊",
+    "sotto": "in India e in Cina",
+    "da": "nascono lungo"
+   },
+   {
+    "id": "citta",
+    "n": "città ordinate",
+    "ic": "🏘️",
+    "sotto": "strade dritte e fognature",
+    "da": "costruiscono"
+   },
+   {
+    "id": "mistero",
+    "n": "una scrittura misteriosa",
+    "ic": "❓",
+    "sotto": "i segni dell'Indo non sono decifrati",
+    "da": "lasciano"
+   },
+   {
+    "id": "seta",
+    "n": "la seta e la carta",
+    "ic": "🧵",
+    "sotto": "invenzioni cinesi",
+    "da": "in Cina inventano"
+   },
+   {
+    "id": "muraglia",
+    "n": "la Grande Muraglia",
+    "ic": "🧱",
+    "sotto": "lunghissima, ma dallo spazio non si vede",
+    "da": "in Cina costruiscono"
+   },
+   {
+    "id": "esercito",
+    "n": "l'Esercito di terracotta",
+    "ic": "🗿",
+    "sotto": "statue per il primo imperatore",
+    "da": "in Cina modellano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Più di 4000 anni fa, lungo il fiume Indo, nascono grandi città come Mohenjo-daro e Harappa. Dal fiume Indo prende il nome l'India.",
+    "v": "Più di quattromila anni fa, lungo il fiume Indo, nascono grandi città come Mohenjo-daro e Harappa. Dal fiume Indo prende il nome l'India.",
+    "nodi": [
+     "fiumi"
+    ]
+   },
+   {
+    "t": "Queste città sono ordinate: strade dritte a scacchiera, case con lo scarico dell'acqua, fognature e perfino un grande bagno pubblico.",
+    "nodi": [
+     "citta"
+    ]
+   },
+   {
+    "t": "Gli abitanti incidono segni su piccoli sigilli. Ma nessuno è ancora riuscito a decifrare la loro scrittura: è un mistero!",
+    "nodi": [
+     "mistero"
+    ]
+   },
+   {
+    "t": "In Cina la civiltà nasce lungo lo Huang He, il Fiume Giallo. L'acqua è gialla per la terra fine che trasporta.",
+    "nodi": [
+     "fiumi"
+    ]
+   },
+   {
+    "t": "I Cinesi inventano la seta, che nasce dal bozzolo del baco da seta. Inventano anche la carta, con cui scriviamo ancora oggi.",
+    "nodi": [
+     "seta"
+    ]
+   },
+   {
+    "t": "La Grande Muraglia è lunghissima, ma stretta e del colore del terreno. È un mito che si veda a occhio nudo dallo spazio.",
+    "nodi": [
+     "muraglia"
+    ]
+   },
+   {
+    "t": "Per il primo imperatore della Cina furono fatte migliaia di statue di soldati: l'Esercito di terracotta. Lo scoprirono dei contadini nel 1974.",
+    "v": "Per il primo imperatore della Cina furono fatte migliaia di statue di soldati: l'Esercito di terracotta. Lo scoprirono dei contadini nel millenovecentosettantaquattro.",
+    "nodi": [
+     "esercito"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "seta",
+    "scelte": [
+     "la seta e la carta",
+     "la plastica e la gomma",
+     "il telefono e la radio"
+    ]
+   }
+  ],
+  "domande": {
+   "qjw9oe": "fiumi",
+   "13qfoyy": "citta",
+   "14jvt89": "mistero",
+   "1l7xrf7": "seta",
+   "1ega1rh": "muraglia",
+   "syt8zj": "seta",
+   "16nkupr": "esercito",
+   "pyjgig": "fiumi"
+  },
+  "collegamenti": [
+   "storia:mesopotamia",
+   "storia:egizi",
+   "geo:mondo"
+  ]
+ },
+ "ebrei-fenici": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Ebrei e Fenici",
+   "ic": "⛵",
+   "sotto": "due popoli del Mediterraneo orientale"
+  },
+  "nodi": [
+   {
+    "id": "libano",
+    "n": "Libano",
+    "ic": "🌲",
+    "sotto": "Tiro e Sidone, cedri per le navi",
+    "da": "Fenici: vivono nell'attuale"
+   },
+   {
+    "id": "mare",
+    "n": "navigatori e mercanti",
+    "ic": "⛵",
+    "sotto": "la porpora e la città di Cartagine",
+    "da": "Fenici: sono"
+   },
+   {
+    "id": "alfabeto",
+    "n": "un alfabeto semplice",
+    "ic": "🔤",
+    "sotto": "pochi segni, poi presi dai Greci",
+    "da": "Fenici: inventano"
+   },
+   {
+    "id": "dio",
+    "n": "un solo Dio",
+    "ic": "✡️",
+    "sotto": "si chiama monoteismo",
+    "da": "Ebrei: credono in"
+   },
+   {
+    "id": "bibbia",
+    "n": "Bibbia ebraica",
+    "ic": "📖",
+    "sotto": "Mosè guida l'uscita dall'Egitto",
+    "da": "Ebrei: raccontano la loro storia nella"
+   },
+   {
+    "id": "davide",
+    "n": "Gerusalemme",
+    "ic": "👑",
+    "sotto": "capitale scelta dal re Davide",
+    "da": "Ebrei: hanno come capitale"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I Fenici vivono su una stretta striscia di costa, nell'attuale Libano. Tra le loro città ci sono Tiro e Sidone.",
+    "nodi": [
+     "libano"
+    ]
+   },
+   {
+    "t": "Sui monti crescono i cedri del Libano: legno forte e profumato per costruire navi. Così i Fenici diventano grandi navigatori e mercanti.",
+    "nodi": [
+     "libano",
+     "mare"
+    ]
+   },
+   {
+    "t": "Da un mollusco, il murice, ricavano la porpora: un colore preziosissimo, da re. Sulla costa dell'Africa fondano Cartagine, che vuol dire Città nuova.",
+    "nodi": [
+     "mare"
+    ]
+   },
+   {
+    "t": "I Fenici inventano un alfabeto semplice, con pochi segni. I Greci lo prendono e lo migliorano: da lì nasce anche il nostro.",
+    "nodi": [
+     "alfabeto"
+    ]
+   },
+   {
+    "t": "Gli Ebrei credono in un solo Dio: si chiama monoteismo. La loro storia è raccontata nella Bibbia ebraica.",
+    "nodi": [
+     "dio",
+     "bibbia"
+    ]
+   },
+   {
+    "t": "Secondo la Bibbia, Mosè guida gli Ebrei fuori dall'Egitto, verso la Terra Promessa. Questo lungo viaggio si chiama Esodo.",
+    "nodi": [
+     "bibbia"
+    ]
+   },
+   {
+    "t": "Sempre secondo la Bibbia, il re Davide fa di Gerusalemme la capitale. Suo figlio Salomone vi costruisce il grande Tempio.",
+    "nodi": [
+     "davide"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "alfabeto",
+    "scelte": [
+     "un alfabeto semplice",
+     "il telefono",
+     "la bicicletta"
+    ]
+   }
+  ],
+  "domande": {
+   "7xdhvn": "mare",
+   "pdy5bs": "mare",
+   "3h124": "dio",
+   "1sisnd4": "bibbia",
+   "smvmoo": "bibbia",
+   "7g3ev7": "davide",
+   "1ezfs6y": "libano",
+   "2n5o3f": "libano",
+   "1rgb3pp": "mare"
+  },
+  "collegamenti": [
+   "storia:mesopotamia",
+   "storia:egizi",
+   "storia:repubblica",
+   "religione:religioni"
+  ]
+ },
+ "creta-micene": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Cretesi e Micenei",
+   "ic": "🐂",
+   "sotto": "antiche civiltà del mar Egeo"
+  },
+  "nodi": [
+   {
+    "id": "minoici",
+    "n": "la civiltà minoica",
+    "ic": "🌊",
+    "sotto": "circa 4000 anni fa",
+    "da": "a Creta creano"
+   },
+   {
+    "id": "minosse",
+    "n": "Minosse",
+    "ic": "👑",
+    "sotto": "minoico vuol dire «di Minosse»",
+    "da": "a Creta hanno un re leggendario:"
+   },
+   {
+    "id": "cnosso",
+    "n": "il palazzo di Cnosso",
+    "ic": "🏛️",
+    "sotto": "stanze, cortili e affreschi",
+    "da": "a Creta costruiscono"
+   },
+   {
+    "id": "minotauro",
+    "n": "Minotauro",
+    "ic": "🐂",
+    "sotto": "nel labirinto, vinto da Teseo",
+    "da": "raccontano il mito del"
+   },
+   {
+    "id": "micene",
+    "n": "la Porta dei Leoni",
+    "ic": "🦁",
+    "sotto": "l'ingresso della città",
+    "da": "a Micene costruiscono"
+   },
+   {
+    "id": "schliemann",
+    "n": "Heinrich Schliemann",
+    "ic": "⛏️",
+    "sotto": "scavò Troia e Micene nell'Ottocento",
+    "da": "a Micene sono riscoperti da"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Circa 4000 anni fa, sull'isola di Creta, fiorisce la civiltà minoica. I Cretesi sono grandi navigatori e commercianti.",
+    "v": "Circa quattromila anni fa, sull'isola di Creta, fiorisce la civiltà minoica. I Cretesi sono grandi navigatori e commercianti.",
+    "nodi": [
+     "minoici"
+    ]
+   },
+   {
+    "t": "Il nome viene da Minosse, un re della leggenda: minoico vuol dire di Minosse. Non sappiamo se sia esistito davvero.",
+    "nodi": [
+     "minosse"
+    ]
+   },
+   {
+    "t": "A Creta c'è il grande palazzo di Cnosso, con centinaia di stanze e affreschi colorati. Uno mostra giovani acrobati che saltano sopra un toro.",
+    "nodi": [
+     "cnosso"
+    ]
+   },
+   {
+    "t": "Il mito racconta il labirinto del Minotauro, metà uomo e metà toro. Teseo lo sconfigge ed esce grazie al filo di Arianna.",
+    "nodi": [
+     "minotauro"
+    ]
+   },
+   {
+    "t": "Poi in Grecia diventano potenti i Micenei, guerrieri della città di Micene. L'ingresso della città è la Porta dei Leoni.",
+    "nodi": [
+     "micene"
+    ]
+   },
+   {
+    "t": "Nell'Ottocento Heinrich Schliemann, appassionato dei racconti di Omero, scava le rovine di Troia e di Micene.",
+    "nodi": [
+     "schliemann"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "minotauro",
+    "scelte": [
+     "Minotauro",
+     "Pinocchio",
+     "Babbo Natale"
+    ]
+   },
+   {
+    "nodo": "micene",
+    "scelte": [
+     "la Porta dei Leoni",
+     "la Torre Eiffel",
+     "il Colosseo"
+    ]
+   }
+  ],
+  "domande": {
+   "2prk0u": "minoici",
+   "4suhbq": "minotauro",
+   "123n1h1": "cnosso",
+   "wartsw": "minosse",
+   "1eqjm99": "cnosso",
+   "237pwa": "micene",
+   "1s5ikfv": "schliemann"
+  },
+  "collegamenti": [
+   "storia:grecia",
+   "storia:greci",
+   "arte:antica"
+  ]
+ },
+ "persiani": {
+  "tipo": "linea",
+  "centro": {
+   "n": "L'impero persiano",
+   "ic": "👑",
+   "sotto": "un impero immenso in Asia"
+  },
+  "nodi": [
+   {
+    "id": "ciro",
+    "anno": -550,
+    "n": "Ciro il Grande fonda l'impero",
+    "ic": "👑",
+    "sotto": "intorno al 550 a.C.",
+    "da": "intorno al 550 a.C.",
+    "tacca": "550 a.C. circa"
+   },
+   {
+    "id": "dario",
+    "periodo": [
+     -522,
+     -486
+    ],
+    "n": "Dario I organizza l'impero",
+    "ic": "🗺️",
+    "sotto": "satrapi e Strada Reale",
+    "da": "dal 522 al 486 a.C."
+   },
+   {
+    "id": "salamina",
+    "anno": -480,
+    "n": "i Greci vincono a Salamina",
+    "ic": "⛵",
+    "sotto": "una grande battaglia sul mare",
+    "da": "nel 480 a.C."
+   },
+   {
+    "id": "alessandro",
+    "anno": -331,
+    "n": "Alessandro Magno lo conquista",
+    "ic": "🐎",
+    "sotto": "vince il re Dario III",
+    "da": "nel 331 a.C."
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I Persiani vengono dall'Iran. Intorno al 550 a.C. il loro re, Ciro il Grande, fonda un impero immenso.",
+    "v": "I Persiani vengono dall'Iran. Intorno al cinquecentocinquanta avanti Cristo il loro re, Ciro il Grande, fonda un impero immenso.",
+    "nodi": [
+     "ciro"
+    ]
+   },
+   {
+    "t": "Dal 522 al 486 a.C. regna Dario I. Divide l'impero in province e a capo di ognuna mette un governatore: il satrapo.",
+    "v": "Dal cinquecentoventidue al quattrocentottantasei avanti Cristo regna Dario primo. Divide l'impero in province e a capo di ognuna mette un governatore: il satrapo.",
+    "nodi": [
+     "dario"
+    ]
+   },
+   {
+    "t": "Il satrapo riscuote le tasse per il re. Lungo la Strada Reale ci sono stazioni con cavalli freschi: i messaggeri viaggiano velocissimi.",
+    "nodi": [
+     "dario"
+    ]
+   },
+   {
+    "t": "I Persiani provano a conquistare la Grecia. Ma nel 480 a.C. la flotta greca li sconfigge a Salamina.",
+    "v": "I Persiani provano a conquistare la Grecia. Ma nel quattrocentottanta avanti Cristo la flotta greca li sconfigge a Salamina.",
+    "nodi": [
+     "salamina"
+    ]
+   },
+   {
+    "t": "Nel 331 a.C. Alessandro Magno sconfigge il re persiano Dario III. L'impero persiano diventa parte del suo regno.",
+    "v": "Nel trecentotrentuno avanti Cristo Alessandro Magno sconfigge il re persiano Dario terzo. L'impero persiano diventa parte del suo regno.",
+    "nodi": [
+     "alessandro"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "salamina",
+    "scelte": [
+     "i Greci vincono a Salamina",
+     "si inventa il telefono",
+     "arrivano i dinosauri"
+    ]
+   },
+   {
+    "nodo": "alessandro",
+    "scelte": [
+     "Alessandro Magno lo conquista",
+     "lo conquistano i robot",
+     "lo conquistano i dinosauri"
+    ]
+   }
+  ],
+  "domande": {
+   "18gsffj": "ciro",
+   "1j4til3": "dario",
+   "137lmxx": "dario"
+  },
+  "collegamenti": [
+   "storia:greci",
+   "storia:alessandro",
+   "storia:mesopotamia"
+  ]
+ },
+ "greci": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'antica Grecia",
+   "ic": "🏛️",
+   "sotto": "Atene, Sparta, dei ed eroi"
+  },
+  "nodi": [
+   {
+    "id": "polis",
+    "n": "Atene e Sparta",
+    "ic": "🏛️",
+    "sotto": "la democrazia e i guerrieri",
+    "da": "ha città-stato come"
+   },
+   {
+    "id": "persiani",
+    "n": "i Persiani",
+    "ic": "🛡️",
+    "sotto": "Maratona, Termopili, Salamina",
+    "da": "vince"
+   },
+   {
+    "id": "dei",
+    "n": "gli dei dell'Olimpo",
+    "ic": "⚡",
+    "sotto": "Zeus è il re degli dei",
+    "da": "prega"
+   },
+   {
+    "id": "omero",
+    "n": "le storie di Omero",
+    "ic": "📜",
+    "sotto": "Iliade e Odissea: Ulisse torna a Itaca",
+    "da": "racconta"
+   },
+   {
+    "id": "regali",
+    "n": "Olimpiadi, teatro e alfabeto",
+    "ic": "🏅",
+    "sotto": "idee e parole che usiamo ancora",
+    "da": "ci lascia in eredità"
+   },
+   {
+    "id": "magna",
+    "n": "la Magna Grecia",
+    "ic": "⛵",
+    "sotto": "Taranto, Crotone, Napoli",
+    "da": "fonda nell'Italia del sud"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Atene prende il nome dalla dea Atena. Sull'Acropoli, la città alta, c'è il suo tempio: il Partenone. Ad Atene nasce la democrazia, il governo del popolo.",
+    "nodi": [
+     "polis"
+    ]
+   },
+   {
+    "t": "Ma votano solo i cittadini maschi, adulti e liberi. Sparta invece è famosa per i suoi guerrieri, allenati fin da bambini.",
+    "nodi": [
+     "polis"
+    ]
+   },
+   {
+    "t": "I Greci vincono i Persiani a Maratona nel 490 a.C. Nel 480 a.C. Leonida e 300 Spartani resistono alle Termopili, e la flotta greca vince a Salamina.",
+    "v": "I Greci vincono i Persiani a Maratona nel quattrocentonovanta avanti Cristo. Nel quattrocentottanta avanti Cristo Leonida e trecento Spartani resistono alle Termopili, e la flotta greca vince a Salamina.",
+    "nodi": [
+     "persiani"
+    ]
+   },
+   {
+    "t": "I Greci pregano tanti dei. Il re degli dei è Zeus: lancia i fulmini e vive sul monte Olimpo, il più alto della Grecia.",
+    "nodi": [
+     "dei"
+    ]
+   },
+   {
+    "t": "Secondo la tradizione, Omero racconta la guerra di Troia nell'Iliade e il viaggio di Ulisse nell'Odissea. Nel mito, i Greci entrano a Troia nascosti in un cavallo di legno.",
+    "nodi": [
+     "omero"
+    ]
+   },
+   {
+    "t": "Dal 776 a.C., secondo la tradizione, i Greci fanno le Olimpiadi a Olimpia, ogni 4 anni, in onore di Zeus. Nel teatro si recitano tragedie e commedie.",
+    "v": "Dal settecentosettantasei avanti Cristo, secondo la tradizione, i Greci fanno le Olimpiadi a Olimpia, ogni quattro anni, in onore di Zeus. Nel teatro si recitano tragedie e commedie.",
+    "nodi": [
+     "regali"
+    ]
+   },
+   {
+    "t": "Alfa e beta, le prime due lettere greche, formano la parola alfabeto. E nell'Italia del sud i Greci fondano tante città: è la Magna Grecia.",
+    "nodi": [
+     "regali",
+     "magna"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "dei",
+    "scelte": [
+     "gli dei dell'Olimpo",
+     "i supereroi dei fumetti",
+     "i robot giganti"
+    ]
+   },
+   {
+    "nodo": "magna",
+    "scelte": [
+     "la Magna Grecia",
+     "la Grande Muraglia",
+     "il Polo Nord"
+    ]
+   }
+  ],
+  "domande": {
+   "74y2mp": "regali",
+   "dgnw3o": "polis",
+   "cqdmxh": "persiani",
+   "83jat5": "persiani",
+   "1xishj3": "polis",
+   "leidnt": "polis",
+   "13tcrkc": "polis",
+   "cntej5": "dei",
+   "1h07a1t": "dei",
+   "yeup7d": "omero",
+   "nxrse0": "omero",
+   "tzp7fb": "regali",
+   "borf4e": "regali",
+   "1ll1cug": "polis",
+   "4n9f26": "regali",
+   "sv6mbj": "magna",
+   "14e8nyq": "omero",
+   "1dp46vv": "persiani",
+   "ktiqk5": "regali"
+  },
+  "collegamenti": [
+   "storia:grecia",
+   "storia:polis",
+   "storia:pensatori",
+   "storia:persiani"
+  ]
+ },
+ "pensatori": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I sapienti greci",
+   "ic": "🦉",
+   "sotto": "filosofi e scienziati"
+  },
+  "nodi": [
+   {
+    "id": "filosofia",
+    "n": "la filosofia",
+    "ic": "💭",
+    "sotto": "amore per la sapienza",
+    "da": "fanno nascere"
+   },
+   {
+    "id": "pitagora",
+    "n": "Pitagora",
+    "ic": "📐",
+    "sotto": "matematico e filosofo, a Crotone",
+    "da": "tra i matematici hanno"
+   },
+   {
+    "id": "socrate",
+    "n": "Socrate, Platone e Aristotele",
+    "ic": "🗣️",
+    "sotto": "una catena di maestri e allievi",
+    "da": "tra i filosofi hanno"
+   },
+   {
+    "id": "archimede",
+    "n": "Archimede",
+    "ic": "🛁",
+    "sotto": "di Siracusa: «Eureka!»",
+    "da": "tra gli scienziati hanno"
+   },
+   {
+    "id": "ippocrate",
+    "n": "Ippocrate",
+    "ic": "⚕️",
+    "sotto": "il padre della medicina",
+    "da": "tra i medici hanno"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Filosofia vuol dire amore per la sapienza. I filosofi greci si chiedono sempre perché: come è fatto il mondo? Come si vive bene?",
+    "nodi": [
+     "filosofia"
+    ]
+   },
+   {
+    "t": "Pitagora è un matematico e filosofo. Vive a lungo a Crotone, in Calabria, nella Magna Grecia. Da lui prende il nome la tavola pitagorica.",
+    "nodi": [
+     "pitagora"
+    ]
+   },
+   {
+    "t": "Ad Atene Socrate fa domande a tutti, ma non scrive libri. Lo conosciamo grazie al suo allievo Platone. E Platone è il maestro di Aristotele.",
+    "nodi": [
+     "socrate"
+    ]
+   },
+   {
+    "t": "Archimede vive a Siracusa. Si racconta che, entrando nella vasca, vide l'acqua salire e gridò Eureka, cioè ho trovato!",
+    "nodi": [
+     "archimede"
+    ]
+   },
+   {
+    "t": "Il medico Ippocrate insegna a osservare con cura il malato. È considerato il padre della medicina: i nuovi medici fanno ancora il giuramento di Ippocrate.",
+    "nodi": [
+     "ippocrate"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "archimede",
+    "scelte": [
+     "Archimede",
+     "Cappuccetto Rosso",
+     "Pinocchio"
+    ]
+   }
+  ],
+  "domande": {
+   "ya7msn": "pitagora",
+   "7vc8zq": "filosofia",
+   "e55617": "socrate",
+   "6fxkrc": "archimede",
+   "1wtoago": "ippocrate"
+  },
+  "collegamenti": [
+   "storia:greci",
+   "storia:alessandro",
+   "storia:polis"
+  ]
+ },
+ "alessandro": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Alessandro Magno",
+   "ic": "🐎",
+   "sotto": "il re che arrivò fino all'India"
+  },
+  "nodi": [
+   {
+    "id": "padre",
+    "n": "Filippo II di Macedonia",
+    "ic": "👑",
+    "sotto": "Alessandro diventa re a 20 anni",
+    "da": "è figlio del re"
+   },
+   {
+    "id": "maestro",
+    "n": "Aristotele",
+    "ic": "🦉",
+    "sotto": "un grande filosofo greco",
+    "da": "ha come maestro"
+   },
+   {
+    "id": "bucefalo",
+    "n": "Bucefalo",
+    "ic": "🐴",
+    "sotto": "il cavallo che nessuno domava",
+    "da": "cavalca"
+   },
+   {
+    "id": "persia",
+    "n": "l'impero persiano",
+    "ic": "⚔️",
+    "sotto": "dall'Egitto fino all'India",
+    "da": "conquista"
+   },
+   {
+    "id": "alessandria",
+    "n": "Alessandria",
+    "ic": "🗼",
+    "sotto": "con il Faro e la Biblioteca",
+    "da": "fonda in Egitto"
+   },
+   {
+    "id": "regni",
+    "n": "i regni ellenistici",
+    "ic": "🏺",
+    "sotto": "la cultura greca in Oriente",
+    "da": "alla sua morte lascia"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Alessandro è figlio di Filippo II, re della Macedonia. Il suo maestro è il grande filosofo Aristotele.",
+    "v": "Alessandro è figlio di Filippo secondo, re della Macedonia. Il suo maestro è il grande filosofo Aristotele.",
+    "nodi": [
+     "padre",
+     "maestro"
+    ]
+   },
+   {
+    "t": "Da ragazzo doma Bucefalo, un cavallo che nessuno riesce a cavalcare: lo gira verso il sole, così il cavallo non vede la sua ombra.",
+    "nodi": [
+     "bucefalo"
+    ]
+   },
+   {
+    "t": "Nel 336 a.C. muore Filippo e Alessandro diventa re, a soli 20 anni. Poi parte con il suo esercito contro l'impero persiano.",
+    "v": "Nel trecentotrentasei avanti Cristo muore Filippo e Alessandro diventa re, a soli vent'anni. Poi parte con il suo esercito contro l'impero persiano.",
+    "nodi": [
+     "padre",
+     "persia"
+    ]
+   },
+   {
+    "t": "Sconfigge il re persiano Dario III e conquista un impero immenso: dalla Grecia all'Egitto, fino all'India. Per questo è chiamato Magno, cioè grande.",
+    "v": "Sconfigge il re persiano Dario terzo e conquista un impero immenso: dalla Grecia all'Egitto, fino all'India. Per questo è chiamato Magno, cioè grande.",
+    "nodi": [
+     "persia"
+    ]
+   },
+   {
+    "t": "In Egitto fonda Alessandria, che porta il suo nome. Più tardi la città avrà un Faro famoso, una delle sette meraviglie, e una grandissima Biblioteca.",
+    "nodi": [
+     "alessandria"
+    ]
+   },
+   {
+    "t": "Alessandro muore nel 323 a.C., a soli 32 anni. Il suo impero viene diviso tra i suoi generali: l'Egitto va a Tolomeo.",
+    "v": "Alessandro muore nel trecentoventitré avanti Cristo, a soli trentadue anni. Il suo impero viene diviso tra i suoi generali: l'Egitto va a Tolomeo.",
+    "nodi": [
+     "regni"
+    ]
+   },
+   {
+    "t": "Verso il 300 a.C. comincia l'età ellenistica: la cultura greca si diffonde in Oriente. A Pergamo c'è una grande biblioteca, e dal nome della città viene la parola pergamena.",
+    "v": "Verso il trecento avanti Cristo comincia l'età ellenistica: la cultura greca si diffonde in Oriente. A Pergamo c'è una grande biblioteca, e dal nome della città viene la parola pergamena.",
+    "nodi": [
+     "regni"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "bucefalo",
+    "scelte": [
+     "Bucefalo",
+     "un dinosauro",
+     "un delfino"
+    ]
+   }
+  ],
+  "domande": {
+   "1u00zy4": "padre",
+   "md3tl1": "bucefalo",
+   "p6h5hg": "persia",
+   "kfkx3g": "regni",
+   "1n64z74": "regni",
+   "1li0ls1": "persia",
+   "nh5unf": "maestro",
+   "yxbpz8": "regni",
+   "13p1mx1": "alessandria"
+  },
+  "collegamenti": [
+   "storia:grecia",
+   "storia:persiani",
+   "storia:pensatori",
+   "storia:egizi"
+  ]
+ },
+ "italici": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'Italia antica",
+   "ic": "🗿",
+   "sotto": "tanti popoli prima di Roma"
+  },
+  "nodi": [
+   {
+    "id": "nomi",
+    "n": "Veneti e Umbri",
+    "ic": "🗺️",
+    "sotto": "e anche i Liguri",
+    "da": "ha popoli che danno il nome alle regioni:"
+   },
+   {
+    "id": "latini",
+    "n": "i Latini",
+    "ic": "🏛️",
+    "sotto": "nel Lazio parlano il latino",
+    "da": "ha nel Lazio"
+   },
+   {
+    "id": "sanniti",
+    "n": "i Sanniti",
+    "ic": "⛰️",
+    "sotto": "tre guerre contro Roma",
+    "da": "ha sulle montagne del Sannio"
+   },
+   {
+    "id": "camuni",
+    "n": "i Camuni",
+    "ic": "🌹",
+    "sotto": "migliaia di disegni sulle rocce",
+    "da": "ha in Val Camonica"
+   },
+   {
+    "id": "nuraghi",
+    "n": "i nuraghi",
+    "ic": "🗼",
+    "sotto": "antiche torri di pietra",
+    "da": "ha in Sardegna"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Prima che Roma diventi potente, in Italia vivono tanti popoli diversi. Alcuni danno il nome alle regioni: i Veneti al Veneto, gli Umbri all'Umbria.",
+    "nodi": [
+     "nomi"
+    ]
+   },
+   {
+    "t": "Gli Umbri vivono a est del fiume Tevere. A ovest del fiume vivono invece gli Etruschi.",
+    "nodi": [
+     "nomi"
+    ]
+   },
+   {
+    "t": "Nel Lazio vivono i Latini, che parlano il latino. Proprio tra i Latini, sulle rive del Tevere, nasce Roma.",
+    "nodi": [
+     "latini"
+    ]
+   },
+   {
+    "t": "Sulle montagne del Sannio vivono i Sanniti, guerrieri forti e coraggiosi. Combattono tre guerre contro Roma.",
+    "nodi": [
+     "sanniti"
+    ]
+   },
+   {
+    "t": "In Val Camonica, in Lombardia, i Camuni incidono migliaia di disegni sulle rocce. Le loro incisioni sono state il primo sito italiano Patrimonio UNESCO.",
+    "v": "In Val Camonica, in Lombardia, i Camuni incidono migliaia di disegni sulle rocce. Le loro incisioni sono state il primo sito italiano Patrimonio Unesco.",
+    "nodi": [
+     "camuni"
+    ]
+   },
+   {
+    "t": "In Sardegna ci sono i nuraghi: antiche torri di pietra a forma di cono tagliato, costruite con grandi pietre e senza malta.",
+    "nodi": [
+     "nuraghi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "nuraghi",
+    "scelte": [
+     "i nuraghi",
+     "i grattacieli",
+     "gli igloo"
+    ]
+   }
+  ],
+  "domande": {
+   "zw4p6j": "sanniti",
+   "adx48s": "nomi",
+   "9sxya0": "nomi",
+   "fth6p8": "camuni",
+   "17ax3qv": "nuraghi",
+   "ond4s1": "latini"
+  },
+  "collegamenti": [
+   "storia:etruschi",
+   "storia:roma-re",
+   "geo:regioni"
+  ]
+ },
+ "etruschi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Gli Etruschi",
+   "ic": "🏺",
+   "sotto": "un popolo dell'Italia antica"
+  },
+  "nodi": [
+   {
+    "id": "etruria",
+    "n": "Etruria",
+    "ic": "🗺️",
+    "sotto": "tra Toscana, Lazio e Umbria",
+    "da": "vivono in"
+   },
+   {
+    "id": "citta",
+    "n": "12 città",
+    "ic": "🏘️",
+    "sotto": "la dodecapoli",
+    "da": "formano una lega di"
+   },
+   {
+    "id": "ferro",
+    "n": "isola d'Elba",
+    "ic": "⚒️",
+    "sotto": "ricchissima di ferro",
+    "da": "lavorano i metalli dell'"
+   },
+   {
+    "id": "alfabeto",
+    "n": "un alfabeto preso dai Greci",
+    "ic": "🔤",
+    "sotto": "spesso da destra a sinistra",
+    "da": "scrivono con"
+   },
+   {
+    "id": "tombe",
+    "n": "tombe come case",
+    "ic": "🎶",
+    "sotto": "pitture di banchetti, danze e musica",
+    "da": "decorano"
+   },
+   {
+    "id": "sposi",
+    "n": "il Sarcofago degli Sposi",
+    "ic": "💑",
+    "sotto": "una coppia sdraiata a banchetto",
+    "da": "scolpiscono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Gli Etruschi vivono in Etruria, soprattutto tra Toscana, Lazio e Umbria. I Romani li chiamano Tusci: da qui viene il nome Toscana.",
+    "nodi": [
+     "etruria"
+    ]
+   },
+   {
+    "t": "Secondo la tradizione, 12 città formano la lega degli Etruschi, la dodecapoli. Ogni città è indipendente, ma si uniscono per feste e religione.",
+    "v": "Secondo la tradizione, dodici città formano la lega degli Etruschi, la dodecapoli. Ogni città è indipendente, ma si uniscono per feste e religione.",
+    "nodi": [
+     "citta"
+    ]
+   },
+   {
+    "t": "Sono abili artigiani e lavorano i metalli. Molto ferro arriva dall'isola d'Elba, ricchissima di minerale.",
+    "nodi": [
+     "ferro"
+    ]
+   },
+   {
+    "t": "Gli Etruschi prendono l'alfabeto dai Greci e spesso scrivono da destra a sinistra. Leggiamo le loro parole, ma capiamo la loro lingua solo in parte.",
+    "nodi": [
+     "alfabeto"
+    ]
+   },
+   {
+    "t": "Le loro tombe sono come case, dipinte con banchetti, danze, musica e giochi. Così sappiamo molto della loro vita.",
+    "nodi": [
+     "tombe"
+    ]
+   },
+   {
+    "t": "Il Sarcofago degli Sposi mostra una coppia sdraiata a banchetto. Ci racconta che le donne etrusche partecipano ai banchetti insieme agli uomini.",
+    "nodi": [
+     "sposi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "tombe",
+    "scelte": [
+     "tombe come case",
+     "castelli di sabbia",
+     "astronavi"
+    ]
+   }
+  ],
+  "domande": {
+   "e0bexj": "etruria",
+   "1775s54": "alfabeto",
+   "1k48yyd": "etruria",
+   "smzzpx": "tombe",
+   "rmptha": "citta",
+   "1xehynj": "ferro",
+   "1t4h4qy": "sposi"
+  },
+  "collegamenti": [
+   "storia:italici",
+   "storia:roma-re",
+   "arte:antica"
+  ]
+ },
+ "roma-re": {
+  "tipo": "linea",
+  "centro": {
+   "n": "Roma antica",
+   "ic": "🐺",
+   "sotto": "le tre fasi: re, consoli, imperatori"
+  },
+  "nodi": [
+   {
+    "id": "fondazione",
+    "anno": -753,
+    "n": "Romolo fonda Roma",
+    "ic": "🐺",
+    "sotto": "il 21 aprile, secondo la tradizione",
+    "da": "nel 753 a.C."
+   },
+   {
+    "id": "re",
+    "periodo": [
+     -753,
+     -509
+    ],
+    "n": "la Monarchia: 7 re",
+    "ic": "👑",
+    "sotto": "da Romolo a Tarquinio il Superbo",
+    "da": "dal 753 al 509 a.C. c'è"
+   },
+   {
+    "id": "cacciata",
+    "anno": -509,
+    "n": "viene cacciato Tarquinio il Superbo",
+    "ic": "🚪",
+    "sotto": "l'ultimo re",
+    "da": "nel 509 a.C."
+   },
+   {
+    "id": "repubblica",
+    "periodo": [
+     -509,
+     -27
+    ],
+    "n": "la Repubblica",
+    "ic": "🗳️",
+    "sotto": "governano i consoli",
+    "da": "dal 509 al 27 a.C. c'è"
+   },
+   {
+    "id": "impero",
+    "periodo": [
+     -27,
+     476
+    ],
+    "n": "l'Impero",
+    "ic": "🦅",
+    "sotto": "governano gli imperatori",
+    "da": "dal 27 a.C. al 476 d.C. c'è"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Secondo la leggenda, i gemelli Romolo e Remo vengono abbandonati sul Tevere. Una lupa li salva e li allatta: per questo la lupa è il simbolo di Roma.",
+    "nodi": [
+     "fondazione"
+    ]
+   },
+   {
+    "t": "Romolo fonda Roma e ne diventa il primo re. Secondo la tradizione, succede il 21 aprile del 753 a.C.",
+    "v": "Romolo fonda Roma e ne diventa il primo re. Secondo la tradizione, succede il ventuno aprile del settecentocinquantatré avanti Cristo.",
+    "nodi": [
+     "fondazione"
+    ]
+   },
+   {
+    "t": "Comincia la Monarchia: secondo la tradizione, a Roma regnano 7 re, uno dopo l'altro. Gli ultimi tre sono di origine etrusca.",
+    "v": "Comincia la Monarchia: secondo la tradizione, a Roma regnano sette re, uno dopo l'altro. Gli ultimi tre sono di origine etrusca.",
+    "nodi": [
+     "re"
+    ]
+   },
+   {
+    "t": "L'ultimo re è Tarquinio il Superbo, cioè prepotente. Nel 509 a.C. i Romani lo cacciano.",
+    "v": "L'ultimo re è Tarquinio il Superbo, cioè prepotente. Nel cinquecentonove avanti Cristo i Romani lo cacciano.",
+    "nodi": [
+     "cacciata"
+    ]
+   },
+   {
+    "t": "Comincia la Repubblica: al posto del re governano due consoli, eletti ogni anno. La Repubblica dura fino al 27 a.C.",
+    "v": "Comincia la Repubblica: al posto del re governano due consoli, eletti ogni anno. La Repubblica dura fino al ventisette avanti Cristo.",
+    "nodi": [
+     "repubblica"
+    ]
+   },
+   {
+    "t": "Poi arriva l'Impero, guidato dagli imperatori. In Occidente finisce nel 476 d.C. Tre fasi da ricordare: Monarchia, Repubblica, Impero.",
+    "v": "Poi arriva l'Impero, guidato dagli imperatori. In Occidente finisce nel quattrocentosettantasei dopo Cristo. Tre fasi da ricordare: Monarchia, Repubblica, Impero.",
+    "nodi": [
+     "impero",
+     "re"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "repubblica",
+    "scelte": [
+     "la Repubblica",
+     "la Preistoria",
+     "l'età dei dinosauri"
+    ]
+   },
+   {
+    "nodo": "impero",
+    "scelte": [
+     "l'Impero",
+     "l'età della pietra",
+     "l'età dei robot"
+    ]
+   }
+  ],
+  "domande": {
+   "ly7bj1": "fondazione",
+   "u4g0wf": "fondazione",
+   "1smach2": "fondazione",
+   "u1doe": "re",
+   "d1kowg": "cacciata"
+  },
+  "collegamenti": [
+   "storia:repubblica",
+   "storia:impero",
+   "storia:etruschi",
+   "storia:italici"
+  ]
+ },
+ "repubblica": {
+  "tipo": "linea",
+  "centro": {
+   "n": "La Repubblica romana",
+   "ic": "🗳️",
+   "sotto": "Roma senza re"
+  },
+  "nodi": [
+   {
+    "id": "nascita",
+    "anno": -509,
+    "n": "nasce la Repubblica",
+    "ic": "🗳️",
+    "sotto": "2 consoli e il Senato",
+    "da": "nel 509 a.C."
+   },
+   {
+    "id": "plebei",
+    "periodo": [
+     -494,
+     -287
+    ],
+    "n": "le lotte dei plebei",
+    "ic": "✊",
+    "sotto": "per avere diritti come i patrizi",
+    "da": "dal 494 al 287 a.C. ci sono"
+   },
+   {
+    "id": "galli",
+    "anno": -390,
+    "n": "i Galli saccheggiano Roma",
+    "ic": "🪓",
+    "sotto": "guidati da Brenno",
+    "da": "intorno al 390 a.C.",
+    "tacca": "390 a.C. circa"
+   },
+   {
+    "id": "puniche",
+    "periodo": [
+     -264,
+     -146
+    ],
+    "n": "le guerre puniche",
+    "ic": "🐘",
+    "sotto": "contro Cartagine: Annibale e gli elefanti",
+    "da": "dal 264 al 146 a.C. ci sono"
+   },
+   {
+    "id": "crisi",
+    "periodo": [
+     -133,
+     -27
+    ],
+    "n": "la crisi della Repubblica",
+    "ic": "🔥",
+    "sotto": "rivolte e guerre civili, come Spartaco",
+    "da": "dal 133 al 27 a.C. c'è"
+   },
+   {
+    "id": "cesare",
+    "anno": -44,
+    "n": "viene ucciso Giulio Cesare",
+    "ic": "🗡️",
+    "sotto": "conquistò la Gallia; luglio porta il suo nome",
+    "da": "nel 44 a.C."
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Nel 509 a.C. nasce la Repubblica. Governano 2 consoli, per un anno solo. Il Senato riunisce i cittadini più importanti. Senato e Popolo Romano si abbrevia SPQR.",
+    "v": "Nel cinquecentonove avanti Cristo nasce la Repubblica. Governano due consoli, per un anno solo. Il Senato riunisce i cittadini più importanti. Senato e Popolo Romano si abbrevia esse pi cu erre.",
+    "nodi": [
+     "nascita"
+    ]
+   },
+   {
+    "t": "Nei grandi pericoli si sceglie un dittatore, con pieni poteri ma per poco tempo. Il dittatore Cincinnato vince e torna subito ad arare i suoi campi.",
+    "nodi": [
+     "nascita"
+    ]
+   },
+   {
+    "t": "Le famiglie nobili e ricche sono i patrizi; la gente comune sono i plebei. Nel 494 a.C., per avere diritti, i plebei escono da Roma e rifiutano di combattere.",
+    "v": "Le famiglie nobili e ricche sono i patrizi; la gente comune sono i plebei. Nel quattrocentonovantaquattro avanti Cristo, per avere diritti, i plebei escono da Roma e rifiutano di combattere.",
+    "nodi": [
+     "plebei"
+    ]
+   },
+   {
+    "t": "Così ottengono i tribuni della plebe, che possono dire veto, cioè mi oppongo. Poi arrivano le leggi delle Dodici Tavole, scritte e mostrate a tutti.",
+    "nodi": [
+     "plebei"
+    ]
+   },
+   {
+    "t": "Intorno al 390 a.C. i Galli, guidati da Brenno, saccheggiano Roma. Secondo la leggenda, le oche del Campidoglio svegliano i difensori.",
+    "v": "Intorno al trecentonovanta avanti Cristo i Galli, guidati da Brenno, saccheggiano Roma. Secondo la leggenda, le oche del Campidoglio svegliano i difensori.",
+    "nodi": [
+     "galli"
+    ]
+   },
+   {
+    "t": "Dal 264 al 146 a.C. Roma combatte le guerre puniche contro Cartagine. Il generale cartaginese Annibale attraversa le Alpi con soldati ed elefanti.",
+    "v": "Dal duecentosessantaquattro al centoquarantasei avanti Cristo Roma combatte le guerre puniche contro Cartagine. Il generale cartaginese Annibale attraversa le Alpi con soldati ed elefanti.",
+    "nodi": [
+     "puniche"
+    ]
+   },
+   {
+    "t": "Nel 73 a.C. Spartaco guida la rivolta degli schiavi. Giulio Cesare conquista la Gallia, passa il Rubicone e nel 44 a.C. viene ucciso. Luglio porta il suo nome.",
+    "v": "Nel settantatré avanti Cristo Spartaco guida la rivolta degli schiavi. Giulio Cesare conquista la Gallia, passa il Rubicone e nel quarantaquattro avanti Cristo viene ucciso. Luglio porta il suo nome.",
+    "nodi": [
+     "crisi",
+     "cesare"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "puniche",
+    "scelte": [
+     "le guerre puniche",
+     "le guerre stellari",
+     "le Olimpiadi"
+    ]
+   }
+  ],
+  "domande": {
+   "1ulfn8g": "nascita",
+   "1mfcfwn": "nascita",
+   "l74qfe": "nascita",
+   "2ind7f": "galli",
+   "e3g6xa": "puniche",
+   "dkehsd": "puniche",
+   "se9kgm": "crisi",
+   "1jl2ahb": "cesare",
+   "1xbbn4k": "cesare",
+   "r1fe0l": "nascita",
+   "134ke7i": "nascita",
+   "1gl3abt": "plebei",
+   "i0a6ib": "plebei",
+   "178kiej": "plebei",
+   "21y084": "nascita",
+   "152v6fi": "nascita",
+   "8slk8w": "plebei",
+   "vf1kmi": "plebei",
+   "11170ex": "cesare",
+   "vzkowk": "cesare"
+  },
+  "collegamenti": [
+   "storia:roma-re",
+   "storia:impero",
+   "storia:ebrei-fenici"
+  ]
+ },
+ "impero": {
+  "tipo": "linea",
+  "centro": {
+   "n": "L'Impero romano",
+   "ic": "🦅",
+   "sotto": "dal primo imperatore alla caduta"
+  },
+  "nodi": [
+   {
+    "id": "augusto",
+    "anno": -27,
+    "n": "Augusto diventa imperatore",
+    "ic": "👑",
+    "sotto": "è il primo imperatore",
+    "da": "nel 27 a.C."
+   },
+   {
+    "id": "pax",
+    "periodo": [
+     -27,
+     180
+    ],
+    "n": "la pax romana",
+    "ic": "🕊️",
+    "sotto": "circa due secoli di pace",
+    "da": "dal 27 a.C. al 180 d.C. c'è"
+   },
+   {
+    "id": "traiano",
+    "anno": 117,
+    "n": "raggiunge la massima estensione",
+    "ic": "🗺️",
+    "sotto": "con l'imperatore Traiano",
+    "da": "nel 117 d.C."
+   },
+   {
+    "id": "cristiani",
+    "periodo": [
+     313,
+     380
+    ],
+    "n": "i cristiani diventano liberi",
+    "ic": "🐟",
+    "sotto": "poi il cristianesimo è religione ufficiale",
+    "da": "dal 313 al 380 d.C."
+   },
+   {
+    "id": "divisione",
+    "periodo": [
+     395,
+     476
+    ],
+    "n": "due imperi: Occidente e Oriente",
+    "ic": "↔️",
+    "sotto": "capitale d'Oriente: Costantinopoli",
+    "da": "dal 395 al 476 d.C. ci sono"
+   },
+   {
+    "id": "fine",
+    "anno": 476,
+    "n": "cade l'Impero d'Occidente",
+    "ic": "🏚️",
+    "sotto": "Odoacre depone Romolo Augusto",
+    "da": "nel 476 d.C."
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Nel 27 a.C. Ottaviano riceve dal Senato il titolo di Augusto e diventa il primo imperatore. Il mese di agosto porta il suo nome. Lo proteggono i pretoriani.",
+    "v": "Nel ventisette avanti Cristo Ottaviano riceve dal Senato il titolo di Augusto e diventa il primo imperatore. Il mese di agosto porta il suo nome. Lo proteggono i pretoriani.",
+    "nodi": [
+     "augusto"
+    ]
+   },
+   {
+    "t": "Con Augusto comincia la pax romana: circa due secoli di pace, con commerci e viaggi. Nel 64 d.C., sotto Nerone, un grande incendio brucia gran parte di Roma.",
+    "v": "Con Augusto comincia la pax romana: circa due secoli di pace, con commerci e viaggi. Nel sessantaquattro dopo Cristo, sotto Nerone, un grande incendio brucia gran parte di Roma.",
+    "nodi": [
+     "pax"
+    ]
+   },
+   {
+    "t": "Nel 79 d.C. il Vesuvio seppellisce Pompei. Gli imperatori della famiglia dei Flavi costruiscono il Colosseo, che si chiama Anfiteatro Flavio.",
+    "v": "Nel settantanove dopo Cristo il Vesuvio seppellisce Pompei. Gli imperatori della famiglia dei Flavi costruiscono il Colosseo, che si chiama Anfiteatro Flavio.",
+    "nodi": [
+     "pax"
+    ]
+   },
+   {
+    "t": "Nel 117 d.C., con Traiano, l'impero raggiunge la massima estensione. Il limes, il confine fortificato, lo protegge dai barbari: in Britannia l'imperatore Adriano fa costruire un lungo muro.",
+    "v": "Nel centodiciassette dopo Cristo, con Traiano, l'impero raggiunge la massima estensione. Il limes, il confine fortificato, lo protegge dai barbari: in Britannia l'imperatore Adriano fa costruire un lungo muro.",
+    "nodi": [
+     "traiano"
+    ]
+   },
+   {
+    "t": "I primi cristiani si riconoscono con il simbolo del pesce. Nel 313 Costantino li lascia liberi di pregare; nel 380 Teodosio rende il cristianesimo religione ufficiale.",
+    "v": "I primi cristiani si riconoscono con il simbolo del pesce. Nel trecentotredici Costantino li lascia liberi di pregare; nel trecentottanta Teodosio rende il cristianesimo religione ufficiale.",
+    "nodi": [
+     "cristiani"
+    ]
+   },
+   {
+    "t": "Nel 395 l'impero viene diviso in due: Occidente e Oriente. La capitale d'Oriente è Costantinopoli, oggi Istanbul. Nel 410 i Visigoti di Alarico saccheggiano Roma.",
+    "v": "Nel trecentonovantacinque l'impero viene diviso in due: Occidente e Oriente. La capitale d'Oriente è Costantinopoli, oggi Istanbul. Nel quattrocentodieci i Visigoti di Alarico saccheggiano Roma.",
+    "nodi": [
+     "divisione"
+    ]
+   },
+   {
+    "t": "Nel 476 d.C. Odoacre depone Romolo Augusto, l'ultimo imperatore d'Occidente. L'Impero d'Oriente invece dura ancora quasi mille anni.",
+    "v": "Nel quattrocentosettantasei dopo Cristo Odoacre depone Romolo Augusto, l'ultimo imperatore d'Occidente. L'Impero d'Oriente invece dura ancora quasi mille anni.",
+    "nodi": [
+     "fine"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "pax",
+    "scelte": [
+     "la pax romana",
+     "l'età della pietra",
+     "l'età dei robot"
+    ]
+   }
+  ],
+  "domande": {
+   "qoq3kj": "augusto",
+   "1hrpz3o": "augusto",
+   "892440": "pax",
+   "ptb3pp": "traiano",
+   "c4hlqs": "cristiani",
+   "137lyoc": "fine",
+   "vbhxuw": "pax",
+   "1m2apd9": "pax",
+   "15lu1wd": "traiano",
+   "178i2k0": "divisione",
+   "130z4ni": "pax",
+   "1tm239v": "augusto",
+   "1r9o1fd": "divisione",
+   "1o8k2xn": "traiano",
+   "7vmla2": "traiano",
+   "1gl3s0t": "cristiani",
+   "394egf": "divisione",
+   "1n7706y": "fine",
+   "n8v5so": "cristiani",
+   "1lxw4g0": "divisione"
+  },
+  "collegamenti": [
+   "storia:repubblica",
+   "storia:vita-romana",
+   "storia:torino",
+   "media:medioevo"
+  ]
+ },
+ "vita-romana": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I Romani",
+   "ic": "🏟️",
+   "sotto": "come si viveva nell'antica Roma"
+  },
+  "nodi": [
+   {
+    "id": "latino",
+    "n": "il latino",
+    "ic": "🗣️",
+    "sotto": "a scuola su tavolette di cera",
+    "da": "parlano"
+   },
+   {
+    "id": "numeri",
+    "n": "i numeri romani",
+    "ic": "🔢",
+    "sotto": "I, V, X, L, C, D, M",
+    "da": "scrivono"
+   },
+   {
+    "id": "citta",
+    "n": "foro, terme e insulae",
+    "ic": "🏛️",
+    "sotto": "la piazza, i bagni, i palazzi",
+    "da": "vivono in città con"
+   },
+   {
+    "id": "strade",
+    "n": "strade e acquedotti",
+    "ic": "🛣️",
+    "sotto": "la via Appia è la regina delle strade",
+    "da": "costruiscono"
+   },
+   {
+    "id": "giochi",
+    "n": "gladiatori e corse di carri",
+    "ic": "🏟️",
+    "sotto": "nel Colosseo e nel Circo Massimo",
+    "da": "si divertono con"
+   },
+   {
+    "id": "legioni",
+    "n": "le legioni",
+    "ic": "🛡️",
+    "sotto": "intorno al Mare Nostrum",
+    "da": "conquistano con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I Romani parlano il latino. Da lì nascono italiano, francese, spagnolo, portoghese e rumeno: le lingue neolatine. A scuola si scrive su tavolette di cera con lo stilo.",
+    "nodi": [
+     "latino"
+    ]
+   },
+   {
+    "t": "Per i numeri usano le lettere: I vale 1, V vale 5, X vale 10, L vale 50, C vale 100. Così X più V fa XV, cioè 15.",
+    "v": "Per i numeri usano le lettere: i vale uno, vu vale cinque, ics vale dieci, elle vale cinquanta, ci vale cento. Così ics più vu fa ics vu, cioè quindici.",
+    "nodi": [
+     "numeri"
+    ]
+   },
+   {
+    "t": "Il centro della città è il foro, la piazza principale, con templi e botteghe. Alle terme ci sono bagni con acqua calda e fredda, palestre e giardini.",
+    "nodi": [
+     "citta"
+    ]
+   },
+   {
+    "t": "La gente comune vive nelle insulae, palazzi popolari a più piani. I ricchi abitano nella domus, una casa con cortile.",
+    "nodi": [
+     "citta"
+    ]
+   },
+   {
+    "t": "Gli acquedotti portano l'acqua dalle montagne alle città. Le vie consolari partono da Roma: la via Appia, che arriva a Brindisi, è la regina delle strade.",
+    "nodi": [
+     "strade"
+    ]
+   },
+   {
+    "t": "Nel Colosseo, il grande anfiteatro, combattono i gladiatori. Nel Circo Massimo si fanno le corse dei carri, tirati da 2 o 4 cavalli.",
+    "v": "Nel Colosseo, il grande anfiteatro, combattono i gladiatori. Nel Circo Massimo si fanno le corse dei carri, tirati da due o quattro cavalli.",
+    "nodi": [
+     "giochi"
+    ]
+   },
+   {
+    "t": "L'esercito è diviso in legioni, ognuna con migliaia di soldati. I Romani conquistano tutte le coste del Mediterraneo e lo chiamano Mare Nostrum, il nostro mare.",
+    "nodi": [
+     "legioni"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "giochi",
+    "scelte": [
+     "gladiatori e corse di carri",
+     "videogiochi e cartoni animati",
+     "giostre elettriche"
+    ]
+   }
+  ],
+  "domande": {
+   "nf516x": "numeri",
+   "1rcsd2p": "giochi",
+   "15tg1a": "giochi",
+   "g0amzp": "strade",
+   "1wb6v71": "strade",
+   "1d33e7z": "citta",
+   "swzabe": "latino",
+   "w702sk": "giochi",
+   "z95jtl": "legioni",
+   "d3g3t0": "citta",
+   "1d8tt7f": "strade",
+   "c4tft4": "citta",
+   "jfu6mp": "latino",
+   "1oh5mxz": "latino",
+   "142ikcg": "numeri",
+   "11u40jm": "legioni"
+  },
+  "collegamenti": [
+   "storia:impero",
+   "storia:repubblica",
+   "storia:torino",
+   "storia:tempo"
+  ]
+ },
+ "torino": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Torino romana",
+   "ic": "🏰",
+   "sotto": "Augusta Taurinorum"
+  },
+  "nodi": [
+   {
+    "id": "taurini",
+    "n": "Taurini",
+    "ic": "🏕️",
+    "sotto": "popolo di origine celtica e ligure",
+    "da": "nasce nella terra dei"
+   },
+   {
+    "id": "nome",
+    "n": "Augusta Taurinorum",
+    "ic": "🦅",
+    "sotto": "fondata al tempo di Augusto",
+    "da": "si chiama"
+   },
+   {
+    "id": "pianta",
+    "n": "scacchiera",
+    "ic": "🧩",
+    "sotto": "il decumano è oggi via Garibaldi",
+    "da": "è costruita a"
+   },
+   {
+    "id": "palatina",
+    "n": "la Porta Palatina",
+    "ic": "🏰",
+    "sotto": "due torri a sedici lati",
+    "da": "conserva ancora"
+   },
+   {
+    "id": "madama",
+    "n": "Palazzo Madama",
+    "ic": "🏯",
+    "sotto": "in piazza Castello",
+    "da": "nasconde una porta romana dentro"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Prima dei Romani, in questa zona vivono i Taurini, un popolo di origine celtica e ligure. Il loro nome è rimasto in quello della città: Taurini, Torino.",
+    "nodi": [
+     "taurini"
+    ]
+   },
+   {
+    "t": "Circa 2000 anni fa, al tempo dell'imperatore Augusto, i Romani fondano la città di Augusta Taurinorum: la città di Augusto nella terra dei Taurini.",
+    "v": "Circa duemila anni fa, al tempo dell'imperatore Augusto, i Romani fondano la città di Augusta Taurinorum: la città di Augusto nella terra dei Taurini.",
+    "nodi": [
+     "nome"
+    ]
+   },
+   {
+    "t": "La città romana è costruita a scacchiera. Il cardo va da nord a sud, il decumano da est a ovest: oggi via Garibaldi segue l'antico decumano.",
+    "nodi": [
+     "pianta"
+    ]
+   },
+   {
+    "t": "Della città romana resta la Porta Palatina, con due torri a sedici lati. È una delle porte romane meglio conservate.",
+    "nodi": [
+     "palatina"
+    ]
+   },
+   {
+    "t": "Anche Palazzo Madama, in piazza Castello, nasconde al suo interno un'antica porta romana: era la porta a est della città.",
+    "nodi": [
+     "madama"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "pianta",
+    "scelte": [
+     "scacchiera",
+     "spirale",
+     "stella"
+    ]
+   }
+  ],
+  "domande": {
+   "neykgq": "nome",
+   "w22a8z": "taurini",
+   "1y4d7wy": "palatina",
+   "11n4kca": "pianta",
+   "wcuxq3": "madama"
+  },
+  "collegamenti": [
+   "storia:impero",
+   "geo:piemonte",
+   "tecno:torino",
+   "arte:torino"
+  ]
  }
 }

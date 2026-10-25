@@ -1,0 +1,503 @@
+{
+ "meteo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Parlare del tempo",
+   "ic": "🌦️",
+   "sotto": "chiedere e rispondere"
+  },
+  "nodi": [
+   {
+    "id": "chiedi",
+    "n": "«What's the weather like?»",
+    "ic": "❓",
+    "sotto": "comincia con «What's», finisce con «like»",
+    "da": "per chiedere si dice"
+   },
+   {
+    "id": "its",
+    "n": "«It's…»",
+    "ic": "🗣️",
+    "sotto": "«It's cold today» · mai senza «It»",
+    "da": "per rispondere si comincia con"
+   },
+   {
+    "id": "y",
+    "n": "«sunny», «rainy», «snowy»",
+    "ic": "☀️",
+    "sotto": "sole, pioggia e neve con la y",
+    "da": "sole, pioggia e neve diventano"
+   },
+   {
+    "id": "nuvole",
+    "n": "«cloudy» e «foggy»",
+    "ic": "☁️",
+    "sotto": "nuvoloso e nebbioso",
+    "da": "nuvole e nebbia diventano"
+   },
+   {
+    "id": "io",
+    "n": "«I'm hot»",
+    "ic": "🥵",
+    "sotto": "ho caldo · ho freddo: «I'm cold»",
+    "da": "per dire ho caldo si usa"
+   },
+   {
+    "id": "day",
+    "n": "«a sunny day»",
+    "ic": "🌞",
+    "sotto": "prima «sunny», poi «day»",
+    "da": "una giornata di sole è"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Parliamo del tempo! Per chiedere che tempo fa si dice «What's the weather like?». Comincia con «What's» e finisce con «like».",
+    "nodi": [
+     "chiedi"
+    ]
+   },
+   {
+    "t": "Per rispondere si comincia con «It's», cioè «It is»: «It's cold today», oggi fa freddo. «It's windy», c'è vento. Senza «It» non funziona!",
+    "nodi": [
+     "its"
+    ]
+   },
+   {
+    "t": "Si aggiunge una y: il sole, «sun», diventa «sunny», con due n; la pioggia, «rain», diventa «rainy»; la neve, «snow», diventa «snowy».",
+    "nodi": [
+     "y"
+    ]
+   },
+   {
+    "t": "La nuvola, «cloud», diventa «cloudy»: «It's very cloudy», è molto nuvoloso. La nebbia, «fog», diventa «foggy», con due g: «It's foggy this morning».",
+    "nodi": [
+     "nuvole"
+    ]
+   },
+   {
+    "t": "In inglese il caldo non si ha: si è! Ho caldo si dice «I'm hot», cioè io sono. Ho freddo si dice «I'm cold».",
+    "nodi": [
+     "io"
+    ]
+   },
+   {
+    "t": "La parola che descrive va prima: «It's a sunny day», è una giornata di sole.",
+    "nodi": [
+     "day"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "day",
+    "scelte": [
+     "«a sunny day»",
+     "«a big cat»",
+     "«a red pen»"
+    ]
+   },
+   {
+    "nodo": "io",
+    "scelte": [
+     "«I'm hot»",
+     "«Good night»",
+     "«Happy birthday!»"
+    ]
+   }
+  ],
+  "domande": {
+   "hyip96z": "y",
+   "x157iyi": "its",
+   "sqoe09n": "y",
+   "pniohi9": "its",
+   "3dagjxv": "y",
+   "e0bxu8r": "chiedi",
+   "knfg413": "nuvole",
+   "r43r4bv": "io",
+   "y4b0jkj": "nuvole",
+   "hja11hy": "day"
+  },
+  "collegamenti": [
+   "eng:meteo",
+   "sci-spazio:meteo",
+   "parlo:misto"
+  ]
+ },
+ "vestiti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Parlare di vestiti",
+   "ic": "👕",
+   "sotto": "mettere, togliere, indossare"
+  },
+  "nodi": [
+   {
+    "id": "puton",
+    "n": "«Put on» e «Take off»",
+    "ic": "🧣",
+    "sotto": "mettersi e togliersi",
+    "da": "per vestirsi e svestirsi si dicono"
+   },
+   {
+    "id": "wearing",
+    "n": "«I'm wearing…»",
+    "ic": "🪞",
+    "sotto": "servono «I'm» e «wearing» · il colore prima",
+    "da": "per dire cosa hai addosso si dice"
+   },
+   {
+    "id": "your",
+    "n": "«my» e «your»",
+    "ic": "🧤",
+    "sotto": "mio e tuo · «Where are my gloves?»",
+    "da": "per dire di chi è si usano"
+   },
+   {
+    "id": "plurale",
+    "n": "«trousers» e «boots»",
+    "ic": "👢",
+    "sotto": "plurali: vogliono «are»",
+    "da": "al plurale ci sono"
+   },
+   {
+    "id": "got",
+    "n": "«I've got» e «Look at»",
+    "ic": "🧥",
+    "sotto": "ho · guarda",
+    "da": "per dire ho e guarda si usano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Mettersi qualcosa si dice «Put on»: «Put on your scarf!», mettiti la sciarpa! Togliersi si dice «Take off», con due f: «Take off your shoes, please».",
+    "nodi": [
+     "puton"
+    ]
+   },
+   {
+    "t": "Per dire cosa hai addosso adesso servono due pezzi: «I'm» e «wearing». «I'm wearing a skirt today», oggi porto una gonna.",
+    "nodi": [
+     "wearing"
+    ]
+   },
+   {
+    "t": "Il colore va prima del vestito: «I'm wearing a red jumper», indosso un maglione rosso.",
+    "nodi": [
+     "wearing"
+    ]
+   },
+   {
+    "t": "Mio si dice «my», tuo si dice «your»: «Where are my gloves?», dove sono i miei guanti? «I like your blue T-shirt», mi piace la tua maglietta blu.",
+    "nodi": [
+     "your"
+    ]
+   },
+   {
+    "t": "I pantaloni, «trousers», sono sempre plurali e vogliono «are»: «My trousers are black». Anche gli stivali: «These are my boots», questi sono i miei stivali.",
+    "nodi": [
+     "plurale"
+    ]
+   },
+   {
+    "t": "Per dire ho: «I've got a coat», ho un cappotto. Per farlo vedere: «Look at my hat!», guarda il mio cappello!",
+    "nodi": [
+     "got"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "puton",
+    "scelte": [
+     "«Put on» e «Take off»",
+     "«Good morning» e «Good night»",
+     "«cat» e «dog»"
+    ]
+   },
+   {
+    "nodo": "got",
+    "scelte": [
+     "«I've got» e «Look at»",
+     "«I'm hungry» e «I'm thirsty»",
+     "«ten» e «twelve»"
+    ]
+   }
+  ],
+  "domande": {
+   "n0hbm2f": "puton",
+   "sfdgmjl": "wearing",
+   "27r9iik": "your",
+   "c9zpuy0": "puton",
+   "sj85gfs": "got",
+   "onvhk4f": "your",
+   "wg83jcl": "plurale",
+   "sj4prmz": "plurale",
+   "t0x12wq": "got",
+   "4zlv0u4": "wearing"
+  },
+  "collegamenti": [
+   "eng:vestiti",
+   "vesto:strati",
+   "parlo:misto"
+  ]
+ },
+ "sport": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Parlare di sport",
+   "ic": "⛸️",
+   "sotto": "cosa sai fare e cosa ti piace"
+  },
+  "nodi": [
+   {
+    "id": "can",
+    "n": "«I can…»",
+    "ic": "💪",
+    "sotto": "so fare · «I can skate»",
+    "da": "per dire so fare si usa"
+   },
+   {
+    "id": "like",
+    "n": "«I like…»",
+    "ic": "😍",
+    "sotto": "mi piace · «I like swimming»",
+    "da": "per dire mi piace si usa"
+   },
+   {
+    "id": "lets",
+    "n": "«Let's…»",
+    "ic": "🙌",
+    "sotto": "dai, facciamo! · «Let's play football!»",
+    "da": "per invitare si usa"
+   },
+   {
+    "id": "play",
+    "n": "«play» o «do»",
+    "ic": "⚽",
+    "sotto": "«plays football» · «do aerial silks»",
+    "da": "con lo sport si usa"
+   },
+   {
+    "id": "go",
+    "n": "«I go swimming»",
+    "ic": "🏊",
+    "sotto": "vado a nuotare · «every day»",
+    "da": "per dire vado a nuotare si usa"
+   },
+   {
+    "id": "we",
+    "n": "«We run»",
+    "ic": "🏃",
+    "sotto": "noi corriamo · «in the park»",
+    "da": "per dire noi si usa"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Per dire che sai fare qualcosa usa «I can»: «I can skate», so pattinare. Dopo «can» niente «to» e niente s: «I can jump very high»!",
+    "nodi": [
+     "can"
+    ]
+   },
+   {
+    "t": "Per dire che ti piace: «I like swimming», mi piace nuotare. Arrampicarsi si dice «climb»: la b alla fine non si sente!",
+    "nodi": [
+     "like"
+    ]
+   },
+   {
+    "t": "Per invitare gli amici usa «Let's»: «Let's play football!», giochiamo a calcio! «Let's go ice skating!», andiamo a pattinare sul ghiaccio!",
+    "nodi": [
+     "lets"
+    ]
+   },
+   {
+    "t": "Per i giochi con la palla si usa «play». «My friend plays football»: c'è la s perché parli di un'altra persona.",
+    "nodi": [
+     "play"
+    ]
+   },
+   {
+    "t": "Per altre attività si usa «do»: «I do aerial silks», faccio i tessuti aerei.",
+    "nodi": [
+     "play"
+    ]
+   },
+   {
+    "t": "Vado a nuotare si dice «I go swimming». «I go swimming every day»: vado a nuotare tutti i giorni.",
+    "nodi": [
+     "go"
+    ]
+   },
+   {
+    "t": "Noi si dice «we»: «We run in the park», corriamo nel parco.",
+    "nodi": [
+     "we"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "lets",
+    "scelte": [
+     "«Let's…»",
+     "«Good night»",
+     "«I'm hungry»"
+    ]
+   },
+   {
+    "nodo": "can",
+    "scelte": [
+     "«I can…»",
+     "«I'm cold»",
+     "«Happy birthday!»"
+    ]
+   }
+  ],
+  "domande": {
+   "5nuohl5": "can",
+   "ufxotty": "like",
+   "vz9tqk1": "lets",
+   "5c0j4fv": "play",
+   "hov0him": "go",
+   "cbgc7up": "play",
+   "0zvfzhf": "we",
+   "bvzp0wj": "lets",
+   "0cyo2e1": "like",
+   "1v5s3dg": "can"
+  },
+  "collegamenti": [
+   "eng:sport",
+   "sp-corpo:sport-squadra",
+   "sp-aerea:attrezzi"
+  ]
+ },
+ "misto": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Tempo e vestiti",
+   "ic": "💬",
+   "sotto": "frasi di tutti i giorni"
+  },
+  "nodi": [
+   {
+    "id": "neve",
+    "n": "«gloves»",
+    "ic": "🧤",
+    "sotto": "«It's snowy. Put on your gloves!»",
+    "da": "con la neve servono"
+   },
+   {
+    "id": "pioggia",
+    "n": "«umbrella»",
+    "ic": "☂️",
+    "sotto": "«It's rainy. Take your umbrella!»",
+    "da": "con la pioggia serve"
+   },
+   {
+    "id": "sole",
+    "n": "«cap»",
+    "ic": "🧢",
+    "sotto": "«It's sunny. Wear your cap!»",
+    "da": "con il sole serve"
+   },
+   {
+    "id": "caldo",
+    "n": "«Let's go swimming!»",
+    "ic": "🏊",
+    "sotto": "andiamo a nuotare · «swimming costume»",
+    "da": "con il caldo si dice"
+   },
+   {
+    "id": "freddo",
+    "n": "«coat», «boots», «scarf»",
+    "ic": "🧥",
+    "sotto": "cappotto, stivali, sciarpa · «I'm cold»",
+    "da": "con il freddo servono"
+   },
+   {
+    "id": "wear",
+    "n": "«I wear» e «I'm wearing»",
+    "ic": "🔁",
+    "sotto": "sempre · adesso",
+    "da": "per dire cosa porti si usano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Guarda il cielo, poi scegli cosa metterti! «It's snowy. Put on your gloves!»: c'è la neve, mettiti i guanti!",
+    "nodi": [
+     "neve"
+    ]
+   },
+   {
+    "t": "«It's rainy. Take your umbrella!»: piove, prendi l'ombrello! L'ombrello si dice «umbrella».",
+    "nodi": [
+     "pioggia"
+    ]
+   },
+   {
+    "t": "«It's sunny. Wear your cap!»: c'è il sole, metti il cappellino con la visiera, «cap».",
+    "nodi": [
+     "sole"
+    ]
+   },
+   {
+    "t": "«It's hot. Let's go swimming!»: fa caldo, andiamo a nuotare! «Put on your swimming costume!»: mettiti il costume da bagno.",
+    "nodi": [
+     "caldo"
+    ]
+   },
+   {
+    "t": "Quando fa freddo: «I'm cold. Where's my scarf?», ho freddo, dov'è la mia sciarpa? «When it's cold, I wear boots», quando fa freddo porto gli stivali.",
+    "nodi": [
+     "freddo"
+    ]
+   },
+   {
+    "t": "Per una cosa che fai sempre: «I wear gloves when I skate», «I go swimming when it's hot». Per adesso: «It's cold. I'm wearing my coat».",
+    "nodi": [
+     "wear",
+     "caldo",
+     "freddo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "pioggia",
+    "scelte": [
+     "«umbrella»",
+     "«cheese»",
+     "«Monday»"
+    ]
+   },
+   {
+    "nodo": "sole",
+    "scelte": [
+     "«cap»",
+     "«snow»",
+     "«dinner»"
+    ]
+   }
+  ],
+  "domande": {
+   "yvrcqc7": "neve",
+   "x68kb3k": "caldo",
+   "lwvu34w": "pioggia",
+   "7e6krg5": "freddo",
+   "o6jkhof": "caldo",
+   "ing78de": "caldo",
+   "2xchouy": "sole",
+   "ktuquob": "wear",
+   "tet4jys": "freddo",
+   "q12tapp": "freddo"
+  },
+  "collegamenti": [
+   "parlo:meteo",
+   "parlo:vestiti",
+   "vesto:sole"
+  ]
+ }
+}

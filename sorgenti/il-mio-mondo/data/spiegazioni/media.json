@@ -1,0 +1,1731 @@
+{
+ "potenze": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le potenze",
+   "ic": "🔺",
+   "sotto": "un numero moltiplicato per se stesso"
+  },
+  "nodi": [
+   {
+    "id": "base",
+    "n": "la base",
+    "ic": "⬇️",
+    "sotto": "il numero che si moltiplica: in 5⁴ è il 5",
+    "da": "hanno in basso"
+   },
+   {
+    "id": "esponente",
+    "n": "l'esponente",
+    "ic": "⬆️",
+    "sotto": "quante volte: 2³ = 2 × 2 × 2",
+    "da": "hanno in alto"
+   },
+   {
+    "id": "speciali",
+    "n": "esponente 0 e 1",
+    "ic": "0️⃣",
+    "sotto": "5⁰ = 1 · 7¹ = 7",
+    "da": "hanno casi speciali con"
+   },
+   {
+    "id": "dieci",
+    "n": "base 10",
+    "ic": "🔟",
+    "sotto": "10³ = 1000: tanti zeri quanto l'esponente",
+    "da": "sono facili con"
+   },
+   {
+    "id": "proprieta",
+    "n": "le proprietà",
+    "ic": "🪄",
+    "sotto": "esponenti che si sommano, si sottraggono, si moltiplicano",
+    "da": "seguono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Una potenza è una moltiplicazione speciale: 2³ vuol dire 2 × 2 × 2 = 8. Il 2 è la base, il 3 piccolo in alto è l'esponente.",
+    "v": "Una potenza è una moltiplicazione speciale: due alla terza vuol dire due per due per due, uguale otto. Il due è la base, il tre piccolo in alto è l'esponente.",
+    "nodi": [
+     "base",
+     "esponente"
+    ]
+   },
+   {
+    "t": "L'esponente dice quante volte la base compare come fattore: 3² = 3 × 3 = 9, non 3 × 2! E 2⁵ = 32: 2, 4, 8, 16, 32.",
+    "v": "L'esponente dice quante volte la base compare come fattore: tre alla seconda è tre per tre, uguale nove, non tre per due! E due alla quinta fa trentadue: due, quattro, otto, sedici, trentadue.",
+    "nodi": [
+     "esponente"
+    ]
+   },
+   {
+    "t": "Due casi speciali: un numero alla prima resta se stesso, 7¹ = 7. Qualsiasi numero diverso da zero elevato a 0 fa 1: 5⁰ = 1.",
+    "v": "Due casi speciali: un numero alla prima resta se stesso, sette alla prima fa sette. Qualsiasi numero diverso da zero elevato a zero fa uno: cinque alla zero fa uno.",
+    "nodi": [
+     "speciali"
+    ]
+   },
+   {
+    "t": "Con la base 10 è facilissimo: scrivi 1 e tanti zeri quanto dice l'esponente. 10³ = 1000.",
+    "v": "Con la base dieci è facilissimo: scrivi uno e tanti zeri quanto dice l'esponente. Dieci alla terza fa mille.",
+    "nodi": [
+     "dieci"
+    ]
+   },
+   {
+    "t": "Con basi uguali: nel prodotto gli esponenti si sommano, 3² × 3⁴ = 3⁶. Nella divisione si sottraggono, 5⁷ : 5³ = 5⁴.",
+    "v": "Con basi uguali: nel prodotto gli esponenti si sommano, tre alla seconda per tre alla quarta fa tre alla sesta. Nella divisione si sottraggono, cinque alla settima diviso cinque alla terza fa cinque alla quarta.",
+    "nodi": [
+     "proprieta"
+    ]
+   },
+   {
+    "t": "Nella potenza di una potenza gli esponenti si moltiplicano: (2³)² = 2⁶, perché 3 × 2 = 6. Infatti fa 64!",
+    "v": "Nella potenza di una potenza gli esponenti si moltiplicano: due alla terza, tutto alla seconda, fa due alla sesta, perché tre per due fa sei. Infatti fa sessantaquattro!",
+    "nodi": [
+     "proprieta"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "base",
+    "scelte": [
+     "la base",
+     "il tetto",
+     "il camino"
+    ]
+   }
+  ],
+  "domande": {
+   "169bd13": "esponente",
+   "1xnbv60": "esponente",
+   "pe5blj": "dieci",
+   "bkwzqw": "speciali",
+   "1xnbypf": "speciali",
+   "1k9j89p": "base",
+   "35relh": "esponente",
+   "10vpd96": "proprieta",
+   "u7rdj9": "proprieta",
+   "zwmmyr": "proprieta"
+  },
+  "collegamenti": [
+   "sci-spazio:scala",
+   "media:divisibilita",
+   "media:espressioni"
+  ]
+ },
+ "divisibilita": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Divisori e multipli",
+   "ic": "➗",
+   "sotto": "numeri primi, criteri, M.C.D. e m.c.m."
+  },
+  "nodi": [
+   {
+    "id": "primi",
+    "n": "i numeri primi",
+    "ic": "🔒",
+    "sotto": "solo due divisori: 1 e se stesso",
+    "da": "fanno scoprire"
+   },
+   {
+    "id": "criteri",
+    "n": "i criteri di divisibilità",
+    "ic": "✅",
+    "sotto": "per 2, 3, 4, 5 e 9",
+    "da": "si riconoscono con"
+   },
+   {
+    "id": "scomposizione",
+    "n": "la scomposizione in fattori primi",
+    "ic": "🧱",
+    "sotto": "12 = 2² × 3",
+    "da": "si smontano con"
+   },
+   {
+    "id": "mcd",
+    "n": "il M.C.D.",
+    "ic": "🔽",
+    "sotto": "il più grande divisore in comune",
+    "da": "in comune danno"
+   },
+   {
+    "id": "mcm",
+    "n": "il m.c.m.",
+    "ic": "🔼",
+    "sotto": "il più piccolo multiplo in comune, diverso da 0",
+    "da": "in comune danno anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Un numero primo è maggiore di 1 e ha solo due divisori: 1 e se stesso. Sotto il 10 sono quattro: 2, 3, 5, 7.",
+    "nodi": [
+     "primi"
+    ]
+   },
+   {
+    "t": "Il 2 è l'unico primo pari. L'1 non è primo: ha un solo divisore. Il 13 è primo; il 15 no, perché 15 = 3 × 5.",
+    "v": "Il due è l'unico primo pari. L'uno non è primo: ha un solo divisore. Il tredici è primo; il quindici no, perché quindici è tre per cinque.",
+    "nodi": [
+     "primi"
+    ]
+   },
+   {
+    "t": "Per 2: l'ultima cifra è pari. Per 5: finisce con 0 o 5. Per 4: le ultime due cifre formano un multiplo di 4, come in 316.",
+    "v": "Per due: l'ultima cifra è pari. Per cinque: finisce con zero o cinque. Per quattro: le ultime due cifre formano un multiplo di quattro, come in trecentosedici.",
+    "nodi": [
+     "criteri"
+    ]
+   },
+   {
+    "t": "Per 3 e per 9 somma le cifre: 123 dà 1 + 2 + 3 = 6, divisibile per 3; 729 dà 18, divisibile per 9.",
+    "v": "Per tre e per nove somma le cifre: centoventitré dà uno più due più tre, sei, divisibile per tre; settecentoventinove dà diciotto, divisibile per nove.",
+    "nodi": [
+     "criteri"
+    ]
+   },
+   {
+    "t": "Scomporre vuol dire scrivere un numero come prodotto di numeri primi: 12 = 2 × 2 × 3, cioè 2² × 3.",
+    "v": "Scomporre vuol dire scrivere un numero come prodotto di numeri primi: dodici è due per due per tre, cioè due alla seconda per tre.",
+    "nodi": [
+     "scomposizione"
+    ]
+   },
+   {
+    "t": "Il M.C.D. è il più grande divisore in comune. Per 12 e 18 è 6. Per 8 e 15 è 1: sono primi tra loro.",
+    "v": "Il massimo comune divisore è il più grande divisore in comune. Per dodici e diciotto è sei. Per otto e quindici è uno: sono primi tra loro.",
+    "nodi": [
+     "mcd"
+    ]
+   },
+   {
+    "t": "Il m.c.m. è il più piccolo multiplo in comune, diverso da 0. Multipli di 4: 4, 8, 12. Multipli di 6: 6, 12. Il m.c.m. è 12!",
+    "v": "Il minimo comune multiplo è il più piccolo multiplo in comune, diverso da zero. Multipli di quattro: quattro, otto, dodici. Multipli di sei: sei, dodici. Il minimo comune multiplo è dodici!",
+    "nodi": [
+     "mcm"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "scomposizione",
+    "scelte": [
+     "la scomposizione in fattori primi",
+     "la ricetta della torta",
+     "la mappa del tesoro"
+    ]
+   }
+  ],
+  "domande": {
+   "xkc85k": "primi",
+   "1ahrhw9": "primi",
+   "bxwhbj": "primi",
+   "1d2gn1f": "primi",
+   "1p9g8cr": "criteri",
+   "1p9g8el": "criteri",
+   "1p9g8bu": "criteri",
+   "1p9g8i9": "criteri",
+   "1odxdvj": "mcm",
+   "6lxrme": "mcd",
+   "1p9g8do": "criteri",
+   "ydwi0q": "criteri",
+   "12vqiuj": "primi",
+   "1n6jkgv": "scomposizione",
+   "12476zq": "mcd",
+   "i8qpvy": "mcm",
+   "5boyhu": "mcd"
+  },
+  "collegamenti": [
+   "media:potenze",
+   "media:frazioni",
+   "media:espressioni"
+  ]
+ },
+ "espressioni": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le espressioni",
+   "ic": "🧮",
+   "sotto": "tante operazioni in fila, con un ordine"
+  },
+  "nodi": [
+   {
+    "id": "parentesi",
+    "n": "parentesi",
+    "ic": "🔲",
+    "sotto": "prima le tonde, poi le quadre, infine le graffe",
+    "da": "partono sempre dalle"
+   },
+   {
+    "id": "potenze",
+    "n": "le potenze",
+    "ic": "🔺",
+    "sotto": "prima delle altre operazioni",
+    "da": "calcolano poi"
+   },
+   {
+    "id": "molt",
+    "n": "moltiplicazioni e divisioni",
+    "ic": "✖️",
+    "sotto": "2 + 3 × 4 = 14",
+    "da": "poi fanno"
+   },
+   {
+    "id": "add",
+    "n": "addizioni e sottrazioni",
+    "ic": "➕",
+    "sotto": "per ultime",
+    "da": "alla fine fanno"
+   },
+   {
+    "id": "proprieta",
+    "n": "le proprietà",
+    "ic": "🔄",
+    "sotto": "commutativa: 3 + 5 = 5 + 3",
+    "da": "usano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Un'espressione è una fila di operazioni. Per non sbagliare si segue un ordine preciso, sempre lo stesso.",
+    "nodi": []
+   },
+   {
+    "t": "Se ci sono parentesi, si parte da quelle più interne: prima le tonde, poi le quadre, infine le graffe. (2 + 3) × 4 = 5 × 4 = 20.",
+    "v": "Se ci sono parentesi, si parte da quelle più interne: prima le tonde, poi le quadre, infine le graffe. Due più tre, tra parentesi, per quattro: cinque per quattro, venti.",
+    "nodi": [
+     "parentesi"
+    ]
+   },
+   {
+    "t": "Poi si calcolano le potenze, prima di tutte le altre operazioni.",
+    "nodi": [
+     "potenze"
+    ]
+   },
+   {
+    "t": "Poi moltiplicazioni e divisioni, nell'ordine in cui le incontri. Infine addizioni e sottrazioni. Così 2 + 3 × 4 = 2 + 12 = 14.",
+    "v": "Poi moltiplicazioni e divisioni, nell'ordine in cui le incontri. Infine addizioni e sottrazioni. Così due più tre per quattro è due più dodici, cioè quattordici.",
+    "nodi": [
+     "molt",
+     "add"
+    ]
+   },
+   {
+    "t": "Le proprietà aiutano a fare i conti. La commutativa dice: se scambi gli addendi, la somma non cambia. 3 + 5 = 5 + 3.",
+    "v": "Le proprietà aiutano a fare i conti. La commutativa dice: se scambi gli addendi, la somma non cambia. Tre più cinque è uguale a cinque più tre.",
+    "nodi": [
+     "proprieta"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "add",
+    "scelte": [
+     "addizioni e sottrazioni",
+     "colori e pennelli",
+     "mari e monti"
+    ]
+   },
+   {
+    "nodo": "potenze",
+    "scelte": [
+     "le potenze",
+     "le scarpe",
+     "le nuvole"
+    ]
+   }
+  ],
+  "domande": {
+   "1tu4uoa": "molt",
+   "6hx5pa": "molt",
+   "10as2z3": "parentesi",
+   "g6ulj7": "proprieta",
+   "b0z0do": "parentesi"
+  },
+  "collegamenti": [
+   "media:potenze",
+   "media:frazioni",
+   "media:divisibilita"
+  ]
+ },
+ "frazioni": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le frazioni",
+   "ic": "🍕",
+   "sotto": "parti di un intero"
+  },
+  "nodi": [
+   {
+    "id": "denominatore",
+    "n": "il denominatore",
+    "ic": "⬇️",
+    "sotto": "sta sotto: in quante parti dividi",
+    "da": "hanno sotto"
+   },
+   {
+    "id": "numeratore",
+    "n": "il numeratore",
+    "ic": "⬆️",
+    "sotto": "sta sopra: quante parti prendi",
+    "da": "hanno sopra"
+   },
+   {
+    "id": "equivalenti",
+    "n": "equivalenti",
+    "ic": "🟰",
+    "sotto": "1/2 = 2/4",
+    "da": "possono essere"
+   },
+   {
+    "id": "calcolo",
+    "n": "parti di un numero",
+    "ic": "🔢",
+    "sotto": "3/4 di 20 = 15",
+    "da": "servono a calcolare"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Una frazione dice quante parti prendi di un intero diviso in parti uguali. In 3/4 il 4 sta sotto: è il denominatore, cioè in quante parti dividi.",
+    "v": "Una frazione dice quante parti prendi di un intero diviso in parti uguali. In tre quarti il quattro sta sotto: è il denominatore, cioè in quante parti dividi.",
+    "nodi": [
+     "denominatore"
+    ]
+   },
+   {
+    "t": "Il 3 sta sopra: è il numeratore, e dice quante parti prendi. Tre fette di una pizza tagliata in quattro!",
+    "nodi": [
+     "numeratore"
+    ]
+   },
+   {
+    "t": "Metà pizza è uguale a due fette su quattro: 1/2 e 2/4 sono equivalenti. Se moltiplichi sopra e sotto per lo stesso numero, il valore non cambia.",
+    "v": "Metà pizza è uguale a due fette su quattro: un mezzo e due quarti sono equivalenti. Se moltiplichi sopra e sotto per lo stesso numero, il valore non cambia.",
+    "nodi": [
+     "equivalenti"
+    ]
+   },
+   {
+    "t": "Per calcolare 3/4 di 20: dividi 20 per il denominatore, 4, e ottieni 5. Poi moltiplica per il numeratore: 5 × 3 = 15.",
+    "v": "Per calcolare tre quarti di venti: dividi venti per il denominatore, quattro, e ottieni cinque. Poi moltiplica per il numeratore: cinque per tre fa quindici.",
+    "nodi": [
+     "calcolo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "numeratore",
+    "scelte": [
+     "il numeratore",
+     "il semaforo",
+     "il cappello"
+    ]
+   }
+  ],
+  "domande": {
+   "cox5h": "denominatore",
+   "1kgj448": "equivalenti",
+   "1dzbers": "calcolo"
+  },
+  "collegamenti": [
+   "media:divisibilita",
+   "media:espressioni",
+   "soldi:sconti"
+  ]
+ },
+ "insiemi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Gli insiemi",
+   "ic": "⭕",
+   "sotto": "gruppi di elementi scelti con una regola"
+  },
+  "nodi": [
+   {
+    "id": "elementi",
+    "n": "gli elementi",
+    "ic": "🔵",
+    "sotto": "∈ vuol dire «appartiene a»",
+    "da": "contengono"
+   },
+   {
+    "id": "vuoto",
+    "n": "vuoti",
+    "ic": "🫙",
+    "sotto": "nessun elemento: ∅ oppure { }",
+    "da": "possono essere"
+   },
+   {
+    "id": "intersezione",
+    "n": "l'intersezione",
+    "ic": "🤝",
+    "sotto": "∩: gli elementi in comune",
+    "da": "si incrociano formando"
+   },
+   {
+    "id": "unione",
+    "n": "l'unione",
+    "ic": "🫂",
+    "sotto": "∪: tutti gli elementi di entrambi",
+    "da": "si mettono insieme con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Un insieme è un gruppo di elementi scelti con una regola chiara. Il simbolo ∈ vuol dire «appartiene a»: 3 ∈ A significa che il 3 sta nell'insieme A.",
+    "v": "Un insieme è un gruppo di elementi scelti con una regola chiara. Il simbolo di appartenenza vuol dire «appartiene a»: tre appartiene ad A significa che il tre sta nell'insieme A.",
+    "nodi": [
+     "elementi"
+    ]
+   },
+   {
+    "t": "Un insieme senza nessun elemento si chiama insieme vuoto. Si scrive ∅, oppure con due graffe vuote.",
+    "v": "Un insieme senza nessun elemento si chiama insieme vuoto. Si scrive con il simbolo dell'insieme vuoto, oppure con due graffe vuote.",
+    "nodi": [
+     "vuoto"
+    ]
+   },
+   {
+    "t": "L'intersezione, con il simbolo ∩, contiene gli elementi in comune: quelli che stanno in tutti e due gli insiemi.",
+    "v": "L'intersezione contiene gli elementi in comune: quelli che stanno in tutti e due gli insiemi.",
+    "nodi": [
+     "intersezione"
+    ]
+   },
+   {
+    "t": "L'unione, con il simbolo ∪, contiene tutti gli elementi di entrambi gli insiemi, senza ripetere i doppioni.",
+    "v": "L'unione contiene tutti gli elementi di entrambi gli insiemi, senza ripetere i doppioni.",
+    "nodi": [
+     "unione"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "unione",
+    "scelte": [
+     "l'unione",
+     "la pioggia",
+     "la merenda"
+    ]
+   }
+  ],
+  "domande": {
+   "ikg6kt": "vuoto",
+   "1o4dhxy": "elementi",
+   "2ki5hn": "intersezione",
+   "2lo9iy": "unione"
+  },
+  "collegamenti": [
+   "media:divisibilita",
+   "tecno:coding"
+  ]
+ },
+ "geometria": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Rette, angoli e triangoli",
+   "ic": "📐",
+   "sotto": "le basi della geometria"
+  },
+  "nodi": [
+   {
+    "id": "linee",
+    "n": "retta, semiretta e segmento",
+    "ic": "📏",
+    "sotto": "nessun estremo · un'origine · due estremi",
+    "da": "partono da"
+   },
+   {
+    "id": "posizioni",
+    "n": "rette parallele e perpendicolari",
+    "ic": "🛤️",
+    "sotto": "mai incontrarsi · 4 angoli retti",
+    "da": "comprendono"
+   },
+   {
+    "id": "angoli",
+    "n": "gli angoli",
+    "ic": "📐",
+    "sotto": "acuto, retto 90°, ottuso, piatto 180°, giro 360°",
+    "da": "misurano in gradi"
+   },
+   {
+    "id": "coppie",
+    "n": "coppie di angoli",
+    "ic": "✖️",
+    "sotto": "complementari: 90° · opposti al vertice: uguali",
+    "da": "hanno anche"
+   },
+   {
+    "id": "triangoli",
+    "n": "i triangoli",
+    "ic": "🔺",
+    "sotto": "equilatero, isoscele, scaleno",
+    "da": "formano"
+   },
+   {
+    "id": "regole",
+    "n": "regole fisse",
+    "ic": "📏",
+    "sotto": "angoli 180° e 360° · niente diagonali · lati",
+    "da": "seguono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La retta non ha né inizio né fine. La semiretta ha un'origine e va all'infinito da una parte. Il segmento è compreso tra due punti, gli estremi.",
+    "nodi": [
+     "linee"
+    ]
+   },
+   {
+    "t": "Per due punti diversi passa una sola retta. Due rette sullo stesso piano che non si incontrano mai sono parallele; se formano 4 angoli retti sono perpendicolari.",
+    "nodi": [
+     "linee",
+     "posizioni"
+    ]
+   },
+   {
+    "t": "Gli angoli si misurano in gradi. Il retto misura 90°, il piatto 180°, il giro 360°. L'acuto è minore di 90°, l'ottuso sta tra 90° e 180°.",
+    "v": "Gli angoli si misurano in gradi. Il retto misura novanta gradi, il piatto centottanta, il giro trecentosessanta. L'acuto è minore di novanta gradi, l'ottuso sta tra novanta e centottanta.",
+    "nodi": [
+     "angoli"
+    ]
+   },
+   {
+    "t": "Due angoli complementari insieme fanno 90°. Se incroci due rette, gli angoli opposti al vertice sono uguali.",
+    "v": "Due angoli complementari insieme fanno novanta gradi. Se incroci due rette, gli angoli opposti al vertice sono uguali.",
+    "nodi": [
+     "coppie"
+    ]
+   },
+   {
+    "t": "Un triangolo con tre lati uguali è equilatero: ogni angolo misura 60°. L'isoscele ha due lati uguali, lo scaleno tutti diversi.",
+    "v": "Un triangolo con tre lati uguali è equilatero: ogni angolo misura sessanta gradi. L'isoscele ha due lati uguali, lo scaleno tutti diversi.",
+    "nodi": [
+     "triangoli"
+    ]
+   },
+   {
+    "t": "In ogni triangolo la somma degli angoli è 180°; in un quadrilatero è 360°. Il triangolo non ha diagonali, e ogni lato è minore della somma degli altri due.",
+    "v": "In ogni triangolo la somma degli angoli è centottanta gradi; in un quadrilatero è trecentosessanta. Il triangolo non ha diagonali, e ogni lato è minore della somma degli altri due.",
+    "nodi": [
+     "regole"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "triangoli",
+    "scelte": [
+     "i triangoli",
+     "i pomodori",
+     "i palloncini"
+    ]
+   }
+  ],
+  "domande": {
+   "12ub3pa": "angoli",
+   "xr8m01": "angoli",
+   "11jzo5d": "angoli",
+   "oo7z96": "angoli",
+   "zhr12c": "regole",
+   "q5vusi": "regole",
+   "rk1dkf": "coppie",
+   "1c13fko": "triangoli",
+   "nrh03x": "linee",
+   "11kgcj1": "posizioni",
+   "su7fjs": "posizioni",
+   "1aoh4om": "linee",
+   "42g41m": "linee",
+   "1n4rbp2": "angoli",
+   "1xgc7db": "coppie",
+   "1rhzrth": "regole",
+   "s1sf4c": "triangoli",
+   "118wmqc": "triangoli",
+   "wna6b8": "regole"
+  },
+  "collegamenti": [
+   "media:misure",
+   "arte:linguaggio",
+   "tecno:costruzioni"
+  ]
+ },
+ "misure": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le misure",
+   "ic": "📏",
+   "sotto": "il sistema metrico decimale"
+  },
+  "nodi": [
+   {
+    "id": "lunghezza",
+    "n": "il metro",
+    "ic": "📏",
+    "sotto": "1 m = 100 cm = 1000 mm",
+    "da": "di lunghezza usano"
+   },
+   {
+    "id": "piccolo",
+    "n": "centimetro e millimetro",
+    "ic": "📐",
+    "sotto": "1 cm = 10 mm",
+    "da": "per le cose piccole usano"
+   },
+   {
+    "id": "km",
+    "n": "il chilometro",
+    "ic": "🛣️",
+    "sotto": "1 km = 1000 m",
+    "da": "per le distanze usano"
+   },
+   {
+    "id": "peso",
+    "n": "il chilogrammo",
+    "ic": "⚖️",
+    "sotto": "1 kg = 1000 g",
+    "da": "di peso usano"
+   },
+   {
+    "id": "capacita",
+    "n": "il litro",
+    "ic": "🧃",
+    "sotto": "1 l = 1000 ml",
+    "da": "di capacità usano"
+   },
+   {
+    "id": "superficie",
+    "n": "il metro quadrato",
+    "ic": "⬛",
+    "sotto": "1 m² = 100 dm²",
+    "da": "di superficie usano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Nel sistema metrico decimale le unità vanno di dieci in dieci. Per le lunghezze si usa il metro: 1 m = 10 dm = 100 cm = 1000 mm.",
+    "v": "Nel sistema metrico decimale le unità vanno di dieci in dieci. Per le lunghezze si usa il metro: un metro è uguale a dieci decimetri, cento centimetri, mille millimetri.",
+    "nodi": [
+     "lunghezza"
+    ]
+   },
+   {
+    "t": "Guarda il righello: in 1 centimetro ci sono 10 millimetri, piccolissimi spazietti.",
+    "v": "Guarda il righello: in un centimetro ci sono dieci millimetri, piccolissimi spazietti.",
+    "nodi": [
+     "piccolo"
+    ]
+   },
+   {
+    "t": "Chilo vuol dire mille: 1 km = 1000 m, e 1 kg = 1000 g. Mezzo chilo sono 500 grammi.",
+    "v": "Chilo vuol dire mille: un chilometro è mille metri, e un chilogrammo è mille grammi. Mezzo chilo sono cinquecento grammi.",
+    "nodi": [
+     "km",
+     "peso"
+    ]
+   },
+   {
+    "t": "Per i liquidi si usa il litro: 1 l = 1000 ml. Una bottiglietta da mezzo litro ha 500 ml.",
+    "v": "Per i liquidi si usa il litro: un litro è mille millilitri. Una bottiglietta da mezzo litro ha cinquecento millilitri.",
+    "nodi": [
+     "capacita"
+    ]
+   },
+   {
+    "t": "Per le superfici si salta di 100 in 100: 1 m² = 100 dm², perché un quadrato di 1 m di lato contiene 10 × 10 quadratini di 1 dm.",
+    "v": "Per le superfici si salta di cento in cento: un metro quadrato è cento decimetri quadrati, perché un quadrato di un metro di lato contiene dieci per dieci quadratini di un decimetro.",
+    "nodi": [
+     "superficie"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "capacita",
+    "scelte": [
+     "il litro",
+     "il gatto",
+     "il martello"
+    ]
+   }
+  ],
+  "domande": {
+   "oygm75": "lunghezza",
+   "6ovzlp": "km",
+   "t22pkl": "peso",
+   "aziljf": "capacita",
+   "s2sb5n": "piccolo",
+   "1pcurz7": "superficie"
+  },
+  "collegamenti": [
+   "media:geometria",
+   "soldi:spesa",
+   "sci-spazio:scala"
+  ]
+ },
+ "scienze": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La scienza",
+   "ic": "🔬",
+   "sotto": "metodo, materia e atomi"
+  },
+  "nodi": [
+   {
+    "id": "metodo",
+    "n": "il metodo scientifico",
+    "ic": "🧪",
+    "sotto": "osservazione, ipotesi, esperimento, conclusione",
+    "da": "segue"
+   },
+   {
+    "id": "galileo",
+    "n": "Galileo Galilei",
+    "ic": "🔭",
+    "sotto": "il padre del metodo scientifico",
+    "da": "deve molto a"
+   },
+   {
+    "id": "atomi",
+    "n": "atomi",
+    "ic": "⚛️",
+    "sotto": "particelle piccolissime di tutta la materia",
+    "da": "scopre che tutto è fatto di"
+   },
+   {
+    "id": "formule",
+    "n": "formule e simboli",
+    "ic": "🧾",
+    "sotto": "H₂O, O₂, Fe",
+    "da": "scrive con"
+   },
+   {
+    "id": "calore",
+    "n": "calore e temperatura",
+    "ic": "🌡️",
+    "sotto": "due cose diverse · l'acqua bolle a 100 °C",
+    "da": "distingue"
+   },
+   {
+    "id": "suolo",
+    "n": "il suolo",
+    "ic": "🪨",
+    "sotto": "sabbioso: l'acqua passa facilmente",
+    "da": "studia anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Gli scienziati seguono il metodo scientifico: osservazione, ipotesi, esperimento, conclusione. L'ipotesi è una possibile spiegazione, da verificare con un esperimento.",
+    "nodi": [
+     "metodo"
+    ]
+   },
+   {
+    "t": "Il padre del metodo scientifico è Galileo Galilei, scienziato italiano vissuto tra il 1564 e il 1642.",
+    "nodi": [
+     "galileo"
+    ]
+   },
+   {
+    "t": "Tutta la materia è fatta di atomi, particelle piccolissime: il ghiaccio, l'aria e anche tu! Non si vedono nemmeno con un normale microscopio.",
+    "nodi": [
+     "atomi"
+    ]
+   },
+   {
+    "t": "Le formule contano gli atomi: H₂O, l'acqua, ha 2 atomi di idrogeno e 1 di ossigeno; O₂ ha due atomi di ossigeno. Il ferro ha simbolo Fe.",
+    "v": "Le formule contano gli atomi: acca due o, l'acqua, ha due atomi di idrogeno e uno di ossigeno; o due ha due atomi di ossigeno. Il ferro ha simbolo effe e.",
+    "nodi": [
+     "formule"
+    ]
+   },
+   {
+    "t": "Calore e temperatura sono cose diverse: il calore è energia che passa dal più caldo al più freddo, la temperatura si misura col termometro.",
+    "nodi": [
+     "calore"
+    ]
+   },
+   {
+    "t": "Al livello del mare l'acqua bolle a 100 °C. In alta montagna bolle un po' prima, perché l'aria preme meno.",
+    "v": "Al livello del mare l'acqua bolle a cento gradi. In alta montagna bolle un po' prima, perché l'aria preme meno.",
+    "nodi": [
+     "calore"
+    ]
+   },
+   {
+    "t": "Anche il suolo si studia: quello sabbioso lascia passare l'acqua facilmente, quello argilloso la trattiene.",
+    "nodi": [
+     "suolo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "atomi",
+    "scelte": [
+     "atomi",
+     "caramelle",
+     "coriandoli"
+    ]
+   }
+  ],
+  "domande": {
+   "k2ub6s": "metodo",
+   "3utno7": "galileo",
+   "185qkcv": "metodo",
+   "1e7epno": "formule",
+   "1vu2v55": "calore",
+   "3zbn0u": "calore",
+   "29ew5i": "atomi",
+   "1o3rp5s": "formule",
+   "p204rc": "formule",
+   "588723": "suolo"
+  },
+  "collegamenti": [
+   "sci-spazio:scala",
+   "media:viventi",
+   "sci-spazio:rocce",
+   "tecno:materiali"
+  ]
+ },
+ "viventi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I viventi",
+   "ic": "🦠",
+   "sotto": "li studia la biologia"
+  },
+  "nodi": [
+   {
+    "id": "cellula",
+    "n": "cellule",
+    "ic": "🔬",
+    "sotto": "la cellula è la più piccola unità vivente",
+    "da": "sono fatti di"
+   },
+   {
+    "id": "vegetale",
+    "n": "cellule animali o vegetali",
+    "ic": "🌿",
+    "sotto": "solo le vegetali hanno parete e cloroplasti",
+    "da": "possono avere"
+   },
+   {
+    "id": "nutrizione",
+    "n": "autotrofi o eterotrofi",
+    "ic": "🍽️",
+    "sotto": "piante · onnivori · decompositori",
+    "da": "possono essere"
+   },
+   {
+    "id": "regni",
+    "n": "cinque regni",
+    "ic": "👑",
+    "sotto": "Monere, Protisti, Funghi, Piante, Animali",
+    "da": "si dividono in"
+   },
+   {
+    "id": "linneo",
+    "n": "un nome scientifico",
+    "ic": "🏷️",
+    "sotto": "Linneo: genere e specie · Homo sapiens",
+    "da": "hanno"
+   },
+   {
+    "id": "darwin",
+    "n": "l'evoluzione",
+    "ic": "🐢",
+    "sotto": "Darwin: le specie cambiano nel tempo",
+    "da": "cambiano lentamente:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La biologia è la scienza che studia gli esseri viventi. Ogni vivente è fatto di cellule: la cellula è la più piccola unità vivente.",
+    "nodi": [
+     "cellula"
+    ]
+   },
+   {
+    "t": "Quasi tutte le cellule si vedono solo al microscopio. Un vivente fatto di una sola cellula è unicellulare, come i batteri.",
+    "nodi": [
+     "cellula"
+    ]
+   },
+   {
+    "t": "Cellule animali e vegetali hanno nucleo, membrana e citoplasma. Solo le vegetali hanno la parete cellulare e i cloroplasti, verdi, che catturano la luce.",
+    "nodi": [
+     "vegetale"
+    ]
+   },
+   {
+    "t": "Le piante si fabbricano il cibo da sole: sono autotrofe. Gli animali sono eterotrofi; chi mangia piante e animali è onnivoro. Molti funghi e batteri, i decompositori, trasformano i resti.",
+    "nodi": [
+     "nutrizione"
+    ]
+   },
+   {
+    "t": "A scuola i viventi si dividono in cinque regni: Monere, Protisti, Funghi, Piante e Animali. I batteri sono Monere.",
+    "nodi": [
+     "regni"
+    ]
+   },
+   {
+    "t": "Nel Settecento lo svedese Carlo Linneo diede a ogni vivente due nomi latini, genere e specie. Noi siamo Homo sapiens: «uomo sapiente».",
+    "nodi": [
+     "linneo"
+    ]
+   },
+   {
+    "t": "L'inglese Charles Darwin, dopo un lungo viaggio sulla nave Beagle, spiegò come le specie cambiano lentamente nel tempo: è l'evoluzione.",
+    "nodi": [
+     "darwin"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "regni",
+    "scelte": [
+     "cinque regni",
+     "cinque pizze",
+     "cinque biciclette"
+    ]
+   }
+  ],
+  "domande": {
+   "6z4sey": "cellula",
+   "1mfnnv1": "cellula",
+   "1k3ry94": "vegetale",
+   "1u79qvb": "cellula",
+   "2xxy1h": "nutrizione",
+   "1il7m6f": "nutrizione",
+   "13vbb5l": "cellula",
+   "10og0tf": "regni",
+   "1mt1k4a": "regni",
+   "8lo06o": "linneo",
+   "1lasiaq": "linneo",
+   "xpdtku": "nutrizione",
+   "rjh1bq": "darwin"
+  },
+  "collegamenti": [
+   "sci-corpo:cellule",
+   "media:scienze",
+   "sci-spazio:scala"
+  ]
+ },
+ "grammatica": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'analisi",
+   "ic": "✍️",
+   "sotto": "smontare la frase per capirla"
+  },
+  "nodi": [
+   {
+    "id": "gramm",
+    "n": "grammaticale",
+    "ic": "🏷️",
+    "sotto": "che tipo di parola: nome, verbo, articolo…",
+    "da": "di ogni parola è"
+   },
+   {
+    "id": "logica",
+    "n": "logica",
+    "ic": "🧠",
+    "sotto": "soggetto, predicato, complementi",
+    "da": "dei ruoli nella frase è"
+   },
+   {
+    "id": "predicato",
+    "n": "il predicato verbale",
+    "ic": "⚡",
+    "sotto": "il verbo: che cosa fa il soggetto",
+    "da": "trova prima"
+   },
+   {
+    "id": "oggetto",
+    "n": "il complemento oggetto",
+    "ic": "🎯",
+    "sotto": "risponde a «che cosa?»",
+    "da": "poi cerca"
+   },
+   {
+    "id": "altri",
+    "n": "tempo, modo e causa",
+    "ic": "❓",
+    "sotto": "quando? · come? · perché?",
+    "da": "scopre anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'analisi grammaticale dà un nome a ogni parola: nome, verbo, articolo, aggettivo… L'analisi logica, invece, studia il ruolo delle parole nella frase.",
+    "nodi": [
+     "gramm",
+     "logica"
+    ]
+   },
+   {
+    "t": "Nell'analisi logica cerca prima il verbo: in «Il gatto mangia il pesce», mangia è il predicato verbale. Chi mangia? Il gatto, il soggetto.",
+    "nodi": [
+     "logica",
+     "predicato"
+    ]
+   },
+   {
+    "t": "Il pesce risponde alla domanda «che cosa?»: è il complemento oggetto.",
+    "nodi": [
+     "oggetto"
+    ]
+   },
+   {
+    "t": "Altri complementi rispondono ad altre domande. Quando? Il sabato: tempo. Come? Con eleganza: modo. Perché? Dalla gioia: causa.",
+    "nodi": [
+     "altri"
+    ]
+   },
+   {
+    "t": "Attenta: «da» non vuol dire sempre luogo. In «salto dalla gioia» c'è un motivo, cioè una causa.",
+    "nodi": [
+     "altri"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "logica",
+    "scelte": [
+     "logica",
+     "golosa",
+     "rumorosa"
+    ]
+   }
+  ],
+  "domande": {
+   "1jywwab": "oggetto",
+   "1mfm3ph": "predicato",
+   "1kjektf": "gramm",
+   "uz4hc5": "altri",
+   "1r6uk": "altri",
+   "z96mjn": "altri"
+  },
+  "collegamenti": [
+   "ita:complementi",
+   "ita:frase",
+   "ita:nomi"
+  ]
+ },
+ "epica": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Epica e miti",
+   "ic": "🛡️",
+   "sotto": "le grandi storie degli antichi"
+  },
+  "nodi": [
+   {
+    "id": "iliade",
+    "n": "l'Iliade",
+    "ic": "⚔️",
+    "sotto": "la guerra di Troia e l'ira di Achille",
+    "da": "cantano la guerra con"
+   },
+   {
+    "id": "odissea",
+    "n": "l'Odissea",
+    "ic": "⛵",
+    "sotto": "Penelope, Polifemo, il cane Argo",
+    "da": "cantano il ritorno di Ulisse con"
+   },
+   {
+    "id": "eneide",
+    "n": "l'Eneide",
+    "ic": "🔥",
+    "sotto": "Enea fugge da Troia · scritta da Virgilio",
+    "da": "cantano il viaggio di Enea con"
+   },
+   {
+    "id": "dei",
+    "n": "dèi e titani",
+    "ic": "🔱",
+    "sotto": "Poseidone, dio del mare · Prometeo e il fuoco",
+    "da": "parlano di"
+   },
+   {
+    "id": "creature",
+    "n": "creature fantastiche",
+    "ic": "🐴",
+    "sotto": "Pegaso, il cavallo con le ali",
+    "da": "sono pieni di"
+   },
+   {
+    "id": "favole",
+    "n": "favole di Esopo",
+    "ic": "🦊",
+    "sotto": "animali che parlano: la volpe e l'uva",
+    "da": "sono vicini alle"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'Iliade racconta la guerra di Troia. Comincia parlando dell'ira di Achille, il guerriero più forte dei Greci.",
+    "nodi": [
+     "iliade"
+    ]
+   },
+   {
+    "t": "L'Odissea racconta il ritorno a Itaca di Ulisse, o Odisseo: un viaggio di dieci anni. Lo aspetta la moglie Penelope, che tesse e disfa una tela.",
+    "nodi": [
+     "odissea"
+    ]
+   },
+   {
+    "t": "Ulisse inganna il ciclope Polifemo, un gigante con un solo occhio, dicendo di chiamarsi «Nessuno». A Itaca, travestito, lo riconosce subito il fedele cane Argo.",
+    "nodi": [
+     "odissea"
+    ]
+   },
+   {
+    "t": "L'Eneide è del poeta latino Virgilio. Enea fugge da Troia in fiamme e, dopo un lungo viaggio, arriva nel Lazio.",
+    "nodi": [
+     "eneide"
+    ]
+   },
+   {
+    "t": "Nei miti greci ci sono tanti dèi: Poseidone è il dio del mare, che i Romani chiamavano Nettuno. Il titano Prometeo rubò il fuoco agli dèi per darlo agli uomini.",
+    "nodi": [
+     "dei"
+    ]
+   },
+   {
+    "t": "Ci sono anche creature fantastiche, come Pegaso, il cavallo con le ali. E il greco Esopo è famoso per tante favole con animali, come la volpe e l'uva.",
+    "nodi": [
+     "creature",
+     "favole"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "iliade",
+    "scelte": [
+     "l'Iliade",
+     "il vocabolario",
+     "il calendario"
+    ]
+   }
+  ],
+  "domande": {
+   "1yihak0": "eneide",
+   "eb6sk1": "eneide",
+   "1h1l8u": "odissea",
+   "1dzdev6": "iliade",
+   "11y5gb": "odissea",
+   "faze4d": "odissea",
+   "18kz8z4": "odissea",
+   "1gw9n75": "eneide",
+   "gd29hq": "dei",
+   "uyia1e": "dei",
+   "1o4c9x4": "favole",
+   "f8ia1a": "creature"
+  },
+  "collegamenti": [
+   "storia:greci",
+   "ita:testi",
+   "sci-spazio:stelle",
+   "storia:roma-re"
+  ]
+ },
+ "medioevo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il Medioevo",
+   "ic": "🏰",
+   "sotto": "dal 476 al 1492"
+  },
+  "nodi": [
+   {
+    "id": "barbari",
+    "n": "i regni barbarici",
+    "ic": "⚔️",
+    "sotto": "Longobardi, Franchi e Carlo Magno",
+    "da": "comincia con"
+   },
+   {
+    "id": "feudi",
+    "n": "feudi e vassalli",
+    "ic": "🛡️",
+    "sotto": "una terra in cambio di fedeltà",
+    "da": "si organizza in"
+   },
+   {
+    "id": "monasteri",
+    "n": "monasteri",
+    "ic": "📜",
+    "sotto": "libri copiati a mano · ora et labora",
+    "da": "custodisce i libri nei"
+   },
+   {
+    "id": "oriente",
+    "n": "Bisanzio e l'Islam",
+    "ic": "🕌",
+    "sotto": "Santa Sofia · cifre arabe · crociate",
+    "da": "incontra"
+   },
+   {
+    "id": "comuni",
+    "n": "i Comuni",
+    "ic": "🏛️",
+    "sotto": "città che si governano da sole · Bologna · Dante",
+    "da": "vede crescere le città con"
+   },
+   {
+    "id": "viaggi",
+    "n": "i grandi viaggi",
+    "ic": "⛵",
+    "sotto": "Marco Polo in Cina · Colombo nel 1492",
+    "da": "si chiude con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il Medioevo comincia, per convenzione, nel 476 d.C.: cade l'Impero romano d'Occidente. Finisce nel 1492, quando Colombo arriva in America con tre navi.",
+    "v": "Il Medioevo comincia, per convenzione, nel quattrocentosettantasei dopo Cristo: cade l'Impero romano d'Occidente. Finisce nel millequattrocentonovantadue, quando Colombo arriva in America con tre navi.",
+    "nodi": [
+     "barbari",
+     "viaggi"
+    ]
+   },
+   {
+    "t": "I Romani chiamavano barbari i popoli fuori dai confini. Nel VI secolo arrivano in Italia i Longobardi, che danno il nome alla Lombardia.",
+    "v": "I Romani chiamavano barbari i popoli fuori dai confini. Nel sesto secolo arrivano in Italia i Longobardi, che danno il nome alla Lombardia.",
+    "nodi": [
+     "barbari"
+    ]
+   },
+   {
+    "t": "Carlo Magno, re dei Franchi, sconfigge i Longobardi. A Natale dell'800, a Roma, il papa lo incorona imperatore.",
+    "v": "Carlo Magno, re dei Franchi, sconfigge i Longobardi. A Natale dell'anno ottocento, a Roma, il papa lo incorona imperatore.",
+    "nodi": [
+     "barbari"
+    ]
+   },
+   {
+    "t": "Il re dà una terra, il feudo, a un signore: il vassallo. In cambio il vassallo gli giura fedeltà e lo aiuta in guerra.",
+    "nodi": [
+     "feudi"
+    ]
+   },
+   {
+    "t": "Nei monasteri i monaci copiano i libri a mano: «Ora et labora», prega e lavora. A Bologna, per tradizione nel 1088, nasce l'università più antica d'Occidente.",
+    "v": "Nei monasteri i monaci copiano i libri a mano: «Ora et labora», prega e lavora. A Bologna, per tradizione nel milleottantotto, nasce l'università più antica d'Occidente.",
+    "nodi": [
+     "monasteri",
+     "comuni"
+    ]
+   },
+   {
+    "t": "A Costantinopoli Giustiniano fa costruire Santa Sofia. Nel VII secolo in Arabia nasce l'Islam. Gli Arabi portano le cifre 0, 1, 2, 3. I crociati cuciono una croce sulle vesti.",
+    "v": "A Costantinopoli Giustiniano fa costruire Santa Sofia. Nel settimo secolo in Arabia nasce l'Islam. Gli Arabi portano le cifre zero, uno, due, tre. I crociati cuciono una croce sulle vesti.",
+    "nodi": [
+     "oriente"
+    ]
+   },
+   {
+    "t": "Nascono i Comuni, città che si governano da sole. Il veneziano Marco Polo viaggia fino in Cina e il fiorentino Dante scrive la Divina Commedia.",
+    "nodi": [
+     "comuni",
+     "viaggi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "monasteri",
+    "scelte": [
+     "monasteri",
+     "supermercati",
+     "grattacieli"
+    ]
+   }
+  ],
+  "domande": {
+   "1vavsz8": "barbari",
+   "w6t5bm": "viaggi",
+   "nqmep8": "barbari",
+   "totwwn": "feudi",
+   "1tfd4h8": "monasteri",
+   "aef6qb": "comuni",
+   "7fy5th": "barbari",
+   "ms9u9u": "barbari",
+   "ohde25": "oriente",
+   "1tu51zg": "oriente",
+   "1fx5xkx": "oriente",
+   "tgtrf4": "barbari",
+   "1pd2q2o": "feudi",
+   "q1n9dt": "monasteri",
+   "1jk87ur": "oriente",
+   "1wh6p8b": "viaggi",
+   "1k6xa3q": "comuni",
+   "1x4o3u9": "comuni",
+   "yogicn": "viaggi"
+  },
+  "collegamenti": [
+   "storia:impero",
+   "arte:medioevo",
+   "religione:religioni"
+  ]
+ },
+ "europa": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'Europa",
+   "ic": "🇪🇺",
+   "sotto": "Stati, capitali e fiumi"
+  },
+  "nodi": [
+   {
+    "id": "ue",
+    "n": "l'Unione Europea",
+    "ic": "🇪🇺",
+    "sotto": "27 Stati dal 2020",
+    "da": "ha un'unione di 27 Stati:"
+   },
+   {
+    "id": "volga",
+    "n": "il Volga",
+    "ic": "🌊",
+    "sotto": "circa 3500 km, tutto in Russia",
+    "da": "ha come fiume più lungo"
+   },
+   {
+    "id": "fiumi",
+    "n": "il Danubio e il Rodano",
+    "ic": "🏞️",
+    "sotto": "Vienna sul Danubio · il Rodano nasce in Svizzera",
+    "da": "ha altri grandi fiumi come"
+   },
+   {
+    "id": "capitali",
+    "n": "le capitali",
+    "ic": "🏙️",
+    "sotto": "Vienna, Atene, Lisbona, Dublino, Varsavia, Copenaghen",
+    "da": "ha come città più importanti"
+   },
+   {
+    "id": "nord",
+    "n": "la penisola scandinava",
+    "ic": "❄️",
+    "sotto": "quasi tutta di Norvegia e Svezia",
+    "da": "verso nord ha"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Dal 2020, dopo l'uscita del Regno Unito, l'Unione Europea riunisce 27 Stati, tra cui l'Italia.",
+    "nodi": [
+     "ue"
+    ]
+   },
+   {
+    "t": "Il fiume più lungo d'Europa è il Volga: circa 3500 chilometri, tutti in Russia, fino al Mar Caspio. Secondo arriva il Danubio, che bagna Vienna.",
+    "v": "Il fiume più lungo d'Europa è il Volga: circa tremilacinquecento chilometri, tutti in Russia, fino al Mar Caspio. Secondo arriva il Danubio, che bagna Vienna.",
+    "nodi": [
+     "volga",
+     "fiumi"
+    ]
+   },
+   {
+    "t": "Il Rodano nasce da un ghiacciaio delle Alpi svizzere, passa per Lione e sfocia nel Mediterraneo, in Francia.",
+    "nodi": [
+     "fiumi"
+    ]
+   },
+   {
+    "t": "Alcune capitali: Vienna in Austria, Atene in Grecia, Lisbona in Portogallo, Dublino in Irlanda, Varsavia in Polonia, Copenaghen in Danimarca.",
+    "nodi": [
+     "capitali"
+    ]
+   },
+   {
+    "t": "Copenaghen ha la statua della Sirenetta. Più a nord c'è la penisola scandinava, occupata quasi tutta da Norvegia e Svezia.",
+    "nodi": [
+     "capitali",
+     "nord"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "volga",
+    "scelte": [
+     "il Volga",
+     "il Nilo",
+     "il Mississippi"
+    ]
+   }
+  ],
+  "domande": {
+   "1g51gxi": "ue",
+   "1k0s0wo": "volga",
+   "1cjbnu8": "capitali",
+   "1j08p3w": "capitali",
+   "19emu6f": "capitali",
+   "bwwzf5": "capitali",
+   "6rgqcy": "capitali",
+   "1o9kr7p": "fiumi",
+   "1vdu83": "capitali",
+   "4k26gg": "nord"
+  },
+  "collegamenti": [
+   "geo:europa",
+   "civica:europa-onu",
+   "geo:acque"
+  ]
+ },
+ "inglese": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'inglese delle medie",
+   "ic": "🇬🇧",
+   "sotto": "frasi e regole nuove"
+  },
+  "nodi": [
+   {
+    "id": "tobe",
+    "n": "il verbo essere",
+    "ic": "🙋",
+    "sotto": "«I am», «you are» · «Are you tired?»",
+    "da": "comincia da"
+   },
+   {
+    "id": "ing",
+    "n": "la forma in «-ing»",
+    "ic": "🏊",
+    "sotto": "«I am swimming»: sto nuotando",
+    "da": "per le azioni di adesso usa"
+   },
+   {
+    "id": "irregolari",
+    "n": "verbi irregolari",
+    "ic": "🔀",
+    "sotto": "«go» diventa «went»",
+    "da": "ha"
+   },
+   {
+    "id": "thereare",
+    "n": "«there is» e «there are»",
+    "ic": "🍎",
+    "sotto": "una cosa · tante cose",
+    "da": "per dire che c'è usa"
+   },
+   {
+    "id": "comparativi",
+    "n": "i comparativi",
+    "ic": "🐘",
+    "sotto": "«big» diventa «bigger»",
+    "da": "per confrontare usa"
+   },
+   {
+    "id": "parole",
+    "n": "parole composte",
+    "ic": "🏠",
+    "sotto": "«home» + «work» = «homework», i compiti",
+    "da": "insegna"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Si parte dal verbo essere: «I am», «you are», «he is». Nelle domande il verbo va prima del soggetto: «Are you tired?» vuol dire «Sei stanca?»",
+    "nodi": [
+     "tobe"
+    ]
+   },
+   {
+    "t": "Per un'azione che fai proprio adesso usi «am», «is» o «are» più il verbo che finisce in «ing»: «I am swimming», sto nuotando.",
+    "nodi": [
+     "ing"
+    ]
+   },
+   {
+    "t": "Alcuni verbi sono irregolari: il passato non si fa con «ed», ma cambia tutto. Il passato di «go» è «went».",
+    "nodi": [
+     "irregolari"
+    ],
+    "v": "Alcuni verbi sono irregolari: il passato non si fa con «ed», ma cambia tutto. Il passato di «go» è una parola nuova: guarda bene come si scrive!"
+   },
+   {
+    "t": "Per dire che c'è una cosa si usa «there is»: «There is one apple». Con tante cose «there are»: «There are three cats», ci sono tre gatti.",
+    "nodi": [
+     "thereare"
+    ]
+   },
+   {
+    "t": "Per confrontare, agli aggettivi corti si aggiunge «er»: «big» diventa «bigger», con la g doppia. Un elefante è più grande di un gatto!",
+    "nodi": [
+     "comparativi"
+    ],
+    "v": "Per confrontare, agli aggettivi corti si aggiunge «er»: «big» raddoppia la g e prende «er» in fondo. Guarda bene come si scrive! Un elefante è più grande di un gatto!"
+   },
+   {
+    "t": "Tante parole sono fatte di due pezzi: «home», casa, più «work», lavoro, fa «homework», i compiti a casa!",
+    "nodi": [
+     "parole"
+    ],
+    "v": "Tante parole sono fatte di due pezzi: «home», casa, più «work», lavoro: insieme fanno la parola dei compiti a casa. Guarda bene come si scrive!"
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "irregolari",
+    "scelte": [
+     "verbi irregolari",
+     "pianeti giganti",
+     "animali marini"
+    ]
+   }
+  ],
+  "domande": {
+   "1bgqmgk": "tobe",
+   "m0m6i2": "tobe",
+   "w1j36j": "ing",
+   "1cskgb8": "irregolari",
+   "1n0t7k0": "thereare",
+   "112g57k": "comparativi",
+   "ku2gmu": "parole"
+  },
+  "collegamenti": [
+   "eng:essere-avere",
+   "eng:verbi",
+   "eng:scuola"
+  ]
+ },
+ "studio": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Organizzarsi alle medie",
+   "ic": "🎒",
+   "sotto": "piccoli trucchi per studiare bene"
+  },
+  "nodi": [
+   {
+    "id": "zaino",
+    "n": "lo zaino",
+    "ic": "🎒",
+    "sotto": "pronto la sera prima, secondo l'orario",
+    "da": "comincia la sera prima con"
+   },
+   {
+    "id": "diario",
+    "n": "il diario",
+    "ic": "📒",
+    "sotto": "compiti e verifiche annotati subito",
+    "da": "si ricorda tutto con"
+   },
+   {
+    "id": "tempi",
+    "n": "un po' ogni giorno",
+    "ic": "📅",
+    "sotto": "ripasso distribuito · compiti in anticipo",
+    "da": "vuol dire studiare"
+   },
+   {
+    "id": "metodo",
+    "n": "leggere, sottolineare e ripetere",
+    "ic": "🖍️",
+    "sotto": "e le mappe concettuali",
+    "da": "vuol dire anche"
+   },
+   {
+    "id": "concentrazione",
+    "n": "il telefono lontano",
+    "ic": "📵",
+    "sotto": "in un'altra stanza, senza notifiche",
+    "da": "vuol dire tenere"
+   },
+   {
+    "id": "errori",
+    "n": "domande ed errori",
+    "ic": "🙋",
+    "sotto": "chiedere all'insegnante · capire gli errori e riprovare",
+    "da": "vuol dire non avere paura di"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La sera prima prepara lo zaino secondo l'orario del giorno dopo: il peso è giusto e non dimentichi nulla.",
+    "nodi": [
+     "zaino"
+    ]
+   },
+   {
+    "t": "Sul diario annoti subito compiti e date delle verifiche: è la tua memoria di carta.",
+    "nodi": [
+     "diario"
+    ]
+   },
+   {
+    "t": "Per una verifica tra una settimana, studia un po' ogni giorno e ripassa alla fine. Se un giorno sei impegnata, fai i compiti un po' prima, nei giorni più liberi.",
+    "nodi": [
+     "tempi"
+    ]
+   },
+   {
+    "t": "Per un capitolo di storia: leggi, sottolinea e ripeti. Una mappa concettuale, con parole chiave collegate, aiuta a ricordare.",
+    "nodi": [
+     "metodo"
+    ]
+   },
+   {
+    "t": "Mentre studi, il telefono o il tablet stanno lontano, in un'altra stanza: la testa resta sul libro.",
+    "nodi": [
+     "concentrazione"
+    ]
+   },
+   {
+    "t": "Se non hai capito, chiedi all'insegnante. Se una verifica va male, capisci gli errori e riprova: ogni errore insegna qualcosa.",
+    "nodi": [
+     "errori"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "zaino",
+    "scelte": [
+     "lo zaino",
+     "il monopattino",
+     "l'ombrellone"
+    ]
+   }
+  ],
+  "domande": {
+   "16noj74": "zaino",
+   "1rk958a": "tempi",
+   "1j8blfx": "errori",
+   "tddnk3": "diario",
+   "192y412": "errori",
+   "8g5abu": "metodo",
+   "wfoqtu": "metodo",
+   "dxjxv4": "concentrazione",
+   "1eeaewn": "tempi"
+  },
+  "collegamenti": [
+   "civica:cura",
+   "sp-corpo:sonno",
+   "tecno:internet"
+  ]
+ }
+}

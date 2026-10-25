@@ -136,5 +136,1707 @@
    "8yqa25z": "cellula",
    "8nx63wo": "nucleo"
   }
+ },
+ "pianeti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I pianeti",
+   "ic": "🪐",
+   "sotto": "8 pianeti girano intorno al Sole"
+  },
+  "nodi": [
+   {
+    "id": "rocciosi",
+    "n": "4 pianeti rocciosi",
+    "ic": "🪨",
+    "sotto": "Mercurio, Venere, Terra e Marte",
+    "da": "vicino al Sole sono"
+   },
+   {
+    "id": "mercurio",
+    "n": "Mercurio",
+    "ic": "☿️",
+    "sotto": "il più piccolo e il più veloce intorno al Sole",
+    "da": "il più vicino al Sole è"
+   },
+   {
+    "id": "venere",
+    "n": "Venere",
+    "ic": "🔥",
+    "sotto": "la «stella del mattino»: lì il Sole sorge a ovest",
+    "da": "il più caldo è"
+   },
+   {
+    "id": "marte",
+    "n": "Marte",
+    "ic": "🔴",
+    "sotto": "suolo ricco di ruggine e il vulcano Olympus Mons",
+    "da": "il pianeta rosso è"
+   },
+   {
+    "id": "giove",
+    "n": "Giove",
+    "ic": "🌪️",
+    "sotto": "fatto di gas, con la Grande Macchia Rossa",
+    "da": "il più grande è"
+   },
+   {
+    "id": "giganti",
+    "n": "Saturno, Urano e Nettuno",
+    "ic": "💫",
+    "sotto": "anelli, un pianeta sdraiato e un pianeta blu",
+    "da": "più lontano ci sono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Intorno al Sole girano 8 pianeti: Mercurio, Venere, Terra, Marte, Giove, Saturno, Urano e Nettuno. Un trucco per ricordarli: «Mia Vecchia Tata Mangia Gelati Sotto Un Noce».",
+    "nodi": [
+     "rocciosi",
+     "giganti"
+    ]
+   },
+   {
+    "t": "I primi 4 sono rocciosi, e la Terra è la terza. Mercurio, il più vicino al Sole, è il più piccolo e gira intorno al Sole più in fretta.",
+    "nodi": [
+     "rocciosi",
+     "mercurio"
+    ]
+   },
+   {
+    "t": "Venere è il più caldo: la sua atmosfera spessa intrappola il calore. Gira su se stessa al contrario e così piano che un giro dura più del suo anno!",
+    "nodi": [
+     "venere"
+    ]
+   },
+   {
+    "t": "Marte è il pianeta rosso: il suo suolo è ricco di ruggine. Ha il nome del dio romano della guerra e un vulcano gigante, Olympus Mons, molto più alto dell'Everest.",
+    "nodi": [
+     "marte"
+    ]
+   },
+   {
+    "t": "Giove, il più grande, ha il nome del re degli dei romani. Dentro starebbero più di 1000 Terre. È di gas e ruota su se stesso più veloce di tutti.",
+    "v": "Giove, il più grande, ha il nome del re degli dei romani. Dentro starebbero più di mille Terre. È di gas e ruota su se stesso più veloce di tutti.",
+    "nodi": [
+     "giove"
+    ]
+   },
+   {
+    "t": "Saturno ha gli anelli più famosi, fatti di pezzi di ghiaccio e roccia. È così leggero che, in teoria, galleggerebbe in una vasca d'acqua gigante!",
+    "nodi": [
+     "giganti"
+    ]
+   },
+   {
+    "t": "Urano gira sdraiato su un fianco. Nettuno, blu, è il più lontano dal Sole. Ancora più in là c'è Plutone: un pianeta nano, un mondo rotondo intorno al Sole.",
+    "nodi": [
+     "giganti"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "marte",
+    "scelte": [
+     "Marte",
+     "la Luna",
+     "una cometa"
+    ]
+   }
+  ],
+  "domande": {
+   "5clq9c": "mercurio",
+   "nc9p3t": "giove",
+   "1hzh72x": "rocciosi",
+   "cdzxe2": "marte",
+   "1qkgop4": "giganti",
+   "1simgmj": "venere",
+   "l88966": "rocciosi",
+   "ct65qf": "giganti",
+   "1uke6jd": "giganti",
+   "1btudho": "giove",
+   "1s8gsav": "venere",
+   "1vbg1z7": "rocciosi",
+   "11uojgw": "marte",
+   "spfuib": "giove",
+   "eemyop": "giganti",
+   "1igw7ia": "mercurio",
+   "sn4otf": "mercurio",
+   "licekr": "giove",
+   "12is7lt": "venere",
+   "14js4rw": "venere",
+   "nlbpp2": "marte",
+   "wqxuzw": "marte",
+   "1yi0su8": "giove",
+   "2oudzb": "giganti",
+   "1yjeua0": "giganti",
+   "6moo8b": "giganti"
+  },
+  "collegamenti": [
+   "sci-spazio:sole",
+   "sci-spazio:gravita",
+   "sci-spazio:esplorazione"
+  ]
+ },
+ "sole": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il Sole",
+   "ic": "☀️",
+   "sotto": "la stella più vicina alla Terra"
+  },
+  "nodi": [
+   {
+    "id": "stella",
+    "n": "una stella",
+    "ic": "⭐",
+    "sotto": "la più vicina a noi",
+    "da": "è"
+   },
+   {
+    "id": "gas",
+    "n": "idrogeno ed elio",
+    "ic": "🎈",
+    "sotto": "gas leggerissimi e caldissimi",
+    "da": "è fatto soprattutto di"
+   },
+   {
+    "id": "fusione",
+    "n": "la fusione nucleare",
+    "ic": "⚛️",
+    "sotto": "l'idrogeno diventa elio",
+    "da": "produce energia con"
+   },
+   {
+    "id": "grande",
+    "n": "circa un milione di Terre",
+    "ic": "🌍",
+    "sotto": "è enorme",
+    "da": "potrebbe contenere"
+   },
+   {
+    "id": "luce",
+    "n": "circa 8 minuti",
+    "ic": "💡",
+    "sotto": "il viaggio della sua luce fino a noi",
+    "da": "manda luce che arriva in"
+   },
+   {
+    "id": "occhi",
+    "n": "gli occhi",
+    "ic": "🕶️",
+    "sotto": "nemmeno con gli occhiali da sole",
+    "da": "non va mai guardato con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il Sole è una stella: un'enorme palla di gas caldissimo che fa luce. È la stella più vicina alla Terra.",
+    "nodi": [
+     "stella"
+    ]
+   },
+   {
+    "t": "È fatto soprattutto di idrogeno ed elio. Nel suo cuore l'idrogeno si fonde e diventa elio: è la fusione nucleare, che libera luce e calore.",
+    "nodi": [
+     "gas",
+     "fusione"
+    ]
+   },
+   {
+    "t": "Il Sole è enorme: dentro ci starebbero circa un milione di Terre!",
+    "nodi": [
+     "grande"
+    ]
+   },
+   {
+    "t": "La sua luce è velocissima, ma impiega circa 8 minuti ad arrivare sulla Terra.",
+    "nodi": [
+     "luce"
+    ]
+   },
+   {
+    "t": "Non guardare mai il Sole direttamente: rovina gli occhi. Non bastano nemmeno gli occhiali da sole normali, e mai con un binocolo!",
+    "nodi": [
+     "occhi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "gas",
+    "scelte": [
+     "idrogeno ed elio",
+     "sabbia e sassi",
+     "acqua e sapone"
+    ]
+   }
+  ],
+  "domande": {
+   "2l6ttn": "stella",
+   "3xmtrp": "stella",
+   "tvcp5a": "gas",
+   "1k2s0mz": "luce",
+   "3dje4h": "grande",
+   "to8j8z": "fusione",
+   "97jnaq": "occhi"
+  },
+  "collegamenti": [
+   "sci-spazio:stelle",
+   "sci-spazio:pianeti",
+   "tecno:energia"
+  ]
+ },
+ "terra": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La Terra",
+   "ic": "🌍",
+   "sotto": "il terzo pianeta dal Sole"
+  },
+  "nodi": [
+   {
+    "id": "rotazione",
+    "n": "24 ore",
+    "ic": "🔄",
+    "sotto": "così c'è il giorno e la notte",
+    "da": "gira su se stessa in"
+   },
+   {
+    "id": "rivoluzione",
+    "n": "un anno",
+    "ic": "☀️",
+    "sotto": "circa 365 giorni, 366 nei bisestili",
+    "da": "gira intorno al Sole in"
+   },
+   {
+    "id": "stagioni",
+    "n": "le stagioni",
+    "ic": "🍂",
+    "sotto": "invertite tra i due emisferi",
+    "da": "ha l'asse inclinato, e così ci sono"
+   },
+   {
+    "id": "solstizi",
+    "n": "solstizi ed equinozi",
+    "ic": "📅",
+    "sotto": "il 21 giugno circa è il giorno più lungo",
+    "da": "segna l'anno con"
+   },
+   {
+    "id": "forma",
+    "n": "una sfera un po' schiacciata",
+    "ic": "⚽",
+    "sotto": "schiacciata ai poli",
+    "da": "ha la forma di"
+   },
+   {
+    "id": "vita",
+    "n": "la vita",
+    "ic": "🌱",
+    "sotto": "circa il 70% della superficie è acqua",
+    "da": "è coperta d'acqua e ospita"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La Terra gira su se stessa in 24 ore. La parte verso il Sole ha il giorno, l'altra la notte. Per questo il Sole sembra muoversi nel cielo.",
+    "nodi": [
+     "rotazione"
+    ]
+   },
+   {
+    "t": "Intanto la Terra gira intorno al Sole: ci mette un anno, circa 365 giorni. Di solito ogni 4 anni c'è un anno bisestile, di 366 giorni.",
+    "nodi": [
+     "rivoluzione"
+    ]
+   },
+   {
+    "t": "Le stagioni ci sono perché l'asse della Terra è inclinato. A gennaio, in Italia, è inverno. Quando da noi è estate, in Australia è inverno.",
+    "nodi": [
+     "stagioni"
+    ]
+   },
+   {
+    "t": "Sorpresa: la Terra è più vicina al Sole a gennaio! Le stagioni dipendono dall'inclinazione, non dalla distanza.",
+    "nodi": [
+     "rivoluzione",
+     "stagioni"
+    ]
+   },
+   {
+    "t": "Intorno al 21 giugno, in Italia, c'è il giorno più lungo dell'anno. Negli equinozi di primavera e d'autunno giorno e notte durano circa uguale.",
+    "nodi": [
+     "solstizi"
+    ]
+   },
+   {
+    "t": "La Terra è una sfera un po' schiacciata ai poli. Circa il 70% della superficie è coperto dall'acqua. È l'unico pianeta dove sappiamo che esiste la vita.",
+    "v": "La Terra è una sfera un po' schiacciata ai poli. Circa il settanta per cento della superficie è coperto dall'acqua. È l'unico pianeta dove sappiamo che esiste la vita.",
+    "nodi": [
+     "forma",
+     "vita"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "forma",
+    "scelte": [
+     "una sfera un po' schiacciata",
+     "un cubo",
+     "una piramide"
+    ]
+   }
+  ],
+  "domande": {
+   "1u5d31h": "rivoluzione",
+   "1s7yswy": "rotazione",
+   "1kklq0s": "rotazione",
+   "6b6j6h": "stagioni",
+   "llm1h7": "stagioni",
+   "u7sf3x": "stagioni",
+   "7mdkl0": "rotazione",
+   "1nvbth6": "rivoluzione",
+   "1e136gd": "rivoluzione",
+   "1opyxy0": "vita",
+   "egb1pc": "vita",
+   "1ifaq8t": "forma",
+   "1s35yt8": "rivoluzione",
+   "1k52og3": "solstizi",
+   "2d4lxj": "solstizi"
+  },
+  "collegamenti": [
+   "sci-spazio:luna",
+   "geo:coordinate",
+   "geo:clima"
+  ]
+ },
+ "luna": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La Luna",
+   "ic": "🌙",
+   "sotto": "il satellite naturale della Terra"
+  },
+  "nodi": [
+   {
+    "id": "satellite",
+    "n": "Terra",
+    "ic": "🌍",
+    "sotto": "un giro in circa un mese",
+    "da": "gira intorno alla"
+   },
+   {
+    "id": "luce",
+    "n": "la luce del Sole",
+    "ic": "☀️",
+    "sotto": "non ha luce propria",
+    "da": "brilla perché riflette"
+   },
+   {
+    "id": "fasi",
+    "n": "le fasi lunari",
+    "ic": "🌓",
+    "sotto": "nuova, crescente, piena e calante",
+    "da": "cambia forma con"
+   },
+   {
+    "id": "faccia",
+    "n": "la stessa faccia",
+    "ic": "🙂",
+    "sotto": "l'altra non la vediamo dalla Terra",
+    "da": "ci mostra sempre"
+   },
+   {
+    "id": "crateri",
+    "n": "crateri",
+    "ic": "🕳️",
+    "sotto": "senza aria, vento né pioggia",
+    "da": "è coperta di"
+   },
+   {
+    "id": "maree",
+    "n": "le maree",
+    "ic": "🌊",
+    "sotto": "la sua gravità tira l'acqua del mare",
+    "da": "provoca soprattutto"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La Luna è il satellite naturale della Terra: l'unico che abbiamo. Ci gira intorno in circa 27 giorni, più o meno un mese.",
+    "nodi": [
+     "satellite"
+    ]
+   },
+   {
+    "t": "La Luna non ha luce propria: brilla perché riflette la luce del Sole. Dalla Terra vediamo sempre la stessa faccia.",
+    "nodi": [
+     "luce",
+     "faccia"
+    ]
+   },
+   {
+    "t": "Di volta in volta vediamo illuminate parti diverse, e la Luna sembra cambiare forma: sono le fasi lunari. Luna nuova, crescente, piena e calante.",
+    "nodi": [
+     "fasi"
+    ]
+   },
+   {
+    "t": "Con la Luna nuova non vediamo quasi niente: è buia. Con la Luna piena vediamo tutta la faccia illuminata, circa una volta al mese.",
+    "nodi": [
+     "fasi"
+    ]
+   },
+   {
+    "t": "Un proverbio aiuta a leggere il cielo: «gobba a ponente, Luna crescente; gobba a levante, Luna calante».",
+    "nodi": [
+     "fasi"
+    ]
+   },
+   {
+    "t": "Sulla Luna ci sono tanti crateri, lasciati da meteoriti. Non c'è aria, né vento né pioggia: le impronte degli astronauti sono ancora lì.",
+    "nodi": [
+     "crateri"
+    ]
+   },
+   {
+    "t": "Con la sua gravità la Luna tira l'acqua del mare: è lei che provoca soprattutto le maree.",
+    "nodi": [
+     "maree"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "maree",
+    "scelte": [
+     "le maree",
+     "i terremoti",
+     "gli arcobaleni"
+    ]
+   }
+  ],
+  "domande": {
+   "1v9pm4n": "satellite",
+   "50ze3c": "satellite",
+   "bry1ca": "fasi",
+   "1rvqqxh": "satellite",
+   "1uxko7i": "crateri",
+   "1ebabiw": "fasi",
+   "dkizoy": "fasi",
+   "1oohskp": "luce",
+   "1nbvbbr": "faccia",
+   "11ihjah": "crateri",
+   "17pywp4": "maree",
+   "1dbkiqt": "fasi",
+   "1kxd2vc": "fasi"
+  },
+  "collegamenti": [
+   "sci-spazio:eclissi",
+   "sci-spazio:gravita",
+   "sci-spazio:esplorazione"
+  ]
+ },
+ "eclissi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le eclissi",
+   "ic": "🌑",
+   "sotto": "quando Sole, Terra e Luna si allineano"
+  },
+  "nodi": [
+   {
+    "id": "sole",
+    "n": "la Luna copre il Sole",
+    "ic": "🌘",
+    "sotto": "la Luna passa tra Sole e Terra",
+    "da": "di Sole avvengono quando"
+   },
+   {
+    "id": "nuova",
+    "n": "la Luna nuova",
+    "ic": "🌑",
+    "sotto": "la Luna è tra Sole e Terra",
+    "da": "di Sole capitano solo con"
+   },
+   {
+    "id": "occhiali",
+    "n": "occhiali speciali per eclissi",
+    "ic": "🥽",
+    "sotto": "quelli da sole non bastano",
+    "da": "di Sole si guardano solo con"
+   },
+   {
+    "id": "luna",
+    "n": "la Luna entra nell'ombra della Terra",
+    "ic": "🔴",
+    "sotto": "diventa scura o rossastra",
+    "da": "di Luna avvengono quando"
+   },
+   {
+    "id": "piena",
+    "n": "la Luna piena",
+    "ic": "🌕",
+    "sotto": "la Terra è tra Sole e Luna",
+    "da": "di Luna capitano solo con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "In un'eclissi di Sole la Luna passa davanti al Sole e lo copre. Di giorno sembra quasi sera!",
+    "nodi": [
+     "sole"
+    ]
+   },
+   {
+    "t": "Per coprire il Sole la Luna deve stare tra Sole e Terra: succede solo con la Luna nuova.",
+    "nodi": [
+     "nuova"
+    ]
+   },
+   {
+    "t": "Un'eclissi di Sole si osserva solo con occhiali speciali per eclissi, insieme a un adulto. Gli occhiali da sole normali non bastano.",
+    "nodi": [
+     "occhiali"
+    ]
+   },
+   {
+    "t": "In un'eclissi di Luna la Terra sta tra Sole e Luna. La Luna entra nell'ombra della Terra e diventa scura o rossastra.",
+    "nodi": [
+     "luna"
+    ]
+   },
+   {
+    "t": "Perciò un'eclissi di Luna può avvenire solo con la Luna piena.",
+    "nodi": [
+     "piena"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "piena",
+    "scelte": [
+     "la Luna piena",
+     "la neve",
+     "l'arcobaleno"
+    ]
+   }
+  ],
+  "domande": {
+   "egaa4e": "sole",
+   "1jbppq4": "luna",
+   "1telvoi": "occhiali",
+   "1cfnngi": "nuova",
+   "fcvmcf": "piena"
+  },
+  "collegamenti": [
+   "sci-spazio:luna",
+   "sci-spazio:sole",
+   "sci-spazio:terra"
+  ]
+ },
+ "stelle": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le stelle",
+   "ic": "⭐",
+   "sotto": "soli lontanissimi"
+  },
+  "nodi": [
+   {
+    "id": "luce",
+    "n": "una luce partita tantissimi anni fa",
+    "ic": "⏳",
+    "sotto": "di giorno ci sono, ma il Sole le copre",
+    "da": "ci mandano"
+   },
+   {
+    "id": "tremolio",
+    "n": "l'aria che si muove",
+    "ic": "✨",
+    "sotto": "sembrano fare l'occhiolino",
+    "da": "sembrano tremolare per"
+   },
+   {
+    "id": "colori",
+    "n": "colori diversi",
+    "ic": "🔵",
+    "sotto": "blu più calde, rosse meno calde",
+    "da": "hanno"
+   },
+   {
+    "id": "sirio",
+    "n": "Sirio",
+    "ic": "💎",
+    "sotto": "la più luminosa del cielo notturno",
+    "da": "di notte, la più luminosa è"
+   },
+   {
+    "id": "costellazioni",
+    "n": "costellazioni",
+    "ic": "✴️",
+    "sotto": "come Orione e l'Orsa Maggiore",
+    "da": "formano disegni chiamati"
+   },
+   {
+    "id": "polare",
+    "n": "la Stella Polare",
+    "ic": "🧭",
+    "sotto": "nell'Orsa Minore",
+    "da": "indicano il nord con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Le stelle sono soli lontanissimi. Di giorno ci sono anche loro, ma la luce del Sole è troppo forte e non le vediamo.",
+    "nodi": [
+     "luce"
+    ]
+   },
+   {
+    "t": "Sono così lontane che la luce che vedi stasera può essere partita tantissimi anni fa. Sembrano tremolare perché l'aria della Terra si muove.",
+    "nodi": [
+     "luce",
+     "tremolio"
+    ]
+   },
+   {
+    "t": "Le stelle hanno colori diversi: quelle blu sono più calde, quelle rosse meno calde. La più luminosa del cielo notturno è Sirio.",
+    "nodi": [
+     "colori",
+     "sirio"
+    ]
+   },
+   {
+    "t": "Le costellazioni sono gruppi di stelle che sembrano formare disegni. Orione, il cacciatore, ha una cintura di tre stelle in fila.",
+    "nodi": [
+     "costellazioni"
+    ]
+   },
+   {
+    "t": "Nell'Orsa Maggiore sette stelle luminose formano il Grande Carro.",
+    "nodi": [
+     "costellazioni"
+    ]
+   },
+   {
+    "t": "La Stella Polare indica il nord. Si trova nell'Orsa Minore, il piccolo carro: è la punta della sua coda.",
+    "nodi": [
+     "polare"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "polare",
+    "scelte": [
+     "la Stella Polare",
+     "la Luna piena",
+     "il Sole"
+    ]
+   }
+  ],
+  "domande": {
+   "1durivl": "polare",
+   "1enjz9m": "costellazioni",
+   "usdh7p": "costellazioni",
+   "u98eez": "luce",
+   "upqvh7": "tremolio",
+   "weh5da": "colori",
+   "xjkoh0": "luce",
+   "1nj9w5": "sirio",
+   "1ivu558": "polare",
+   "zy7mut": "costellazioni"
+  },
+  "collegamenti": [
+   "sci-spazio:universo",
+   "sci-spazio:sole",
+   "geo:carte"
+  ]
+ },
+ "universo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'universo",
+   "ic": "🌌",
+   "sotto": "pieno di galassie"
+  },
+  "nodi": [
+   {
+    "id": "vialattea",
+    "n": "la Via Lattea",
+    "ic": "🌀",
+    "sotto": "a spirale, con centinaia di miliardi di stelle",
+    "da": "contiene la nostra galassia:"
+   },
+   {
+    "id": "andromeda",
+    "n": "Andromeda",
+    "ic": "🌌",
+    "sotto": "una grande galassia vicina",
+    "da": "contiene, vicino a noi,"
+   },
+   {
+    "id": "nebulose",
+    "n": "nebulose",
+    "ic": "☁️",
+    "sotto": "nubi di gas e polvere, culle di stelle",
+    "da": "contiene nubi chiamate"
+   },
+   {
+    "id": "buchi",
+    "n": "i buchi neri",
+    "ic": "⚫",
+    "sotto": "nemmeno la luce può scappare",
+    "da": "contiene anche"
+   },
+   {
+    "id": "annoluce",
+    "n": "anni luce",
+    "ic": "📏",
+    "sotto": "la distanza che la luce fa in un anno",
+    "da": "si misura in"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La nostra galassia si chiama Via Lattea. Ha la forma di una spirale, e il Sole è solo una delle sue centinaia di miliardi di stelle.",
+    "nodi": [
+     "vialattea"
+    ]
+   },
+   {
+    "t": "Vicino a noi c'è un'altra grande galassia: Andromeda. In un cielo buio si vede a occhio nudo, come una macchiolina chiara.",
+    "nodi": [
+     "andromeda"
+    ]
+   },
+   {
+    "t": "La luce è velocissima: circa 300.000 km al secondo. Un anno luce è la distanza che la luce fa in un anno: misura le distanze, non il tempo.",
+    "v": "La luce è velocissima: circa trecentomila chilometri al secondo. Un anno luce è la distanza che la luce fa in un anno: misura le distanze, non il tempo.",
+    "nodi": [
+     "annoluce"
+    ]
+   },
+   {
+    "t": "Le nebulose sono nubi di gas e polvere. In molte di loro nascono nuove stelle.",
+    "nodi": [
+     "nebulose"
+    ]
+   },
+   {
+    "t": "Un buco nero è un posto da cui nemmeno la luce può scappare, perché la sua gravità è fortissima. Può nascere quando una stella enorme collassa.",
+    "nodi": [
+     "buchi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "vialattea",
+    "scelte": [
+     "la Via Lattea",
+     "la Via Emilia",
+     "la Via dei Fori"
+    ]
+   }
+  ],
+  "domande": {
+   "1f4l47k": "vialattea",
+   "nnobqg": "buchi",
+   "tkpsje": "vialattea",
+   "71vnsl": "andromeda",
+   "k4l2w0": "annoluce",
+   "7vyiuq": "annoluce",
+   "1c6fa4l": "nebulose"
+  },
+  "collegamenti": [
+   "sci-spazio:scala",
+   "sci-spazio:stelle",
+   "sci-spazio:astronomi"
+  ]
+ },
+ "comete": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Nel sistema solare",
+   "ic": "☄️",
+   "sotto": "viaggiano tanti corpi piccoli"
+  },
+  "nodi": [
+   {
+    "id": "cometa",
+    "n": "le comete",
+    "ic": "☄️",
+    "sotto": "palle di ghiaccio e polvere con la coda",
+    "da": "viaggiano"
+   },
+   {
+    "id": "coda",
+    "n": "la coda delle comete",
+    "ic": "🎏",
+    "sotto": "punta lontano dal Sole",
+    "da": "il vento del Sole spinge"
+   },
+   {
+    "id": "asteroidi",
+    "n": "asteroidi",
+    "ic": "🪨",
+    "sotto": "piccoli come sassi o grandi come montagne",
+    "da": "girano rocce chiamate"
+   },
+   {
+    "id": "fascia",
+    "n": "la fascia degli asteroidi",
+    "ic": "💍",
+    "sotto": "milioni di asteroidi",
+    "da": "tra Marte e Giove c'è"
+   },
+   {
+    "id": "meteore",
+    "n": "stelle cadenti",
+    "ic": "🌠",
+    "sotto": "bruciano nell'aria: sono meteore",
+    "da": "i sassolini diventano"
+   },
+   {
+    "id": "perseidi",
+    "n": "le Perseidi",
+    "ic": "🎆",
+    "sotto": "le «lacrime di San Lorenzo»",
+    "da": "ad agosto arrivano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Una cometa è una palla di ghiaccio e polvere. Quando si avvicina al Sole, il ghiaccio si scalda e forma una lunga coda luminosa.",
+    "nodi": [
+     "cometa"
+    ]
+   },
+   {
+    "t": "Il vento e la luce del Sole spingono la coda: punta sempre lontano dal Sole.",
+    "nodi": [
+     "coda"
+    ]
+   },
+   {
+    "t": "Gli asteroidi sono rocce che girano intorno al Sole, piccole come sassi o grandi come montagne. Milioni di asteroidi formano la fascia tra Marte e Giove.",
+    "nodi": [
+     "asteroidi",
+     "fascia"
+    ]
+   },
+   {
+    "t": "Una «stella cadente» non è una stella: è un sassolino spaziale che brucia nell'aria. Si chiama meteora.",
+    "nodi": [
+     "meteore"
+    ]
+   },
+   {
+    "t": "Ad agosto si vedono tante stelle cadenti: sono le Perseidi, chiamate anche «lacrime di San Lorenzo».",
+    "nodi": [
+     "perseidi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "fascia",
+    "scelte": [
+     "la fascia degli asteroidi",
+     "la fascia dei capelli",
+     "la fascia del pigiama"
+    ]
+   }
+  ],
+  "domande": {
+   "1fzm2rp": "cometa",
+   "p0bh63": "meteore",
+   "ao7krd": "asteroidi",
+   "8xlbav": "fascia",
+   "ha8c2f": "coda",
+   "1nuynwz": "perseidi"
+  },
+  "collegamenti": [
+   "sci-spazio:pianeti",
+   "sci-spazio:atmosfera",
+   "sci-spazio:gravita"
+  ]
+ },
+ "gravita": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La gravità",
+   "ic": "🍎",
+   "sotto": "la forza che attira le cose"
+  },
+  "nodi": [
+   {
+    "id": "terra",
+    "n": "Terra",
+    "ic": "🌍",
+    "sotto": "attira tutto verso il suo centro",
+    "da": "ci tiene attaccati alla"
+   },
+   {
+    "id": "newton",
+    "n": "Isaac Newton",
+    "ic": "🧑‍🔬",
+    "sotto": "si racconta: pensando a una mela",
+    "da": "fu spiegata da"
+   },
+   {
+    "id": "orbite",
+    "n": "le orbite",
+    "ic": "🔁",
+    "sotto": "il percorso di un corpo intorno a un altro",
+    "da": "fa nascere"
+   },
+   {
+    "id": "luna",
+    "n": "più debole",
+    "ic": "🌙",
+    "sotto": "si pesa circa sei volte meno",
+    "da": "sulla Luna è"
+   },
+   {
+    "id": "piuma",
+    "n": "martello e piuma insieme",
+    "ic": "🪶",
+    "sotto": "senza aria che frena",
+    "da": "sulla Luna fa cadere"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La forza di gravità ci tiene attaccati alla Terra: attira tutto verso il suo centro.",
+    "nodi": [
+     "terra"
+    ]
+   },
+   {
+    "t": "Lo scienziato Isaac Newton spiegò la legge della gravità universale. Si racconta che ci pensò vedendo cadere una mela.",
+    "nodi": [
+     "newton"
+    ]
+   },
+   {
+    "t": "Un'orbita è il percorso di un corpo intorno a un altro. La gravità tiene la Luna intorno alla Terra, e la Terra intorno al Sole.",
+    "nodi": [
+     "orbite"
+    ]
+   },
+   {
+    "t": "Sulla Luna la gravità è più debole: si pesa circa sei volte meno. Per questo gli astronauti saltavano così in alto!",
+    "nodi": [
+     "luna"
+    ]
+   },
+   {
+    "t": "Sulla Luna non c'è aria che frena. Un astronauta lasciò cadere insieme un martello e una piuma: arrivarono a terra insieme!",
+    "nodi": [
+     "piuma"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "newton",
+    "scelte": [
+     "Isaac Newton",
+     "Cappuccetto Rosso",
+     "Pinocchio"
+    ]
+   }
+  ],
+  "domande": {
+   "umtefr": "luna",
+   "8l7ekh": "terra",
+   "1lc7icz": "orbite",
+   "qtoba5": "newton",
+   "1ja87ns": "piuma"
+  },
+  "collegamenti": [
+   "sci-spazio:luna",
+   "sci-spazio:astronomi",
+   "sci-spazio:esplorazione"
+  ]
+ },
+ "esplorazione": {
+  "tipo": "linea",
+  "centro": {
+   "n": "L'esplorazione dello spazio",
+   "ic": "🚀",
+   "sotto": "razzi, astronauti e robot"
+  },
+  "nodi": [
+   {
+    "id": "sputnik",
+    "anno": 1957,
+    "n": "parte lo Sputnik",
+    "ic": "🛰️",
+    "sotto": "il primo satellite artificiale",
+    "da": "nel 1957"
+   },
+   {
+    "id": "gagarin",
+    "anno": 1961,
+    "n": "vola Jurij Gagarin",
+    "ic": "👨‍🚀",
+    "sotto": "il primo essere umano nello spazio",
+    "da": "nel 1961"
+   },
+   {
+    "id": "tereskova",
+    "anno": 1963,
+    "n": "vola Valentina Tereškova",
+    "ic": "👩‍🚀",
+    "sotto": "la prima donna nello spazio",
+    "da": "nel 1963"
+   },
+   {
+    "id": "apollo",
+    "anno": 1969,
+    "n": "Apollo 11 arriva sulla Luna",
+    "ic": "🌕",
+    "sotto": "Armstrong e Aldrin camminano sulla Luna",
+    "da": "nel 1969"
+   },
+   {
+    "id": "rover",
+    "anno": 1997,
+    "n": "arriva su Marte il primo rover della NASA",
+    "ic": "🤖",
+    "sotto": "robot con le ruote",
+    "da": "nel 1997"
+   },
+   {
+    "id": "iss",
+    "anno": 1998,
+    "n": "nasce la Stazione Spaziale",
+    "ic": "🏠",
+    "sotto": "costruita da molti paesi insieme",
+    "da": "dal 1998"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Per salire, un razzo spinge con forza i gas verso il basso. Nel 1957 un razzo portò in orbita lo Sputnik, il primo satellite artificiale.",
+    "nodi": [
+     "sputnik"
+    ]
+   },
+   {
+    "t": "Nel 1961 Jurij Gagarin fu il primo essere umano a volare nello spazio. Nel 1963 Valentina Tereškova fu la prima donna nello spazio.",
+    "nodi": [
+     "gagarin",
+     "tereskova"
+    ]
+   },
+   {
+    "t": "Nel 1969 la missione Apollo 11 portò l'uomo sulla Luna. Neil Armstrong fu il primo a camminarci; dopo di lui scese Buzz Aldrin.",
+    "nodi": [
+     "apollo"
+    ]
+   },
+   {
+    "t": "Michael Collins restò in orbita intorno alla Luna. Armstrong disse: «Un piccolo passo per un uomo, un grande balzo per l'umanità».",
+    "nodi": [
+     "apollo"
+    ]
+   },
+   {
+    "t": "Su Marte esplorano i rover: robot con le ruote, che ricevono comandi dalla Terra. Il primo rover della NASA su Marte arrivò nel 1997.",
+    "nodi": [
+     "rover"
+    ]
+   },
+   {
+    "t": "Gli astronauti vivono sulla Stazione Spaziale Internazionale, costruita da molti paesi insieme, a circa 400 km d'altezza. Nel 2014 arrivò Samantha Cristoforetti, prima astronauta italiana.",
+    "v": "Gli astronauti vivono sulla Stazione Spaziale Internazionale, costruita da molti paesi insieme, a circa quattrocento chilometri d'altezza. Nel 2014 arrivò Samantha Cristoforetti, prima astronauta italiana.",
+    "nodi": [
+     "iss"
+    ]
+   },
+   {
+    "t": "Lassù gli astronauti fluttuano perché cadono di continuo intorno alla Terra. Vedono circa 16 albe al giorno. Fuori dalla stazione indossano la tuta spaziale.",
+    "nodi": [
+     "iss"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "apollo",
+    "scelte": [
+     "Apollo 11 arriva sulla Luna",
+     "arrivano i dinosauri",
+     "nasce la televisione"
+    ]
+   }
+  ],
+  "domande": {
+   "lscxl2": "apollo",
+   "1curqv7": "tereskova",
+   "io06pm": "apollo",
+   "6hxxi5": "apollo",
+   "nkolsa": "sputnik",
+   "n042c1": "iss",
+   "1vchedz": "iss",
+   "1d7yi94": "gagarin",
+   "7ebkmf": "gagarin",
+   "1yz5mc2": "sputnik",
+   "1qdqv9s": "tereskova",
+   "yp7jt7": "iss",
+   "7zm5qk": "apollo",
+   "1yhm58q": "apollo",
+   "1wjp6w7": "apollo",
+   "jx1slf": "iss",
+   "2n0mmx": "iss",
+   "16wlyz6": "iss",
+   "hdprs4": "sputnik",
+   "rp8xvw": "rover"
+  },
+  "collegamenti": [
+   "sci-spazio:luna",
+   "sci-spazio:gravita",
+   "tecno:robot"
+  ]
+ },
+ "astronomi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'astronomia",
+   "ic": "🔭",
+   "sotto": "la scienza che studia il cielo"
+  },
+  "nodi": [
+   {
+    "id": "astronomo",
+    "n": "astronomo",
+    "ic": "🧑‍🔬",
+    "sotto": "studia stelle e pianeti",
+    "da": "è il lavoro dell'"
+   },
+   {
+    "id": "telescopio",
+    "n": "il telescopio",
+    "ic": "🔭",
+    "sotto": "fa sembrare vicine le cose lontane",
+    "da": "usa"
+   },
+   {
+    "id": "copernico",
+    "n": "Niccolò Copernico",
+    "ic": "☀️",
+    "sotto": "mise il Sole al centro",
+    "da": "nel Cinquecento cambiò con"
+   },
+   {
+    "id": "galileo",
+    "n": "Galileo Galilei",
+    "ic": "🪐",
+    "sotto": "vide le lune di Giove col cannocchiale",
+    "da": "nel 1610 fece un passo avanti con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'astronomo è lo scienziato che studia stelle e pianeti. L'astronauta invece va nello spazio. L'astrologo fa oroscopi, che non sono scienza.",
+    "nodi": [
+     "astronomo"
+    ]
+   },
+   {
+    "t": "Per guardare le stelle lontane si usa il telescopio: raccoglie tanta luce. Tele vuol dire lontano.",
+    "nodi": [
+     "telescopio"
+    ]
+   },
+   {
+    "t": "Nel Cinquecento l'astronomo Niccolò Copernico mise il Sole al centro dei pianeti: è la Terra che gira intorno al Sole.",
+    "nodi": [
+     "copernico"
+    ]
+   },
+   {
+    "t": "Nel 1610 lo scienziato italiano Galileo Galilei puntò il cannocchiale su Giove. Scoprì quattro lune che gli giravano intorno.",
+    "nodi": [
+     "galileo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "telescopio",
+    "scelte": [
+     "il telescopio",
+     "il frullatore",
+     "l'ombrello"
+    ]
+   }
+  ],
+  "domande": {
+   "yrp3qn": "astronomo",
+   "t7ypj9": "telescopio",
+   "tzm69e": "galileo",
+   "a16nuj": "copernico"
+  },
+  "collegamenti": [
+   "sci-spazio:pianeti",
+   "sci-spazio:esplorazione",
+   "tecno:inventori"
+  ]
+ },
+ "dentro-terra": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il nostro pianeta",
+   "ic": "🌋",
+   "sotto": "dentro è fatto a strati"
+  },
+  "nodi": [
+   {
+    "id": "crosta",
+    "n": "la crosta",
+    "ic": "🍎",
+    "sotto": "sottile come la buccia di una mela",
+    "da": "fuori ha"
+   },
+   {
+    "id": "mantello",
+    "n": "il mantello",
+    "ic": "🧥",
+    "sotto": "tra la crosta e il nucleo",
+    "da": "in mezzo ha"
+   },
+   {
+    "id": "nucleo",
+    "n": "il nucleo",
+    "ic": "🔥",
+    "sotto": "esterno liquido, interno solido",
+    "da": "al centro ha"
+   },
+   {
+    "id": "placche",
+    "n": "placche",
+    "ic": "🧩",
+    "sotto": "scontrandosi hanno formato le Alpi",
+    "da": "ha una crosta divisa in"
+   },
+   {
+    "id": "vulcani",
+    "n": "i vulcani",
+    "ic": "🌋",
+    "sotto": "il magma esce dal cratere come lava",
+    "da": "ha"
+   },
+   {
+    "id": "terremoti",
+    "n": "terremoti",
+    "ic": "📈",
+    "sotto": "si registrano con il sismografo",
+    "da": "trema con i"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La Terra è fatta a strati. Fuori c'è la crosta, sottile come la buccia di una mela. In mezzo, tra crosta e nucleo, c'è il mantello.",
+    "nodi": [
+     "crosta",
+     "mantello"
+    ]
+   },
+   {
+    "t": "Al centro c'è il nucleo. Il nucleo esterno è liquido, il nucleo interno è solido.",
+    "nodi": [
+     "nucleo"
+    ]
+   },
+   {
+    "t": "La crosta è divisa in grandi placche. Due placche si sono spinte una contro l'altra per milioni di anni: così si sono formate le Alpi.",
+    "nodi": [
+     "placche"
+    ]
+   },
+   {
+    "t": "Sotto terra la roccia fusa si chiama magma; quando esce dal vulcano diventa lava. L'apertura in cima al vulcano è il cratere.",
+    "nodi": [
+     "vulcani"
+    ]
+   },
+   {
+    "t": "In Italia ci sono vulcani famosi: l'Etna, in Sicilia, e il Vesuvio, vicino a Napoli.",
+    "nodi": [
+     "vulcani"
+    ]
+   },
+   {
+    "t": "Nei terremoti la terra trema. Le scosse si registrano con il sismografo. Se sei in casa, riparati sotto un tavolo robusto.",
+    "nodi": [
+     "terremoti"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "mantello",
+    "scelte": [
+     "il mantello",
+     "il cappello",
+     "la sciarpa"
+    ]
+   }
+  ],
+  "domande": {
+   "178qysx": "crosta",
+   "bhap6n": "mantello",
+   "ur3el9": "nucleo",
+   "1qn9z3c": "placche",
+   "1yl8nk": "vulcani",
+   "vzin1n": "vulcani",
+   "3lhrb0": "vulcani",
+   "1s0at2f": "vulcani",
+   "b1ar0r": "terremoti",
+   "1wit8ge": "terremoti"
+  },
+  "collegamenti": [
+   "geo:montagne",
+   "sci-spazio:rocce",
+   "civica:emergenze"
+  ]
+ },
+ "rocce": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le rocce",
+   "ic": "🪨",
+   "sotto": "nascono in modi diversi"
+  },
+  "nodi": [
+   {
+    "id": "minerali",
+    "n": "minerali",
+    "ic": "💎",
+    "sotto": "il più duro è il diamante",
+    "da": "sono fatte di"
+   },
+   {
+    "id": "magmatiche",
+    "n": "magmatiche",
+    "ic": "🔥",
+    "sotto": "magma raffreddato, come il granito",
+    "da": "possono essere"
+   },
+   {
+    "id": "sedimentarie",
+    "n": "sedimentarie",
+    "ic": "📚",
+    "sotto": "a strati, con i fossili",
+    "da": "possono essere anche"
+   },
+   {
+    "id": "metamorfiche",
+    "n": "metamorfiche",
+    "ic": "🦋",
+    "sotto": "trasformate da calore e pressione, come il marmo",
+    "da": "possono essere infine"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Le rocce sono fatte di minerali. Il minerale naturale più duro è il diamante: graffia quasi tutto.",
+    "nodi": [
+     "minerali"
+    ]
+   },
+   {
+    "t": "Le rocce magmatiche nascono dal magma raffreddato. Il granito, per esempio, è magma che si è raffreddato piano sotto terra.",
+    "nodi": [
+     "magmatiche"
+    ]
+   },
+   {
+    "t": "Le rocce sedimentarie si formano strato su strato, come le pagine di un libro. Lì si trovano più spesso i fossili.",
+    "nodi": [
+     "sedimentarie"
+    ]
+   },
+   {
+    "t": "Le rocce metamorfiche sono state trasformate da calore e pressione. Il marmo nasce così, dal calcare.",
+    "nodi": [
+     "metamorfiche"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "minerali",
+    "scelte": [
+     "minerali",
+     "biscotti",
+     "piume"
+    ]
+   }
+  ],
+  "domande": {
+   "1cnk7ei": "magmatiche",
+   "1hk0n6h": "metamorfiche",
+   "ecvpfi": "sedimentarie",
+   "mylabt": "minerali"
+  },
+  "collegamenti": [
+   "sci-spazio:dentro-terra",
+   "geo:montagne",
+   "tecno:materiali"
+  ]
+ },
+ "atmosfera": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'atmosfera",
+   "ic": "🌤️",
+   "sotto": "l'aria che avvolge la Terra"
+  },
+  "nodi": [
+   {
+    "id": "azoto",
+    "n": "azoto",
+    "ic": "🫧",
+    "sotto": "circa quattro parti su cinque",
+    "da": "è fatta soprattutto di"
+   },
+   {
+    "id": "troposfera",
+    "n": "la troposfera",
+    "ic": "🏠",
+    "sotto": "dove viviamo, con nuvole e meteo",
+    "da": "in basso ha"
+   },
+   {
+    "id": "ozono",
+    "n": "lo strato di ozono",
+    "ic": "🛡️",
+    "sotto": "ferma gran parte dei raggi ultravioletti più pericolosi",
+    "da": "più in alto ha"
+   },
+   {
+    "id": "colori",
+    "n": "azzurro e, al tramonto, rosso",
+    "ic": "🌅",
+    "sotto": "l'aria sparpaglia la luce del Sole",
+    "da": "colora il cielo di"
+   },
+   {
+    "id": "aurora",
+    "n": "l'aurora boreale",
+    "ic": "🌌",
+    "sotto": "luci colorate nel cielo del Nord",
+    "da": "si illumina con"
+   },
+   {
+    "id": "serra",
+    "n": "i gas serra",
+    "ic": "🧣",
+    "sotto": "una coperta intorno alla Terra",
+    "da": "trattiene il calore con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'atmosfera è l'aria che avvolge la Terra. Il gas più abbondante è l'azoto, circa quattro parti su cinque. L'ossigeno è circa un quinto.",
+    "nodi": [
+     "azoto"
+    ]
+   },
+   {
+    "t": "Noi viviamo nella troposfera, con le nuvole e il meteo. Il meteo racconta il tempo di questi giorni; il clima, quello di molti anni.",
+    "nodi": [
+     "troposfera"
+    ]
+   },
+   {
+    "t": "Più in alto c'è lo strato di ozono: ci protegge dai raggi ultravioletti del Sole.",
+    "nodi": [
+     "ozono"
+    ]
+   },
+   {
+    "t": "Di giorno il cielo è azzurro, perché l'aria sparpaglia la luce azzurra del Sole. Al tramonto la luce attraversa più aria e il cielo diventa rosso e arancione.",
+    "nodi": [
+     "colori"
+    ]
+   },
+   {
+    "t": "Vicino al Polo Nord, particelle che arrivano dal Sole fanno brillare l'aria: sono luci colorate chiamate aurora boreale.",
+    "nodi": [
+     "aurora"
+    ]
+   },
+   {
+    "t": "I gas serra trattengono il calore, come una coperta. Se la coperta diventa troppo spessa, la Terra si scalda troppo.",
+    "nodi": [
+     "serra"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "azoto",
+    "scelte": [
+     "azoto",
+     "cioccolato",
+     "sabbia"
+    ]
+   }
+  ],
+  "domande": {
+   "1rvz1uo": "colori",
+   "1hwp9ck": "colori",
+   "1glsndr": "aurora",
+   "19vaake": "azoto",
+   "n1ldtn": "ozono",
+   "1vecnoc": "troposfera",
+   "5i9tow": "troposfera",
+   "1yt1vy9": "serra"
+  },
+  "collegamenti": [
+   "sci-spazio:meteo",
+   "geo:clima",
+   "civica:ambiente"
+  ]
+ },
+ "meteo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il tempo atmosferico",
+   "ic": "⛈️",
+   "sotto": "nuvole, pioggia, vento e temporali"
+  },
+  "nodi": [
+   {
+    "id": "nuvole",
+    "n": "cumuli, cirri e cumulonembi",
+    "ic": "☁️",
+    "sotto": "batuffoli, piume e torri scure",
+    "da": "ha nuvole diverse:"
+   },
+   {
+    "id": "cadono",
+    "n": "pioggia, grandine e neve",
+    "ic": "🌨️",
+    "sotto": "un fiocco di neve ha di solito sei punte",
+    "da": "fa cadere"
+   },
+   {
+    "id": "suolo",
+    "n": "nebbia e rugiada",
+    "ic": "🌫️",
+    "sotto": "acqua in goccioline vicino a terra",
+    "da": "vicino al suolo porta"
+   },
+   {
+    "id": "vento",
+    "n": "il vento",
+    "ic": "🌬️",
+    "sotto": "si misura con l'anemometro",
+    "da": "muove l'aria con"
+   },
+   {
+    "id": "arcobaleno",
+    "n": "l'arcobaleno",
+    "ic": "🌈",
+    "sotto": "rosso fuori, viola dentro",
+    "da": "dopo la pioggia regala"
+   },
+   {
+    "id": "fulmini",
+    "n": "fulmini e tuoni",
+    "ic": "⚡",
+    "sotto": "il parafulmine porta la scarica nel terreno",
+    "da": "nei temporali porta"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I cumuli sono nuvole a batuffoli bianchi. I cirri sono alti e sottili, come piume. I cumulonembi sono torri scure: portano i temporali.",
+    "nodi": [
+     "nuvole"
+    ]
+   },
+   {
+    "t": "Dalle nuvole cade la pioggia. La grandine è fatta di palline di ghiaccio. Un fiocco di neve, di solito, ha sei punte.",
+    "nodi": [
+     "cadono"
+    ]
+   },
+   {
+    "t": "La nebbia è una nuvola vicino al suolo. La rugiada sono goccioline che di notte si formano sull'erba.",
+    "nodi": [
+     "suolo"
+    ]
+   },
+   {
+    "t": "Il vento è aria in movimento. La sua velocità si misura con l'anemometro.",
+    "nodi": [
+     "vento"
+    ]
+   },
+   {
+    "t": "Nell'arcobaleno il rosso sta nella parte più esterna. A volte sopra appare un secondo arcobaleno, più debole, con i colori in ordine invertito.",
+    "nodi": [
+     "arcobaleno"
+    ]
+   },
+   {
+    "t": "Il fulmine è una grande scarica elettrica. Scalda l'aria, che si allarga di colpo: ecco il tuono. Benjamin Franklin inventò il parafulmine.",
+    "nodi": [
+     "fulmini"
+    ]
+   },
+   {
+    "t": "Durante un temporale all'aperto non ripararti sotto un albero isolato: meglio entrare in un edificio.",
+    "nodi": [
+     "fulmini"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "vento",
+    "scelte": [
+     "il vento",
+     "il formaggio",
+     "la matita"
+    ]
+   }
+  ],
+  "domande": {
+   "16i355d": "nuvole",
+   "zv4vch": "nuvole",
+   "1wlmdn6": "nuvole",
+   "15f2q1p": "cadono",
+   "1tean27": "cadono",
+   "1ptxv5i": "suolo",
+   "jma9g2": "suolo",
+   "b9u5ah": "vento",
+   "1vwxgou": "vento",
+   "abmiw8": "arcobaleno",
+   "1uje88h": "arcobaleno",
+   "a3erqz": "fulmini",
+   "pfviu3": "fulmini",
+   "hp3t5x": "fulmini",
+   "1aww8h3": "fulmini"
+  },
+  "collegamenti": [
+   "sci-spazio:atmosfera",
+   "geo:clima",
+   "arte:colori"
+  ]
  }
 }

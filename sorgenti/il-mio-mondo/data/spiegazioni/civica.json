@@ -589,5 +589,1316 @@
    "civica:convivenza",
    "civica:cura"
   ]
+ },
+ "simboli": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La Repubblica",
+   "ic": "🇮🇹",
+   "sotto": "feste e simboli di tutti"
+  },
+  "nodi": [
+   {
+    "id": "bandiera",
+    "n": "il Tricolore",
+    "ic": "🇮🇹",
+    "sotto": "verde, bianco e rosso, a bande verticali",
+    "da": "ha come bandiera"
+   },
+   {
+    "id": "inno",
+    "n": "il Canto degli Italiani",
+    "ic": "🎵",
+    "sotto": "testo di Goffredo Mameli, musica di Michele Novaro",
+    "da": "ha come inno"
+   },
+   {
+    "id": "emblema",
+    "n": "l'emblema",
+    "ic": "⭐",
+    "sotto": "stella, ruota dentata, ulivo e quercia",
+    "da": "ha un simbolo ufficiale:"
+   },
+   {
+    "id": "giugno",
+    "n": "il 2 giugno",
+    "ic": "🎉",
+    "sotto": "Festa della Repubblica",
+    "da": "festeggia la sua nascita"
+   },
+   {
+    "id": "aprile",
+    "n": "il 25 aprile",
+    "ic": "🕊️",
+    "sotto": "Festa della Liberazione",
+    "da": "ricorda la Liberazione"
+   },
+   {
+    "id": "giornate",
+    "n": "altre giornate",
+    "ic": "📅",
+    "sotto": "17 marzo, 1° maggio, 27 gennaio",
+    "da": "celebra anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La nostra bandiera è il Tricolore: verde, bianco e rosso, a tre bande verticali uguali. Tri vuol dire tre. Il verde sta vicino all'asta.",
+    "nodi": [
+     "bandiera"
+    ]
+   },
+   {
+    "t": "Il primo tricolore nacque a Reggio Emilia, il 7 gennaio 1797. Oggi lo descrive l'articolo 12 della Costituzione. Le Frecce Tricolori lo disegnano nel cielo.",
+    "nodi": [
+     "bandiera"
+    ]
+   },
+   {
+    "t": "Il nostro inno si chiama ufficialmente Il Canto degli Italiani. Il testo lo scrisse Goffredo Mameli nel 1847. Comincia così: Fratelli d'Italia.",
+    "nodi": [
+     "inno"
+    ]
+   },
+   {
+    "t": "Al centro dell'emblema ci sono una stella e una ruota dentata. Intorno, rami d'ulivo e di quercia. La ruota ricorda il lavoro, l'ulivo la pace, la quercia la forza.",
+    "nodi": [
+     "emblema"
+    ]
+   },
+   {
+    "t": "Il 2 giugno è la Festa della Repubblica. Ricorda il referendum del 1946, quando gli italiani scelsero la Repubblica.",
+    "nodi": [
+     "giugno"
+    ]
+   },
+   {
+    "t": "Il 25 aprile è la Festa della Liberazione: ricorda la liberazione dell'Italia, nel 1945.",
+    "nodi": [
+     "aprile"
+    ]
+   },
+   {
+    "t": "Altre date importanti: il 17 marzo l'Unità d'Italia, nata nel 1861. Il 1° maggio la Festa dei lavoratori. Il 27 gennaio il Giorno della Memoria.",
+    "v": "Altre date importanti: il 17 marzo l'Unità d'Italia, nata nel 1861. Il primo maggio la Festa dei lavoratori. Il 27 gennaio il Giorno della Memoria.",
+    "nodi": [
+     "giornate"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "bandiera",
+    "scelte": [
+     "il Tricolore",
+     "il pallone",
+     "l'ombrello"
+    ]
+   },
+   {
+    "nodo": "inno",
+    "scelte": [
+     "il Canto degli Italiani",
+     "la ninna nanna",
+     "la canzone di Natale"
+    ]
+   }
+  ],
+  "domande": {
+   "1y7sclu": "giugno",
+   "c42aa3": "bandiera",
+   "1a5egi5": "aprile",
+   "1xjst57": "giornate",
+   "1qfkn99": "bandiera",
+   "cwjs03": "giornate",
+   "kuthk6": "bandiera",
+   "hxloa4": "inno",
+   "n653fe": "emblema",
+   "16dyr0v": "bandiera",
+   "2uqhf3": "bandiera",
+   "11d7vmc": "bandiera",
+   "1fcjua7": "giornate"
+  },
+  "collegamenti": [
+   "civica:costituzione",
+   "musica:inni",
+   "civica:memoria"
+  ]
+ },
+ "costituzione": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La Costituzione",
+   "ic": "📜",
+   "sotto": "la legge fondamentale dello Stato"
+  },
+  "nodi": [
+   {
+    "id": "legge",
+    "n": "la legge più importante",
+    "ic": "⚖️",
+    "sotto": "tutte le altre leggi la rispettano",
+    "da": "è"
+   },
+   {
+    "id": "costituente",
+    "n": "l'Assemblea Costituente",
+    "ic": "🗳️",
+    "sotto": "eletta nel 1946; in vigore dal 1948",
+    "da": "fu scritta da"
+   },
+   {
+    "id": "articoli",
+    "n": "139 articoli",
+    "ic": "📖",
+    "sotto": "più 18 disposizioni transitorie e finali",
+    "da": "contiene"
+   },
+   {
+    "id": "principi",
+    "n": "12 principi fondamentali",
+    "ic": "🌳",
+    "sotto": "art. 1: Repubblica democratica fondata sul lavoro",
+    "da": "comincia con"
+   },
+   {
+    "id": "tesori",
+    "n": "il paesaggio e la pace",
+    "ic": "🏞️",
+    "sotto": "articoli 9 e 11",
+    "da": "difende"
+   },
+   {
+    "id": "diritti",
+    "n": "diritti e doveri",
+    "ic": "🤝",
+    "sotto": "scuola, salute, parola, voto, famiglia",
+    "da": "elenca"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il 2 giugno 1946 gli italiani votarono per scegliere la Repubblica. Per la prima volta votarono anche le donne, in tutta Italia.",
+    "nodi": [
+     "costituente"
+    ]
+   },
+   {
+    "t": "Quel giorno elessero anche l'Assemblea Costituente, che scrisse la Costituzione. È la legge fondamentale dello Stato, in vigore dal 1° gennaio 1948: tutte le altre leggi devono rispettarla.",
+    "v": "Quel giorno elessero anche l'Assemblea Costituente, che scrisse la Costituzione. È la legge fondamentale dello Stato, in vigore dal primo gennaio 1948: tutte le altre leggi devono rispettarla.",
+    "nodi": [
+     "costituente",
+     "legge"
+    ]
+   },
+   {
+    "t": "Ha 139 articoli, più 18 disposizioni transitorie e finali. L'ultimo, il 139, dice che la forma repubblicana non si può mai cambiare.",
+    "nodi": [
+     "articoli"
+    ]
+   },
+   {
+    "t": "I primi 12 articoli sono i principi fondamentali. L'articolo 1 dice: l'Italia è una Repubblica democratica fondata sul lavoro. La sovranità appartiene al popolo.",
+    "nodi": [
+     "principi"
+    ]
+   },
+   {
+    "t": "L'articolo 2 protegge i diritti inviolabili di ogni persona. Il 3: pari dignità e tutti uguali davanti alla legge. Il 4: diritto al lavoro. Il 5: Repubblica una e indivisibile.",
+    "nodi": [
+     "principi"
+    ]
+   },
+   {
+    "t": "L'articolo 9 tutela il paesaggio e il patrimonio artistico, e dal 2022 anche l'ambiente e gli animali. L'articolo 11: l'Italia ripudia la guerra come offesa agli altri popoli.",
+    "nodi": [
+     "tesori"
+    ]
+   },
+   {
+    "t": "Altri diritti: dire liberamente ciò che si pensa, la salute, la scuola aperta a tutti, il voto libero e segreto. E i genitori hanno il dovere di educare i figli.",
+    "nodi": [
+     "diritti"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "articoli",
+    "scelte": [
+     "139 articoli",
+     "2 articoli",
+     "nessun articolo"
+    ]
+   },
+   {
+    "nodo": "costituente",
+    "scelte": [
+     "l'Assemblea Costituente",
+     "la squadra di calcio",
+     "il club degli scacchi"
+    ]
+   }
+  ],
+  "domande": {
+   "l497u0": "legge",
+   "19hv7p2": "articoli",
+   "1pu22wy": "principi",
+   "zs4pj8": "principi",
+   "c3ffee": "costituente",
+   "155jprr": "costituente",
+   "dolx8g": "principi",
+   "pbhvcj": "principi",
+   "jqq5au": "principi",
+   "5yo2n8": "tesori",
+   "1njb7vw": "tesori",
+   "1m1sque": "diritti",
+   "w9swc4": "costituente",
+   "xflpd0": "costituente",
+   "16o18wy": "diritti",
+   "k9m49s": "diritti",
+   "1eb1zp6": "principi",
+   "ik6lit": "articoli",
+   "jw89us": "diritti",
+   "1g6xa9s": "diritti"
+  },
+  "collegamenti": [
+   "civica:simboli",
+   "civica:stato",
+   "civica:diritti"
+  ]
+ },
+ "stato": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Lo Stato",
+   "ic": "🏛️",
+   "sotto": "tre poteri separati"
+  },
+  "nodi": [
+   {
+    "id": "parlamento",
+    "n": "il Parlamento",
+    "ic": "🗣️",
+    "sotto": "Camera e Senato: potere legislativo",
+    "da": "fa le leggi con"
+   },
+   {
+    "id": "governo",
+    "n": "il Governo",
+    "ic": "🧭",
+    "sotto": "Presidente del Consiglio e ministri: potere esecutivo",
+    "da": "applica le leggi con"
+   },
+   {
+    "id": "magistratura",
+    "n": "la magistratura",
+    "ic": "⚖️",
+    "sotto": "i giudici, indipendenti: potere giudiziario",
+    "da": "giudica con"
+   },
+   {
+    "id": "presidente",
+    "n": "il Presidente della Repubblica",
+    "ic": "🎖️",
+    "sotto": "capo dello Stato per 7 anni",
+    "da": "ha come capo"
+   },
+   {
+    "id": "corte",
+    "n": "la Corte costituzionale",
+    "ic": "🔍",
+    "sotto": "controlla che le leggi rispettino la Costituzione",
+    "da": "ha un arbitro:"
+   },
+   {
+    "id": "cittadini",
+    "n": "tutti i cittadini",
+    "ic": "🗳️",
+    "sotto": "votano a 18 anni, anche nei referendum",
+    "da": "si basa sul voto di"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Lo Stato ha tre poteri, separati perché nessuno ne abbia troppo. Il legislativo fa le leggi: è il Parlamento, con Camera dei deputati e Senato.",
+    "nodi": [
+     "parlamento"
+    ]
+   },
+   {
+    "t": "Ogni legge deve essere approvata dalla Camera, a Palazzo Montecitorio, e dal Senato, a Palazzo Madama. Tutti e due sono a Roma. Si eleggono di solito ogni 5 anni.",
+    "nodi": [
+     "parlamento"
+    ]
+   },
+   {
+    "t": "Il potere esecutivo fa applicare le leggi: è il Governo, guidato dal Presidente del Consiglio dei ministri. Lo nomina il Presidente della Repubblica.",
+    "nodi": [
+     "governo"
+    ]
+   },
+   {
+    "t": "Il potere giudiziario è la magistratura: i giudici giudicano chi non rispetta le leggi. Sono indipendenti da ogni altro potere, come un arbitro.",
+    "nodi": [
+     "magistratura"
+    ]
+   },
+   {
+    "t": "Il capo dello Stato è il Presidente della Repubblica. Lo elegge il Parlamento in seduta comune, con i delegati delle Regioni. Resta in carica 7 anni e lavora al Quirinale.",
+    "nodi": [
+     "presidente"
+    ]
+   },
+   {
+    "t": "Il Presidente firma, cioè promulga, le leggi approvate dal Parlamento. E la Corte costituzionale controlla che le leggi rispettino la Costituzione.",
+    "nodi": [
+     "presidente",
+     "corte"
+    ]
+   },
+   {
+    "t": "Tutto parte dai cittadini: a 18 anni si vota per la Camera e per il Senato. Con il referendum si risponde sì o no a una domanda.",
+    "nodi": [
+     "cittadini"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "governo",
+    "scelte": [
+     "il Governo",
+     "il circo",
+     "il meteo"
+    ]
+   },
+   {
+    "nodo": "corte",
+    "scelte": [
+     "la Corte costituzionale",
+     "la pasticceria",
+     "la piscina"
+    ]
+   }
+  ],
+  "domande": {
+   "1up7r5q": "presidente",
+   "19mdhsz": "parlamento",
+   "1fstagb": "parlamento",
+   "1i7cws7": "governo",
+   "11mnde": "magistratura",
+   "7l1k5d": "parlamento",
+   "1sqso8v": "presidente",
+   "1ieyh4r": "cittadini",
+   "1czeu2g": "parlamento",
+   "1fbnpca": "parlamento",
+   "ukobio": "presidente",
+   "1xqrkv8": "presidente",
+   "pqd97h": "parlamento",
+   "5ychdb": "corte",
+   "1vdajnj": "governo",
+   "lu1wcw": "magistratura",
+   "13egmz2": "presidente",
+   "147uprg": "cittadini"
+  },
+  "collegamenti": [
+   "civica:costituzione",
+   "civica:comune",
+   "storia:repubblica"
+  ]
+ },
+ "comune": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il Comune",
+   "ic": "🏘️",
+   "sotto": "governa una città o un paese"
+  },
+  "nodi": [
+   {
+    "id": "sindaco",
+    "n": "il sindaco",
+    "ic": "🎗️",
+    "sotto": "eletto dai cittadini del Comune",
+    "da": "ha come guida"
+   },
+   {
+    "id": "consiglio",
+    "n": "il Consiglio comunale",
+    "ic": "👥",
+    "sotto": "gli eletti che decidono per il Comune",
+    "da": "decide con"
+   },
+   {
+    "id": "giunta",
+    "n": "la Giunta",
+    "ic": "🗂️",
+    "sotto": "il sindaco e gli assessori",
+    "da": "governa con"
+   },
+   {
+    "id": "anagrafe",
+    "n": "l'anagrafe",
+    "ic": "📇",
+    "sotto": "l'elenco di chi abita nel Comune",
+    "da": "ha un ufficio speciale:"
+   },
+   {
+    "id": "polizia",
+    "n": "la polizia locale",
+    "ic": "🚓",
+    "sotto": "i vigili urbani",
+    "da": "ha in strada"
+   },
+   {
+    "id": "regione",
+    "n": "la Regione",
+    "ic": "🗺️",
+    "sotto": "in Italia sono 20",
+    "da": "sta dentro"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il Comune governa una città o un paese: si occupa di scuole, parchi e strade. Lo guida il sindaco, eletto dai cittadini adulti del Comune.",
+    "nodi": [
+     "sindaco"
+    ]
+   },
+   {
+    "t": "Insieme al sindaco, i cittadini eleggono il Consiglio comunale: un gruppo di consiglieri che si riunisce in municipio e decide per il Comune.",
+    "nodi": [
+     "consiglio"
+    ]
+   },
+   {
+    "t": "Il sindaco governa con la Giunta comunale. Nella Giunta ci sono gli assessori: ognuno si occupa di un tema, come la scuola o i trasporti.",
+    "nodi": [
+     "giunta"
+    ]
+   },
+   {
+    "t": "All'anagrafe, un ufficio del Comune, c'è l'elenco di chi abita lì. Chi cambia casa o città lo comunica proprio all'anagrafe.",
+    "nodi": [
+     "anagrafe"
+    ]
+   },
+   {
+    "t": "Nelle strade lavora la polizia locale, che molti chiamano ancora vigili urbani. Controlla il traffico e aiuta pedoni e automobilisti.",
+    "nodi": [
+     "polizia"
+    ]
+   },
+   {
+    "t": "Ogni Comune fa parte di una Regione: in Italia sono 20. La guida il Presidente della Regione, con la Giunta e il Consiglio regionale. Quasi ovunque lo eleggono i cittadini.",
+    "nodi": [
+     "regione"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "sindaco",
+    "scelte": [
+     "il sindaco",
+     "il pirata",
+     "il mago"
+    ]
+   },
+   {
+    "nodo": "anagrafe",
+    "scelte": [
+     "l'anagrafe",
+     "la gelateria",
+     "il cinema"
+    ]
+   }
+  ],
+  "domande": {
+   "10ktzha": "sindaco",
+   "1juufq0": "consiglio",
+   "bgtml4": "regione",
+   "191attf": "sindaco",
+   "aites2": "giunta",
+   "174piy1": "anagrafe",
+   "afchdh": "polizia"
+  },
+  "collegamenti": [
+   "civica:stato",
+   "geo:regioni",
+   "geo:piemonte"
+  ]
+ },
+ "europa-onu": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'Italia",
+   "ic": "🌍",
+   "sotto": "in Europa e nel mondo"
+  },
+  "nodi": [
+   {
+    "id": "ue",
+    "n": "l'Unione Europea",
+    "ic": "🇪🇺",
+    "sotto": "27 Paesi; l'Italia è tra i 6 fondatori",
+    "da": "aiuta a costruire"
+   },
+   {
+    "id": "stelle",
+    "n": "12 stelle d'oro",
+    "ic": "⭐",
+    "sotto": "motto: Unita nella diversità",
+    "da": "sventola la bandiera europea con"
+   },
+   {
+    "id": "euro",
+    "n": "l'euro",
+    "ic": "💶",
+    "sotto": "in tasca dal 2002",
+    "da": "usa la moneta europea:"
+   },
+   {
+    "id": "parlamento",
+    "n": "il Parlamento europeo",
+    "ic": "🏛️",
+    "sotto": "sede ufficiale a Strasburgo",
+    "da": "vota per"
+   },
+   {
+    "id": "onu",
+    "n": "l'ONU",
+    "ic": "🕊️",
+    "sotto": "193 Paesi; sede a New York",
+    "da": "lavora per la pace con"
+   },
+   {
+    "id": "agenzie",
+    "n": "OMS e UNESCO",
+    "ic": "🏥",
+    "sotto": "salute e Patrimonio dell'umanità",
+    "da": "collabora con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'Unione Europea è un'unione di Stati europei che collaborano. Oggi sono 27 Paesi. L'Italia è tra i 6 fondatori: i Trattati del 1957 furono firmati a Roma.",
+    "nodi": [
+     "ue"
+    ]
+   },
+   {
+    "t": "La bandiera europea ha 12 stelle d'oro in cerchio, simbolo di unità, non il numero dei Paesi. Il motto è Unita nella diversità. La festa è il 9 maggio.",
+    "nodi": [
+     "stelle"
+    ]
+   },
+   {
+    "t": "Molti Paesi europei usano la stessa moneta, l'euro. In Italia è arrivato nelle tasche di tutti nel 2002.",
+    "nodi": [
+     "euro"
+    ]
+   },
+   {
+    "t": "I cittadini europei eleggono il Parlamento europeo: la sua sede ufficiale è a Strasburgo, in Francia. E con il programma Erasmus si può studiare in un altro Paese.",
+    "nodi": [
+     "parlamento",
+     "ue"
+    ]
+   },
+   {
+    "t": "Nel 1945, dopo la Seconda guerra mondiale, nacque l'ONU, le Nazioni Unite. Oggi riunisce 193 Paesi e lavora per la pace. La sede è a New York.",
+    "nodi": [
+     "onu"
+    ]
+   },
+   {
+    "t": "Sulla bandiera dell'ONU c'è il mondo tra due rami d'ulivo, simbolo di pace. L'Agenda 2030 dell'ONU ha 17 obiettivi per un mondo più giusto.",
+    "v": "Sulla bandiera dell'ONU c'è il mondo tra due rami d'ulivo, simbolo di pace. L'Agenda duemilatrenta dell'ONU ha diciassette obiettivi per un mondo più giusto.",
+    "nodi": [
+     "onu"
+    ]
+   },
+   {
+    "t": "L'ONU ha agenzie speciali. L'OMS si occupa della salute nel mondo. L'UNESCO protegge i luoghi Patrimonio dell'umanità, come le Residenze Sabaude.",
+    "nodi": [
+     "agenzie"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "euro",
+    "scelte": [
+     "l'euro",
+     "le conchiglie",
+     "i bottoni"
+    ]
+   },
+   {
+    "nodo": "onu",
+    "scelte": [
+     "l'ONU",
+     "il circo",
+     "la pizzeria"
+    ]
+   }
+  ],
+  "domande": {
+   "1em14o": "stelle",
+   "1do32hm": "ue",
+   "18a9opl": "euro",
+   "1h14r9m": "onu",
+   "1y4g2s6": "onu",
+   "6css24": "parlamento",
+   "1kwfbsj": "agenzie",
+   "n19qm": "stelle",
+   "1b5gkjv": "stelle",
+   "b3mxyg": "ue",
+   "18i4bml": "onu",
+   "14qq3a3": "agenzie",
+   "1hbx5if": "onu"
+  },
+  "collegamenti": [
+   "geo:europa",
+   "civica:pace",
+   "soldi:euro",
+   "civica:diritti"
+  ]
+ },
+ "diritti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I diritti dei bambini",
+   "ic": "🧒",
+   "sotto": "per ogni bambina e bambino del mondo"
+  },
+  "nodi": [
+   {
+    "id": "convenzione",
+    "n": "Convenzione ONU sui diritti dell'infanzia",
+    "ic": "📜",
+    "sotto": "approvata il 20 novembre 1989",
+    "da": "sono scritti nella"
+   },
+   {
+    "id": "nome",
+    "n": "un nome",
+    "ic": "🏷️",
+    "sotto": "e una cittadinanza, fin dalla nascita",
+    "da": "cominciano con"
+   },
+   {
+    "id": "studio",
+    "n": "lo studio e il gioco",
+    "ic": "📚",
+    "sotto": "il diritto all'istruzione e al gioco",
+    "da": "proteggono"
+   },
+   {
+    "id": "salute",
+    "n": "la salute e la protezione",
+    "ic": "🩺",
+    "sotto": "cure, cibo, acqua pulita, sicurezza",
+    "da": "garantiscono"
+   },
+   {
+    "id": "ascolto",
+    "n": "essere ascoltati",
+    "ic": "👂",
+    "sotto": "l'opinione dei bambini conta",
+    "da": "danno il diritto di"
+   },
+   {
+    "id": "unicef",
+    "n": "l'UNICEF",
+    "ic": "💙",
+    "sotto": "l'agenzia dell'ONU per i bambini",
+    "da": "hanno un difensore:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il 20 novembre 1989 l'ONU approvò la Convenzione sui diritti dell'infanzia: un accordo che protegge i diritti di tutti i bambini del mondo.",
+    "nodi": [
+     "convenzione"
+    ]
+   },
+   {
+    "t": "Uno dei primi diritti arriva appena nati: avere un nome e una cittadinanza. Il nome è la prima cosa che ci appartiene.",
+    "nodi": [
+     "nome"
+    ]
+   },
+   {
+    "t": "Ogni bambino ha diritto all'istruzione e al gioco: andare a scuola, imparare, giocare e riposare.",
+    "nodi": [
+     "studio"
+    ]
+   },
+   {
+    "t": "Ha diritto anche alla salute e a essere protetto: cure, cibo e acqua pulita, lontano dai pericoli.",
+    "nodi": [
+     "salute"
+    ]
+   },
+   {
+    "t": "Quando si decide qualcosa su di lui, un bambino ha diritto a essere ascoltato: la sua opinione conta.",
+    "nodi": [
+     "ascolto"
+    ]
+   },
+   {
+    "t": "L'UNICEF è l'agenzia dell'ONU che si occupa dei bambini nel mondo: porta cibo, acqua, vaccini e scuole dove servono.",
+    "nodi": [
+     "unicef"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "salute",
+    "scelte": [
+     "la salute e la protezione",
+     "la noia",
+     "la paura"
+    ]
+   },
+   {
+    "nodo": "nome",
+    "scelte": [
+     "un nome",
+     "un'automobile",
+     "un telefono"
+    ]
+   }
+  ],
+  "domande": {
+   "1ll1znb": "convenzione",
+   "1s4iuj6": "studio",
+   "qgjgeb": "convenzione",
+   "1w6q4y4": "nome",
+   "1gm4sph": "ascolto",
+   "ch26uk": "unicef"
+  },
+  "collegamenti": [
+   "civica:europa-onu",
+   "civica:costituzione",
+   "civica:convivenza",
+   "civica:cura"
+  ]
+ },
+ "emergenze": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "In un'emergenza",
+   "ic": "🚨",
+   "sotto": "calma e regole giuste"
+  },
+  "nodi": [
+   {
+    "id": "numero",
+    "n": "il 112",
+    "ic": "📞",
+    "sotto": "numero unico europeo, gratuito",
+    "da": "si chiede aiuto con"
+   },
+   {
+    "id": "terremoto",
+    "n": "sotto il banco",
+    "ic": "🏫",
+    "sotto": "lontano dalle finestre",
+    "da": "se c'è un terremoto, ci si ripara"
+   },
+   {
+    "id": "uscita",
+    "n": "in fila con l'insegnante",
+    "ic": "🚪",
+    "sotto": "senza correre, senza zaino, niente ascensore",
+    "da": "se suona l'allarme, si esce"
+   },
+   {
+    "id": "raccolta",
+    "n": "il punto di raccolta",
+    "ic": "📍",
+    "sotto": "lì si fa l'appello",
+    "da": "fuori si raggiunge"
+   },
+   {
+    "id": "gas",
+    "n": "un adulto",
+    "ic": "🧑",
+    "sotto": "con odore di gas: niente luci né fiamme",
+    "da": "se senti odore di gas, avvisi subito"
+   },
+   {
+    "id": "protezione",
+    "n": "la Protezione civile",
+    "ic": "🦺",
+    "sotto": "allerta meteo: verde, giallo, arancione, rosso",
+    "da": "c'è chi coordina gli aiuti:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Per un'emergenza vera si chiama il 112: è gratuito e vale in tutta l'Unione Europea. Si dice con calma dove sei e che cosa succede.",
+    "v": "Per un'emergenza vera si chiama il centododici: è gratuito e vale in tutta l'Unione Europea. Si dice con calma dove sei e che cosa succede.",
+    "nodi": [
+     "numero"
+    ]
+   },
+   {
+    "t": "Il 112 è un numero prezioso: non si chiama mai per scherzo, perché la linea serve a chi ha davvero bisogno.",
+    "v": "Il centododici è un numero prezioso: non si chiama mai per scherzo, perché la linea serve a chi ha davvero bisogno.",
+    "nodi": [
+     "numero"
+    ]
+   },
+   {
+    "t": "Se c'è un terremoto in classe, ci si ripara sotto il banco, lontano dalle finestre. All'aperto si sta lontano da edifici, alberi e fili elettrici.",
+    "nodi": [
+     "terremoto"
+    ]
+   },
+   {
+    "t": "Se suona l'allarme antincendio, si esce in fila con l'insegnante, senza correre e senza zaino. Si seguono i cartelli verdi. L'ascensore no: può bloccarsi e riempirsi di fumo.",
+    "nodi": [
+     "uscita"
+    ]
+   },
+   {
+    "t": "Fuori si va al punto di raccolta: lì l'insegnante fa l'appello, per essere sicuri che ci siano tutti.",
+    "nodi": [
+     "raccolta"
+    ]
+   },
+   {
+    "t": "Se senti odore di gas in casa, non accendi luci né fiamme: avvisi subito un adulto.",
+    "nodi": [
+     "gas"
+    ]
+   },
+   {
+    "t": "Nelle alluvioni e nei terremoti la Protezione civile coordina gli aiuti. L'allerta meteo ha quattro colori: verde, giallo, arancione e rosso, il più grave.",
+    "nodi": [
+     "protezione"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "raccolta",
+    "scelte": [
+     "il punto di raccolta",
+     "il parco giochi",
+     "la gelateria"
+    ]
+   },
+   {
+    "nodo": "gas",
+    "scelte": [
+     "un adulto",
+     "un gatto",
+     "nessuno"
+    ]
+   }
+  ],
+  "domande": {
+   "2dacya": "numero",
+   "v18yu8": "terremoto",
+   "1j2p431": "uscita",
+   "1rohc3o": "uscita",
+   "vs5j4x": "gas",
+   "mpfq9t": "raccolta",
+   "bq5icb": "uscita",
+   "c53k45": "numero",
+   "1ggwbrt": "protezione",
+   "zgpb52": "protezione",
+   "i3n5z3": "numero",
+   "1ltwrlw": "terremoto"
+  },
+  "collegamenti": [
+   "civica:strada",
+   "sci-spazio:dentro-terra",
+   "sci-corpo:incidenti",
+   "sci-spazio:meteo"
+  ]
+ },
+ "strada": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "In strada",
+   "ic": "🚦",
+   "sotto": "regole per pedoni, bici e auto"
+  },
+  "nodi": [
+   {
+    "id": "strisce",
+    "n": "sulle strisce",
+    "ic": "🦓",
+    "sotto": "dopo aver guardato a sinistra, a destra, a sinistra",
+    "da": "si attraversa"
+   },
+   {
+    "id": "semaforo",
+    "n": "il semaforo",
+    "ic": "🚥",
+    "sotto": "verde: puoi passare, con attenzione",
+    "da": "si rispetta"
+   },
+   {
+    "id": "pedone",
+    "n": "contro il senso di marcia",
+    "ic": "🚶",
+    "sotto": "e di sera con qualcosa che brilla",
+    "da": "senza marciapiede, il pedone cammina"
+   },
+   {
+    "id": "cartelli",
+    "n": "i cartelli",
+    "ic": "🛑",
+    "sotto": "la forma dice il messaggio",
+    "da": "si leggono"
+   },
+   {
+    "id": "bici",
+    "n": "in bicicletta",
+    "ic": "🚲",
+    "sotto": "casco, luce rossa dietro, pista ciclabile",
+    "da": "si va sicuri anche"
+   },
+   {
+    "id": "auto",
+    "n": "la cintura",
+    "ic": "🚗",
+    "sotto": "sempre, davanti e dietro",
+    "da": "in auto si allaccia"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Si attraversa sulle strisce. Prima ci si ferma sul bordo e si guarda a sinistra, a destra e di nuovo a sinistra.",
+    "nodi": [
+     "strisce"
+    ]
+   },
+   {
+    "t": "Con il semaforo pedonale verde puoi attraversare, ma controlla che le auto si siano fermate. Con il rosso ci si ferma.",
+    "nodi": [
+     "semaforo"
+    ]
+   },
+   {
+    "t": "Fuori città, senza marciapiede, il pedone cammina contro il senso di marcia: così vede le auto che arrivano. Di sera aiuta qualcosa di catarifrangente, per farsi vedere.",
+    "nodi": [
+     "pedone"
+    ]
+   },
+   {
+    "t": "I cartelli parlano con la forma. Triangolo con la punta in su: pericolo. Punta in giù: dare precedenza. Cerchio con bordo rosso: divieto. Cerchio azzurro: obbligo.",
+    "nodi": [
+     "cartelli"
+    ]
+   },
+   {
+    "t": "Lo STOP è un ottagono rosso, con otto lati: vuol dire fermarsi del tutto.",
+    "nodi": [
+     "cartelli"
+    ]
+   },
+   {
+    "t": "In bicicletta si mette il casco, per proteggere la testa. Dietro c'è una luce rossa. In città la strada più sicura è la pista ciclabile.",
+    "nodi": [
+     "bici"
+    ]
+   },
+   {
+    "t": "In auto si allaccia sempre la cintura, anche dietro. Per i bambini il posto più sicuro è dietro; sotto 1,50 metri serve un seggiolino o un rialzo.",
+    "v": "In auto si allaccia sempre la cintura, anche dietro. Per i bambini il posto più sicuro è dietro; sotto un metro e cinquanta serve un seggiolino o un rialzo.",
+    "nodi": [
+     "auto"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "semaforo",
+    "scelte": [
+     "il semaforo",
+     "l'arcobaleno",
+     "la lavatrice"
+    ]
+   },
+   {
+    "nodo": "bici",
+    "scelte": [
+     "in bicicletta",
+     "in astronave",
+     "sul tappeto volante"
+    ]
+   }
+  ],
+  "domande": {
+   "tfmogd": "strisce",
+   "16oq3u9": "semaforo",
+   "1j0jr7v": "strisce",
+   "12qrbgj": "bici",
+   "1wuupsz": "auto",
+   "e2uf4g": "cartelli",
+   "1m0uco5": "cartelli",
+   "tomt6p": "cartelli",
+   "1a3z5a8": "cartelli",
+   "crs1kx": "pedone",
+   "1u4ilgl": "bici",
+   "1bmpagu": "pedone",
+   "1gb7jap": "auto",
+   "1l9rht6": "bici",
+   "1gc6h9x": "cartelli"
+  },
+  "collegamenti": [
+   "civica:emergenze",
+   "sci-corpo:incidenti"
+  ]
+ },
+ "rifiuti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I rifiuti",
+   "ic": "♻️",
+   "sotto": "possono diventare risorse"
+  },
+  "nodi": [
+   {
+    "id": "differenziata",
+    "n": "la raccolta differenziata",
+    "ic": "🗑️",
+    "sotto": "per riciclare e inquinare meno",
+    "da": "si separano con"
+   },
+   {
+    "id": "riciclo",
+    "n": "materiali nuovi",
+    "ic": "🔄",
+    "sotto": "riciclare vuol dire trasformare",
+    "da": "si trasformano in"
+   },
+   {
+    "id": "bidoni",
+    "n": "carta, plastica, vetro e organico",
+    "ic": "🧴",
+    "sotto": "un contenitore per ogni materiale",
+    "da": "vanno nei contenitori di"
+   },
+   {
+    "id": "speciali",
+    "n": "raccolte speciali",
+    "ic": "🔋",
+    "sotto": "pile, olio di cucina, apparecchi elettronici",
+    "da": "a volte hanno bisogno di"
+   },
+   {
+    "id": "erre",
+    "n": "le 3 R",
+    "ic": "🌱",
+    "sotto": "ridurre, riutilizzare, riciclare",
+    "da": "si riducono con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Con la raccolta differenziata si separano i rifiuti per materiale. Così si possono riciclare e si inquina meno: un rifiuto diventa una risorsa.",
+    "nodi": [
+     "differenziata"
+    ]
+   },
+   {
+    "t": "Riciclare vuol dire trasformare i rifiuti in materiali nuovi. Da carta vecchia nasce carta nuova. Il vetro si può riciclare all'infinito.",
+    "nodi": [
+     "riciclo"
+    ]
+   },
+   {
+    "t": "La bottiglia di plastica va nella plastica, meglio schiacciata. Il foglio va nella carta, il barattolo di vetro nel vetro. La buccia di banana va nell'organico, l'umido: diventa compost.",
+    "nodi": [
+     "bidoni"
+    ]
+   },
+   {
+    "t": "Alcuni rifiuti vanno raccolti a parte. Le pile usate negli appositi contenitori, perché contengono sostanze inquinanti. L'olio di cucina nella raccolta apposita. Gli apparecchi elettronici rotti all'ecocentro.",
+    "nodi": [
+     "speciali"
+    ]
+   },
+   {
+    "t": "Poi ci sono le 3 R. Ridurre: produrre meno rifiuti. Riutilizzare: usare di nuovo un oggetto. Riciclare: farne materiali nuovi.",
+    "v": "Poi ci sono le tre erre. Ridurre: produrre meno rifiuti. Riutilizzare: usare di nuovo un oggetto. Riciclare: farne materiali nuovi.",
+    "nodi": [
+     "erre"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "speciali",
+    "scelte": [
+     "raccolte speciali",
+     "il cestino della merenda",
+     "la finestra"
+    ]
+   },
+   {
+    "nodo": "erre",
+    "scelte": [
+     "le 3 R",
+     "le 3 caramelle",
+     "i 3 porcellini"
+    ]
+   }
+  ],
+  "domande": {
+   "sh4d26": "bidoni",
+   "128126q": "riciclo",
+   "5d5p1l": "bidoni",
+   "1en9epc": "bidoni",
+   "8jt97a": "bidoni",
+   "1phur3c": "speciali",
+   "1oanxbw": "erre",
+   "1uhrkfo": "differenziata",
+   "ircj6j": "speciali",
+   "fhtoz4": "speciali",
+   "178kkct": "erre"
+  },
+  "collegamenti": [
+   "tecno:riciclo",
+   "civica:ambiente",
+   "tecno:materiali"
+  ]
+ },
+ "ambiente": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'ambiente",
+   "ic": "🌱",
+   "sotto": "la casa di tutti, da proteggere"
+  },
+  "nodi": [
+   {
+    "id": "inquinamento",
+    "n": "l'inquinamento",
+    "ic": "🏭",
+    "sotto": "sostanze dannose in aria, acqua e terra",
+    "da": "soffre per"
+   },
+   {
+    "id": "clima",
+    "n": "il riscaldamento globale",
+    "ic": "🌡️",
+    "sotto": "la temperatura media della Terra aumenta",
+    "da": "cambia con"
+   },
+   {
+    "id": "gesti",
+    "n": "piccoli gesti",
+    "ic": "💧",
+    "sotto": "rubinetto chiuso, luce spenta, borraccia",
+    "da": "si protegge con"
+   },
+   {
+    "id": "parchi",
+    "n": "i parchi nazionali",
+    "ic": "🏔️",
+    "sotto": "come il Gran Paradiso, con lo stambecco",
+    "da": "ha aree protette:"
+   },
+   {
+    "id": "sostenibile",
+    "n": "lo sviluppo sostenibile",
+    "ic": "🌍",
+    "sotto": "crescere senza rovinare il futuro",
+    "da": "chiede"
+   },
+   {
+    "id": "giornate",
+    "n": "giornate speciali",
+    "ic": "📅",
+    "sotto": "22 marzo l'acqua, 22 aprile la Terra",
+    "da": "si festeggia in"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'inquinamento è quando sostanze dannose sporcano l'aria, l'acqua o la terra. Si combatte con l'aiuto di tutti.",
+    "nodi": [
+     "inquinamento"
+    ]
+   },
+   {
+    "t": "Il riscaldamento globale è l'aumento della temperatura media della Terra. È causato soprattutto dai gas prodotti dalle attività dell'uomo.",
+    "nodi": [
+     "clima"
+    ]
+   },
+   {
+    "t": "Anche i piccoli gesti contano: chiudere il rubinetto mentre ti lavi i denti, spegnere la luce uscendo da una stanza, usare una borraccia invece delle bottigliette.",
+    "nodi": [
+     "gesti"
+    ]
+   },
+   {
+    "t": "Un parco nazionale è un'area protetta per la natura. Il Gran Paradiso, in parte in Piemonte, protegge lo stambecco, il suo simbolo.",
+    "nodi": [
+     "parchi"
+    ]
+   },
+   {
+    "t": "Sviluppo sostenibile vuol dire crescere senza rovinare il futuro: usare le risorse in modo che ne restino anche per chi verrà dopo.",
+    "nodi": [
+     "sostenibile"
+    ]
+   },
+   {
+    "t": "Ci sono giornate speciali: il 22 marzo è la Giornata mondiale dell'acqua, il 22 aprile la Giornata della Terra.",
+    "nodi": [
+     "giornate"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "gesti",
+    "scelte": [
+     "piccoli gesti",
+     "grandi sprechi",
+     "rifiuti nel prato"
+    ]
+   },
+   {
+    "nodo": "clima",
+    "scelte": [
+     "il riscaldamento globale",
+     "il gelato",
+     "la ginnastica"
+    ]
+   }
+  ],
+  "domande": {
+   "5d7tlb": "gesti",
+   "58h3eb": "inquinamento",
+   "1kwkjtl": "clima",
+   "1a11f7l": "parchi",
+   "44uhbz": "parchi",
+   "3j7lp4": "giornate",
+   "1miu1dg": "giornate",
+   "3pqo7h": "sostenibile",
+   "cemmrj": "gesti",
+   "1geecry": "gesti"
+  },
+  "collegamenti": [
+   "civica:rifiuti",
+   "geo:clima",
+   "geo:piemonte",
+   "tecno:energia"
+  ]
  }
 }

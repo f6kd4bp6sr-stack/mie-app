@@ -115,5 +115,2326 @@
    "soldi:sconti"
   ],
   "tutte": "dinumero"
+ },
+ "0": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le tabelline del 2, 3, 4, 5",
+   "ic": "✖️",
+   "sotto": "salti sempre uguali"
+  },
+  "nodi": [
+   {
+    "id": "salti",
+    "n": "salti uguali",
+    "ic": "🐸",
+    "sotto": "4 × 3 = 4 + 4 + 4",
+    "da": "sono fatte di"
+   },
+   {
+    "id": "trucco",
+    "n": "un salto in più",
+    "ic": "➕",
+    "sotto": "3 × 7 = 3 × 6 + 3",
+    "da": "si ricordano con"
+   },
+   {
+    "id": "doppio",
+    "n": "il doppio",
+    "ic": "👯",
+    "sotto": "× 4 è il doppio del doppio",
+    "da": "per il 2 e il 4 usano"
+   },
+   {
+    "id": "cinque",
+    "n": "0 o 5",
+    "ic": "🖐️",
+    "sotto": "5 × 7 = 35, 5 × 8 = 40",
+    "da": "nel 5 finiscono sempre con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Una tabellina è fatta di salti uguali. 4 × 3 vuol dire 3 salti da 4: 4 + 4 + 4 = 12.",
+    "v": "Una tabellina è fatta di salti uguali. Quattro per tre vuol dire tre salti da quattro: quattro più quattro più quattro fa dodici.",
+    "nodi": [
+     "salti"
+    ]
+   },
+   {
+    "t": "Non ricordi un risultato? Parti da quello prima e fai un salto in più. 3 × 7? 3 × 6 = 18, poi aggiungi ancora 3: 21.",
+    "v": "Non ricordi un risultato? Parti da quello prima e fai un salto in più. Tre per sette? Tre per sei fa diciotto, poi aggiungi ancora tre: ventuno.",
+    "nodi": [
+     "trucco"
+    ]
+   },
+   {
+    "t": "Per il 2 fai il doppio: 2 × 8 = 16. Per il 4 fai il doppio del doppio: 4 × 6 = 12 + 12 = 24.",
+    "v": "Per il due fai il doppio: due per otto fa sedici. Per il quattro fai il doppio del doppio: quattro per sei fa dodici più dodici, ventiquattro.",
+    "nodi": [
+     "doppio"
+    ]
+   },
+   {
+    "t": "Nella tabellina del 5 i risultati finiscono sempre con 0 o con 5: 5 × 7 = 35, 5 × 8 = 40.",
+    "v": "Nella tabellina del cinque i risultati finiscono sempre con zero o con cinque: cinque per sette fa trentacinque, cinque per otto fa quaranta.",
+    "nodi": [
+     "cinque"
+    ]
+   },
+   {
+    "t": "Ultimo segreto: l'ordine non cambia il risultato. 3 × 9 è uguale a 9 × 3: fanno tutti e due 27.",
+    "v": "Ultimo segreto: l'ordine non cambia il risultato. Tre per nove è uguale a nove per tre: fanno tutti e due ventisette.",
+    "nodi": [
+     "salti"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "doppio",
+    "scelte": [
+     "il doppio",
+     "la pioggia",
+     "il disegno"
+    ]
+   },
+   {
+    "nodo": "cinque",
+    "scelte": [
+     "0 o 5",
+     "solo 7",
+     "solo 9"
+    ]
+   }
+  ],
+  "tutte": "trucco",
+  "collegamenti": [
+   "mate:1",
+   "mate:3",
+   "mate:4"
+  ]
+ },
+ "1": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le tabelline del 6, 7, 8, 9",
+   "ic": "✖️",
+   "sotto": "con i trucchi diventano facili"
+  },
+  "nodi": [
+   {
+    "id": "scambio",
+    "n": "lo scambio",
+    "ic": "🔁",
+    "sotto": "7 × 3 = 3 × 7",
+    "da": "si semplificano con"
+   },
+   {
+    "id": "sei",
+    "n": "il 5 più un salto",
+    "ic": "6️⃣",
+    "sotto": "6 × 7 = 5 × 7 + 7",
+    "da": "per il 6 usano"
+   },
+   {
+    "id": "otto",
+    "n": "il doppio del 4",
+    "ic": "8️⃣",
+    "sotto": "8 × 6 = 24 + 24",
+    "da": "per l'8 usano"
+   },
+   {
+    "id": "nove",
+    "n": "il 10 meno un salto",
+    "ic": "9️⃣",
+    "sotto": "9 × 4 = 40 − 4",
+    "da": "per il 9 usano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Buona notizia: l'ordine non cambia il risultato. 7 × 3 è uguale a 3 × 7, cioè 21. Scegli la tabellina che conosci meglio!",
+    "v": "Buona notizia: l'ordine non cambia il risultato. Sette per tre è uguale a tre per sette, cioè ventuno. Scegli la tabellina che conosci meglio!",
+    "nodi": [
+     "scambio"
+    ]
+   },
+   {
+    "t": "Così tante caselle le conosci già: 6 × 4 è 4 × 6, 8 × 5 è 5 × 8. Restano pochi risultati nuovi.",
+    "v": "Così tante caselle le conosci già: sei per quattro è quattro per sei, otto per cinque è cinque per otto. Restano pochi risultati nuovi.",
+    "nodi": [
+     "scambio"
+    ]
+   },
+   {
+    "t": "Per il 6 parti dal 5 e fai un salto in più: 6 × 7? 5 × 7 = 35, più 7: 42.",
+    "v": "Per il sei parti dal cinque e fai un salto in più: sei per sette? Cinque per sette fa trentacinque, più sette: quarantadue.",
+    "nodi": [
+     "sei"
+    ]
+   },
+   {
+    "t": "Per l'8 fai il doppio del 4: 4 × 6 = 24, e il doppio di 24 è 48. Quindi 8 × 6 = 48.",
+    "v": "Per l'otto fai il doppio del quattro: quattro per sei fa ventiquattro, e il doppio di ventiquattro è quarantotto. Quindi otto per sei fa quarantotto.",
+    "nodi": [
+     "otto"
+    ]
+   },
+   {
+    "t": "Per il 9 usa il 10 e togli: 9 × 4 è come 10 × 4 = 40, meno 4: 36.",
+    "v": "Per il nove usa il dieci e togli: nove per quattro è come dieci per quattro, quaranta, meno quattro: trentasei.",
+    "nodi": [
+     "nove"
+    ]
+   },
+   {
+    "t": "Controllo per il 9: le cifre del risultato sommate fanno 9. 36: 3 + 6 = 9. 72: 7 + 2 = 9.",
+    "v": "Controllo per il nove: le cifre del risultato sommate fanno nove. Trentasei: tre più sei fa nove. Settantadue: sette più due fa nove.",
+    "nodi": [
+     "nove"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "otto",
+    "scelte": [
+     "il doppio del 4",
+     "il colore del 4",
+     "il nome del 4"
+    ]
+   },
+   {
+    "nodo": "nove",
+    "scelte": [
+     "il 10 meno un salto",
+     "il gatto meno un salto",
+     "la luna meno un salto"
+    ]
+   }
+  ],
+  "tutte": "scambio",
+  "collegamenti": [
+   "mate:0",
+   "mate:3",
+   "mate:4"
+  ]
+ },
+ "2": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Addizioni e sottrazioni",
+   "ic": "➕",
+   "sotto": "con numeri a tre cifre"
+  },
+  "nodi": [
+   {
+    "id": "valore",
+    "n": "centinaia, decine e unità",
+    "ic": "🧱",
+    "sotto": "347 = 300 + 40 + 7",
+    "da": "si fanno per"
+   },
+   {
+    "id": "somma",
+    "n": "prima le centinaia",
+    "ic": "➕",
+    "sotto": "poi le decine e le unità",
+    "da": "nell'addizione si sommano"
+   },
+   {
+    "id": "togli",
+    "n": "prima le decine",
+    "ic": "➖",
+    "sotto": "poi le unità",
+    "da": "nella sottrazione si tolgono"
+   },
+   {
+    "id": "controllo",
+    "n": "l'operazione inversa",
+    "ic": "✅",
+    "sotto": "il + si controlla con il −, e viceversa",
+    "da": "si controllano con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Ogni numero si divide in centinaia, decine e unità. 347 vuol dire 300 + 40 + 7.",
+    "v": "Ogni numero si divide in centinaia, decine e unità. Trecentoquarantasette vuol dire trecento più quaranta più sette.",
+    "nodi": [
+     "valore"
+    ]
+   },
+   {
+    "t": "Nell'addizione somma prima le centinaia, poi le decine e poi le unità.",
+    "nodi": [
+     "somma"
+    ]
+   },
+   {
+    "t": "347 + 125: 300 + 100 = 400, 40 + 20 = 60, 7 + 5 = 12. Insieme fa 472.",
+    "v": "Trecentoquarantasette più centoventicinque: trecento più cento fa quattrocento, quaranta più venti fa sessanta, sette più cinque fa dodici. Insieme fa quattrocentosettantadue.",
+    "nodi": [
+     "somma"
+    ]
+   },
+   {
+    "t": "Nella sottrazione togli prima le decine, poi le unità. 563 − 48: togli 40 e arrivi a 523, poi togli 8: 515.",
+    "v": "Nella sottrazione togli prima le decine, poi le unità. Cinquecentosessantatré meno quarantotto: togli quaranta e arrivi a cinquecentoventitré, poi togli otto: cinquecentoquindici.",
+    "nodi": [
+     "togli"
+    ]
+   },
+   {
+    "t": "Alla fine controlla con l'operazione inversa. 515 + 48 = 563: giusto! E per l'addizione: 472 − 125 = 347.",
+    "v": "Alla fine controlla con l'operazione inversa. Cinquecentoquindici più quarantotto fa cinquecentosessantatré: giusto! E per l'addizione: quattrocentosettantadue meno centoventicinque fa trecentoquarantasette.",
+    "nodi": [
+     "controllo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "somma",
+    "scelte": [
+     "prima le centinaia",
+     "prima i colori",
+     "prima le lettere"
+    ]
+   },
+   {
+    "nodo": "togli",
+    "scelte": [
+     "prima le decine",
+     "prima le vocali",
+     "prima le figurine"
+    ]
+   }
+  ],
+  "tutte": "controllo",
+  "collegamenti": [
+   "mate:3",
+   "mate:10",
+   "mate:12"
+  ]
+ },
+ "3": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le moltiplicazioni grandi",
+   "ic": "🧮",
+   "sotto": "si spezzano in pezzi facili"
+  },
+  "nodi": [
+   {
+    "id": "spezza",
+    "n": "decine e unità",
+    "ic": "✂️",
+    "sotto": "34 = 30 + 4",
+    "da": "si spezzano in"
+   },
+   {
+    "id": "decine",
+    "n": "le decine",
+    "ic": "🔟",
+    "sotto": "30 × 6 = 180",
+    "da": "prima si moltiplicano"
+   },
+   {
+    "id": "unita",
+    "n": "le unità",
+    "ic": "1️⃣",
+    "sotto": "4 × 6 = 24",
+    "da": "poi si moltiplicano"
+   },
+   {
+    "id": "insieme",
+    "n": "i due risultati",
+    "ic": "🤝",
+    "sotto": "180 + 24 = 204",
+    "da": "alla fine si sommano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Una moltiplicazione grande fa meno paura se la spezzi. 34 × 6: spezza 34 in 30 + 4.",
+    "v": "Una moltiplicazione grande fa meno paura se la spezzi. Trentaquattro per sei: spezza trentaquattro in trenta più quattro.",
+    "nodi": [
+     "spezza"
+    ]
+   },
+   {
+    "t": "Prima le decine: 30 × 6. Fai 3 × 6 = 18 e aggiungi uno zero: 180.",
+    "v": "Prima le decine: trenta per sei. Fai tre per sei, diciotto, e aggiungi uno zero: centottanta.",
+    "nodi": [
+     "decine"
+    ]
+   },
+   {
+    "t": "Poi le unità: 4 × 6 = 24.",
+    "v": "Poi le unità: quattro per sei fa ventiquattro.",
+    "nodi": [
+     "unita"
+    ]
+   },
+   {
+    "t": "Alla fine somma i due risultati: 180 + 24 = 204. Quindi 34 × 6 = 204.",
+    "v": "Alla fine somma i due risultati: centottanta più ventiquattro fa duecentoquattro. Quindi trentaquattro per sei fa duecentoquattro.",
+    "nodi": [
+     "insieme"
+    ]
+   },
+   {
+    "t": "Controllo veloce: 34 è vicino a 30, e 30 × 6 = 180. Il risultato deve essere un po' più grande di 180.",
+    "v": "Controllo veloce: trentaquattro è vicino a trenta, e trenta per sei fa centottanta. Il risultato deve essere un po' più grande di centottanta.",
+    "nodi": [
+     "insieme"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "decine",
+    "scelte": [
+     "le decine",
+     "le lettere",
+     "le figurine"
+    ]
+   },
+   {
+    "nodo": "unita",
+    "scelte": [
+     "le unità",
+     "i colori",
+     "le note"
+    ]
+   }
+  ],
+  "tutte": "insieme",
+  "collegamenti": [
+   "mate:1",
+   "mate:10",
+   "media:espressioni"
+  ]
+ },
+ "4": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La divisione",
+   "ic": "➗",
+   "sotto": "fare parti uguali"
+  },
+  "nodi": [
+   {
+    "id": "parti",
+    "n": "parti uguali",
+    "ic": "🍬",
+    "sotto": "12 : 3 = 4",
+    "da": "divide in"
+   },
+   {
+    "id": "contrario",
+    "n": "la moltiplicazione al contrario",
+    "ic": "🔁",
+    "sotto": "24 : 6 = 4 perché 4 × 6 = 24",
+    "da": "è"
+   },
+   {
+    "id": "tabelline",
+    "n": "le tabelline",
+    "ic": "✖️",
+    "sotto": "cerca il numero che manca",
+    "da": "si risolve con"
+   },
+   {
+    "id": "prova",
+    "n": "la prova",
+    "ic": "✅",
+    "sotto": "risultato × divisore = numero di partenza",
+    "da": "si controlla con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Dividere vuol dire fare parti uguali. 12 caramelle per 3 amici: 12 : 3 = 4. Ognuno ne ha 4.",
+    "v": "Dividere vuol dire fare parti uguali. Dodici caramelle per tre amici: dodici diviso tre fa quattro. Ognuno ne ha quattro.",
+    "nodi": [
+     "parti"
+    ]
+   },
+   {
+    "t": "La divisione è la moltiplicazione al contrario. 24 : 6 = 4, perché 4 × 6 = 24.",
+    "v": "La divisione è la moltiplicazione al contrario. Ventiquattro diviso sei fa quattro, perché quattro per sei fa ventiquattro.",
+    "nodi": [
+     "contrario"
+    ]
+   },
+   {
+    "t": "Per dividere usa le tabelline. 56 : 8? Chiediti: quale numero per 8 fa 56? È 7, perché 7 × 8 = 56.",
+    "v": "Per dividere usa le tabelline. Cinquantasei diviso otto? Chiediti: quale numero per otto fa cinquantasei? È sette, perché sette per otto fa cinquantasei.",
+    "nodi": [
+     "tabelline"
+    ]
+   },
+   {
+    "t": "Fai sempre la prova: moltiplica il risultato per il numero che divide. 7 × 8 = 56: torna il numero di partenza, quindi è giusto!",
+    "v": "Fai sempre la prova: moltiplica il risultato per il numero che divide. Sette per otto fa cinquantasei: torna il numero di partenza, quindi è giusto!",
+    "nodi": [
+     "prova"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "parti",
+    "scelte": [
+     "parti uguali",
+     "parti a caso",
+     "nessuna parte"
+    ]
+   },
+   {
+    "nodo": "prova",
+    "scelte": [
+     "la prova",
+     "il gelato",
+     "la corsa"
+    ]
+   }
+  ],
+  "tutte": "contrario",
+  "collegamenti": [
+   "mate:0",
+   "mate:1",
+   "mate:5"
+  ]
+ },
+ "6": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le frazioni a confronto",
+   "ic": "🍕",
+   "sotto": "quale è più grande?"
+  },
+  "nodi": [
+   {
+    "id": "torta",
+    "n": "fette di torta",
+    "ic": "🎂",
+    "sotto": "una torta tagliata in parti uguali",
+    "da": "si immaginano come"
+   },
+   {
+    "id": "denominatore",
+    "n": "lo stesso denominatore",
+    "ic": "⬇️",
+    "sotto": "fette della stessa grandezza",
+    "da": "hanno sotto"
+   },
+   {
+    "id": "fette",
+    "n": "più fette",
+    "ic": "🏆",
+    "sotto": "il numeratore più grande",
+    "da": "vince chi ha"
+   },
+   {
+    "id": "ordine",
+    "n": "dalla più piccola",
+    "ic": "📶",
+    "sotto": "1/6, 2/6, 5/6",
+    "da": "si mettono in fila"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Immagina una torta tagliata in 8 fette uguali. Ogni fetta è 1/8 della torta.",
+    "v": "Immagina una torta tagliata in otto fette uguali. Ogni fetta è un ottavo della torta.",
+    "nodi": [
+     "torta"
+    ]
+   },
+   {
+    "t": "Se due frazioni hanno lo stesso denominatore, le fette sono della stessa grandezza. In 3/8 e 5/8 sono tutte ottavi.",
+    "v": "Se due frazioni hanno lo stesso denominatore, le fette sono della stessa grandezza. In tre ottavi e cinque ottavi sono tutte ottavi.",
+    "nodi": [
+     "denominatore"
+    ]
+   },
+   {
+    "t": "Allora vince chi ha più fette: guarda il numeratore. 5/8 è più grande di 3/8, perché 5 fette sono più di 3.",
+    "v": "Allora vince chi ha più fette: guarda il numeratore. Cinque ottavi è più grande di tre ottavi, perché cinque fette sono più di tre.",
+    "nodi": [
+     "fette"
+    ]
+   },
+   {
+    "t": "Attenzione: 3/8 e 5/8 non sono uguali. Con lo stesso denominatore, sono uguali solo se anche il numero sopra è lo stesso.",
+    "v": "Attenzione: tre ottavi e cinque ottavi non sono uguali. Con lo stesso denominatore, sono uguali solo se anche il numero sopra è lo stesso.",
+    "nodi": [
+     "fette"
+    ]
+   },
+   {
+    "t": "Puoi anche metterle in fila dalla più piccola: 1/6, 2/6, 5/6. Il denominatore resta uguale, il numeratore cresce.",
+    "v": "Puoi anche metterle in fila dalla più piccola: un sesto, due sesti, cinque sesti. Il denominatore resta uguale, il numeratore cresce.",
+    "nodi": [
+     "ordine"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "denominatore",
+    "scelte": [
+     "lo stesso denominatore",
+     "lo stesso colore",
+     "lo stesso profumo"
+    ]
+   },
+   {
+    "nodo": "ordine",
+    "scelte": [
+     "dalla più piccola",
+     "dalla più colorata",
+     "dalla più rumorosa"
+    ]
+   }
+  ],
+  "tutte": "fette",
+  "collegamenti": [
+   "mate:5",
+   "media:frazioni"
+  ]
+ },
+ "7": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'orologio",
+   "ic": "🕐",
+   "sotto": "due lancette, due compiti"
+  },
+  "nodi": [
+   {
+    "id": "corta",
+    "n": "la lancetta corta",
+    "ic": "⏰",
+    "sotto": "indica l'ora",
+    "da": "segna l'ora con"
+   },
+   {
+    "id": "lunga",
+    "n": "la lancetta lunga",
+    "ic": "⏱️",
+    "sotto": "indica i minuti",
+    "da": "segna i minuti con"
+   },
+   {
+    "id": "cinque",
+    "n": "5 minuti",
+    "ic": "🖐️",
+    "sotto": "sul 4 sono 20, sull'8 sono 40",
+    "da": "per ogni numero conta"
+   },
+   {
+    "id": "parole",
+    "n": "quarto e mezza",
+    "ic": "🗣️",
+    "sotto": "15 e 30 minuti",
+    "da": "ha parole speciali:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La lancetta corta indica l'ora. Guarda il numero che ha appena superato: se sta tra il 3 e il 4, sono le 3 e qualcosa.",
+    "v": "La lancetta corta indica l'ora. Guarda il numero che ha appena superato: se sta tra il tre e il quattro, sono le tre e qualcosa.",
+    "nodi": [
+     "corta"
+    ]
+   },
+   {
+    "t": "La lancetta lunga indica i minuti. Quando è sul 12, l'ora è in punto.",
+    "v": "La lancetta lunga indica i minuti. Quando è sul dodici, l'ora è in punto.",
+    "nodi": [
+     "lunga"
+    ]
+   },
+   {
+    "t": "Ogni numero vale 5 minuti: conta di 5 in 5. Sul 4 sono 20 minuti, sull'8 sono 40, sul 10 sono 50.",
+    "v": "Ogni numero vale cinque minuti: conta di cinque in cinque. Sul quattro sono venti minuti, sull'otto sono quaranta, sul dieci sono cinquanta.",
+    "nodi": [
+     "cinque"
+    ]
+   },
+   {
+    "t": "Corta tra il 3 e il 4, lunga sull'8: sono le 3:40, cioè le tre e quaranta.",
+    "v": "Corta tra il tre e il quattro, lunga sull'otto: sono le tre e quaranta.",
+    "nodi": [
+     "corta",
+     "lunga"
+    ]
+   },
+   {
+    "t": "Ci sono parole speciali: 15 minuti sono un quarto, 30 minuti sono mezz'ora. Le 3:45 si dicono anche le quattro meno un quarto.",
+    "v": "Ci sono parole speciali: quindici minuti sono un quarto, trenta minuti sono mezz'ora. Le tre e quarantacinque si dicono anche le quattro meno un quarto.",
+    "nodi": [
+     "parole"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "corta",
+    "scelte": [
+     "la lancetta corta",
+     "il campanello",
+     "la pila"
+    ]
+   },
+   {
+    "nodo": "parole",
+    "scelte": [
+     "quarto e mezza",
+     "pizza e torta",
+     "sole e luna"
+    ]
+   }
+  ],
+  "tutte": "cinque",
+  "collegamenti": [
+   "mate:8",
+   "eng:ore"
+  ]
+ },
+ "8": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La durata",
+   "ic": "⏱️",
+   "sotto": "quanto tempo passa"
+  },
+  "nodi": [
+   {
+    "id": "inizio",
+    "n": "ora di inizio",
+    "ic": "▶️",
+    "sotto": "per esempio 9:40",
+    "da": "si aggiunge all'"
+   },
+   {
+    "id": "salti",
+    "n": "salti",
+    "ic": "🦘",
+    "sotto": "prima fino all'ora piena, poi il resto",
+    "da": "si conta a"
+   },
+   {
+    "id": "sessanta",
+    "n": "60 minuti",
+    "ic": "🕐",
+    "sotto": "un'ora, non 100 minuti",
+    "da": "si misura in ore da"
+   },
+   {
+    "id": "fine",
+    "n": "l'ora di fine",
+    "ic": "🏁",
+    "sotto": "per esempio 10:25",
+    "da": "ci fa scoprire"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Una lezione inizia alle 9:40 e dura 45 minuti. A che ora finisce? Si parte dall'ora di inizio.",
+    "v": "Una lezione inizia alle nove e quaranta e dura quarantacinque minuti. A che ora finisce? Si parte dall'ora di inizio.",
+    "nodi": [
+     "inizio"
+    ]
+   },
+   {
+    "t": "Si conta in avanti a salti. Primo salto fino all'ora piena: da 9:40 a 10:00 sono 20 minuti.",
+    "v": "Si conta in avanti a salti. Primo salto fino all'ora piena: dalle nove e quaranta alle dieci sono venti minuti.",
+    "nodi": [
+     "salti"
+    ]
+   },
+   {
+    "t": "Ricorda: un'ora ha 60 minuti, non 100. Così 75 minuti sono un'ora e 15 minuti.",
+    "v": "Ricorda: un'ora ha sessanta minuti, non cento. Così settantacinque minuti sono un'ora e quindici minuti.",
+    "nodi": [
+     "sessanta"
+    ]
+   },
+   {
+    "t": "Mancano ancora 25 minuti, perché 45 − 20 = 25. Dalle 10:00 si va alle 10:25.",
+    "v": "Mancano ancora venticinque minuti, perché quarantacinque meno venti fa venticinque. Dalle dieci si va alle dieci e venticinque.",
+    "nodi": [
+     "salti"
+    ]
+   },
+   {
+    "t": "Ecco l'ora di fine: 9:40 + 45 minuti = 10:25. Puoi controllare contando all'indietro.",
+    "v": "Ecco l'ora di fine: nove e quaranta più quarantacinque minuti fa dieci e venticinque. Puoi controllare contando all'indietro.",
+    "nodi": [
+     "fine"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "sessanta",
+    "scelte": [
+     "60 minuti",
+     "2 minuti",
+     "7 minuti"
+    ]
+   },
+   {
+    "nodo": "inizio",
+    "scelte": [
+     "ora di inizio",
+     "colore dell'orologio",
+     "nome della lezione"
+    ]
+   }
+  ],
+  "tutte": "salti",
+  "collegamenti": [
+   "mate:7",
+   "mate:2",
+   "eng:ore"
+  ]
+ },
+ "9": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il rettangolo",
+   "ic": "📐",
+   "sotto": "una misura fuori, una dentro"
+  },
+  "nodi": [
+   {
+    "id": "perimetro",
+    "n": "il perimetro",
+    "ic": "🔲",
+    "sotto": "il giro intorno: si sommano i lati",
+    "da": "ha intorno"
+   },
+   {
+    "id": "cm",
+    "n": "centimetri",
+    "ic": "📏",
+    "sotto": "il perimetro è una lunghezza",
+    "da": "ha il bordo misurato in"
+   },
+   {
+    "id": "area",
+    "n": "l'area",
+    "ic": "🟩",
+    "sotto": "i quadretti dentro: base × altezza",
+    "da": "ha dentro"
+   },
+   {
+    "id": "cm2",
+    "n": "centimetri quadrati",
+    "ic": "▦",
+    "sotto": "l'area si misura in cm²",
+    "da": "ha la superficie misurata in"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Prendi un rettangolo lungo 5 cm e alto 3 cm. La lunghezza è la base, l'altra misura è l'altezza.",
+    "v": "Prendi un rettangolo lungo cinque centimetri e alto tre centimetri. La lunghezza è la base, l'altra misura è l'altezza.",
+    "nodi": []
+   },
+   {
+    "t": "Il perimetro è il giro intorno. Sommi tutti i lati: 5 + 3 + 5 + 3 = 16 cm.",
+    "v": "Il perimetro è il giro intorno. Sommi tutti i lati: cinque più tre più cinque più tre fa sedici centimetri.",
+    "nodi": [
+     "perimetro"
+    ]
+   },
+   {
+    "t": "Il perimetro è una lunghezza: si misura in centimetri, cm.",
+    "v": "Il perimetro è una lunghezza: si misura in centimetri.",
+    "nodi": [
+     "cm"
+    ]
+   },
+   {
+    "t": "L'area è lo spazio dentro: conta i quadretti. Si calcola base × altezza: 5 × 3 = 15 cm².",
+    "v": "L'area è lo spazio dentro: conta i quadretti. Si calcola base per altezza: cinque per tre fa quindici centimetri quadrati.",
+    "nodi": [
+     "area"
+    ]
+   },
+   {
+    "t": "L'area si misura in centimetri quadrati, cm²: ogni quadretto ha il lato di 1 cm.",
+    "v": "L'area si misura in centimetri quadrati: ogni quadretto ha il lato di un centimetro.",
+    "nodi": [
+     "cm2"
+    ]
+   },
+   {
+    "t": "Trucco per non confondersi: per il giro intorno sommi i lati, per i quadretti dentro moltiplichi base per altezza.",
+    "nodi": [
+     "perimetro",
+     "area"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "perimetro",
+    "scelte": [
+     "il perimetro",
+     "il peso",
+     "il colore"
+    ]
+   },
+   {
+    "nodo": "cm2",
+    "scelte": [
+     "centimetri quadrati",
+     "litri",
+     "chilogrammi"
+    ]
+   }
+  ],
+  "tutte": "area",
+  "collegamenti": [
+   "media:geometria",
+   "media:misure",
+   "tecno:costruzioni"
+  ]
+ },
+ "10": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Un problema",
+   "ic": "🧩",
+   "sotto": "si risolve passo dopo passo"
+  },
+  "nodi": [
+   {
+    "id": "dati",
+    "n": "i dati",
+    "ic": "🔎",
+    "sotto": "i numeri che conosci",
+    "da": "si legge cercando"
+   },
+   {
+    "id": "domanda",
+    "n": "la domanda",
+    "ic": "❓",
+    "sotto": "che cosa devo trovare?",
+    "da": "finisce con"
+   },
+   {
+    "id": "operazioni",
+    "n": "le operazioni in ordine",
+    "ic": "🧮",
+    "sotto": "prima ×, poi −",
+    "da": "si risolve con"
+   },
+   {
+    "id": "risposta",
+    "n": "la risposta",
+    "ic": "💬",
+    "sotto": "una frase con il numero giusto",
+    "da": "si chiude con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Leggi con calma: ci sono 4 scatole da 6 pastelli. Ne regali 5. Quanti pastelli restano?",
+    "v": "Leggi con calma: ci sono quattro scatole da sei pastelli. Ne regali cinque. Quanti pastelli restano?",
+    "nodi": []
+   },
+   {
+    "t": "Cerca i dati: 4 scatole, 6 pastelli in ogni scatola, 5 pastelli regalati.",
+    "v": "Cerca i dati: quattro scatole, sei pastelli in ogni scatola, cinque pastelli regalati.",
+    "nodi": [
+     "dati"
+    ]
+   },
+   {
+    "t": "Poi guarda la domanda: quanti pastelli restano? Restano vuol dire che qualcosa si toglie.",
+    "nodi": [
+     "domanda"
+    ]
+   },
+   {
+    "t": "Prima la moltiplicazione: 4 × 6 = 24 pastelli in tutto. Poi la sottrazione: 24 − 5 = 19.",
+    "v": "Prima la moltiplicazione: quattro per sei fa ventiquattro pastelli in tutto. Poi la sottrazione: ventiquattro meno cinque fa diciannove.",
+    "nodi": [
+     "operazioni"
+    ]
+   },
+   {
+    "t": "Scrivi la risposta con una frase: restano 19 pastelli. Controlla: 19 + 5 = 24, giusto!",
+    "v": "Scrivi la risposta con una frase: restano diciannove pastelli. Controlla: diciannove più cinque fa ventiquattro, giusto!",
+    "nodi": [
+     "risposta"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "dati",
+    "scelte": [
+     "i dati",
+     "i colori",
+     "le figurine"
+    ]
+   },
+   {
+    "nodo": "domanda",
+    "scelte": [
+     "la domanda",
+     "la merenda",
+     "la canzone"
+    ]
+   }
+  ],
+  "tutte": "operazioni",
+  "collegamenti": [
+   "mate:3",
+   "mate:2",
+   "mate:12"
+  ]
+ },
+ "11": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'euro",
+   "ic": "🪙",
+   "sotto": "monete e centesimi"
+  },
+  "nodi": [
+   {
+    "id": "monete",
+    "n": "monete diverse",
+    "ic": "🪙",
+    "sotto": "2 €, 1 €, 50, 20, 10, 5 centesimi",
+    "da": "ha"
+   },
+   {
+    "id": "cento",
+    "n": "100 centesimi",
+    "ic": "💯",
+    "sotto": "fanno 1 euro",
+    "da": "si divide in"
+   },
+   {
+    "id": "grande",
+    "n": "dalla moneta più grande",
+    "ic": "⬇️",
+    "sotto": "poi via via le più piccole",
+    "da": "si conta partendo"
+   },
+   {
+    "id": "virgola",
+    "n": "la virgola",
+    "ic": "✍️",
+    "sotto": "3,70 € = 3 euro e 70 centesimi",
+    "da": "si scrive con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Tra le monete in euro ci sono quelle da 2 euro, 1 euro, 50, 20, 10 e 5 centesimi.",
+    "v": "Tra le monete in euro ci sono quelle da due euro, un euro, cinquanta, venti, dieci e cinque centesimi.",
+    "nodi": [
+     "monete"
+    ]
+   },
+   {
+    "t": "Ricorda: 100 centesimi fanno 1 euro. Per esempio 50 + 50 centesimi = 1 euro.",
+    "v": "Ricorda: cento centesimi fanno un euro. Per esempio cinquanta più cinquanta centesimi fanno un euro.",
+    "nodi": [
+     "cento"
+    ]
+   },
+   {
+    "t": "Per contare, parti dalla moneta più grande e aggiungi le altre, una alla volta.",
+    "nodi": [
+     "grande"
+    ]
+   },
+   {
+    "t": "2 € + 1 € = 3 €. Poi + 50 cent = 3,50 €. Poi + 20 cent = 3,70 €.",
+    "v": "Due euro più un euro fa tre euro. Più cinquanta centesimi fa tre euro e cinquanta. Più venti centesimi fa tre euro e settanta.",
+    "nodi": [
+     "grande"
+    ]
+   },
+   {
+    "t": "Il risultato si scrive con la virgola: 3,70 € vuol dire 3 euro e 70 centesimi.",
+    "v": "Il risultato si scrive con la virgola: tre virgola settanta euro vuol dire tre euro e settanta centesimi.",
+    "nodi": [
+     "virgola"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "virgola",
+    "scelte": [
+     "la virgola",
+     "il punto interrogativo",
+     "la lettera A"
+    ]
+   },
+   {
+    "nodo": "cento",
+    "scelte": [
+     "100 centesimi",
+     "3 centesimi",
+     "7 centesimi"
+    ]
+   }
+  ],
+  "tutte": "grande",
+  "collegamenti": [
+   "soldi:contare",
+   "soldi:euro",
+   "mate:12"
+  ]
+ },
+ "12": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il resto",
+   "ic": "🧾",
+   "sotto": "i soldi che tornano indietro"
+  },
+  "nodi": [
+   {
+    "id": "prezzo",
+    "n": "prezzo",
+    "ic": "🏷️",
+    "sotto": "quanto costa la cosa",
+    "da": "si calcola partendo dal"
+   },
+   {
+    "id": "avanti",
+    "n": "contando in avanti",
+    "ic": "➡️",
+    "sotto": "il trucco del negoziante",
+    "da": "si trova"
+   },
+   {
+    "id": "pagato",
+    "n": "i soldi dati",
+    "ic": "💶",
+    "sotto": "per esempio 5 € o 10 €",
+    "da": "si conta fino a raggiungere"
+   },
+   {
+    "id": "controllo",
+    "n": "la prova",
+    "ic": "✅",
+    "sotto": "prezzo + resto = soldi dati",
+    "da": "si verifica con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Compri un quaderno che costa 3,70 € e paghi con 5 €. Quanto resto ricevi?",
+    "v": "Compri un quaderno che costa tre euro e settanta e paghi con cinque euro. Quanto resto ricevi?",
+    "nodi": [
+     "prezzo"
+    ]
+   },
+   {
+    "t": "Il trucco del negoziante: parti dal prezzo e conta in avanti, fino ai soldi che hai dato.",
+    "nodi": [
+     "avanti"
+    ]
+   },
+   {
+    "t": "Da 3,70 € a 4 € mancano 30 centesimi. Da 4 € a 5 € manca 1 euro.",
+    "v": "Da tre euro e settanta a quattro euro mancano trenta centesimi. Da quattro euro a cinque euro manca un euro.",
+    "nodi": [
+     "avanti"
+    ]
+   },
+   {
+    "t": "Arrivato a 5 €, ti fermi. Il resto è 1 euro e 30 centesimi: 1,30 €.",
+    "v": "Arrivato a cinque euro, ti fermi. Il resto è un euro e trenta centesimi.",
+    "nodi": [
+     "pagato"
+    ]
+   },
+   {
+    "t": "Fai la prova: prezzo più resto deve dare i soldi pagati. 3,70 € + 1,30 € = 5 €.",
+    "v": "Fai la prova: prezzo più resto deve dare i soldi pagati. Tre euro e settanta più un euro e trenta fa cinque euro.",
+    "nodi": [
+     "controllo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "prezzo",
+    "scelte": [
+     "prezzo",
+     "colore",
+     "profumo"
+    ]
+   },
+   {
+    "nodo": "controllo",
+    "scelte": [
+     "la prova",
+     "la pioggia",
+     "la nanna"
+    ]
+   }
+  ],
+  "tutte": "avanti",
+  "collegamenti": [
+   "soldi:spesa",
+   "mate:11",
+   "mate:2"
+  ]
+ },
+ "13": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I numeri grandi",
+   "ic": "🔟",
+   "sotto": "fino ai milioni"
+  },
+  "nodi": [
+   {
+    "id": "posizione",
+    "n": "la posizione",
+    "ic": "📍",
+    "sotto": "ogni cifra vale secondo il suo posto",
+    "da": "danno valore alle cifre con"
+   },
+   {
+    "id": "destra",
+    "n": "da destra",
+    "ic": "➡️",
+    "sotto": "unità, decine, centinaia, migliaia…",
+    "da": "si leggono contando"
+   },
+   {
+    "id": "classi",
+    "n": "gruppi di tre cifre",
+    "ic": "🧱",
+    "sotto": "unità, migliaia, milioni",
+    "da": "si dividono in"
+   },
+   {
+    "id": "punto",
+    "n": "il puntino",
+    "ic": "⚫",
+    "sotto": "1.000.000 = un milione",
+    "da": "separano i gruppi con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "In un numero ogni cifra vale secondo la sua posizione. In 3.527.104 il 5 vale 500.000, non 5!",
+    "v": "In un numero ogni cifra vale secondo la sua posizione. In tre milioni cinquecentoventisettemila centoquattro il cinque vale cinquecentomila, non cinque!",
+    "nodi": [
+     "posizione"
+    ]
+   },
+   {
+    "t": "Per trovare il posto, conta da destra: unità, decine, centinaia, poi unità di migliaia, decine di migliaia, centinaia di migliaia, unità di milione.",
+    "nodi": [
+     "destra"
+    ]
+   },
+   {
+    "t": "Le cifre si raggruppano a tre a tre, partendo da destra: unità semplici, migliaia, milioni. Un puntino separa i gruppi: 1.000.000 è un milione.",
+    "v": "Le cifre si raggruppano a tre a tre, partendo da destra: unità semplici, migliaia, milioni. Un puntino separa i gruppi: un uno seguito da sei zeri è un milione.",
+    "nodi": [
+     "classi",
+     "punto"
+    ]
+   },
+   {
+    "t": "Ogni posto vale 10 volte quello alla sua destra. Per questo un 4 nelle decine di migliaia vale 40.000.",
+    "v": "Ogni posto vale dieci volte quello alla sua destra. Per questo un quattro nelle decine di migliaia vale quarantamila.",
+    "nodi": [
+     "posizione"
+    ]
+   },
+   {
+    "t": "Prova con 6.081.352: il 6 sta nelle unità di milione e vale 6.000.000. L'8 sta nelle decine di migliaia e vale 80.000.",
+    "v": "Prova con sei milioni ottantunomila trecentocinquantadue: il sei sta nelle unità di milione e vale sei milioni. L'otto sta nelle decine di migliaia e vale ottantamila.",
+    "nodi": [
+     "posizione",
+     "destra"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "destra",
+    "scelte": [
+     "da destra",
+     "dal colore",
+     "dal profumo"
+    ]
+   },
+   {
+    "nodo": "classi",
+    "scelte": [
+     "gruppi di tre cifre",
+     "gruppi di fiori",
+     "gruppi di lettere"
+    ]
+   }
+  ],
+  "tutte": "posizione",
+  "collegamenti": [
+   "mate:2",
+   "mate:14",
+   "media:potenze"
+  ]
+ },
+ "14": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I numeri decimali",
+   "ic": "🔢",
+   "sotto": "con la virgola"
+  },
+  "nodi": [
+   {
+    "id": "virgola",
+    "n": "la virgola",
+    "ic": "✍️",
+    "sotto": "separa gli interi dai decimali",
+    "da": "hanno"
+   },
+   {
+    "id": "decimi",
+    "n": "decimi e centesimi",
+    "ic": "🍫",
+    "sotto": "le cifre dopo la virgola",
+    "da": "dopo la virgola hanno"
+   },
+   {
+    "id": "colonna",
+    "n": "in colonna",
+    "ic": "📏",
+    "sotto": "virgola sotto virgola",
+    "da": "si sommano e si sottraggono"
+   },
+   {
+    "id": "zero",
+    "n": "uno zero",
+    "ic": "0️⃣",
+    "sotto": "2,5 = 2,50",
+    "da": "si pareggiano aggiungendo"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "In 3,45 la virgola separa la parte intera, 3, dai decimali. Dopo la virgola ci sono 4 decimi e 5 centesimi.",
+    "v": "In tre virgola quarantacinque la virgola separa la parte intera, tre, dai decimali. Dopo la virgola ci sono quattro decimi e cinque centesimi.",
+    "nodi": [
+     "virgola",
+     "decimi"
+    ]
+   },
+   {
+    "t": "Un decimo è una delle 10 parti uguali dell'unità. Un centesimo è una delle 100 parti. Come con gli euro: 0,50 € sono 50 centesimi.",
+    "v": "Un decimo è una delle dieci parti uguali dell'unità. Un centesimo è una delle cento parti. Come con gli euro: zero virgola cinquanta euro sono cinquanta centesimi.",
+    "nodi": [
+     "decimi"
+    ]
+   },
+   {
+    "t": "Per sommare o sottrarre, metti in colonna la virgola sotto la virgola: unità sotto unità, decimi sotto decimi, centesimi sotto centesimi.",
+    "nodi": [
+     "colonna"
+    ]
+   },
+   {
+    "t": "Se un numero ha meno decimali, aggiungi uno zero: 2,5 è uguale a 2,50. Lo zero in fondo non cambia il valore.",
+    "v": "Se un numero ha meno decimali, aggiungi uno zero: due virgola cinque è uguale a due virgola cinquanta. Lo zero in fondo non cambia il valore.",
+    "nodi": [
+     "zero"
+    ]
+   },
+   {
+    "t": "Esempio: 4,75 + 2,5. In colonna diventa 4,75 + 2,50 = 7,25.",
+    "v": "Esempio: quattro virgola settantacinque più due virgola cinque. In colonna diventa quattro virgola settantacinque più due virgola cinquanta: sette virgola venticinque.",
+    "nodi": [
+     "colonna"
+    ]
+   },
+   {
+    "t": "Con la sottrazione è uguale: 6,3 − 1,45 diventa 6,30 − 1,45 = 4,85.",
+    "v": "Con la sottrazione è uguale: sei virgola tre meno uno virgola quarantacinque diventa sei virgola trenta meno uno virgola quarantacinque: quattro virgola ottantacinque.",
+    "nodi": [
+     "colonna",
+     "zero"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "virgola",
+    "scelte": [
+     "la virgola",
+     "il punto esclamativo",
+     "la stellina"
+    ]
+   },
+   {
+    "nodo": "zero",
+    "scelte": [
+     "uno zero",
+     "un cuore",
+     "una lettera"
+    ]
+   }
+  ],
+  "tutte": "colonna",
+  "collegamenti": [
+   "mate:15",
+   "mate:11",
+   "media:frazioni"
+  ]
+ },
+ "15": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La virgola che salta",
+   "ic": "✨",
+   "sotto": "× e : per 10, 100, 1000"
+  },
+  "nodi": [
+   {
+    "id": "zeri",
+    "n": "tanti posti quanti zeri",
+    "ic": "🔢",
+    "sotto": "10: 1 posto, 100: 2, 1000: 3",
+    "da": "si sposta di"
+   },
+   {
+    "id": "destra",
+    "n": "a destra",
+    "ic": "➡️",
+    "sotto": "con × il numero diventa più grande",
+    "da": "con la moltiplicazione si sposta"
+   },
+   {
+    "id": "sinistra",
+    "n": "a sinistra",
+    "ic": "⬅️",
+    "sotto": "con : il numero diventa più piccolo",
+    "da": "con la divisione si sposta"
+   },
+   {
+    "id": "aggiungi",
+    "n": "zeri in più",
+    "ic": "➕",
+    "sotto": "0,5 × 100 = 50",
+    "da": "se mancano cifre, usa"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Per moltiplicare o dividere per 10, 100 o 1000 non serve fare il conto: basta spostare la virgola.",
+    "v": "Per moltiplicare o dividere per dieci, cento o mille non serve fare il conto: basta spostare la virgola.",
+    "nodi": []
+   },
+   {
+    "t": "Conta gli zeri: 10 ne ha 1, 100 ne ha 2, 1000 ne ha 3. La virgola si sposta di tanti posti quanti sono gli zeri.",
+    "v": "Conta gli zeri: dieci ne ha uno, cento ne ha due, mille ne ha tre. La virgola si sposta di tanti posti quanti sono gli zeri.",
+    "nodi": [
+     "zeri"
+    ]
+   },
+   {
+    "t": "Con × la virgola va a destra e il numero diventa più grande. 3,45 × 10 = 34,5. 3,45 × 100 = 345.",
+    "v": "Con il per la virgola va a destra e il numero diventa più grande. Tre virgola quarantacinque per dieci fa trentaquattro virgola cinque. Tre virgola quarantacinque per cento fa trecentoquarantacinque.",
+    "nodi": [
+     "destra"
+    ]
+   },
+   {
+    "t": "Con : la virgola va a sinistra e il numero diventa più piccolo. 3,45 : 10 = 0,345. 3,45 : 100 = 0,0345.",
+    "v": "Con il diviso la virgola va a sinistra e il numero diventa più piccolo. Tre virgola quarantacinque diviso dieci fa zero virgola trecentoquarantacinque. Diviso cento fa zero virgola zero trecentoquarantacinque.",
+    "nodi": [
+     "sinistra"
+    ]
+   },
+   {
+    "t": "Se mancano le cifre, aggiungi degli zeri. 0,5 × 100 = 50: la virgola salta due posti e serve uno zero. Anche a sinistra: 1,2 : 100 = 0,012.",
+    "v": "Se mancano le cifre, aggiungi degli zeri. Zero virgola cinque per cento fa cinquanta: la virgola salta due posti e serve uno zero. Anche a sinistra: uno virgola due diviso cento fa zero virgola zero dodici.",
+    "nodi": [
+     "aggiungi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "destra",
+    "scelte": [
+     "a destra",
+     "in cucina",
+     "in giardino"
+    ]
+   },
+   {
+    "nodo": "sinistra",
+    "scelte": [
+     "a sinistra",
+     "in soffitta",
+     "in piscina"
+    ]
+   }
+  ],
+  "tutte": "zeri",
+  "collegamenti": [
+   "mate:14",
+   "mate:17",
+   "media:potenze"
+  ]
+ },
+ "16": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le percentuali",
+   "ic": "💯",
+   "sotto": "parti su 100"
+  },
+  "nodi": [
+   {
+    "id": "cento",
+    "n": "parti su 100",
+    "ic": "💯",
+    "sotto": "25% = 25/100",
+    "da": "contano"
+   },
+   {
+    "id": "dieci",
+    "n": "il 10%",
+    "ic": "🔟",
+    "sotto": "dividi per 10; per il 20% poi × 2",
+    "da": "hanno una chiave:"
+   },
+   {
+    "id": "meta",
+    "n": "metà e quarti",
+    "ic": "🍕",
+    "sotto": "50% metà, 25% un quarto, 75% tre quarti",
+    "da": "si trovano con"
+   },
+   {
+    "id": "sconto",
+    "n": "lo sconto",
+    "ic": "🏷️",
+    "sotto": "quanti euro risparmi",
+    "da": "servono per calcolare"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Per cento vuol dire su 100. Il 25% è 25 parti su 100, cioè 25/100.",
+    "v": "Per cento vuol dire su cento. Il venticinque per cento è venticinque parti su cento, cioè venticinque centesimi.",
+    "nodi": [
+     "cento"
+    ]
+   },
+   {
+    "t": "Il 10% è facile: dividi per 10. Il 10% di 70 è 7. Il 20%? Dividi per 10 e moltiplica per 2: 14.",
+    "v": "Il dieci per cento è facile: dividi per dieci. Il dieci per cento di settanta è sette. Il venti per cento? Dividi per dieci e moltiplica per due: quattordici.",
+    "nodi": [
+     "dieci"
+    ]
+   },
+   {
+    "t": "Il 50% è la metà: il 50% di 60 è 30. Il 25% è un quarto: il 25% di 60 è 15.",
+    "v": "Il cinquanta per cento è la metà: il cinquanta per cento di sessanta è trenta. Il venticinque per cento è un quarto: il venticinque per cento di sessanta è quindici.",
+    "nodi": [
+     "meta"
+    ]
+   },
+   {
+    "t": "Il 75% è tre quarti: prima trovi un quarto, poi lo prendi 3 volte. Il 75% di 60: 15 × 3 = 45.",
+    "v": "Il settantacinque per cento è tre quarti: prima trovi un quarto, poi lo prendi tre volte. Il settantacinque per cento di sessanta: quindici per tre fa quarantacinque.",
+    "nodi": [
+     "meta"
+    ]
+   },
+   {
+    "t": "Uno zaino costa 40 € e ha lo sconto del 25%: risparmi un quarto di 40, cioè 10 €. Lo paghi 30 €.",
+    "v": "Uno zaino costa quaranta euro e ha lo sconto del venticinque per cento: risparmi un quarto di quaranta, cioè dieci euro. Lo paghi trenta euro.",
+    "nodi": [
+     "sconto"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "cento",
+    "scelte": [
+     "parti su 100",
+     "parti di un puzzle",
+     "parti di una canzone"
+    ]
+   },
+   {
+    "nodo": "sconto",
+    "scelte": [
+     "lo sconto",
+     "il temporale",
+     "la nanna"
+    ]
+   }
+  ],
+  "tutte": "meta",
+  "collegamenti": [
+   "mate:5",
+   "soldi:sconti",
+   "mate:4"
+  ]
+ },
+ "17": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le equivalenze",
+   "ic": "📏",
+   "sotto": "la stessa misura, un'altra unità"
+  },
+  "nodi": [
+   {
+    "id": "scala",
+    "n": "unità grandi e piccole",
+    "ic": "🪜",
+    "sotto": "km, m, dm, cm, mm",
+    "da": "passano tra"
+   },
+   {
+    "id": "fattori",
+    "n": "10, 100, 1000",
+    "ic": "🔢",
+    "sotto": "1 m = 100 cm, 1 kg = 1000 g, 1 l = 1000 ml",
+    "da": "usano i numeri"
+   },
+   {
+    "id": "giu",
+    "n": "la moltiplicazione",
+    "ic": "✖️",
+    "sotto": "da m a cm: × 100",
+    "da": "dalla grande alla piccola usano"
+   },
+   {
+    "id": "su",
+    "n": "la divisione",
+    "ic": "➗",
+    "sotto": "da cm a m: : 100",
+    "da": "dalla piccola alla grande usano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Un'equivalenza cambia l'unità di misura, ma non la misura: 1 m e 100 cm sono la stessa lunghezza.",
+    "v": "Un'equivalenza cambia l'unità di misura, ma non la misura: un metro e cento centimetri sono la stessa lunghezza.",
+    "nodi": [
+     "scala"
+    ]
+   },
+   {
+    "t": "Ricorda i numeri chiave: 1 m = 100 cm = 1000 mm. 1 km = 1000 m. 1 cm = 10 mm. 1 dm = 10 cm.",
+    "v": "Ricorda i numeri chiave: un metro è cento centimetri, cioè mille millimetri. Un chilometro è mille metri. Un centimetro è dieci millimetri. Un decimetro è dieci centimetri.",
+    "nodi": [
+     "fattori"
+    ]
+   },
+   {
+    "t": "E per peso e capacità: 1 kg = 1000 g, 1 l = 100 cl = 1000 ml.",
+    "v": "E per peso e capacità: un chilogrammo è mille grammi, un litro è cento centilitri, cioè mille millilitri.",
+    "nodi": [
+     "fattori"
+    ]
+   },
+   {
+    "t": "Da un'unità grande a una piccola moltiplichi: 2,5 m = quanti cm? 2,5 × 100 = 250 cm.",
+    "v": "Da un'unità grande a una piccola moltiplichi: due virgola cinque metri sono quanti centimetri? Due virgola cinque per cento fa duecentocinquanta centimetri.",
+    "nodi": [
+     "giu"
+    ]
+   },
+   {
+    "t": "Da un'unità piccola a una grande dividi: 350 cm = quanti m? 350 : 100 = 3,5 m.",
+    "v": "Da un'unità piccola a una grande dividi: trecentocinquanta centimetri sono quanti metri? Trecentocinquanta diviso cento fa tre virgola cinque metri.",
+    "nodi": [
+     "su"
+    ]
+   },
+   {
+    "t": "Controllo: in unità più piccole il numero diventa più grande. Per la stessa lunghezza servono più centimetri che metri.",
+    "nodi": [
+     "scala"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "giu",
+    "scelte": [
+     "la moltiplicazione",
+     "il disegno",
+     "la merenda"
+    ]
+   },
+   {
+    "nodo": "su",
+    "scelte": [
+     "la divisione",
+     "la pittura",
+     "la danza"
+    ]
+   }
+  ],
+  "tutte": "fattori",
+  "collegamenti": [
+   "media:misure",
+   "mate:15",
+   "mate:9"
+  ]
+ },
+ "18": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Gli angoli",
+   "ic": "📐",
+   "sotto": "si misurano in gradi"
+  },
+  "nodi": [
+   {
+    "id": "tipi",
+    "n": "quattro nomi",
+    "ic": "🏷️",
+    "sotto": "acuto, retto, ottuso, piatto",
+    "da": "hanno"
+   },
+   {
+    "id": "retto",
+    "n": "90 gradi",
+    "ic": "📐",
+    "sotto": "l'angolo retto, come l'angolo di un foglio",
+    "da": "si confrontano con"
+   },
+   {
+    "id": "triangolo",
+    "n": "180 gradi",
+    "ic": "🔺",
+    "sotto": "la somma degli angoli di un triangolo",
+    "da": "in un triangolo sommano"
+   },
+   {
+    "id": "terzo",
+    "n": "il terzo angolo",
+    "ic": "❓",
+    "sotto": "180 meno i due angoli che conosci",
+    "da": "permettono di trovare"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Gli angoli si misurano in gradi, con il goniometro. Il simbolo dei gradi è un piccolo cerchio: 90°.",
+    "v": "Gli angoli si misurano in gradi, con il goniometro. Il simbolo dei gradi è un piccolo cerchio: novanta gradi.",
+    "nodi": []
+   },
+   {
+    "t": "L'angolo retto misura 90°, come l'angolo di un foglio. Acuto: meno di 90°. Ottuso: tra 90° e 180°. Piatto: 180°.",
+    "v": "L'angolo retto misura novanta gradi, come l'angolo di un foglio. Acuto: meno di novanta gradi. Ottuso: tra novanta e centottanta gradi. Piatto: centottanta gradi.",
+    "nodi": [
+     "retto",
+     "tipi"
+    ]
+   },
+   {
+    "t": "Per esempio 35° è acuto, 120° è ottuso, 180° è piatto: sembra una linea dritta.",
+    "v": "Per esempio trentacinque gradi è acuto, centoventi gradi è ottuso, centottanta gradi è piatto: sembra una linea dritta.",
+    "nodi": [
+     "tipi"
+    ]
+   },
+   {
+    "t": "In ogni triangolo i tre angoli sommano sempre 180°.",
+    "v": "In ogni triangolo i tre angoli sommano sempre centottanta gradi.",
+    "nodi": [
+     "triangolo"
+    ]
+   },
+   {
+    "t": "Due angoli misurano 50° e 70°? Il terzo è 180 − 50 − 70 = 60°.",
+    "v": "Due angoli misurano cinquanta e settanta gradi? Il terzo è centottanta meno cinquanta meno settanta, cioè sessanta gradi.",
+    "nodi": [
+     "terzo"
+    ]
+   },
+   {
+    "t": "Controllo: 50 + 70 + 60 = 180. Torna!",
+    "v": "Controllo: cinquanta più settanta più sessanta fa centottanta. Torna!",
+    "nodi": [
+     "triangolo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "retto",
+    "scelte": [
+     "90 gradi",
+     "1000 gradi",
+     "zero gradi"
+    ]
+   },
+   {
+    "nodo": "tipi",
+    "scelte": [
+     "quattro nomi",
+     "quattro colori",
+     "quattro sapori"
+    ]
+   }
+  ],
+  "tutte": "triangolo",
+  "collegamenti": [
+   "media:geometria",
+   "mate:19",
+   "mate:9"
+  ]
+ },
+ "19": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le aree dei poligoni",
+   "ic": "🔷",
+   "sotto": "quanta superficie c'è dentro"
+  },
+  "nodi": [
+   {
+    "id": "param",
+    "n": "base × altezza",
+    "ic": "▱",
+    "sotto": "l'area del parallelogramma",
+    "da": "per il parallelogramma usano"
+   },
+   {
+    "id": "triangolo",
+    "n": "base × altezza : 2",
+    "ic": "🔺",
+    "sotto": "il triangolo è metà di un parallelogramma",
+    "da": "per il triangolo usano"
+   },
+   {
+    "id": "rombo",
+    "n": "diagonale × diagonale : 2",
+    "ic": "🔶",
+    "sotto": "diagonale maggiore × diagonale minore : 2",
+    "da": "per il rombo usano"
+   },
+   {
+    "id": "trapezio",
+    "n": "(base + base) × altezza : 2",
+    "ic": "⏢",
+    "sotto": "base maggiore + base minore",
+    "da": "per il trapezio usano"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Parallelogramma: area = base × altezza. Con base 8 cm e altezza 5 cm: 8 × 5 = 40 cm².",
+    "v": "Parallelogramma: area uguale base per altezza. Con base otto centimetri e altezza cinque centimetri: otto per cinque fa quaranta centimetri quadrati.",
+    "nodi": [
+     "param"
+    ]
+   },
+   {
+    "t": "Un triangolo è metà di un parallelogramma. Area = base × altezza : 2. Base 6 cm, altezza 4 cm: 6 × 4 : 2 = 12 cm².",
+    "v": "Un triangolo è metà di un parallelogramma. Area uguale base per altezza diviso due. Base sei centimetri, altezza quattro centimetri: sei per quattro diviso due fa dodici centimetri quadrati.",
+    "nodi": [
+     "triangolo"
+    ]
+   },
+   {
+    "t": "Il rombo usa le diagonali: area = diagonale maggiore × diagonale minore : 2. Diagonali 10 cm e 6 cm: 10 × 6 : 2 = 30 cm².",
+    "v": "Il rombo usa le diagonali: area uguale diagonale maggiore per diagonale minore diviso due. Diagonali dieci e sei centimetri: dieci per sei diviso due fa trenta centimetri quadrati.",
+    "nodi": [
+     "rombo"
+    ]
+   },
+   {
+    "t": "Il trapezio ha due basi. Area = (base maggiore + base minore) × altezza : 2.",
+    "v": "Il trapezio ha due basi. Area uguale base maggiore più base minore, per altezza, diviso due.",
+    "nodi": [
+     "trapezio"
+    ]
+   },
+   {
+    "t": "Basi 9 cm e 5 cm, altezza 4 cm: (9 + 5) × 4 : 2 = 14 × 4 : 2 = 28 cm².",
+    "v": "Basi nove e cinque centimetri, altezza quattro centimetri: nove più cinque fa quattordici, per quattro fa cinquantasei, diviso due fa ventotto centimetri quadrati.",
+    "nodi": [
+     "trapezio"
+    ]
+   },
+   {
+    "t": "Attenzione al : 2! Serve per triangolo, rombo con le diagonali e trapezio, non per il parallelogramma. L'area si misura in cm².",
+    "v": "Attenzione al diviso due! Serve per triangolo, rombo con le diagonali e trapezio, non per il parallelogramma. L'area si misura in centimetri quadrati.",
+    "nodi": [
+     "triangolo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "param",
+    "scelte": [
+     "base × altezza",
+     "base × colore",
+     "nome × altezza"
+    ]
+   },
+   {
+    "nodo": "rombo",
+    "scelte": [
+     "diagonale × diagonale : 2",
+     "pioggia × sole : 2",
+     "gatto × cane : 2"
+    ]
+   }
+  ],
+  "tutte": "triangolo",
+  "collegamenti": [
+   "mate:9",
+   "media:geometria",
+   "mate:18"
+  ]
+ },
+ "20": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il cerchio",
+   "ic": "⭕",
+   "sotto": "la figura chiusa dalla circonferenza"
+  },
+  "nodi": [
+   {
+    "id": "raggio",
+    "n": "il raggio",
+    "ic": "📍",
+    "sotto": "dal centro al bordo",
+    "da": "si misura con"
+   },
+   {
+    "id": "diametro",
+    "n": "il diametro",
+    "ic": "↔️",
+    "sotto": "il doppio del raggio",
+    "da": "si attraversa con"
+   },
+   {
+    "id": "pi",
+    "n": "3,14",
+    "ic": "🥧",
+    "sotto": "pi greco, arrotondato",
+    "da": "usa il numero"
+   },
+   {
+    "id": "circonferenza",
+    "n": "la circonferenza",
+    "ic": "⭕",
+    "sotto": "diametro × 3,14",
+    "da": "ha intorno"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il raggio va dal centro del cerchio fino al bordo. Il diametro attraversa tutto il cerchio passando per il centro.",
+    "nodi": [
+     "raggio",
+     "diametro"
+    ]
+   },
+   {
+    "t": "Il diametro è il doppio del raggio. Se il raggio è 4 cm, il diametro è 8 cm.",
+    "v": "Il diametro è il doppio del raggio. Se il raggio è quattro centimetri, il diametro è otto centimetri.",
+    "nodi": [
+     "diametro"
+    ]
+   },
+   {
+    "t": "La circonferenza è la linea che fa il giro del cerchio: è come il suo perimetro.",
+    "nodi": [
+     "circonferenza"
+    ]
+   },
+   {
+    "t": "Per misurarla si usa pi greco, un numero che vale circa 3,14. Circonferenza = diametro × 3,14.",
+    "v": "Per misurarla si usa pi greco, un numero che vale circa tre virgola quattordici. Circonferenza uguale diametro per tre virgola quattordici.",
+    "nodi": [
+     "pi"
+    ]
+   },
+   {
+    "t": "Raggio 4 cm? Prima il diametro: 8 cm. Poi 8 × 3,14 = 25,12 cm.",
+    "v": "Raggio quattro centimetri? Prima il diametro: otto centimetri. Poi otto per tre virgola quattordici fa venticinque virgola dodici centimetri.",
+    "nodi": [
+     "circonferenza"
+    ]
+   },
+   {
+    "t": "Attenzione: se conosci il raggio, prima raddoppialo! 4 × 3,14 darebbe solo metà circonferenza.",
+    "v": "Attenzione: se conosci il raggio, prima raddoppialo! Quattro per tre virgola quattordici darebbe solo metà circonferenza.",
+    "nodi": [
+     "raggio",
+     "diametro"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "raggio",
+    "scelte": [
+     "il raggio",
+     "il fulmine",
+     "la nuvola"
+    ]
+   },
+   {
+    "nodo": "pi",
+    "scelte": [
+     "3,14",
+     "100",
+     "7"
+    ]
+   }
+  ],
+  "tutte": "circonferenza",
+  "collegamenti": [
+   "mate:9",
+   "media:geometria",
+   "mate:19"
+  ]
+ },
+ "21": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I dati",
+   "ic": "📊",
+   "sotto": "media e moda"
+  },
+  "nodi": [
+   {
+    "id": "somma",
+    "n": "tutti i valori",
+    "ic": "➕",
+    "sotto": "5 + 7 + 6 + 10 = 28",
+    "da": "per la media si sommano"
+   },
+   {
+    "id": "dividi",
+    "n": "quanti sono",
+    "ic": "➗",
+    "sotto": "28 : 4 = 7",
+    "da": "poi si dividono per"
+   },
+   {
+    "id": "media",
+    "n": "la media",
+    "ic": "⚖️",
+    "sotto": "una parte uguale per tutti",
+    "da": "così danno"
+   },
+   {
+    "id": "moda",
+    "n": "la moda",
+    "ic": "🔁",
+    "sotto": "il valore che compare più volte",
+    "da": "hanno anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La media dice quanto toccherebbe a ognuno, se dividessimo tutto in parti uguali.",
+    "nodi": [
+     "media"
+    ]
+   },
+   {
+    "t": "Voti di 4 prove: 5, 7, 6, 10. Prima somma tutti i valori: 5 + 7 + 6 + 10 = 28.",
+    "v": "Voti di quattro prove: cinque, sette, sei, dieci. Prima somma tutti i valori: cinque più sette più sei più dieci fa ventotto.",
+    "nodi": [
+     "somma"
+    ]
+   },
+   {
+    "t": "Poi dividi per quanti sono: sono 4 valori, quindi 28 : 4 = 7. La media è 7.",
+    "v": "Poi dividi per quanti sono: sono quattro valori, quindi ventotto diviso quattro fa sette. La media è sette.",
+    "nodi": [
+     "dividi",
+     "media"
+    ]
+   },
+   {
+    "t": "Media = somma dei valori : quanti sono. Controllo: la media sta sempre tra il valore più piccolo e il più grande.",
+    "v": "Media uguale somma dei valori diviso quanti sono. Controllo: la media sta sempre tra il valore più piccolo e il più grande.",
+    "nodi": [
+     "media"
+    ]
+   },
+   {
+    "t": "La moda è il valore che compare più volte. In 2, 5, 5, 8, 5, 3 la moda è 5: compare 3 volte.",
+    "v": "La moda è il valore che compare più volte. In due, cinque, cinque, otto, cinque, tre la moda è cinque: compare tre volte.",
+    "nodi": [
+     "moda"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "dividi",
+    "scelte": [
+     "quanti sono",
+     "quanto pesano",
+     "di che colore sono"
+    ]
+   },
+   {
+    "nodo": "moda",
+    "scelte": [
+     "la moda",
+     "la merenda",
+     "la musica"
+    ]
+   }
+  ],
+  "tutte": "media",
+  "collegamenti": [
+   "mate:4",
+   "mate:10"
+  ]
+ },
+ "22": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I numeri relativi",
+   "ic": "🌡️",
+   "sotto": "sopra e sotto lo zero"
+  },
+  "nodi": [
+   {
+    "id": "zero",
+    "n": "lo zero",
+    "ic": "0️⃣",
+    "sotto": "sta a metà",
+    "da": "hanno al centro"
+   },
+   {
+    "id": "positivi",
+    "n": "il segno più",
+    "ic": "➕",
+    "sotto": "sopra lo zero: +3",
+    "da": "sopra lo zero hanno"
+   },
+   {
+    "id": "negativi",
+    "n": "il segno meno",
+    "ic": "➖",
+    "sotto": "sotto lo zero: −5",
+    "da": "sotto lo zero hanno"
+   },
+   {
+    "id": "scala",
+    "n": "una scala",
+    "ic": "🪜",
+    "sotto": "sali: verso il più; scendi: verso il meno",
+    "da": "si contano come su"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Pensa a un termometro: è come una scala con lo zero a metà. Sopra lo zero fa più caldo, sotto fa più freddo.",
+    "nodi": [
+     "scala",
+     "zero"
+    ]
+   },
+   {
+    "t": "Sopra lo zero i numeri hanno il segno più: +3 °C. Sotto lo zero hanno il segno meno: −5 °C.",
+    "v": "Sopra lo zero i numeri hanno il segno più: più tre gradi. Sotto lo zero hanno il segno meno: meno cinque gradi.",
+    "nodi": [
+     "positivi",
+     "negativi"
+    ]
+   },
+   {
+    "t": "Se la temperatura sale, vai su per la scala. Da −2 °C sali di 5 gradi: −1, 0, +1, +2, +3. Arrivi a +3 °C.",
+    "v": "Se la temperatura sale, vai su per la scala. Da meno due gradi sali di cinque gradi: meno uno, zero, più uno, più due, più tre. Arrivi a più tre gradi.",
+    "nodi": [
+     "scala"
+    ]
+   },
+   {
+    "t": "Se scende, vai giù. Da +2 °C scendi di 6 gradi: +1, 0, −1, −2, −3, −4. Arrivi a −4 °C.",
+    "v": "Se scende, vai giù. Da più due gradi scendi di sei gradi: più uno, zero, meno uno, meno due, meno tre, meno quattro. Arrivi a meno quattro gradi.",
+    "nodi": [
+     "scala"
+    ]
+   },
+   {
+    "t": "Attenzione: −8 °C è più freddo di −2 °C. Sotto lo zero, più è grande il numero dopo il meno, più fa freddo.",
+    "v": "Attenzione: meno otto gradi è più freddo di meno due gradi. Sotto lo zero, più è grande il numero dopo il meno, più fa freddo.",
+    "nodi": [
+     "negativi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "zero",
+    "scelte": [
+     "lo zero",
+     "il cento",
+     "il mille"
+    ]
+   },
+   {
+    "nodo": "negativi",
+    "scelte": [
+     "il segno meno",
+     "il punto esclamativo",
+     "la virgola"
+    ]
+   }
+  ],
+  "tutte": "scala",
+  "collegamenti": [
+   "mate:2",
+   "sci-spazio:meteo",
+   "geo:clima"
+  ]
+ },
+ "23": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La matematica delle medie",
+   "ic": "🎒",
+   "sotto": "un primo assaggio"
+  },
+  "nodi": [
+   {
+    "id": "potenze",
+    "n": "le potenze",
+    "ic": "🔺",
+    "sotto": "5² = 5 × 5 = 25",
+    "da": "comincia con"
+   },
+   {
+    "id": "divisori",
+    "n": "divisori e multipli",
+    "ic": "➗",
+    "sotto": "criteri, numeri primi, m.c.m. e M.C.D.",
+    "da": "studia"
+   },
+   {
+    "id": "espressioni",
+    "n": "le espressioni",
+    "ic": "🧮",
+    "sotto": "prima la parentesi, poi ×, poi +",
+    "da": "risolve"
+   },
+   {
+    "id": "angoli",
+    "n": "gli angoli",
+    "ic": "📐",
+    "sotto": "nel triangolo fanno 180°",
+    "da": "misura"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Le potenze sono moltiplicazioni speciali: 5² vuol dire 5 × 5 = 25. Attenzione, non è 5 × 2! E 2³ = 2 × 2 × 2 = 8.",
+    "v": "Le potenze sono moltiplicazioni speciali: cinque alla seconda vuol dire cinque per cinque, venticinque. Attenzione, non è cinque per due! E due alla terza è due per due per due, otto.",
+    "nodi": [
+     "potenze"
+    ]
+   },
+   {
+    "t": "Divisibile per 2: ultima cifra pari. Per 5: ultima 0 o 5. Per 3: la somma delle cifre si divide per 3. Per 9: la somma si divide per 9.",
+    "v": "Divisibile per due: ultima cifra pari. Per cinque: ultima zero o cinque. Per tre: la somma delle cifre si divide per tre. Per nove: la somma si divide per nove.",
+    "nodi": [
+     "divisori"
+    ]
+   },
+   {
+    "t": "Un numero primo si divide solo per 1 e per se stesso, come 7 o 13. Invece 15 non è primo: 15 = 3 × 5.",
+    "v": "Un numero primo si divide solo per uno e per se stesso, come sette o tredici. Invece quindici non è primo: quindici è tre per cinque.",
+    "nodi": [
+     "divisori"
+    ]
+   },
+   {
+    "t": "Il m.c.m. è il primo multiplo in comune: per 4 e 6 è 12. Il M.C.D. è il divisore comune più grande: per 4 e 6 è 2.",
+    "v": "Il minimo comune multiplo è il primo multiplo in comune: per quattro e sei è dodici. Il massimo comune divisore è il divisore comune più grande: per quattro e sei è due.",
+    "nodi": [
+     "divisori"
+    ]
+   },
+   {
+    "t": "Nelle espressioni: prima la parentesi, poi ×, poi +. 2 + 3 × 4 = 2 + 12 = 14. Invece (2 + 3) × 4 = 20.",
+    "v": "Nelle espressioni: prima la parentesi, poi la moltiplicazione, poi l'addizione. Due più tre per quattro fa due più dodici, quattordici. Invece, tra parentesi due più tre, per quattro, fa venti.",
+    "nodi": [
+     "espressioni"
+    ]
+   },
+   {
+    "t": "Due angoli complementari insieme fanno 90°, due supplementari fanno 180°. In un triangolo i tre angoli fanno sempre 180°.",
+    "v": "Due angoli complementari insieme fanno novanta gradi, due supplementari fanno centottanta gradi. In un triangolo i tre angoli fanno sempre centottanta gradi.",
+    "nodi": [
+     "angoli"
+    ]
+   },
+   {
+    "t": "Ultimo ripasso, le misure: 1 m = 100 cm, 1 km = 1000 m, 1 kg = 1000 g, 1 l = 1000 ml. E un'ora ha 60 minuti.",
+    "v": "Ultimo ripasso, le misure: un metro è cento centimetri, un chilometro è mille metri, un chilogrammo è mille grammi, un litro è mille millilitri. E un'ora ha sessanta minuti.",
+    "nodi": []
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "potenze",
+    "scelte": [
+     "le potenze",
+     "le pozzanghere",
+     "le pentole"
+    ]
+   },
+   {
+    "nodo": "divisori",
+    "scelte": [
+     "divisori e multipli",
+     "pozzanghere e ombrelli",
+     "pentole e padelle"
+    ]
+   }
+  ],
+  "tutte": "espressioni",
+  "collegamenti": [
+   "media:potenze",
+   "media:divisibilita",
+   "media:espressioni",
+   "media:geometria"
+  ]
  }
 }

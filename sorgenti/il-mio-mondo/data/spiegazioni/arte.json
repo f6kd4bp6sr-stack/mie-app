@@ -125,5 +125,1391 @@
    "8b2sbsg": "design",
    "6x7kzn2": "giocare"
   }
+ },
+ "colori": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I colori",
+   "ic": "🎨",
+   "sotto": "si mescolano sulla tavolozza"
+  },
+  "nodi": [
+   {
+    "id": "primari",
+    "n": "primari",
+    "ic": "🔴",
+    "sotto": "rosso, giallo e blu",
+    "da": "partono dai"
+   },
+   {
+    "id": "secondari",
+    "n": "i secondari",
+    "ic": "🟢",
+    "sotto": "verde, arancione e viola",
+    "da": "mescolati a due a due danno"
+   },
+   {
+    "id": "caldi",
+    "n": "caldi o freddi",
+    "ic": "🔥",
+    "sotto": "caldi: rosso, arancione, giallo; freddi: blu, verde, viola",
+    "da": "possono essere"
+   },
+   {
+    "id": "compl",
+    "n": "coppie complementari",
+    "ic": "⚖️",
+    "sotto": "opposte nel cerchio cromatico",
+    "da": "formano"
+   },
+   {
+    "id": "chiaro",
+    "n": "bianco e nero",
+    "ic": "⚪",
+    "sotto": "schiariscono e scuriscono",
+    "da": "cambiano con"
+   },
+   {
+    "id": "mono",
+    "n": "un solo colore",
+    "ic": "🔵",
+    "sotto": "il disegno monocromatico",
+    "da": "a volte si riducono a"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "A scuola i colori primari sono rosso, giallo e blu. Mescolandoli puoi ottenere quasi tutti gli altri colori.",
+    "nodi": [
+     "primari"
+    ]
+   },
+   {
+    "t": "Mescolando due primari nascono i secondari: giallo e blu fanno verde, giallo e rosso arancione, rosso e blu viola. Tutti e tre insieme fanno un colore scuro, quasi marrone.",
+    "nodi": [
+     "secondari"
+    ]
+   },
+   {
+    "t": "Rosso, arancione e giallo sono colori caldi: ricordano il sole e il fuoco. Blu, verde e viola sono freddi, come l'acqua e il ghiaccio.",
+    "nodi": [
+     "caldi"
+    ]
+   },
+   {
+    "t": "Nel cerchio cromatico i colori sono in ordine, come una ruota. Quelli opposti sono complementari: rosso e verde, giallo e viola, blu e arancione.",
+    "nodi": [
+     "compl"
+    ]
+   },
+   {
+    "t": "Il bianco schiarisce un colore, il nero lo scurisce. Bianco, nero e grigi sono colori acromatici, cioè senza colore.",
+    "nodi": [
+     "chiaro"
+    ]
+   },
+   {
+    "t": "Un disegno monocromatico usa un solo colore e le sue sfumature: tutto blu, dal cielo chiaro al mare profondo.",
+    "nodi": [
+     "mono"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "compl",
+    "scelte": [
+     "coppie complementari",
+     "coppie di scarpe",
+     "coppie di dadi"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:tecniche",
+   "arte:moderna",
+   "sci-spazio:atmosfera"
+  ],
+  "domande": {
+   "t5wllw": "primari",
+   "nfpuoz": "secondari",
+   "p7s73q": "secondari",
+   "1r2k7sx": "secondari",
+   "14k8k2q": "secondari",
+   "19d6sip": "secondari",
+   "agvaro": "caldi",
+   "157cjcu": "caldi",
+   "1yf1wfu": "compl",
+   "16c5pn3": "compl",
+   "m52k58": "compl",
+   "lgss0h": "compl",
+   "17pynvr": "compl",
+   "4slqfz": "chiaro",
+   "w1dkbr": "chiaro",
+   "19xp6ee": "chiaro",
+   "14eqktq": "mono"
+  }
+ },
+ "generi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I generi della pittura",
+   "ic": "🖼️",
+   "sotto": "che cosa dipinge l'artista"
+  },
+  "nodi": [
+   {
+    "id": "ritratto",
+    "n": "il ritratto",
+    "ic": "👤",
+    "sotto": "l'immagine di una persona",
+    "da": "includono"
+   },
+   {
+    "id": "auto",
+    "n": "l'autoritratto",
+    "ic": "🪞",
+    "sotto": "il pittore ritrae se stesso",
+    "da": "hanno anche"
+   },
+   {
+    "id": "paesaggio",
+    "n": "il paesaggio",
+    "ic": "🏞️",
+    "sotto": "montagne, mari, campagne o città",
+    "da": "raccontano luoghi con"
+   },
+   {
+    "id": "natura",
+    "n": "natura morta",
+    "ic": "🍎",
+    "sotto": "oggetti, frutta o fiori",
+    "da": "dipingono oggetti nella"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il ritratto è l'immagine di una persona, spesso del suo viso.",
+    "nodi": [
+     "ritratto"
+    ]
+   },
+   {
+    "t": "Se il pittore dipinge se stesso, guardandosi allo specchio, fa un autoritratto.",
+    "nodi": [
+     "auto"
+    ]
+   },
+   {
+    "t": "Il paesaggio mostra luoghi: montagne, mari, campagne o città. Dentro la parola paesaggio c'è «paese».",
+    "nodi": [
+     "paesaggio"
+    ]
+   },
+   {
+    "t": "La natura morta è un dipinto di oggetti, frutta o fiori: cose ferme, in posa per il pittore.",
+    "nodi": [
+     "natura"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "natura",
+    "scelte": [
+     "natura morta",
+     "partita di calcio",
+     "corsa in bicicletta"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:rinascimento",
+   "arte:linguaggio",
+   "arte:moderna"
+  ],
+  "domande": {
+   "1lprmk6": "auto",
+   "1a0zt96": "natura",
+   "6khfi3": "paesaggio",
+   "119ctj8": "ritratto"
+  }
+ },
+ "linguaggio": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il linguaggio visivo",
+   "ic": "📏",
+   "sotto": "gli attrezzi per costruire un'immagine"
+  },
+  "nodi": [
+   {
+    "id": "linee",
+    "n": "linee e forme",
+    "ic": "✏️",
+    "sotto": "orizzontali, verticali, spezzate; cerchi e triangoli",
+    "da": "usa"
+   },
+   {
+    "id": "texture",
+    "n": "la texture",
+    "ic": "🪵",
+    "sotto": "ruvida, liscia, a righe",
+    "da": "fa sentire la superficie con"
+   },
+   {
+    "id": "luce",
+    "n": "luce e ombra",
+    "ic": "💡",
+    "sotto": "chiaroscuro e ombra portata",
+    "da": "dà volume con"
+   },
+   {
+    "id": "prosp",
+    "n": "la prospettiva",
+    "ic": "🛤️",
+    "sotto": "punto di fuga; le cose lontane sono più piccole",
+    "da": "crea profondità con"
+   },
+   {
+    "id": "comp",
+    "n": "la composizione",
+    "ic": "🧩",
+    "sotto": "primo piano e sfondo",
+    "da": "dispone gli elementi con"
+   },
+   {
+    "id": "simm",
+    "n": "la simmetria",
+    "ic": "🦋",
+    "sotto": "due metà uguali, come allo specchio",
+    "da": "a volte cerca"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Le linee orizzontali sono distese come l'orizzonte, le verticali vanno dall'alto in basso. La linea spezzata va a zig zag. Cerchi, quadrati e triangoli sono forme geometriche.",
+    "nodi": [
+     "linee"
+    ]
+   },
+   {
+    "t": "La texture è l'effetto della superficie: ruvida, liscia, a righe. Si crea con tratteggi e puntini.",
+    "nodi": [
+     "texture"
+    ]
+   },
+   {
+    "t": "Con il chiaroscuro alterni zone di luce e d'ombra: il disegno prende volume. L'ombra cade sempre dalla parte opposta alla luce.",
+    "nodi": [
+     "luce"
+    ]
+   },
+   {
+    "t": "L'ombra portata è quella che l'oggetto proietta su una superficie, come il pavimento.",
+    "nodi": [
+     "luce"
+    ]
+   },
+   {
+    "t": "La prospettiva dà la sensazione di profondità: le cose lontane, come gli alberi in fondo, sono più piccole. Le linee si incontrano nel punto di fuga.",
+    "nodi": [
+     "prosp"
+    ]
+   },
+   {
+    "t": "La composizione è il modo in cui sono disposti gli elementi. Il primo piano è ciò che è più vicino a chi guarda; lo sfondo sta dietro.",
+    "nodi": [
+     "comp"
+    ]
+   },
+   {
+    "t": "Una figura è simmetrica se, piegata a metà, le due parti combaciano come allo specchio: come le ali di una farfalla.",
+    "nodi": [
+     "simm"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "prosp",
+    "scelte": [
+     "la prospettiva",
+     "la merenda",
+     "il raffreddore"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:rinascimento",
+   "arte:colori",
+   "media:geometria"
+  ],
+  "domande": {
+   "o506ba": "prosp",
+   "1ygdvlv": "prosp",
+   "tqz3qh": "prosp",
+   "s285j0": "linee",
+   "1uisrlj": "linee",
+   "32ravb": "linee",
+   "17tsfqx": "comp",
+   "1vuagpe": "comp",
+   "95whpc": "texture",
+   "1n0ue9r": "luce",
+   "1gyhnov": "luce",
+   "1mbp0od": "luce",
+   "njrk51": "simm"
+  }
+ },
+ "tecniche": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'artista",
+   "ic": "🖌️",
+   "sotto": "sceglie tecniche e strumenti"
+  },
+  "nodi": [
+   {
+    "id": "attrezzi",
+    "n": "tavolozza e cavalletto",
+    "ic": "🎨",
+    "sotto": "per mescolare i colori e reggere la tela",
+    "da": "lavora con"
+   },
+   {
+    "id": "disegno",
+    "n": "matite, carboncino e sanguigna",
+    "ic": "✏️",
+    "sotto": "e pastelli a cera",
+    "da": "disegna con"
+   },
+   {
+    "id": "acqua",
+    "n": "acquerello e tempera",
+    "ic": "💧",
+    "sotto": "trasparente o coprente",
+    "da": "dipinge con"
+   },
+   {
+    "id": "olio",
+    "n": "olio e affresco",
+    "ic": "🖼️",
+    "sotto": "l'olio asciuga piano; l'affresco va sul muro",
+    "da": "per le grandi opere usa"
+   },
+   {
+    "id": "mosaico",
+    "n": "il mosaico",
+    "ic": "🟦",
+    "sotto": "tante tessere di pietra o vetro",
+    "da": "compone immagini con"
+   },
+   {
+    "id": "giochi",
+    "n": "collage, frottage e stencil",
+    "ic": "✂️",
+    "sotto": "ritagli, strofinate, mascherine",
+    "da": "sperimenta con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il pittore mescola i colori sulla tavolozza e tiene la tela dritta sul cavalletto. Copiare i grandi maestri è un ottimo esercizio: si imparano le loro tecniche.",
+    "nodi": [
+     "attrezzi"
+    ]
+   },
+   {
+    "t": "La mina della matita è di grafite e argilla, non di piombo. La lettera B vuol dire mina morbida e scura. Il carboncino è un bastoncino di carbone.",
+    "nodi": [
+     "disegno"
+    ]
+   },
+   {
+    "t": "Leonardo disegnava anche con la sanguigna, un gessetto rosso-mattone. I pastelli a cera sono fatti di cera e colore in polvere.",
+    "nodi": [
+     "disegno"
+    ]
+   },
+   {
+    "t": "L'acquerello usa colori sciolti in acqua, trasparenti. La tempera è cremosa e coprente: a scuola si scioglie con poca acqua.",
+    "nodi": [
+     "acqua"
+    ]
+   },
+   {
+    "t": "I colori a olio asciugano molto lentamente, così il pittore può correggere a lungo. L'affresco si dipinge sull'intonaco ancora fresco: il colore resta nel muro per secoli.",
+    "nodi": [
+     "olio"
+    ]
+   },
+   {
+    "t": "Il mosaico è un'immagine fatta di tante tessere di pietra o vetro, messe vicine vicine.",
+    "nodi": [
+     "mosaico"
+    ]
+   },
+   {
+    "t": "Nel collage incolli ritagli. Nel frottage strofini la matita su un foglio appoggiato a una superficie. Lo stencil è una mascherina traforata per dipingere forme.",
+    "nodi": [
+     "giochi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "mosaico",
+    "scelte": [
+     "il mosaico",
+     "il motorino",
+     "il minestrone"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:colori",
+   "arte:medioevo",
+   "arte:rinascimento"
+  ],
+  "domande": {
+   "1lo4dck": "olio",
+   "1llcitf": "olio",
+   "1ozhm5y": "mosaico",
+   "c6i5r0": "mosaico",
+   "15y2sl2": "acqua",
+   "xjffwu": "acqua",
+   "11mvkex": "attrezzi",
+   "iel61s": "attrezzi",
+   "vs12ww": "attrezzi",
+   "w8jys3": "disegno",
+   "157llqm": "disegno",
+   "1vm5db5": "disegno",
+   "r1v5h7": "disegno",
+   "1bfz85f": "disegno",
+   "14exima": "giochi",
+   "p9jsjj": "giochi",
+   "14qie3w": "giochi"
+  }
+ },
+ "scultura": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La scultura",
+   "ic": "🗿",
+   "sotto": "opere in tre dimensioni"
+  },
+  "nodi": [
+   {
+    "id": "tre",
+    "n": "tre dimensioni",
+    "ic": "📦",
+    "sotto": "a tutto tondo: le giri intorno",
+    "da": "ha"
+   },
+   {
+    "id": "rilievo",
+    "n": "il bassorilievo",
+    "ic": "🪙",
+    "sotto": "figure che sporgono poco da un fondo",
+    "da": "può essere anche"
+   },
+   {
+    "id": "marmo",
+    "n": "il marmo",
+    "ic": "🏛️",
+    "sotto": "di Carrara, come il David",
+    "da": "usa"
+   },
+   {
+    "id": "bronzo",
+    "n": "il bronzo",
+    "ic": "🔔",
+    "sotto": "metallo fuso versato in uno stampo",
+    "da": "si fa anche fondendo"
+   },
+   {
+    "id": "argilla",
+    "n": "l'argilla",
+    "ic": "🏺",
+    "sotto": "modellata al tornio e cotta in forno",
+    "da": "si modella anche con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La scultura ha tre dimensioni: altezza, larghezza e profondità. Si fa togliendo materiale, oppure modellandolo con le mani.",
+    "nodi": [
+     "tre"
+    ]
+   },
+   {
+    "t": "Una statua a tutto tondo si guarda da ogni lato, girandole intorno. Nel bassorilievo, invece, le figure sporgono appena da un fondo, come su una moneta.",
+    "nodi": [
+     "tre",
+     "rilievo"
+    ]
+   },
+   {
+    "t": "Michelangelo scolpì il David in un unico blocco di marmo bianco di Carrara, in Toscana. Le cave sono sulle Alpi Apuane.",
+    "nodi": [
+     "marmo"
+    ]
+   },
+   {
+    "t": "Il bronzo è una lega di rame e stagno. Si scioglie col fuoco e si versa in uno stampo: raffreddandosi, prende la forma della statua.",
+    "nodi": [
+     "bronzo"
+    ]
+   },
+   {
+    "t": "Con l'argilla si fa la ceramica: il vasaio la modella sul tornio, un disco che gira, poi la cuoce in un forno caldissimo.",
+    "nodi": [
+     "argilla"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "bronzo",
+    "scelte": [
+     "il bronzo",
+     "il burro",
+     "il cartone"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:rinascimento",
+   "tecno:materiali",
+   "arte:antica"
+  ],
+  "domande": {
+   "1gmz01r": "tre",
+   "10j3z2i": "tre",
+   "1lq5ngq": "bronzo",
+   "6dxmvz": "marmo",
+   "1hsrj2h": "marmo",
+   "15vs6e5": "rilievo",
+   "1o1gbwl": "argilla",
+   "swxa2k": "argilla"
+  }
+ },
+ "immagini": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le immagini",
+   "ic": "📷",
+   "sotto": "si stampano, si fotografano, si animano"
+  },
+  "nodi": [
+   {
+    "id": "incisione",
+    "n": "l'incisione",
+    "ic": "🖋️",
+    "sotto": "disegno inciso su una lastra e stampato",
+    "da": "si stampano con"
+   },
+   {
+    "id": "xilo",
+    "n": "la xilografia",
+    "ic": "🌊",
+    "sotto": "stampa da legno inciso, come la Grande onda",
+    "da": "si stampano anche con"
+   },
+   {
+    "id": "foto",
+    "n": "la fotografia",
+    "ic": "📸",
+    "sotto": "scrivere con la luce",
+    "da": "si catturano con"
+   },
+   {
+    "id": "fumetto",
+    "n": "fumetto",
+    "ic": "💬",
+    "sotto": "vignette e nuvolette",
+    "da": "raccontano storie nel"
+   },
+   {
+    "id": "cartoni",
+    "n": "cartoni animati",
+    "ic": "🎞️",
+    "sotto": "tanti disegni in sequenza",
+    "da": "si muovono nei"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Nell'incisione si graffia un disegno su una lastra, si mette l'inchiostro e si preme sul foglio: così si stampano tante copie.",
+    "nodi": [
+     "incisione"
+    ]
+   },
+   {
+    "t": "La xilografia è una stampa da legno inciso: xilo in greco vuol dire legno. «La grande onda» dell'artista giapponese Hokusai è una stampa famosissima.",
+    "nodi": [
+     "xilo"
+    ]
+   },
+   {
+    "t": "La parola fotografia viene dal greco: vuol dire scrivere con la luce.",
+    "nodi": [
+     "foto"
+    ]
+   },
+   {
+    "t": "Il fumetto racconta una storia con disegni e nuvolette. Le nuvolette sembrano sbuffi di fumo: da qui il nome. I riquadri si chiamano vignette.",
+    "nodi": [
+     "fumetto"
+    ]
+   },
+   {
+    "t": "Nei cartoni animati tanti disegni, ognuno un po' diverso dal precedente, scorrono velocissimi: così sembrano muoversi.",
+    "nodi": [
+     "cartoni"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "foto",
+    "scelte": [
+     "la fotografia",
+     "la marmellata",
+     "la ginnastica"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:tecniche",
+   "tecno:inventori",
+   "ita:testi"
+  ],
+  "domande": {
+   "alaumn": "fumetto",
+   "y4wttu": "fumetto",
+   "cs569v": "fumetto",
+   "157w4wl": "cartoni",
+   "11d60up": "incisione",
+   "18n2xuj": "xilo",
+   "1gzufqz": "xilo",
+   "nrjn20": "foto"
+  }
+ },
+ "antica": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'arte antica",
+   "ic": "🏺",
+   "sotto": "dalle caverne all'Impero romano"
+  },
+  "nodi": [
+   {
+    "id": "rupestri",
+    "n": "le pitture rupestri",
+    "ic": "🐂",
+    "sotto": "nelle caverne, come a Lascaux",
+    "da": "comincia con"
+   },
+   {
+    "id": "egizi",
+    "n": "gli Egizi",
+    "ic": "🔺",
+    "sotto": "piramidi, papiro, figure di profilo, oro",
+    "da": "continua con"
+   },
+   {
+    "id": "templi",
+    "n": "i templi greci",
+    "ic": "🏛️",
+    "sotto": "il Partenone; capitelli ionici e corinzi",
+    "da": "cresce con"
+   },
+   {
+    "id": "statue",
+    "n": "le statue greche",
+    "ic": "🗿",
+    "sotto": "Discobolo, Venere di Milo, Bronzi di Riace",
+    "da": "ha capolavori come"
+   },
+   {
+    "id": "romani",
+    "n": "i Romani",
+    "ic": "🏟️",
+    "sotto": "archi, Colosseo e Pantheon",
+    "da": "si conclude con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Le pitture più antiche sono nelle caverne: sono le pitture rupestri. A Lascaux, in Francia, gli uomini della preistoria dipinsero cavalli e bisonti.",
+    "nodi": [
+     "rupestri"
+    ]
+   },
+   {
+    "t": "In Egitto le piramidi di Giza erano le tombe dei faraoni, costruite più di 4000 anni fa. Gli Egizi scrivevano e dipingevano sul papiro.",
+    "nodi": [
+     "egizi"
+    ]
+   },
+   {
+    "t": "Nell'arte egizia le figure hanno la testa di profilo e il busto di fronte. La maschera del faraone Tutankhamon è d'oro.",
+    "nodi": [
+     "egizi"
+    ]
+   },
+   {
+    "t": "Il Partenone di Atene era il tempio della dea Atena. La parte alta della colonna è il capitello: ionico con due riccioli, le volute; corinzio con foglie d'acanto.",
+    "nodi": [
+     "templi"
+    ]
+   },
+   {
+    "t": "Gli scultori greci rappresentavano corpi forti ed eleganti. Il Discobolo di Mirone sta per lanciare il disco. La Venere di Milo è senza braccia.",
+    "nodi": [
+     "statue"
+    ]
+   },
+   {
+    "t": "Nel 1972, in fondo al mare vicino a Riace, in Calabria, furono ritrovati due guerrieri greci di bronzo: i Bronzi di Riace.",
+    "nodi": [
+     "statue"
+    ]
+   },
+   {
+    "t": "I Romani usarono moltissimo l'arco, per ponti e acquedotti. Il Colosseo era un anfiteatro per gli spettacoli; la cupola del Pantheon ha un foro rotondo in cima.",
+    "nodi": [
+     "romani"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "templi",
+    "scelte": [
+     "i templi greci",
+     "i grattacieli",
+     "i supermercati"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "storia:egizi",
+   "storia:greci",
+   "storia:vita-romana"
+  ],
+  "domande": {
+   "bm5fq7": "rupestri",
+   "1vnvar4": "egizi",
+   "1t2r27w": "egizi",
+   "scfpvt": "egizi",
+   "l9rjb6": "egizi",
+   "mz15zr": "templi",
+   "1cllwcw": "templi",
+   "1bnupxv": "templi",
+   "gqti1r": "templi",
+   "skwmlh": "romani",
+   "15uwea1": "romani",
+   "a09rwk": "romani",
+   "1rg25ig": "statue",
+   "11ls2wf": "statue",
+   "1y7xjp9": "statue"
+  }
+ },
+ "medioevo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'arte del Medioevo",
+   "ic": "⛪",
+   "sotto": "chiese, mosaici e oro"
+  },
+  "nodi": [
+   {
+    "id": "biz",
+    "n": "mosaici e icone",
+    "ic": "✨",
+    "sotto": "i mosaici dorati di Ravenna",
+    "da": "brilla di"
+   },
+   {
+    "id": "romanico",
+    "n": "chiese romaniche",
+    "ic": "⛪",
+    "sotto": "archi a tutto sesto; la Torre di Pisa",
+    "da": "costruisce"
+   },
+   {
+    "id": "gotico",
+    "n": "chiese gotiche",
+    "ic": "🏰",
+    "sotto": "archi a sesto acuto, vetrate, rosoni",
+    "da": "innalza"
+   },
+   {
+    "id": "oro",
+    "n": "fondi d'oro e trittici",
+    "ic": "🟨",
+    "sotto": "foglia d'oro; tre pannelli",
+    "da": "dipinge"
+   },
+   {
+    "id": "miniature",
+    "n": "miniature",
+    "ic": "📖",
+    "sotto": "illustrazioni nei libri scritti a mano",
+    "da": "decora i libri con"
+   },
+   {
+    "id": "giotto",
+    "n": "Giotto",
+    "ic": "🎨",
+    "sotto": "Cappella degli Scrovegni e Campanile di Firenze",
+    "da": "ha un grande maestro:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Nel Medioevo l'arte racconta soprattutto storie sacre. A Ravenna ci sono antichissimi mosaici dorati. Le icone bizantine sono immagini sacre dipinte su tavola.",
+    "nodi": [
+     "biz"
+    ]
+   },
+   {
+    "t": "Le chiese romaniche hanno archi a tutto sesto, cioè a mezzo cerchio. A Pisa il campanile del Duomo è famoso perché pende: il terreno sotto è morbido.",
+    "nodi": [
+     "romanico"
+    ]
+   },
+   {
+    "t": "Le chiese gotiche si slanciano verso il cielo, con archi a punta, detti a sesto acuto. Hanno grandi vetrate colorate e rosoni, finestre rotonde decorate.",
+    "nodi": [
+     "gotico"
+    ]
+   },
+   {
+    "t": "Nei dipinti lo sfondo era spesso di foglia d'oro. Un dipinto diviso in tre pannelli si chiama trittico.",
+    "nodi": [
+     "oro"
+    ]
+   },
+   {
+    "t": "I monaci decoravano i libri scritti a mano con le miniature. Il nome viene dal minio, un colore rosso.",
+    "nodi": [
+     "miniature"
+    ]
+   },
+   {
+    "t": "Giotto dipinse gli affreschi della Cappella degli Scrovegni, a Padova, più di 700 anni fa. Progettò anche il campanile del Duomo di Firenze.",
+    "nodi": [
+     "giotto"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "gotico",
+    "scelte": [
+     "chiese gotiche",
+     "piscine olimpiche",
+     "stazioni dei treni"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "media:medioevo",
+   "arte:tecniche",
+   "arte:rinascimento"
+  ],
+  "domande": {
+   "1av7uno": "giotto",
+   "8zuhdk": "giotto",
+   "1cglwbg": "biz",
+   "1ulsy5r": "biz",
+   "1qwjyzw": "gotico",
+   "ezh0xp": "gotico",
+   "v6w4sp": "gotico",
+   "14rmge2": "romanico",
+   "1a4e5bl": "romanico",
+   "1bsm618": "oro",
+   "nh0yro": "oro",
+   "d2ih9e": "miniature"
+  }
+ },
+ "rinascimento": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il Rinascimento",
+   "ic": "🌟",
+   "sotto": "nel Quattrocento e nel Cinquecento"
+  },
+  "nodi": [
+   {
+    "id": "antichi",
+    "n": "l'arte antica",
+    "ic": "🏛️",
+    "sotto": "si riscopre l'arte di Greci e Romani",
+    "da": "fa rinascere"
+   },
+   {
+    "id": "brunel",
+    "n": "Brunelleschi",
+    "ic": "📐",
+    "sotto": "la prospettiva e la cupola del Duomo di Firenze",
+    "da": "comincia a Firenze con"
+   },
+   {
+    "id": "botti",
+    "n": "Botticelli",
+    "ic": "🐚",
+    "sotto": "Nascita di Venere e Primavera, agli Uffizi",
+    "da": "dipinge sogni con"
+   },
+   {
+    "id": "leonardo",
+    "n": "Leonardo da Vinci",
+    "ic": "🖼️",
+    "sotto": "Gioconda, Ultima cena, sfumato, invenzioni",
+    "da": "ha un genio:"
+   },
+   {
+    "id": "michel",
+    "n": "Michelangelo",
+    "ic": "🗿",
+    "sotto": "il David e la Cappella Sistina",
+    "da": "scolpisce e dipinge con"
+   },
+   {
+    "id": "raff",
+    "n": "Raffaello e Tiziano",
+    "ic": "🎨",
+    "sotto": "la Scuola di Atene; il colore di Venezia",
+    "da": "continua con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Tra il Quattrocento e il Cinquecento in Italia c'è il Rinascimento: si riscopre l'arte degli antichi Greci e Romani.",
+    "nodi": [
+     "antichi"
+    ]
+   },
+   {
+    "t": "A Firenze Filippo Brunelleschi è considerato il primo ad aver studiato le regole della prospettiva. Progettò anche la grande cupola del Duomo.",
+    "nodi": [
+     "brunel"
+    ]
+   },
+   {
+    "t": "Sandro Botticelli dipinse «La nascita di Venere» e la «Primavera»: oggi sono agli Uffizi di Firenze.",
+    "nodi": [
+     "botti"
+    ]
+   },
+   {
+    "t": "Leonardo da Vinci era pittore, inventore e scienziato. Dipinse la Gioconda, oggi al Louvre di Parigi, e «L'ultima cena» a Milano.",
+    "nodi": [
+     "leonardo"
+    ]
+   },
+   {
+    "t": "Con lo sfumato Leonardo rendeva i contorni morbidi, come nebbia. Nell'Uomo vitruviano studiò le proporzioni del corpo, dentro un cerchio e un quadrato.",
+    "nodi": [
+     "leonardo"
+    ]
+   },
+   {
+    "t": "Michelangelo scolpì il David di marmo e dipinse la volta della Cappella Sistina, tra il 1508 e il 1512. Poi sulla parete dell'altare dipinse il Giudizio Universale.",
+    "nodi": [
+     "michel"
+    ]
+   },
+   {
+    "t": "Raffaello dipinse la «Scuola di Atene» in Vaticano. Tiziano lavorò soprattutto a Venezia: fu un grande maestro del colore.",
+    "nodi": [
+     "raff"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "brunel",
+    "scelte": [
+     "Brunelleschi",
+     "Cappuccetto Rosso",
+     "Pinocchio"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:linguaggio",
+   "arte:scultura",
+   "arte:barocco"
+  ],
+  "domande": {
+   "1d0i1mx": "leonardo",
+   "4ollth": "leonardo",
+   "1lozwp7": "leonardo",
+   "yber84": "leonardo",
+   "tguptc": "leonardo",
+   "1ijoflh": "leonardo",
+   "12sba8a": "michel",
+   "b0thsw": "michel",
+   "918txs": "michel",
+   "1hywk5c": "botti",
+   "7x5xqy": "botti",
+   "5njm3z": "botti",
+   "11ubumh": "antichi",
+   "10pxd3q": "brunel",
+   "11i70lm": "brunel",
+   "23djhg": "raff",
+   "mybrrk": "raff"
+  }
+ },
+ "barocco": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il Seicento",
+   "ic": "🕯️",
+   "sotto": "l'arte del Barocco"
+  },
+  "nodi": [
+   {
+    "id": "cara",
+    "n": "Caravaggio",
+    "ic": "🕯️",
+    "sotto": "forte contrasto tra luce e ombra",
+    "da": "ha un pittore della luce:"
+   },
+   {
+    "id": "bernini",
+    "n": "Gian Lorenzo Bernini",
+    "ic": "🌿",
+    "sotto": "scolpì «Apollo e Dafne»",
+    "da": "ha uno scultore geniale:"
+   },
+   {
+    "id": "colonnato",
+    "n": "il colonnato di San Pietro",
+    "ic": "🏛️",
+    "sotto": "due braccia che abbracciano la piazza",
+    "da": "costruisce a Roma"
+   },
+   {
+    "id": "vermeer",
+    "n": "Vermeer",
+    "ic": "🦪",
+    "sotto": "la Ragazza con l'orecchino di perla",
+    "da": "in Olanda ha"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Nel Seicento l'arte vuole stupire ed emozionare: è il tempo del Barocco.",
+    "nodi": []
+   },
+   {
+    "t": "Caravaggio usava un forte contrasto tra luce e ombra: le figure sembrano uscire dal buio, illuminate come da un faro.",
+    "nodi": [
+     "cara"
+    ]
+   },
+   {
+    "t": "Gian Lorenzo Bernini fu un grande scultore barocco. In «Apollo e Dafne» la ragazza si trasforma in albero: sembra che il marmo si muova!",
+    "nodi": [
+     "bernini"
+    ]
+   },
+   {
+    "t": "Bernini progettò anche il grande colonnato di Piazza San Pietro, a Roma: sembra due enormi braccia che abbracciano chi arriva.",
+    "nodi": [
+     "colonnato"
+    ]
+   },
+   {
+    "t": "In Olanda, nello stesso secolo, Johannes Vermeer dipinse la «Ragazza con l'orecchino di perla».",
+    "nodi": [
+     "vermeer"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "cara",
+    "scelte": [
+     "Caravaggio",
+     "Babbo Natale",
+     "Peter Pan"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:rinascimento",
+   "arte:linguaggio",
+   "arte:torino"
+  ],
+  "domande": {
+   "1glddja": "cara",
+   "52s5it": "vermeer",
+   "v3kkcj": "colonnato",
+   "pb68uy": "bernini"
+  }
+ },
+ "moderna": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'arte moderna",
+   "ic": "🌻",
+   "sotto": "dall'Ottocento a oggi, idee nuove"
+  },
+  "nodi": [
+   {
+    "id": "impress",
+    "n": "gli impressionisti",
+    "ic": "🌅",
+    "sotto": "la luce di un momento: Monet, Degas",
+    "da": "comincia con"
+   },
+   {
+    "id": "colori",
+    "n": "nuovi colori",
+    "ic": "🌻",
+    "sotto": "Van Gogh, Seurat, Klimt",
+    "da": "sperimenta"
+   },
+   {
+    "id": "forme",
+    "n": "nuove forme",
+    "ic": "🔷",
+    "sotto": "cubismo, futurismo, arte astratta",
+    "da": "inventa"
+   },
+   {
+    "id": "sogni",
+    "n": "sogni e ritagli",
+    "ic": "✂️",
+    "sotto": "Dalí, Matisse, Calder",
+    "da": "gioca con"
+   },
+   {
+    "id": "oggi",
+    "n": "il mondo di oggi",
+    "ic": "🥫",
+    "sotto": "Pop Art, street art, installazioni",
+    "da": "racconta"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Gli impressionisti volevano dipingere la luce e i colori di un momento. Dipingevano all'aperto, en plein air come dicono i francesi, con pennellate veloci.",
+    "v": "Gli impressionisti volevano dipingere la luce e i colori di un momento. Dipingevano all'aperto, an plen èr come dicono i francesi, con pennellate veloci.",
+    "nodi": [
+     "impress"
+    ]
+   },
+   {
+    "t": "Il nome viene da un quadro di Claude Monet, «Impressione, levar del sole». Monet dipinse anche tantissime ninfee nel suo giardino. Edgar Degas amava le ballerine.",
+    "nodi": [
+     "impress"
+    ]
+   },
+   {
+    "t": "Vincent van Gogh dipinse la «Notte stellata» nel 1889 e «I girasoli». Georges Seurat dipingeva con tantissimi puntini colorati. Gustav Klimt usò l'oro nel «Bacio».",
+    "nodi": [
+     "colori"
+    ]
+   },
+   {
+    "t": "Pablo Picasso e Georges Braque inventarono il cubismo, con figure fatte di forme geometriche. I futuristi italiani, come Boccioni, amavano la velocità e le macchine.",
+    "nodi": [
+     "forme"
+    ]
+   },
+   {
+    "t": "Kandinskij fu tra i primi artisti astratti: un'opera astratta non rappresenta cose riconoscibili. Mondrian usava linee nere e rettangoli rossi, gialli e blu.",
+    "nodi": [
+     "forme"
+    ]
+   },
+   {
+    "t": "Salvador Dalí dipinse orologi molli, come nei sogni. Henri Matisse, da anziano, ritagliava carta colorata. Alexander Calder inventò i mobile, sculture sospese che si muovono con l'aria.",
+    "nodi": [
+     "sogni"
+    ]
+   },
+   {
+    "t": "Andy Warhol, della Pop Art, dipinse le lattine di zuppa. La street art è fatta sui muri delle città; un'installazione riempie uno spazio.",
+    "nodi": [
+     "oggi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "impress",
+    "scelte": [
+     "gli impressionisti",
+     "gli astronauti",
+     "i pirati"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "arte:colori",
+   "arte:munari",
+   "arte:torino"
+  ],
+  "domande": {
+   "7belbj": "colori",
+   "u4cv8h": "colori",
+   "1yqzx9m": "colori",
+   "wee05v": "colori",
+   "119b5wj": "impress",
+   "df6m1l": "impress",
+   "x7l6nn": "impress",
+   "r9gmdk": "impress",
+   "451d4z": "impress",
+   "1yhip6s": "forme",
+   "3w2m5f": "forme",
+   "vu2m16": "forme",
+   "1y185f7": "forme",
+   "14s1qgb": "forme",
+   "qtr3og": "sogni",
+   "1glqbwh": "sogni",
+   "73e3rt": "sogni",
+   "6xjytv": "oggi",
+   "1i09lnz": "oggi",
+   "yguukm": "oggi"
+  }
+ },
+ "torino": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Torino",
+   "ic": "🏰",
+   "sotto": "musei, regge e palazzi"
+  },
+  "nodi": [
+   {
+    "id": "egizio",
+    "n": "il Museo Egizio",
+    "ic": "🏺",
+    "sotto": "il più antico dedicato all'antico Egitto",
+    "da": "custodisce"
+   },
+   {
+    "id": "mole",
+    "n": "la Mole Antonelliana",
+    "ic": "🗼",
+    "sotto": "di Antonelli; dentro c'è il Museo del Cinema",
+    "da": "ha come simbolo"
+   },
+   {
+    "id": "regge",
+    "n": "residenze di caccia",
+    "ic": "🦌",
+    "sotto": "Venaria e Stupinigi, dei Savoia",
+    "da": "è circondata dalle"
+   },
+   {
+    "id": "palazzi",
+    "n": "palazzi e castelli",
+    "ic": "🏯",
+    "sotto": "Palazzo Madama, Valentino, Borgo Medievale",
+    "da": "mostra"
+   },
+   {
+    "id": "architetti",
+    "n": "grandi architetti",
+    "ic": "📐",
+    "sotto": "Juvarra e Guarini",
+    "da": "ebbe"
+   },
+   {
+    "id": "gam",
+    "n": "GAM",
+    "ic": "🖼️",
+    "sotto": "la Galleria d'Arte Moderna",
+    "da": "espone arte moderna alla"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Un museo è un luogo che conserva ed espone opere. Il Museo Egizio di Torino, nato nel 1824, è il più antico del mondo dedicato all'antico Egitto.",
+    "nodi": [
+     "egizio"
+    ]
+   },
+   {
+    "t": "Al Museo Egizio ci sono mummie, papiri e statue di migliaia di anni fa.",
+    "nodi": [
+     "egizio"
+    ]
+   },
+   {
+    "t": "Il simbolo di Torino è la Mole Antonelliana, dell'architetto Alessandro Antonelli: nell'Ottocento doveva essere una sinagoga. Oggi ospita il Museo Nazionale del Cinema.",
+    "nodi": [
+     "mole"
+    ]
+   },
+   {
+    "t": "Per la caccia i Savoia usavano la Reggia di Venaria, vicino a Torino, e la Palazzina di Stupinigi. In cima alla Palazzina c'è un cervo: oggi è una copia.",
+    "nodi": [
+     "regge"
+    ]
+   },
+   {
+    "t": "Palazzo Madama prende il nome da due «Madame Reali», duchesse di Savoia. Il Castello del Valentino si specchia nel Po; vicino c'è il Borgo Medievale, costruito nel 1884.",
+    "nodi": [
+     "palazzi"
+    ]
+   },
+   {
+    "t": "Filippo Juvarra progettò la Basilica di Superga, sulla collina. Guarino Guarini creò la cupola della Cappella della Sindone.",
+    "nodi": [
+     "architetti"
+    ]
+   },
+   {
+    "t": "La GAM, Galleria d'Arte Moderna, raccoglie quadri e sculture dall'Ottocento a oggi.",
+    "v": "La Gam, Galleria d'Arte Moderna, raccoglie quadri e sculture dall'Ottocento a oggi.",
+    "nodi": [
+     "gam"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "mole",
+    "scelte": [
+     "la Mole Antonelliana",
+     "la Torre Eiffel",
+     "il Big Ben"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "storia:egizi",
+   "tecno:torino",
+   "geo:piemonte",
+   "storia:torino"
+  ],
+  "domande": {
+   "iyp110": "egizio",
+   "ri4d5g": "egizio",
+   "e1mayv": "egizio",
+   "sywcy4": "mole",
+   "ig6v5e": "mole",
+   "fudqzz": "mole",
+   "tcpyuh": "regge",
+   "me54ej": "regge",
+   "1m7gsqc": "regge",
+   "j92h3z": "palazzi",
+   "qm5yvr": "palazzi",
+   "1n1v9cc": "palazzi",
+   "f0gwxv": "architetti",
+   "rrf2lp": "architetti",
+   "1sprgiw": "gam"
+  }
  }
 }
