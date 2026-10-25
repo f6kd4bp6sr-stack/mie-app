@@ -1573,7 +1573,7 @@ else document.getElementById('heroFig').innerHTML=still(EXM.apertura,1,false);
 })();
 window.__flush=()=>{ try{ TCM.flush(); }catch(e){} };
 </script>
-<script>window.APP_VERSION="6b7dffd572";window.APP_BUILD="2026-10-25T18:00+02:00";</script>
+<script>window.APP_VERSION="72ed295b11";window.APP_BUILD="2026-10-25T18:58+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
@@ -1646,6 +1646,7 @@ window.__flush=()=>{ try{ TCM.flush(); }catch(e){} };
     var o=dumpAll(); if(!o){alertBar("Ancora nessun dato da salvare");return;}
     /* la copia su file non porta mai la chiave del collegamento con «Il mio mondo» */
     if(o.progressi)o.progressi.link=null;
+    delete o.diario; /* il diario non va mai nella copia su file, che non è cifrata */
     if(window.__pfCache)o.pratFiles=window.__pfCache;
     var data=JSON.stringify(o,null,1), fn="pianificazione-copia-"+today()+".json";
     var done=function(){var t=new Date().toISOString();try{localStorage.setItem("pn-lastBackup",t);localStorage.setItem("tc_lastBackup",JSON.stringify(t));}catch(e){}paint();};
@@ -1702,6 +1703,8 @@ window.__flush=()=>{ try{ TCM.flush(); }catch(e){} };
     var c=cbCfg(),tok=ghTok(); if(!c||!c.gist||!c.key||cbBusy)return false; if(!tok){c.err="manca la chiave GitHub";cbSet(c);paint();return false;}
     if(navigator.onLine===false)return false;
     var o=dumpAll(); if(!o)return false; var files=window.__pfCache||null; if(files)o.pratFiles=files;
+    /* 📓 il Diario del passaggio va solo in questa copia cifrata (non nella copia su File/iCloud) */
+    var dia=lsJ("pn-diario-v1"); if(dia)o.diario=dia;
     var js=JSON.stringify(o),h=hsh(js),age=Date.now()-new Date(c.last||0).getTime();
     if(!force&&((c.h===h&&age<20*36e5)||(c.h!==h&&age<3*36e5&&c.last)))return true;
     cbBusy=true;
@@ -1748,6 +1751,7 @@ window.__flush=()=>{ try{ TCM.flush(); }catch(e){} };
       if(pg.pack){try{localStorage.setItem("prog-mm-v1",JSON.stringify(pg.pack));localStorage.setItem("prog-mm-hist-v1",JSON.stringify(pg.hist||[]));}catch(e){} await put("progressi",JSON.stringify({pack:pg.pack,hist:pg.hist||[]}));}}
     var pn=o.pianifica;delete o.pianifica;if(pn){try{localStorage.setItem("pn-v1",JSON.stringify(pn));}catch(e){} await put("pianifica",JSON.stringify(pn));}
     var pf=o.pratFiles;delete o.pratFiles;if(pf)await pfRestore(pf);
+    var dia=o.diario;delete o.diario;if(dia&&typeof dia==="object"){try{localStorage.setItem("pn-diario-v1",JSON.stringify(dia));}catch(e){} await put("diario",JSON.stringify(dia));}
     delete o.app; if(o.bal){o.savedAt=new Date().toISOString();var t=JSON.stringify(o);try{localStorage.setItem("licenze-marco-v1",t);}catch(e){} await put("stato",t);}
   }
   function cbPanel(){
@@ -1761,7 +1765,7 @@ window.__flush=()=>{ try{ TCM.flush(); }catch(e){} };
     var h="<div style=\""+box+"\"><div style=\"display:flex;align-items:center\"><b style=\"font-size:20px;flex:1\">☁️ Copia automatica</b><button id=\"cbX\" style=\""+sec+"\">Chiudi</button></div>";
     if(c&&c.gist){
       h+="<p style=\"margin:8px 0\">"+(c.err?"⚠️ <b>"+esc(c.err)+"</b><br>":"✅ <b>Attiva.</b> ")+"Ultima copia: <b>"+when(c.last)+"</b>"+(c.size?" · "+Math.max(1,Math.round(c.size*0.75/1024))+" KB":"")+(c.nofiles?"<br>I file delle pratiche sono troppi per la copia automatica: restano nella copia su File/iCloud.":"")+"</p>"+
-        "<p style=\"margin:0 0 8px;color:#6b7280;font-size:14px\">Contiene tutto: Licenze, Calendario, Scadenze, Pensione con i suoi file (e le vecchie Pratiche), Benessere, Tai Chi e Progressi. È cifrata con la tua parola della copia: senza, nessuno la legge (nemmeno GitHub).</p>"+
+        "<p style=\"margin:0 0 8px;color:#6b7280;font-size:14px\">Contiene tutto: Licenze, Calendario, Scadenze, Pensione con i suoi file (e le vecchie Pratiche), 📓 Diario, Benessere, Tai Chi e Progressi. È cifrata con la tua parola della copia: senza, nessuno la legge (nemmeno GitHub).</p>"+
         "<button id=\"cbNow\" style=\""+pri+"\">Fai la copia adesso</button><button id=\"cbRes\" style=\""+sec+"\">Ripristina da questa copia</button><button id=\"cbOff\" style=\""+dang+"\">Disattiva</button>";
     }else{
       h+="<p style=\"margin:8px 0\">Ogni giorno, da sola, una copia completa e <b>cifrata</b> va su GitHub (in uno spazio privato), con la chiave GitHub che usi già per i Progressi. Se l’iPad si rompe o lo cambi, ritrovi tutto.</p>"+
