@@ -245,5 +245,1478 @@
    "c4yqzi3": "genitori",
    "9swv0z4": "genitori"
   }
+ },
+ "ortografia": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'ortografia",
+   "ic": "✏️",
+   "sotto": "le regole per scrivere le parole giuste"
+  },
+  "nodi": [
+   {
+    "id": "h",
+    "n": "l'acca",
+    "ic": "🔤",
+    "sotto": "ho, hai, ha, hanno: il verbo avere",
+    "da": "insegna a usare"
+   },
+   {
+    "id": "accento",
+    "n": "l'accento",
+    "ic": "🎩",
+    "sotto": "città, perché, è, dà, sì",
+    "da": "insegna dove mettere"
+   },
+   {
+    "id": "apostrofo",
+    "n": "l'apostrofo",
+    "ic": "✂️",
+    "sotto": "c'è, po', un'amica, ma qual è",
+    "da": "spiega quando serve"
+   },
+   {
+    "id": "suoni",
+    "n": "i suoni difficili",
+    "ic": "🧩",
+    "sotto": "cuore, quadro, acqua, gn, gli, scienza",
+    "da": "allena a scrivere"
+   },
+   {
+    "id": "doppie",
+    "n": "le doppie e le sillabe",
+    "ic": "👯",
+    "sotto": "pat-ti-na-re, gelato, stazione",
+    "da": "conta anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'acca non si sente, ma conta! «Ho», «hai», «ha», «hanno» sono il verbo avere: lui ha fame. Senza acca, «a» e «o» sono altre parole: vado a casa.",
+    "nodi": [
+     "h"
+    ]
+   },
+   {
+    "t": "Se la voce cade sull'ultima sillaba, l'accento si scrive: città, perché, però. Serve anche a distinguere: «è» (verbo essere) ed «e»; «dà» (verbo dare) e «da»; «sì» e «si».",
+    "nodi": [
+     "accento"
+    ]
+   },
+   {
+    "t": "Attenzione: «perché» ha l'accento acuto, che sale verso destra: é. E ricorda la filastrocca: su «qui» e su «qua» l'accento non va!",
+    "v": "Attenzione: «perché» ha l'accento acuto, che sale verso destra. E ricorda la filastrocca: su «qui» e su «qua» l'accento non va!",
+    "nodi": [
+     "accento"
+    ]
+   },
+   {
+    "t": "L'apostrofo prende il posto di lettere cadute: c'è (ci è), po' (poco), un'amica. Al maschile niente apostrofo: un amico. E «qual è» non lo vuole mai!",
+    "nodi": [
+     "apostrofo"
+    ]
+   },
+   {
+    "t": "Alcuni suoni vanno imparati a memoria. «Cuore» e «scuola» vogliono la c; «quadro» la q; «acqua» si scrive cq; «soqquadro» ha addirittura due q!",
+    "v": "Alcuni suoni vanno imparati a memoria. «Cuore» e «scuola» vogliono la ci; «quadro» la cu; «acqua» si scrive ci cu; «soqquadro» ha addirittura due cu!",
+    "nodi": [
+     "suoni"
+    ]
+   },
+   {
+    "t": "Dopo gn di solito non serve la i: ragno, gnocchi. Il suono gli si scrive g-l-i: famiglia, conchiglia. E «scienza» vuole una i che non si sente.",
+    "v": "Dopo gi enne di solito non serve la i: ragno, gnocchi. Il suono gli si scrive gi, elle, i: famiglia, conchiglia. E «scienza» vuole una i che non si sente.",
+    "nodi": [
+     "suoni"
+    ]
+   },
+   {
+    "t": "Batti le mani a ogni sillaba: pat-ti-na-re. Le doppie si dividono a metà. «Gelato» non ha doppie e le parole in -zione hanno una z sola: stazione.",
+    "v": "Batti le mani a ogni sillaba: pat, ti, na, re. Le doppie si dividono a metà. «Gelato» non ha doppie e le parole in zione hanno una zeta sola: stazione.",
+    "nodi": [
+     "doppie"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "h",
+    "scelte": [
+     "l'acca",
+     "la zeta",
+     "la erre"
+    ]
+   },
+   {
+    "nodo": "apostrofo",
+    "scelte": [
+     "l'apostrofo",
+     "il semaforo",
+     "il termometro"
+    ]
+   }
+  ],
+  "domande": {
+   "6809ka": "suoni",
+   "wco24d": "h",
+   "rbkj15": "h",
+   "rbkj15-2": "h",
+   "s19kvj": "apostrofo",
+   "1flmgko": "apostrofo",
+   "1hlwicv": "apostrofo",
+   "lgdv7b": "apostrofo",
+   "iw0fsq": "suoni",
+   "iw0fsq-2": "suoni",
+   "iw0fsq-3": "suoni",
+   "iw0fsq-4": "suoni",
+   "iw0fsq-5": "suoni",
+   "1mw17ey": "accento",
+   "1udiqxo": "accento",
+   "11qvumy": "h",
+   "18tyrxk": "accento",
+   "ratkb0": "h",
+   "1cy0lhp": "accento",
+   "1htdzgi": "suoni",
+   "10gycox": "apostrofo",
+   "1c5c2jn": "doppie",
+   "1c9ke62": "doppie",
+   "1d46d2j": "suoni",
+   "k53wi3": "doppie",
+   "1x7o22e": "suoni",
+   "16d488n": "accento",
+   "1nlhbij": "accento"
+  },
+  "collegamenti": [
+   "ita:nomi",
+   "ita:punteggiatura",
+   "ita:lessico"
+  ]
+ },
+ "nomi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il nome",
+   "ic": "🏷️",
+   "sotto": "chiama persone, animali, luoghi e cose"
+  },
+  "nodi": [
+   {
+    "id": "tipi",
+    "n": "comune o proprio",
+    "ic": "🔠",
+    "sotto": "gatto · Roma, con la maiuscola",
+    "da": "può essere"
+   },
+   {
+    "id": "speciali",
+    "n": "concreto, astratto o collettivo",
+    "ic": "💭",
+    "sotto": "sedia · felicità · gregge",
+    "da": "può essere anche"
+   },
+   {
+    "id": "genere",
+    "n": "genere e numero",
+    "ic": "⚖️",
+    "sotto": "attore-attrice, lago-laghi, fratello-sorella",
+    "da": "cambia secondo"
+   },
+   {
+    "id": "irregolari",
+    "n": "plurali speciali",
+    "ic": "🥚",
+    "sotto": "uova, uomini, buoi, dèi, re",
+    "da": "ha a volte"
+   },
+   {
+    "id": "alterati",
+    "n": "gli alterati",
+    "ic": "🏠",
+    "sotto": "casetta, librone · mulino è un falso alterato",
+    "da": "con un suffisso forma"
+   },
+   {
+    "id": "articoli",
+    "n": "l'articolo",
+    "ic": "🔗",
+    "sotto": "il, lo, la, i, gli, le · un, uno, una",
+    "da": "va con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Ogni cosa ha un nome. Il nome comune vale per tutti: gatto, città. Il nome proprio indica proprio quello lì e vuole la maiuscola: Roma, il fiume Po.",
+    "nodi": [
+     "tipi"
+    ]
+   },
+   {
+    "t": "Un nome può essere concreto, come sedia, o astratto, come felicità: non si tocca. Il nome collettivo indica tanti elementi insieme: un gregge di pecore.",
+    "nodi": [
+     "speciali"
+    ]
+   },
+   {
+    "t": "Il nome cambia genere e numero: attore, attrice; lago, laghi; camicia, camicie. Alcuni cambiano parola intera: fratello e sorella.",
+    "nodi": [
+     "genere"
+    ]
+   },
+   {
+    "t": "Ci sono plurali speciali: un uovo, le uova; un uomo, gli uomini; un bue, i buoi; il dio, gli dèi. Un re, due re: non cambia!",
+    "nodi": [
+     "irregolari"
+    ]
+   },
+   {
+    "t": "Con un suffisso il nome si trasforma: casetta è un diminutivo, librone un accrescitivo. Ma mulino è un falso alterato: non è un piccolo mulo!",
+    "nodi": [
+     "alterati"
+    ]
+   },
+   {
+    "t": "Davanti al nome c'è l'articolo. Determinativi: il, lo, la, i, gli, le. Indeterminativi: un, uno, una. Si dice lo zaino, lo gnomo, gli amici.",
+    "nodi": [
+     "articoli"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "articoli",
+    "scelte": [
+     "l'articolo",
+     "il termometro",
+     "l'ombrello"
+    ]
+   }
+  ],
+  "domande": {
+   "7h1fp": "irregolari",
+   "1kojlxb": "articoli",
+   "7a3vg": "irregolari",
+   "15fxx5x": "tipi",
+   "2cdl62": "tipi",
+   "mwwe7g": "genere",
+   "16op0zc": "irregolari",
+   "16puurc": "irregolari",
+   "1flwk94": "articoli",
+   "ejzy2m": "articoli",
+   "1t4of1b": "genere",
+   "9f9p1f": "genere",
+   "w0zdq4": "speciali",
+   "4e75v5": "speciali",
+   "gjfseo": "alterati",
+   "vh4bvd": "alterati",
+   "e7tv8z": "irregolari",
+   "mtqvme": "genere",
+   "tgo6v9": "articoli"
+  },
+  "collegamenti": [
+   "ita:aggettivi",
+   "ita:ortografia",
+   "media:grammatica"
+  ]
+ },
+ "aggettivi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'aggettivo",
+   "ic": "🎨",
+   "sotto": "descrive o accompagna il nome"
+  },
+  "nodi": [
+   {
+    "id": "qualif",
+    "n": "qualificativo",
+    "ic": "🎨",
+    "sotto": "dice com'è: morbidi; grande è al grado positivo",
+    "da": "può essere"
+   },
+   {
+    "id": "comparativo",
+    "n": "il comparativo",
+    "ic": "⚖️",
+    "sotto": "più alto, alto come, migliore",
+    "da": "confronta con"
+   },
+   {
+    "id": "superlativo",
+    "n": "il superlativo",
+    "ic": "🚀",
+    "sotto": "bellissimo · la più veloce della classe",
+    "da": "esagera con"
+   },
+   {
+    "id": "determ",
+    "n": "possessivo, dimostrativo, numerale",
+    "ic": "👉",
+    "sotto": "mio · questo · terzo",
+    "da": "può essere anche"
+   },
+   {
+    "id": "pronome",
+    "n": "il pronome",
+    "ic": "🔁",
+    "sotto": "sta al posto del nome: io, lo, che",
+    "da": "ha come compagno"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'aggettivo è una parola che descrive il nome, come un vestito: un drago coraggioso, gattini morbidi. Questi sono aggettivi qualificativi: dicono com'è.",
+    "nodi": [
+     "qualif"
+    ]
+   },
+   {
+    "t": "In «una casa grande», grande è al grado positivo: indica solo una qualità, senza confronti.",
+    "nodi": [
+     "qualif"
+    ]
+   },
+   {
+    "t": "Il comparativo confronta: più alto è di maggioranza, alto come è di uguaglianza. Più buono si dice anche in una parola: migliore.",
+    "nodi": [
+     "comparativo"
+    ]
+   },
+   {
+    "t": "Il superlativo assoluto esagera: bellissimo, velocissima. Il superlativo relativo guarda un gruppo: Sara è la più veloce della classe.",
+    "nodi": [
+     "superlativo"
+    ]
+   },
+   {
+    "t": "Altri aggettivi precisano il nome: possessivi come mio e tuo; dimostrativi come questo e quello; numerali come tre o terzo. Terzo è ordinale: dice il posto in fila.",
+    "nodi": [
+     "determ"
+    ]
+   },
+   {
+    "t": "Il pronome sta al posto del nome. Io, tu, lui, noi, voi, loro sono pronomi personali. In «lo vedo», lo sostituisce un nome.",
+    "nodi": [
+     "pronome"
+    ]
+   },
+   {
+    "t": "Attenta: in «questo zaino», questo è aggettivo; in «questo è il mio zaino» sta da solo ed è pronome. In «il libro che leggo», che è pronome relativo.",
+    "nodi": [
+     "pronome"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "pronome",
+    "scelte": [
+     "il pronome",
+     "il semaforo",
+     "il vulcano"
+    ]
+   },
+   {
+    "nodo": "superlativo",
+    "scelte": [
+     "il superlativo",
+     "il triangolo",
+     "il gelato"
+    ]
+   }
+  ],
+  "domande": {
+   "qlnznr": "qualif",
+   "1rupoqv": "pronome",
+   "3m34zz": "determ",
+   "1kcbiml": "superlativo",
+   "122durd": "comparativo",
+   "1jcgwhe": "determ",
+   "1cjb2b3": "determ",
+   "1uryhsx": "pronome",
+   "6v1nsk": "comparativo",
+   "1cr78mg": "superlativo",
+   "pxmmje": "qualif",
+   "177796p": "comparativo",
+   "tpx36v": "pronome",
+   "17mvb1v": "pronome",
+   "1jutham": "qualif"
+  },
+  "collegamenti": [
+   "ita:nomi",
+   "ita:frase",
+   "media:grammatica"
+  ]
+ },
+ "verbi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il verbo",
+   "ic": "🏃",
+   "sotto": "un'azione o uno stato"
+  },
+  "nodi": [
+   {
+    "id": "persone",
+    "n": "sei persone",
+    "ic": "👥",
+    "sotto": "io, tu, lui · noi, voi, loro",
+    "da": "cambia per"
+   },
+   {
+    "id": "coniug",
+    "n": "tre coniugazioni",
+    "ic": "🔢",
+    "sotto": "-are, -ere, -ire",
+    "da": "ha"
+   },
+   {
+    "id": "modi",
+    "n": "modi finiti e indefiniti",
+    "ic": "🧭",
+    "sotto": "4 finiti · infinito, participio, gerundio",
+    "da": "si coniuga in"
+   },
+   {
+    "id": "tempi",
+    "n": "tempi semplici e composti",
+    "ic": "⏰",
+    "sotto": "8 tempi nell'indicativo",
+    "da": "usa"
+   },
+   {
+    "id": "ausiliari",
+    "n": "ausiliari essere e avere",
+    "ic": "🤝",
+    "sotto": "ho mangiato · sono andata",
+    "da": "si fa aiutare dagli"
+   },
+   {
+    "id": "forma",
+    "n": "forma attiva o passiva",
+    "ic": "🔄",
+    "sotto": "il gatto insegue · il topo è inseguito",
+    "da": "può essere in"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il verbo dice che cosa si fa o come si è: corro, mangio, sono. Cambia con la persona: io dormo, tu dormi, lui dorme. Le persone sono sei.",
+    "nodi": [
+     "persone"
+    ]
+   },
+   {
+    "t": "Io, tu, lui al singolare; noi, voi, loro al plurale: «noi cantiamo» è prima persona plurale. I verbi hanno tre coniugazioni: -are, -ere, -ire. Dormire è della terza.",
+    "v": "Io, tu, lui al singolare; noi, voi, loro al plurale: «noi cantiamo» è prima persona plurale. I verbi hanno tre coniugazioni: are, ere, ire. Dormire è della terza.",
+    "nodi": [
+     "persone",
+     "coniug"
+    ]
+   },
+   {
+    "t": "Quattro modi finiti: indicativo, congiuntivo (che io sia), condizionale (io andrei), imperativo (corri!). I finiti dicono chi fa l'azione. Tre indefiniti: infinito (correre), participio (mangiato), gerundio (cantando).",
+    "nodi": [
+     "modi"
+    ]
+   },
+   {
+    "t": "L'indicativo ha otto tempi. Quattro semplici, di una parola: presente, imperfetto (mangiavo), passato remoto (andai), futuro (mangerò).",
+    "nodi": [
+     "tempi"
+    ]
+   },
+   {
+    "t": "Quattro composti, con un ausiliare: passato prossimo (ho mangiato), trapassato prossimo (avevo mangiato), trapassato remoto (ebbi mangiato) e futuro anteriore (avrò finito).",
+    "nodi": [
+     "tempi"
+    ]
+   },
+   {
+    "t": "Essere e avere sono gli ausiliari: aiutano a formare i tempi composti. Mangiare vuole avere: ho mangiato. Andare vuole essere: sono andata.",
+    "nodi": [
+     "ausiliari"
+    ]
+   },
+   {
+    "t": "Nella forma attiva il soggetto compie l'azione: Luca lava la bici. Nella passiva la subisce: la bici è lavata da Luca. Serve un verbo transitivo e l'ausiliare essere.",
+    "nodi": [
+     "forma"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "ausiliari",
+    "scelte": [
+     "ausiliari essere e avere",
+     "colori e pennelli",
+     "sale e pepe"
+    ]
+   }
+  ],
+  "domande": {
+   "1t642ga": "persone",
+   "x0i3gp": "persone",
+   "1qnrhhw": "coniug",
+   "19zoors": "tempi",
+   "1lahkxu": "tempi",
+   "1ug5rct": "tempi",
+   "mnfcn5": "ausiliari",
+   "8tolrb": "modi",
+   "zlu4xn": "modi",
+   "gpqflj": "modi",
+   "10q3f3c": "modi",
+   "enivov": "tempi",
+   "ey56ki": "tempi",
+   "c7qi3f": "tempi",
+   "1hvw3ia": "forma",
+   "1cj5asr": "forma",
+   "17msa4t": "ausiliari",
+   "21q8zc": "forma",
+   "ckgbrp": "forma",
+   "i4n4o": "forma",
+   "xy6sbb": "ausiliari",
+   "1dr3rvf": "persone",
+   "z0cmcd": "modi",
+   "1y9s227": "modi",
+   "1r1fbwr": "tempi",
+   "ar1m0x": "modi",
+   "13slnh2": "modi",
+   "48ugm4": "tempi",
+   "zg95b0": "coniug"
+  },
+  "collegamenti": [
+   "ita:frase",
+   "media:grammatica",
+   "eng:verbi"
+  ]
+ },
+ "invariabili": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le parole invariabili",
+   "ic": "🔗",
+   "sotto": "parole che non cambiano mai"
+  },
+  "nodi": [
+   {
+    "id": "avverbi",
+    "n": "gli avverbi",
+    "ic": "⏩",
+    "sotto": "di modo, di tempo, di luogo: bene, ieri",
+    "da": "sono"
+   },
+   {
+    "id": "prep",
+    "n": "le preposizioni",
+    "ic": "🧷",
+    "sotto": "semplici: di, a, da… · articolate: nel, dalla",
+    "da": "sono anche"
+   },
+   {
+    "id": "congiunzioni",
+    "n": "le congiunzioni",
+    "ic": "🤲",
+    "sotto": "uniscono: e, ma, perché",
+    "da": "comprendono"
+   },
+   {
+    "id": "interiezioni",
+    "n": "le interiezioni",
+    "ic": "❗",
+    "sotto": "esclamazioni: evviva!, ahi!, uffa!",
+    "da": "includono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Alcune parole non cambiano mai: né maschile né femminile, né singolare né plurale. Sono le parole invariabili, e sono di quattro tipi.",
+    "nodi": []
+   },
+   {
+    "t": "L'avverbio dice come, quando o dove: canto bene (modo), ieri sono uscita (tempo). Molti avverbi finiscono in -mente: velocemente.",
+    "v": "L'avverbio dice come, quando o dove: canto bene, modo; ieri sono uscita, tempo. Molti avverbi finiscono in mente: velocemente.",
+    "nodi": [
+     "avverbi"
+    ]
+   },
+   {
+    "t": "Le preposizioni semplici sono nove: di, a, da, in, con, su, per, tra, fra. Unite a un articolo diventano articolate: nel è in + il, dalla è da + la.",
+    "v": "Le preposizioni semplici sono nove: di, a, da, in, con, su, per, tra, fra. Unite a un articolo diventano articolate: nel è in più il, dalla è da più la.",
+    "nodi": [
+     "prep"
+    ]
+   },
+   {
+    "t": "Le congiunzioni uniscono parole e frasi: e, ma, perché. «Ma» unisce due idee opposte: è tardi, ma non ho sonno.",
+    "nodi": [
+     "congiunzioni"
+    ]
+   },
+   {
+    "t": "Le interiezioni sono esclamazioni che esprimono un'emozione all'improvviso: evviva!, ahi!, uffa! Di solito hanno il punto esclamativo.",
+    "nodi": [
+     "interiezioni"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "interiezioni",
+    "scelte": [
+     "le interiezioni",
+     "le montagne",
+     "le stagioni"
+    ]
+   }
+  ],
+  "domande": {
+   "1mnebip": "prep",
+   "l9drp1": "prep",
+   "1x1z5g0": "avverbi",
+   "1fvmfnf": "avverbi",
+   "1egksma": "congiunzioni",
+   "1mh8vhn": "interiezioni",
+   "8mrpty": "avverbi",
+   "14v932v": "prep",
+   "xa5jwa": "congiunzioni"
+  },
+  "collegamenti": [
+   "ita:nomi",
+   "ita:complementi",
+   "media:grammatica"
+  ]
+ },
+ "complementi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I complementi",
+   "ic": "➕",
+   "sotto": "completano la frase rispondendo a domande"
+  },
+  "nodi": [
+   {
+    "id": "oggetto",
+    "n": "il complemento oggetto",
+    "ic": "🎯",
+    "sotto": "che cosa? · senza preposizione",
+    "da": "comprendono"
+   },
+   {
+    "id": "termine",
+    "n": "il complemento di termine",
+    "ic": "🎁",
+    "sotto": "a chi? a che cosa?",
+    "da": "includono"
+   },
+   {
+    "id": "specificazione",
+    "n": "il complemento di specificazione",
+    "ic": "🔍",
+    "sotto": "di chi? di che cosa?",
+    "da": "contano anche"
+   },
+   {
+    "id": "luogo",
+    "n": "i complementi di luogo",
+    "ic": "📍",
+    "sotto": "stato, moto a, moto da, moto per luogo",
+    "da": "hanno anche"
+   },
+   {
+    "id": "tempo",
+    "n": "i complementi di tempo",
+    "ic": "⏱️",
+    "sotto": "determinato · continuato",
+    "da": "hanno poi"
+   },
+   {
+    "id": "mezzo",
+    "n": "mezzo e compagnia",
+    "ic": "🚌",
+    "sotto": "con che cosa? · con chi?",
+    "da": "indicano anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Soggetto e predicato fanno la frase. I complementi la completano: ognuno risponde a una domanda. Il complemento oggetto risponde a «che cosa?», senza preposizione: Sara mangia una mela.",
+    "nodi": [
+     "oggetto"
+    ]
+   },
+   {
+    "t": "Il complemento di termine risponde a «a chi?»: regalo un fiore alla mamma. Quello di specificazione a «di chi? di che cosa?»: il libro di storia.",
+    "nodi": [
+     "termine",
+     "specificazione"
+    ]
+   },
+   {
+    "t": "Dove? Il gatto dorme in cucina: stato in luogo. Vado in piscina, vado dalla nonna: moto a luogo. Esco dalla piscina: moto da luogo.",
+    "nodi": [
+     "luogo"
+    ]
+   },
+   {
+    "t": "Per dove passiamo? Per il bosco: è moto per luogo, la strada che attraversiamo.",
+    "nodi": [
+     "luogo"
+    ]
+   },
+   {
+    "t": "Quando? Ci vediamo alle cinque: tempo determinato. Per quanto tempo? Ho giocato per due ore: tempo continuato.",
+    "nodi": [
+     "tempo"
+    ]
+   },
+   {
+    "t": "Con che cosa? Vado in autobus, mando un messaggio col telefono: complemento di mezzo. Con chi? Gioco con mia sorella: complemento di compagnia.",
+    "nodi": [
+     "mezzo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "specificazione",
+    "scelte": [
+     "il complemento di specificazione",
+     "il ritornello",
+     "il vulcano"
+    ]
+   }
+  ],
+  "domande": {
+   "1wb1851": "oggetto",
+   "1x57fqp": "termine",
+   "196on82": "specificazione",
+   "17rpocs": "tempo",
+   "1tacwrs": "tempo",
+   "kfe5py": "luogo",
+   "1aorzc7": "luogo",
+   "1q2ugs8": "mezzo",
+   "m9guh1": "mezzo",
+   "11sgc5l": "luogo",
+   "wdyoq8": "oggetto",
+   "1b12lk0": "termine",
+   "15lmo7u": "specificazione",
+   "1umqi7o": "luogo",
+   "1r8guqj": "luogo",
+   "1r3nk6d": "mezzo",
+   "15qs663": "mezzo"
+  },
+  "collegamenti": [
+   "ita:frase",
+   "media:grammatica",
+   "ita:invariabili"
+  ]
+ },
+ "lessico": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le parole",
+   "ic": "📖",
+   "sotto": "significati e famiglie"
+  },
+  "nodi": [
+   {
+    "id": "sinonimi",
+    "n": "i sinonimi",
+    "ic": "🤝",
+    "sotto": "quasi lo stesso: felice e contento",
+    "da": "hanno cugine:"
+   },
+   {
+    "id": "contrari",
+    "n": "i contrari",
+    "ic": "↔️",
+    "sotto": "significato opposto: caldo e freddo",
+    "da": "hanno il loro opposto:"
+   },
+   {
+    "id": "famiglie",
+    "n": "famiglie",
+    "ic": "🌳",
+    "sotto": "mare, marinaio, marittimo",
+    "da": "si riuniscono in"
+   },
+   {
+    "id": "prefissi",
+    "n": "prefissi e suffissi",
+    "ic": "🧩",
+    "sotto": "ri-, bi-, im- · -aio",
+    "da": "si trasformano con"
+   },
+   {
+    "id": "omonimi",
+    "n": "omonime",
+    "ic": "👯",
+    "sotto": "il riso da mangiare e il riso della risata",
+    "da": "a volte sono"
+   },
+   {
+    "id": "palindromi",
+    "n": "palindrome",
+    "ic": "🪞",
+    "sotto": "si leggono uguali al contrario: osso",
+    "da": "possono essere anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il sinonimo è una parola che vuol dire quasi lo stesso: felice e contento, iniziare e cominciare, spaventato e impaurito.",
+    "nodi": [
+     "sinonimi"
+    ]
+   },
+   {
+    "t": "Il contrario, o antonimo, ha un significato opposto: coraggioso e pauroso, generoso e avaro, accendere e spegnere.",
+    "nodi": [
+     "contrari"
+    ]
+   },
+   {
+    "t": "Le parole hanno famiglie: marinaio e marittimo nascono da mare. Marmellata invece comincia con le stesse lettere solo per caso!",
+    "nodi": [
+     "famiglie"
+    ]
+   },
+   {
+    "t": "I prefissi si mettono davanti: ri- vuol dire di nuovo (rileggere), bi- vuol dire due (bicicletta). Possibile diventa impossibile: davanti a p e b, in- diventa im-.",
+    "v": "I prefissi si mettono davanti: ri vuol dire di nuovo, come in rileggere; bi vuol dire due, come in bicicletta. Possibile diventa impossibile: davanti a pi e bi, in diventa im.",
+    "nodi": [
+     "prefissi"
+    ]
+   },
+   {
+    "t": "I suffissi si mettono in fondo: -aio indica spesso un mestiere, come fornaio e giornalaio.",
+    "v": "I suffissi si mettono in fondo: aio indica spesso un mestiere, come fornaio e giornalaio.",
+    "nodi": [
+     "prefissi"
+    ]
+   },
+   {
+    "t": "Le parole omonime si scrivono uguali ma vogliono dire cose diverse: il riso nel piatto e il riso della risata. Osso è un palindromo: si legge uguale al contrario!",
+    "nodi": [
+     "omonimi",
+     "palindromi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "famiglie",
+    "scelte": [
+     "famiglie",
+     "pentole",
+     "nuvole"
+    ]
+   }
+  ],
+  "domande": {
+   "1hy8w8z": "palindromi",
+   "11t2kcl": "contrari",
+   "vjtlvj": "sinonimi",
+   "arm3zr": "sinonimi",
+   "r5s2lu": "contrari",
+   "10a1usc": "sinonimi",
+   "w1hg92": "sinonimi",
+   "t6rtbu": "contrari",
+   "6gsbaq": "contrari",
+   "a8v7vs": "prefissi",
+   "153vr4t": "famiglie",
+   "13daxox": "prefissi",
+   "rjw77j": "prefissi",
+   "a9rq4s": "prefissi",
+   "z4tsmr": "omonimi"
+  },
+  "collegamenti": [
+   "ita:modi-dire",
+   "ita:nomi",
+   "ita:ortografia"
+  ]
+ },
+ "modi-dire": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I modi di dire",
+   "ic": "💬",
+   "sotto": "frasi da non prendere alla lettera"
+  },
+  "nodi": [
+   {
+    "id": "ghiaccio",
+    "n": "ghiaccio",
+    "ic": "🧊",
+    "sotto": "rompere il ghiaccio: superare l'imbarazzo",
+    "da": "parlano di"
+   },
+   {
+    "id": "acqua",
+    "n": "acqua",
+    "ic": "🤐",
+    "sotto": "acqua in bocca: mantieni il segreto",
+    "da": "parlano anche di"
+   },
+   {
+    "id": "cielo",
+    "n": "cielo e pioggia",
+    "ic": "🌧️",
+    "sotto": "al settimo cielo · piove a catinelle",
+    "da": "nominano"
+   },
+   {
+    "id": "corpo",
+    "n": "parti del corpo",
+    "ic": "👁️",
+    "sotto": "costa un occhio della testa: carissimo",
+    "da": "usano"
+   },
+   {
+    "id": "animali",
+    "n": "animali",
+    "ic": "🐭",
+    "sotto": "dormire come un ghiro: profondamente",
+    "da": "scherzano con"
+   },
+   {
+    "id": "parole",
+    "n": "parole simili",
+    "ic": "🍶",
+    "sotto": "fischi per fiaschi: capire una cosa per un'altra",
+    "da": "giocano con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "I modi di dire sono frasi da non prendere alla lettera. «Rompere il ghiaccio» vuol dire superare l'imbarazzo iniziale e cominciare a parlare.",
+    "nodi": [
+     "ghiaccio"
+    ]
+   },
+   {
+    "t": "«Acqua in bocca!» vuol dire: mantieni il segreto. Con la bocca piena d'acqua, infatti, non si può parlare!",
+    "nodi": [
+     "acqua"
+    ]
+   },
+   {
+    "t": "Chi è «al settimo cielo» è felicissimo. Quando «piove a catinelle» piove fortissimo: la catinella è una bacinella.",
+    "nodi": [
+     "cielo"
+    ]
+   },
+   {
+    "t": "Una cosa che «costa un occhio della testa» costa tantissimo: gli occhi sono preziosissimi!",
+    "nodi": [
+     "corpo"
+    ]
+   },
+   {
+    "t": "«Dormire come un ghiro» vuol dire dormire profondamente: il ghiro d'inverno va in letargo e dorme per mesi.",
+    "nodi": [
+     "animali"
+    ]
+   },
+   {
+    "t": "Fischi e fiaschi suonano quasi uguali. Per questo «prendere fischi per fiaschi» vuol dire capire una cosa per un'altra.",
+    "nodi": [
+     "parole"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "ghiaccio",
+    "scelte": [
+     "ghiaccio",
+     "sabbia",
+     "cioccolato"
+    ]
+   }
+  ],
+  "domande": {
+   "12jaik0": "ghiaccio",
+   "xl9ix1": "acqua",
+   "11i69kf": "cielo",
+   "qx3mt5": "corpo",
+   "8y38m4": "animali",
+   "3u9fcv": "cielo",
+   "tue4nn": "parole"
+  },
+  "collegamenti": [
+   "ita:lessico",
+   "ita:poesia"
+  ]
+ },
+ "poesia": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La poesia",
+   "ic": "🎵",
+   "sotto": "suono, ritmo e immagini"
+  },
+  "nodi": [
+   {
+    "id": "versi",
+    "n": "versi e strofe",
+    "ic": "📏",
+    "sotto": "il verso è una riga, la strofa un gruppo di versi",
+    "da": "è fatta di"
+   },
+   {
+    "id": "rima",
+    "n": "la rima",
+    "ic": "🎶",
+    "sotto": "cuore-amore · baciata AABB, alternata ABAB",
+    "da": "gioca con"
+   },
+   {
+    "id": "similitudine",
+    "n": "similitudine e metafora",
+    "ic": "🪞",
+    "sotto": "paragoni con «come» o senza",
+    "da": "fa paragoni con"
+   },
+   {
+    "id": "figure",
+    "n": "altre figure retoriche",
+    "ic": "✨",
+    "sotto": "personificazione, onomatopea, iperbole",
+    "da": "usa anche"
+   },
+   {
+    "id": "forme",
+    "n": "forme famose",
+    "ic": "📜",
+    "sotto": "quartina, sonetto, haiku",
+    "da": "ha"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "In una poesia contano molto il suono e il ritmo delle parole. Ogni riga è un verso; un gruppo di versi è una strofa.",
+    "nodi": [
+     "versi"
+    ]
+   },
+   {
+    "t": "Due parole fanno rima quando finiscono con lo stesso suono: cuore e amore, gatto e matto. Rime a coppie (AABB) sono baciate; con lo schema ABAB sono alternate.",
+    "v": "Due parole fanno rima quando finiscono con lo stesso suono: cuore e amore, gatto e matto. Rime a coppie, a a bi bi, sono baciate; con lo schema a bi a bi sono alternate.",
+    "nodi": [
+     "rima"
+    ]
+   },
+   {
+    "t": "La similitudine paragona con «come»: veloce come il vento. La metafora paragona senza «come»: sei un fulmine!",
+    "nodi": [
+     "similitudine"
+    ]
+   },
+   {
+    "t": "Se il vento sussurra come una persona, è una personificazione. Tic tac e splash sono onomatopee: imitano i suoni. «Te l'ho detto mille volte!» è un'iperbole: un'esagerazione.",
+    "nodi": [
+     "figure"
+    ]
+   },
+   {
+    "t": "Alcune forme hanno un nome: la quartina è una strofa di 4 versi. Il sonetto ha 14 versi, come quelli di Petrarca. L'haiku, di tre versi, viene dal Giappone.",
+    "nodi": [
+     "forme"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "similitudine",
+    "scelte": [
+     "similitudine e metafora",
+     "pentola e coperchio",
+     "forchetta e coltello"
+    ]
+   }
+  ],
+  "domande": {
+   "1pzskn0": "similitudine",
+   "w3e5rv": "similitudine",
+   "15mdcxq": "rima",
+   "15wsk1n": "versi",
+   "1ep2w5k": "versi",
+   "1jnsfta": "figure",
+   "1kb9wz7": "figure",
+   "j07wyc": "figure",
+   "1uhrkfl": "forme",
+   "1e4r2b1": "rima",
+   "c8n5uv": "rima",
+   "qifpzq": "versi",
+   "rh466v": "forme",
+   "n7ugvm": "forme"
+  },
+  "collegamenti": [
+   "ita:modi-dire",
+   "ita:testi",
+   "musica:voce"
+  ]
+ },
+ "testi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il testo",
+   "ic": "📝",
+   "sotto": "ogni testo ha uno scopo"
+  },
+  "nodi": [
+   {
+    "id": "narrativo",
+    "n": "narrativo",
+    "ic": "📖",
+    "sotto": "inizio, svolgimento, conclusione · diario, fumetti",
+    "da": "per raccontare è"
+   },
+   {
+    "id": "fantastici",
+    "n": "favola, fiaba o leggenda",
+    "ic": "🧚",
+    "sotto": "morale · fate e magie · l'origine di un luogo",
+    "da": "può diventare"
+   },
+   {
+    "id": "descrittivo",
+    "n": "descrittivo",
+    "ic": "🖼️",
+    "sotto": "com'è una persona, un luogo, una cosa",
+    "da": "per descrivere è"
+   },
+   {
+    "id": "informativo",
+    "n": "informativo",
+    "ic": "📰",
+    "sotto": "fatti veri e precisi · le 5 W · il riassunto",
+    "da": "per informare è"
+   },
+   {
+    "id": "regolativo",
+    "n": "regolativo",
+    "ic": "📋",
+    "sotto": "istruzioni e regole: la ricetta",
+    "da": "per dare istruzioni è"
+   },
+   {
+    "id": "argomentativo",
+    "n": "argomentativo",
+    "ic": "🗣️",
+    "sotto": "una tesi con i suoi argomenti",
+    "da": "per convincere è"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il testo narrativo racconta una storia, divisa in inizio, svolgimento e conclusione. Anche il diario racconta: in prima persona, con la data.",
+    "nodi": [
+     "narrativo"
+    ]
+   },
+   {
+    "t": "Anche i fumetti raccontano: le parole dei personaggi stanno nei balloon, le nuvolette, dentro le vignette.",
+    "nodi": [
+     "narrativo"
+    ]
+   },
+   {
+    "t": "La favola è breve, con animali che parlano e una morale, l'insegnamento finale. La fiaba ha fate e magie. La leggenda spiega con la fantasia l'origine di un luogo.",
+    "nodi": [
+     "fantastici"
+    ]
+   },
+   {
+    "t": "Il testo descrittivo dice com'è una persona, un luogo o una cosa. Il testo regolativo dà istruzioni o regole: una ricetta, il regolamento di un gioco.",
+    "nodi": [
+     "descrittivo",
+     "regolativo"
+    ]
+   },
+   {
+    "t": "Il testo informativo dà informazioni vere e precise, per esempio sui delfini. Il giornalista usa le 5 W: chi, che cosa, dove, quando, perché.",
+    "v": "Il testo informativo dà informazioni vere e precise, per esempio sui delfini. Il giornalista usa le cinque doppie vu: chi, che cosa, dove, quando, perché.",
+    "nodi": [
+     "informativo"
+    ]
+   },
+   {
+    "t": "Il riassunto è un testo più breve che dice solo le cose importanti, con parole tue.",
+    "nodi": [
+     "informativo"
+    ]
+   },
+   {
+    "t": "Il testo argomentativo sostiene un'opinione, la tesi, con delle ragioni: gli argomenti. Per esempio: leggere ogni giorno fa bene.",
+    "nodi": [
+     "argomentativo"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "regolativo",
+    "scelte": [
+     "regolativo",
+     "musicale",
+     "colorato"
+    ]
+   }
+  ],
+  "domande": {
+   "105kx8l": "fantastici",
+   "1d2zydb": "fantastici",
+   "6czi6o": "narrativo",
+   "por94a": "descrittivo",
+   "x2iaxi": "regolativo",
+   "17cu02i": "argomentativo",
+   "abb3s8": "informativo",
+   "9s5e2t": "informativo",
+   "jjvhw9": "regolativo",
+   "1vh7xfk": "argomentativo",
+   "1tsuf5y": "informativo",
+   "jbk6e5": "narrativo",
+   "1mxc3o7": "narrativo",
+   "1vflu7b": "fantastici",
+   "mmfmnx": "fantastici",
+   "4j3shq": "narrativo",
+   "1l1gg3c": "informativo"
+  },
+  "collegamenti": [
+   "ita:poesia",
+   "ita:punteggiatura",
+   "ita:autori",
+   "media:epica"
+  ]
+ },
+ "punteggiatura": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La punteggiatura",
+   "ic": "❝",
+   "sotto": "i segni che danno respiro al testo"
+  },
+  "nodi": [
+   {
+    "id": "punto",
+    "n": "il punto",
+    "ic": "⏺️",
+    "sotto": "chiude la frase: poi la maiuscola",
+    "da": "chiude la frase con"
+   },
+   {
+    "id": "sospensione",
+    "n": "i puntini di sospensione",
+    "ic": "💭",
+    "sotto": "sempre tre…",
+    "da": "lascia in sospeso con"
+   },
+   {
+    "id": "duepunti",
+    "n": "i due punti",
+    "ic": "👀",
+    "sotto": "annunciano il discorso diretto",
+    "da": "annuncia chi parla con"
+   },
+   {
+    "id": "diretto",
+    "n": "discorso diretto",
+    "ic": "🗨️",
+    "sotto": "parole esatte tra virgolette basse o caporali",
+    "da": "si usa nel"
+   },
+   {
+    "id": "indiretto",
+    "n": "discorso indiretto",
+    "ic": "🔁",
+    "sotto": "Luca disse che aveva fame: niente virgolette",
+    "da": "cambia nel"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il punto chiude la frase: la parola dopo comincia con la lettera maiuscola. Punto, maiuscola, via!",
+    "nodi": [
+     "punto"
+    ]
+   },
+   {
+    "t": "I puntini di sospensione sono sempre tre... e lasciano la frase in sospeso.",
+    "nodi": [
+     "sospensione"
+    ]
+   },
+   {
+    "t": "Il discorso diretto riporta le parole esatte di un personaggio. Prima si mettono i due punti, poi le virgolette basse, dette caporali: « ».",
+    "v": "Il discorso diretto riporta le parole esatte di un personaggio. Prima si mettono i due punti, poi le virgolette basse, dette caporali.",
+    "nodi": [
+     "duepunti",
+     "diretto"
+    ]
+   },
+   {
+    "t": "Le parole sono annunciate da verbi come disse, rispose, chiese, esclamò. Esempio: la mamma disse: «È pronto!»",
+    "nodi": [
+     "diretto"
+    ]
+   },
+   {
+    "t": "Nel discorso indiretto il narratore riferisce: le virgolette spariscono, arriva «che» e il verbo cambia. Luca disse: «Ho fame» diventa: Luca disse che aveva fame.",
+    "nodi": [
+     "indiretto"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "sospensione",
+    "scelte": [
+     "i puntini di sospensione",
+     "i fiocchi di neve",
+     "i bottoni"
+    ]
+   },
+   {
+    "nodo": "punto",
+    "scelte": [
+     "il punto",
+     "il pallone",
+     "il cuscino"
+    ]
+   }
+  ],
+  "domande": {
+   "4byatk": "sospensione",
+   "awy34j": "duepunti",
+   "u6gwho": "punto",
+   "u1vlbg": "diretto",
+   "1kkazw1": "indiretto",
+   "14ga9tt": "indiretto",
+   "pcbidh": "diretto"
+  },
+  "collegamenti": [
+   "ita:testi",
+   "ita:ortografia",
+   "ita:frase"
+  ]
+ },
+ "autori": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Libri da leggere",
+   "ic": "📚",
+   "sotto": "grandi autori italiani per ragazzi"
+  },
+  "nodi": [
+   {
+    "id": "collodi",
+    "n": "Carlo Collodi",
+    "ic": "🤥",
+    "sotto": "vero nome Carlo Lorenzini, di Firenze",
+    "da": "come «Pinocchio», di"
+   },
+   {
+    "id": "rodari",
+    "n": "Gianni Rodari",
+    "ic": "📞",
+    "sotto": "premio Andersen nel 1970",
+    "da": "come «Favole al telefono», di"
+   },
+   {
+    "id": "deamicis",
+    "n": "Edmondo De Amicis",
+    "ic": "❤️",
+    "sotto": "il diario di Enrico, in una scuola di Torino",
+    "da": "come «Cuore», di"
+   },
+   {
+    "id": "salgari",
+    "n": "Emilio Salgari",
+    "ic": "🐯",
+    "sotto": "Sandokan, la Tigre della Malesia",
+    "da": "come le avventure di Sandokan, di"
+   },
+   {
+    "id": "lodi",
+    "n": "Mario Lodi",
+    "ic": "🐦",
+    "sotto": "un passerotto, scritto con gli alunni",
+    "da": "come «Cipì», di"
+   },
+   {
+    "id": "dami",
+    "n": "Elisabetta Dami",
+    "ic": "🐭",
+    "sotto": "Geronimo Stilton, il topo giornalista",
+    "da": "come Geronimo Stilton, di"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "«Le avventure di Pinocchio» le scrisse Carlo Collodi: uscirono prima a puntate su un giornale per bambini, poi come libro nel 1883.",
+    "nodi": [
+     "collodi"
+    ]
+   },
+   {
+    "t": "Il suo vero nome era Carlo Lorenzini, ed era di Firenze. Collodi è il paese della sua mamma.",
+    "nodi": [
+     "collodi"
+    ]
+   },
+   {
+    "t": "Gianni Rodari scrisse «Favole al telefono» e tante filastrocche. Nel 1970 vinse il premio Hans Christian Andersen, il più importante per chi scrive per ragazzi.",
+    "nodi": [
+     "rodari"
+    ]
+   },
+   {
+    "t": "«Cuore» di Edmondo De Amicis uscì nel 1886. È il diario di Enrico, un ragazzino di una scuola di Torino.",
+    "nodi": [
+     "deamicis"
+    ]
+   },
+   {
+    "t": "Emilio Salgari inventò Sandokan, il pirata detto «la Tigre della Malesia». Scrisse avventure in luoghi lontanissimi, viaggiando con la fantasia.",
+    "nodi": [
+     "salgari"
+    ]
+   },
+   {
+    "t": "«Cipì» di Mario Lodi racconta di un passerotto: il maestro lo scrisse con i suoi alunni. Geronimo Stilton, il topo giornalista, è nato dalla fantasia di Elisabetta Dami.",
+    "nodi": [
+     "lodi",
+     "dami"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "deamicis",
+    "scelte": [
+     "Edmondo De Amicis",
+     "Cristoforo Colombo",
+     "Giulio Cesare"
+    ]
+   }
+  ],
+  "domande": {
+   "9qgjyh": "collodi",
+   "1plzbf9": "rodari",
+   "o8oki3": "collodi",
+   "1sd15qa": "deamicis",
+   "jv73g1": "salgari",
+   "k19day": "rodari",
+   "5jmdqd": "lodi",
+   "18c7us1": "dami"
+  },
+  "collegamenti": [
+   "ita:testi",
+   "ita:zagazoo",
+   "media:epica"
+  ]
  }
 }

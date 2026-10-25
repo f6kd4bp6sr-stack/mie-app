@@ -1,0 +1,2600 @@
+{
+ "saluti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Chi saluta in inglese",
+   "ic": "👋",
+   "sotto": "saluti e frasi gentili"
+  },
+  "nodi": [
+   {
+    "id": "mattina",
+    "n": "«Good morning»",
+    "ic": "🌅",
+    "sotto": "buongiorno · di pomeriggio «Good afternoon»",
+    "da": "di mattina dice"
+   },
+   {
+    "id": "notte",
+    "n": "«Good night»",
+    "ic": "🌙",
+    "sotto": "buonanotte · la sera «Good evening»",
+    "da": "prima di dormire dice"
+   },
+   {
+    "id": "ciao",
+    "n": "«See you tomorrow!»",
+    "ic": "🎒",
+    "sotto": "ci vediamo domani",
+    "da": "uscendo da scuola dice"
+   },
+   {
+    "id": "chi",
+    "n": "«What's your name?»",
+    "ic": "🙋",
+    "sotto": "come ti chiami? · «Where are you from?»",
+    "da": "per conoscere qualcuno chiede"
+   },
+   {
+    "id": "gentile",
+    "n": "«please» e «thank you»",
+    "ic": "💐",
+    "sotto": "per favore e grazie · scusa: «sorry»",
+    "da": "per essere gentile dice"
+   },
+   {
+    "id": "festa",
+    "n": "«Happy birthday!»",
+    "ic": "🎂",
+    "sotto": "buon compleanno",
+    "da": "a una festa di compleanno dice"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Salutare in inglese è facile! Di mattina si dice «Good morning», buongiorno. Dopo mezzogiorno si dice «Good afternoon», buon pomeriggio.",
+    "nodi": [
+     "mattina"
+    ]
+   },
+   {
+    "t": "La sera si dice «Good evening». Quando vai a dormire, invece, si dice «Good night»: buonanotte!",
+    "nodi": [
+     "notte"
+    ]
+   },
+   {
+    "t": "Per conoscere qualcuno chiedi «What's your name?», come ti chiami? Si risponde «My name is…». Per sapere da dove viene: «Where are you from?»",
+    "nodi": [
+     "chi"
+    ]
+   },
+   {
+    "t": "Si risponde «I'm from Italy», vengo dall'Italia. Le nazionalità vogliono la maiuscola: «I'm Italian», sono italiana. Come stai? Si dice «How are you?»",
+    "nodi": [
+     "chi"
+    ]
+   },
+   {
+    "t": "Le parole gentili: «please», per favore, e «thank you», grazie. Se sbagli dici «sorry», scusa. A chi ti ringrazia rispondi «You're welcome», prego.",
+    "nodi": [
+     "gentile"
+    ]
+   },
+   {
+    "t": "All'uscita di scuola si saluta un'amica: «See you tomorrow!», ci vediamo domani. «See» vuol dire vedere e «tomorrow» domani.",
+    "nodi": [
+     "ciao"
+    ]
+   },
+   {
+    "t": "Alle feste di compleanno si dice «Happy birthday!», buon compleanno. «Birthday» unisce «birth», nascita, e «day», giorno: il giorno della nascita!",
+    "nodi": [
+     "festa"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "mattina",
+    "scelte": [
+     "«Good morning»",
+     "«Good night»",
+     "«Happy birthday!»"
+    ]
+   },
+   {
+    "nodo": "gentile",
+    "scelte": [
+     "«please» e «thank you»",
+     "«cat» e «dog»",
+     "«red» e «blue»"
+    ]
+   }
+  ],
+  "domande": {
+   "1otosj7": "festa",
+   "syb93h": "mattina",
+   "1rgiz55": "festa",
+   "qwftxz": "chi",
+   "1x8qn1q": "chi",
+   "n5erkx": "chi",
+   "12c14p5": "gentile",
+   "1d7vvby": "gentile",
+   "1oz1bh": "notte",
+   "1kxz6vh": "ciao",
+   "17m2bgt": "chi",
+   "1bknwnx": "gentile",
+   "v4lbdv": "mattina"
+  },
+  "collegamenti": [
+   "eng:domande",
+   "eng:essere-avere",
+   "parlo:misto"
+  ]
+ },
+ "numeri": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Contare in inglese",
+   "ic": "🔢",
+   "sotto": "numeri e posti in fila"
+  },
+  "nodi": [
+   {
+    "id": "dieci",
+    "n": "«ten»",
+    "ic": "🖐️",
+    "sotto": "10 · e 12 è «twelve»",
+    "da": "dieci è"
+   },
+   {
+    "id": "teen",
+    "n": "«-teen»",
+    "ic": "🧒",
+    "sotto": "«thirteen» 13 · «fifteen» 15",
+    "da": "da 13 a 19 c'è la coda"
+   },
+   {
+    "id": "ty",
+    "n": "«-ty»",
+    "ic": "🔟",
+    "sotto": "«twenty» 20 · «fifty» 50",
+    "da": "per le decine c'è la coda"
+   },
+   {
+    "id": "cento",
+    "n": "«one hundred»",
+    "ic": "💯",
+    "sotto": "cento · mille è «one thousand»",
+    "da": "cento è"
+   },
+   {
+    "id": "ordine",
+    "n": "«first», «second», «third»",
+    "ic": "🏅",
+    "sotto": "primo, secondo, terzo",
+    "da": "in una gara dice"
+   },
+   {
+    "id": "breve",
+    "n": "«1st», «2nd», «3rd», «4th»",
+    "ic": "✏️",
+    "sotto": "le ultime due lettere della parola",
+    "da": "in breve scrive"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Contiamo in inglese! Dieci è «ten», come le dita delle due mani. Dodici è «twelve», come i mesi dell'anno.",
+    "nodi": [
+     "dieci"
+    ]
+   },
+   {
+    "t": "Da 13 a 19 i numeri hanno una coda: «-teen». Tredici è «thirteen», quindici è «fifteen». L'accento va in fondo: «thir-TEEN».",
+    "nodi": [
+     "teen"
+    ]
+   },
+   {
+    "t": "Le decine hanno un'altra coda: «-ty». Venti è «twenty», trenta «thirty», cinquanta «fifty». Qui l'accento va all'inizio: «THIR-ty».",
+    "nodi": [
+     "ty"
+    ]
+   },
+   {
+    "t": "Cento si dice «one hundred»: «one» davanti vuol dire un. Duecento è «two hundred». Mille è «one thousand».",
+    "nodi": [
+     "cento"
+    ]
+   },
+   {
+    "t": "Chi arriva primo in una gara è «first». Poi vengono «second», secondo, e «third», terzo.",
+    "nodi": [
+     "ordine"
+    ]
+   },
+   {
+    "t": "In breve si scrive il numero con le ultime due lettere della parola: «1st», «2nd», «3rd». Dal quarto al ventesimo si usa «th»: «4th».",
+    "nodi": [
+     "breve"
+    ]
+   },
+   {
+    "t": "Guarda sempre l'ultima parola! Ventunesimo è «twenty-first», quindi si scrive «21st». E poi «22nd», «23rd», ma «24th».",
+    "nodi": [
+     "breve"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "dieci",
+    "scelte": [
+     "«ten»",
+     "«red»",
+     "«cat»"
+    ]
+   },
+   {
+    "nodo": "cento",
+    "scelte": [
+     "«one hundred»",
+     "«good night»",
+     "«blue»"
+    ]
+   }
+  ],
+  "domande": {
+   "99a3x4": "dieci",
+   "m6s4fv": "ty",
+   "m6s3od": "teen",
+   "lwmqq2": "cento",
+   "3c1aom": "ordine",
+   "1lfzdy1": "breve",
+   "14m5lkf": "breve",
+   "1hawy1m": "dieci",
+   "1cc9599": "teen",
+   "3zj36k": "ty"
+  },
+  "collegamenti": [
+   "eng:ore",
+   "eng:calendario",
+   "media:inglese"
+  ]
+ },
+ "colori": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I colori in inglese",
+   "ic": "🌈",
+   "sotto": "dal rosso al viola"
+  },
+  "nodi": [
+   {
+    "id": "rosso",
+    "n": "«red»",
+    "ic": "🍓",
+    "sotto": "come una fragola",
+    "da": "il rosso è"
+   },
+   {
+    "id": "giallo",
+    "n": "«yellow»",
+    "ic": "🍋",
+    "sotto": "come il sole e i limoni",
+    "da": "il giallo è"
+   },
+   {
+    "id": "verde",
+    "n": "«green»",
+    "ic": "🌿",
+    "sotto": "con due e, come due foglioline",
+    "da": "il verde è"
+   },
+   {
+    "id": "blu",
+    "n": "«blue»",
+    "ic": "💙",
+    "sotto": "con la e finale",
+    "da": "il blu è"
+   },
+   {
+    "id": "nero",
+    "n": "«black»",
+    "ic": "🎹",
+    "sotto": "e il bianco è «white»",
+    "da": "il nero è"
+   },
+   {
+    "id": "viola",
+    "n": "«purple»",
+    "ic": "🍇",
+    "sotto": "rosa «pink» · arancione «orange»",
+    "da": "il viola è"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Coloriamo in inglese! Il rosso è «red», come una fragola. Il giallo è «yellow», come il sole e i limoni.",
+    "nodi": [
+     "rosso",
+     "giallo"
+    ]
+   },
+   {
+    "t": "Il verde è «green», come l'erba e le foglie. Ricorda: «green» ha due e, come due foglioline!",
+    "nodi": [
+     "verde"
+    ]
+   },
+   {
+    "t": "Il blu è «blue»: attenta alla e finale, che in italiano non c'è. È il colore del cielo d'estate.",
+    "nodi": [
+     "blu"
+    ]
+   },
+   {
+    "t": "Il nero è «black» e il bianco è «white». I tasti del pianoforte sono «black and white», come le strisce della zebra.",
+    "nodi": [
+     "nero"
+    ]
+   },
+   {
+    "t": "Il viola è «purple», il rosa è «pink» e l'arancione è «orange». Il grigio è «grey» e il marrone «brown».",
+    "nodi": [
+     "viola"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "rosso",
+    "scelte": [
+     "«red»",
+     "«dog»",
+     "«ten»"
+    ]
+   },
+   {
+    "nodo": "viola",
+    "scelte": [
+     "«purple»",
+     "«apple»",
+     "«school»"
+    ]
+   }
+  ],
+  "domande": {
+   "dy0noz": "rosso",
+   "t9jswn": "giallo",
+   "17hnmwl": "verde",
+   "1oyw0m8": "blu",
+   "13mu1ib": "nero",
+   "17uti9u": "viola"
+  },
+  "collegamenti": [
+   "arte:colori",
+   "eng:vestiti",
+   "eng:animali"
+  ]
+ },
+ "animali": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Gli animali in inglese",
+   "ic": "🐶",
+   "sotto": "dalla casa allo zoo"
+  },
+  "nodi": [
+   {
+    "id": "casa",
+    "n": "«cat» e «dog»",
+    "ic": "🐱",
+    "sotto": "gatto e cane · cuccioli: «kitten», «puppy»",
+    "da": "in casa vivono"
+   },
+   {
+    "id": "cavallo",
+    "n": "«horse»",
+    "ic": "🐴",
+    "sotto": "con la r · «house» è la casa",
+    "da": "il cavallo è"
+   },
+   {
+    "id": "coniglio",
+    "n": "«rabbit»",
+    "ic": "🐰",
+    "sotto": "il Bianconiglio è il «White Rabbit»",
+    "da": "il coniglio è"
+   },
+   {
+    "id": "volano",
+    "n": "«bird» e «butterfly»",
+    "ic": "🦋",
+    "sotto": "uccello e farfalla",
+    "da": "in cielo volano"
+   },
+   {
+    "id": "elefante",
+    "n": "«elephant»",
+    "ic": "🐘",
+    "sotto": "con «ph», che si legge f",
+    "da": "l'elefante è"
+   },
+   {
+    "id": "drago",
+    "n": "«dragon»",
+    "ic": "🐉",
+    "sotto": "quasi come in italiano",
+    "da": "il drago è"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Andiamo a conoscere gli animali! Il gatto è «cat» e il cane è «dog». Il gattino è «kitten», il cagnolino «puppy».",
+    "nodi": [
+     "casa"
+    ]
+   },
+   {
+    "t": "Il cavallo è «horse», con la r. Attenta: «house» vuol dire casa e «mouse» vuol dire topo!",
+    "nodi": [
+     "cavallo"
+    ]
+   },
+   {
+    "t": "Il coniglio è «rabbit». Nella storia di Alice nel Paese delle Meraviglie, il Bianconiglio si chiama «White Rabbit».",
+    "nodi": [
+     "coniglio"
+    ]
+   },
+   {
+    "t": "In cielo volano «bird», l'uccello, e «butterfly», la farfalla. «Butterfly» unisce «butter», burro, e «fly», volare!",
+    "nodi": [
+     "volano"
+    ]
+   },
+   {
+    "t": "L'elefante è «elephant»: si scrive con «ph», che si legge come la nostra f. Succede anche in «phone», il telefono.",
+    "nodi": [
+     "elefante"
+    ]
+   },
+   {
+    "t": "E il drago? Si dice «dragon», quasi come in italiano. Il mio drago è «my dragon»!",
+    "nodi": [
+     "drago"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "drago",
+    "scelte": [
+     "«dragon»",
+     "«yellow»",
+     "«Monday»"
+    ]
+   },
+   {
+    "nodo": "cavallo",
+    "scelte": [
+     "«horse»",
+     "«bread»",
+     "«ten»"
+    ]
+   }
+  ],
+  "domande": {
+   "1ec5xle": "casa",
+   "rc1u8a": "drago",
+   "romdcm": "casa",
+   "1757k4h": "cavallo",
+   "11tolzy": "coniglio",
+   "ndnepw": "volano",
+   "ki90y3": "volano",
+   "1ge2pmd": "elefante"
+  },
+  "collegamenti": [
+   "eng:plurali",
+   "eng:colori",
+   "eng:famiglia"
+  ]
+ },
+ "famiglia": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Famiglia e amici",
+   "ic": "👪",
+   "sotto": "le persone vicine"
+  },
+  "nodi": [
+   {
+    "id": "mamma",
+    "n": "«mum» e «dad»",
+    "ic": "👩",
+    "sotto": "mamma e papà · in America «mom»",
+    "da": "mamma e papà si dicono"
+   },
+   {
+    "id": "genitori",
+    "n": "«parents»",
+    "ic": "👫",
+    "sotto": "i genitori, non i parenti!",
+    "da": "mamma e papà insieme si dicono"
+   },
+   {
+    "id": "fratelli",
+    "n": "«brother» e «sister»",
+    "ic": "👧",
+    "sotto": "fratello e sorella",
+    "da": "fratello e sorella si dicono"
+   },
+   {
+    "id": "nonni",
+    "n": "«grandmother» e «grandfather»",
+    "ic": "👵",
+    "sotto": "in casa anche «granny» e «grandpa»",
+    "da": "i nonni si dicono"
+   },
+   {
+    "id": "zii",
+    "n": "«uncle», «aunt», «cousin»",
+    "ic": "🧑‍🤝‍🧑",
+    "sotto": "zio, zia, cugino o cugina",
+    "da": "zii e cugini si dicono"
+   },
+   {
+    "id": "amici",
+    "n": "«friend»",
+    "ic": "🤝",
+    "sotto": "la migliore amica: «best friend»",
+    "da": "un amico o un'amica è"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Ecco la famiglia in inglese! La mamma è «mum», in America «mom». Il papà è «dad», o «daddy».",
+    "nodi": [
+     "mamma"
+    ]
+   },
+   {
+    "t": "Mamma e papà insieme sono i «parents», i genitori. Attenta, è un falso amico: i parenti si chiamano «relatives»!",
+    "nodi": [
+     "genitori"
+    ]
+   },
+   {
+    "t": "Il fratello è «brother» e la sorella è «sister».",
+    "nodi": [
+     "fratelli"
+    ]
+   },
+   {
+    "t": "La nonna è «grandmother» e il nonno è «grandfather». In famiglia si dice anche «granny» o «grandma», e «grandpa».",
+    "nodi": [
+     "nonni"
+    ]
+   },
+   {
+    "t": "Lo zio è «uncle» e la zia è «aunt». Il cugino e la cugina si dicono tutti e due «cousin»: comodo!",
+    "nodi": [
+     "zii"
+    ]
+   },
+   {
+    "t": "Poi ci sono gli amici. «Friend» vale per un amico e per un'amica. La migliore amica è la «best friend»!",
+    "nodi": [
+     "amici"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "genitori",
+    "scelte": [
+     "«parents»",
+     "«snow»",
+     "«apple»"
+    ]
+   },
+   {
+    "nodo": "amici",
+    "scelte": [
+     "«friend»",
+     "«winter»",
+     "«yellow»"
+    ]
+   }
+  ],
+  "domande": {
+   "mhf9qw": "amici",
+   "1poajwo": "mamma",
+   "6tq5bs": "fratelli",
+   "l30mnt": "nonni",
+   "1g5n167": "fratelli",
+   "1al3x3n": "mamma",
+   "wrizs1": "zii",
+   "zozsef": "genitori",
+   "1w3y4i6": "zii",
+   "185m9r6": "zii"
+  },
+  "collegamenti": [
+   "eng:essere-avere",
+   "eng:verbi",
+   "eng:saluti"
+  ]
+ },
+ "corpo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il corpo",
+   "ic": "🧒",
+   "sotto": "e come descriversi"
+  },
+  "nodi": [
+   {
+    "id": "viso",
+    "n": "«nose» e «mouth»",
+    "ic": "👃",
+    "sotto": "naso e bocca · il topo è «mouse»",
+    "da": "ha sul viso"
+   },
+   {
+    "id": "orecchie",
+    "n": "«ears» ed «eyes»",
+    "ic": "👂",
+    "sotto": "orecchie e occhi",
+    "da": "sente e vede con"
+   },
+   {
+    "id": "capelli",
+    "n": "«hair»",
+    "ic": "💇",
+    "sotto": "i capelli, senza la s",
+    "da": "ha in testa"
+   },
+   {
+    "id": "aspetto",
+    "n": "«long brown hair»",
+    "ic": "🪞",
+    "sotto": "gli aggettivi vanno prima del nome",
+    "da": "si descrive così:"
+   },
+   {
+    "id": "mani",
+    "n": "«hands» e «feet»",
+    "ic": "✋",
+    "sotto": "mani e piedi · la testa è «head»",
+    "da": "prende e cammina con"
+   },
+   {
+    "id": "ginocchio",
+    "n": "«knee»",
+    "ic": "🦵",
+    "sotto": "la k non si pronuncia",
+    "da": "piega la gamba con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Guardiamo il viso! Il naso è «nose» e la bocca è «mouth». Attenta: «mouse», con la s, è il topo!",
+    "nodi": [
+     "viso"
+    ]
+   },
+   {
+    "t": "Le orecchie sono «ears» e gli occhi «eyes». Un trucco: dentro «hear», sentire, c'è nascosto «ear», l'orecchio!",
+    "nodi": [
+     "orecchie"
+    ]
+   },
+   {
+    "t": "I capelli sono «hair», senza la s, anche se sono tantissimi. La testa è «head».",
+    "nodi": [
+     "capelli"
+    ]
+   },
+   {
+    "t": "Per descriverti, gli aggettivi vanno prima del nome: «I've got long brown hair», ho i capelli lunghi e castani.",
+    "nodi": [
+     "aspetto"
+    ]
+   },
+   {
+    "t": "Le mani sono «hands» e i piedi sono «feet». Con le mani prendi le cose, con i piedi cammini e salti.",
+    "nodi": [
+     "mani"
+    ]
+   },
+   {
+    "t": "Il ginocchio è «knee». La k all'inizio non si pronuncia, come in «know» e «knife»: è una k silenziosa!",
+    "nodi": [
+     "ginocchio"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "ginocchio",
+    "scelte": [
+     "«knee»",
+     "«apple»",
+     "«Sunday»"
+    ]
+   },
+   {
+    "nodo": "capelli",
+    "scelte": [
+     "«hair»",
+     "«cheese»",
+     "«rain»"
+    ]
+   }
+  ],
+  "domande": {
+   "1col33r": "viso",
+   "1nn6wwp": "capelli",
+   "106hxvs": "aspetto",
+   "313ht2": "orecchie",
+   "1ggdr8f": "viso",
+   "1yr3dl5": "mani",
+   "1ehh4rx": "ginocchio"
+  },
+  "collegamenti": [
+   "sci-corpo:sensi",
+   "eng:plurali",
+   "eng:essere-avere"
+  ]
+ },
+ "vestiti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I vestiti",
+   "ic": "👕",
+   "sotto": "dalla testa ai piedi"
+  },
+  "nodi": [
+   {
+    "id": "freddo",
+    "n": "«scarf», «hat», «gloves»",
+    "ic": "🧣",
+    "sotto": "sciarpa, cappello e guanti",
+    "da": "per il freddo servono"
+   },
+   {
+    "id": "jumper",
+    "n": "«jumper»",
+    "ic": "🧶",
+    "sotto": "il maglione · in America «sweater»",
+    "da": "sopra la maglietta va"
+   },
+   {
+    "id": "gambe",
+    "n": "«trousers» e «skirt»",
+    "ic": "👖",
+    "sotto": "pantaloni e gonna",
+    "da": "sulle gambe vanno"
+   },
+   {
+    "id": "piedi",
+    "n": "«socks» e «shoes»",
+    "ic": "🧦",
+    "sotto": "calzini e scarpe",
+    "da": "ai piedi vanno"
+   },
+   {
+    "id": "wear",
+    "n": "«I'm wearing…»",
+    "ic": "🪞",
+    "sotto": "sto indossando…",
+    "da": "per dire cosa porti si usa"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Fa freddo? Mettiamo la sciarpa, «scarf», il cappello, «hat», e i guanti, «gloves». «Hat» fa rima con «cat»: «a cat in a hat»!",
+    "nodi": [
+     "freddo"
+    ]
+   },
+   {
+    "t": "Sopra la maglietta va il maglione: in Gran Bretagna si dice «jumper», in America «sweater».",
+    "nodi": [
+     "jumper"
+    ]
+   },
+   {
+    "t": "Sulle gambe: i pantaloni sono «trousers», sempre al plurale. La gonna è «skirt»: non confonderla con «shirt», la camicia!",
+    "nodi": [
+     "gambe"
+    ]
+   },
+   {
+    "t": "Ai piedi: prima i calzini, «socks», poi le scarpe, «shoes». Un calzino solo è «a sock».",
+    "nodi": [
+     "piedi"
+    ]
+   },
+   {
+    "t": "Per dire cosa hai addosso: «I'm wearing a coat», indosso un cappotto. «I'm wearing a red hat!», porto un cappello rosso!",
+    "nodi": [
+     "wear"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "jumper",
+    "scelte": [
+     "«jumper»",
+     "«dog»",
+     "«Monday»"
+    ]
+   },
+   {
+    "nodo": "wear",
+    "scelte": [
+     "«I'm wearing…»",
+     "«I'm hungry»",
+     "«Good night»"
+    ]
+   }
+  ],
+  "domande": {
+   "1anxysn": "freddo",
+   "1bbg6j6": "jumper",
+   "1hx8p15": "freddo",
+   "oy4n5a": "piedi",
+   "1ov8zoc": "wear",
+   "1lfcvnw": "piedi",
+   "l6rbm8": "gambe",
+   "1lpeooq": "freddo",
+   "x2a26p": "gambe"
+  },
+  "collegamenti": [
+   "parlo:vestiti",
+   "eng:meteo",
+   "vesto:strati"
+  ]
+ },
+ "cibo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il cibo",
+   "ic": "🍎",
+   "sotto": "pasti, frutta e bevande"
+  },
+  "nodi": [
+   {
+    "id": "pasti",
+    "n": "«breakfast», «lunch», «dinner»",
+    "ic": "🍽️",
+    "sotto": "colazione, pranzo e cena",
+    "da": "ogni giorno ha tre pasti:"
+   },
+   {
+    "id": "pollo",
+    "n": "«chicken» ed «egg»",
+    "ic": "🐔",
+    "sotto": "pollo e uovo · cucina è «kitchen»",
+    "da": "dalla fattoria arrivano"
+   },
+   {
+    "id": "an",
+    "n": "«an apple»",
+    "ic": "🍏",
+    "sotto": "«an» davanti a un suono di vocale",
+    "da": "la mela si dice"
+   },
+   {
+    "id": "bere",
+    "n": "«water» e «orange juice»",
+    "ic": "🧃",
+    "sotto": "acqua e succo d'arancia",
+    "da": "da bere ci sono"
+   },
+   {
+    "id": "pane",
+    "n": "«bread» e «cheese»",
+    "ic": "🧀",
+    "sotto": "pane e formaggio · burro è «butter»",
+    "da": "per merenda ci sono"
+   },
+   {
+    "id": "frutta",
+    "n": "«strawberry»",
+    "ic": "🍓",
+    "sotto": "la fragola · «berry» è bacca",
+    "da": "tra la frutta c'è"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Ogni giorno ci sono tre pasti. La colazione è «breakfast», il pranzo è «lunch» e la cena è «dinner».",
+    "nodi": [
+     "pasti"
+    ]
+   },
+   {
+    "t": "«Breakfast» unisce «break», rompere, e «fast», digiuno. Al mattino rompi il digiuno della notte!",
+    "nodi": [
+     "pasti"
+    ]
+   },
+   {
+    "t": "Il pollo è «chicken» e l'uovo è «egg». Attenta: «kitchen» è la cucina, dove si cucina il pollo!",
+    "nodi": [
+     "pollo"
+    ]
+   },
+   {
+    "t": "La mela è «apple». Si dice «an apple», con «an», perché «apple» comincia con un suono di vocale. Così anche «an egg»!",
+    "nodi": [
+     "an"
+    ]
+   },
+   {
+    "t": "Da bere: l'acqua è «water». Il succo d'arancia è «orange juice»: in inglese il frutto va prima.",
+    "nodi": [
+     "bere"
+    ]
+   },
+   {
+    "t": "Pane e formaggio sono «bread» e «cheese». Per fare un sorriso nelle foto, in inglese si dice «say cheese»!",
+    "nodi": [
+     "pane"
+    ]
+   },
+   {
+    "t": "La fragola è «strawberry». Dentro c'è «berry», bacca: il mirtillo è «blueberry» e il lampone «raspberry».",
+    "nodi": [
+     "frutta"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "frutta",
+    "scelte": [
+     "«strawberry»",
+     "«Tuesday»",
+     "«scarf»"
+    ]
+   },
+   {
+    "nodo": "pane",
+    "scelte": [
+     "«bread» e «cheese»",
+     "«hat» e «gloves»",
+     "«red» e «blue»"
+    ]
+   }
+  ],
+  "domande": {
+   "qael46": "pollo",
+   "mv91jz": "pollo",
+   "1xxddro": "bere",
+   "1mdds84": "pasti",
+   "y8ehem": "an",
+   "wb53eo": "an",
+   "juchai": "bere",
+   "1jrcpyg": "pane",
+   "6tgaoo": "pane",
+   "qi4f9b": "frutta",
+   "14tr7i5": "pasti"
+  },
+  "collegamenti": [
+   "sci-corpo:cibo",
+   "eng:ore",
+   "eng:casa"
+  ]
+ },
+ "meteo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il tempo che fa",
+   "ic": "🌦️",
+   "sotto": "e le quattro stagioni"
+  },
+  "nodi": [
+   {
+    "id": "chiedi",
+    "n": "«What's the weather like?»",
+    "ic": "❓",
+    "sotto": "che tempo fa? · «weather» non è «time»",
+    "da": "si chiede con"
+   },
+   {
+    "id": "sole",
+    "n": "«sunny» e «cloudy»",
+    "ic": "⛅",
+    "sotto": "con il sole o nuvoloso",
+    "da": "in cielo può essere"
+   },
+   {
+    "id": "vento",
+    "n": "«windy» e «foggy»",
+    "ic": "🌬️",
+    "sotto": "con il vento o con la nebbia",
+    "da": "nell'aria può essere"
+   },
+   {
+    "id": "pioggia",
+    "n": "«It's raining»",
+    "ic": "🌧️",
+    "sotto": "sta piovendo · arcobaleno: «rainbow»",
+    "da": "quando piove si dice"
+   },
+   {
+    "id": "freddo",
+    "n": "«It's cold»",
+    "ic": "❄️",
+    "sotto": "neve «snow» · ghiaccio «ice»",
+    "da": "d'inverno si dice"
+   },
+   {
+    "id": "stagioni",
+    "n": "«winter», «spring», «summer», «autumn»",
+    "ic": "🍂",
+    "sotto": "inverno, primavera, estate, autunno",
+    "da": "cambia con le stagioni:"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Per sapere che tempo fa chiedi: «What's the weather like?». «Weather» è il tempo del cielo; «time» è il tempo dell'orologio.",
+    "nodi": [
+     "chiedi"
+    ]
+   },
+   {
+    "t": "Il sole è «sun»: aggiungi la y e diventa «sunny». «It's sunny», c'è il sole! La nuvola è «cloud» e nuvoloso è «cloudy».",
+    "nodi": [
+     "sole"
+    ]
+   },
+   {
+    "t": "Il vento è «wind»: «It's windy», c'è vento. La nebbia è «fog» e diventa «foggy», con due g: «It's foggy», c'è la nebbia.",
+    "nodi": [
+     "vento"
+    ]
+   },
+   {
+    "t": "Quando piove: «It's raining», sta piovendo. Con pioggia e sole spunta l'arcobaleno, «rainbow»: «rain» è pioggia e «bow» è arco.",
+    "nodi": [
+     "pioggia"
+    ]
+   },
+   {
+    "t": "D'inverno: «It's cold», fa freddo. Il contrario è «It's hot», fa caldo. Cade la neve, «snow», e l'acqua diventa ghiaccio, «ice».",
+    "nodi": [
+     "freddo"
+    ]
+   },
+   {
+    "t": "Le stagioni sono quattro: inverno, «winter»; primavera, «spring»; estate, «summer»; autunno, «autumn».",
+    "nodi": [
+     "stagioni"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "stagioni",
+    "scelte": [
+     "«winter», «spring», «summer», «autumn»",
+     "«red», «blue», «green», «pink»",
+     "«cat», «dog», «bird», «horse»"
+    ]
+   },
+   {
+    "nodo": "chiedi",
+    "scelte": [
+     "«What's the weather like?»",
+     "«Happy birthday!»",
+     "«I'm hungry»"
+    ]
+   }
+  ],
+  "domande": {
+   "sz0p58": "vento",
+   "1jxey9g": "freddo",
+   "uoaok8": "freddo",
+   "os3b31": "vento",
+   "1j2nrnx": "chiedi",
+   "1wbw9kj": "pioggia",
+   "qi2m3k": "stagioni",
+   "mcbkwu": "sole",
+   "1ft37nv": "pioggia",
+   "8ke7q2": "sole",
+   "140f5u3": "freddo"
+  },
+  "collegamenti": [
+   "parlo:meteo",
+   "sci-spazio:meteo",
+   "eng:vestiti"
+  ]
+ },
+ "calendario": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Giorni e mesi",
+   "ic": "📅",
+   "sotto": "la settimana e l'anno in inglese"
+  },
+  "nodi": [
+   {
+    "id": "luna",
+    "n": "«Monday» e «Sunday»",
+    "ic": "🌙",
+    "sotto": "lunedì da «moon» · domenica da «sun»",
+    "da": "vengono dal cielo"
+   },
+   {
+    "id": "tuth",
+    "n": "«Tuesday» e «Thursday»",
+    "ic": "👯",
+    "sotto": "martedì e giovedì",
+    "da": "si somigliano"
+   },
+   {
+    "id": "wed",
+    "n": "«Wednesday»",
+    "ic": "🐫",
+    "sotto": "mercoledì · la prima d non si sente",
+    "da": "a metà settimana c'è"
+   },
+   {
+    "id": "fine",
+    "n": "«Friday» e «Saturday»",
+    "ic": "🎉",
+    "sotto": "venerdì e sabato",
+    "da": "dopo il giovedì vengono"
+   },
+   {
+    "id": "maiuscola",
+    "n": "la maiuscola",
+    "ic": "🔠",
+    "sotto": "«Monday», «January», «October»",
+    "da": "si scrivono sempre con"
+   },
+   {
+    "id": "mesi",
+    "n": "da «January» a «December»",
+    "ic": "🗓️",
+    "sotto": "da gennaio a dicembre",
+    "da": "nell'anno vanno"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Lunedì è «Monday»: viene da «moon», la luna, proprio come lunedì viene da luna! Domenica è «Sunday», il giorno del sole, «sun».",
+    "nodi": [
+     "luna"
+    ]
+   },
+   {
+    "t": "Martedì è «Tuesday» e giovedì è «Thursday»: si somigliano tanto! «Thursday» è il giorno di Thor, il dio del tuono: «thunder».",
+    "nodi": [
+     "tuth"
+    ]
+   },
+   {
+    "t": "Mercoledì è «Wednesday». Si legge più o meno «uénzdei»: la prima d non si sente. Per scriverlo, dillo piano: «Wed-nes-day».",
+    "nodi": [
+     "wed"
+    ]
+   },
+   {
+    "t": "Dopo giovedì arriva venerdì, «Friday». Dopo «Friday» c'è «Saturday», sabato: comincia il fine settimana!",
+    "nodi": [
+     "fine"
+    ]
+   },
+   {
+    "t": "In inglese giorni e mesi si scrivono sempre con la maiuscola: «Monday», «January», «October».",
+    "nodi": [
+     "maiuscola"
+    ]
+   },
+   {
+    "t": "Il primo mese è «January», gennaio; l'ultimo è «December», dicembre. Ottobre è «October», con ct. Dopo «August», agosto, viene «September».",
+    "nodi": [
+     "mesi"
+    ]
+   },
+   {
+    "t": "Luglio, «July», viene dal nome di Giulio Cesare. Agosto, «August», dall'imperatore Augusto. Natale è il 25 dicembre: «25th December».",
+    "nodi": [
+     "mesi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "wed",
+    "scelte": [
+     "«Wednesday»",
+     "«rainbow»",
+     "«teacher»"
+    ]
+   },
+   {
+    "nodo": "maiuscola",
+    "scelte": [
+     "la maiuscola",
+     "il pennarello verde",
+     "un disegno di gatto"
+    ]
+   }
+  ],
+  "domande": {
+   "1hcxlur": "luna",
+   "17uw2ee": "tuth",
+   "1d6m504": "wed",
+   "1ol5d69": "maiuscola",
+   "1pumupo": "mesi",
+   "1ew3lhj": "tuth",
+   "1tbmfm6": "mesi",
+   "a8czb": "mesi",
+   "iywnd3": "mesi",
+   "1cystgr": "mesi",
+   "1e8ilyw": "fine",
+   "3c124e": "luna"
+  },
+  "collegamenti": [
+   "eng:numeri",
+   "eng:ore",
+   "storia:impero"
+  ]
+ },
+ "ore": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le ore",
+   "ic": "🕒",
+   "sotto": "che ore sono e che cosa fai"
+  },
+  "nodi": [
+   {
+    "id": "chiedi",
+    "n": "«What time is it?»",
+    "ic": "❓",
+    "sotto": "che ore sono? · a che ora…? «What time…?»",
+    "da": "si chiedono con"
+   },
+   {
+    "id": "oclock",
+    "n": "«o'clock»",
+    "ic": "🕖",
+    "sotto": "«seven o'clock»: le sette in punto",
+    "da": "per l'ora esatta c'è"
+   },
+   {
+    "id": "past",
+    "n": "«past»",
+    "ic": "➕",
+    "sotto": "e: «ten past four», le quattro e dieci",
+    "da": "per i minuti dopo l'ora c'è"
+   },
+   {
+    "id": "to",
+    "n": "«to»",
+    "ic": "➖",
+    "sotto": "meno: «twenty to five», le cinque meno venti",
+    "da": "per i minuti che mancano c'è"
+   },
+   {
+    "id": "am",
+    "n": "«a.m.» e «p.m.»",
+    "ic": "🌗",
+    "sotto": "prima e dopo mezzogiorno",
+    "da": "per mattina e sera ci sono"
+   },
+   {
+    "id": "giornata",
+    "n": "«I get up» e «I brush my teeth»",
+    "ic": "🪥",
+    "sotto": "mi alzo · mi lavo i denti",
+    "da": "raccontano la giornata"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Per sapere l'ora chiedi: «What time is it?», che ore sono? Per l'ora di una cosa: «What time do you have lunch?», a che ora pranzi?",
+    "nodi": [
+     "chiedi"
+    ]
+   },
+   {
+    "t": "Per l'ora esatta si usa «o'clock», che viene da «of the clock», dell'orologio. «It's seven o'clock»: sono le sette in punto.",
+    "nodi": [
+     "oclock"
+    ]
+   },
+   {
+    "t": "«Past» vuol dire dopo. «Ten past four» sono le quattro e dieci; «quarter past six», le sei e un quarto; «half past three», le tre e mezza.",
+    "nodi": [
+     "past"
+    ]
+   },
+   {
+    "t": "«To» vuol dire che mancano dei minuti. «Twenty to five» sono le cinque meno venti, cioè le 4:40. «Quarter to nine», le nove meno un quarto.",
+    "v": "«To» vuol dire che mancano dei minuti. «Twenty to five» sono le cinque meno venti, cioè le quattro e quaranta. «Quarter to nine», le nove meno un quarto.",
+    "nodi": [
+     "to"
+    ]
+   },
+   {
+    "t": "«8 a.m.» sono le otto del mattino: «a.m.» va da mezzanotte a mezzogiorno. «8 p.m.» sono le otto di sera, cioè le 20.",
+    "v": "«8 a.m.» sono le otto del mattino: «a.m.» va da mezzanotte a mezzogiorno. «8 p.m.» sono le otto di sera, cioè le venti.",
+    "nodi": [
+     "am"
+    ]
+   },
+   {
+    "t": "La mattina: «I get up at seven», mi alzo alle sette. Poi «I brush my teeth», mi lavo i denti. La sera: «I go to bed», vado a letto.",
+    "nodi": [
+     "giornata"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "oclock",
+    "scelte": [
+     "«o'clock»",
+     "«butterfly»",
+     "«cheese»"
+    ]
+   },
+   {
+    "nodo": "am",
+    "scelte": [
+     "«a.m.» e «p.m.»",
+     "«cat» e «dog»",
+     "«red» e «blue»"
+    ]
+   }
+  ],
+  "domande": {
+   "hwb89f": "chiedi",
+   "1nag394": "to",
+   "x06i4i": "past",
+   "id7pzz": "to",
+   "1wywx65": "am",
+   "1nv9x88": "chiedi",
+   "8cx5ta": "giornata",
+   "1l0iy5e": "giornata",
+   "j7i1k4": "oclock",
+   "1imod8y": "past",
+   "1ogy8xj": "past"
+  },
+  "collegamenti": [
+   "eng:numeri",
+   "eng:calendario",
+   "lavo:denti"
+  ]
+ },
+ "scuola": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "A scuola",
+   "ic": "🏫",
+   "sotto": "cose, persone e frasi utili"
+  },
+  "nodi": [
+   {
+    "id": "luoghi",
+    "n": "«school» e «library»",
+    "ic": "📚",
+    "sotto": "scuola e biblioteca, non libreria!",
+    "da": "i posti si chiamano"
+   },
+   {
+    "id": "zaino",
+    "n": "«book» e «schoolbag»",
+    "ic": "🎒",
+    "sotto": "libro e zaino · anche «backpack»",
+    "da": "nello zaino porti"
+   },
+   {
+    "id": "astuccio",
+    "n": "«pencil», «rubber», «ruler»",
+    "ic": "✏️",
+    "sotto": "matita, gomma e righello",
+    "da": "nell'astuccio trovi"
+   },
+   {
+    "id": "classe",
+    "n": "«teacher» e «desk»",
+    "ic": "🧑‍🏫",
+    "sotto": "insegnante e banco",
+    "da": "in classe ci sono"
+   },
+   {
+    "id": "frasi",
+    "n": "«Can you repeat, please?»",
+    "ic": "💬",
+    "sotto": "«I don't understand» · «How do you say it in English?»",
+    "da": "per chiedere aiuto si dice"
+   },
+   {
+    "id": "medie",
+    "n": "una seconda lingua",
+    "ic": "🌍",
+    "sotto": "spesso francese o spagnolo",
+    "da": "alle medie arriva"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La scuola è «school», e si legge più o meno «scul». La biblioteca è «library»: attenta, non è la libreria! Il negozio di libri è «bookshop».",
+    "nodi": [
+     "luoghi"
+    ]
+   },
+   {
+    "t": "Nello zaino, «schoolbag» o «backpack», porti il libro, «book». Si legge più o meno «buk».",
+    "nodi": [
+     "zaino"
+    ]
+   },
+   {
+    "t": "Nell'astuccio, «pencil case», ci sono la matita, «pencil», e il righello, «ruler». In Gran Bretagna la gomma per cancellare è «rubber».",
+    "nodi": [
+     "astuccio"
+    ]
+   },
+   {
+    "t": "In classe c'è l'insegnante, «teacher», da «to teach», insegnare. Ognuno ha il suo banco, «desk». «Open your books!»: aprite i libri!",
+    "nodi": [
+     "classe"
+    ]
+   },
+   {
+    "t": "Frasi utili: «Can you repeat, please?», può ripetere, per favore? «I don't understand», non capisco. «Can I go to the toilet, please?», posso andare in bagno?",
+    "nodi": [
+     "frasi"
+    ]
+   },
+   {
+    "t": "Non conosci una parola? Chiedi: «How do you say it in English?», come si dice in inglese?",
+    "nodi": [
+     "frasi"
+    ]
+   },
+   {
+    "t": "Alle medie, di solito, oltre all'inglese arriva una seconda lingua straniera, spesso francese o spagnolo.",
+    "nodi": [
+     "medie"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "astuccio",
+    "scelte": [
+     "«pencil», «rubber», «ruler»",
+     "«cat», «dog», «horse»",
+     "«rain», «snow», «fog»"
+    ]
+   },
+   {
+    "nodo": "medie",
+    "scelte": [
+     "una seconda lingua",
+     "una seconda merenda",
+     "un secondo zaino"
+    ]
+   }
+  ],
+  "domande": {
+   "1ph3aue": "luoghi",
+   "19a4y2f": "zaino",
+   "1ev5b9b": "astuccio",
+   "1j4u328": "zaino",
+   "1x5rq5y": "frasi",
+   "1ibbqpd": "medie",
+   "18f8gdw": "astuccio",
+   "19ybbm4": "astuccio",
+   "19sbn0x": "classe",
+   "1d9xb2h": "classe",
+   "e8nnd5": "classe",
+   "1j0gpif": "frasi",
+   "t56u7b": "frasi",
+   "pr73ic": "frasi",
+   "q84iqn": "luoghi"
+  },
+  "collegamenti": [
+   "media:inglese",
+   "media:studio",
+   "eng:domande"
+  ]
+ },
+ "casa": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "In casa",
+   "ic": "🏠",
+   "sotto": "stanze e dove sono le cose"
+  },
+  "nodi": [
+   {
+    "id": "casa",
+    "n": "«house» e «home»",
+    "ic": "🏡",
+    "sotto": "l'edificio · il posto dove vivi",
+    "da": "la casa si chiama"
+   },
+   {
+    "id": "stanze",
+    "n": "«kitchen» e «bedroom»",
+    "ic": "🛏️",
+    "sotto": "cucina e camera · finestra: «window»",
+    "da": "ci sono le stanze"
+   },
+   {
+    "id": "dentro",
+    "n": "«in», «on», «under»",
+    "ic": "📦",
+    "sotto": "dentro, sopra, sotto",
+    "da": "per dire dove si usano"
+   },
+   {
+    "id": "davanti",
+    "n": "«in front of» e «behind»",
+    "ic": "🚗",
+    "sotto": "davanti a · dietro",
+    "da": "davanti e dietro si dicono"
+   },
+   {
+    "id": "vicino",
+    "n": "«next to» e «between»",
+    "ic": "🥪",
+    "sotto": "accanto a · tra, in mezzo a",
+    "da": "accanto e in mezzo si dicono"
+   },
+   {
+    "id": "thereis",
+    "n": "«There is»",
+    "ic": "🎂",
+    "sotto": "c'è · «There is a cake on the table»",
+    "da": "per dire c'è si usa"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La casa, l'edificio, è «house». La casa dove vivi con la tua famiglia è «home»: «I'm at home», sono a casa.",
+    "nodi": [
+     "casa"
+    ]
+   },
+   {
+    "t": "Entriamo! La cucina è «kitchen», da non confondere con «chicken», pollo. La camera da letto è «bedroom»: «bed» è letto e «room» stanza.",
+    "nodi": [
+     "stanze"
+    ]
+   },
+   {
+    "t": "La finestra è «window»: dentro c'è «wind», vento, che entra proprio dalla finestra! Il bagno è «bathroom».",
+    "nodi": [
+     "stanze"
+    ]
+   },
+   {
+    "t": "Dov'è la palla? «In the box», dentro la scatola. «On the bed», sopra il letto. «Under the table», sotto il tavolo.",
+    "nodi": [
+     "dentro"
+    ]
+   },
+   {
+    "t": "Davanti si dice «in front of»: «The car is in front of the house», la macchina è davanti alla casa. Dietro si dice «behind».",
+    "nodi": [
+     "davanti"
+    ]
+   },
+   {
+    "t": "Accanto si dice «next to»: «I sit next to my friend». In mezzo a due cose si dice «between», come il formaggio tra due fette di pane.",
+    "nodi": [
+     "vicino"
+    ]
+   },
+   {
+    "t": "Per dire c'è si usa «There is»: «There is a cake on the table», c'è una torta sul tavolo!",
+    "nodi": [
+     "thereis"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "casa",
+    "scelte": [
+     "«house» e «home»",
+     "«red» e «blue»",
+     "«ten» e «twelve»"
+    ]
+   },
+   {
+    "nodo": "thereis",
+    "scelte": [
+     "«There is»",
+     "«Good night»",
+     "«Happy birthday»"
+    ]
+   }
+  ],
+  "domande": {
+   "1izv2zb": "casa",
+   "dmhmmo": "stanze",
+   "5ykcib": "stanze",
+   "1b1tsv6": "stanze",
+   "1ofmavz": "davanti",
+   "975c41": "dentro",
+   "15nq34k": "vicino",
+   "1q2ihgm": "dentro",
+   "1bxd39e": "dentro",
+   "eftxgs": "vicino",
+   "1u3sdw": "davanti",
+   "vegmu1": "thereis"
+  },
+  "collegamenti": [
+   "eng:essere-avere",
+   "eng:cibo",
+   "geo:carte"
+  ]
+ },
+ "mestieri": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I mestieri",
+   "ic": "👩‍⚕️",
+   "sotto": "chi fa che cosa"
+  },
+  "nodi": [
+   {
+    "id": "doctor",
+    "n": "«doctor»",
+    "ic": "🩺",
+    "sotto": "il medico · ospedale: «hospital»",
+    "da": "chi cura le persone si chiama"
+   },
+   {
+    "id": "vet",
+    "n": "«vet»",
+    "ic": "🐕",
+    "sotto": "il veterinario",
+    "da": "chi cura gli animali si chiama"
+   },
+   {
+    "id": "fire",
+    "n": "«firefighter»",
+    "ic": "🚒",
+    "sotto": "il pompiere · anche «fireman»",
+    "da": "chi spegne il fuoco si chiama"
+   },
+   {
+    "id": "farmer",
+    "n": "«farmer»",
+    "ic": "🚜",
+    "sotto": "l'agricoltore, non il farmacista",
+    "da": "chi lavora in fattoria si chiama"
+   },
+   {
+    "id": "cook",
+    "n": "«cook»",
+    "ic": "👩‍🍳",
+    "sotto": "il cuoco · il fornaio è «baker»",
+    "da": "chi prepara da mangiare si chiama"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Che lavoro fa? Il medico è «doctor», quasi come dottore. Lavora spesso in ospedale, che si dice «hospital».",
+    "nodi": [
+     "doctor"
+    ]
+   },
+   {
+    "t": "Chi cura gli animali è il «vet», la parola breve per veterinario. Gli porti il cane quando sta male.",
+    "nodi": [
+     "vet"
+    ]
+   },
+   {
+    "t": "Il pompiere è «firefighter»: «fire» è il fuoco e «fighter» chi combatte. Chi combatte il fuoco! Si dice anche «fireman».",
+    "nodi": [
+     "fire"
+    ]
+   },
+   {
+    "t": "Chi lavora nella fattoria, «farm», è il «farmer», l'agricoltore. Attenta: il farmacista si dice «pharmacist» o «chemist»!",
+    "nodi": [
+     "farmer"
+    ]
+   },
+   {
+    "t": "Il cuoco è «cook», e «to cook» vuol dire cucinare. Il fornaio è «baker» e l'autista è «driver».",
+    "nodi": [
+     "cook"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "vet",
+    "scelte": [
+     "«vet»",
+     "«jumper»",
+     "«rainbow»"
+    ]
+   },
+   {
+    "nodo": "cook",
+    "scelte": [
+     "«cook»",
+     "«snow»",
+     "«Monday»"
+    ]
+   }
+  ],
+  "domande": {
+   "1ndtxjp": "doctor",
+   "1rmppwe": "fire",
+   "1g7meo6": "farmer",
+   "kqw41i": "cook",
+   "lz1jvq": "vet"
+  },
+  "collegamenti": [
+   "geo:lavoro",
+   "sci-corpo:salute",
+   "eng:animali"
+  ]
+ },
+ "sport": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Lo sport",
+   "ic": "⛸️",
+   "sotto": "e il tempo libero"
+  },
+  "nodi": [
+   {
+    "id": "skates",
+    "n": "«skates»",
+    "ic": "⛸️",
+    "sotto": "i pattini · pattinare: «to skate»",
+    "da": "sul ghiaccio vuole"
+   },
+   {
+    "id": "swim",
+    "n": "«swimming»",
+    "ic": "🏊",
+    "sotto": "nuotare, il nuoto · «swimming pool»",
+    "da": "in piscina si chiama"
+   },
+   {
+    "id": "like",
+    "n": "«I like…»",
+    "ic": "😍",
+    "sotto": "mi piace · «I don't like»: non mi piace",
+    "da": "si racconta con"
+   },
+   {
+    "id": "ball",
+    "n": "«ball»",
+    "ic": "⚽",
+    "sotto": "la palla · «football», «volleyball»",
+    "da": "in tanti giochi usa"
+   },
+   {
+    "id": "team",
+    "n": "«team»",
+    "ic": "🤝",
+    "sotto": "la squadra",
+    "da": "la squadra si dice"
+   },
+   {
+    "id": "win",
+    "n": "«to win»",
+    "ic": "🏆",
+    "sotto": "vincere · perdere: «to lose»",
+    "da": "alla fine si può"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Sul ghiaccio servono i pattini: «skates». Pattinare si dice «to skate». I pattini da ghiaccio sono gli «ice skates».",
+    "nodi": [
+     "skates"
+    ]
+   },
+   {
+    "t": "«Swimming» vuol dire nuotare, o il nuoto. La piscina è la «swimming pool».",
+    "nodi": [
+     "swim"
+    ]
+   },
+   {
+    "t": "Per dire cosa ti piace usa «I like»: «I like ice skating», mi piace pattinare sul ghiaccio. Il contrario è «I don't like».",
+    "nodi": [
+     "like"
+    ]
+   },
+   {
+    "t": "La palla è «ball». Tanti sport ce l'hanno nel nome: «football», «basketball», «volleyball»!",
+    "nodi": [
+     "ball"
+    ]
+   },
+   {
+    "t": "Chi gioca insieme forma una squadra: «team». Giocare è «to play», vincere è «to win» e perdere è «to lose».",
+    "nodi": [
+     "team",
+     "win"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "team",
+    "scelte": [
+     "«team»",
+     "«cheese»",
+     "«window»"
+    ]
+   },
+   {
+    "nodo": "win",
+    "scelte": [
+     "«to win»",
+     "«to eat»",
+     "«to sit»"
+    ]
+   }
+  ],
+  "domande": {
+   "1ewtjj1": "skates",
+   "1fqk4id": "swim",
+   "l4dosa": "like",
+   "ixqstj": "ball",
+   "1k4qqkx": "team",
+   "11vdynd": "win"
+  },
+  "collegamenti": [
+   "parlo:sport",
+   "sp-corpo:sport-squadra",
+   "sp-nuoto:stili"
+  ]
+ },
+ "emozioni": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Emozioni e bisogni",
+   "ic": "😊",
+   "sotto": "dire come ti senti"
+  },
+  "nodi": [
+   {
+    "id": "fame",
+    "n": "«I'm hungry»",
+    "ic": "🍝",
+    "sotto": "ho fame",
+    "da": "se hai fame dici"
+   },
+   {
+    "id": "sete",
+    "n": "«I'm thirsty»",
+    "ic": "🥤",
+    "sotto": "ho sete",
+    "da": "se hai sete dici"
+   },
+   {
+    "id": "felice",
+    "n": "«I'm happy»",
+    "ic": "😄",
+    "sotto": "sono felice",
+    "da": "se sei contenta dici"
+   },
+   {
+    "id": "triste",
+    "n": "«sad»",
+    "ic": "😢",
+    "sotto": "triste · arrabbiato: «angry»",
+    "da": "se piangi sei"
+   },
+   {
+    "id": "stanca",
+    "n": "«I'm tired»",
+    "ic": "😴",
+    "sotto": "sono stanca",
+    "da": "dopo l'allenamento dici"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Come ti senti? Per dirlo in inglese si comincia spesso con «I'm», io sono. Se hai fame dici «I'm hungry»: ho fame!",
+    "nodi": [
+     "fame"
+    ]
+   },
+   {
+    "t": "Se hai sete dici «I'm thirsty», ho sete. «Hungry» parla della fame, per mangiare; «thirsty» della sete, per bere.",
+    "nodi": [
+     "sete"
+    ]
+   },
+   {
+    "t": "Quando sei contenta dici «I'm happy», sono felice. È la stessa parola di «Happy birthday»!",
+    "nodi": [
+     "felice"
+    ]
+   },
+   {
+    "t": "«Sad» vuol dire triste. «Angry» vuol dire arrabbiato o arrabbiata.",
+    "nodi": [
+     "triste"
+    ]
+   },
+   {
+    "t": "Dopo un bell'allenamento dici «I'm tired», sono stanca. Anzi: «tired but happy», stanca ma felice!",
+    "nodi": [
+     "stanca"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "sete",
+    "scelte": [
+     "«I'm thirsty»",
+     "«Good morning»",
+     "«See you tomorrow!»"
+    ]
+   }
+  ],
+  "domande": {
+   "114uu5g": "fame",
+   "5g0u7d": "felice",
+   "1avp71e": "triste",
+   "uhhv3q": "stanca"
+  },
+  "collegamenti": [
+   "civica:convivenza",
+   "eng:essere-avere",
+   "sp-corpo:mente"
+  ]
+ },
+ "essere-avere": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Essere e avere",
+   "ic": "🧩",
+   "sotto": "«to be» e «have got»"
+  },
+  "nodi": [
+   {
+    "id": "am",
+    "n": "«I am», «I'm»",
+    "ic": "🙋",
+    "sotto": "io sono · anche per l'età",
+    "da": "io sono si dice"
+   },
+   {
+    "id": "is",
+    "n": "«he is», «she is»",
+    "ic": "👧",
+    "sotto": "«She is my friend»",
+    "da": "lui e lei usano"
+   },
+   {
+    "id": "are",
+    "n": "«we are», «they are»",
+    "ic": "👨‍👩‍👧",
+    "sotto": "noi, voi, loro · «They are at school»",
+    "da": "noi, voi e loro usano"
+   },
+   {
+    "id": "have",
+    "n": "«I have got»",
+    "ic": "🐉",
+    "sotto": "ho · con «he» e «she»: «has got»",
+    "da": "per dire ho si usa"
+   },
+   {
+    "id": "brevi",
+    "n": "«Yes, I have.»",
+    "ic": "✅",
+    "sotto": "«No, I haven't.» · «No, she hasn't.»",
+    "da": "in breve si risponde"
+   },
+   {
+    "id": "there",
+    "n": "«There is» e «There are»",
+    "ic": "🐈",
+    "sotto": "c'è, ci sono · «No, there isn't.»",
+    "da": "c'è e ci sono si dicono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il verbo essere è «to be». Io sono si dice «I am», in breve «I'm»: l'apostrofo prende il posto della a.",
+    "nodi": [
+     "am"
+    ]
+   },
+   {
+    "t": "In inglese l'età si dice con essere: «I'm ten years old», ho dieci anni.",
+    "nodi": [
+     "am"
+    ]
+   },
+   {
+    "t": "Con lui e lei, «he» e «she», si usa «is»: «She is my friend», lei è mia amica.",
+    "nodi": [
+     "is"
+    ]
+   },
+   {
+    "t": "Con noi, voi e loro si usa «are»: «we are», «you are», «they are». «They are at school»: loro sono a scuola.",
+    "nodi": [
+     "are"
+    ]
+   },
+   {
+    "t": "Per dire ho, possiedo: «I have got», in breve «I've got». «I have got a dragon», ho un drago! Con «he» e «she» diventa «has got».",
+    "nodi": [
+     "have"
+    ]
+   },
+   {
+    "t": "Nelle risposte brevi si ripete il verbo: «Have you got a pet?» «Yes, I have.» Oppure «No, I haven't.» Con «she»: «No, she hasn't.»",
+    "nodi": [
+     "brevi"
+    ]
+   },
+   {
+    "t": "C'è si dice «There is»; ci sono si dice «There are»: «There are three cats». Risposta breve: «No, there isn't.»",
+    "nodi": [
+     "there"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "there",
+    "scelte": [
+     "«There is» e «There are»",
+     "«Good morning» e «Good night»",
+     "«red» e «blue»"
+    ]
+   }
+  ],
+  "domande": {
+   "7rjr2p": "am",
+   "7jf3gz": "is",
+   "15u1fa6": "are",
+   "1fm7q59": "have",
+   "1b695ve": "there",
+   "1omk865": "there",
+   "1t2r20v": "am",
+   "zd2a76": "are",
+   "cccr6x": "have",
+   "1hd97dx": "brevi",
+   "6bdn7m": "brevi",
+   "nltjrt": "brevi"
+  },
+  "collegamenti": [
+   "eng:verbi",
+   "eng:famiglia",
+   "media:inglese"
+  ]
+ },
+ "verbi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Le frasi inglesi",
+   "ic": "🗣️",
+   "sotto": "verbi, pronomi e parole in fila"
+  },
+  "nodi": [
+   {
+    "id": "pronomi",
+    "n": "«he», «she», «it», «they»",
+    "ic": "👥",
+    "sotto": "lui, lei, esso, loro · dopo il verbo: «her», «him»",
+    "da": "chi fa l'azione è"
+   },
+   {
+    "id": "mio",
+    "n": "«my», «his», «her», «our», «their»",
+    "ic": "🎒",
+    "sotto": "«his bag» · «our class» · «their house»",
+    "da": "di chi è si dice con"
+   },
+   {
+    "id": "s",
+    "n": "la s",
+    "ic": "🐍",
+    "sotto": "«she plays» · «he watches» · «she goes»",
+    "da": "con «he», «she», «it» il verbo prende"
+   },
+   {
+    "id": "do",
+    "n": "«do» e «don't»",
+    "ic": "🙅",
+    "sotto": "«Do you play…?» · «I don't like» · «she doesn't»",
+    "da": "per domande e no servono"
+   },
+   {
+    "id": "can",
+    "n": "«can»",
+    "ic": "🚲",
+    "sotto": "so, posso · «can't»: non so",
+    "da": "per saper fare c'è"
+   },
+   {
+    "id": "ordine",
+    "n": "prima del nome",
+    "ic": "🍎",
+    "sotto": "«a red apple» · «never», mai",
+    "da": "l'aggettivo va"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Chi fa l'azione? «You», tu; «he», lui; «she», lei; «we», noi; «they», loro. Per cose e animali c'è «it»: «it is red», è rosso.",
+    "nodi": [
+     "pronomi"
+    ]
+   },
+   {
+    "t": "Dopo il verbo cambiano: lei diventa «her», lui «him», loro «them». «I call her every day»: la chiamo ogni giorno.",
+    "nodi": [
+     "pronomi"
+    ]
+   },
+   {
+    "t": "Per dire di chi è: «my», «your», «his», «her», «our», «their». «His bag» è lo zaino di un ragazzo; «our class», la nostra classe; «their house», la loro casa.",
+    "nodi": [
+     "mio"
+    ]
+   },
+   {
+    "t": "Con «he», «she» e «it» il verbo prende la s: «she plays». Se finisce in ch o in o, prende es: «he watches», «she goes».",
+    "v": "Con «he», «she» e «it» il verbo prende la esse: «she plays». Se finisce in ci acca, oppure nella lettera o, prende e esse: «he watches», «she goes».",
+    "nodi": [
+     "s"
+    ]
+   },
+   {
+    "t": "Per il no serve l'aiutante «don't»: «I don't like». Con «she» diventa «doesn't»: «She doesn't like milk». Domanda: «Do you play football?»",
+    "nodi": [
+     "do"
+    ]
+   },
+   {
+    "t": "«Can» vuol dire so fare o posso, e non cambia mai: «I can swim», «she can swim». Il no è «can't»: «I can't skate». Domanda: «Can you ride a bike?»",
+    "nodi": [
+     "can"
+    ]
+   },
+   {
+    "t": "L'aggettivo va prima del nome: «a red apple», una mela rossa. «Never», mai, di solito va prima del verbo: «I never eat broccoli».",
+    "nodi": [
+     "ordine"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "can",
+    "scelte": [
+     "«can»",
+     "«cat»",
+     "«cake»"
+    ]
+   },
+   {
+    "nodo": "ordine",
+    "scelte": [
+     "prima del nome",
+     "dentro una scatola",
+     "sotto il tavolo"
+    ]
+   }
+  ],
+  "domande": {
+   "1jigrcy": "do",
+   "mxtp8n": "pronomi",
+   "1s5nu9w": "ordine",
+   "idla82": "s",
+   "1cut3q5": "do",
+   "juz7qi": "ordine",
+   "57ql5w": "can",
+   "my83t1": "can",
+   "jg3jn8": "can",
+   "1rlxqq9": "s",
+   "1ohmjlw": "s",
+   "1lw6p2u": "do",
+   "11id72u": "pronomi",
+   "1wg1ttd": "pronomi",
+   "1xzbgq3": "mio",
+   "xbee72": "mio",
+   "qhnaa2": "mio"
+  },
+  "collegamenti": [
+   "eng:essere-avere",
+   "ita:verbi",
+   "ita:aggettivi"
+  ]
+ },
+ "plurali": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I plurali",
+   "ic": "➕",
+   "sotto": "da uno a tanti"
+  },
+  "nodi": [
+   {
+    "id": "s",
+    "n": "«books»",
+    "ic": "📚",
+    "sotto": "di solito basta la s",
+    "da": "il libro diventa"
+   },
+   {
+    "id": "es",
+    "n": "«boxes»",
+    "ic": "📦",
+    "sotto": "dopo x, s, sh, ch: es",
+    "da": "la scatola diventa"
+   },
+   {
+    "id": "children",
+    "n": "«children»",
+    "ic": "🧒",
+    "sotto": "da «child» · «man» diventa «men»",
+    "da": "il bambino diventa"
+   },
+   {
+    "id": "feet",
+    "n": "«feet»",
+    "ic": "🦶",
+    "sotto": "da «foot» · «tooth» diventa «teeth»",
+    "da": "il piede diventa"
+   },
+   {
+    "id": "mice",
+    "n": "«mice»",
+    "ic": "🐭",
+    "sotto": "da «mouse»",
+    "da": "il topo diventa"
+   },
+   {
+    "id": "sheep",
+    "n": "«sheep»",
+    "ic": "🐑",
+    "sotto": "«one sheep», «ten sheep»",
+    "da": "la pecora resta"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Di solito, per fare il plurale basta aggiungere una s: «book», «books». Un libro, tanti libri!",
+    "nodi": [
+     "s"
+    ]
+   },
+   {
+    "t": "Se la parola finisce in x, s, sh o ch si aggiunge es: «box», «boxes». Così anche «buses» e «dishes».",
+    "v": "Se la parola finisce in ics, esse, esse acca o ci acca si aggiunge e esse: «box», «boxes». Così anche «buses» e «dishes».",
+    "nodi": [
+     "es"
+    ]
+   },
+   {
+    "t": "Alcuni plurali sono ribelli! Il bambino, «child», diventa «children». E l'uomo, «man», diventa «men».",
+    "nodi": [
+     "children"
+    ]
+   },
+   {
+    "t": "Il piede, «foot», cambia la vocale: «feet». Anche il dente: «tooth», «teeth».",
+    "nodi": [
+     "feet"
+    ]
+   },
+   {
+    "t": "Il topo, «mouse», al plurale diventa «mice»: «one mouse», «two mice».",
+    "nodi": [
+     "mice"
+    ]
+   },
+   {
+    "t": "La pecora, «sheep», non cambia mai: «one sheep», «ten sheep». Proprio come quando si contano le pecore per addormentarsi!",
+    "nodi": [
+     "sheep"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "sheep",
+    "scelte": [
+     "«sheep»",
+     "«ice»",
+     "«pencil»"
+    ]
+   },
+   {
+    "nodo": "mice",
+    "scelte": [
+     "«mice»",
+     "«rain»",
+     "«Friday»"
+    ]
+   }
+  ],
+  "domande": {
+   "1611qy1": "children",
+   "1dakjq0": "mice",
+   "1mxq9rb": "s",
+   "enhh64": "feet",
+   "1pi66e5": "es",
+   "1l118jg": "sheep"
+  },
+  "collegamenti": [
+   "ita:nomi",
+   "eng:animali",
+   "eng:corpo"
+  ]
+ },
+ "domande": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Chi fa domande",
+   "ic": "❓",
+   "sotto": "le parole per chiedere"
+  },
+  "nodi": [
+   {
+    "id": "what",
+    "n": "«What?»",
+    "ic": "📦",
+    "sotto": "che cosa? · «What's your name?»",
+    "da": "per una cosa chiede"
+   },
+   {
+    "id": "where",
+    "n": "«Where?»",
+    "ic": "📍",
+    "sotto": "dove? · «Where are you from?»",
+    "da": "per un posto chiede"
+   },
+   {
+    "id": "when",
+    "n": "«When?»",
+    "ic": "📅",
+    "sotto": "quando?",
+    "da": "per il momento chiede"
+   },
+   {
+    "id": "who",
+    "n": "«Who?»",
+    "ic": "🧑",
+    "sotto": "chi? · si legge «hu»",
+    "da": "per una persona chiede"
+   },
+   {
+    "id": "many",
+    "n": "«How many?»",
+    "ic": "🔢",
+    "sotto": "quanti? · si risponde con un numero",
+    "da": "per contare chiede"
+   },
+   {
+    "id": "why",
+    "n": "«Why?»",
+    "ic": "🤔",
+    "sotto": "perché? · si risponde «Because…»",
+    "da": "per sapere il motivo chiede"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Le parole per fare domande cominciano quasi tutte con «wh»: «what», «where», «when», «who», «why».",
+    "nodi": [
+     "what"
+    ]
+   },
+   {
+    "t": "«What» vuol dire che cosa: «What's your name?». «Where» vuol dire dove: «Where are you from?»",
+    "nodi": [
+     "what",
+     "where"
+    ]
+   },
+   {
+    "t": "«When» vuol dire quando: «When is Christmas?», quando è Natale? «In December!», a dicembre!",
+    "nodi": [
+     "when"
+    ]
+   },
+   {
+    "t": "«Who» vuol dire chi, e si legge più o meno «hu»: «Who is your teacher?», chi è la tua insegnante?",
+    "nodi": [
+     "who"
+    ]
+   },
+   {
+    "t": "«How many» serve per contare: «How many brothers have you got?», quanti fratelli hai? Si risponde con un numero!",
+    "nodi": [
+     "many"
+    ]
+   },
+   {
+    "t": "«Why» vuol dire perché, nelle domande. Per rispondere si usa «because»: «Why are you happy?» «Because I can skate!»",
+    "nodi": [
+     "why"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "what",
+    "scelte": [
+     "«What?»",
+     "«Red?»",
+     "«Ten?»"
+    ]
+   },
+   {
+    "nodo": "where",
+    "scelte": [
+     "«Where?»",
+     "«Cheese?»",
+     "«Monday?»"
+    ]
+   }
+  ],
+  "domande": {
+   "11f8opo": "when",
+   "1ac34mw": "who",
+   "cd7p59": "many",
+   "1kovc6p": "why"
+  },
+  "collegamenti": [
+   "eng:saluti",
+   "eng:scuola",
+   "eng:numeri"
+  ]
+ },
+ "paesi": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'inglese nel mondo",
+   "ic": "🇬🇧",
+   "sotto": "Paesi, simboli e feste"
+  },
+  "nodi": [
+   {
+    "id": "paesi",
+    "n": "Australia, Canada, Irlanda",
+    "ic": "🌏",
+    "sotto": "e Stati Uniti, Nuova Zelanda",
+    "da": "si parla anche in"
+   },
+   {
+    "id": "londra",
+    "n": "il «Big Ben»",
+    "ic": "🔔",
+    "sotto": "la grande campana della torre dell'orologio",
+    "da": "a Londra ha"
+   },
+   {
+    "id": "sinistra",
+    "n": "la guida a sinistra",
+    "ic": "🚗",
+    "sotto": "il volante è a destra",
+    "da": "nel Regno Unito ha"
+   },
+   {
+    "id": "scozia",
+    "n": "l'unicorno",
+    "ic": "🦄",
+    "sotto": "l'animale nazionale scozzese",
+    "da": "in Scozia ha come simbolo"
+   },
+   {
+    "id": "halloween",
+    "n": "«Halloween»",
+    "ic": "🎃",
+    "sotto": "«Trick or treat!»: dolcetto o scherzetto",
+    "da": "il 31 ottobre festeggia"
+   },
+   {
+    "id": "statua",
+    "n": "la Statua della Libertà",
+    "ic": "🗽",
+    "sotto": "un regalo della Francia, nel 1886",
+    "da": "a New York ha"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'inglese è nato in Inghilterra, nel Regno Unito. Oggi è la lingua più parlata negli Stati Uniti, in Canada, in Irlanda, in Australia e in Nuova Zelanda.",
+    "nodi": [
+     "paesi"
+    ]
+   },
+   {
+    "t": "A Londra, vicino al Parlamento, c'è una torre con un grande orologio. Il vero «Big Ben» è la grande campana dentro la torre.",
+    "nodi": [
+     "londra"
+    ]
+   },
+   {
+    "t": "Nel Regno Unito le auto vanno sulla sinistra della strada, e il volante è a destra. Quando attraversi, guarda bene da tutte e due le parti!",
+    "nodi": [
+     "sinistra"
+    ]
+   },
+   {
+    "t": "La Scozia, a nord dell'Inghilterra, ha un animale nazionale fantastico: l'unicorno! Lo trovi negli stemmi scozzesi.",
+    "nodi": [
+     "scozia"
+    ]
+   },
+   {
+    "t": "La sera del 31 ottobre è «Halloween». I bambini si travestono e bussano alle porte dicendo «Trick or treat!», dolcetto o scherzetto!",
+    "nodi": [
+     "halloween"
+    ]
+   },
+   {
+    "t": "A New York c'è la Statua della Libertà, con la torcia alzata. Fu un regalo della Francia agli Stati Uniti e fu inaugurata nel 1886.",
+    "nodi": [
+     "statua"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "scozia",
+    "scelte": [
+     "l'unicorno",
+     "il canguro",
+     "il cammello"
+    ]
+   },
+   {
+    "nodo": "statua",
+    "scelte": [
+     "la Statua della Libertà",
+     "la Torre di Pisa",
+     "il Colosseo"
+    ]
+   }
+  ],
+  "domande": {
+   "txds5t": "londra",
+   "rwukxx": "sinistra",
+   "1z0wdat": "scozia",
+   "ajyuo3": "halloween",
+   "1y0nw1f": "paesi",
+   "1ubb9kq": "statua"
+  },
+  "collegamenti": [
+   "geo:europa",
+   "geo:mondo",
+   "eng:saluti"
+  ]
+ }
+}

@@ -20,6 +20,7 @@ const Gems = {
 const PATH_DECO = { base: ['🌳', '🌼', '🍄', '🌷', '🦋', '🌲'], bosco: ['🌲', '🦊', '🍄', '🌳', '🦔', '🐿️'], mare: ['🐚', '🐠', '🌊', '🦀', '🐬', '⛵'], spazio: ['🪐', '⭐', '🚀', '🌙', '☄️', '👽'], ghiaccio: ['❄️', '⛄', '🐧', '⛸️', '🏔️', '🦭'] };
 /* prima le materie di scuola (programma di 5ª), poi gli extra che si aprono come premio */
 const PATH_ORDER = ['mate', 'ita', 'eng', 'parlo', 'storia', 'geo', 'sci-corpo', 'sci-energia', 'sci-spazio', 'sci-animali', 'civica', 'lavo', 'vesto', 'soldi', 'tecno', 'media', 'arte', 'musica', 'motoria', 'religione', 'sp-patt', 'sp-aerea', 'sp-nuoto', 'sp-corpo', 'roblox'];
+const HIDE_UNITS = ['sci-animali', 'sci-energia'];
 const EXTRA_UNITS = ['sp-patt', 'sp-aerea', 'sp-nuoto', 'sp-corpo', 'roblox'];
 let __units = null;
 function pathUnits() {
@@ -44,7 +45,17 @@ function pathUnits() {
     const SP = (typeof SPIEGA !== 'undefined' && SPIEGA[x.id]) || {};
     T.forEach(t => { if (!t.items.length && SP[t.id]) t.solo = true; });
     x.topics = T.filter(t => t.items.length || t.solo); });
-  return (__units = u);
+  /* 🇬🇧 Inglese e Parlo inglese sono una materia sola (scelta del genitore, 24/10/2026): gli argomenti di Parlo entrano in Inglese.
+     Le domande tengono il loro codice «parlo:…» (ku), così i ricordi e i progressi di prima restano. */
+  const en = u.find(x => x.id === 'eng'), pa = u.find(x => x.id === 'parlo');
+  if (en && pa) {
+    pa.items.forEach(it => { it.ku = 'parlo'; });
+    (pa.topics || []).forEach(t => { t.sk = 'parlo:' + t.id; t.id = 'parlo-' + t.id; t.n = '🗣️ ' + t.n; t.items.forEach(it => { it.ku = 'parlo'; }); });
+    en.items = en.items.concat(pa.items); en.topics = (en.topics || []).concat(pa.topics || []); en.speakToo = true;
+  }
+  /* materie tolte da 🏫 La mia scuola (scelta del genitore, 24/10/2026): i dati restano, non si vedono né vanno in ripasso */
+  const out = u.filter(x => x.id !== 'parlo' && !HIDE_UNITS.includes(x.id));
+  return (__units = out);
 }
 /* righe chiave brevi (la spiegazione lunga resta dietro «Perché?»), correzioni e domande nuove di 5ª */
 function rev5Items(uid, items) {
@@ -71,9 +82,9 @@ function splitExpl(q) {
 }
 /* le risposte si mescolano ogni volta: la giusta non sta sempre nello stesso posto */
 function mixOpts(it) { const ok = it.o[it.a], o = shuffle(it.o.slice()); return { o, a: o.indexOf(ok) }; }
-const unitById = id => pathUnits().find(u => u.id === id);
+const unitById = id => pathUnits().find(u => u.id === (id === 'parlo' ? 'eng' : id));
 const hashQ = s => { let h = 5381; s = String(s); for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return (h >>> 0).toString(36); };
-const itemKey = (u, it) => u.id + ':' + (it.id || hashQ(it.q));
+const itemKey = (u, it) => (it.ku || u.id) + ':' + (it.id || hashQ(it.q));
 
 /* ---------- tappe della matematica (domande generate, sempre nuove) ---------- */
 const mk = (q, ok, wrong, e, viz) => {
@@ -94,7 +105,7 @@ const MATH_TAPPE = [
   { n: 'Perimetro e area', ic: '📐', g: () => { const b = rnd(3, 12), hh = rnd(2, 9), ar = Math.random() < .5; const r = ar ? b * hh : 2 * (b + hh); return mk('Un rettangolo è lungo ' + b + ' cm e alto ' + hh + ' cm. Quanto misura ' + (ar ? 'la sua area' : 'il suo perimetro') + '?', r + (ar ? ' cm²' : ' cm'), [(ar ? 2 * (b + hh) : b * hh) + (ar ? ' cm²' : ' cm'), (b + hh) + (ar ? ' cm²' : ' cm')], ar ? 'Area = base × altezza = ' + b + ' × ' + hh + ' = ' + r + ' cm²: i quadretti dentro.' : 'Perimetro = il giro intorno: ' + b + ' + ' + hh + ' + ' + b + ' + ' + hh + ' = ' + r + ' cm.'); } },
   { n: 'Problemi', ic: '🧩', g: () => { const k = rnd(3, 6), n = rnd(4, 9), mm = rnd(2, n * k - 3), r = n * k - mm; return mk('Ci sono ' + k + ' scatole da ' + n + ' pastelli. Ne regali ' + mm + '. Quanti pastelli restano?', r, [n * k, r + n, r - 1], 'Prima la moltiplicazione: ' + k + ' × ' + n + ' = ' + n * k + ' pastelli. Poi la sottrazione: ' + n * k + ' − ' + mm + ' = ' + r + '.'); } },
   { n: 'Contare gli euro', ic: '🪙', g: () => { const V = [[200, '2 €'], [100, '1 €'], [50, '50 cent'], [20, '20 cent'], [10, '10 cent'], [5, '5 cent']]; const n = rnd(3, 5), cs = []; for (let k = 0; k < n; k++) cs.push(pick(V)); cs.sort((a, b) => b[0] - a[0]); const tot = cs.reduce((a, c) => a + c[0], 0); const fmt = v => (v / 100).toFixed(2).replace('.', ',') + ' €'; return mk('Quanti soldi ci sono in tutto?', fmt(tot), [fmt(tot + 10), fmt(tot - (tot > 50 ? 20 : -20))], 'Conta partendo dalla moneta più grande: ' + cs.map(c => c[1]).join(' + ') + ' = ' + fmt(tot) + '. Ricorda: 100 centesimi fanno 1 euro!', '<div class="coins">' + cs.map(c => '<span class="coin c' + c[0] + '">' + c[1].replace(' cent', '<small>cent</small>') + '</span>').join('') + '</div>'); } },
-  { n: 'Il resto', ic: '🧾', g: () => { const prezzo = rnd(3, 18) * 50 + pick([0, 20, 40, 70]), paga = prezzo <= 500 ? 500 : prezzo <= 1000 ? 1000 : 2000, r = paga - prezzo; const fmt = v => (v / 100).toFixed(2).replace('.', ',') + ' €'; return mk('Compri una cosa che costa ' + fmt(prezzo) + ' e paghi con ' + (paga / 100) + ' €. Quanto resto ricevi?', fmt(r), [fmt(r + 100), fmt(Math.abs(r - 50) || 10)], 'Trucco del negoziante: parti dal prezzo e conta in avanti fino a ' + (paga / 100) + ' €: ' + fmt(prezzo) + ' + ' + fmt(r) + ' = ' + fmt(paga) + '.'); } },
+  { n: 'Il resto', ic: '🧾', g: () => { const prezzo = rnd(3, 18) * 50 + pick([0, 20, 40, 70]), paga = prezzo < 500 ? 500 : prezzo < 1000 ? 1000 : 2000, r = paga - prezzo; const fmt = v => (v / 100).toFixed(2).replace('.', ',') + ' €'; return mk('Compri una cosa che costa ' + fmt(prezzo) + ' e paghi con ' + (paga / 100) + ' €. Quanto resto ricevi?', fmt(r), [fmt(r + 100), fmt(Math.abs(r - 50) || 10)], 'Trucco del negoziante: parti dal prezzo e conta in avanti fino a ' + (paga / 100) + ' €: ' + fmt(prezzo) + ' + ' + fmt(r) + ' = ' + fmt(paga) + '.'); } },
   { n: 'Verso la prima media', ic: '🎒', g: null }
 ];
 function mathLesson(i) {
@@ -157,7 +168,7 @@ function chunkLearned(u, i) {
 function nodeState(u, nodes, k) {
   const us = (pState().u[u.id] || { done: {} });
   const node = nodes[k], id = nodeKey(node);
-  const tp = topicOf(u, node), done = !!us.done[id] || !!(tp && tp.solo && typeof spState === 'function' && spState().visto[u.id + ':' + tp.id]);
+  const tp = topicOf(u, node), done = !!us.done[id] || !!(tp && tp.solo && typeof spState === 'function' && spState().visto[tp.sk || u.id + ':' + tp.id]);
   const conquered = tp ? tp.items.length > 0 && topicLearned(u, tp) >= Math.min(8, tp.items.length) : node.t === 'lez' && chunkLearned(u, node.i) >= (u.math ? CHUNK : Math.min(8, u.items.slice(node.i * CHUNK, node.i * CHUNK + CHUNK).length));
   const open = true; /* tutte le lezioni aperte da subito (scelta del genitore) */
   return { done, conquered, open, id };
@@ -168,9 +179,9 @@ function nextNode(u) { const nodes = unitNodes(u); if (u.topics && u.topics.leng
 function buildLesson(u, node) {
   const s = pState();
   if (u.math) {
-    if (node.t === 'lez') return mathLesson(node.i).map(q => Object.assign(q, { key: null }));
+    if (node.t === 'lez') return mathLesson(node.i).map(q => Object.assign(q, mixOpts(q), { key: null }));
     const upTo = node.i; const out = [];
-    for (let k = 0; k < 6; k++) { const qs = mathLesson(rnd(0, upTo)); if (qs[0]) out.push(Object.assign(qs[0], { key: null })); }
+    for (let k = 0; k < 6; k++) { const qs = mathLesson(rnd(0, upTo)); if (qs[0]) out.push(Object.assign(qs[0], mixOpts(qs[0]), { key: null })); }
     return out;
   }
   const wrap = it => Object.assign(mixOpts(it), { q: it.q, e: it.e, k: it.k, key: itemKey(u, it), enl: it.enl, kind: it.kind, say: it.say, it: it.it });

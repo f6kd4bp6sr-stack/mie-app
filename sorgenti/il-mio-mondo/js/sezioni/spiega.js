@@ -6,7 +6,7 @@
    4 🗣️ lo racconto io: guardando la mappa lo spiega a voce e si riascolta (la registrazione non si salva)
    La prima volta si parte sempre dal racconto; dopo è a scelta (🗺️ accanto all'argomento).
    Chiave: materia:argomento; per la matematica materia:numero della tappa. */
-const spKeyOf = (u, nd) => !u || !nd ? null : nd.t === 'arg' ? u.id + ':' + u.topics[nd.i].id : (u.math && nd.t === 'lez') ? u.id + ':' + nd.i : null;
+const spKeyOf = (u, nd) => !u || !nd ? null : nd.t === 'arg' ? (u.topics[nd.i].sk || u.id + ':' + u.topics[nd.i].id) : (u.math && nd.t === 'lez') ? u.id + ':' + nd.i : null;
 const spData = key => { if (!key || typeof SPIEGA === 'undefined') return null; const i = key.indexOf(':'); return (SPIEGA[key.slice(0, i)] || {})[key.slice(i + 1)] || null; };
 const spState = () => { const s = store.get('spiega', null) || {}; s.visto = s.visto || {}; s.acceso = s.acceso || {}; return s; };
 const spSave = s => store.set('spiega', s);
@@ -16,7 +16,7 @@ function spAddLit(key, ids) { const s = spState(), cur = new Set(s.acceso[key] |
 function spTitle(key) {
   const i = key.indexOf(':'), u = unitById(key.slice(0, i)), t = key.slice(i + 1); if (!u) return { u: null, n: key, ic: '' };
   if (u.math) { const m = MATH_TAPPE[+t]; return { u, n: m ? m.n : t, ic: m ? m.ic : '🔢' }; }
-  const tp = (u.topics || []).find(x => x.id === t); return { u, n: tp ? tp.n : t, ic: tp ? tp.ic : '' };
+  const tp = (u.topics || []).find(x => (x.sk || u.id + ':' + x.id) === key); return { u, n: tp ? tp.n : t, ic: tp ? tp.ic : '' };
 }
 /* posizione della lezione (indice del nodo) di una chiave */
 function spNodeIndex(key) { const { u } = spTitle(key); if (!u) return -1; const nodes = unitNodes(u); return nodes.findIndex(nd => spKeyOf(u, nd) === key); }
@@ -134,7 +134,7 @@ const spVoice = sl => sl.v || sl.t;  /* «v»: come leggerlo a voce (per esempio
 function spOpen(key, ret) {
   const d = spData(key); if (!d) return;
   const T = spTitle(key);
-  const tp = T.u && T.u.topics ? T.u.topics.find(x => key === T.u.id + ':' + x.id) : null;
+  const tp = T.u && T.u.topics ? T.u.topics.find(x => key === (x.sk || T.u.id + ':' + x.id)) : null;
   SP = { key, d, ret, T, ph: 'racconto', i: 0, j: 0, shown: new Set(), lit: spLit(key), solo: !!(d.solo || (tp && tp.solo)) };
   let ov = $('sp-ov'); if (!ov) { ov = document.createElement('div'); ov.id = 'sp-ov'; ov.className = 'sp-ov'; document.body.appendChild(ov); }
   ov.hidden = false; document.body.classList.add('in-lesson');

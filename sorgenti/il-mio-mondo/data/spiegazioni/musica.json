@@ -1,0 +1,1200 @@
+{
+ "leggere": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La musica scritta",
+   "ic": "🎼",
+   "sotto": "si legge come un libro"
+  },
+  "nodi": [
+   {
+    "id": "penta",
+    "n": "pentagramma",
+    "ic": "🎼",
+    "sotto": "5 linee e 4 spazi, divisi in battute",
+    "da": "sta sul"
+   },
+   {
+    "id": "note",
+    "n": "sette note",
+    "ic": "🎵",
+    "sotto": "do, re, mi, fa, sol, la, si",
+    "da": "usa"
+   },
+   {
+    "id": "chiavi",
+    "n": "una chiave",
+    "ic": "🔑",
+    "sotto": "di violino (sol) o di basso (fa)",
+    "da": "comincia con"
+   },
+   {
+    "id": "durate",
+    "n": "le durate",
+    "ic": "⏱️",
+    "sotto": "semibreve 4, minima 2, semiminima 1",
+    "da": "misura il tempo con"
+   },
+   {
+    "id": "alter",
+    "n": "diesis e bemolle",
+    "ic": "♯",
+    "sotto": "alzano o abbassano di un semitono",
+    "da": "cambia le note con"
+   },
+   {
+    "id": "insieme",
+    "n": "melodie e accordi",
+    "ic": "🎹",
+    "sotto": "note in fila o tutte insieme",
+    "da": "forma"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "La musica si scrive sul pentagramma: 5 linee e 4 spazi. Penta in greco vuol dire cinque. Per le note troppo alte o basse si aggiungono i tagli addizionali.",
+    "nodi": [
+     "penta"
+    ]
+   },
+   {
+    "t": "Le note sono 7: do, re, mi, fa, sol, la, si. Da un do al do più acuto c'è un'ottava. In inglese il do si chiama C.",
+    "v": "Le note sono sette: do, re, mi, fa, sol, la, si. Da un do al do più acuto c'è un'ottava. In inglese il do si chiama ci.",
+    "nodi": [
+     "note"
+    ]
+   },
+   {
+    "t": "Secondo la tradizione, Guido d'Arezzo, un monaco di circa mille anni fa, diede il nome a sei note: ut, re, mi, fa, sol, la. Poi ut diventò do.",
+    "nodi": [
+     "note"
+    ]
+   },
+   {
+    "t": "All'inizio del pentagramma c'è la chiave. La chiave di violino, o di sol, gira intorno alla seconda linea. La chiave di basso, o di fa, è per i suoni gravi.",
+    "nodi": [
+     "chiavi"
+    ]
+   },
+   {
+    "t": "La semibreve vale 4 tempi, la minima 2, la semiminima 1. Due crome fanno una semiminima. Il punto allunga una nota della metà; la pausa è un silenzio scritto.",
+    "v": "La semibreve vale quattro tempi, la minima due, la semiminima uno. Due crome fanno una semiminima. Il punto allunga una nota della metà; la pausa è un silenzio scritto.",
+    "nodi": [
+     "durate"
+    ]
+   },
+   {
+    "t": "La legatura di valore unisce due note uguali in un solo suono. Le stanghette dividono il pentagramma in battute.",
+    "nodi": [
+     "durate",
+     "penta"
+    ]
+   },
+   {
+    "t": "Il diesis alza una nota di un semitono, il bemolle la abbassa. Note in fila formano una melodia; più note suonate insieme formano un accordo.",
+    "nodi": [
+     "alter",
+     "insieme"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "chiavi",
+    "scelte": [
+     "una chiave",
+     "una forchetta",
+     "un ombrello"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "musica:ritmo",
+   "musica:strumenti",
+   "musica:compositori"
+  ],
+  "domande": {
+   "8omyfe": "penta",
+   "1463viv": "penta",
+   "122biwf": "penta",
+   "1nzlwis": "penta",
+   "1hu86qb": "penta",
+   "170bjxr": "note",
+   "1fyzvlv": "note",
+   "14c0tkl": "note",
+   "1mzcjgh": "note",
+   "1trwrkl": "note",
+   "1vfhxjm": "chiavi",
+   "lyqv3g": "chiavi",
+   "1jjwslb": "durate",
+   "fqbww2": "durate",
+   "74jw15": "durate",
+   "8isfz0": "durate",
+   "i4ufsb": "durate",
+   "1mhuq8z": "durate",
+   "1yb0dwb": "durate",
+   "1cexmr9": "alter",
+   "e28qc": "alter",
+   "2ektxi": "insieme",
+   "q7a7vr": "insieme"
+  }
+ },
+ "ritmo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Ogni brano",
+   "ic": "🥁",
+   "sotto": "ha ritmo, tempo e volume"
+  },
+  "nodi": [
+   {
+    "id": "ritmo",
+    "n": "un ritmo",
+    "ic": "🥁",
+    "sotto": "suoni lunghi e brevi che si alternano",
+    "da": "ha"
+   },
+   {
+    "id": "battute",
+    "n": "battute",
+    "ic": "📏",
+    "sotto": "il valzer ne conta tre movimenti: uno-due-tre",
+    "da": "si divide in"
+   },
+   {
+    "id": "tempo",
+    "n": "un tempo, veloce o lento",
+    "ic": "⏱️",
+    "sotto": "adagio, allegro, presto",
+    "da": "segue"
+   },
+   {
+    "id": "metronomo",
+    "n": "il metronomo",
+    "ic": "🕰️",
+    "sotto": "batte il tempo: tic-tac",
+    "da": "si prova con"
+   },
+   {
+    "id": "volume",
+    "n": "piano o forte",
+    "ic": "🔊",
+    "sotto": "e crescendo, in italiano",
+    "da": "si suona"
+   },
+   {
+    "id": "modi",
+    "n": "staccato o in glissando",
+    "ic": "🎹",
+    "sotto": "note separate o scivolate",
+    "da": "può essere suonato"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il ritmo è il modo in cui si alternano suoni lunghi e brevi: è il battito della musica. La musica si divide in battute.",
+    "nodi": [
+     "ritmo",
+     "battute"
+    ]
+   },
+   {
+    "t": "Il valzer ha tre movimenti in ogni battuta: uno-due-tre, uno-due-tre.",
+    "nodi": [
+     "battute"
+    ]
+   },
+   {
+    "t": "Il tempo dice quanto è veloce la musica: adagio è lento, allegro è abbastanza veloce, presto è molto veloce. Il metronomo batte il tempo.",
+    "nodi": [
+     "tempo",
+     "metronomo"
+    ]
+   },
+   {
+    "t": "Forte vuol dire suonare con volume alto, piano con volume basso. Crescendo vuol dire aumentare il volume a poco a poco.",
+    "nodi": [
+     "volume"
+    ]
+   },
+   {
+    "t": "Queste indicazioni sono parole italiane: le usano i musicisti di tutto il mondo!",
+    "nodi": [
+     "volume"
+    ]
+   },
+   {
+    "t": "Staccato vuol dire note brevi e separate. Nel glissando si scivola velocemente da una nota all'altra.",
+    "nodi": [
+     "modi"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "metronomo",
+    "scelte": [
+     "il metronomo",
+     "il termometro",
+     "il tostapane"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "musica:leggere",
+   "musica:mondo",
+   "musica:orchestra"
+  ],
+  "domande": {
+   "8rl1s8": "ritmo",
+   "6vvr7z": "tempo",
+   "aunnjd": "tempo",
+   "1hydt48": "tempo",
+   "9bpd0g": "tempo",
+   "gyw8tf": "volume",
+   "13n9kgq": "volume",
+   "kz29g9": "volume",
+   "1da514y": "volume",
+   "uums0t": "metronomo",
+   "1hnxu0y": "battute",
+   "ggzqex": "modi",
+   "1li8l3j": "modi"
+  }
+ },
+ "suono": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il suono",
+   "ic": "🔊",
+   "sotto": "viaggia nell'aria fino alle orecchie"
+  },
+  "nodi": [
+   {
+    "id": "vibr",
+    "n": "una vibrazione",
+    "ic": "〰️",
+    "sotto": "come le corde vocali che tremano",
+    "da": "nasce da"
+   },
+   {
+    "id": "altezza",
+    "n": "un'altezza",
+    "ic": "↕️",
+    "sotto": "acuto o grave",
+    "da": "ha"
+   },
+   {
+    "id": "intens",
+    "n": "un'intensità",
+    "ic": "📢",
+    "sotto": "forte o debole: il volume",
+    "da": "ha anche"
+   },
+   {
+    "id": "timbro",
+    "n": "timbro",
+    "ic": "🎺",
+    "sotto": "la voce speciale di ogni strumento",
+    "da": "si riconosce dal"
+   },
+   {
+    "id": "eco",
+    "n": "un'eco",
+    "ic": "⛰️",
+    "sotto": "torna indietro rimbalzando",
+    "da": "a volte diventa"
+   },
+   {
+    "id": "diapason",
+    "n": "il diapason",
+    "ic": "🍴",
+    "sotto": "dà una nota precisa, di solito il La",
+    "da": "si controlla con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Ogni suono nasce da una vibrazione. Tocca la gola mentre canti: sentirai le corde vocali che tremano!",
+    "nodi": [
+     "vibr"
+    ]
+   },
+   {
+    "t": "L'altezza distingue i suoni acuti, alti e sottili come un fischietto, da quelli gravi, bassi e profondi come un tuono.",
+    "nodi": [
+     "altezza"
+    ]
+   },
+   {
+    "t": "L'intensità è il volume: distingue un suono forte da uno debole. Un sussurro ha poca intensità.",
+    "nodi": [
+     "intens"
+    ]
+   },
+   {
+    "t": "Il timbro è la voce speciale di ogni strumento: anche a occhi chiusi distingui una tromba da un violino.",
+    "nodi": [
+     "timbro"
+    ]
+   },
+   {
+    "t": "L'eco è un suono che rimbalza su una parete di roccia e torna indietro, come una palla.",
+    "nodi": [
+     "eco"
+    ]
+   },
+   {
+    "t": "Il diapason è una forchetta di metallo: se lo batti vibra con una nota precisa, di solito il La. Serve per accordare gli strumenti.",
+    "nodi": [
+     "diapason"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "eco",
+    "scelte": [
+     "un'eco",
+     "un panino",
+     "una sedia"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "musica:strumenti",
+   "sci-corpo:sensi",
+   "tecno:oggetti"
+  ],
+  "domande": {
+   "1789qgi": "eco",
+   "awsit3": "altezza",
+   "ikboey": "altezza",
+   "c7tqtc": "altezza",
+   "1eypuni": "timbro",
+   "1bbeal6": "intens",
+   "1c2d7e2": "vibr",
+   "64uhak": "diapason"
+  }
+ },
+ "strumenti": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Gli strumenti",
+   "ic": "🎻",
+   "sotto": "famiglie diverse, suoni diversi"
+  },
+  "nodi": [
+   {
+    "id": "archi",
+    "n": "archi",
+    "ic": "🎻",
+    "sotto": "violino, viola, violoncello, contrabbasso",
+    "da": "comprendono gli"
+   },
+   {
+    "id": "pizzicate",
+    "n": "corde pizzicate",
+    "ic": "🎸",
+    "sotto": "arpa, chitarra, mandolino, clavicembalo",
+    "da": "hanno anche"
+   },
+   {
+    "id": "legni",
+    "n": "legni",
+    "ic": "🪈",
+    "sotto": "flauto, oboe, clarinetto, fagotto, sax",
+    "da": "suonano con il fiato nei"
+   },
+   {
+    "id": "ottoni",
+    "n": "ottoni",
+    "ic": "🎺",
+    "sotto": "tromba, trombone, tuba",
+    "da": "squillano negli"
+   },
+   {
+    "id": "percussioni",
+    "n": "percussioni",
+    "ic": "🥁",
+    "sotto": "tamburo, timpani, triangolo, xilofono",
+    "da": "battono il ritmo con le"
+   },
+   {
+    "id": "tasti",
+    "n": "pianoforte, organo e fisarmonica",
+    "ic": "🎹",
+    "sotto": "88 tasti, canne, mantice",
+    "da": "includono"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Gli archi hanno corde suonate con l'archetto, di legno e crini di cavallo. Dal più piccolo: violino, con 4 corde, viola, violoncello, contrabbasso, il più grande.",
+    "v": "Gli archi hanno corde suonate con l'archetto, di legno e crini di cavallo. Dal più piccolo: violino, con quattro corde, viola, violoncello, contrabbasso, il più grande.",
+    "nodi": [
+     "archi"
+    ]
+   },
+   {
+    "t": "Il violoncello si suona seduti, tenendolo tra le gambe. Nel pizzicato le corde si pizzicano con le dita. A Cremona Antonio Stradivari costruiva violini famosissimi.",
+    "nodi": [
+     "archi"
+    ]
+   },
+   {
+    "t": "Altre corde si pizzicano: l'arpa, la chitarra con 6 corde, il mandolino di Napoli e il clavicembalo. La chitarra elettrica ha bisogno di un amplificatore.",
+    "v": "Altre corde si pizzicano: l'arpa, la chitarra con sei corde, il mandolino di Napoli e il clavicembalo. La chitarra elettrica ha bisogno di un amplificatore.",
+    "nodi": [
+     "pizzicate"
+    ]
+   },
+   {
+    "t": "Nei legni il suono nasce dal fiato: flauto, flauto dolce, ottavino, oboe, clarinetto, fagotto. Il sassofono è un legno: ha un'ancia. La cornamusa ha una sacca d'aria.",
+    "nodi": [
+     "legni"
+    ]
+   },
+   {
+    "t": "L'oboe dà il La per accordare l'orchestra. Gli ottoni sono la tromba, il trombone con la coulisse e la tuba, la più grave.",
+    "nodi": [
+     "legni",
+     "ottoni"
+    ]
+   },
+   {
+    "t": "Le percussioni si colpiscono: tamburo, timpani, triangolo, batteria. Lo xilofono ha lamine di legno.",
+    "nodi": [
+     "percussioni"
+    ]
+   },
+   {
+    "t": "Il pianoforte ha 88 tasti e suona piano e forte: lo inventò Bartolomeo Cristofori verso il 1700. L'organo ha tante canne, la fisarmonica un mantice.",
+    "v": "Il pianoforte ha ottantotto tasti e suona piano e forte: lo inventò Bartolomeo Cristofori verso il millesettecento. L'organo ha tante canne, la fisarmonica un mantice.",
+    "nodi": [
+     "tasti"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "ottoni",
+    "scelte": [
+     "ottoni",
+     "biscotti",
+     "cuscini"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "musica:orchestra",
+   "musica:suono",
+   "musica:compositori"
+  ],
+  "domande": {
+   "dxufkt": "archi",
+   "1qu75hd": "archi",
+   "291awg": "archi",
+   "f5gseg": "archi",
+   "73s9sn": "archi",
+   "11r51rf": "archi",
+   "196lxbq": "archi",
+   "gfeir": "archi",
+   "1em9o33": "archi",
+   "g20bpp": "pizzicate",
+   "1uc9l1d": "pizzicate",
+   "sy1o2e": "pizzicate",
+   "xnneiy": "pizzicate",
+   "x50u1y": "pizzicate",
+   "1brdul2": "legni",
+   "5tw5fz": "legni",
+   "1spbxd2": "legni",
+   "aic3q6": "legni",
+   "mkw72l": "legni",
+   "vz3wn0": "legni",
+   "5fzuh7": "legni",
+   "13zw7zw": "legni",
+   "4jnb6w": "ottoni",
+   "1opnj0w": "ottoni",
+   "1uh9fd9": "ottoni",
+   "1xi0mcl": "percussioni",
+   "v0r4vl": "percussioni",
+   "1hyl7t5": "percussioni",
+   "1qjb978": "percussioni",
+   "1oq9y8k": "percussioni",
+   "1gvfm17": "tasti",
+   "15g7ttx": "tasti",
+   "1pwyy8k": "tasti",
+   "1vurtfj": "tasti",
+   "sbe6gh": "tasti"
+  }
+ },
+ "orchestra": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'orchestra sinfonica",
+   "ic": "🎶",
+   "sotto": "tanti musicisti insieme"
+  },
+  "nodi": [
+   {
+    "id": "famiglie",
+    "n": "quattro famiglie",
+    "ic": "🎻",
+    "sotto": "archi, legni, ottoni, percussioni",
+    "da": "è divisa in"
+   },
+   {
+    "id": "direttore",
+    "n": "direttore d'orchestra",
+    "ic": "🪄",
+    "sotto": "guida con la bacchetta",
+    "da": "è guidata dal"
+   },
+   {
+    "id": "partitura",
+    "n": "la partitura",
+    "ic": "📖",
+    "sotto": "le parti di tutti gli strumenti",
+    "da": "legge"
+   },
+   {
+    "id": "sinfonia",
+    "n": "la sinfonia",
+    "ic": "🎼",
+    "sotto": "un grande brano in più movimenti",
+    "da": "suona"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Un'orchestra sinfonica può avere più di 80 musicisti, divisi in quattro famiglie: archi, legni, ottoni e percussioni.",
+    "v": "Un'orchestra sinfonica può avere più di ottanta musicisti, divisi in quattro famiglie: archi, legni, ottoni e percussioni.",
+    "nodi": [
+     "famiglie"
+    ]
+   },
+   {
+    "t": "La guida il direttore d'orchestra: con la bacchetta indica il tempo e quando ogni strumento deve entrare.",
+    "nodi": [
+     "direttore"
+    ]
+   },
+   {
+    "t": "Il direttore legge la partitura: lo spartito di tutti gli strumenti, con le parti una sotto l'altra.",
+    "nodi": [
+     "partitura"
+    ]
+   },
+   {
+    "t": "La sinfonia è un grande brano per orchestra, diviso in più parti chiamate movimenti.",
+    "nodi": [
+     "sinfonia"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "direttore",
+    "scelte": [
+     "direttore d'orchestra",
+     "capitano della nave",
+     "maestro di sci"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "musica:strumenti",
+   "musica:compositori",
+   "musica:opera"
+  ],
+  "domande": {
+   "mmvhpl": "direttore",
+   "176cj8x": "direttore",
+   "viwgon": "famiglie",
+   "dkil01": "partitura",
+   "8c4n2b": "sinfonia"
+  }
+ },
+ "voce": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La voce",
+   "ic": "🎤",
+   "sotto": "lo strumento che hai sempre con te"
+  },
+  "nodi": [
+   {
+    "id": "corde",
+    "n": "corde vocali",
+    "ic": "🗣️",
+    "sotto": "vibrano nella gola",
+    "da": "nasce dalle"
+   },
+   {
+    "id": "registri",
+    "n": "voci diverse",
+    "ic": "🎶",
+    "sotto": "soprano, contralto, tenore, basso",
+    "da": "si divide in"
+   },
+   {
+    "id": "coro",
+    "n": "coro",
+    "ic": "👥",
+    "sotto": "tante voci insieme; a cappella e canone",
+    "da": "si unisce nel"
+   },
+   {
+    "id": "canzoni",
+    "n": "canzoni",
+    "ic": "🎵",
+    "sotto": "ritornello, ninna nanna, jingle",
+    "da": "canta"
+   },
+   {
+    "id": "memoria",
+    "n": "la memoria",
+    "ic": "🧠",
+    "sotto": "rima, ritmo e melodia sono ganci",
+    "da": "aiuta"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Quando canti, l'aria fa vibrare le corde vocali, piccole pieghe nella gola.",
+    "nodi": [
+     "corde"
+    ]
+   },
+   {
+    "t": "Le voci femminili vanno dal soprano, la più acuta, al contralto, la più grave. Le voci maschili vanno dal tenore, acuto, al basso, il più grave.",
+    "nodi": [
+     "registri"
+    ]
+   },
+   {
+    "t": "Nel coro tante persone cantano insieme. A cappella vuol dire senza strumenti. Nel canone, come «Fra Martino», la stessa melodia parte in momenti diversi.",
+    "nodi": [
+     "coro"
+    ]
+   },
+   {
+    "t": "Il ritornello è la parte della canzone che si ripete. La ninna nanna è dolce, per far addormentare. Il jingle è un breve motivo facile da ricordare.",
+    "nodi": [
+     "canzoni"
+    ]
+   },
+   {
+    "t": "Cantare aiuta la memoria: ritmo e melodia fanno da ganci. Anche le filastrocche si ricordano facilmente, grazie a rima e ritmo.",
+    "nodi": [
+     "memoria"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "coro",
+    "scelte": [
+     "coro",
+     "forno",
+     "garage"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "musica:opera",
+   "sci-corpo:respiro",
+   "ita:poesia"
+  ],
+  "domande": {
+   "1kliblq": "coro",
+   "1dw6hl7": "coro",
+   "ygttmw": "coro",
+   "5e2dfb": "registri",
+   "9k14xq": "registri",
+   "lw6t1": "registri",
+   "10xnwum": "registri",
+   "11kjm0l": "canzoni",
+   "kl1rik": "canzoni",
+   "1iby8ys": "canzoni",
+   "13632el": "memoria",
+   "yhtmk": "memoria",
+   "bcj53o": "corde"
+  }
+ },
+ "opera": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "L'opera lirica",
+   "ic": "🎭",
+   "sotto": "teatro cantato, con l'orchestra"
+  },
+  "nodi": [
+   {
+    "id": "cosa",
+    "n": "teatro cantato",
+    "ic": "🎭",
+    "sotto": "nata in Italia intorno al 1600",
+    "da": "è"
+   },
+   {
+    "id": "parti",
+    "n": "libretto, ouverture e arie",
+    "ic": "📜",
+    "sotto": "il testo, l'inizio, gli assoli",
+    "da": "è fatta di"
+   },
+   {
+    "id": "verdi",
+    "n": "Giuseppe Verdi",
+    "ic": "🎶",
+    "sotto": "Traviata, Nabucco, Aida",
+    "da": "deve molto a"
+   },
+   {
+    "id": "rossini",
+    "n": "Gioachino Rossini",
+    "ic": "🐎",
+    "sotto": "Barbiere di Siviglia, Guglielmo Tell",
+    "da": "ride e galoppa con"
+   },
+   {
+    "id": "puccini",
+    "n": "Giacomo Puccini",
+    "ic": "🌸",
+    "sotto": "Bohème, Madama Butterfly, Turandot",
+    "da": "commuove con"
+   },
+   {
+    "id": "teatri",
+    "n": "grandi teatri",
+    "ic": "🏛️",
+    "sotto": "Regio di Torino, Scala di Milano, Arena di Verona",
+    "da": "si ascolta in"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'opera lirica è uno spettacolo teatrale cantato, con costumi e orchestra. È nata in Italia intorno al 1600.",
+    "nodi": [
+     "cosa"
+    ]
+   },
+   {
+    "t": "Il testo dell'opera si chiama libretto. All'inizio l'orchestra suona l'ouverture; quando un personaggio canta da solo, è un'aria.",
+    "nodi": [
+     "parti"
+    ]
+   },
+   {
+    "t": "Giuseppe Verdi compose «La traviata», «Aida», ambientata nell'antico Egitto, e il «Nabucco», con il famoso coro «Va' pensiero».",
+    "nodi": [
+     "verdi"
+    ]
+   },
+   {
+    "t": "Gioachino Rossini scrisse la versione più famosa del «Barbiere di Siviglia», nel 1816, e il «Guglielmo Tell», con un'ouverture che sembra una cavalcata.",
+    "nodi": [
+     "rossini"
+    ]
+   },
+   {
+    "t": "Giacomo Puccini scrisse «Madama Butterfly», «Turandot», ambientata in Cina, e «La Bohème», che debuttò al Teatro Regio di Torino nel 1896.",
+    "nodi": [
+     "puccini"
+    ]
+   },
+   {
+    "t": "La Scala è il più famoso teatro d'opera di Milano. D'estate si ascoltano opere all'aperto nell'Arena di Verona, un antico anfiteatro romano.",
+    "nodi": [
+     "teatri"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "teatri",
+    "scelte": [
+     "grandi teatri",
+     "grandi frigoriferi",
+     "grandi pozzanghere"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "musica:voce",
+   "musica:compositori",
+   "arte:antica"
+  ],
+  "domande": {
+   "18rtxbx": "cosa",
+   "k728lq": "verdi",
+   "16ga98s": "verdi",
+   "1m6zco5": "verdi",
+   "lxdp01": "rossini",
+   "1fv94t1": "rossini",
+   "1h10vc": "puccini",
+   "17nw9co": "puccini",
+   "770wyd": "teatri",
+   "1exmgi9": "teatri",
+   "ml6vyx": "teatri",
+   "8za4lp": "parti",
+   "1e8zyq": "parti",
+   "1ds7yoq": "parti"
+  }
+ },
+ "compositori": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "I compositori",
+   "ic": "🎹",
+   "sotto": "scrivono la musica"
+  },
+  "nodi": [
+   {
+    "id": "vivaldi",
+    "n": "Antonio Vivaldi",
+    "ic": "🍂",
+    "sotto": "il prete rosso; Le quattro stagioni",
+    "da": "a Venezia hanno"
+   },
+   {
+    "id": "bach",
+    "n": "Johann Sebastian Bach",
+    "ic": "⛪",
+    "sotto": "tedesco, grande organista",
+    "da": "in Germania hanno"
+   },
+   {
+    "id": "mozart",
+    "n": "Wolfgang Amadeus Mozart",
+    "ic": "🎼",
+    "sotto": "nato a Salisburgo; il Flauto magico",
+    "da": "hanno un bambino prodigio:"
+   },
+   {
+    "id": "beethoven",
+    "n": "Ludwig van Beethoven",
+    "ic": "🎹",
+    "sotto": "nove sinfonie; l'Inno alla gioia",
+    "da": "ammirano"
+   },
+   {
+    "id": "cajk",
+    "n": "Čajkovskij",
+    "ic": "🦢",
+    "sotto": "Lago dei cigni, Schiaccianoci, Bella addormentata",
+    "da": "fanno danzare con"
+   },
+   {
+    "id": "altri",
+    "n": "tanti altri",
+    "ic": "🎻",
+    "sotto": "Rossini, Chopin, Paganini, Strauss, Morricone",
+    "da": "sono anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Chi scrive musica è un compositore: comporre vuol dire mettere insieme le note. Antonio Vivaldi, veneziano, era detto «il prete rosso»: era prete e aveva i capelli rossi.",
+    "nodi": [
+     "vivaldi",
+     "altri"
+    ]
+   },
+   {
+    "t": "Vivaldi scrisse «Le quattro stagioni», concerti per violino, e suonava con l'orchestra di ragazze dell'Ospedale della Pietà. Johann Sebastian Bach era tedesco, e grande organista.",
+    "nodi": [
+     "vivaldi",
+     "bach"
+    ]
+   },
+   {
+    "t": "Mozart nacque a Salisburgo, oggi in Austria. Suonava da piccolissimo e componeva già a 5 anni. Girava l'Europa con il papà e la sorella Nannerl. Scrisse «Il flauto magico».",
+    "v": "Mozart nacque a Salisburgo, oggi in Austria. Suonava da piccolissimo e componeva già a cinque anni. Girava l'Europa con il papà e la sorella Nannerl. Scrisse «Il flauto magico».",
+    "nodi": [
+     "mozart"
+    ]
+   },
+   {
+    "t": "Ludwig van Beethoven compose nove sinfonie. La Quinta comincia con quattro note famosissime; la Nona contiene l'«Inno alla gioia». Scrisse anche «Per Elisa».",
+    "nodi": [
+     "beethoven"
+    ]
+   },
+   {
+    "t": "Beethoven diventò sordo, ma continuò a comporre: sentiva la musica nella testa.",
+    "nodi": [
+     "beethoven"
+    ]
+   },
+   {
+    "t": "Il russo Pëtr Il'ič Čajkovskij scrisse i balletti «Il lago dei cigni», «Lo schiaccianoci» e «La bella addormentata».",
+    "v": "Il russo Piòtr Ilìc Ciaikòvskij scrisse i balletti «Il lago dei cigni», «Lo schiaccianoci» e «La bella addormentata».",
+    "nodi": [
+     "cajk"
+    ]
+   },
+   {
+    "t": "Rossini, nato a Pesaro; Chopin, polacco, che scrisse soprattutto per pianoforte; il violinista genovese Paganini; Johann Strauss figlio, del valzer «Sul bel Danubio blu»; Ennio Morricone, per il cinema.",
+    "v": "Rossini, nato a Pesaro; Sciopèn, polacco, che scrisse soprattutto per pianoforte; il violinista genovese Paganini; Johann Strauss figlio, del valzer «Sul bel Danubio blu»; Ennio Morricone, per il cinema.",
+    "nodi": [
+     "altri"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "cajk",
+    "scelte": [
+     "Čajkovskij",
+     "Garibaldi",
+     "Colombo"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "musica:opera",
+   "musica:orchestra",
+   "musica:inni"
+  ],
+  "domande": {
+   "1yj443b": "beethoven",
+   "9zvel5": "beethoven",
+   "12c9ezn": "beethoven",
+   "j8sreo": "beethoven",
+   "ox1pqr": "beethoven",
+   "40su4a": "vivaldi",
+   "zx25t3": "vivaldi",
+   "1pijaf8": "vivaldi",
+   "1om244a": "mozart",
+   "n2g3x2": "mozart",
+   "i4tebt": "mozart",
+   "1jtpazq": "mozart",
+   "fwbwlm": "cajk",
+   "hak5g7": "cajk",
+   "jb5axc": "cajk",
+   "11y7yn6": "cajk",
+   "ek59n9": "bach",
+   "1vggyll": "altri",
+   "6yqjng": "altri",
+   "1cjano": "altri",
+   "15zxhkc": "altri",
+   "18y8bhu": "altri",
+   "10550np": "altri"
+  }
+ },
+ "inni": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "Il Canto degli Italiani",
+   "ic": "🇮🇹",
+   "sotto": "l'inno nazionale"
+  },
+  "nodi": [
+   {
+    "id": "nome",
+    "n": "tre nomi",
+    "ic": "🏷️",
+    "sotto": "Canto degli Italiani, Inno di Mameli, Fratelli d'Italia",
+    "da": "ha"
+   },
+   {
+    "id": "mameli",
+    "n": "Goffredo Mameli",
+    "ic": "✍️",
+    "sotto": "scrisse le parole nel 1847, a vent'anni",
+    "da": "ha le parole di"
+   },
+   {
+    "id": "novaro",
+    "n": "Michele Novaro",
+    "ic": "🎹",
+    "sotto": "compose la musica",
+    "da": "ha la musica di"
+   },
+   {
+    "id": "torino",
+    "n": "Torino",
+    "ic": "📍",
+    "sotto": "dove Novaro compose la musica, nel 1847",
+    "da": "fu musicato a"
+   },
+   {
+    "id": "europa",
+    "n": "l'inno europeo",
+    "ic": "🇪🇺",
+    "sotto": "l'Inno alla gioia, senza parole",
+    "da": "si suona anche con"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "L'inno nazionale italiano si chiama «Il Canto degli Italiani». Lo chiamano anche Inno di Mameli, o «Fratelli d'Italia», dalle sue prime parole.",
+    "nodi": [
+     "nome"
+    ]
+   },
+   {
+    "t": "Le parole le scrisse Goffredo Mameli nel 1847, quando aveva solo vent'anni.",
+    "nodi": [
+     "mameli"
+    ]
+   },
+   {
+    "t": "La musica è di Michele Novaro. Nel 1847 Novaro era a Torino quando ricevette le parole: si racconta che si mise subito al pianoforte.",
+    "nodi": [
+     "novaro",
+     "torino"
+    ]
+   },
+   {
+    "t": "L'inno dell'Unione Europea è la melodia dell'Inno alla gioia di Beethoven, senza parole: così tutti i paesi lo possono condividere.",
+    "nodi": [
+     "europa"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "torino",
+    "scelte": [
+     "Torino",
+     "Parigi",
+     "New York"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "civica:simboli",
+   "musica:compositori",
+   "civica:europa-onu"
+  ],
+  "domande": {
+   "15ypf4s": "mameli",
+   "c65d0g": "nome",
+   "13evg4g": "nome",
+   "1vny7ir": "novaro",
+   "if5i6x": "torino",
+   "110jra4": "europa"
+  }
+ },
+ "mondo": {
+  "tipo": "raggiera",
+  "centro": {
+   "n": "La musica",
+   "ic": "💃",
+   "sotto": "generi e danze del mondo"
+  },
+  "nodi": [
+   {
+    "id": "jazz",
+    "n": "il jazz",
+    "ic": "🎷",
+    "sotto": "nato negli Stati Uniti; improvvisazione",
+    "da": "inventa all'istante con"
+   },
+   {
+    "id": "balli",
+    "n": "danze di molti paesi",
+    "ic": "🌎",
+    "sotto": "tango, flamenco, samba, reggae",
+    "da": "fa ballare con"
+   },
+   {
+    "id": "tarantella",
+    "n": "la tarantella",
+    "ic": "🪘",
+    "sotto": "veloce e allegra, del sud Italia",
+    "da": "in Italia fa ballare"
+   },
+   {
+    "id": "dj",
+    "n": "DJ",
+    "ic": "🎧",
+    "sotto": "mescola musica registrata",
+    "da": "alle feste passa dal"
+   },
+   {
+    "id": "danza",
+    "n": "danza classica",
+    "ic": "🩰",
+    "sotto": "scarpette da punta",
+    "da": "accompagna la"
+   },
+   {
+    "id": "sport",
+    "n": "lo sport",
+    "ic": "⛸️",
+    "sotto": "musica scelta per il programma",
+    "da": "accompagna anche"
+   }
+  ],
+  "racconto": [
+   {
+    "t": "Il jazz è nato negli Stati Uniti, a New Orleans, più di cent'anni fa. I musicisti improvvisano: inventano la musica mentre suonano.",
+    "nodi": [
+     "jazz"
+    ]
+   },
+   {
+    "t": "Ogni paese ha i suoi ritmi: il tango è nato in Argentina e in Uruguay, il flamenco in Spagna, la samba in Brasile, il reggae in Giamaica.",
+    "nodi": [
+     "balli"
+    ]
+   },
+   {
+    "t": "In Italia, al sud, si balla la tarantella: veloce e allegra, con i tamburelli.",
+    "nodi": [
+     "tarantella"
+    ]
+   },
+   {
+    "t": "Il DJ sceglie e mescola musica registrata, unendo una canzone all'altra.",
+    "v": "Il di gèi sceglie e mescola musica registrata, unendo una canzone all'altra.",
+    "nodi": [
+     "dj"
+    ]
+   },
+   {
+    "t": "Nella danza classica le ballerine stanno sulle punte dei piedi con le scarpette da punta, dopo anni di allenamento.",
+    "nodi": [
+     "danza"
+    ]
+   },
+   {
+    "t": "Nel pattinaggio artistico ogni atleta usa una musica scelta per il suo programma e la ascolta tante volte, per ricordare quando fare ogni elemento.",
+    "nodi": [
+     "sport"
+    ]
+   }
+  ],
+  "ritrova": [
+   {
+    "nodo": "tarantella",
+    "scelte": [
+     "la tarantella",
+     "la tartaruga",
+     "la tovaglia"
+    ]
+   }
+  ],
+  "collegamenti": [
+   "musica:ritmo",
+   "sp-patt:gare",
+   "geo:mondo"
+  ],
+  "domande": {
+   "7ipmo6": "sport",
+   "nh9pfd": "sport",
+   "8pp80s": "jazz",
+   "1eelt5l": "dj",
+   "1ir49uv": "balli",
+   "thlyq1": "balli",
+   "z86xfs": "balli",
+   "bibkfk": "balli",
+   "x0iuwx": "tarantella",
+   "1ay0qjd": "danza"
+  }
+ }
+}

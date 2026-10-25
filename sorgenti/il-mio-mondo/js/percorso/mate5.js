@@ -58,14 +58,14 @@ const MATE5 = [
     const t = rnd(0, 3);
     if (t === 0) { const b = rnd(2, 12) * 2, h = rnd(2, 12), r = b * h / 2; return mk('Triangolo: base ' + b + ' cm, altezza ' + h + ' cm. Quanto misura l’area?', r + ' cm²', [b * h + ' cm²', (b + h) + ' cm²', 2 * (b + h) + ' cm²', (r + b) + ' cm²'], 'Area del triangolo = base × altezza : 2. ' + b + ' × ' + h + ' : 2 = ' + r + ' cm².'); }
     if (t === 1) { const b = rnd(3, 15), h = rnd(2, 10), r = b * h; return mk('Parallelogramma: base ' + b + ' cm, altezza ' + h + ' cm. Area?', r + ' cm²', [(r % 2 ? r * 2 : r / 2) + ' cm²', 2 * (b + h) + ' cm²', (b + h) + ' cm²', (r + h) + ' cm²'], 'Area del parallelogramma = base × altezza. ' + b + ' × ' + h + ' = ' + r + ' cm².'); }
-    if (t === 2) { const D = rnd(3, 12) * 2, d = rnd(2, 10), r = D * d / 2; return mk('Rombo: diagonali di ' + D + ' cm e ' + d + ' cm. Area?', r + ' cm²', [D * d + ' cm²', (D + d) * 2 + ' cm²', (D + d) + ' cm²', (r + d) + ' cm²'], 'Area del rombo = diagonale maggiore × diagonale minore : 2. ' + D + ' × ' + d + ' : 2 = ' + r + ' cm².'); }
+    if (t === 2) { const D = rnd(6, 12) * 2, d = rnd(2, 10), r = D * d / 2; return mk('Rombo: diagonali di ' + D + ' cm e ' + d + ' cm. Area?', r + ' cm²', [D * d + ' cm²', (D + d) * 2 + ' cm²', (D + d) + ' cm²', (r + d) + ' cm²'], 'Area del rombo = diagonale maggiore × diagonale minore : 2. ' + D + ' × ' + d + ' : 2 = ' + r + ' cm².'); }
     const B = rnd(6, 14), b = rnd(2, B - 2), h = rnd(1, 6) * 2, r = (B + b) * h / 2;
     return mk('Trapezio: basi ' + B + ' cm e ' + b + ' cm, altezza ' + h + ' cm. Area?', r + ' cm²', [(B + b) * h + ' cm²', B * h + ' cm²', (B + b + h) + ' cm²', (r + h) + ' cm²'], 'Area del trapezio = (base maggiore + base minore) × altezza : 2. (' + B + ' + ' + b + ') × ' + h + ' : 2 = ' + r + ' cm².');
   } },
   { n: 'Il cerchio', ic: '⭕', g: () => {
     const r = rnd(1, 10), useD = Math.random() < .5, d = 2 * r, c = d * 314; /* centesimi */
-    return mk('Un cerchio ha ' + (useD ? 'il diametro di ' + d : 'il raggio di ' + r) + ' cm. Quanto misura la circonferenza?', fmtD(c) + ' cm', [fmtD(r * 314) + ' cm', fmtD(c * 2) + ' cm'],
-      'Circonferenza = diametro × 3,14. ' + (useD ? '' : 'Il diametro è il doppio del raggio: ' + d + ' cm. ') + d + ' × 3,14 = ' + fmtD(c) + ' cm.');
+    return mk('Un cerchio ha ' + (useD ? 'il diametro di ' + d : 'il raggio di ' + r) + ' cm. Quanto misura la circonferenza, usando 3,14?', fmtD(c) + ' cm', [fmtD(r * 314) + ' cm', fmtD(c * 2) + ' cm'],
+      'Circonferenza = diametro × 3,14 (pi greco vale circa 3,14, quindi il risultato è approssimato). ' + (useD ? '' : 'Il diametro è il doppio del raggio: ' + d + ' cm. ') + d + ' × 3,14 = ' + fmtD(c) + ' cm.');
   } },
   { n: 'Media e moda', ic: '📊', g: () => {
     if (Math.random() < .5) { const m = rnd(5, 9); let v; do { v = [rnd(3, 10), rnd(3, 10), rnd(3, 10)]; v.push(4 * m - v[0] - v[1] - v[2]); } while (v[3] < 1 || v[3] > 10);

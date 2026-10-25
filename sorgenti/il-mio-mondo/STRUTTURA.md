@@ -28,7 +28,7 @@ app/
 ├── tools/sorgenti_pubbliche.py  copia le sorgenti in /sorgenti/il-mio-mondo/ del repository (senza revisioni di lavoro, con controllo dei dati personali)
 ├── README.md           memoria dell'app: indirizzo, dati sul dispositivo, collegamenti, regole
 ├── data/
-│   ├── spiegazioni/    racconto + mappa concettuale per argomento (22; mappe raggiera, ciclo, linea, scala; «solo» = da guardare insieme), controllati da tools/controlla.py
+│   ├── spiegazioni/    racconto + mappa concettuale per argomento (198, tutta La mia scuola; mappe raggiera, ciclo, linea, scala; «solo» = da guardare insieme), controllati da tools/controlla.py
 │   ├── cartine/        cartine interattive (grecia.json: coste Natural Earth semplificate + 13 luoghi)
 │   ├── domande/argomenti.json  nomi e icone degli argomenti di ogni materia (ogni domanda ha il campo «arg»)
 │   ├── domande/quiz/   ★ FONTE UNICA delle domande: un file per materia, una scheda per domanda
