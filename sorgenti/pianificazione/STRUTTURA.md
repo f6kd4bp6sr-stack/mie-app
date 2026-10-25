@@ -33,7 +33,7 @@ pian/
 ├── sezioni/investimenti.js 🌱 Investimenti (`pn-v1` → `inv`: prof, ris, som, deb, sim, ipo): legge Cassa e scheda della Pensione,
 │                     tassi da `news-pensione.json` → `mercati` (aggiornati dall’attività) o scritti a mano
 ├── sezioni/metodo_dati.json  🤝 Metodo: 4 abilità con motto, 30 schede (curiosità + scienza con fonti), oltre 100 missioni (nome in codice, bonus, livello, situazione), 12 gruppi di frasi di scorta; inserito nella pagina dal build
-├── sezioni/pratiche.js 🗂️ Pratiche (`pn-v1` → `prat`): stato, prossimo passo, documenti, contatti, diario, note;
+├── sezioni/pratiche.js 🗂️ Pratiche, nascosta dal 25/10/2026 (`PRAT_ON=false` in pagine/index.html; dati in `pn-v1` → `prat` conservati nelle copie; da qui viene anche il visore dei file usato dalla Pensione): stato, prossimo passo, documenti, contatti, diario, note;
 │                     file allegati nel database `licenze-…`, chiavi `pf-…` (non vanno nella copia su iCloud)
 ├── docs/             ricerca sui formati di esportazione delle banche
 ├── comune/barra.html  riga in fondo a ogni pagina (si apre al tocco): aggiornamenti, copie giornaliere, copia su File/iCloud, copia automatica

@@ -176,7 +176,7 @@ a.btn{text-decoration:none;display:inline-block}
   --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--met:#f0a43a;--met-bg:#3a2a12;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
   .warnbox{background:#3a2a1c;border-color:#b8743c}}
 </style>
-<script>window.APP_VERSION="3431ee5b83";window.APP_BUILD="2026-10-24T18:15+02:00";</script>
+<script>window.APP_VERSION="6b7dffd572";window.APP_BUILD="2026-10-25T18:00+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -302,7 +302,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 <script>
 /* ================= PIANIFICAZIONE =================
    Sezioni: 📆 Calendario (punto di partenza: giorno, settimana, mese, anno, scadenze; il giorno contiene benessere e Tai Chi,
-   il giorno di oggi anche il riepilogo; dentro ci sono gli impegni e le attività fisse della famiglia) · 🗂️ Pratiche · ⚙️ Impostazioni
+   il giorno di oggi anche il riepilogo; dentro ci sono gli impegni e le attività fisse della famiglia) · ⚙️ Impostazioni
    (blocco con Face ID, Calendario dell'iPad, copie). I vecchi indirizzi #scad, #ben, #sic, #oggi, #fam portano al posto giusto.
    Tutti i dati restano su questo dispositivo: localStorage «pn-v1» + copia nel database del dispositivo (IndexedDB «licenze-marco», voce «pianifica»)
    + copie giornaliere e copia su File/iCloud insieme a Licenze, Tai Chi e Progressi (barra in fondo). Nessun dato personale nel codice. */
@@ -310,6 +310,8 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 /* 💶 Conti: sezione nascosta, codice e dati conservati per il futuro (sezioni/conti.js). Con true torna visibile:
    menu, pagamenti nel Calendario, riquadro di oggi, pagamenti nel file per il Calendario dell'iPad. */
 const CONTI_ON=false;
+/* 🗂️ Pratiche tolta il 25/10/2026 (scelta del proprietario): i dati restano nelle copie, la sezione non compare più */
+const PRAT_ON=false;
 const HOL={"2026-11-01":"Ognissanti","2026-12-08":"Immacolata","2026-12-25":"Natale","2026-12-26":"S. Stefano",
 "2027-01-01":"Capodanno","2027-01-06":"Epifania","2027-03-28":"Pasqua","2027-03-29":"Pasquetta",
 "2027-04-25":"Liberazione","2027-05-01":"Festa del Lavoro","2027-06-02":"Festa della Repubblica"};
@@ -1047,7 +1049,7 @@ function dayData(s,V){
   famOn(s).forEach(a=>it.push({ic:"👨‍👧",t:(a.chi?a.chi+": ":"")+a.t,o:a.o||"",f:a.f||"",c:"fam",k:a.tipo==="att"?"att":"fev",id:a.id,sub:[a.tipo==="att"?(+a.ogni===2?"ogni 2 settimane":"ogni settimana"):"",a.acc?"🚗 "+a.acc:""].filter(Boolean).join(" · ")}));
   if(typeof pensOn==="function")pensOn(s).forEach(a=>it.push({ic:"🎖️",t:a.t,c:"pens",k:"pens",id:a.id}));
   if(typeof cassaOn==="function")cassaOn(s).forEach(x=>it.push(x));
-  if(typeof pratOn==="function")pratOn(s).forEach(x=>it.push({ic:"🗂️",t:x.passo.t,c:"prat",k:"prat",id:x.id,sub:x.t}));
+  if(PRAT_ON&&typeof pratOn==="function")pratOn(s).forEach(x=>it.push({ic:"🗂️",t:x.passo.t,c:"prat",k:"prat",id:x.id,sub:x.t}));
   calOn(s).forEach(e=>it.push({ic:calIc(e),t:e.t,o:e.o||"",f:e.f||"",c:"ipad",k:"ipad",sub:[e.cal,e.loc].filter(Boolean).join(" · ")}));
   const dn=(P.dn||{})[s];
   it.sort((a,b)=>(a.o||"99")<(b.o||"99")?-1:(a.o||"99")>(b.o||"99")?1:0);
@@ -1444,7 +1446,14 @@ function cassaCalc(){const p=PENS(),C=p.cassa,D=p.dati,t=today(),T=t.slice(0,7),
   const SP=C.spunte||{},MV=C.sposta||{},SA=C.saldi||{},{pen}=cassaPen(),rit=+(C.rit||0),dec=decYM(),items=[];
   const put=(k,d,tipo,t,exp,x)=>{if(MV[k])d=dayIn(MV[k],d.slice(8,10));const s=SP[k]||{};
     items.push(Object.assign({k,d,ym:d.slice(0,7),tipo,t,exp,imp:has(s.imp)?+s.imp:exp,real:has(s.imp),ok:!!s.ok,moved:!!MV[k]},x||{}));return items[items.length-1];};
-  p.cedolini.forEach(c=>{if(!c.ym)return;const it=put("ced:"+c.id,c.ym+"-27","e",c.t,+c.netto||0,{src:"Cedolino",ced:c.id});if(has(c.ric)){it.imp=+c.ric;it.real=true;it.ok=true;}});
+  /* niente doppioni: se c'è già uno stipendio tuo ricorrente in quel mese (per esempio il 23), lo stipendio del Cedolino non si aggiunge (arretrati e tredicesima restano) */
+  const stipMov=p.mov.filter(x=>x.tipo==="e"&&/stipend/i.test(x.t||"")),stipAmt=c=>{const x=stipMov.find(x=>movDates(x,c.ym+"-01",c.ym+"-31").length);return x?+x.imp||0:null;};
+  p.cedolini.forEach(c=>{if(!c.ym)return;
+    if(/^\s*stipend/i.test(c.t||"")&&!/tredic/i.test(c.t||"")){const sa=stipAmt(c);if(sa!=null){
+      /* lo stipendio c'è già (il tuo, per esempio il 23): del Cedolino resta solo la parte in più degli arretrati */
+      if(!/arretr/i.test(c.t||""))return;const extra=Math.round((has(c.ric)?+c.ric:+c.netto||0)-sa);if(extra<=0)return;
+      const ia=put("ced:"+c.id,c.ym+"-27","e","Arretrati (dal Cedolino, oltre lo stipendio)",extra,{src:"Cedolino"});if(has(c.ric)){ia.ok=true;}return;}}
+    const it=put("ced:"+c.id,c.ym+"-27","e",c.t,+c.netto||0,{src:"Cedolino",ced:c.id});if(has(c.ric)){it.imp=+c.ric;it.real=true;it.ok=true;}});
   const PQ=pen?cassaPerq():null,penY=y=>{let v=pen;for(let a=+dec.slice(0,4)+1;a<=y;a++)v+=PQ?PQ.nettoUp*Math.pow(1+PQ.inf/100,a-+dec.slice(0,4)-1):0;return Math.round(v);};
   for(let ym=dec,i=0;ym<=csFineYM()&&pen;ym=ymAdd(ym,1),i++){if(i<rit)continue;const py=penY(+ym.slice(0,4)),up=py>pen&&ym.slice(5)==="01";
     put("pen:"+ym,dayIn(ym,1),"e",i===rit&&rit?"Pensione + "+rit+" "+(rit===1?"mese":"mesi")+" arretrati":"Pensione"+(up?" (adeguata all’inflazione)":""),i===rit?pen*(rit+1):py,{src:"Ricalcolo"+(py>pen?" + perequazione":"")});
@@ -1533,7 +1542,7 @@ function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,
   const yrs=[...new Set(K.rows.map(r=>r.ym.slice(0,4)))];
   o+=`<h2>📅 Mese per mese</h2>`+yrs.map(y=>{const R=K.rows.filter(r=>r.ym.slice(0,4)===y),e=R.reduce((a,r)=>a+r.e,0),u=R.reduce((a,r)=>a+r.u,0),l=R[R.length-1],todo=R.reduce((a,r)=>a+r.L.filter(i=>!i.ok&&i.d<=K.t).length,0);
     return csBox("y"+y,`📅 ${y}${todo?` <span class="n">${todo}</span>`:""}`,`<span class="lbl">${R.length} ${R.length===1?"mese":"mesi"}</span><span class="amt">+${eur0(e)}</span><span class="amt u">−${eur0(u)}</span><b>${c(Math.round(l.fin))}</b>`,y===T.slice(0,4),R.map(mese).join(""));}).join("")
-    +`<p class="lbl" style="margin:8px 2px 0">Stipendi dal Cedolino (il 27), pensione dal Ricalcolo (il 1°, tredicesima a dicembre in proporzione ai mesi), incassi della scheda nel loro mese; ✓ quando un movimento è arrivato o pagato, ✏️ per l’importo vero o un altro mese. Sono i tuoi numeri messi in fila, non consigli.</p>`;
+    +`<p class="lbl" style="margin:8px 2px 0">Stipendi dal Cedolino (il 27, solo se non hai già uno stipendio tuo ricorrente in quel mese), pensione dal Ricalcolo (il 1°, tredicesima a dicembre in proporzione ai mesi), incassi della scheda nel loro mese; ✓ quando un movimento è arrivato o pagato, ✏️ per l’importo vero o un altro mese. Sono i tuoi numeri messi in fila, non consigli.</p>`;
   return o;
 }
 /* ---- 📈 andamento nel tempo: storico del conto principale (dai Conti, anche se la sezione è nascosta) + cassa prevista ---- */
@@ -2255,7 +2264,7 @@ function icsItems(opt){
       items.push({uid:"fam-"+a.id,lines:["DTSTART:"+dval(d)+"T"+tm(a.o||"16:00"),"DTEND:"+dval(d)+"T"+tm(a.f||a.o||"17:00"),"SUMMARY:"+icsEsc("👨‍👧 "+(a.chi?a.chi+": ":"")+a.t),"RRULE:FREQ=WEEKLY;BYDAY="+BY[a.g-1]+(+a.ogni===2?";INTERVAL=2":"")+(a.fino?";UNTIL="+dval(a.fino)+"T235959":""),...(ex.length?["EXDATE:"+ex.join(",")]:[]),...(a.acc?["DESCRIPTION:"+icsEsc("Accompagna: "+a.acc)]:[])]});});
     P.fam.ev.filter(e=>e.d>=t).forEach(e=>{const tm=x=>(x||"00:00").replace(":","")+"00";items.push({uid:"fev-"+e.id,lines:e.o?["DTSTART:"+dval(e.d)+"T"+tm(e.o),"DTEND:"+dval(e.d)+"T"+tm(e.f||e.o),"SUMMARY:"+icsEsc("👨‍👧 "+e.t),...alarm(1)]:["DTSTART;VALUE=DATE:"+dval(e.d),"DTEND;VALUE=DATE:"+dval(add(e.d,1)),"SUMMARY:"+icsEsc("👨‍👧 "+e.t),...alarm(1)]});});}
   if(opt.pens!==false)items.push(...pensIcs(t));
-  if(opt.prat!==false&&typeof PR==="function")PR().filter(x=>x.stato!=="chiusa"&&x.passo&&x.passo.d&&x.passo.d>=t).forEach(x=>items.push({uid:"prat-"+x.id,lines:["DTSTART;VALUE=DATE:"+dval(x.passo.d),"DTEND;VALUE=DATE:"+dval(add(x.passo.d,1)),"SUMMARY:"+icsEsc("🗂️ "+x.passo.t+" («"+x.t+"»)"),...alarm(2)]}));
+  if(PRAT_ON&&opt.prat!==false&&typeof PR==="function")PR().filter(x=>x.stato!=="chiusa"&&x.passo&&x.passo.d&&x.passo.d>=t).forEach(x=>items.push({uid:"prat-"+x.id,lines:["DTSTART;VALUE=DATE:"+dval(x.passo.d),"DTEND;VALUE=DATE:"+dval(add(x.passo.d,1)),"SUMMARY:"+icsEsc("🗂️ "+x.passo.t+" («"+x.t+"»)"),...alarm(2)]}));
   items.forEach(i=>i.sig=i.lines.join("|"));
   return items;
 }
@@ -2264,7 +2273,7 @@ function icsText(items){const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Pian
 
 /* ---------- interfaccia ---------- */
 /* sezioni nel menu (ognuna con il suo colore); ⚙️ Impostazioni sta a parte, a destra */
-const SECT=[["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["prat","🗂️","Pratiche","--prat"]].concat(CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
+const SECT=[["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"]].concat(PRAT_ON?[["prat","🗂️","Pratiche","--prat"]]:[],CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
 const ALL_SECT=SECT.map(x=>x[0]).concat(["set"]);
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
 function mapOld(k){
@@ -2284,7 +2293,7 @@ function side(){const late=lateN();
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(k==="prat")pratNew=false;cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({cal:vCal,pens:vPens,inv:vInv,prat:vPrat,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
+function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({cal:vCal,pens:vPens,inv:vInv,prat:PRAT_ON?vPrat:vCal,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
 /* ---------- 🪟 finestre: ogni riquadro con un titolo si apre e si chiude; lo stato resta su questo iPad (pn-fold) ---------- */
 const FOLD_KEY="pn-fold";let foldSt=lsJ(FOLD_KEY)||{};
 function foldCards(m){m.querySelectorAll(":scope > h2").forEach(h=>{const c=h.nextElementSibling;if(!c||c.tagName!=="DIV"||!c.classList.contains("card")||(c.firstElementChild&&c.firstElementChild.tagName==="H3"))return;const t=document.createElement("h3");t.innerHTML=h.innerHTML;c.prepend(t);h.remove();});
@@ -2313,7 +2322,7 @@ function vOggi(){
   const due=scadOpen().filter(x=>x.d!==t&&diff(t,x.d)<=7);
   o+=`<div class="card k-scad"><h3>📌 Scadenze <button class="lnk" data-cv="scad">Tutte ›</button></h3>${due.length?due.slice(0,6).map(x=>scadRow(x,true)).join(""):'<p class="empty">Niente in scadenza nei prossimi 7 giorni. 👍</p>'}</div>`;
   // pratiche
-  const pd=typeof pratDue==="function"?pratDue(14):[];
+  const pd=PRAT_ON&&typeof pratDue==="function"?pratDue(14):[];
   if(pd.length)o+=`<div class="card k-prat"><h3>🗂️ Pratiche <button class="lnk" data-go="prat">Tutte ›</button></h3>${pd.slice(0,5).map(x=>`<div class="row"><span class="pill ${x.passo.d<t?"warn":x.passo.d===t?"soon":"prat"}">${x.passo.d===t?"oggi":fmt(x.passo.d,{day:"numeric",month:"short"})}</span><div class="grow"><b>${pratIc(x)} ${esc(x.passo.t)}</b><small>${esc(x.t)} · ${rel(x.passo.d)}</small></div></div>`).join("")}</div>`;
   // conti (solo se la sezione è visibile)
   if(CONTI_ON){const np=nextPayments(7),mt=monthTotals(t.slice(0,7));
@@ -2366,14 +2375,14 @@ function vScad(){
   </div><div class="btns"><button class="btn pri" id="sSave">${x?"Salva modifiche":"Aggiungi"}</button>${x?'<button class="btn" id="sCancel">Annulla</button><button class="btn danger" id="sDel">Elimina</button>':""}</div></div>`;
   const ce=(P.cal.ev||[]).filter(e=>e.d>=t&&diff(t,e.d)<=30&&calIc(e)!=="🎂");
   if(ce.length)o+=`<details class="more"><summary>📆 Dal Calendario dell’iPad (${ce.length}, prossimi 30 giorni)</summary><div class="card k-ipad">${ce.map(e=>`<div class="row"><span class="pill">${fmt(e.d,{weekday:"short",day:"numeric",month:"short"})}${e.o?" "+esc(e.o):""}</span><div class="grow"><b>${calIc(e)} ${esc(e.t)}</b><small>${esc(e.cal)}${e.loc?" · "+esc(e.loc):""} · ${rel(e.d)}</small></div><button class="btn sm" data-c2s="${esc(e.k)}">➕ Scadenza</button></div>`).join("")}</div></details>`;
-  const pp=typeof pratDue==="function"?pratDue(60):[];
+  const pp=PRAT_ON&&typeof pratDue==="function"?pratDue(60):[];
   if(pp.length)o+=`<h2>🗂️ Prossimi passi delle pratiche</h2><div class="card k-prat">${pp.map(x=>`<div class="row"><span class="pill ${x.passo.d<t?"warn":diff(t,x.passo.d)<=7?"soon":"prat"}">${fmt(x.passo.d,{day:"numeric",month:"short"})}</span><div class="grow"><b>${pratIc(x)} ${esc(x.passo.t)}</b><small>${esc(x.t)} · ${rel(x.passo.d)}</small></div><button class="btn sm" data-psel="${x.id}">Apri</button></div>`).join("")}</div>`;
   const done=P.scad.filter(y=>y.done).sort((a,b)=>a.doneAt<b.doneAt?1:-1).slice(0,10);
   if(done.length)o+=`<details class="more"><summary>Fatte (${done.length})</summary><div class="card">${done.map(y=>`<div class="row"><button class="chk done" data-undo="${y.id}" aria-label="Riapri">✓</button><div class="grow"><b>${esc(y.t)}</b><small>fatta il ${fmt(y.doneAt)}</small></div></div>`).join("")}</div></details>`;
   return o;
 }
 function vCalImport(){
-  return `<h2>📆 Calendario dell’iPad</h2><p class="sub">In entrata: gli eventi del Calendario dell’iPad compaiono nel Calendario di Pianificazione. In uscita: assenze, scadenze, pratiche e impegni diventano promemoria nel Calendario dell’iPad.</p><div class="card k-ipad" id="calGuide"><h3>📥 Prendi gli eventi dal Calendario dell’iPad</h3>
+  return `<h2>📆 Calendario dell’iPad</h2><p class="sub">In entrata: gli eventi del Calendario dell’iPad compaiono nel Calendario di Pianificazione. In uscita: assenze, scadenze e impegni diventano promemoria nel Calendario dell’iPad.</p><div class="card k-ipad" id="calGuide"><h3>📥 Prendi gli eventi dal Calendario dell’iPad</h3>
   <p class="lbl">Un’app web non può leggere da sola il Calendario: lo fa un Comando Rapido, che copia gli eventi negli appunti. Si crea una volta sola.</p><details class="more"${P.cal.at?"":" open"}><summary>Come crearlo, passo per passo</summary>
   <div class="row"><span class="pill">1</span><div class="grow">Apri <b>Comandi Rapidi</b> → <b>+</b> → chiamalo esattamente <b>${SC_NAME}</b>.</div></div>
   <div class="row"><span class="pill">2</span><div class="grow">Aggiungi <b>Trova eventi di Calendario</b>: tocca «Aggiungi filtro» → <b>Data di inizio</b> «è nei prossimi» <b>60 giorni</b>; nessun altro filtro (le festività le salta l’app, che le conosce già). Ordina per <b>Data di inizio</b>, limite 300.</div></div>
@@ -2386,7 +2395,7 @@ function vCalImport(){
 }
 function vCalExport(){
   const opt=P.ics.opt||{abs:true,app:true,scad:true,pens:true,prat:true,pay:true,fam:true},items=icsItems(opt),news=items.filter(i=>P.ics.sent[i.uid]!==i.sig);
-  const lab={abs:"🏖️ Periodi a casa (dalle Licenze)",app:"📅 Appuntamenti delle Licenze e congedo",scad:"📌 Scadenze (con promemoria)",pens:"🎖️ Adempimenti e leve della Pensione",prat:"🗂️ Prossimi passi delle pratiche",pay:"💶 Pagamenti ricorrenti",fam:"👨‍👧 Attività della famiglia"};if(!CONTI_ON)delete lab.pay;
+  const lab={abs:"🏖️ Periodi a casa (dalle Licenze)",app:"📅 Appuntamenti delle Licenze e congedo",scad:"📌 Scadenze (con promemoria)",pens:"🎖️ Adempimenti e leve della Pensione",prat:"🗂️ Prossimi passi delle pratiche",pay:"💶 Pagamenti ricorrenti",fam:"👨‍👧 Attività della famiglia"};if(!CONTI_ON)delete lab.pay;if(!PRAT_ON)delete lab.prat;
   return `<div class="card k-ipad" id="icsBox"><h3>📤 Manda i promemoria al Calendario</h3><p class="lbl" style="margin-top:0">Un file da aggiungere al Calendario dell’iPad: i promemoria arrivano anche ad app chiusa e su tutti i dispositivi con iCloud.</p><h3 style="color:var(--ink);font-size:15px;margin-top:10px">Che cosa mettere nel Calendario</h3>${Object.keys(lab).map(k=>`<label class="row" style="cursor:pointer"><input type="checkbox" data-opt="${k}"${opt[k]?" checked":""} style="width:22px;height:22px"><span class="grow">${lab[k]}</span></label>`).join("")}
     <div class="kpi" style="margin-top:10px"><div><b>${items.length}</b><span>eventi in tutto</span></div><div><b>${news.length}</b><span>nuovi o cambiati dall’ultima volta</span></div></div>
     <div class="btns"><button class="btn pri" id="icsNew"${news.length?"":" disabled"}>📆 Aggiungi le novità (${news.length})</button><button class="btn" id="icsAll">Tutto da capo (${items.length})</button></div></div>
@@ -2413,7 +2422,7 @@ function vSet(){
 /* ---------- eventi ---------- */
 function bind(){
   if(cur!=="prat")document.querySelectorAll("[data-psel]").forEach(b=>b.onclick=()=>{pratSel=b.dataset.psel;go("prat");});
-  if(cur==="prat"&&typeof bindPrat==="function")bindPrat();
+  if(PRAT_ON&&cur==="prat"&&typeof bindPrat==="function")bindPrat();
   if(cur==="pens")bindPens();
   if(cur==="inv")bindInv();
   if(cur==="cal"&&typeof bindCal==="function")bindCal();
@@ -2654,7 +2663,7 @@ render(); recover(); setTimeout(()=>valePull(false),800); setTimeout(ghDaily,150
     var h="<div style=\""+box+"\"><div style=\"display:flex;align-items:center\"><b style=\"font-size:20px;flex:1\">☁️ Copia automatica</b><button id=\"cbX\" style=\""+sec+"\">Chiudi</button></div>";
     if(c&&c.gist){
       h+="<p style=\"margin:8px 0\">"+(c.err?"⚠️ <b>"+esc(c.err)+"</b><br>":"✅ <b>Attiva.</b> ")+"Ultima copia: <b>"+when(c.last)+"</b>"+(c.size?" · "+Math.max(1,Math.round(c.size*0.75/1024))+" KB":"")+(c.nofiles?"<br>I file delle pratiche sono troppi per la copia automatica: restano nella copia su File/iCloud.":"")+"</p>"+
-        "<p style=\"margin:0 0 8px;color:#6b7280;font-size:14px\">Contiene tutto: Licenze, Calendario, Scadenze, Pensione e Pratiche con i loro file, Benessere, Tai Chi e Progressi. È cifrata con la tua parola della copia: senza, nessuno la legge (nemmeno GitHub).</p>"+
+        "<p style=\"margin:0 0 8px;color:#6b7280;font-size:14px\">Contiene tutto: Licenze, Calendario, Scadenze, Pensione con i suoi file (e le vecchie Pratiche), Benessere, Tai Chi e Progressi. È cifrata con la tua parola della copia: senza, nessuno la legge (nemmeno GitHub).</p>"+
         "<button id=\"cbNow\" style=\""+pri+"\">Fai la copia adesso</button><button id=\"cbRes\" style=\""+sec+"\">Ripristina da questa copia</button><button id=\"cbOff\" style=\""+dang+"\">Disattiva</button>";
     }else{
       h+="<p style=\"margin:8px 0\">Ogni giorno, da sola, una copia completa e <b>cifrata</b> va su GitHub (in uno spazio privato), con la chiave GitHub che usi già per i Progressi. Se l’iPad si rompe o lo cambi, ritrovi tutto.</p>"+

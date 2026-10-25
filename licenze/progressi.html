@@ -1240,7 +1240,7 @@ window.__analyze=analyze; window.__normalize=normalize;
 
 })();
 </script>
-<script>window.APP_VERSION="3431ee5b83";window.APP_BUILD="2026-10-24T18:15+02:00";</script>
+<script>window.APP_VERSION="6b7dffd572";window.APP_BUILD="2026-10-25T18:00+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
@@ -1428,7 +1428,7 @@ window.__analyze=analyze; window.__normalize=normalize;
     var h="<div style=\""+box+"\"><div style=\"display:flex;align-items:center\"><b style=\"font-size:20px;flex:1\">☁️ Copia automatica</b><button id=\"cbX\" style=\""+sec+"\">Chiudi</button></div>";
     if(c&&c.gist){
       h+="<p style=\"margin:8px 0\">"+(c.err?"⚠️ <b>"+esc(c.err)+"</b><br>":"✅ <b>Attiva.</b> ")+"Ultima copia: <b>"+when(c.last)+"</b>"+(c.size?" · "+Math.max(1,Math.round(c.size*0.75/1024))+" KB":"")+(c.nofiles?"<br>I file delle pratiche sono troppi per la copia automatica: restano nella copia su File/iCloud.":"")+"</p>"+
-        "<p style=\"margin:0 0 8px;color:#6b7280;font-size:14px\">Contiene tutto: Licenze, Calendario, Scadenze, Pensione e Pratiche con i loro file, Benessere, Tai Chi e Progressi. È cifrata con la tua parola della copia: senza, nessuno la legge (nemmeno GitHub).</p>"+
+        "<p style=\"margin:0 0 8px;color:#6b7280;font-size:14px\">Contiene tutto: Licenze, Calendario, Scadenze, Pensione con i suoi file (e le vecchie Pratiche), Benessere, Tai Chi e Progressi. È cifrata con la tua parola della copia: senza, nessuno la legge (nemmeno GitHub).</p>"+
         "<button id=\"cbNow\" style=\""+pri+"\">Fai la copia adesso</button><button id=\"cbRes\" style=\""+sec+"\">Ripristina da questa copia</button><button id=\"cbOff\" style=\""+dang+"\">Disattiva</button>";
     }else{
       h+="<p style=\"margin:8px 0\">Ogni giorno, da sola, una copia completa e <b>cifrata</b> va su GitHub (in uno spazio privato), con la chiave GitHub che usi già per i Progressi. Se l’iPad si rompe o lo cambi, ritrovi tutto.</p>"+
