@@ -1,6 +1,6 @@
 # Pianificazione — memoria dell'app
 
-App per iPad del genitore: calendario di casa e di lavoro, licenze fino al congedo, pratiche, Tai Chi, 🤝 Metodo (stare con gli altri) e progressi di «Il mio mondo».
+App per iPad del genitore: calendario di casa e di lavoro, licenze fino al congedo, Tai Chi, 🤝 Metodo (stare con gli altri) e progressi di «Il mio mondo».
 
 | | |
 |---|---|

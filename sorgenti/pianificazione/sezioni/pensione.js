@@ -107,7 +107,14 @@ function cassaCalc(){const p=PENS(),C=p.cassa,D=p.dati,t=today(),T=t.slice(0,7),
   const SP=C.spunte||{},MV=C.sposta||{},SA=C.saldi||{},{pen}=cassaPen(),rit=+(C.rit||0),dec=decYM(),items=[];
   const put=(k,d,tipo,t,exp,x)=>{if(MV[k])d=dayIn(MV[k],d.slice(8,10));const s=SP[k]||{};
     items.push(Object.assign({k,d,ym:d.slice(0,7),tipo,t,exp,imp:has(s.imp)?+s.imp:exp,real:has(s.imp),ok:!!s.ok,moved:!!MV[k]},x||{}));return items[items.length-1];};
-  p.cedolini.forEach(c=>{if(!c.ym)return;const it=put("ced:"+c.id,c.ym+"-27","e",c.t,+c.netto||0,{src:"Cedolino",ced:c.id});if(has(c.ric)){it.imp=+c.ric;it.real=true;it.ok=true;}});
+  /* niente doppioni: se c'è già uno stipendio tuo ricorrente in quel mese (per esempio il 23), lo stipendio del Cedolino non si aggiunge (arretrati e tredicesima restano) */
+  const stipMov=p.mov.filter(x=>x.tipo==="e"&&/stipend/i.test(x.t||"")),stipAmt=c=>{const x=stipMov.find(x=>movDates(x,c.ym+"-01",c.ym+"-31").length);return x?+x.imp||0:null;};
+  p.cedolini.forEach(c=>{if(!c.ym)return;
+    if(/^\s*stipend/i.test(c.t||"")&&!/tredic/i.test(c.t||"")){const sa=stipAmt(c);if(sa!=null){
+      /* lo stipendio c'è già (il tuo, per esempio il 23): del Cedolino resta solo la parte in più degli arretrati */
+      if(!/arretr/i.test(c.t||""))return;const extra=Math.round((has(c.ric)?+c.ric:+c.netto||0)-sa);if(extra<=0)return;
+      const ia=put("ced:"+c.id,c.ym+"-27","e","Arretrati (dal Cedolino, oltre lo stipendio)",extra,{src:"Cedolino"});if(has(c.ric)){ia.ok=true;}return;}}
+    const it=put("ced:"+c.id,c.ym+"-27","e",c.t,+c.netto||0,{src:"Cedolino",ced:c.id});if(has(c.ric)){it.imp=+c.ric;it.real=true;it.ok=true;}});
   const PQ=pen?cassaPerq():null,penY=y=>{let v=pen;for(let a=+dec.slice(0,4)+1;a<=y;a++)v+=PQ?PQ.nettoUp*Math.pow(1+PQ.inf/100,a-+dec.slice(0,4)-1):0;return Math.round(v);};
   for(let ym=dec,i=0;ym<=csFineYM()&&pen;ym=ymAdd(ym,1),i++){if(i<rit)continue;const py=penY(+ym.slice(0,4)),up=py>pen&&ym.slice(5)==="01";
     put("pen:"+ym,dayIn(ym,1),"e",i===rit&&rit?"Pensione + "+rit+" "+(rit===1?"mese":"mesi")+" arretrati":"Pensione"+(up?" (adeguata all’inflazione)":""),i===rit?pen*(rit+1):py,{src:"Ricalcolo"+(py>pen?" + perequazione":"")});
@@ -196,7 +203,7 @@ function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,
   const yrs=[...new Set(K.rows.map(r=>r.ym.slice(0,4)))];
   o+=`<h2>📅 Mese per mese</h2>`+yrs.map(y=>{const R=K.rows.filter(r=>r.ym.slice(0,4)===y),e=R.reduce((a,r)=>a+r.e,0),u=R.reduce((a,r)=>a+r.u,0),l=R[R.length-1],todo=R.reduce((a,r)=>a+r.L.filter(i=>!i.ok&&i.d<=K.t).length,0);
     return csBox("y"+y,`📅 ${y}${todo?` <span class="n">${todo}</span>`:""}`,`<span class="lbl">${R.length} ${R.length===1?"mese":"mesi"}</span><span class="amt">+${eur0(e)}</span><span class="amt u">−${eur0(u)}</span><b>${c(Math.round(l.fin))}</b>`,y===T.slice(0,4),R.map(mese).join(""));}).join("")
-    +`<p class="lbl" style="margin:8px 2px 0">Stipendi dal Cedolino (il 27), pensione dal Ricalcolo (il 1°, tredicesima a dicembre in proporzione ai mesi), incassi della scheda nel loro mese; ✓ quando un movimento è arrivato o pagato, ✏️ per l’importo vero o un altro mese. Sono i tuoi numeri messi in fila, non consigli.</p>`;
+    +`<p class="lbl" style="margin:8px 2px 0">Stipendi dal Cedolino (il 27, solo se non hai già uno stipendio tuo ricorrente in quel mese), pensione dal Ricalcolo (il 1°, tredicesima a dicembre in proporzione ai mesi), incassi della scheda nel loro mese; ✓ quando un movimento è arrivato o pagato, ✏️ per l’importo vero o un altro mese. Sono i tuoi numeri messi in fila, non consigli.</p>`;
   return o;
 }
 /* ---- 📈 andamento nel tempo: storico del conto principale (dai Conti, anche se la sezione è nascosta) + cassa prevista ---- */
