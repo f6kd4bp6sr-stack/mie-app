@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-26T13:12:00+01:00",
+ "updated": "2026-10-26T17:02:00+01:00",
  "voci": [
   {
    "id": "n20261023-straordinari",
@@ -65,7 +65,7 @@
    "id": "n20261020-manovra",
    "d": "2026-10-20",
    "titolo": "Manovra 2027: il Consiglio dei ministri slitta verso il 28 ottobre",
-   "sintesi": "Secondo Agimeg e QuiFinanza (20 ottobre), l’esame della legge di bilancio 2027 in Consiglio dei ministri, ipotizzato per venerdì 23 ottobre, slitta indicativamente al 28 ottobre, in attesa del confronto con l’UE sulla flessibilità. Il Documento programmatico di bilancio vale circa 23,5 miliardi, di cui 4,5 per difesa e sicurezza (0,19% del PIL). QuiFinanza cita come ipotesi non confermata un intervento sulle pensioni anticipate per le Forze dell’ordine. Aggiornato il 26/10: secondo Jamma e Sbircia la Notizia (26/10) vertice di governo alle 18.30 e Consiglio dei ministri atteso martedì 27 (al più tardi mercoledì 28), dote 23,5 miliardi; nessuna misura citata per il comparto.",
+   "sintesi": "Secondo Agimeg e QuiFinanza (20 ottobre), l’esame della legge di bilancio 2027 in Consiglio dei ministri, ipotizzato per il 23 ottobre, slitta verso fine mese, in attesa del confronto con l’UE sulla flessibilità. Il Documento programmatico di bilancio vale circa 23,5 miliardi, di cui 4,5 per difesa e sicurezza (0,19% del PIL). QuiFinanza cita come ipotesi non confermata un intervento sulle pensioni anticipate per le Forze dell’ordine. Aggiornato il 26/10: vertice di governo alle 18.30 (Jamma, Sbircia la Notizia) e, secondo AgiproNews dal Sole 24 Ore, Consiglio dei ministri martedì 27 annunciato da Salvini; nessuna misura citata per il comparto.",
    "fonte": "Agimeg",
    "url": "https://www.agimeg.it/manovra-2027-slitta-legge-bilancio-attesa-in-consiglio-dei-ministri-per-fine-mese/",
    "fonti2": [
@@ -73,7 +73,8 @@
     "https://www.agi.it/economia/news/2026-10-23/manovra-governo-cdm-misure-per-giovani-ceto-medio-39665073/",
     "https://www.agi.it/economia/news/2026-10-25/manovra-giorgetti-coperta-corta-39697617/",
     "https://www.jamma.it/attualita/manovra-2027-vertice-di-governo-alle-18-30-consiglio-dei-ministri-atteso-domani-361193",
-    "https://www.sbircialanotizia.it/articoli/2026/10/26/manovra-2027-n8q4c/"
+    "https://www.sbircialanotizia.it/articoli/2026/10/26/manovra-2027-n8q4c/",
+    "https://www.agipronews.it/manovra-2027-salvini-domani-in-consiglio-dei-ministri-dal-settore-giochi-attesi-718-milioni-di-euro"
    ],
    "temi": [
     "inps",
@@ -285,21 +286,21 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-26T13:12:00+01:00",
-   "esito": "non raggiungibile"
+   "ultimo": "2026-10-26T17:02:00+01:00",
+   "esito": "ok"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -313,7 +314,7 @@
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -327,7 +328,7 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -348,7 +349,7 @@
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -397,28 +398,28 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -502,14 +503,14 @@
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Corriere dei Militari",
    "url": "https://www.corrieredeimilitari.com/",
    "tipo": "testata",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -635,7 +636,14 @@
    "n": "Money.it",
    "url": "https://www.money.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-26T13:12:00+01:00",
+   "ultimo": "2026-10-26T17:02:00+01:00",
+   "esito": "ok"
+  },
+  {
+   "n": "AgiproNews",
+   "url": "https://www.agipronews.it/",
+   "tipo": "testata",
+   "ultimo": "2026-10-26T17:02:00+01:00",
    "esito": "ok"
   }
  ],
@@ -744,6 +752,11 @@
    "at": "2026-10-26T13:12:00+01:00",
    "notizie": 0,
    "note": "giro delle 13 (lunedì): nessuna notizia nuova. Gazzetta ferma alla S.G. n. 248 del 24/10 (il n. 249 del 26/10 non ancora in elenco): DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Aggiornata la voce sulla manovra: vertice di governo il 26/10 alle 18.30 e Consiglio dei ministri atteso il 27/10 (al più tardi il 28), secondo Jamma e Sbircia la Notizia. USIF (26/10: straordinari, 9 milioni alla GdF, già in elenco), SILF (23/10), SINAFI (22/10) e SIULP (Flash 43) senza novità su contratto o pensione; INPS: ultimo messaggio n. 3422 del 23/10; MEF, Ministero del Lavoro, ISTAT, Corte dei conti senza comunicati nuovi sul tema; NoiPA senza comunicazioni sugli arretrati. Tassi di mercato invariati (BTP: seduta del 26/10 non ancora chiusa; decisione BCE attesa il 29/10); conti deposito ricontrollati su conti-deposito.net, tassi invariati. Volontariato: giro del lunedì, 14 voci ricontrollate, 1 corretta, 2 annunci aggiunti. Scheda invariata. Non raggiungibili: Governo; non ricontrollati in questo giro Difesa, Polizia di Stato, Camera, Senato, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-10-26T17:02:00+01:00",
+   "notizie": 0,
+   "note": "giro delle 17 (lunedì): nessuna notizia nuova. Gazzetta ferma alla S.G. n. 248 del 24/10: DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Aggiornata la voce sulla manovra: secondo AgiproNews (26/10, dal Sole 24 Ore) Salvini conferma il Consiglio dei ministri per martedì 27; nessuna misura citata per il comparto. USIF (ultimo comunicato 19/10), SILF (23/10) e SINAFI (22/10) senza novità su contratto o pensione; INPS: ultimo messaggio n. 3422 del 23/10; Funzione Pubblica e Governo senza comunicati nuovi sul tema; NoiPA senza comunicazioni sugli arretrati. Tassi di mercato invariati (seduta BTP del 26/10 non ancora chiusa; decisione BCE attesa il 29/10); prodotti invariati (conti deposito ricontrollati alle 13). Volontariato già fatto al giro delle 13. Scheda invariata. Non ricontrollati in questo giro MEF, ISTAT, Ministero del Lavoro, Corte dei conti, Difesa, Polizia di Stato, Camera, Senato, Agenzia delle Entrate"
   }
  ],
  "mercati": [
