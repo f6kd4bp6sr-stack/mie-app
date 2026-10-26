@@ -9,6 +9,11 @@ r, l = '/home/claude/mie-app/licenze/news-pensione.json', '/home/claude/pian/sta
 if os.path.exists(r):
     up = lambda f: json.load(open(f, encoding='utf-8')).get('updated', '')
     if not os.path.exists(l) or up(r) > up(l): shutil.copy(r, l); print('novità: presa la versione pubblicata')
+# le novità di Cultura digitale le aggiorna l'attività una volta al mese: vince l'aggiornamento più recente
+r, l = '/home/claude/mie-app/licenze/cultura-novita.json', '/home/claude/pian/statici/cultura-novita.json'
+if os.path.exists(r):
+    up = lambda f: json.load(open(f, encoding='utf-8')).get('updated', '')
+    if not os.path.exists(l) or up(r) > up(l): shutil.copy(r, l); print('cultura digitale: presa la versione pubblicata')
 # il volontariato del Metodo lo ricontrolla l'attività una volta a settimana: vince l'aggiornamento più recente
 r, l = '/home/claude/mie-app/licenze/occasioni-torino.json', '/home/claude/pian/statici/occasioni-torino.json'
 if os.path.exists(r):

@@ -37,12 +37,15 @@ _cena = re.search(r'const VCENA=\{.*?\]\]\};', pages['index.html'], re.S).group(
 pages['progressi.html'] = pages['progressi.html'].replace('/*@VCENA*/', _cena)
 # 🤝 Metodo: schede e sfide da sezioni/metodo_dati.json, controllate prima di pubblicare
 sys.path.insert(0, D + 'strumenti'); import verifica_metodo
+import verifica_cultura
+_ec = verifica_cultura.controlla(D + 'sezioni/cultura_dati.json') + (verifica_cultura.controlla_novita(D + 'statici/cultura-novita.json') if os.path.exists(D + 'statici/cultura-novita.json') else ['manca statici/cultura-novita.json'])
+if _ec: sys.exit('Cultura digitale, contenuti da sistemare:\n- ' + '\n- '.join(_ec))
 _err = verifica_metodo.controlla(D + 'sezioni/metodo_dati.json')
 if _err: sys.exit('Metodo, contenuti da sistemare:\n- ' + '\n- '.join(_err))
 _md = json.dumps(json.load(open(D + 'sezioni/metodo_dati.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 assert pages['metodo.html'].count('/*@METODO_DATI*/null') == 1
 pages['metodo.html'] = pages['metodo.html'].replace('/*@METODO_DATI*/null', _md)
-pages['index.html'] = pages['index.html'].replace('/*@LICENZE_DATI*/', _dati).replace('/*@FOGLI*/', open(D + 'comune/fogli.js', encoding='utf-8').read()).replace('/*@CONTI*/', open(D + 'sezioni/conti.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/conti_stat.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/calendario.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pratiche.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pensione.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/investimenti.js', encoding='utf-8').read() + '\n/* domande del Diario del passaggio (sezioni/diario_domande.json) */\nconst DIA_D = ' + json.dumps(json.load(open(D + 'sezioni/diario_domande.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + ';\n' + open(D + 'sezioni/diario.js', encoding='utf-8').read())
+pages['index.html'] = pages['index.html'].replace('/*@LICENZE_DATI*/', _dati).replace('/*@FOGLI*/', open(D + 'comune/fogli.js', encoding='utf-8').read()).replace('/*@CONTI*/', open(D + 'sezioni/conti.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/conti_stat.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/calendario.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pratiche.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pensione.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/investimenti.js', encoding='utf-8').read() + '\n/* domande del Diario del passaggio (sezioni/diario_domande.json) */\nconst DIA_D = ' + json.dumps(json.load(open(D + 'sezioni/diario_domande.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + ';\n' + open(D + 'sezioni/diario.js', encoding='utf-8').read() + '\n/* schede di Cultura digitale (sezioni/cultura_dati.json) */\nconst CD_D = ' + json.dumps(json.load(open(D + 'sezioni/cultura_dati.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + ';\n' + open(D + 'sezioni/cultura.js', encoding='utf-8').read())
 for f in os.listdir(D + 'statici'):
     shutil.copy(D + 'statici/' + f, OUT + f)
 # versione: impronta di tutte le pagine (stessa in tutte, letta da version.json)
@@ -52,7 +55,7 @@ else:
     h = hashlib.md5()
     for k in sorted(pages): h.update(re.sub(r'window\.APP_VERSION="[^"]*";window\.APP_BUILD="[^"]*";', '', pages[k]).encode())
     for f in sorted(os.listdir(D + 'statici')):
-        if f not in ('version.json', 'sw.js', 'news-pensione.json', 'scheda-pensione.cifrata.json', 'occasioni-torino.json'): h.update(open(D + 'statici/' + f, 'rb').read())  # le novità cambiano ogni giorno senza cambiare versione
+        if f not in ('version.json', 'sw.js', 'news-pensione.json', 'scheda-pensione.cifrata.json', 'occasioni-torino.json', 'cultura-novita.json'): h.update(open(D + 'statici/' + f, 'rb').read())  # le novità cambiano ogni giorno senza cambiare versione
     ver = h.hexdigest()[:10]
     import datetime
     built = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=2))).strftime('%Y-%m-%dT%H:%M+02:00')

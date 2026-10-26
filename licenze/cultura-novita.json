@@ -1,0 +1,77 @@
+{
+ "app": "cultura-digitale",
+ "updated": "2026-10-26T22:00+01:00",
+ "nota": "Novità verificate sull'IA: regole, rischi, usi. Una volta al mese.",
+ "voci": [
+  {
+   "id": "aiact-divieti",
+   "d": "2025-02-02",
+   "tema": "prudenza",
+   "t": "AI Act: scattano i divieti e l'alfabetizzazione sull'IA",
+   "s": "Dal 2 febbraio 2025 si applicano le prime regole del Regolamento (UE) 2024/1689: le definizioni, l'obbligo di alfabetizzazione sull'IA e il divieto delle pratiche considerate più pericolose.",
+   "perche": "È il primo passo concreto della legge europea: alcuni usi dell'IA sono vietati in tutta l'Unione.",
+   "fonte": "Commissione europea, AI Act Service Desk",
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act"
+  },
+  {
+   "id": "legge-132-2025",
+   "d": "2025-10-10",
+   "tema": "bimba",
+   "t": "In vigore la legge italiana sull'intelligenza artificiale",
+   "s": "La Legge 23 settembre 2025, n. 132, pubblicata in Gazzetta Ufficiale il 25 settembre, è in vigore dal 10 ottobre 2025. Tra le regole: sotto i 14 anni l'uso dell'IA richiede il consenso dei genitori.",
+   "perche": "Per tua figlia l'IA si usa con il tuo consenso e, meglio ancora, insieme a te.",
+   "fonte": "Normattiva",
+   "url": "https://www.normattiva.it/eli/id/2025/09/25/25G00143/ORIGINAL"
+  },
+  {
+   "id": "garante-deepfake-2026",
+   "d": "2026-01-08",
+   "tema": "prudenza",
+   "t": "Il Garante privacy avverte sui deepfake",
+   "s": "Il Garante ha avvertito chi usa servizi di IA che creano contenuti da immagini o voci reali: diffonderli senza consenso delle persone ritratte può causare gravi violazioni dei diritti, con possibili sanzioni.",
+   "perche": "Non creare né condividere foto o audio modificati di altre persone senza il loro consenso.",
+   "fonte": "Garante per la protezione dei dati personali",
+   "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/print/10207147"
+  },
+  {
+   "id": "codice-etichette-ia",
+   "d": "2026-06-10",
+   "tema": "prudenza",
+   "t": "Pubblicato il codice europeo per etichettare i contenuti IA",
+   "s": "La Commissione europea ha pubblicato un codice di buone pratiche, volontario, per marcare ed etichettare i contenuti generati dall'IA, compresi i deepfake. Aiuta le aziende a rispettare l'art. 50 dell'AI Act.",
+   "perche": "Vedrai più spesso etichette sui contenuti creati con l'IA. Ma l'assenza di etichetta non prova che un contenuto sia vero.",
+   "fonte": "Commissione europea",
+   "url": "https://digital-strategy.ec.europa.eu/en/faqs/code-practice-transparency-ai-generated-content"
+  },
+  {
+   "id": "omnibus-ia",
+   "d": "2026-06-29",
+   "tema": "prudenza",
+   "t": "Via libera alle modifiche dell'AI Act",
+   "s": "Il Consiglio dell'UE ha approvato in via definitiva le modifiche all'AI Act: le regole per l'IA ad alto rischio slittano al 2 dicembre 2027 e al 2 agosto 2028. Arriva il divieto dell'IA che crea immagini intime false senza consenso.",
+   "perche": "Il nuovo divieto sulle immagini intime false si applica dal 2 dicembre 2026 e protegge anche i minori.",
+   "fonte": "Consiglio dell'Unione europea",
+   "url": "https://www.consilium.europa.eu/en/policies/artificial-intelligence/timeline-artificial-intelligence/"
+  },
+  {
+   "id": "aiact-art50",
+   "d": "2026-08-02",
+   "tema": "prudenza",
+   "t": "AI Act: in vigore gli obblighi di trasparenza",
+   "s": "Dal 2 agosto 2026 si applica l'art. 50 dell'AI Act: i chatbot devono far sapere che sono un'IA e i deepfake vanno dichiarati in modo chiaro. Per alcuni sistemi già sul mercato, la marcatura può arrivare entro il 2 dicembre 2026.",
+   "perche": "Hai diritto di sapere quando parli con un'IA. Resta prudente: chi truffa non mette etichette.",
+   "fonte": "Commissione europea",
+   "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+  }
+ ],
+ "controlli": [
+  {
+   "at": "2026-10-26T22:00+01:00",
+   "note": "prima stesura: 6 voci verificate sulle pagine ufficiali"
+  },
+  {
+   "at": "2026-10-26T22:00+01:00",
+   "note": "revisione indipendente: 6 voci ricontrollate sulle fonti ufficiali, nessuna correzione"
+  }
+ ]
+}
