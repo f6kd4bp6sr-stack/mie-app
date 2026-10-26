@@ -87,6 +87,28 @@ Solo al **primo giro del lunedì** (quello delle 13; se salta, al primo giro uti
 4. Aggiorna `updated` e aggiungi in fondo a `controlli` `{"at": ora, "note": "…"}` (ultimi 30).
 5. Scrivi lo stesso file in `licenze/occasioni-torino.json` e `sorgenti/pianificazione/statici/occasioni-torino.json`; `python3 sorgenti/pianificazione/strumenti/verifica_occasioni.py licenze/occasioni-torino.json sorgenti/pianificazione/statici/occasioni-torino.json` deve dire ✅. Entrano nello stesso commit delle novità.
 
+## 🤖 Cultura digitale (`cultura-novita.json`, sezione 🤖 Cultura digitale): una volta al mese
+Si fa solo al **primo giro del mese**: quello delle 13 del primo giorno, oppure, se salta, il primo giro utile del mese. Per capire se è già stato fatto, guarda la data dell'ultimo `controlli[].at` in `licenze/cultura-novita.json`.
+
+Il file è **pubblico**: dentro vanno solo informazioni generali verificate, senza consigli e senza dati personali.
+
+1. **Cerca le novità del mese sull'intelligenza artificiale** che servono a una persona comune, scegliendo fra questi quattro temi:
+   - `prudenza`: truffe con voci o video falsi e avvisi della Polizia Postale e del Garante privacy;
+   - `bimba`: regole per i minori, L. 132/2025, indicazioni del Ministero dell'Istruzione e del Garante;
+   - `basi`: tappe dell'AI Act (Regolamento UE 2024/1689) e obblighi di trasparenza;
+   - `usi`: nuove funzioni utili e sicure degli assistenti, descritte in modo neutrale, senza pubblicità.
+
+   Fonti ufficiali per prime: Commissione europea, Gazzetta Ufficiale, Garante privacy, Polizia di Stato / commissariato di PS online, AGID, MIM. Le testate autorevoli vengono dopo. Usa la regola 10: prima cerca sul sito, poi leggi la pagina.
+2. **Aggiungi da 1 a 4 voci**. Ogni voce ha `id`, `d` (la data della fonte, mai nel futuro), `tema`, `t`, `s` (al massimo 55 parole), `perche` («che cosa cambia per te», al massimo 35 parole), `fonte` e `url`.
+   - Doppia verifica come per le notizie.
+   - Niente doppioni.
+   - Al massimo 24 voci: togli le più vecchie.
+   - Correggi le voci superate scrivendo «aggiornato il …» nella sintesi.
+3. Aggiorna `updated` e aggiungi in fondo a `controlli` la riga `{"at": ora, "note": "…"}`. Tieni le ultime 24 righe.
+4. Scrivi lo stesso file in `licenze/cultura-novita.json` e in `sorgenti/pianificazione/statici/cultura-novita.json`.
+5. `python3 sorgenti/pianificazione/strumenti/verifica_cultura.py --novita licenze/cultura-novita.json sorgenti/pianificazione/statici/cultura-novita.json` deve rispondere ✅.
+6. Al primo giro del mese il commit comprende anche questi due file.
+
 ## Pubblicazione
 1. Scrivi lo stesso file in `sorgenti/pianificazione/statici/news-pensione.json` e in `licenze/news-pensione.json`.
 2. `python3 sorgenti/pianificazione/strumenti/verifica_novita.py licenze/news-pensione.json sorgenti/pianificazione/statici/news-pensione.json` deve dire ✅.
