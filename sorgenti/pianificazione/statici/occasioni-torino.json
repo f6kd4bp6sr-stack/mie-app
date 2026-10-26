@@ -1,6 +1,6 @@
 {
  "app": "pianificazione-occasioni",
- "updated": "2026-10-24T09:10+02:00",
+ "updated": "2026-10-26T13:05+01:00",
  "nota": "Volontariato a Torino con molto contatto con le persone. Solo informazioni pubbliche, con fonte e data del controllo; niente consigli. Esclusi i gruppi legati al lavoro e alla categoria.",
  "voci": [
   {
@@ -17,7 +17,7 @@
    ],
    "fonte": "Vol.To",
    "url": "https://volontariatotorino.it/diventa-volontario/",
-   "ctrl": "2026-10-20"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "senior-civico",
@@ -67,7 +67,7 @@
    ],
    "fonte": "Touring Club Italiano",
    "url": "https://www.touringclub.it/notizie/aperti-per-voi/diventa-volontario-touring-a-torino",
-   "ctrl": "2026-10-20"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "avo",
@@ -84,7 +84,7 @@
    ],
    "fonte": "AVO Torino",
    "url": "https://www.avotorino.it/diventa-volontario/",
-   "ctrl": "2026-10-20"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "reti-anziani",
@@ -117,7 +117,7 @@
    ],
    "fonte": "Croce Verde Torino",
    "url": "https://www.croceverde.org/volontari/diventa-volontario/",
-   "ctrl": "2026-10-20"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "gruppo-abele",
@@ -134,7 +134,7 @@
    ],
    "fonte": "Gruppo Abele",
    "url": "https://www.gruppoabele.org/it-schede-16-volontariato",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "banco-alimentare",
@@ -151,7 +151,7 @@
    ],
    "fonte": "Banco Alimentare",
    "url": "https://www.bancoalimentare.it/diventa-volontario",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "cottolengo-avc",
@@ -168,7 +168,7 @@
    ],
    "fonte": "AVC — Associazione Volontariato Cottolenghino",
    "url": "https://www.avc-odv.org/contatti/",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "casaoz",
@@ -185,7 +185,7 @@
    ],
    "fonte": "CasaOz",
    "url": "https://casaoz.org/diventa-volontario/",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "faro",
@@ -201,7 +201,7 @@
    ],
    "fonte": "Fondazione FARO",
    "url": "https://fondazionefaro.it/diventa-volontario/",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "san-vincenzo",
@@ -218,7 +218,7 @@
    ],
    "fonte": "San Vincenzo Torino",
    "url": "https://www.sanvincenzotorino.it/cosa-facciamo/",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "emergency-torino",
@@ -235,7 +235,7 @@
    ],
    "fonte": "Emergency",
    "url": "https://www.emergency.it/volontariato-2/",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "uisp-torino",
@@ -252,7 +252,7 @@
    ],
    "fonte": "UISP Torino",
    "url": "https://www.uisp.it/torino2/pagina/diventa-volontario",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "special-olympics",
@@ -260,7 +260,7 @@
    "tipo": "sport",
    "contatto": "alto",
    "cosa": "I volontari sono il sostegno concreto degli eventi sportivi Special Olympics e condividono con gli atleti le giornate di gara: coinvolgimento «fisico ed emotivo». Il programma si rivolge soprattutto ai giovani, ma il sito dice che tutti possono partecipare.",
-   "impegno": "Legato ai singoli eventi; ore non indicate sulla pagina.",
+   "impegno": "Opportunità a breve e a lungo termine, legate ai singoli eventi; ore non indicate sulla pagina.",
    "requisiti": "Nessuna esperienza richiesta; aperto a «persone di ogni età», senza limiti indicati.",
    "primo": "Iscriviti al Programma Volontari con il pulsante «Iscriviti» della pagina (rimanda al modulo su sisoi.it), oppure scrivi al referente provinciale, torino@specialolympics.it (Piemonte: piemonte@specialolympics.it).",
    "ab": [
@@ -269,7 +269,7 @@
    ],
    "fonte": "Special Olympics Italia",
    "url": "https://specialolympics.it/panoramica-mettiti-in-gioco/",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   },
   {
    "id": "cri-torino",
@@ -285,7 +285,7 @@
    ],
    "fonte": "CRI Comitato di Torino",
    "url": "https://www.critorino.it/volontari/",
-   "ctrl": "2026-10-24"
+   "ctrl": "2026-10-26"
   }
  ],
  "annunci": [
@@ -334,6 +334,24 @@
    "d": "2026-01-04",
    "fonte": "Vol.To, bacheca del volontariato",
    "url": "https://volontariatotorino.it/bacheca-del-volontariato/volontari-per-attivita-di-accoglienza-presso-lospedale-molinette/"
+  },
+  {
+   "id": "sea-accompagnamenti-circ2",
+   "n": "Accompagnamenti per persone anziane — Circoscrizione 2",
+   "cosa": "SEA Servizio Emergenza Anziani - Monviso cerca volontari per accompagnare persone anziane a visite mediche, uffici e pratiche con i mezzi dell'associazione (partenza da via Giacomo Balla 25), oppure per la segreteria da remoto: un turno a settimana, lun-ven, mattino o pomeriggio. Servono maggiore età, buone capacità relazionali e patente (per la segreteria, dimestichezza con il computer).",
+   "primo": "Candidati con il modulo dell'annuncio sul sito di Vol.To: lo Sportello di Orientamento ti ricontatta.",
+   "d": "2026-01-08",
+   "fonte": "Vol.To, bacheca del volontariato",
+   "url": "https://volontariatotorino.it/bacheca-del-volontariato/volontari-e-per-accompagnamenti-a-favore-delle-persone-anziane-della-circoscrizione-2/"
+  },
+  {
+   "id": "cpd-accompagnamenti",
+   "n": "Accompagnamenti solidali a Torino — CPD",
+   "cosa": "CPD – Consulta per le Persone in Difficoltà ODV ETS cerca volontari per accompagnare persone con disabilità o non autosufficienti a esami, visite, terapie o anche a una passeggiata al parco, con i mezzi dell'associazione (partenza da via San Marino 22/A): due mezze giornate a settimana, lun-ven tra le 7.45 e le 18. La patente è indispensabile.",
+   "primo": "Candidati con il modulo dell'annuncio sul sito di Vol.To: lo Sportello di Orientamento ti ricontatta.",
+   "d": "2026-07-14",
+   "fonte": "Vol.To, bacheca del volontariato",
+   "url": "https://volontariatotorino.it/bacheca-del-volontariato/volontari-per-accompagnamenti-solidali-a-torino/"
   }
  ],
  "controlli": [
@@ -348,6 +366,10 @@
   {
    "at": "2026-10-24T09:10+02:00",
    "note": "aggiunte 10 realtà e 3 annunci verificati sulle pagine ufficiali; ricontrollate da un revisore indipendente"
+  },
+  {
+   "at": "2026-10-26T13:05+01:00",
+   "note": "giro del lunedì: ricontrollate 14 voci sulle pagine ufficiali, nessuna tolta; corretto l'impegno di Special Olympics (opportunità a breve e a lungo termine); non raggiungibili le pagine di comune.torino.it e bct.comune.torino.it (Senior Civico, Biblioteche civiche, Reti solidali anziani: accesso bloccato, data di controllo invariata) e, per errore del sito, gli annunci Vol.To cene via Ghedini e accoglienza Molinette (lasciati). Nessun annuncio scaduto; aggiunti 2 annunci Vol.To: accompagnamenti SEA in Circoscrizione 2 e accompagnamenti solidali CPD."
   }
  ]
 }
