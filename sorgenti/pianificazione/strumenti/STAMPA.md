@@ -20,6 +20,18 @@ Usa la regola «prima cerca, poi leggi»: fai una WebSearch limitata al sito (al
   - agi.it
 - **Quotidiani nazionali**, a rotazione e di orientamento diverso: corriere.it, repubblica.it, ilsole24ore.com, lastampa.it, ilpost.it, avvenire.it, ilgiornale.it, ilfattoquotidiano.it.
 - **Se una testata blocca la ricerca o la lettura**, il 31/10/2026 è successo con lastampa.it, repubblica.it, corriere.it e rainews.it. In quel caso usa anche skytg24.it, tgcom24.mediaset.it, adnkronos.com, avvenire.it, ilgiornale.it e ilfattoquotidiano.it, così le fonti restano varie. Le notizie di Torino si possono cercare anche su ansa.it/piemonte, torinoggi.it e lagendanews.com.
+- **Stampa estera** (dal 31/10/2026). Si cerca come per le altre fonti: prima la ricerca sul sito, poi la lettura.
+  - Agenzie: reuters.com e apnews.com.
+  - Regno Unito e Stati Uniti: bbc.com, theguardian.com, nytimes.com, washingtonpost.com, ft.com.
+  - Francia, Spagna e Germania: lemonde.fr, lefigaro.fr, elpais.com, spiegel.de, faz.net, dw.com.
+  - Altri: aljazeera.com, politico.eu, euronews.com.
+  - **Siti spesso non raggiungibili**. Il 31/10/2026 lo strumento di ricerca ha rifiutato reuters, apnews, bbc, theguardian, nytimes, ft, lemonde, lefigaro, elpais, elmundo, spiegel, faz, dw, politico.eu, sueddeutsche, welt, zeit, tagesschau, lavanguardia e rfi. france24, npr e washingtonpost si trovano ma non si leggono.
+  - **Prova sempre prima le grandi testate**: possono tornare raggiungibili. Quando sono bloccate, usa queste, che funzionano:
+    - euronews.com, in tutte le sue lingue (en, fr, de, es);
+    - aljazeera.com, cbsnews.com e swissinfo.ch (anche con l'agenzia EFE);
+    - le altre testate estere che la ricerca restituisce e che si possono leggere.
+  - Annota in «controlli» quali grandi testate erano bloccate.
+  - Servono sia per la sezione **mondo** (meglio due fonti, una italiana e una estera) sia per la sezione **estero**.
 - **Torino**:
   - lastampa.it/torino
   - torino.corriere.it
@@ -31,6 +43,7 @@ Usa la regola «prima cerca, poi leggi»: fai una WebSearch limitata al sito (al
 ## Che cosa scegliere
 - **italia**: da 3 a 6 notizie. Politica, cronaca di rilievo nazionale, scuola, sanità, giustizia, lavoro.
 - **mondo**: da 3 a 6 notizie.
+- **estero**, cioè «🌐 Stampa estera»: da 2 a 5 notizie. Contiene i temi su cui aprono i giornali stranieri e, quando c'è, come la stampa estera racconta l'Italia. Ogni notizia ha almeno una fonte estera. Scegli testate di Paesi e orientamenti diversi.
 - **economia**: da 1 a 4 notizie. Prezzi, mercati, pensioni e fisco solo quando la notizia riguarda tutti.
 - **torino**: da 3 a 6 notizie. Città e area metropolitana: trasporti, lavori, servizi, eventi, cronaca di rilievo.
 - **cultura** e **sport** (facoltative): da 0 a 3 notizie ciascuna.
@@ -60,16 +73,22 @@ Lascia fuori:
 - I **link di approfondimento** sono facoltativi, al massimo 3. Usali quando aiutano a capire: un documento ufficiale, una pagina del Comune, una scheda che spiega.
 - Gli URL vanno copiati **esatti**, mai inventati.
 
+**Traduzione automatica**
+- Gli articoli stranieri li leggi nella lingua originale. Titolo e sintesi li scrivi **in italiano**, con parole tue: è una traduzione con riassunto, non una traduzione parola per parola.
+- Nomi di persone, enti e luoghi vanno nella forma italiana corrente, per esempio «Casa Bianca», «Bundestag», «Parigi».
+- Su ogni fonte straniera metti la lingua: `{"n": "BBC News", "url": "https://…", "l": "en"}`. Per le fonti italiane `l` si può omettere.
+- L'app aggiunge da sola il link «🔤 leggi tradotto», che apre l'articolo tradotto in italiano.
+
 **Date**
 - `d` è la data della notizia. Solo notizie delle ultime 24 ore, oppure fatti che sono ancora al centro della giornata.
 
 ## Il file
 ```json
 {"app": "stampa-oggi", "edizione": "mattina", "updated": "AAAA-MM-GGTHH:MM+01:00", "nota": "facoltativa",
- "sezioni": {"italia": […], "mondo": […], "economia": […], "torino": […], "cultura": […], "sport": […]},
+ "sezioni": {"italia": […], "mondo": […], "estero": […], "economia": […], "torino": […], "cultura": […], "sport": […]},
  "controlli": [{"at": "…", "edizione": "mattina", "notizie": 18, "note": "fonti lette, siti non raggiungibili"}]}
 ```
-In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti dalla sezione (`it-…`, `mo-…`, `ec-…`, `to-…`, `cu-…`, `sp-…`).
+In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti dalla sezione (`it-…`, `mo-…`, `es-…`, `ec-…`, `to-…`, `cu-…`, `sp-…`).
 
 ## Pubblicazione
 1. `git pull`.
