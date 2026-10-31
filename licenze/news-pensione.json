@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-31T09:15:00+01:00",
+ "updated": "2026-10-31T12:58:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
@@ -357,7 +357,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-10-31T12:58:00+01:00",
    "esito": "ok"
   },
   {
@@ -469,21 +469,21 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-10-31T12:58:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-10-31T12:58:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-10-31T12:58:00+01:00",
    "esito": "ok"
   },
   {
@@ -862,6 +862,11 @@
    "at": "2026-10-31T09:15:00+01:00",
    "notizie": 2,
    "note": "giro straordinario di sabato mattina (gli ultimi giri registrati sono del 27/10): 2 notizie nuove sul ddl di bilancio 2027 approvato dal CdM n. 195 del 28/10 e bollinato il 30/10: TFS più rapido dal 2028 (art. 50; Sky TG24, ItaliaOggi, GrNet) e, secondo GrNet, FESI +17,6 milioni annui alla GdF, 9,5 milioni di straordinari 2027, 60 assunzioni straordinarie, esclusione dalla tassazione al 15% sull'accessorio, nessuna misura di previdenza dedicata (SILP CGIL 29/10 conferma la critica). Aggiornate le voci sulla manovra e sui coefficienti (comunicato in G.U. S.G. n. 252 del 29/10). DPR di recepimento non ancora in Gazzetta; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. USIF, SILF (28/10 coefficienti, 29/10 protocollo AdE-Carabinieri) e SINAFI senza comunicati nuovi su contratto o pensione; INPS: ultimo messaggio n. 3484 del 29/10, non sul tema. Tassi: inflazione ottobre 5,4% (stima preliminare ISTAT, era 4,2%); BCE invariata al 2,50% il 29/10; BTP 10 anni 4,51% e 5 anni 3,99% alla chiusura del 30/10; BTP 2 anni lasciato a 3,51% (Trading Economics 3,50% senza seconda fonte); conti deposito ricontrollati, invariati; BBVA non ricontrollato (cambia a inizio trimestre). Prodotti: date aggiornate, tassi invariati. Volontariato già fatto lunedì 26/10; cultura digitale già fatta a ottobre. Scheda invariata (il ddl non è ancora norma). Non raggiungibili: Governo, SIAP, pagina ISTAT del comunicato (dato preso dall'URL del comunicato e da due testate); non ricontrollati Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-10-31T12:58:00+01:00",
+   "notizie": 0,
+   "note": "giro delle 13 (sabato): nessuna notizia nuova rispetto al giro delle 9:15. Gazzetta: ultimo numero in elenco S.G. n. 253 del 30/10, DPR di recepimento del contratto 2025-2027 non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. USIF (ultimo comunicato 19/10), SILF (29/10, protocollo AdE-Carabinieri) e SINAFI (29/10, stesso tema) senza novità su contratto o pensione; INPS: ricerca sul sito senza messaggi nuovi sul tema. Tassi di mercato e prodotti invariati (sabato, mercati chiusi; BCE e inflazione già aggiornate). Volontariato già fatto lunedì 26/10; cultura digitale già fatta a ottobre. Scheda invariata. Ricontrollate Gazzetta, USIF, SILF, SINAFI e INPS; non ricontrollati in questo giro Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
   }
  ],
  "mercati": [
