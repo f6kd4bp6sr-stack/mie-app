@@ -1,31 +1,36 @@
 {
   "app": "stampa-oggi",
   "edizione": "mattina",
-  "updated": "2026-10-31T10:41+01:00",
-  "nota": "Prima edizione. Alcune notizie di venerdì restano incluse perché sono ancora al centro della giornata.",
+  "updated": "2026-10-31T10:58+01:00",
+  "nota": "Edizione del mattino aggiornata. Alcune notizie di venerdì restano incluse perché sono ancora al centro della giornata.",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-perquisizioni",
+        "t": "Dopo i cortei dello sciopero, 60 perquisizioni in 23 città per istigazione alla violenza",
+        "s": "Digos e Polizia postale hanno perquisito persone che, secondo la polizia, avevano incitato sui social e nelle chat a compiere violenze durante le recenti manifestazioni. L'operazione arriva il giorno dopo lo sciopero generale dell'Usb, in gran parte pacifico ma con tensioni serali a Roma e Torino.",
+        "d": "2026-10-31",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/cortei-60-perquisizioni-in-23-citta-_449404aa-1c37-4c96-aa63-5089df5221ae.html"
+          }
+        ]
+      },
       {
         "id": "it-sciopero",
         "t": "Sciopero generale dell'Usb: cortei in decine di città, tensioni a Roma e Torino",
         "s": "Venerdì l'Unione sindacale di base ha portato in piazza lavoratori e studenti contro carovita, salari bassi e riarmo. Le stime parlano di decine di migliaia di persone, gli organizzatori di molte di più. A Roma lanci di oggetti e idranti tra Colosseo e Testaccio, con otto fermati; un gruppo è accampato ai Fori Imperiali.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-e-cortei-in-tutta-italia-tensioni-a-roma-e-torino.-la-cronaca-della_a6c5a68a-dc6a-450e-9dac-8c7c47dc898a.html"},
-          {"n": "Il Post", "url": "https://www.ilpost.it/live/manifestazioni-sciopero-proteste-30-ottobre/"}
-        ]
-      },
-      {
-        "id": "it-elicottero",
-        "t": "Elicottero militare caduto in Bosnia: quattro morti, undici feriti, indagini sulle cause",
-        "s": "Il Chinook dell'Esercito, impegnato nella missione europea Eufor Althea, è precipitato giovedì pomeriggio vicino a Brčko poco dopo il decollo. La Procura militare di Roma ha aperto un fascicolo e una commissione della Difesa esamina i rottami; tra le ipotesi c'è un guasto tecnico. Il rientro delle salme e i funerali non hanno ancora date ufficiali.",
-        "d": "2026-10-30",
-        "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-in-bosnia-le-ipotesi-sulla-caduta-del-chinook-crosetto-dai_d00f82f4-ad02-4306-ab7c-446cbf8f0f99.html"},
-          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/30/elicottero-militare-italiano-bosnia-erzegovina-cosa-sappiamo-ricostruzione-incidente-video/"}
-        ],
-        "link": [
-          {"n": "Il Post: che cosa fanno i militari italiani in Bosnia Erzegovina", "url": "https://www.ilpost.it/2026/10/30/militari-italiani-bosnia-erzegovina/"}
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/sciopero-generale-e-cortei-in-tutta-italia-tensioni-a-roma-e-torino.-la-cronaca-della_a6c5a68a-dc6a-450e-9dac-8c7c47dc898a.html"
+          },
+          {
+            "n": "Il Post",
+            "url": "https://www.ilpost.it/live/manifestazioni-sciopero-proteste-30-ottobre/"
+          }
         ]
       },
       {
@@ -34,8 +39,36 @@
         "s": "Il vicepremier Tajani definisce la legge di bilancio «seria e responsabile» e difende il contributo chiesto a banche, assicurazioni ed energia, circa 5 miliardi, con tutele per le banche più piccole. Pd, M5s, Avs e +Europa la giudicano insufficiente su carovita, salari e sanità e contestano l'aumento delle spese per la difesa.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/31/manovra-tajani-giusto-contribuire-ma-punire-chi-produce-ricchezza-sarebbe-errore_d4973b26-e1d7-474b-bd52-761fa3c8c0f2.html"},
-          {"n": "AGI", "url": "https://www.agi.it/politica/news/2026-10-30/centrosinistra-boccia-manovra-39772466/"}
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/31/manovra-tajani-giusto-contribuire-ma-punire-chi-produce-ricchezza-sarebbe-errore_d4973b26-e1d7-474b-bd52-761fa3c8c0f2.html"
+          },
+          {
+            "n": "AGI",
+            "url": "https://www.agi.it/politica/news/2026-10-30/centrosinistra-boccia-manovra-39772466/"
+          }
+        ]
+      },
+      {
+        "id": "it-elicottero",
+        "t": "Elicottero militare caduto in Bosnia: quattro morti, undici feriti, indagini sulle cause",
+        "s": "Il Chinook dell'Esercito, impegnato nella missione europea Eufor Althea, è precipitato giovedì pomeriggio vicino a Brčko poco dopo il decollo. La Procura militare di Roma ha aperto un fascicolo e una commissione della Difesa esamina i rottami; tra le ipotesi c'è un guasto tecnico. Il rientro delle salme e i funerali non hanno ancora date ufficiali.",
+        "d": "2026-10-30",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/30/elicottero-caduto-in-bosnia-le-ipotesi-sulla-caduta-del-chinook-crosetto-dai_d00f82f4-ad02-4306-ab7c-446cbf8f0f99.html"
+          },
+          {
+            "n": "Il Post",
+            "url": "https://www.ilpost.it/2026/10/30/elicottero-militare-italiano-bosnia-erzegovina-cosa-sappiamo-ricostruzione-incidente-video/"
+          }
+        ],
+        "link": [
+          {
+            "n": "Il Post: che cosa fanno i militari italiani in Bosnia Erzegovina",
+            "url": "https://www.ilpost.it/2026/10/30/militari-italiani-bosnia-erzegovina/"
+          }
         ]
       },
       {
@@ -44,43 +77,117 @@
         "s": "Schlein, Conte, Fratoianni e Bonelli hanno annunciato venerdì un percorso comune: il confronto sul programma parte la prossima settimana, mentre le primarie per scegliere il candidato alla guida del Governo si terranno entro febbraio 2027. L'invito è esteso alle altre forze di opposizione; a dicembre è prevista una mobilitazione nazionale.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/politica/2026/10/31/il-campo-largo-accelera-subito-il-programma-e-primarie-entro-febbraio_2e10ed14-2959-47b6-8f4d-4c06f9726eee.html"},
-          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/30/campo-largo-primarie-febbraio/"}
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/10/31/il-campo-largo-accelera-subito-il-programma-e-primarie-entro-febbraio_2e10ed14-2959-47b6-8f4d-4c06f9726eee.html"
+          },
+          {
+            "n": "Il Post",
+            "url": "https://www.ilpost.it/2026/10/30/campo-largo-primarie-febbraio/"
+          }
         ]
       }
     ],
     "mondo": [
       {
         "id": "mo-polonia",
-        "t": "Polonia, scontro sulla Corte costituzionale: sospesi i vertici, proteste a Varsavia",
-        "s": "Cinque giudici eletti dall'attuale maggioranza hanno sospeso il presidente della Corte, Bogdan Święczkowski, e il suo vice, nominati ai tempi del PiS. Il presidente della Repubblica Nawrocki ha interrotto un viaggio ufficiale ed è entrato nella sede della Corte, parlando di violazione dell'ordine costituzionale. Centinaia di sostenitori del PiS hanno protestato; tre persone arrestate.",
+        "t": "Polonia, crisi sulla Corte costituzionale: il presidente Nawrocki entra nella sede e accusa il Governo",
+        "s": "Venerdì cinque giudici eletti dal Parlamento hanno sospeso presidente e vicepresidente della Corte, vicini al PiS. Nawrocki ha interrotto un viaggio in Senegal e di notte è entrato nell'edificio, parlando di violazione dell'ordine costituzionale. Il ministro della Giustizia Żurek chiede che la Corte torni a lavorare e auspica l'intervento della procura.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/tensioni-e-proteste-in-polonia-dopo-la-sospensione-del-presidente-corte-costituzionale_630b4c01-47af-4b69-b140-f20f02ecdc20.html"},
-          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/31/corte-costituzionale-polonia-proteste/"},
-          {"n": "Euronews", "url": "https://www.euronews.com/2026/10/30/polish-president-turns-back-mid-flight-amid-coup-detat-allegations", "l": "en"}
+          {
+            "n": "Il Post",
+            "url": "https://www.ilpost.it/2026/10/31/corte-costituzionale-polonia-proteste/"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/31/tensioni-e-proteste-in-polonia-dopo-la-sospensione-del-presidente-corte-costituzionale_0f35a3af-265e-4f32-b650-9941730f20c2.html"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/10/31/poland-political-crisis-constitutional-court-in-chaos-as-nawrocki-accuses-government-of-st",
+            "l": "en"
+          }
         ]
       },
       {
         "id": "mo-ucraina",
-        "t": "Via libera Usa a 500 missili Patriot per Kiev; Zelensky chiede aiuti subito",
-        "s": "Washington approverà la vendita all'Ucraina di 500 intercettori Patriot per 2,1 miliardi di dollari, pagati con fondi di Germania, Canada e Norvegia, ma le consegne richiederanno anni. Zelensky chiede agli alleati di cedere ora missili dalle proprie scorte. Proseguono gli attacchi russi alla rete energetica: venerdì sera blackout in quattro distretti di Kiev.",
+        "t": "Via libera Usa a 500 Patriot per Kiev, consegne fra anni; Zelensky chiede aiuti per l'inverno",
+        "s": "Washington approva la vendita all'Ucraina di intercettori Patriot per 2,1 miliardi di dollari, ma le consegne richiederanno anni. Zelensky chiede agli alleati un pacchetto invernale di 100 intercettori al mese dalle proprie scorte. Nelle ultime due settimane la Russia ha colpito più di 30 volte infrastrutture energetiche ucraine.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/31/zelensky-i-500-patriot-usa-fra-anni-ma-dobbiamo-difenderci-questo-inverno_8d224cb3-a893-48d0-87ef-9a6ba9c0516e.html"},
-          {"n": "AGI", "url": "https://www.agi.it/estero/news/2026-10-31/russia-ucraina-patriot-guerra-zelensky-putin-39798242/"},
-          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/30/stati-uniti-patriot-ucraina/"},
-          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/31/us-greenlights-2-1bn-patriot-missile-sale-to-ukraine", "l": "en"}
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/31/zelensky-i-500-patriot-usa-fra-anni-ma-dobbiamo-difenderci-questo-inverno_8d224cb3-a893-48d0-87ef-9a6ba9c0516e.html"
+          },
+          {
+            "n": "AGI",
+            "url": "https://www.agi.it/estero/news/2026-10-31/russia-ucraina-patriot-guerra-zelensky-putin-39798242/"
+          },
+          {
+            "n": "Il Post",
+            "url": "https://www.ilpost.it/2026/10/30/stati-uniti-patriot-ucraina/"
+          },
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/10/31/us-greenlights-2-1bn-patriot-missile-sale-to-ukraine",
+            "l": "en"
+          }
         ]
       },
       {
         "id": "mo-francia",
-        "t": "Francia, terzo sabato di proteste contro il carovita: vietato il corteo nel centro di Parigi",
-        "s": "Il Consiglio di Stato ha annullato l'autorizzazione a partire dalla Bastiglia: il percorso resta in periferia. Il Governo schiera circa 70mila agenti, con coprifuoco notturno in alcune zone della capitale e limiti serali per i minori non accompagnati. I gilet gialli invitano a manifestare comunque, dopo i disordini del 17 ottobre.",
+        "t": "Francia, terzo sabato di proteste: 70mila agenti, cortei vietati nei centri città",
+        "s": "Il ministro dell'Interno Nuñez ha vietato le manifestazioni nei centri urbani, ammesse solo in periferia, e i raduni presentati come feste di Halloween. A Parigi coprifuoco notturno sabato e domenica nei quartieri colpiti dai disordini del 17 ottobre e oltre 40 stazioni del metrò chiuse. I sindacati valutano ricorsi.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "AGI", "url": "https://www.agi.it/estero/news/2026-10-31/francia-sabato-proteste-parigi-corteo-39798026/"},
-          {"n": "Euronews (francese)", "url": "https://fr.euronews.com/2026/10/30/manifestations-en-france-des-violences-comparables-au-17-octobre-redoutees-par-les-autorit", "l": "fr"}
+          {
+            "n": "AGI",
+            "url": "https://www.agi.it/estero/news/2026-10-31/francia-sabato-proteste-parigi-corteo-39798026/"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/10/31/france-to-deploy-70000-security-personnel-as-it-prepares-for-halloween-protests",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-canada",
+        "t": "Vertice di Montreal: Ue e Canada firmano un'«Alleanza per il futuro»",
+        "s": "Von der Leyen, Costa e il premier Carney hanno concordato cooperazione su commercio digitale, ricerca, materie prime, energia e difesa complementare alla Nato. Dal testo è sparita l'ipotesi di «membro associato» per il Canada, frenata da alcuni Stati tra cui la Germania. Ottawa contribuirà con 500 milioni al prestito Ue all'Ucraina.",
+        "d": "2026-10-31",
+        "fonti": [
+          {
+            "n": "AGI",
+            "url": "https://www.agi.it/estero/news/2026-10-31/ue-canada-alleanza-39792997/"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/10/30/canada-aims-to-become-eus-first-associate-member-by-june-2027-carney-says",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-brasile",
+        "t": "Brasile, Flávio Bolsonaro dice di essere fuggito negli Usa per una persecuzione politica",
+        "s": "Il senatore, figlio dell'ex presidente e sconfitto da Lula alle presidenziali di domenica, è arrivato a Miami senza consegnare i passaporti come ordinato dalla Corte suprema nell'ambito di un'indagine per riciclaggio. In una diretta sui social ha contestato il risultato del voto, senza prove, e ha detto di volersi ricandidare.",
+        "d": "2026-10-31",
+        "fonti": [
+          {
+            "n": "Il Post",
+            "url": "https://www.ilpost.it/2026/10/31/flavio-bolsonaro-fuga-persecuzione-politica"
+          },
+          {
+            "n": "AGI",
+            "url": "https://www.agi.it/estero/news/2026-10-31/bolsonaro-flavio-fuggito-brasile-vittima-persecuzione-39797754/"
+          },
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/31/flavio-bolsonaro-vows-to-continue-fathers-political-fight-in-brazil",
+            "l": "en"
+          }
         ]
       },
       {
@@ -89,19 +196,19 @@
         "s": "La redazione del quotidiano legato a Dmitrij Muratov, premio Nobel per la pace 2021, attribuisce la decisione alle pressioni delle autorità: l'inserimento tra gli «agenti stranieri», lo sfratto dalla sede storica e il blocco delle donazioni dei lettori. Muratov collega la chiusura all'opposizione del giornale alla guerra in Ucraina.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/30/novaya-gazeta-chiusura-russia/"},
-          {"n": "AGI", "url": "https://www.agi.it/estero/news/2026-10-30/russia-novaya-gazeta-annuncia-la-chiusura-39784114/"},
-          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/30/russia-forces-closure-of-investigative-newspaper-novaya-gazeta", "l": "en"}
-        ]
-      },
-      {
-        "id": "mo-g20",
-        "t": "G20 ad Atlanta, Kallas: da Lavrov nessun segnale di apertura sui negoziati",
-        "s": "L'Alta rappresentante Ue per la politica estera, Kaja Kallas, ha detto all'AFP che il ministro degli Esteri russo non ha mostrato disponibilità a trattare sull'Ucraina e lo ha accusato di sostenere tesi false. Gli Stati Uniti hanno annullato la foto di gruppo dei ministri dopo le proteste di alcuni diplomatici europei.",
-        "d": "2026-10-30",
-        "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/kallas-da-lavrov-menzogne-al-g20-nessun-segnale-di-apertura_da9b9b90-09cb-43b4-92b3-648f7cd3e797.html"},
-          {"n": "Euronews", "url": "https://www.euronews.com/2026/10/30/eu-diplomats-object-to-g20-photo-with-lavrov-prompting-us-cancellation", "l": "en"}
+          {
+            "n": "Il Post",
+            "url": "https://www.ilpost.it/2026/10/30/novaya-gazeta-chiusura-russia/"
+          },
+          {
+            "n": "AGI",
+            "url": "https://www.agi.it/estero/news/2026-10-30/russia-novaya-gazeta-annuncia-la-chiusura-39784114/"
+          },
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/10/30/russia-forces-closure-of-investigative-newspaper-novaya-gazeta",
+            "l": "en"
+          }
         ]
       }
     ],
@@ -112,8 +219,16 @@
         "s": "I Pasdaran sostengono che quattro petroliere hanno preso fuoco nello stretto di Hormuz, alcune su mine, perché viaggiavano su rotte non autorizzate; il comando militare statunitense contesta la versione iraniana. Mediatori del Qatar sono tornati a Teheran per cercare un accordo. Trump assicura che la guerra finirà presto, senza dire se con un'intesa o con nuovi attacchi.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/liveblog/2026/10/31/iran-war-live-oil-tankers-hit-in-hormuz-trump-says-conflict-will-end-soon", "l": "en"},
-          {"n": "Euronews", "url": "https://www.euronews.com/2026/10/30/irans-revolutionary-guard-reports-two-tankers-on-fire-in-strait-of-hormuz-as-talks-continu", "l": "en"}
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/10/31/iran-war-live-oil-tankers-hit-in-hormuz-trump-says-conflict-will-end-soon",
+            "l": "en"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/10/30/irans-revolutionary-guard-reports-two-tankers-on-fire-in-strait-of-hormuz-as-talks-continu",
+            "l": "en"
+          }
         ]
       },
       {
@@ -122,8 +237,16 @@
         "s": "Il 3 novembre si rinnovano tutta la Camera e un terzo del Senato, oggi entrambi con una stretta maggioranza repubblicana. I sondaggi danno i democratici in vantaggio alla Camera; al Senato pesano sfide incerte come Texas, Ohio e Maine. Oltre 44 milioni di americani hanno già votato. Trump sostituisce alcuni comizi con collegamenti telefonici.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/30/trump-cancels-iowa-kansas-midterm-events-opting-for-tele-rallies", "l": "en"},
-          {"n": "CBS News", "url": "https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/", "l": "en"}
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/10/30/trump-cancels-iowa-kansas-midterm-events-opting-for-tele-rallies",
+            "l": "en"
+          },
+          {
+            "n": "CBS News",
+            "url": "https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/",
+            "l": "en"
+          }
         ]
       },
       {
@@ -132,8 +255,16 @@
         "s": "Il movimento giovanile manifesta in circa 30 città, tra cui Berlino, Colonia, Francoforte e Amburgo, per scuole migliori, case accessibili e contro un ritorno della leva obbligatoria. Gli organizzatori promettono cortei pacifici; la polizia rafforza i controlli e alcuni negozi hanno protetto le vetrine. I timori nascono dai disordini delle scorse settimane in Francia e Italia.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "Euronews (tedesco)", "url": "https://de.euronews.com/2026/10/31/krawall-alarm-in-diesen-deutschen-stadten-konnte-es-krachen", "l": "de"},
-          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/31/germany-and-france-brace-for-protests-on-halloween-weekend", "l": "en"}
+          {
+            "n": "Euronews (tedesco)",
+            "url": "https://de.euronews.com/2026/10/31/krawall-alarm-in-diesen-deutschen-stadten-konnte-es-krachen",
+            "l": "de"
+          },
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/10/31/germany-and-france-brace-for-protests-on-halloween-weekend",
+            "l": "en"
+          }
         ]
       },
       {
@@ -142,17 +273,29 @@
         "s": "Euronews descrive un'Italia in stato di allerta, con il Viminale preoccupato per le infiltrazioni violente e gli scontri di un piccolo gruppo vicino al Colosseo. L'agenzia spagnola EFE racconta proteste in tutto il Paese contro il carovita e il Governo Meloni, per lo più pacifiche, con tensioni a Torino e Roma, e ricorda il decreto sicurezza di ottobre.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "Euronews", "url": "https://www.euronews.com/2026/10/30/italy-on-high-alert-as-thousands-take-the-streets-in-nationwide-strike", "l": "en"},
-          {"n": "SWI swissinfo.ch (EFE)", "url": "https://www.swissinfo.ch/spa/manifestaciones-en-toda-italia-contra-la-carest%C3%ADa-y-las-pol%C3%ADticas-de-meloni/92304213", "l": "es"}
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/10/30/italy-on-high-alert-as-thousands-take-the-streets-in-nationwide-strike",
+            "l": "en"
+          },
+          {
+            "n": "SWI swissinfo.ch (EFE)",
+            "url": "https://www.swissinfo.ch/spa/manifestaciones-en-toda-italia-contra-la-carest%C3%ADa-y-las-pol%C3%ADticas-de-meloni/92304213",
+            "l": "es"
+          }
         ]
       },
       {
-        "id": "es-eurozona",
-        "t": "Eurozona, inflazione in salita e crescita debole: si parla di rischio stagflazione",
-        "s": "Euronews in spagnolo mette a confronto Italia, con l'inflazione al 5,4% a ottobre, e Spagna, al 4,9%, spinte soprattutto dall'energia legata alla guerra con l'Iran. Nel terzo trimestre il Pil dell'eurozona cresce dello 0,4%, ma l'Italia è ferma e la Francia cala dello 0,1%. Gli economisti citati temono una stagflazione.",
-        "d": "2026-10-30",
+        "id": "es-corea",
+        "t": "Usa, Corea del Sud e Giappone chiedono la «completa denuclearizzazione» della Corea del Nord",
+        "s": "Al Jazeera riferisce la dichiarazione di Rubio e dei ministri Cho Hyun e Motegi a margine del G20 di Atlanta, con l'impegno ad applicare le sanzioni Onu. Pyongyang ha fissato per legge il proprio status nucleare e lo considera irreversibile. Si parla di un possibile nuovo incontro tra Trump e Kim al vertice Apec in Cina.",
+        "d": "2026-10-31",
         "fonti": [
-          {"n": "Euronews (spagnolo)", "url": "https://es.euronews.com/2026/10/30/la-inflacion-de-italia-se-dispara-al-54-en-octubre-por-el-encarecimiento-de-la-energia", "l": "es"}
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/10/31/us-south-korea-japan-call-for-complete-denuclearisation-of-north-korea",
+            "l": "en"
+          }
         ]
       }
     ],
@@ -163,8 +306,26 @@
         "s": "Secondo la stima preliminare Istat pesano soprattutto energia (+31,4% su un anno), trasporti e alimentari freschi (+7,5%); a settembre l'inflazione era al 4,2%. Il Pil è invariato sul trimestre e cresce dello 0,8% sull'anno. Il Governo annuncia un decreto sulle bollette; opposizione e sindacati chiedono di adeguare salari e fisco.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/il-caro-energia-fa-danni-vola-linflazione-e-la-crescita-si-ferma_6ea6c523-9671-4e3d-b1df-e2cfbfa1e6fd.html"},
-          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/30/italia-economia-inflazione-prezzi-ottobre-2026-massimi-3-anni/"}
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/10/30/il-caro-energia-fa-danni-vola-linflazione-e-la-crescita-si-ferma_6ea6c523-9671-4e3d-b1df-e2cfbfa1e6fd.html"
+          },
+          {
+            "n": "Il Post",
+            "url": "https://www.ilpost.it/2026/10/30/italia-economia-inflazione-prezzi-ottobre-2026-massimi-3-anni/"
+          }
+        ]
+      },
+      {
+        "id": "ec-exittax",
+        "t": "Manovra, arriva una exit tax per chi sposta la residenza fiscale all'estero",
+        "s": "L'articolo 17 del disegno di legge di bilancio tassa al 26% le plusvalenze maturate da chi lascia l'Italia dal 2027, se il patrimonio vale almeno 800mila euro e la residenza è durata 6 anni su 10. Per chi va nell'Ue il pagamento può essere rinviato. La relazione tecnica stima pochi milioni di gettito l'anno.",
+        "d": "2026-10-31",
+        "fonti": [
+          {
+            "n": "AGI",
+            "url": "https://www.agi.it/economia/news/2026-10-30/manovra-tassa-super-ricchi-lasciano-l-italia-39793812/amp/"
+          }
         ]
       },
       {
@@ -173,8 +334,14 @@
         "s": "Gli hacker hanno sottratto circa 6,3 miliardi di dollari; circa 3 miliardi sono stati bloccati. Binance ha sospeso le operazioni di prelievo e promette di coprire le perdite dei clienti. Le società di analisi sospettano un gruppo legato alla Corea del Nord. Il bitcoin ha perso oltre il 4%.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "ANSA", "url": "https://ansa.it/sito/notizie/economia/2026/10/30/maxi-attacco-hacker-contro-binance-e-il-furto-del-secolo-_3aea9536-ba98-4317-b834-8d48a442e54e.html"},
-          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/30/binance-criptovalute-hack/"}
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/economia/2026/10/30/maxi-attacco-hacker-contro-binance-e-il-furto-del-secolo-_3aea9536-ba98-4317-b834-8d48a442e54e.html"
+          },
+          {
+            "n": "Il Post",
+            "url": "https://www.ilpost.it/2026/10/30/binance-criptovalute-hack/"
+          }
         ]
       }
     ],
@@ -185,8 +352,30 @@
         "s": "Nel primo pomeriggio la polizia ha caricato e usato l'idrante davanti alla Prefettura, dopo lanci di uova con vernice rossa e bottiglie. In serata nuovi scontri e lacrimogeni in via Roma, raggiunta dai manifestanti attraverso le vie laterali; poi il corteo si è spostato in via Po. Alcune persone sono state trattenute per accertamenti.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "ANSA Piemonte", "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/sciopero-a-torino-cariche-in-piazza-castello_08e37cf6-3558-4d26-8f51-c01fe18a78cc.html"},
-          {"n": "ANSA Piemonte", "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/-cariche-in-pieno-centro-al-corteo-torino-_4264d723-6986-4c41-8f17-5e363aa30391.html"}
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/sciopero-a-torino-cariche-in-piazza-castello_08e37cf6-3558-4d26-8f51-c01fe18a78cc.html"
+          },
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/-cariche-in-pieno-centro-al-corteo-torino-_4264d723-6986-4c41-8f17-5e363aa30391.html"
+          },
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/10/30/leggi-notizia/argomenti/cronaca-11/articolo/ogni-polo-sara-una-barricata-noi-la-guerra-non-la-paghiamo-a-torino-la-giornata-di-protesta-si.html"
+          }
+        ]
+      },
+      {
+        "id": "to-defunti",
+        "t": "Ognissanti e Defunti: cimiteri di Torino aperti 8.30-17.30, navette gratuite e bus potenziati",
+        "s": "Fino al 2 novembre Monumentale, Parco, Cavoretto, Mirafiori, Sassi e Abbadia di Stura seguono l'orario prolungato. Al Monumentale e al Parco ci sono navette gratuite e carrozzine; le auto private non entrano, salvo con contrassegno disabili. Gtt potenzia le linee esterne e sospende la 102 dentro il Parco il 31 ottobre e l'1 e 2 novembre.",
+        "d": "2026-10-31",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/10/23/leggi-notizia/argomenti/attualita-31/articolo/aperture-straordinarie-navette-e-carrozzine-10-giorni-di-iniziative-a-torino-per-la-giornata-dei-d.html"
+          }
         ]
       },
       {
@@ -195,7 +384,10 @@
         "s": "Dal 2 al 6 novembre si fermano circa mille lavoratori delle Carrozzerie Stellantis, dopo le due settimane già previste fino al 31 ottobre. Per la Fiom il problema sono le vendite, non la mancanza di materiali, e servono un nuovo modello e l'impegno di Governo, Regione e Comune. Il restyling della 500e non è atteso prima del 2028.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "ANSA Piemonte", "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/stellantis-unaltra-settimana-di-cassa-integrazione-alle-carrozzerie-di-mirafiori_7f61e7a0-9618-4134-bfe3-67d288cf9ed6.html"}
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/stellantis-unaltra-settimana-di-cassa-integrazione-alle-carrozzerie-di-mirafiori_7f61e7a0-9618-4134-bfe3-67d288cf9ed6.html"
+          }
         ]
       },
       {
@@ -204,7 +396,22 @@
         "s": "La Regione finanzierà voucher per l'assistenza a casa o in struttura destinati a circa 1.500 persone fragili in lista d'attesa. Lo hanno annunciato il presidente Cirio e il vicepresidente Marrone durante un incontro alla Nuvola Lavazza. Il bando partirà a breve; scadenze e modalità di domanda non sono ancora state comunicate.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "ANSA Piemonte", "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/assistenza-anziani-in-piemonte-bando-da-10-milioni-per-famiglie-in-attesa_b011315d-7020-447f-a16a-5a44dd2aa3b5.html"}
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/assistenza-anziani-in-piemonte-bando-da-10-milioni-per-famiglie-in-attesa_b011315d-7020-447f-a16a-5a44dd2aa3b5.html"
+          }
+        ]
+      },
+      {
+        "id": "to-accoglienza",
+        "t": "Festival dell'Accoglienza, chiusa la sesta edizione con quasi 13mila presenze",
+        "s": "In cinquanta giorni la rassegna promossa dalla Pastorale diocesana dei migranti ha proposto oltre cento eventi con 260 ospiti, sul tema della «mitezza». La serata finale si è tenuta venerdì nella chiesa del Carmine. Fino a settembre è prevista un'edizione «Off» con un appuntamento al mese.",
+        "d": "2026-10-31",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/10/31/leggi-notizia/argomenti/centro/articolo/festival-dellaccoglienza-finale-da-record-a-torino-quasi-13mila-presenze-per-la-sesta-edizione.html"
+          }
         ]
       },
       {
@@ -213,7 +420,10 @@
         "s": "Nell'edificio comunale riqualificato con 550mila euro del Pnrr ci sono alloggi per un massimo di 11 persone, spazi comuni e un'area verde. Il progetto «Futuro Prossimo», gestito dalle cooperative Esserci e Paradigma, unisce formazione, casa, lavoro e relazioni sociali. All'inaugurazione erano presenti il sindaco Lo Russo e l'assessore Rosatelli.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "ANSA Piemonte", "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/inaugurati-a-torino-gli-spazi-per-lautonomia-delle-persone-con-disabilita_7aa6da4f-2f37-4dc6-8fe7-5744b37b232e.html"}
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/inaugurati-a-torino-gli-spazi-per-lautonomia-delle-persone-con-disabilita_7aa6da4f-2f37-4dc6-8fe7-5744b37b232e.html"
+          }
         ]
       }
     ],
@@ -224,11 +434,20 @@
         "s": "Fino a domenica 1 novembre Artissima, diretta da Luigi Fassi, riunisce all'Oval Lingotto 183 gallerie da 35 Paesi, con spazio a controcultura, conflitti e memoria storica. La fiera The Others festeggia la quindicesima edizione trasformando in sala espositiva il garage del Parcheggio Lancia.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "ANSA Piemonte", "url": "https://www.ansa.it/piemonte/notizie/2026/10/29/artissima-larte-contemporanea-tra-controcultura-e-attualita_27bb7c9f-f3e6-4334-a429-a8e4c5867744.html"},
-          {"n": "ANSA Piemonte", "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/the-others-larte-al-posto-delle-auto-nel-garage-del-parcheggio_d58e859f-7a48-4487-acc1-72c218b4eb35.html"}
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/29/artissima-larte-contemporanea-tra-controcultura-e-attualita_27bb7c9f-f3e6-4334-a429-a8e4c5867744.html"
+          },
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/30/the-others-larte-al-posto-delle-auto-nel-garage-del-parcheggio_d58e859f-7a48-4487-acc1-72c218b4eb35.html"
+          }
         ],
         "link": [
-          {"n": "ANSA: Artissima all'Oval Lingotto, la scheda dell'edizione", "url": "https://www.ansa.it/sito/notizie/cultura/arte/2026/09/17/artissima-alloval-lingotto-dal-30-ottobre-all1-novembre-183-gallerie-da-35-paesi_4f9bba86-68c9-4b38-8cb4-2d4a03961e28.html"}
+          {
+            "n": "ANSA: Artissima all'Oval Lingotto, la scheda dell'edizione",
+            "url": "https://www.ansa.it/sito/notizie/cultura/arte/2026/09/17/artissima-alloval-lingotto-dal-30-ottobre-all1-novembre-183-gallerie-da-35-paesi_4f9bba86-68c9-4b38-8cb4-2d4a03961e28.html"
+          }
         ]
       }
     ],
@@ -239,7 +458,10 @@
         "s": "A Sepang la gara breve va alla Ktm di Pedro Acosta; Bagnaia è sesto, mentre Alex Márquez, partito dalla pole, è uscito di gara. Marc Márquez allunga in classifica a +19 su Jorge Martín, assente nel fine settimana. La gara lunga si corre domenica.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/31/motogp-sepang-acosta-vince-la-gara-sprint-secondo-marc-marquez-terzo_1889bc9e-c366-4be7-b119-6ebcb6d4f63d.html"}
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/31/motogp-sepang-acosta-vince-la-gara-sprint-secondo-marc-marquez-terzo_1889bc9e-c366-4be7-b119-6ebcb6d4f63d.html"
+          }
         ]
       },
       {
@@ -248,7 +470,10 @@
         "s": "Nella seconda sessione di prove libere a Città del Messico la Ferrari di Charles Leclerc precede Norris e Russell. Quarto Kimi Antonelli, leader del Mondiale, tornato in pista dopo un'influenza; Hamilton è undicesimo. Oggi le qualifiche, domenica la gara.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/sport/2026/10/31/f1-messico-la-ferrari-di-leclerc-domina-le-seconde-libere-quarto-tempo-per-mercedes_589e3c5d-754b-421f-ac8b-2cdadb46b4a2.html"}
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/sport/2026/10/31/f1-messico-la-ferrari-di-leclerc-domina-le-seconde-libere-quarto-tempo-per-mercedes_589e3c5d-754b-421f-ac8b-2cdadb46b4a2.html"
+          }
         ]
       }
     ]
@@ -265,6 +490,12 @@
       "edizione": "mattina",
       "notizie": 23,
       "note": "Aggiunta la sezione estero (5 notizie) e una fonte estera alle 5 notizie del mondo. Fonti estere lette: Euronews (en, fr, de, es), Al Jazeera, CBS News, SWI swissinfo.ch/EFE. Ricerca rifiutata: reuters.com, apnews.com, bbc.com, bbc.co.uk, theguardian.com, nytimes.com, ft.com, lemonde.fr, lefigaro.fr, elpais.com, elmundo.es, spiegel.de, faz.net, dw.com, politico.eu, sueddeutsche.de, welt.de, zeit.de, tagesschau.de, lavanguardia.com, rfi.fr. Lettura non riuscita: france24.com, npr.org, washingtonpost.com."
+    },
+    {
+      "at": "2026-10-31T10:58+01:00",
+      "edizione": "mattina",
+      "notizie": 28,
+      "note": "Nuovo giro: aggiunte perquisizioni dopo i cortei, crisi in Polonia (aggiornata), vertice Ue-Canada, Bolsonaro, Francia, Corea del Nord, exit tax, cimiteri e Festival dell'Accoglienza a Torino. Fonti lette: ANSA (anche Piemonte), AGI, Il Post, Torino Oggi, Euronews (en), Al Jazeera. Ricerca rifiutata: reuters.com, theguardian.com, bbc.com, lemonde.fr. Senza risultati: skytg24.it. Lettura non riuscita: torinotoday.it."
     }
   ]
 }
