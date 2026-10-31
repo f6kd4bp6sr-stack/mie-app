@@ -18,447 +18,10 @@
   ]
  },
  "livelli": {
-  "1": "Base",
   "2": "Intermedio",
   "3": "Avanzato"
  },
  "schede": [
-  {
-   "id": "b1-che-cose",
-   "liv": 1,
-   "tema": "basi",
-   "ic": "🤖",
-   "t": "Che cos'è un assistente di IA",
-   "testo": [
-    "Un assistente di intelligenza artificiale (IA) è un programma con cui parli scrivendo, o a voce. Ne esistono molti: un assistente come Claude, ChatGPT, Gemini o Copilot. Gli fai una domanda e ti risponde con un testo.",
-    "Dentro c'è un «modello linguistico». Ha letto tantissimi testi e ha imparato quali parole di solito vengono dopo altre. Quando risponde, prevede il testo più probabile, parola dopo parola.",
-    "Per questo scrive bene, ma non «sa» le cose come una persona. Non ha emozioni, non ha esperienza della vita e non capisce davvero chi sei.",
-    "È uno strumento utile, come una calcolatrice per le parole. La decisione finale resta sempre tua."
-   ],
-   "punti": [
-    "L'IA prevede il testo più probabile: non pensa come una persona e non ha emozioni.",
-    "Scrive in modo sicuro anche quando sbaglia.",
-    "È un aiuto per scrivere e capire, non un esperto di fiducia.",
-    "La decisione finale è sempre tua."
-   ],
-   "prova": {
-    "t": "Chiedi all'assistente di spiegarti come funziona, con parole semplici.",
-    "prompt": "Spiegami in 5 frasi semplici come funzioni tu, assistente di intelligenza artificiale. Usa un esempio della vita di tutti i giorni. Dimmi anche due cose che non sai fare bene.",
-    "guarda": "Se ammette i suoi limiti: per esempio che può sbagliare, che non ha emozioni o che le sue conoscenze hanno una data."
-   },
-   "quiz": [
-    {
-     "id": "b1q1",
-     "q": "Come produce le risposte un assistente di IA?",
-     "ok": "Prevede le parole più probabili, partendo da tantissimi testi letti",
-     "wrong": [
-      "Cerca la risposta giusta in un grande archivio controllato da esperti",
-      "Chiede ogni volta a una persona che risponde al posto suo"
-     ],
-     "e": "Un modello linguistico calcola quale testo è più probabile. Non consulta un archivio verificato e non c'è una persona dietro ogni risposta."
-    },
-    {
-     "id": "b1q2",
-     "q": "L'assistente ti scrive «Mi dispiace molto». Che cosa significa?",
-     "ok": "È un modo di scrivere imparato dai testi, non un sentimento vero",
-     "wrong": [
-      "Prova davvero dispiacere per te",
-      "Ha capito come ti senti meglio di un amico"
-     ],
-     "e": "L'IA imita il linguaggio umano, comprese le frasi gentili. Non ha emozioni e non ti conosce."
-    },
-    {
-     "id": "b1q3",
-     "q": "Chi prende la decisione finale dopo una risposta dell'IA?",
-     "ok": "Tu, dopo aver controllato",
-     "wrong": [
-      "L'assistente, perché ha letto più testi di te",
-      "Nessuno: la risposta dell'IA vale come un documento ufficiale"
-     ],
-     "e": "L'IA è uno strumento. La responsabilità di che cosa fare, firmare o inviare resta sempre tua."
-    }
-   ],
-   "fonti": [
-    {
-     "c": "Comitato europeo per la protezione dei dati (EDPB), Rapporto della task force su ChatGPT (2024)",
-     "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/other/report-work-undertaken-chatgpt-taskforce_en"
-    }
-   ]
-  },
-  {
-   "id": "b1-chiedere-bene",
-   "liv": 1,
-   "tema": "basi",
-   "ic": "✍️",
-   "t": "Come chiedere bene",
-   "testo": [
-    "La richiesta che scrivi all'assistente si chiama «prompt» (parola inglese che vuol dire, appunto, richiesta). Più è chiara, più la risposta è utile.",
-    "Una buona richiesta ha quattro parti: il contesto (chi sei e la situazione), l'obiettivo (che cosa ti serve), la forma (lunghezza, tono, elenco o lettera) e, se puoi, un esempio.",
-    "Se la prima risposta non va bene, non ricominciare da capo. Chiedi di migliorarla: «più breve», «più formale», «togli i termini tecnici». È una conversazione."
-   ],
-   "punti": [
-    "Contesto, obiettivo, forma della risposta, esempio: le quattro parti di una buona richiesta.",
-    "Scrivi come parleresti a un collaboratore nuovo, che non sa niente di te.",
-    "Se la risposta non va, chiedi di correggerla: «più breve», «più semplice».",
-    "Usa [segnaposto] al posto dei dati personali."
-   ],
-   "prova": {
-    "t": "Confronta una richiesta vaga con una richiesta completa.",
-    "prompt": "Ho [età] anni e voglio camminare di più. Obiettivo: un piano di passeggiate per [numero] giorni a settimana, partendo da poco. Forma: una tabella semplice con giorno, durata e un consiglio. Esempio di riga: «Lunedì, 20 minuti, passo tranquillo». Alla fine ricordami di sentire il medico prima di iniziare.",
-    "guarda": "Se la risposta rispetta la forma che hai chiesto. Poi prova a chiedere «rendila più breve» e guarda come cambia."
-   },
-   "quiz": [
-    {
-     "id": "b1q4",
-     "q": "Quale richiesta funziona meglio?",
-     "ok": "«Scrivi un invito per la festa di [nome], tono allegro, massimo 5 righe»",
-     "wrong": [
-      "«Invito»",
-      "«Fai tu, come ti pare»"
-     ],
-     "e": "La richiesta migliore dice l'obiettivo, il tono e la lunghezza. Con una sola parola l'assistente deve indovinare."
-    },
-    {
-     "id": "b1q5",
-     "q": "La prima risposta è troppo lunga. Che cosa conviene fare?",
-     "ok": "Chiedere nella stessa chat: «Riassumila in 3 righe»",
-     "wrong": [
-      "Chiudere tutto: vuol dire che l'IA non funziona",
-      "Riscrivere la stessa richiesta identica sperando in meglio"
-     ],
-     "e": "Si può correggere la risposta chiedendo modifiche precise. Ripetere la stessa richiesta identica non dice all'assistente che cosa cambiare."
-    },
-    {
-     "id": "b1q6",
-     "q": "Che cos'è un «prompt»?",
-     "ok": "La richiesta che scrivi all'assistente",
-     "wrong": [
-      "Un virus che entra nell'iPad",
-      "Il nome dell'azienda che ha creato l'IA"
-     ],
-     "e": "«Prompt» è una parola inglese che indica il testo con cui chiedi qualcosa all'assistente."
-    }
-   ],
-   "fonti": [
-    {
-     "c": "OpenAI, Buone pratiche per scrivere le richieste a ChatGPT (s.d.)",
-     "url": "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt"
-    }
-   ]
-  },
-  {
-   "id": "u1-lettera",
-   "liv": 1,
-   "tema": "usi",
-   "ic": "📨",
-   "t": "Scrivere una lettera, un'email o una PEC",
-   "testo": [
-    "L'assistente è bravo a scrivere testi formali: una lettera a un ufficio, un'email a un'associazione, il testo di una PEC (posta elettronica certificata).",
-    "Tu dai i punti principali, lui li mette in ordine con un tono corretto. Puoi anche incollare una bozza tua e chiedere di correggerla, senza cambiare il senso.",
-    "Prima di inviare, rileggi tutto. Controlla date, numeri di pratica e nomi: inseriscili tu alla fine, al posto dei [segnaposto]."
-   ],
-   "punti": [
-    "Dai i punti principali: l'assistente li ordina in un testo chiaro.",
-    "Chiedi il tono: cortese, formale, deciso ma educato.",
-    "I dati veri li aggiungi tu, alla fine, al posto dei segnaposto.",
-    "Rileggi sempre prima di inviare: la firma è tua."
-   ],
-   "prova": {
-    "t": "Fatti scrivere una richiesta formale a un ufficio.",
-    "prompt": "Scrivi una email formale e cortese a [nome dell'ufficio]. Devo chiedere [che cosa chiedi, per esempio un appuntamento o una copia di un documento] per la pratica [numero di pratica]. Massimo 10 righe. Chiudi con i saluti e lascia lo spazio per [nome e cognome]. Poi dammi anche un oggetto breve.",
-    "guarda": "Se il tono è adatto, se l'oggetto è chiaro e se ha lasciato i segnaposto al posto giusto, senza inventare dati."
-   },
-   "quiz": [
-    {
-     "id": "b1q7",
-     "q": "Che cosa fai prima di inviare una PEC scritta con l'IA?",
-     "ok": "La rileggo e inserisco io i dati veri",
-     "wrong": [
-      "La invio subito: l'IA non sbaglia la grammatica",
-      "Chiedo all'IA di inviarla al posto mio con i miei dati"
-     ],
-     "e": "Il testo può contenere errori o dettagli inventati. Rileggere è indispensabile, e i dati veri li inserisci tu."
-    },
-    {
-     "id": "b1q8",
-     "q": "Hai una bozza tua, scritta di getto. Che cosa puoi chiedere?",
-     "ok": "«Correggi la forma e rendila più chiara, senza cambiare il senso»",
-     "wrong": [
-      "Niente: l'IA sa solo scrivere da zero",
-      "«Riscrivila inventando dettagli per renderla più forte»"
-     ],
-     "e": "Rivedere una bozza è uno degli usi migliori. Chiedi di non cambiare il senso e di non aggiungere fatti."
-    },
-    {
-     "id": "b1q9",
-     "q": "Perché usare [segnaposto] come [numero di pratica]?",
-     "ok": "Per non dare all'IA dati personali o riservati",
-     "wrong": [
-      "Perché l'IA non sa leggere i numeri",
-      "Perché le PEC non possono contenere numeri"
-     ],
-     "e": "I segnaposto ti fanno ottenere un testo pronto senza condividere dati. Li sostituisci tu prima di inviare."
-    }
-   ]
-  },
-  {
-   "id": "u1-domande",
-   "liv": 1,
-   "tema": "usi",
-   "ic": "❓",
-   "t": "Preparare le domande giuste",
-   "testo": [
-    "Prima di andare in un ufficio, dal medico o di chiamare un artigiano, l'assistente ti aiuta a preparare le domande. Così non dimentichi niente.",
-    "Descrivi la situazione in generale, senza dati personali, e chiedi un elenco di domande in ordine di importanza. Puoi chiedere anche quali documenti portare.",
-    "Le risposte le dà la persona competente, non l'IA. L'assistente ti aiuta solo a non arrivare impreparato."
-   ],
-   "punti": [
-    "Chiedi un elenco di domande, dalla più importante alla meno importante.",
-    "Chiedi anche: «Quali documenti conviene portare?»",
-    "Descrivi la situazione in generale, senza nomi né dati sanitari.",
-    "Le risposte vere le dà il professionista."
-   ],
-   "prova": {
-    "t": "Prepara le domande per un artigiano.",
-    "prompt": "Devo chiamare un [tipo di artigiano, per esempio idraulico] per [descrizione generale del problema]. Preparami 8 domande da fare prima di accettare il lavoro: prezzo, tempi, garanzia, preventivo scritto. Mettile in ordine di importanza, con frasi brevi.",
-    "guarda": "Se le domande sono concrete e se c'è quella sul preventivo scritto. Togli quelle che non ti servono."
-   },
-   "quiz": [
-    {
-     "id": "b1q10",
-     "q": "Vuoi preparare una visita medica. Che cosa scrivi all'assistente?",
-     "ok": "Una descrizione generale e la richiesta di domande da fare al medico",
-     "wrong": [
-      "Il referto completo con nome e codice del paziente",
-      "La richiesta di una diagnosi, così non serve andare"
-     ],
-     "e": "L'IA aiuta a preparare le domande. La diagnosi spetta al medico e i documenti sanitari non vanno inseriti."
-    },
-    {
-     "id": "b1q11",
-     "q": "A che cosa serve un elenco di domande preparato prima?",
-     "ok": "A non dimenticare le cose importanti durante l'incontro",
-     "wrong": [
-      "A sostituire l'incontro con l'ufficio",
-      "A sapere già le risposte giuste"
-     ],
-     "e": "L'elenco ti aiuta a organizzarti. Le risposte vere arrivano dalla persona competente."
-    },
-    {
-     "id": "b1q12",
-     "q": "Quale domanda in più conviene chiedere all'assistente?",
-     "ok": "«Quali documenti conviene portare?»",
-     "wrong": [
-      "«Qual è il mio codice fiscale?»",
-      "«Puoi telefonare tu all'ufficio?»"
-     ],
-     "e": "Sapere che cosa portare evita un secondo viaggio. L'assistente non conosce i tuoi dati e non telefona per te."
-    }
-   ]
-  },
-  {
-   "id": "p1-verifica",
-   "liv": 1,
-   "tema": "prudenza",
-   "ic": "🔎",
-   "t": "Verifica sempre alla fonte ufficiale",
-   "testo": [
-    "L'IA può sbagliare, anche con tono sicuro. Il Comitato europeo per la protezione dei dati, a proposito di ChatGPT, lo ha scritto chiaramente: le risposte possono essere distorte o inventate, e chi legge tende a crederle vere.",
-    "Per leggi, pensione, tasse, salute e numeri vale una regola fissa: controlla sempre sulla fonte ufficiale, cioè il sito dell'ente o il testo della legge.",
-    "L'IA non sostituisce un professionista. Anche la legge italiana sull'IA, L. 132/2025, dice che in sanità la decisione spetta sempre al medico."
-   ],
-   "punti": [
-    "Leggi, pensione, tasse, salute e numeri: verifica sempre sul sito ufficiale.",
-    "Chiedi all'assistente da dove prende le informazioni, poi controlla tu.",
-    "Per decisioni importanti, parla con un professionista o con l'ufficio competente.",
-    "Un tono sicuro non è una prova."
-   ],
-   "prova": {
-    "t": "Chiedi all'assistente di dirti che cosa verificare.",
-    "prompt": "Ho letto questa informazione: [frase da verificare, senza dati personali]. Non darmi una risposta definitiva. Dimmi: 1) quale ente ufficiale se ne occupa; 2) quale documento o pagina dovrei consultare; 3) quali domande fare a un professionista.",
-    "guarda": "Se ti indica enti e documenti ufficiali invece di darti una certezza. Poi apri tu il sito dell'ente."
-   },
-   "quiz": [
-    {
-     "id": "b1q13",
-     "q": "L'assistente ti dà una data di scadenza fiscale. Che cosa fai?",
-     "ok": "La controllo sul sito ufficiale dell'ente",
-     "wrong": [
-      "Me la segno: l'IA ha sempre i dati aggiornati",
-      "La giro ad amici e parenti, così sono avvisati"
-     ],
-     "e": "Le date possono essere vecchie o sbagliate. Per tasse e pensione vale solo la fonte ufficiale."
-    },
-    {
-     "id": "b1q14",
-     "q": "Secondo la L. 132/2025, chi decide in ambito sanitario?",
-     "ok": "Il medico; l'IA è solo un supporto",
-     "wrong": [
-      "L'IA, perché è più precisa",
-      "Il paziente, seguendo l'IA"
-     ],
-     "e": "La legge dice che i sistemi di IA in sanità sono un supporto e che la decisione è sempre del medico."
-    },
-    {
-     "id": "b1q15",
-     "q": "L'assistente risponde con grande sicurezza. Vuol dire che ha ragione?",
-     "ok": "No: può sbagliare anche con tono sicuro",
-     "wrong": [
-      "Sì: se fosse incerto lo direbbe sempre",
-      "Sì, se la risposta è lunga e dettagliata"
-     ],
-     "e": "Il tono e la lunghezza non dimostrano niente. Conta solo la verifica su una fonte affidabile."
-    }
-   ],
-   "fonti": [
-    {
-     "c": "Comitato europeo per la protezione dei dati (EDPB), Rapporto della task force su ChatGPT (2024)",
-     "url": "https://www.edpb.europa.eu/our-work-tools/our-documents/other/report-work-undertaken-chatgpt-taskforce_en"
-    },
-    {
-     "c": "Gazzetta Ufficiale, Serie generale n. 223 del 25 settembre 2025, testo della L. 132/2025 (2025)",
-     "url": "https://www.gazzettaufficiale.it/eli/gu/2025/09/25/223/sg/pdf"
-    }
-   ]
-  },
-  {
-   "id": "p1-dati",
-   "liv": 1,
-   "tema": "prudenza",
-   "ic": "🔒",
-   "t": "I dati da non inserire mai",
-   "testo": [
-    "Quello che scrivi in una chat viene salvato dal servizio e, secondo le impostazioni, può essere letto per controlli o usato per migliorare il sistema. Meglio non scrivere niente che non metteresti in una cartolina.",
-    "Non inserire mai: codice fiscale, IBAN, numeri delle carte, password, codici di accesso, documenti sanitari, dati e foto di tua figlia.",
-    "Usa i segnaposto: scrivi [nome], [indirizzo], [numero di pratica]. L'assistente prepara il testo e i dati veri li metti tu alla fine."
-   ],
-   "punti": [
-    "Mai codice fiscale, IBAN, carte, password o codici.",
-    "Mai documenti sanitari né dati o foto di tua figlia.",
-    "Usa [segnaposto] e inserisci tu i dati veri alla fine.",
-    "Se un documento contiene dati personali, coprili prima di fotografarlo."
-   ],
-   "prova": {
-    "t": "Fatti aiutare a togliere i dati da un testo.",
-    "prompt": "Ti spiego un testo senza incollarlo: è una lettera con nome, indirizzo, numero di telefono e numero di pratica. Dimmi come riscriverla usando [segnaposto] al posto di ogni dato personale, con un esempio di frase già pronta.",
-    "guarda": "Se ti propone segnaposto chiari come [nome] e [numero di pratica], e se ti ricorda di non incollare dati veri."
-   },
-   "quiz": [
-    {
-     "id": "b1q16",
-     "q": "Quale di questi puoi scrivere in una chat con l'IA?",
-     "ok": "«Scrivi una lettera per [nome] che abita in [indirizzo]»",
-     "wrong": [
-      "Il tuo IBAN, per farti aiutare con un bonifico",
-      "La password della banca, per farti spiegare come cambiarla"
-     ],
-     "e": "I segnaposto permettono di ottenere il testo senza dare dati. IBAN e password non vanno mai scritti."
-    },
-    {
-     "id": "b1q17",
-     "q": "Vuoi aiuto per un compito di tua figlia. Che cosa eviti?",
-     "ok": "Di inserire il suo nome, la scuola e le sue foto",
-     "wrong": [
-      "Di chiedere una spiegazione semplice dell'argomento",
-      "Di chiedere esercizi simili per allenarsi"
-     ],
-     "e": "Si può chiedere una spiegazione generale. I dati e le foto di un minore non vanno mai inseriti."
-    },
-    {
-     "id": "b1q18",
-     "q": "Un modulo da far leggere all'IA contiene i tuoi dati. Che cosa fai?",
-     "ok": "Copro i dati prima di fotografarlo, oppure non lo carico",
-     "wrong": [
-      "Lo carico così com'è: tanto è un computer",
-      "Lo carico e poi cancello la chat il giorno dopo"
-     ],
-     "e": "Cancellare dopo non basta: i dati sono già stati inviati. Meglio coprirli prima o rinunciare."
-    }
-   ],
-   "fonti": [
-    {
-     "c": "OpenAI, Domande frequenti sui controlli dei dati (s.d.)",
-     "url": "https://help.openai.com/en/articles/7730893-data-controls-faq"
-    },
-    {
-     "c": "Anthropic, Aggiornamenti alle condizioni per i consumatori (2025)",
-     "url": "https://www.anthropic.com/news/updates-to-our-consumer-terms"
-    }
-   ]
-  },
-  {
-   "id": "k1-legge-eta",
-   "liv": 1,
-   "tema": "bimba",
-   "ic": "👧",
-   "t": "L'IA e i minori: che cosa dice la legge",
-   "testo": [
-    "In Italia c'è una legge sull'IA: la L. 132/2025, in vigore dal 10 ottobre 2025. Dice che i minori di 14 anni possono usare l'IA solo con il consenso di chi esercita la responsabilità genitoriale.",
-    "Ogni servizio ha poi un'età minima nelle sue condizioni d'uso. Per esempio ChatGPT, in Europa, chiede almeno 13 anni (o l'età minima prevista nel Paese) e il permesso dei genitori sotto i 18. Claude chiede almeno 18 anni.",
-    "Le condizioni cambiano nel tempo. Prima di far provare un servizio, controlla l'età minima nelle sue condizioni d'uso."
-   ],
-   "punti": [
-    "Sotto i 14 anni serve il consenso dei genitori (L. 132/2025).",
-    "Ogni servizio ha la sua età minima: molti chiedono 13 anni, alcuni 18.",
-    "Controlla l'età minima nelle condizioni del servizio, perché può cambiare.",
-    "Con una bambina di 10 anni, l'IA si usa insieme a te."
-   ],
-   "prova": {
-    "t": "Fatti spiegare le condizioni d'uso di un servizio.",
-    "prompt": "Ti incollo un estratto delle condizioni d'uso di [nome del servizio]: [testo copiato dalla pagina ufficiale]. Spiegami in parole semplici: qual è l'età minima, se serve il permesso dei genitori e che cosa dice sui dati dei minori. Indicami la frase esatta da cui lo ricavi.",
-    "guarda": "Se cita la frase esatta del testo che hai incollato. Poi rileggi tu quella frase sulla pagina ufficiale."
-   },
-   "quiz": [
-    {
-     "id": "b1q19",
-     "q": "Secondo la L. 132/2025, un bambino di 10 anni può usare l'IA…",
-     "ok": "solo con il consenso dei genitori",
-     "wrong": [
-      "liberamente, se il servizio è gratuito",
-      "solo a scuola, mai a casa"
-     ],
-     "e": "La legge chiede il consenso di chi esercita la responsabilità genitoriale per i minori di 14 anni."
-    },
-    {
-     "id": "b1q20",
-     "q": "Dove trovi l'età minima di un servizio di IA?",
-     "ok": "Nelle sue condizioni d'uso ufficiali",
-     "wrong": [
-      "Lo chiedo all'IA e mi fido della risposta",
-      "È uguale per tutti i servizi: 10 anni"
-     ],
-     "e": "Ogni servizio decide la propria età minima e la scrive nelle condizioni d'uso, che possono cambiare."
-    },
-    {
-     "id": "b1q21",
-     "q": "Da quando è in vigore la legge italiana sull'IA?",
-     "ok": "Dal 10 ottobre 2025",
-     "wrong": [
-      "Dal 1° gennaio 2020",
-      "Non è ancora in vigore"
-     ],
-     "e": "La L. 132/2025 è stata pubblicata in Gazzetta Ufficiale il 25 settembre 2025 ed è in vigore dal 10 ottobre 2025."
-    }
-   ],
-   "fonti": [
-    {
-     "c": "Normattiva, Legge 23 settembre 2025, n. 132 sull'intelligenza artificiale (2025)",
-     "url": "https://www.normattiva.it/eli/id/2025/09/25/25G00143/ORIGINAL"
-    },
-    {
-     "c": "Gazzetta Ufficiale, Serie generale n. 223 del 25 settembre 2025, testo della L. 132/2025 (2025)",
-     "url": "https://www.gazzettaufficiale.it/eli/gu/2025/09/25/223/sg/pdf"
-    },
-    {
-     "c": "OpenAI, Condizioni d'uso per l'Europa (2026)",
-     "url": "https://openai.com/policies/eu-terms-of-use/"
-    },
-    {
-     "c": "Anthropic, Condizioni d'uso per i consumatori (2025)",
-     "url": "https://www.anthropic.com/legal/consumer-terms"
-    }
-   ]
-  },
   {
    "id": "b2-inventa",
    "liv": 2,
@@ -1191,6 +754,984 @@
      "url": "https://www.normattiva.it/eli/id/2025/09/25/25G00143/ORIGINAL"
     }
    ]
+  },
+  {
+   "id": "b3-token",
+   "liv": 3,
+   "tema": "basi",
+   "ic": "🧩",
+   "t": "Come funziona davvero: token e memoria della chat",
+   "testo": [
+    "L'assistente non legge parole intere ma «token», cioè pezzetti di testo: una parola breve, un pezzo di parola, un segno di punteggiatura. In inglese 100 token valgono in media circa 75 parole; in altre lingue, come l'italiano, spesso ne servono di più.",
+    "La «finestra di contesto» è la memoria di lavoro di una chat: tutto il testo che il modello vede insieme, cioè le tue domande e le sue risposte. Ha un limite. Nelle chat molto lunghe l'inizio può uscire dalla finestra o essere riassunto, e la precisione cala.",
+    "Addestramento e conversazione sono cose diverse. L'addestramento è avvenuto prima, su enormi quantità di testi. Durante la chat il modello non impara in modo permanente: quello che scrivi resta in quella conversazione. Alcuni servizi però possono usare le chat per addestrare versioni future, se lo permetti.",
+    "Per un lavoro lungo, ogni tanto chiedi un riassunto dei punti decisi. Poi apri una chat nuova e incollalo: l'assistente riparte con le idee chiare."
+   ],
+   "punti": [
+    "Token: pezzetti di testo che il modello legge e scrive.",
+    "Finestra di contesto: la memoria di lavoro di una sola chat, con un limite.",
+    "Nelle chat lunghissime l'inizio può essere dimenticato o riassunto.",
+    "Lavori lunghi: riassunto dei punti fermi e chat nuova.",
+    "Mentre parli, il modello non impara in modo permanente."
+   ],
+   "prova": {
+    "t": "Metti alla prova la memoria di una chat lunga.",
+    "prompt": "Stiamo per lavorare a lungo su [argomento]. Prima di iniziare, spiegami in 5 righe semplici che cosa sono i token e la finestra di contesto. Poi, ogni 10 messaggi, preparami un riassunto di massimo 8 righe con i punti decisi, così posso copiarlo in una chat nuova se serve. Se non ricordi bene qualcosa detto all'inizio, dimmelo invece di indovinare.",
+    "guarda": "Se ammette quando non ricorda l'inizio. Prova a incollare il riassunto in una chat nuova: il lavoro riprende bene?"
+   },
+   "quiz": [
+    {
+     "id": "b3tq1",
+     "q": "Che cos'è un «token»?",
+     "ok": "Un pezzetto di testo che il modello legge e scrive",
+     "wrong": [
+      "Una moneta digitale per pagare l'assistente",
+      "Una password per entrare nella chat"
+     ],
+     "e": "Il testo viene diviso in token: parole brevi, pezzi di parola o segni. Anche i limiti delle chat si misurano in token."
+    },
+    {
+     "id": "b3tq2",
+     "q": "In una chat lunghissima l'assistente non ricorda una cosa detta all'inizio. Perché?",
+     "ok": "Perché l'inizio può essere uscito dalla finestra di contesto",
+     "wrong": [
+      "Perché si è offeso",
+      "Perché l'iPad ha poca batteria"
+     ],
+     "e": "La finestra di contesto ha un limite. Quando si riempie, le parti più vecchie possono essere tolte o riassunte e la precisione cala."
+    },
+    {
+     "id": "b3tq3",
+     "q": "Dici all'assistente il nome del tuo gatto. Il modello lo saprà per sempre?",
+     "ok": "No: resta in quella chat, salvo memoria o impostazioni",
+     "wrong": [
+      "Sì: il modello si aggiorna subito con ogni chat",
+      "Sì, e lo dirà a tutti gli altri utenti"
+     ],
+     "e": "Il modello è addestrato prima. In chat non impara in modo permanente, ma il servizio può salvare la chat o usarla per addestramenti futuri, secondo le impostazioni."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "OpenAI, Che cosa sono i token e come contarli (s.d.)",
+     "url": "https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them"
+    },
+    {
+     "c": "Anthropic, Documentazione: la finestra di contesto (s.d.)",
+     "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows"
+    }
+   ]
+  },
+  {
+   "id": "b3-verifica",
+   "liv": 3,
+   "tema": "basi",
+   "ic": "🔎",
+   "t": "Verifica incrociata: fonti vere o inventate?",
+   "testo": [
+    "Una risposta sicura non è per forza una risposta vera. La verifica incrociata è un'abitudine semplice: confronti due risposte, chiedi le fonti e le apri davvero, una per una.",
+    "Le citazioni inventate sono un errore frequente. In uno studio del 2023 sulla rivista Scientific Reports, il 55% delle citazioni di GPT-3.5 e il 18% di quelle di GPT-4 rimandavano a lavori che non esistono. I modelli sono migliorati, ma il rischio resta.",
+    "Segnali d'allarme: un link che non si apre o porta a un'altra pagina; un libro che non trovi nel catalogo di una biblioteca; una frase tra virgolette che nella fonte non c'è. In questi casi la citazione non vale.",
+    "Confrontare due assistenti aiuta a scoprire i punti in disaccordo. Ma due risposte uguali non sono una prova: possono sbagliare allo stesso modo. Decide la fonte originale."
+   ],
+   "punti": [
+    "Chiedi le fonti, poi aprile e leggi tu la frase citata.",
+    "Link rotto o pagina diversa: la citazione non vale.",
+    "Libri e articoli si controllano nel catalogo di una biblioteca.",
+    "Due assistenti d'accordo non sono una prova."
+   ],
+   "prova": {
+    "t": "Metti alla prova le fonti di una risposta.",
+    "prompt": "Rispondi a questa domanda: [domanda su un tema pubblico, per esempio una regola o un fatto storico]. Per ogni affermazione importante indica la fonte con titolo, autore o ente, anno e link. Separa le cose che puoi documentare da quelle che deduci. Se non hai una fonte, scrivi «fonte non disponibile» invece di inventarla.",
+    "guarda": "Apri ogni link: la pagina esiste e dice davvero quella cosa? Cerca i libri citati nel catalogo di una biblioteca. Anche una sola fonte falsa è un campanello d'allarme."
+   },
+   "quiz": [
+    {
+     "id": "b3vq1",
+     "q": "L'assistente cita un articolo con titolo, autore e anno. Che cosa fai?",
+     "ok": "Lo cerco e leggo il punto citato",
+     "wrong": [
+      "Mi fido: ci sono tutti i dati",
+      "Lo copio così com'è nella mia lettera"
+     ],
+     "e": "Gli studi mostrano che i modelli possono inventare citazioni complete e credibili. Solo aprendo la fonte sai se esiste e se dice quella cosa."
+    },
+    {
+     "id": "b3vq2",
+     "q": "Due assistenti diversi danno la stessa risposta. Basta?",
+     "ok": "No: serve comunque la fonte originale",
+     "wrong": [
+      "Sì: se due sono d'accordo è vero",
+      "Sì, se rispondono in fretta"
+     ],
+     "e": "I modelli imparano da testi simili e possono ripetere lo stesso errore. Il confronto fa emergere i dubbi, la fonte li risolve."
+    },
+    {
+     "id": "b3vq3",
+     "q": "Apri il link indicato e la pagina parla d'altro. Che cosa significa?",
+     "ok": "Che la citazione non è affidabile",
+     "wrong": [
+      "Che il sito è cambiato e va bene lo stesso",
+      "Che devo fidarmi di più dell'assistente"
+     ],
+     "e": "Un link che non conferma l'affermazione non è una fonte. Chiedi un'altra fonte o cercala tu sui siti ufficiali."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "Walters e Wilder, Fabrication and errors in the bibliographic citations generated by ChatGPT, Scientific Reports (2023)",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10484980"
+    },
+    {
+     "c": "Commissione europea, Trovare informazioni affidabili (2026)",
+     "url": "https://commission.europa.eu/digital-life/finding-information-you-can-trust_it"
+    }
+   ]
+  },
+  {
+   "id": "b3-bias",
+   "liv": 3,
+   "tema": "basi",
+   "ic": "⚖️",
+   "t": "Pregiudizi: l'IA ripete gli stereotipi dei testi",
+   "testo": [
+    "Il modello impara da enormi quantità di testi scritti da persone. Insieme alle conoscenze assorbe anche i pregiudizi, in inglese «bias»: idee fisse su donne e uomini, età, provenienze, professioni.",
+    "Uno studio dell'UNESCO del 2024 su alcuni modelli diffusi ha trovato che i nomi femminili erano associati più spesso a «casa», «famiglia» e «figli», quelli maschili a «carriera» e «stipendio». In alcuni racconti generati, le donne avevano molto più spesso ruoli domestici.",
+    "Le aziende lavorano per ridurre il problema, ma non è sparito. Si nota soprattutto in racconti, immagini, esempi e consigli che riguardano persone e lavori. Accorgersene è il primo passo.",
+    "Puoi chiedere esempi vari ed equilibrati e domandare all'assistente quali stereotipi potrebbero esserci nella sua risposta."
+   ],
+   "punti": [
+    "Bias: pregiudizio appreso dai testi, spesso invisibile.",
+    "Attenzione a racconti, immagini e consigli su persone e lavori.",
+    "Chiedi esempi vari: donne e uomini, età e provenienze diverse.",
+    "Nelle decisioni sulle persone, il giudizio resta tuo."
+   ],
+   "prova": {
+    "t": "Cerca gli stereotipi in un racconto.",
+    "prompt": "Scrivi 3 brevi storie di 5 righe su [professione, per esempio una persona che lavora in ospedale]. Poi rileggi le storie e dimmi: quali ruoli hai dato a donne e uomini? Ci sono stereotipi su età, provenienza o lavoro? Infine riscrivi una delle storie evitandoli.",
+    "guarda": "Se nella prima versione compaiono ruoli scontati, per esempio il medico uomo e l'infermiera donna, e se l'assistente li riconosce da solo."
+   },
+   "quiz": [
+    {
+     "id": "b3bq1",
+     "q": "Che cos'è un «bias» in un sistema di IA?",
+     "ok": "Un pregiudizio appreso dai testi o dai dati",
+     "wrong": [
+      "Un virus che entra nell'iPad",
+      "Un tipo di abbonamento a pagamento"
+     ],
+     "e": "Il modello ripete le regolarità dei testi su cui è addestrato, comprese le idee fisse e gli stereotipi presenti nella società."
+    },
+    {
+     "id": "b3bq2",
+     "q": "Che cosa ha trovato lo studio UNESCO del 2024?",
+     "ok": "Associazioni stereotipate tra donne e lavori domestici",
+     "wrong": [
+      "Che i modelli non hanno nessun pregiudizio",
+      "Che i modelli parlano solo di sport"
+     ],
+     "e": "Lo studio ha trovato che i nomi femminili erano associati più spesso a casa e famiglia, quelli maschili a carriera e stipendio."
+    },
+    {
+     "id": "b3bq3",
+     "q": "Come riduci gli stereotipi in una risposta?",
+     "ok": "Chiedo esempi vari e faccio rileggere la risposta",
+     "wrong": [
+      "Non si può fare niente",
+      "Uso solo assistenti che costano di più"
+     ],
+     "e": "Una richiesta esplicita di varietà e una rilettura critica aiutano. Resta comunque importante il tuo giudizio."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "UNESCO, IA generativa: uno studio rivela stereotipi di genere regressivi (2024)",
+     "url": "https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes"
+    },
+    {
+     "c": "IRCAI e UNESCO, Challenging Systematic Prejudices: bias against women and girls in LLMs (2024)",
+     "url": "https://ircai.org/project/challenging-systematic-prejudices/"
+    }
+   ]
+  },
+  {
+   "id": "u3-agenti",
+   "liv": 3,
+   "tema": "usi",
+   "ic": "🤖",
+   "t": "Agenti: quando l'assistente agisce al posto tuo",
+   "testo": [
+    "Alcuni assistenti non si limitano a rispondere: diventano «agenti», cioè compiono azioni. Aprono siti, compilano moduli, scrivono email, mettono prodotti nel carrello.",
+    "Il rischio nuovo si chiama «prompt injection»: istruzioni nascoste in una pagina web o in un'email, che l'agente legge e che lo spingono a fare cose che non hai chiesto, per esempio mandare dati a estranei.",
+    "Regola pratica: l'agente va bene per cercare, confrontare e preparare bozze. Per pagare, inviare messaggi o entrare in banca, sanità e pratiche personali decidi e confermi tu, passo per passo. Le password le inserisci tu.",
+    "Dai compiti precisi, non «pensa a tutto tu». Concedi solo gli accessi necessari e fermalo subito se va su siti strani o chiede dati."
+   ],
+   "punti": [
+    "Agente: assistente che compie azioni, non solo risposte.",
+    "Sì a ricerche, confronti e bozze da rivedere.",
+    "Pagamenti, invii e conti: confermi sempre tu, passo per passo.",
+    "Compiti precisi e solo gli accessi necessari.",
+    "Comportamento strano? Fermalo subito."
+   ],
+   "prova": {
+    "t": "Prepara istruzioni sicure per un agente.",
+    "prompt": "Voglio usare un assistente che può navigare sul web per [compito, per esempio confrontare tre musei da visitare in una giornata]. Aiutami a scrivere istruzioni precise: che cosa può fare, che cosa non deve fare, quando deve fermarsi e chiedermi conferma. Niente acquisti, niente invii di messaggi, nessun accesso ai miei conti.",
+    "guarda": "Se le istruzioni escludono pagamenti e invii e prevedono che l'agente si fermi a chiedere. Controlla poi tu i risultati sui siti ufficiali."
+   },
+   "quiz": [
+    {
+     "id": "b3aq1",
+     "q": "Che cos'è un «agente» di IA?",
+     "ok": "Un assistente che compie azioni, come compilare moduli",
+     "wrong": [
+      "Un poliziotto che controlla le chat",
+      "Un programma che ripara l'iPad"
+     ],
+     "e": "Gli agenti navigano, cliccano e scrivono per te. Per questo servono più cautela e più conferme."
+    },
+    {
+     "id": "b3aq2",
+     "q": "Che cos'è la «prompt injection»?",
+     "ok": "Istruzioni nascoste in pagine o email che ingannano l'agente",
+     "wrong": [
+      "Un vaccino digitale per l'iPad",
+      "Un modo veloce per scrivere richieste"
+     ],
+     "e": "Un testo malevolo può spingere l'agente a fare cose non richieste, per esempio condividere dati. Per questo servono compiti precisi e accessi limitati."
+    },
+    {
+     "id": "b3aq3",
+     "q": "L'agente sta per pagare un acquisto. Che cosa fai?",
+     "ok": "Controllo io tutti i dettagli e confermo solo se è giusto",
+     "wrong": [
+      "Lascio fare: è più veloce di me",
+      "Gli do la password della banca per comodità"
+     ],
+     "e": "Le stesse aziende consigliano di verificare ogni conferma prima di acquisti o invii. Di quello che l'agente fa a tuo nome rispondi tu."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "OpenAI, Understanding prompt injections: a frontier security challenge (2025)",
+     "url": "https://openai.com/index/prompt-injections/"
+    },
+    {
+     "c": "Anthropic, Use Claude in Chrome safely (s.d.)",
+     "url": "https://support.claude.com/en/articles/12902428-use-claude-in-chrome-safely"
+    },
+    {
+     "c": "Garante privacy, Assistenti digitali (smart assistant): i consigli del Garante per bilanciare utilità e tutela della privacy (2021)",
+     "url": "https://www.garanteprivacy.it/temi/assistenti-digitali"
+    }
+   ]
+  },
+  {
+   "id": "u3-su-misura",
+   "liv": 3,
+   "tema": "usi",
+   "ic": "🗂️",
+   "t": "Assistente su misura: progetti e memoria",
+   "testo": [
+    "Molti assistenti si possono personalizzare. Le istruzioni fisse dicono come rispondere. I «progetti» raccolgono chat, documenti e istruzioni su un solo tema, per esempio un viaggio o un hobby.",
+    "La memoria ricorda informazioni e preferenze da una chat all'altra, per esempio «preferisco risposte brevi». In alcuni servizi ogni progetto ha una memoria separata dalle altre chat.",
+    "Ogni tanto controlla che cosa ricorda: nelle impostazioni puoi leggere, correggere o cancellare i ricordi, oppure mettere in pausa la memoria. Attenzione: cancellare una chat non sempre cancella i ricordi nati da quella chat.",
+    "Per una domanda che non vuoi lasciare in memoria, usa la chat temporanea o in incognito. Nei documenti dei progetti metti solo materiale senza dati personali."
+   ],
+   "punti": [
+    "Progetto: chat, documenti e istruzioni su un solo tema.",
+    "Memoria: preferenze ricordate tra una chat e l'altra.",
+    "Rivedi i ricordi: leggi, correggi, cancella.",
+    "Cancellare una chat non sempre cancella i ricordi.",
+    "Chat temporanea per le domande da non ricordare."
+   ],
+   "prova": {
+    "t": "Controlla che cosa ricorda di te.",
+    "prompt": "Elenca tutto quello che ricordi di me e delle mie preferenze, in punti brevi. Per ciascun punto dimmi da dove viene, se lo sai. Poi spiegami dove trovo nelle impostazioni di [nome del servizio] la pagina per vedere, correggere e cancellare i ricordi. Se non sei sicuro dei nomi dei menù, indicami la pagina di aiuto ufficiale.",
+    "guarda": "Se l'elenco corrisponde a quello che vedi nelle impostazioni. Cancella i ricordi che non ti servono o che contengono dati personali."
+   },
+   "quiz": [
+    {
+     "id": "b3mq1",
+     "q": "A che cosa serve un «progetto» in un assistente?",
+     "ok": "A raccogliere chat, documenti e istruzioni su un tema",
+     "wrong": [
+      "A costruire una casa con l'IA",
+      "A rendere pubbliche le tue chat"
+     ],
+     "e": "Un progetto tiene insieme il materiale di un argomento, così l'assistente ha il contesto giusto senza che tu lo ripeta ogni volta."
+    },
+    {
+     "id": "b3mq2",
+     "q": "Hai cancellato una chat. Anche i ricordi nati lì sono spariti?",
+     "ok": "Non sempre: controllo la pagina della memoria",
+     "wrong": [
+      "Sì, sempre e subito",
+      "I ricordi non si possono mai cancellare"
+     ],
+     "e": "In alcuni servizi i ricordi si cancellano a parte, dalle impostazioni della memoria. Conviene verificare."
+    },
+    {
+     "id": "b3mq3",
+     "q": "Vuoi fare una domanda senza lasciare traccia nella memoria. Che cosa usi?",
+     "ok": "La chat temporanea o in incognito",
+     "wrong": [
+      "Una chat normale scritta in fretta",
+      "Una chat dentro un progetto condiviso"
+     ],
+     "e": "Le chat temporanee non entrano nella memoria. Anche lì, comunque, niente dati personali."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "Anthropic, Use Claude's chat search and memory (s.d.)",
+     "url": "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+    },
+    {
+     "c": "OpenAI, Memory FAQ (s.d.)",
+     "url": "https://help.openai.com/en/articles/8983136-what-is-memory"
+    },
+    {
+     "c": "Google, Personalizzare le risposte di Gemini con le tue istruzioni (s.d.)",
+     "url": "https://support.google.com/gemini/answer/16598625"
+    }
+   ]
+  },
+  {
+   "id": "p3-autore",
+   "liv": 3,
+   "tema": "prudenza",
+   "ic": "🎨",
+   "t": "Immagini, voci e diritto d'autore: le regole",
+   "testo": [
+    "Con l'IA si creano immagini, testi, musica e voci. In Italia la legge 132 del 2025 ha chiarito che il diritto d'autore protegge le opere dell'ingegno umano, anche create con l'aiuto dell'IA, purché siano frutto del lavoro intellettuale dell'autore.",
+    "La stessa legge ha introdotto un reato: diffondere senza consenso immagini, video o voci falsificati con l'IA, capaci di ingannare, causando un danno ingiusto. La pena va da uno a cinque anni.",
+    "Per l'AI Act, dal 2 agosto 2026 i deepfake vanno dichiarati in modo chiaro. Anche per un uso privato, come un biglietto di auguri, valgono buon senso e rispetto delle persone.",
+    "Regola di casa: niente volti o voci di persone reali senza il loro permesso, mai di minori. Per un caso concreto, chiedi a un professionista."
+   ],
+   "punti": [
+    "Il diritto d'autore protegge le opere umane, anche fatte con l'aiuto dell'IA.",
+    "Diffondere falsi dannosi senza consenso è reato in Italia dal 2025.",
+    "Dal 2 agosto 2026 i deepfake vanno dichiarati.",
+    "Mai volti o voci di altri senza permesso; mai di minori.",
+    "Per un caso concreto, chiedi a un professionista."
+   ],
+   "prova": {
+    "t": "Crea un'immagine rispettando le regole.",
+    "prompt": "Voglio creare un'immagine per [occasione, per esempio un biglietto di compleanno]. Proponi 3 idee che non usino volti di persone reali, marchi famosi o personaggi protetti da diritto d'autore. Per ciascuna scrivi la richiesta da dare a un generatore di immagini e una breve dicitura da aggiungere, come «immagine creata con l'IA».",
+    "guarda": "Se evita persone reali e personaggi famosi, e se propone di dichiarare l'uso dell'IA."
+   },
+   "quiz": [
+    {
+     "id": "b3dq1",
+     "q": "Che cosa protegge il diritto d'autore secondo la legge 132/2025?",
+     "ok": "Le opere dell'ingegno umano, anche create con l'aiuto dell'IA",
+     "wrong": [
+      "Qualsiasi immagine prodotta dall'IA da sola",
+      "Solo le opere scritte a mano"
+     ],
+     "e": "La legge ha aggiunto la parola «umano»: serve il lavoro intellettuale di una persona, anche se usa strumenti di IA."
+    },
+    {
+     "id": "b3dq2",
+     "q": "Che cosa ha introdotto la legge 132/2025 sui falsi creati con l'IA?",
+     "ok": "Un reato per chi li diffonde senza consenso causando un danno",
+     "wrong": [
+      "L'obbligo di usare l'IA per tutte le foto",
+      "Un premio per i video più realistici"
+     ],
+     "e": "Il nuovo art. 612-quater del codice penale punisce la diffusione dannosa, senza consenso, di immagini, video o voci falsificati con l'IA."
+    },
+    {
+     "id": "b3dq3",
+     "q": "Vuoi fare un video scherzoso con la voce di un amico creata con l'IA. Che cosa fai?",
+     "ok": "Chiedo prima il suo permesso",
+     "wrong": [
+      "Lo pubblico: è solo uno scherzo",
+      "Uso la voce di un famoso, così nessuno si offende"
+     ],
+     "e": "Volto e voce appartengono alla persona. Senza consenso puoi violare i suoi diritti, anche con buone intenzioni."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "Gazzetta Ufficiale, Legge 23 settembre 2025, n. 132, artt. 25 e 26 (2025)",
+     "url": "https://www.gazzettaufficiale.it/atto/vediMenuHTML?atto.dataPubblicazioneGazzetta=2025-09-25&atto.codiceRedazionale=25G00143&tipoSerie=serie_generale&tipoVigenza=originario"
+    },
+    {
+     "c": "Commissione europea, Legge sull'IA: regole di trasparenza e calendario (2026)",
+     "url": "https://digital-strategy.ec.europa.eu/it/policies/regulatory-framework-ai"
+    },
+    {
+     "c": "Garante privacy, Deepfake: vademecum e materiali (s.d.)",
+     "url": "https://www.garanteprivacy.it/temi/intelligenza-artificiale/deepfake"
+    }
+   ]
+  },
+  {
+   "id": "u3-salute",
+   "liv": 3,
+   "tema": "usi",
+   "ic": "🩺",
+   "t": "IA e salute: capire, non decidere",
+   "testo": [
+    "L'assistente può aiutarti a capire le parole difficili di un referto o di un foglio informativo e a preparare le domande per la visita. Non può fare una diagnosi né scegliere una cura.",
+    "La legge italiana sull'IA (L. 132/2025, art. 7) dice che in sanità i sistemi di IA sono un supporto e che la decisione resta sempre al medico. Il paziente ha diritto di sapere se viene usata l'IA.",
+    "Nel 2025 il Garante privacy ha avvertito: caricare referti e analisi sulle piattaforme di IA può far perdere il controllo su dati molto delicati, e le risposte possono essere sbagliate. Prima di caricare, leggi l'informativa e valuta bene.",
+    "Il modo più prudente: copia solo le parole o i valori da capire, senza nome, codici o documento intero. Poi porta le domande al medico."
+   ],
+   "punti": [
+    "Sì: spiegare parole difficili e preparare domande per il medico.",
+    "No: diagnosi, cure, dosi di farmaci.",
+    "La decisione spetta al medico (L. 132/2025, art. 7).",
+    "Prima di caricare un referto leggi l'informativa; meglio solo i termini, senza nome.",
+    "Sintomi improvvisi o gravi: chiama il medico o il 112."
+   ],
+   "prova": {
+    "t": "Prepara le domande per la visita.",
+    "prompt": "Tra poco ho una visita da [tipo di specialista]. Nel referto ci sono queste parole che non capisco: [termini, senza nome e senza dati personali]. Spiegamele con parole semplici, in generale, senza fare diagnosi. Poi preparami 6 domande chiare da fare al medico e una lista di cose da portare. Ricordami che decide il medico.",
+    "guarda": "Se resta sul generale e non azzarda diagnosi o cure. Porta le domande alla visita: le risposte sul tuo caso le dà il medico."
+   },
+   "quiz": [
+    {
+     "id": "b3sq1",
+     "q": "Secondo la legge 132/2025, chi decide su diagnosi e cura?",
+     "ok": "Il medico; l'IA è solo un supporto",
+     "wrong": [
+      "L'assistente di IA, se è aggiornato",
+      "Il paziente da solo, con l'aiuto dell'IA"
+     ],
+     "e": "L'art. 7 dice che in sanità i sistemi di IA sono un supporto e che la decisione resta sempre al medico."
+    },
+    {
+     "id": "b3sq2",
+     "q": "Che cosa raccomanda il Garante prima di caricare un referto su una piattaforma di IA?",
+     "ok": "Leggere l'informativa e valutare bene se farlo",
+     "wrong": [
+      "Caricarlo sempre, così la risposta è più precisa",
+      "Caricarlo solo di sera"
+     ],
+     "e": "Nel 2025 il Garante ha avvertito del rischio di perdere il controllo sui dati sanitari e di ricevere risposte sbagliate."
+    },
+    {
+     "id": "b3sq3",
+     "q": "Qual è un buon uso dell'IA prima di una visita?",
+     "ok": "Preparare domande chiare da fare al medico",
+     "wrong": [
+      "Chiedere quale farmaco prendere e in che dose",
+      "Cambiare la cura in base alla risposta"
+     ],
+     "e": "Preparare le domande rende la visita più utile. Farmaci e cure si decidono solo con il medico."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "Gazzetta Ufficiale, Legge 23 settembre 2025, n. 132, art. 7 (2025)",
+     "url": "https://www.gazzettaufficiale.it/atto/vediMenuHTML?atto.dataPubblicazioneGazzetta=2025-09-25&atto.codiceRedazionale=25G00143&tipoSerie=serie_generale&tipoVigenza=originario"
+    },
+    {
+     "c": "Garante privacy, Referti medici e IA: allarme sui rischi di un uso scorretto (2025)",
+     "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10154670"
+    }
+   ]
+  },
+  {
+   "id": "p3-disinfo",
+   "liv": 3,
+   "tema": "prudenza",
+   "ic": "📰",
+   "t": "Notizie false in serie: come controllarle",
+   "testo": [
+    "Con l'IA si producono notizie false in grande quantità. NewsGuard, società che valuta l'affidabilità dei siti, a giugno 2026 contava 3.749 siti di «notizie» scritti in gran parte dall'IA senza un vero controllo umano, anche in italiano.",
+    "Spesso hanno nomi generici, pubblicano decine di articoli al giorno e non dichiarano di usare l'IA. Circolano anche foto e video generati con l'IA o tolti dal loro contesto.",
+    "Tre controlli: la fonte (chi pubblica? La notizia è riportata da altre fonti serie?); la data (è una notizia vecchia rimessa in giro?); l'immagine (con la ricerca inversa, per esempio Google Lens, scopri dove è già comparsa).",
+    "Se una notizia ti fa arrabbiare o spaventare molto, fermati: i contenuti manipolativi puntano sulle emozioni. Nel dubbio, non condividere."
+   ],
+   "punti": [
+    "Fonte: chi pubblica? La riportano altre fonti serie?",
+    "Data: controlla che non sia una notizia vecchia.",
+    "Immagine: cercala con la ricerca inversa, per esempio Google Lens.",
+    "Emozione fortissima? Fermati prima di condividere.",
+    "Nel dubbio, non inoltrare."
+   ],
+   "prova": {
+    "t": "Controlla una notizia prima di condividerla.",
+    "prompt": "Ho letto questa notizia: [titolo e testo, senza dati personali]. Non dirmi se è vera o falsa: aiutami a controllarla da solo. Dammi una lista di verifiche su fonte, data e immagini, con le domande da farmi. Indica quali fonti ufficiali o testate affidabili potrei consultare e come fare una ricerca inversa dell'immagine su iPad.",
+    "guarda": "Se ti guida a controllare invece di darti un verdetto. Fai davvero le verifiche: anche l'assistente può sbagliare sulle notizie recenti."
+   },
+   "quiz": [
+    {
+     "id": "b3nq1",
+     "q": "Una notizia ti fa infuriare e ti invita a condividerla subito. Che cosa fai?",
+     "ok": "Mi fermo e controllo fonte e data",
+     "wrong": [
+      "La condivido: se fa arrabbiare è importante",
+      "La inoltro a tutti per avvisarli"
+     ],
+     "e": "I contenuti manipolativi puntano su emozioni forti. La Commissione europea consiglia di fermarsi e verificare prima di condividere."
+    },
+    {
+     "id": "b3nq2",
+     "q": "A che cosa serve la ricerca inversa di un'immagine?",
+     "ok": "A scoprire dove e quando l'immagine è già comparsa",
+     "wrong": [
+      "A rendere la foto più nitida",
+      "A cancellare la foto da internet"
+     ],
+     "e": "Con strumenti come Google Lens trovi la stessa immagine altrove: a volte è vecchia o viene da un altro luogo."
+    },
+    {
+     "id": "b3nq3",
+     "q": "Un sito ha un nome generico e pubblica decine di articoli al giorno. Che cosa pensi?",
+     "ok": "Potrebbe essere scritto in serie dall'IA: verifico",
+     "wrong": [
+      "È sicuramente un grande giornale",
+      "Più articoli pubblica, più è affidabile"
+     ],
+     "e": "Sono segnali tipici dei siti di contenuti prodotti dall'IA senza controllo umano, secondo il monitoraggio di NewsGuard."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "NewsGuard, AI Tracking Center: siti di notizie generati dall'IA (2026)",
+     "url": "https://www.newsguardtech.com/special-reports/ai-tracking-center/"
+    },
+    {
+     "c": "Commissione europea, Trovare informazioni affidabili (2026)",
+     "url": "https://commission.europa.eu/digital-life/finding-information-you-can-trust_it"
+    },
+    {
+     "c": "Google, Cercare con un'immagine su iPhone e iPad (s.d.)",
+     "url": "https://support.google.com/websearch/answer/1325808?hl=en&co=GENIE.Platform%3DiOS"
+    }
+   ]
+  },
+  {
+   "id": "k3-compagni",
+   "liv": 3,
+   "tema": "bimba",
+   "ic": "🧸",
+   "t": "Chatbot «amici» e controlli per la famiglia",
+   "testo": [
+    "Esistono app con chatbot che fanno da «compagno virtuale»: imitano emozioni e si presentano come amici o confidenti. Nel 2025 la FTC, l'autorità americana per i consumatori, ha avviato un'indagine perché bambini e ragazzi possono fidarsi troppo e affezionarsi.",
+    "Un chatbot «amico» è sempre disponibile e quasi sempre d'accordo. Ma non vuole bene, non custodisce segreti e può essere progettato per tenerti collegato il più a lungo possibile.",
+    "In Italia, sotto i 14 anni, l'accesso alle tecnologie di IA richiede il consenso dei genitori (L. 132/2025, art. 4). Molti servizi indicano nelle condizioni un'età minima: controllala prima.",
+    "Sull'iPad i controlli parentali permettono limiti di tempo, approvazione di app e acquisti, filtri dei contenuti. Aiutano, ma non sostituiscono il dialogo."
+   ],
+   "punti": [
+    "Un chatbot non è un amico: imita affetto e attenzione.",
+    "Sotto i 14 anni serve il consenso dei genitori.",
+    "Controlla l'età minima nelle condizioni del servizio.",
+    "Controlli parentali: tempo, app approvate, filtri dei contenuti.",
+    "Gli strumenti aiutano; il dialogo conta di più."
+   ],
+   "prova": {
+    "t": "Preparate insieme le regole per le app.",
+    "prompt": "Ho una figlia di [età] anni che usa un iPad. Aiutami a preparare: 1) una spiegazione semplice, adatta alla sua età, del perché un chatbot non è un amico vero; 2) quattro regole di famiglia sulle app con chatbot; 3) un elenco generale dei controlli parentali da guardare nelle impostazioni dell'iPad. Se non sei sicuro dei nomi dei menù, rimandami alla guida ufficiale di Apple.",
+    "guarda": "Se la spiegazione è serena e non spaventa. Confronta i nomi dei menù con quelli che vedi davvero sull'iPad."
+   },
+   "quiz": [
+    {
+     "id": "b3kq1",
+     "q": "Perché un chatbot «amico» può essere un rischio per una bambina?",
+     "ok": "Perché imita l'affetto e lei può fidarsi troppo",
+     "wrong": [
+      "Perché consuma troppa batteria",
+      "Perché parla solo inglese"
+     ],
+     "e": "La FTC ha avviato un'indagine proprio perché questi chatbot imitano emozioni e possono spingere i più giovani a fidarsi e a legarsi."
+    },
+    {
+     "id": "b3kq2",
+     "q": "In Italia, che cosa serve a chi ha meno di 14 anni per usare tecnologie di IA?",
+     "ok": "Il consenso di chi esercita la responsabilità genitoriale",
+     "wrong": [
+      "Niente: l'età non conta",
+      "Il permesso della scuola"
+     ],
+     "e": "Lo stabilisce l'art. 4 della legge 132/2025, per l'accesso alle tecnologie di IA e per il trattamento dei dati collegato."
+    },
+    {
+     "id": "b3kq3",
+     "q": "Hai attivato i controlli parentali sull'iPad. Basta così?",
+     "ok": "No: servono anche dialogo e uso insieme",
+     "wrong": [
+      "Sì: ora è protetta da tutto",
+      "Sì, e non serve più parlarne"
+     ],
+     "e": "Limiti e filtri aiutano, ma nessuno strumento è perfetto. Parlare con lei e usare l'IA insieme resta la protezione migliore."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "FTC, Indagine sui chatbot di IA che fanno da compagni (2025)",
+     "url": "https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions"
+    },
+    {
+     "c": "Gazzetta Ufficiale, Legge 23 settembre 2025, n. 132, art. 4 (2025)",
+     "url": "https://www.gazzettaufficiale.it/atto/vediMenuHTML?atto.dataPubblicazioneGazzetta=2025-09-25&atto.codiceRedazionale=25G00143&tipoSerie=serie_generale&tipoVigenza=originario"
+    },
+    {
+     "c": "Apple, Impostare i controlli parentali su iPhone e iPad (s.d.)",
+     "url": "https://support.apple.com/en-us/105121"
+    },
+    {
+     "c": "Garante privacy, Minori: età del consenso e materiali per i genitori (s.d.)",
+     "url": "https://www.garanteprivacy.it/temi/minori"
+    }
+   ]
+  }
+ ],
+ "letture": [
+  {
+   "id": "cristianini-scorciatoia",
+   "t": "La scorciatoia. Come le macchine sono diventate intelligenti senza pensare in modo umano",
+   "autore": "Nello Cristianini",
+   "editore": "il Mulino",
+   "anno": 2023,
+   "tipo": "libro",
+   "liv": 2,
+   "tema": "basi",
+   "gratis": false,
+   "perche": "Spiega con chiarezza perché le macchine sembrano intelligenti pur non pensando come noi. Un ottimo punto di partenza per capire gli assistenti di oggi.",
+   "riassunto": [
+    "Per decenni i ricercatori hanno provato a insegnare alle macchine regole e ragionamenti simili ai nostri, con risultati limitati. Poi hanno preso una scorciatoia: invece di capire che cos'è l'intelligenza, hanno fatto imparare alle macchine comportamenti utili partendo da enormi quantità di dati, con metodi statistici.",
+    "Per l'autore l'intelligenza è la capacità di comportarsi in modo efficace in situazioni nuove. In questo senso le macchine sono intelligenti, ma non hanno una visione del mondo come la nostra. I dati da cui imparano vengono in gran parte dal comportamento delle persone, e questo ha conseguenze.",
+    "Questi sistemi selezionano curricula, valutano prestiti, personalizzano la pubblicità e cercano di tenerci collegati alle piattaforme. I rischi riguardano privacy, uguaglianza, autonomia e libertà di espressione. La conclusione non è spegnere le macchine ma regolarle, con un dibattito pubblico informato."
+   ],
+   "idee": [
+    "Le macchine imparano dai dati, non da regole scritte a mano.",
+    "Sembrano pensare come noi, ma funzionano in modo diverso.",
+    "I dati vengono dal nostro comportamento: per questo ci riguardano da vicino.",
+    "La strada indicata: regolare, non spegnere."
+   ],
+   "dove": "il Mulino, in libreria e nelle biblioteche",
+   "url": "https://www.mulino.it/isbn/9788815299833"
+  },
+  {
+   "id": "cristianini-machina",
+   "t": "Machina sapiens. L'algoritmo che ci ha rubato il segreto della conoscenza",
+   "autore": "Nello Cristianini",
+   "editore": "il Mulino",
+   "anno": 2024,
+   "tipo": "libro",
+   "liv": 3,
+   "tema": "basi",
+   "gratis": false,
+   "perche": "Il seguito de «La scorciatoia»: racconta come sono nati i modelli linguistici alla base degli assistenti di oggi e che cosa ancora non sappiamo di loro.",
+   "riassunto": [
+    "Il libro parte dalla domanda di Alan Turing del 1950: le macchine possono pensare? Oggi parlare con un computer può sembrare come parlare con una persona. L'autore ripercorre le tappe che ci hanno portato fin qui, da AlphaGo all'architettura chiamata Transformer, fino ai modelli GPT.",
+    "Questi modelli sono stati addestrati soprattutto a indovinare le parole mancanti in un testo. Eppure sembrano aver acquisito una certa comprensione del mondo e del linguaggio, che usano per ragionare, pianificare e conversare. Perché accada non è chiaro del tutto nemmeno a chi li ha costruiti.",
+    "Cristianini si chiede se ci stiamo avvicinando a una soglia oltre la quale le macchine supereranno le nostre prestazioni. Per lui capire che cosa sta succedendo è un obbligo sociale, non una semplice curiosità. Le prime leggi, come quella europea sull'IA, sono solo un punto di partenza."
+   ],
+   "idee": [
+    "Gli assistenti nascono da modelli addestrati a prevedere le parole mancanti.",
+    "Le loro capacità hanno sorpreso anche chi li ha progettati.",
+    "Capire l'IA è un obbligo sociale, non solo una curiosità.",
+    "Le prime leggi sull'IA sono solo un punto di partenza."
+   ],
+   "dove": "il Mulino, in libreria e nelle biblioteche",
+   "url": "https://mulino.it/isbn/9788815384461"
+  },
+  {
+   "id": "mitchell-guida",
+   "t": "L'intelligenza artificiale. Una guida per esseri umani pensanti",
+   "autore": "Melanie Mitchell",
+   "editore": "Einaudi",
+   "anno": 2022,
+   "tipo": "libro",
+   "liv": 2,
+   "tema": "basi",
+   "gratis": false,
+   "perche": "Una scienziata spiega con chiarezza e ironia che cosa l'IA sa fare davvero e dove inciampa. Utile per non farsi impressionare dagli annunci.",
+   "riassunto": [
+    "Melanie Mitchell, informatica e docente, racconta la storia dell'IA e i programmi che provano a imparare, vedere, capire il linguaggio, inventare e usare il buon senso. Usa spiegazioni semplici, ricordi personali e una buona dose di ironia, senza formule difficili.",
+    "La domanda centrale è quanto siano davvero intelligenti questi programmi e quanto possiamo fidarci delle loro decisioni. L'autrice mostra che ottengono risultati notevoli in compiti precisi, ma restano fragili quando la situazione cambia e non hanno il buon senso che per noi è naturale.",
+    "Il libro collega l'IA alle scienze cognitive e alla filosofia: si chiede se le macchine possano davvero comprendere e se servano qualità tipicamente umane. L'edizione originale è del 2019, prima dei chatbot attuali, ma le domande restano attuali."
+   ],
+   "idee": [
+    "Risultati straordinari in compiti precisi non significano intelligenza generale.",
+    "I sistemi possono sbagliare quando la situazione cambia un poco.",
+    "Il buon senso è tra le cose più difficili da dare a una macchina.",
+    "Davanti agli annunci entusiasti, conviene chiedere prove."
+   ],
+   "dove": "Einaudi, in libreria, in e-book e nelle biblioteche",
+   "url": "https://www.einaudi.it/catalogo-libri/scienze-sociali/media/lintelligenza-artificiale-melanie-mitchell-9788858440056/"
+  },
+  {
+   "id": "floridi-etica",
+   "t": "Etica dell'intelligenza artificiale. Sviluppi, opportunità, sfide",
+   "autore": "Luciano Floridi",
+   "editore": "Raffaello Cortina Editore",
+   "anno": 2022,
+   "tipo": "libro",
+   "liv": 3,
+   "tema": "basi",
+   "gratis": false,
+   "perche": "Un filosofo tra i più noti nel campo spiega che cosa sia davvero l'IA e quali principi dovrebbero guidarla. Più impegnativo, ma chiarisce molti dubbi.",
+   "riassunto": [
+    "Floridi parte da un'idea semplice: l'IA riesce a svolgere compiti che per noi richiederebbero intelligenza, senza essere intelligente come noi. Il suo successo nasce proprio da questa separazione tra la capacità di agire con successo e l'intelligenza.",
+    "Spesso è il mondo ad adattarsi alle macchine: costruiamo ambienti, dati e procedure su misura per le loro capacità limitate. Viviamo in una realtà dove online e offline si mescolano, e i dati diventano il punto in cui nascono i problemi di privacy, controllo e discriminazione.",
+    "Per orientare l'IA propone cinque principi: fare il bene, non fare del male, rispettare l'autonomia, essere giusti e rendere comprensibile il funzionamento. Le persone restano responsabili dei fini e delle scelte. La rivoluzione digitale è appena iniziata e si può ancora indirizzare bene."
+   ],
+   "idee": [
+    "L'IA agisce con successo senza capire come capiamo noi.",
+    "Spesso adattiamo il mondo alle macchine, non il contrario.",
+    "Cinque principi: beneficenza, non maleficenza, autonomia, giustizia, esplicabilità.",
+    "Fini e responsabilità restano alle persone."
+   ],
+   "dove": "Raffaello Cortina Editore, in libreria e nelle biblioteche",
+   "url": "https://www.raffaellocortina.it/scheda-libro/luciano-floridi/etica-dellintelligenza-artificiale-9788832854091-3667.html"
+  },
+  {
+   "id": "crawford-ne-intelligente",
+   "t": "Né intelligente né artificiale. Il lato oscuro dell'IA",
+   "autore": "Kate Crawford",
+   "editore": "il Mulino",
+   "anno": 2021,
+   "tipo": "libro",
+   "liv": 3,
+   "tema": "prudenza",
+   "gratis": false,
+   "perche": "Mostra il lato nascosto dell'IA: miniere, lavoro umano, dati raccolti senza chiedere e classificazioni discutibili. Aiuta a guardare oltre lo schermo.",
+   "riassunto": [
+    "Il titolo è una provocazione: per l'autrice l'IA non è né intelligente né artificiale, perché è fatta di risorse materiali e di persone. Il libro segue questa catena, dalle miniere da cui escono i minerali per i dispositivi fino alle grandi infrastrutture di calcolo.",
+    "Dietro i sistemi c'è molto lavoro umano poco visibile, e ci sono enormi raccolte di dati, spesso prese senza chiedere. Per insegnare alle macchine a riconoscere le immagini, le persone sono state messe in categorie che possono contenere pregiudizi su razza e genere.",
+    "Crawford critica anche il riconoscimento automatico delle emozioni, che si basa su teorie scientifiche contestate, e l'uso dell'IA per la sorveglianza da parte degli Stati. La sua conclusione è che l'IA è soprattutto una questione di potere: chi la costruisce e a vantaggio di chi."
+   ],
+   "idee": [
+    "L'IA ha un costo materiale: minerali, energia, infrastrutture.",
+    "Dietro l'automazione c'è lavoro umano spesso invisibile.",
+    "Classificare le persone con i dati può fissare pregiudizi.",
+    "Riconoscere le emozioni dal volto poggia su basi contestate.",
+    "La domanda chiave: a vantaggio di chi?"
+   ],
+   "dove": "il Mulino, in libreria e nelle biblioteche",
+   "url": "https://www.mulino.it/isbn/9788815294197"
+  },
+  {
+   "id": "russell-compatibile",
+   "t": "Compatibile con l'uomo. Come impedire che l'IA controlli il mondo",
+   "autore": "Stuart Russell",
+   "editore": "Einaudi",
+   "anno": 2025,
+   "tipo": "libro",
+   "liv": 3,
+   "tema": "prudenza",
+   "gratis": false,
+   "perche": "Uno dei maggiori esperti di IA spiega perché macchine con obiettivi fissi possono diventare pericolose e propone un'alternativa concreta. Impegnativo ma chiaro.",
+   "riassunto": [
+    "Stuart Russell ripercorre la lunga ricerca per capire l'intelligenza e costruire menti artificiali. Sostiene che l'IA diventerà probabilmente la tecnologia dominante del prossimo futuro e che macchine capaci di superare le nostre decisioni sarebbero l'evento più importante della storia umana.",
+    "Il problema sta nel modo in cui di solito definiamo una macchina intelligente: brava a raggiungere un obiettivo dato. Se l'obiettivo non coincide del tutto con quello che vogliamo davvero, una macchina molto capace può perseguirlo nel modo sbagliato, anche prendendo il controllo.",
+    "La proposta: macchine senza obiettivi fissi, che restano incerte su che cosa preferiamo. Lasciano decidere alle persone, domandano prima di agire, procedono con prudenza e si lasciano spegnere. Per l'autore è un cambiamento delle fondamenta dell'IA, possibile e necessario."
+   ],
+   "idee": [
+    "Un obiettivo dato male può portare a risultati che nessuno voleva.",
+    "Le macchine dovrebbero restare incerte sulle nostre preferenze.",
+    "Chiedere il permesso e accettare lo spegnimento sono garanzie di sicurezza.",
+    "Lo scopo è una tecnologia che migliora la vita, non una distopia."
+   ],
+   "dove": "Einaudi, collana Saggi, in libreria e nelle biblioteche",
+   "url": "https://www.einaudi.it/catalogo-libri/scienze/compatibile-con-luomo-stuart-russell-9788806263218/"
+  },
+  {
+   "id": "mollick-condivisa",
+   "t": "L'intelligenza condivisa. Vivere e lavorare insieme all'AI",
+   "autore": "Ethan Mollick",
+   "editore": "Luiss University Press",
+   "anno": 2025,
+   "tipo": "libro",
+   "liv": 2,
+   "tema": "usi",
+   "gratis": false,
+   "perche": "Il libro più pratico della lista: come usare l'IA ogni giorno come collega, tutor o coach, senza perdere il proprio giudizio.",
+   "riassunto": [
+    "Ethan Mollick insegna alla Wharton School. Per lui l'IA è la prima intelligenza non umana con cui dobbiamo imparare a vivere: non ragiona come noi, eppure già oggi produce testi, progetti, lezioni e idee creative.",
+    "Propone quattro principi: coinvolgere l'IA nei propri compiti per scoprire dove aiuta davvero; restare la persona che controlla e decide; darle un ruolo preciso, per esempio collega, tutor o revisore; ricordare che le prossime versioni saranno più capaci di quelle di oggi.",
+    "Le sue capacità sono irregolari, come una «frontiera frastagliata»: alcuni compiti difficili li svolge bene, altri in apparenza facili li sbaglia. Il libro guarda a lavoro, scuola e creatività con ottimismo, ma senza nascondere errori, allucinazioni e questioni etiche."
+   ],
+   "idee": [
+    "Sperimenta: per capire dove l'IA aiuta bisogna provarla.",
+    "Resta nel processo: controlli tu e decidi tu.",
+    "Dai all'assistente un ruolo preciso: collega, tutor, coach.",
+    "Capacità irregolari: brava in cose difficili, a volte sbaglia le facili."
+   ],
+   "dove": "Luiss University Press, in libreria, in e-book e nelle biblioteche",
+   "url": "https://luissuniversitypress.it/pubblicazioni/la-intelligenza-condivisa-vivere-e-lavorare-insieme-alle-ai/"
+  },
+  {
+   "id": "oneil-armi",
+   "t": "Armi di distruzione matematica",
+   "autore": "Cathy O'Neil",
+   "editore": "Bompiani",
+   "anno": 2017,
+   "tipo": "libro",
+   "liv": 3,
+   "tema": "prudenza",
+   "gratis": false,
+   "perche": "Con esempi concreti mostra come algoritmi opachi possano decidere su lavoro, credito e scuola, e sbagliare senza possibilità di appello. Spiega bene il problema dei pregiudizi.",
+   "riassunto": [
+    "Cathy O'Neil è una matematica che ha lavorato nella finanza e nell'analisi dei dati. Chiama «armi di distruzione matematica» i modelli che decidono sulla vita delle persone e hanno tre caratteristiche: sono opachi, vengono usati su larga scala e possono fare danni.",
+    "Con casi presi soprattutto dagli Stati Uniti racconta modelli usati per valutare insegnanti, selezionare candidati, concedere prestiti, fissare prezzi delle assicurazioni e indirizzare la pubblicità. Spesso ignorano informazioni importanti, riflettono pregiudizi e non permettono di contestare l'errore.",
+    "Questi sistemi possono creare circoli viziosi: chi è già svantaggiato riceve punteggi peggiori, che lo svantaggiano ancora di più. L'autrice chiede modelli più equi e trasparenti e controlli sul loro funzionamento. L'originale è del 2016, prima dei chatbot, ma il tema resta attuale."
+   ],
+   "idee": [
+    "Un algoritmo non è neutrale: riflette i dati e le scelte di chi lo costruisce.",
+    "Opacità, larga scala e danno: i tre segnali di un modello pericoloso.",
+    "Senza possibilità di appello, un errore diventa un'ingiustizia.",
+    "Servono controlli e trasparenza sui modelli che decidono sulle persone."
+   ],
+   "dove": "Bompiani, in libreria e nelle biblioteche",
+   "url": "https://bompiani.it/catalogo/armi-di-distruzione-matematica-9788845294211"
+  },
+  {
+   "id": "quattrociocchi-liberi",
+   "t": "Liberi di crederci. Informazione, internet e post-verità",
+   "autore": "Walter Quattrociocchi e Antonella Vicini",
+   "editore": "Codice Edizioni",
+   "anno": 2018,
+   "tipo": "libro",
+   "liv": 2,
+   "tema": "prudenza",
+   "gratis": false,
+   "perche": "Due autori spiegano perché crediamo alle bufale e perché smentirle spesso non basta. Utile per capire la disinformazione, che con l'IA diventa più veloce.",
+   "riassunto": [
+    "Il punto di partenza: la verità sfugge facilmente e la nostra mente ha limiti ed emozioni. Internet e i social ci danno accesso a moltissime informazioni e ci fanno credere che basti questo per sapere davvero.",
+    "Per gli autori la rete ha diffuso anche molta disinformazione, spesso usata a fini politici, e ha radicalizzato l'opinione pubblica. Tra gli esempi ci sono i movimenti contro i vaccini e il successo della parola «post-verità».",
+    "Il libro spiega come nascono le bufale, perché si diffondono, quali meccanismi della mente sfruttano e come smascherarle. Le ricerche di Quattrociocchi sui social mostrano che cerchiamo conferme a ciò che già pensiamo, e che le smentite convincono poco chi ha già deciso."
+   ],
+   "idee": [
+    "Avere molte informazioni non significa sapere.",
+    "Cerchiamo conferme a ciò che pensiamo già.",
+    "Le smentite convincono poco chi ha già deciso.",
+    "La tecnologia amplifica tendenze umane che esistevano già."
+   ],
+   "dove": "Codice Edizioni, in libreria e nelle biblioteche",
+   "url": "https://www.codiceedizioni.it/libri/liberi-di-crederci/"
+  },
+  {
+   "id": "elements-of-ai",
+   "t": "Elements of AI (versione italiana)",
+   "autore": "Università di Helsinki e MinnaLearn",
+   "editore": "Università di Helsinki e MinnaLearn; in Italia con Fondazione Cotec e Università Roma Tre",
+   "anno": 2020,
+   "tipo": "corso",
+   "liv": 2,
+   "tema": "basi",
+   "gratis": true,
+   "perche": "Corso online gratuito in italiano, senza programmazione: spiega le basi dell'IA con esercizi. Si segue con calma, ai propri tempi, e alla fine c'è un certificato.",
+   "riassunto": [
+    "Elements of AI è un corso online gratuito creato dall'Università di Helsinki con MinnaLearn. La versione italiana è stata presentata nel dicembre 2020, con Fondazione Cotec e l'Università Roma Tre. È pensato per tutti i cittadini, non per specialisti.",
+    "La parte introduttiva spiega che cos'è l'IA, che cosa può e non può fare e come entra nella vita quotidiana. Tocca anche l'apprendimento automatico, le reti neurali e le conseguenze sociali. Non serve saper programmare: basta un po' di matematica di base.",
+    "Si procede al proprio ritmo: ogni parte richiede alcune ore e il sito consiglia di finire in sei settimane. Alcuni esercizi chiedono carta e penna. Chi supera gli esercizi può ottenere un certificato di completamento."
+   ],
+   "idee": [
+    "Gratuito, online e in italiano.",
+    "Nessuna programmazione: solo un po' di matematica di base.",
+    "Alcune ore per ogni parte, al tuo ritmo.",
+    "Esercizi pratici e certificato finale."
+   ],
+   "dove": "Sito ufficiale del corso",
+   "url": "https://www.elementsofai.it/"
+  },
+  {
+   "id": "garante-assistenti",
+   "t": "Assistenti digitali (smart assistant): i consigli del Garante per bilanciare utilità e tutela della privacy",
+   "autore": "Garante per la protezione dei dati personali",
+   "editore": "Garante per la protezione dei dati personali",
+   "anno": 2021,
+   "tipo": "guida",
+   "liv": 2,
+   "tema": "prudenza",
+   "gratis": true,
+   "perche": "Scheda breve e pratica del Garante: come usare gli assistenti digitali proteggendo i propri dati. Molti consigli valgono anche per i chatbot di oggi.",
+   "riassunto": [
+    "Il Garante privacy ha preparato una scheda informativa sugli assistenti digitali, quelli che rispondono alla voce ed eseguono comandi. Il primo consiglio è leggere l'informativa: quali dati raccoglie il servizio, come li usa, con chi li condivide, dove e per quanto tempo li conserva.",
+    "Si suggerisce di condividere solo i dati necessari, usare pseudonimi, soprattutto per i minori, ed evitare informazioni delicate come dati sanitari, password o numeri di carte. Quando l'assistente non serve conviene disattivarlo, oppure spegnere microfono e videocamera.",
+    "Il Garante invita a limitare le funzioni più rischiose, come inviare messaggi, pubblicare sui social o fare acquisti, a cancellare ogni tanto la cronologia e a proteggere la rete di casa. Prima di cedere il dispositivo vanno disattivati gli account e cancellati i dati."
+   ],
+   "idee": [
+    "Leggi l'informativa: quali dati, per quale uso, per quanto tempo.",
+    "Solo i dati necessari: niente salute, password o carte.",
+    "Limita acquisti, messaggi e pubblicazioni automatiche.",
+    "Cancella ogni tanto la cronologia."
+   ],
+   "dove": "Sito del Garante privacy, sezione Temi",
+   "url": "https://www.garanteprivacy.it/temi/assistenti-digitali"
+  },
+  {
+   "id": "ce-ai-act",
+   "t": "Legge sull'IA (AI Act): la pagina ufficiale",
+   "autore": "Commissione europea",
+   "editore": "Commissione europea",
+   "anno": 2026,
+   "tipo": "guida",
+   "liv": 3,
+   "tema": "prudenza",
+   "gratis": true,
+   "perche": "La spiegazione ufficiale e aggiornata delle regole europee sull'IA: livelli di rischio, divieti, trasparenza e calendario. Si può leggere anche in italiano.",
+   "riassunto": [
+    "La Commissione europea spiega il Regolamento (UE) 2024/1689, detto AI Act. La legge segue un approccio basato sul rischio: vieta alcune pratiche, pone obblighi severi agli usi ad alto rischio, chiede trasparenza a chatbot e contenuti generati e lascia liberi gli usi a rischio minimo, come i filtri antispam.",
+    "Tra i divieti ci sono il punteggio sociale delle persone, il riconoscimento delle emozioni a scuola e sul lavoro e la raccolta indiscriminata di volti per creare banche dati. Sono ad alto rischio, per esempio, i sistemi che selezionano curricula o valutano chi chiede un prestito.",
+    "La pagina riporta il calendario: legge in vigore dal 1° agosto 2024, primi divieti dal 2 febbraio 2025, regole di trasparenza da agosto 2026, alcuni obblighi per l'alto rischio rinviati al 2027 e al 2028. Segnala anche uno strumento ufficiale per presentare reclami."
+   ],
+   "idee": [
+    "Quattro livelli di rischio: inaccettabile, alto, trasparenza, minimo.",
+    "Il chatbot deve dire che è un'IA; i deepfake vanno dichiarati.",
+    "Alcune pratiche sono vietate, come il punteggio sociale.",
+    "Le regole si applicano a tappe, fino al 2028."
+   ],
+   "dove": "Sito della Commissione europea, versione italiana (tradotta automaticamente)",
+   "url": "https://digital-strategy.ec.europa.eu/it/policies/regulatory-framework-ai"
+  },
+  {
+   "id": "ce-informazioni",
+   "t": "Trovare informazioni affidabili",
+   "autore": "Commissione europea",
+   "editore": "Commissione europea",
+   "anno": 2026,
+   "tipo": "guida",
+   "liv": 2,
+   "tema": "prudenza",
+   "gratis": true,
+   "perche": "Guida breve dell'Unione europea per riconoscere la manipolazione online e trovare fonti affidabili. Utile ogni volta che una notizia sembra troppo forte per essere vera.",
+   "riassunto": [
+    "La pagina spiega dove cercare informazioni affidabili: siti ufficiali di governi e istituzioni europee, testate con standard editoriali chiari, autorità sanitarie ed enti scientifici, organizzazioni indipendenti che verificano i fatti. Invita a diffidare delle fonti sconosciute e degli indirizzi che imitano siti noti.",
+    "Descrive come funziona la manipolazione: fatti veri presentati senza contesto, immagini e video alterati o generati con l'IA, deepfake che fanno dire a qualcuno cose mai dette. I contenuti manipolativi puntano su emozioni forti, perché così vengono condivisi di più.",
+    "Prima di credere o condividere, controlla che la fonte sia nota, che la notizia sia riportata da più fonti credibili e che il tono sia pacato. I contenuti dubbi non vanno inoltrati: si possono segnalare. Nell'Unione europea le grandi piattaforme devono permetterlo e intervenire."
+   ],
+   "idee": [
+    "Parti da fonti ufficiali e testate con standard chiari.",
+    "Emozione fortissima? Fermati e verifica.",
+    "Una notizia vera di solito la riportano più fonti credibili.",
+    "Non inoltrare il dubbio: segnalalo alla piattaforma."
+   ],
+   "dove": "Sito della Commissione europea, versione italiana",
+   "url": "https://commission.europa.eu/digital-life/finding-information-you-can-trust_it"
+  },
+  {
+   "id": "ai-safety-report-2026",
+   "t": "International AI Safety Report 2026",
+   "autore": "Yoshua Bengio (presidente) e oltre 100 esperti",
+   "editore": "International AI Safety Report",
+   "anno": 2026,
+   "tipo": "rapporto",
+   "liv": 3,
+   "tema": "prudenza",
+   "gratis": true,
+   "perche": "Il quadro scientifico più autorevole su capacità e rischi dell'IA, scritto da oltre 100 esperti di molti paesi. È in inglese, con una sintesi per i decisori.",
+   "riassunto": [
+    "Il rapporto, pubblicato il 3 febbraio 2026, è la seconda edizione di un lavoro internazionale guidato dallo scienziato Yoshua Bengio, con oltre 100 esperti e un comitato di consulenti indicati da più di 30 paesi e organizzazioni internazionali. Risponde a tre domande: che cosa sa fare l'IA, quali rischi comporta, come si possono gestire.",
+    "Le capacità crescono in fretta ma in modo irregolare: sistemi bravissimi in compiti complessi possono sbagliare compiti semplici. Alcuni rischi sono già concreti, come le truffe con contenuti generati dall'IA e gli attacchi informatici; altri restano ipotetici.",
+    "Il rapporto osserva che i test di sicurezza prima del rilascio sono diventati meno affidabili, perché alcuni modelli riconoscono quando vengono messi alla prova. La gestione del rischio si basa su più livelli di protezione, ma molte iniziative delle aziende restano volontarie."
+   ],
+   "idee": [
+    "Capacità in rapida crescita, ma irregolari.",
+    "Truffe e attacchi informatici con l'IA sono rischi già reali.",
+    "Verificare la sicurezza dei modelli è sempre più difficile.",
+    "La protezione si costruisce a più livelli; molte misure restano volontarie."
+   ],
+   "dove": "Sito ufficiale del rapporto (in inglese)",
+   "url": "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026"
   }
  ]
 }

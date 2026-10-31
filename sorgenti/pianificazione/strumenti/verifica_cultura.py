@@ -99,8 +99,53 @@ def controlla(path):
         tutto = json.dumps(s, ensure_ascii=False)
         if VIETATE.search(tutto):
             err.append(w + ': contiene una parola da non pubblicare')
-    if per[1] < 6 or per[2] < 5 or per[3] < 4:
-        err.append('servono almeno 6 schede di livello 1, 5 di livello 2 e 4 di livello 3 (ora %s)' % per)
+    # il livello 1 (Base) è stato tolto il 27/10/2026, dopo che il proprietario l'ha completato
+    if per[1] or per[2] < 5 or per[3] < 10:
+        err.append('servono 0 schede di livello 1, almeno 5 di livello 2 e almeno 10 di livello 3 (ora %s)' % per)
+    err += controlla_letture(d.get('letture') or [])
+    return err
+
+
+TIPI = ('libro', 'guida', 'corso', 'articolo', 'rapporto')
+
+
+def controlla_letture(L):
+    err, ids = [], set()
+    if len(L) < 10:
+        err.append('servono almeno 10 letture (ora %d)' % len(L))
+    for x in L:
+        w = 'lettura ' + str(x.get('id'))
+        if not re.fullmatch(r'[a-z0-9-]{3,30}', str(x.get('id', ''))) or x.get('id') in ids:
+            err.append(w + ': id non valido o doppio')
+        ids.add(x.get('id'))
+        for k in ('t', 'autore', 'editore'):
+            if not x.get(k):
+                err.append(w + ': manca «' + k + '»')
+        if not isinstance(x.get('anno'), int) or not 1950 <= x['anno'] <= 2026:
+            err.append(w + ': anno mancante o non valido')
+        if x.get('tipo') not in TIPI:
+            err.append(w + ': tipo sconosciuto (' + ', '.join(TIPI) + ')')
+        if x.get('liv') not in (2, 3):
+            err.append(w + ': «liv» deve essere 2 o 3')
+        if x.get('tema') not in TEMI:
+            err.append(w + ': tema sconosciuto')
+        r = x.get('riassunto') or []
+        if not 2 <= len(r) <= 4 or any(parole(p) > 60 for p in r):
+            err.append(w + ': «riassunto» deve avere da 2 a 4 paragrafi di massimo 60 parole')
+        k = x.get('idee') or []
+        if not 3 <= len(k) <= 5 or any(parole(p) > 22 for p in k):
+            err.append(w + ': «idee» deve avere da 3 a 5 righe di massimo 22 parole')
+        if not x.get('perche') or parole(x.get('perche')) > 35:
+            err.append(w + ': «perche» mancante o troppo lungo')
+        if not x.get('dove') or not str(x.get('url', '')).startswith('https://'):
+            err.append(w + ': «dove» o link https mancante')
+        if x.get('gratis') not in (True, False):
+            err.append(w + ': «gratis» deve essere vero o falso')
+        # niente citazioni lunghe dei testi: il riassunto è scritto con parole nostre
+        if any(len(q) > 160 for q in re.findall(r'«([^»]*)»', ' '.join(r))):
+            err.append(w + ': citazione troppo lunga nel riassunto')
+        if VIETATE.search(json.dumps(x, ensure_ascii=False)):
+            err.append(w + ': contiene una parola da non pubblicare')
     return err
 
 
