@@ -1,18 +1,62 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-27T17:08:00+01:00",
+ "updated": "2026-10-31T09:15:00+01:00",
  "voci": [
+  {
+   "id": "n20261031-ddlcomparto",
+   "d": "2026-10-31",
+   "titolo": "Ddl di bilancio 2027: FESI +17,6 milioni l'anno alla GdF, nessuna misura di previdenza dedicata",
+   "sintesi": "Secondo GrNet (31/10), che riporta il testo del ddl di bilancio 2027 (157 articoli): art. 98, aumento strutturale del FESI dal 2027 di circa 90,8 milioni annui, di cui 17,6 alla Guardia di Finanza; art. 99, 50 milioni nel 2027 per straordinari già svolti (9,5 alla GdF); art. 101, 180 assunzioni straordinarie 2027-2032 (60 alla GdF); art. 65, imposta al 15% sul salario accessorio 2027 che esclude Forze di polizia e Forze armate. Non risultano misure di previdenza dedicata né di rinnovo contrattuale. Secondo SILP CGIL (29/10) le risorse previdenziali sono un rifinanziamento di impegni già previsti.",
+   "fonte": "GrNet (testo del ddl di bilancio 2027)",
+   "url": "https://www.grnet.it/legge-di-bilancio-2027-ecco-le-novita-per-il-personale-del-comparto-sicurezza-e-difesa-e-per-i-pensionati/",
+   "fonti2": [
+    "https://www.silpcgil.it/articolo/13622-ddl_legge_di_bilancio_2027,_nessuna_risorsa_specifica_per_il_comparto_sicurezza",
+    "https://www.italiaoggi.it/economia-e-politica/legge-di-bilancio-2027-il-testo-punto-per-punto-irpef-bollo-auto-pensioni-e-forfettari-jsgt9n7s",
+    "https://forzearmate.org/legge-di-bilancio-2027-via-libera-del-governo-alla-manovra-da-26-miliardi-novita-per-stipendi-pensioni-famiglie-e-difesa/"
+   ],
+   "temi": [
+    "contratto",
+    "previdenza"
+   ],
+   "tocca": [
+    "fesi",
+    "arretrati",
+    "fiscale"
+   ],
+   "effetto": "Per ora non cambia nulla: è un disegno di legge e può cambiare in Parlamento. Il FESI è salario accessorio; per il calcolo della pensione conta quanto verrà davvero pagato e assoggettato a contributi."
+  },
+  {
+   "id": "n20261030-tfs",
+   "d": "2026-10-30",
+   "titolo": "Ddl di bilancio 2027: TFS dopo 6 mesi dal 2028, 3 mesi dal 2029, alla cessazione dal 2030 per limiti di età",
+   "sintesi": "Il disegno di legge di bilancio 2027, approvato dal Consiglio dei ministri il 28/10 e bollinato dalla Ragioneria il 30/10, all'art. 50 accorcia i termini del TFS dei dipendenti pubblici: per chi matura i requisiti dal 2028 il primo pagamento arriva dopo 6 mesi (oggi 9 mesi per chi li matura dal 2027), dal 2029 dopo 3 mesi e dal 2030 alla cessazione per chi esce per limiti di età. Secondo GrNet la soglia della prima rata sale da 50.000 a 60.000 euro nel 2031 e a 90.000 nel 2034; dal 2035 niente rateizzazione per i limiti di età. Secondo Sky TG24 e ItaliaOggi (30/10), confermato da GrNet (31/10).",
+   "fonte": "Sky TG24",
+   "url": "https://tg24.sky.it/economia/2026/10/30/manovra-2027-pensioni-irpef-novita",
+   "fonti2": [
+    "https://www.grnet.it/legge-di-bilancio-2027-ecco-le-novita-per-il-personale-del-comparto-sicurezza-e-difesa-e-per-i-pensionati/",
+    "https://www.italiaoggi.it/economia-e-politica/legge-di-bilancio-2027-il-testo-punto-per-punto-irpef-bollo-auto-pensioni-e-forfettari-jsgt9n7s"
+   ],
+   "temi": [
+    "inps",
+    "previdenza"
+   ],
+   "tocca": [
+    "tfs"
+   ],
+   "effetto": "Per ora non cambia nulla: è un disegno di legge che il Parlamento può modificare. Se approvato così, chi esce per limiti di età dal 2028 riceverebbe la prima rata del TFS prima dei 9 mesi oggi previsti."
+  },
   {
    "id": "n20261027-manovrafo",
    "d": "2026-10-27",
    "titolo": "Manovra 2027: in discussione 480 milioni in dieci anni per assunzioni e previdenza dedicata delle forze dell'ordine",
-   "sintesi": "Secondo Milano Finanza (27/10, ore 12.14) tra le misure della legge di bilancio 2027 in discussione ci sono «le assunzioni nelle forze dell'ordine e una previdenza dedicata, per un valore di 480 milioni in dieci anni», misura che però potrebbe essere ridimensionata. Corriere Nazionale (27/10) riporta la stessa cifra come richiesta di Forza Italia, con copertura dalla «flessibilità per la difesa». ANSA (27/10) conferma la richiesta di Forza Italia sulla previdenza dedicata del comparto sicurezza-difesa, senza cifre. Il Consiglio dei ministri sul testo è atteso mercoledì 28 ottobre. Sono indiscrezioni di stampa, non un testo approvato.",
+   "sintesi": "Secondo Milano Finanza (27/10, ore 12.14) tra le misure della legge di bilancio 2027 in discussione ci sono «le assunzioni nelle forze dell'ordine e una previdenza dedicata, per un valore di 480 milioni in dieci anni», misura che però potrebbe essere ridimensionata. Corriere Nazionale (27/10) riporta la stessa cifra come richiesta di Forza Italia, con copertura dalla «flessibilità per la difesa». ANSA (27/10) conferma la richiesta di Forza Italia sulla previdenza dedicata del comparto sicurezza-difesa, senza cifre. Il Consiglio dei ministri sul testo è atteso mercoledì 28 ottobre. Aggiornato il 31/10: nel ddl approvato il 28/10, secondo GrNet, non risultano misure di previdenza dedicata.",
    "fonte": "Milano Finanza",
    "url": "https://www.milanofinanza.it/news/manovra-giorgetti-prudente-faremo-quel-che-e-possibile-mini-irpef-per-i-giovani-il-ceto-medio-resta-202610271151206914",
    "fonti2": [
     "https://www.corrierenazionale.it/2026/10/27/manovra-mini-irpef-per-under-30-voucher-sanitario-irpef-al-33-e-pensioni-i-nodi-da-sciogliere",
-    "https://www.ansa.it/sito/notizie/economia/2026/10/26/manovra-le-misure-sul-tavolo-dai-giovani-alle-pensioni_15fe28f6-37bf-43ae-8fac-256f2338cd34.html"
+    "https://www.ansa.it/sito/notizie/economia/2026/10/26/manovra-le-misure-sul-tavolo-dai-giovani-alle-pensioni_15fe28f6-37bf-43ae-8fac-256f2338cd34.html",
+    "https://www.grnet.it/legge-di-bilancio-2027-ecco-le-novita-per-il-personale-del-comparto-sicurezza-e-difesa-e-per-i-pensionati/"
    ],
    "temi": [
     "previdenza",
@@ -65,12 +109,13 @@
    "id": "n20261020-coefficienti",
    "d": "2026-10-20",
    "titolo": "Coefficienti di trasformazione 2027-2028: a 60 anni scende al 4,475%",
-   "sintesi": "Il Ministero del Lavoro ha pubblicato il 20 ottobre il decreto direttoriale del 16 ottobre 2026, di concerto con il MEF, che ridetermina i coefficienti di trasformazione del montante contributivo dal 1° gennaio 2027 (tasso di sconto 1,5%). A 60 anni il coefficiente è 4,475% (divisore 22,345), contro 4,536% del biennio 2025-2026; a 58 anni 4,254%, a 62 anni 4,725%, a 67 anni 5,514%, a 71 anni 6,382%. Si applica alle pensioni con decorrenza dal 2027, per la parte contributiva.",
+   "sintesi": "Il Ministero del Lavoro ha pubblicato il 20 ottobre il decreto direttoriale del 16 ottobre 2026, di concerto con il MEF, che ridetermina i coefficienti di trasformazione del montante contributivo dal 1° gennaio 2027 (tasso di sconto 1,5%). A 60 anni il coefficiente è 4,475% (divisore 22,345), contro 4,536% del biennio 2025-2026; a 58 anni 4,254%, a 62 anni 4,725%, a 67 anni 5,514%, a 71 anni 6,382%. Si applica alle pensioni con decorrenza dal 2027, per la parte contributiva. Aggiornato il 31/10: il comunicato del Ministero è nella G.U. S.G. n. 252 del 29/10.",
    "fonte": "Ministero del Lavoro",
    "url": "https://lavoro.gov.it/sites/default/files/documenti-pubblicita-legale/Decreto%20direttoriale%2016.10.2026%20coefficienti%20trasformazione%201.1.2027_0.pdf",
    "fonti2": [
     "https://www.lavoro.gov.it/notizie/pagine/aggiornamento-coefficienti-di-trasformazione-del-montante-contributivo-2027",
-    "https://www.simcarabinieri.it/pensioni-pubblicati-i-nuovi-coefficienti-di-trasformazione-in-vigore-dal-1-gennaio-2027/"
+    "https://www.simcarabinieri.it/pensioni-pubblicati-i-nuovi-coefficienti-di-trasformazione-in-vigore-dal-1-gennaio-2027/",
+    "https://www.gazzettaufficiale.it/rss/SG"
    ],
    "temi": [
     "inps",
@@ -84,8 +129,8 @@
   {
    "id": "n20261020-manovra",
    "d": "2026-10-20",
-   "titolo": "Manovra 2027: Consiglio dei ministri atteso mercoledì 28 ottobre alle 12",
-   "sintesi": "Secondo Agimeg e QuiFinanza (20/10), l’esame della legge di bilancio 2027 in Consiglio dei ministri, ipotizzato per il 23/10, è slittato a fine mese per il confronto con l’UE. Il DPB vale circa 23,5 miliardi, di cui 4,5 per difesa e sicurezza. Il 26/10 ANSA riporta che Forza Italia chiede interventi su «retribuzioni e previdenza delle forze dell'ordine». Aggiornato il 27/10: secondo Sky TG24 e Milano Finanza il Consiglio dei ministri dovrebbe riunirsi mercoledì 28 alle 12 per il testo definitivo; tra le ipotesi non confermate, tassazione al 5% sugli aumenti dei rinnovi contrattuali e al 15% sul salario accessorio del pubblico impiego.",
+   "titolo": "Manovra 2027: approvata dal Consiglio dei ministri il 28 ottobre",
+   "sintesi": "Secondo Agimeg e QuiFinanza (20/10), l’esame della legge di bilancio 2027 in Consiglio dei ministri, ipotizzato per il 23/10, è slittato a fine mese per il confronto con l’UE. Il DPB vale circa 23,5 miliardi, di cui 4,5 per difesa e sicurezza. Il 26/10 ANSA riporta che Forza Italia chiede interventi su «retribuzioni e previdenza delle forze dell'ordine». Aggiornato il 31/10: il Consiglio dei ministri n. 195 del 28/10 ha approvato il ddl (circa 26 miliardi secondo la presidente del Consiglio); il testo bollinato il 30/10 va alle Camere. La tassazione al 15% sul salario accessorio esclude Forze di polizia e Forze armate (GrNet).",
    "fonte": "Agimeg",
    "url": "https://www.agimeg.it/manovra-2027-slitta-legge-bilancio-attesa-in-consiglio-dei-ministri-per-fine-mese/",
    "fonti2": [
@@ -98,7 +143,9 @@
     "https://www.ansa.it/sito/notizie/politica/2026/10/26/mercoledi-il-cdm-sulla-manovra.-lue-risponde-ma-ancora-nodi-da-sciogliere_d8929f9e-cae5-4b75-a4ce-ccd9d2236aaf.html",
     "https://www.agenzianova.com/news/legge-bilancio-fonti-maggioranza-in-cdm-di-mercoledi-ok-a-manovra/",
     "https://tg24.sky.it/economia/2026/10/27/manovra-2027-misure-cdm",
-    "https://www.milanofinanza.it/news/borse-oggi-diretta-27-ottobre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202610270811428399"
+    "https://www.milanofinanza.it/news/borse-oggi-diretta-27-ottobre-2026-chiusura-apertura-europee-borsa-milano-ftse-mib-piazza-affari-202610270811428399",
+    "https://forzearmate.org/legge-di-bilancio-2027-via-libera-del-governo-alla-manovra-da-26-miliardi-novita-per-stipendi-pensioni-famiglie-e-difesa/",
+    "https://tg24.sky.it/economia/2026/10/30/manovra-2027-pensioni-irpef-novita"
    ],
    "temi": [
     "inps",
@@ -108,7 +155,7 @@
     "fiscale",
     "requisiti"
    ],
-   "effetto": "Per ora non cambia nulla: nessuna misura su pensioni o aumenti del comparto è confermata finché il testo non è approvato e presentato in Parlamento."
+   "effetto": "Per ora non cambia nulla: il testo deve essere esaminato e approvato dal Parlamento entro fine anno; le misure per il comparto sono nelle voci del 30 e 31 ottobre."
   },
   {
    "id": "n20261016-usic",
@@ -271,7 +318,7 @@
    "id": "dpr2527",
    "t": "DPR di recepimento del contratto 2025-2027 in Gazzetta Ufficiale",
    "stato": "atteso",
-   "quando": "non ancora in Gazzetta al 27/10/2026 ore 17 (ultima S.G. in elenco n. 249 del 26/10, senza DPR); attesa entro la prima metà di novembre 2026 (previsione SIULP)",
+   "quando": "non ancora in Gazzetta al 31/10/2026 ore 9 (nessun DPR nelle S.G. fino alla n. 252 del 29/10; n. 253 del 30/10 senza notizia di pubblicazione); attesa entro la prima metà di novembre 2026 (previsione SIULP)",
    "fonte": "SIULP",
    "url": "https://siulp.it/articolo/pubblicazione-del-dpr-di-recepimento-del-contratto-di-lavoro-per-gli-anni-2025-2027/",
    "valore": null
@@ -310,35 +357,35 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "MEF",
    "url": "https://www.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
@@ -352,28 +399,28 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Ministero del Lavoro",
    "url": "https://www.lavoro.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "ISTAT",
    "url": "https://www.istat.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
@@ -401,14 +448,14 @@
    "n": "Camera dei deputati",
    "url": "https://www.camera.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-25T22:58:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Senato",
    "url": "https://www.senato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-25T22:58:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
@@ -422,28 +469,28 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-26T17:02:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
@@ -457,7 +504,7 @@
    "n": "SIAP",
    "url": "https://www.siap-polizia.org/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "non raggiungibile"
   },
   {
@@ -471,7 +518,7 @@
    "n": "SILP CGIL",
    "url": "https://www.silpcgil.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-18T12:58:00+02:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
@@ -541,7 +588,7 @@
    "n": "ForzeArmate.org",
    "url": "https://forzearmate.org/",
    "tipo": "testata",
-   "ultimo": "2026-10-27T12:58:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
@@ -569,7 +616,7 @@
    "n": "Sky TG24",
    "url": "https://tg24.sky.it/economia",
    "tipo": "testata",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
@@ -597,14 +644,14 @@
    "n": "Milano Finanza",
    "url": "https://www.milanofinanza.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
    "n": "ANSA",
    "url": "https://www.ansa.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
@@ -660,7 +707,7 @@
    "n": "Money.it",
    "url": "https://www.money.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-26T17:02:00+01:00",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   },
   {
@@ -668,6 +715,20 @@
    "url": "https://www.agipronews.it/",
    "tipo": "testata",
    "ultimo": "2026-10-26T17:02:00+01:00",
+   "esito": "ok"
+  },
+  {
+   "n": "GrNet",
+   "url": "https://www.grnet.it/",
+   "tipo": "testata",
+   "ultimo": "2026-10-31T09:15:00+01:00",
+   "esito": "ok"
+  },
+  {
+   "n": "BCE",
+   "url": "https://www.ecb.europa.eu/",
+   "tipo": "ufficiale",
+   "ultimo": "2026-10-31T09:15:00+01:00",
    "esito": "ok"
   }
  ],
@@ -796,26 +857,33 @@
    "at": "2026-10-27T17:08:00+01:00",
    "notizie": 1,
    "note": "giro delle 17 (martedì): 1 notizia nuova sulla manovra 2027: secondo Milano Finanza e Corriere Nazionale (27/10) in discussione 480 milioni in dieci anni per assunzioni e previdenza dedicata delle forze dell'ordine (richiesta di Forza Italia, a rischio ridimensionamento); ANSA conferma la richiesta senza cifre. Consiglio dei ministri atteso il 28/10. Gazzetta ferma alla S.G. n. 249 del 26/10: DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. USIF (19/10), SILF (27/10, visita a Malpensa) e SINAFI (22/10) senza novità su contratto o pensione; INPS: ultimo messaggio n. 3422 del 23/10; Ministero del Lavoro: ultimo comunicato 26/10, non sul tema; Funzione Pubblica, MEF/NoiPA, GdF, ISTAT, Corte dei conti senza novità nelle ricerche sul sito. Tassi di mercato e prodotti invariati (seduta BTP del 27/10 non ancora chiusa; BCE attesa il 29/10; depositi ricontrollati alle 13). Volontariato e cultura digitale già fatti. Scheda invariata. Non raggiungibili: Governo, SIM Carabinieri; non ricontrollati in questo giro Difesa, Polizia di Stato, Camera, Senato, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-10-31T09:15:00+01:00",
+   "notizie": 2,
+   "note": "giro straordinario di sabato mattina (gli ultimi giri registrati sono del 27/10): 2 notizie nuove sul ddl di bilancio 2027 approvato dal CdM n. 195 del 28/10 e bollinato il 30/10: TFS più rapido dal 2028 (art. 50; Sky TG24, ItaliaOggi, GrNet) e, secondo GrNet, FESI +17,6 milioni annui alla GdF, 9,5 milioni di straordinari 2027, 60 assunzioni straordinarie, esclusione dalla tassazione al 15% sull'accessorio, nessuna misura di previdenza dedicata (SILP CGIL 29/10 conferma la critica). Aggiornate le voci sulla manovra e sui coefficienti (comunicato in G.U. S.G. n. 252 del 29/10). DPR di recepimento non ancora in Gazzetta; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. USIF, SILF (28/10 coefficienti, 29/10 protocollo AdE-Carabinieri) e SINAFI senza comunicati nuovi su contratto o pensione; INPS: ultimo messaggio n. 3484 del 29/10, non sul tema. Tassi: inflazione ottobre 5,4% (stima preliminare ISTAT, era 4,2%); BCE invariata al 2,50% il 29/10; BTP 10 anni 4,51% e 5 anni 3,99% alla chiusura del 30/10; BTP 2 anni lasciato a 3,51% (Trading Economics 3,50% senza seconda fonte); conti deposito ricontrollati, invariati; BBVA non ricontrollato (cambia a inizio trimestre). Prodotti: date aggiornate, tassi invariati. Volontariato già fatto lunedì 26/10; cultura digitale già fatta a ottobre. Scheda invariata (il ddl non è ancora norma). Non raggiungibili: Governo, SIAP, pagina ISTAT del comunicato (dato preso dall'URL del comunicato e da due testate); non ricontrollati Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
   }
  ],
  "mercati": [
   {
    "id": "infl",
    "t": "Inflazione in Italia (NIC, su un anno)",
-   "valore": 4.2,
-   "d": "2026-10-16",
-   "fonte": "ISTAT, settembre 2026 (definitivo)",
-   "url": "https://www.istat.it/wp-content/uploads/2026/10/Prezzi-al-consumo-def-Set2026-1.pdf",
-   "unita": "%"
+   "valore": 5.4,
+   "d": "2026-10-30",
+   "fonte": "ISTAT, ottobre 2026 (stima preliminare)",
+   "url": "https://www.istat.it/comunicato-stampa/prezzi-al-consumo-dati-provvisori-ottobre-2026/",
+   "unita": "%",
+   "nota": "settembre 4,2% (definitivo); +0,9% sul mese; dato riportato da Milano Finanza e imgpress (30/10)"
   },
   {
    "id": "bce",
    "t": "Tasso BCE sui depositi",
    "valore": 2.5,
-   "d": "2026-09-16",
-   "fonte": "BCE, decisione del 10 settembre 2026",
-   "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.it.html",
-   "unita": "%"
+   "d": "2026-10-29",
+   "fonte": "BCE, decisione del 29 ottobre 2026",
+   "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.it.html",
+   "unita": "%",
+   "nota": "invariato; operazioni di rifinanziamento principali 2,65%, rifinanziamento marginale 2,90%"
   },
   {
    "id": "btp2",
@@ -830,22 +898,22 @@
   {
    "id": "btp5",
    "t": "BTP a 5 anni (rendimento lordo)",
-   "valore": 4.05,
-   "d": "2026-10-23",
+   "valore": 3.99,
+   "d": "2026-10-30",
    "fonte": "Trading Economics",
    "url": "https://it.tradingeconomics.com/italy/government-bond-yield",
    "unita": "%",
-   "nota": "chiusura 23/10: Trading Economics 4,05%; Milano Finanza (23/10) indica il 5 anni a tasso fisso intorno al 4,05%"
+   "nota": "chiusura 30/10: Trading Economics 3,99%; all'asta del 29/10 il BTP 3,95% febbraio 2032 è stato collocato al 4,02% (OraFinanza)"
   },
   {
    "id": "btp10",
    "t": "BTP a 10 anni (rendimento lordo)",
-   "valore": 4.48,
-   "d": "2026-10-26",
-   "fonte": "ANSA, chiusura del 26/10",
-   "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/26/lo-spread-tra-btp-e-bund-chiude-in-forte-calo-a-112-punti_4e892336-c2df-45a9-bf7c-7679655e940a.html",
+   "valore": 4.51,
+   "d": "2026-10-30",
+   "fonte": "ANSA, chiusura del 30/10",
+   "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/30/lo-spread-tra-btp-e-bund-chiude-in-lieve-rialzo-a-118-punti-base_9c1ccf87-639a-4602-8527-9c9ec1842183.html",
    "unita": "%",
-   "nota": "chiusura 26/10: 4,48% (−8 punti base, spread 112 punti), anche SoldiOnline; Trading Economics 4,50% e Milano Finanza «al 4,5%»"
+   "nota": "chiusura 30/10: 4,51% (spread 118 punti), anche SoldiOnline; Trading Economics 4,53%; all'asta del 29/10 il BTP 4% ottobre 2036 è stato collocato al 4,49% (OraFinanza)"
   },
   {
    "id": "btpv",
@@ -861,17 +929,17 @@
    "id": "cdl",
    "t": "Conto deposito libero, miglior tasso lordo",
    "valore": 3.25,
-   "d": "2026-10-26",
+   "d": "2026-10-31",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/miglior-conto-deposito-libero.php",
-   "nota": "tasso promozionale: Conto deposito X Risparmio Flexi, Banca AideXa",
+   "nota": "tasso promozionale: Conto deposito X Risparmio Flexi, Banca AideXa (Revolut Bank UAB al 3,50% non è una banca italiana del Fondo Interbancario)",
    "unita": "%"
   },
   {
    "id": "cd12",
    "t": "Conto deposito vincolato 12 mesi, miglior tasso lordo",
    "valore": 4.0,
-   "d": "2026-10-26",
+   "d": "2026-10-31",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -880,7 +948,7 @@
    "id": "cd24",
    "t": "Conto deposito vincolato 24 mesi, miglior tasso lordo",
    "valore": 4.0,
-   "d": "2026-10-26",
+   "d": "2026-10-31",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -889,7 +957,7 @@
    "id": "cd36",
    "t": "Conto deposito vincolato 36 mesi, miglior tasso lordo",
    "valore": 3.75,
-   "d": "2026-10-26",
+   "d": "2026-10-31",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -942,7 +1010,7 @@
    "tasso": 4.0,
    "anni": 1,
    "gar": "Fondo Interbancario fino a 100.000 €",
-   "d": "2026-10-26",
+   "d": "2026-10-31",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php"
   },
@@ -954,7 +1022,7 @@
    "tasso": 4.0,
    "anni": 2,
    "gar": "Fondo Interbancario fino a 100.000 €",
-   "d": "2026-10-26",
+   "d": "2026-10-31",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php"
   },
@@ -966,7 +1034,7 @@
    "tasso": 3.75,
    "anni": 3,
    "gar": "da verificare con la banca",
-   "d": "2026-10-26",
+   "d": "2026-10-31",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "nota": "sulla stessa pagina il riquadro dei migliori indica 3,75%, l’elenco 3,50%: verificare con la banca"
@@ -979,7 +1047,7 @@
    "tasso": 3.25,
    "anni": 0,
    "gar": "Fondo Interbancario fino a 100.000 €",
-   "d": "2026-10-26",
+   "d": "2026-10-31",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/miglior-conto-deposito-libero.php",
    "nota": "tasso promozionale; durata della promozione non indicata"
@@ -992,7 +1060,7 @@
    "tasso": 3.0,
    "anni": 0,
    "gar": "Fondo Interbancario fino a 100.000 €",
-   "d": "2026-10-24",
+   "d": "2026-10-31",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/miglior-conto-deposito-libero.php",
    "nota": "tasso promozionale"
