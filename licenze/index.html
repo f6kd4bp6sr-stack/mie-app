@@ -202,12 +202,12 @@ a.btn{text-decoration:none;display:inline-block}
 .st-old{background:var(--soon-bg);color:var(--soon);border-radius:10px;padding:8px 12px;font-weight:700}
 .st-n{padding:12px 0;border-top:1px solid var(--line)}.st-n:first-child{border-top:0;padding-top:2px}.st-t{font-size:17px;margin:0 0 4px;line-height:1.3;color:var(--ink)}.st-top .st-t{font-size:20px}
 .st-s{margin:0;line-height:1.55}.st-f{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:6px;font-size:14px}.st-f a{font-weight:700;text-decoration:none;color:var(--cal)}.st-f .st-ap{font-weight:600;color:var(--muted)}
-.st-read .st-t{color:var(--muted)}
+.st-read .st-t{color:var(--muted)}.st-lang{font-size:11px;font-weight:800;background:var(--seg);border-radius:6px;padding:1px 5px;margin-left:2px}.st-f .st-tr{font-weight:600;color:var(--ok)}
 .dia-foot{margin-top:16px}.dia-foot summary{cursor:pointer;font-weight:700;color:var(--muted)}
 @media (max-width:600px){.dia-qt{font-size:18px}.dia-temp button small{font-size:10.5px}}
 
 </style>
-<script>window.APP_VERSION="18d4e6decb";window.APP_BUILD="2026-10-31T11:29+02:00";</script>
+<script>window.APP_VERSION="2b823806a9";window.APP_BUILD="2026-10-31T11:41+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -2517,13 +2517,16 @@ function bindCd(){const R=()=>render(),qa=s=>document.querySelectorAll(s),c=CD()
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-cdgo]");if(!b)return;cdV=b.dataset.cdgo;cdSel=b.dataset.cdid||null;go("cd");});
 
 /* ---------- 🗞️ STAMPA DI OGGI: le notizie principali, generali e di Torino ----------
+   Sezioni: Italia, Mondo, 🌐 Stampa estera (testate straniere, sintesi tradotte in italiano + link «leggi tradotto»), Economia, Torino, Cultura, Sport.
    File pubblico stampa-oggi.json, scritto dall'attività programmata alle 6 (edizione del mattino) e alle 22 (edizione della sera)
    seguendo strumenti/STAMPA.md: titoli e sintesi con parole nostre, tono neutro, fonti e link di approfondimento.
    Sull'iPad resta una copia (pn-stampa) per quando manca internet; quali notizie hai aperto: pn-stampa-lette (solo su questo iPad). */
 const ST_KEY="pn-stampa",ST_LKEY="pn-stampa-lette";
-const ST_SEZ=[["italia","🇮🇹","Italia"],["mondo","🌍","Mondo"],["economia","💶","Economia"],["torino","🏙️","Torino"],["cultura","🎭","Cultura"],["sport","⚽","Sport"]];
+const ST_SEZ=[["italia","🇮🇹","Italia"],["mondo","🌍","Mondo"],["estero","🌐","Stampa estera"],["economia","💶","Economia"],["torino","🏙️","Torino"],["cultura","🎭","Cultura"],["sport","⚽","Sport"]];
 let stSez="",stBusy=false;
 const stData=()=>lsJ(ST_KEY)||{sezioni:{}};
+/* articoli stranieri: titolo e sintesi sono già in italiano; «leggi tradotto» apre l'originale tradotto in italiano da Google Traduttore */
+const stTrad=u=>"https://translate.google.com/translate?sl=auto&tl=it&u="+encodeURIComponent(u);
 const stLette=()=>lsJ(ST_LKEY)||{};
 async function stFetch(force){const N=stData();if(stBusy||navigator.onLine===false)return;if(!force&&N.checked&&Date.now()-new Date(N.checked).getTime()<20*60e3)return;
   stBusy=true;try{const r=await fetch("stampa-oggi.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw 0;const o=await r.json();if(o.app!=="stampa-oggi"||!o.sezioni)throw 0;
@@ -2537,7 +2540,7 @@ function stQuando(){const N=stData();if(!N.updated)return "";const d=new Date(N.
   return (N.edizione==="sera"?"🌙 Edizione della sera":"☀️ Edizione del mattino")+" · "+d.toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"})+", "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});}
 
 function vSt(){const N=stData(),S=N.sezioni||{},L=stLette(),old=stOre()>30;
-  let o=`<h1>🗞️ Stampa di oggi</h1><p class="sub">Le notizie principali dai quotidiani online, generali e di Torino: aggiornate ogni giorno alle 6 e alle 22, con le fonti per approfondire.</p>`;
+  let o=`<h1>🗞️ Stampa di oggi</h1><p class="sub">Le notizie principali dai quotidiani online italiani ed esteri (tradotte in italiano), generali e di Torino: aggiornate ogni giorno alle 6 e alle 22, con le fonti per approfondire.</p>`;
   o+=`<div class="st-head"><span class="pill st-ed">${N.updated?esc(stQuando()):"in attesa della prima edizione"}</span><button class="btn sm" id="stRefresh">🔄 Aggiorna</button></div>`;
   if(N.updated&&old)o+=`<p class="st-old">⚠️ Questa edizione ha più di un giorno: la prossima arriva alle ${new Date().getHours()<22&&new Date().getHours()>=6?"22":"6"}.</p>`;
   const tabs=[["","📰","Tutte"]].concat(ST_SEZ.filter(([k])=>(S[k]||[]).length));
@@ -2545,7 +2548,7 @@ function vSt(){const N=stData(),S=N.sezioni||{},L=stLette(),old=stOre()>30;
   if(!N.updated)return o+`<div class="card k-st nofold"><p class="empty">Le notizie arrivano da internet: apri la sezione quando sei collegato.</p></div>`;
   (stSez?ST_SEZ.filter(([k])=>k===stSez):ST_SEZ).forEach(([k,ic,t])=>{const A=S[k]||[];if(!A.length)return;
     o+=`<h2>${ic} ${t}</h2><div class="card k-st nofold">${A.map((n,i)=>`<article class="st-n${i===0?" st-top":""}${L[n.id]?" st-read":""}"><h3 class="st-t">${esc(n.t)}</h3><p class="st-s">${esc(n.s)}</p>
-      <div class="st-f">${(n.fonti||[]).map(f=>`<a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">${esc(f.n)} ›</a>`).join("")}${(n.link||[]).map(f=>`<a class="st-ap" href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">🔎 ${esc(f.n)}</a>`).join("")}</div></article>`).join("")}</div>`;});
+      <div class="st-f">${(n.fonti||[]).map(f=>`<a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">${esc(f.n)}${f.l&&f.l!=="it"?` <span class="st-lang">${esc(f.l.toUpperCase())}</span>`:""} ›</a>${f.l&&f.l!=="it"?`<a class="st-tr" href="${stTrad(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">🔤 leggi tradotto</a>`:""}`).join("")}${(n.link||[]).map(f=>`<a class="st-ap" href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">🔎 ${esc(f.n)}</a>`).join("")}</div></article>`).join("")}</div>`;});
   o+=`<p class="lbl" style="margin-top:12px">Titoli e sintesi sono scritti per questa app con parole proprie, in tono neutro, partendo dalle testate indicate: per il testo completo apri la fonte (alcuni articoli sono riservati agli abbonati). Non sono opinioni né consigli.</p>`;
   return o;}
 

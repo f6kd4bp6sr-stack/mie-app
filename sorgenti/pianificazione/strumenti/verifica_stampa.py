@@ -7,7 +7,9 @@ import json, os, re, sys, datetime
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'tools'))
 from guardia import guarda  # impronte dei dati da non pubblicare, con chiave segreta (tools/guardia.py)
 
-SEZ = {'italia': (3, 8), 'mondo': (3, 8), 'economia': (1, 5), 'torino': (3, 8), 'cultura': (0, 4), 'sport': (0, 4)}
+SEZ = {'italia': (3, 8), 'mondo': (3, 8), 'estero': (0, 6), 'economia': (1, 5), 'torino': (3, 8), 'cultura': (0, 4), 'sport': (0, 4)}
+# lingua dell'articolo originale (per le testate estere): l'app offre «leggi tradotto»
+LINGUE = {'it', 'en', 'fr', 'es', 'de', 'pt', 'nl', 'ar', 'zh', 'ja', 'ru', 'uk', 'pl'}
 # stesse impronte usate per le novità della Pensione
 _src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'verifica_novita.py'), encoding='utf-8').read()
 REGOLE = json.loads(re.search(r'^REGOLE = (\[.*?\])\s*#', _src, re.M).group(1))
@@ -55,6 +57,8 @@ def controlla(o):
                 if not f.get('n') or not str(f.get('url', '')).startswith('https://'):
                     E.append(w + ': fonte o link senza nome o senza https')
             for f in F:
+                if f.get('l', 'it') not in LINGUE:
+                    E.append(w + ': lingua della fonte sconosciuta: ' + str(f.get('l')))
                 if f.get('url') in urls:
                     E.append(w + ': stesso articolo usato per due notizie')
                 urls.add(f.get('url'))
@@ -63,6 +67,9 @@ def controlla(o):
             # niente citazioni lunghe: le sintesi sono scritte con parole nostre
             if any(len(a or b) > 120 for a, b in re.findall(r'«([^»]*)»|"([^"]*)"', n.get('s', ''))):
                 E.append(w + ': citazione troppo lunga nella sintesi')
+    est = S.get('estero') or []
+    if est and any(all(f.get('l', 'it') == 'it' for f in n.get('fonti') or []) for n in est):
+        E.append('estero: ogni notizia deve avere almeno una fonte estera (campo «l» diverso da «it»)')
     if not isinstance(o.get('controlli'), list) or not o['controlli']:
         E.append('«controlli» mancante')
     if guarda(json.dumps(o, ensure_ascii=False), REGOLE, obbligatoria=False):

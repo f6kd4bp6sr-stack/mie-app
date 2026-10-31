@@ -1,7 +1,7 @@
 {
   "app": "stampa-oggi",
   "edizione": "mattina",
-  "updated": "2026-10-31T10:30+01:00",
+  "updated": "2026-10-31T10:41+01:00",
   "nota": "Prima edizione. Alcune notizie di venerdì restano incluse perché sono ancora al centro della giornata.",
   "sezioni": {
     "italia": [
@@ -57,7 +57,8 @@
         "d": "2026-10-31",
         "fonti": [
           {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/tensioni-e-proteste-in-polonia-dopo-la-sospensione-del-presidente-corte-costituzionale_630b4c01-47af-4b69-b140-f20f02ecdc20.html"},
-          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/31/corte-costituzionale-polonia-proteste/"}
+          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/31/corte-costituzionale-polonia-proteste/"},
+          {"n": "Euronews", "url": "https://www.euronews.com/2026/10/30/polish-president-turns-back-mid-flight-amid-coup-detat-allegations", "l": "en"}
         ]
       },
       {
@@ -68,7 +69,8 @@
         "fonti": [
           {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/31/zelensky-i-500-patriot-usa-fra-anni-ma-dobbiamo-difenderci-questo-inverno_8d224cb3-a893-48d0-87ef-9a6ba9c0516e.html"},
           {"n": "AGI", "url": "https://www.agi.it/estero/news/2026-10-31/russia-ucraina-patriot-guerra-zelensky-putin-39798242/"},
-          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/30/stati-uniti-patriot-ucraina/"}
+          {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/30/stati-uniti-patriot-ucraina/"},
+          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/31/us-greenlights-2-1bn-patriot-missile-sale-to-ukraine", "l": "en"}
         ]
       },
       {
@@ -77,7 +79,8 @@
         "s": "Il Consiglio di Stato ha annullato l'autorizzazione a partire dalla Bastiglia: il percorso resta in periferia. Il Governo schiera circa 70mila agenti, con coprifuoco notturno in alcune zone della capitale e limiti serali per i minori non accompagnati. I gilet gialli invitano a manifestare comunque, dopo i disordini del 17 ottobre.",
         "d": "2026-10-31",
         "fonti": [
-          {"n": "AGI", "url": "https://www.agi.it/estero/news/2026-10-31/francia-sabato-proteste-parigi-corteo-39798026/"}
+          {"n": "AGI", "url": "https://www.agi.it/estero/news/2026-10-31/francia-sabato-proteste-parigi-corteo-39798026/"},
+          {"n": "Euronews (francese)", "url": "https://fr.euronews.com/2026/10/30/manifestations-en-france-des-violences-comparables-au-17-octobre-redoutees-par-les-autorit", "l": "fr"}
         ]
       },
       {
@@ -87,16 +90,69 @@
         "d": "2026-10-30",
         "fonti": [
           {"n": "Il Post", "url": "https://www.ilpost.it/2026/10/30/novaya-gazeta-chiusura-russia/"},
-          {"n": "AGI", "url": "https://www.agi.it/estero/news/2026-10-30/russia-novaya-gazeta-annuncia-la-chiusura-39784114/"}
+          {"n": "AGI", "url": "https://www.agi.it/estero/news/2026-10-30/russia-novaya-gazeta-annuncia-la-chiusura-39784114/"},
+          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/30/russia-forces-closure-of-investigative-newspaper-novaya-gazeta", "l": "en"}
         ]
       },
       {
         "id": "mo-g20",
         "t": "G20 ad Atlanta, Kallas: da Lavrov nessun segnale di apertura sui negoziati",
-        "s": "L'Alta rappresentante dell'Unione europea per la politica estera, Kaja Kallas, ha detto all'AFP che il ministro degli Esteri russo non ha mostrato disponibilità a trattare sull'Ucraina e lo ha accusato di aver sostenuto tesi false durante la riunione negli Stati Uniti.",
+        "s": "L'Alta rappresentante Ue per la politica estera, Kaja Kallas, ha detto all'AFP che il ministro degli Esteri russo non ha mostrato disponibilità a trattare sull'Ucraina e lo ha accusato di sostenere tesi false. Gli Stati Uniti hanno annullato la foto di gruppo dei ministri dopo le proteste di alcuni diplomatici europei.",
         "d": "2026-10-30",
         "fonti": [
-          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/kallas-da-lavrov-menzogne-al-g20-nessun-segnale-di-apertura_da9b9b90-09cb-43b4-92b3-648f7cd3e797.html"}
+          {"n": "ANSA", "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/30/kallas-da-lavrov-menzogne-al-g20-nessun-segnale-di-apertura_da9b9b90-09cb-43b4-92b3-648f7cd3e797.html"},
+          {"n": "Euronews", "url": "https://www.euronews.com/2026/10/30/eu-diplomats-object-to-g20-photo-with-lavrov-prompting-us-cancellation", "l": "en"}
+        ]
+      }
+    ],
+    "estero": [
+      {
+        "id": "es-iran",
+        "t": "Iran, petroliere in fiamme a Hormuz mentre il Qatar media; Trump: la guerra finirà presto",
+        "s": "I Pasdaran sostengono che quattro petroliere hanno preso fuoco nello stretto di Hormuz, alcune su mine, perché viaggiavano su rotte non autorizzate; il comando militare statunitense contesta la versione iraniana. Mediatori del Qatar sono tornati a Teheran per cercare un accordo. Trump assicura che la guerra finirà presto, senza dire se con un'intesa o con nuovi attacchi.",
+        "d": "2026-10-31",
+        "fonti": [
+          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/liveblog/2026/10/31/iran-war-live-oil-tankers-hit-in-hormuz-trump-says-conflict-will-end-soon", "l": "en"},
+          {"n": "Euronews", "url": "https://www.euronews.com/2026/10/30/irans-revolutionary-guard-reports-two-tankers-on-fire-in-strait-of-hormuz-as-talks-continu", "l": "en"}
+        ]
+      },
+      {
+        "id": "es-usa",
+        "t": "Stati Uniti, martedì le elezioni di metà mandato: in gioco il controllo del Congresso",
+        "s": "Il 3 novembre si rinnovano tutta la Camera e un terzo del Senato, oggi entrambi con una stretta maggioranza repubblicana. I sondaggi danno i democratici in vantaggio alla Camera; al Senato pesano sfide incerte come Texas, Ohio e Maine. Oltre 44 milioni di americani hanno già votato. Trump sostituisce alcuni comizi con collegamenti telefonici.",
+        "d": "2026-10-30",
+        "fonti": [
+          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/30/trump-cancels-iowa-kansas-midterm-events-opting-for-tele-rallies", "l": "en"},
+          {"n": "CBS News", "url": "https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/", "l": "en"}
+        ]
+      },
+      {
+        "id": "es-germania",
+        "t": "Germania, oggi in piazza i giovani di «Gen Z regelt»: oltre 150mila iscritti",
+        "s": "Il movimento giovanile manifesta in circa 30 città, tra cui Berlino, Colonia, Francoforte e Amburgo, per scuole migliori, case accessibili e contro un ritorno della leva obbligatoria. Gli organizzatori promettono cortei pacifici; la polizia rafforza i controlli e alcuni negozi hanno protetto le vetrine. I timori nascono dai disordini delle scorse settimane in Francia e Italia.",
+        "d": "2026-10-31",
+        "fonti": [
+          {"n": "Euronews (tedesco)", "url": "https://de.euronews.com/2026/10/31/krawall-alarm-in-diesen-deutschen-stadten-konnte-es-krachen", "l": "de"},
+          {"n": "Al Jazeera", "url": "https://www.aljazeera.com/news/2026/10/31/germany-and-france-brace-for-protests-on-halloween-weekend", "l": "en"}
+        ]
+      },
+      {
+        "id": "es-italia",
+        "t": "Lo sciopero italiano visto dall'estero: carovita e riarmo, scontri isolati, sicurezza rafforzata",
+        "s": "Euronews descrive un'Italia in stato di allerta, con il Viminale preoccupato per le infiltrazioni violente e gli scontri di un piccolo gruppo vicino al Colosseo. L'agenzia spagnola EFE racconta proteste in tutto il Paese contro il carovita e il Governo Meloni, per lo più pacifiche, con tensioni a Torino e Roma, e ricorda il decreto sicurezza di ottobre.",
+        "d": "2026-10-30",
+        "fonti": [
+          {"n": "Euronews", "url": "https://www.euronews.com/2026/10/30/italy-on-high-alert-as-thousands-take-the-streets-in-nationwide-strike", "l": "en"},
+          {"n": "SWI swissinfo.ch (EFE)", "url": "https://www.swissinfo.ch/spa/manifestaciones-en-toda-italia-contra-la-carest%C3%ADa-y-las-pol%C3%ADticas-de-meloni/92304213", "l": "es"}
+        ]
+      },
+      {
+        "id": "es-eurozona",
+        "t": "Eurozona, inflazione in salita e crescita debole: si parla di rischio stagflazione",
+        "s": "Euronews in spagnolo mette a confronto Italia, con l'inflazione al 5,4% a ottobre, e Spagna, al 4,9%, spinte soprattutto dall'energia legata alla guerra con l'Iran. Nel terzo trimestre il Pil dell'eurozona cresce dello 0,4%, ma l'Italia è ferma e la Francia cala dello 0,1%. Gli economisti citati temono una stagflazione.",
+        "d": "2026-10-30",
+        "fonti": [
+          {"n": "Euronews (spagnolo)", "url": "https://es.euronews.com/2026/10/30/la-inflacion-de-italia-se-dispara-al-54-en-octubre-por-el-encarecimiento-de-la-energia", "l": "es"}
         ]
       }
     ],
@@ -203,6 +259,12 @@
       "edizione": "mattina",
       "notizie": 18,
       "note": "Fonti lette: ANSA (anche Piemonte), AGI, Il Post. Ricerca rifiutata: rainews.it, lastampa.it, repubblica.it, corriere.it, torino.corriere.it e torino.repubblica.it senza risultati. Lettura non riuscita: ilsole24ore.com, torinotoday.it, comune.torino.it, regione.piemonte.it."
+    },
+    {
+      "at": "2026-10-31T10:41+01:00",
+      "edizione": "mattina",
+      "notizie": 23,
+      "note": "Aggiunta la sezione estero (5 notizie) e una fonte estera alle 5 notizie del mondo. Fonti estere lette: Euronews (en, fr, de, es), Al Jazeera, CBS News, SWI swissinfo.ch/EFE. Ricerca rifiutata: reuters.com, apnews.com, bbc.com, bbc.co.uk, theguardian.com, nytimes.com, ft.com, lemonde.fr, lefigaro.fr, elpais.com, elmundo.es, spiegel.de, faz.net, dw.com, politico.eu, sueddeutsche.de, welt.de, zeit.de, tagesschau.de, lavanguardia.com, rfi.fr. Lettura non riuscita: france24.com, npr.org, washingtonpost.com."
     }
   ]
 }
