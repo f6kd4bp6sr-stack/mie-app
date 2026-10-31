@@ -31,7 +31,7 @@ pian/
 ├── statici/scheda-pensione.cifrata.json  scheda pensione CIFRATA (AES-256-GCM, chiave casuale mai nel repository): l'iPad la scarica,
 │                     la apre con la chiave `pn-scheda-chiave` e la unisce da sola (spunte, note, importi reali restano); non cambia la versione
 ├── sezioni/diario.js 📓 Diario del passaggio (`pn-diario-v1`, fuori da `pn-v1`: settimane, idee, prove, insieme, tappe, lettera); domande in `sezioni/diario_domande.json` (autore + revisore); solo nella copia automatica cifrata, mai nella copia su file
-├── sezioni/cultura.js 🤖 Cultura digitale (`pn-v1` → `cd`: fatte, lette, srs, novVisto); schede in `sezioni/cultura_dati.json`, novità in `statici/cultura-novita.json` (attività programmata, primo giro del mese); controllo `strumenti/verifica_cultura.py` (parte nel build)
+├── sezioni/cultura.js 🤖 Cultura digitale (`pn-v1` → `cd`: fatte, lette, srs, novVisto, lib = letture da leggere o lette; livello 1 tolto il 27/10/2026, livelli dal file); schede in `sezioni/cultura_dati.json`, novità in `statici/cultura-novita.json` (attività programmata, primo giro del mese); controllo `strumenti/verifica_cultura.py` (parte nel build)
 ├── sezioni/investimenti.js 🌱 Investimenti (`pn-v1` → `inv`: prof, ris, som, deb, sim, ipo): legge Cassa e scheda della Pensione,
 │                     tassi da `news-pensione.json` → `mercati` (aggiornati dall’attività) o scritti a mano
 ├── sezioni/metodo_dati.json  🤝 Metodo: 4 abilità con motto, 30 schede (curiosità + scienza con fonti), oltre 100 missioni (nome in codice, bonus, livello, situazione), 12 gruppi di frasi di scorta; inserito nella pagina dal build
