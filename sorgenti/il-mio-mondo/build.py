@@ -86,6 +86,7 @@ js=''.join(open(D+f,encoding='utf-8').read()+'\n' for f in
   'data/domande/vids.js',
   'js/percorso/video.js',
   'data/domande/serie.js',
+  'data/domande/cartoni.js',
   'js/sezioni/serie.js',
   'js/core/bg.js',
   'js/core/boot.js']

@@ -64,7 +64,7 @@ function srGo(i) {
   const bub = $('sr-bub'); bub.classList.remove('in'); void bub.offsetWidth; bub.textContent = sl.t; bub.classList.add('in');
   const shown = new Set(); R.slice(0, i + 1).forEach(x => (x.nodi || []).forEach(n => shown.add(n)));
   $('sr-chips').innerHTML = [...shown].map(n => N[n] ? '<span class="sr-chip' + ((sl.nodi || []).includes(n) ? ' new' : '') + '">' + (N[n].ic || '') + ' ' + esc(N[n].n) + (N[n].anno != null ? '<small>' + (N[n].anno < 0 ? -N[n].anno + ' a.C.' : N[n].anno + ' d.C.') + '</small>' : '') + '</span>' : '').join('');
-  const nn = (sl.nodi || []).map(n => N[n]).filter(Boolean)[0], sc = $('sr-scene'); if (sc) { sc.classList.remove('in'); void sc.offsetWidth; sc.textContent = nn && nn.ic ? nn.ic : srIc(SR.id); sc.classList.add('in'); }
+  const nn = (sl.nodi || []).map(n => N[n]).filter(Boolean)[0], sc = $('sr-scene'); if (sc) { sc.classList.remove('in'); void sc.offsetWidth; const cart = typeof CARTONI !== 'undefined' && CARTONI[SR.id] && CARTONI[SR.id][i]; sc.classList.toggle('cart', !!cart); if (cart) sc.innerHTML = '<svg viewBox="0 0 400 240" role="img" aria-hidden="true">' + cart + '</svg>'; else sc.textContent = nn && nn.ic ? nn.ic : srIc(SR.id); sc.classList.add('in'); }
   $('sr-dots').querySelectorAll('i').forEach((e, k) => e.className = k < i ? 'on' : k === i ? 'cur' : '');
   const dr = document.querySelector('#sr-ov .sr-drago'); if (dr) { dr.classList.remove('talk'); void dr.offsetWidth; dr.classList.add('talk'); }
   if (!SR.play) return;

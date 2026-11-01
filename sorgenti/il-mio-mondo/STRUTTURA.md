@@ -29,6 +29,7 @@ app/
 ├── README.md           memoria dell'app: indirizzo, dati sul dispositivo, collegamenti, regole
 ├── data/
 │   ├── domande/serie.js  🎬 la serie del drago: ordine degli episodi (programma di 5ª) e video PROPOSTI per episodio, visibili alla bambina solo se approvati dal genitore con il PIN (vid-ok sull'iPad; js/sezioni/serie.js, css/serie.css; progressi in serie-storia)
+│   ├── domande/cartoni.js  🎨 cartoni disegnati della serie: una scena SVG animata per ogni frase del racconto (le parole restano quelle verificate in SPIEGA; se manca la scena si vede l'icona). Pilota: Torino romana
 │   (🔗 inviti WhatsApp: docs/episodi/ → /episodi/index.html e /episodi/N.html con anteprima img/N.jpg; si rigenerano con node tools/episodi.js; nell'app #serie e #serie=N aprono la serie o l'episodio N se già aperto)
 │   ├── spiegazioni/    racconto + mappa concettuale per argomento (198, tutta La mia scuola; mappe raggiera, ciclo, linea, scala; «solo» = da guardare insieme), controllati da tools/controlla.py
 │   ├── cartine/        cartine interattive (grecia.json: coste Natural Earth semplificate + 13 luoghi)

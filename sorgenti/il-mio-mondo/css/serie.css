@@ -64,3 +64,18 @@
 .sr-pr button{font-size:22px;background:none;border:2px solid transparent;border-radius:12px;cursor:pointer;opacity:.35;padding:2px 6px}
 .sr-pr button.on{opacity:1;border-color:var(--line)}
 .sr-pr span,.sr-pg{text-align:left}
+
+/* 🎨 cartoni disegnati (data/domande/cartoni.js) */
+.sr-scene.cart{font-size:0;width:min(520px,78vw);top:36%;filter:drop-shadow(0 10px 22px rgba(0,0,0,.3))}.sr-scene.cart svg{width:100%;height:auto;display:block}
+.sr-scene.cart text{font-family:inherit}
+.sr-scene.cart .a{opacity:0;animation:crA .7s ease forwards;animation-delay:var(--d,0s)}
+.sr-scene.cart .w{stroke-dasharray:1000;stroke-dashoffset:1000;animation:crW 1.8s ease forwards;animation-delay:var(--d,0s)}
+.sr-scene.cart .b{transform-box:fill-box;transform-origin:center bottom;animation:crB 2.6s ease-in-out infinite}
+.sr-scene.cart .ghost{--d:1.8s}.sr-scene.cart .ghost rect,.sr-scene.cart .ghost path{stroke:#d6453d;stroke-width:3;stroke-dasharray:6 5;fill:rgba(214,69,61,.12)}.sr-scene.cart .ghost line{display:none}
+.sr-scene.cart .pm{animation:crPm 1s ease 1.2s forwards}
+@keyframes crA{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes crW{to{stroke-dashoffset:0}}
+@keyframes crB{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes crPm{to{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.sr-scene.cart *{animation:none!important;opacity:1!important;stroke-dashoffset:0!important}}
+@media (min-width:900px) and (orientation:landscape){.sr-scene.cart{left:calc((100% - 352px) / 2 + 40px);top:34%;width:min(500px,calc(100% - 520px))}}
