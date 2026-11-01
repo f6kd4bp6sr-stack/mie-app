@@ -1,19 +1,20 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-10-31T12:58:00+01:00",
+ "updated": "2026-11-01T13:05:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
    "d": "2026-10-31",
    "titolo": "Ddl di bilancio 2027: FESI +17,6 milioni l'anno alla GdF, nessuna misura di previdenza dedicata",
-   "sintesi": "Secondo GrNet (31/10), che riporta il testo del ddl di bilancio 2027 (157 articoli): art. 98, aumento strutturale del FESI dal 2027 di circa 90,8 milioni annui, di cui 17,6 alla Guardia di Finanza; art. 99, 50 milioni nel 2027 per straordinari già svolti (9,5 alla GdF); art. 101, 180 assunzioni straordinarie 2027-2032 (60 alla GdF); art. 65, imposta al 15% sul salario accessorio 2027 che esclude Forze di polizia e Forze armate. Non risultano misure di previdenza dedicata né di rinnovo contrattuale. Secondo SILP CGIL (29/10) le risorse previdenziali sono un rifinanziamento di impegni già previsti.",
+   "sintesi": "Secondo GrNet (31/10), che riporta il ddl di bilancio 2027: art. 98, FESI in aumento dal 2027; art. 99, straordinari già svolti (9,5 milioni alla GdF nel 2027); art. 101, assunzioni straordinarie 2027-2032; art. 65, imposta al 15% sull'accessorio che esclude Forze di polizia e armate. Non risultano misure di previdenza dedicata né di rinnovo contrattuale (SILP CGIL 29/10: risorse già previste). Aggiornato il 1/11: per il SILF (31/10) alla GdF vanno 17.614.492 euro di FESI (+16% sul 2026) e 60 assunzioni (6 ufficiali, 36 ispettori, 18 appuntati e finanzieri); conferma l'assenza di fondi per la previdenza dedicata.",
    "fonte": "GrNet (testo del ddl di bilancio 2027)",
    "url": "https://www.grnet.it/legge-di-bilancio-2027-ecco-le-novita-per-il-personale-del-comparto-sicurezza-e-difesa-e-per-i-pensionati/",
    "fonti2": [
     "https://www.silpcgil.it/articolo/13622-ddl_legge_di_bilancio_2027,_nessuna_risorsa_specifica_per_il_comparto_sicurezza",
     "https://www.italiaoggi.it/economia-e-politica/legge-di-bilancio-2027-il-testo-punto-per-punto-irpef-bollo-auto-pensioni-e-forfettari-jsgt9n7s",
-    "https://forzearmate.org/legge-di-bilancio-2027-via-libera-del-governo-alla-manovra-da-26-miliardi-novita-per-stipendi-pensioni-famiglie-e-difesa/"
+    "https://forzearmate.org/legge-di-bilancio-2027-via-libera-del-governo-alla-manovra-da-26-miliardi-novita-per-stipendi-pensioni-famiglie-e-difesa/",
+    "https://www.silfnazionale.it/2026/10/31/ddl-bilancio-2027-tutte-le-novita-per-i-finanzieri-poche-luci-tante-ombre/"
    ],
    "temi": [
     "contratto",
@@ -35,7 +36,8 @@
    "url": "https://tg24.sky.it/economia/2026/10/30/manovra-2027-pensioni-irpef-novita",
    "fonti2": [
     "https://www.grnet.it/legge-di-bilancio-2027-ecco-le-novita-per-il-personale-del-comparto-sicurezza-e-difesa-e-per-i-pensionati/",
-    "https://www.italiaoggi.it/economia-e-politica/legge-di-bilancio-2027-il-testo-punto-per-punto-irpef-bollo-auto-pensioni-e-forfettari-jsgt9n7s"
+    "https://www.italiaoggi.it/economia-e-politica/legge-di-bilancio-2027-il-testo-punto-per-punto-irpef-bollo-auto-pensioni-e-forfettari-jsgt9n7s",
+    "https://www.silfnazionale.it/2026/10/31/ddl-bilancio-2027-tutte-le-novita-per-i-finanzieri-poche-luci-tante-ombre/"
    ],
    "temi": [
     "inps",
@@ -318,7 +320,7 @@
    "id": "dpr2527",
    "t": "DPR di recepimento del contratto 2025-2027 in Gazzetta Ufficiale",
    "stato": "atteso",
-   "quando": "non ancora in Gazzetta al 31/10/2026 ore 9 (nessun DPR nelle S.G. fino alla n. 252 del 29/10; n. 253 del 30/10 senza notizia di pubblicazione); attesa entro la prima metà di novembre 2026 (previsione SIULP)",
+   "quando": "non ancora in Gazzetta al 1/11/2026 (nessun DPR nelle S.G. fino alla n. 254 del 31/10); attesa entro la prima metà di novembre 2026 (previsione SIULP)",
    "fonte": "SIULP",
    "url": "https://siulp.it/articolo/pubblicazione-del-dpr-di-recepimento-del-contratto-di-lavoro-per-gli-anni-2025-2027/",
    "valore": null
@@ -357,7 +359,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T12:58:00+01:00",
+   "ultimo": "2026-11-01T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -371,21 +373,21 @@
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-11-01T13:05:00+01:00",
    "esito": "ok"
   },
   {
    "n": "MEF",
    "url": "https://www.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-11-01T13:05:00+01:00",
    "esito": "ok"
   },
   {
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-11-01T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -399,7 +401,7 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-11-01T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -420,7 +422,7 @@
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-11-01T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -469,14 +471,14 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-31T12:58:00+01:00",
+   "ultimo": "2026-11-01T13:05:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-31T12:58:00+01:00",
+   "ultimo": "2026-11-01T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -867,6 +869,11 @@
    "at": "2026-10-31T12:58:00+01:00",
    "notizie": 0,
    "note": "giro delle 13 (sabato): nessuna notizia nuova rispetto al giro delle 9:15. Gazzetta: ultimo numero in elenco S.G. n. 253 del 30/10, DPR di recepimento del contratto 2025-2027 non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. USIF (ultimo comunicato 19/10), SILF (29/10, protocollo AdE-Carabinieri) e SINAFI (29/10, stesso tema) senza novità su contratto o pensione; INPS: ricerca sul sito senza messaggi nuovi sul tema. Tassi di mercato e prodotti invariati (sabato, mercati chiusi; BCE e inflazione già aggiornate). Volontariato già fatto lunedì 26/10; cultura digitale già fatta a ottobre. Scheda invariata. Ricontrollate Gazzetta, USIF, SILF, SINAFI e INPS; non ricontrollati in questo giro Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-11-01T13:05:00+01:00",
+   "notizie": 0,
+   "note": "giro delle 13 (domenica 1/11): nessuna notizia nuova; corretta una voce e aggiunta una seconda fonte a un'altra con il SILF (31/10): FESI GdF 17.614.492 € (+16%), assunzioni 6+36+18, TFS dal 2028 con fine rateizzazione nel 2035. Gazzetta: ultimo numero S.G. n. 254 del 31/10, DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. USIF (ultimo comunicato 19/10) senza novità; SILF: 28/10 coefficienti e 31/10 ddl bilancio; INPS: ultimo messaggio n. 3484 del 29/10, non sul tema; NoiPA, MEF, Funzione Pubblica e GdF senza novità nelle ricerche sul sito. Domenica, mercati chiusi: BTP, BCE, inflazione e BBVA invariati; conti deposito riletti su conti-deposito.net, invariati. Nessuna nuova emissione retail MEF. Volontariato: non è lunedì. Cultura digitale: fatta (2 voci). Scheda invariata. Non ricontrollati Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
   }
  ],
  "mercati": [
@@ -934,7 +941,7 @@
    "id": "cdl",
    "t": "Conto deposito libero, miglior tasso lordo",
    "valore": 3.25,
-   "d": "2026-10-31",
+   "d": "2026-11-01",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/miglior-conto-deposito-libero.php",
    "nota": "tasso promozionale: Conto deposito X Risparmio Flexi, Banca AideXa (Revolut Bank UAB al 3,50% non è una banca italiana del Fondo Interbancario)",
@@ -944,7 +951,7 @@
    "id": "cd12",
    "t": "Conto deposito vincolato 12 mesi, miglior tasso lordo",
    "valore": 4.0,
-   "d": "2026-10-31",
+   "d": "2026-11-01",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -953,7 +960,7 @@
    "id": "cd24",
    "t": "Conto deposito vincolato 24 mesi, miglior tasso lordo",
    "valore": 4.0,
-   "d": "2026-10-31",
+   "d": "2026-11-01",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -962,7 +969,7 @@
    "id": "cd36",
    "t": "Conto deposito vincolato 36 mesi, miglior tasso lordo",
    "valore": 3.75,
-   "d": "2026-10-31",
+   "d": "2026-11-01",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -1015,7 +1022,7 @@
    "tasso": 4.0,
    "anni": 1,
    "gar": "Fondo Interbancario fino a 100.000 €",
-   "d": "2026-10-31",
+   "d": "2026-11-01",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php"
   },
@@ -1027,7 +1034,7 @@
    "tasso": 4.0,
    "anni": 2,
    "gar": "Fondo Interbancario fino a 100.000 €",
-   "d": "2026-10-31",
+   "d": "2026-11-01",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php"
   },
@@ -1039,7 +1046,7 @@
    "tasso": 3.75,
    "anni": 3,
    "gar": "da verificare con la banca",
-   "d": "2026-10-31",
+   "d": "2026-11-01",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "nota": "sulla stessa pagina il riquadro dei migliori indica 3,75%, l’elenco 3,50%: verificare con la banca"
@@ -1052,7 +1059,7 @@
    "tasso": 3.25,
    "anni": 0,
    "gar": "Fondo Interbancario fino a 100.000 €",
-   "d": "2026-10-31",
+   "d": "2026-11-01",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/miglior-conto-deposito-libero.php",
    "nota": "tasso promozionale; durata della promozione non indicata"

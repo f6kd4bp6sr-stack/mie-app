@@ -1,6 +1,6 @@
 {
  "app": "cultura-digitale",
- "updated": "2026-10-26T22:00+01:00",
+ "updated": "2026-11-01T13:05:00+01:00",
  "nota": "Novità verificate sull'IA: regole, rischi, usi. Una volta al mese.",
  "voci": [
   {
@@ -62,6 +62,26 @@
    "perche": "Hai diritto di sapere quando parli con un'IA. Resta prudente: chi truffa non mette etichette.",
    "fonte": "Commissione europea",
    "url": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+  },
+  {
+   "id": "ue-linee-guida-art50",
+   "d": "2026-07-20",
+   "tema": "basi",
+   "t": "Linee guida europee sull'etichettatura dei contenuti creati con l'IA",
+   "s": "Il 20 luglio 2026 la Commissione europea ha pubblicato le linee guida sugli obblighi di trasparenza dell'art. 50 dell'AI Act. Chi crea sistemi di IA deve segnalare quando si parla con una macchina e marcare i contenuti generati; chi li usa deve avvisare quando mostra deepfake o testi di interesse pubblico senza controllo editoriale.",
+   "perche": "Un contenuto dichiarato come creato con l'IA è più facile da riconoscere. Ma l'assenza dell'etichetta non prova che sia vero.",
+   "fonte": "Commissione europea",
+   "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems"
+  },
+  {
+   "id": "garante-deepfake-ott2026",
+   "d": "2026-10-08",
+   "tema": "prudenza",
+   "t": "Deepfake: il Garante privacy riepiloga reato e interventi",
+   "s": "Il Garante privacy ricorda che l'art. 612-quater del codice penale (legge 132/2025) punisce con la reclusione da uno a cinque anni chi diffonde senza consenso immagini, video o voci falsificati con l'IA e causa un danno ingiusto. Si procede a querela. Cita gli interventi su Clothoff e Grok.",
+   "perche": "Diffondere un deepfake di qualcuno è un reato. Se ne sei vittima puoi sporgere querela.",
+   "fonte": "Garante privacy",
+   "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10306949"
   }
  ],
  "controlli": [
@@ -72,6 +92,10 @@
   {
    "at": "2026-10-26T22:00+01:00",
    "note": "revisione indipendente: 6 voci ricontrollate sulle fonti ufficiali, nessuna correzione"
+  },
+  {
+   "at": "2026-11-01T13:05:00+01:00",
+   "note": "primo giro di novembre: 2 voci aggiunte (linee guida UE art. 50 del 20/07 e riepilogo del Garante sui deepfake dell'8/10), ciascuna letta due volte con domande diverse; pagina MIM sul decreto legislativo IA non raggiungibile"
   }
  ]
 }
