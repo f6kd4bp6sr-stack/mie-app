@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="0353ff1be6";</script>
+<script>window.APP_VERSION="a5d12f75ab";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -14432,7 +14432,7 @@ function parentList() {
   const hide = vidHidden();
   openModal('<div class="big" style="font-size:24px">👨‍👧 Video visibili</div><p style="font-weight:700;color:var(--ink-soft)">Tocca per nascondere o mostrare. Il link apre il video su YouTube per guardarlo prima.</p>' +
     '<div class="vd-par-list">' + VIDEOS.map(x => '<div class="vd-pr"><button type="button" class="vd-tg' + (hide.includes(x.id) ? ' off' : '') + '" data-v="' + x.id + '">' + (hide.includes(x.id) ? '🚫' : '✅') + '</button><span><b>' + esc(x.t) + '</b><small>' + esc(unitLabel(x.u)) + ' · ' + esc(x.ch) + '</small></span><a href="https://www.youtube.com/watch?v=' + x.id + '" target="_blank" rel="noopener noreferrer">▶ YouTube</a></div>').join('') + '</div>' +
-    '<div class="row center" style="margin-top:12px;gap:8px">' + (typeof srParent === 'function' ? '<button type="button" class="btn ghost" id="pl-sr">🎬 Video della serie' + (!SR_VID_AUTO && srVidDa().length ? ' (' + srVidDa().length + ' da vedere)' : '') + '</button>' : '') + '<button type="button" class="btn" id="pl-x" data-focus>Fatto</button></div>');
+    '<div class="row center" style="margin-top:12px;gap:8px">' + (typeof srParent === 'function' && srVidAll().length ? '<button type="button" class="btn ghost" id="pl-sr">🎬 Video della serie' + (!SR_VID_AUTO && srVidDa().length ? ' (' + srVidDa().length + ' da vedere)' : '') + '</button>' : '') + '<button type="button" class="btn" id="pl-x" data-focus>Fatto</button></div>');
   if ($('pl-sr')) $('pl-sr').addEventListener('click', () => srParent());
   $('modal-box').classList.add('wide');
   $('pl-x').addEventListener('click', () => { closeModal(); openVideos(); });
@@ -14442,12 +14442,13 @@ function parentList() {
   }));
 }
 
-/* 🎬 la serie del drago: episodi nell'ordine del programma di 5ª e video proposti per episodio (cercati da un agente, controllati a campione da un revisore) */
-const SERIE = {"storia": {"episodi": ["grecia", "polis", "greci", "pensatori", "alessandro", "italici", "etruschi", "roma-re", "repubblica", "impero", "vita-romana", "torino"], "video": {"grecia": [{"id": "M_AidDernAI", "t": "I Greci - Storia per la Primaria", "ch": "", "why": "Una lezione di storia sui Greci pensata per i bambini della primaria."}, {"id": "VHBzrj8EPwc", "t": "I Greci pt.1 - La storia spiegata ai bambini", "ch": "", "why": "La storia dei Greci spiegata ai bambini, prima parte: si comincia da qui!"}, {"id": "QLUI43oKrGk", "t": "Antica Grecia - 5 cose da sapere", "ch": "", "why": "Cinque cose da sapere sull'antica Grecia, raccontate per bambini."}, {"id": "GNNovWYbuJc", "t": "Gli Elleni e la nascita della civiltà greca", "ch": "", "why": "Chi erano gli Elleni e come è nata la civiltà greca?"}, {"id": "NiOtxBaVVPw", "t": "L'Antica Grecia: arte e cultura (classe 5ª primaria)", "ch": "", "why": "Arte e cultura dell'antica Grecia, per la classe quinta."}], "polis": [{"id": "E6U-Mj2D20M", "t": "Le poleis - I Greci (Renato lo scienziato)", "ch": "Mela Educational", "why": "Renato lo scienziato ci porta a scoprire le poleis dei Greci."}, {"id": "hB2MMvdUZ30", "t": "La polis greca: Acropoli, Asty e Chora", "ch": "", "why": "Acropoli, asty e chora: chi abitava nella polis greca?"}, {"id": "gEkEu851NsU", "t": "Le poleis: Sparta e Atene", "ch": "Maestra Annagrazia", "why": "La maestra ci racconta le poleis di Sparta e Atene."}, {"id": "LFhk630wWFg", "t": "Atene e Sparta: due città a confronto", "ch": "Pasticciotti", "why": "Atene e Sparta messe a confronto: governo, cultura e società."}], "greci": [{"id": "a71bzG8GVNY", "t": "I Greci pt.3 - La storia spiegata ai bambini", "ch": "", "why": "Terza parte sui Greci, raccontata ai bambini della primaria."}, {"id": "Dhc8lc1EXEI", "t": "Introduzione alla mitologia greca (scuola primaria)", "ch": "", "why": "Un'introduzione ai miti greci pensata per la scuola primaria."}, {"id": "H0qi3Bs96PI", "t": "Divinità dell'antica Grecia: gli dei dell'Olimpo", "ch": "", "why": "Gli dei dell'Olimpo con miti e leggende dell'antica Grecia."}, {"id": "N3LagO-6thw", "t": "Le Olimpiadi dell'antica Grecia", "ch": "", "why": "Come erano le Olimpiadi nell'antica Grecia?"}], "pensatori": [{"id": "TYDuekbQym4", "t": "Archimede - Renato lo scienziato", "ch": "Mela Educational", "why": "Renato lo scienziato ci presenta Archimede."}, {"id": "GOV5zIgDvrg", "t": "Socrate - Storia della filosofia per bambini", "ch": "Fondazione Circolo dei lettori", "why": "Chi era Socrate? La filosofia raccontata ai bambini."}, {"id": "cUZRUnAO18Y", "t": "C'era una volta gli scopritori: Archimede e i Greci", "ch": "", "why": "Archimede e i Greci in una storia di scoperte."}, {"id": "xzUTfPpFpdE", "t": "La storia di Archimede e la corona d'oro", "ch": "La Fisica che ci piace Kids", "why": "La storia di Archimede e della corona d'oro."}, {"id": "evinJvJDiUM", "t": "Storie di scienza - Eureka!", "ch": "", "why": "Eureka! Una storia di scienza."}], "alessandro": [{"id": "BZIhY6UarKM", "t": "I Macedoni: Alessandro Magno e Filippo II", "ch": "", "why": "I Macedoni con Alessandro Magno e suo padre Filippo II."}, {"id": "KFpDRfOflhk", "t": "I Macedoni e Alessandro Magno", "ch": "Maestra Annagrazia", "why": "La maestra racconta i Macedoni e Alessandro Magno."}, {"id": "vIQyhA0VviY", "t": "I Macedoni - Prima parte (Storia per la Primaria)", "ch": "", "why": "Prima parte sui Macedoni, per la primaria."}, {"id": "JG0stLMG1dY", "t": "I Macedoni - La storia spiegata facile", "ch": "", "why": "I Macedoni: la storia spiegata in modo facile."}], "italici": [{"id": "Dy3rJUj9Flg", "t": "Umbri, Sanniti e Piceni - Popoli dell'Italia antica", "ch": "", "why": "Umbri, Sanniti e Piceni: popoli dell'Italia antica, prima parte."}, {"id": "oKyM8Alpy6c", "t": "I Sardi - Popoli dell'Italia antica", "ch": "", "why": "I Sardi tra i popoli dell'Italia antica."}, {"id": "J8BvvaBKVlU", "t": "I popoli dell'Italia", "ch": "Maestra Annagrazia", "why": "La maestra ci presenta i popoli dell'Italia antica."}, {"id": "oG0JUxy-SU8", "t": "I popoli italici - La storia spiegata facile", "ch": "", "why": "I popoli italici spiegati in modo facile."}, {"id": "MMwoJX2Ah7s", "t": "La colonizzazione e la Magna Grecia", "ch": "", "why": "I Greci arrivano in Italia: la Magna Grecia."}], "etruschi": [{"id": "ZtF6F9XGM6M", "t": "Gli Etruschi pt.1 - Una lezione avventurosa", "ch": "maestro Tommaso Provvedi", "why": "Una lezione avventurosa sugli Etruschi per i bambini."}, {"id": "XD2-NqOoI3M", "t": "Gli Etruschi pt.2 - Alla scoperta dei loro misteri", "ch": "", "why": "Seconda parte: alla scoperta dei misteri degli Etruschi."}, {"id": "qQ2qx3z2sRk", "t": "Gli Etruschi", "ch": "Maestra Annagrazia", "why": "La maestra ci racconta gli Etruschi."}, {"id": "0d_YO1N3mmA", "t": "Gli Etruschi - Seconda parte (Storia per la Primaria)", "ch": "", "why": "Seconda parte sugli Etruschi, per la primaria."}, {"id": "dcLpli_Hc40", "t": "Gli Etruschi", "ch": "Maestra Selene", "why": "Gli Etruschi raccontati dalla maestra Selene."}, {"id": "I9TU2CHqRxw", "t": "GLI ETRUSCHI: una civiltà avvolta nel mistero - Popoli italici, Storia a Scuola", "ch": "Pasticciotti", "why": "Il mistero degli Etruschi: la loro lingua e come leggevano il futuro."}], "roma-re": [{"id": "5uK0KuXAqEY", "t": "I 7 Re di Roma - la storia (Renato lo scienziato)", "ch": "Mela Educational", "why": "Renato lo scienziato racconta la storia dei sette re di Roma."}, {"id": "4MJ68g_yTxo", "t": "I sette Re di Roma - Canzone", "ch": "Mela Educational", "why": "Una canzone per ricordare i sette re di Roma."}, {"id": "dCKQuR63jBo", "t": "I 7 Re di Roma - Storia, scuola primaria", "ch": "Renato lo scienziato", "why": "I sette re di Roma spiegati per la scuola primaria."}, {"id": "sHtrePlj4zs", "t": "Videolezione: i sette Re di Roma", "ch": "Renato lo scienziato", "why": "Una videolezione sui sette re di Roma."}, {"id": "vzV9FP3ldZE", "t": "La fondazione di Roma e i 7 Re", "ch": "", "why": "Come nacque Roma e chi furono i suoi sette re."}], "repubblica": [{"id": "Q_rXkY9Khnc", "t": "L'Antica Roma: la Repubblica (scuola primaria)", "ch": "", "why": "La Repubblica dell'antica Roma, per la scuola primaria."}, {"id": "P4BIhkKMlFU", "t": "I Romani: la Repubblica (scuola primaria)", "ch": "", "why": "I Romani e la Repubblica, per la scuola primaria."}, {"id": "NMBCPJVnxzA", "t": "I Romani - Monarchia e Repubblica", "ch": "", "why": "Dalla monarchia alla Repubblica: la storia dei Romani."}, {"id": "a-0ss_d7PaQ", "t": "Roma: dalla Monarchia alla Repubblica", "ch": "", "why": "Roma passa dalla monarchia alla Repubblica."}], "impero": [{"id": "hs2K-nDJ3Es", "t": "L'Impero romano - 5 cose da sapere", "ch": "", "why": "Cinque cose da sapere sull'Impero romano, per bambini."}, {"id": "1j8hVYfEZUE", "t": "I Romani - Prima parte (Storia per la Primaria)", "ch": "", "why": "Prima parte sui Romani, per la primaria."}, {"id": "sYr9_WnXWMg", "t": "La nascita dell'Impero romano: Ottaviano Augusto", "ch": "", "why": "Ottaviano Augusto e la nascita dell'Impero romano."}, {"id": "AqwcSE51ONI", "t": "L'Impero romano diventa cristiano", "ch": "", "why": "Come l'Impero romano diventa cristiano."}, {"id": "NEOGGgSaLnw", "t": "La caduta dell'Impero romano d'Occidente", "ch": "Giulia De Santis", "why": "Perché l'Impero d'Occidente finì nel 476."}], "vita-romana": [{"id": "-xeiS_1OhEY", "t": "Scuola primaria: le Domus e le Insulae romane", "ch": "", "why": "Le case dei Romani: domus e insulae, per la scuola primaria."}, {"id": "jaI_Frke-yY", "t": "La Domus romana", "ch": "", "why": "Com'era fatta una domus romana?"}, {"id": "yEUlAkLRjf0", "t": "I Romani pt.3 - Alla scoperta della società romana", "ch": "", "why": "Alla scoperta della società romana, spiegata facile."}, {"id": "cqYiZJFWgfE", "t": "Le strade romane. Come le costruivano?", "ch": "", "why": "Come costruivano le strade i Romani?"}], "torino": [{"id": "IRp6hkDZyR8", "t": "Torino romana. La città (quasi) quadrata - ArcheoPillola 001", "ch": "", "why": "La Torino romana era una città quasi quadrata."}, {"id": "aCXuYn6n6W8", "t": "Torino romana. Le porte monumentali - ArcheoPillola 003", "ch": "", "why": "Le grandi porte della Torino romana."}, {"id": "8uwE8WbK9SI", "t": "Torino romana. Le strade - ArcheoPillola 004", "ch": "", "why": "Le strade della Torino romana."}, {"id": "-SyHy6UC-xE", "t": "Torino fu fondata dai Romani", "ch": "", "why": "Torino fu fondata dai Romani."}, {"id": "0cHz9M93WUM", "t": "Porta Palatina: curiosità e segreti", "ch": "", "why": "Curiosità e segreti della Porta Palatina di Torino."}]}}};
-/* i video della serie sono PROPOSTE: per ora visibili tutti (SR_VID_AUTO); il genitore nasconde con ❌ (vid-ok, solo sull'iPad) */
+/* 🎬 la serie del drago: episodi nell'ordine del programma di 5ª (i video sono archiviati) */
+const SERIE = {"storia": {"episodi": ["grecia", "polis", "greci", "pensatori", "alessandro", "italici", "etruschi", "roma-re", "repubblica", "impero", "vita-romana", "torino"], "video": {}}};
+/* i video YouTube sono archiviati in data/_archivio/serie-video.json: al loro posto i cartoni disegnati (cartoni.js) */
 
 /* 🎨 cartoni della serie: una scena disegnata per ogni frase del racconto (le parole restano quelle verificate in SPIEGA).
    Classi: a = compare (--d ritardo), w = si disegna il tratto, b = respira, m = cammina. Pilota: Torino romana. */
+var CH; /* aiutanti di disegno condivisi: CH.T testo, CH.cielo, CH.capanna, CH.torre, CH.porta */
 const CARTONI = (() => {
   const T = (x, y, s, t, d, extra) => '<text class="a" style="--d:' + d + 's" x="' + x + '" y="' + y + '" font-size="' + s + '" ' + (extra || '') + '>' + t + '</text>';
   const cielo = (a, b) => '<defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + a + '"/><stop offset="1" stop-color="' + b + '"/></linearGradient></defs><rect width="400" height="240" rx="18" fill="url(#cg)"/>';
@@ -14458,6 +14459,7 @@ const CARTONI = (() => {
     [[x + 40, 18, 30], [x + 62, 30, 46], [x + 98, 30, 46], [x + 132, 18, 30]].map(([ax, w, h]) => '<path d="M' + ax + ',' + (y + 110) + 'v-' + (h - w / 2) + 'a' + w / 2 + ',' + w / 2 + ' 0 0 1 ' + w + ',0v' + (h - w / 2) + 'z" fill="#2b1d14"/>').join('') +
     [0, 1, 2, 3, 4, 5].map(k => '<rect x="' + (x + 44 + k * 18) + '" y="' + (y + 32) + '" width="10" height="14" rx="5" fill="#2b1d14"/>').join('') + '</g>';
   const pianta = '<rect class="w" x="110" y="40" width="180" height="170" fill="#f3e3c3" stroke="#7a4b2a" stroke-width="6" pathLength="1000"/>';
+  CH = { T, cielo, capanna, torre, porta };
   return {
     torino: [
       /* 0 · Taurini: villaggio tra le montagne e i fiumi */
@@ -14510,6 +14512,655 @@ const CARTONI = (() => {
   };
 })();
 
+/* cartoni della serie: episodi (grecia) — scritti da un agente, controllati dal revisore */
+(() => {
+  const { T, cielo, capanna } = CH;
+  const K = '#1d2433', SK = '#f0c29a';
+  const L = (x, y, s, t, d, col) => T(x, y, s, t, d, 'text-anchor="middle" font-weight="900" fill="' + (col || K) + '"');
+  const G = (d, inner) => '<g class="a" style="--d:' + d + 's">' + inner + '</g>';
+  const mare = (y, c1, c2) => '<rect y="' + y + '" width="400" height="' + (240 - y) + '" fill="' + c1 + '"/>' + [0, 1, 2].map(k => '<path d="M0,' + (y + 14 + k * 18) + ' q25,-8 50,0 t50,0 t50,0 t50,0 t50,0 t50,0 t50,0 t50,0" stroke="' + c2 + '" stroke-width="3" fill="none" opacity=".7"/>').join('');
+  /* tempio dorico: x sinistra, y base, w larghezza, n colonne */
+  const tI = (x, y, w, n, c) => {
+    c = c || '#f4ead6';
+    const h = w * .3 + 6, e = Math.max(3, h * .13), p = h * .42, top = y - h, cw = Math.min(8, (w - 10) / (n - 1) * .55) / 2;
+    let s = '<rect x="' + (x - 10) + '" y="' + (y + 5) + '" width="' + (w + 20) + '" height="5" fill="#c4b390"/><rect x="' + (x - 6) + '" y="' + y + '" width="' + (w + 12) + '" height="5" fill="#d4c4a2"/>';
+    s += '<rect x="' + (x + 3) + '" y="' + top + '" width="' + (w - 6) + '" height="' + h + '" fill="#8a7a5e" opacity=".6"/>';
+    for (let i = 0; i < n; i++) {
+      const cx = x + 5 + i * (w - 10) / (n - 1);
+      s += '<polygon points="' + (cx - cw) + ',' + (top + 3) + ' ' + (cx + cw) + ',' + (top + 3) + ' ' + (cx + cw * .85) + ',' + y + ' ' + (cx - cw * .85) + ',' + y + '" fill="' + c + '"/><rect x="' + (cx - cw - 1.5) + '" y="' + top + '" width="' + (cw * 2 + 3) + '" height="3" fill="' + c + '"/>';
+    }
+    s += '<rect x="' + (x - 3) + '" y="' + (top - e) + '" width="' + (w + 6) + '" height="' + e + '" fill="' + c + '" stroke="#b9a889" stroke-width=".6"/>';
+    s += '<polygon points="' + (x - 5) + ',' + (top - e) + ' ' + (x + w / 2) + ',' + (top - e - p) + ' ' + (x + w + 5) + ',' + (top - e) + '" fill="' + c + '" stroke="#b9a889" stroke-width=".6"/>';
+    s += '<polygon points="' + (x + w * .12) + ',' + (top - e - 1.5) + ' ' + (x + w / 2) + ',' + (top - e - p + 4) + ' ' + (x + w * .88) + ',' + (top - e - 1.5) + '" fill="#e0cfae"/>';
+    return s;
+  };
+  const tempio = (x, y, w, n, d) => G(d, tI(x, y, w, n));
+  /* persona semplice; o: b barba, c corona, h elmo, l veste lunga, w alloro */
+  const uo = (x, y, c, s, d, o) => {
+    o = o || '';
+    let g = '<g transform="translate(' + x + ',' + y + ') scale(' + s + ')">';
+    g += '<g stroke="' + SK + '" stroke-width="3.2" stroke-linecap="round"><line x1="-3" y1="-9" x2="-3" y2="0"/><line x1="3" y1="-9" x2="3" y2="0"/><line x1="-7" y1="-27" x2="-12" y2="-15"/><line x1="7" y1="-27" x2="12" y2="-15"/></g>';
+    g += o.includes('l') ? '<polygon points="-7,-30 7,-30 10,-1 -10,-1" fill="' + c + '"/>' : '<polygon points="-7,-30 7,-30 9,-9 -9,-9" fill="' + c + '"/>';
+    g += '<polygon points="-7,-30 7,-30 7,-26 -7,-26" fill="rgba(0,0,0,.12)"/><circle cy="-36" r="6.5" fill="' + SK + '"/>';
+    if (!o.includes('h')) g += '<path d="M-6.5,-37 a6.5,6.5 0 0 1 13,0 z" fill="' + (o.includes('b') ? '#bdbdbd' : '#5b3a1e') + '"/>';
+    g += '<circle cx="-2.2" cy="-36" r=".9" fill="#333"/><circle cx="2.2" cy="-36" r=".9" fill="#333"/>';
+    if (o.includes('b')) g += '<path d="M-5,-34 q5,15 10,0 z" fill="#d6d6d6"/>';
+    if (o.includes('c')) g += '<polygon points="-6,-41 -6,-48 -3,-44 0,-49 3,-44 6,-48 6,-41" fill="#f2c230"/>';
+    if (o.includes('h')) g += '<path d="M-7,-36 a7,7 0 0 1 14,0 z" fill="#b87333"/><path d="M-4,-43 q4,-9 8,0 z" fill="#c0392b"/>';
+    if (o.includes('w')) g += '<path d="M-6,-41 q6,-5 12,0" stroke="#3a8a3a" stroke-width="2" fill="none"/>';
+    return G(d, g + '</g>');
+  };
+  const scI = (x, y, r, c) => '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="' + c + '" stroke="#7a5a1e" stroke-width="2"/><circle cx="' + x + '" cy="' + y + '" r="' + (r * .55) + '" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2"/><circle cx="' + x + '" cy="' + y + '" r="' + (r * .15) + '" fill="#7a5a1e"/>';
+  const nvI = (x, y, s) => '<g transform="translate(' + x + ',' + y + ') scale(' + s + ')"><g class="b">' +
+    [-30, -18, -6, 6, 18, 30].map(k => '<line x1="' + k + '" y1="2" x2="' + (k - 10) + '" y2="22" stroke="#6b4a2a" stroke-width="2.5"/>').join('') +
+    '<line x1="0" y1="-4" x2="0" y2="-46" stroke="#6b4a2a" stroke-width="3"/><path d="M-20,-44 L20,-44 L18,-12 L-18,-12 z" fill="#f7f0de" stroke="#c9b98f"/><rect x="-18" y="-30" width="36" height="6" fill="#c0392b"/>' +
+    '<path d="M-48,-8 Q-46,12 -26,12 L32,12 Q50,10 54,-10 Z" fill="#8a5a2e"/><polygon points="52,6 68,8 52,11" fill="#5b3a1e"/><path d="M-44,-2 Q0,6 52,-4" stroke="#f2c230" stroke-width="3" fill="none"/></g></g>';
+  /* polis: collina, mura, case, tempio; fl = colore bandiera */
+  const citta = (x, y, s, d, fl) => G(d, '<g transform="translate(' + x + ',' + y + ') scale(' + s + ')"><path d="M-62,0 Q-52,-30 -32,-34 L32,-34 Q52,-30 62,0 Z" fill="#c8b27f"/>' +
+    '<rect x="-56" y="-12" width="112" height="12" fill="#b59a68"/>' + [-50, -36, -22, 8, 22, 36].map(k => '<rect x="' + k + '" y="-14" width="8" height="4" fill="#b59a68"/>').join('') +
+    '<rect x="-46" y="-24" width="16" height="12" fill="#e8d3a0"/><rect x="26" y="-24" width="16" height="12" fill="#e8d3a0"/><rect x="-28" y="-26" width="14" height="14" fill="#f0dfb4"/><rect x="12" y="-26" width="14" height="14" fill="#f0dfb4"/>' +
+    tI(-24, -34, 48, 4) + (fl ? '<line x1="50" y1="-12" x2="50" y2="-54" stroke="#6b4a2a" stroke-width="2.5"/><polygon points="50,-54 70,-48 50,-42" fill="' + fl + '"/>' : '') + '</g>');
+  const ar = (x1, x2, y, c, d, w) => { const s = x2 > x1 ? 1 : -1; return '<path class="w" style="--d:' + d + 's" d="M' + x1 + ',' + y + ' L' + (x2 - s * 8) + ',' + y + '" stroke="' + c + '" stroke-width="' + (w || 6) + '" stroke-linecap="round" fill="none" pathLength="1000"/>' + G(d + .9, '<polygon points="' + x2 + ',' + y + ' ' + (x2 - s * 14) + ',' + (y - 9) + ' ' + (x2 - s * 14) + ',' + (y + 9) + '" fill="' + c + '"/>'); };
+  const pin = (x, y, t, d) => G(d, '<circle cx="' + x + '" cy="' + y + '" r="6" fill="#d6453d" stroke="#fff" stroke-width="2"/>') + L(x, y - 12, 14, t, d + .2);
+  const cav = (x, y, s, c, wood, d) => {
+    const yy = wood ? y - 17 * s : y;
+    let g = '<g transform="translate(' + x + ',' + yy + ') scale(' + s + ')">';
+    g += '<path d="M-30,-40 q-16,6 -12,30" stroke="' + c + '" stroke-width="4" fill="none" stroke-linecap="round"/>';
+    g += '<g stroke="' + c + '" stroke-width="5" stroke-linecap="round"><line x1="-24" y1="-26" x2="-26" y2="0"/><line x1="-14" y1="-26" x2="-12" y2="0"/><line x1="14" y1="-26" x2="12" y2="0"/><line x1="24" y1="-26" x2="27" y2="0"/></g>';
+    g += '<ellipse cy="-34" rx="32" ry="15" fill="' + c + '"/><polygon points="16,-42 30,-72 44,-66 34,-34" fill="' + c + '"/><polygon points="32,-74 52,-70 64,-52 58,-48 46,-56 38,-62" fill="' + c + '"/><polygon points="34,-74 36,-84 41,-73" fill="' + c + '"/>';
+    g += '<path d="M30,-74 q-10,10 -14,32" stroke="rgba(0,0,0,.35)" stroke-width="4" fill="none"/><circle cx="46" cy="-65" r="1.8" fill="#fff"/>';
+    if (wood) g += '<path d="M-30,-40 h60 M-26,-30 h54 M22,-62 l-8,26" stroke="rgba(0,0,0,.28)" stroke-width="1.5" fill="none"/><rect x="-36" y="0" width="76" height="5" fill="#6b4a2a"/><circle cx="-22" cy="11" r="7" fill="#6b4a2a" stroke="#3b2a1e" stroke-width="2"/><circle cx="24" cy="11" r="7" fill="#6b4a2a" stroke="#3b2a1e" stroke-width="2"/>';
+    return G(d, g + '</g>');
+  };
+  const scroll = (x, y, w, t, d) => G(d, '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="20" rx="8" fill="#f3e3c3" stroke="#a7743f" stroke-width="2"/>') + L(x + w / 2, y + 15, 14, t, d + .1);
+  const ground = (y, c) => '<rect y="' + y + '" width="400" height="' + (240 - y) + '" fill="' + c + '"/>';
+  const PAL = ['#c0392b', '#2f7fc8', '#e8a317', '#4a9d4a', '#8e5bb8', '#d9692b'];
+
+  Object.assign(CARTONI, {
+    grecia: [
+      /* 0 · coste e isole del mar Egeo */
+      cielo('#bfe8ff', '#f4fcff') + '<circle cx="345" cy="50" r="20" fill="#ffd54a"/>' + mare(112, '#8fd0f5', '#ffffff') +
+      '<path d="M0,96 L38,92 L66,104 L88,118 L60,128 L0,134 Z" fill="#8cc56b"/><path d="M400,90 L352,96 L328,112 L338,126 L400,132 Z" fill="#c9b27c"/>' +
+      '<ellipse cx="150" cy="122" rx="20" ry="8" fill="#8cc56b"/><ellipse cx="214" cy="130" rx="14" ry="6" fill="#8cc56b"/><ellipse cx="274" cy="118" rx="18" ry="7" fill="#8cc56b"/>' +
+      G(1.2, nvI(205, 168, 1.1)) + L(200, 34, 22, 'mar Egeo', .3) + L(200, 58, 14, 'dal 1000 a.C. circa', .8) + L(42, 86, 14, 'coste', 1.6) + L(214, 112, 14, 'isole', 1.8) + L(200, 230, 15, 'il mare è la loro strada', 2.8),
+
+      /* 1 · le polis nascono: Atene e Sparta */
+      cielo('#cfe9ff', '#f4faff') + ground(172, '#b9d98a') + citta(100, 186, 1.25, .5, '#d6453d') + citta(300, 186, 1.25, 1.2, '#2f7fc8') +
+      L(200, 34, 22, 'le polis', .2) + L(200, 58, 14, 'verso il 700 a.C. · città-stato', .6) + L(100, 216, 17, 'Atene', 1.8) + L(300, 216, 17, 'Sparta', 2.4),
+
+      /* 2 · 3 periodi, il primo è l'arcaico */
+      cielo('#f6e7c1', '#fff6e0') + L(200, 34, 22, '3 periodi', .2) +
+      G(.8, '<g transform="translate(78,100)"><path d="M-10,-30 q-18,0 -16,14" stroke="#c0623a" stroke-width="4" fill="none"/><path d="M10,-30 q18,0 16,14" stroke="#c0623a" stroke-width="4" fill="none"/><path d="M-8,-30 h16 l-2,6 q16,8 16,26 q0,22 -14,28 h-14 q-14,-6 -14,-28 q0,-18 16,-26 z" fill="#c0623a"/><path d="M-15,-6 h30 M-14,22 h28" stroke="#2b1d14" stroke-width="3"/><circle cy="2" r="3" fill="#2b1d14"/><path d="M0,5 v10 m-5,-6 h10 m-5,6 l-4,8 m4,-8 l4,8" stroke="#2b1d14" stroke-width="2" fill="none"/></g>') +
+      G(.4, '<rect x="24" y="150" width="108" height="36" rx="10" fill="#d6453d"/>') + G(.8, '<rect x="146" y="150" width="108" height="36" rx="10" fill="#d9d9d9"/><rect x="268" y="150" width="108" height="36" rx="10" fill="#d9d9d9"/>') +
+      L(78, 177, 22, '1', .6, '#fff') + L(200, 177, 22, '2', 1, '#8a8a8a') + L(322, 177, 22, '3', 1.2, '#8a8a8a') +
+      L(200, 214, 15, 'il primo è il periodo arcaico', 2) + L(200, 232, 14, 'dalle origini fino al 480 a.C.', 3),
+
+      /* 3 · periodo classico: Partenone e filosofi */
+      cielo('#cfe6ff', '#f1f8ff') + ground(200, '#b9d98a') + '<path d="M20,200 L60,178 L260,178 L300,200 Z" fill="#b8a27a"/>' + tempio(75, 178, 170, 8, .5) +
+      uo(335, 205, '#f5f0e6', 1.1, 2, 'bl') + uo(368, 205, '#e8d8b0', 1.1, 2.4, 'bl') +
+      L(200, 34, 22, 'periodo classico', .2) + L(200, 58, 14, 'dal 480 al 323 a.C.', .7) + L(160, 226, 15, 'Partenone', 1.4) + L(350, 226, 15, 'filosofi', 2.6),
+
+      /* 4 · Alessandro Magno e il periodo ellenistico */
+      cielo('#fbe6b8', '#fff6df') + '<rect y="90" width="400" height="150" fill="#7cc4ec"/><path d="M72,100 Q200,86 400,96 L400,240 L72,240 Z" fill="#e8d3a0"/>' +
+      ar(120, 352, 165, '#d6453d', 1.2, 6) + tempio(158, 150, 30, 3, 1.4) + tempio(235, 150, 30, 3, 2.2) + tempio(310, 150, 30, 3, 3) +
+      '<circle cx="110" cy="165" r="7" fill="#2f7fc8" stroke="#fff" stroke-width="2"/>' +
+      L(200, 34, 21, 'Alessandro Magno', .2) + T(300, 36, 24, '👑', .3) + L(200, 58, 14, 'muore nel 323 a.C.', .6) + L(110, 196, 14, 'Grecia', 1) + L(352, 196, 14, 'India', 3.4) + L(236, 196, 14, 'Oriente', 2.4) + L(200, 226, 14, 'la cultura greca si diffonde in Oriente', 3.8),
+
+      /* 5 · 146 a.C.: i Romani, la cultura greca continua */
+      cielo('#ffd9c9', '#fff2ea') + ground(190, '#cdbb9c') + tempio(30, 190, 170, 6, .3) +
+      '<g class="a" style="--d:1.4s"><g class="b"><line x1="262" y1="190" x2="262" y2="96" stroke="#6b4a2a" stroke-width="4"/><text x="262" y="96" font-size="34" text-anchor="middle">🦅</text></g></g>' +
+      uo(300, 190, '#f5f0e6', 1.2, 1.8, 'l') + G(1.8, '<rect x="292" y="148" width="14" height="26" rx="3" fill="#c0392b" stroke="#7a1f16" stroke-width="2" transform="rotate(8 299 160)"/>') +
+      G(3.2, '<g opacity=".95">' + tI(345, 190, 40, 3) + '</g>') +
+      L(200, 34, 24, '146 a.C.', .2) + L(200, 56, 14, 'conquistata dai Romani', 1.2) + L(115, 212, 14, 'Grecia', 1) + L(280, 212, 14, 'Romani', 2) + L(366, 212, 13, 'imitano', 3.4) + L(200, 232, 14, 'la cultura greca continua a vivere', 3.8)
+    ],
+
+    polis: [
+      /* 0 · nasce la polis */
+      cielo('#d9efff', '#f4faff') + ground(190, '#b9d98a') + citta(200, 190, 1.5, .4) +
+      [70, 112, 288, 330].map((x, k) => uo(x, 222, PAL[k], 1, 1.4 + k * .3)).join('') +
+      L(200, 34, 22, 'la polis', .2) + L(200, 58, 14, 'in Grecia, verso il 700 a.C.', .6) + L(200, 234, 14, 'un modo nuovo di vivere insieme', 2.8),
+
+      /* 1 · città-stato, non un unico regno */
+      cielo('#cfe9ff', '#f4faff') + ground(172, '#b9d98a') + citta(72, 188, .85, .5, '#d6453d') + citta(200, 188, .85, 1, '#e8a317') + citta(328, 188, .85, 1.5, '#2f7fc8') +
+      L(200, 34, 22, 'città-stato', .2) + L(200, 58, 14, 'ogni città è come un piccolo Stato', 3) +
+      L(72, 214, 15, 'Atene', 1.8) + L(200, 214, 15, 'Sparta', 2.2) + L(328, 214, 15, 'Corinto', 2.6) + L(200, 234, 14, 'non un unico regno', 3.6),
+
+      /* 2 · stessa lingua e stessa religione */
+      cielo('#dfe9ff', '#f7faff') + ground(198, '#b9d98a') +
+      G(.4, '<g fill="#fff"><ellipse cx="200" cy="50" rx="72" ry="18"/><ellipse cx="156" cy="58" rx="36" ry="14"/><ellipse cx="246" cy="58" rx="36" ry="14"/></g><g fill="#ffe08a" stroke="#e8a317" stroke-width="2"><circle cx="168" cy="46" r="9"/><circle cx="200" cy="40" r="9"/><circle cx="232" cy="46" r="9"/></g>') +
+      L(200, 94, 15, 'la religione: gli stessi dei', 1) +
+      [70, 200, 330].map((x, k) => G(1.6 + k * .4, '<ellipse cx="' + x + '" cy="124" rx="34" ry="17" fill="#fff" stroke="#8a9bb8" stroke-width="2"/><polygon points="' + (x - 6) + ',139 ' + (x + 6) + ',139 ' + x + ',150" fill="#fff" stroke="#8a9bb8" stroke-width="2"/><rect x="' + (x - 8) + '" y="137" width="16" height="3" fill="#fff"/>') + L(x, 130, 15, 'Α Β Γ', 1.8 + k * .4, '#b8322b')).join('') +
+      citta(70, 226, .55, 2.2) + citta(200, 226, .55, 2.6) + citta(330, 226, .55, 3) + L(200, 172, 14, 'la lingua greca', 3.4),
+
+      /* 3 · una comunità di cittadini */
+      cielo('#fff1d6', '#fffaf0') + ground(190, '#d9c59a') +
+      '<rect class="w" style="--d:.4s" x="118" y="82" width="262" height="108" fill="none" stroke="#9b8a6a" stroke-width="3" pathLength="1000" opacity=".7"/>' + L(250, 78, 13, 'strade e mura', .6, '#7a6a4a') +
+      L(200, 32, 19, '«una comunità di cittadini»', .3) +
+      [170, 205, 240, 275, 310].map((x, k) => uo(x, 188, PAL[k], 1.05, 1.4 + k * .25)).join('') + uo(62, 196, '#f5f0e6', 1.5, .8, 'bl') +
+      L(62, 220, 15, 'Aristotele', 1) + L(240, 214, 15, 'cittadini', 2.8),
+
+      /* 4 · autonomia: leggi, organizzazione, moneta */
+      cielo('#e5f0ff', '#f8fbff') + L(200, 38, 24, 'autonomia', .2) + L(200, 62, 14, 'ogni polis ha', .6) +
+      [0, 1, 2].map(k => G(.8 + k * .8, '<rect x="' + (22 + k * 124) + '" y="78" width="112" height="108" rx="14" fill="#fff" stroke="#c9d6ea" stroke-width="2"/>')).join('') +
+      G(1.2, '<g transform="translate(78,124)"><rect x="-32" y="-22" width="64" height="44" rx="5" fill="#f3e3c3" stroke="#a7743f" stroke-width="2"/><path d="M-22,-10 h44 M-22,0 h44 M-22,10 h30" stroke="#a7743f" stroke-width="2.5"/></g>') +
+      '<text class="a" style="--d:2s" x="202" y="140" font-size="46" text-anchor="middle">🏛️</text>' +
+      G(2.8, '<g transform="translate(326,124)"><circle r="26" fill="#f2c230" stroke="#b8860b" stroke-width="3"/><circle r="18" fill="none" stroke="#b8860b" stroke-width="2"/><rect x="-2.5" y="-11" width="5" height="22" fill="#b8860b"/><rect x="-9" y="-12" width="18" height="4" fill="#b8860b"/></g>') +
+      L(78, 174, 14, 'leggi', 1.5) + L(202, 174, 14, 'organizzazione', 2.3) + L(326, 174, 14, 'moneta', 3.1) + L(200, 218, 16, 'La prima è l\'autonomia', 3.8),
+
+      /* 5 · il territorio: città e campi */
+      cielo('#bfe08f', '#d9eeb0') +
+      [[16, 74, 70, 112], [314, 74, 70, 112], [100, 54, 200, 20], [100, 196, 200, 12]].map((f, k) => G(.3 + k * .15, '<rect x="' + f[0] + '" y="' + f[1] + '" width="' + f[2] + '" height="' + f[3] + '" fill="#e8d27a" stroke="#c9ac4a" stroke-width="2"/>' + (f[2] > f[3] ? [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19].map(i => i * 10 < f[2] ? '<line x1="' + (f[0] + i * 10) + '" y1="' + f[1] + '" x2="' + (f[0] + i * 10) + '" y2="' + (f[1] + f[3]) + '" stroke="#c9ac4a" stroke-width="2"/>' : '').join('') : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => '<line x1="' + f[0] + '" y1="' + (f[1] + i * 11) + '" x2="' + (f[0] + f[2]) + '" y2="' + (f[1] + i * 11) + '" stroke="#c9ac4a" stroke-width="2"/>').join('')))).join('') +
+      G(.9, '<circle cx="200" cy="136" r="58" fill="#d9c9a6" stroke="#8a7a5e" stroke-width="5"/><rect x="176" y="118" width="48" height="36" fill="#f6efe0" stroke="#b9a889" stroke-width="2"/>' +
+        [[214, 92], [230, 108], [150, 128], [152, 146], [170, 166], [188, 172], [212, 170], [232, 160]].map(h => '<rect x="' + h[0] + '" y="' + h[1] + '" width="14" height="12" fill="#c0623a"/>').join('') + tI(162, 106, 34, 3)) +
+      L(200, 140, 13, 'agorà', 2) + L(51, 204, 14, 'campi', 2.4, '#5b4a1e') + L(349, 204, 14, 'campi', 2.4, '#5b4a1e') +
+      '<rect class="w" style="--d:2.8s" x="8" y="46" width="384" height="172" rx="34" fill="none" stroke="#d6453d" stroke-width="4" pathLength="1000"/>' +
+      L(200, 34, 20, 'il territorio', .3) + L(200, 234, 14, 'la città, con case e templi, e intorno i campi', 3.4),
+
+      /* 6 · la comunità: riti e tradizioni */
+      cielo('#ffe8c2', '#fff6e5') + ground(150, '#d9c59a') + tempio(150, 150, 100, 4, .3) +
+      [90, 125, 160, 240, 275, 310].map((x, k) => uo(x, 214, PAL[k], 1.1, 1 + k * .2)).join('') +
+      G(.8, '<rect x="186" y="168" width="28" height="22" fill="#cbbb99" stroke="#a89878" stroke-width="2"/>') +
+      '<g class="a" style="--d:1.2s"><g class="b"><path d="M200,168 q-12,-14 0,-32 q12,18 0,32 z" fill="#f08a24"/><path d="M200,168 q-5,-8 0,-16 q5,8 0,16 z" fill="#ffd54a"/></g></g>' +
+      L(200, 32, 22, 'la comunità', .2) + L(200, 56, 14, 'i cittadini si sentono parte della loro polis', 1.6) + L(200, 234, 14, 'cultura · tradizioni · riti religiosi', 2.8)
+    ],
+
+    greci: [
+      /* 0 · Atena, Acropoli, Partenone, democrazia */
+      cielo('#cfe6ff', '#f1f8ff') + ground(200, '#b9d98a') + '<path d="M170,200 L190,128 L368,128 L388,200 Z" fill="#b8a27a"/>' + tempio(198, 128, 160, 6, .5) +
+      uo(70, 196, '#f7f7f7', 1.7, 1.2, 'hl') + G(1.4, '<line x1="100" y1="198" x2="100" y2="100" stroke="#6b4a2a" stroke-width="3"/><polygon points="100,92 95,106 105,106" fill="#b8b8b8"/>') +
+      L(70, 218, 15, 'Atena', 1.6) + L(278, 26, 15, 'Partenone', 1.8) + L(279, 186, 14, 'Acropoli', 2.2) + L(225, 233, 14, 'democrazia: il governo del popolo', 3.2),
+
+      /* 1 · voto riservato; Sparta guerrieri */
+      cielo('#e3f0ff', '#fafcff') + ground(170, '#e8dcc0') + '<line x1="200" y1="20" x2="200" y2="230" stroke="#9aa6bb" stroke-width="2" stroke-dasharray="6 6"/>' +
+      [50, 100, 150].map((x, k) => uo(x, 176, PAL[k], 1.1, .6 + k * .3, 'l') + T(x, 112, 24, '✓', 1.2 + k * .3, 'text-anchor="middle" font-weight="900" fill="#2e9d4a"')).join('') +
+      L(100, 34, 18, 'votano solo', .3) + L(100, 206, 14, 'maschi · adulti · liberi', 2) +
+      L(300, 34, 20, 'Sparta', 2) + L(300, 54, 14, 'guerrieri', 2.4) +
+      uo(268, 176, '#c0392b', 1.4, 2.4, 'h') + G(2.6, '<line x1="300" y1="178" x2="300" y2="96" stroke="#6b4a2a" stroke-width="3"/><polygon points="300,88 295,102 305,102" fill="#b8b8b8"/>' + scI(248, 150, 14, '#d9a13a')) +
+      uo(340, 176, '#c0392b', .75, 3, 'h') + G(3.2, scI(358, 156, 8, '#d9a13a')) + L(300, 206, 14, 'allenati fin da bambini', 3.4),
+
+      /* 2 · Maratona, Termopili, Salamina */
+      cielo('#c9e6fb', '#eef8ff') + L(200, 32, 18, 'i Greci vincono i Persiani', .2) +
+      [0, 1, 2].map(k => G(.6 + k * .6, '<rect x="' + (14 + k * 130) + '" y="48" width="112" height="132" rx="14" fill="' + (k == 2 ? '#8fd0f5' : '#fff') + '" stroke="#9fb2cc" stroke-width="2"/>')).join('') +
+      G(.9, scI(56, 96, 20, '#c0392b') + scI(86, 96, 20, '#d9a13a')) + G(1.5, scI(172, 84, 15, '#c0392b') + scI(200, 84, 15, '#c0392b') + scI(228, 84, 15, '#c0392b') + scI(186, 110, 15, '#d9a13a') + scI(214, 110, 15, '#d9a13a')) + G(2.1, nvI(330, 104, .72)) +
+      L(70, 150, 15, 'Maratona', 1.2) + L(70, 169, 14, '490 a.C.', 1.4) + L(200, 150, 15, 'Termopili', 1.8) + L(200, 169, 14, '480 a.C.', 2) + L(330, 150, 15, 'Salamina', 2.4) + L(330, 169, 14, '480 a.C.', 2.6) +
+      L(70, 202, 13, 'i Greci', 1.6) + L(70, 218, 13, 'vincono', 1.6) + L(200, 202, 13, 'Leonida e', 2.2) + L(200, 218, 13, '300 Spartani', 2.2) + L(330, 202, 13, 'la flotta', 2.8) + L(330, 218, 13, 'greca vince', 2.8),
+
+      /* 3 · Zeus sul monte Olimpo */
+      cielo('#4d5f94', '#b9c6ea') + '<polygon points="60,238 200,100 340,238" fill="#5f7a5a"/><polygon points="170,130 200,100 230,130 216,124 200,134 184,124" fill="#fff"/>' +
+      G(.4, '<ellipse cx="200" cy="96" rx="52" ry="12" fill="#fff"/><ellipse cx="160" cy="100" rx="28" ry="9" fill="#fff"/><ellipse cx="244" cy="100" rx="28" ry="9" fill="#fff"/>') + uo(200, 96, '#fff', 1.4, .8, 'bl') +
+      '<g class="a" style="--d:1.6s"><polygon points="218,54 210,76 216,75 211,90 224,66 218,67 224,54" fill="#ffd23f" stroke="#f0a000"/></g>' +
+      '<g class="a" style="--d:2.2s"><g class="b"><polygon points="320,60 304,110 316,108 302,160 334,98 320,100 336,60" fill="#ffd23f" stroke="#f0a000" stroke-width="2"/></g></g>' +
+      L(76, 52, 22, 'Zeus', .4, '#fff') + L(76, 74, 14, 're degli dei', 1, '#fff') + L(352, 150, 14, 'fulmini', 2.4, '#fff') + L(200, 200, 17, 'monte Olimpo', 2.8, '#fff') + L(200, 222, 13, 'il più alto della Grecia', 3.4, '#fff'),
+
+      /* 4 · Omero, Iliade, Odissea, cavallo di legno */
+      cielo('#ffe6c4', '#fff5e4') + ground(190, '#d9c59a') +
+      G(.3, '<rect x="290" y="120" width="96" height="70" fill="#c9b79a" stroke="#a89878" stroke-width="2"/>' + [0, 1, 2, 3, 4, 5].map(k => '<rect x="' + (290 + k * 17) + '" y="112" width="11" height="9" fill="#c9b79a" stroke="#a89878" stroke-width="1.5"/>').join('') + '<path d="M322,190 v-22 q16,-14 32,0 v22 z" fill="#4a3a2a"/>') +
+      L(338, 100, 14, 'Troia', .6) + uo(55, 190, '#e8e0cc', 1.4, .6, 'bl') + scroll(15, 62, 80, 'Iliade', 1.2) + scroll(15, 88, 80, 'Odissea', 1.8) +
+      cav(185, 190, 1.5, '#b7794a', true, 2.6) + L(55, 212, 15, 'Omero', .9) + L(215, 232, 14, 'nel mito: un cavallo di legno', 3.2),
+
+      /* 5 · Olimpiadi e teatro */
+      cielo('#d8efff', '#f7fcff') + ground(172, '#b9d98a') + '<rect x="10" y="172" width="184" height="44" fill="#e3c08a"/>' + [1, 2].map(k => '<line x1="10" y1="' + (172 + k * 14.6) + '" x2="194" y2="' + (172 + k * 14.6) + '" stroke="#fff" stroke-width="2"/>').join('') +
+      uo(60, 194, '#c0392b', 1.2, .8, 'w') + uo(110, 210, '#2f7fc8', 1.2, 1.2, 'w') + uo(160, 194, '#e8a317', 1.2, 1.6, 'w') +
+      L(100, 34, 18, 'Olimpiadi', .3) + L(100, 56, 13, 'dal 776 a.C. a Olimpia', .8) + L(100, 74, 13, 'ogni 4 anni', 1.2) + L(100, 234, 13, 'in onore di Zeus', 2.2) +
+      G(2.4, '<path d="M220,172 a80,80 0 0 1 160,0 z" fill="#c9b27c"/><path d="M238,172 a62,62 0 0 1 124,0 z" fill="#d9c59a"/><path d="M256,172 a44,44 0 0 1 88,0 z" fill="#e6d7b0"/><path d="M274,172 a26,26 0 0 1 52,0 z" fill="#f3e8c8"/>') +
+      '<text class="a" style="--d:3s" x="300" y="170" font-size="26" text-anchor="middle">🎭</text>' + L(300, 34, 18, 'teatro', 2.6) + L(300, 56, 13, 'tragedie e commedie', 3.2) + L(300, 200, 13, 'si recitano', 3.6),
+
+      /* 6 · alfabeto e Magna Grecia */
+      cielo('#cde9f7', '#e9f5fb') + L(100, 34, 18, 'alfa e beta', .3) +
+      G(.5, '<rect x="16" y="52" width="170" height="116" rx="14" fill="#fff6dc" stroke="#c9a77c" stroke-width="3"/>') + L(66, 116, 60, 'Α', 1, '#b8322b') + L(136, 116, 60, 'Β', 1.4, '#b8322b') + L(66, 150, 15, 'alfa', 1.6) + L(136, 150, 15, 'beta', 2) + L(100, 206, 22, 'alfabeto', 2.4) +
+      G(.4, '<polygon points="240,12 256,30 263,47 279,59 292,68 304,88 314,110 322,132 313,156 323,160 338,150 349,125 335,98 353,73 377,95 381,85 367,66 343,51 328,24 326,12" fill="#c9d98a" stroke="#6b8a3a" stroke-width="2"/><polygon points="306,150 300,173 304,188 300,201 279,190 258,180 239,168 236,160 245,153 257,152 273,154 290,151" fill="#c9d98a" stroke="#6b8a3a" stroke-width="2"/>') +
+      [[279, 59], [353, 73], [349, 125], [304, 186]].map((p, k) => G(3 + k * .3, '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="6" fill="#d6453d" stroke="#fff" stroke-width="2"/>')).join('') +
+      L(330, 214, 14, 'Italia del sud', 3.2) + L(330, 233, 16, 'Magna Grecia', 3.8)
+    ],
+
+    pensatori: [
+      /* 0 · filosofia: perché? */
+      cielo('#efe3ff', '#fbf7ff') + ground(200, '#e6dcf5') + uo(70, 200, '#ffffff', 1.7, .3, 'bl') + L(70, 222, 14, 'i filosofi', .6) +
+      G(1, '<circle cx="116" cy="136" r="6" fill="#fff" stroke="#b7a3e0" stroke-width="2"/><circle cx="130" cy="124" r="9" fill="#fff" stroke="#b7a3e0" stroke-width="2"/><ellipse cx="256" cy="98" rx="124" ry="52" fill="#fff" stroke="#b7a3e0" stroke-width="3"/>') +
+      L(200, 28, 15, 'filosofia = amore per la sapienza', .3) + L(256, 90, 26, 'perché?', 1.4, '#6b3fb0') + L(256, 112, 14, 'come è fatto il mondo?', 2.4) + L(256, 132, 14, 'come si vive bene?', 3.2),
+
+      /* 1 · Pitagora e la tavola pitagorica */
+      cielo('#d9f0ff', '#f5fbff') + ground(200, '#cfe3a1') + uo(80, 198, '#ffffff', 1.6, .4, 'bl') + L(200, 32, 22, 'Pitagora', .2) + L(200, 54, 14, 'matematico e filosofo', .8) +
+      [0, 1, 2].map(r => [0, 1, 2].map(c => G(1.2 + (r * 3 + c) * .2, '<rect x="' + (220 + c * 40) + '" y="' + (70 + r * 40) + '" width="40" height="40" fill="' + ((r + c) % 2 ? '#e6f0ff' : '#fff') + '" stroke="#7a9bd0" stroke-width="2"/>') + L(240 + c * 40, 97 + r * 40, 20, String((r + 1) * (c + 1)), 1.3 + (r * 3 + c) * .2)).join('')).join('') +
+      L(280, 212, 13, 'tavola pitagorica', 3.4) + L(100, 232, 14, 'a Crotone, in Calabria', 2.6),
+
+      /* 2 · Socrate, Platone, Aristotele */
+      cielo('#e6f7e1', '#fafff7') + ground(176, '#d5e8b8') +
+      uo(70, 178, '#e8e0cc', 1.5, .5, 'bl') + uo(200, 178, '#cfe0ff', 1.5, 1.2, 'bl') + uo(330, 178, '#ffe0cf', 1.5, 1.9, 'bl') +
+      G(1.4, '<ellipse cx="100" cy="76" rx="26" ry="18" fill="#fff" stroke="#8a9bb8" stroke-width="2"/><polygon points="88,90 98,90 82,104" fill="#fff" stroke="#8a9bb8" stroke-width="2"/><rect x="87" y="88" width="12" height="3" fill="#fff"/>') + L(100, 86, 24, '?', 1.6, '#b8322b') +
+      ar(166, 116, 142, '#8a6a3a', 2.4, 5) + ar(234, 284, 142, '#8a6a3a', 3, 5) + L(141, 130, 13, 'allievo di', 2.6) + L(259, 130, 13, 'maestro di', 3.2) +
+      L(70, 202, 16, 'Socrate', .8) + L(200, 202, 16, 'Platone', 1.4) + L(330, 202, 16, 'Aristotele', 2) + L(200, 232, 14, 'Socrate fa domande a tutti, ma non scrive libri', 3.8),
+
+      /* 3 · Archimede: Eureka! */
+      cielo('#d8f0ff', '#f3fbff') + ground(176, '#e9dcc0') +
+      '<path d="M110,132 h180 q0,56 -40,64 h-100 q-40,-8 -40,-64 z" fill="#d9b98a" stroke="#a7743f" stroke-width="3"/>' +
+      '<rect x="182" y="120" width="36" height="42" rx="6" fill="' + SK + '"/><circle cx="200" cy="104" r="15" fill="' + SK + '"/><path d="M185,102 a15,15 0 0 1 30,0 q-15,-8 -30,0 z" fill="#5b3a1e"/><circle cx="195" cy="104" r="1.5" fill="#333"/><circle cx="205" cy="104" r="1.5" fill="#333"/><path d="M194,111 q6,5 12,0" stroke="#333" stroke-width="1.5" fill="none"/>' +
+      '<path d="M118,152 h164 q0,36 -34,42 h-96 q-34,-6 -34,-42 z" fill="#6fc0ee" opacity=".9"/>' + G(1.6, '<path d="M114,138 h172 q0,48 -38,56 h-96 q-38,-8 -38,-56 z" fill="#6fc0ee" opacity=".95"/><path d="M122,138 q16,-6 32,0 t32,0 t32,0 t32,0 t24,0" stroke="#fff" stroke-width="3" fill="none"/>') +
+      T(92, 130, 26, '↑', 1.6, 'text-anchor="middle" font-weight="900" fill="#2f7fc8"') + T(308, 130, 26, '↑', 1.8, 'text-anchor="middle" font-weight="900" fill="#2f7fc8"') +
+      L(100, 40, 20, 'Archimede', .2) + L(100, 62, 14, 'a Siracusa', .5) +
+      G(2.6, '<ellipse cx="306" cy="70" rx="78" ry="34" fill="#fff" stroke="#e8a317" stroke-width="3"/><polygon points="262,92 276,96 238,108" fill="#fff" stroke="#e8a317" stroke-width="3"/><rect x="262" y="88" width="16" height="10" fill="#fff"/>') + L(306, 70, 26, 'Eureka!', 2.8, '#b8322b') + L(306, 90, 14, 'ho trovato!', 3.2) + L(200, 226, 15, 'l\'acqua sale!', 2.2),
+
+      /* 4 · Ippocrate: osservare e giuramento */
+      cielo('#fff0e0', '#fffaf3') + ground(190, '#e0cfae') +
+      '<rect x="40" y="154" width="150" height="14" fill="#a7743f"/><rect x="44" y="168" width="8" height="22" fill="#a7743f"/><rect x="178" y="168" width="8" height="22" fill="#a7743f"/><rect x="40" y="142" width="150" height="14" rx="6" fill="#f3e3c3"/>' +
+      '<circle cx="62" cy="136" r="11" fill="' + SK + '"/><rect x="72" y="132" width="112" height="16" rx="8" fill="#9fc5e8"/>' +
+      uo(214, 190, '#ffffff', 1.5, .8, 'bl') + T(214, 88, 22, '👁️', 1.8, 'text-anchor="middle"') +
+      uo(332, 190, '#cfe0ff', 1.4, 2.2) + G(2.4, '<line x1="341" y1="152" x2="352" y2="124" stroke="' + SK + '" stroke-width="4" stroke-linecap="round"/>') +
+      G(2.8, '<ellipse cx="332" cy="70" rx="56" ry="22" fill="#fff" stroke="#e8a317" stroke-width="2"/><polygon points="332,92 344,92 336,104" fill="#fff" stroke="#e8a317" stroke-width="2"/><rect x="331" y="90" width="14" height="3" fill="#fff"/>') + L(332, 76, 15, 'giuramento', 3) +
+      L(110, 34, 20, 'Ippocrate', .2) + L(110, 56, 13, 'padre della medicina', .8) + L(115, 222, 14, 'osserva con cura il malato', 2.4) + L(332, 222, 14, 'nuovi medici', 3.4)
+    ],
+
+    alessandro: [
+      /* 0 · Alessandro, Filippo II, Aristotele */
+      cielo('#ffe9c9', '#fff7e8') + ground(188, '#d9c59a') +
+      uo(80, 192, '#6b3fa0', 1.5, .5, 'bc') + uo(200, 192, '#c0392b', 1, 1.2) + uo(325, 192, '#f2efe6', 1.5, 1.9, 'bl') +
+      L(200, 34, 22, 'Alessandro', .2) + L(80, 212, 15, 'Filippo II', .8) + L(80, 228, 13, 're della Macedonia', .9) + L(200, 212, 15, 'Alessandro', 1.4) + L(200, 228, 13, 'figlio', 1.5) + L(325, 212, 15, 'Aristotele', 2) + L(325, 228, 13, 'il suo maestro', 2.1),
+
+      /* 1 · Bucefalo e il sole */
+      cielo('#ffd9a8', '#fff0d6') + ground(190, '#c9b27c') +
+      '<g class="b"><circle cx="345" cy="70" r="30" fill="#ffd54a"/>' + [0, 45, 90, 135, 180, 225, 270, 315].map(a => '<line x1="345" y1="70" x2="' + (345 + 46 * Math.cos(a * Math.PI / 180)) + '" y2="' + (70 + 46 * Math.sin(a * Math.PI / 180)) + '" stroke="#ffd54a" stroke-width="4" stroke-linecap="round"/>').join('') + '<circle cx="345" cy="70" r="30" fill="#ffd54a"/></g>' +
+      G(2.8, '<ellipse cx="100" cy="196" rx="74" ry="8" fill="rgba(0,0,0,.28)"/>') + cav(190, 190, 1.5, '#3a2a22', false, .5) +
+      uo(290, 190, '#c0392b', 1.1, 1.2) + G(1.6, '<path d="M276,158 Q250,150 262,118" stroke="#6b4a2a" stroke-width="2.5" fill="none"/>') +
+      L(200, 34, 22, 'Bucefalo', .2) + L(200, 56, 14, 'lo gira verso il sole', 1.8) + L(200, 230, 14, 'così non vede la sua ombra', 3.2),
+
+      /* 2 · 336 a.C.: re a 20 anni, parte con l'esercito */
+      cielo('#d9ecff', '#f7fbff') + ground(190, '#d9c59a') +
+      [34, 58, 82].map((x, k) => uo(x, 192, '#8a6a3a', 1, .8 + k * .2, 'h') + G(.9 + k * .2, '<line x1="' + (x + 14) + '" y1="194" x2="' + (x + 14) + '" y2="136" stroke="#6b4a2a" stroke-width="2.5"/>' + scI(x - 8, 172, 9, '#d9a13a'))).join('') +
+      uo(130, 192, '#c0392b', 1.5, 1.4, 'c') + ar(168, 290, 150, '#d6453d', 2.4, 6) +
+      G(1.6, '<rect x="300" y="122" width="70" height="68" fill="#c9b79a" stroke="#a89878" stroke-width="2"/>' + [0, 1, 2, 3].map(k => '<rect x="' + (300 + k * 20) + '" y="114" width="12" height="9" fill="#c9b79a" stroke="#a89878" stroke-width="1.5"/>').join('') + '<path d="M322,190 v-24 q13,-12 26,0 v24 z" fill="#4a3a2a"/><line x1="335" y1="114" x2="335" y2="92" stroke="#6b4a2a" stroke-width="2.5"/><polygon points="335,92 355,98 335,104" fill="#8e5bb8"/>') +
+      L(200, 32, 22, '336 a.C.', .2) + L(200, 54, 14, 're, a soli 20 anni', .8) + L(58, 212, 13, 'esercito', 1.2) + L(130, 226, 14, 'Alessandro', 1.6) + L(335, 212, 13, 'impero persiano', 3.2),
+
+      /* 3 · Dario III, un impero immenso */
+      cielo('#bfe3f5', '#e9f6fb') +
+      '<path d="M20,120 Q60,92 120,98 L200,92 Q300,88 392,104 L392,178 Q300,200 220,190 L130,196 Q60,190 24,170 Z" fill="#e8d3a0" stroke="#c9b27c" stroke-width="2"/>' +
+      '<path class="a" style="--d:1s" d="M46,114 L150,98 L300,102 L380,114 L380,176 L300,190 L150,186 L50,168 Z" fill="rgba(214,69,61,.3)" stroke="#d6453d" stroke-width="3"/>' +
+      pin(86, 142, 'Grecia', 1.4) + pin(150, 168, 'Egitto', 1.9) + pin(352, 140, 'India', 2.4) +
+      L(250, 150, 15, 'impero immenso', 2.8, '#8b1e18') + L(200, 34, 20, 'sconfigge Dario III', .3) + T(342, 70, 28, '👑', .6) + L(200, 226, 16, 'Magno, cioè grande', 3.6),
+
+      /* 4 · Alessandria: Faro e Biblioteca */
+      cielo('#ffe3b0', '#fff6e0') + mare(150, '#7cc4ec', '#fff') + '<path d="M0,150 L200,150 L176,240 L0,240 Z" fill="#e8d3a0"/>' +
+      tempio(20, 180, 120, 6, .6) + L(80, 232, 15, 'Biblioteca', 1.2) +
+      '<ellipse cx="300" cy="198" rx="52" ry="12" fill="#e8d3a0"/>' +
+      G(1.6, '<polygon points="282,198 318,198 314,150 286,150" fill="#f1e6d0" stroke="#b9a889" stroke-width="1.5"/><polygon points="288,150 312,150 309,112 291,112" fill="#f6edd8" stroke="#b9a889" stroke-width="1.5"/><polygon points="293,112 307,112 305,88 295,88" fill="#f1e6d0" stroke="#b9a889" stroke-width="1.5"/><rect x="294" y="76" width="12" height="12" fill="#ffd54a"/><polygon points="291,76 300,66 309,76" fill="#a7743f"/>') +
+      '<g class="a" style="--d:2.4s"><g class="b"><polygon points="294,82 230,62 230,102" fill="rgba(255,213,74,.45)"/><polygon points="306,82 370,62 370,102" fill="rgba(255,213,74,.45)"/></g></g>' +
+      L(290, 218, 15, 'il Faro', 2) + L(290, 234, 13, 'una delle sette meraviglie', 3) + L(200, 34, 22, 'Alessandria', .2),
+
+      /* 5 · 323 a.C.: l'impero diviso tra i generali */
+      cielo('#f0e4ff', '#fbf7ff') +
+      [['#e8a317', 40], ['#3d8fd6', 122], ['#6bbf59', 204], ['#c05fb0', 286]].map((p, k) => G(.5 + k * .35, '<rect x="' + p[1] + '" y="74" width="74" height="66" rx="6" fill="' + p[0] + '" stroke="#fff" stroke-width="2"/>')).join('') +
+      L(77, 112, 15, 'Egitto', 1.2) + [77, 159, 241, 323].map((x, k) => uo(x, 198, PAL[k], 1, 1.6 + k * .3, 'h')).join('') + L(77, 218, 14, 'Tolomeo', 3) +
+      L(200, 34, 22, '323 a.C.', .2) + L(200, 56, 14, 'Alessandro muore a soli 32 anni', .6) + L(262, 231, 14, 'l\'impero va ai suoi generali', 2.8),
+
+      /* 6 · età ellenistica: Pergamo e la pergamena */
+      cielo('#e8f1ff', '#fafcff') + ground(192, '#cfe3a1') + '<path d="M20,200 L60,172 L200,172 L240,200 Z" fill="#b8a27a"/>' + tempio(75, 172, 110, 5, .5) +
+      ar(250, 292, 140, '#d6453d', 2, 5) + L(268, 124, 13, 'il nome', 2) +
+      G(2.6, '<rect x="302" y="104" width="76" height="92" fill="#f3e3c3" stroke="#a7743f" stroke-width="2"/><ellipse cx="340" cy="104" rx="44" ry="8" fill="#e6d3a8" stroke="#a7743f" stroke-width="2"/><ellipse cx="340" cy="196" rx="44" ry="8" fill="#e6d3a8" stroke="#a7743f" stroke-width="2"/><path d="M314,124 h52 M314,140 h52 M314,156 h52 M314,172 h36" stroke="#a7743f" stroke-width="2.5"/>') +
+      L(200, 34, 22, 'età ellenistica', .2) + L(200, 56, 13, 'a Pergamo c\'è una grande biblioteca', .8) + L(130, 226, 16, 'Pergamo', 1.4) + L(340, 226, 16, 'pergamena', 3)
+    ],
+
+    italici: [
+      /* 0 · tanti popoli: Veneti, Umbri */
+      cielo('#d9efff', '#f5fbff') + ground(128, '#b9d98a') + L(200, 34, 22, 'tanti popoli diversi', .2) +
+      [0, 1, 2, 3, 4, 5, 6, 7, 8].map(k => uo(40 + k * 40, 116, PAL[k % 6], .85, .6 + k * .15, k % 2 ? 'l' : '')).join('') +
+      G(2.2, '<rect x="20" y="146" width="170" height="70" rx="14" fill="rgba(255,255,255,.85)" stroke="#8aa57a" stroke-width="2"/>') + G(2.8, '<rect x="210" y="146" width="170" height="70" rx="14" fill="rgba(255,255,255,.85)" stroke="#8aa57a" stroke-width="2"/>') +
+      L(105, 174, 17, 'i Veneti', 2.4) + L(105, 202, 17, '→ il Veneto', 2.6, '#b8322b') + L(295, 174, 17, 'gli Umbri', 3) + L(295, 202, 17, '→ l\'Umbria', 3.2, '#b8322b'),
+
+      /* 1 · Umbri a est del Tevere, Etruschi a ovest */
+      cielo('#dff1ff', '#f6fbff') + '<rect y="96" width="200" height="144" fill="#cfe3a1"/><rect x="200" y="96" width="200" height="144" fill="#b9d98a"/>' +
+      '<path class="w" style="--d:.3s" d="M200,96 C176,130 226,160 196,196 S214,230 200,244" stroke="#3d8fd6" stroke-width="32" fill="none" pathLength="1000"/>' +
+      L(200, 34, 18, 'il fiume Tevere', .6) + L(95, 76, 16, 'a ovest', 1.2) + L(305, 76, 16, 'a est', 1.4) +
+      uo(66, 204, '#a02c2c', 1.3, 1.6) + uo(124, 204, '#a02c2c', 1.3, 1.9, 'l') + uo(280, 204, '#2c7a3a', 1.3, 2.4) + uo(338, 204, '#2c7a3a', 1.3, 2.7, 'l') +
+      L(95, 228, 15, 'gli Etruschi', 2.2) + L(309, 228, 15, 'gli Umbri', 3),
+
+      /* 2 · Latini nel Lazio, nasce Roma sul Tevere */
+      cielo('#ffeccc', '#fff8ea') + ground(168, '#b9d98a') + '<rect y="192" width="400" height="48" fill="#9fd3f2"/>' +
+      '<path class="w" style="--d:.5s" d="M0,204 q25,-7 50,0 t50,0 t50,0 t50,0 t50,0 t50,0 t50,0 t50,0" stroke="#fff" stroke-width="3" fill="none" pathLength="1000"/>' +
+      capanna(270, 1.6) + capanna(310, 2) + capanna(350, 2.4) +
+      uo(70, 190, '#d9b25c', 1.3, .5) + uo(122, 190, '#c0392b', 1.3, .8, 'l') +
+      G(1.4, '<ellipse cx="96" cy="86" rx="40" ry="18" fill="#fff" stroke="#8a9bb8" stroke-width="2"/><polygon points="90,102 102,102 106,116" fill="#fff" stroke="#8a9bb8" stroke-width="2"/><rect x="89" y="100" width="14" height="3" fill="#fff"/>') + L(96, 92, 16, 'latino', 1.6, '#b8322b') +
+      L(200, 34, 22, 'i Latini nel Lazio', .2) + L(96, 222, 14, 'i Latini', 1) + L(300, 222, 14, 'nasce Roma sul Tevere', 2.8),
+
+      /* 3 · Sanniti: tre guerre contro Roma */
+      cielo('#cfe2f5', '#eef6fc') + '<polygon points="0,170 70,90 130,150 200,70 270,150 330,100 400,160 400,196 0,196" fill="#8aa0b8"/><polygon points="62,98 70,90 78,98 70,102" fill="#fff"/><polygon points="190,82 200,70 210,82 200,86" fill="#fff"/><polygon points="322,108 330,100 338,108 330,112" fill="#fff"/>' + ground(190, '#8cc56b') +
+      L(200, 32, 22, 'i Sanniti', .2) + L(200, 54, 13, 'guerrieri forti e coraggiosi', .6) + L(215, 184, 14, 'montagne del Sannio', 1) +
+      uo(60, 216, '#8a4b2a', 1.3, 1.4, 'h') + G(1.6, scI(40, 194, 13, '#d9a13a')) + uo(108, 216, '#8a4b2a', 1.3, 1.8, 'h') + G(2, scI(130, 194, 13, '#d9a13a')) +
+      [1, 2, 3].map((n, k) => G(2.6 + k * .5, '<circle cx="' + (190 + k * 36) + '" cy="208" r="15" fill="#d6453d" stroke="#fff" stroke-width="2"/>') + L(190 + k * 36, 214, 16, String(n), 2.7 + k * .5, '#fff')).join('') +
+      '<g class="a" style="--d:3.6s"><g class="b"><line x1="340" y1="218" x2="340" y2="132" stroke="#6b4a2a" stroke-width="4"/><text x="340" y="134" font-size="34" text-anchor="middle">🦅</text></g></g>' + L(340, 234, 13, 'Roma', 3.8) + L(180, 234, 13, 'tre guerre contro Roma', 3.4),
+
+      /* 4 · Camuni: disegni sulle rocce */
+      cielo('#cfe2f5', '#eef6fc') + ground(196, '#8cc56b') +
+      '<path d="M30,62 Q40,44 90,48 L320,44 Q372,48 372,94 L368,172 Q360,192 310,190 L90,194 Q38,192 34,160 Z" fill="#a39f95" stroke="#7d7a70" stroke-width="3"/>' +
+      '<g stroke="#4b4944" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">' +
+      '<path class="w" style="--d:.6s" d="M88,84 m-13,0 a13,13 0 1 0 26,0 a13,13 0 1 0 -26,0 M88,64 v-8 M88,104 v8 M68,84 h-8 M108,84 h8"/>' +
+      '<path class="w" style="--d:1.2s" d="M152,96 m-6,0 a6,6 0 1 0 12,0 a6,6 0 1 0 -12,0 M152,102 v26 m-13,-20 l13,8 l13,-8 m-13,18 l-9,22 m9,-22 l9,22"/>' +
+      '<path class="w" style="--d:1.8s" d="M200,108 m-5,0 a5,5 0 1 0 10,0 a5,5 0 1 0 -10,0 M200,113 v20 m-10,-15 l10,6 l10,-6 m-10,14 l-7,18 m7,-18 l7,18"/>' +
+      '<path class="w" style="--d:2.4s" d="M256,126 h46 M258,126 v24 M266,126 v24 M294,126 v24 M302,126 v24 M256,126 l-7,-6 M302,126 l10,-18 l12,4 M312,108 l-3,-16 l-6,-3 M309,92 l5,-5 M314,108 l6,-14 l7,-2 M320,94 l-1,-8"/>' +
+      '<path class="w" style="--d:3s" d="M306,168 l22,-18 l22,18 z M318,168 v-12 h12 v12"/></g>' +
+      L(200, 32, 22, 'i Camuni', .2) + L(70, 26, 13, 'Val Camonica', .5) + L(340, 26, 13, 'Lombardia', .6) +
+      L(200, 216, 14, 'migliaia di disegni sulle rocce', 3.2) + L(200, 233, 13, 'il primo sito italiano Patrimonio UNESCO', 3.8),
+
+      /* 5 · nuraghi: torri di pietra senza malta */
+      cielo('#bfe3ff', '#eaf6ff') + ground(190, '#c9b27c') + G(.4, '<ellipse cx="60" cy="192" rx="32" ry="9" fill="#8cc56b"/><ellipse cx="344" cy="192" rx="36" ry="9" fill="#8cc56b"/>') +
+      G(.6, '<polygon points="110,190 290,190 250,92 150,92" fill="#8d8579" stroke="#6b645a" stroke-width="2"/><rect x="144" y="80" width="112" height="14" rx="3" fill="#7d766b" stroke="#6b645a" stroke-width="2"/>' +
+        [0, 1, 2, 3, 4, 5, 6].map(r => {
+          const y = 106 + r * 12, hw = 50 + (y - 92) * .4, o = (r % 2) * 14;
+          let s = '<line x1="' + (200 - hw) + '" y1="' + y + '" x2="' + (200 + hw) + '" y2="' + y + '" stroke="rgba(0,0,0,.3)" stroke-width="2"/>';
+          for (let x = 200 - hw + 10 + o; x < 200 + hw - 6; x += 28) s += '<line x1="' + x + '" y1="' + (y - 12) + '" x2="' + x + '" y2="' + y + '" stroke="rgba(0,0,0,.3)" stroke-width="2"/>';
+          return s;
+        }).join('') + '<path d="M188,190 v-28 q12,-10 24,0 v28 z" fill="#2b241d"/>') +
+      L(200, 32, 22, 'i nuraghi', .2) + L(200, 56, 14, 'in Sardegna', .6) + L(200, 214, 14, 'torri di pietra a forma di cono tagliato', 2.4) + L(200, 233, 14, 'grandi pietre, senza malta', 3.4)
+    ]
+  });
+})();
+
+/* cartoni della serie: episodi (roma) — scritti da un agente, controllati dal revisore */
+(() => {
+  const { T, cielo } = CH;
+  const A = (d, s) => `<g class="a" style="--d:${d}s">${s}</g>`;
+  const B = s => `<g class="b">${s}</g>`;
+  const TX = (x, y, s, t, d, f, st) => T(x, y, s, t, d, `text-anchor="middle" font-weight="900" fill="${f || '#1d2433'}" stroke="${st || '#fff'}" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round"`);
+  const R = (x, y, w, h, f, e) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${f}" ${e || ''}/>`;
+  const tt = (x, y, s, t) => `<text x="${x}" y="${y}" font-size="${s}" font-weight="900" text-anchor="middle" fill="#1d2433">${t}</text>`;
+  const omino = (x, y, c, s, sk, up) => `<g transform="translate(${x},${y}) scale(${s || 1})"><rect x="-6" y="-12" width="5" height="12" fill="#5b3a1e"/><rect x="1" y="-12" width="5" height="12" fill="#5b3a1e"/><path d="M-9,-40h18l4,30h-26z" fill="${c}" stroke="rgba(0,0,0,.25)"/><path d="${up ? 'M-8,-38l-10,-16M8,-38l10,-16' : 'M-8,-38l-7,16M8,-38l7,16'}" stroke="${c}" stroke-width="4.5" stroke-linecap="round"/><circle cy="-46" r="7" fill="${sk || '#f2c9a0'}"/></g>`;
+  const corona = (x, y, s) => `<polygon transform="translate(${x},${y}) scale(${s || 1})" points="-8,0 -8,-8 -4,-4 0,-10 4,-4 8,-8 8,0" fill="#f2c94c" stroke="#a07c1a"/>`;
+  const scudo = (x, y, w, h, c) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="6" fill="${c}" stroke="#6b3b12" stroke-width="2"/><circle cx="${x + w / 2}" cy="${y + h / 2}" r="4" fill="#f2c94c"/>`;
+  const colonna = (x, y, h, c) => R(x - 9, y - 4, 18, 4, c) + R(x - 6, y - h, 12, h - 4, c) + R(x - 9, y - h - 4, 18, 5, c);
+  const tempio = (x, y, n, gap, h, c, r) => { const w = (n - 1) * gap + 30, x0 = x - w / 2; let s = ''; for (let k = 0; k < n; k++) s += colonna(x0 + 15 + k * gap, y, h, c); return s + R(x0, y - h - 12, w, 8, c) + `<polygon points="${x0 - 4},${y - h - 12} ${x},${y - h - 34} ${x0 + w + 4},${y - h - 12}" fill="${r}"/>` + R(x0 - 6, y, w + 12, 6, c); };
+  const nave = (x, y, s, c, cargo) => `<g transform="translate(${x},${y}) scale(${s})"><path d="M-34,0L34,0L24,14L-24,14z" fill="#8a5a2b"/>${cargo ? R(-26, -8, 14, 8, '#777') + R(-10, -8, 14, 8, '#888') : ''}<line x1="12" y1="0" x2="12" y2="-42" stroke="#5b3a1e" stroke-width="3"/><path d="M12,-40L34,-6L12,-6z" fill="${c}"/></g>`;
+  const fiamma = (x, y, s) => `<g transform="translate(${x},${y}) scale(${s})"><path d="M0,0C-10,-6 -8,-18 0,-28C2,-18 10,-14 8,-6C6,0 0,0 0,0z" fill="#ff8a1e"/><path d="M0,0C-5,-3 -4,-9 0,-14C2,-9 5,-7 4,-3z" fill="#ffd54a"/></g>`;
+  const cal = (x, y, top, body, d) => A(d, `<rect x="${x}" y="${y}" width="76" height="76" rx="8" fill="#fff" stroke="#8a6a4a" stroke-width="3"/><path d="M${x},${y + 22}V${y + 8}a8,8 0 0 1 8,-8H${x + 68}a8,8 0 0 1 8,8V${y + 22}z" fill="#d6453d"/><text x="${x + 38}" y="${y + 17}" font-size="14" font-weight="900" fill="#fff" text-anchor="middle">${top}</text>${body}`);
+  const elefante = (x, y, s) => `<g transform="translate(${x},${y}) scale(${s})">${R(-26, 10, 9, 20, '#7d8896')}${R(-12, 10, 9, 20, '#7d8896')}${R(8, 10, 9, 20, '#7d8896')}${R(22, 10, 9, 20, '#7d8896')}<ellipse rx="36" ry="24" fill="#8d98a6"/><circle cx="38" cy="-8" r="15" fill="#8d98a6"/><ellipse cx="29" cy="-4" rx="9" ry="14" fill="#7d8896"/><path d="M48,0Q62,14 54,32" stroke="#8d98a6" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M44,6Q58,10 62,0" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="43" cy="-12" r="2" fill="#1d2433"/><path d="M-36,-6Q-46,6 -42,18" stroke="#7d8896" stroke-width="3" fill="none"/></g>`;
+  const oca = (x, y, s) => `<g transform="translate(${x},${y}) scale(${s})"><line x1="-3" y1="8" x2="-3" y2="16" stroke="#f2a33a" stroke-width="2.5"/><line x1="4" y1="8" x2="4" y2="16" stroke="#f2a33a" stroke-width="2.5"/><ellipse rx="15" ry="9" fill="#fff" stroke="#bbb"/><path d="M10,-4Q19,-10 15,-22" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="15" cy="-23" r="5" fill="#fff" stroke="#bbb"/><polygon points="19,-25 28,-22 19,-20" fill="#f2a33a"/></g>`;
+  const cupole = (x, b, s) => `<g transform="translate(${x},${b}) scale(${s})">${R(-40, -30, 80, 30, '#e3d3b0')}<path d="M-30,-30a30,30 0 0 1 60,0z" fill="#4a7fb5"/>${R(-60, -22, 20, 22, '#d8c69c')}${R(-60, -27, 5, 5, '#d8c69c')}${R(-52, -27, 5, 5, '#d8c69c')}${R(-45, -27, 5, 5, '#d8c69c')}${R(40, -22, 20, 22, '#d8c69c')}${R(40, -27, 5, 5, '#d8c69c')}${R(47, -27, 5, 5, '#d8c69c')}${R(55, -27, 5, 5, '#d8c69c')}<path d="M-8,0v-14a8,8 0 0 1 16,0v14z" fill="#5b3a1e"/></g>`;
+  const colosseo = (x, b, w, h) => { const x0 = x - w / 2, n = 7, s = w / n, rh = (h - 14) / 3; let o = R(x0, b - h, w, h, '#d9b88a', 'stroke="#a07c4c" stroke-width="2"'); for (let r = 0; r < 3; r++) { const ry = b - h + 8 + r * rh; for (let k = 0; k < n; k++) o += `<path d="M${x0 + k * s + s * .2},${ry + rh - 4}v-${rh - 12}a${s * .3},${s * .3} 0 0 1 ${s * .6},0v${rh - 12}z" fill="#6b4a2a"/>`; } return o; };
+  const cavallo = (x, y, c) => `<g transform="translate(${x},${y})"><path d="M-24,2Q-36,8 -32,22" stroke="#3b2a1e" stroke-width="5" fill="none" stroke-linecap="round"/><g stroke="${c}" stroke-width="4"><line x1="-16" y1="8" x2="-18" y2="28"/><line x1="-8" y1="8" x2="-6" y2="28"/><line x1="12" y1="8" x2="14" y2="28"/><line x1="20" y1="8" x2="24" y2="26"/></g><ellipse rx="26" ry="12" fill="${c}"/><path d="M16,-6L26,-26L38,-22L30,0z" fill="${c}"/><ellipse cx="38" cy="-22" rx="10" ry="5" fill="${c}" transform="rotate(25 38 -22)"/></g>`;
+  const cipresso = (x, y) => `<ellipse cx="${x}" cy="${y - 20}" rx="7" ry="22" fill="#2f6b3a"/>${R(x - 1.5, y, 3, 9, '#5b3a1e')}`;
+  const frecciaD = (x1, x2, y, c) => `<path class="w" d="M${x1},${y}H${x2}m-10,-9l10,9l-10,9" stroke="${c}" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" pathLength="1000"/>`;
+  const meta = (x) => `<path d="M${x},0H382a18,18 0 0 1 18,18V222a18,18 0 0 1-18,18H${x}z"`;
+
+  Object.assign(CARTONI, {
+    etruschi: [
+      /* 0 · Etruria: Toscana, Lazio, Umbria; Tusci */
+      cielo('#bfe3ff', '#fff1cf') + A(.2, '<circle cx="335" cy="62" r="22" fill="#ffd54a"/>') +
+      '<path d="M0,150Q90,100 190,140T400,120V240H0z" fill="#9bcf6f"/><path d="M0,185Q110,140 230,180T400,165V240H0z" fill="#7fbf5a"/>' +
+      [[60, 160], [112, 172], [300, 152], [352, 160]].map(([x, y], k) => A(.4 + k * .2, cipresso(x, y))).join('') +
+      TX(200, 38, 28, 'Etruria', .6) + TX(95, 200, 15, 'Toscana', 1.4) + TX(310, 196, 15, 'Umbria', 1.8) + TX(205, 211, 15, 'Lazio', 2.2) +
+      TX(200, 234, 15, 'Romani: Tusci → Toscana', 3),
+
+      /* 1 · dodici città unite nella lega: la dodecapoli */
+      cielo('#ffe2a8', '#fff4dc') + R(0, 175, 400, 65, '#b9d98a') +
+      '<ellipse class="w" cx="200" cy="128" rx="135" ry="62" fill="none" stroke="#c9a77c" stroke-width="4" pathLength="1000"/>' +
+      Array.from({ length: 12 }, (_, k) => { const a = k * Math.PI / 6, x = (200 + 135 * Math.cos(a)).toFixed(0), y = (128 + 62 * Math.sin(a)).toFixed(0); return A(.5 + k * .18, `<g transform="translate(${x},${y})">${R(-10, -8, 20, 15, '#d9a066')}<polygon points="-13,-8 0,-21 13,-8" fill="#b8553a"/></g>`); }).join('') +
+      A(2.8, R(188, 134, 24, 12, '#cbb994') + B(fiamma(200, 134, 1))) +
+      TX(200, 34, 22, '12 città · dodecapoli', 2.6) + TX(200, 230, 16, 'feste e religione', 3.4),
+
+      /* 2 · artigiani dei metalli; ferro dall'isola d'Elba */
+      cielo('#cfe9ff', '#eaf6ff') + R(0, 125, 400, 115, '#4aa3df') +
+      '<ellipse cx="85" cy="128" rx="62" ry="32" fill="#8cc56b"/><polygon points="62,118 80,92 98,118" fill="#8b6a52"/><polygon points="95,122 108,104 120,122" fill="#7a5a44"/>' +
+      A(.4, '<rect x="300" y="140" width="100" height="100" fill="#e3c88f"/>') +
+      A(1, B(nave(200, 165, 1, '#f1e6c9', 1))) +
+      A(1.8, `<polygon points="338,196 374,196 366,206 346,206 350,214 362,214 362,222 338,222" fill="#45474f"/><rect x="326" y="208" width="14" height="14" fill="#b8553a"/>`) + A(2.2, B(fiamma(333, 208, .7))) +
+      A(2.2, omino(352, 196, '#c2452d', .85)) +
+      TX(200, 36, 22, 'abili artigiani', .6) + TX(85, 88, 15, 'isola d\'Elba', 1.4) + TX(200, 112, 15, 'ferro', 2) + TX(346, 128, 15, 'metalli', 2.6) +
+      TX(200, 232, 14, 'lavorano i metalli', 3.2),
+
+      /* 3 · alfabeto dai Greci, scritto da destra a sinistra */
+      cielo('#f2e6ff', '#fbf7ff') +
+      R(50, 66, 240, 100, '#8a5a2b', 'rx="10"') + R(60, 76, 220, 80, '#f3e3c3', 'rx="6"') +
+      T(170, 134, 44, 'ΕΔΓΒΑ', 1, 'text-anchor="middle" font-weight="900" fill="#7a4b2a" letter-spacing="6"') +
+      frecciaD(285, 80, 196, '#d6453d').replace('stroke-width="6"', 'stroke-width="6"') +
+      TX(338, 130, 44, '?', 2.6, '#7a4b2a') + TX(338, 160, 13, 'solo in parte', 3.2) +
+      TX(200, 38, 22, 'alfabeto dai Greci', .4) + TX(200, 232, 15, 'da destra a sinistra', 2.2),
+
+      /* 4 · tombe come case, dipinte */
+      cielo('#d9e3f2', '#f1f5fb') +
+      '<polygon points="70,96 200,46 330,96" fill="#b8553a"/>' + R(90, 96, 220, 110, '#e8c48a', 'stroke="#7a4b2a" stroke-width="3"') +
+      R(90, 100, 220, 10, '#c2452d') + R(90, 110, 220, 4, '#3d7fd6') +
+      A(.8, omino(130, 205, '#c2452d', .8, '#f2c9a0', 1)) + A(1.4, B(omino(190, 205, '#3d7fd6', .8))) + A(1.6, '<text x="212" y="150" font-size="22">🎶</text>') +
+      A(2.2, R(240, 178, 56, 5, '#7a4b2a') + R(244, 183, 4, 22, '#7a4b2a') + R(288, 183, 4, 22, '#7a4b2a') + '<text x="256" y="176" font-size="20">🍇</text>') +
+      A(2.8, '<text x="150" y="203" font-size="16">🎲</text>') +
+      TX(200, 34, 22, 'tombe come case', .4) + TX(200, 232, 15, 'banchetti, danze, musica e giochi', 3.2),
+
+      /* 5 · Sarcofago degli Sposi */
+      cielo('#ffe2c8', '#fff3e6') +
+      R(80, 150, 240, 56, '#c9774a', 'rx="6"') + R(92, 160, 216, 36, 'rgba(255,255,255,.18)', 'rx="4"') +
+      A(.6, R(96, 124, 208, 28, '#e8b98a', 'rx="12"')) +
+      A(1.2, B(R(112, 108, 70, 28, '#3d7fd6', 'rx="14"') + '<circle cx="128" cy="98" r="11" fill="#f2c9a0"/><path d="M117,96a11,11 0 0 1 22,-2v-2a11,11 0 0 0-22,2z" fill="#3b2a1e"/>')) +
+      A(1.8, B(R(206, 108, 70, 28, '#d6453d', 'rx="14"') + '<circle cx="222" cy="98" r="11" fill="#f2c9a0"/><path d="M209,100a13,13 0 0 1 26,0v10h-26z" fill="#3b2a1e" opacity=".9"/><circle cx="222" cy="100" r="9" fill="#f2c9a0"/>')) +
+      TX(200, 40, 22, 'Sarcofago degli Sposi', .3) + TX(200, 232, 14, 'donne e uomini insieme al banchetto', 3),
+    ],
+
+    'roma-re': [
+      /* 0 · Romolo e Remo, la lupa, il Tevere */
+      cielo('#ffd8a8', '#fff0d6') +
+      R(0, 150, 400, 45, '#9bcf6f') + '<path class="w" d="M0,212C90,196 180,226 260,210S360,202 400,208" stroke="#3d8fd6" stroke-width="26" fill="none" pathLength="1000"/>' +
+      A(.3, R(76, 92, 8, 60, '#5b3a1e') + '<circle cx="80" cy="84" r="34" fill="#3f8a3a"/>') +
+      A(1, `<g transform="translate(200,150)">${R(-30, 8, 7, 18, '#6f6f7a')}${R(-14, 8, 7, 18, '#6f6f7a')}${R(14, 8, 7, 18, '#6f6f7a')}${R(28, 8, 7, 18, '#6f6f7a')}<path d="M-40,-6Q-58,-10 -56,8" stroke="#8c8c96" stroke-width="7" fill="none" stroke-linecap="round"/><ellipse rx="42" ry="17" fill="#8c8c96"/><circle cx="46" cy="-10" r="12" fill="#8c8c96"/><polygon points="52,-14 70,-4 52,0" fill="#8c8c96"/><polygon points="40,-20 44,-34 50,-20" fill="#6f6f7a"/><circle cx="50" cy="-12" r="2" fill="#1d2433"/></g>`) +
+      A(2, '<g><circle cx="186" cy="168" r="6" fill="#f2c9a0"/><ellipse cx="186" cy="178" rx="9" ry="5" fill="#fff"/><circle cx="214" cy="168" r="6" fill="#f2c9a0"/><ellipse cx="214" cy="178" rx="9" ry="5" fill="#fff"/></g>') +
+      TX(200, 38, 24, 'Romolo e Remo', 2.4) + TX(200, 112, 15, 'la lupa', 2.8) + TX(325, 232, 15, 'Tevere', 3.2),
+
+      /* 1 · Romolo fonda Roma, primo re; 21 aprile 753 a.C. */
+      cielo('#ffe9b8', '#fff7e0') + R(0, 190, 400, 50, '#9bcf6f') +
+      '<path class="w" d="M118,198V150H282V198" stroke="#8a5a2b" stroke-width="8" fill="none" pathLength="1000"/>' +
+      CH.capanna(160, 1.2) + CH.capanna(205, 1.5) + CH.capanna(250, 1.8) +
+      A(2.2, omino(66, 205, '#b8322b', 1.1, '#f2c9a0', 1) + corona(66, 148, 1.2)) +
+      cal(298, 52, 'aprile', tt(336, 94, 28, '21') + tt(336, 114, 13, '753 a.C.'), 3) +
+      TX(150, 40, 22, 'Romolo fonda Roma', .4) + TX(66, 232, 15, 'primo re', 2.8),
+
+      /* 2 · Monarchia: 7 re, gli ultimi tre etruschi */
+      cielo('#e3d4f3', '#f7efff') + R(0, 175, 400, 65, '#c9b48a') +
+      Array.from({ length: 7 }, (_, k) => A(.4 + k * .4, omino(52 + k * 49, 175, k < 4 ? '#8e5bbf' : '#d9822b', .8) + corona(52 + k * 49, 133, 1))).join('') +
+      A(3.4, '<path d="M236,186V192H358V186" stroke="#a85f12" stroke-width="3" fill="none"/>') +
+      TX(297, 211, 14, 'ultimi tre:', 3.4) + TX(297, 229, 14, 'origine etrusca', 3.6) + TX(125, 211, 14, 'uno dopo l\'altro', 3.2) +
+      TX(200, 46, 26, 'Monarchia · 7 re', .3),
+
+      /* 3 · Tarquinio il Superbo cacciato, 509 a.C. */
+      cielo('#e3d4f3', '#f7efff') + R(0, 190, 400, 50, '#9bcf6f') +
+      R(0, 108, 70, 82, '#c99a63') + '<path d="M22,190v-26a13,13 0 0 1 26,0v26z" fill="#4a2f1a"/>' +
+      A(.8, omino(110, 200, '#f6f1e4', 1, '#f2c9a0', 1)) + A(1.2, omino(150, 200, '#f2e6d0', 1)) + A(1.6, omino(190, 200, '#f6f1e4', 1, '#f2c9a0', 1)) +
+      frecciaD(215, 290, 140, '#d6453d') +
+      A(2.6, B(omino(335, 200, '#7b4ea3', 1.1) + corona(335, 143, 1.2))) +
+      TX(200, 38, 22, 'Tarquinio il Superbo', .3) + TX(150, 228, 15, '509 a.C.', 2) + TX(335, 228, 15, 'prepotente', 3),
+
+      /* 4 · Repubblica: due consoli, ogni anno, fino al 27 a.C. */
+      cielo('#d9e8ff', '#f4f8ff') + R(0, 195, 400, 45, '#d8c9a8') +
+      A(.6, omino(80, 195, '#f6f1e4', 1.3)) + A(1.2, omino(165, 195, '#f2e6d0', 1.3, '#f2c9a0', 1)) +
+      A(1.8, '<circle cx="122" cy="96" r="20" fill="#f2c94c" stroke="#a07c1a" stroke-width="3"/>' + tt(122, 105, 26, '2')) +
+      '<circle class="w" style="--d:2.4s" cx="310" cy="118" r="42" fill="none" stroke="#3d7fd6" stroke-width="6" pathLength="1000"/>' +
+      TX(310, 124, 15, 'ogni anno', 3.2) +
+      TX(200, 38, 26, 'Repubblica', .3) + TX(122, 226, 16, 'due consoli', 2.2) + TX(310, 226, 14, 'fino al 27 a.C.', 3.8),
+
+      /* 5 · tre fasi: Monarchia, Repubblica, Impero; 476 d.C. */
+      cielo('#d9e8ff', '#f4f8ff') +
+      [['👑', 'Monarchia', '#fff1c4'], ['🏛️', 'Repubblica', '#dcebff'], ['🦅', 'Impero', '#ffdcd6']].map(([e, n, c], k) => A(.5 + k * 1.1, R(20 + k * 126, 66, 107, 104, c, 'rx="14" stroke="#8a6a4a" stroke-width="3"') + `<text x="${73 + k * 126}" y="116" font-size="44" text-anchor="middle">${e}</text>` + tt(73 + k * 126, 152, 16, n))).join('') +
+      '<path class="w" style="--d:1.2s" d="M128,118H145" stroke="#1d2433" stroke-width="5" pathLength="1000"/><path class="w" style="--d:2.3s" d="M254,118H271" stroke="#1d2433" stroke-width="5" pathLength="1000"/>' +
+      TX(200, 40, 22, 'tre fasi da ricordare', .2) + TX(200, 210, 14, 'in Occidente finisce nel 476 d.C.', 3.8),
+    ],
+
+    repubblica: [
+      /* 0 · 509 a.C.: consoli, Senato, SPQR */
+      cielo('#d9e8ff', '#f4f8ff') + R(0, 190, 400, 50, '#d8c9a8') +
+      A(.5, omino(170, 188, '#f6f1e4', .6) + omino(200, 188, '#f2e6d0', .6) + omino(230, 188, '#f6f1e4', .6)) +
+      A(.3, tempio(200, 190, 4, 34, 60, '#efe6d2', '#c9774a')) +
+      A(1.4, omino(64, 198, '#f6f1e4', 1) + omino(100, 198, '#f2e6d0', 1)) +
+      A(2, R(334, 66, 4, 132, '#6b4a2a') + R(308, 72, 56, 44, '#b8322b', 'stroke="#f2c94c" stroke-width="3"') + '<text x="336" y="100" font-size="15" font-weight="900" text-anchor="middle" fill="#f2c94c">SPQR</text>') +
+      TX(200, 34, 20, '509 a.C. · nasce la Repubblica', .3) + TX(82, 226, 15, '2 consoli', 1.6) + TX(200, 226, 16, 'Senato', 1.2),
+
+      /* 1 · il dittatore e Cincinnato che torna ad arare */
+      cielo('#cfe9ff', '#f1f8ff') + R(0, 190, 400, 50, '#9bcf6f') +
+      [0, 1, 2, 3].map(k => `<path d="M170,${200 + k * 10}H400" stroke="#8b6a3e" stroke-width="3"/>`).join('') +
+      A(.6, omino(68, 200, '#b8322b', 1.2, '#f2c9a0', 1)) + frecciaD(112, 170, 130, '#d6453d') +
+      A(2, `<g>${R(250, 158, 50, 22, '#8b5a3c')}${R(254, 180, 6, 14, '#6b4a2e')}${R(290, 180, 6, 14, '#6b4a2e')}<ellipse cx="306" cy="164" rx="12" ry="9" fill="#8b5a3c"/><path d="M300,155l-6,-9M312,155l6,-9" stroke="#fff" stroke-width="3"/><path d="M300,174L340,194" stroke="#6b4a2e" stroke-width="3"/></g>`) +
+      A(2.6, omino(352, 200, '#9c6b3f', 1) + '<path d="M342,194L336,164" stroke="#6b4a2e" stroke-width="4"/>') +
+      TX(68, 92, 15, 'pieni poteri', 1) + TX(68, 230, 15, 'dittatore', 1.2) + TX(305, 70, 20, 'Cincinnato', 2.4) + TX(305, 112, 15, 'torna ad arare', 3),
+
+      /* 2 · patrizi e plebei: 494 a.C. */
+      cielo('#ffe9d0', '#fff7ec') + R(0, 190, 400, 50, '#9bcf6f') +
+      R(0, 104, 112, 86, '#c99a63') + [0, 1, 2, 3].map(k => R(4 + k * 28, 96, 16, 10, '#c99a63')).join('') + '<path d="M44,190v-24a12,12 0 0 1 24,0v24z" fill="#4a2f1a"/>' +
+      A(.6, omino(30, 190, '#7b4ea3', .8) + omino(86, 190, '#7b4ea3', .8)) +
+      [0, 1, 2].map(k => A(1.4 + k * .4, B(omino(190 + k * 44, 190, '#9c6b3f', .9)))).join('') + frecciaD(135, 340, 112, '#d6453d') +
+      A(3, scudo(338, 168, 22, 26, '#b8322b') + scudo(366, 172, 22, 26, '#b8322b')) +
+      TX(200, 36, 24, '494 a.C.', .3) + TX(56, 84, 15, 'patrizi', .8) + TX(235, 70, 14, 'i plebei escono da Roma', 2) + TX(232, 212, 15, 'plebei', 1.8) + TX(250, 234, 15, 'rifiutano di combattere', 3.2),
+
+      /* 3 · tribuni, veto, Dodici Tavole */
+      cielo('#e8e0ff', '#f7f4ff') + R(0, 200, 400, 40, '#d8c9a8') +
+      A(.6, omino(70, 200, '#f6f1e4', 1.2, '#f2c9a0', 1)) +
+      A(1.4, '<rect x="24" y="56" width="104" height="54" rx="12" fill="#fff" stroke="#7b4ea3" stroke-width="3"/><polygon points="60,110 72,110 66,124" fill="#fff" stroke="#7b4ea3" stroke-width="3"/>' + tt(76, 84, 20, 'veto!') + tt(76, 102, 13, 'mi oppongo')) +
+      A(1.2, R(192, 62, 196, 138, '#b08a52', 'rx="8"')) +
+      Array.from({ length: 12 }, (_, k) => { const c = k % 6, r = (k / 6) | 0; return A(2.4 + k * .15, R(200 + c * 30, 70 + r * 62, 26, 54, '#f3e3c3') + `<path d="M${204 + c * 30},${82 + r * 62}h18M${204 + c * 30},${92 + r * 62}h18M${204 + c * 30},${102 + r * 62}h14" stroke="#9b7a4a" stroke-width="2"/>`); }).join('') +
+      TX(290, 44, 18, 'Dodici Tavole', 2.2) + TX(85, 232, 14, 'tribuni della plebe', 1.6) + TX(290, 226, 13, 'scritte e mostrate a tutti', 4),
+
+      /* 4 · i Galli di Brenno; le oche del Campidoglio */
+      cielo('#3b4a7a', '#a9a6d6') + A(.2, '<circle cx="340" cy="56" r="16" fill="#fff6c8"/>') +
+      '<path d="M0,205Q100,195 140,150Q200,100 260,150Q310,195 400,205V240H0z" fill="#7c9a5a"/>' +
+      R(164, 100, 72, 26, '#c99a63') + [0, 1, 2, 3].map(k => R(166 + k * 19, 94, 12, 8, '#c99a63')).join('') +
+      A(.8, omino(200, 152, '#c0392b', .7, '#f2c9a0', 1) + scudo(212, 124, 14, 18, '#b8322b')) +
+      A(1.6, B(oca(150, 158, 1.1) + oca(252, 158, 1.1))) + A(2.2, tt(132, 118, 24, '!') + tt(272, 118, 24, '!')) +
+      [0, 1, 2].map(k => A(2.6 + k * .3, omino(44 + k * 36, 224, '#e07b39', .75))).join('') +
+      TX(200, 28, 18, 'i Galli guidati da Brenno', .3) + TX(200, 72, 15, 'le oche del Campidoglio', 1.4) + TX(300, 228, 14, 'svegliano i difensori', 3.4),
+
+      /* 5 · guerre puniche: Annibale, Alpi, soldati ed elefanti */
+      cielo('#cfe9ff', '#eef6ff') +
+      '<polygon points="0,170 70,62 140,170" fill="#7e8fa6"/><polygon points="90,170 190,46 290,170" fill="#8a9bb2"/><polygon points="230,170 320,72 400,170" fill="#7e8fa6"/><polygon points="190,46 168,84 190,76 208,88" fill="#fff"/><polygon points="70,62 54,92 70,84 86,96" fill="#fff"/><polygon points="320,72 304,98 320,92 336,100" fill="#fff"/>' +
+      R(0, 168, 400, 72, '#e9eef3') +
+      [0, 1, 2].map(k => A(.6 + k * .4, omino(46 + k * 36, 214, '#7b4ea3', .75) + scudo(60 + k * 36, 182, 12, 18, '#b8322b'))).join('') +
+      A(2, B(elefante(222, 192, 1.05))) +
+      TX(200, 30, 20, 'Annibale attraversa le Alpi', .3) + TX(200, 232, 14, 'guerre puniche: Roma contro Cartagine', 3),
+
+      /* 6 · Spartaco, Cesare, Rubicone, luglio */
+      cielo('#ffe9d0', '#fff7ec') +
+      [12, 140, 268].map((x, k) => A(.3 + k * .3, R(x, 50, 120, 122, '#fff', 'rx="12" stroke="#8a6a4a" stroke-width="3"'))).join('') +
+      A(.9, omino(72, 160, '#9c6b3f', .9, '#f2c9a0', 1) + '<g fill="none" stroke="#6b6f78" stroke-width="3"><ellipse cx="34" cy="166" rx="8" ry="5"/><ellipse cx="46" cy="166" rx="8" ry="5"/><ellipse cx="102" cy="166" rx="8" ry="5"/><ellipse cx="114" cy="166" rx="8" ry="5"/></g>') +
+      A(1.8, R(196, 56, 16, 110, '#4aa3df') + omino(166, 162, '#c0392b', .85) + '<path d="M162,112a8,8 0 0 1 16,0" stroke="#3f8a3a" stroke-width="3" fill="none"/>') + '<path class="w" style="--d:2.6s" d="M180,120H240m-9,-8l9,8l-9,8" stroke="#d6453d" stroke-width="5" fill="none" pathLength="1000"/>' +
+      cal(290, 72, 'Luglio', '<circle cx="328" cy="124" r="12" fill="#f2c9a0"/><path d="M314,122a14,14 0 0 1 28,0" stroke="#3f8a3a" stroke-width="4" fill="none"/>', 3) +
+      TX(200, 32, 20, '73 a.C. → 44 a.C.', .2) +
+      TX(72, 194, 15, 'Spartaco', 1.2) + TX(72, 211, 13, 'rivolta degli', 1.4) + TX(72, 227, 13, 'schiavi', 1.4) +
+      TX(200, 194, 15, 'Giulio Cesare', 2) + TX(200, 211, 13, 'Gallia · Rubicone', 2.2) +
+      TX(328, 194, 15, 'Luglio', 3.2) + TX(328, 211, 13, 'porta il suo nome', 3.4),
+    ],
+
+    impero: [
+      /* 0 · Augusto, i pretoriani, agosto */
+      cielo('#ffe9b8', '#fff6df') + R(0, 200, 400, 40, '#d9c59a') +
+      A(.6, omino(70, 200, '#7a1f1f', 1) + scudo(84, 168, 16, 24, '#b8322b') + omino(110, 200, '#7a1f1f', 1) + omino(290, 200, '#7a1f1f', 1) + scudo(262, 168, 16, 24, '#b8322b') + omino(330, 200, '#7a1f1f', 1)) +
+      A(1.4, B(omino(200, 200, '#f6f1e4', 1.5) + '<path d="M188,134Q185,119 200,118Q215,119 212,134" fill="none" stroke="#3f8a3a" stroke-width="4"/>')) +
+      cal(300, 36, 'agosto', '<text x="338" y="84" font-size="30" text-anchor="middle">☀️</text>', 2.6) +
+      TX(150, 34, 20, 'Augusto, primo imperatore', .3) + TX(200, 228, 15, '27 a.C.', 1.8) + TX(80, 228, 14, 'pretoriani', 2.2),
+
+      /* 1 · pax romana, poi l'incendio di Roma sotto Nerone */
+      cielo('#cfe9ff', '#eaf6ff') +
+      `<path d="M200,0H382a18,18 0 0 1 18,18V222a18,18 0 0 1-18,18H200z" fill="#f5a55a"/>` +
+      R(0, 170, 200, 70, '#4aa3df') + A(.4, '<circle cx="40" cy="60" r="20" fill="#ffd54a"/>') +
+      A(.8, B(nave(90, 168, 1.1, '#fff', 1))) + A(1.6, '<text x="150" y="110" font-size="36">🕊️</text>') +
+      [[214, 120, 40], [260, 96, 64], [304, 130, 30], [340, 108, 52]].map(([x, y, h], k) => A(2 + k * .3, R(x, 200 - h - 20, 38, h + 20, '#6b4a3a') + B(fiamma(x + 19, 200 - h - 20, 1.3)))).join('') +
+      A(3, '<ellipse cx="300" cy="72" rx="40" ry="14" fill="#8a8a8a" opacity=".7"/>') +
+      TX(100, 36, 20, 'pax romana', .3) + TX(100, 226, 14, 'commerci e viaggi', 1.4) + TX(300, 38, 18, 'grande incendio', 2.4) + TX(300, 226, 14, '64 d.C. · Nerone', 3.4),
+
+      /* 2 · Vesuvio e Pompei; Colosseo */
+      cielo('#cfe9ff', '#f4f8ff') + R(0, 200, 400, 40, '#d9c59a') +
+      '<polygon points="20,200 108,88 196,200" fill="#7a5a48"/><polygon points="96,100 108,88 120,100 108,108" fill="#ff7a2a"/>' +
+      A(.8, B('<ellipse cx="108" cy="62" rx="34" ry="16" fill="#8a8a8a"/><ellipse cx="134" cy="74" rx="26" ry="12" fill="#9a9a9a"/><ellipse cx="84" cy="74" rx="24" ry="11" fill="#9a9a9a"/>')) +
+      A(1.6, [0, 1, 2].map(k => R(36 + k * 28, 180, 22, 20, '#bdb2a0')).join('')) +
+      A(2.2, colosseo(300, 200, 150, 105)) +
+      TX(108, 34, 22, '79 d.C.', .3) + TX(108, 154, 15, 'Vesuvio', 1.2) + TX(70, 226, 15, 'Pompei', 1.8) + TX(300, 66, 18, 'il Colosseo', 2.6) + TX(300, 228, 14, 'Anfiteatro Flavio', 3.2),
+
+      /* 3 · limes e muro di Adriano */
+      cielo('#ffe9b8', '#fff6df') + R(0, 100, 400, 140, '#a9cf7a') +
+      '<path class="w" d="M0,150Q100,120 200,150T400,130" stroke="#b99a6b" stroke-width="14" fill="none" pathLength="1000"/>' +
+      A(1.6, R(92, 117, 16, 32, '#a98a5b') + R(192, 132, 16, 32, '#a98a5b') + R(292, 142, 16, 32, '#a98a5b')) +
+      A(2, omino(44, 126, '#8a6a4a', .6, '#f2c9a0', 1) + omino(80, 128, '#8a6a4a', .6)) +
+      A(2.6, omino(240, 215, '#b8322b', .9) + scudo(252, 184, 14, 20, '#b8322b') + omino(300, 215, '#b8322b', .9)) +
+      TX(200, 32, 20, '117 d.C. · massima estensione', .3) + TX(62, 94, 15, 'barbari', 2) + TX(200, 120, 18, 'il limes', 1.2) + TX(120, 232, 14, 'in Britannia: il lungo muro di Adriano', 3.2).replace('x="120"', 'x="200"'),
+
+      /* 4 · pesce dei cristiani; 313; 380 */
+      cielo('#e0f0ff', '#f6fbff') +
+      '<g fill="none" stroke="#2a6fb0" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"><path class="w" d="M90,100Q190,28 290,100L322,70M90,100Q190,172 290,100L322,130" pathLength="1000"/></g>' +
+      A(1.4, '<circle cx="132" cy="92" r="5" fill="#2a6fb0"/>') +
+      A(2, R(16, 164, 176, 60, '#fff', 'rx="12" stroke="#8a6a4a" stroke-width="3"') + tt(104, 190, 17, '313 · Costantino') + tt(104, 212, 14, 'liberi di pregare')) +
+      A(3, R(208, 164, 176, 60, '#fff', 'rx="12" stroke="#8a6a4a" stroke-width="3"') + tt(296, 190, 17, '380 · Teodosio') + tt(296, 212, 13, 'religione ufficiale')) +
+      TX(200, 34, 22, 'il simbolo del pesce', .3),
+
+      /* 5 · impero diviso: Occidente e Oriente; Visigoti */
+      cielo('#fde2c4', '#fff3e6') +
+      `<path d="M200,0H382a18,18 0 0 1 18,18V222a18,18 0 0 1-18,18H200z" fill="#d6e8ff"/>` +
+      R(0, 190, 400, 50, 'rgba(120,150,90,.35)') +
+      A(.8, tempio(100, 180, 3, 24, 40, '#efe6d2', '#c9774a')) + A(1.4, cupole(300, 180, 1.1)) +
+      '<line x1="200" y1="50" x2="200" y2="190" stroke="#1d2433" stroke-width="3" stroke-dasharray="7 6"/>' +
+      TX(200, 30, 18, '395: impero diviso in due', .3) + TX(100, 72, 22, 'Occidente', 1) +
+      TX(300, 72, 22, 'Oriente', 1.8) + TX(300, 196, 15, 'Costantinopoli', 2.2) + TX(300, 213, 13, 'oggi Istanbul', 2.6) + TX(200, 233, 13, '410 · Visigoti di Alarico saccheggiano Roma', 3.6),
+
+      /* 6 · 476: Odoacre depone Romolo Augusto; l'Oriente dura */
+      cielo('#e3d4f3', '#f7efff') + R(0, 190, 400, 50, '#c9b48a') +
+      A(.8, omino(70, 190, '#7b4ea3', .9, '#f2c9a0')) + A(1.4, omino(150, 190, '#8a6a4a', 1, '#f2c9a0')) + A(2, corona(108, 200, 1.2)) +
+      A(2.6, cupole(314, 160, .9)) + frecciaD(256, 376, 178, '#3d7fd6') +
+      TX(200, 30, 24, '476 d.C.', .3) + TX(125, 64, 14, 'l\'ultimo imperatore d\'Occidente', 1) +
+      TX(62, 216, 13, 'Romolo Augusto', 3) + TX(155, 216, 13, 'Odoacre', 3.2) +
+      TX(314, 90, 15, 'Impero d\'Oriente', 3.4) + TX(314, 207, 14, 'quasi mille anni', 4),
+    ],
+
+    'vita-romana': [
+      /* 0 · latino e lingue neolatine; tavoletta di cera */
+      cielo('#fff3d6', '#fffbee') +
+      A(.4, R(26, 80, 108, 44, '#b8322b', 'rx="14"') + `<text x="80" y="110" font-size="22" font-weight="900" text-anchor="middle" fill="#fff">latino</text>`) +
+      ['italiano', 'francese', 'spagnolo', 'portoghese', 'rumeno'].map((n, k) => `<path class="w" style="--d:${1 + k * .35}s" d="M136,102L228,${48 + k * 28}" stroke="#b8322b" stroke-width="3" fill="none" pathLength="1000"/>` + A(1.4 + k * .35, R(232, 30 + k * 28, 138, 26, '#fff', 'rx="13" stroke="#e0c9a0" stroke-width="2"') + tt(301, 49 + k * 28, 17, n))).join('') +
+      TX(301, 196, 15, 'lingue neolatine', 3.2) +
+      A(3.4, R(24, 150, 110, 62, '#8a5a2b', 'rx="6"') + R(32, 158, 94, 46, '#d8c27a', 'rx="3"') + '<path d="M40,172h70M40,184h56M40,196h64" stroke="#8a5a2b" stroke-width="2"/>') +
+      '<path class="w" style="--d:3.8s" d="M112,176L150,138" stroke="#555" stroke-width="4" pathLength="1000"/>' +
+      TX(130, 232, 14, 'tavolette di cera con lo stilo', 4),
+
+      /* 1 · numeri romani */
+      cielo('#e8f1ff', '#f7fbff') +
+      [['I', 1], ['V', 5], ['X', 10], ['L', 50], ['C', 100]].map(([l, v], k) => A(.4 + k * .4, R(22 + k * 74, 58, 66, 84, '#fff', 'rx="10" stroke="#c9a77c" stroke-width="3"') + tt(55 + k * 74, 106, 40, l) + tt(55 + k * 74, 132, 13, 'vale ' + v))).join('') +
+      T(200, 204, 32, 'X + V = XV = 15', 3, 'text-anchor="middle" font-weight="900" fill="#b8322b"') +
+      TX(200, 34, 20, 'i numeri con le lettere', .2),
+
+      /* 2 · il foro e le terme */
+      cielo('#cfe9ff', '#f4f8ff') + R(0, 190, 400, 50, '#d8c9a8') +
+      `<path d="M200,0H382a18,18 0 0 1 18,18V222a18,18 0 0 1-18,18H200z" fill="#e6f4ee"/>` + R(200, 190, 188, 50, '#cfe3d8') +
+      A(.5, tempio(100, 180, 3, 26, 44, '#efe6d2', '#c9774a')) +
+      A(1.2, R(14, 150, 38, 30, '#c2452d') + R(14, 180, 38, 10, '#8a5a2b') + R(150, 150, 38, 30, '#3d7fd6') + R(150, 180, 38, 10, '#8a5a2b')) +
+      A(1.8, R(216, 128, 84, 52, '#7ec8f0', 'stroke="#6b7480" stroke-width="3"') + R(306, 128, 76, 52, '#f6b78a', 'stroke="#6b7480" stroke-width="3"') + tt(258, 160, 14, 'fredda') + tt(344, 160, 14, 'calda')) +
+      A(2.4, B('<path d="M330,120q-6,-10 0,-18q6,-8 0,-16M350,120q-6,-10 0,-18q6,-8 0,-16" stroke="#aab" stroke-width="3" fill="none"/>')) + A(2.8, '<text x="236" y="104" font-size="30">🌳</text>') +
+      TX(100, 36, 22, 'il foro', .3) + TX(300, 36, 22, 'le terme', .6) + TX(100, 228, 14, 'templi e botteghe', 3) + TX(300, 228, 14, 'palestre e giardini', 3.4),
+
+      /* 3 · insulae e domus */
+      cielo('#cfe9ff', '#f4f8ff') + R(0, 200, 400, 40, '#d8c9a8') +
+      A(.4, R(40, 56, 110, 144, '#c97a5a', 'stroke="#8a4a32" stroke-width="3"') + [0, 1, 2, 3].map(r => [0, 1, 2].map(c => R(54 + c * 32, 68 + r * 32, 16, 20, '#4a2f1a')).join('')).join('')) +
+      A(1.6, B('<circle cx="70" cy="116" r="5" fill="#f2c9a0"/>')) +
+      A(1.8, R(214, 120, 172, 80, '#f0dcb4', 'stroke="#a07c4c" stroke-width="3"') + R(214, 120, 70, 80, '#f0dcb4', 'stroke="#a07c4c" stroke-width="3"') + R(316, 120, 70, 80, '#f0dcb4', 'stroke="#a07c4c" stroke-width="3"') + '<polygon points="206,120 249,92 292,120" fill="#c9774a"/><polygon points="308,120 351,92 394,120" fill="#c9774a"/>' + R(284, 150, 32, 50, '#9ad0e6') + '<ellipse cx="300" cy="190" rx="10" ry="5" fill="#4aa3df"/><path d="M300,186v-22M290,170q10,-14 20,0" stroke="#3f8a3a" stroke-width="3" fill="none"/>' + R(235, 168, 14, 32, '#4a2f1a') + R(337, 168, 14, 32, '#4a2f1a')) +
+      TX(95, 36, 22, 'le insulae', .3) + TX(95, 226, 14, 'gente comune', 1.2) + TX(300, 36, 22, 'la domus', 1) + TX(300, 226, 14, 'ricchi · casa con cortile', 2),
+
+      /* 4 · acquedotti e via Appia */
+      cielo('#cfe9ff', '#eef6ff') +
+      '<polygon points="0,120 50,50 100,120" fill="#8aa0b8"/><polygon points="44,62 50,50 56,62 50,66" fill="#fff"/>' +
+      R(0, 120, 400, 120, '#9bcf6f') +
+      A(.6, R(60, 78, 280, 8, '#b99a6b') + R(60, 92, 280, 28, '#d1b182', 'stroke="#a07c4c" stroke-width="2"') + Array.from({ length: 8 }, (_, k) => `<path d="M${73 + k * 33},120v-14a10,10 0 0 1 20,0v14z" fill="#9bcf6f"/>`).join('') + R(60, 86, 280, 6, '#b99a6b')) +
+      '<path class="w" style="--d:1.2s" d="M62,84H338" stroke="#4aa3df" stroke-width="5" pathLength="1000"/>' +
+      A(1.6, R(336, 96, 24, 24, '#d9a066') + '<polygon points="332,96 348,80 364,96" fill="#b8553a"/>') +
+      R(0, 168, 400, 44, '#a9a9b0') + R(0, 168, 400, 4, '#7a7a82') + R(0, 208, 400, 4, '#7a7a82') +
+      TX(32, 196, 14, 'Roma', 2) + TX(200, 196, 15, 'via Appia', 2.4) + TX(358, 196, 14, 'Brindisi', 2.8) +
+      TX(200, 34, 18, 'acquedotti: acqua dalle montagne', .3).replace('x="200"', 'x="200"') + TX(200, 232, 15, 'la regina delle strade', 3.4),
+
+      /* 5 · Colosseo e Circo Massimo */
+      cielo('#ffe9b8', '#fff6df') +
+      `<path d="M200,0H382a18,18 0 0 1 18,18V222a18,18 0 0 1-18,18H200z" fill="#f6d9a0"/>` + R(0, 190, 400, 50, '#d9c59a') +
+      A(.4, colosseo(100, 170, 160, 100)) +
+      A(1.2, omino(70, 214, '#9a9aa5', .8) + scudo(80, 184, 12, 18, '#b8322b') + omino(130, 214, '#c0392b', .8) + scudo(112, 184, 12, 18, '#3d7fd6')) +
+      A(1.8, B(cavallo(300, 166, '#a0825a') + cavallo(284, 168, '#8a6a46'))) +
+      A(2.4, '<path d="M236,178L268,170" stroke="#5b3a1e" stroke-width="3"/><rect x="204" y="162" width="34" height="24" rx="4" fill="#b8322b"/><circle cx="214" cy="192" r="9" fill="#5b3a1e"/><circle cx="232" cy="192" r="9" fill="#5b3a1e"/>' + omino(220, 166, '#3d7fd6', .5)) +
+      TX(100, 34, 20, 'il Colosseo', .3) + TX(100, 226, 14, 'gladiatori', 1.4) + TX(300, 34, 20, 'Circo Massimo', 1) + TX(300, 226, 14, 'corse dei carri', 2.2) + TX(300, 208, 13, '2 o 4 cavalli', 2.8),
+
+      /* 6 · legioni e Mare Nostrum */
+      cielo('#bfe3ff', '#e8f6ff') + R(0, 70, 400, 120, '#3d9bd6') +
+      '<path d="M0,0H400V70Q330,92 250,70T100,78T0,66z" fill="#c9b48a"/><path d="M0,240H400V196Q320,176 240,194T90,184T0,198z" fill="#c9b48a"/>' +
+      '<path class="w" d="M0,66Q40,84 100,78T250,70T400,70" stroke="#d6453d" stroke-width="5" fill="none" pathLength="1000"/><path class="w" style="--d:1s" d="M0,198Q40,184 90,184T240,194T400,196" stroke="#d6453d" stroke-width="5" fill="none" pathLength="1000"/>' +
+      Array.from({ length: 8 }, (_, k) => A(.4 + k * .15, scudo(16 + (k % 4) * 26, 14 + ((k / 4) | 0) * 24, 20, 20, '#b8322b'))).join('') +
+      A(2.2, B(`<text x="200" y="146" font-size="36" font-weight="900" text-anchor="middle" fill="#fff" stroke="#1d5a8a" stroke-width="4" paint-order="stroke">Mare Nostrum</text>`)) +
+      TX(175, 38, 15, 'legioni', 1.6) + TX(300, 168, 16, 'il nostro mare', 3) + TX(200, 232, 14, 'conquistano tutte le coste', 3.6),
+    ]
+  });
+})();
+
 /* ---------- 🎬 LA SERIE DEL DRAGO: «Le avventure del drago nella Storia» (pilota, novembre 2026) ----------
    Gli argomenti di Storia del programma di 5ª diventano episodi di un cartone, in ordine, come in classe.
    Ogni episodio = la spiegazione già verificata (data/spiegazioni/storia.json) recitata dal drago con la voce dell'iPad,
@@ -14548,8 +15199,8 @@ PAGES.serie = el => {
         (done ? '✅ visto e superato' : seen ? (k === E.length - 1 ? '⚡ manca la sfida finale' : '⚡ manca la sfida per aprire il prossimo') : open ? '▶️ da guardare' : 'si apre con la sfida dell\'episodio prima') + '</small></span></button>';
     }).join('') + '</div>';
   el.querySelectorAll('.sr-ep:not(.lock)').forEach(b => b.addEventListener('click', () => srPlay(+b.dataset.ep)));
-  const pb = document.createElement('button'); pb.type = 'button'; pb.className = 'btn ghost sr-par'; pb.textContent = SR_VID_AUTO ? '👨‍👧 Genitore: video della serie' : '👨‍👧 Genitore: video' + (srVidDa().length ? ' da vedere (' + srVidDa().length + ')' : '');
-  pb.addEventListener('click', () => SR_VID_AUTO ? srParent() : parentGate(srParent)); el.appendChild(pb);
+  if (srVidAll().length) { const pb = document.createElement('button'); pb.type = 'button'; pb.className = 'btn ghost sr-par'; pb.textContent = SR_VID_AUTO ? '👨‍👧 Genitore: video della serie' : '👨‍👧 Genitore: video' + (srVidDa().length ? ' da vedere (' + srVidDa().length + ')' : '');
+  pb.addEventListener('click', () => SR_VID_AUTO ? srParent() : parentGate(srParent)); el.appendChild(pb); }
 };
 
 /* ---- il cartone ---- */

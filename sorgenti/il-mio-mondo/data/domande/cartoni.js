@@ -1,5 +1,6 @@
 /* 🎨 cartoni della serie: una scena disegnata per ogni frase del racconto (le parole restano quelle verificate in SPIEGA).
    Classi: a = compare (--d ritardo), w = si disegna il tratto, b = respira, m = cammina. Pilota: Torino romana. */
+var CH; /* aiutanti di disegno condivisi: CH.T testo, CH.cielo, CH.capanna, CH.torre, CH.porta */
 const CARTONI = (() => {
   const T = (x, y, s, t, d, extra) => '<text class="a" style="--d:' + d + 's" x="' + x + '" y="' + y + '" font-size="' + s + '" ' + (extra || '') + '>' + t + '</text>';
   const cielo = (a, b) => '<defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + a + '"/><stop offset="1" stop-color="' + b + '"/></linearGradient></defs><rect width="400" height="240" rx="18" fill="url(#cg)"/>';
@@ -10,6 +11,7 @@ const CARTONI = (() => {
     [[x + 40, 18, 30], [x + 62, 30, 46], [x + 98, 30, 46], [x + 132, 18, 30]].map(([ax, w, h]) => '<path d="M' + ax + ',' + (y + 110) + 'v-' + (h - w / 2) + 'a' + w / 2 + ',' + w / 2 + ' 0 0 1 ' + w + ',0v' + (h - w / 2) + 'z" fill="#2b1d14"/>').join('') +
     [0, 1, 2, 3, 4, 5].map(k => '<rect x="' + (x + 44 + k * 18) + '" y="' + (y + 32) + '" width="10" height="14" rx="5" fill="#2b1d14"/>').join('') + '</g>';
   const pianta = '<rect class="w" x="110" y="40" width="180" height="170" fill="#f3e3c3" stroke="#7a4b2a" stroke-width="6" pathLength="1000"/>';
+  CH = { T, cielo, capanna, torre, porta };
   return {
     torino: [
       /* 0 · Taurini: villaggio tra le montagne e i fiumi */

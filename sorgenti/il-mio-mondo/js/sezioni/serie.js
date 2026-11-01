@@ -36,8 +36,8 @@ PAGES.serie = el => {
         (done ? '✅ visto e superato' : seen ? (k === E.length - 1 ? '⚡ manca la sfida finale' : '⚡ manca la sfida per aprire il prossimo') : open ? '▶️ da guardare' : 'si apre con la sfida dell\'episodio prima') + '</small></span></button>';
     }).join('') + '</div>';
   el.querySelectorAll('.sr-ep:not(.lock)').forEach(b => b.addEventListener('click', () => srPlay(+b.dataset.ep)));
-  const pb = document.createElement('button'); pb.type = 'button'; pb.className = 'btn ghost sr-par'; pb.textContent = SR_VID_AUTO ? '👨‍👧 Genitore: video della serie' : '👨‍👧 Genitore: video' + (srVidDa().length ? ' da vedere (' + srVidDa().length + ')' : '');
-  pb.addEventListener('click', () => SR_VID_AUTO ? srParent() : parentGate(srParent)); el.appendChild(pb);
+  if (srVidAll().length) { const pb = document.createElement('button'); pb.type = 'button'; pb.className = 'btn ghost sr-par'; pb.textContent = SR_VID_AUTO ? '👨‍👧 Genitore: video della serie' : '👨‍👧 Genitore: video' + (srVidDa().length ? ' da vedere (' + srVidDa().length + ')' : '');
+  pb.addEventListener('click', () => SR_VID_AUTO ? srParent() : parentGate(srParent)); el.appendChild(pb); }
 };
 
 /* ---- il cartone ---- */

@@ -103,7 +103,7 @@ function parentList() {
   const hide = vidHidden();
   openModal('<div class="big" style="font-size:24px">👨‍👧 Video visibili</div><p style="font-weight:700;color:var(--ink-soft)">Tocca per nascondere o mostrare. Il link apre il video su YouTube per guardarlo prima.</p>' +
     '<div class="vd-par-list">' + VIDEOS.map(x => '<div class="vd-pr"><button type="button" class="vd-tg' + (hide.includes(x.id) ? ' off' : '') + '" data-v="' + x.id + '">' + (hide.includes(x.id) ? '🚫' : '✅') + '</button><span><b>' + esc(x.t) + '</b><small>' + esc(unitLabel(x.u)) + ' · ' + esc(x.ch) + '</small></span><a href="https://www.youtube.com/watch?v=' + x.id + '" target="_blank" rel="noopener noreferrer">▶ YouTube</a></div>').join('') + '</div>' +
-    '<div class="row center" style="margin-top:12px;gap:8px">' + (typeof srParent === 'function' ? '<button type="button" class="btn ghost" id="pl-sr">🎬 Video della serie' + (!SR_VID_AUTO && srVidDa().length ? ' (' + srVidDa().length + ' da vedere)' : '') + '</button>' : '') + '<button type="button" class="btn" id="pl-x" data-focus>Fatto</button></div>');
+    '<div class="row center" style="margin-top:12px;gap:8px">' + (typeof srParent === 'function' && srVidAll().length ? '<button type="button" class="btn ghost" id="pl-sr">🎬 Video della serie' + (!SR_VID_AUTO && srVidDa().length ? ' (' + srVidDa().length + ' da vedere)' : '') + '</button>' : '') + '<button type="button" class="btn" id="pl-x" data-focus>Fatto</button></div>');
   if ($('pl-sr')) $('pl-sr').addEventListener('click', () => srParent());
   $('modal-box').classList.add('wide');
   $('pl-x').addEventListener('click', () => { closeModal(); openVideos(); });
