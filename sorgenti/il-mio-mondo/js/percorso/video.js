@@ -48,10 +48,10 @@ function openVideos() {
   });
   $('modal-box').querySelectorAll('.vd-it').forEach(b => b.addEventListener('click', () => playVideo(b.dataset.v)));
 }
-function playVideo(id) {
+function playVideo(id, free) {   /* free: video della serie del drago, non consuma biglietti */
   const x = VIDEOS.find(y => y.id === id); if (!x) return;
-  const v = vidState(); if (v.tickets <= 0 || v.today >= VID_MAX_DAY) return;
-  v.tickets--; v.today++; v.seen[id] = todayIso(); vidSave(v);
+  const v = vidState(); if ((!free && v.tickets <= 0) || v.today >= VID_MAX_DAY) return;
+  if (!free) v.tickets--; v.today++; v.seen[id] = todayIso(); vidSave(v);
   /* registro per la pagina Progressi del genitore: solo titolo, materia e se l'ha finito */
   const lk = todayIso() + '|' + id, vlog = store.get('vid-log', {}); vlog[lk] = { t: x.t, u: x.u, f: 0 };
   const cut = iso(addDays(new Date(), -60)); Object.keys(vlog).forEach(k => { if (k < cut) delete vlog[k]; }); store.set('vid-log', vlog);

@@ -1,0 +1,59 @@
+/* 🎬 la serie del drago */
+.sr-hero{display:flex;gap:14px;align-items:center;margin:12px 0 16px;padding:16px;border-radius:22px;color:#fff;background:linear-gradient(135deg,var(--a),var(--b))}
+.sr-hd{width:96px;flex:0 0 96px}.sr-hd svg{width:100%;height:auto}
+.sr-kick{font-weight:800;opacity:.85;font-size:14px}.sr-title{margin:2px 0 6px;font-size:24px;line-height:1.2}.sr-hero p{margin:0;font-weight:600;opacity:.95}
+.sr-list{display:grid;gap:10px}
+.sr-ep{display:flex;align-items:center;gap:12px;text-align:left;border:0;border-radius:18px;padding:12px 14px;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;font:inherit;cursor:pointer;min-height:64px;box-shadow:0 3px 0 rgba(0,0,0,.18)}
+.sr-ep.lock{filter:grayscale(.85);opacity:.55;cursor:default}.sr-ep.done{outline:3px solid #ffd76a}
+.sr-n{font-weight:900;font-size:22px;width:30px;text-align:center}.sr-ic{font-size:30px}.sr-t b{display:block;font-size:17px}.sr-t small{opacity:.9;font-weight:700}
+.sr-banner{display:flex;align-items:center;gap:10px;width:100%;margin:8px 0 12px;border:0;border-radius:16px;padding:12px 14px;background:linear-gradient(135deg,#1d4e89,#7a1f1f);color:#fff;font:inherit;text-align:left;cursor:pointer}
+.sr-banner span{font-size:28px}.sr-banner b{font-size:17px}.sr-banner small{margin-left:auto;font-weight:700;opacity:.9}
+#sr-ov{position:fixed;inset:0;z-index:9000;display:flex;flex-direction:column;background:linear-gradient(160deg,var(--a),var(--b));color:#fff;padding:calc(env(safe-area-inset-top) + 10px) 14px calc(env(safe-area-inset-bottom) + 12px)}
+#sr-ov[hidden]{display:none}
+.sr-top{display:flex;align-items:center;gap:10px}.sr-top b{font-size:18px;flex:1}.sr-epn{background:rgba(255,255,255,.2);border-radius:999px;padding:3px 10px;font-weight:800;font-size:13px}
+.sr-x{border:0;background:rgba(255,255,255,.22);color:#fff;border-radius:12px;width:44px;height:44px;font-size:20px;cursor:pointer}
+.sr-stage{flex:1;position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;min-height:0;overflow:hidden}
+.sr-chips{display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;flex:1;overflow:auto;padding-top:8px}
+.sr-chip{background:rgba(255,255,255,.18);border-radius:14px;padding:8px 12px;font-weight:800;font-size:16px;display:flex;flex-direction:column;animation:srPop .5s ease}
+.sr-chip small{font-weight:700;opacity:.85;font-size:12px}.sr-chip.new{background:#fff;color:var(--a)}
+.sr-scene{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-size:min(30vh,200px);line-height:1;opacity:.95;filter:drop-shadow(0 10px 18px rgba(0,0,0,.25));pointer-events:none}.sr-scene.in{animation:srScene .8s ease}
+.sr-drago{width:170px;align-self:flex-start;position:relative;z-index:1}.sr-drago svg{width:100%;height:auto}.sr-drago.talk{animation:srTalk .9s ease}
+.sr-bubble{background:#fff;color:#1d2433;border-radius:20px;padding:14px 16px;font-size:20px;font-weight:700;line-height:1.4;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.sr-bubble.in{animation:srIn .45s ease}
+.sr-dots{display:flex;gap:6px;justify-content:center;margin:10px 0}.sr-dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.35)}.sr-dots i.on{background:#fff}.sr-dots i.cur{background:#ffd76a;transform:scale(1.3)}
+.sr-ctl{display:flex;gap:14px;justify-content:center}.sr-ctl button{border:0;background:rgba(255,255,255,.22);color:#fff;border-radius:16px;width:64px;height:52px;font-size:22px;cursor:pointer}
+.sr-end{margin:auto 0;display:grid;gap:12px;text-align:center}.sr-endt{font-size:24px;font-weight:900}
+.sr-next{background:rgba(255,255,255,.16);border-radius:18px;padding:14px}.sr-next small{display:block;font-weight:800;opacity:.85}.sr-next b{display:block;font-size:20px;margin:4px 0}.sr-next p{margin:4px 0 0;font-weight:600}
+.sr-acts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.sr-vid{display:grid;gap:8px;text-align:left}.sr-vid>small{font-weight:800;opacity:.9}.sr-vb{border:0;border-radius:14px;padding:10px 12px;background:#fff;color:#1d2433;font:inherit;font-weight:800;text-align:left;cursor:pointer}.sr-vb small{display:block;font-weight:600;color:#5b6475}
+.sr-pil{flex:1;overflow-y:auto;scroll-snap-type:y mandatory;border-radius:20px}
+.sr-pc{scroll-snap-align:start;min-height:100%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:22px;background:rgba(0,0,0,.18);border-radius:20px;margin-bottom:10px}
+.sr-pc b{font-size:26px;line-height:1.3}.sr-pc p{font-size:19px;font-weight:600;margin:0;line-height:1.45}.sr-pc small{opacity:.75;font-weight:700}.sr-pn{font-weight:800;opacity:.85}
+.sr-q{margin:auto 0;display:grid;gap:12px}.sr-q>small{font-weight:800;opacity:.9}.sr-q>b{font-size:22px;line-height:1.35}
+.sr-opts{display:grid;gap:10px}.sr-o{border:0;border-radius:16px;padding:14px;background:#fff;color:#1d2433;font:inherit;font-weight:800;font-size:18px;text-align:left;cursor:pointer;min-height:52px}
+.sr-o.ok{background:#bff0cf}.sr-o.no{background:#ffd0cc}.sr-fb{font-weight:700;font-size:17px;min-height:1.4em;margin:0}
+@keyframes srScene{from{transform:translate(-50%,-40%) scale(.6);opacity:0}to{transform:translate(-50%,-50%) scale(1);opacity:.95}}
+@keyframes srPop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes srIn{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+@keyframes srTalk{0%,100%{transform:none}30%{transform:translateY(-8px) rotate(-3deg)}60%{transform:translateY(-3px) rotate(2deg)}}
+@media (prefers-reduced-motion:reduce){.sr-chip,.sr-bubble.in,.sr-drago.talk{animation:none}}
+@media (max-width:600px){.sr-bubble{font-size:18px}.sr-drago{width:110px}.sr-scene{font-size:min(22vh,140px);top:40%}.sr-pc b{font-size:22px}.sr-pc p{font-size:17px}}
+
+/* iPad in orizzontale (destinazione principale): scena a due colonne, elenco degli episodi a griglia */
+@media (min-width:900px) and (orientation:landscape){
+  .sr-list{grid-template-columns:repeat(3,1fr)}
+  .sr-ep{min-height:96px}
+  #sr-ov{padding-left:28px;padding-right:28px}
+  .sr-stage{display:grid;grid-template-columns:1fr 330px;grid-template-rows:1fr auto;gap:14px 22px;align-items:end}
+  .sr-chips{grid-column:2;grid-row:1/3;flex-direction:column;flex-wrap:nowrap;align-self:stretch;background:rgba(0,0,0,.14);border-radius:20px;padding:14px;gap:10px}
+  .sr-chips:empty::before{content:"🗺️ la mappa si costruisce qui";opacity:.7;font-weight:700}
+  .sr-chip{font-size:17px}
+  .sr-scene{left:calc((100% - 352px) / 2);top:40%;font-size:min(34vh,230px)}
+  .sr-drago{grid-column:1;grid-row:1;align-self:end;width:190px}
+  .sr-bubble{grid-column:1;grid-row:2;font-size:22px;padding:16px 20px}
+  .sr-end,.sr-q{grid-column:1/3;grid-row:1/3;max-width:760px;width:100%;justify-self:center}
+  .sr-pil{grid-column:1/3;grid-row:1/3;width:min(720px,100%);justify-self:center;height:100%}
+  .sr-pc b{font-size:30px}.sr-pc p{font-size:21px}
+  .sr-opts{grid-template-columns:1fr 1fr}
+  .sr-vid{grid-template-columns:1fr 1fr}.sr-vid>small{grid-column:1/3}
+}
