@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="0e5e91a40f";</script>
+<script>window.APP_VERSION="4fa8c4325e";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -15172,7 +15172,9 @@ const CARTONI = (() => {
 const SR_ERE = { grecia: ['#1d4e89', '#5fa8d3'], roma: ['#7a1f1f', '#d9774f'], italia: ['#5b3a1a', '#c08a4b'] };
 const srEra = id => /^(roma|repubblica|impero|vita|torino)/.test(id) ? SR_ERE.roma : /^(italici|etruschi)/.test(id) ? SR_ERE.italia : SR_ERE.grecia;
 const srEpisodi = () => (typeof SERIE !== 'undefined' ? SERIE.storia.episodi : []).filter(id => SPIEGA.storia && SPIEGA.storia[id]);
-const srState = () => { const s = store.get('serie-storia', null) || {}; s.aperti = Math.max(1, s.aperti || 1); s.visti = s.visti || {}; s.sfide = s.sfide || {}; return s; };
+/* deciso dal genitore (1/11/2026): episodi liberi e sganciati, tutti aperti; la sfida resta facoltativa (dà le gemme). false = si aprono uno alla volta con la sfida */
+const SR_LIBERI = true;
+const srState = () => { const s = store.get('serie-storia', null) || {}; s.aperti = Math.max(1, s.aperti || 1); if (SR_LIBERI) s.aperti = Math.max(s.aperti, 99); s.visti = s.visti || {}; s.sfide = s.sfide || {}; return s; };
 const srSave = s => store.set('serie-storia', s);
 const srNome = id => { const a = (ARGOMENTI.storia || []).find(x => x[0] === id); return a ? a[1] : id; };
 const srIc = id => { const a = (ARGOMENTI.storia || []).find(x => x[0] === id); return a ? a[2] : '📜'; };
@@ -15192,12 +15194,12 @@ if (!$('p-serie')) { const sec = document.createElement('section'); sec.id = 'p-
 /* ---- pagina della serie ---- */
 PAGES.serie = el => {
   const E = srEpisodi(), s = srState();
-  el.innerHTML = '<div class="sr-hero" style="--a:' + srEra('grecia')[0] + ';--b:' + srEra('roma')[0] + '"><div class="sr-hd">' + srDrago('sr-hd-dr') + '</div><div><div class="sr-kick">🎬 La serie</div><h1 class="sr-title">Le avventure del drago nella Storia</h1><p>Un episodio alla volta, come in classe. Guarda, scopri le pillole e supera la sfida per aprire il prossimo!</p></div></div>' +
+  el.innerHTML = '<div class="sr-hero" style="--a:' + srEra('grecia')[0] + ';--b:' + srEra('roma')[0] + '"><div class="sr-hd">' + srDrago('sr-hd-dr') + '</div><div><div class="sr-kick">🎬 La serie</div><h1 class="sr-title">Le avventure del drago nella Storia</h1><p>' + (SR_LIBERI ? 'Scegli l\'episodio che vuoi: guarda il cartone, scopri le pillole e prova la sfida!' : 'Un episodio alla volta, come in classe. Guarda, scopri le pillole e supera la sfida per aprire il prossimo!') + '</p></div></div>' +
     '<div class="sr-list">' + E.map((id, k) => {
       const open = k < s.aperti, seen = s.visti[id], done = s.sfide[id];
       return '<button type="button" class="sr-ep' + (open ? '' : ' lock') + (done ? ' done' : '') + '" data-ep="' + k + '"' + (open ? '' : ' disabled') + ' style="--a:' + srEra(id)[0] + ';--b:' + srEra(id)[1] + '">' +
         '<span class="sr-n">' + (k + 1) + '</span><span class="sr-ic">' + (open ? srIc(id) : '🔒') + '</span><span class="sr-t"><b>' + esc(srNome(id)) + '</b><small>' +
-        (done ? '✅ visto e superato' : seen ? (k === E.length - 1 ? '⚡ manca la sfida finale' : '⚡ manca la sfida per aprire il prossimo') : open ? '▶️ da guardare' : 'si apre con la sfida dell\'episodio prima') + '</small></span></button>';
+        (done ? '✅ visto e superato' : seen ? (SR_LIBERI ? '👀 visto · ⚡ sfida da provare' : k === E.length - 1 ? '⚡ manca la sfida finale' : '⚡ manca la sfida per aprire il prossimo') : open ? '▶️ da guardare' : 'si apre con la sfida dell\'episodio prima') + '</small></span></button>';
     }).join('') + '</div>';
   el.querySelectorAll('.sr-ep:not(.lock)').forEach(b => b.addEventListener('click', () => srPlay(+b.dataset.ep)));
   if (srVidAll().length) { const pb = document.createElement('button'); pb.type = 'button'; pb.className = 'btn ghost sr-par'; pb.textContent = SR_VID_AUTO ? '👨‍👧 Genitore: video della serie' : '👨‍👧 Genitore: video' + (srVidDa().length ? ' da vedere (' + srVidDa().length + ')' : '');
@@ -15245,8 +15247,8 @@ function srFine() {
   const stage = document.querySelector('#sr-ov .sr-stage');
   stage.innerHTML = '<div class="sr-end"><div class="sr-endt">🎬 Fine dell\'episodio ' + (k + 1) + '</div>' +
     (nx ? '<div class="sr-next"><small>Nel prossimo episodio…</small><b>' + srIc(nx) + ' ' + esc(srNome(nx)) + '</b><p>' + esc(teaser) + '</p></div>' : '<div class="sr-next"><b>🏆 Hai visto tutta la serie!</b></div>') +
-    '<div class="sr-acts">' + (s.sfide[id] ? '' : '<button type="button" class="btn" id="sr-pil">🎬 Pillole e ⚡ sfida' + (nx ? ' per aprirlo' : '') + '</button>') +
-    (s.sfide[id] && nx && k + 1 < s.aperti ? '<button type="button" class="btn" id="sr-go">▶️ Episodio ' + (k + 2) + '</button>' : '') +
+    '<div class="sr-acts">' + (s.sfide[id] ? '' : '<button type="button" class="btn" id="sr-pil">🎬 Pillole e ⚡ sfida' + (nx && !SR_LIBERI ? ' per aprirlo' : '') + '</button>') +
+    ((SR_LIBERI || s.sfide[id]) && nx && k + 1 < s.aperti ? '<button type="button" class="btn" id="sr-go">▶️ Episodio ' + (k + 2) + '</button>' : '') +
     '<button type="button" class="btn ghost" id="sr-rew">🔁 Rivedi</button></div>' +
     (V.length ? '<div class="sr-vid"><small>📺 Guarda anche</small>' + V.map(v => '<button type="button" class="sr-vb" data-v="' + esc(v.id) + '">▶ ' + esc(v.t) + '<small>' + esc(v.ch) + (v.min ? ' · ' + v.min + ' min' : '') + '</small></button>').join('') + '</div>' : '') + '</div>';
   ['sr-dots', 'sr-prev', 'sr-pp', 'sr-next'].forEach(x => { const e = $(x); if (e) e.style.visibility = 'hidden'; });
@@ -15264,7 +15266,7 @@ const srDup = q => !!q.e && srNorm(q.e).startsWith(srNorm(q.k));
 function srPillole(k) {
   const id = srEpisodi()[k], P = srMix(srItems(id)).slice(0, 6), stage = document.querySelector('#sr-ov .sr-stage');
   stage.innerHTML = '<div class="sr-pil" id="sr-pil-l">' + P.map((q, i) => '<section class="sr-pc" data-i="' + i + '"><div class="sr-pn">' + srIc(id) + ' ' + (i + 1) + '/' + P.length + '</div>' + (srDup(q) ? '<b>' + esc(q.e) + '</b>' : '<b>' + esc(q.k) + '</b><p>' + esc(q.e || '') + '</p>') + '<small>scorri in su ⬆️</small></section>').join('') +
-    '<section class="sr-pc sr-pc-go"><b>⚡ Pronta per la sfida?</b><p>3 domande: con almeno 2 giuste si apre il prossimo episodio.</p><button type="button" class="btn" id="sr-sf">⚡ Via!</button></section></div>';
+    '<section class="sr-pc sr-pc-go"><b>⚡ Pronta per la sfida?</b><p>3 domande: con almeno 2 giuste ' + (SR_LIBERI ? 'vinci 5 💎.' : 'si apre il prossimo episodio.') + '</p><button type="button" class="btn" id="sr-sf">⚡ Via!</button></section></div>';
   const L = $('sr-pil-l'); let last = -1;
   const io = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting || e.intersectionRatio < 0.6) return; const i = +e.target.dataset.i; if (isNaN(i) || i === last) return; last = i; if (Voice.ok) Voice.say(srDup(P[i]) ? P[i].e : P[i].k + '. ' + (P[i].e || '')); }), { root: L, threshold: [0.6] });
   L.querySelectorAll('.sr-pc[data-i]').forEach(c => io.observe(c));
@@ -15293,8 +15295,8 @@ function srSfida(k) {
     if (pass && !s.sfide[id]) { s.sfide[id] = todayIso(); s.aperti = Math.max(s.aperti, k + 2); srSave(s); try { Gems.add(5); } catch (e) {} }
     const nx = E[k + 1];
     stage.innerHTML = '<div class="sr-end"><div class="sr-endt">' + (pass ? '🎉 Sfida superata! ' + ok + ' su 3' : '💪 Quasi! ' + ok + ' su 3') + '</div>' +
-      (pass ? (nx ? '<div class="sr-next"><small>Si è aperto</small><b>' + srIc(nx) + ' Episodio ' + (k + 2) + ': ' + esc(srNome(nx)) + '</b><p>+5 💎</p></div>' : '<div class="sr-next"><b>🏆 Serie completata!</b></div>') : '<div class="sr-next"><p>Rivedi le pillole e riprova: le domande cambiano.</p></div>') +
-      '<div class="sr-acts">' + (pass && nx ? '<button type="button" class="btn" id="sr-go">▶️ Guarda l\'episodio ' + (k + 2) + '</button>' : '') + (pass ? '' : '<button type="button" class="btn" id="sr-again">🎬 Pillole e sfida</button>') + '<button type="button" class="btn ghost" id="sr-list">📋 Tutti gli episodi</button></div></div>';
+      (pass ? (nx ? '<div class="sr-next"><small>' + (SR_LIBERI ? 'Prossimo episodio' : 'Si è aperto') + '</small><b>' + srIc(nx) + ' Episodio ' + (k + 2) + ': ' + esc(srNome(nx)) + '</b><p>+5 💎</p></div>' : '<div class="sr-next"><b>🏆 Serie completata!</b></div>') : '<div class="sr-next"><p>Rivedi le pillole e riprova: le domande cambiano.</p></div>') +
+      '<div class="sr-acts">' + ((pass || SR_LIBERI) && nx ? '<button type="button" class="btn" id="sr-go">▶️ Guarda l\'episodio ' + (k + 2) + '</button>' : '') + (pass ? '' : '<button type="button" class="btn" id="sr-again">🎬 Pillole e sfida</button>') + '<button type="button" class="btn ghost" id="sr-list">📋 Tutti gli episodi</button></div></div>';
     if ($('sr-go')) $('sr-go').onclick = () => srPlay(k + 1);
     if ($('sr-again')) $('sr-again').onclick = () => srPillole(k);
     $('sr-list').onclick = () => { srClose(); go('serie'); };
@@ -15310,7 +15312,7 @@ function srClose() { if (SR) { clearTimeout(SR.timer); clearTimeout(SR.wd); } SR
   PAGES.materia = el => {
     m0(el);
     const u = unitById(pathSel || store.get('path-sel', '')); if (!u || u.id !== 'storia' || !srEpisodi().length) return;
-    const s = srState(), E = srEpisodi(), cur = Math.min(s.aperti, E.length) - 1, b = document.createElement('button');
+    const s = srState(), E = srEpisodi(), cur = SR_LIBERI ? Math.max(0, E.findIndex(x => !s.visti[x])) : Math.min(s.aperti, E.length) - 1, b = document.createElement('button');
     b.type = 'button'; b.className = 'sr-banner'; b.innerHTML = '<span>🎬</span><b>La serie del drago</b><small>Episodio ' + (cur + 1) + ': ' + esc(srNome(E[cur])) + ' ›</small>';
     b.addEventListener('click', () => go('serie'));
     const h = el.querySelector('h1, .m-head'); if (h && h.parentNode) h.parentNode.insertBefore(b, h.nextSibling); else el.prepend(b);

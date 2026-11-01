@@ -9,7 +9,7 @@ const FONT = '@font-face{font-family:"Baloo 2";src:url(f/baloo.woff) format("wof
 
 function pagina(e, all) {
   const serie = !e.n, titolo = serie ? '🎬 La serie del drago' : '🎬 Episodio ' + e.n + ': ' + e.nome;
-  const desc = serie ? all.length + ' episodi di Storia, dalla Grecia antica a Torino romana. Guarda, scopri le pillole e supera la sfida per aprire il prossimo!' : e.teaser;
+  const desc = serie ? all.length + ' episodi di Storia, dalla Grecia antica a Torino romana. Scegli l’episodio che vuoi: guarda il cartone, scopri le pillole e prova la sfida!' : e.teaser;
   const voce = serie ? 'Ciao! Sono il tuo drago. Ti aspetta una serie tutta nuova: ' + all.length + ' episodi di Storia, dalla Grecia antica a Torino romana. Il primo episodio è: ' + all[0].nome + '. Ti aspetto!'
     : 'Episodio ' + e.n + '. ' + e.nome + '. ' + e.teaser + ' Ti aspetto nella serie del drago!';
   const link = '../#serie' + (serie ? '' : '=' + e.n);
@@ -35,10 +35,10 @@ a{color:#fff;opacity:.85;font-size:15px}
 </style></head><body><main class="c">
 <div class="k">🎬 La serie del drago${serie ? ' · Storia' : ' · Episodio ' + e.n + ' di ' + all.length}</div>
 <div class="ic">${serie ? '🐉' : e.ic}</div><h1>${esc(serie ? 'Le avventure del drago nella Storia' : e.nome)}</h1>
-<div class="s">${e.drago}<div class="b">${esc(serie ? 'Ti aspetta una serie tutta nuova! Un episodio alla volta, come in classe: guarda, scopri le pillole e supera la sfida per aprire il prossimo.' : e.teaser)}</div></div>
+<div class="s">${e.drago}<div class="b">${esc(serie ? 'Ti aspetta una serie tutta nuova! Scegli l’episodio che vuoi: guarda il cartone, scopri le pillole e prova la sfida per vincere le gemme!' : e.teaser)}</div></div>
 <div><button type="button" id="v">🔊 Ascolta il trailer</button></div>
 ${serie ? '<div class="l">' + all.map(x => '<span>' + x.n + '. ' + esc(x.nome) + '</span>').join('') + '</div>' : ''}
-<div class="h"><b>Come guardarlo</b><ol><li>Apri <b style="display:inline;font-size:inherit">🐉 Il mio mondo</b> dalla schermata Home</li><li>Tocca 🎬 La serie del drago</li>${serie ? '' : '<li>Se c’è il lucchetto 🔒, supera la sfida dell’episodio prima: si apre subito!</li>'}</ol></div>
+<div class="h"><b>Come guardarlo</b><ol><li>Apri <b style="display:inline;font-size:inherit">🐉 Il mio mondo</b> dalla schermata Home</li><li>Tocca 🎬 La serie del drago</li>${serie ? '' : '<li>Tocca l’episodio: sono tutti aperti!</li>'}</ol></div>
 <a href="${link}">Usi Il mio mondo dentro Safari e non dalla schermata Home? Apri qui</a>
 </main><script>
 document.getElementById('v').onclick=function(){try{var u=new SpeechSynthesisUtterance(${JSON.stringify(voce)});u.lang='it-IT';var v=speechSynthesis.getVoices().filter(function(x){return /^it/i.test(x.lang)})[0];if(v)u.voice=v;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}};
