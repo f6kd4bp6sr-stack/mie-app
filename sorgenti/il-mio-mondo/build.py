@@ -138,6 +138,8 @@ import hashlib
 ver = hashlib.md5(full.encode()).hexdigest()[:10]
 idx = full.replace('<link rel="apple-touch-icon" href="'+uri+'">\n', pwa_head).replace('</body>', pwa_sw+'<script>/* collegamento genitori: sempre la versione più recente */(function(){if(document.querySelector("script[data-msync]"))return;var s=document.createElement("script");s.dataset.msync=1;s.src="licenze/mondo-sync.js?t="+Date.now();s.defer=true;document.head.appendChild(s);})();</script>\n</body>').replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<script>window.APP_VERSION="'+ver+'";</script>', 1)
 import shutil; shutil.copyfile(D+'docs/LEGGIMI.html', P+'LEGGIMI.html')  # guida: la fonte è docs/LEGGIMI.html
+# 🔗 pagine d'invito della serie del drago, da mandare su WhatsApp (si rigenerano con: node tools/episodi.js)
+shutil.copytree(D+'docs/episodi', P+'episodi', dirs_exist_ok=True, ignore=shutil.ignore_patterns('_*'))
 open(P+'version.json','w').write('{"v": "'+ver+'"}')
 import os as _os, sys as _sys
 _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), 'tools'))

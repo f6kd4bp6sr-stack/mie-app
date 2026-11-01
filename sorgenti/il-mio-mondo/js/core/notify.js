@@ -125,7 +125,7 @@ const isInstalled = () => navigator.standalone === true || (window.matchMedia &&
 function badgeInvite() {
   if (!('Notification' in window) || !('setAppBadge' in navigator) || !isInstalled()) return;
   if (Notification.permission !== 'default' || store.get('badge-asked', '') === todayIso() || (store.get('badge-asked-n', 0) >= 3)) return;
-  if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy())) { setTimeout(badgeInvite, 4000); return; }
+  if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy()) || ($('sr-ov') && !$('sr-ov').hidden)) { setTimeout(badgeInvite, 4000); return; }
   store.set('badge-asked', todayIso()); store.set('badge-asked-n', store.get('badge-asked-n', 0) + 1);
   openModal('<div class="v2-greet"><div class="v2-gd">' + dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob') + '</div><div class="v2-gb">Posso mettere un <b style="color:#ff3b30">pallino rosso</b> sulla mia icona quando ho novità per te? Tocca «Sì» e poi «Consenti».</div></div>' +
     '<div class="row center" style="gap:10px;margin-top:12px"><button type="button" class="btn ghost" id="bi-no">Più tardi</button><button type="button" class="btn" id="bi-ok" data-focus style="--bc:var(--v2-green)">Sì! 🔴</button></div>');
@@ -144,7 +144,7 @@ function greetIfNew() {
   const today = todayIso();
   if (store.get('greet-day', '') === today) return;
   const t0 = Date.now(), tryShow = () => {
-    if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy())) { if (Date.now() - t0 < 20000) setTimeout(tryShow, 1500); return; }
+    if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy()) || ($('sr-ov') && !$('sr-ov').hidden)) { if (Date.now() - t0 < 20000) setTimeout(tryShow, 1500); return; }
     store.set('greet-day', today); openNews(true); store.set('last-open', today);
   };
   setTimeout(tryShow, 1200);

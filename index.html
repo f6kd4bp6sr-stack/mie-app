@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="17ddfd239e";</script>
+<script>window.APP_VERSION="934edf009c";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -13616,7 +13616,7 @@ const isInstalled = () => navigator.standalone === true || (window.matchMedia &&
 function badgeInvite() {
   if (!('Notification' in window) || !('setAppBadge' in navigator) || !isInstalled()) return;
   if (Notification.permission !== 'default' || store.get('badge-asked', '') === todayIso() || (store.get('badge-asked-n', 0) >= 3)) return;
-  if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy())) { setTimeout(badgeInvite, 4000); return; }
+  if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy()) || ($('sr-ov') && !$('sr-ov').hidden)) { setTimeout(badgeInvite, 4000); return; }
   store.set('badge-asked', todayIso()); store.set('badge-asked-n', store.get('badge-asked-n', 0) + 1);
   openModal('<div class="v2-greet"><div class="v2-gd">' + dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob') + '</div><div class="v2-gb">Posso mettere un <b style="color:#ff3b30">pallino rosso</b> sulla mia icona quando ho novità per te? Tocca «Sì» e poi «Consenti».</div></div>' +
     '<div class="row center" style="gap:10px;margin-top:12px"><button type="button" class="btn ghost" id="bi-no">Più tardi</button><button type="button" class="btn" id="bi-ok" data-focus style="--bc:var(--v2-green)">Sì! 🔴</button></div>');
@@ -13635,7 +13635,7 @@ function greetIfNew() {
   const today = todayIso();
   if (store.get('greet-day', '') === today) return;
   const t0 = Date.now(), tryShow = () => {
-    if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy())) { if (Date.now() - t0 < 20000) setTimeout(tryShow, 1500); return; }
+    if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy()) || ($('sr-ov') && !$('sr-ov').hidden)) { if (Date.now() - t0 < 20000) setTimeout(tryShow, 1500); return; }
     store.set('greet-day', today); openNews(true); store.set('last-open', today);
   };
   setTimeout(tryShow, 1200);
@@ -14567,6 +14567,16 @@ function srClose() { if (SR) clearTimeout(SR.timer); SR = null; try { speechSynt
     const h = el.querySelector('h1, .m-head'); if (h && h.parentNode) h.parentNode.insertBefore(b, h.nextSibling); else el.prepend(b);
   };
 })();
+
+/* 🔗 link d'invito (pagine /episodi/N.html, mandate da papà su WhatsApp): #serie apre la serie, #serie=N l'episodio N se è già aperto */
+function srLink() {
+  const m = String(location.hash || '').match(/^#serie(?:=(\d+))?$/); if (!m) return;
+  try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+  const t = () => { const md = $('modal'); if (!D || (md && !md.hidden)) return setTimeout(t, 1500);
+    go('serie'); const k = (+m[1] || 0) - 1; if (k >= 0 && k < srState().aperti && k < srEpisodi().length) srPlay(k); };
+  setTimeout(t, 800);
+}
+srLink(); window.addEventListener('hashchange', srLink);
 
 /* ================= SFONDI RILASSANTI: li sceglie lei (o una sua foto) ================= */
 const svgUrl = s => 'url("data:image/svg+xml;charset=utf-8,' + encodeURIComponent(s) + '")';

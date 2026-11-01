@@ -142,3 +142,13 @@ function srClose() { if (SR) clearTimeout(SR.timer); SR = null; try { speechSynt
     const h = el.querySelector('h1, .m-head'); if (h && h.parentNode) h.parentNode.insertBefore(b, h.nextSibling); else el.prepend(b);
   };
 })();
+
+/* 🔗 link d'invito (pagine /episodi/N.html, mandate da papà su WhatsApp): #serie apre la serie, #serie=N l'episodio N se è già aperto */
+function srLink() {
+  const m = String(location.hash || '').match(/^#serie(?:=(\d+))?$/); if (!m) return;
+  try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+  const t = () => { const md = $('modal'); if (!D || (md && !md.hidden)) return setTimeout(t, 1500);
+    go('serie'); const k = (+m[1] || 0) - 1; if (k >= 0 && k < srState().aperti && k < srEpisodi().length) srPlay(k); };
+  setTimeout(t, 800);
+}
+srLink(); window.addEventListener('hashchange', srLink);
