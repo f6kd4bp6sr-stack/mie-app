@@ -49,7 +49,7 @@ function srPlay(k) {
   let ov = $('sr-ov'); if (!ov) { ov = document.createElement('div'); ov.id = 'sr-ov'; document.body.appendChild(ov); }
   ov.hidden = false; ov.style.setProperty('--a', srEra(id)[0]); ov.style.setProperty('--b', srEra(id)[1]);
   ov.innerHTML = '<div class="sr-top"><span class="sr-epn">Episodio ' + (k + 1) + '</span><b>' + esc(srNome(id)) + '</b><button type="button" class="sr-x" aria-label="Chiudi">✕</button></div>' +
-    '<div class="sr-stage"><div class="sr-chips" id="sr-chips"></div><div class="sr-scene" id="sr-scene">' + srIc(id) + '</div><div class="sr-drago">' + srDrago('sr-dr') + '</div><div class="sr-bubble" id="sr-bub"></div></div>' +
+    '<div class="sr-stage"><div class="sr-chips" id="sr-chips"></div><div class="sr-scene" id="sr-scene">' + srIc(id) + '</div><div class="sr-bubble" id="sr-bub"></div></div>' +
     '<div class="sr-dots" id="sr-dots">' + d.racconto.map((_, i) => '<i data-i="' + i + '"></i>').join('') + '</div>' +
     '<div class="sr-ctl"><button type="button" id="sr-prev" aria-label="Indietro">⏮</button><button type="button" id="sr-pp" aria-label="Pausa">⏸</button><button type="button" id="sr-next" aria-label="Avanti">⏭</button></div>';
   ov.querySelector('.sr-x').onclick = srClose;

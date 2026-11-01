@@ -79,3 +79,4 @@
 @keyframes crPm{to{opacity:.35}}
 @media (prefers-reduced-motion:reduce){.sr-scene.cart *{animation:none!important;opacity:1!important;stroke-dashoffset:0!important}}
 @media (min-width:900px) and (orientation:landscape){.sr-scene.cart{left:calc((100% - 352px) / 2 + 40px);top:34%;width:min(500px,calc(100% - 520px))}}
+@media (min-width:900px) and (orientation:landscape){.sr-scene.cart{left:calc((100% - 352px) / 2);top:42%;width:min(720px,calc(100% - 400px))}}
