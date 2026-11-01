@@ -53,12 +53,12 @@ function srPlay(k) {
   ov.querySelector('.sr-x').onclick = srClose;
   $('sr-prev').onclick = () => srGo(SR.i - 1);
   $('sr-next').onclick = () => srGo(SR.i + 1);
-  $('sr-pp').onclick = () => { SR.play = !SR.play; $('sr-pp').textContent = SR.play ? '⏸' : '▶️'; if (SR.play) srGo(SR.i); else { clearTimeout(SR.timer); try { speechSynthesis.cancel(); } catch (e) {} } };
+  $('sr-pp').onclick = () => { SR.play = !SR.play; $('sr-pp').textContent = SR.play ? '⏸' : '▶️'; if (SR.play) srGo(SR.i); else { clearTimeout(SR.timer); clearTimeout(SR.wd); try { speechSynthesis.cancel(); } catch (e) {} } };
   srGo(0);
 }
 function srGo(i) {
   if (!SR) return; const d = SPIEGA.storia[SR.id], R = d.racconto;
-  clearTimeout(SR.timer); try { speechSynthesis.cancel(); } catch (e) {}
+  clearTimeout(SR.timer); clearTimeout(SR.wd); try { speechSynthesis.cancel(); } catch (e) {}
   if (i < 0) i = 0; if (i >= R.length) return srFine();
   SR.i = i; const sl = R[i], N = {}; (d.nodi || []).forEach(n => N[n.id] = n);
   const bub = $('sr-bub'); bub.classList.remove('in'); void bub.offsetWidth; bub.textContent = sl.t; bub.classList.add('in');
@@ -69,7 +69,8 @@ function srGo(i) {
   const dr = document.querySelector('#sr-ov .sr-drago'); if (dr) { dr.classList.remove('talk'); void dr.offsetWidth; dr.classList.add('talk'); }
   if (!SR.play) return;
   const next = () => { if (SR && SR.play) SR.timer = setTimeout(() => srGo(SR.i + 1), 900); };
-  if (Voice.ok) Voice.say(sl.v || sl.t, null, { onend: next });
+  /* rete di sicurezza: se la voce dell'iPad non avvisa la fine della frase, si va avanti lo stesso */
+  if (Voice.ok) { const me = i; SR.wd = setTimeout(() => { if (SR && SR.play && SR.i === me) srGo(me + 1); }, 4000 + 520 * sl.t.split(/\s+/).length); Voice.say(sl.v || sl.t, null, { onend: () => { if (SR) clearTimeout(SR.wd); next(); } }); }
   else SR.timer = setTimeout(() => srGo(SR.i + 1), 900 + 380 * (sl.t.split(/\s+/).length));
 }
 function srFine() {
@@ -137,7 +138,7 @@ function srSfida(k) {
   };
   show();
 }
-function srClose() { if (SR) clearTimeout(SR.timer); SR = null; try { speechSynthesis.cancel(); } catch (e) {} const ov = $('sr-ov'); if (ov) { ov.hidden = true; ov.innerHTML = ''; } if (typeof current !== 'undefined' && current === 'serie') go('serie'); }
+function srClose() { if (SR) { clearTimeout(SR.timer); clearTimeout(SR.wd); } SR = null; try { speechSynthesis.cancel(); } catch (e) {} const ov = $('sr-ov'); if (ov) { ov.hidden = true; ov.innerHTML = ''; } if (typeof current !== 'undefined' && current === 'serie') go('serie'); }
 
 /* ---- ingresso dalla pagina di Storia: banner della serie ---- */
 (function srMateria() {

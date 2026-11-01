@@ -100,12 +100,13 @@ const Voice = {
       if (!this.v && !this.ve) this.pickVoice();
       const slow = opt && opt.slow;
       const ps = this.parts(t, en); if (!ps.length && opt && opt.onend) setTimeout(opt.onend, 50);
+      this._q = [];   /* Safari: tenere le frasi in memoria, altrimenti a volte non avvisa la fine */
       ps.forEach((p, i) => {
         const u = new SpeechSynthesisUtterance(p.t.trim());
         if (p.l === 'en') { u.lang = 'en-GB'; if (this.ve) u.voice = this.ve; u.rate = slow ? 0.6 : 0.85; u.pitch = 1.05; }
         else { const o = this.itOpts(); u.lang = 'it-IT'; if (this.v) u.voice = this.v; u.rate = o.rate; u.pitch = o.pitch; }
         if (opt && opt.onend && i === ps.length - 1) u.onend = opt.onend;   // fine dell'ultima parte
-        speechSynthesis.speak(u);
+        this._q.push(u); speechSynthesis.speak(u);
       });
     } catch (e) {}
   },
