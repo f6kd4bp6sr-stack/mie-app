@@ -17,6 +17,9 @@ const srMix = a => a.map(x => [Math.random(), x]).sort((p, q) => p[0] - q[0]).ma
 let SR = null;
 /* 📺 video proposti per episodio: la bambina vede solo quelli approvati dal genitore. vid-ok = {id: 1 approvato | -1 scartato}, solo sull'iPad */
 const srVidOk = () => store.get('vid-ok', {});
+/* deciso dal genitore (1/11/2026): per ora tutti i video proposti sono visibili e l'elenco si apre senza PIN; ❌ li nasconde. false = torna l'approvazione con PIN */
+const SR_VID_AUTO = true;
+const srVidVede = id => SR_VID_AUTO ? srVidOk()[id] !== -1 : srVidOk()[id] === 1;
 const srVidAll = () => typeof SERIE === 'undefined' ? [] : Object.entries(SERIE.storia.video).flatMap(([ep, L]) => L.map(v => Object.assign({ ep, u: 'storia' }, v)));
 const srVidDa = () => { const ok = srVidOk(); return srVidAll().filter(v => !(v.id in ok)); };
 const srDrago = cls => dragonSVG(D ? levelOf(D.energy) : 1, D ? D.color : 'verde', cls);
@@ -30,11 +33,11 @@ PAGES.serie = el => {
       const open = k < s.aperti, seen = s.visti[id], done = s.sfide[id];
       return '<button type="button" class="sr-ep' + (open ? '' : ' lock') + (done ? ' done' : '') + '" data-ep="' + k + '"' + (open ? '' : ' disabled') + ' style="--a:' + srEra(id)[0] + ';--b:' + srEra(id)[1] + '">' +
         '<span class="sr-n">' + (k + 1) + '</span><span class="sr-ic">' + (open ? srIc(id) : '🔒') + '</span><span class="sr-t"><b>' + esc(srNome(id)) + '</b><small>' +
-        (done ? '✅ visto e superato' : seen ? '⚡ manca la sfida per aprire il prossimo' : open ? '▶️ da guardare' : 'si apre con la sfida dell\'episodio prima') + '</small></span></button>';
+        (done ? '✅ visto e superato' : seen ? (k === E.length - 1 ? '⚡ manca la sfida finale' : '⚡ manca la sfida per aprire il prossimo') : open ? '▶️ da guardare' : 'si apre con la sfida dell\'episodio prima') + '</small></span></button>';
     }).join('') + '</div>';
   el.querySelectorAll('.sr-ep:not(.lock)').forEach(b => b.addEventListener('click', () => srPlay(+b.dataset.ep)));
-  const pb = document.createElement('button'); pb.type = 'button'; pb.className = 'btn ghost sr-par'; pb.textContent = '👨‍👧 Genitore: video' + (srVidDa().length ? ' da vedere (' + srVidDa().length + ')' : '');
-  pb.addEventListener('click', () => parentGate(srParent)); el.appendChild(pb);
+  const pb = document.createElement('button'); pb.type = 'button'; pb.className = 'btn ghost sr-par'; pb.textContent = SR_VID_AUTO ? '👨‍👧 Genitore: video della serie' : '👨‍👧 Genitore: video' + (srVidDa().length ? ' da vedere (' + srVidDa().length + ')' : '');
+  pb.addEventListener('click', () => SR_VID_AUTO ? srParent() : parentGate(srParent)); el.appendChild(pb);
 };
 
 /* ---- il cartone ---- */
@@ -73,7 +76,7 @@ function srFine() {
   const s = srState(), id = SR.id, k = SR.k, E = srEpisodi(), nx = E[k + 1];
   if (!s.visti[id]) { s.visti[id] = todayIso(); srSave(s); }
   const teaser = nx && SPIEGA.storia[nx] ? SPIEGA.storia[nx].racconto[0].t : '';
-  const V = ((typeof SERIE !== 'undefined' && SERIE.storia.video[id]) || []).filter(v => srVidOk()[v.id] === 1);
+  const V = ((typeof SERIE !== 'undefined' && SERIE.storia.video[id]) || []).filter(v => srVidVede(v.id));
   const stage = document.querySelector('#sr-ov .sr-stage');
   stage.innerHTML = '<div class="sr-end"><div class="sr-endt">🎬 Fine dell\'episodio ' + (k + 1) + '</div>' +
     (nx ? '<div class="sr-next"><small>Nel prossimo episodio…</small><b>' + srIc(nx) + ' ' + esc(srNome(nx)) + '</b><p>' + esc(teaser) + '</p></div>' : '<div class="sr-next"><b>🏆 Hai visto tutta la serie!</b></div>') +
@@ -165,7 +168,7 @@ function srParent() {
   const row = v => '<div class="vd-pr sr-pr" data-v="' + v.id + '"><span><b>' + esc(v.t) + '</b><small>' + esc(v.ch || 'canale da controllare') + (v.min ? ' · ' + Math.round(v.min) + ' min' : '') + '</small></span>' +
     '<a href="https://www.youtube.com/watch?v=' + v.id + '" target="_blank" rel="noopener noreferrer">▶ Guarda</a>' +
     '<button type="button" class="sr-ok' + (ok[v.id] === 1 ? ' on' : '') + '" data-a="1" aria-label="Approva">✅</button><button type="button" class="sr-no' + (ok[v.id] === -1 ? ' on' : '') + '" data-a="-1" aria-label="Scarta">❌</button></div>';
-  openModal('<div class="big" style="font-size:24px">👨‍👧 Video della serie</div><p style="font-weight:700;color:var(--ink-soft)">Guarda ogni video e decidi: ✅ lo vede alla fine dell’episodio, ❌ non lo vede. Finché non scegli, resta nascosto.' + (da ? ' <b>Da vedere: ' + da + '.</b>' : '') + '</p>' +
+  openModal('<div class="big" style="font-size:24px">👨‍👧 Video della serie</div><p style="font-weight:700;color:var(--ink-soft)">' + (SR_VID_AUTO ? 'Per ora tutti i video sono visibili alla fine dell’episodio. Tocca ❌ per nascondere quelli che non vanno bene; ✅ segna quelli che hai già guardato.' : 'Guarda ogni video e decidi: ✅ lo vede alla fine dell’episodio, ❌ non lo vede. Finché non scegli, resta nascosto.' + (da ? ' <b>Da vedere: ' + da + '.</b>' : '')) + '</p>' +
     '<div class="vd-par-list">' + E.map((id, k) => { const L = (SERIE.storia.video[id] || []).map(v => Object.assign({ ep: id }, v)); return L.length ? '<div class="sr-pg">' + (k + 1) + '. ' + srIc(id) + ' ' + esc(srNome(id)) + '</div>' + L.map(row).join('') : ''; }).join('') + '</div>' +
     '<div class="row center" style="margin-top:12px"><button type="button" class="btn" id="srp-x" data-focus>Fatto</button></div>');
   $('modal-box').classList.add('wide');
