@@ -28,7 +28,7 @@ app/
 ├── tools/sorgenti_pubbliche.py  copia le sorgenti in /sorgenti/il-mio-mondo/ del repository (senza revisioni di lavoro, con controllo dei dati personali)
 ├── README.md           memoria dell'app: indirizzo, dati sul dispositivo, collegamenti, regole
 ├── data/
-│   ├── domande/serie.js  🎬 la serie del drago: ordine degli episodi (programma di 5ª) e video per episodio (js/sezioni/serie.js, css/serie.css; progressi in serie-storia)
+│   ├── domande/serie.js  🎬 la serie del drago: ordine degli episodi (programma di 5ª) e video PROPOSTI per episodio, visibili alla bambina solo se approvati dal genitore con il PIN (vid-ok sull'iPad; js/sezioni/serie.js, css/serie.css; progressi in serie-storia)
 │   (🔗 inviti WhatsApp: docs/episodi/ → /episodi/index.html e /episodi/N.html con anteprima img/N.jpg; si rigenerano con node tools/episodi.js; nell'app #serie e #serie=N aprono la serie o l'episodio N se già aperto)
 │   ├── spiegazioni/    racconto + mappa concettuale per argomento (198, tutta La mia scuola; mappe raggiera, ciclo, linea, scala; «solo» = da guardare insieme), controllati da tools/controlla.py
 │   ├── cartine/        cartine interattive (grecia.json: coste Natural Earth semplificate + 13 luoghi)

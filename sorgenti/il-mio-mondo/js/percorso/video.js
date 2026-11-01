@@ -49,7 +49,7 @@ function openVideos() {
   $('modal-box').querySelectorAll('.vd-it').forEach(b => b.addEventListener('click', () => playVideo(b.dataset.v)));
 }
 function playVideo(id, free) {   /* free: video della serie del drago, non consuma biglietti */
-  const x = VIDEOS.find(y => y.id === id); if (!x) return;
+  const x = VIDEOS.find(y => y.id === id) || (typeof srVidAll === 'function' && srVidAll().find(y => y.id === id)); if (!x) return;
   const v = vidState(); if ((!free && v.tickets <= 0) || v.today >= VID_MAX_DAY) return;
   if (!free) v.tickets--; v.today++; v.seen[id] = todayIso(); vidSave(v);
   /* registro per la pagina Progressi del genitore: solo titolo, materia e se l'ha finito */
@@ -84,17 +84,18 @@ function playVideo(id, free) {   /* free: video della serie del drago, non consu
 }
 /* ---------- angolo del genitore: PIN scelto sull'iPad, per nascondere/mostrare i video ---------- */
 async function pinHash(p) { const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode('mondo-pin:' + p)); return [...new Uint8Array(b)].slice(0, 12).map(x => x.toString(16).padStart(2, '0')).join(''); }
-function parentGate() {
+function parentGate(next) {   /* next: dove andare dopo il PIN (di serie: elenco dei video) */
+  const back = typeof next === 'function' ? closeModal : openVideos;
   const has = !!store.get('par-pin', '');
   openModal('<div class="big" style="font-size:24px">👨‍👧 Per il genitore</div><p style="font-weight:700">' + (has ? 'Scrivi il PIN.' : 'Scegli un PIN di 4–8 cifre (solo per i grandi). Resta su questo iPad.') + '</p>' +
     '<input id="pp-in" type="password" inputmode="numeric" autocomplete="off" maxlength="8" style="font-size:24px;padding:10px;border-radius:12px;border:2px solid var(--line);width:100%;box-sizing:border-box;text-align:center">' +
     '<p id="pp-err" style="color:var(--v2-red);font-weight:800;min-height:1.2em"></p><div class="row center" style="gap:8px"><button type="button" class="btn ghost" id="pp-x">Annulla</button><button type="button" class="btn" id="pp-ok">Entra</button></div>');
-  $('pp-x').addEventListener('click', () => { closeModal(); openVideos(); });
+  $('pp-x').addEventListener('click', () => { closeModal(); if (back !== closeModal) back(); });
   $('pp-ok').addEventListener('click', async () => {
     const p = $('pp-in').value.trim(); if (!/^\d{4,8}$/.test(p)) { $('pp-err').textContent = 'Servono da 4 a 8 cifre'; return; }
     const h = await pinHash(p);
     if (!has) store.set('par-pin', h); else if (store.get('par-pin', '') !== h) { $('pp-err').textContent = 'PIN sbagliato'; return; }
-    parentList();
+    if (typeof next === 'function') next(); else parentList();
   });
   setTimeout(() => $('pp-in') && $('pp-in').focus(), 100);
 }
@@ -102,7 +103,8 @@ function parentList() {
   const hide = vidHidden();
   openModal('<div class="big" style="font-size:24px">👨‍👧 Video visibili</div><p style="font-weight:700;color:var(--ink-soft)">Tocca per nascondere o mostrare. Il link apre il video su YouTube per guardarlo prima.</p>' +
     '<div class="vd-par-list">' + VIDEOS.map(x => '<div class="vd-pr"><button type="button" class="vd-tg' + (hide.includes(x.id) ? ' off' : '') + '" data-v="' + x.id + '">' + (hide.includes(x.id) ? '🚫' : '✅') + '</button><span><b>' + esc(x.t) + '</b><small>' + esc(unitLabel(x.u)) + ' · ' + esc(x.ch) + '</small></span><a href="https://www.youtube.com/watch?v=' + x.id + '" target="_blank" rel="noopener noreferrer">▶ YouTube</a></div>').join('') + '</div>' +
-    '<div class="row center" style="margin-top:12px"><button type="button" class="btn" id="pl-x" data-focus>Fatto</button></div>');
+    '<div class="row center" style="margin-top:12px;gap:8px">' + (typeof srParent === 'function' ? '<button type="button" class="btn ghost" id="pl-sr">🎬 Video della serie' + (srVidDa().length ? ' (' + srVidDa().length + ' da vedere)' : '') + '</button>' : '') + '<button type="button" class="btn" id="pl-x" data-focus>Fatto</button></div>');
+  if ($('pl-sr')) $('pl-sr').addEventListener('click', () => srParent());
   $('modal-box').classList.add('wide');
   $('pl-x').addEventListener('click', () => { closeModal(); openVideos(); });
   $('modal-box').querySelectorAll('.vd-tg').forEach(b => b.addEventListener('click', () => {
