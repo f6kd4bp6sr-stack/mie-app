@@ -10,7 +10,7 @@ const JOKES = [
   ['Perché lo scheletro non litiga mai con nessuno?', 'Perché non ha il fegato! 💀'],
   ['Qual è il colmo per un fornaio?', 'Avere una figlia che è un pezzo di pane! 🍞'],
   ['Qual è il colmo per un giardiniere?', 'Piantare in asso gli amici! 🌱'],
-  ['Qual è il colmo per un drago?', 'Avere un fuoco di paglia! Il tuo invece è un fuoco che dura, perché ti alleni ogni giorno 🐉'],
+  ['Qual è il colmo per un drago?', 'Avere un fuoco di paglia! Il tuo invece è un fuoco che dura, perché ti alleni ogni giorno 🌟'],
   ['Qual è il colmo per un orologiaio?', 'Non avere mai tempo per niente! ⏰'],
   ['Qual è il colmo per una cuoca?', 'Non avere sale in zucca! 🧂'],
   ['Qual è il colmo per un astronauta?', 'Avere sempre la testa fra le nuvole! 🚀'],
@@ -31,7 +31,7 @@ function jokeReward(game, detail, el) {
   markDay('giochi', el);
   const j = JOKES[idx];
   openModal('<div class="big">' + pick(['Bravissima, ' + NAME + '!', 'Che campionessa!', 'Evviva, ' + NAME + '!', 'Grandissima!']) + '</div>' +
-    '<p>' + esc(detail) + '</p><p style="font-size:22px">+5 🔥 per ' + esc(D.name) + '</p>' +
+    '<p>' + esc(detail) + '</p><p style="font-size:22px">+5 ⭐ per te</p>' +
     '<div class="jk"><div class="jk-label">Barzelletta sbloccata</div><div class="jk-q"><span>' + esc(j[0]) + '</span>' + sayBtn(j[0]) + '</div><div class="jk-a" id="jk-a" hidden>' + esc(j[1]) + '</div>' + (j[2] ? '<div id="jk-w" hidden style="margin-top:10px;font-weight:700">💡 ' + esc(j[2]) + '</div>' : '') + '</div>' +
     '<div class="row"><button type="button" class="btn" id="jk-show" data-focus style="--bc:var(--c5);--bs:var(--c5-soft)">Scopri la risposta</button><button type="button" class="btn ghost" id="jk-x">Chiudi</button></div>');
   $('jk-show').addEventListener('click', () => { if (!$('jk-a').hidden && $('jk-w')) { $('jk-w').hidden = false; $('jk-show').hidden = true; Voice.ok && Voice.say(j[2]); return; } $('jk-a').hidden = false; if ($('jk-w')) $('jk-show').textContent = 'Perché fa ridere? 🤔'; else $('jk-show').hidden = true; tone(523.25, .2); tone(659.25, .3, .12); Voice.ok && Voice.say(j[1]); });

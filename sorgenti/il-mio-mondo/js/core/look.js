@@ -74,8 +74,8 @@ function openCustomize(tab) {
     anim(t0);
   }
   const setV = o => { store.set('voice', Object.assign(voicePref(), o)); Voice.v = null; Voice.pickVoice(); };
-  $('modal-box').querySelectorAll('[data-g]').forEach(b => b.addEventListener('click', () => { setV({ g: b.dataset.g, name: '' }); Voice.say('Ciao ' + NAME + '! Sono ' + D.name + ', il tuo drago.'); openCustomize(); }));
-  $('modal-box').querySelectorAll('[data-vn]').forEach(b => b.addEventListener('click', () => { setV({ name: b.dataset.vn, g: b.dataset.vg === '?' ? voicePref().g : b.dataset.vg }); Voice.say('Ciao ' + NAME + '! Sono ' + D.name + '. Ti piace questa voce?'); openCustomize(); }));
+  $('modal-box').querySelectorAll('[data-g]').forEach(b => b.addEventListener('click', () => { setV({ g: b.dataset.g, name: '' }); Voice.say('Ciao ' + NAME + '! Questa è la mia voce.'); openCustomize(); }));
+  $('modal-box').querySelectorAll('[data-vn]').forEach(b => b.addEventListener('click', () => { setV({ name: b.dataset.vn, g: b.dataset.vg === '?' ? voicePref().g : b.dataset.vg }); Voice.say('Ciao ' + NAME + '! Ti piace questa voce?'); openCustomize(); }));
   $('modal-box').querySelectorAll('[data-vt]').forEach(b => b.addEventListener('click', () => { const keep = Voice.v; const x = itVoices().find(y => y.name === b.dataset.vt); if (x) { Voice.v = x.v; Voice.say('Ciao ' + NAME + '! Oggi impariamo insieme.'); Voice.v = keep; } }));
   $('modal-box').querySelectorAll('[data-r]').forEach(b => b.addEventListener('click', () => { setV({ rate: +b.dataset.r }); Voice.say('Ecco la nuova velocità.'); openCustomize(); }));
 }

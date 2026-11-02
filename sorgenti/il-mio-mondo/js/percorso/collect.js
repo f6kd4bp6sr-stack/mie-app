@@ -203,7 +203,7 @@ function openTesori() {
   openModal('<div class="big" style="font-size:28px">🔍 I tesori nascosti</div>' +
     '<p style="font-weight:700;color:var(--ink-soft)">Ogni giorno in ogni sezione dell’app è nascosto un piccolo tesoro. Aguzza la vista e toccalo! Ne hai trovati ' + tesoriFound() + ' su ' + TESORI.length + '.</p>' +
     '<div class="alb-grid">' + TESORI.map(t => c.o[t[0]] ? '<div class="alb-s have"><span class="alb-ic">' + t[0] + '</span><span class="alb-t">' + esc(t[1]) + (c.o[t[0]] > 1 ? ' ×' + c.o[t[0]] : '') + '</span></div>' : '<div class="alb-s"><span class="alb-ic" style="filter:grayscale(1) brightness(.2);opacity:.35">' + t[0] + '</span><span class="alb-t">???</span></div>').join('') + '</div>' +
-    '<p style="font-weight:700">Premi speciali: 🔍 la lente per il drago (12 tesori) e ❄️ il percorso sul ghiaccio (tutti i 24)!</p>' +
+    '<p style="font-weight:700">Premi speciali: 🔍 la lente per il tuo avatar (12 tesori) e ❄️ il percorso sul ghiaccio (tutti i 24)!</p>' +
     '<div class="row center"><button type="button" class="btn ghost" id="ts-x" data-focus>Chiudi</button></div>');
   $('ts-x').addEventListener('click', closeModal);
 }

@@ -144,7 +144,7 @@ const fanfare = () => { [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => tone(
 
 /* ---------- Brava! e coriandoli ---------- */
 const PRAISE = ['Brava!', 'Bravissima!', 'Che brava!', 'Sei forte!', 'Evviva!', 'Grande!', 'Super!', 'Fantastica!'];
-const TRY = ['Ci hai provato: il drago è più forte!', 'Errore = allenamento!', 'Ogni tentativo conta!', 'Coraggio, ci sei quasi!', 'Sbagliando si impara!'];
+const TRY = ['Ci hai provato: una stella in più!', 'Errore = allenamento!', 'Ogni tentativo conta!', 'Coraggio, ci sei quasi!', 'Sbagliando si impara!'];
 function praise() { let m = pick(PRAISE); if (Math.random() < 0.5) m = m.replace(/!$/, ', ' + NAME + '!'); return m; }
 function cheer(el, text, soft) {
   const r = el.getBoundingClientRect();
@@ -207,7 +207,11 @@ function closeModal() { $('modal').hidden = true; try { speechSynthesis.cancel()
 $('modal').addEventListener('click', e => { if (e.target.id === 'modal' && !$('modal').dataset.lock) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('modal').hidden && !$('modal').dataset.lock) closeModal(); });
 
-/* ---------- Drago ---------- */
+/* ---------- Mascotte: dal 2/11/2026 un avatar scelto dalla bambina (MASCOTTE = 'drago' rimette il drago) ---------- */
+const MASCOTTE = 'avatar';
+const AVATARS = ['🦊', '🐱', '🐶', '🐰', '🐼', '🐨', '🐯', '🦁', '🐸', '🐢', '🐬', '🦋', '🦄', '🐧', '🌸', '🌈', '⭐', '🎨'];
+let AVP = null; /* anteprima mentre si sceglie */
+const AV = () => AVP || (D && D.avatar) || '🦊';
 const DCOLORS = {
   verde: ['#4bc0a8', '#bff0e2', 'var(--c4)', 'var(--c4-soft)', 'Verde smeraldo'],
   viola: ['#a879ff', '#e4d6ff', 'var(--c6)', 'var(--c6-soft)', 'Viola magico'],
@@ -236,7 +240,14 @@ function dragonAcc(a) {
   if (a === 'corona') return '<path d="M80 40 L86 18 L95 32 L100 12 L105 32 L114 18 L120 40 Z" fill="#ffd23f" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round"/><circle cx="100" cy="30" r="3.5" fill="#ff5c8a"/>';
   return '';
 }
-const LEVELS = [
+const LEVELS = MASCOTTE === 'avatar' ? [
+  { n: 'Stellina', min: 0 },
+  { n: 'Stella curiosa', min: 15 },
+  { n: 'Stella coraggiosa', min: 50 },
+  { n: 'Stella tenace', min: 120 },
+  { n: 'Stella brillante', min: 250 },
+  { n: 'Stella leggendaria', min: 450 }
+] : [
   { n: 'Uovo magico', min: 0 },
   { n: 'Cucciolo curioso', min: 15 },
   { n: 'Draghetto coraggioso', min: 50 },
@@ -244,11 +255,22 @@ const LEVELS = [
   { n: 'Drago volante', min: 250 },
   { n: 'Drago leggendario', min: 450 }
 ];
+const EIC = MASCOTTE === 'avatar' ? '⭐' : '🔥';
 let D = store.get('dragon', null);
 function levelOf(e) { let i = 0; LEVELS.forEach((l, k) => { if (e >= l.min) i = k; }); return i; }
 function dcol() { return DCOLORS[(D && D.color) || 'verde']; }
 
+/* l'avatar: emoji scelta su un cerchio del suo colore, le stelline del livello e gli oggetti del negozio */
+function avatarSVG(stage, colorKey, cls) {
+  const c = DCOLORS[colorKey] || DCOLORS.verde;
+  return '<svg class="dragon ' + (cls || '') + '" viewBox="0 0 200 200" role="img" aria-label="Il tuo avatar, livello ' + esc(LEVELS[stage].n) + '">' +
+    '<circle cx="100" cy="106" r="76" fill="' + c[1] + '" stroke="' + c[0] + '" stroke-width="6"/>' +
+    '<text x="100" y="112" font-size="98" text-anchor="middle" dominant-baseline="central">' + AV() + '</text>' +
+    (stage ? '<text x="100" y="190" font-size="20" text-anchor="middle">' + '⭐'.repeat(stage) + '</text>' : '') +
+    '<g transform="translate(0 20)">' + dragonAcc((typeof festaHat === 'function' && festaHat()) || store.get('dragon-acc', '')) + '</g></svg>';
+}
 function dragonSVG(stage, colorKey, cls) {
+  if (MASCOTTE === 'avatar') return avatarSVG(stage, colorKey, cls);
   const c = DCOLORS[colorKey] || DCOLORS.verde;
   const body = c[0], belly = c[1];
   const ink = '#33304a';
@@ -297,14 +319,14 @@ function nextInfo() {
   const e = D.energy, i = levelOf(e);
   if (i >= LEVELS.length - 1) return { pct: 100, text: 'Livello massimo! Sei una leggenda!' };
   const a = LEVELS[i].min, b = LEVELS[i + 1].min;
-  return { pct: Math.round((e - a) / (b - a) * 100), text: 'Ancora ' + (b - e) + ' 🔥 per diventare ' + LEVELS[i + 1].n };
+  return { pct: Math.round((e - a) / (b - a) * 100), text: 'Ancora ' + (b - e) + ' ' + EIC + ' per diventare ' + LEVELS[i + 1].n };
 }
 function updateBar() {
   if (!D) return;
   const c = dcol(), i = levelOf(D.energy);
   $('mini').style.setProperty('--dsoft', c[3]);
   $('mini').innerHTML = dragonSVG(i, D.color);
-  $('bar-name').textContent = D.name;
+  $('bar-name').textContent = MASCOTTE === 'avatar' ? (childName() || 'Io') : D.name;
   $('bar-level').textContent = LEVELS[i].n;
   $('bar-e').style.width = nextInfo().pct + '%';
   $('bar-energy').textContent = D.energy;
@@ -319,13 +341,13 @@ function gain(n, el) {
   const t = todayKey();
   if (!days.includes(t)) { days.push(t); store.set('days', days); }
   updateBar();
-  floatText(el || $('bar-energy'), '+' + n + ' 🔥');
+  floatText(el || $('bar-energy'), '+' + n + ' ' + EIC);
   const after = levelOf(D.energy);
   if (after > before) setTimeout(() => levelUp(after), 900);
 }
 function levelUp(i) {
   fanfare();
-  const txt = D.name + ' è diventato ' + LEVELS[i].n + '! Tutto grazie alla tua forza di volontà, ' + NAME + '!';
+  const txt = MASCOTTE === 'avatar' ? 'Sei diventata ' + LEVELS[i].n + '! Tutto grazie alla tua forza di volontà, ' + NAME + '!' : D.name + ' è diventato ' + LEVELS[i].n + '! Tutto grazie alla tua forza di volontà, ' + NAME + '!';
   openModal('<div>' + dragonSVG(i, D.color, 'bob') + '</div><div class="big">Evviva!</div><p>' + esc(txt) + '</p>' +
     '<div class="row"><button type="button" class="btn" data-focus id="lv-ok">Che forza!</button>' + sayBtn(txt) + '</div>', [dcol()[2], dcol()[3]]);
   $('lv-ok').addEventListener('click', closeModal);
@@ -354,7 +376,7 @@ function markDay(kind, el) {
     s.bonus = true; store.set('today', s);
     setTimeout(() => {
       gain(10, el);
-      cheer(el || $('bar-energy'), 'Tutte le missioni di oggi! +10 🔥');
+      cheer(el || $('bar-energy'), 'Tutte le missioni di oggi! +10 ' + EIC);
     }, 1300);
   }
 }
@@ -390,7 +412,7 @@ function runQuiz(box, questions, opts) {
     if (i >= qs.length) {
       const txt = score === qs.length ? 'Tutte giuste, ' + NAME + '!' : score + ' su ' + qs.length + ': che impegno, ' + NAME + '!';
       box.innerHTML = '<div class="quiz" style="text-align:center"><div class="big-q" style="font-size:clamp(28px,5vw,40px)">' + esc(txt) + '</div>' +
-        '<p style="font-weight:800">' + (score === qs.length ? '🏆' : '💪') + ' Il tuo drago ha preso energia a ogni risposta.</p>' +
+        '<p style="font-weight:800">' + (score === qs.length ? '🏆' : '💪') + ' Hai preso una stella a ogni risposta.</p>' +
         '<div class="row center"><button type="button" class="btn" style="--bc:' + (opts.color || 'var(--c6)') + '">Rifai la sfida</button></div></div>';
       box.querySelector('.btn').addEventListener('click', () => { if (opts.restart) opts.restart(); else runQuiz(box, questions, opts); });
       if (score >= Math.ceil(qs.length / 2)) { fanfare(); confetti(window.innerWidth / 2, window.innerHeight / 3, 30); }
@@ -627,19 +649,19 @@ PAGES.home = el => {
   el.innerHTML =
     '<p class="hello">' + greeting() + '</p>' +
     '<h1 class="page-title rainbow">Forza, ' + esc(NAME) + '!</h1>' +
-    '<p class="page-sub">Ogni volta che ci provi, anche quando sbagli, ' + esc(D.name) + ' prende energia e diventa più forte.</p>' +
+    '<p class="page-sub">Ogni volta che ci provi, anche quando sbagli, ' + (MASCOTTE === 'avatar' ? 'guadagni stelle e diventi più forte.' : esc(D.name) + ' prende energia e diventa più forte.') + '</p>' +
     '<div id="h-path"></div>' +
     '<div class="home-top">' +
       '<div class="den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '">' +
-        '<div class="bubble"><span>' + esc(D.name) + ' dice: «' + esc(phrase) + '»</span>' + sayBtn(D.name + ' dice: ' + phrase) + '</div>' +
+        '<div class="bubble"><span>«' + esc(phrase) + '»</span>' + sayBtn(phrase) + '</div>' +
         '<div class="kp-wrap">' + dragonSVG(i, D.color, 'bob') + (typeof keeperBadge === 'function' ? keeperBadge() : '') + '</div>' +
-        '<div class="dname">' + esc(D.name) + '</div><div class="dlevel">' + esc(LEVELS[i].n) + ' · ' + D.energy + ' 🔥</div>' +
+        '<div class="dname">' + esc(MASCOTTE === 'avatar' ? (childName() || 'Io') : D.name) + '</div><div class="dlevel">' + esc(LEVELS[i].n) + ' · ' + D.energy + ' ' + EIC + '</div>' +
         (typeof keeperHome === 'function' ? keeperHome() : '') + '<div class="ebig" aria-hidden="true"><i style="width:' + ni.pct + '%"></i></div><div class="enext">' + esc(ni.text) + '</div>' +
         '<div class="row center" style="margin-top:12px"><button type="button" class="btn small ghost" id="h-next">Un’altra frase</button><button type="button" class="btn small ghost" id="h-edit">⚙️ Impostazioni</button><button type="button" class="btn small ghost" id="h-cust">✨ Personalizza</button><button type="button" class="btn small ghost" id="h-prog">📊 Progressi</button></div>' +
       '</div>' +
       '<div style="display:grid;gap:16px;align-content:start;min-width:0">' +
         (typeof homeMoodCard === 'function' ? homeMoodCard() : '') +
-        '<div class="card">' + secHead('🎯', 'Le missioni di oggi', s.done.length + ' su ' + TODAY.length + ' · tutte insieme valgono +10 🔥', 'var(--c3-soft)') +
+        '<div class="card">' + secHead('🎯', 'Le missioni di oggi', s.done.length + ' su ' + TODAY.length + ' · tutte insieme valgono +10 ' + EIC, 'var(--c3-soft)') +
           '<div class="today-list" id="h-today"></div></div>' +
         (typeof homeDiaryCard === 'function' ? homeDiaryCard() : '') +
         '<button type="button" class="today" id="h-clock" style="--ts:var(--c5-soft);border-color:var(--c5)"><span class="ic" aria-hidden="true">🕐</span><span class="tx">Impara l’orologio<small>Lancette, trucchi e giochi</small></span><span class="st" aria-hidden="true">→</span></button>' +
@@ -649,12 +671,12 @@ PAGES.home = el => {
           '<div style="color:var(--ink-soft);font-weight:700;font-size:14px">' + esc(b.label) + '</div></div></div></div>' : '<button type="button" class="today" id="h-setbd" style="--ts:var(--c1-soft);border-color:var(--c1)"><span class="ic" aria-hidden="true">🎂</span><span class="tx">' + (childName() ? 'Quando è il tuo compleanno?' : 'Come ti chiami? Quando compi gli anni?') + '<small>Scrivilo nelle ⚙️ Impostazioni: resta solo su questo iPad 🔒</small></span><span class="st" aria-hidden="true">→</span></button>') +
       '</div>' +
     '</div>' +
-    '<div class="sec">' + secHead('🌱', 'Come cresce ' + D.name, 'L’energia arriva da ogni cosa che fai: routine, esercizi, giochi, missioni. Anche dagli errori!', c[3]) +
+    '<div class="sec">' + (MASCOTTE === 'avatar' ? secHead('⭐', 'Le tue stelle', 'Le stelle arrivano da ogni cosa che fai: routine, esercizi, giochi, missioni. Anche dagli errori!', c[3]) : secHead('🌱', 'Come cresce ' + D.name, 'L’energia arriva da ogni cosa che fai: routine, esercizi, giochi, missioni. Anche dagli errori!', c[3])) +
       '<div class="grid3" id="h-levels"></div>' +
-      '<div class="stat-row"><span class="pill">📅 ' + days + (days === 1 ? ' giorno' : ' giorni') + ' di allenamento</span><span class="pill">🔥 ' + D.energy + ' energia totale</span></div>' +
+      '<div class="stat-row"><span class="pill">📅 ' + days + (days === 1 ? ' giorno' : ' giorni') + ' di allenamento</span><span class="pill">' + EIC + ' ' + D.energy + (MASCOTTE === 'avatar' ? ' stelle in tutto' : ' energia totale') + '</span></div>' +
     '</div>' +
     (typeof backupCard === 'function' ? backupCard() : '') +
-    '<footer class="note">' + esc(D.name) + ' ti aspetta ogni giorno!</footer>';
+    '<footer class="note">' + (MASCOTTE === 'avatar' ? 'Torna anche domani!' : esc(D.name) + ' ti aspetta ogni giorno!') + '</footer>';
 
   const tl = $('h-today');
   TODAY.forEach(t => {
@@ -675,7 +697,7 @@ PAGES.home = el => {
     d.style.cssText = 'padding:12px;text-align:center;' + (k === i ? '--kc:' + c[2] + ';--ks:' + c[3] : '') + (reached ? '' : ';opacity:.55');
     d.innerHTML = '<div style="width:90px;margin:0 auto">' + (reached ? dragonSVG(k, D.color) : '<div style="font-size:54px;line-height:90px">❔</div>') + '</div>' +
       '<div style="font-family:var(--font-display);font-weight:800;font-size:17px;line-height:1.1">' + esc(l.n) + '</div>' +
-      '<div style="font-size:13px;font-weight:800;color:var(--ink-soft)">' + (k === 0 ? 'si parte!' : 'da ' + l.min + ' 🔥') + '</div>';
+      '<div style="font-size:13px;font-weight:800;color:var(--ink-soft)">' + (k === 0 ? 'si parte!' : 'da ' + l.min + ' ' + EIC) + '</div>';
     lv.appendChild(d);
   });
   $('h-next').addEventListener('click', () => { forzaI = drawDeck('forza', FORZA.length, 1)[0]; PAGES.home(el); });
@@ -691,7 +713,7 @@ PAGES.home = el => {
   if ($('h-sport')) $('h-sport').addEventListener('click', () => { routineSel = sportToday().r.id; go('routine'); });
 };
 
-/* ---------- Primo avvio: nasce il drago ---------- */
+/* ---------- Primo avvio: si sceglie l'avatar (o nasce il drago se MASCOTTE = 'drago') ---------- */
 function childFields(cf) {
   const opt = (v, t, sel) => '<option value="' + v + '"' + (String(sel) === String(v) ? ' selected' : '') + '>' + t + '</option>';
   const days = (id, sel) => '<select id="' + id + '" class="cf-sel">' + opt('', '—  nessuno', sel) + ['lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato', 'domenica'].map((g, k) => opt((k + 1) % 7, g, sel)).join('') + '</select>';
@@ -709,19 +731,24 @@ function readChildFields() {
   return { name: v('cf-name').trim().slice(0, 20), bd: { d: n(v('cf-d')), m: n(v('cf-m')), y: n(v('cf-y')) }, patt: n(v('cf-patt')), aerea: n(v('cf-aerea')) };
 }
 function onboarding(edit) {
-  let color = (D && D.color) || 'verde';
+  let color = (D && D.color) || 'verde', av = AV();
+  const AVM = MASCOTTE === 'avatar';
   let cf = JSON.parse(JSON.stringify(CHILD || {}));
   const draw = () => {
     openModal(
       '<div>' + dragonSVG(0, color) + '</div>' +
-      '<div class="big">' + (edit ? 'Il tuo drago' : 'Un uovo per te!') + '</div>' +
+      (AVM ? '<div class="big">' + (edit ? 'Il tuo avatar' : 'Scegli il tuo avatar!') + '</div>' +
+        '<p>' + (edit ? 'Puoi cambiare avatar, colore, compleanno e giorni dello sport quando vuoi.' : 'Ciao! Scegli chi ti rappresenta. Ogni volta che ci provi, anche quando sbagli, guadagni stelle ⭐.') + '</p>' +
+        '<p style="margin-top:14px;font-weight:800">Chi sei oggi?</p><div class="av-grid" id="ob-av">' + AVATARS.map(a => '<button type="button" class="av-b" data-a="' + a + '" aria-pressed="' + (a === av) + '">' + a + '</button>').join('') + '</div>' +
+        '<input type="hidden" id="ob-name" value="' + esc((D && D.name) || 'avatar') + '">'
+      : '<div class="big">' + (edit ? 'Il tuo drago' : 'Un uovo per te!') + '</div>' +
       '<p>' + (edit ? 'Puoi cambiare nomi, colore, compleanno e giorni dello sport quando vuoi.' : 'Ciao! Dentro quest’uovo c’è un drago. Crescerà con la tua forza di volontà: ogni volta che ci provi, prende energia.') + '</p>' +
       '<label for="ob-name" style="display:block;font-weight:800;margin-top:14px">Come lo vuoi chiamare?</label>' +
-      '<input type="text" id="ob-name" maxlength="16" autocomplete="off" placeholder="Scrivi il suo nome" value="' + esc((D && D.name) || '') + '">' +
+      '<input type="text" id="ob-name" maxlength="16" autocomplete="off" placeholder="Scrivi il suo nome" value="' + esc((D && D.name) || '') + '">') +
       '<p style="margin-top:14px">Di che colore?</p><div class="swatches" id="ob-sw"></div>' + childFields(cf) +
-      '<div class="row"><button type="button" class="btn" id="ob-go" style="--bc:' + DCOLORS[color][2] + ';--bs:' + DCOLORS[color][3] + '">' + (edit ? 'Salva' : 'Fai nascere il mio drago!') + '</button>' +
+      '<div class="row"><button type="button" class="btn" id="ob-go" style="--bc:' + DCOLORS[color][2] + ';--bs:' + DCOLORS[color][3] + '">' + (edit ? 'Salva' : AVM ? 'Iniziamo!' : 'Fai nascere il mio drago!') + '</button>' +
       (edit ? '<button type="button" class="btn ghost" id="ob-x">Annulla</button>' : '') + '</div>' +
-      (edit ? '' : '<div class="row center" style="margin-top:10px"><button type="button" class="btn small ghost" id="ob-restore">📂 Ho già un drago: ripristina i miei progressi</button></div>'),
+      (edit ? '' : '<div class="row center" style="margin-top:10px"><button type="button" class="btn small ghost" id="ob-restore">📂 ' + (AVM ? 'Ho già usato l’app' : 'Ho già un drago') + ': ripristina i miei progressi</button></div>'),
       [DCOLORS[color][2], DCOLORS[color][3]]);
     const sw = $('ob-sw');
     Object.keys(DCOLORS).filter(colorUsable).forEach(k => {
@@ -731,6 +758,7 @@ function onboarding(edit) {
       b.addEventListener('click', () => { const n = $('ob-name').value; cf = readChildFields(); color = k; draw(); $('ob-name').value = n; });
       sw.appendChild(b);
     });
+    document.querySelectorAll('#ob-av .av-b').forEach(b => b.addEventListener('click', () => { cf = readChildFields(); av = AVP = b.dataset.a; draw(); }));
     if ($('ob-restore')) $('ob-restore').addEventListener('click', () => { if (typeof restoreFromFile === 'function') restoreFromFile(); });
     $('ob-go').addEventListener('click', () => {
       const n = $('ob-name').value.trim();
@@ -738,16 +766,16 @@ function onboarding(edit) {
       const first = !D;
       const old = JSON.stringify(CHILD), nc = Object.assign({}, CHILD, readChildFields(), { asked: 1 });
       CHILD = nc; store.set('child', nc);
-      D = { name: n, color: color, energy: D ? D.energy : 0 };
+      D = Object.assign({}, D || {}, { name: n, color: color, energy: D ? D.energy : 0, avatar: av });
       store.set('dragon', D);
       if (JSON.stringify(nc) !== old) applyChild();
-      delete $('modal').dataset.lock;
+      AVP = null; delete $('modal').dataset.lock;
       closeModal(); updateBar(); go('home');
       if (first) {
-        setTimeout(() => { cheer($('mini'), 'Ciao ' + n + '!'); fanfare(); Voice.ok && Voice.say('Ciao ' + (childName() || '') + '! Io sono ' + n + '. Allenati con me e diventerò un drago fortissimo!'); }, 300);
+        setTimeout(() => { cheer($('mini'), 'Ciao' + (AVM ? (childName() ? ' ' + childName() : '') : ' ' + n) + '!'); fanfare(); Voice.ok && Voice.say(AVM ? 'Ciao ' + (childName() || '') + '! Ogni volta che ci provi guadagni una stella. Iniziamo!' : 'Ciao ' + (childName() || '') + '! Io sono ' + n + '. Allenati con me e diventerò un drago fortissimo!'); }, 300);
       }
     });
-    if (edit) $('ob-x').addEventListener('click', closeModal);
+    if (edit) $('ob-x').addEventListener('click', () => { AVP = null; closeModal(); });
   };
   if (!edit) $('modal').dataset.lock = '1';
   draw();

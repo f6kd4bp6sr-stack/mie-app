@@ -1,6 +1,6 @@
 # Il mio mondo — memoria dell'app
 
-App di studio per bambini (5ª elementare), con il drago, le lezioni delle materie, i giochi, il diario, il disegno e la festa di compleanno.
+App di studio per bambini (5ª elementare), con l'avatar scelto dalla bambina e le stelle ⭐ (dal 2/11/2026 al posto del drago), le lezioni delle materie, i giochi, il diario, il disegno e la festa di compleanno.
 
 Interfaccia semplice (scelta del genitore, ottobre 2026): una sola 🏠 Casa con tutte le sezioni e tutte le materie aperte da subito; niente percorso a tappe bloccate, niente linguette in basso, niente missioni né contatore dei giorni di fila. I dati di prima (lezioni fatte, ricordi, gemme) restano tutti.
 

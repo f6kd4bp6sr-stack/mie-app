@@ -8,7 +8,7 @@ const MATH = [
 let mathSel = 'tab';
 PAGES.mate = el => {
   el.innerHTML = '<h1 class="page-title rainbow">Matematica da campionessa</h1>' +
-    '<p class="page-sub">La matematica è un allenamento: ogni esercizio, anche sbagliato, rende il tuo cervello più forte e ' + esc(D.name) + ' più grande.</p>' +
+    '<p class="page-sub">La matematica è un allenamento: ogni esercizio, anche sbagliato, rende il tuo cervello più forte e fa crescere le tue stelle ⭐.</p>' +
     '<div class="sec"><div id="m-tiles"></div></div><div id="m-panel"></div>';
   const done = store.get('math-done', {});
   renderTiles($('m-tiles'), MATH.map(m => ({ ...m, ok: done[m.id] ? '✓ fatto ' + done[m.id] + (done[m.id] === 1 ? ' volta' : ' volte') : '' })), mathSel, id => { mathSel = id; PAGES.mate(el); });
@@ -109,7 +109,7 @@ function mathTab(p, m) {
       const key = table || 'mix';
       if (table) { best[table] = Math.max(best[table] || 0, firstTry); store.set('tab-best', best); }
       endCard(p, firstTry === total ? 'Tutte giuste, ' + NAME + '! 🏆' : firstTry + ' su ' + total + ' al primo colpo!',
-        ['Hai ripassato anche i conti più difficili: così la memoria li fissa. 💪', timed ? '⏱️ Tempo: ' + secs + ' secondi' : '', '+' + (4 + Math.floor(firstTry / 2)) + ' 🔥 per ' + D.name].filter(Boolean),
+        ['Hai ripassato anche i conti più difficili: così la memoria li fissa. 💪', timed ? '⏱️ Tempo: ' + secs + ' secondi' : '', '+' + (4 + Math.floor(firstTry / 2)) + ' ⭐ per te'].filter(Boolean),
         () => mathTab(p, m), m.c);
       mathFinished('tab', stage, 4 + Math.floor(firstTry / 2));
     }
@@ -186,7 +186,7 @@ function mathFraz(p, m) {
     const stage = p.querySelector('.m-stage');
     function show() {
       if (i >= qs.length) {
-        endCard(p, right === qs.length ? 'Tutte giuste, ' + NAME + '! 🍕' : right + ' su ' + qs.length + '!', ['Sei una vera pizzaiola delle frazioni. 💪', '+6 🔥 per ' + D.name], () => mathFraz(p, m), m.c);
+        endCard(p, right === qs.length ? 'Tutte giuste, ' + NAME + '! 🍕' : right + ' su ' + qs.length + '!', ['Sei una vera pizzaiola delle frazioni. 💪', '+6 ⭐ per te'], () => mathFraz(p, m), m.c);
         mathFinished('fraz', stage, 6); return;
       }
       const q = qs[i]; let tried = false;
@@ -279,7 +279,7 @@ function mathProb(p, m) {
     const stage = p.querySelector('.m-stage');
     function show() {
       if (i >= gens.length) {
-        endCard(p, 'Casi risolti: ' + solved + ' su ' + gens.length + '! 🕵️‍♀️', ['Una detective vera non si arrende mai. 💪', '+6 🔥 per ' + D.name], () => mathProb(p, m), m.c);
+        endCard(p, 'Casi risolti: ' + solved + ' su ' + gens.length + '! 🕵️‍♀️', ['Una detective vera non si arrende mai. 💪', '+6 ⭐ per te'], () => mathProb(p, m), m.c);
         mathFinished('prob', stage, 6); return;
       }
       const q = gens[i]; let hints = 0, tries = 0;
@@ -351,7 +351,7 @@ function mathGeo(p, m) {
     const stage = p.querySelector('.m-stage');
     function show() {
       if (i >= plan.length) {
-        endCard(p, right + ' su ' + plan.length + ', architetta ' + NAME + '! 📐', ['Le figure non hanno più segreti. 💪', '+6 🔥 per ' + D.name], () => mathGeo(p, m), m.c);
+        endCard(p, right + ' su ' + plan.length + ', architetta ' + NAME + '! 📐', ['Le figure non hanno più segreti. 💪', '+6 ⭐ per te'], () => mathGeo(p, m), m.c);
         mathFinished('geo', stage, 6); return;
       }
       const t = plan[i];

@@ -392,7 +392,7 @@ function endLesson() {
 function goalParty() {
   const dg = dayGoal(); const due = dueKeys(pState()).length;
   openModal('<div style="font-size:60px">🏆</div><div class="big" style="font-size:28px">Obiettivo di oggi raggiunto!</div>' +
-    '<p style="font-weight:700">' + dg.nuove + ' nozioni nuove e ' + dg.rip + ' ricordi rafforzati. ' + esc(D.name) + ' è fiero di te! +15 💎</p>' +
+    '<p style="font-weight:700">' + dg.nuove + ' nozioni nuove e ' + dg.rip + ' ricordi rafforzati. Sei stata bravissima! +15 💎</p>' +
     '<p style="font-weight:700;color:var(--ink-soft)">' + (due ? 'Se vuoi, puoi ancora rafforzare ' + due + ' ricordi. Oppure fai una pausa: anche il cervello ha bisogno di riposare per ricordare meglio. 🌿' : 'Ora una bella pausa: il cervello mette in ordine i ricordi mentre riposi. 🌿') + '</p>' +
     '<div class="row center">' + (due ? '<button type="button" class="btn" id="gp-rip">💪 Rafforza</button>' : '') + '<button type="button" class="btn ghost" id="gp-ok" data-focus>Pausa</button></div>');
   $('gp-ok').addEventListener('click', closeModal);

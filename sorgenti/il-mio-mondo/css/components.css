@@ -211,3 +211,7 @@
     color: var(--fire); text-shadow: 0 2px 0 var(--surface);
   }
 
+/* scelta dell'avatar (primo avvio e impostazioni) */
+.av-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:6px 0 4px}
+.av-b{font-size:34px;line-height:1;padding:8px 0;border-radius:16px;border:3px solid transparent;background:var(--card,#fff);cursor:pointer}
+.av-b[aria-pressed="true"]{border-color:var(--mc,var(--c3));background:var(--ms,var(--c3-soft))}

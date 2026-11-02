@@ -107,7 +107,7 @@ function topbar() {
 renderTabs = function () {
   const box = $('tabs'); box.innerHTML = ''; TABS.length = 0; TABS.push(['home', '🏠', 'Casa', 'var(--c4-soft)']); return;
   const open = tabsOpen();
-  const T = [['home', '🏠', 'Impara'], open.giochi && ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], open.esplora && ['esplora', '🔭', 'Esplora'], ['io', '🐉', 'Io']].filter(Boolean);
+  const T = [['home', '🏠', 'Impara'], open.giochi && ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], open.esplora && ['esplora', '🔭', 'Esplora'], ['io', AV(), 'Io']].filter(Boolean);
   TABS.length = 0; T.forEach(t => TABS.push([t[0], t[1], t[2], 'var(--c4-soft)']));
   const sub = { mate: 'esplora', scienze: 'esplora', scopri: 'esplora', sport: 'esplora', routine: 'esplora', metodo: 'esplora', teatro: 'esplora', disegno: 'esplora' };
   TABS.forEach(t => {
@@ -121,7 +121,7 @@ renderTabs = function () {
 ['esplora', 'io', 'teatro', 'materia'].forEach(id => { if (!$('p-' + id)) { const s = document.createElement('section'); s.id = 'p-' + id; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); } });
 
 /* ---------- 🏠 CASA: tutte le sezioni, subito ---------- */
-const HOME_DO = [['disegno', '🎨', 'Disegno'], ['mappe', '🗺️', 'Le mie mappe'], ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], ['mate', '🔢', 'Officina dei numeri'], ['scienze', '🔬', 'Laboratorio'], ['scopri', '🌍', 'Scopri il mondo'], ['teatro', '🎭', 'Teatro'], ['sport', '🤸‍♀️', 'Pausa movimento'], ['vita', '🧼', 'Io e il mio corpo'], ['routine', '☀️', 'Le mie routine'], ['metodo', '🧠', 'Il mio metodo'], ['io', '🐉', 'Io e il mio drago']];
+const HOME_DO = [['disegno', '🎨', 'Disegno'], ['mappe', '🗺️', 'Le mie mappe'], ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], ['mate', '🔢', 'Officina dei numeri'], ['scienze', '🔬', 'Laboratorio'], ['scopri', '🌍', 'Scopri il mondo'], ['teatro', '🎭', 'Teatro'], ['sport', '🤸‍♀️', 'Pausa movimento'], ['vita', '🧼', 'Io e il mio corpo'], ['routine', '☀️', 'Le mie routine'], ['metodo', '🧠', 'Il mio metodo'], ['io', '🙂', 'Il mio avatar']];
 /* 🌟 Fuori scuola: le passioni e le cose della vita (le materie di scuola stanno in 🏫 La mia scuola) */
 const HOME_VITA = ['sp-aerea', 'sp-patt', 'sp-nuoto', 'sp-corpo', 'roblox', 'soldi', 'lavo', 'vesto'];
 /* 🏫 La mia scuola: dopo le materie, la classe (solo su questo iPad) e il passaggio alla scuola media */
@@ -136,9 +136,9 @@ PAGES.home = el => {
     (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
     '<input type="search" class="h-find" id="h-find" placeholder="🔎 Cerca un argomento in tutte le materie (es. acqua, Romani, frazioni)" autocomplete="off" enterkeyhint="search"><div id="h-res" hidden></div><div id="h-rest">' +
     '<section class="h-part h-scuola"><h2 class="h-h2">🏫 La mia scuola</h2><p class="h-note">Le materie del programma di 5ª, come in classe.</p><div class="v2-grid h-grid">' + pathUnits().filter(u => !HOME_VITA.includes(u.id) && !HOME_SCUOLA_EXTRA.includes(u.id)).map(ut).join('') + '</div>' +
-    '<div class="v2-grid h-grid h-grid2">' + tile('classe', '🗓️', 'La mia classe', 'progetti, uscite e date') + tile('serie', '🎬', 'La serie del drago', 'Storia a episodi') + HOME_SCUOLA_EXTRA.map(unitById).filter(Boolean).map(ut).join('') + '</div></section>' +
+    '<div class="v2-grid h-grid h-grid2">' + tile('classe', '🗓️', 'La mia classe', 'progetti, uscite e date') + tile('serie', '🎬', 'La serie di Storia', 'Storia a episodi') + HOME_SCUOLA_EXTRA.map(unitById).filter(Boolean).map(ut).join('') + '</div></section>' +
     '<section class="h-part h-fuori"><h2 class="h-h2">🌟 Fuori scuola</h2><p class="h-note">Sport, passioni e cose della vita.</p><div class="v2-grid h-grid">' + HOME_VITA.map(unitById).filter(Boolean).map(ut).join('') + '</div>' +
-    '<h3 class="h-h3">🎨 Fare e scoprire</h3><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[1], x[2])).join('') + '</div></section></div>';
+    '<h3 class="h-h3">🎨 Fare e scoprire</h3><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[0] === 'io' ? AV() : x[1], x[2])).join('') + '</div></section></div>';
   el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { const g = b.dataset.go; if (g.startsWith('u:')) openMateria(g.slice(2)); else if (g === 'vita') openVita(); else go(g); }));
   if ($('h-cont')) $('h-cont').addEventListener('click', () => startLesson(last.id, nextNode(last)));
   if ($('h-rip')) $('h-rip').addEventListener('click', () => startLesson(null, 0, { daily: true }));
@@ -237,22 +237,22 @@ PAGES.io = el => {
   if (!D) { el.innerHTML = ''; return; }
   const i = levelOf(D.energy), ni = nextInfo(), b = birthday(), cnt = (n, t) => '<div class="v2-stat"><b>' + n + '</b><small>' + t + '</small></div>';
   el.innerHTML =
-    '<div class="v2-me"><div class="v2-dragon">' + dragonSVG(i, D.color, 'bob') + '</div><div style="flex:1;min-width:0"><h1 class="v2-h1" style="margin:0">' + (childName() ? esc(childName()) + ' e ' : '') + esc(D.name) + '</h1>' +
-      '<div class="v2-sub" style="margin:2px 0 8px">' + esc(LEVELS[i].n) + ' · ' + D.energy + ' 🔥 energia</div>' + '<div class="v2-bar big"><i style="width:' + ni.pct + '%;background:var(--v2-orange)"></i></div><small class="v2-sub">' + esc(ni.text) + '</small></div></div>' +
+    '<div class="v2-me"><div class="v2-dragon">' + dragonSVG(i, D.color, 'bob') + '</div><div style="flex:1;min-width:0"><h1 class="v2-h1" style="margin:0">' + esc(childName() || 'Io') + '</h1>' +
+      '<div class="v2-sub" style="margin:2px 0 8px">' + esc(LEVELS[i].n) + ' · ' + D.energy + ' ⭐</div>' + '<div class="v2-bar big"><i style="width:' + ni.pct + '%;background:var(--v2-orange)"></i></div><small class="v2-sub">' + esc(ni.text) + '</small></div></div>' +
     (typeof linkWarn === 'function' ? linkWarn() : '') +
     '<div class="v2-stats">' + cnt(streakDays(), 'giorni di fila') + cnt(knowTotal(), 'nozioni imparate') + cnt(figOwned() + '/' + figTotal(), 'figurine') + cnt(tesoriFound() + '/' + TESORI.length, 'tesori trovati') + '</div>' +
     '<div class="v2-grid">' +
       '<button type="button" class="v2-tile" id="io-shop"><span class="v2-ti">🛍️</span><b>Negozio</b><small>💎 ' + Gems.get().n + ' gemme · salvadanaio</small></button>' +
       '<button type="button" class="v2-tile" id="io-alb"><span class="v2-ti">📒</span><b>Album</b><small>Le figurine della curiosità</small></button>' +
       '<button type="button" class="v2-tile" id="io-tes"><span class="v2-ti">🔍</span><b>Tesori nascosti</b><small>Uno al giorno in ogni sezione</small></button>' +
-      '<button type="button" class="v2-tile" id="io-cust"><span class="v2-ti">✨</span><b>Personalizza</b><small>Il tuo aspetto e la voce del drago</small></button>' +
+      '<button type="button" class="v2-tile" id="io-cust"><span class="v2-ti">✨</span><b>Personalizza</b><small>Il tuo aspetto e la voce</small></button>' +
       '<button type="button" class="v2-tile" id="io-vita"><span class="v2-ti">🧼</span><b>Io e il mio corpo</b><small>Armadio del meteo · mani · denti</small></button>' +
       '<button type="button" class="v2-tile" id="io-teatro"><span class="v2-ti">🎭</span><b>Teatro</b><small>La mia parte e i segreti del palco</small></button>' +
       '<button type="button" class="v2-tile" id="io-vid"><span class="v2-ti">🎬</span><b>Video</b><small>' + (typeof vidOpen === 'function' && vidOpen() ? '🎟️ ' + vidState().tickets + ' biglietti' : '🎁 Premio: si apre con l’obiettivo') + '</small></button>' +
       '<button type="button" class="v2-tile" id="io-mus"><span class="v2-ti">🎵</span><b>Musica</b><small>Sottofondo per studiare</small></button>' +
       '<button type="button" class="v2-tile" id="io-set"><span class="v2-ti">⚙️</span><b>Impostazioni</b><small>Nomi, colore, compleanno, sport</small></button>' +
       '<button type="button" class="v2-tile" id="io-bg"><span class="v2-ti">🖼️</span><b>Sfondo</b><small>Scegli un paesaggio o una tua foto</small></button>' +
-      '<button type="button" class="v2-tile" id="io-bell"><span class="v2-ti">🔔</span><b>Avvisi del drago</b><small>Novità di oggi e pallino sull’icona</small></button>' +
+      '<button type="button" class="v2-tile" id="io-bell"><span class="v2-ti">🔔</span><b>Avvisi</b><small>Novità di oggi e pallino sull’icona</small></button>' +
       '<button type="button" class="v2-tile" id="io-prog"><span class="v2-ti">📊</span><b>Progressi</b><small>Giuste e sbagliate per materia</small></button>' +
     '</div>' +
     (b ? '<div class="v2-card v2-next" style="margin-top:14px"><span>🎂</span><div><b>' + (b.days === 0 ? 'Oggi è il tuo compleanno! Auguri!' : b.days === 1 ? 'Domani è il tuo compleanno!' : 'Mancano ' + b.days + ' giorni al tuo compleanno') + '</b><small>' + esc(b.label) + '</small></div></div>' : '') +

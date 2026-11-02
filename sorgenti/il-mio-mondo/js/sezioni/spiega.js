@@ -154,7 +154,7 @@ function spPaint() {
     const sl = d.racconto[S.i]; (sl.nodi || []).forEach(n => S.shown.add(n));
     const last = S.i === d.racconto.length - 1;
     map = spMapSVG(d, { shown: S.shown, focus: (sl.nodi || [])[0], lit: S.lit });
-    side = '<div class="sp-card"><h3>🐉 Il drago racconta · ' + (S.i + 1) + ' di ' + d.racconto.length + '</h3><p class="sp-text">' + esc(sl.t) + '</p>' +
+    side = '<div class="sp-card"><h3>🎙️ Il racconto · ' + (S.i + 1) + ' di ' + d.racconto.length + '</h3><p class="sp-text">' + esc(sl.t) + '</p>' +
       '<div class="sp-row"><button type="button" class="btn ghost small" id="sp-say">🔊 Ascolta</button><button type="button" class="btn ghost small" id="sp-mute">' + (spMute() ? '🔇 Voce spenta' : '🔈 Voce accesa') + '</button></div>' +
       '<div class="sp-row">' + (S.i ? '<button type="button" class="btn ghost" id="sp-prev">◀</button>' : '') + '<button type="button" class="btn" id="sp-next" data-focus>' + (last ? 'Ora tocca a te ▶' : 'Avanti ▶') + '</button></div></div>';
   } else if (S.ph === 'ritrova') {

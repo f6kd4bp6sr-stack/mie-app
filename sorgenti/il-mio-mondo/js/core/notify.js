@@ -44,8 +44,8 @@ function newsItems() {
   /* 🗓️ La mia classe: il drago chiede a lei (date da scoprire, zaino per domani, com'è andata) */
   if (typeof clNews === 'function') { try { N.push(...clNews()); } catch (e) {} }
   /* 📝 la nota del giorno nel diario, dal pomeriggio */
-  try { const de = diary()[todayIso()]; if (new Date().getHours() >= 15 && !(de && de.nx)) N.push({ k: 'nota', ic: '📝', t: 'La nota di oggi: ' + noteQOf(todayIso()), s: 'Scrivila nel diario (+3 🔥)', go: () => go('diario') }); } catch (e) {}
-  const b = birthday(); if (b && b.days <= 1) N.push({ k: 'bday', ic: '🎂', t: b.days === 0 ? 'Oggi è il tuo compleanno! Auguri!' : 'Domani è il tuo compleanno!', s: D.name + ' ha preparato una festa', go: b.days === 0 && typeof festaOpen === 'function' ? () => festaOpen() : null });
+  try { const de = diary()[todayIso()]; if (new Date().getHours() >= 15 && !(de && de.nx)) N.push({ k: 'nota', ic: '📝', t: 'La nota di oggi: ' + noteQOf(todayIso()), s: 'Scrivila nel diario (+3 ⭐)', go: () => go('diario') }); } catch (e) {}
+  const b = birthday(); if (b && b.days <= 1) N.push({ k: 'bday', ic: '🎂', t: b.days === 0 ? 'Oggi è il tuo compleanno! Auguri!' : 'Domani è il tuo compleanno!', s: 'C’è una festa per te', go: b.days === 0 && typeof festaOpen === 'function' ? () => festaOpen() : null });
   return N;
 }
 /* letto/non letto: ogni novità ha una «firma» (cambia se cambia il numero: 5 ricordi → 4 ricordi = di nuovo novità)
@@ -73,11 +73,11 @@ let notifLastN = 0;
 function notifPaint() {
   const bar = document.querySelector('.appbar-in'); if (!bar || !D) return;
   let b = $('bar-bell');
-  if (!b) { b = document.createElement('button'); b.type = 'button'; b.id = 'bar-bell'; b.className = 'energy-pill v2-bell'; b.setAttribute('aria-label', 'Novità del drago'); bar.insertBefore(b, $('bar-streak') || bar.querySelector('.gem-pill')); b.addEventListener('click', () => openNews(false)); }
+  if (!b) { b = document.createElement('button'); b.type = 'button'; b.id = 'bar-bell'; b.className = 'energy-pill v2-bell'; b.setAttribute('aria-label', 'Novità'); bar.insertBefore(b, $('bar-streak') || bar.querySelector('.gem-pill')); b.addEventListener('click', () => openNews(false)); }
   const un = notifUnread(), n = un.length, col = (DCOLORS[D.color] || DCOLORS.verde)[0];
   b.style.setProperty('--dd', col);
   b.classList.toggle('has-news', !!n);
-  b.setAttribute('aria-label', n ? D.name + ' ti aspetta: ' + n + (n === 1 ? ' novità' : ' novità') : 'Novità del drago');
+  b.setAttribute('aria-label', n ? (n === 1 ? 'Ti aspetta 1 novità' : 'Ti aspettano ' + n + ' novità') : 'Novità');
   b.innerHTML = '<span aria-hidden="true">🔔</span>' + (n ? dotDragon(n, n > notifLastN ? 'pop' : '') : '');
   notifLastN = n;
   appBadge();
@@ -104,7 +104,7 @@ function greetLine() {
 }
 function openNews(greet) {
   const N = newsItems(), unread = notifUnread().map(n => n.k), i = levelOf(D.energy);
-  openModal('<div class="v2-greet"><div class="v2-gd">' + dragonSVG(Math.max(1, i), D.color, 'bob') + '</div><div class="v2-gb">' + esc(greet ? greetLine() : D.name + ' ti racconta le novità di oggi:') + '</div></div>' +
+  openModal('<div class="v2-greet"><div class="v2-gd">' + dragonSVG(Math.max(1, i), D.color, 'bob') + '</div><div class="v2-gb">' + esc(greet ? greetLine() : 'Ecco le novità di oggi:') + '</div></div>' +
     '<div class="v2-news">' + (N.length ? N.map((n, k) => '<button type="button" class="v2-nw' + (unread.includes(n.k) ? ' new' : '') + '" data-n="' + k + '"' + (n.go ? '' : ' data-nogo="1"') + '><span class="v2-ni">' + n.ic + '</span><span style="flex:1;min-width:0"><b>' + esc(n.t) + '</b><small>' + esc(n.s) + '</small></span>' + (n.go ? '<span class="v2-na">›</span>' : '') + '</button>').join('') : '<p style="font-weight:800">Hai fatto tutto per oggi! Sono fiero di te. 🌟</p>') + '</div>' +
     '<div class="row center" style="margin-top:12px"><button type="button" class="btn" id="nw-ok" data-focus style="--bc:var(--v2-green)">' + (greet ? 'Andiamo!' : 'Ok') + '</button></div>');
   notifMarkAll();
@@ -130,11 +130,11 @@ function badgeInvite() {
   openModal('<div class="v2-greet"><div class="v2-gd">' + dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob') + '</div><div class="v2-gb">Posso mettere un <b style="color:#ff3b30">pallino rosso</b> sulla mia icona quando ho novità per te? Tocca «Sì» e poi «Consenti».</div></div>' +
     '<div class="row center" style="gap:10px;margin-top:12px"><button type="button" class="btn ghost" id="bi-no">Più tardi</button><button type="button" class="btn" id="bi-ok" data-focus style="--bc:var(--v2-green)">Sì! 🔴</button></div>');
   $('bi-no').addEventListener('click', closeModal);
-  $('bi-ok').addEventListener('click', async () => { const pr = Notification.requestPermission(); closeModal(); try { const r = await pr; if (r === 'granted') { toastV2('🔴 Fatto! Il drago ti chiamerà con il pallino rosso'); appBadge(); } } catch (e) {} });
+  $('bi-ok').addEventListener('click', async () => { const pr = Notification.requestPermission(); closeModal(); try { const r = await pr; if (r === 'granted') { toastV2('🔴 Fatto! Il pallino rosso ti avviserà'); appBadge(); } } catch (e) {} });
 }
 async function askBadge() {
   if (!('Notification' in window)) { toastV2('Su questo iPad il pallino non è disponibile: serve l’app aggiunta alla schermata Home (iPadOS 16.4 o più)'); return; }
-  try { const r = await Notification.requestPermission(); toastV2(r === 'granted' ? '🔔 Fatto! Il drago metterà un pallino sull’icona quando ti aspetta' : 'Permesso non concesso: si può attivare dalle Impostazioni dell’iPad'); } catch (e) {}
+  try { const r = await Notification.requestPermission(); toastV2(r === 'granted' ? '🔔 Fatto! Ci sarà un pallino sull’icona quando hai novità' : 'Permesso non concesso: si può attivare dalle Impostazioni dell’iPad'); } catch (e) {}
 }
 
 /* ---------- avvio: saluto una volta al giorno, poi 🔔 ---------- */

@@ -289,7 +289,7 @@ function fsSong(I) {
     fClap(2.6); fTada(); fsRain(50);
     const msg = (I.kind === 'after' ? 'Ieri era il tuo compleanno e la festa ti ha aspettata! ' : '') + 'Tanti auguri' + (nm ? ', ' + nm : '') + '! ' +
       (I.age === 10 ? 'Dieci anni: oggi entri nel club delle due cifre!' : I.age ? I.age + ' anni: sono felicissimo di festeggiarli con te!' : 'Sono felicissimo di festeggiare con te!');
-    $('fs-bub').innerHTML = '<div class="fs-say">🐉 ' + esc(msg) + '</div>';
+    $('fs-bub').innerHTML = '<div class="fs-say">' + AV() + ' ' + esc(msg) + '</div>';
     FS.t(() => fSay(msg), 700);
     $('fs-act').innerHTML = '<button type="button" class="fs-btn" id="fs-go-cake">🕯️ Spegni le candeline</button>';
     $('fs-go-cake').addEventListener('click', () => fsCake(I));
@@ -384,15 +384,15 @@ function fsCapOpen(I) {
 /* ---------- 4. i palloncini ---------- */
 function fBalMsgs(I) {
   const nm = fNm(), age = I.age, m = [
-    '🐉 Tanti auguri dal tuo drago ' + D.name + '!', '😄 Che quest’anno sia pieno di risate!', '🌟 Sei unica: nessuno al mondo è come te.',
-    '💪 Ogni volta che ci hai provato, sei diventata più forte.', '🤗 Un abbraccio grande come un drago!', '🍰 Oggi la fetta più grande è per te!',
+    '🎉 Tantissimi auguri!', '😄 Che quest’anno sia pieno di risate!', '🌟 Sei unica: nessuno al mondo è come te.',
+    '💪 Ogni volta che ci hai provato, sei diventata più forte.', '🤗 Un abbraccio grandissimo!', '🍰 Oggi la fetta più grande è per te!',
     '🌈 Il tuo coraggio colora il mondo.', '🎶 Questa musica è tutta per te!', '🦋 Crescere è un’avventura, e tu la vivi alla grande.',
     '🚀 Chissà quante cose nuove scoprirai' + (age ? ' a ' + age + ' anni' : ' quest’anno') + '!', '🥳 ' + (nm ? nm + ', sei' : 'Sei') + ' la festeggiata più importante del mondo… almeno per me!'];
   if (age === 10) m.push('🔟 Benvenuta nel club delle due cifre!');
   const days = store.get('days', []).length; if (days > 1) m.push('📅 ' + days + ' giorni di allenamento insieme!');
   try { const k = knowTotal(); if (k > 0) m.push('🧠 Hai già imparato ' + k + ' nozioni!'); } catch (e) {}
   try { const f = figOwned(); if (f > 0) m.push('🃏 ' + f + (f === 1 ? ' figurina' : ' figurine') + ' nel tuo album!'); } catch (e) {}
-  if (D.energy > 0) m.push('🔥 Hai dato a ' + D.name + ' ' + D.energy + ' di energia!');
+  if (D.energy > 0) m.push('⭐ Hai guadagnato ' + D.energy + ' stelle!');
   return shuffle(m);
 }
 function fsBalloons(I) {
@@ -403,7 +403,7 @@ function fsBalloons(I) {
   const gifted = () => ownedShop().includes(fCrownId(I));
   const showActs = () => {
     const r = fRec()[I.year] || {}, cap = fCaps()[I.year];
-    $('fs-bact').innerHTML = '<button type="button" class="fs-btn" id="fs-anno">📖 Il tuo anno con ' + esc(D.name) + '</button>' +
+    $('fs-bact').innerHTML = '<button type="button" class="fs-btn" id="fs-anno">📖 Il tuo anno</button>' +
       (!cap ? '<button type="button" class="fs-btn" id="fs-capb">⏳ Capsula del tempo</button>' : '') +
       '<button type="button" class="fs-btn ghost" id="fs-in">Entra nella festa 🎉</button>';
     $('fs-anno').addEventListener('click', () => fsAnno(I));
@@ -440,7 +440,7 @@ function fsBalloons(I) {
 function fsGift(I) {
   FS.field.querySelectorAll('.fs-bal').forEach(b => b.remove());
   const id = fCrownId(I), v = I.age ? 'bday' + I.age : 'bday', nmC = I.age ? 'la corona ' + fDei(I.age) + ' ' + I.age + ' anni' : 'la corona del compleanno';
-  fsScene('<h2 class="fs-h">🎁 Il regalo di ' + esc(D.name) + '</h2><button type="button" class="fs-giftbtn" id="fs-g2" aria-label="Apri il regalo">' + fGiftSVG('wiggle', ['#5aa9ff', '#4b8fe0']) + '</button><p class="fs-p" id="fs-g2p">Tocca per aprirlo</p><div class="fs-act" id="fs-g2a"></div>');
+  fsScene('<h2 class="fs-h">🎁 Il tuo regalo</h2><button type="button" class="fs-giftbtn" id="fs-g2" aria-label="Apri il regalo">' + fGiftSVG('wiggle', ['#5aa9ff', '#4b8fe0']) + '</button><p class="fs-p" id="fs-g2p">Tocca per aprirlo</p><div class="fs-act" id="fs-g2a"></div>');
   $('fs-g2').addEventListener('click', e => {
     const g = e.currentTarget; if (g.dataset.open) return; g.dataset.open = 1;
     g.querySelector('.fs-gift').classList.remove('wiggle'); g.querySelector('.fs-gift').classList.add('open'); fWhoosh();
@@ -449,10 +449,10 @@ function fsGift(I) {
     FS.t(() => {
       fTada(); fClap(1.6); fsRain(60);
       g.outerHTML = '<div class="fs-drg big">' + dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'fs-dancing') + '</div>';
-      $('fs-g2p').innerHTML = '<b>👑 ' + esc(nmC.charAt(0).toUpperCase() + nmC.slice(1)) + '!</b><br>È tua per sempre: la trovi nel 🛍️ Negozio, «Per il drago».' + (first ? '<br>E in più: +10 💎' : '');
+      $('fs-g2p').innerHTML = '<b>👑 ' + esc(nmC.charAt(0).toUpperCase() + nmC.slice(1)) + '!</b><br>È tua per sempre: la trovi nel 🛍️ Negozio, «Per il tuo avatar».' + (first ? '<br>E in più: +10 💎' : '');
       if (first) Gems.add(10, $('fs-g2p'));
-      fSay(D.name + ' ti regala ' + nmC + '. È tua per sempre!');
-      $('fs-g2a').innerHTML = '<button type="button" class="fs-btn" id="fs-g2n">📖 Il tuo anno con ' + esc(D.name) + '</button><button type="button" class="fs-btn ghost" id="fs-g2b">🎈 Altri palloncini</button>';
+      fSay('Ecco ' + nmC + ' per te. È tua per sempre!');
+      $('fs-g2a').innerHTML = '<button type="button" class="fs-btn" id="fs-g2n">📖 Il tuo anno</button><button type="button" class="fs-btn ghost" id="fs-g2b">🎈 Altri palloncini</button>';
       $('fs-g2n').addEventListener('click', () => fsAnno(I)); $('fs-g2b').addEventListener('click', () => fsBalloons(I));
     }, 600);
   });
@@ -463,15 +463,15 @@ function fAnnoSlides(I) {
   const S = [], days = store.get('days', []), i = levelOf(D.energy);
   const fd = days.length ? days[0] : '', fdd = fd ? new Date(+fd.slice(0, 4), +fd.slice(5, 7) - 1, +fd.slice(8, 10)) : null;
   const long = fdd && (fDay0() - fdd) / 864e5 >= 330;
-  S.push({ em: '🐉', t: (long ? 'Il tuo anno con ' : 'Il tuo viaggio con ') + D.name, s: fdd ? 'Ci conosciamo dal ' + fLabel(fdd) + '. Guarda quanta strada abbiamo fatto!' : 'Guarda quanta strada abbiamo fatto!' });
+  S.push({ em: '🌟', t: (long ? 'Il tuo anno' : 'Il tuo viaggio'), s: fdd ? 'Sei qui dal ' + fLabel(fdd) + '. Guarda quanta strada hai fatto!' : 'Guarda quanta strada hai fatto!' });
   if (days.length) S.push({ em: '📅', n: days.length, t: days.length === 1 ? 'giorno di allenamento' : 'giorni di allenamento', s: 'Ogni giorno in cui ci hai provato conta.' });
-  S.push({ dr: 1, t: i > 0 ? D.name + ' è diventato ' + LEVELS[i].n : D.name + ' sta per nascere', s: D.energy + ' 🔥 di energia, tutta grazie alla tua forza di volontà.' });
+  S.push({ dr: 1, t: i > 0 ? 'Sei arrivata a «' + LEVELS[i].n + '»' : 'Il tuo viaggio sta per cominciare', s: D.energy + ' ⭐ guadagnate, tutte grazie alla tua forza di volontà.' });
   try { const k = knowTotal(); if (k > 0) S.push({ em: '🧠', n: k, t: 'nozioni imparate', s: 'Ogni nozione è un mattoncino della tua memoria.' }); } catch (e) {}
   const pr = store.get('prog', {}), ok = Object.keys(pr).reduce((a, x) => a + ((pr[x] || {}).ok || 0), 0);
   if (ok > 0) S.push({ em: '✅', n: ok, t: 'risposte giuste', s: 'E anche gli errori ti hanno aiutata a imparare.' });
   try { const f = figOwned(), te = tesoriFound(); if (f || te) S.push({ em: '🃏', n: f, t: f === 1 ? 'figurina nel tuo album' : 'figurine nel tuo album', s: te ? 'E ' + te + (te === 1 ? ' tesoro nascosto trovato.' : ' tesori nascosti trovati.') : 'Ognuna è una curiosità che sai raccontare.' }); } catch (e) {}
   const gt = (Gems.get() || {}).tot || 0; if (gt > 0) S.push({ em: '💎', n: gt, t: 'gemme guadagnate', s: 'Le hai conquistate una a una.' });
-  try { if (typeof tState === 'function' && tState().pers) S.push({ em: '🎭', t: 'Stai preparando la tua parte a teatro', s: D.name + ' farà il tifo per te in prima fila!' }); } catch (e) {}
+  try { if (typeof tState === 'function' && tState().pers) S.push({ em: '🎭', t: 'Stai preparando la tua parte a teatro', s: 'Il tifo in prima fila è tutto per te!' }); } catch (e) {}
   S.push({ em: '🌟', t: 'E questo è solo l’inizio!', s: 'Chissà quante cose scopriremo insieme' + (I.age ? ' a ' + I.age + ' anni' : ' quest’anno') + '.' });
   return S;
 }
@@ -515,7 +515,7 @@ function fsCapsule(I) {
     const all = fCaps(); all[I.year] = { age: I.age, at: fIso(fDay0()), r }; store.set(CAP_KEY, all); fRecSet(I.year, { cap: 1 });
     FS.st.querySelector('.fs-letter').classList.add('fold'); FS.st.querySelector('.fs-cap').classList.add('sealed'); fLock(); FS.t(() => { fTada(); fsRain(50); }, 500);
     Gems.add(5, $('fs-seal'));
-    $('fs-cpa').innerHTML = '<p class="fs-p"><b>Chiusa! 🔒</b> Si apre il ' + esc(fLabel(next)) + '. Mancano ' + days + ' giorni: ' + esc(D.name) + ' la custodirà per te.</p><button type="button" class="fs-btn" id="fs-ce">Entra nella festa 🎉</button>';
+    $('fs-cpa').innerHTML = '<p class="fs-p"><b>Chiusa! 🔒</b> Si apre il ' + esc(fLabel(next)) + '. Mancano ' + days + ' giorni: è al sicuro per te.</p><button type="button" class="fs-btn" id="fs-ce">Entra nella festa 🎉</button>';
     $('fs-ce').addEventListener('click', () => fsClose());
   });
 }
@@ -536,7 +536,7 @@ const F_SORP = [['gem', 10], ['fig'], ['gem', 12], ['hat'], ['fig'], ['gem', 15]
 function festaSorp(I) {
   fsShell('party'); fsEnterLater(4000);
   fsScene('<p class="fs-kick">Sorpresa ' + I.n + ' di 10</p><button type="button" class="fs-giftbtn" id="fs-sg" aria-label="Apri la sorpresa">' + fGiftSVG('wiggle', I.n % 2 ? ['#4bc0a8', '#36a28c'] : ['#a879ff', '#8d5fe6']) + '</button>' +
-    '<h2 class="fs-h">🎁 Una sorpresa per te!</h2><p class="fs-p" id="fs-sp">' + esc(D.name) + ' ha preparato 10 sorprese' + (I.age ? ' per i tuoi ' + I.age + ' anni' : '') + ': una per ogni giorno in cui vieni a trovarlo.</p><div id="fs-sbox"></div><div class="fs-act" id="fs-sa"></div>');
+    '<h2 class="fs-h">🎁 Una sorpresa per te!</h2><p class="fs-p" id="fs-sp">Ci sono 10 sorprese' + (I.age ? ' per i tuoi ' + I.age + ' anni' : '') + ': una per ogni giorno in cui torni qui.</p><div id="fs-sbox"></div><div class="fs-act" id="fs-sa"></div>');
   $('fs-sg').addEventListener('click', e => {
     const g = e.currentTarget; if (g.dataset.open) return; g.dataset.open = 1;
     g.querySelector('.fs-gift').classList.remove('wiggle'); g.querySelector('.fs-gift').classList.add('open'); fWhoosh();
@@ -545,7 +545,7 @@ function festaSorp(I) {
   });
   const ends = () => {
     const next = fBdIn(I.year + 1), dd = Math.round((next - fDay0()) / 864e5);
-    $('fs-sa').innerHTML = '<p class="fs-p">' + (I.n < 10 ? 'Torna domani: ti aspetta la sorpresa n. ' + (I.n + 1) + '! 🎁' : 'Erano 10 sorprese' + (I.age ? ' per i tuoi ' + I.age + ' anni' : '') + '! Al prossimo compleanno mancano ' + dd + ' giorni' + (fCaps()[I.year] ? ', e la capsula del tempo ti aspetta. ⏳' : '.')) + '</p><button type="button" class="fs-btn" id="fs-sok">Grazie, ' + esc(D.name) + '! 💛</button>';
+    $('fs-sa').innerHTML = '<p class="fs-p">' + (I.n < 10 ? 'Torna domani: ti aspetta la sorpresa n. ' + (I.n + 1) + '! 🎁' : 'Erano 10 sorprese' + (I.age ? ' per i tuoi ' + I.age + ' anni' : '') + '! Al prossimo compleanno mancano ' + dd + ' giorni' + (fCaps()[I.year] ? ', e la capsula del tempo ti aspetta. ⏳' : '.')) + '</p><button type="button" class="fs-btn" id="fs-sok">Grazie! 💛</button>';
     $('fs-sok').addEventListener('click', () => fsClose());
   };
   const reveal = () => {
@@ -553,11 +553,11 @@ function festaSorp(I) {
     if (k === 'fig' && typeof figUnlock === 'function') {
       const f = figUnlock(); if (f) { p.textContent = '🃏 Una figurina nuova per il tuo album!'; figShow(box, f, ends); return; }
     }
-    if (k === 'hat') { fOwn('d-festa'); p.innerHTML = '<b>🥳 Il cappellino della festa per ' + esc(D.name) + '!</b><br>Lo trovi nel 🛍️ Negozio, «Per il drago».'; __fAccPreview = 'festa'; const hsvg = dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob'); __fAccPreview = ''; box.innerHTML = '<div class="fs-drg">' + hsvg + '</div><div class="fs-act"><button type="button" class="fs-btn ghost" id="fs-hat">Mettilo adesso</button></div>'; $('fs-hat').addEventListener('click', e => { store.set('dragon-acc', 'festa'); updateBar(); e.currentTarget.textContent = 'Fatto! 🥳'; e.currentTarget.disabled = true; }); ends(); return; }
+    if (k === 'hat') { fOwn('d-festa'); p.innerHTML = '<b>🥳 Il cappellino della festa!</b><br>Lo trovi nel 🛍️ Negozio, «Per il tuo avatar».'; __fAccPreview = 'festa'; const hsvg = dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob'); __fAccPreview = ''; box.innerHTML = '<div class="fs-drg">' + hsvg + '</div><div class="fs-act"><button type="button" class="fs-btn ghost" id="fs-hat">Mettilo adesso</button></div>'; $('fs-hat').addEventListener('click', e => { store.set('dragon-acc', 'festa'); updateBar(); e.currentTarget.textContent = 'Fatto! 🥳'; e.currentTarget.disabled = true; }); ends(); return; }
     if (k === 'shop' && typeof SHOP !== 'undefined') {
       const own = ownedShop(), opts = SHOP.filter(x => x.who === 'd' && x.p > 0 && x.p <= 200 && !own.includes(x.id)).slice(0, 8);
       if (opts.length) {
-        p.innerHTML = '<b>🏆 Gran finale!</b> Scegli un regalo per ' + esc(D.name) + ': è gratis!';
+        p.innerHTML = '<b>🏆 Gran finale!</b> Scegli un regalo per il tuo avatar: è gratis!';
         box.innerHTML = '<div class="fs-pick">' + opts.map(x => '<button type="button" class="fs-pk" data-pk="' + x.id + '"><span>' + x.ic + '</span>' + esc(x.n) + '</button>').join('') + '</div>';
         box.querySelectorAll('[data-pk]').forEach(b => b.addEventListener('click', () => {
           const it = SHOP.find(x => x.id === b.dataset.pk); if (!it) return; fOwn(it.id); try { shopEquip(it, true); } catch (e) {}
@@ -581,7 +581,7 @@ function festaPreview() {
   __fPrev = { g0, s0, D0, C0 };
   store.get = (k, d) => Object.prototype.hasOwnProperty.call(tmp, k) ? JSON.parse(JSON.stringify(tmp[k])) : g0.call(store, k, d);
   store.set = (k, v) => { tmp[k] = JSON.parse(JSON.stringify(v)); };
-  if (!D) D = { name: 'il tuo drago', color: 'verde', energy: 60 };
+  if (!D) D = { name: 'avatar', color: 'verde', energy: 60 };
   const t = fDay0(), bd = CHILD.bd || {};
   let age = 10;
   if (bd.y && bd.m && bd.d) { const ny = fBdIn(t.getFullYear()) < t ? t.getFullYear() + 1 : t.getFullYear(); age = ny - bd.y; }
@@ -608,7 +608,7 @@ function festaPaint() {
 }
 function festaCard() {
   const I = festaInfo(); if (!I) return '';
-  if (I.kind === 'eve') return '<div class="v2-card fs-card"><div class="v2-ct"><span class="fs-wig">🎁</span> ' + (I.age ? 'Domani compi ' + I.age + ' anni!' : 'Domani è il tuo compleanno!') + '</div><small>Il pacco si apre domani. ' + esc(D.name) + ' sta preparando la festa…</small></div>';
+  if (I.kind === 'eve') return '<div class="v2-card fs-card"><div class="v2-ct"><span class="fs-wig">🎁</span> ' + (I.age ? 'Domani compi ' + I.age + ' anni!' : 'Domani è il tuo compleanno!') + '</div><small>Il pacco si apre domani. La festa è in preparazione…</small></div>';
   if (I.kind !== 'day' && I.kind !== 'after') return '';
   const r = fRec()[I.year] || {}, cap = fCaps()[I.year];
   return '<div class="v2-card fs-card"><div class="v2-ct">🎉 ' + (I.kind === 'after' ? 'La tua festa di compleanno!' : 'Oggi è la tua festa!') + '</div>' +

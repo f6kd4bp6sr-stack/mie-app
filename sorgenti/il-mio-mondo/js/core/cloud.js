@@ -309,8 +309,8 @@ async function openQR() {
   }
   openModal('<div class="big" style="font-size:26px">📱 Per i genitori</div>' +
     (svg ? '<div class="qr-box">' + svg + '</div><p style="font-weight:700">Apri <b>Progressi</b> sul telefono o sull’iPad del genitore, tocca <b>📷 Leggi il QR</b> e inquadra questo codice. Va bene anche la fotocamera dell’iPhone.</p>'
-         : '<p style="font-weight:800">I dati sono troppi per un QR: usa 📤 Condividi in 🐉 Io → 📊 Progressi.</p>') +
-    '<p style="font-size:14px;color:var(--ink-soft);font-weight:700">Dentro ci sono i contatori dello studio, le emozioni e le presenze del diario e il nome del drago: niente testi del diario, niente nome della bimba. Non passa da internet.</p>' +
+         : '<p style="font-weight:800">I dati sono troppi per un QR: usa 📤 Condividi in Io → 📊 Progressi.</p>') +
+    '<p style="font-size:14px;color:var(--ink-soft);font-weight:700">Dentro ci sono i contatori dello studio, le emozioni e le presenze del diario e le stelle guadagnate: niente testi del diario, niente nome della bimba. Non passa da internet.</p>' +
     '<div class="row center"><button type="button" class="btn ghost" id="qr-x" data-focus>Chiudi</button></div>', ['var(--c5)', 'var(--c5-soft)']);
   $('qr-x').addEventListener('click', closeModal);
 }
@@ -503,7 +503,7 @@ function backupFile() {
   /* la copia su file non contiene mai il collegamento con i genitori (chiave GitHub e chiave di cifratura) */
   const st = snapData(); if (st && st.data) { delete st.data['link-cfg']; if (st.t) delete st.t['link-cfg']; }
   const data = JSON.stringify({ app: APP_ID, saved: new Date().toISOString(), state: st });
-  const d = new Date(), fn = 'drago-progressi-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + '.json';
+  const d = new Date(), fn = 'il-mio-mondo-progressi-' + d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) + '.json';
   return { data, fn };
 }
 const canShareFiles = () => { try { return !!(navigator.share && navigator.canShare && navigator.canShare({ files: [new File(['x'], 'x.json', { type: 'application/json' })] })); } catch (e) { return false; } };
@@ -511,7 +511,7 @@ async function shareBackup(btn) {
   const { data, fn } = backupFile();
   const done = () => { store.set('__lastBackup', Date.now(), true); store.set('__backupDay', todayIso(), true); keeperReward(btn); };
   if (canShareFiles()) {
-    try { await navigator.share({ files: [new File([data], fn, { type: 'application/json' })], title: 'Progressi del drago' }); done(); return true; }
+    try { await navigator.share({ files: [new File([data], fn, { type: 'application/json' })], title: 'Progressi di Il mio mondo' }); done(); return true; }
     catch (e) { if (e && e.name === 'AbortError') return false; }
   }
   let dl = null; try { dl = window.claude && window.claude.use ? await window.claude.use('downloads') : null; } catch (e) {}
@@ -529,13 +529,13 @@ function backupDue() {
 /* (la richiesta giornaliera non apre più finestre: è un pulsante nel riquadro del Drago custode, in Casa) */
 
 /* ================= IL DRAGO CUSTODE: ogni giorno di salvataggio fa crescere il drago =================
-   Primo salvataggio del giorno: +3 🔥, più 1 per ogni giorno di fila (fino a +10).
+   Primo salvataggio del giorno: +3 ⭐, più 1 per ogni giorno di fila (fino a +10).
    I giorni totali di salvataggio fanno salire di grado il Custode, che compare sul drago. */
 const KEEPER = [
   { min: 1, ic: '🌱', n: 'Custode in prova' },
   { min: 3, ic: '🛡️', n: 'Custode dei ricordi' },
   { min: 7, ic: '☁️', n: 'Guardiano delle nuvole' },
-  { min: 15, ic: '💎', n: 'Drago dello scrigno' },
+  { min: 15, ic: '💎', n: 'Custode dello scrigno' },
   { min: 30, ic: '👑', n: 'Re dei ricordi' },
   { min: 60, ic: '🌟', n: 'Leggenda dei ricordi' }
 ];
@@ -560,13 +560,13 @@ function keeperReward(btn) {
   setTimeout(() => {
     gain(bonus, el);
     if (after && (!before || after.min !== before.min)) {
-      openModal('<div style="font-size:70px">' + after.ic + '</div><div class="big">' + esc(D.name) + ' è cresciuto!</div>' +
-        '<p style="font-weight:800">Nuovo grado: <b>' + esc(after.n) + '</b>. Proteggendo i tuoi ricordi ogni giorno, il tuo drago diventa più forte.</p>' +
+      openModal('<div style="font-size:70px">' + after.ic + '</div><div class="big">Sei salita di grado!</div>' +
+        '<p style="font-weight:800">Nuovo grado: <b>' + esc(after.n) + '</b>. Proteggi i tuoi ricordi ogni giorno: così diventi sempre più forte.</p>' +
         '<button type="button" class="btn" id="kp-ok" data-focus style="--bc:var(--c5)">Evviva!</button>', ['var(--c5)', 'var(--c5-soft)']);
       $('kp-ok').addEventListener('click', () => { closeModal(); go(current); });
       try { fanfare(); confetti(window.innerWidth / 2, window.innerHeight / 3, 40); } catch (e) {}
     } else {
-      cheer(el, 'Ricordi al sicuro! +' + bonus + ' 🔥' + (k.streak > 1 ? ' · ' + k.streak + ' giorni di fila' : ''));
+      cheer(el, 'Ricordi al sicuro! +' + bonus + ' ⭐' + (k.streak > 1 ? ' · ' + k.streak + ' giorni di fila' : ''));
       if (current === 'home') setTimeout(() => go('home'), 1200);
     }
   }, 300);
@@ -575,7 +575,7 @@ function keeperHome() {
   const s = keeperState();
   const alive = s.k.days.includes(todayIso()) || s.k.days.includes(iso(addDays(fromIso(todayIso()), -1)));
   const streak = alive ? s.k.streak : 0;
-  return '<div class="keeper">' + (s.lv ? '<span class="kp-ic" aria-hidden="true">' + s.lv.ic + '</span><span><b>' + esc(s.lv.n) + '</b>' : '<span class="kp-ic" aria-hidden="true">☁️</span><span><b>Salva i ricordi per far crescere ' + esc(D.name) + '</b>') +
+  return '<div class="keeper">' + (s.lv ? '<span class="kp-ic" aria-hidden="true">' + s.lv.ic + '</span><span><b>' + esc(s.lv.n) + '</b>' : '<span class="kp-ic" aria-hidden="true">☁️</span><span><b>Salva i ricordi per salire di grado</b>') +
     '<small>' + s.n + (s.n === 1 ? ' giorno salvato' : ' giorni salvati') + (streak > 1 ? ' · 🔥 ' + streak + ' di fila' : '') + (s.next ? ' · ancora ' + s.next.left + ' per ' + s.next.ic + ' ' + esc(s.next.n) : '') + '</small>' +
     (backupDue() && canShareFiles() ? '<button type="button" class="btn small" id="kp-save" style="--bc:var(--c5);margin-top:6px">☁️ Salva i ricordi di oggi</button>' : (s.k.days.includes(todayIso()) ? '<small>✅ Ricordi di oggi al sicuro su iCloud</small>' : '')) + '</span></div>';
 }
@@ -704,7 +704,7 @@ function mcRestore(R) {
 }
 function mcOffer(R) {
   const when = new Date(R.saved).toLocaleString('it-IT', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' });
-  openModal('<div style="font-size:50px">☁️</div><div class="big" style="font-size:24px">C’è una copia completa!</div><p style="font-weight:700">Copia del ' + esc(when) + ': drago, percorso, diario e tutto il resto. La rimetto su questo iPad?</p>' +
+  openModal('<div style="font-size:50px">☁️</div><div class="big" style="font-size:24px">C’è una copia completa!</div><p style="font-weight:700">Copia del ' + esc(when) + ': avatar, percorso, diario e tutto il resto. La rimetto su questo iPad?</p>' +
     '<div class="row center" style="gap:10px"><button type="button" class="btn ghost" id="mc-no">No</button><button type="button" class="btn" id="mc-yes" data-focus>Sì, ripristina</button></div>');
   $('mc-no').addEventListener('click', closeModal);
   $('mc-yes').addEventListener('click', () => { closeModal(); mcRestore(R); });

@@ -147,6 +147,6 @@ function clAddForm(k, i) {
     const btn = $('cl-ok');
     const prize = disc && clDay(d) && !x.gem; if (prize) { c[k][i].gem = 1; store.set('classe', c); Gems.add(3); try { cheer(btn, 'Brava detective!'); } catch (e) {} }
     ding(); closeModal(); go('classe');
-    if (prize) toastV2('🕵️ Scoperta! +3 💎 — ' + D.name + ' la mette tra le date della classe.');
+    if (prize) toastV2('🕵️ Scoperta! +3 💎 — ora la data è tra quelle della classe.');
   });
 }

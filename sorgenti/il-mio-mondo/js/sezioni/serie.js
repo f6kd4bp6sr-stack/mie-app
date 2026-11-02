@@ -30,7 +30,7 @@ if (!$('p-serie')) { const sec = document.createElement('section'); sec.id = 'p-
 /* ---- pagina della serie ---- */
 PAGES.serie = el => {
   const E = srEpisodi(), s = srState();
-  el.innerHTML = '<div class="sr-hero" style="--a:' + srEra('grecia')[0] + ';--b:' + srEra('roma')[0] + '"><div class="sr-hd">' + srDrago('sr-hd-dr') + '</div><div><div class="sr-kick">🎬 La serie</div><h1 class="sr-title">Le avventure del drago nella Storia</h1><p>' + (SR_LIBERI ? 'Scegli l\'episodio che vuoi: guarda il cartone, scopri le pillole e prova la sfida!' : 'Un episodio alla volta, come in classe. Guarda, scopri le pillole e supera la sfida per aprire il prossimo!') + '</p></div></div>' +
+  el.innerHTML = '<div class="sr-hero" style="--a:' + srEra('grecia')[0] + ';--b:' + srEra('roma')[0] + '"><div class="sr-hd">' + srDrago('sr-hd-dr') + '</div><div><div class="sr-kick">🎬 La serie</div><h1 class="sr-title">La serie di Storia</h1><p>' + (SR_LIBERI ? 'Scegli l\'episodio che vuoi: guarda il cartone, scopri le pillole e prova la sfida!' : 'Un episodio alla volta, come in classe. Guarda, scopri le pillole e supera la sfida per aprire il prossimo!') + '</p></div></div>' +
     '<div class="sr-list">' + E.map((id, k) => {
       const open = k < s.aperti, seen = s.visti[id], done = s.sfide[id];
       return '<button type="button" class="sr-ep' + (open ? '' : ' lock') + (done ? ' done' : '') + '" data-ep="' + k + '"' + (open ? '' : ' disabled') + ' style="--a:' + srEra(id)[0] + ';--b:' + srEra(id)[1] + '">' +
@@ -149,7 +149,7 @@ function srClose() { if (SR) { clearTimeout(SR.timer); clearTimeout(SR.wd); } SR
     m0(el);
     const u = unitById(pathSel || store.get('path-sel', '')); if (!u || u.id !== 'storia' || !srEpisodi().length) return;
     const s = srState(), E = srEpisodi(), cur = SR_LIBERI ? Math.max(0, E.findIndex(x => !s.visti[x])) : Math.min(s.aperti, E.length) - 1, b = document.createElement('button');
-    b.type = 'button'; b.className = 'sr-banner'; b.innerHTML = '<span>🎬</span><b>La serie del drago</b><small>Episodio ' + (cur + 1) + ': ' + esc(srNome(E[cur])) + ' ›</small>';
+    b.type = 'button'; b.className = 'sr-banner'; b.innerHTML = '<span>🎬</span><b>La serie di Storia</b><small>Episodio ' + (cur + 1) + ': ' + esc(srNome(E[cur])) + ' ›</small>';
     b.addEventListener('click', () => go('serie'));
     const h = el.querySelector('h1, .m-head'); if (h && h.parentNode) h.parentNode.insertBefore(b, h.nextSibling); else el.prepend(b);
   };

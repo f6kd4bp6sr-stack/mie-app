@@ -23,7 +23,7 @@ SCOPRI.push({
     ['Che cosa possono fare i genitori?', 'Con i controlli parentali possono vedere la lista degli amici e bloccare chi non va bene, scegliere la chat, mettere limiti di tempo e di spesa e bloccare i giochi che non sono adatti.'],
     ['Segnalare e bloccare', 'Se qualcuno scrive cose cattive o strane, puoi bloccarlo e segnalarlo con gli appositi pulsanti di Roblox. E poi dillo sempre a un adulto: non è colpa tua.'],
     ['La regola d’oro dei dati', 'In nessun gioco si danno nome e cognome, indirizzo, scuola, telefono, foto o password. Gli amici veri non te li chiedono.'],
-    ['Quanto tempo giocare?', 'Meglio poco e bene: decidi prima quanto tempo giocare con mamma o papà e usa un timer. Dopo, una pausa movimento: anche il tuo drago apprezza!']
+    ['Quanto tempo giocare?', 'Meglio poco e bene: decidi prima quanto tempo giocare con mamma o papà e usa un timer. Dopo, una pausa movimento: anche il tuo corpo ringrazia!']
   ],
   missions: [
     ['Il mio patto del gioco', 'Scrivi con mamma o papà le tue 3 regole di Roblox: quanto tempo, con chi giocare, cosa fare se qualcosa non ti piace. Appendile vicino all’iPad.'],
@@ -60,6 +60,6 @@ SCOPRI.push({
     S("Che cosa succede se fai una pausa ogni tanto mentre giochi?", "Occhi e testa si riposano e giochi meglio", "Perdi tutti i progressi", "Il gioco si rompe", "Dopo una pausa movimento si torna più concentrate: vale per lo studio e anche per i giochi."),
     S("Perché in Roblox gli oggetti cadono e rimbalzano come nella realtà?", "Perché il motore del gioco simula la fisica", "Per magia", "Perché sono veri", "Il motore di Roblox calcola la gravità e gli urti, un po' come negli esperimenti di scienze!"),
     S("Che cosa puoi imparare creando un gioco su Roblox Studio?", "A programmare e a progettare", "A cucinare", "Una lingua straniera antica", "Costruire un obby insegna geometria, logica e coding: le stesse cose che usano i veri sviluppatori di videogiochi."),
-    S("Se perdi in un gioco, che cosa ricordi?", "Sbagliando si impara: riprovo", "Sono negata", "Il gioco ce l'ha con me", "Anche i giocatori più bravi hanno perso tantissime volte: ogni tentativo è un allenamento, come per il tuo drago.")
+    S("Se perdi in un gioco, che cosa ricordi?", "Sbagliando si impara: riprovo", "Sono negata", "Il gioco ce l'ha con me", "Anche i giocatori più bravi hanno perso tantissime volte: ogni tentativo è un allenamento, come qui con le stelle.")
   ]
 });

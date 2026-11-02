@@ -35,7 +35,7 @@ FORZA.push(
   'La pazienza è la forza segreta dei campioni.',
   'Chiedere aiuto è una cosa da persone coraggiose.',
   'Se ti sembra difficile, vuol dire che stai crescendo.',
-  'Il drago più forte è quello che non si arrende.',
+  'Più forte di tutti è chi non si arrende.',
   'Respira, concentrati e riparti.',
   'Sei capace di molto più di quanto pensi.',
   'Una cosa alla volta, fatta bene, vale più di tante fatte di corsa.',

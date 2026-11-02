@@ -35,7 +35,7 @@ const MOVES = [
       { e: '🫨', n: 'Scuoti tutto', t: 'Scuoti le mani, poi le braccia, poi una gamba e l’altra. Come un cane bagnato!', tip: 'Scuoti via la stanchezza!', d: 15, a: 'shake' },
       { e: '🦘', n: 'Saltelli del canguro', t: 'Piccoli saltelli sul posto a piedi uniti.', tip: 'Atterra morbida: prima le punte, poi tutto il piede, ginocchia piegate.', d: 15, a: 'hop' },
       { e: '🙆‍♀️', n: 'Allunga al cielo', t: 'Intreccia le dita e spingi le mani verso il soffitto. Poi piegati un po’ a destra e a sinistra.', tip: 'Senti la schiena che si allunga.', d: 15, a: 'stretch' },
-      { e: '😮‍💨', n: 'Respiro del drago', t: 'Inspira forte dal naso, poi butta fuori l’aria come un drago che sputa fuoco. Per 3 volte.', tip: 'Il tuo drago respira con te!', d: 15, a: 'belly' }
+      { e: '😮‍💨', n: 'Respiro del drago', t: 'Inspira forte dal naso, poi butta fuori l’aria come un drago che sputa fuoco. Per 3 volte.', tip: 'Respira con calma: sei bravissima!', d: 15, a: 'belly' }
     ] }
 ];
 
@@ -212,8 +212,8 @@ function tryBreak() {
   if (!$('modal').hidden || !$('move').hidden) { setTimeout(tryBreak, 1500); return; }
   breakPending = false;
   const m = pick(MOVES);
-  const txt = 'Pausa del drago! Hai studiato tanto: 2 minuti di movimento sul posto e poi riprendiamo con il cervello pieno di energia.';
-  openModal('<div>' + dragonSVG(levelOf(D.energy), D.color, 'bob') + '</div><div class="big">Pausa del drago!</div>' +
+  const txt = 'Pausa movimento! Hai studiato tanto: 2 minuti di movimento sul posto e poi riprendiamo con il cervello pieno di energia.';
+  openModal('<div>' + dragonSVG(levelOf(D.energy), D.color, 'bob') + '</div><div class="big">Pausa movimento!</div>' +
     '<p>' + esc(txt) + '</p><p style="font-size:20px">' + m.ic + ' ' + esc(m.name) + '</p>' +
     '<div class="row"><button type="button" class="btn" id="brk-go" data-focus style="--bc:' + m.c + ';--bs:' + m.s + '">Muoviamoci! 🤸‍♀️</button>' +
     '<button type="button" class="btn ghost" id="brk-later">Tra 5 minuti</button>' + sayBtn(txt) + '</div>', [m.c, m.s]);
@@ -266,7 +266,7 @@ function startMove(id, fromBreak) {
     const s = store.get('brk', { n: 0, last: 0 }); s.n = 0; s.last = Date.now(); store.set('brk', s);
     const cnt = store.get('moves-done', 0) + 1; store.set('moves-done', cnt);
     $('move-box').innerHTML = '<div class="mv-fig" id="mv-fig"></div><div class="mv-name">🏅 Che energia, ' + NAME + '!</div>' +
-      '<p class="mv-text">Il corpo si è svegliato e il cervello è pieno di ossigeno. ' + esc(D.name) + ' ha preso +5 🔥!</p>' +
+      '<p class="mv-text">Il corpo si è svegliato e il cervello è pieno di ossigeno. Hai guadagnato +5 ⭐!</p>' +
       '<p class="mv-tip">Pause movimento fatte: ' + cnt + '</p>' +
       '<div class="row center"><button type="button" class="btn" id="mv-end" style="--bc:var(--mvc);--bs:var(--mvs)">' + (fromBreak ? 'Riprendo a studiare! 📚' : 'Fatto!') + '</button></div>';
     Girl.set('jump', false, m.c);
@@ -308,7 +308,7 @@ PAGES.sport = el => {
     '<div class="sec">' + secHead('📅', 'La mia settimana sportiva', 'Le borse da preparare sono nella scheda Routine', 'var(--c3-soft)') +
     '<div class="grid2">' + ROUTINES.filter(r => r.day !== undefined).map(r => '<div class="card" style="--kc:' + r.c + ';--ks:' + r.s + ';display:flex;gap:14px;align-items:center' + (new Date().getDay() === r.day ? ';background:' + r.s : '') + '"><span style="font-size:46px" aria-hidden="true">' + r.ic + '</span><div style="min-width:0"><div style="font-family:var(--font-display);font-weight:800;font-size:22px;text-transform:capitalize">' + GIORNI[r.day] + (new Date().getDay() === r.day ? ' · oggi!' : '') + '</div><div style="font-weight:800">' + esc(r.sport) + '</div></div></div>').join('') + '</div></div>' +
     '<div class="sec">' + secHead('🤸‍♀️', 'Pause movimento', 'Tutorial sul posto di 1–2 minuti. Pause fatte: ' + cnt, 'var(--c2-soft)') + '<div class="row" style="margin:4px 0 12px"><button type="button" class="btn small" id="sp-cust" style="--bc:var(--c6)">👧 Rendi la bambina simile a te</button></div>' + '<div id="sp-moves"></div>' +
-    '<p style="font-weight:700;color:var(--ink-soft);margin:12px 0 0">Mentre studi, il drago ti proporrà una pausa da solo ogni tanto. Ogni pausa vale +5 🔥.</p></div>' +
+    '<p style="font-weight:700;color:var(--ink-soft);margin:12px 0 0">Mentre studi, ogni tanto ti viene proposta una pausa. Ogni pausa vale +5 ⭐.</p></div>' +
     '<div class="sec">' + secHead('🏅', 'Curiosità da campionessa', 'Scegli uno sport', 'var(--c5-soft)') + '<div id="sp-tiles"></div><div id="sp-panel"></div></div>';
   renderTiles($('sp-moves'), MOVES.map(m => ({ id: m.id, ic: m.ic, name: m.name, sk: m.sk, c: m.c, s: m.s })), null, id => startMove(id, false));
   if ($('sp-cust')) $('sp-cust').addEventListener('click', () => openCustomize('bimba'));

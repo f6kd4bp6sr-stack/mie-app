@@ -88,8 +88,8 @@ const TRIP_Q = ['Che cosa abbiamo fatto?', 'La cosa che mi è piaciuta di più�
 const tripNote = (day, id) => ((diary()[day] || {}).ev || {})[id] || null;
 function openTripNote(day, id, title, onDone, noPrize) {
   const old = tripNote(day, id), a = (old && old.a) || [];
-  openModal('<div class="big" style="font-size:24px">📝 Com’è andata?</div><p style="font-weight:800;margin:4px 0">' + esc(title) + ' · ' + esc(fmtDay(day)) + '</p><p class="df-ask">Rispondi solo a quello che vuoi, con parole tue. ' + esc(D.name) + ' è curioso!</p>' +
-    '<p class="note-s">Con almeno 5 parole ' + esc(D.name) + ' prende +3 🔥.</p>' + TRIP_Q.map((q, k) => '<label class="cl-lab">' + esc(q) + '<textarea id="tn-' + k + '" rows="2" maxlength="300">' + esc(a[k] || '') + '</textarea></label>').join('') +
+  openModal('<div class="big" style="font-size:24px">📝 Com’è andata?</div><p style="font-weight:800;margin:4px 0">' + esc(title) + ' · ' + esc(fmtDay(day)) + '</p><p class="df-ask">Rispondi solo a quello che vuoi, con parole tue.</p>' +
+    '<p class="note-s">Con almeno 5 parole guadagni +3 ⭐.</p>' + TRIP_Q.map((q, k) => '<label class="cl-lab">' + esc(q) + '<textarea id="tn-' + k + '" rows="2" maxlength="300">' + esc(a[k] || '') + '</textarea></label>').join('') +
     '<div class="sp-row"><button type="button" class="btn ghost" id="tn-x">Chiudi</button><button type="button" class="btn" id="tn-ok" style="--bc:var(--c1)">Salva nel diario</button></div>', ['var(--c1)', 'var(--c1-soft)']);
   $('tn-x').addEventListener('click', closeModal);
   $('tn-ok').addEventListener('click', () => {
@@ -102,7 +102,7 @@ function openTripNote(day, id, title, onDone, noPrize) {
     e.ev[id] = { t: title, a: ans, r: paid || !first ? 1 : 0 }; all[day] = e; store.set('diary', all);
     if (paid) gain(3, $('tn-ok'));
     ding(); closeModal();
-    toastV2(D.name + ': grazie per avermelo raccontato! Scrivere aiuta a ricordare. 🐉');
+    toastV2('Grazie per avermelo raccontato! Scrivere aiuta a ricordare. 💛');
     if (onDone) onDone();
   });
 }
@@ -182,13 +182,13 @@ function dayForm(box, key, onSaved) {
   render();
 }
 function dragonReply(e) {
-  const m = moodOf(e.m), nm = D.name;
+  const m = moodOf(e.m);
   if (!m) return e.nx ? 'Che bella nota! Rileggerla tra qualche mese sarà come aprire una scatola di ricordi.' : 'Segnato! Grazie, ' + NAME + '.';
-  if (m.k === 'up') return 'Evviva! ' + nm + ' fa una capriola di gioia. Quando racconti le cose belle, le vivi due volte!';
+  if (m.k === 'up') return 'Evviva! Che bella notizia. Quando racconti le cose belle, le vivi due volte!';
   if (m.k === 'mid') return 'Grazie di avermelo detto. Anche le giornate normali sono importanti: domani sarà una pagina nuova.';
-  if (m.k === 'tired') return 'Anche i draghi si stancano! Stasera nanna presto: il sonno ricarica il corpo e il cervello.';
+  if (m.k === 'tired') return 'Anche i campioni si stancano! Stasera nanna presto: il sonno ricarica il corpo e il cervello.';
   const st = downStreak();
-  if (st >= 3) return 'Sono ' + st + ' giorni che ti senti giù. ' + nm + ' ti è vicino e ti chiede una cosa coraggiosa: racconta oggi a mamma o papà quello che hai scritto. Dirlo forte è il primo passo per stare meglio. 💜';
+  if (st >= 3) return 'Sono ' + st + ' giorni che ti senti giù. Un grande abbraccio. Ti chiedo una cosa coraggiosa: racconta oggi a mamma o papà quello che hai scritto. Dirlo forte è il primo passo per stare meglio. 💜';
   return 'Grazie per avermelo detto: ci vuole coraggio. Le emozioni difficili passano, come le nuvole. Raccontalo anche a mamma o papà: un abbraccio aiuta.';
 }
 
@@ -215,16 +215,16 @@ PAGES.diario = el => {
   const st = downStreak();
   el.innerHTML =
     '<h1 class="page-title rainbow">Il mio diario</h1>' +
-    '<p class="page-sub">Il calendario della scuola, le vacanze e le tue emozioni giorno per giorno. Ogni volta che dici come ti senti, ' + esc(D.name) + ' prende energia.</p>' +
+    '<p class="page-sub">Il calendario della scuola, le vacanze e le tue emozioni giorno per giorno. Ogni volta che dici come ti senti, guadagni ⭐.</p>' +
     '<div class="countdown">' + hero + '</div>' +
     '<div class="grid2" style="margin-top:18px;align-items:start">' +
       '<div class="card" style="--kc:var(--c1);--ks:var(--c1-soft)">' + secHead('✏️', 'Oggi, ' + fmtDay(t), isSchoolDay(t) ? 'Giorno di scuola' : (holOf(t) ? holOf(t).n : 'Niente scuola'), 'var(--c1-soft)') +
         '<div id="d-form"></div><div id="d-reply"></div></div>' +
       '<div style="display:grid;gap:16px;min-width:0">' +
         (st >= 3 ? '<div class="card" style="--kc:var(--c6);--ks:var(--c6-soft)">' + secHead('💜', 'Da ' + st + ' giorni ti senti giù', 'Succede a tutti. Adesso però è il momento di dirlo più forte.', 'var(--c6-soft)') +
-          '<ul class="feel-list"><li><b>Dillo ad alta voce</b> a mamma, papà o alla maestra: «Da qualche giorno mi sento… perché…».</li><li><b>Disegna</b> la tua emozione: che colore ha? che forma?</li><li><b>Scrivi una lettera a ' + esc(D.name) + '</b> nel campo «Perché?», più lunga del solito.</li><li><b>Fai 3 respiri del drago</b> e una pausa movimento: il corpo aiuta la testa.</li></ul>' +
+          '<ul class="feel-list"><li><b>Dillo ad alta voce</b> a mamma, papà o alla maestra: «Da qualche giorno mi sento… perché…».</li><li><b>Disegna</b> la tua emozione: che colore ha? che forma?</li><li><b>Scrivi una lettera a te stessa</b> nel campo «Perché?», più lunga del solito.</li><li><b>Fai 3 respiri del drago</b> e una pausa movimento: il corpo aiuta la testa.</li></ul>' +
           '<p style="font-weight:800;margin:8px 0 0">Non devi tenerti tutto dentro: chi ti vuole bene vuole saperlo. 🤗</p></div>' : '') +
-        '<div class="den mini-den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '"><div style="width:110px;flex:none">' + dragonSVG(lv, D.color, 'bob') + '</div><div style="min-width:0"><b>' + esc(D.name) + ' ascolta</b><p>Ogni emozione che racconti dà <b>+2 🔥</b>, se scrivi anche il perché <b>+3 🔥</b>, la <b>📝 nota del giorno</b> altri <b>+3 🔥</b> e il racconto di un’uscita <b>+3 🔥</b>. Felice o triste vale uguale: conta il coraggio di dirlo.</p></div></div>' +
+        '<div class="den mini-den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '"><div style="width:110px;flex:none">' + dragonSVG(lv, D.color, 'bob') + '</div><div style="min-width:0"><b>Ti ascolto</b><p>Ogni emozione che racconti dà <b>+2 ⭐</b>, se scrivi anche il perché <b>+3 ⭐</b>, la <b>📝 nota del giorno</b> altri <b>+3 ⭐</b> e il racconto di un’uscita <b>+3 ⭐</b>. Felice o triste vale uguale: conta il coraggio di dirlo.</p></div></div>' +
         '<div class="card" id="d-trips-card" hidden>' + secHead('🚌', 'Com’è andata?', 'Racconta le uscite e gli appuntamenti della classe', 'var(--c4-soft)') + '<div id="d-trips"></div></div>' +
         '<div class="card">' + secHead('📒', 'Le mie note', 'Quello che hai scritto per pensarci su', 'var(--c2-soft)') + '<div id="d-notes"></div></div>' +
         '<div class="card">' + secHead('🧠', 'Le emozioni sono normali', 'Toccane una per scoprire di più', 'var(--c5-soft)') + '<div id="d-facts"></div></div>' +
@@ -243,7 +243,7 @@ PAGES.diario = el => {
     '</div>';
 
   renderFacts($('d-facts'), FEEL_FACTS, 'feel');
-  const reply = r => { $('d-reply').innerHTML = '<div class="explain" style="background:var(--c3-soft);text-align:left;margin-top:12px"><b>' + esc(D.name) + ':</b> ' + esc(r) + ' ' + sayBtn(r) + '</div>'; };
+  const reply = r => { $('d-reply').innerHTML = '<div class="explain" style="background:var(--c3-soft);text-align:left;margin-top:12px"><b>' + AV() + '</b> ' + esc(r) + ' ' + sayBtn(r) + '</div>'; };
   const startForm = () => dayForm($('d-form'), t, e => { if (e.m && moodOf(e.m).k === 'up') confetti(window.innerWidth / 2, window.innerHeight / 3, 24); drawCal(); stats(); notes(); reply(dragonReply(e)); });
   function notes() {
     const L = diaryNotes();
@@ -320,7 +320,7 @@ function homeDiaryCard() {
   const t = todayIso(), { cur, next } = nextHoliday(t), e = diary()[t];
   const line = cur ? cur.ic + ' Sei in vacanza: ' + cur.n + '!' : next ? next.ic + ' ' + (daysBetween(t, next.s) === 1 ? 'Domani: ' + next.n + '!' : 'Mancano ' + daysBetween(t, next.s) + ' giorni a: ' + next.n) : '📅 Diario';
   const P = typeof clPending === 'function' ? clPending() : [];
-  const sub = P.length ? '🚌 Com’è andata: ' + P[0].t + '? Scrivilo nel diario' : e && e.m && !e.nx ? '📝 ' + noteQOf(t) : e && e.m ? 'Oggi ti senti ' + moodOf(e.m).n.toLowerCase() + ' ' + moodOf(e.m).ic + ' · tocca per il diario' : 'Come ti senti oggi? Raccontalo a ' + D.name + ' 💬';
+  const sub = P.length ? '🚌 Com’è andata: ' + P[0].t + '? Scrivilo nel diario' : e && e.m && !e.nx ? '📝 ' + noteQOf(t) : e && e.m ? 'Oggi ti senti ' + moodOf(e.m).n.toLowerCase() + ' ' + moodOf(e.m).ic + ' · tocca per il diario' : 'Come ti senti oggi? Raccontalo nel diario 💬';
   return '<button type="button" class="today" id="h-diary" style="--ts:var(--c1-soft);border-color:var(--c1)"><span class="ic" aria-hidden="true">📅</span><span class="tx">' + esc(line) + '<small>' + esc(sub) + '</small></span><span class="st" aria-hidden="true">→</span></button>';
 }
 

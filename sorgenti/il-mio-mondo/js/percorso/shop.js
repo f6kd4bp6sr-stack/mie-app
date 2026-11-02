@@ -68,7 +68,7 @@ function openShop() {
   openModal('<div class="big" style="font-size:28px">🛍️ Il negozio</div>' +
     '<p style="font-weight:700;color:var(--ink-soft)">Hai <b style="color:var(--c6)">💎 ' + g + ' gemme</b>. Si guadagnano nel percorso: di più quando ci pensi con calma! 🧠</p>' +
     (typeof piggyCard === 'function' ? piggyCard() : '') +
-    '<div class="row center" style="gap:8px;margin-top:10px"><button type="button" class="chip" data-st="g" aria-pressed="' + (shopTab === 'g') + '">👧 Per te</button><button type="button" class="chip" data-st="d" aria-pressed="' + (shopTab === 'd') + '">🐉 Per il drago</button><button type="button" class="chip" data-st="t" aria-pressed="' + (shopTab === 't') + '">🗺️ Percorsi</button></div>' +
+    '<div class="row center" style="gap:8px;margin-top:10px"><button type="button" class="chip" data-st="g" aria-pressed="' + (shopTab === 'g') + '">👧 Per te</button><button type="button" class="chip" data-st="d" aria-pressed="' + (shopTab === 'd') + '">' + AV() + ' Per il tuo avatar</button><button type="button" class="chip" data-st="t" aria-pressed="' + (shopTab === 't') + '">🗺️ Percorsi</button></div>' +
     '<div class="shop-wrap"><div class="shop-prev" id="shop-prev"></div><div class="shop-grid">' + items.map(it => {
       const have = owned.includes(it.id), eq = have && shopEquipped(it), ok = shopReqOk(it), isGoal = Piggy.get().goal === it.id;
       return '<div class="shop-it' + (eq ? ' eq' : '') + (it.req ? ' special' : '') + '"><div class="si-ic">' + it.ic + '</div><div class="si-n">' + esc(it.n) + '</div>' +

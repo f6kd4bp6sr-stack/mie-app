@@ -79,7 +79,7 @@ const DIS_PROG = [
       { t: 'La coda è una curva lunga che finisce a punta.', g: [['p', 'M340 600 Q180 640 160 760 Q150 820 230 800'], ['p', 'M224 776 L236 824 L279 788 Z']] },
       { t: 'Le zampe sono ovali piccoli sotto il corpo.', g: [['e', 470, 710, 45, 60], ['e', 660, 710, 45, 60]] },
       { t: 'Ultimi dettagli: occhio, narice e una fila di spine a triangolo sulla schiena.', g: [['c', 860, 245, 14], ['c', 1000, 280, 6], ['p', 'M349 498 L332 459 L373 471 M381 465 L376 422 L415 443 M424 438 L431 394 L466 422 M545 411 L565 371 L585 411']] },
-      { t: 'Colora il tuo drago con i colori che preferisci.', g: [['dot', 560, 580, '#2e9e44', 'drago']], tool: 'secchiello', col: 'verde' }
+      { t: 'Colora il drago con i colori che preferisci.', g: [['dot', 560, 580, '#2e9e44', 'drago']], tool: 'secchiello', col: 'verde' }
     ] },
   /* 🌳 dal libro «Disegnare un albero» di Bruno Munari (Arte → Bruno Munari) */
   { id: 'd107', f: 'linee', lv: 2, ic: '🌳', n: 'L’albero di Munari', tool: 'matita', col: 'nero', impara: 'la regola di Munari: ogni ramo è più sottile del ramo da cui nasce',
@@ -237,4 +237,4 @@ const DIS_PROG = [
     ] }
 ];
 /* idee per la tela libera */
-const DIS_IDEE = ['il tuo drago che vola sopra la città', 'la tua colazione preferita', 'un animale che non esiste, metà gatto e metà pesce', 'la vista dalla tua finestra', 'un albero nelle quattro stagioni', 'il tuo zaino e quello che c’è dentro', 'una casa sull’albero', 'un mostriciattolo simpatico', 'un paesaggio con un tramonto', 'il ritratto di qualcuno che ti vuole bene', 'una pianta del giardino, guardandola dal vero', 'una città nel futuro', 'il fondo del mare', 'la tua mano, guardandola mentre la disegni', 'tre frutti su un tavolo con le loro ombre'];
+const DIS_IDEE = ['un drago che vola sopra la città', 'la tua colazione preferita', 'un animale che non esiste, metà gatto e metà pesce', 'la vista dalla tua finestra', 'un albero nelle quattro stagioni', 'il tuo zaino e quello che c’è dentro', 'una casa sull’albero', 'un mostriciattolo simpatico', 'un paesaggio con un tramonto', 'il ritratto di qualcuno che ti vuole bene', 'una pianta del giardino, guardandola dal vero', 'una città nel futuro', 'il fondo del mare', 'la tua mano, guardandola mentre la disegni', 'tre frutti su un tavolo con le loro ombre'];

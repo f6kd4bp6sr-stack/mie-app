@@ -44,7 +44,7 @@ SCOPRI.push({
     ["E in scienze?", "Spesso si parte dal metodo scientifico: osservare, fare un'ipotesi, sperimentare, concludere. Poi materia, calore e temperatura, cellule e classificazione dei viventi."],
     ["A che cosa serve il diario?", "A scrivere compiti, verifiche e interrogazioni nel giorno giusto. Molte scuole hanno anche il registro elettronico, ma il diario controllato ogni sera è il tuo migliore amico."],
     ["Come si preparano le verifiche?", "Dividendo lo studio in più giorni: un pezzetto oggi, un pezzetto domani, e il giorno prima solo ripasso. Studiare tutto la sera prima funziona male per tutti."],
-    ["Come ci si allena per le interrogazioni?", "Spiegando a voce alta, come se fossi tu la maestra: a mamma, a papà, o al tuo drago! Se riesci a spiegarlo, lo sai davvero."],
+    ["Come ci si allena per le interrogazioni?", "Spiegando a voce alta, come se fossi tu la maestra: a mamma, a papà, o a un pupazzo! Se riesci a spiegarlo, lo sai davvero."],
     ["Il mio metodo funziona anche alle medie?", "Sì! Ripescare dalla memoria, ripassare a distanza di giorni, fare schemi e pause di movimento: sono i trucchi che usano anche gli studenti più grandi."],
     ["E se all'inizio mi sento confusa?", "È normalissimo: tutti in prima media hanno bisogno di qualche settimana per abituarsi. Chiedere aiuto agli insegnanti è una cosa da persone forti."]
   ],

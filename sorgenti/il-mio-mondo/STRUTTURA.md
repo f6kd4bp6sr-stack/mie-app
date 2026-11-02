@@ -15,7 +15,7 @@ app/
 │   └── festa.css       la festa di compleanno
 ├── js/
 │   ├── lib/            librerie esterne (generatore QR, licenza)
-│   ├── core/           base: salvataggi e drago (core, cloud), progressi, notifiche, sfondi,
+│   ├── core/           base: salvataggi e avatar (core: MASCOTTE='avatar', AV(), avatarSVG, stelle ⭐ in D.energy; dati ancora in mm2-dragon) (core, cloud), progressi, notifiche, sfondi,
 │   │                   musica, microfono (mic: registra e riascolta), guscio dell'app (shell), avvio (boot),
 │   │                   applicatore delle correzioni
 │   ├── sezioni/        routine, giochi, matematica, scienze, sport, scopri, diario, orologio, schede,
@@ -28,7 +28,7 @@ app/
 ├── tools/sorgenti_pubbliche.py  copia le sorgenti in /sorgenti/il-mio-mondo/ del repository (senza revisioni di lavoro, con controllo dei dati personali)
 ├── README.md           memoria dell'app: indirizzo, dati sul dispositivo, collegamenti, regole
 ├── data/
-│   ├── domande/serie.js  🎬 la serie del drago: ordine degli episodi (programma di 5ª) (video archiviati; codice di approvazione ancora presente, vid-ok; js/sezioni/serie.js, css/serie.css; progressi in serie-storia)
+│   ├── domande/serie.js  🎬 la serie di Storia: ordine degli episodi (programma di 5ª) (video archiviati; codice di approvazione ancora presente, vid-ok; js/sezioni/serie.js, css/serie.css; progressi in serie-storia)
 │   ├── domande/cartoni.js  🎨 cartoni disegnati della serie: una scena SVG animata per ogni frase del racconto (le parole restano quelle verificate in SPIEGA; se manca la scena si vede l'icona). Tutti i 12 episodi di Storia: cartoni.js (aiutanti CH + Torino), cartoni-grecia.js, cartoni-roma.js. I video YouTube sono archiviati in data/_archivio/serie-video.json (non entra nel sito)
 │   (🔗 inviti WhatsApp: docs/episodi/ → /episodi/index.html e /episodi/N.html con anteprima img/N.jpg; si rigenerano con node tools/episodi.js; nell'app #serie e #serie=N aprono la serie o l'episodio N se già aperto)
 │   ├── spiegazioni/    racconto + mappa concettuale per argomento (198, tutta La mia scuola; mappe raggiera, ciclo, linea, scala; «solo» = da guardare insieme), controllati da tools/controlla.py

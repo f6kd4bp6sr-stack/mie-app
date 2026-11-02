@@ -93,19 +93,19 @@ function dilloTu(el, phrase, opts) {
   const can = Mic.canRecord();
   let state = 'idle', doneOnce = false;
   const paint = () => {
-    el.innerHTML = '<div class="dt"><div class="dt-h">🎙️ <b>Dillo tu!</b> <span>Ascolta il drago, poi registra la tua voce e confrontale.</span></div>' +
+    el.innerHTML = '<div class="dt"><div class="dt-h">🎙️ <b>Dillo tu!</b> <span>Ascolta la voce, poi registra la tua voce e confrontale.</span></div>' +
       (opts.noPhrase ? '' : '<div class="dt-phrase">' + esc(phrase) + '</div>') +
       '<div class="dt-row">' +
-        '<button type="button" class="btn small ghost" data-dt="drago">🐉 Drago</button>' +
+        '<button type="button" class="btn small ghost" data-dt="drago">🔊 Voce</button>' +
         '<button type="button" class="btn small ghost" data-dt="piano">🐢 Piano</button>' +
         (can ? (state === 'rec' ? '<button type="button" class="btn small dt-rec on" data-dt="stop">⏹️ Fine</button>'
           : '<button type="button" class="btn small dt-rec" data-dt="rec">' + (state === 'have' ? '🔁 Di nuovo' : '🎙️ Registra') + '</button>') : '') +
-        (can && state === 'have' ? '<button type="button" class="btn small" data-dt="me">▶️ Io</button><button type="button" class="btn small ghost" data-dt="both">🐉 + ▶️</button>' : '') +
+        (can && state === 'have' ? '<button type="button" class="btn small" data-dt="me">▶️ Io</button><button type="button" class="btn small ghost" data-dt="both">🔊 + ▶️</button>' : '') +
       '</div>' +
       (state === 'rec' ? '<div class="dt-live">🔴 Sto ascoltando… di’ la frase, poi tocca Fine</div>' : '') +
-      (state === 'have' ? '<div class="dt-ask">Assomiglia a quella del drago? <button type="button" class="btn small" data-dt="si">👍 Sì!</button><button type="button" class="btn small ghost" data-dt="rec">🔁 Riprovo</button></div>' : '') +
-      (state === 'nomic' ? '<div class="dt-note">Il microfono non è disponibile: ripeti la frase ad alta voce insieme al drago. 🗣️</div>' : '') +
-      (!can ? '<div class="dt-note">Ripeti la frase ad alta voce insieme al drago. 🗣️</div>' : '') +
+      (state === 'have' ? '<div class="dt-ask">Assomiglia a quella che hai ascoltato? <button type="button" class="btn small" data-dt="si">👍 Sì!</button><button type="button" class="btn small ghost" data-dt="rec">🔁 Riprovo</button></div>' : '') +
+      (state === 'nomic' ? '<div class="dt-note">Il microfono non è disponibile: ripeti la frase ad alta voce insieme alla voce. 🗣️</div>' : '') +
+      (!can ? '<div class="dt-note">Ripeti la frase ad alta voce insieme alla voce. 🗣️</div>' : '') +
       (state === 'ok' ? '<div class="dt-ok">🌟 Bravissima! Ripeterla ad alta voce la fa ricordare meglio.</div>' : '') +
       '<div class="dt-priv">🔒 La registrazione resta su questo iPad e si cancella da sola.</div></div>';
   };

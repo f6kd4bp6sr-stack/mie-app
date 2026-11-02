@@ -80,7 +80,7 @@ PAGES.routine = el => {
   if (!routineSel) { const h = new Date().getHours(); routineSel = h < 11 ? 'mattino' : h < 18 ? 'compiti' : 'sera'; const sp = sportToday(); if (sp && ((sp.when === 'oggi' && h >= 11 && h < 18) || sp.when === 'domani')) routineSel = sp.r.id; }
   const st = routineState();
   el.innerHTML = '<h1 class="page-title rainbow">Le routine di ' + esc(CHI) + '</h1>' +
-    '<p class="page-sub">Tocca ogni tappa quando l’hai fatta. Ogni tappa dà energia a ' + esc(D.name) + '! Le spunte ripartono da zero ogni giorno.</p>' +
+    '<p class="page-sub">Tocca ogni tappa quando l’hai fatta. Ogni tappa ti fa guadagnare ⭐! Le spunte ripartono da zero ogni giorno.</p>' +
     '<div class="sec"><div id="r-tiles"></div></div><div id="r-panel"></div>';
   const sp = sportToday();
   const list = ROUTINES.map(r => ({ ...r, sk: r.day !== undefined && sp && sp.r.id === r.id ? '⭐ Serve ' + sp.when + '!' : r.sk, ok: (st.done[r.id] || []).length === r.steps.length ? '✓ fatta oggi' : (st.done[r.id] || []).length + '/' + r.steps.length + ' oggi' }));
