@@ -1,6 +1,6 @@
 {
  "app": "pianificazione-occasioni",
- "updated": "2026-10-26T13:05+01:00",
+ "updated": "2026-11-02T13:05:00+01:00",
  "nota": "Volontariato a Torino con molto contatto con le persone. Solo informazioni pubbliche, con fonte e data del controllo; niente consigli. Esclusi i gruppi legati al lavoro e alla categoria.",
  "voci": [
   {
@@ -17,7 +17,7 @@
    ],
    "fonte": "Vol.To",
    "url": "https://volontariatotorino.it/diventa-volontario/",
-   "ctrl": "2026-10-26"
+   "ctrl": "2026-11-02"
   },
   {
    "id": "senior-civico",
@@ -370,6 +370,10 @@
   {
    "at": "2026-10-26T13:05+01:00",
    "note": "giro del lunedì: ricontrollate 14 voci sulle pagine ufficiali, nessuna tolta; corretto l'impegno di Special Olympics (opportunità a breve e a lungo termine); non raggiungibili le pagine di comune.torino.it e bct.comune.torino.it (Senior Civico, Biblioteche civiche, Reti solidali anziani: accesso bloccato, data di controllo invariata) e, per errore del sito, gli annunci Vol.To cene via Ghedini e accoglienza Molinette (lasciati). Nessun annuncio scaduto; aggiunti 2 annunci Vol.To: accompagnamenti SEA in Circoscrizione 2 e accompagnamenti solidali CPD."
+  },
+  {
+   "at": "2026-11-02T13:05:00+01:00",
+   "note": "giro del lunedì: riletti Vol.To (recapiti invariati: via Giolitti 21, 011 81 38 711, 800 59 00 00) e Colletta Alimentare (sabato 14/11/2026, modulo online, volontari.colletta@bancoalimentare.it, 02 8965 8459); la bacheca annunci di Vol.To non era leggibile (verifica anti-bot), annunci e altre voci non ricontrollati e lasciati invariati; nessuna voce nuova o tolta"
   }
  ]
 }

@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-01T13:05:00+01:00",
+ "updated": "2026-11-02T13:05:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
@@ -320,7 +320,7 @@
    "id": "dpr2527",
    "t": "DPR di recepimento del contratto 2025-2027 in Gazzetta Ufficiale",
    "stato": "atteso",
-   "quando": "non ancora in Gazzetta al 1/11/2026 (nessun DPR nelle S.G. fino alla n. 254 del 31/10); attesa entro la prima metà di novembre 2026 (previsione SIULP)",
+   "quando": "non ancora in Gazzetta al 2/11/2026 (nessun DPR nelle S.G. fino alla n. 254 del 31/10); attesa entro la prima metà di novembre 2026 (previsione SIULP)",
    "fonte": "SIULP",
    "url": "https://siulp.it/articolo/pubblicazione-del-dpr-di-recepimento-del-contratto-di-lavoro-per-gli-anni-2025-2027/",
    "valore": null
@@ -359,7 +359,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-01T13:05:00+01:00",
+   "ultimo": "2026-11-02",
    "esito": "ok"
   },
   {
@@ -471,14 +471,14 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-01T13:05:00+01:00",
+   "ultimo": "2026-11-02",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-01T13:05:00+01:00",
+   "ultimo": "2026-11-02",
    "esito": "ok"
   },
   {
@@ -492,7 +492,7 @@
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-11-02",
    "esito": "ok"
   },
   {
@@ -653,7 +653,7 @@
    "n": "ANSA",
    "url": "https://www.ansa.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-11-02",
    "esito": "ok"
   },
   {
@@ -874,6 +874,11 @@
    "at": "2026-11-01T13:05:00+01:00",
    "notizie": 0,
    "note": "giro delle 13 (domenica 1/11): nessuna notizia nuova; corretta una voce e aggiunta una seconda fonte a un'altra con il SILF (31/10): FESI GdF 17.614.492 € (+16%), assunzioni 6+36+18, TFS dal 2028 con fine rateizzazione nel 2035. Gazzetta: ultimo numero S.G. n. 254 del 31/10, DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. USIF (ultimo comunicato 19/10) senza novità; SILF: 28/10 coefficienti e 31/10 ddl bilancio; INPS: ultimo messaggio n. 3484 del 29/10, non sul tema; NoiPA, MEF, Funzione Pubblica e GdF senza novità nelle ricerche sul sito. Domenica, mercati chiusi: BTP, BCE, inflazione e BBVA invariati; conti deposito riletti su conti-deposito.net, invariati. Nessuna nuova emissione retail MEF. Volontariato: non è lunedì. Cultura digitale: fatta (2 voci). Scheda invariata. Non ricontrollati Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-11-02T13:05:00+01:00",
+   "notizie": 0,
+   "note": "giro delle 13 (lunedì 2/11): nessuna notizia nuova. Gazzetta: ultimo numero leggibile S.G. n. 254 del 31/10, DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. SILF (ultimo 31/10 ddl bilancio), USIF (ultimo 19/10) e SIULP (ultimo 30/10) senza comunicati nuovi su contratto o pensione; INPS: ricerca sul sito senza messaggi nuovi sul tema. Mercati: BTP 10 anni Trading Economics 4,49% (30/10), invariato; conti deposito riletti su conti-deposito.net (2/11), invariati (libero: 3,50% Revolut promozionale, non banca italiana, escluso). Prodotti invariati. Volontariato fatto. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, Funzione Pubblica, MEF"
   }
  ],
  "mercati": [
@@ -925,7 +930,7 @@
    "fonte": "ANSA, chiusura del 30/10",
    "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/30/lo-spread-tra-btp-e-bund-chiude-in-lieve-rialzo-a-118-punti-base_9c1ccf87-639a-4602-8527-9c9ec1842183.html",
    "unita": "%",
-   "nota": "chiusura 30/10: 4,51% (spread 118 punti), anche SoldiOnline; Trading Economics 4,53%; all'asta del 29/10 il BTP 4% ottobre 2036 è stato collocato al 4,49% (OraFinanza)"
+   "nota": "chiusura 30/10: 4,51% (spread 118 punti), anche SoldiOnline; Trading Economics 4,53%; all'asta del 29/10 il BTP 4% ottobre 2036 è stato collocato al 4,49% (OraFinanza) Trading Economics 4,49% al 30/10 (coincide entro 0,05)."
   },
   {
    "id": "btpv",
@@ -941,7 +946,7 @@
    "id": "cdl",
    "t": "Conto deposito libero, miglior tasso lordo",
    "valore": 3.25,
-   "d": "2026-11-01",
+   "d": "2026-11-02",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/miglior-conto-deposito-libero.php",
    "nota": "tasso promozionale: Conto deposito X Risparmio Flexi, Banca AideXa (Revolut Bank UAB al 3,50% non è una banca italiana del Fondo Interbancario)",
@@ -951,7 +956,7 @@
    "id": "cd12",
    "t": "Conto deposito vincolato 12 mesi, miglior tasso lordo",
    "valore": 4.0,
-   "d": "2026-11-01",
+   "d": "2026-11-02",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -960,7 +965,7 @@
    "id": "cd24",
    "t": "Conto deposito vincolato 24 mesi, miglior tasso lordo",
    "valore": 4.0,
-   "d": "2026-11-01",
+   "d": "2026-11-02",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -969,7 +974,7 @@
    "id": "cd36",
    "t": "Conto deposito vincolato 36 mesi, miglior tasso lordo",
    "valore": 3.75,
-   "d": "2026-11-01",
+   "d": "2026-11-02",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
