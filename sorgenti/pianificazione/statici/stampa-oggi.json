@@ -1,171 +1,148 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-02T05:55+01:00",
-  "nota": "Edizione della mattina del 2 novembre. Alcune notizie di sabato e domenica restano incluse perché ancora al centro della giornata.",
+  "edizione": "sera",
+  "updated": "2026-11-02T21:55+01:00",
+  "nota": "Edizione della sera del 2 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-manovra-scuola",
-        "t": "Manovra, scontro sulla scuola: circa 7mila posti in meno; Cgil sciopera il 20 novembre",
-        "s": "Il testo prevede circa 7mila posti in meno nell'istruzione. Opposizioni, sindacati ed enti locali criticano le misure, mentre si rivede il riparto dei fondi per gli asili nido. La Cgil ha proclamato lo sciopero generale per il 20 novembre.",
-        "d": "2026-10-31",
+        "id": "it-bosnia-salme",
+        "t": "Elicottero caduto in Bosnia: le salme dei quattro militari a Ciampino, domani i funerali",
+        "s": "Le salme dei quattro caduti dell'incidente del 29 ottobre, durante la missione Eufor Althea, sono arrivate a Ciampino, accolte da Meloni e Crosetto. I funerali solenni sono previsti domani nella basilica di Santa Maria degli Angeli. Eufor e la Procura militare di Roma indagano sulle cause.",
+        "d": "2026-11-02",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/10/31/manovra-scontro-sulla-scuola.-banche-ancora-sotto-tiro_ff019702-1b62-4f1a-8c3d-ca9b9e0ad8cb.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/10/31/manovra-le-principali-misure-in-pillole_f5cb7876-7b38-43ac-b235-f21dc2593c8c.html"
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/cronaca/bosnia-militari-italiani-morti-rientro-salme-oggi_oAHRxfiZpYb8C9P9LDH9i"
           }
         ]
       },
       {
-        "id": "it-colosseo-regole",
-        "t": "Dopo la morte dell'operaio, al Colosseo stop a subappalti ed edilizia acrobatica",
-        "s": "Dopo l'incidente costato la vita a un operaio edile, nel cantiere del Colosseo cambiano le regole: vietati i subappalti e le lavorazioni in edilizia acrobatica.",
-        "d": "2026-10-31",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/al-colosseo-cambiano-le-regole-dopo-la-morte-delloperaio-stop-ai-subappalti_889df092-47c3-4165-adb5-50b0556a4df6.html"
-          }
-        ]
-      },
-      {
-        "id": "it-perquisizioni",
-        "t": "Dopo i cortei dello sciopero, 60 perquisizioni in 23 città per istigazione alla violenza",
-        "s": "Sessanta perquisizioni in 23 città hanno riguardato persone accusate di aver incitato alla violenza nelle piazze durante le proteste dei giorni scorsi.",
-        "d": "2026-10-31",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/31/hanno-incitato-alla-violenza-nelle-piazze-60-perquisizioni_449404aa-1c37-4c96-aa63-5089df5221ae.html"
-          }
-        ]
-      },
-      {
-        "id": "it-papa-verano",
-        "t": "Commemorazione dei defunti: oggi alle 16 Papa Leone celebra la messa al Verano",
-        "s": "Per il 2 novembre il calendario della Santa Sede prevede la messa in suffragio di tutti i fedeli defunti, alle 16, al cimitero del Verano di Roma.",
+        "id": "it-scuola-sindacati",
+        "t": "Manovra, tagli alla scuola: i sindacati chiedono modifiche e preparano una mobilitazione unitaria",
+        "s": "Dal settembre 2027 la manovra riduce di 4.925 i docenti e di 2.049 il personale Ata. I sindacati chiedono di cambiare la norma e si vedranno nei prossimi giorni; la Flc Cgil sciopera già il 20 novembre. Fonti del ministero avrebbero espresso sorpresa per la norma.",
         "d": "2026-11-02",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/27/il-papa-al-cimitero-del-verano-il-2-novembre_a4792e82-e213-4fe7-8cd0-871d470a79eb.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/02/i-sindacati-della-scuola-pronti-alla-mobilitazione-contro-i-tagli-previsti-nella_ade17b33-28ec-4e0d-8182-d5235c910705.html"
+          }
+        ]
+      },
+      {
+        "id": "it-giovani-polizia",
+        "t": "Criminalità giovanile: in due settimane 644 arresti e oltre 1.600 denunce in un'operazione della polizia",
+        "s": "Secondo i dati della polizia, i controlli in tutta Italia hanno riguardato oltre 236mila giovani, di cui circa 23mila minorenni. Gli arresti sono 644 (575 maggiorenni e 69 minorenni), le denunce a piede libero 1.695. Reati più frequenti: rissa, lesioni, spaccio, armi.",
+        "d": "2026-11-02",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/contrasto-alla-criminalita-giovanile-644-arrestati-dalla-polizia_db556012-898f-436a-be31-d9e57d4e9ccc.html"
+          },
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/cronaca/maxi-blitz-polizia-italia-criminalita-giovanile-arresti-denunce_6SCCehq5PEFXg5psxYMFiF"
+          }
+        ]
+      },
+      {
+        "id": "it-maltempo-centrosud",
+        "t": "Maltempo al Centro-Sud: allerta arancione, scuole chiuse, allagamenti e neve sull'Appennino",
+        "s": "Il maltempo colpisce soprattutto i versanti adriatico e ionico, tra Calabria, Puglia, Abruzzo e Molise. Disagi a Pescara, Crotone, Trani e Chieti, lezioni sospese in molti Comuni. In Abruzzo i fiumi Pescara e Aterno-Sagittario hanno superato la soglia di pre-allarme.",
+        "d": "2026-11-02",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/maltempo-al-centro-sud-nevicate-allagamenti-e-scuole-chiuse_89bf9972-1692-4d72-95d7-ad0c9b4a5a3e.html"
+          }
+        ]
+      },
+      {
+        "id": "it-calenda-azione",
+        "t": "Calenda: Azione correrà da sola alle prossime elezioni, puntando a un centro decisivo",
+        "s": "In un'intervista al Corriere della Sera, il leader di Azione esclude alleanze con il centrodestra e con il Campo largo. Punta a una lista di centro che, con quattro poli e nessuno oltre il 42%, possa risultare determinante. Critica sia la manovra del Governo sia la linea di Conte.",
+        "d": "2026-11-02",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-carlo-calenda-azione-campo-largo_3sjiJdWduugh1UrK9r5fSh"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-iran",
-        "t": "Iran e Usa, la diplomazia va avanti con la mediazione del Qatar mentre crescono le minacce",
-        "s": "Dopo i colloqui di venerdì a Teheran e sabato in Qatar, Trump dice di non avere fretta e che restano uno o due siti da colpire. Khamenei avverte di una risposta «senza confini». Il Qatar fa da mediatore.",
-        "d": "2026-11-01",
+        "id": "mo-zaporizhzhia-attacco",
+        "t": "Ucraina, bombardamento russo su Komyshuvakha: almeno 24 morti, tra cui soccorritori e agenti",
+        "s": "Secondo i servizi di emergenza ucraini, un attacco aereo russo ha colpito una scuola usata per distribuire aiuti nella regione di Zaporizhzhia. Zelensky parla di un secondo attacco sul rifugio vicino. Intanto è finita la tregua di sei giorni a Oleshky, nel Kherson.",
+        "d": "2026-11-02",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/01/trump-non-abbiamo-fretta-sulliran-abbiamo-uno-o-due-siti-di-cui_502b70e6-4f9b-4853-8ebe-e83d054eba8c.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/iran-khamenei-avverte-trump-se-ci-attaccate-risposta-senza-confini_3cf54edb-3eec-4388-ae57-c19b268c5d39.html"
-          }
-        ]
-      },
-      {
-        "id": "mo-polonia",
-        "t": "Polonia, scontro sulla Corte costituzionale: Tusk promette di far rispettare lo Stato di diritto",
-        "s": "Venerdì sera il presidente Nawrocki ha tentato di entrare nella sede della Corte mentre la polizia la circondava, nel braccio di ferro sulla nomina di nuovi giudici. Tusk parla di fatti scandalosi, il PiS di colpo di Stato.",
-        "d": "2026-11-01",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/caos-in-polonia.-tusk-il-partito-pis-vuole-distruggere-la-democrazia_630b4c01-47af-4b69-b140-f20f02ecdc20.html"
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucriana-russia-news-2-novembre-2026_7tbXUaID3Cux0Co0Gnh7ND"
           },
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/10/31/poland-crisis-donald-tusk-strikes-defiant-tone-vowing-no-compromise-on-rule-of-law-after-t",
+            "url": "https://www.euronews.com/2026/11/02/hopes-of-progress-toward-peace-knocked-by-deadly-russian-attack-on-zaporizhzhia-zelenskyy-",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-francia",
-        "t": "Francia, terzo weekend di proteste: ancora scontri a Parigi a fine corteo",
-        "s": "A Parigi sono tornati gli scontri a fine corteo, provocati da gruppi di casseurs. È il terzo fine settimana consecutivo di mobilitazione, nato dalle proteste degli studenti e poi allargato a sindacati e altri gruppi.",
-        "d": "2026-10-31",
+        "id": "mo-iran-hormuz",
+        "t": "Iran e Stati Uniti: trattativa tramite il Qatar, Trump dice che la guerra finirà presto",
+        "s": "Teheran afferma di aver inviato una proposta tramite i mediatori del Qatar e di attendere la risposta di Washington: se sarà accettata, la sicurezza di Hormuz verrebbe ripristinata. Trump parla di un'intesa o di un'azione militare. Nei giorni scorsi alcune navi sono state colpite nell'area.",
+        "d": "2026-11-02",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/31/a-parigi-ancora-scontri-a-fine-corteo-dai-casseurs-violenza-inaudita_2c093ef1-cc85-4d03-bcc4-4d553004fd49.html"
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/2/iran-war-live-tankers-hit-in-hormuz-trump-again-says-conflict-to-end-soon",
+            "l": "en"
+          },
+          {
+            "n": "CBS News",
+            "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-diplomacy-threat-resume-attacks/",
+            "l": "en"
           }
         ]
       },
       {
-        "id": "mo-midterm",
-        "t": "Usa, martedì si vota per le elezioni di metà mandato: Trump teme un'ondata democratica",
-        "s": "Ultimi giorni di campagna prima del voto del 3 novembre. Secondo la lettura di ANSA, la Casa Bianca teme un buon risultato dei democratici.",
-        "d": "2026-10-31",
+        "id": "mo-ebola",
+        "t": "Ebola: oltre 5.300 morti nell'epidemia più rapida mai registrata, soprattutto in Congo",
+        "s": "Secondo l'Africa Cdc i morti sono 5.376, quasi tutti nella Repubblica Democratica del Congo. I casi superano i 10mila. Il ceppo Bundibugyo non ha vaccini né cure approvati; casi anche in Uganda, Kenya e Nigeria.",
+        "d": "2026-11-02",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/10/31/rush-finale-alle-midterm-trump-teme-londata-dem_288d891f-ad1f-4645-a886-37370d72fb4c.html"
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/02/ebola-kills-over-5300-in-fastest-growing-outbreak-on-record",
+            "l": "en"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-polonia-ec",
-        "t": "Euronews: Bruxelles sulla crisi polacca, i giudici li nomina il Sejm; conservatori europei con Nawrocki",
-        "s": "La Commissione europea segue il caso e ricorda una misura della Corte europea dei diritti umani di maggio. I conservatori dell'Ecr accusano il governo di violare lo Stato di diritto; il governo parla di riforme dopo anni di interferenze del PiS.",
-        "d": "2026-11-01",
+        "id": "es-polonia-tribunale",
+        "t": "Euronews: Polonia in crisi costituzionale, scontro tra il governo Tusk e il presidente Nawrocki",
+        "s": "Lo stallo sulla nomina dei giudici del Tribunale costituzionale è diventato uno scontro aperto. Il governo parla di ripristino dello Stato di diritto, il partito PiS di colpo di Stato. La Commissione di Venezia attribuisce la nomina al Sejm; la Commissione europea segue la vicenda.",
+        "d": "2026-11-02",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/01/eu-commission-polish-parliament-has-right-to-appoint-judges-to-the-constitutional-court",
+            "url": "https://www.euronews.com/2026/11/02/an-unprecedented-situation-constitutional-crisis-wobbles-warsaw",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-iran-aj",
-        "t": "Al Jazeera: nodo dell'accordo Usa-Iran è l'ordine delle mosse, concessioni prima o nucleare prima",
-        "s": "Per gli analisti citati dall'emittente del Qatar, Teheran vuole prima revoca del blocco navale, deroghe sul petrolio e fondi sbloccati; Washington chiede progressi sul nucleare. Secondo il rapporto del Tesoro Usa, da fine agosto non viene caricato nuovo greggio nei terminal iraniani.",
-        "d": "2026-11-01",
+        "id": "es-cina-iran-oman",
+        "t": "Al Jazeera: la Cina tratta con Iran e Oman e chiede di riaprire Hormuz",
+        "s": "Il ministro cinese Wang Yi ha incontrato a Pechino un alto funzionario iraniano e ha parlato di dialogo come unica strada. Con l'Oman, Pechino ha chiesto la ripresa della navigazione nello Stretto e del dialogo tra Usa e Iran.",
+        "d": "2026-11-02",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/1/iran-and-us-explore-diplomacy-amid-rising-threats-of-war",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-giovani-europa",
-        "t": "Euronews: le proteste dei giovani dalla Francia si estendono a Germania, Spagna e Italia",
-        "s": "In Francia il ministero dell'Interno ha contato circa 320mila manifestanti (70mila a Parigi), in calo rispetto ai 410mila del 24 ottobre. Il movimento nato dalle scuole francesi è arrivato in Germania con «Gen Z regelt» (oltre 180mila iscritti online, in piazza alcune migliaia) e in Spagna con l'allerta massima a Barcellona. In Italia segnalati scontri a Milano, Torino e Bologna.",
-        "d": "2026-10-31",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://euronews.com/2026/10/31/frances-third-weekend-of-social-protests-sees-lower-turnout-and-early-clashes-in-major-cit",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-italia-sciopero",
-        "t": "Euronews sull'Italia: sciopero del 30 ottobre contro caro vita e spese militari",
-        "s": "Il sito europeo descrive lo sciopero generale di Usb e sindacati di base con treni, aerei e taxi fermi, e il blocco di porti in oltre 100 scali di 17 Paesi contro il riarmo. Tra le richieste: salari al passo coi prezzi, meno spese militari.",
-        "d": "2026-10-29",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/10/29/major-strikes-planned-across-italy-on-friday-against-cost-of-living-and-military-spending",
+            "url": "https://www.aljazeera.com/news/2026/11/2/china-steps-up-middle-east-diplomacy-with-iran-and-oman-meetings",
             "l": "en"
           }
         ]
@@ -173,90 +150,76 @@
     ],
     "economia": [
       {
-        "id": "ec-manovra-misure",
-        "t": "Manovra: 5,8 miliardi dal settore finanziario, pensioni a fasce e slot più care",
-        "s": "Il contributo di banche e assicurazioni vale 5,8 miliardi ed è contestato; la Lega lo difende. La rivalutazione delle pensioni è piena fino a quattro volte il minimo, poi scende fino al 32%: risparmio stimato 1,476 miliardi lordi nel 2027. Dal 2027 la giocata alle slot passa da 1 a 2 euro.",
-        "d": "2026-11-01",
+        "id": "ec-borsa-spread",
+        "t": "Piazza Affari in lieve rialzo, A2a giù del 4%; lo spread Btp-Bund scende a 116",
+        "s": "Alle 10 il Ftse Mib saliva dello 0,2%. Bene Unicredit e Campari, male A2a, Stellantis e Prysmian. Il rendimento del Btp decennale è al 4,48%, quello del Bund al 3,32%.",
+        "d": "2026-11-02",
         "fonti": [
           {
-            "n": "AGI",
-            "url": "https://www.agi.it/economia/news/2026-11-01/manovra-tagli-scuola-pensioni--39807614/"
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/topnews/2026/11/02/borsa-milano-positiva-02-sale-unicredit-scivola-a2a-giu-prysmian_a9a291c5-3140-477c-8ffa-2242096b8d99.html"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-controlli-halloween",
-        "t": "Torino, weekend di Halloween: 8 arresti e 18 denunce nei controlli",
-        "s": "Forze dell'ordine e polizia locale hanno identificato circa 1.400 persone e controllato oltre 280 veicoli tra Borgo Rossini e le piazze Santa Giulia, Carlina e Vittorio. Controllati 12 locali, 5 sanzionati per oltre 16.500 euro.",
-        "d": "2026-11-01",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/01/a-torino-otto-arresti-e-18-denunce-nei-controlli-del-weekend-di-halloween_958ecaf4-3dcc-416a-b5e3-1322b107c056.html"
-          }
-        ]
-      },
-      {
-        "id": "to-metro-caldo",
-        "t": "Metro di Torino senza aria condizionata: Gtt valuta nuovi tetti o finestrini, ma mancano i fondi",
-        "s": "Per raffrescare la linea 1 si studiano due ipotesi: nuovi tetti con climatizzatori su tutti i 58 treni, con circa tre anni di disagi, oppure piccoli finestrini che darebbero solo ventilazione. Nessuna è finanziata; Gtt segnala 7 milioni di costi extra per il carburante nel 2026.",
-        "d": "2026-10-29",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/10/29/leggi-notizia/argomenti/viabilita-1/articolo/caldo-nella-metro-torino-due-soluzioni-finestrini-oppure-nuovi-tetti-dei-convogli-con-condizionato.html"
-          }
-        ]
-      },
-      {
-        "id": "to-lingotto-ascensore",
-        "t": "Stazione Lingotto, ascensore fermo da luglio: Rfi attende software e ricambi",
-        "s": "Sul lato della promenade Italia '61 l'ascensore è guasto da luglio. Un consigliere della Circoscrizione 8 denuncia il disagio; Rfi spiega che serve un software specifico del produttore e componenti già ordinati.",
-        "d": "2026-11-01",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/01/leggi-notizia/argomenti/viabilita-1/articolo/stazione-lingotto-lascensore-e-ko-da-luglio-grave-disagio-per-disabili-e-anziani-foto.html"
-          }
-        ]
-      },
-      {
-        "id": "to-defunti",
-        "t": "Torino, oggi la commemorazione dei defunti: messa del cardinale Repole al Monumentale",
-        "s": "Il 2 novembre il cardinale Repole celebra la messa al cimitero Monumentale, dove si tiene anche la cerimonia istituzionale. I sei cimiteri cittadini restano aperti dalle 8.30 alle 17.30; il Sacrario della Gran Madre è visitabile anche il 2 e il 4 novembre.",
-        "d": "2026-11-02",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/10/23/torino-si-prepara-a-celebrare-la-commemorazione-dei-defunti_72b12a58-3cc7-4b7c-b8e4-122230d9acaa.html"
-          }
-        ]
-      },
-      {
-        "id": "to-pianezza-strada",
-        "t": "Pianezza, chiusa da oggi a venerdì una parte di via Torino per lavori",
-        "s": "Dal 2 al 6 novembre, dalle 8 alle 17, la strada è chiusa tra la Sp 176 e corso Fratelli Cervi; il traffico è deviato su viale Svezia. Residenti e attività fino al civico 127 accedono dalla rotatoria di corso Fratelli Cervi.",
+        "id": "to-stura-treno",
+        "t": "Torino Stura: persona investita da un treno della linea Sfm1, circolazione rallentata",
+        "s": "Il fatto è avvenuto in serata alla stazione di Torino Stura, su un treno diretto a Chieri. Sul posto Polfer, 118 e vigili del fuoco. Treni rallentati o limitati nelle tratte Chivasso, Settimo e Lingotto.",
         "d": "2026-11-02",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/10/29/leggi-notizia/argomenti/viabilita-1/articolo/lavori-in-corso-e-viabilita-a-rischio-chiude-un-tratto-di-via-torino-pianezza-dal-2-al-6-novembre-1.html"
+            "url": "https://www.torinoggi.it/2026/11/02/leggi-notizia/argomenti/cronaca-11/articolo/tragedia-sui-binari-una-persona-investita-alla-stazione-torino-stura.html"
           }
         ]
-      }
-    ],
-    "sport": [
+      },
       {
-        "id": "sp-torino-frosinone",
-        "t": "Serie A, Torino a Frosinone alle 15 con diverse assenze",
-        "s": "Abate non ha Cacciamani, fermato da un problema alla spalla, né Fortini, Israel, Mandragora e Rodriguez, infortunati. Biraghi è out per l'influenza; aggregato dalla Primavera Carrascosa.",
-        "d": "2026-11-01",
+        "id": "to-processo-collegno",
+        "t": "Collegno, al via il processo per l'omicidio di Marco Veronese: l'imputato ha confessato",
+        "s": "Davanti alla Corte d'assise di Torino è iniziato il processo a Michele Nicastri, accusato di omicidio premeditato. Il delitto risale al 23 ottobre 2025. Previsti circa ottanta testimoni; la difesa ha chiesto una perizia psichiatrica.",
+        "d": "2026-11-02",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/02/leggi-notizia/argomenti/cronaca-11/articolo/omicidio-di-marco-veronese-a-collegno-al-via-il-processo.html"
+          }
+        ]
+      },
+      {
+        "id": "to-finto-prete",
+        "t": "Torino, un 25enne si spacciava per sacerdote copto: denunciato dalla diocesi",
+        "s": "Per alcuni mesi ha celebrato messe in tre parrocchie con documenti falsi. Il segnale di un fedele ha fatto partire i controlli, che hanno smentito sia l'ordinazione sia l'iscrizione al Politecnico. La diocesi lo ha allontanato e denunciato.",
+        "d": "2026-11-02",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/01/torino-cacciamani-non-ce-la-fa-salta-il-frosinone_b2a2c105-9839-473b-a986-51c36b778a76.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/finto-prete-celebrava-messa-25enne-denunciato-a-torino_1e354c6c-4892-4a56-814c-b4bfa309731e.html"
+          }
+        ]
+      },
+      {
+        "id": "to-forno-crematorio",
+        "t": "Torino valuta un nuovo forno crematorio al cimitero Parco, gestito dalla municipalizzata Afc",
+        "s": "Il progetto è nella fase preliminare, ha spiegato l'assessora Foglietta. L'obiettivo è avviare un servizio comunale e rendersi autonomi da Socrem, dopo una controversia legale durata dodici anni. Non ci sono ancora costi né tempi.",
+        "d": "2026-11-02",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/02/leggi-notizia/argomenti/attualita-31/articolo/ipotesi-nuovo-forno-crematorio-al-cimitero-parco.html"
+          }
+        ]
+      },
+      {
+        "id": "to-salone-libro-mic",
+        "t": "Salone del libro: il nuovo presidente del Circolo dei lettori non esclude il Ministero della Cultura",
+        "s": "Andrea Ganelli dice di non avere preclusioni sull'ingresso del ministero nella governance e vuole prima incontrare ministro, privati e Città. Le regole attuali scadono a fine anno e per cambiarle serve l'unanimità dei soci.",
+        "d": "2026-11-02",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/presidente-circolo-lettori-di-torino-mic-nel-salone-del-libro-nessuna_7bbc3e9d-dbbd-45f7-901a-c2d987aee816.html"
           }
         ]
       }
@@ -328,6 +291,18 @@
       "edizione": "mattina",
       "notizie": 19,
       "note": "Fonti lette: ANSA, AGI, Torino Oggi, Al Jazeera (en), Euronews (en). Ricerca rifiutata: reuters.com, theguardian.com, bbc.com, lemonde.fr, spiegel.de, elpais.com. Lettura non riuscita: alcune pagine ANSA non uscite da ricerca; torinotoday.it non letto."
+    },
+    {
+      "at": "2026-11-02T21:55+01:00",
+      "edizione": "sera",
+      "notizie": 16,
+      "note": "Fonti lette: ANSA, Adnkronos, Torino Oggi, Euronews (en), Al Jazeera (en), CBS News (en). Ricerca rifiutata: reuters.com. Lettura non riuscita: torinotoday.it (4 pagine). Testate estere maggiori non interrogate (bloccate il 31/10)."
+    },
+    {
+      "at": "2026-11-02T21:55+01:00",
+      "edizione": "sera",
+      "notizie": 16,
+      "note": "Fonti lette: ANSA, Adnkronos, Torino Oggi, Euronews (en), Al Jazeera (en), CBS News (en). Ricerca rifiutata: reuters.com. Lettura non riuscita: torinotoday.it (4 pagine). Testate estere maggiori non interrogate (bloccate il 31/10)."
     }
   ]
 }
