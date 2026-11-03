@@ -172,7 +172,7 @@
     if (!box) return;
     var c = cfg(), el = box.querySelector(".ms-body");
     if (!c || c.need || !c.gist) {
-      el.innerHTML = '<p>Collega questi progressi alla sezione <b>🐉 Progressi</b> del genitore: si aggiornerà da sola, almeno una volta al giorno.</p>' +
+      el.innerHTML = '<p>Collega questi progressi alla sezione <b>📊 Progressi</b> del genitore: si aggiornerà da sola, almeno una volta al giorno.</p>' +
         '<p style="font-size:14px">Serve una chiave GitHub con il solo permesso <b>gist</b> (istruzioni nella sezione Progressi). Si inserisce una volta sola.</p>' +
         '<input type="password" class="ms-tok" placeholder="Incolla la chiave GitHub" autocomplete="off" style="width:100%;font:inherit;padding:10px;border-radius:12px;border:2px solid #ccc;box-sizing:border-box">' +
         '<div class="ms-row"><button type="button" class="btn ms-go">🔗 Collega</button></div><p class="ms-msg" style="font-size:14px"></p>';

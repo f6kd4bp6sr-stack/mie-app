@@ -109,7 +109,7 @@ details.app h4{margin:10px 0 4px;font-size:14px}details.app p,details.app ol,det
 
 @media (max-width:600px){h1{font-size:24px}.mtabs button{font-size:14.5px;padding:9px 12px}}
 </style>
-<script>window.APP_VERSION="09d282104e";window.APP_BUILD="2026-11-03T11:06+02:00";</script>
+<script>window.APP_VERSION="bc8bdae2cd";window.APP_BUILD="2026-11-03T11:34+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -211,7 +211,7 @@ html.locked #lockScr{display:grid}
 })();
 </script>
 <style id="tema">/* ===== Tema comune di Pianificazione (inserito dal build in ogni pagina, dopo lo stile della pagina) =====
-   Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🤝 Metodo ambra · 🐉 Progressi rosa.
+   Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🤝 Metodo ambra · 📊 Progressi rosa.
    Le sezioni dentro Pianificazione hanno i loro colori (pagine/index.html). */
 :root{--app-pian:#2563eb;--app-lic:#c0532b;--app-tc:#0d9488;--app-met:#b86e00;--app-prog:#d63384}
 @media (prefers-color-scheme:dark){:root{--app-pian:#5b8cff;--app-lic:#f08a5d;--app-tc:#2cc5b6;--app-met:#f0a43a;--app-prog:#ff6fae}}
@@ -226,7 +226,7 @@ body[data-app=lic],body[data-app=prog]{background:#f4f5f9}
 body[data-app=lic] .card,body[data-app=prog] .card{border:0;border-radius:18px;box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05)}
 body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog)}
 @media (prefers-color-scheme:dark){body[data-app=lic],body[data-app=prog]{background:#0f1115}body[data-app=lic] .card,body[data-app=prog] .card{box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(0,0,0,.4)}}
-</style><script>document.body.setAttribute("data-app","met")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="met" class="on" href="metodo.html" aria-current="page">🤝 Metodo</a><a data-a="prog" href="progressi.html">🐉 Progressi</a></nav>
+</style><script>document.body.setAttribute("data-app","met")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="met" class="on" href="metodo.html" aria-current="page">🤝 Metodo</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav>
 <div class="wrap">
   <h1>🤝 Metodo</h1>
   <p class="sub" id="intro"></p>
@@ -715,6 +715,52 @@ render();recover();occPull();
   setTimeout(check,2500);
   document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(check,1500);});
   setInterval(check,30*60*1000);
+})();
+
+/* ===== 🩺 Stato dell'app (3/11/2026, proposta n. 4): un controllo unico di copie, notizie, collegamento e chiave GitHub.
+   Se qualcosa non va compare un avviso in basso a sinistra (✕ lo nasconde per la giornata); il dettaglio si apre dalla riga in fondo. ===== */
+(function(){
+  function J(k){try{return JSON.parse(localStorage.getItem(k)||"null");}catch(e){return null;}}
+  function S(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+  function ore(t){return t?(Date.now()-new Date(t).getTime())/36e5:null;}
+  function quando(t){if(!t)return "mai";var d=new Date(t);return d.toDateString()===new Date().toDateString()?"oggi alle "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"}):d.toLocaleDateString("it-IT",{weekday:"short",day:"numeric",month:"short"});}
+  function checks(){
+    var R=[],bk=S("pn-lastBackup"),sn=S("pn-lastSnap"),cb=J("pn-copia-cloud"),st=J("pn-stampa"),nw=J("pn-news"),lk=J("prog-link-v1"),gh=J("prog-gh-v1");
+    if(typeof bk==="string"&&bk.charAt(0)==='"')bk=J("pn-lastBackup");
+    var hb=ore(bk);R.push({k:hb==null||hb>7*24?"w":"ok",ic:"💾",t:"Copia su File / iCloud",x:"ultima "+quando(bk)+(hb==null||hb>7*24?" · tocca «💾 Salva copia su File / iCloud» qui in fondo":"")});
+    var hs=ore(sn);R.push({k:hs!=null&&hs>48?"w":"ok",ic:"🗂️",t:"Copia giornaliera sull’iPad",x:"ultima "+quando(sn)});
+    if(!cb||!cb.gist)R.push({k:"i",ic:"☁️",t:"Copia automatica",x:"non attiva (si attiva da «☁️ Copia automatica» qui in fondo)"});
+    else{var hc=ore(cb.last);R.push({k:cb.err||hc==null||hc>48?"w":"ok",ic:"☁️",t:"Copia automatica",x:cb.err?String(cb.err):"ultima "+quando(cb.last)});}
+    if(st&&st.updated){var a=ore(st.updated),c=ore(st.checked);R.push({k:a>30&&c!=null&&c<3?"w":"ok",ic:"🗞️",t:"Stampa di oggi",x:"edizione di "+quando(st.updated)+(a>30&&c!=null&&c<3?" · la nuova edizione non è arrivata":"")});}
+    if(nw&&nw.updated){var a2=ore(nw.updated),c2=ore(nw.checked);R.push({k:a2>36&&c2!=null&&c2<3?"w":"ok",ic:"🎖️",t:"Novità su contratto e pensione",x:"aggiornate "+quando(nw.updated)+(a2>36&&c2!=null&&c2<3?" · il giro di oggi non è arrivato":"")});}
+    if(!lk||!lk.gist)R.push({k:"i",ic:"📊",t:"Progressi di «Il mio mondo»",x:"non collegato (Progressi → 📲 Collega con un QR)"});
+    else{var hl=ore(lk.sent);R.push({k:lk.err||hl==null||hl>36?"w":"ok",ic:"📊",t:"Progressi di «Il mio mondo»",x:(lk.err?String(lk.err)+" · ":"")+"ultimo invio "+quando(lk.sent)+(hl!=null&&hl>36?" · apri «Il mio mondo» sull’iPad della bimba con internet":"")});}
+    if(gh&&gh.token){var dd=gh.exp?Math.floor((new Date(gh.exp)-Date.now())/864e5):null;
+      R.push({k:gh.ok===false||(dd!=null&&dd<30)?"w":"ok",ic:"🔑",t:"Chiave GitHub del collegamento",x:gh.ok===false?(gh.why||"non funziona")+" · prepara una chiave nuova in Progressi":dd==null?"senza scadenza":"scade tra "+Math.max(0,dd)+" giorni"+(dd<30?" · prepara una chiave nuova in Progressi":"")});}
+    return R;
+  }
+  function panel(){
+    var R=checks(),ov=document.createElement("div");ov.id="pn-health";
+    ov.style.cssText="position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;padding:16px";
+    ov.innerHTML='<div style="background:var(--card,#fff);color:inherit;max-width:560px;width:100%;border-radius:20px;padding:18px 20px;box-shadow:0 12px 40px rgba(0,0,0,.25);font:inherit"><h2 style="margin:0 0 10px">🩺 Stato dell’app</h2>'+
+      R.map(function(r){return '<div style="display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:start;padding:8px 0;border-top:1px solid rgba(127,127,127,.2)"><span style="font-size:20px">'+r.ic+'</span><div><b>'+r.t+'</b><div style="font-size:14px;opacity:.8">'+String(r.x).replace(/[<>&]/g,"")+'</div></div><span style="font-size:20px">'+(r.k==="w"?"⚠️":r.k==="i"?"ℹ️":"✅")+'</span></div>';}).join("")+
+      '<div style="text-align:right;margin-top:10px"><button type="button" id="pn-h-x" style="font:inherit;font-weight:700;border:0;border-radius:999px;padding:8px 16px;background:rgba(127,127,127,.16);color:inherit;cursor:pointer">Chiudi</button></div></div>';
+    document.body.appendChild(ov);ov.onclick=function(e){if(e.target===ov||e.target.id==="pn-h-x")ov.remove();};
+  }
+  function pill(){
+    var w=checks().filter(function(r){return r.k==="w";}),b=document.getElementById("pn-health-pill");
+    try{if(S("pn-health-off")===new Date().toDateString()){if(b)b.remove();return;}}catch(e){}
+    if(!w.length){if(b)b.remove();return;}
+    if(!b){b=document.createElement("button");b.type="button";b.id="pn-health-pill";
+      b.style.cssText="position:fixed;left:16px;bottom:72px;z-index:9000;padding:10px 14px;border-radius:16px;font:inherit;font-weight:800;font-size:15px;border:2px solid #f59e0b;background:#fff4e5;color:#9a3412;box-shadow:0 6px 18px rgba(0,0,0,.18);cursor:pointer";
+      document.body.appendChild(b);b.onclick=function(e){if(e.target.dataset.x){try{localStorage.setItem("pn-health-off",new Date().toDateString());}catch(_){}b.remove();return;}panel();};}
+    b.innerHTML="🩺 "+w.length+(w.length===1?" cosa da controllare":" cose da controllare")+' <span data-x="1" aria-label="Nascondi per oggi" style="margin-left:8px;opacity:.6">✕</span>';
+  }
+  function addBtn(){var m=document.querySelector(".updbar .u-more");if(m&&!m.querySelector(".u-hl")){var x=document.createElement("button");x.type="button";x.className="u-hl";x.textContent="🩺 Stato dell’app";x.onclick=panel;m.insertBefore(x,m.querySelector(".u-bk"));}}
+  window.pnHealth=panel;
+  setTimeout(function(){addBtn();pill();},4000);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(pill,4000);});
+  setInterval(pill,30*60*1000);
 })();
 </script>
 </body>

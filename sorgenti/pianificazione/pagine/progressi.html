@@ -564,7 +564,7 @@ function render(pack,hist){
   ${A.days.length||A.D["prog-days"]?brief(A):""}
   ${A.good.length||A.bad.length?`<h2>In evidenza</h2><div class="ev">${A.good.length?`<div class="evc good"><h3>✅ Punti di forza</h3>${li(A.good)}</div>`:""}${A.bad.length?`<div class="evc bad"><h3>⚠️ Da rinforzare</h3>${li(A.bad)}</div>`:""}</div>`:""}
   <div id="diario">${diaryCard(A)}</div>
-  ${A.days.length?`<h2>Utilizzo</h2><div class="kpi">${k(A.days.length+tr("days"),"giorni di utilizzo in totale")}${k(A.last7?A.last7+'<span class="lbl">/7</span>':"","giorni negli ultimi 7")}${k(A.last30,"giorni negli ultimi 30")}${k(A.streak>1?A.streak:"","giorni di fila (serie attuale)")}${k(A.lastUse?(daysAgo(A.lastUse)===0?"oggi":fmt(A.lastUse,{day:"numeric",month:"short"})):"","ultimo utilizzo")}${k(A.energy?A.energy+tr("energy"):"","energia del drago"+(A.dragon?" «"+esc(A.dragon)+"»":""))}</div>`:""}
+  ${A.days.length?`<h2>Utilizzo</h2><div class="kpi">${k(A.days.length+tr("days"),"giorni di utilizzo in totale")}${k(A.last7?A.last7+'<span class="lbl">/7</span>':"","giorni negli ultimi 7")}${k(A.last30,"giorni negli ultimi 30")}${k(A.streak>1?A.streak:"","giorni di fila (serie attuale)")}${k(A.lastUse?(daysAgo(A.lastUse)===0?"oggi":fmt(A.lastUse,{day:"numeric",month:"short"})):"","ultimo utilizzo")}${k(A.energy?A.energy+tr("energy"):"","stelle ⭐")}</div>`:""}
   ${daysCard(A.D["prog-days"],A.ref)}
   ${A.days.length?`<div class="card" style="margin-top:12px"><b>Giorni di utilizzo · ultime 8 settimane</b><div class="heat">${heat}</div><div class="lbl">Ogni quadratino è un giorno (righe: lunedì → domenica). Verde = app usata.</div></div>`:""}
   ${monthCard(A)}

@@ -12,7 +12,7 @@ pian/
 │   ├── licenze.html   📅 Licenze (prima era index.html)
 │   ├── taichi.html    🧘 Tai Chi
 │   ├── metodo.html    🤝 Metodo: Oggi (3 carte da girare), Lo sapevi?, Frasi di scorta, Volontariato; finestre apri/chiudi (`pn-v1` → `met`)
-│   └── progressi.html 🐉 Progressi di «Il mio mondo»
+│   └── progressi.html 📊 Progressi di «Il mio mondo»
 ├── comune/blocco.html blocco con Face ID (passkey WebAuthn) inserito in testa a ogni pagina; sposta le vecchie chiavi mie-app-… in pn-…
 ├── comune/tema.css   tema comune: colore di ogni app nel menu in alto, riquadri morbidi di Licenze e Progressi
 ├── comune/fogli.js   lettura dei file della banca (CSV, XLSX, XLS, HTML) sull'iPad

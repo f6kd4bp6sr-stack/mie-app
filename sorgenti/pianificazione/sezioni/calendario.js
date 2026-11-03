@@ -91,10 +91,10 @@ function calMonthView(){
   while(s<=last||((parse(s).getDay()+6)%7)!==0){
     const D=dayData(s,V),inM=s.slice(0,7)===first.slice(0,7),lab=D.L&&D.S?(D.L.c==="P"?"":D.L.c&&D.L.c!=="OUT"?D.L.c:""):"";
     cells+=`<button class="mc${inM?"":" out"}${s===t?" today":""}${s===calSel?" sel":""}${offDay(D.L)?(D.L.k==="LAV"?" lic":" we"):""}${HOL[s]?" hol":""}" data-cd="${s}" aria-label="${esc(fmt(s,{weekday:"long",day:"numeric",month:"long"}))}">
-      <span class="mn"><b>${parse(s).getDate()}</b>${lab?`<em class="code">${lab}</em>`:""}${HOL[s]?`<em class="holn">${esc(HOL[s])}</em>`:""}</span>${cellChips(D,3)}<span class="mi">${cellIcons(D)}${D.vstudy?"<i class='vs' title='Ha studiato'>🐉</i>":""}</span></button>`;
+      <span class="mn"><b>${parse(s).getDate()}</b>${lab?`<em class="code">${lab}</em>`:""}${HOL[s]?`<em class="holn">${esc(HOL[s])}</em>`:""}</span>${cellChips(D,3)}<span class="mi">${cellIcons(D)}${D.vstudy?"<i class='vs' title='Ha studiato'>📊</i>":""}</span></button>`;
     s=add(s,1);}
   return `<div class="cal-mo"><div><div class="mgrid">${GIORNI.map(g=>`<div class="mh">${g.slice(0,3)}</div>`).join("")}${cells}</div>
-    <p class="lbl cal-leg"><span class="lg lic"></span> licenza / a casa · <span class="lg we"></span> fine settimana e festivi · 🐉 Il mio mondo · 🧘 Tai Chi · 🤝 missione del Metodo · 📝 nota</p></div>
+    <p class="lbl cal-leg"><span class="lg lic"></span> licenza / a casa · <span class="lg we"></span> fine settimana e festivi · 📊 Il mio mondo · 🧘 Tai Chi · 🤝 missione del Metodo · 📝 nota</p></div>
     <div class="cal-side">${dayEditor(calSel,true)}</div></div>`;
 }
 function calWeekView(){const m=monday(calD),t=today(),V=valeCal();
@@ -102,7 +102,7 @@ function calWeekView(){const m=monday(calD),t=today(),V=valeCal();
     return `<button class="day${s===t?" today":""}${offDay(D.L)&&D.S?" together":""}" data-cday="${s}"><b class="dn">${fmt(s,{weekday:"long",day:"numeric"})}</b>
       ${D.S?`<span class="ev ${D.L.c==="P"?"job":"off"}">${D.L.c==="P"?"🏢 "+esc(D.L.i||"")+"–"+esc(D.L.o||""):"🏡 "+esc(D.L.t)}</span>`:HOL[s]?`<span class="ev off">🇮🇹 ${esc(HOL[s])}</span>`:""}
       ${D.it.filter(x=>x.k!=="hol").map(x=>`<span class="cc ${x.c}">${x.ic} ${esc(x.o?x.o+" ":"")}${esc(x.t)}${x.amt?" "+x.amt:""}</span>`).join("")}
-      <span class="mi">${cellIcons(D)}${D.vstudy?"🐉":""}</span></button>`;}).join("")}</div>`;}
+      <span class="mi">${cellIcons(D)}${D.vstudy?"📊":""}</span></button>`;}).join("")}</div>`;}
 function calYearView(){const y=parse(calD).getFullYear(),t=today(),S=licS();
   let o=`<div class="ygrid">`;
   for(let m=0;m<12;m++){const first=iso(new Date(y,m,1)),last=iso(new Date(y,m+1,0));let s=first,cells='<i class="x"></i>'.repeat((parse(first).getDay()+6)%7),nl=0;
@@ -156,7 +156,7 @@ function dayEditor(s,compact){
     else if(s===t)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>Missione del giorno</b><small>Tre carte coperte ti aspettano nel Metodo</small></div><a class="lnk" href="metodo.html#oggi">Pesca ›</a></div>`;}
   // il mio mondo
   if(D.vstudy||D.vmood){const v=D.vmood;
-    o+=`<div class="row"><span class="pill">🐉</span><div class="grow"><b>Il mio mondo</b><small>${D.vstudy?"ha studiato":"non ha studiato"}${v?" · diario: "+VMOOD[v.m][0]+" "+VMOOD[v.m][1]+(v.f?" ("+["","pochissimo","un po’","abbastanza","tanto","tantissimo"][Math.min(5,+v.f||0)]+")":""):""}</small>${v&&v.w?`<small class="vw${VDOWN.has(v.m)?" down":""}">«${esc(v.w)}»</small>`:""}</div><a class="lnk" href="progressi.html">Progressi ›</a></div>`;}
+    o+=`<div class="row"><span class="pill">📊</span><div class="grow"><b>Il mio mondo</b><small>${D.vstudy?"ha studiato":"non ha studiato"}${v?" · diario: "+VMOOD[v.m][0]+" "+VMOOD[v.m][1]+(v.f?" ("+["","pochissimo","un po’","abbastanza","tanto","tantissimo"][Math.min(5,+v.f||0)]+")":""):""}</small>${v&&v.w?`<small class="vw${VDOWN.has(v.m)?" down":""}">«${esc(v.w)}»</small>`:""}</div><a class="lnk" href="progressi.html">Progressi ›</a></div>`;}
   return o+`</div>`;
 }
 function calDayView(s){
