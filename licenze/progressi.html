@@ -531,6 +531,22 @@ function videoCard(A){
   return h;
 }
 
+/* ---------- 👗 «Come mi vesto»: misure (mai il peso), look e colori preferiti (dal 3/11/2026) ---------- */
+const VV_RUOTA=["giallo","giallo arancio","arancione","rosso arancio","rosso","rosso viola","viola","blu viola","blu","blu verde","verde","giallo verde"];
+function vestoCard(A){
+  const D=A.D||{},M=Array.isArray(D.misure)?D.misure:[],L=Array.isArray(D.looks)?D.looks:[],F=Array.isArray(D["col-fav"])?D["col-fav"]:[];
+  if(!M.length&&!L.length&&!F.length)return "";
+  let h=`<h2>👗 Come mi vesto</h2>`;
+  if(M.length){const m=M[M.length-1],age=Math.floor((Date.now()-new Date(m.d).getTime())/864e5);
+    h+=`<div class="kpi">${m.h?`<div><b>${esc(String(m.h))} cm</b><span>altezza</span></div>`:""}${m.p?`<div><b>${esc(String(m.p))} cm</b><span>piede</span></div>`:""}${m.pe?`<div><b>${esc(String(m.pe))} cm</b><span>petto</span></div>`:""}${m.vi?`<div><b>${esc(String(m.vi))} cm</b><span>vita</span></div>`:""}</div>`;
+    h+=`<div class="card" style="margin-top:12px"><b>📏 Misure</b> <span class="lbl">ultime del ${new Date(m.d).toLocaleDateString("it-IT",{day:"numeric",month:"long",year:"numeric"})}${age>90?" · ⏰ più di 3 mesi fa: è ora di rimisurarsi":""}</span>`+
+      M.slice(-6).reverse().map(x=>`<div class="row"><span>${new Date(x.d).toLocaleDateString("it-IT",{day:"numeric",month:"short",year:"numeric"})}</span><span class="v">${[x.h?x.h+" cm":"",x.p?"piede "+x.p+" cm":""].filter(Boolean).join(" · ")}</span></div>`).join("")+
+      `<p class="lbl">Taglia dei vestiti e numero di scarpe li calcola l’app sull’iPad della bimba (📏 La mia taglia).</p></div>`;}
+  if(F.length)h+=`<p class="lbl" style="margin-top:8px">❤️ Colori preferiti: ${F.map(i=>esc(VV_RUOTA[i]||"?")).join(", ")}</p>`;
+  if(L.length)h+=`<p class="lbl">👚 Look composti e salvati: ${L.length}</p>`;
+  return h;
+}
+
 /* ---------- 📈 andamento mese per mese (giorni di studio e risposte giuste) ---------- */
 const MESI_B=["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"];
 function monthCard(A){
@@ -667,6 +683,7 @@ function render(pack,hist){
   ${pathCard(A)}
   ${subj.length?`<h2>Materia per materia</h2><div class="subj">${subj.map(s=>`<div class="sj" style="--c:${s.c}"><h3><span>${s.t}</span><span class="badge ${s.st}">${stTxt[s.st]}</span></h3>${s.html}</div>`).join("")}</div>`:""}
   ${videoCard(A)}
+  ${vestoCard(A)}
   ${prev?`<p class="lbl" style="margin:8px 4px">Confronto con la copia del ${fmt(prev.d)}: matematica ${now.math-prev.math>=0?"+":""}${now.math-prev.math} esercizi, scienze ${now.sci-prev.sci>=0?"+":""}${now.sci-prev.sci} argomenti, diario ${now.diary-prev.diary>=0?"+":""}${now.diary-prev.diary} pagine.</p>`:""}
   <details class="more"><summary>ℹ️ Come leggere questi dati</summary><div class="note">${A.prog?"Le percentuali di risposte giuste vengono dal registro delle risposte di «Il mio mondo».":"Le carenze si basano sulle tabelline, sui livelli e sulla costanza: le risposte dei quiz arriveranno quando l’app le invia."} Qui compare solo quello che ha già usato: materie e giochi mai aperti non sono elencati. I numeri «x/y» delle sfide indicano quante domande diverse sono già uscite rispetto al totale disponibile.</div></details>`;
   tidySubjects(out);
@@ -1272,7 +1289,7 @@ window.__analyze=analyze; window.__normalize=normalize;
 
 })();
 </script>
-<script>window.APP_VERSION="a3ba8c9be0";window.APP_BUILD="2026-11-03T10:04+02:00";</script>
+<script>window.APP_VERSION="ffb7aaca17";window.APP_BUILD="2026-11-03T10:46+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
