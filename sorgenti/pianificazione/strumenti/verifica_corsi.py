@@ -1,0 +1,86 @@
+"""Controllo dei 🎓 Corsi online di Pianificazione.
+- sezioni/corsi_dati.json: la lista dei corsi. Il controllo parte da solo a ogni build e, con un errore, il build si ferma.
+Uso a mano:
+  python3 strumenti/verifica_corsi.py sezioni/corsi_dati.json"""
+import json, re, sys, datetime
+
+LINGUE = {'Italiano', 'Sottotitoli in italiano', 'Italiano e inglese'}
+LIVELLI = {'Principiante', 'Intermedio', 'Avanzato'}
+FORMATI = {'Al proprio ritmo', 'Con date'}
+ATTESTATI = {'Gratis', 'A pagamento (il corso è gratis)', 'No'}
+CAMPI = ('id', 'area', 'tema', 'titolo', 'ente', 'paese', 'piattaforma', 'lingua', 'livello', 'formato', 'durata', 'attestato', 'sintesi', 'url', 'verificato')
+
+
+def controlla(path):
+    e = []
+    try:
+        d = json.load(open(path, encoding='utf-8'))
+    except Exception as x:
+        return ['%s non si legge: %s' % (path, x)]
+    if d.get('app') != 'corsi-online':
+        e.append('app deve essere «corsi-online»')
+    temi = d.get('temi') or {}
+    if set(temi) != {'ia', 'pens'}:
+        e.append('temi deve avere le aree ia e pens')
+    corsi = d.get('corsi')
+    if not isinstance(corsi, list):
+        return e + ['corsi deve essere una lista']
+    ids, urls = set(), set()
+    oggi = datetime.date.today()
+    for i, c in enumerate(corsi):
+        w = 'corso %d (%s)' % (i + 1, c.get('id', '?'))
+        for k in CAMPI:
+            if not str(c.get(k) or '').strip():
+                e.append('%s: manca «%s»' % (w, k))
+        if c.get('gratuito') is not True:
+            e.append('%s: «gratuito» deve essere true (solo corsi gratuiti)' % w)
+        if not re.fullmatch(r'c-[a-z0-9-]+', str(c.get('id', ''))):
+            e.append('%s: id deve iniziare con c- (minuscole, cifre, trattini)' % w)
+        if c.get('id') in ids:
+            e.append('%s: id ripetuto' % w)
+        ids.add(c.get('id'))
+        if c.get('area') not in temi:
+            e.append('%s: area sconosciuta' % w)
+        elif c.get('tema') not in temi[c['area']]:
+            e.append('%s: tema «%s» non è tra quelli dell\'area' % (w, c.get('tema')))
+        for k, ok in (('lingua', LINGUE), ('livello', LIVELLI), ('formato', FORMATI), ('attestato', ATTESTATI)):
+            if c.get(k) and c[k] not in ok:
+                e.append('%s: %s «%s» non ammesso (%s)' % (w, k, c[k], ', '.join(sorted(ok))))
+        u = str(c.get('url', ''))
+        if not u.startswith('https://'):
+            e.append('%s: url deve iniziare con https://' % w)
+        if u in urls:
+            e.append('%s: url ripetuto' % w)
+        urls.add(u)
+        if len(str(c.get('titolo', ''))) > 110:
+            e.append('%s: titolo troppo lungo' % w)
+        if len(str(c.get('sintesi', '')).split()) > 45:
+            e.append('%s: sintesi oltre 45 parole' % w)
+        try:
+            v = datetime.date.fromisoformat(str(c.get('verificato')))
+            if v > oggi or (oggi - v).days > 400:
+                e.append('%s: data di verifica fuori intervallo' % w)
+        except ValueError:
+            e.append('%s: verificato deve essere AAAA-MM-GG' % w)
+    if d.get('pronto'):
+        if len(corsi) < 30:
+            e.append('pronto: servono almeno 30 corsi (ora %d)' % len(corsi))
+        for a in ('ia', 'pens'):
+            n = sum(1 for c in corsi if c.get('area') == a)
+            if n < 12:
+                e.append('pronto: area %s con %d corsi, ne servono almeno 12' % (a, n))
+        if sum(1 for c in corsi if c.get('paese') != 'Italia') < 5:
+            e.append('pronto: servono almeno 5 corsi di università non italiane')
+        if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', str(d.get('updated', ''))):
+            e.append('pronto: updated deve essere AAAA-MM-GG')
+    return e
+
+
+if __name__ == '__main__':
+    err = []
+    for p in sys.argv[1:] or ['sezioni/corsi_dati.json']:
+        err += controlla(p)
+    if err:
+        print('❌ da sistemare:\n- ' + '\n- '.join(err))
+        sys.exit(1)
+    print('✅ tutto a posto')

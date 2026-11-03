@@ -16,7 +16,7 @@
 /* Colori per sezione: ogni sezione ha il suo (riquadri, schede, chip del calendario) */
 :root{--chp:#a8740a;--bg:#f4f5f9;--card:#ffffff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);
   --cal:#2563eb;--cal-bg:#e8f0fe;--scad:#d6342c;--scad-bg:#fdeceb;--prat:#e8770e;--prat-bg:#fff0e0;--fam:#7c3aed;--fam-bg:#f1eafe;--ben:#0d9488;--ben-bg:#ddf4f1;
-  --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;--inv:#15803d;--inv-bg:#dcf2e3;--met:#b86e00;--met-bg:#fff1dc;--dia:#8e4f9e;--dia-bg:#f6eaf8;--cd:#0e7490;--cd-bg:#e0f2f7;--st:#334155;--st-bg:#e9edf3;--auto:#0e7490;--auto-bg:#e0f2f7;
+  --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;--inv:#15803d;--inv-bg:#dcf2e3;--met:#b86e00;--met-bg:#fff1dc;--dia:#8e4f9e;--dia-bg:#f6eaf8;--cd:#0e7490;--cd-bg:#e0f2f7;--st:#334155;--st-bg:#e9edf3;--auto:#0e7490;--auto-bg:#e0f2f7;--corsi:#4338ca;--corsi-bg:#e8e9fb;
   --accent:var(--cal);--ok:#2e7d5b;--ok-bg:#e1f3e9;--warn:var(--scad);--warn-bg:var(--scad-bg);--soon:#b7791f;--soon-bg:#fdf1dc;--lp:var(--lic);--lp-bg:var(--lic-bg);--euro:#1f5fae;--euro-bg:#e3edf9}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -27,7 +27,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.42 -apple-system
 .sect::-webkit-scrollbar{display:none}
 .sect button{--c:var(--muted);display:flex;align-items:center;gap:8px;border:0;font:inherit;font-weight:700;font-size:16px;color:var(--ink);background:var(--card);padding:10px 16px;border-radius:14px;cursor:pointer;box-shadow:var(--shadow);white-space:nowrap}
 .sect button .ic{font-size:19px}
-@media (max-width:1366px){.sect{gap:6px}.sect button{padding:8px 11px;font-size:15px;gap:6px}.sect button .ic{font-size:17px}}
+@media (max-width:1366px){.sect{gap:5px}.sect button{padding:8px 9px;font-size:15px;gap:5px}.sect button .ic{font-size:17px}}
 .sect button.on{background:var(--c);color:#fff}
 .sect button .n{font-size:12px;font-weight:800;background:var(--scad);color:#fff;border-radius:999px;padding:1px 7px}
 .sect button.on .n{background:#fff;color:var(--scad)}
@@ -74,7 +74,7 @@ main[data-sec=oggi] .grid>.card .row{padding:4px 0;gap:6px}
 main[data-sec=oggi] .grid>.card small,main[data-sec=oggi] .grid>.card .lbl{font-size:12px}
 .card{background:var(--card);border-radius:18px;padding:14px 16px;margin-bottom:14px;box-shadow:var(--shadow)}
 .card[class*=" k-"]{box-shadow:inset 0 4px 0 var(--c),var(--shadow);padding-top:16px}
-.k-cal{--c:var(--cal)}.k-dia{--c:var(--dia)}.k-cd{--c:var(--cd)}.k-st{--c:var(--st)}.og-pills{display:flex;flex-wrap:wrap;gap:8px;margin:-4px 0 14px}.og-p{font:inherit;font-weight:600;border:1px solid var(--line,#d0d5dd);background:var(--card,#fff);color:inherit;border-radius:999px;padding:6px 14px;text-decoration:none;cursor:pointer}.og-w{border-color:#f59e0b;background:#fff4e5;color:#9a3412}.k-auto{--c:var(--auto)}
+.k-cal{--c:var(--cal)}.k-dia{--c:var(--dia)}.k-cd{--c:var(--cd)}.k-st{--c:var(--st)}.og-pills{display:flex;flex-wrap:wrap;gap:8px;margin:-4px 0 14px}.og-p{font:inherit;font-weight:600;border:1px solid var(--line,#d0d5dd);background:var(--card,#fff);color:inherit;border-radius:999px;padding:6px 14px;text-decoration:none;cursor:pointer}.og-w{border-color:#f59e0b;background:#fff4e5;color:#9a3412}.k-auto{--c:var(--auto)}.k-corsi{--c:var(--corsi)}.co-fr{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}.og-p.on{background:var(--corsi);border-color:var(--corsi);color:var(--card,#fff)}.co-ck{font-size:14px;display:flex;gap:5px;align-items:center}.co-c{border-top:1px solid var(--line,#e3e6ea);padding:8px 0}.co-c:first-of-type{border-top:0}.co-c p{margin:4px 0;font-size:13.5px}.co-e{font-size:12.5px;opacity:.75}.co-t{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}.co-t span{font-size:11.5px;background:var(--corsi-bg);border-radius:8px;padding:1px 7px}.co-b{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0}.co-b .btn.on{outline:2px solid var(--corsi)}.co-da,.co-in,.co-ok{background:linear-gradient(90deg,var(--corsi-bg),transparent);border-radius:8px;padding-left:6px}
 .au-big{font-size:20px;margin:4px 0 10px}.au-form{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0}.au-form label{display:grid;gap:4px;font-weight:600;font-size:14px}.au-form .au-w{grid-column:span 2}.au-form input{font:inherit;padding:8px 10px;border-radius:10px;border:1px solid var(--line,#d0d5dd)}
 .au-chk{list-style:none;padding:0;margin:4px 0 10px;display:grid;gap:6px}.au-chk label{display:flex;gap:8px;align-items:flex-start}.au-chk input{margin-top:4px;width:20px;height:20px}
 .au-tab{display:grid;gap:4px;margin:10px 0}.au-row{display:grid;grid-template-columns:2fr 1fr 1.2fr 1.2fr 1fr auto;gap:8px;align-items:center;padding:6px 8px;border-radius:10px;background:var(--auto-bg)}.au-h{background:none;font-weight:700;font-size:13px;opacity:.75}.k-scad{--c:var(--scad)}.k-prat{--c:var(--prat)}.k-fam{--c:var(--fam)}.k-ben{--c:var(--ben)}.k-lic{--c:var(--lic)}.k-mondo{--c:var(--mondo)}.k-ipad{--c:var(--ipad)}.k-set{--c:var(--set)}.k-pens{--c:var(--pens)}.k-inv{--c:var(--inv)}.k-conti{--c:var(--euro)}
@@ -212,7 +212,7 @@ a.btn{text-decoration:none;display:inline-block}
 .setl .row{cursor:default}
 @media (prefers-color-scheme:dark){:root{--chp:#b58424;--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--shadow:0 1px 2px rgba(0,0,0,.4);
   --cal:#5b8cff;--cal-bg:#18264a;--scad:#ff6b5f;--scad-bg:#3b1a18;--prat:#ff9a3d;--prat-bg:#3a2612;--fam:#a98bff;--fam-bg:#271f3d;--ben:#2cc5b6;--ben-bg:#12302d;
-  --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--met:#f0a43a;--met-bg:#3a2a12;--dia:#d39be0;--dia-bg:#33203a;--cd:#4cc3dc;--cd-bg:#11303a;--st:#cbd5e1;--st-bg:#232a35;--auto:#67e8f9;--auto-bg:#16303a;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
+  --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--met:#f0a43a;--met-bg:#3a2a12;--dia:#d39be0;--dia-bg:#33203a;--cd:#4cc3dc;--cd-bg:#11303a;--st:#cbd5e1;--st-bg:#232a35;--auto:#67e8f9;--auto-bg:#16303a;--corsi:#a5b4fc;--corsi-bg:#23254a;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
   .warnbox{background:#3a2a1c;border-color:#b8743c}}
 /* 📓 Diario del passaggio */
 .dia-fasi{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.dia-fasi .pill{opacity:.55}.dia-fasi .pill.dia-on,.pill.dia-on{opacity:1;background:var(--dia-bg);color:var(--dia)}.dia-fasi .lbl{flex-basis:100%;margin-top:4px}
@@ -246,7 +246,7 @@ a.btn{text-decoration:none;display:inline-block}
 @media (max-width:600px){.dia-qt{font-size:18px}.dia-temp button small{font-size:10.5px}}
 
 </style>
-<script>window.APP_VERSION="4bb7131972";window.APP_BUILD="2026-11-03T13:32+02:00";</script>
+<script>window.APP_VERSION="aa898f9b0b";window.APP_BUILD="2026-11-03T14:22+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -2705,6 +2705,47 @@ function bindAuto(){
 function auCard(){const A=P.auto||{},g=auGiorni(A.scad);if(g==null||g>45||g<-3)return "";const done=AU_CHECK.filter((_,i)=>(A.chk||{})[i]).length;
   return `<div class="card k-auto"><h3>🚗 Auto <button class="lnk" data-go="auto">Apri ›</button></h3><div class="big">${g>0?g:g===0?"oggi":"✓"}</div><div class="lbl">${g>0?(g===1?"giorno":"giorni")+" alla riconsegna":g===0?"è il giorno della riconsegna":"riconsegna fatta? controlla la checklist del «dopo»"}</div><div class="row"><div class="grow">Checklist della riconsegna</div><b>${done} su ${AU_CHECK.length}</b></div></div>`;}
 
+/* corsi online (sezioni/corsi_dati.json) */
+const CO_D = {"app":"corsi-online","updated":"","pronto":false,"criteri":"Solo corsi gratuiti da seguire per intero e aperti all'iscrizione il giorno del controllo, di università italiane o straniere, che si possono seguire in italiano (lingua del corso o sottotitoli ufficiali in italiano). L'attestato può essere a pagamento: è indicato su ogni corso.","temi":{"ia":["Intelligenza artificiale","Informatica e programmazione","Dati e statistica","Sicurezza e privacy","Competenze digitali"],"pens":["Finanza personale ed economia","Salute e benessere","Storia","Arte e musica","Letteratura e scrittura","Lingue","Scienze e natura","Filosofia e psicologia","Diritto e cittadinanza"]},"corsi":[]};
+/* ---------- 🎓 Corsi online (3/11/2026, richiesta del proprietario) ----------
+   Corsi gratuiti di università italiane e straniere che si seguono in italiano. La lista è in sezioni/corsi_dati.json
+   (CO_D, controllata da strumenti/verifica_corsi.py a ogni build). Sull'iPad resta solo lo stato dei corsi (P.corsi). */
+const CO_AREE={ia:["🤖","IA e digitale"],pens:["🌿","Pensione e tempo libero"]};
+const CO_ST={da:["⭐","Da seguire"],in:["▶️","In corso"],ok:["✅","Finito"]};
+function coD(){P.corsi=P.corsi||{};const C=P.corsi;C.st=C.st||{};C.f=C.f||{};return C;}
+function coFiltra(C){const f=C.f;return CO_D.corsi.filter(c=>(!f.a||c.area===f.a)&&(!f.it||c.lingua!=="Sottotitoli in italiano")&&(!f.at||c.attestato==="Gratis")&&(!f.st||C.st[c.id]));}
+function coCard(c,C){const s=C.st[c.id];
+  return `<div class="co-c${s?" co-"+s:""}"><b>${esc(c.titolo)}</b><div class="co-e">${esc(c.ente)}${c.paese!=="Italia"?" · "+esc(c.paese):""} · ${esc(c.piattaforma)}</div>`+
+    `<div class="co-t"><span>${c.lingua==="Sottotitoli in italiano"?"💬":"🇮🇹"} ${esc(c.lingua)}</span><span>${esc(c.livello)}</span><span>⏱️ ${esc(c.durata)}</span><span>${esc(c.formato)}</span><span>🎓 attestato: ${esc(c.attestato)}</span></div>`+
+    `<p>${esc(c.sintesi)}</p><div class="co-b"><a class="btn sm" href="${esc(c.url)}" target="_blank" rel="noopener">Apri il corso ›</a>`+
+    Object.keys(CO_ST).map(k=>`<button class="btn sm${s===k?" on":""}" data-cos="${esc(c.id)}" data-v="${k}" title="${CO_ST[k][1]}">${CO_ST[k][0]}</button>`).join("")+
+    `</div><div class="lbl">Controllato il ${new Date(c.verificato+"T12:00").toLocaleDateString("it-IT")}</div></div>`;}
+function vCorsi(){
+  const C=coD(),f=C.f,L=CO_D.corsi,R=coFiltra(C);
+  let o=`<h1>🎓 Corsi online</h1><p class="sub">Corsi gratuiti di università italiane e straniere che si seguono in italiano. Tocca ⭐ ▶️ ✅ per segnare i tuoi: lo stato resta su questo iPad.</p>`;
+  if(!L.length)return o+`<div class="card k-corsi nofold"><h2>📚 La lista è in preparazione</h2><p>${esc(CO_D.criteri)}</p><p class="empty">I corsi arrivano dopo la ricerca e il controllo: ogni corso viene aperto sulla pagina ufficiale prima di entrare nella lista.</p></div>`;
+  const mie=L.filter(c=>C.st[c.id]),nn=k=>mie.filter(c=>C.st[c.id]===k).length;
+  o+=`<div class="card k-corsi nofold co-f"><div class="co-fr">`+
+    `<button class="og-p${!f.a?" on":""}" data-cof="a" data-v="">Tutti · ${L.length}</button>`+
+    Object.keys(CO_AREE).map(a=>`<button class="og-p${f.a===a?" on":""}" data-cof="a" data-v="${a}">${CO_AREE[a][0]} ${CO_AREE[a][1]} · ${L.filter(c=>c.area===a).length}</button>`).join("")+
+    `<label class="co-ck"><input type="checkbox" data-cok="it"${f.it?" checked":""}> solo in italiano (senza sottotitoli)</label>`+
+    `<label class="co-ck"><input type="checkbox" data-cok="at"${f.at?" checked":""}> attestato gratis</label>`+
+    `<label class="co-ck"><input type="checkbox" data-cok="st"${f.st?" checked":""}> solo i miei (${mie.length})</label></div>`+
+    (mie.length?`<div class="lbl">I miei corsi: ⭐ ${nn("da")} da seguire · ▶️ ${nn("in")} in corso · ✅ ${nn("ok")} finiti</div>`:"")+
+    `<div class="lbl">${esc(CO_D.criteri)}${CO_D.updated?" Lista aggiornata il "+new Date(CO_D.updated+"T12:00").toLocaleDateString("it-IT")+".":""}</div></div>`;
+  if(!R.length)return o+`<p class="empty">Nessun corso con questi filtri.</p>`;
+  const temi=[].concat(...Object.keys(CO_AREE).map(a=>CO_D.temi[a]));
+  o+=`<div class="cols4">`+temi.map(t=>{const g=R.filter(c=>c.tema===t);if(!g.length)return "";
+    return `<div class="card k-corsi"><h3>${esc(t)} <span class="pill">${g.length}</span></h3>${g.map(c=>coCard(c,C)).join("")}</div>`;}).join("")+`</div>`;
+  return o;
+}
+function bindCorsi(){
+  const C=coD();
+  document.querySelectorAll("[data-cof]").forEach(b=>b.onclick=()=>{C.f[b.dataset.cof]=b.dataset.v;save();render();});
+  document.querySelectorAll("[data-cok]").forEach(c=>c.onchange=()=>{C.f[c.dataset.cok]=c.checked?1:0;save();render();});
+  document.querySelectorAll("[data-cos]").forEach(b=>b.onclick=()=>{const id=b.dataset.cos,v=b.dataset.v;if(C.st[id]===v)delete C.st[id];else C.st[id]=v;save();render();toast(C.st[id]?CO_ST[v][0]+" "+CO_ST[v][1]:"Tolto dai tuoi corsi");});
+}
+
 /* ---------- famiglia ---------- */
 const chiList=()=>[...new Set(P.fam.att.map(a=>a.chi).filter(Boolean))];
 /* attività fisse: ogni settimana o ogni 2 settimane (da «dal»), fino a «fino», con periodi di pausa; impegni di un giorno */
@@ -2793,7 +2834,7 @@ function icsText(items){const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Pian
 
 /* ---------- interfaccia ---------- */
 /* sezioni nel menu (ognuna con il suo colore); ⚙️ Impostazioni sta a parte, a destra */
-const SECT=[["oggi","☀️","Oggi","--cal"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["st","🗞️","Stampa di oggi","--st"],["auto","🚗","Auto","--auto"]].concat(PRAT_ON?[["prat","🗂️","Pratiche","--prat"]]:[],CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
+const SECT=[["oggi","☀️","Oggi","--cal"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["st","🗞️","Stampa di oggi","--st"],["auto","🚗","Auto","--auto"],["corsi","🎓","Corsi","--corsi"]].concat(PRAT_ON?[["prat","🗂️","Pratiche","--prat"]]:[],CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
 const ALL_SECT=SECT.map(x=>x[0]).concat(["set"]);
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
 function mapOld(k){
@@ -2813,7 +2854,7 @@ function side(){const late=lateN();
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(k==="prat")pratNew=false;cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,prat:PRAT_ON?vPrat:vCal,dia:vDia,cd:vCd,st:vSt,auto:vAuto,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
+function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,prat:PRAT_ON?vPrat:vCal,dia:vDia,cd:vCd,st:vSt,auto:vAuto,corsi:vCorsi,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
 /* ---------- 🪟 finestre: ogni riquadro con un titolo si apre e si chiude; lo stato resta su questo iPad (pn-fold) ---------- */
 const FOLD_KEY="pn-fold";let foldSt=lsJ(FOLD_KEY)||{};
 function foldCards(m){m.querySelectorAll(":scope > h2").forEach(h=>{const c=h.nextElementSibling;if(!c||c.tagName!=="DIV"||!c.classList.contains("card")||(c.firstElementChild&&c.firstElementChild.tagName==="H3"))return;const t=document.createElement("h3");t.innerHTML=h.innerHTML;c.prepend(t);h.remove();});
@@ -2961,6 +3002,7 @@ function bind(){
   if(cur==="cd")bindCd();
   if(cur==="st")bindSt();
   if(cur==="auto")bindAuto();
+  if(cur==="corsi")bindCorsi();
   if(cur==="cal"&&typeof bindCal==="function")bindCal();
   if(cur==="oggi"&&typeof bindCal==="function"){bindCal();document.querySelectorAll("[data-cv]").forEach(b=>b.onclick=()=>{setCalV(b.dataset.cv);if(calV==="giorno")calD=calSel;go("cal");});}
   if(cur==="cal"&&calV==="scad")bindScad();
