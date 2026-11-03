@@ -78,6 +78,14 @@ button,.btn{font:inherit;border:0;border-radius:10px;padding:10px 14px;backgroun
 .mbar{display:flex;height:10px;border-radius:6px;overflow:hidden;background:var(--seg);margin:8px 0 6px}
 .mbar i{display:block;height:100%}
 .dpage{border-left:4px solid var(--line);padding:8px 12px;margin-top:10px;background:var(--seg);border-radius:0 12px 12px 0}
+/* 3/11/2026: pagine del diario su colonne (4 su iPad orizzontale) in un riquadro che scorre */
+.dpages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px;max-height:430px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding-right:2px}
+.dpages .dpage{margin:0;font-size:13px;padding:6px 10px}.dpages .dph{font-size:13px;flex-direction:column;gap:2px}.dpages p{margin:4px 0 0}
+@media (max-width:900px){.dpages{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* sezioni che si aprono e si chiudono toccando il titolo (stato ricordato su questo iPad) */
+details.psec>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px}details.psec>summary::-webkit-details-marker{display:none}
+details.psec>summary::before{content:'▸';font-size:14px;color:var(--muted);transition:transform .15s;margin:14px 0 0 4px}details.psec[open]>summary::before{transform:rotate(90deg)}
+details.psec>summary{background:var(--card,#fff);border-radius:12px;padding:10px 14px;margin-top:10px;box-shadow:0 1px 3px rgba(0,0,0,.06)}details.psec>summary h2{margin:0;font-size:14px;color:var(--ink,#1d2433)}details.psec>summary::before{margin:0}details.psec[open]>summary{margin-bottom:8px}
 .dpage.up{border-color:var(--good)} .dpage.mid{border-color:var(--mid)} .dpage.tired{border-color:var(--c1)} .dpage.down{border-color:var(--bad)}
 .dph{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;font-size:14px}
 .dpage p{margin:6px 0 0;white-space:pre-wrap;font-size:15px}
@@ -400,8 +408,8 @@ function diaryCard(A){
   const pages=I.E.filter(e=>!e.old&&(e.w||e.m||e.p)).slice().reverse();
   const pg=e=>`<div class="dpage${e.m?" "+MOODS[e.m][2]:""}"><div class="dph"><b>${esc(day(e.d))}</b>${e.m?`<span>${MOODS[e.m][0]} ${esc(MOODS[e.m][1])} · ${FORZA[e.f]}</span>`:""}${e.p?`<span class="lbl">${e.p==="P"?"🏫 a scuola":"🏠 assente"}</span>`:""}</div>${e.w?`<p>${esc(e.w)}</p>`:`<p class="lbl">Nessun testo scritto.</p>`}</div>`;
   const recent=pages.filter(e=>I.ago(e.d)<30), older=pages.filter(e=>I.ago(e.d)>=30);
-  h+=`<div class="card"><b>Le pagine del diario</b> <span class="lbl">· ${I.texts} con testo</span>${recent.length?recent.map(pg).join(""):`<p class="lbl">Nessuna pagina negli ultimi 30 giorni.</p>`}`+
-    (older.length?`<details class="dold"><summary>Pagine più vecchie (${older.length})</summary>${older.map(pg).join("")}</details>`:"")+
+  h+=`<div class="card"><b>Le pagine del diario</b> <span class="lbl">· ${I.texts} con testo</span>${recent.length?`<div class="dpages">${recent.map(pg).join("")}</div>`:`<p class="lbl">Nessuna pagina negli ultimi 30 giorni.</p>`}`+
+    (older.length?`<details class="dold"><summary>Pagine più vecchie (${older.length})</summary><div class="dpages">${older.map(pg).join("")}</div></details>`:"")+
     (I.old?`<div class="lbl" style="margin-top:8px">${I.old} ${I.old===1?"pagina arrivata":"pagine arrivate"} prima di questo aggiornamento: si vede solo la data. Con il prossimo invio dall’iPad arrivano anche emozioni e testi.</div>`:"")+
     `<div class="lbl" style="margin-top:8px">I testi arrivano con il collegamento automatico, cifrato. Con il QR arrivano solo emozioni e presenze.</div></div>`;
   return h;
@@ -1130,6 +1138,16 @@ $("lnkOff").onclick=async()=>{if($("lnkOff").dataset.sure){const g0=lsGet(GKEY);
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")pull(false);});
 setInterval(()=>pull(false),30*60e3);
 window.__pull=pull;
+/* ▸ ogni titolo di sezione apre e chiude la sua parte; la prima sezione è aperta, le altre chiuse finché non le apri (stato in prog-fold) */
+function foldSections(out){if(!out)return;const S=lsGet("prog-fold")||{};let cur=null,n=0;
+  [...out.children].forEach(el=>{if(el.tagName==="H2"){const k=el.textContent.trim();const d=document.createElement("details");d.className="psec";d.dataset.k=k;d.open=k in S?!!S[k]:n===0;n++;
+      const sm=document.createElement("summary");out.insertBefore(d,el);sm.appendChild(el);d.appendChild(sm);cur=d;
+      d.addEventListener("toggle",()=>{const T=lsGet("prog-fold")||{};T[k]=d.open?1:0;lsSet("prog-fold",T);});return;}
+    const h=el.firstElementChild;if(h&&h.tagName==="H2"&&el.id){const k=h.textContent.trim();const d=document.createElement("details");d.className="psec";d.dataset.k=k;d.open=k in S?!!S[k]:n===0;n++;
+      const sm=document.createElement("summary");out.insertBefore(d,el);sm.appendChild(h);d.appendChild(sm);d.appendChild(el);cur=d;
+      d.addEventListener("toggle",()=>{const T=lsGet("prog-fold")||{};T[k]=d.open?1:0;lsSet("prog-fold",T);});return;}
+    if(cur)cur.appendChild(el);});}
+const _renderP=render;render=function(){_renderP.apply(this,arguments);try{foldSections($("out"));}catch(e){}};
 /* ---------- 📲 collegamento con QR e controllo della chiave (la chiave resta su questo iPad, fuori dalle copie) ---------- */
 const GKEY="prog-gh-v1", GH="https://api.github.com";
 const b64u=s=>btoa(unescape(encodeURIComponent(s))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
