@@ -31,11 +31,11 @@ function vPens(){
   if(!pensHas())return o+`<p class="sub">Il passaggio dal servizio alla pensione: adempimenti, leve, cifre, incassi e cassa fino al TFS.</p>`+skCard()+pensImport(true);
   const op=pensOpen(),late=op.filter(a=>a.d<t),next=op.filter(a=>a.d>=t).slice(0,1)[0],lp=lastPresence();
   o+=`<p class="sub">${esc(p.src||"Dati della scheda pensione")}${p.rev?" · scheda rev. "+esc(String(p.rev))+(p.revAt?" del "+fmt(p.revAt.slice(0,10),{day:"numeric",month:"long"}):""):""}${p.at?" · caricati il "+fmt(p.at.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):""}</p>
-  <div class="kpi" style="margin-bottom:14px">${cess?`<div><b>${Math.max(0,diff(t,cess))}</b><span>giorni alla cessazione (${fmt(cess,{day:"numeric",month:"short",year:"numeric"})})</span></div>`:""}
+  <div class="pn-top"><div class="kpi">${cess?`<div><b>${Math.max(0,diff(t,cess))}</b><span>giorni alla cessazione (${fmt(cess,{day:"numeric",month:"short",year:"numeric"})})</span></div>`:""}
     ${lp?`<div><b>${fmt(lp,{day:"numeric",month:"short"})}</b><span>ultimo giorno in ufficio (dalle Licenze)</span></div>`:""}
     <div><b style="${late.length?"color:var(--scad)":""}">${late.length||op.length}</b><span>${late.length?"scadenze passate da guardare":"adempimenti e leve aperti"}</span></div>
-    ${next?`<div><b>${fmt(next.d,{day:"numeric",month:"short"})}</b><span>prossima: ${esc(next.t.slice(0,60))}</span></div>`:""}</div>`;
-  o+=pensIcsNag()+pensTimeline2();
+    ${next?`<div><b>${fmt(next.d,{day:"numeric",month:"short"})}</b><span>prossima: ${esc(next.t.slice(0,60))}</span></div>`:""}</div>${pensTimeline2()}</div>`;
+  /* 3/11/2026: la linea del tempo sta accanto ai numeri; il riquadro dei promemoria per il Calendario non c'è più qui (resta nel Calendario) */
   if(D.rientro){const S=licS();if(S&&S.start&&S.start!==D.rientro)o+=`<div class="warnbox" style="margin:0 0 12px">In Licenze il rientro è il ${fmt(S.start,{day:"numeric",month:"long"})}, nella scheda il ${fmt(D.rientro,{day:"numeric",month:"long"})}: controlla quale è giusto in <a href="licenze.html">Licenze</a>.</div>`;}
   o+=`<div class="seg" role="tablist" style="margin:0 0 14px;width:max-content;max-width:100%">${PV.map(([k,n])=>`<button role="tab" data-pv="${k}" class="${pensV===k?"on":""}" aria-selected="${pensV===k}">${n}${k==="adem"&&late.length?`<span class="n">${late.length}</span>`:""}${k==="news"&&newsNew()?`<span class="n">${newsNew()}</span>`:""}</button>`).join("")}</div>`;
   return o+({news:pensNews,adem:pensAdem,leve:pensLeve,cifre:pensCifre,ced:pensCed,cassa:pensCassa,cont:pensCont,doc:pensDoc}[pensV]||pensAdem)();

@@ -47,6 +47,11 @@ main[data-sec=pens]>.card:has(table,textarea,input:not([type=checkbox]):not([typ
 main[data-sec=pens]>.card h2,main[data-sec=inv]>.card h2,main[data-sec=dia]>.card h2,main[data-sec=cd]>.card h2,main[data-sec=st]>.card h2,main[data-sec=pens]>.card h3,main[data-sec=inv]>.card h3,main[data-sec=dia]>.card h3,main[data-sec=cd]>.card h3,main[data-sec=st]>.card h3{font-size:16px;margin-top:0}
 main[data-sec=pens]>.card .big,main[data-sec=inv]>.card .big,main[data-sec=dia]>.card .big,main[data-sec=cd]>.card .big,main[data-sec=st]>.card .big{font-size:28px}
 }
+/* 🎖️ Pensione: numeri e linea del tempo affiancati */
+.pn-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:12px;align-items:start;margin:0 0 14px}
+.pn-top>.kpi{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pn-top>.kpi>div{margin:0}
+.pn-top>.card{margin:0;max-height:none}
+@media (max-width:900px){.pn-top{grid-template-columns:1fr}}
 /* ☀️ Oggi: riepilogo compatto, 4 colonne su iPad orizzontale (5 su schermi più larghi), riquadri bassi che scorrono dentro */
 main[data-sec=oggi] .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:start}
 @media (min-width:1500px){main[data-sec=oggi] .grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
@@ -230,7 +235,7 @@ a.btn{text-decoration:none;display:inline-block}
 @media (max-width:600px){.dia-qt{font-size:18px}.dia-temp button small{font-size:10.5px}}
 
 </style>
-<script>window.APP_VERSION="f29af5f8fc";window.APP_BUILD="2026-11-03T12:06+02:00";</script>
+<script>window.APP_VERSION="253b439d51";window.APP_BUILD="2026-11-03T12:09+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -1424,11 +1429,11 @@ function vPens(){
   if(!pensHas())return o+`<p class="sub">Il passaggio dal servizio alla pensione: adempimenti, leve, cifre, incassi e cassa fino al TFS.</p>`+skCard()+pensImport(true);
   const op=pensOpen(),late=op.filter(a=>a.d<t),next=op.filter(a=>a.d>=t).slice(0,1)[0],lp=lastPresence();
   o+=`<p class="sub">${esc(p.src||"Dati della scheda pensione")}${p.rev?" · scheda rev. "+esc(String(p.rev))+(p.revAt?" del "+fmt(p.revAt.slice(0,10),{day:"numeric",month:"long"}):""):""}${p.at?" · caricati il "+fmt(p.at.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):""}</p>
-  <div class="kpi" style="margin-bottom:14px">${cess?`<div><b>${Math.max(0,diff(t,cess))}</b><span>giorni alla cessazione (${fmt(cess,{day:"numeric",month:"short",year:"numeric"})})</span></div>`:""}
+  <div class="pn-top"><div class="kpi">${cess?`<div><b>${Math.max(0,diff(t,cess))}</b><span>giorni alla cessazione (${fmt(cess,{day:"numeric",month:"short",year:"numeric"})})</span></div>`:""}
     ${lp?`<div><b>${fmt(lp,{day:"numeric",month:"short"})}</b><span>ultimo giorno in ufficio (dalle Licenze)</span></div>`:""}
     <div><b style="${late.length?"color:var(--scad)":""}">${late.length||op.length}</b><span>${late.length?"scadenze passate da guardare":"adempimenti e leve aperti"}</span></div>
-    ${next?`<div><b>${fmt(next.d,{day:"numeric",month:"short"})}</b><span>prossima: ${esc(next.t.slice(0,60))}</span></div>`:""}</div>`;
-  o+=pensIcsNag()+pensTimeline2();
+    ${next?`<div><b>${fmt(next.d,{day:"numeric",month:"short"})}</b><span>prossima: ${esc(next.t.slice(0,60))}</span></div>`:""}</div>${pensTimeline2()}</div>`;
+  /* 3/11/2026: la linea del tempo sta accanto ai numeri; il riquadro dei promemoria per il Calendario non c'è più qui (resta nel Calendario) */
   if(D.rientro){const S=licS();if(S&&S.start&&S.start!==D.rientro)o+=`<div class="warnbox" style="margin:0 0 12px">In Licenze il rientro è il ${fmt(S.start,{day:"numeric",month:"long"})}, nella scheda il ${fmt(D.rientro,{day:"numeric",month:"long"})}: controlla quale è giusto in <a href="licenze.html">Licenze</a>.</div>`;}
   o+=`<div class="seg" role="tablist" style="margin:0 0 14px;width:max-content;max-width:100%">${PV.map(([k,n])=>`<button role="tab" data-pv="${k}" class="${pensV===k?"on":""}" aria-selected="${pensV===k}">${n}${k==="adem"&&late.length?`<span class="n">${late.length}</span>`:""}${k==="news"&&newsNew()?`<span class="n">${newsNew()}</span>`:""}</button>`).join("")}</div>`;
   return o+({news:pensNews,adem:pensAdem,leve:pensLeve,cifre:pensCifre,ced:pensCed,cassa:pensCassa,cont:pensCont,doc:pensDoc}[pensV]||pensAdem)();
