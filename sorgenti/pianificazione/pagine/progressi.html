@@ -1166,6 +1166,11 @@ function ghPaint(){const g=lsGet(GKEY),el=$("pairSt");if(!el)return;
 async function ghDaily(force){const g=lsGet(GKEY);if(!g||!g.token||navigator.onLine===false)return;if(!force&&g.checked&&Date.now()-new Date(g.checked).getTime()<20*36e5)return;
   try{const r=await ghCheck(g.token);if(r.ok===null)return;Object.assign(g,r,{checked:new Date().toISOString()});lsSet(GKEY,g);}catch(e){}ghPaint();}
 let pairTimer=null;
+async function qrShow(t,id,key,wiped){wiped=wiped||0;const box=$("pairQR");
+  await new Promise((res,rej)=>{if(window.qrcode)return res();const s=document.createElement("script");s.src="qrcode.js";s.onload=res;s.onerror=()=>rej(new Error("serve internet la prima volta"));document.head.appendChild(s);});
+    const q=qrcode(0,"M");q.addData("MMQR1."+b64u(JSON.stringify({t,g:id,k:key,v:2})));q.make();
+    box.innerHTML=`<div style="background:#fff;display:inline-block;padding:14px;border-radius:14px;margin:10px 0">${q.createSvgTag({cellSize:6,margin:2,scalable:false})}</div><div class="btns" style="justify-content:center"><button id="pairHide">Chiudi il QR</button></div><p class="lbl">Sull’iPad della bimba: Io → 💾 Salvataggi → 📷 Collegati con il QR.${wiped?` 🗑️ Cancellati ${wiped} spazi vecchi pubblici.`:""}</p>`;
+    $("pairTok").value="";const hide=()=>{clearTimeout(pairTimer);box.innerHTML="";};$("pairHide").onclick=hide;clearTimeout(pairTimer);pairTimer=setTimeout(hide,180000);}
 $("pairGo").onclick=async()=>{const t=$("pairTok").value.trim()||((lsGet(GKEY)||{}).token||""),box=$("pairQR");
   if(!/^(ghp_|github_pat_)/.test(t)){toast("Incolla la chiave GitHub (inizia con ghp_)");return;}
   box.innerHTML='<p class="lbl">⏳ Controllo la chiave…</p>';
@@ -1180,13 +1185,13 @@ $("pairGo").onclick=async()=>{const t=$("pairTok").value.trim()||((lsGet(GKEY)||
     const wiped=await wipeOldGists(t),prev=LINK&&LINK.gist&&LINK.key&&!linkOld(LINK)?[{gist:LINK.gist,key:LINK.key},...(LINK.prev||[])].slice(0,4):[];
     lsSet(GKEY,Object.assign({token:t,checked:new Date().toISOString()},chk));
     LINK={gist:id,key,v:2,prev};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();ghPaint();
-    await new Promise((res,rej)=>{if(window.qrcode)return res();const s=document.createElement("script");s.src="qrcode.js";s.onload=res;s.onerror=()=>rej(new Error("serve internet la prima volta"));document.head.appendChild(s);});
-    const q=qrcode(0,"M");q.addData("MMQR1."+b64u(JSON.stringify({t,g:id,k:key,v:2})));q.make();
-    box.innerHTML=`<div style="background:#fff;display:inline-block;padding:14px;border-radius:14px;margin:10px 0">${q.createSvgTag({cellSize:6,margin:2,scalable:false})}</div><div class="btns" style="justify-content:center"><button id="pairHide">Chiudi il QR</button></div><p class="lbl">Sull’iPad della bimba: Io → 💾 Salvataggi → 📷 Collegati con il QR.${wiped?` 🗑️ Cancellati ${wiped} spazi vecchi pubblici.`:""}</p>`;
-    $("pairTok").value="";const hide=()=>{clearTimeout(pairTimer);box.innerHTML="";};$("pairHide").onclick=hide;clearTimeout(pairTimer);pairTimer=setTimeout(hide,180000);
+    await qrShow(t,id,key,wiped);
   }catch(e){box.innerHTML=`<p class="lbl" style="color:#c2410c">⚠️ ${esc(e.message||String(e))}</p>`;}
 };
-(()=>{ghPaint();setTimeout(()=>ghDaily(false),1200);
+/* 3/11/2026 (richiesta del proprietario): con la chiave già salvata su questo iPad il QR compare da solo aprendo il riquadro, senza riscrivere la chiave; riusa il collegamento attuale se è valido, altrimenti ne prepara uno nuovo */
+$("pairBox").addEventListener("toggle",async()=>{if(!$("pairBox").open||$("pairQR").innerHTML)return;const g=lsGet(GKEY);if(!g||!g.token||g.ok===false)return;
+  if(LINK&&LINK.gist&&LINK.key&&!linkOld(LINK)){try{await qrShow(g.token,LINK.gist,LINK.key);}catch(e){$("pairQR").innerHTML=`<p class="lbl" style="color:#c2410c">⚠️ ${esc(e.message||String(e))}</p>`;}}else $("pairGo").click();});
+(()=>{ghPaint();setTimeout(()=>ghDaily(false),1200);const g0=lsGet(GKEY);if(g0&&g0.token&&g0.ok!==false){const i=$("pairTok");if(i)i.placeholder="Chiave già salvata su questo iPad: lascia vuoto (o incolla una chiave nuova)";const b=$("pairGo");if(b)b.textContent="Mostra il QR";}
   /* collegamento vecchio: con la chiave già salvata si cancellano subito gli spazi pubblici */
   const g=lsGet(GKEY),forget=()=>{LINK={renew:1};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();};
   if(linkOld(LINK)&&LINK.key&&!(g&&g.token))forget();
