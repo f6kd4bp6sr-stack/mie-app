@@ -41,6 +41,7 @@ function openVita() {
   openModal('<div class="big" style="font-size:28px">🧼👗 Io e il mio corpo</div><p class="vd-sub">Scopri il perché delle buone abitudini.</p>' +
     '<div class="v2-grid">' +
     '<button type="button" class="v2-tile" id="vi-arm"><span class="v2-ti">👗</span><b>L’armadio del meteo</b><small>Che cosa metto oggi?</small></button>' +
+    '<button type="button" class="v2-tile" id="vi-v2"><span class="v2-ti">🎨</span><b>Colori e taglia</b><small>Componi il look · La mia taglia</small></button>' +
     '<button type="button" class="v2-tile" id="vi-mani"><span class="v2-ti">🧼</span><b>Timer delle mani</b><small>40 secondi, passo per passo</small></button>' +
     '<button type="button" class="v2-tile" id="vi-denti"><span class="v2-ti">🪥</span><b>Timer dei denti</b><small>2 minuti, 4 zone</small></button>' +
     '<button type="button" class="v2-tile" id="vi-u"><span class="v2-ti">📚</span><b>Le lezioni</b><small>Come mi vesto · Perché mi lavo</small></button>' +
@@ -48,6 +49,7 @@ function openVita() {
   $('modal-box').classList.add('wide');
   $('vi-x').addEventListener('click', closeModal);
   $('vi-arm').addEventListener('click', () => openWardrobe());
+  if ($('vi-v2')) $('vi-v2').addEventListener('click', () => openVesto2());
   $('vi-mani').addEventListener('click', () => openTimer('mani'));
   $('vi-denti').addEventListener('click', () => openTimer('denti'));
   $('vi-u').addEventListener('click', () => { closeModal(); const ids = typeof unitUnlockedIds === 'function' ? unitUnlockedIds() : new Set(); pathSel = ids.has('lavo') ? 'lavo' : ids.has('vesto') ? 'vesto' : pathSel; store.set('path-sel', pathSel); go('home'); });

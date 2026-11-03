@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="6711f4a6b9";</script>
+<script>window.APP_VERSION="30e2c4799e";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -374,6 +374,35 @@
 .av-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:6px 0 4px}
 .av-b{font-size:34px;line-height:1;padding:8px 0;border-radius:16px;border:3px solid transparent;background:var(--card,#fff);cursor:pointer}
 .av-b[aria-pressed="true"]{border-color:var(--mc,var(--c3));background:var(--ms,var(--c3-soft))}
+/* 👗🎨 Come mi vesto: colori e taglia (js/sezioni/vesto2.js) */
+.v2-hello{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.v2-hl{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;column-gap:12px;align-items:center;text-align:left;padding:12px 18px;border-radius:20px;border:3px solid var(--c6);background:linear-gradient(135deg,var(--c6-soft),#fff);cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.08);max-width:420px}
+.v2-hl span{grid-row:1/3;font-size:34px}.v2-hl b{font-size:19px}.v2-hl small{grid-column:2;font-weight:700;color:var(--ink-soft)}
+.v2-hl i{grid-row:1/3;grid-column:3;font-style:normal;font-weight:900;font-size:13px;background:var(--c1);color:#fff;border-radius:999px;padding:4px 10px;animation:vvPulse 2s ease-in-out infinite}
+@keyframes vvPulse{50%{transform:scale(1.08)}}
+@media (prefers-reduced-motion:reduce){.v2-hl i{animation:none}}
+.vv-ruota{width:min(300px,70vw);display:block;margin:6px auto}
+.vv-pair,.vv-neu{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:6px 0}
+.vv-pair span,.vv-neu span{width:30px;height:30px;border-radius:50%;border:2px solid #1d2433}.vv-pair b{margin:0 10px 0 4px}
+.vv-look{display:grid;grid-template-columns:230px 1fr;gap:18px;align-items:start;text-align:left}
+.vv-fig{width:200px;display:block}.vv-fig [data-p]{cursor:pointer}
+.vv-parts{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}.vv-parts .chip.on{outline:3px solid var(--c6)}
+.vv-dot{display:inline-block;width:16px;height:16px;border-radius:50%;border:2px solid #1d2433;margin-right:6px;vertical-align:-3px}
+.vv-pal{display:grid;grid-template-columns:repeat(6,48px);gap:8px}.vv-pal button{width:48px;height:48px;border-radius:14px;border:2px solid #1d2433;cursor:pointer}
+.vv-sk{display:block;margin:10px 0;font-weight:700}
+.vv-ef{background:var(--c6-soft);border-radius:16px;padding:10px 14px}.vv-ef b{font-size:20px}.vv-ef p{margin:4px 0;font-weight:700}
+.vv-saved{margin-top:12px;text-align:left}.vv-saved div{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.vv-saved button{display:flex;gap:2px;padding:6px;border-radius:12px;border:2px solid var(--line);background:#fff;cursor:pointer}.vv-saved i{width:16px;height:24px;border-radius:4px;border:1px solid #1d2433}
+.vv-sugs{display:grid;gap:8px;text-align:left;margin:8px 0}.vv-sug{display:grid;grid-template-columns:38px 1fr repeat(3,22px);gap:8px;align-items:center}
+.vv-sug span{width:38px;height:38px;border-radius:50%;border:2px solid #1d2433}.vv-sug i{width:22px;height:22px;border-radius:50%;border:2px solid #1d2433}.vv-sug small{display:block;font-weight:700;color:var(--ink-soft)}
+.vv-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:8px 0 12px}.vv-tabs .chip.on{outline:3px solid var(--c6)}
+.vv-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left}.vv-form label{font-weight:800;display:grid;gap:4px}.vv-form input{font-size:20px;padding:8px 10px;border-radius:12px;border:2px solid var(--line)}
+.vv-due{background:#fff4e5;border:2px solid #f59e0b;border-radius:14px;padding:8px 12px;font-weight:800;margin-bottom:10px}
+.vv-how{text-align:left;margin:10px 0}.vv-how summary{font-weight:800;cursor:pointer}
+.vv-hist{text-align:left;margin-top:12px;font-weight:700}.vv-res{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vv-res div{background:var(--c6-soft);border-radius:16px;padding:12px;display:grid}.vv-res span{font-size:34px}.vv-res b{font-size:20px}.vv-res small{font-weight:700;color:var(--ink-soft)}
+.vv-note{font-weight:700;text-align:left;margin-top:10px}.vv-sport{text-align:left;display:grid;gap:8px}.vv-sport summary{cursor:pointer;font-size:18px}
+.vv-sport ul,.vv-check{list-style:none;padding:0;text-align:left;display:grid;gap:6px;font-weight:700}
   /* Giochi */
   .sgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 360px; margin: 16px auto 0; }
   .pad { aspect-ratio: 1; max-width: 100%; border: 0; border-radius: 28px; background: var(--pad); opacity: .45; font-size: 38px; color: #fff; transition: opacity .1s, transform .1s; }
@@ -8173,6 +8202,124 @@ SCOPRI.push({
  "quiz": []
 });
 
+/* «Come mi vesto»: colori e taglie — fonti in VESTO2.fonti (verificato: autore + revisore) */
+/* Nota taglie: l'etichetta è l'altezza in cm (EN 13402). Se l'altezza cade proprio su un confine tra due taglie, conviene la taglia più grande. */
+const VESTO2 = {
+  colFacts: [
+    ['I tre colori primari', 'Nel cerchio dei colori di Itten i colori primari sono tre: rosso, giallo e blu. Con la pittura non si ottengono mescolando altri colori, e mescolandoli, con l\'aiuto del bianco e del nero, nascono tantissimi altri colori. Pensa a quanti ne puoi inventare con tre soli tubetti!'],
+    ['I colori secondari', 'Mescolando due primari nascono i colori secondari: giallo e blu danno il verde, giallo e rosso l\'arancione, rosso e blu il viola. Nel cerchio dei colori stanno tra i due primari che li formano.'],
+    ['Colori complementari', 'Sono i colori che stanno uno di fronte all\'altro sul cerchio, come blu e arancione. Vicini si fanno risaltare a vicenda e danno un effetto vivace. Se ti piace un look che si nota, puoi provarli!'],
+    ['Colori analoghi', 'Sono i colori vicini sul cerchio, per esempio giallo, giallo arancio e arancione. Messi insieme danno un effetto morbido e armonioso, perché si somigliano. Sono un\'idea facile per un abbinamento che sta bene insieme.'],
+    ['Caldi e freddi', 'I colori caldi, come rosso, arancione e giallo, ricordano il fuoco e la luce del sole. I colori freddi, come azzurro, blu e viola, ricordano acqua, cielo e ghiaccio. Ognuno ci dà un\'impressione diversa, ma non c\'è un colore giusto per tutte.'],
+    ['Neutri e tono su tono', 'Bianco, nero, grigio e beige sono colori neutri: stanno bene con quasi tutto. Tono su tono vuol dire usare lo stesso colore in versioni più chiare e più scure, per esempio un azzurro chiaro con un blu scuro.'],
+    ['La luce bianca è fatta di colori', 'La luce del sole sembra bianca, ma contiene tutti i colori. Dopo un temporale le gocce d\'acqua nell\'aria la separano nei colori dell\'arcobaleno. Con un prisma di vetro puoi vedere la stessa magia in classe o a casa.'],
+    ['Il tuo gusto conta', 'Il cerchio dei colori è un aiuto, non una regola da rispettare. Tanti artisti rompono le regole e creano cose bellissime. Prova gli abbinamenti, guarda allo specchio come ti senti e scegli quello che ti fa stare bene.']
+  ],
+
+  taglie: [
+    { t: '92',  h: [86, 92],   eta: '1,5-2 anni' },
+    { t: '98',  h: [92, 98],   eta: '2-3 anni' },
+    { t: '104', h: [98, 104],  eta: '3-4 anni' },
+    { t: '110', h: [104, 110], eta: '4-5 anni' },
+    { t: '116', h: [110, 116], eta: '5-6 anni' },
+    { t: '122', h: [116, 122], eta: '6-7 anni' },
+    { t: '128', h: [122, 128], eta: '7-8 anni' },
+    { t: '134', h: [128, 134], eta: '8-9 anni' },
+    { t: '140', h: [134, 140], eta: '9-10 anni' },
+    { t: '146', h: [140, 146], eta: '10-11 anni' },
+    { t: '152', h: [146, 152], eta: '11-12 anni' },
+    { t: '158', h: [152, 158], eta: '12-13 anni' },
+    { t: '164', h: [158, 164], eta: '13-14 anni' },
+    { t: '170', h: [164, 170], eta: '14-15 anni' },
+    { t: '176', h: [170, 176], eta: '15-16 anni' }
+  ],
+
+  scarpe: [
+    { eu: 28, piede: [17.0, 17.7] },
+    { eu: 29, piede: [17.7, 18.3] },
+    { eu: 30, piede: [18.3, 19.0] },
+    { eu: 31, piede: [19.0, 19.7] },
+    { eu: 32, piede: [19.7, 20.3] },
+    { eu: 33, piede: [20.3, 21.0] },
+    { eu: 34, piede: [21.0, 21.7] },
+    { eu: 35, piede: [21.7, 22.3] },
+    { eu: 36, piede: [22.3, 23.0] },
+    { eu: 37, piede: [23.0, 23.7] },
+    { eu: 38, piede: [23.7, 24.3] },
+    { eu: 39, piede: [24.3, 25.0] },
+    { eu: 40, piede: [25.0, 25.7] },
+    { eu: 41, piede: [25.7, 26.3] }
+  ],
+
+  margineScarpe: 'Lascia circa 1 cm tra la punta del dito più lungo e la scarpa: il piede si allunga un po\' quando cammini e cresce, e una scarpa troppo piccola può far male. Nella tabella il margine è già compreso: scrivi la misura vera del piede. Se il piede sta tra due numeri, scegli quello più grande. I numeri sono indicativi: ogni marca è un po\' diversa, quindi prova sempre le scarpe, nel pomeriggio e con le calze che userai.',
+
+  sport: [
+    { id: 'pattini', ic: '⛸️', n: 'Pattini da ghiaccio',
+      come: 'Di solito i pattini da ghiaccio sono un po\' più piccoli delle scarpe di tutti i giorni, ma dipende dalla marca: ogni marca ha la sua tabella delle misure. Non scegliere solo dal numero di scarpa: misura il piede e guarda la tabella della marca, oppure fatti consigliare da chi vende i pattini o dalla tua istruttrice. Se stai crescendo, non comprarli troppo grandi: un pattino largo non tiene il piede e non è sicuro.',
+      prova: [
+        'Provali con calze sottili, non con calze grosse: cambiano il modo in cui il pattino calza.',
+        'In piedi, le dita devono toccare appena la punta, senza piegarsi.',
+        'Il tallone deve restare fermo al suo posto, senza sollevarsi quando ti pieghi sulle ginocchia.',
+        'Devono essere ben aderenti, ma non devono fare male né far formicolare i piedi. Se fanno male, dillo subito.'
+      ] },
+    { id: 'aerea', ic: '🎪', n: 'Body per i tessuti aerei',
+      come: 'Il body (o l\'abbigliamento) per i tessuti aerei si sceglie sull\'altezza e sulla comodità, e conta più la forma che il numero: dipende dalla marca, quindi provalo. Di solito si indossa un capo aderente al corpo, con le gambe coperte, perché il tessuto non deve incastrarsi e la pelle non deve sfregare. Chiedi alla tua insegnante come vuole che ti vesta per la lezione.',
+      prova: [
+        'Capelli ben raccolti, senza fermagli rigidi: non devono impigliarsi nel tessuto.',
+        'Fai un grande piegamento in avanti e uno all\'indietro: il body non deve tirare né scoprirti.',
+        'Alza le gambe e fai uno squat: ginocchia e dietro delle ginocchia coperti, e tutto deve restare al suo posto.',
+        'Niente cerniere, bottoni o decorazioni che possono impigliarsi nel tessuto, e niente gioielli.',
+        'Le spalline e l\'orlo non devono segnare o dare fastidio sotto le braccia.'
+      ] },
+    { id: 'nuoto', ic: '🏊', n: 'Costume e cuffia',
+      come: 'Per il costume da piscina scegli la taglia dall\'altezza, ma dipende dalla marca: leggi la tabella e provalo. Deve stare aderente e comodo, senza stringere e senza ballare. Vale anche per la cuffia: deve coprire bene i capelli e restare ferma, senza tirare. In caso di dubbio chiedi a chi ti insegna nuoto.',
+      prova: [
+        'Alza le braccia e fai finta di nuotare: il costume non deve tirare sulle spalle né scivolare.',
+        'Accovacciati e piegati in avanti: deve restare al suo posto.',
+        'Le spalline non devono segnare la pelle e l\'elastico delle gambe non deve stringere.',
+        'Metti la cuffia: deve restare ferma quando muovi la testa, senza fare male alle orecchie.'
+      ] },
+    { id: 'ginnastica', ic: '👟', n: 'Scarpe e tuta per la ginnastica',
+      come: 'Per le scarpe da ginnastica vale la regola di tutte le scarpe: lascia un po\' di spazio davanti alle dita, ma non troppo, perché con una scarpa troppo grande il piede scivola quando corri e salti. La tuta si sceglie sull\'altezza, comoda e senza parti penzolanti. Prova sempre tutto con le calze che userai in palestra.',
+      prova: [
+        'La suola deve piegarsi con il piede ma non afflosciarsi, e non deve scivolare sul pavimento liscio.',
+        'Il tallone deve restare fermo a ogni passo, senza uscire dalla scarpa quando corri o salti.',
+        'Allaccia bene la scarpa e fai due saltelli: il piede non deve scivolare in avanti.',
+        'La tuta non deve tirare quando ti pieghi, corri o alzi le braccia, né coprirti i piedi o le mani.'
+      ] }
+  ],
+
+  prova: [
+    'Alza le braccia sopra la testa: la maglia non deve tirare né salire troppo sulla pancia.',
+    'Accovacciati e rialzati: i pantaloni non devono stringere né scendere.',
+    'Le maniche devono arrivare al polso (o poco sotto) quando stendi le braccia.',
+    'Il collo deve far passare la testa senza strappi e non deve stringere quando giri la testa.',
+    'Il girovita deve stare comodo anche quando ti siedi, senza segnare la pelle.',
+    'Cammina e fai due passi di corsa: l\'orlo e i pantaloni non devono impicciarti e le scarpe non devono dare fastidio.',
+    'Siediti e piegati in avanti: niente deve tirare dietro la schiena né scoprirti.',
+    'Controlla l\'etichetta e leggi cosa dice sul lavaggio: dopo il bucato può restringersi un po\'.'
+  ],
+
+  fonti: [
+    { t: 'Nostro Figlio: guida alle taglie per bambini (la taglia è l\'altezza in cm; età indicative 98-140)', u: 'https://www.nostrofiglio.it/famiglia/moda-e-bellezza/guida-alle-taglie-per-bambini' },
+    { t: 'Size.ly: tabella taglie bambini (intervalli di altezza 92-152 cm con età)', u: 'https://www.size.ly/de/grossentabellen/grossen-umrechnungstabelle-fur-kinder' },
+    { t: 'Fred Perry: guida taglie bambini (altezze 134-176 cm per età; conferma 158-176)', u: 'https://www.fredperry.com/size-guides/kids' },
+    { t: 'Wikipedia: Joint European standard for size labelling of clothes (EN 13402, altezza in cm come dato principale per i bambini)', u: 'https://en.wikipedia.org/wiki/Joint_European_standard_for_size_labelling_of_clothes' },
+    { t: 'Wikipedia: Shoe size (punto Parigi = 2/3 cm; numero ≈ 1,5 × lunghezza del piede + 2). La tabella scarpe è calcolata con questa formula; Nostro Figlio dà valori di circa 0,3 cm più alti: gli intervalli sono prudenti e indicativi', u: 'https://en.wikipedia.org/wiki/Shoe_size' },
+    { t: 'Nostro Figlio: lunghezza del piede e numero di scarpa (confronto per i numeri 28-34; margine di 1 cm)', u: 'https://www.nostrofiglio.it/bambino/lunghezza-piede-bambino-e-numero-scarpa' },
+    { t: 'Birkenstock: tabella misure EU in mm (confronto)', u: 'https://www.birkenstock.com/it/fit-guide-size-chart.html' },
+    { t: 'GreenMe: numero di scarpe del bambino (almeno 1 cm davanti alle dita, le misure non sono uguali tra le marche)', u: 'https://www.greenme.it/lifestyle/bambini/scarpe-bambini-misura-giusta/' },
+    { t: 'Pianeta Mamma: scarpe per bambini (comprare nel pomeriggio, controllo con il pollice)', u: 'https://www.pianetamamma.it/il-bambino/shopping/scarpe-per-bambini-come-scegliere-tipo-e-misura.html' },
+    { t: 'Riedell: come scegliere la misura dei pattini artistici (calze sottili, tallone fermo, dita che toccano appena, tabella di ogni marca)', u: 'https://ice-blog.riedellskates.com/figure-skate-boot-sizing-fitting/' },
+    { t: 'Nostro Figlio: sport su ghiaccio per bambini (imparare a cadere, consiglio dell\'istruttore)', u: 'https://www.nostrofiglio.it/bambino/sport/sport-su-ghiaccio-per-bambini' },
+    { t: 'Dragonfly: tessuti aerei, cosa indossare (capo aderente, gambe coperte, niente cerniere né gioielli)', u: 'https://dragonflybrand.com/blogs/blog/aerial-silks-for-beginners-what-to-wear-how-to-start-and-how-to-stay-safe' },
+    { t: 'Nostro Figlio: scarpe da ginnastica per bambini (suola flessibile e antiscivolo, tallone fermo, spazio davanti alle dita)', u: 'https://www.nostrofiglio.it/shopping/sneakers-e-scarpe-da-ginnastica-ammortizzati' },
+    { t: 'Studentville: cerchio cromatico di Itten (primari rosso-giallo-blu, secondari, complementari)', u: 'https://www.studentville.it/appunti/cerchio-cromatico-di-itten-cose-e-come-si-disegna/' },
+    { t: 'Eroica Fenice: cerchio di Itten (colori analoghi, caldi e freddi, complementari)', u: 'https://www.eroicafenice.com/salotto-culturale/cerchio-di-itten/' },
+    { t: 'Studenti.it: colori e arcobaleno (la luce bianca si scompone nei colori dello spettro)', u: 'https://www.studenti.it/colori.html' }
+  ]
+};
+
 /* ================= SCOPRI: PERCHÉ MI LAVO (fonti e verifica indipendente: data/verifiche/rev6) ================= */
 SCOPRI.push({
  "id": "lavo",
@@ -9214,6 +9361,7 @@ function openVita() {
   openModal('<div class="big" style="font-size:28px">🧼👗 Io e il mio corpo</div><p class="vd-sub">Scopri il perché delle buone abitudini.</p>' +
     '<div class="v2-grid">' +
     '<button type="button" class="v2-tile" id="vi-arm"><span class="v2-ti">👗</span><b>L’armadio del meteo</b><small>Che cosa metto oggi?</small></button>' +
+    '<button type="button" class="v2-tile" id="vi-v2"><span class="v2-ti">🎨</span><b>Colori e taglia</b><small>Componi il look · La mia taglia</small></button>' +
     '<button type="button" class="v2-tile" id="vi-mani"><span class="v2-ti">🧼</span><b>Timer delle mani</b><small>40 secondi, passo per passo</small></button>' +
     '<button type="button" class="v2-tile" id="vi-denti"><span class="v2-ti">🪥</span><b>Timer dei denti</b><small>2 minuti, 4 zone</small></button>' +
     '<button type="button" class="v2-tile" id="vi-u"><span class="v2-ti">📚</span><b>Le lezioni</b><small>Come mi vesto · Perché mi lavo</small></button>' +
@@ -9221,6 +9369,7 @@ function openVita() {
   $('modal-box').classList.add('wide');
   $('vi-x').addEventListener('click', closeModal);
   $('vi-arm').addEventListener('click', () => openWardrobe());
+  if ($('vi-v2')) $('vi-v2').addEventListener('click', () => openVesto2());
   $('vi-mani').addEventListener('click', () => openTimer('mani'));
   $('vi-denti').addEventListener('click', () => openTimer('denti'));
   $('vi-u').addEventListener('click', () => { closeModal(); const ids = typeof unitUnlockedIds === 'function' ? unitUnlockedIds() : new Set(); pathSel = ids.has('lavo') ? 'lavo' : ids.has('vesto') ? 'vesto' : pathSel; store.set('path-sel', pathSel); go('home'); });
@@ -9297,6 +9446,217 @@ function openTimer(kind) {
     }, 250);
   });
 }
+
+/* ================= COME MI VESTO: 🎨 colori e 📏 taglie (3/11/2026, scelta del genitore) =================
+   - 🎨 La ruota dei colori (cerchio di Itten, 12 colori): opposti, vicini, caldi e freddi, neutri
+   - 👗 Componi il look: maglia, pantaloni o gonna, scarpe; l'app descrive l'effetto, non dice mai «sbagliato»
+   - ❤️ I miei colori: fino a 3 preferiti e gli abbinamenti che stanno bene
+   - 📏 La mia taglia: misure con un adulto (mai il peso), taglia dei vestiti, numero di scarpe, sport e prova della taglia
+   Dati verificati in data/domande/vesto2.js (VESTO2). Le misure restano sull'iPad e vanno anche in Progressi del genitore.
+   Chiavi: misure [{d,h,p,pe,vi}], looks [{d,c:[maglia,sotto,scarpe],g}], col-fav [indici], vesto-prova {sport:{voce:1}} */
+const RUOTA = [['giallo', '#FFE135'], ['giallo arancio', '#FFB627'], ['arancione', '#FF8C1A'], ['rosso arancio', '#F2542D'], ['rosso', '#E02B2B'], ['rosso viola', '#B8236B'],
+  ['viola', '#7B2D9B'], ['blu viola', '#4B3BA8'], ['blu', '#2456C9'], ['blu verde', '#1B8A8F'], ['verde', '#2EA84A'], ['giallo verde', '#9BCB2E']];
+const NEUTRI = [['bianco', '#FFFFFF'], ['grigio', '#9AA0A6'], ['nero', '#222222'], ['beige', '#E8D9BC'], ['blu jeans', '#3B5B8C']];
+const PALETTE = RUOTA.map((c, i) => ({ n: c[0], h: c[1], i })).concat(NEUTRI.map(c => ({ n: c[0], h: c[1], i: -1 })));
+const rDist = (a, b) => { const d = Math.abs(a - b) % 12; return Math.min(d, 12 - d); };
+const rCaldo = i => i <= 5;
+const art = n => /^[aeiou]/i.test(n) ? 'l’' : 'il ';
+const V2OK = () => typeof VESTO2 !== 'undefined';
+const openModalW = (h, c) => { openModal(h, c); const b = $('modal-box'); if (b) b.classList.add('wide'); };
+
+/* ---------- menu: in evidenza nella Casa e in «Io e il mio corpo» ---------- */
+function vestoMisDue() { const M = store.get('misure', []); if (!M.length) return true; return (Date.now() - new Date(M[M.length - 1].d).getTime()) / 864e5 > 90; }
+function openVesto2() {
+  const due = vestoMisDue();
+  openModal('<div class="big" style="font-size:28px">👗 Come mi vesto</div><p class="vd-sub">Colori che stanno bene insieme e la taglia giusta per ogni cosa che fai.</p>' +
+    '<div class="v2-grid">' +
+    '<button type="button" class="v2-tile" id="vv-ruota"><span class="v2-ti">🎨</span><b>La ruota dei colori</b><small>Opposti, vicini, caldi e freddi</small></button>' +
+    '<button type="button" class="v2-tile" id="vv-look"><span class="v2-ti">👗</span><b>Componi il look</b><small>Scegli i colori, scopri l’effetto</small></button>' +
+    '<button type="button" class="v2-tile" id="vv-fav"><span class="v2-ti">❤️</span><b>I miei colori</b><small>E gli abbinamenti giusti</small></button>' +
+    '<button type="button" class="v2-tile" id="vv-tg"><span class="v2-ti">📏</span><b>La mia taglia</b><small>' + (due ? '⏰ È ora di misurarti!' : 'Vestiti, scarpe e sport') + '</small></button>' +
+    '<button type="button" class="v2-tile" id="vv-arm"><span class="v2-ti">🌦️</span><b>L’armadio del meteo</b><small>Che cosa metto oggi?</small></button>' +
+    '<button type="button" class="v2-tile" id="vv-cur"><span class="v2-ti">💡</span><b>Curiosità sui colori</b><small>Lo sapevi che…</small></button>' +
+    '</div><div class="row center"><button type="button" class="btn ghost" id="vv-x">Chiudi</button></div>');
+  $('vv-ruota').onclick = () => openRuota();
+  $('vv-look').onclick = () => openLook();
+  $('vv-fav').onclick = () => openFav();
+  $('vv-tg').onclick = () => openTaglia();
+  $('vv-arm').onclick = () => openWardrobe();
+  $('vv-cur').onclick = () => openColFacts(0);
+  $('vv-x').onclick = closeModal;
+}
+
+/* ---------- 🎨 la ruota ---------- */
+function ruotaSVG(sel, id) {
+  const R = 120, r = 52, cx = 140, cy = 140, P = (a, rad) => [cx + rad * Math.cos(a), cy + rad * Math.sin(a)];
+  let s = '<svg viewBox="0 0 280 280" class="vv-ruota" id="' + id + '" role="img" aria-label="Cerchio dei colori">';
+  RUOTA.forEach((c, i) => {
+    const a0 = (i * 30 - 105) * Math.PI / 180, a1 = ((i + 1) * 30 - 105) * Math.PI / 180;
+    const [x0, y0] = P(a0, R), [x1, y1] = P(a1, R), [x2, y2] = P(a1, r), [x3, y3] = P(a0, r);
+    const on = sel != null && (i === sel), op = sel != null && rDist(i, sel) === 6, vi = sel != null && rDist(i, sel) === 1;
+    s += '<path data-i="' + i + '" d="M' + x0 + ',' + y0 + ' A' + R + ',' + R + ' 0 0 1 ' + x1 + ',' + y1 + ' L' + x2 + ',' + y2 + ' A' + r + ',' + r + ' 0 0 0 ' + x3 + ',' + y3 + 'Z" fill="' + c[1] + '" stroke="' + (on || op || vi ? '#1d2433' : '#fff') + '" stroke-width="' + (on ? 6 : op || vi ? 4 : 2) + '" style="cursor:pointer"/>';
+  });
+  s += '<circle cx="140" cy="140" r="46" fill="#fff"/>';
+  if (sel != null) s += '<circle cx="140" cy="140" r="30" fill="' + RUOTA[sel][1] + '" stroke="#1d2433" stroke-width="2"/>';
+  else s += '<text x="140" y="146" text-anchor="middle" font-size="16" font-weight="800" fill="#1d2433">tocca!</text>';
+  return s + '</svg>';
+}
+function openRuota(sel) {
+  const has = sel != null, op = has ? (sel + 6) % 12 : 0, v1 = has ? (sel + 11) % 12 : 0, v2 = has ? (sel + 1) % 12 : 0;
+  const txt = has ? 'Hai scelto ' + art(RUOTA[sel][0]) + RUOTA[sel][0] + ', un colore ' + (rCaldo(sel) ? 'caldo ☀️' : 'freddo ❄️') + '. Il suo opposto è ' + art(RUOTA[op][0]) + RUOTA[op][0] + ': insieme fanno un contrasto forte e vivace. I suoi vicini sono ' + RUOTA[v1][0] + ' e ' + RUOTA[v2][0] + ': insieme danno armonia e calma. E con i neutri sta quasi sempre bene.' : 'È il cerchio dei colori che usi anche in Arte. Tocca un colore: ti mostro il suo opposto e i suoi vicini.';
+  openModalW('<div class="big" style="font-size:26px">🎨 La ruota dei colori</div>' + ruotaSVG(sel, 'vv-r') +
+    (has ? '<div class="vv-pair"><span style="background:' + RUOTA[sel][1] + '"></span><span style="background:' + RUOTA[op][1] + '"></span><b>opposti</b><span style="background:' + RUOTA[v1][1] + '"></span><span style="background:' + RUOTA[sel][1] + '"></span><span style="background:' + RUOTA[v2][1] + '"></span><b>vicini</b></div>' : '') +
+    '<p style="font-weight:700">' + esc(txt) + '</p>' +
+    '<div class="vv-neu">' + NEUTRI.map(n => '<span title="' + n[0] + '" style="background:' + n[1] + '"></span>').join('') + '<b>I neutri: stanno con quasi tutto (in moda anche il blu jeans)</b></div>' +
+    '<div class="row center" style="gap:8px">' + sayBtn(txt) + '<button type="button" class="btn ghost" id="vv-b">← Indietro</button><button type="button" class="btn" id="vv-l" style="--bc:var(--v2-green)">👗 Prova in un look</button></div>');
+  $('vv-r').querySelectorAll('path').forEach(p => p.addEventListener('click', () => openRuota(+p.dataset.i)));
+  $('vv-b').onclick = () => openVesto2();
+  $('vv-l').onclick = () => openLook(has ? [sel, -1, -1] : null);
+  if (has && Voice.ok) Voice.say(txt);
+}
+
+/* ---------- 👗 componi il look ---------- */
+const LOOK_PARTS = [['maglia', 'Maglia'], ['sotto', 'Pantaloni o gonna'], ['scarpe', 'Scarpe']];
+function lookHex(v) { return v == null ? '#eeeeee' : v >= 0 ? RUOTA[v][1] : NEUTRI[-v - 1][1]; }
+function lookName(v) { return v >= 0 ? RUOTA[v][0] : NEUTRI[-v - 1][0]; }
+/* l'effetto del look: descrive, non giudica (il gusto personale conta) */
+function lookEffect(c) {
+  const hues = [...new Set(c.filter(v => v >= 0))], n = hues.length;
+  if (!n) return ['🤍', 'Tutto neutro', 'Elegante e semplice: i neutri stanno bene con quasi tutto.'];
+  if (n === 1) return c.filter(v => v >= 0).length > 1 ? ['🎚️', 'Lo stesso colore', 'Lo stesso colore ripetuto: un look ordinato. Con un tono più chiaro o più scuro diventa un vero tono su tono!'] : ['⭐', 'Un colore protagonista', (art(RUOTA[hues[0]][0]) === 'il ' ? 'Il ' : 'L’') + RUOTA[hues[0]][0] + ' risalta e i neutri lo accompagnano: un abbinamento facile e sempre bello.'];
+  if (n === 2) { const d = rDist(hues[0], hues[1]);
+    if (d <= 2) return ['🌿', 'Colori vicini', RUOTA[hues[0]][0] + ' e ' + RUOTA[hues[1]][0] + ' sono vicini sulla ruota: insieme danno armonia e calma.'];
+    if (d === 6) return ['⚡', 'Colori opposti', RUOTA[hues[0]][0] + ' e ' + RUOTA[hues[1]][0] + ' sono opposti sulla ruota: un contrasto forte, che si fa notare!'];
+    return ['🎈', 'Contrasto allegro', 'Due colori lontani sulla ruota: un look allegro e vivace.' + (rCaldo(hues[0]) !== rCaldo(hues[1]) ? ' Uno caldo e uno freddo: si bilanciano.' : '')]; }
+  if (hues.every(a => hues.every(b => rDist(a, b) <= 2))) return ['🌿', 'Tutti vicini', 'Tre colori vicini sulla ruota: insieme danno armonia e calma.'];
+  if (hues.every(a => hues.every(b => a === b || rDist(a, b) === 4))) return ['🔺', 'Il triangolo', 'Tre colori alla stessa distanza sulla ruota: vivace ed equilibrato, come un quadro.'];
+  return ['🌈', 'Tanti colori', 'Un look coraggioso e pieno di energia! Se vuoi più calma, cambia un pezzo con un neutro.'];
+}
+function lookSVG(c, skirt) {
+  const av = typeof AV === 'function' ? AV() : '🙂';
+  return '<svg viewBox="0 0 200 300" class="vv-fig" role="img" aria-label="Il tuo look">' +
+    '<text x="100" y="62" font-size="58" text-anchor="middle">' + av + '</text>' +
+    '<path data-p="0" d="M62 78 L138 78 L170 112 L152 128 L140 116 L140 172 L60 172 L60 116 L48 128 L30 112 Z" fill="' + lookHex(c[0]) + '" stroke="#1d2433" stroke-width="3" stroke-linejoin="round"/>' +
+    (skirt ? '<path data-p="1" d="M60 172 L140 172 L160 236 L40 236 Z" fill="' + lookHex(c[1]) + '" stroke="#1d2433" stroke-width="3" stroke-linejoin="round"/><path d="M78 236 L78 262 M122 236 L122 262" stroke="#e8b48a" stroke-width="10" stroke-linecap="round"/>'
+      : '<path data-p="1" d="M60 172 L140 172 L136 262 L106 262 L100 196 L94 262 L64 262 Z" fill="' + lookHex(c[1]) + '" stroke="#1d2433" stroke-width="3" stroke-linejoin="round"/>') +
+    '<path data-p="2" d="M58 262 L98 262 L98 282 L46 282 Q46 268 58 262 Z M102 262 L142 262 Q154 268 154 282 L102 282 Z" fill="' + lookHex(c[2]) + '" stroke="#1d2433" stroke-width="3" stroke-linejoin="round"/></svg>';
+}
+function openLook(start) {
+  const st = { c: start || [null, null, null], part: 0, skirt: store.get('look-skirt', false) };
+  const paint = () => {
+    const full = st.c.every(v => v != null), ef = full ? lookEffect(st.c) : null;
+    openModalW('<div class="big" style="font-size:26px">👗 Componi il look</div>' +
+      '<div class="vv-look"><div>' + lookSVG(st.c, st.skirt) + '</div><div>' +
+      '<div class="vv-parts">' + LOOK_PARTS.map((p, i) => '<button type="button" class="chip' + (i === st.part ? ' on' : '') + '" data-pt="' + i + '"><span class="vv-dot" style="background:' + lookHex(st.c[i]) + '"></span>' + esc(p[1]) + '</button>').join('') + '</div>' +
+      '<div class="vv-pal">' + PALETTE.map(p => '<button type="button" aria-label="' + p.n + '" data-v="' + (p.i >= 0 ? p.i : -(NEUTRI.findIndex(n => n[0] === p.n) + 1)) + '" style="background:' + p.h + '"></button>').join('') + '</div>' +
+      '<label class="vv-sk"><input type="checkbox" id="vv-sk"' + (st.skirt ? ' checked' : '') + '> Gonna invece dei pantaloni</label>' +
+      (ef ? '<div class="vv-ef"><b>' + ef[0] + ' ' + esc(ef[1]) + '</b><p>' + esc(ef[2]) + '</p><small>Ti piace? Conta il tuo gusto!</small></div>' : '<p class="vd-sub">Scegli un pezzo e poi un colore.</p>') +
+      '</div></div>' +
+      '<div class="row center" style="gap:8px"><button type="button" class="btn ghost" id="vv-b">← Indietro</button>' + (ef ? sayBtn(ef[1] + '. ' + ef[2]) + '<button type="button" class="btn" id="vv-s" style="--bc:var(--v2-green)">💾 Salva nel mio armadio</button>' : '') + '</div>' +
+      lookSaved());
+    document.querySelectorAll('[data-pt]').forEach(b => b.onclick = () => { st.part = +b.dataset.pt; paint(); });
+    document.querySelectorAll('.vv-fig [data-p]').forEach(b => b.onclick = () => { st.part = +b.dataset.p; paint(); });
+    document.querySelectorAll('.vv-pal button').forEach(b => b.onclick = () => { st.c[st.part] = +b.dataset.v; if (st.part < 2 && st.c[st.part + 1] == null) st.part++; paint(); });
+    $('vv-sk').onchange = () => { st.skirt = $('vv-sk').checked; store.set('look-skirt', st.skirt); paint(); };
+    $('vv-b').onclick = () => openVesto2();
+    if ($('vv-s')) $('vv-s').onclick = () => {
+      const L = store.get('looks', []); L.push({ d: todayIso(), c: st.c.slice(), g: st.skirt ? 1 : 0 }); store.set('looks', L.slice(-30));
+      const g = vitaGems(2); try { fanfare(); } catch (e) {} floatText($('vv-s'), g ? '+' + g + ' 💎' : 'Salvato!');
+      setTimeout(paint, 700);
+    };
+    document.querySelectorAll('[data-lk]').forEach(b => b.onclick = () => { const l = store.get('looks', [])[+b.dataset.lk]; if (l) { st.c = l.c.slice(); st.skirt = !!l.g; paint(); } });
+  };
+  paint();
+}
+function lookSaved() {
+  const L = store.get('looks', []); if (!L.length) return '';
+  return '<div class="vv-saved"><b>👚 Il mio armadio (' + L.length + ')</b><div>' + L.slice(-8).map((l, k) => '<button type="button" data-lk="' + (L.length - Math.min(8, L.length) + k) + '" aria-label="Look salvato">' + l.c.map(v => '<i style="background:' + lookHex(v) + '"></i>').join('') + '</button>').join('') + '</div></div>';
+}
+
+/* ---------- ❤️ i miei colori ---------- */
+function openFav() {
+  const F = store.get('col-fav', []);
+  const sug = F.map(i => '<div class="vv-sug"><span style="background:' + RUOTA[i][1] + '"></span><div><b>' + esc(RUOTA[i][0]) + '</b><small>Con l’opposto ' + esc(RUOTA[(i + 6) % 12][0]) + ': contrasto. Con i vicini ' + esc(RUOTA[(i + 11) % 12][0]) + ' e ' + esc(RUOTA[(i + 1) % 12][0]) + ': armonia. Con i neutri: sempre!</small></div>' +
+    '<i style="background:' + RUOTA[(i + 6) % 12][1] + '"></i><i style="background:' + RUOTA[(i + 11) % 12][1] + '"></i><i style="background:' + RUOTA[(i + 1) % 12][1] + '"></i></div>').join('');
+  openModalW('<div class="big" style="font-size:26px">❤️ I miei colori</div><p class="vd-sub">Tocca fino a 3 colori che ami di più.</p>' + ruotaSVG(null, 'vv-fr') +
+    (sug ? '<div class="vv-sugs">' + sug + '</div>' : '') +
+    '<div class="row center" style="gap:8px"><button type="button" class="btn ghost" id="vv-b">← Indietro</button>' + (F.length ? '<button type="button" class="btn" id="vv-l" style="--bc:var(--v2-green)">👗 Un look con i miei colori</button>' : '') + '</div>');
+  $('vv-fr').querySelectorAll('path').forEach(p => { const i = +p.dataset.i; if (F.includes(i)) { p.setAttribute('stroke', '#1d2433'); p.setAttribute('stroke-width', '6'); }
+    p.addEventListener('click', () => { let G = store.get('col-fav', []); G = G.includes(i) ? G.filter(x => x !== i) : G.concat(i).slice(-3); store.set('col-fav', G); openFav(); }); });
+  $('vv-b').onclick = () => openVesto2();
+  if ($('vv-l')) $('vv-l').onclick = () => openLook([F[0], F[1] != null ? F[1] : -1, -3]);
+}
+
+/* ---------- 💡 curiosità sui colori ---------- */
+function openColFacts(k) {
+  if (!V2OK()) return;
+  const L = VESTO2.colFacts, f = L[(k + L.length) % L.length];
+  openModal('<div style="font-size:50px">💡</div><div class="big" style="font-size:24px">' + esc(f[0]) + '</div><p style="font-weight:700;font-size:19px">' + esc(f[1]) + '</p>' +
+    '<div class="row center" style="gap:8px"><button type="button" class="btn ghost" id="vv-b">← Indietro</button>' + sayBtn(f[0] + '. ' + f[1]) + '<button type="button" class="btn" id="vv-n" style="--bc:var(--v2-green)">Un’altra →</button></div>');
+  $('vv-b').onclick = () => openVesto2(); $('vv-n').onclick = () => openColFacts(k + 1);
+}
+
+/* ---------- 📏 la mia taglia ---------- */
+function tgVestiti(h) {
+  const T = VESTO2.taglie; if (!h) return null;
+  return T.find(t => h > t.h[0] && h <= t.h[1]) || T.find(t => t.h[1] >= h) || T[T.length - 1];
+}
+function tgScarpe(p) {
+  const S = VESTO2.scarpe; if (!p) return null;
+  return S.find(s => p >= s.piede[0] && p < s.piede[1]) || S.find(s => s.piede[1] >= p) || S[S.length - 1];
+}
+function openTaglia(tab) {
+  if (!V2OK()) return;
+  tab = tab || 'mis';
+  const M = store.get('misure', []), last = M[M.length - 1] || null, due = vestoMisDue();
+  const tabs = [['mis', '📏 Misure'], ['tg', '👕 Le mie taglie'], ['sport', '⛸️ Sport'], ['prova', '✅ Prova']];
+  let body = '';
+  if (tab === 'mis') {
+    body = (due ? '<div class="vv-due">' + (last ? '⏰ Sono passati più di 3 mesi: crescendo le misure cambiano. Misuriamoci!' : 'Con un adulto: scalza, schiena dritta contro il muro.') + '</div>' : '') +
+      '<div class="vv-form">' +
+      '<label>📐 Altezza (cm)<input type="number" inputmode="decimal" id="tg-h" min="80" max="200" value="' + (last ? last.h || '' : '') + '"></label>' +
+      '<label>🦶 Lunghezza del piede (cm)<input type="number" inputmode="decimal" step="0.1" id="tg-p" min="12" max="32" value="' + (last ? last.p || '' : '') + '"></label>' +
+      '<label>Giro petto (cm) <small>se vuoi</small><input type="number" inputmode="decimal" id="tg-pe" value="' + (last ? last.pe || '' : '') + '"></label>' +
+      '<label>Giro vita (cm) <small>se vuoi</small><input type="number" inputmode="decimal" id="tg-vi" value="' + (last ? last.vi || '' : '') + '"></label></div>' +
+      '<details class="vv-how"><summary>Come si misura?</summary><p>📐 <b>Altezza:</b> scalza, talloni contro il muro, un libro piatto sulla testa: l’adulto segna e misura dal pavimento.</p><p>🦶 <b>Piede:</b> in piedi su un foglio, l’adulto segna il tallone e la punta del dito più lungo. Misura tutti e due i piedi e usa il più lungo.</p><p>Metro morbido per petto e vita, appoggiato senza stringere.</p></details>' +
+      '<div class="row center" style="gap:8px"><button type="button" class="btn" id="tg-save" style="--bc:var(--v2-green)">💾 Salva le misure</button></div>' +
+      (M.length ? '<div class="vv-hist"><b>📅 Le mie misure</b>' + M.slice(-6).reverse().map(m => '<div>' + new Date(m.d).toLocaleDateString('it-IT', { day: 'numeric', month: 'short', year: 'numeric' }) + ': ' + [m.h ? m.h + ' cm' : '', m.p ? 'piede ' + m.p + ' cm' : ''].filter(Boolean).join(' · ') + '</div>').join('') + '</div>' : '');
+  } else if (tab === 'tg') {
+    const tv = last && tgVestiti(last.h), ts = last && tgScarpe(last.p);
+    body = !last ? '<p class="vd-sub">Prima salva le misure in 📏 Misure.</p>' :
+      '<div class="vv-res"><div><span>👕</span><b>Vestiti: taglia ' + esc(tv ? tv.t : '–') + '</b><small>' + (tv ? 'per altezza da ' + (tv.h[0] + 1) + ' a ' + tv.h[1] + ' cm. Se sei vicina al limite, prova anche la taglia dopo.' : 'manca l’altezza') + '</small></div>' +
+      '<div><span>👟</span><b>Scarpe: numero ' + esc(ts ? String(ts.eu) : '–') + '</b><small>' + (ts ? 'per un piede di ' + ts.piede[0] + '–' + ts.piede[1] + ' cm' : 'manca il piede') + '</small></div></div>' +
+      '<p class="vv-note">💡 Spesso la taglia sull’etichetta dei vestiti per bambini è l’altezza in centimetri (a volte invece c’è l’età, per esempio «10 anni»). Conta l’altezza, non l’età: ogni corpo cresce con il suo ritmo. Ogni marca veste un po’ diversa: prova sempre! ' + esc(VESTO2.margineScarpe || '') + '</p>';
+  } else if (tab === 'sport') {
+    const P = store.get('vesto-prova', {});
+    body = '<div class="vv-sport">' + VESTO2.sport.map(s => '<details><summary>' + s.ic + ' <b>' + esc(s.n) + '</b></summary><p>' + esc(s.come) + '</p><ul>' + s.prova.map((x, j) => '<li><label><input type="checkbox" data-sp="' + s.id + '" data-j="' + j + '"' + (P[s.id] && P[s.id][j] ? ' checked' : '') + '> ' + esc(x) + '</label></li>').join('') + '</ul></details>').join('') + '</div>';
+  } else {
+    const P = store.get('vesto-prova', {});
+    body = '<p class="vd-sub">Prima di comprare o quando un vestito ti sembra piccolo:</p><ul class="vv-check">' + VESTO2.prova.map((x, j) => '<li><label><input type="checkbox" data-sp="vestito" data-j="' + j + '"' + (P.vestito && P.vestito[j] ? ' checked' : '') + '> ' + esc(x) + '</label></li>').join('') + '</ul>' +
+      '<p class="vv-note">Se un vestito è diventato piccolo ma è ancora bello: missione «Scambio e riuso»! ♻️</p>';
+  }
+  openModalW('<div class="big" style="font-size:26px">📏 La mia taglia</div><div class="vv-tabs">' + tabs.map(t => '<button type="button" class="chip' + (t[0] === tab ? ' on' : '') + '" data-tb="' + t[0] + '">' + t[1] + '</button>').join('') + '</div>' + body +
+    '<div class="row center" style="margin-top:10px"><button type="button" class="btn ghost" id="vv-b">← Indietro</button></div>');
+  document.querySelectorAll('[data-tb]').forEach(b => b.onclick = () => openTaglia(b.dataset.tb));
+  $('vv-b').onclick = () => openVesto2();
+  document.querySelectorAll('input[data-sp]').forEach(c => c.onchange = () => {
+    const P = store.get('vesto-prova', {}), k = c.dataset.sp; P[k] = P[k] || {}; P[k][c.dataset.j] = c.checked ? 1 : 0; store.set('vesto-prova', P);
+    const box = c.closest('ul'); if (box && [...box.querySelectorAll('input')].every(x => x.checked)) { const g = vitaGems(3); if (g) floatText(box, '+' + g + ' 💎'); }
+  });
+  if ($('tg-save')) $('tg-save').onclick = () => {
+    const n = id => { const v = parseFloat(String($(id).value).replace(',', '.')); return isFinite(v) && v > 0 ? Math.round(v * 10) / 10 : null; };
+    const m = { d: new Date().toISOString(), h: n('tg-h'), p: n('tg-p'), pe: n('tg-pe'), vi: n('tg-vi') };
+    if (!m.h && !m.p) { (typeof toastV2 === 'function' ? toastV2 : alert)('Scrivi almeno l’altezza o il piede'); return; }
+    if ((m.h && (m.h < 80 || m.h > 200)) || (m.p && (m.p < 12 || m.p > 32))) { (typeof toastV2 === 'function' ? toastV2 : alert)('Controlla i numeri: sono in centimetri?'); return; }
+    const M2 = store.get('misure', []); M2.push(m); store.set('misure', M2.slice(-24));
+    const g = vitaGems(3); try { fanfare(); } catch (e) {}
+    if (typeof __mondoSyncPush === 'function') try { __mondoSyncPush(true); } catch (e) {}
+    floatText($('tg-save'), g ? '+' + g + ' 💎' : 'Salvato!'); setTimeout(() => openTaglia('tg'), 700);
+  };
+}
+
+/* colori: le curiosità entrano anche nella lezione «Come mi vesto» */
+(function () { try { if (V2OK() && typeof SCOPRI !== 'undefined') { const u = SCOPRI.find(x => x.id === 'vesto'); if (u && !u._v2) { u._v2 = 1; VESTO2.colFacts.forEach(f => u.facts.push(f)); } } } catch (e) {} })();
 
 /* 🎭 Teatro: «Dietro le quinte» (autore + revisore indipendente, ottobre 2026) */
 const TEATRO = {
@@ -12760,7 +13120,8 @@ PAGES.home = el => {
   const due = dueKeys(pState()).length, last = unitById(store.get('path-sel', '')) || null;
   const tile = (go, ic, n, sm, c) => '<button type="button" class="v2-tile h-tile" data-go="' + go + '"' + (c ? ' style="--uc:' + c + '"' : '') + '><span class="v2-ti">' + ic + '</span><b>' + esc(n) + '</b>' + (sm ? '<small>' + esc(sm) + '</small>' : '') + '</button>';
   const ut = u => tile('u:' + u.id, u.ic, u.name, '', u.c);
-  el.innerHTML = '<h1 class="v2-h1">' + (childName() ? 'Ciao ' + esc(childName()) + '!' : 'Ciao!') + '</h1><p class="v2-sub">Che cosa facciamo?</p>' +
+  el.innerHTML = '<div class="v2-hello"><div><h1 class="v2-h1">' + (childName() ? 'Ciao ' + esc(childName()) + '!' : 'Ciao!') + '</h1><p class="v2-sub">Che cosa facciamo?</p></div>' +
+    (typeof openVesto2 === 'function' ? '<button type="button" class="v2-hl" id="h-vesto"><span>👗🎨</span><b>Come mi vesto</b><small>' + (typeof vestoMisDue === 'function' && vestoMisDue() && store.get('misure', []).length ? '⏰ È ora di misurarti!' : 'Componi il look · La mia taglia') + '</small><i>Nuovo</i></button>' : '') + '</div>' +
     (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
     '<input type="search" class="h-find" id="h-find" placeholder="🔎 Cerca un argomento in tutte le materie (es. acqua, Romani, frazioni)" autocomplete="off" enterkeyhint="search"><div id="h-res" hidden></div><div id="h-rest">' +
     '<section class="h-part h-scuola"><h2 class="h-h2">🏫 La mia scuola</h2><p class="h-note">Le materie del programma di 5ª, come in classe.</p><div class="v2-grid h-grid">' + pathUnits().filter(u => !HOME_VITA.includes(u.id) && !HOME_SCUOLA_EXTRA.includes(u.id)).map(ut).join('') + '</div>' +
@@ -12768,6 +13129,7 @@ PAGES.home = el => {
     '<section class="h-part h-fuori"><h2 class="h-h2">🌟 Fuori scuola</h2><p class="h-note">Sport, passioni e cose della vita.</p><div class="v2-grid h-grid">' + HOME_VITA.map(unitById).filter(Boolean).map(ut).join('') + '</div>' +
     '<h3 class="h-h3">🎨 Fare e scoprire</h3><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[0] === 'io' ? AV() : x[1], x[2])).join('') + '</div></section></div>';
   el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { const g = b.dataset.go; if (g.startsWith('u:')) openMateria(g.slice(2)); else if (g === 'vita') openVita(); else go(g); }));
+  if ($('h-vesto')) $('h-vesto').addEventListener('click', () => openVesto2());
   if ($('h-cont')) $('h-cont').addEventListener('click', () => startLesson(last.id, nextNode(last)));
   if ($('h-rip')) $('h-rip').addEventListener('click', () => startLesson(null, 0, { daily: true }));
   homeSearchWire(el);
