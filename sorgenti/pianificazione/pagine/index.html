@@ -506,8 +506,8 @@ function icsText(items){const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Pian
 
 /* ---------- interfaccia ---------- */
 /* sezioni nel menu (ognuna con il suo colore); ⚙️ Impostazioni sta a parte, a destra */
-const SECT=[["oggi","☀️","Oggi","--cal"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["st","🗞️","Stampa di oggi","--st"],["auto","🚗","Auto","--auto"],["corsi","🎓","Corsi","--corsi"]].concat(PRAT_ON?[["prat","🗂️","Pratiche","--prat"]]:[],CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
-const ALL_SECT=SECT.map(x=>x[0]).concat(["set"]);
+const SECT=[["oggi","☀️","Oggi","--cal"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["st","🗞️","Stampa di oggi","--st"],["auto","🚗","Auto","--auto"]].concat(PRAT_ON?[["prat","🗂️","Pratiche","--prat"]]:[],CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
+const ALL_SECT=SECT.map(x=>x[0]).concat(["set","corsi"]);
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
 function mapOld(k){
   if(k.indexOf("sk=")===0){skFromHash(k.slice(3));return "pens";}
@@ -526,7 +526,7 @@ function side(){const late=lateN();
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(k==="prat")pratNew=false;cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,prat:PRAT_ON?vPrat:vCal,dia:vDia,cd:vCd,st:vSt,auto:vAuto,corsi:vCorsi,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
+function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="corsi"?"corsi":"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,prat:PRAT_ON?vPrat:vCal,dia:vDia,cd:vCd,st:vSt,auto:vAuto,corsi:vCorsi,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
 /* ---------- 🪟 finestre: ogni riquadro con un titolo si apre e si chiude; lo stato resta su questo iPad (pn-fold) ---------- */
 const FOLD_KEY="pn-fold";let foldSt=lsJ(FOLD_KEY)||{};
 function foldCards(m){m.querySelectorAll(":scope > h2").forEach(h=>{const c=h.nextElementSibling;if(!c||c.tagName!=="DIV"||!c.classList.contains("card")||(c.firstElementChild&&c.firstElementChild.tagName==="H3"))return;const t=document.createElement("h3");t.innerHTML=h.innerHTML;c.prepend(t);h.remove();});

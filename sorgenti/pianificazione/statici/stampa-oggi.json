@@ -360,12 +360,12 @@
     ],
     "spettacoli": [
       {
-        "id": "spe-dio-ride",
+        "id": "spe-cin-dio-ride",
         "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
         "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
         "d": "2026-11-03",
-        "quando": "oggi 3 nov spettacoli dalle 14:30 alle 22 circa; orari dei giorni successivi sulle pagine delle sale",
-        "dove": "Eliseo, Romano, Fratelli Marx, Reposi, The Space, UCI Lingotto, Ideal e Massaua Cityplex",
+        "quando": "in programmazione oggi 3 nov; giorni e orari sulle pagine delle due sale",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
         "fonti": [
           {
             "n": "MYmovies",
@@ -374,26 +374,12 @@
         ]
       },
       {
-        "id": "spe-nel-silenzio",
-        "t": "Nel silenzio delle stanze: dramma in costume di Jérôme Bonnell",
-        "s": "Nella Normandia di inizio Novecento una donna sposata e la giovane cameriera si ribellano al patriarcato borghese. Regia di Jérôme Bonnell.",
-        "d": "2026-11-03",
-        "quando": "oggi 3 nov: 15:30, 17:30, 19:30; giorni successivi da verificare",
-        "dove": "Cinema Romano, Torino",
-        "fonti": [
-          {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/film/2025/nel-silenzio-delle-stanze/"
-          }
-        ]
-      },
-      {
-        "id": "spe-shaun",
+        "id": "spe-cin-shaun",
         "t": "Shaun, vita da pecora: Operazione Z.U.C.C.A., film d'animazione per tutti",
         "s": "Shaun e gli animali della fattoria cercano di salvare il contadino scomparso da un mostro prima di Halloween. Regia di Matthew Walker e Steve Cox. Adatto anche ai ragazzi.",
         "d": "2026-11-03",
-        "quando": "oggi 3 nov spettacoli pomeridiani (14-19 circa); altri giorni da verificare",
-        "dove": "Fratelli Marx, The Space, UCI Lingotto, Ideal e Massaua Cityplex",
+        "quando": "in programmazione oggi 3 nov; giorni e orari sulle pagine delle due sale",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
         "fonti": [
           {
             "n": "MYmovies",
@@ -402,12 +388,12 @@
         ]
       },
       {
-        "id": "spe-je-so-pazzo",
+        "id": "spe-cin-je-so-pazzo",
         "t": "Je so' pazzo, il film su Pino Daniele diretto da Nicola Prosatore",
         "s": "Racconta la crescita del musicista napoletano, dall'infanzia difficile fino al concerto del 1981. Regia di Nicola Prosatore.",
         "d": "2026-11-03",
-        "quando": "oggi 3 nov spettacoli dalle 15:20 alle 21:30 circa; altri giorni da verificare",
-        "dove": "Eliseo, Romano, Reposi, The Space, UCI Lingotto, Ideal Cityplex",
+        "quando": "in programmazione oggi 3 nov; giorni e orari sulle pagine delle due sale",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
         "fonti": [
           {
             "n": "MYmovies",
@@ -416,7 +402,7 @@
         ]
       },
       {
-        "id": "spe-orgasmo",
+        "id": "spe-tea-orgasmo",
         "t": "Orgasmo: commedia satirica di Niccolò Fettarappa al Teatro Gobetti",
         "s": "In un futuro vicino una coppia in crisi vive in un mondo dove il desiderio sparisce, mentre una giornalista e uno zoologo indagano su orsi in preda a un'inconsueta frenesia. Con Gianni D'Addario, Niccolò Fettarappa, Lorenzo Guerrieri e Rebecca Sisti; durata 1 ora e 20.",
         "d": "2026-11-03",
@@ -431,7 +417,7 @@
         "costo": "prezzo non indicato sulla pagina; biglietti su Vivaticket"
       },
       {
-        "id": "spe-ultime-lune",
+        "id": "spe-tea-ultime-lune",
         "t": "Le ultime lune in scena al Teatro Carignano fino all'8 novembre",
         "s": "Spettacolo della stagione 2026/27 del Teatro Stabile di Torino, in cartellone al Carignano dal 27 ottobre all'8 novembre.",
         "d": "2026-11-03",
@@ -445,7 +431,7 @@
         ]
       },
       {
-        "id": "spe-escaped-alone",
+        "id": "spe-tea-escaped-alone",
         "t": "Escaped Alone di Caryl Churchill, prima italiana di lacasadargilla al Carignano",
         "s": "Prima italiana del testo di Caryl Churchill, proposto dalla compagnia lacasadargilla.",
         "d": "2026-11-03",
@@ -822,6 +808,7 @@
       "edizione": "mattina",
       "notizie": 32,
       "note": "3/11 prova: aggiornate solo eventi, spettacoli e concerti. Fonti lette: TurismoTorino, MYmovies, Teatro Stabile Torino, Teatro Regio, Lingotto Musica, TicketOne. Non raggiungibili: torinotoday.it e alcune pagine di dettaglio (permesso non concesso)."
-    }
+    },
+    "3/11 13:30: cinema limitato a The Space Cinema e Cinema Ideal (scelta del proprietario); tolto un film proiettato solo al Romano"
   ]
 }

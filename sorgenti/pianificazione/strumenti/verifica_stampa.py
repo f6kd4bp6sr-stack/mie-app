@@ -64,6 +64,12 @@ def controlla(o):
                 urls.add(f.get('url'))
             if k in ('eventi', 'spettacoli', 'concerti') and not (n.get('quando') and n.get('dove')):
                 E.append(w + ': per cose da fare, cinema e teatro servono «quando» e «dove»')
+            if k == 'spettacoli':
+                nid = str(n.get('id', ''))
+                if not (nid.startswith('spe-cin-') or nid.startswith('spe-tea-')):
+                    E.append(w + ': negli spettacoli l\'id inizia con spe-cin- (cinema) o spe-tea- (teatro)')
+                if nid.startswith('spe-cin-') and any(not re.search(r'space|ideal', x, re.I) for x in re.split(r',| e |;|/', n.get('dove', '')) if x.strip()):
+                    E.append(w + ': per il cinema solo The Space Cinema e Cinema Ideal (scelta del proprietario)')
             if len(n.get('link') or []) > 3:
                 E.append(w + ': massimo 3 link di approfondimento')
             # niente citazioni lunghe: le sintesi sono scritte con parole nostre

@@ -246,7 +246,7 @@ a.btn{text-decoration:none;display:inline-block}
 @media (max-width:600px){.dia-qt{font-size:18px}.dia-temp button small{font-size:10.5px}}
 
 </style>
-<script>window.APP_VERSION="aa898f9b0b";window.APP_BUILD="2026-11-03T14:22+02:00";</script>
+<script>window.APP_VERSION="eb0a6bb719";window.APP_BUILD="2026-11-03T14:28+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -350,20 +350,20 @@ html.locked #lockScr{display:grid}
 <style id="tema">/* ===== Tema comune di Pianificazione (inserito dal build in ogni pagina, dopo lo stile della pagina) =====
    Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🤝 Metodo ambra · 📊 Progressi rosa.
    Le sezioni dentro Pianificazione hanno i loro colori (pagine/index.html). */
-:root{--app-pian:#2563eb;--app-lic:#c0532b;--app-tc:#0d9488;--app-met:#b86e00;--app-prog:#d63384}
-@media (prefers-color-scheme:dark){:root{--app-pian:#5b8cff;--app-lic:#f08a5d;--app-tc:#2cc5b6;--app-met:#f0a43a;--app-prog:#ff6fae}}
+:root{--app-pian:#2563eb;--app-lic:#c0532b;--app-corsi:#4338ca;--app-tc:#0d9488;--app-met:#b86e00;--app-prog:#d63384}
+@media (prefers-color-scheme:dark){:root{--app-pian:#5b8cff;--app-lic:#f08a5d;--app-corsi:#a5b4fc;--app-tc:#2cc5b6;--app-met:#f0a43a;--app-prog:#ff6fae}}
 .appsw{display:flex;justify-content:flex-start;gap:6px;margin:12px auto 4px;padding:0 16px;background:none;border-radius:0;width:auto;max-width:1180px;overflow-x:auto;scrollbar-width:none;box-shadow:none}
 .appsw::-webkit-scrollbar{display:none}
 .appsw a:first-child{margin-left:auto}.appsw a:last-child{margin-right:auto}
 .appsw a{--c:var(--app-pian);display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font-weight:700;font-size:14.5px;color:var(--c);text-decoration:none;white-space:nowrap;background:transparent;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--c) 35%,transparent)}
 .appsw a.on{background:var(--c);color:#fff;box-shadow:0 2px 8px color-mix(in srgb,var(--c) 35%,transparent)}
-.appsw a[data-a=lic]{--c:var(--app-lic)}.appsw a[data-a=tc]{--c:var(--app-tc)}.appsw a[data-a=met]{--c:var(--app-met)}.appsw a[data-a=prog]{--c:var(--app-prog)}
+.appsw a[data-a=lic]{--c:var(--app-lic)}.appsw a[data-a=corsi]{--c:var(--app-corsi)}.appsw a[data-a=tc]{--c:var(--app-tc)}.appsw a[data-a=met]{--c:var(--app-met)}.appsw a[data-a=prog]{--c:var(--app-prog)}
 /* Licenze e Progressi: riquadri morbidi con la riga del colore dell'app */
 body[data-app=lic],body[data-app=prog]{background:#f4f5f9}
 body[data-app=lic] .card,body[data-app=prog] .card{border:0;border-radius:18px;box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05)}
 body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog)}
 @media (prefers-color-scheme:dark){body[data-app=lic],body[data-app=prog]{background:#0f1115}body[data-app=lic] .card,body[data-app=prog] .card{box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(0,0,0,.4)}}
-</style><script>document.body.setAttribute("data-app","pian")</script><nav class="appsw" aria-label="App"><a data-a="pian" class="on" href="./" aria-current="page">🏠 Pianificazione</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="met" href="metodo.html">🤝 Metodo</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav>
+</style><script>document.body.setAttribute("data-app","pian")</script><nav class="appsw" aria-label="App"><a data-a="pian" class="on" href="./" aria-current="page">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="met" href="metodo.html">🤝 Metodo</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav>
 <div class="wrap">
   <nav class="sect" id="side" aria-label="Sezioni"></nav>
   <main id="main"></main>
@@ -2834,8 +2834,8 @@ function icsText(items){const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Pian
 
 /* ---------- interfaccia ---------- */
 /* sezioni nel menu (ognuna con il suo colore); ⚙️ Impostazioni sta a parte, a destra */
-const SECT=[["oggi","☀️","Oggi","--cal"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["st","🗞️","Stampa di oggi","--st"],["auto","🚗","Auto","--auto"],["corsi","🎓","Corsi","--corsi"]].concat(PRAT_ON?[["prat","🗂️","Pratiche","--prat"]]:[],CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
-const ALL_SECT=SECT.map(x=>x[0]).concat(["set"]);
+const SECT=[["oggi","☀️","Oggi","--cal"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["st","🗞️","Stampa di oggi","--st"],["auto","🚗","Auto","--auto"]].concat(PRAT_ON?[["prat","🗂️","Pratiche","--prat"]]:[],CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
+const ALL_SECT=SECT.map(x=>x[0]).concat(["set","corsi"]);
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
 function mapOld(k){
   if(k.indexOf("sk=")===0){skFromHash(k.slice(3));return "pens";}
@@ -2854,7 +2854,7 @@ function side(){const late=lateN();
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(k==="prat")pratNew=false;cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,prat:PRAT_ON?vPrat:vCal,dia:vDia,cd:vCd,st:vSt,auto:vAuto,corsi:vCorsi,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
+function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="corsi"?"corsi":"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,prat:PRAT_ON?vPrat:vCal,dia:vDia,cd:vCd,st:vSt,auto:vAuto,corsi:vCorsi,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
 /* ---------- 🪟 finestre: ogni riquadro con un titolo si apre e si chiude; lo stato resta su questo iPad (pn-fold) ---------- */
 const FOLD_KEY="pn-fold";let foldSt=lsJ(FOLD_KEY)||{};
 function foldCards(m){m.querySelectorAll(":scope > h2").forEach(h=>{const c=h.nextElementSibling;if(!c||c.tagName!=="DIV"||!c.classList.contains("card")||(c.firstElementChild&&c.firstElementChild.tagName==="H3"))return;const t=document.createElement("h3");t.innerHTML=h.innerHTML;c.prepend(t);h.remove();});

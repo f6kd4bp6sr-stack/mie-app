@@ -11,7 +11,7 @@ for _f in os.listdir(OUT): os.remove(OUT + _f)
 barra = open(D + 'comune/barra.html', encoding='utf-8').read()
 blocco = open(D + 'comune/blocco.html', encoding='utf-8').read()
 tema = open(D + 'comune/tema.css', encoding='utf-8').read()
-NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi', 'tc'), ('metodo.html', '🤝 Metodo', 'met'), ('progressi.html', '📊 Progressi', 'prog')]
+NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('index.html#corsi', '🎓 Corsi online', 'corsi'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi', 'tc'), ('metodo.html', '🤝 Metodo', 'met'), ('progressi.html', '📊 Progressi', 'prog')]
 pages = {}
 for p in sorted(glob.glob(D + 'pagine/*.html')):
     s = open(p, encoding='utf-8').read()
