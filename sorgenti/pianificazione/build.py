@@ -45,6 +45,9 @@ _eco = verifica_corsi.controlla(D + 'sezioni/corsi_dati.json')
 if _eco: sys.exit('Corsi online, contenuti da sistemare:\n- ' + '\n- '.join(_eco))
 _err = verifica_metodo.controlla(D + 'sezioni/metodo_dati.json')
 if _err: sys.exit('Metodo, contenuti da sistemare:\n- ' + '\n- '.join(_err))
+import verifica_ikigai
+_ei = verifica_ikigai.controlla(D + 'sezioni/metodo_dati.json', D + 'pagine/metodo.html')
+if _ei: sys.exit('Ikigai, contenuti da sistemare:\n- ' + '\n- '.join(_ei))
 _md = json.dumps(json.load(open(D + 'sezioni/metodo_dati.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 assert pages['metodo.html'].count('/*@METODO_DATI*/null') == 1
 pages['metodo.html'] = pages['metodo.html'].replace('/*@METODO_DATI*/null', _md)

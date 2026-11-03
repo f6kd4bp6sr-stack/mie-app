@@ -2193,7 +2193,6 @@
  "ikigai": {
   "intro": "Ikigai (生き甲斐) vuol dire più o meno «ciò per cui vale la pena vivere»: in Giappone indica le piccole e grandi ragioni che danno senso alle giornate. Qui lo trovi insieme alle pratiche giapponesi che lo accompagnano (Morita e Naikan), alla meditazione e al flusso.",
   "nota": "Sono pratiche di benessere per la vita di tutti i giorni. Morita e Naikan nascono come terapie: qui ne usiamo solo i principi, che non sostituiscono un professionista.",
-  "bozza": "📝 Prima versione per vedere la struttura: in settimana arrivano la revisione indipendente, i link alle fonti e i capitoli mancanti.",
   "capitoli": [
    {
     "id": "cosa",
@@ -2211,7 +2210,7 @@
      "Non serve che c'entri con il lavoro o con i soldi.",
      "Conta di più farlo che definirlo."
     ],
-    "spiega": "Lo schema famoso con quattro cerchi (ciò che ami, ciò in cui sei bravo, ciò di cui il mondo ha bisogno, ciò per cui ti pagano) non è giapponese: è un'idea occidentale diffusa dal 2014. In Giappone ne ha scritto, tra i primi, la psichiatra Mieko Kamiya nel libro «Ikigai ni tsuite» («Sull'ikigai», 1966). Una grande ricerca giapponese ha seguito per 7 anni più di 40.000 adulti: chi diceva di avere un ikigai è vissuto in media più a lungo. È un legame osservato, non la prova che l'ikigai allunghi la vita.",
+    "spiega": "«Iki» è vivere, «gai» è il valore. Il termine è antico, ma il primo grande libro sul tema è «Ikigai ni tsuite» («Sull'ikigai», 1966) della psichiatra giapponese Mieko Kamiya: lei distingueva l'oggetto che dà valore alla vita (una persona, un compito) dal sentimento di sentirla sensata. Il celebre schema a quattro cerchi (ciò che ami, in cui sei bravo, di cui il mondo ha bisogno, per cui ti pagano) non è giapponese: è un adattamento occidentale, nato quando nel 2014 il blogger Marc Winn mise la parola «ikigai» al centro di un diagramma dello «scopo» attribuito ad Andrés Zuzunaga. È utile come gioco di riflessione ma lontana dall'idea originale, dove l'ikigai può essere anche piccolissimo. Una ricerca giapponese (studio di Ohsaki, 2008) ha seguito per circa 7 anni 43.391 adulti: chi non dichiarava un ikigai ha avuto più decessi nel periodo. È un'associazione osservata, non la prova che l'ikigai allunghi la vita. Per la pensione: curare l'orto ogni mattina; aspettare il giovedì in cui si va a prendere il nipote a scuola.",
     "es": {
      "t": "La lista delle piccole ragioni",
      "min": 5,
@@ -2222,8 +2221,15 @@
      ]
     },
     "fonti": [
-     "Kamiya M. (1966), «Ikigai ni tsuite», libro",
-     "Sone T. e altri (2008), studio di Ohsaki, Psychosomatic Medicine"
+     {
+      "c": "Kamiya M. (1966), «Ikigai ni tsuite» (non risulta un'edizione italiana)",
+      "t": "libro"
+     },
+     {
+      "c": "Sone T. e altri (2008), Sense of life worth living (ikigai) and mortality in Japan: Ohsaki Study, Psychosomatic Medicine 70(6) — 43.391 adulti, circa 7 anni",
+      "t": "studio",
+      "url": "https://pure.fujita-hu.ac.jp/en/publications/sense-of-life-worth-living-ikigai-and-mortality-in-japan-ohsaki-s/"
+     }
     ]
    },
    {
@@ -2243,7 +2249,7 @@
      "Un pilastro alla volta, non tutti insieme.",
      "Meglio cinque minuti ogni giorno che un'ora ogni tanto."
     ],
-    "spiega": "Il neuroscienziato giapponese Ken Mogi, nel libro «Awakening Your Ikigai» (2017, uscito anche in italiano), riassume l'ikigai in cinque pilastri. Non sono regole da rispettare, ma cinque modi di guardare la stessa giornata: per esempio, riparare un oggetto con calma (cominciare in piccolo) senza pensare a chi ti guarda (lasciar andare l'io).",
+    "spiega": "Il neuroscienziato giapponese Ken Mogi, nel libro uscito nel 2017 nel Regno Unito come «The Little Book of Ikigai» (negli Stati Uniti «Awakening Your Ikigai», 2018) e in italiano da Einaudi nel 2018 come «Il piccolo libro dell'ikigai», riassume l'ikigai in cinque pilastri. Non sono regole da rispettare, ma cinque modi di guardare la stessa giornata. Per esempio, riparare un oggetto con calma è cominciare in piccolo; farlo senza pensare a chi ti guarda è lasciar andare l'io; assaporare il primo caffè è la gioia delle piccole cose. Un'idea per la pensione: scegli il pilastro «qui e ora» e fai la passeggiata di ogni giorno senza telefono, guardando soltanto ciò che trovi lungo la strada. Un altro: «cominciare in piccolo» con dieci minuti di una cosa che rimandi da tempo, come riordinare un cassetto o suonare un brano.",
     "es": {
      "t": "Un pilastro al giorno",
      "min": 2,
@@ -2254,7 +2260,16 @@
      ]
     },
     "fonti": [
-     "Mogi K. (2017), «Awakening Your Ikigai», libro"
+     {
+      "c": "Mogi K. (2017), «The Little Book of Ikigai», Quercus (negli USA «Awakening Your Ikigai», 2018)",
+      "t": "libro",
+      "url": "https://www.hachette.co.uk/titles/ken-mogi/the-little-book-of-ikigai/9781786489043/"
+     },
+     {
+      "c": "Mogi K. (2018), «Il piccolo libro dell'ikigai. La via giapponese alla felicità», Einaudi",
+      "t": "libro",
+      "url": "https://www.einaudi.it/catalogo-libri/filosofia/filosofia-contemporanea/il-piccolo-libro-dellikigai-ken-mogi-9788806237387/"
+     }
     ]
    },
    {
@@ -2262,49 +2277,293 @@
     "ic": "🌊",
     "tit": "Morita: vivere con le emozioni così come sono",
     "sotto": "accettare (arugamama) e fare ciò che conta",
-    "pronto": false
+    "pronto": true,
+    "princ": [
+     "Shōma Morita fu uno psichiatra giapponese (1874-1938): la sua idea nasce come terapia, ma qui prendiamo solo alcuni principi di vita quotidiana.",
+     "«Arugamama» vuol dire accettare le cose come sono, comprese emozioni e pensieri: non si comandano, vanno e vengono come il tempo.",
+     "Non serve sentirsi pronti per agire: l'azione utile viene prima, e il buon umore spesso la segue.",
+     "Si guarda a ciò che conta (lo «scopo») e si fa il passo successivo, anche se dentro c'è un po' di fastidio o di pigrizia."
+    ],
+    "regole": [
+     "Accetta ciò che senti, senza combatterlo.",
+     "Fai il passo piccolo che serve adesso.",
+     "Se un disagio è forte o dura, parlane con il medico."
+    ],
+    "spiega": "Immagina una mattina in cui non hai voglia di uscire a camminare. L'abitudine è aspettare che la voglia arrivi. Il principio di Morita dice il contrario: riconosci che la voglia non c'è («oggi sono svogliato»), non discuti con te stesso, e metti le scarpe lo stesso, perché la camminata è ciò che conta per te. Le emozioni non sono nemici da vincere e non vanno nemmeno obbedite: sono come nuvole. Per chi va in pensione può essere utile quando manca la spinta data dagli orari del lavoro. Questa scheda non è una cura e non sostituisce un professionista: in italiano non abbiamo trovato libri specifici su Morita.",
+    "es": {
+     "t": "Faccio lo stesso, con la svogliatezza",
+     "min": 5,
+     "passi": [
+      "Pensa a una cosa utile che rimandi perché «non ti senti».",
+      "Scrivi una riga: «Sento… e lo accetto».",
+      "Fai solo i primi cinque minuti di quella cosa.",
+      "Annota com'è andata: spesso la voglia arriva dopo."
+     ]
+    },
+    "fonti": [
+     {
+      "c": "Sugg H., Richards D., Frost J. (2020), What is Morita Therapy? The Nature, Origins, and Cross-cultural Application of a Unique Japanese Psychotherapy, Journal of Contemporary Psychotherapy",
+      "t": "articolo",
+      "url": "https://link.springer.com/article/10.1007/s10879-020-09464-6"
+     }
+    ]
    },
    {
     "id": "naikan",
     "ic": "🪞",
     "tit": "Naikan: le tre domande della sera",
     "sotto": "che cosa ho ricevuto, che cosa ho dato, quali difficoltà ho causato",
-    "pronto": false
+    "pronto": true,
+    "princ": [
+     "Naikan («guardarsi dentro») fu messo a punto dal giapponese Ishin Yoshimoto negli anni Quaranta del Novecento; qui usiamo solo l'esercizio breve della sera.",
+     "Si ripensa a una giornata con tre domande: che cosa ho ricevuto da…? che cosa ho dato a…? quali difficoltà ho causato a…?",
+     "Si cerca un fatto concreto per ogni risposta, non un giudizio su di sé.",
+     "Di solito fa notare quanto aiuto, anche piccolo, c'è stato nella giornata."
+    ],
+    "regole": [
+     "Fatti concreti, non colpe.",
+     "Una persona alla volta.",
+     "Dieci minuti bastano, in un posto tranquillo."
+    ],
+    "spiega": "Le tre domande sono semplici, ma portano l'attenzione dove di solito non guardiamo. Scegli una persona (la moglie, un figlio, il vicino, il panettiere) e il giorno appena passato. Che cosa ho ricevuto da lei? Magari un caffè, un passaggio in auto, un messaggio. Che cosa le ho dato? Che difficoltà le ho causato? La terza domanda non serve a punirsi: aiuta a vedere la realtà intera, senza darsi troppo merito né troppa colpa. Molti trovano che porti gratitudine. Il metodo nasce come pratica intensiva e anche come terapia; qui è solo una breve riflessione serale. Se emergono pensieri pesanti, ci si ferma e se ne parla con il medico o con una persona di fiducia.",
+    "es": {
+     "t": "Le tre domande della sera",
+     "min": 10,
+     "passi": [
+      "Siediti in un posto tranquillo e scegli una persona e il giorno di oggi.",
+      "Rispondi per iscritto: che cosa ho ricevuto da lei?",
+      "Poi: che cosa le ho dato? Quali difficoltà le ho causato?",
+      "Scrivi le risposte nel 📓 Diario, con un fatto concreto per ciascuna."
+     ]
+    },
+    "fonti": [
+     {
+      "c": "Krech G. (2023), «Naikan. Gratitudine, grazia e l'arte giapponese dell'autoriflessione», Mimesis",
+      "t": "libro",
+      "url": "https://www.macrolibrarsi.it/libri/__naikan-libro.php"
+     },
+     {
+      "c": "Ozawa-de Silva C. (2015), Mindfulness of the kindness of others: the contemplative practice of Naikan in cultural context, Transcultural Psychiatry 52(4)",
+      "t": "articolo",
+      "url": "https://journals.sagepub.com/doi/10.1177/1363461514562922"
+     }
+    ]
    },
    {
     "id": "flusso",
     "ic": "🏞️",
     "tit": "Il flusso: la corrente della vita",
     "sotto": "immergersi in ciò che si fa, con la sfida giusta",
-    "pronto": false
+    "pronto": true,
+    "princ": [
+     "Lo psicologo Mihály Csíkszentmihályi chiama «flusso» lo stato in cui si è così immersi in un'attività che il resto sparisce.",
+     "Aiutano: un obiettivo chiaro, un riscontro immediato su come sta andando, una sfida adeguata alle proprie capacità, una concentrazione piena.",
+     "Spesso si perde il senso del tempo: un'ora sembra dieci minuti.",
+     "Se la sfida è troppo alta viene ansia, se è troppo bassa viene noia: il flusso sta nel canale in mezzo."
+    ],
+    "regole": [
+     "Scegli attività che richiedono un po' di impegno, non troppo.",
+     "Togli le interruzioni (telefono lontano).",
+     "Alza o abbassa leggermente la difficoltà."
+    ],
+    "spiega": "Il flusso non è un lusso: è una delle esperienze che più spesso fanno sentire la vita piena. Il libro di Héctor García e Francesc Miralles («Il metodo Ikigai» in italiano) lo riprende tra le chiavi dell'ikigai: trovare ciò che ci assorbe e dargli spazio. Per un pensionato gli esempi sono quotidiani: preparare l'orto con un piano per la giornata, costruire un mobile in falegnameria (il pezzo di legno ti dice subito se il taglio è giusto), imparare un brano alla chitarra, un cammino con una meta e un ritmo. Se ti annoi, aumenta un po' la difficoltà; se ti agiti, riduci il compito. Non serve che sia utile a qualcuno: basta che ti assorba.",
+    "es": {
+     "t": "Trovare il canale",
+     "min": 15,
+     "passi": [
+      "Scegli un'attività che ti piace: orto, legno, musica, cammino.",
+      "Fissa un obiettivo piccolo e chiaro per oggi.",
+      "Togli le distrazioni e lavora senza controllare l'ora.",
+      "Poi scrivi: ansia, noia o flusso? Domani regola la difficoltà."
+     ]
+    },
+    "fonti": [
+     {
+      "c": "Csíkszentmihályi M. (1990; ed. it. 2021), «Flow. Psicologia dell'esperienza ottimale», ROI edizioni",
+      "t": "libro",
+      "url": "https://www.illibraio.it/libri/csikszentmihalyi-mihaly-flow-psicologia-dellesperienza-ottimale-9788836200382"
+     },
+     {
+      "c": "García H., Miralles F. (2018), «Il metodo Ikigai. I segreti della filosofia giapponese per una vita lunga e felice», BUR",
+      "t": "libro",
+      "url": "https://www.macrolibrarsi.it/libri/__il-metodo-ikigai.php"
+     },
+     {
+      "c": "Peifer C. e altri (2022), A Scoping Review of Flow Research, Frontiers in Psychology 13",
+      "t": "articolo",
+      "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2022.815665/full"
+     }
+    ]
    },
    {
     "id": "mente",
     "ic": "🧘",
     "tit": "Allenare la mente: meditazione per cominciare",
     "sotto": "respiro, seduta breve, camminata lenta",
-    "pronto": false
+    "pronto": true,
+    "princ": [
+     "Per cominciare bastano 3-10 minuti, meglio ogni giorno alla stessa ora.",
+     "Respiro tranquillo: si osserva il respiro com'è, senza forzarlo né trattenerlo.",
+     "Si può stare seduti comodi su una sedia, oppure camminare lentamente, sentendo i piedi.",
+     "Quando la mente si distrae (succede sempre) si torna con gentilezza al respiro."
+    ],
+    "regole": [
+     "Niente respirazioni forzate o prolungate.",
+     "Se compaiono disagio o pensieri pesanti, ci si ferma.",
+     "Se il disagio continua, se ne parla con il medico."
+    ],
+    "spiega": "La meditazione, qui, è semplicemente allenare l'attenzione. Siediti con la schiena comoda, i piedi a terra, gli occhi socchiusi. Senti l'aria che entra e che esce, in un punto qualsiasi (narici, petto, pancia). Quando la mente parte, noti che è partita e torni: quel «tornare» è l'esercizio. In alternativa la camminata lenta: pochi metri avanti e indietro, attenzione ai piedi. Per la salute, l'ente americano NCCIH spiega che di solito i rischi sono pochi, ma che in una parte di persone possono comparire effetti spiacevoli come ansia o umore depresso, e che non va usata al posto delle cure o per rimandare una visita. Per questo, al primo disagio, ci si ferma.",
+    "es": {
+     "t": "Cinque minuti di respiro",
+     "min": 5,
+     "passi": [
+      "Siediti comodo e metti un timer a 5 minuti.",
+      "Senti il respiro così com'è, senza cambiarlo.",
+      "Quando ti distrai, torna al respiro senza rimproverarti.",
+      "Alla fine apri gli occhi e scrivi una riga su come ti senti."
+     ]
+    },
+    "fonti": [
+     {
+      "c": "NCCIH (US National Institutes of Health), Meditation and Mindfulness: Effectiveness and Safety (ultimo aggiornamento 2022)",
+      "t": "articolo",
+      "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety"
+     }
+    ]
    },
    {
     "id": "pensione",
     "ic": "🌅",
     "tit": "Il mio ikigai nella pensione",
     "sotto": "esercizi personali, collegati al 📓 Diario",
-    "pronto": false
+    "pronto": true,
+    "princ": [
+     "La pensione toglie orari e ruoli, ma lascia spazio per scegliere che cosa dà valore alle giornate.",
+     "Alcuni ruoli restano (marito, padre, nonno, amico), altri sono nuovi (volontario, ortolano, allievo).",
+     "Si parte dalle piccole ragioni di ogni giorno e si costruisce una settimana che ne contenga qualcuna.",
+     "Il 📓 Diario serve a tenere traccia di ciò che funziona."
+    ],
+    "regole": [
+     "Poche cose, ma regolari.",
+     "Un impegno per sé, uno con gli altri, uno per il corpo.",
+     "Rivedi la settimana una volta al mese."
+    ],
+    "spiega": "Tre esercizi. Le piccole ragioni: ogni sera scrivi nel 📓 Diario una cosa per cui valeva la pena alzarsi. I ruoli: fai due colonne, quelli che restano e quelli nuovi, e a fianco una cosa concreta per ciascuno. Una settimana tipo: disegna sette giorni e metti in ogni giorno una cosa per il corpo, una per la mente, una con altre persone. Non serve riempire tutto: lascia spazi liberi. Sul tema, lo studio giapponese di Ohsaki ha trovato più decessi tra chi non dichiarava un ikigai, ma è un'associazione e non dice che cosa fare. Per questo contano le tue scelte, non le medie.",
+    "es": {
+     "t": "Ruoli e settimana tipo",
+     "min": 15,
+     "passi": [
+      "Elenca i ruoli che restano e quelli nuovi che ti incuriosiscono.",
+      "Per ciascuno scrivi un gesto concreto della settimana.",
+      "Disegna sette giorni e inserisci i gesti, lasciando spazi liberi.",
+      "Scrivi nel 📓 Diario cosa ti piace di più e cosa cambieresti."
+     ]
+    },
+    "fonti": [
+     {
+      "c": "Sone T. e altri (2008), Sense of life worth living (ikigai) and mortality in Japan: Ohsaki Study, Psychosomatic Medicine 70(6) — 43.391 adulti, circa 7 anni",
+      "t": "studio",
+      "url": "https://pure.fujita-hu.ac.jp/en/publications/sense-of-life-worth-living-ikigai-and-mortality-in-japan-ohsaki-s/"
+     }
+    ]
    },
    {
     "id": "sfida",
     "ic": "🎯",
     "tit": "La sfida dei 7 giorni",
     "sotto": "una pratica al giorno per una settimana",
-    "pronto": false
+    "pronto": true,
+    "princ": [
+     "Una pratica al giorno per sette giorni, tutte prese dalla scheda.",
+     "Ogni giorno richiede da 2 a 15 minuti.",
+     "Alla fine si rilegge il Diario e si sceglie che cosa tenere.",
+     "Non è una gara: se salti un giorno, riprendi dal giorno dopo."
+    ],
+    "regole": [
+     "Una pratica al giorno, non di più.",
+     "Annota una riga nel 📓 Diario ogni sera.",
+     "Se qualcosa dà disagio, salta e passa oltre."
+    ],
+    "spiega": "La sfida mette insieme le pratiche viste: ognuna è piccola e si può fare in casa. Alla fine di sette giorni avrai provato strumenti diversi e saprai quali ti si adattano. Non c'è punteggio. L'obiettivo è la scelta finale: tenere due o tre pratiche e lasciare le altre.",
+    "es": {
+     "t": "I 7 giorni",
+     "min": 15,
+     "passi": [
+      "Giorno 1: lista delle piccole ragioni. Giorno 2: un pilastro di Mogi.",
+      "Giorno 3: arugamama (accetto ciò che sento e faccio il passo). Giorno 4: Naikan, le tre domande.",
+      "Giorno 5: un'attività di flusso. Giorno 6: meditazione di 5 minuti.",
+      "Giorno 7: rileggi il Diario e scegli che cosa tenere."
+     ]
+    },
+    "fonti": [
+     {
+      "c": "Mogi K. (2018), «Il piccolo libro dell'ikigai. La via giapponese alla felicità», Einaudi",
+      "t": "libro",
+      "url": "https://www.einaudi.it/catalogo-libri/filosofia/filosofia-contemporanea/il-piccolo-libro-dellikigai-ken-mogi-9788806237387/"
+     },
+     {
+      "c": "Krech G. (2023), «Naikan. Gratitudine, grazia e l'arte giapponese dell'autoriflessione», Mimesis",
+      "t": "libro",
+      "url": "https://www.macrolibrarsi.it/libri/__naikan-libro.php"
+     }
+    ]
    },
    {
     "id": "letture",
     "ic": "📚",
     "tit": "Letture",
     "sotto": "libri e studi con un riassunto, in italiano quando c'è",
-    "pronto": false
+    "pronto": true,
+    "princ": [
+     "Il piccolo libro dell'ikigai — Ken Mogi (Einaudi, 2018): i cinque pilastri spiegati con esempi di vita giapponese di ogni giorno.",
+     "Il metodo Ikigai — Héctor García e Francesc Miralles (BUR Rizzoli, 2018): nato dalle visite degli autori a Ogimi (Okinawa) e consigli su alimentazione, comunità e flusso.",
+     "Flow. Psicologia dell'esperienza ottimale — Mihály Csíkszentmihályi (ROI edizioni, 2021): spiega quando un'attività ci assorbe e rende felici.",
+     "Naikan. Gratitudine, grazia e l'arte giapponese dell'autoriflessione — Gregg Krech (Mimesis, 2023): guida alla riflessione serale con le tre domande.",
+     "Ikigai. Il segreto giapponese per vivere più a lungo — Yukari Mitsuhashi (Newton Compton, 2022): breve libro sulle piccole attività quotidiane che danno senso."
+    ],
+    "regole": [
+     "Leggi un libro alla volta.",
+     "Sottolinea due idee da provare.",
+     "Non cercare risposte mediche nei libri."
+    ],
+    "spiega": "I riassunti sono scritti con parole nostre; per i dettagli guarda i libri. Su Morita non abbiamo trovato un libro in italiano.",
+    "es": {
+     "t": "Una pagina al giorno",
+     "min": 10,
+     "passi": [
+      "Scegli un libro della lista.",
+      "Leggi una pagina o due, lentamente.",
+      "Sottolinea una frase da provare.",
+      "Provala il giorno dopo e annotalo nel 📓 Diario."
+     ]
+    },
+    "fonti": [
+     {
+      "c": "Mogi K. (2018), «Il piccolo libro dell'ikigai. La via giapponese alla felicità», Einaudi",
+      "t": "libro",
+      "url": "https://www.einaudi.it/catalogo-libri/filosofia/filosofia-contemporanea/il-piccolo-libro-dellikigai-ken-mogi-9788806237387/"
+     },
+     {
+      "c": "García H., Miralles F. (2018), «Il metodo Ikigai. I segreti della filosofia giapponese per una vita lunga e felice», BUR",
+      "t": "libro",
+      "url": "https://www.macrolibrarsi.it/libri/__il-metodo-ikigai.php"
+     },
+     {
+      "c": "Csíkszentmihályi M. (1990; ed. it. 2021), «Flow. Psicologia dell'esperienza ottimale», ROI edizioni",
+      "t": "libro",
+      "url": "https://www.illibraio.it/libri/csikszentmihalyi-mihaly-flow-psicologia-dellesperienza-ottimale-9788836200382"
+     },
+     {
+      "c": "Krech G. (2023), «Naikan. Gratitudine, grazia e l'arte giapponese dell'autoriflessione», Mimesis",
+      "t": "libro",
+      "url": "https://www.macrolibrarsi.it/libri/__naikan-libro.php"
+     },
+     {
+      "c": "Mitsuhashi Y. (2022), «Ikigai. Il segreto giapponese per vivere più a lungo», Newton Compton",
+      "t": "libro",
+      "url": "https://www.ibs.it/ikigai-segreto-giapponese-per-vivere-libro-yukari-mitsuhashi/e/9788822764423"
+     }
+    ]
    }
   ]
  }
