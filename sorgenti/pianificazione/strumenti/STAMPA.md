@@ -54,6 +54,8 @@ Usa la regola «prima cerca, poi leggi»: fai una WebSearch limitata al sito (al
   - **Cinema**: per ogni film titolo (nella forma italiana), in `s` di che cosa parla in 1-2 frasi tue e regista, e soprattutto **dove vederlo**: in `dove` le sale di Torino che lo proiettano (es. «Massimo, Nazionale, Romano»), in `quando` i giorni o «tutti i giorni, spettacoli 16-21». Fonti: le pagine ufficiali delle sale (Museo Nazionale del Cinema - Cinema Massimo, Cinema Nazionale, Romano, Eliseo, Centrale, Classico, Greenwich, Ambrosio, Reposi, Uci/The Space…) e le programmazioni di mymovies.it, comingsoon.it, torinotoday.it per la città di Torino. Varia i generi; segnala con «per tutti» i film adatti anche ai ragazzi.
   - **Teatro**: titolo, compagnia o interpreti principali, in `dove` il teatro (Teatro Stabile: Carignano, Gobetti, Fonderie Limone; Teatro Regio; Alfieri; Colosseo; Juvarra; Astra; Erba; Concordia di Venaria…), in `quando` le date e l'orario, in `costo` il prezzo se indicato. Fonti: i siti ufficiali dei teatri e di Torino Spettacoli.
   - Solo programmazione confermata sulla pagina ufficiale o sulla programmazione delle sale; niente recensioni né giudizi, niente pubblicità.
+- **concerti**, cioè «🎵 Concerti nei prossimi mesi» (dal 3/11/2026): da 8 a 20 concerti a Torino e in Piemonte **dai prossimi giorni fino ad almeno 3 mesi**, per pianificare i biglietti: musica leggera e rock (Inalpi Arena/Pala Alpitour, Teatro Colosseo, Hiroshima Mon Amour, Officine Grandi Riparazioni, Teatro Concordia di Venaria…), classica e opera (Teatro Regio, Auditorium RAI-OSN, Lingotto Musica, Unione Musicale, Conservatorio), jazz e altro. In ordine di data. Per ognuno: `t` artista o titolo, `s` 1-2 frasi (genere, tour, programma), `quando` data e ora (es. «sab 14 feb 2027, 21:00»), `dove` luogo e comune, `costo` (es. «da 45 €» oppure «esaurito») e tra le `fonti` la pagina ufficiale del concerto o della vendita dei biglietti (sito del teatro, dell'organizzatore o del venditore ufficiale). Solo concerti confermati, niente rivendite non ufficiali.
+  - **Per risparmiare**: aggiorna la lista per intero solo all'edizione del **lunedì mattina** (o se la lista è vuota); nelle altre edizioni copia la lista dell'edizione precedente togliendo i concerti già passati.
 - **cultura** e **sport** (facoltative): da 0 a 3 notizie ciascuna.
 
 Per decidere l'ordine, conta quanto spazio danno alla notizia più testate. Le notizie più importanti vanno per prime.
@@ -93,10 +95,10 @@ Lascia fuori:
 ## Il file
 ```json
 {"app": "stampa-oggi", "edizione": "mattina", "updated": "AAAA-MM-GGTHH:MM+01:00", "nota": "facoltativa",
- "sezioni": {"italia": […], "mondo": […], "estero": […], "economia": […], "torino": […], "piemonte": […], "eventi": […], "spettacoli": […], "cultura": […], "sport": […]},
+ "sezioni": {"italia": […], "mondo": […], "estero": […], "economia": […], "torino": […], "piemonte": […], "eventi": […], "spettacoli": […], "concerti": […], "cultura": […], "sport": […]},
  "controlli": [{"at": "…", "edizione": "mattina", "notizie": 18, "note": "fonti lette, siti non raggiungibili"}]}
 ```
-In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti dalla sezione (`it-…`, `mo-…`, `es-…`, `ec-…`, `to-…`, `pi-…`, `ev-…`, `spe-…`, `cu-…`, `sp-…`). Le proposte di «eventi» e «spettacoli» hanno in più `quando`, `dove` e, se vuoi, `costo`; `d` è la data di pubblicazione della pagina (o di oggi)..
+In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti dalla sezione (`it-…`, `mo-…`, `es-…`, `ec-…`, `to-…`, `pi-…`, `ev-…`, `spe-…`, `co-…`, `cu-…`, `sp-…`). Le proposte di «eventi», «spettacoli» e «concerti» hanno in più `quando`, `dove` e, se vuoi, `costo`; `d` è la data di pubblicazione della pagina (o di oggi)..
 
 ## Pubblicazione
 1. `git pull`.

@@ -4,7 +4,7 @@
    seguendo strumenti/STAMPA.md: titoli e sintesi con parole nostre, tono neutro, fonti e link di approfondimento.
    Sull'iPad resta una copia (pn-stampa) per quando manca internet; quali notizie hai aperto: pn-stampa-lette (solo su questo iPad). */
 const ST_KEY="pn-stampa",ST_LKEY="pn-stampa-lette";
-const ST_SEZ=[["italia","🇮🇹","Italia"],["mondo","🌍","Mondo"],["estero","🌐","Stampa estera"],["economia","💶","Economia"],["torino","🏙️","Torino"],["piemonte","🏔️","Piemonte"],["eventi","🎟️","Cose da fare a Torino e in Piemonte"],["spettacoli","🎬","Cinema e teatro a Torino"],["cultura","🎭","Cultura"],["sport","⚽","Sport"]];
+const ST_SEZ=[["italia","🇮🇹","Italia"],["mondo","🌍","Mondo"],["estero","🌐","Stampa estera"],["economia","💶","Economia"],["torino","🏙️","Torino"],["piemonte","🏔️","Piemonte"],["eventi","🎟️","Cose da fare a Torino e in Piemonte"],["spettacoli","🎬","Cinema e teatro a Torino"],["concerti","🎵","Concerti nei prossimi mesi"],["cultura","🎭","Cultura"],["sport","⚽","Sport"]];
 let stSez="",stBusy=false;
 const stData=()=>lsJ(ST_KEY)||{sezioni:{}};
 /* articoli stranieri: titolo e sintesi sono già in italiano; «leggi tradotto» apre l'originale tradotto in italiano da Google Traduttore */
@@ -29,7 +29,8 @@ function vSt(){const N=stData(),S=N.sezioni||{},L=stLette(),old=stOre()>30;
   if(!N.updated)return o+`<div class="card k-st nofold"><p class="empty">Le notizie arrivano da internet: apri la sezione quando sei collegato.</p></div>`;
   o+=`<div class="cols4">`;
   ST_SEZ.forEach(([k,ic,t])=>{const A=S[k]||[];if(!A.length)return;
-    o+=`<div class="card k-st nofold"><h3>${ic} ${t} <span class="lbl" style="margin-left:auto">${A.length}</span></h3>${A.map((n,i)=>`<article class="st-n${i===0?" st-top":""}${L[n.id]?" st-read":""}"><h3 class="st-t">${esc(n.t)}</h3>${n.quando||n.dove?`<p class="st-ev">${n.quando?"📅 "+esc(n.quando):""}${n.quando&&n.dove?" · ":""}${n.dove?"📍 "+esc(n.dove):""}${n.costo?" · 💶 "+esc(n.costo):""}</p>`:""}<p class="st-s">${esc(n.s)}</p>
+    /* ogni colonna si apre e si chiude toccando il titolo (stato ricordato) */
+    o+=`<div class="card k-st"><h3>${ic} ${t} <span class="lbl" style="margin-left:auto">${A.length}</span></h3>${A.map((n,i)=>`<article class="st-n${i===0?" st-top":""}${L[n.id]?" st-read":""}"><h3 class="st-t">${esc(n.t)}</h3>${n.quando||n.dove?`<p class="st-ev">${n.quando?"📅 "+esc(n.quando):""}${n.quando&&n.dove?" · ":""}${n.dove?"📍 "+esc(n.dove):""}${n.costo?" · 💶 "+esc(n.costo):""}</p>`:""}<p class="st-s">${esc(n.s)}</p>
       <div class="st-f">${(n.fonti||[]).map(f=>`<a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">${esc(f.n)}${f.l&&f.l!=="it"?` <span class="st-lang">${esc(f.l.toUpperCase())}</span>`:""} ›</a>${f.l&&f.l!=="it"?`<a class="st-tr" href="${stTrad(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">🔤 leggi tradotto</a>`:""}`).join("")}${(n.link||[]).map(f=>`<a class="st-ap" href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">🔎 ${esc(f.n)}</a>`).join("")}</div></article>`).join("")}</div>`;});
   o+=`</div>`;
   o+=`<p class="lbl" style="margin-top:12px">Titoli e sintesi sono scritti per questa app con parole proprie, in tono neutro, partendo dalle testate indicate: per il testo completo apri la fonte (alcuni articoli sono riservati agli abbonati). Non sono opinioni né consigli.</p>`;
