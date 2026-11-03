@@ -241,11 +241,11 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
     <details id="pairBox" style="margin-top:6px"><summary class="lbl" style="cursor:pointer"><b>Prepara il QR di collegamento (anche per una chiave nuova)</b></summary>
       <ol class="lbl" style="padding-left:20px;margin:6px 0">
         <li>Crea la chiave: <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> → spunta solo <b>gist</b>, scadenza <b>No expiration</b> (nessuna scadenza: così il collegamento non si rompe più; la chiave può toccare solo gli spazi cifrati e si revoca quando vuoi da GitHub) → <b>Generate token</b> → copia la chiave.</li>
-        <li>Incollala qui sotto e tocca <b>Prepara il QR</b>: l’app crea uno spazio privato su GitHub con una chiave casuale lunga (e cancella gli spazi vecchi pubblici).</li>
+        <li>Torna qui e tocca <b>📋 2. Incolla e mostra il QR</b> (oppure incollala nel campo e tocca <b>Prepara il QR</b>): l’app crea uno spazio privato su GitHub con una chiave casuale lunga (e cancella gli spazi vecchi pubblici).</li>
         <li>Sull’iPad della bimba: <b>Io → 💾 Salvataggi → 📷 Collegati con il QR</b> e inquadra questo schermo.</li>
       </ol>
       <div class="btns"><input id="pairTok" type="password" placeholder="Chiave GitHub (inizia con ghp_)" autocomplete="off" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line,#ccc);background:transparent;color:inherit"></div>
-      <div class="btns"><button id="pairGo" class="primary">Prepara il QR</button></div>
+      <div class="btns"><a class="btn" id="pairNew" href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">🔑 1. Crea la chiave su GitHub</a><button id="pairPaste" class="primary">📋 2. Incolla e mostra il QR</button><button id="pairGo">Prepara il QR</button></div>
       <div id="pairQR" style="text-align:center"></div>
       <div class="lbl">🔒 Il QR contiene la chiave: mostralo solo all’iPad della bimba. Si chiude da solo dopo 3 minuti. La chiave resta su questo iPad (non va nelle copie) e sull’iPad della bimba.</div>
     </details>
@@ -1313,9 +1313,13 @@ $("pairGo").onclick=async()=>{const t=$("pairTok").value.trim()||((lsGet(GKEY)||
   }catch(e){box.innerHTML=`<p class="lbl" style="color:#c2410c">⚠️ ${esc(e.message||String(e))}</p>`;}
 };
 /* 3/11/2026 (richiesta del proprietario): con la chiave già salvata su questo iPad il QR compare da solo aprendo il riquadro, senza riscrivere la chiave; riusa il collegamento attuale se è valido, altrimenti ne prepara uno nuovo */
+/* prima volta quasi automatica: la chiave si crea su GitHub (la pagina si apre con «gist» già spuntato), si copia e qui basta un tocco: l'app la legge dagli appunti, la salva e mostra il QR */
+$("pairPaste").onclick=async()=>{let t="";try{t=((await navigator.clipboard.readText())||"").trim();}catch(e){}
+  if(!/^(ghp_|github_pat_)[A-Za-z0-9_]+$/.test(t)){toast("Negli appunti non c'è una chiave GitHub: copiala su GitHub (inizia con ghp_) oppure incollala nel campo");$("pairTok").focus();return;}
+  $("pairTok").value=t;$("pairGo").click();};
 $("pairBox").addEventListener("toggle",async()=>{if(!$("pairBox").open||$("pairQR").innerHTML)return;const g=lsGet(GKEY);if(!g||!g.token||g.ok===false)return;
   if(LINK&&LINK.gist&&LINK.key&&!linkOld(LINK)){try{await qrShow(g.token,LINK.gist,LINK.key);}catch(e){$("pairQR").innerHTML=`<p class="lbl" style="color:#c2410c">⚠️ ${esc(e.message||String(e))}</p>`;}}else $("pairGo").click();});
-(()=>{ghPaint();setTimeout(()=>ghDaily(false),1200);const g0=lsGet(GKEY);if(g0&&g0.token&&g0.ok!==false){const i=$("pairTok");if(i)i.placeholder="Chiave già salvata su questo iPad: lascia vuoto (o incolla una chiave nuova)";const b=$("pairGo");if(b)b.textContent="Mostra il QR";}
+(()=>{ghPaint();setTimeout(()=>ghDaily(false),1200);const g0=lsGet(GKEY);if(!(LINK&&LINK.gist&&!linkOld(LINK))){const pb=$("pairBox");if(pb)pb.open=true;}if(g0&&g0.token&&g0.ok!==false){const pp=$("pairPaste"),pn=$("pairNew");if(pp)pp.hidden=true;if(pn)pn.hidden=true;}if(g0&&g0.token&&g0.ok!==false){const i=$("pairTok");if(i)i.placeholder="Chiave già salvata su questo iPad: lascia vuoto (o incolla una chiave nuova)";const b=$("pairGo");if(b)b.textContent="Mostra il QR";}
   /* collegamento vecchio: con la chiave già salvata si cancellano subito gli spazi pubblici */
   const g=lsGet(GKEY),forget=()=>{LINK={renew:1};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();};
   if(linkOld(LINK)&&LINK.key&&!(g&&g.token))forget();
@@ -1325,7 +1329,7 @@ window.__analyze=analyze; window.__normalize=normalize;
 
 })();
 </script>
-<script>window.APP_VERSION="f1787659ff";window.APP_BUILD="2026-11-03T20:52+02:00";</script>
+<script>window.APP_VERSION="f469642a19";window.APP_BUILD="2026-11-03T20:56+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
