@@ -1302,7 +1302,7 @@ window.__analyze=analyze; window.__normalize=normalize;
 
 })();
 </script>
-<script>window.APP_VERSION="bc8bdae2cd";window.APP_BUILD="2026-11-03T11:34+02:00";</script>
+<script>window.APP_VERSION="6633d83223";window.APP_BUILD="2026-11-03T11:40+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
@@ -1527,6 +1527,28 @@ window.__analyze=analyze; window.__normalize=normalize;
       }catch(e){msg("Non riuscito: "+e.message,1);}};
   }
   window.__cbPush=cbPush; window.__cbPanel=cbPanel; window.__svTxt=svTxt;
+  /* 🔁 prova di ripristino (3/11/2026, proposta n. 5): una volta al mese apre davvero l'ultima copia giornaliera e la copia automatica
+     cifrata, controlla che si leggano e che contengano i dati principali. Non cambia niente: il risultato va in pn-restore-test. */
+  async function restoreTest(manual){
+    var R={at:new Date().toISOString(),local:null,cloud:null};
+    try{var db=await kvDb();var keys=await new Promise(function(res){var q=db.transaction("kv").objectStore("kv").getAllKeys();q.onsuccess=function(){res(q.result.map(String));};q.onerror=function(){res([]);};});
+      var ks=keys.filter(function(x){return x.indexOf("snap-")===0&&x.indexOf("~")<0;}).sort();
+      if(!ks.length)R.local={ok:false,why:"nessuna copia giornaliera"};
+      else{var k=ks[ks.length-1];var v=await new Promise(function(res){var q=db.transaction("kv").objectStore("kv").get(k);q.onsuccess=function(){res(q.result);};q.onerror=function(){res(null);};});
+        var o=null;try{o=JSON.parse(v);}catch(e){}
+        R.local=o&&o.app==="le-mie-app"&&(o.pianifica||o.taichi||o.progressi)?{ok:true,d:k.slice(5),n:Object.keys(o).length}:{ok:false,d:k.slice(5),why:"la copia non si legge"};}
+    }catch(e){R.local={ok:false,why:"database non disponibile"};}
+    var c=cbCfg(),tok=ghTok();
+    if(c&&c.gist&&c.key&&tok&&navigator.onLine!==false){
+      try{var r=await cbRead(tok,c.gist,null,c.key);R.cloud=r&&r.o&&r.o.app==="le-mie-app"?{ok:true,saved:r.saved}:{ok:false,why:"contenuto non riconosciuto"};}
+      catch(e){R.cloud={ok:false,why:String(e.message||e)};}
+    }
+    try{localStorage.setItem("pn-restore-test",JSON.stringify(R));}catch(e){}
+    if(manual)alertBar((R.local&&R.local.ok?"✅ Copia giornaliera leggibile":"⚠️ Copia giornaliera: "+((R.local&&R.local.why)||"?"))+(R.cloud?(R.cloud.ok?" · ✅ copia automatica leggibile":" · ⚠️ copia automatica: "+R.cloud.why):""));
+    return R;
+  }
+  window.__restoreTest=restoreTest;
+  setTimeout(function(){try{var t=lsJ("pn-restore-test");if(!t||Date.now()-new Date(t.at).getTime()>30*864e5)restoreTest(false);}catch(e){}},20000);
   setTimeout(function(){cbPush(false);},6000);
   document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(function(){cbPush(false);},4000);});
 
@@ -1619,6 +1641,9 @@ window.__analyze=analyze; window.__normalize=normalize;
     if(nw&&nw.updated){var a2=ore(nw.updated),c2=ore(nw.checked);R.push({k:a2>36&&c2!=null&&c2<3?"w":"ok",ic:"🎖️",t:"Novità su contratto e pensione",x:"aggiornate "+quando(nw.updated)+(a2>36&&c2!=null&&c2<3?" · il giro di oggi non è arrivato":"")});}
     if(!lk||!lk.gist)R.push({k:"i",ic:"📊",t:"Progressi di «Il mio mondo»",x:"non collegato (Progressi → 📲 Collega con un QR)"});
     else{var hl=ore(lk.sent);R.push({k:lk.err||hl==null||hl>36?"w":"ok",ic:"📊",t:"Progressi di «Il mio mondo»",x:(lk.err?String(lk.err)+" · ":"")+"ultimo invio "+quando(lk.sent)+(hl!=null&&hl>36?" · apri «Il mio mondo» sull’iPad della bimba con internet":"")});}
+    var rt=J("pn-restore-test");
+    if(!rt)R.push({k:"i",ic:"🔁",t:"Prova di ripristino",x:"non ancora fatta: parte da sola (una volta al mese)"});
+    else{var bad=(rt.local&&!rt.local.ok)||(rt.cloud&&!rt.cloud.ok),old=ore(rt.at)>40*24;R.push({k:bad||old?"w":"ok",ic:"🔁",t:"Prova di ripristino",x:"fatta "+quando(rt.at)+" · copia giornaliera "+(rt.local&&rt.local.ok?"✅ leggibile":"⚠️ "+((rt.local&&rt.local.why)||"?"))+(rt.cloud?" · copia automatica "+(rt.cloud.ok?"✅ leggibile":"⚠️ "+rt.cloud.why):"")});}
     if(gh&&gh.token){var dd=gh.exp?Math.floor((new Date(gh.exp)-Date.now())/864e5):null;
       R.push({k:gh.ok===false||(dd!=null&&dd<30)?"w":"ok",ic:"🔑",t:"Chiave GitHub del collegamento",x:gh.ok===false?(gh.why||"non funziona")+" · prepara una chiave nuova in Progressi":dd==null?"senza scadenza":"scade tra "+Math.max(0,dd)+" giorni"+(dd<30?" · prepara una chiave nuova in Progressi":"")});}
     return R;
@@ -1628,8 +1653,8 @@ window.__analyze=analyze; window.__normalize=normalize;
     ov.style.cssText="position:fixed;inset:0;z-index:9500;background:rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;padding:16px";
     ov.innerHTML='<div style="background:var(--card,#fff);color:inherit;max-width:560px;width:100%;border-radius:20px;padding:18px 20px;box-shadow:0 12px 40px rgba(0,0,0,.25);font:inherit"><h2 style="margin:0 0 10px">🩺 Stato dell’app</h2>'+
       R.map(function(r){return '<div style="display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:start;padding:8px 0;border-top:1px solid rgba(127,127,127,.2)"><span style="font-size:20px">'+r.ic+'</span><div><b>'+r.t+'</b><div style="font-size:14px;opacity:.8">'+String(r.x).replace(/[<>&]/g,"")+'</div></div><span style="font-size:20px">'+(r.k==="w"?"⚠️":r.k==="i"?"ℹ️":"✅")+'</span></div>';}).join("")+
-      '<div style="text-align:right;margin-top:10px"><button type="button" id="pn-h-x" style="font:inherit;font-weight:700;border:0;border-radius:999px;padding:8px 16px;background:rgba(127,127,127,.16);color:inherit;cursor:pointer">Chiudi</button></div></div>';
-    document.body.appendChild(ov);ov.onclick=function(e){if(e.target===ov||e.target.id==="pn-h-x")ov.remove();};
+      '<div style="text-align:right;margin-top:10px"><button type="button" id="pn-h-rt" style="font:inherit;font-weight:700;border:0;border-radius:999px;padding:8px 16px;background:rgba(127,127,127,.16);color:inherit;cursor:pointer;margin-right:8px">🔁 Prova il ripristino adesso</button><button type="button" id="pn-h-x" style="font:inherit;font-weight:700;border:0;border-radius:999px;padding:8px 16px;background:rgba(127,127,127,.16);color:inherit;cursor:pointer">Chiudi</button></div></div>';
+    document.body.appendChild(ov);ov.onclick=function(e){if(e.target===ov||e.target.id==="pn-h-x")ov.remove();if(e.target.id==="pn-h-rt"&&window.__restoreTest){e.target.textContent="⏳ Controllo…";window.__restoreTest(true).then(function(){ov.remove();panel();pill();});}};
   }
   function pill(){
     var w=checks().filter(function(r){return r.k==="w";}),b=document.getElementById("pn-health-pill");
@@ -1642,6 +1667,7 @@ window.__analyze=analyze; window.__normalize=normalize;
   }
   function addBtn(){var m=document.querySelector(".updbar .u-more");if(m&&!m.querySelector(".u-hl")){var x=document.createElement("button");x.type="button";x.className="u-hl";x.textContent="🩺 Stato dell’app";x.onclick=panel;m.insertBefore(x,m.querySelector(".u-bk"));}}
   window.pnHealth=panel;
+  window.pnHealthWarn=function(){return checks().filter(function(r){return r.k==="w";}).length;};
   setTimeout(function(){addBtn();pill();},4000);
   document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(pill,4000);});
   setInterval(pill,30*60*1000);

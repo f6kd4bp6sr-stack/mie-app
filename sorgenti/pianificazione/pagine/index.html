@@ -27,6 +27,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.42 -apple-system
 .sect::-webkit-scrollbar{display:none}
 .sect button{--c:var(--muted);display:flex;align-items:center;gap:8px;border:0;font:inherit;font-weight:700;font-size:16px;color:var(--ink);background:var(--card);padding:10px 16px;border-radius:14px;cursor:pointer;box-shadow:var(--shadow);white-space:nowrap}
 .sect button .ic{font-size:19px}
+@media (max-width:1366px){.sect{gap:6px}.sect button{padding:8px 11px;font-size:15px;gap:6px}.sect button .ic{font-size:17px}}
 .sect button.on{background:var(--c);color:#fff}
 .sect button .n{font-size:12px;font-weight:800;background:var(--scad);color:#fff;border-radius:999px;padding:1px 7px}
 .sect button.on .n{background:#fff;color:var(--scad)}
@@ -38,7 +39,7 @@ h2{font-size:18px;margin:20px 2px 8px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
 .card{background:var(--card);border-radius:18px;padding:14px 16px;margin-bottom:14px;box-shadow:var(--shadow)}
 .card[class*=" k-"]{box-shadow:inset 0 4px 0 var(--c),var(--shadow);padding-top:16px}
-.k-cal{--c:var(--cal)}.k-dia{--c:var(--dia)}.k-cd{--c:var(--cd)}.k-st{--c:var(--st)}.k-auto{--c:var(--auto)}
+.k-cal{--c:var(--cal)}.k-dia{--c:var(--dia)}.k-cd{--c:var(--cd)}.k-st{--c:var(--st)}.og-pills{display:flex;flex-wrap:wrap;gap:8px;margin:-4px 0 14px}.og-p{font:inherit;font-weight:600;border:1px solid var(--line,#d0d5dd);background:var(--card,#fff);color:inherit;border-radius:999px;padding:6px 14px;text-decoration:none;cursor:pointer}.og-w{border-color:#f59e0b;background:#fff4e5;color:#9a3412}.k-auto{--c:var(--auto)}
 .au-big{font-size:20px;margin:4px 0 10px}.au-form{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0}.au-form label{display:grid;gap:4px;font-weight:600;font-size:14px}.au-form .au-w{grid-column:span 2}.au-form input{font:inherit;padding:8px 10px;border-radius:10px;border:1px solid var(--line,#d0d5dd)}
 .au-chk{list-style:none;padding:0;margin:4px 0 10px;display:grid;gap:6px}.au-chk label{display:flex;gap:8px;align-items:flex-start}.au-chk input{margin-top:4px;width:20px;height:20px}
 .au-tab{display:grid;gap:4px;margin:10px 0}.au-row{display:grid;grid-template-columns:2fr 1fr 1.2fr 1.2fr 1fr auto;gap:8px;align-items:center;padding:6px 8px;border-radius:10px;background:var(--auto-bg)}.au-h{background:none;font-weight:700;font-size:13px;opacity:.75}.k-scad{--c:var(--scad)}.k-prat{--c:var(--prat)}.k-fam{--c:var(--fam)}.k-ben{--c:var(--ben)}.k-lic{--c:var(--lic)}.k-mondo{--c:var(--mondo)}.k-ipad{--c:var(--ipad)}.k-set{--c:var(--set)}.k-pens{--c:var(--pens)}.k-inv{--c:var(--inv)}.k-conti{--c:var(--euro)}
@@ -470,17 +471,17 @@ function icsText(items){const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Pian
 
 /* ---------- interfaccia ---------- */
 /* sezioni nel menu (ognuna con il suo colore); ⚙️ Impostazioni sta a parte, a destra */
-const SECT=[["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["st","🗞️","Stampa di oggi","--st"],["auto","🚗","Auto","--auto"]].concat(PRAT_ON?[["prat","🗂️","Pratiche","--prat"]]:[],CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
+const SECT=[["oggi","☀️","Oggi","--cal"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["st","🗞️","Stampa di oggi","--st"],["auto","🚗","Auto","--auto"]].concat(PRAT_ON?[["prat","🗂️","Pratiche","--prat"]]:[],CONTI_ON?[["conti","💶","Conti","--euro"]]:[]);
 const ALL_SECT=SECT.map(x=>x[0]).concat(["set"]);
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
 function mapOld(k){
   if(k.indexOf("sk=")===0){skFromHash(k.slice(3));return "pens";}
-  if(k==="oggi"||k==="ben"){setCalV("giorno");calD=calSel=today();return "cal";}
+  if(k==="ben"){setCalV("giorno");calD=calSel=today();return "cal";}
   if(k==="fam"){setCalV("sett");calD=today();return "cal";}
   if(k==="scad"){setCalV("scad");return "cal";}
   if(k==="sic")return "set";
-  return ALL_SECT.includes(k)?k:"cal";}
-let cur=mapOld((location.hash||"").slice(1)||"cal");
+  return ALL_SECT.includes(k)?k:"oggi";}
+let cur=mapOld((location.hash||"").slice(1)||"oggi");
 if(location.hash&&location.hash.slice(1)!==cur)try{history.replaceState(null,"","#"+cur);}catch(e){}
 let editId=null;
 const lateN=()=>scadOpen().filter(x=>scadState(x)==="warn").length;
@@ -490,7 +491,7 @@ function side(){const late=lateN();
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(k==="prat")pratNew=false;cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({cal:vCal,pens:vPens,inv:vInv,prat:PRAT_ON?vPrat:vCal,dia:vDia,cd:vCd,st:vSt,auto:vAuto,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
+function render(){side();const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,prat:PRAT_ON?vPrat:vCal,dia:vDia,cd:vCd,st:vSt,auto:vAuto,conti:CONTI_ON?vConti:vCal,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
 /* ---------- 🪟 finestre: ogni riquadro con un titolo si apre e si chiude; lo stato resta su questo iPad (pn-fold) ---------- */
 const FOLD_KEY="pn-fold";let foldSt=lsJ(FOLD_KEY)||{};
 function foldCards(m){m.querySelectorAll(":scope > h2").forEach(h=>{const c=h.nextElementSibling;if(!c||c.tagName!=="DIV"||!c.classList.contains("card")||(c.firstElementChild&&c.firstElementChild.tagName==="H3"))return;const t=document.createElement("h3");t.innerHTML=h.innerHTML;c.prepend(t);h.remove();});
@@ -506,6 +507,18 @@ document.addEventListener("click",e=>{const s=e.target.closest&&e.target.closest
 function softRender(){const a=document.activeElement;if((a&&/INPUT|SELECT|TEXTAREA/.test(a.tagName))||calAdd||editId){clearTimeout(softRender.t);softRender.t=setTimeout(softRender,4000);return;}render();}
 
 /* ---------- 📋 il riepilogo del giorno di oggi (sotto il giorno, nel Calendario) ---------- */
+/* ☀️ Oggi (3/11/2026, proposta n. 1): apri l'app e vedi tutto il giorno in una pagina sola; è la pagina di partenza */
+function vToday(){
+  const t=today();calSel=calD=t;
+  const S=licS(),L=S?licCalc(S):null,A=P.auto||{},ga=A.scad?Math.round((new Date(A.scad+"T12:00")-new Date(t+"T12:00"))/864e5):null;
+  const hw=typeof window.pnHealthWarn==="function"?window.pnHealthWarn():null;
+  const h=new Date().getHours(),saluto=h<12?"Buongiorno":h<18?"Buon pomeriggio":"Buonasera";
+  let o=`<h1>☀️ ${saluto}!</h1><p class="sub">${fmt(t,{weekday:"long",day:"numeric",month:"long",year:"numeric"})} · tutto il giorno in una pagina</p><div class="og-pills">`;
+  if(L)o+=`<a class="og-p" href="licenze.html">🎖️ <b>${Math.max(0,L.toEnd)}</b> giorni al congedo</a>`;
+  if(ga!=null&&ga>=0&&ga<=45)o+=`<button class="og-p" data-go="auto">🚗 riconsegna auto ${ga===0?"<b>oggi</b>":"tra <b>"+ga+"</b> "+(ga===1?"giorno":"giorni")}</button>`;
+  o+=hw==null?`<button class="og-p" id="ogHealth">🩺 Stato dell’app</button>`:hw?`<button class="og-p og-w" id="ogHealth">🩺 <b>${hw}</b> ${hw===1?"cosa":"cose"} da controllare</button>`:`<button class="og-p" id="ogHealth">🩺 tutto a posto</button>`;
+  return o+`</div>`+calDayView(t);
+}
 function vOggi(){
   const t=today(),S=licS();let o=`<div class="grid">`;
   // licenze
@@ -524,7 +537,7 @@ function vOggi(){
   // conti (solo se la sezione è visibile)
   if(CONTI_ON){const np=nextPayments(7),mt=monthTotals(t.slice(0,7));
     o+=`<div class="card k-conti${P.conti.hide?" hidden-amt":""}"><h3>💶 Conti <button class="lnk" data-go="conti">Apri ›</button></h3><div class="row"><div class="grow">Questo mese<small>entrate − uscite previste</small></div><span class="amt ${mt.e-mt.u>=0?"e":"u"}">${euro(mt.e-mt.u)}</span></div>${np.length?np.slice(0,4).map(p=>`<div class="row"><div class="grow">${esc(p.r.t)}<small>${fmt(p.d)} · ${rel(p.d)}</small></div><span class="amt ${p.r.tipo==="e"?"e":"u"}">${euro(p.r.imp)}</span></div>`).join(""):'<p class="empty">Nessun pagamento nei prossimi 7 giorni.</p>'}</div>`;}
-  o+=stCard()+pensCard()+diaCard()+cdCard()+benCard()+mondoCard();
+  o+=(typeof auCard==="function"?auCard():"")+stCard()+pensCard()+diaCard()+cdCard()+benCard()+mondoCard();
   return o+"</div>";
 }
 /* 🧘 benessere: andamento di 2 settimane e Tai Chi (si compila nel giorno, qui sopra) */
@@ -627,6 +640,7 @@ function bind(){
   if(cur==="st")bindSt();
   if(cur==="auto")bindAuto();
   if(cur==="cal"&&typeof bindCal==="function")bindCal();
+  if(cur==="oggi"&&typeof bindCal==="function"){bindCal();document.querySelectorAll("[data-cv]").forEach(b=>b.onclick=()=>{setCalV(b.dataset.cv);if(calV==="giorno")calD=calSel;go("cal");});}
   if(cur==="cal"&&calV==="scad")bindScad();
   if(CONTI_ON&&typeof bindConti==="function"&&cur==="conti")bindConti();
   if($("setSv")&&window.__svTxt)$("setSv").innerHTML=window.__svTxt();
@@ -638,6 +652,7 @@ function bind(){
   if($("lkNow"))$("lkNow").onclick=()=>window.__pnLock.lockNow();
   document.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{if(b.dataset.s==="prat")pratSel=null;go(b.dataset.s);});
   document.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));
+  if($("ogHealth"))$("ogHealth").onclick=()=>{if(window.pnHealth)window.pnHealth();};
   document.querySelectorAll("[data-gonews]").forEach(b=>b.onclick=()=>{pensV="news";go("pens");});
   document.querySelectorAll("[data-gocassa]").forEach(b=>b.onclick=()=>{pensV="cassa";try{sessionStorage.setItem("pn-pensv","cassa");}catch(e){}go("pens");});
   document.querySelectorAll("[data-done]").forEach(b=>b.onclick=()=>doneScad(b.dataset.done));

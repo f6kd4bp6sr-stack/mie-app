@@ -62,3 +62,6 @@ function bindAuto(){
   if($("auODel"))$("auODel").onclick=()=>{A.opz.splice(auEdit,1);auEdit=-1;save();render();};
   if($("auONo"))$("auONo").onclick=()=>{auEdit=-1;render();};
 }
+/* riquadro per il riepilogo di oggi (Oggi e Calendario): solo nei 45 giorni prima della riconsegna e fino a 3 giorni dopo */
+function auCard(){const A=P.auto||{},g=auGiorni(A.scad);if(g==null||g>45||g<-3)return "";const done=AU_CHECK.filter((_,i)=>(A.chk||{})[i]).length;
+  return `<div class="card k-auto"><h3>🚗 Auto <button class="lnk" data-go="auto">Apri ›</button></h3><div class="big">${g>0?g:g===0?"oggi":"✓"}</div><div class="lbl">${g>0?(g===1?"giorno":"giorni")+" alla riconsegna":g===0?"è il giorno della riconsegna":"riconsegna fatta? controlla la checklist del «dopo»"}</div><div class="row"><div class="grow">Checklist della riconsegna</div><b>${done} su ${AU_CHECK.length}</b></div></div>`;}

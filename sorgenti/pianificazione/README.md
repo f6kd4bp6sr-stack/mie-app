@@ -15,6 +15,8 @@ App per iPad del genitore: calendario di casa e di lavoro, licenze fino al conge
 - 📅 **Licenze** (`pagine/licenze.html`), 🧘 **Tai Chi** (`pagine/taichi.html`), 📊 **Progressi** di «Il mio mondo» (`pagine/progressi.html`).
 - 💶 **Conti** (`sezioni/conti.js`): **nascosta** ma conservata. In `pagine/index.html` basta `const CONTI_ON=true` per farla tornare (menu, pagamenti nel Calendario, riquadro di oggi, file per il Calendario dell'iPad). I dati dei Conti restano nelle copie.
 
+- ☀️ **Oggi** (`vToday` in pagine/index.html, 3/11/2026): pagina di partenza con saluto, giorni al congedo, riconsegna dell'auto, stato dell'app, il giorno di oggi (impegni, benessere, Tai Chi) e il riepilogo (licenze, scadenze, auto, Stampa, Diario, Cultura, Il mio mondo). Il vecchio `#oggi` apre questa pagina.
+- 🔁 **Prova di ripristino** (comune/barra.html, 3/11/2026): una volta al mese apre davvero l'ultima copia giornaliera e la copia automatica cifrata e controlla che si leggano (`pn-restore-test`); esito e pulsante «Prova il ripristino adesso» in 🩺 Stato dell'app.
 - 🚗 **Auto** (`sezioni/auto.js`, 3/11/2026): data e luogo della riconsegna del noleggio con conto alla rovescia e scadenza nel Calendario (id `auto-riconsegna`, avviso 7 giorni prima), checklist della riconsegna, confronto dei costi delle offerte (solo conti, nessun consiglio). Dati in `P.auto` (nelle copie), mai nel codice.
 - 🩺 **Stato dell'app** (comune/barra.html, 3/11/2026): copie, Stampa, Novità, collegamento con «Il mio mondo» e chiave GitHub in un solo pannello (riga in fondo → «🩺 Stato dell'app»); se c'è qualcosa da controllare compare un avviso in basso a sinistra.
 
