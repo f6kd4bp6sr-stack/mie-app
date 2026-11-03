@@ -160,7 +160,9 @@ nav.tabs button.on{color:var(--accent)}
   #pg1 .cols{gap:18px}
   #pg1 .cols h2{margin:6px 4px 6px}
   #pg1 #events{display:none}
-  #pg1 .cell{height:52px;padding-top:5px;font-size:15px}   /* «Prossime date»: le date sono già nei numeri di Oggi e nel calendario */
+  #pg1 .cell{height:52px;padding-top:5px;font-size:15px}
+  #pg1 .mini{gap:6px;margin-top:8px}#pg1 .mini div{padding:5px 4px}#pg1 .mini b{font-size:18px}#pg1 .mini span{font-size:10.5px}
+  #pg1 #dStatus{margin-top:4px!important}   /* «Prossime date»: le date sono già nei numeri di Oggi e nel calendario */
   #pg1 .card{padding:10px 12px;margin-bottom:10px;border-radius:14px}
   #pg1 .row{padding:5px 0;font-size:15px}
   #pg1 .big{font-size:30px}
@@ -474,7 +476,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
   </div>
   <div class="card">
     <b>Appuntamenti</b>
-    <div class="lbl">Visite e scadenze da vedere nel calendario e in “Prossime date”. Restano solo su questo dispositivo e nella copia su File / iCloud.</div>
+    <div class="lbl">Visite e scadenze da vedere nel calendario. Restano solo su questo dispositivo e nella copia su File / iCloud.</div>
     <div id="evList"></div>
     <div class="row" style="flex-wrap:wrap"><input type="date" id="evD" aria-label="Data appuntamento"><input id="evN" maxlength="40" placeholder="Es. visita medica" aria-label="Descrizione" style="flex:1;min-width:140px;font:inherit;color:var(--ink);background:var(--seg);border:0;border-radius:9px;padding:6px 9px;min-height:34px"><button class="primary" id="evAdd">Aggiungi</button></div>
   </div>
@@ -492,6 +494,10 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
   </div>
   </div></div>
 </main>
+<script>
+/* 3/11/2026: su iPad orizzontale a destra restano calendario e giorno scelto; Situazione iniziale, Appuntamenti e il resto vanno sotto a sinistra, così le due colonne sono bilanciate */
+(function(){try{if(window.innerWidth<820)return;var c=document.querySelector("#pg1 .cols");if(!c||c.children.length<2)return;var L=c.children[0],dc=document.getElementById("dayCard");if(!dc)return;var n=dc.nextElementSibling;while(n){var nx=n.nextElementSibling;L.appendChild(n);n=nx;}}catch(e){}})();
+</script>
 
 <!-- ================= PAGINA 2: VARIAZIONI ================= -->
 <main id="pg2" class="hide">
@@ -1514,7 +1520,7 @@ setSaveStat("init");
 window.__flush=()=>{ try{ flushAll(); }catch(e){} };
 })();
 </script>
-<script>window.APP_VERSION="7ba37b80d6";window.APP_BUILD="2026-11-03T13:08+02:00";</script>
+<script>window.APP_VERSION="346332e9bf";window.APP_BUILD="2026-11-03T13:10+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
