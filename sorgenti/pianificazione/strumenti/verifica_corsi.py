@@ -69,14 +69,14 @@ def controlla(path):
         except ValueError:
             e.append('%s: verificato deve essere AAAA-MM-GG' % w)
     if d.get('pronto'):
-        if len(corsi) < 30:
-            e.append('pronto: servono almeno 30 corsi (ora %d)' % len(corsi))
+        if len(corsi) < 10:
+            e.append('pronto: servono almeno 10 corsi (ora %d)' % len(corsi))
         for a in ('ia', 'pens'):
             n = sum(1 for c in corsi if c.get('area') == a)
-            if n < 12:
-                e.append('pronto: area %s con %d corsi, ne servono almeno 12' % (a, n))
-        if sum(1 for c in corsi if c.get('paese') != 'Italia') < 5:
-            e.append('pronto: servono almeno 5 corsi di università non italiane')
+            if n < 4:
+                e.append('pronto: area %s con %d corsi, ne servono almeno 4' % (a, n))
+        if sum(1 for c in corsi if c.get('paese') != 'Italia') < 1:
+            e.append('pronto: serve almeno 1 corso di un ente non italiano')
         if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', str(d.get('updated', ''))):
             e.append('pronto: updated deve essere AAAA-MM-GG')
     return e

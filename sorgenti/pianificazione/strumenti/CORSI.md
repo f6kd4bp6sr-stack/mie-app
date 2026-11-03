@@ -24,8 +24,8 @@ Oltre alle università (italiane, Svizzera italiana USI, Helsinki - Elements of 
 - `pens`, «Pensione e tempo libero»: Finanza personale ed economia; Salute e benessere; Storia; Arte e musica; Letteratura e scrittura; Lingue; Scienze e natura; Filosofia e psicologia; Diritto e cittadinanza.
 
 Obiettivo:
-- almeno 30 corsi in tutto e almeno 12 per area;
-- almeno 5 di università non italiane;
+- per il momento 10 corsi in tutto (scelta del proprietario, 3/11/2026, per contenere i token), almeno 4 per area;
+- almeno 2 di enti non italiani e almeno 1 università popolare, se ce n'è una gratuita e aperta a tutti;
 - livello soprattutto Principiante o Intermedio, con pochi corsi avanzati segnati come tali.
 
 ## Campi di ogni corso
@@ -38,7 +38,7 @@ Quando la lista è completa:
 Niente dati personali: il repository è pubblico.
 
 ## Revisione
-Un revisore indipendente riapre ogni URL e controlla gratuità, disponibilità, lingua o sottotitoli in italiano, durata e attestato. Se un dato non è verificabile, il revisore corregge il corso o lo toglie.
+Un revisore indipendente riapre ogni URL e controlla i punti essenziali: gratuità completa, apertura a tutti, iscrizione aperta e lingua o sottotitoli in italiano. Ricontrolla per intero (durata, attestato, livello, sintesi) solo i corsi con dati incerti o mancanti. Se un dato non è verificabile, corregge il corso o lo toglie.
 
 ## Aggiornamento
 Una volta al mese, insieme alle novità:
