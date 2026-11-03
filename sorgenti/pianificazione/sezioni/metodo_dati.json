@@ -2189,5 +2189,123 @@
    ]
   }
  ],
- "frasi_nota": "Le frasi danno del tu: con persone più grandi o in contesti formali, passa al lei."
+ "frasi_nota": "Le frasi danno del tu: con persone più grandi o in contesti formali, passa al lei.",
+ "ikigai": {
+  "intro": "Ikigai (生き甲斐) vuol dire più o meno «ciò per cui vale la pena vivere»: in Giappone indica le piccole e grandi ragioni che danno senso alle giornate. Qui lo trovi insieme alle pratiche giapponesi che lo accompagnano (Morita e Naikan), alla meditazione e al flusso.",
+  "nota": "Sono pratiche di benessere per la vita di tutti i giorni. Morita e Naikan nascono come terapie: qui ne usiamo solo i principi, che non sostituiscono un professionista.",
+  "bozza": "📝 Prima versione per vedere la struttura: in settimana arrivano la revisione indipendente, i link alle fonti e i capitoli mancanti.",
+  "capitoli": [
+   {
+    "id": "cosa",
+    "ic": "🌸",
+    "tit": "Che cos'è davvero l'ikigai",
+    "sotto": "non un grande scopo, ma tante ragioni quotidiane",
+    "pronto": true,
+    "princ": [
+     "«Iki» è vivere, «gai» è il valore, ciò che ripaga: l'ikigai è ciò che fa sentire che la giornata vale.",
+     "Non va trovato una volta per tutte: può essere una passeggiata, un orto, un nipote, un lavoro fatto bene, un caffè con un amico.",
+     "Si può avere più di un ikigai, e cambia con le età della vita: la pensione è un buon momento per guardarlo di nuovo."
+    ],
+    "regole": [
+     "Cerca nelle piccole cose prima che nelle grandi.",
+     "Non serve che c'entri con il lavoro o con i soldi.",
+     "Conta di più farlo che definirlo."
+    ],
+    "spiega": "Lo schema famoso con quattro cerchi (ciò che ami, ciò in cui sei bravo, ciò di cui il mondo ha bisogno, ciò per cui ti pagano) non è giapponese: è un'idea occidentale diffusa dal 2014. In Giappone ne ha scritto, tra i primi, la psichiatra Mieko Kamiya nel libro «Ikigai ni tsuite» («Sull'ikigai», 1966). Una grande ricerca giapponese ha seguito per 7 anni più di 40.000 adulti: chi diceva di avere un ikigai è vissuto in media più a lungo. È un legame osservato, non la prova che l'ikigai allunghi la vita.",
+    "es": {
+     "t": "La lista delle piccole ragioni",
+     "min": 5,
+     "passi": [
+      "Scrivi 10 piccole cose che oggi ti hanno fatto piacere o che aspetti per domani.",
+      "Sottolinea quelle che dipendono da te.",
+      "Domani fanne almeno una, apposta."
+     ]
+    },
+    "fonti": [
+     "Kamiya M. (1966), «Ikigai ni tsuite», libro",
+     "Sone T. e altri (2008), studio di Ohsaki, Psychosomatic Medicine"
+    ]
+   },
+   {
+    "id": "pilastri",
+    "ic": "🏯",
+    "tit": "I 5 pilastri dell'ikigai",
+    "sotto": "il modo semplice di Ken Mogi",
+    "pronto": true,
+    "princ": [
+     "1. Cominciare in piccolo: un passo minuscolo, fatto bene.",
+     "2. Lasciar andare l'io: meno «come appaio», più «che cosa sto facendo».",
+     "3. Armonia e sostenibilità: stare bene con le persone e con l'ambiente intorno, senza strafare.",
+     "4. La gioia delle piccole cose: il primo sorso di caffè, la luce del mattino.",
+     "5. Essere qui e ora: attenzione a ciò che stai facendo, adesso."
+    ],
+    "regole": [
+     "Un pilastro alla volta, non tutti insieme.",
+     "Meglio cinque minuti ogni giorno che un'ora ogni tanto."
+    ],
+    "spiega": "Il neuroscienziato giapponese Ken Mogi, nel libro «Awakening Your Ikigai» (2017, uscito anche in italiano), riassume l'ikigai in cinque pilastri. Non sono regole da rispettare, ma cinque modi di guardare la stessa giornata: per esempio, riparare un oggetto con calma (cominciare in piccolo) senza pensare a chi ti guarda (lasciar andare l'io).",
+    "es": {
+     "t": "Un pilastro al giorno",
+     "min": 2,
+     "passi": [
+      "Al mattino scegli un pilastro, uno solo.",
+      "Durante il giorno cerca un momento in cui lo vivi davvero.",
+      "Alla sera scrivi una riga su com'è andata."
+     ]
+    },
+    "fonti": [
+     "Mogi K. (2017), «Awakening Your Ikigai», libro"
+    ]
+   },
+   {
+    "id": "morita",
+    "ic": "🌊",
+    "tit": "Morita: vivere con le emozioni così come sono",
+    "sotto": "accettare (arugamama) e fare ciò che conta",
+    "pronto": false
+   },
+   {
+    "id": "naikan",
+    "ic": "🪞",
+    "tit": "Naikan: le tre domande della sera",
+    "sotto": "che cosa ho ricevuto, che cosa ho dato, quali difficoltà ho causato",
+    "pronto": false
+   },
+   {
+    "id": "flusso",
+    "ic": "🏞️",
+    "tit": "Il flusso: la corrente della vita",
+    "sotto": "immergersi in ciò che si fa, con la sfida giusta",
+    "pronto": false
+   },
+   {
+    "id": "mente",
+    "ic": "🧘",
+    "tit": "Allenare la mente: meditazione per cominciare",
+    "sotto": "respiro, seduta breve, camminata lenta",
+    "pronto": false
+   },
+   {
+    "id": "pensione",
+    "ic": "🌅",
+    "tit": "Il mio ikigai nella pensione",
+    "sotto": "esercizi personali, collegati al 📓 Diario",
+    "pronto": false
+   },
+   {
+    "id": "sfida",
+    "ic": "🎯",
+    "tit": "La sfida dei 7 giorni",
+    "sotto": "una pratica al giorno per una settimana",
+    "pronto": false
+   },
+   {
+    "id": "letture",
+    "ic": "📚",
+    "tit": "Letture",
+    "sotto": "libri e studi con un riassunto, in italiano quando c'è",
+    "pronto": false
+   }
+  ]
+ }
 }

@@ -108,6 +108,7 @@ details.app h4{margin:10px 0 4px;font-size:14px}details.app p,details.app ol,det
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 
 @media (max-width:600px){h1{font-size:24px}.mtabs button{font-size:14.5px;padding:9px 12px}}
+.iki-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start}.iki-g>.card,.iki-g>details{margin:0}.iki-g>details[open]{grid-column:span 2}.iki-p{opacity:.7}.iki-c h4{margin:10px 0 4px;font-size:14px}.iki-c ul,.iki-c ol{margin:0;padding-left:20px}
 </style>
 <script>window.APP_VERSION="dev";window.APP_BUILD="dev";</script>
 </head>
@@ -185,14 +186,14 @@ function sub(k,title,body,def){return `<details class="subw" data-fk="${k}"${win
 const tools=()=>`<div class="tools"><button class="btn sm" data-all="1">➕ Apri tutto</button><button class="btn sm" data-all="0">➖ Chiudi tutto</button></div>`;
 
 /* ---------- interfaccia ---------- */
-const TABS=[["oggi","🃏 Oggi"],["sapevi","🧠 Lo sapevi?"],["frasi","💬 Frasi di scorta"],["vol","🤲 Volontariato"]];
+const TABS=[["oggi","🃏 Oggi"],["sapevi","🧠 Lo sapevi?"],["frasi","💬 Frasi di scorta"],["vol","🤲 Volontariato"],["iki","🌸 Ikigai"]];
 let tab=(()=>{const ok=v=>TABS.some(t=>t[0]===v),h=(location.hash||"").slice(1);if(ok(h))return h;try{const v=localStorage.getItem("pn-metv");return ok(v)?v:"oggi";}catch(e){return "oggi";}})();
 let frCat="tutte",frPick=null;
 function setTab(t){tab=t;try{localStorage.setItem("pn-metv",t);}catch(e){}history.replaceState(null,"","#"+t);render();scrollTo({top:0});}
 function render(){
   $("intro").textContent=MD.intro;
   $("tabs").innerHTML=TABS.map(([k,n])=>`<button data-tab="${k}" class="${tab===k?"on":""}">${n}</button>`).join("");
-  $("main").innerHTML=tools()+({oggi:vOggi,sapevi:vSapevi,frasi:vFrasi,vol:vVol}[tab]||vOggi)();
+  $("main").innerHTML=tools()+({oggi:vOggi,sapevi:vSapevi,frasi:vFrasi,vol:vVol,iki:vIki}[tab]||vOggi)();
   bind();
 }
 const LIVI=["","🌱","🌿","🦁"];
@@ -264,6 +265,14 @@ async function occPull(){if(occBusy||navigator.onLine===false)return;occBusy=tru
   try{const r=await fetch("occasioni-torino.json",{cache:"no-store"});if(r.ok){const o=await r.json();if(o&&o.app==="pianificazione-occasioni"){OCC=o;try{localStorage.setItem(OKEY,JSON.stringify(o));}catch(e){}if(tab==="vol")render();}}}catch(e){}occBusy=false;}
 const ST=[["","—"],["interessa","⭐ mi interessa"],["contattato","📞 ho contattato"],["iniziato","🤲 ho iniziato"],["no","✖️ non fa per me"]];
 const STI=Object.fromEntries(ST);
+/* ---------- 🌸 Ikigai (3/11/2026, richiesta del proprietario): capitoli in metodo_dati.json → ikigai ---------- */
+function vIki(){const I=MD.ikigai;if(!I)return "";
+  let o=`<div class="card"><h3>🌸 Ikigai: la ragione delle giornate</h3><p>${esc(I.intro)}</p><p class="lbl">${esc(I.nota)}</p>${I.bozza?`<p class="lbl">${esc(I.bozza)}</p>`:""}</div>`;
+  o+=`<div class="iki-g">`+I.capitoli.map((c,n)=>{const t=`${c.ic} ${n+1}. ${esc(c.tit)}`;
+    if(!c.pronto)return `<div class="card iki-p"><h3>${t}</h3><p class="lbl">${esc(c.sotto)}</p><p class="lbl">🔜 In preparazione</p></div>`;
+    const L=a=>`<ul>${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
+    return win("iki-"+c.id,t,`<p class="lbl">${esc(c.sotto)}</p><h4>Principi</h4>${L(c.princ)}<h4>Regole</h4>${L(c.regole)}<h4>Spiegazione</h4><p>${esc(c.spiega)}</p><h4>✍️ Esercizio: ${esc(c.es.t)} · ${c.es.min} min</h4><ol>${c.es.passi.map(x=>`<li>${esc(x)}</li>`).join("")}</ol><p class="lbl">Fonti: ${c.fonti.map(esc).join(" · ")}</p>`,n===0,"iki-c");}).join("")+`</div>`;
+  return o;}
 function vVol(){
   if(!OCC)return `<div class="card"><p class="empty">Sto scaricando le occasioni… serve internet la prima volta.</p></div>`;
   const AT=Object.fromEntries(AB.map(a=>[a.id,a])),V=OCC.voci||[];
