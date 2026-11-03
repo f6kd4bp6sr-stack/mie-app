@@ -230,7 +230,7 @@ a.btn{text-decoration:none;display:inline-block}
 @media (max-width:600px){.dia-qt{font-size:18px}.dia-temp button small{font-size:10.5px}}
 
 </style>
-<script>window.APP_VERSION="700713b1a9";window.APP_BUILD="2026-11-03T11:51+02:00";</script>
+<script>window.APP_VERSION="14ed86fd96";window.APP_BUILD="2026-11-03T11:58+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -3170,7 +3170,7 @@ render(); recover(); setTimeout(()=>valePull(false),800); setTimeout(ghDaily,150
       if(!/^(ghp_|github_pat_)/.test(t))return msg("Serve la chiave GitHub (inizia con ghp_)",1);if(p1.length<12)return msg("La parola deve avere almeno 12 caratteri",1);if(p1!==p2)return msg("Le due parole non coincidono",1);
       msg("Preparo la copia…");try{var ok=await cbEnable(t,p1);msg(ok?"✅ Copia automatica attiva: prima copia fatta.":"Attivata, ma la prima copia non è riuscita: riprovo da sola.",!ok);setTimeout(cbPanel,1600);}catch(e){msg("Non riuscito: "+e.message,1);}};
     var bNow=document.getElementById("cbNow");if(bNow)bNow.onclick=async function(){msg("Copia in corso…");pfRefresh();setTimeout(async function(){var ok=await cbPush(true);msg(ok?"✅ Copia fatta":"Non riuscita: "+((cbCfg()||{}).err||""),!ok);},600);};
-    var bOff=document.getElementById("cbOff");if(bOff)bOff.onclick=function(){if(!confirm("Disattivare la copia automatica su questo iPad? La copia già salvata resta su GitHub."))return;cbSet(null);cbPanel();};
+    var bOff=document.getElementById("cbOff");if(bOff)bOff.onclick=function(){if(!confirm("Disattivare la copia automatica su questo iPad? La copia già salvata resta su GitHub."))return;cbSet({off:1});cbPanel();};
     document.getElementById("cbRes").onclick=async function(){
       var cc=cbCfg(),t=(document.getElementById("cbTok")&&document.getElementById("cbTok").value.trim())||ghTok();
       if(!t){t=prompt("Chiave GitHub (inizia con ghp_):")||"";t=t.trim();}if(!t)return;
@@ -3207,8 +3207,28 @@ render(); recover(); setTimeout(()=>valePull(false),800); setTimeout(ghDaily,150
   }
   window.__restoreTest=restoreTest;
   setTimeout(function(){try{var t=lsJ("pn-restore-test");if(!t||Date.now()-new Date(t.at).getTime()>30*864e5)restoreTest(false);}catch(e){}},20000);
-  setTimeout(function(){cbPush(false);},6000);
-  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(function(){cbPush(false);},4000);});
+  /* ☁️ copia automatica senza richieste (3/11/2026, richiesta del proprietario: «Risolvi copia automatica su cloud senza richieste»):
+     - se non è attiva e su questo iPad c'è la chiave GitHub (quella di Progressi), si attiva da sola con una «parola della copia»
+       casuale e lunga, salvata su questo iPad (serve solo per ripristinare su un altro iPad: si legge in ⚙️ Impostazioni / 🩺 Stato dell'app);
+     - se lo spazio su GitHub è sparito (404) se ne crea uno nuovo; se mancava la chiave GitHub e ora c'è, riparte da sola. */
+  function cbWord(){var A="ABCDEFGHJKLMNPQRSTUVWXYZ23456789",b=crypto.getRandomValues(new Uint8Array(20)),w="";for(var i=0;i<20;i++){w+=A[b[i]%A.length];if(i%5===4&&i<19)w+="-";}return w;}
+  var cbAutoBusy=false;
+  async function cbAuto(){
+    if(cbAutoBusy||navigator.onLine===false)return; var tok=ghTok(); if(!tok)return; cbAutoBusy=true;
+    try{
+      var c=cbCfg();
+      if(c&&c.gist&&c.key){
+        if(/spazio della copia non trovato/.test(c.err||"")){var pw=c.pw||cbWord();await cbEnable(tok,pw);var n=cbCfg();if(n){n.pw=pw;n.auto=1;cbSet(n);}}
+        else await cbPush(!!c.err);
+      }else if(!c||!c.off){
+        var pw2=cbWord();await cbEnable(tok,pw2);var n2=cbCfg();if(n2){n2.pw=pw2;n2.auto=1;n2.since=new Date().toISOString();cbSet(n2);}
+      }
+    }catch(e){var c3=cbCfg();if(c3){c3.err=String(e.message||e);cbSet(c3);}}
+    finally{cbAutoBusy=false;paint();}
+  }
+  window.__cbWord=function(){var c=cbCfg();return c&&c.pw||"";};
+  setTimeout(cbAuto,6000);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(cbAuto,4000);});
 
   function apply(v){
     try{if(typeof window.__flush==="function")window.__flush();}catch(e){}
@@ -3293,8 +3313,8 @@ render(); recover(); setTimeout(()=>valePull(false),800); setTimeout(ghDaily,150
     if(typeof bk==="string"&&bk.charAt(0)==='"')bk=J("pn-lastBackup");
     var hb=ore(bk);R.push({k:hb==null||hb>7*24?"w":"ok",ic:"💾",t:"Copia su File / iCloud",x:"ultima "+quando(bk)+(hb==null||hb>7*24?" · tocca «💾 Salva copia su File / iCloud» qui in fondo":"")});
     var hs=ore(sn);R.push({k:hs!=null&&hs>48?"w":"ok",ic:"🗂️",t:"Copia giornaliera sull’iPad",x:"ultima "+quando(sn)});
-    if(!cb||!cb.gist)R.push({k:"i",ic:"☁️",t:"Copia automatica",x:"non attiva (si attiva da «☁️ Copia automatica» qui in fondo)"});
-    else{var hc=ore(cb.last);R.push({k:cb.err||hc==null||hc>48?"w":"ok",ic:"☁️",t:"Copia automatica",x:cb.err?String(cb.err):"ultima "+quando(cb.last)});}
+    if(!cb||!cb.gist)R.push({k:J("prog-gh-v1")&&J("prog-gh-v1").token?"i":"w",ic:"☁️",t:"Copia automatica",x:J("prog-gh-v1")&&J("prog-gh-v1").token?"si sta attivando da sola…":"serve la chiave GitHub: si prepara una volta in Progressi (📲 Collega con un QR), poi la copia si attiva da sola"});
+    else{var hc=ore(cb.last);R.push({k:cb.err||hc==null||hc>48?"w":"ok",ic:"☁️",t:"Copia automatica",x:(cb.err?String(cb.err):"ultima "+quando(cb.last))+(cb.pw?" · parola per ripristinare su un altro iPad: "+cb.pw+" (scrivila in un posto sicuro)":"")});}
     if(st&&st.updated){var a=ore(st.updated),c=ore(st.checked);R.push({k:a>30&&c!=null&&c<3?"w":"ok",ic:"🗞️",t:"Stampa di oggi",x:"edizione di "+quando(st.updated)+(a>30&&c!=null&&c<3?" · la nuova edizione non è arrivata":"")});}
     if(nw&&nw.updated){var a2=ore(nw.updated),c2=ore(nw.checked);R.push({k:a2>36&&c2!=null&&c2<3?"w":"ok",ic:"🎖️",t:"Novità su contratto e pensione",x:"aggiornate "+quando(nw.updated)+(a2>36&&c2!=null&&c2<3?" · il giro di oggi non è arrivato":"")});}
     if(!lk||!lk.gist)R.push({k:"i",ic:"📊",t:"Progressi di «Il mio mondo»",x:"non collegato (Progressi → 📲 Collega con un QR)"});
