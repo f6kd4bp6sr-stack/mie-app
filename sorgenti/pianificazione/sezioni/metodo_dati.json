@@ -2230,7 +2230,27 @@
       "t": "studio",
       "url": "https://pure.fujita-hu.ac.jp/en/publications/sense-of-life-worth-living-ikigai-and-mortality-in-japan-ohsaki-s/"
      }
-    ]
+    ],
+    "appro": {
+     "storia": "La parola è giapponese e molto antica nell'uso comune. Il primo libro importante è del 1966: la psichiatra Mieko Kamiya, che lavorò anche con persone malate e isolate, notò che il senso della vita nasce spesso da cose semplici. Lo schema a quattro cerchi che oggi si vede ovunque è invece occidentale e recente: si è diffuso intorno al 2014.",
+     "come": "Funziona perché sposta lo sguardo dalla domanda grande («qual è il mio scopo?») a quelle piccole («che cosa mi fa alzare volentieri?»). Le risposte piccole si possono provare subito e cambiare. Può aiutare a dare ritmo alle giornate senza orari di lavoro, ma è un modo di riflettere, non una cura.",
+     "esempi": [
+      "Il caffè al bar sotto i portici, con le stesse due persone, ogni mattina verso le nove.",
+      "La passeggiata lungo il Po al pomeriggio, guardando com'è cambiata la luce.",
+      "Il sabato al mercato di Porta Palazzo a scegliere la verdura con calma.",
+      "Chiamare un vecchio collega ogni domenica sera."
+     ],
+     "errori": [
+      "Aspettare un grande scopo e intanto trascurare le piccole gioie di oggi.",
+      "Usare lo schema a quattro cerchi come un test con una risposta giusta.",
+      "Confrontare il proprio ikigai con quello di altri."
+     ],
+     "domande": [
+      "Quali tre momenti di questa settimana mi hanno fatto sentire che la giornata valeva?",
+      "Che cosa farei volentieri anche senza nessuno che me lo chieda?",
+      "Quale piccola ragione vorrei avere di più il prossimo mese?"
+     ]
+    }
    },
    {
     "id": "pilastri",
@@ -2270,7 +2290,27 @@
       "t": "libro",
       "url": "https://www.einaudi.it/catalogo-libri/filosofia/filosofia-contemporanea/il-piccolo-libro-dellikigai-ken-mogi-9788806237387/"
      }
-    ]
+    ],
+    "appro": {
+     "storia": "Ken Mogi, nato nel 1962, è un neuroscienziato giapponese e scrittore. Nel suo libro del 2017 raccoglie cinque idee che osserva nella vita giapponese di ogni giorno: dai maestri di sushi agli artigiani, fino ai piccoli rituali del mattino. Non è una tradizione antica codificata, ma la sintesi di un autore contemporaneo.",
+     "come": "I cinque pilastri sono cinque «porte» diverse per entrare nella stessa giornata. Se una non ti parla, provane un'altra. Possono aiutare perché danno un compito piccolo e chiaro, e fanno notare ciò che già c'è. Non servono a misurarsi: sono spunti da provare con curiosità.",
+     "esempi": [
+      "Cominciare in piccolo: dieci minuti per sistemare le foto di famiglia in una scatola.",
+      "Il qui e ora: bere il caffè guardando fuori dalla finestra, senza telefono.",
+      "Gioia delle piccole cose: fermarsi un momento davanti a un tram storico che passa.",
+      "Armonia: salutare con un sorriso il portinaio, ogni giorno."
+     ],
+     "errori": [
+      "Provare tutti e cinque i pilastri insieme e stancarsi presto.",
+      "Trasformarli in un dovere da spuntare, con rimprovero se si salta.",
+      "Cercare risultati grandi invece di notare cosa cambia."
+     ],
+     "domande": [
+      "Quale pilastro mi è più naturale e quale mi sembra più strano?",
+      "In quale momento di oggi sono stato davvero «qui e ora»?",
+      "Qual è un piccolo inizio che rimando da tempo?"
+     ]
+    }
    },
    {
     "id": "morita",
@@ -2306,7 +2346,27 @@
       "t": "articolo",
       "url": "https://link.springer.com/article/10.1007/s10879-020-09464-6"
      }
-    ]
+    ],
+    "appro": {
+     "storia": "Shōma Morita (1874-1938) era uno psichiatra giapponese e insegnò alla scuola di medicina Jikei di Tokyo. Intorno al 1920 mise a punto un metodo per persone molto in ansia, basato su riposo e poi su lavori pratici. Dal metodo vengono due idee ancora citate: accettare i sentimenti così come sono e agire lo stesso.",
+     "come": "L'idea è che combattere un'emozione la rende spesso più forte, mentre accoglierla e occuparsi di qualcosa di utile lascia che passi da sé. Può aiutare quando manca la voglia: non si aspetta di sentirsi pronti. È un principio di vita quotidiana, non una terapia, e non sostituisce un professionista.",
+     "esempi": [
+      "Oggi piove e non ho voglia: lo dico a me stesso e vado lo stesso a fare la spesa.",
+      "Sono un po' agitato per una pratica burocratica: lo accetto e compilo il primo modulo.",
+      "Mi sento giù senza motivo: noto la sensazione e innaffio le piante come ogni giorno.",
+      "Rimando una telefonata: faccio il numero e parlo un minuto."
+     ],
+     "errori": [
+      "Scambiare l'accettazione con la rassegnazione: si accetta il sentimento, non si smette di agire.",
+      "Forzarsi a «stare bene» o a scacciare il fastidio.",
+      "Usarlo per ignorare un disagio forte o lungo, che va detto al medico."
+     ],
+     "domande": [
+      "Quale emozione mi ha fermato di recente, e che cosa ho fatto lo stesso?",
+      "Che cosa conta davvero per me in questa settimana?",
+      "Quale piccolo gesto posso fare oggi anche senza averne voglia?"
+     ]
+    }
    },
    {
     "id": "naikan",
@@ -2347,7 +2407,36 @@
       "t": "articolo",
       "url": "https://journals.sagepub.com/doi/10.1177/1363461514562922"
      }
-    ]
+    ],
+    "appro": {
+     "storia": "Ishin Yoshimoto (1916-1988) era un uomo d'affari giapponese e sacerdote buddhista della scuola Jōdo Shinshū che, dagli anni Quaranta, sviluppò questo metodo di riflessione sulle relazioni. Ne nacquero ritiri di una settimana e anche un uso nelle carceri giapponesi. Oggi si pratica anche in Europa e negli Stati Uniti, in forme più brevi.",
+     "come": "Le tre domande portano l'attenzione sui fatti concreti: ciò che gli altri hanno fatto per noi, ciò che noi abbiamo fatto, i disagi che abbiamo causato. Può aiutare a vedere la giornata in modo più completo e a provare gratitudine. Qui è solo un esercizio serale breve, non una terapia.",
+     "esempi": [
+      "Ricevuto: mia moglie ha preparato la cena. Dato: ho portato giù la spazzatura. Disagio: sono rientrato tardi senza avvisare.",
+      "Ricevuto: il vicino mi ha tenuto il pacco. Dato: gli ho portato un po' di basilico.",
+      "Ricevuto: mia figlia mi ha mandato un messaggio. Dato: ho risposto subito.",
+      "Pensare al panettiere: il pane caldo, il resto contato con pazienza."
+     ],
+     "errori": [
+      "Farne un esame di coscienza severo: si cercano fatti, non colpe.",
+      "Dimenticare la prima domanda e fermarsi solo ai propri errori.",
+      "Continuare se emergono pensieri pesanti, invece di fermarsi e parlarne."
+     ],
+     "domande": [
+      "Chi ho dimenticato di ringraziare questa settimana?",
+      "Che cosa ho ricevuto oggi che di solito do per scontato?",
+      "Per quale piccolo disagio causato posso fare un gesto di rimedio?"
+     ],
+     "studio": {
+      "cosa": "Ozawa-de Silva, antropologa, ha studiato il Naikan intensivo in Giappone con lavoro sul campo e dati raccolti dai partecipanti. Le persone riferivano più gratitudine, più legame con gli altri e un migliore benessere mentale.",
+      "limiti": "Riguarda ritiri intensivi di una settimana (circa 14 ore al giorno), non l'esercizio breve della sera. Si basa su ciò che riferiscono i partecipanti: non dimostra che sia il metodo a causare i cambiamenti.",
+      "fonte": {
+       "c": "Ozawa-de Silva C. (2015), Mindfulness of the kindness of others: the contemplative practice of Naikan in cultural context, Transcultural Psychiatry 52(4)",
+       "t": "studio",
+       "url": "https://journals.sagepub.com/doi/10.1177/1363461514562922"
+      }
+     }
+    }
    },
    {
     "id": "flusso",
@@ -2393,7 +2482,36 @@
       "t": "articolo",
       "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2022.815665/full"
      }
-    ]
+    ],
+    "appro": {
+     "storia": "Mihály Csíkszentmihályi (1934-2021), psicologo di origine ungherese che lavorò a Chicago, tra gli anni Sessanta e Settanta chiese ad artisti, scalatori, danzatori e giocatori di scacchi che cosa provassero quando erano più assorbiti. Descrisse lo stato che chiamò «flow» in un libro del 1975 e nel 1990 lo raccontò nel libro «Flow». Da allora è un tema molto studiato.",
+     "come": "Il flusso viene quando l'attività è chiara, ha un riscontro immediato e la difficoltà è giusta per le proprie capacità. Può aiutare a scegliere come usare il tempo libero: meno attività passive, più attività che assorbono. Non si può forzare, ma si possono preparare le condizioni.",
+     "esempi": [
+      "Montare una libreria seguendo le istruzioni passo passo, senza controllare l'ora.",
+      "Imparare a mano un pezzo semplice con la chitarra, battuta dopo battuta.",
+      "Una partita a scacchi o a carte con un avversario alla pari.",
+      "Camminare in collina sopra Torino con una meta e un ritmo regolare."
+     ],
+     "errori": [
+      "Scegliere attività troppo facili e poi annoiarsi, o troppo difficili e scoraggiarsi.",
+      "Interrompersi di continuo per guardare il telefono.",
+      "Aspettarsi il flusso ogni volta: a volte semplicemente non arriva."
+     ],
+     "domande": [
+      "Quando mi sono accorto che il tempo era volato, questa settimana?",
+      "Quale attività potrei rendere un po' più difficile, o un po' più facile?",
+      "Che cosa mi distrae di più mentre faccio ciò che mi piace?"
+     ],
+     "studio": {
+      "cosa": "Peifer e colleghi hanno riunito 252 studi sul flusso pubblicati tra il 2000 e il 2016, organizzandoli in tre livelli: persona, contesto e cultura. È una mappa di che cosa si è studiato finora.",
+      "limiti": "È una rassegna, non una prova. Gli autori dicono che servono più studi sperimentali e di lungo periodo per capire cause ed effetti.",
+      "fonte": {
+       "c": "Peifer C. e altri (2022), A Scoping Review of Flow Research, Frontiers in Psychology 13",
+       "t": "studio",
+       "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2022.815665/full"
+      }
+     }
+    }
    },
    {
     "id": "mente",
@@ -2429,7 +2547,36 @@
       "t": "articolo",
       "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety"
      }
-    ]
+    ],
+    "appro": {
+     "storia": "Le pratiche di attenzione al respiro vengono da antiche tradizioni contemplative dell'Asia, in particolare buddhiste, e in Giappone dallo zen. Dagli anni Settanta-Ottanta sono state adattate in forma laica in programmi occidentali, per esempio da Jon Kabat-Zinn negli Stati Uniti. Qui si usa la forma più semplice, senza aspetti religiosi.",
+     "come": "L'esercizio è tornare all'attenzione ogni volta che ci si distrae: è questo ripetuto «tornare» ad allenare. Può aiutare a rallentare e a notare ciò che si prova. Non è adatta a tutti e non sostituisce visite o cure: se dà disagio ci si ferma e se ne parla con il medico.",
+     "esempi": [
+      "Cinque minuti sulla sedia della cucina, dopo il caffè, guardando il respiro.",
+      "La camminata lenta in corridoio o sul balcone: dieci passi avanti e dieci indietro.",
+      "Sulla panchina al parco, ascoltare per due minuti solo i suoni intorno.",
+      "Prima di dormire, tre respiri tranquilli, senza forzarli."
+     ],
+     "errori": [
+      "Pensare di dover «svuotare la mente»: la mente pensa, si torna al respiro.",
+      "Allungare in fretta i tempi o forzare il respiro.",
+      "Insistere se si prova ansia o agitazione, invece di fermarsi."
+     ],
+     "domande": [
+      "Come mi sentivo prima e dopo i cinque minuti?",
+      "Quante volte la mente è partita e dove è andata?",
+      "A che ora del giorno mi è più facile fermarmi?"
+     ],
+     "studio": {
+      "cosa": "La pagina dell'ente americano NCCIH riassume le ricerche. Dice che di solito i rischi sono considerati pochi, ma una rassegna del 2020 ha concluso che circa l'8% dei partecipanti agli studi ha avuto un effetto negativo, soprattutto ansia o depressione.",
+      "limiti": "Molte ricerche sono preliminari o poco rigorose, e pochi studi hanno esaminato i possibili effetti dannosi.",
+      "fonte": {
+       "c": "NCCIH (US National Institutes of Health), Meditation and Mindfulness: Effectiveness and Safety (ultimo aggiornamento 2022)",
+       "t": "articolo",
+       "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety"
+      }
+     }
+    }
    },
    {
     "id": "pensione",
@@ -2465,7 +2612,27 @@
       "t": "studio",
       "url": "https://pure.fujita-hu.ac.jp/en/publications/sense-of-life-worth-living-ikigai-and-mortality-in-japan-ohsaki-s/"
      }
-    ]
+    ],
+    "appro": {
+     "storia": "Queste pratiche non vengono da un'unica fonte: la lista delle piccole ragioni richiama Kamiya e Mogi, i ruoli e la settimana tipo sono esercizi comuni nella riflessione sul tempo libero. La parte sulla pensione è un adattamento pensato per questa scheda, con un appoggio al Diario.",
+     "come": "Dopo anni di orari fissi, la pensione lascia molto spazio e a volte disorienta. Scrivere ruoli e gesti concreti rende il tempo meno vuoto senza riempirlo del tutto. Può aiutare a notare cosa funziona. È un aiuto di organizzazione e riflessione, non una promessa di benessere.",
+     "esempi": [
+      "Ruolo che resta: padre. Gesto: pranzo della domenica con i figli, a turno a casa di uno.",
+      "Ruolo nuovo: volontario. Gesto: due ore al mese in un'associazione del quartiere.",
+      "Una settimana: lunedì camminata, mercoledì corso, sabato mercato e amici.",
+      "Lasciare vuoto il giovedì pomeriggio, per decidere sul momento."
+     ],
+     "errori": [
+      "Riempire ogni giorno come un'agenda di lavoro e restare stanchi.",
+      "Voler cambiare tutto nei primi mesi, invece di provare una cosa alla volta.",
+      "Non rileggere il Diario: senza rilettura non si capisce cosa funziona."
+     ],
+     "domande": [
+      "Quale ruolo mi manca di più e quale vorrei provare?",
+      "Come sarebbe una settimana che mi piacerebbe vivere?",
+      "Che cosa ho smesso di fare e che mi manca?"
+     ]
+    }
    },
    {
     "id": "sfida",
@@ -2506,7 +2673,27 @@
       "t": "libro",
       "url": "https://www.macrolibrarsi.it/libri/__naikan-libro.php"
      }
-    ]
+    ],
+    "appro": {
+     "storia": "La sfida di sette giorni è un'idea di questa scheda: mette in fila, una al giorno, le pratiche descritte negli altri capitoli. Le pratiche vengono da fonti diverse: Kamiya e Mogi per le piccole ragioni e i pilastri, Morita per l'accettazione, Yoshimoto per il Naikan, Csíkszentmihályi per il flusso, le tradizioni contemplative per il respiro.",
+     "come": "Provare una cosa al giorno per una settimana permette di confrontare senza impegnarsi. Può aiutare a scegliere poche abitudini adatte a sé. La rilettura finale nel Diario è la parte più importante: è lì che si decide cosa tenere. Non è una gara e non ha obiettivi di salute.",
+     "esempi": [
+      "Giorno 4: dopo cena, le tre domande del Naikan sulla moglie, con tre fatti concreti.",
+      "Giorno 5: un'ora in falegnameria o in orto, telefono in un'altra stanza.",
+      "Giorno 6: cinque minuti di respiro dopo la passeggiata.",
+      "Giorno 7: rileggere il Diario con un caffè e sottolineare due cose da tenere."
+     ],
+     "errori": [
+      "Recuperare di corsa i giorni saltati: si riprende semplicemente dal giorno dopo.",
+      "Giudicare una pratica dal primo giorno: alcune servono più volte.",
+      "Tenere tutto alla fine invece di scegliere due o tre cose."
+     ],
+     "domande": [
+      "Quale giorno mi è piaciuto di più, e perché?",
+      "Quale pratica ho trovato più faticosa, e c'è un modo più leggero?",
+      "Quali due o tre cose voglio tenere per il prossimo mese?"
+     ]
+    }
    },
    {
     "id": "letture",

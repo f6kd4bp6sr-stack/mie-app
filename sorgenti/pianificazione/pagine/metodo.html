@@ -278,13 +278,16 @@ const IKI_IMG={
  pilastri:`<svg viewBox="0 0 520 244" role="img" aria-label="Un tempio: il tetto è l'ikigai, sostenuto da cinque pilastri" class="iki-svg"><polygon points="40,62 260,10 480,62" fill="#c2410c" opacity=".85"/><rect x="40" y="62" width="440" height="14" fill="#9a3412" opacity=".85"/><text x="260" y="52" font-size="18" font-weight="900" text-anchor="middle" fill="#fff">IKIGAI</text>${[["1","in","piccolo"],["2","lasciar","andare l'io"],["3","armonia",""],["4","piccole","gioie"],["5","qui","e ora"]].map(([n,t,u],i)=>{const x=62+i*88;return `<rect x="${x}" y="80" width="40" height="100" rx="4" fill="#fde68a" stroke="#b45309" stroke-width="2"/><text x="${x+20}" y="136" font-size="18" font-weight="900" text-anchor="middle" fill="#92400e">${n}</text><text x="${x+20}" y="202" font-size="13" font-weight="700" text-anchor="middle" fill="currentColor">${t}</text><text x="${x+20}" y="217" font-size="13" font-weight="700" text-anchor="middle" fill="currentColor">${u}</text>`;}).join("")}<rect x="30" y="180" width="460" height="6" fill="#b45309" opacity=".7"/><text x="260" y="238" font-size="13" text-anchor="middle" fill="currentColor" opacity=".8">la base: la tua giornata</text></svg>`
 };
 /* ---------- 🌸 Ikigai (3/11/2026, richiesta del proprietario): capitoli in metodo_dati.json → ikigai; tutti apri e chiudi, in 2 colonne (scelta del proprietario: più leggibile) ---------- */
+/* 🔍 approfondimento di un capitolo (3/11/2026): storia, come funziona, esempi, errori, domande per il Diario, uno studio con i suoi limiti */
+function ikiAppro(c){const A=c.appro;if(!A)return "";const L=a=>`<ul>${(a||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`,S=A.studio;
+  return sub("iki-a-"+c.id,"🔍 Approfondisci",`<h4>📜 Storia</h4><p>${esc(A.storia)}</p><h4>⚙️ Come funziona</h4><p>${esc(A.come)}</p><h4>🏙️ Esempi</h4>${L(A.esempi)}<h4>⚠️ Errori da evitare</h4>${L(A.errori)}<h4>📓 Domande per il Diario</h4>${L(A.domande)}${S?`<h4>🔬 Che cosa dice la ricerca</h4><p>${esc(S.cosa)}</p><p class="lbl"><b>Limiti:</b> ${esc(S.limiti)}</p><p class="lbl">Fonte: ${S.fonte&&S.fonte.url?`<a href="${esc(S.fonte.url)}" target="_blank" rel="noopener">${esc(S.fonte.c)}</a>`:esc((S.fonte||{}).c||"")}</p>`:""}`,false);}
 function vIki(){const I=MD.ikigai;if(!I)return "";
   let o=`<div class="card"><h3>🌸 Ikigai: la ragione delle giornate</h3><p>${esc(I.intro)}</p><p class="lbl">${esc(I.nota)}</p>${I.bozza?`<p class="lbl">${esc(I.bozza)}</p>`:""}</div>`;
   const L=a=>`<ul>${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
   o+=`<div class="iki-g">`+I.capitoli.map((c,n)=>{const t=`${c.ic} ${n+1}. ${esc(c.tit)}`;
     const body=!c.pronto?`<p class="lbl">${esc(c.sotto)}</p><p class="lbl">🔜 In preparazione</p>`:
       `<p class="lbl">${esc(c.sotto)}</p>${IKI_IMG[c.id]||""}<h4>Principi</h4>${L(c.princ)}<h4>Regole</h4>${L(c.regole)}<h4>Spiegazione</h4><p>${esc(c.spiega)}</p><h4>✍️ Esercizio: ${esc(c.es.t)} · ${c.es.min} min</h4><ol>${c.es.passi.map(x=>`<li>${esc(x)}</li>`).join("")}</ol><p class="lbl">Fonti: ${c.fonti.map(f=>typeof f==="string"?esc(f):(f.url?`<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.c)}</a>`:esc(f.c))).join(" · ")}</p>`;
-    return win("iki-"+c.id,t,body,false,"iki-c"+(c.pronto?"":" iki-p"));}).join("")+`</div>`;
+    return win("iki-"+c.id,t,body+(c.pronto?ikiAppro(c):""),false,"iki-c"+(c.pronto?"":" iki-p"));}).join("")+`</div>`;
   return o;}
 function vVol(){
   if(!OCC)return `<div class="card"><p class="empty">Sto scaricando le occasioni… serve internet la prima volta.</p></div>`;
