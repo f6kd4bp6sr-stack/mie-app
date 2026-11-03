@@ -246,7 +246,7 @@ a.btn{text-decoration:none;display:inline-block}
 @media (max-width:600px){.dia-qt{font-size:18px}.dia-temp button small{font-size:10.5px}}
 
 </style>
-<script>window.APP_VERSION="f686113be8";window.APP_BUILD="2026-11-03T12:46+02:00";</script>
+<script>window.APP_VERSION="660fe144fa";window.APP_BUILD="2026-11-03T12:55+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -1545,7 +1545,9 @@ function cassaCalc(){const p=PENS(),C=p.cassa,D=p.dati,t=today(),T=t.slice(0,7),
   p.incassi.forEach(x=>{if(!x.d)return;if(!x.una&&(/pension|cedolino/i.test(x.t)||p.cedolini.some(c=>kw(c.t)===kw(x.t))))return;
     const ri=x.una&&!x.ok&&+(C.ritInc||0)?+C.ritInc:0,dd=ri?dayIn(ymAdd(x.d.slice(0,7),ri),x.d.slice(8,10)):x.d;
     const it=put("inc:"+x.id,dd,"e",x.t,+x.netto||0,{src:"Scheda"+(ri?" · in ritardo di "+ri+" "+(ri===1?"mese":"mesi"):""),inc:x.id,nd:!x.netto,d0:x.d});if(x.ok)it.ok=true;});
-  p.mov.forEach(x=>{const st=movCat(x)==="stip"&&x.freq!=="una"&&pen;movDates(x,start+"-01",csFineYM()+"-31").forEach(d=>{if(st&&d.slice(0,7)>=dec){if(!dupSkip.some(z=>z.stop===x.id))dupSkip.push({ym:dec,t:x.t,stop:x.id,why:"da qui c’è la pensione: lo stipendio si ferma"});return;}put("mov:"+x.id+":"+d,d,x.tipo,x.t,+x.imp||0,{mov:x.id,freq:x.freq,src:x.inv?"🌱 Investimenti":undefined});});});
+  /* se in un mese ci sono due tuoi stipendi (per esempio due importi quasi uguali), vale solo quello impostato più di recente */
+  const stipOf={},stipPick=ym=>{if(!(ym in stipOf)){const c=stipMov.filter(m=>movDates(m,ym+"-01",ym+"-31").length);stipOf[ym]=c.length>1?c.slice().sort((a,b)=>(a.da||"")<(b.da||"")?1:(a.da||"")>(b.da||"")?-1:p.mov.indexOf(b)-p.mov.indexOf(a))[0].id:null;}return stipOf[ym];};
+  p.mov.forEach(x=>{const st=movCat(x)==="stip"&&x.freq!=="una"&&pen;movDates(x,start+"-01",csFineYM()+"-31").forEach(d=>{if(movCat(x)==="stip"){const k=stipPick(d.slice(0,7));if(k&&k!==x.id)return;}if(st&&d.slice(0,7)>=dec){if(!dupSkip.some(z=>z.stop===x.id))dupSkip.push({ym:dec,t:x.t,stop:x.id,why:"da qui c’è la pensione: lo stipendio si ferma"});return;}put("mov:"+x.id+":"+d,d,x.tipo,x.t,+x.imp||0,{mov:x.id,freq:x.freq,src:x.inv?"🌱 Investimenti":undefined});});});
   /* controllo finale: se in un mese restano due stipendi o due tredicesime, lo segnalo */
   const dupLeft=[];{const by={};items.filter(i=>i.tipo==="e").forEach(i=>{const k=cat(i.t)||(i.mov&&movCat(p.mov.find(m=>m.id===i.mov)||{}));if(k!=="stip"&&k!=="13")return;const z=i.ym+"|"+k;(by[z]=by[z]||[]).push(i);});
     Object.keys(by).forEach(z=>{if(by[z].length>1)dupLeft.push({ym:z.split("|")[0],k:z.split("|")[1],L:by[z].map(i=>i.t+" "+eur0(i.imp))});});}
@@ -1570,8 +1572,8 @@ function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,
   const c=v=>`<span class="amt ${v<0?"u":""}">${eur0(v)}</span>`;
   let o="";
   const mn=ym=>new Date(ym+"-15T12:00").toLocaleDateString("it-IT",{month:"long",year:"numeric"});
-  if(K.dupLeft&&K.dupLeft.length)o+=`<div class="card k-pens"><h3>⚠️ Possibili doppioni</h3>${K.dupLeft.map(d=>`<div class="row"><div class="grow"><b>${mn(d.ym)}</b> · ${d.k==="13"?"due tredicesime":"due stipendi"}<small>${d.L.map(esc).join(" · ")}</small></div></div>`).join("")}<p class="lbl">Se è un errore, togli o sposta una delle due entrate qui sotto.</p></div>`;
-  if(K.dupSkip&&K.dupSkip.length)o+=`<details class="more"><summary>🔍 Doppioni evitati: ${K.dupSkip.length}</summary>${K.dupSkip.map(d=>`<div class="row"><div class="grow">${mn(d.ym)} · ${esc(d.t)}<small>${esc(d.why)}</small></div></div>`).join("")}</details>`;
+  if(false&&K.dupLeft&&K.dupLeft.length)o+=`<div class="card k-pens"><h3>⚠️ Possibili doppioni</h3>${K.dupLeft.map(d=>`<div class="row"><div class="grow"><b>${mn(d.ym)}</b> · ${d.k==="13"?"due tredicesime":"due stipendi"}<small>${d.L.map(esc).join(" · ")}</small></div></div>`).join("")}<p class="lbl">Se è un errore, togli o sposta una delle due entrate qui sotto.</p></div>`;
+  if(false&&K.dupSkip&&K.dupSkip.length)o+=`<details class="more"><summary>🔍 Doppioni evitati: ${K.dupSkip.length}</summary>${K.dupSkip.map(d=>`<div class="row"><div class="grow">${mn(d.ym)} · ${esc(d.t)}<small>${esc(d.why)}</small></div></div>`).join("")}</details>`;
   if(!K.ini||csIniEd)o+=`<div class="card k-pens"><h3>💶 Da dove parti</h3><p class="lbl" style="margin-top:0">Scrivi quanto hai sul conto (o sui conti, insieme) in una data: da lì l’app conta entrate e uscite fino a giugno 2029.</p>
     <div class="form"><label>Soldi disponibili €<input id="csIniI" inputmode="decimal" value="${K.ini?esc(String(K.ini.imp).replace(".",",")):""}" placeholder="0"></label><label>Al giorno<input id="csIniD" type="date" value="${esc(K.ini?K.ini.d:K.t)}"></label></div>
     ${(()=>{const F=contoStorico();return F?`<p class="lbl">Nei Conti il conto ${esc(F.n)} risulta ${eur0(Math.round(F.oggi))} al ${fmt(F.last<K.t?F.last:K.t,{day:"numeric",month:"short",year:"numeric"})}. <button class="lnk" data-csx="conto">Usa questo</button></p>`:"";})()}
