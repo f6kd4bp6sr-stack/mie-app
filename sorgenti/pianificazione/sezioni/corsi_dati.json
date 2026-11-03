@@ -2,10 +2,26 @@
   "app": "corsi-online",
   "updated": "",
   "pronto": false,
-  "criteri": "Solo corsi gratuiti da seguire per intero e aperti all'iscrizione il giorno del controllo, di università italiane o straniere, che si possono seguire in italiano (lingua del corso o sottotitoli ufficiali in italiano). L'attestato può essere a pagamento: è indicato su ogni corso.",
+  "criteri": "Solo corsi gratuiti, aperti a tutti (non serve essere studenti universitari) e con iscrizione aperta il giorno del controllo: università italiane e straniere e università popolari, che si seguono in italiano (lingua del corso o sottotitoli ufficiali in italiano). L'attestato può essere a pagamento: è indicato su ogni corso.",
   "temi": {
-    "ia": ["Intelligenza artificiale", "Informatica e programmazione", "Dati e statistica", "Sicurezza e privacy", "Competenze digitali"],
-    "pens": ["Finanza personale ed economia", "Salute e benessere", "Storia", "Arte e musica", "Letteratura e scrittura", "Lingue", "Scienze e natura", "Filosofia e psicologia", "Diritto e cittadinanza"]
+    "ia": [
+      "Intelligenza artificiale",
+      "Informatica e programmazione",
+      "Dati e statistica",
+      "Sicurezza e privacy",
+      "Competenze digitali"
+    ],
+    "pens": [
+      "Finanza personale ed economia",
+      "Salute e benessere",
+      "Storia",
+      "Arte e musica",
+      "Letteratura e scrittura",
+      "Lingue",
+      "Scienze e natura",
+      "Filosofia e psicologia",
+      "Diritto e cittadinanza"
+    ]
   },
   "corsi": []
 }

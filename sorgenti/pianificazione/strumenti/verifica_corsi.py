@@ -7,8 +7,10 @@ import json, re, sys, datetime
 LINGUE = {'Italiano', 'Sottotitoli in italiano', 'Italiano e inglese'}
 LIVELLI = {'Principiante', 'Intermedio', 'Avanzato'}
 FORMATI = {'Al proprio ritmo', 'Con date'}
+TIPI = {'Università', 'Università popolare'}
+MODALITA = {'Online', 'In presenza', 'Online e in presenza'}
 ATTESTATI = {'Gratis', 'A pagamento (il corso è gratis)', 'No'}
-CAMPI = ('id', 'area', 'tema', 'titolo', 'ente', 'paese', 'piattaforma', 'lingua', 'livello', 'formato', 'durata', 'attestato', 'sintesi', 'url', 'verificato')
+CAMPI = ('id', 'area', 'tema', 'titolo', 'ente', 'paese', 'piattaforma', 'lingua', 'livello', 'formato', 'durata', 'attestato', 'sintesi', 'url', 'verificato', 'tipo', 'modalita')
 
 
 def controlla(path):
@@ -34,6 +36,10 @@ def controlla(path):
                 e.append('%s: manca «%s»' % (w, k))
         if c.get('gratuito') is not True:
             e.append('%s: «gratuito» deve essere true (solo corsi gratuiti)' % w)
+        if c.get('aperto') is not True:
+            e.append('%s: «aperto» deve essere true (iscrizione aperta a tutti, senza essere studenti universitari)' % w)
+        if c.get('modalita') in ('In presenza', 'Online e in presenza') and not str(c.get('citta') or '').strip():
+            e.append('%s: per i corsi in presenza serve «citta»' % w)
         if not re.fullmatch(r'c-[a-z0-9-]+', str(c.get('id', ''))):
             e.append('%s: id deve iniziare con c- (minuscole, cifre, trattini)' % w)
         if c.get('id') in ids:
@@ -43,7 +49,7 @@ def controlla(path):
             e.append('%s: area sconosciuta' % w)
         elif c.get('tema') not in temi[c['area']]:
             e.append('%s: tema «%s» non è tra quelli dell\'area' % (w, c.get('tema')))
-        for k, ok in (('lingua', LINGUE), ('livello', LIVELLI), ('formato', FORMATI), ('attestato', ATTESTATI)):
+        for k, ok in (('lingua', LINGUE), ('livello', LIVELLI), ('formato', FORMATI), ('attestato', ATTESTATI), ('tipo', TIPI), ('modalita', MODALITA)):
             if c.get(k) and c[k] not in ok:
                 e.append('%s: %s «%s» non ammesso (%s)' % (w, k, c[k], ', '.join(sorted(ok))))
         u = str(c.get('url', ''))

@@ -7,6 +7,7 @@ La sezione «🎓 Corsi» di Pianificazione mostra corsi online **gratuiti** di 
   - i corsi Coursera in cui la versione gratuita apre solo il primo modulo;
   - i corsi su abbonamento.
 - **Disponibile:** l'iscrizione è aperta il giorno del controllo, oppure il corso si segue al proprio ritmo. Restano fuori i corsi chiusi o archiviati senza accesso.
+- **Aperto a tutti** (scelta del proprietario, 3/11/2026): non serve essere iscritti all'università né avere credenziali d'ateneo; basta una registrazione libera (email, SPID o account). `aperto`: true. Restano fuori i corsi riservati a studenti, dipendenti o professionisti di un ente.
 - **In italiano:** il corso è in italiano (`Italiano`, `Italiano e inglese`), oppure ha sottotitoli **ufficiali** in italiano dichiarati sulla pagina del corso (`Sottotitoli in italiano`). La traduzione automatica del browser non conta.
 - **Università o ente universitario:** sono ammessi università, politecnici e i loro portali, cioè:
   - Federica (Federico II), EduOpen, POK (Polimi);
@@ -14,6 +15,9 @@ La sezione «🎓 Corsi» di Pianificazione mostra corsi online **gratuiti** di 
   - Elements of AI (Università di Helsinki), USI (Svizzera italiana);
   - i corsi di università straniere su edX, Coursera o FutureLearn con versione italiana.
 - **Fonti:** prima WebSearch con allowed_domains sul sito, poi WebFetch solo sugli URL usciti dalla ricerca. Mai URL scritti a mano. I dati vanno letti sulla pagina ufficiale del corso.
+
+## Università popolari e della terza età
+Oltre alle università (italiane, Svizzera italiana USI, Helsinki - Elements of AI, …) cerca le **università popolari** e le università della terza età di Torino (es. Università Popolare di Torino, UNITRE Torino) e di altre città italiane, solo per le proposte **gratuite e aperte a tutti** (lezioni online, conferenze o cicli gratuiti). Campo `tipo`: «Università» o «Università popolare». Annota a parte, senza inserirle, le università popolari di Torino con corsi a quota (nome, quota di iscrizione indicata, URL): il proprietario deciderà se aggiungerle.
 
 ## Aree e temi
 - `ia`, «IA e digitale»: Intelligenza artificiale; Informatica e programmazione; Dati e statistica; Sicurezza e privacy; Competenze digitali.
@@ -25,7 +29,7 @@ Obiettivo:
 - livello soprattutto Principiante o Intermedio, con pochi corsi avanzati segnati come tali.
 
 ## Campi di ogni corso
-`id` (`c-…`), `area`, `tema`, `titolo` (quello ufficiale), `ente`, `paese` («Italia», «Finlandia», «Svizzera»…), `piattaforma`, `lingua` (Italiano | Sottotitoli in italiano | Italiano e inglese), `livello` (Principiante | Intermedio | Avanzato), `formato` (Al proprio ritmo | Con date), `durata` (come indicata sulla pagina), `attestato` (Gratis | A pagamento (il corso è gratis) | No), `sintesi` (massimo 45 parole, scritta con parole tue, in tono neutro), `url` (la pagina ufficiale del corso), `verificato` (AAAA-MM-GG), `gratuito`: true.
+`id` (`c-…`), `area`, `tema`, `titolo` (quello ufficiale), `ente`, `paese` («Italia», «Finlandia», «Svizzera»…), `piattaforma`, `lingua` (Italiano | Sottotitoli in italiano | Italiano e inglese), `livello` (Principiante | Intermedio | Avanzato), `formato` (Al proprio ritmo | Con date), `durata` (come indicata sulla pagina), `attestato` (Gratis | A pagamento (il corso è gratis) | No), `sintesi` (massimo 45 parole, scritta con parole tue, in tono neutro), `url` (la pagina ufficiale del corso), `verificato` (AAAA-MM-GG), `gratuito`: true, `aperto`: true, `tipo` (Università | Università popolare), `modalita` (Online | In presenza | Online e in presenza) e, per i corsi in presenza, `citta`.
 
 Quando la lista è completa:
 - metti `"pronto": true`;
