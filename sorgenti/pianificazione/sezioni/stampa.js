@@ -25,12 +25,13 @@ function vSt(){const N=stData(),S=N.sezioni||{},L=stLette(),old=stOre()>30;
   let o=`<h1>🗞️ Stampa di oggi</h1><p class="sub">Le notizie principali dai quotidiani online italiani ed esteri (tradotte in italiano), generali e di Torino: aggiornate ogni giorno alle 6 e alle 22, con le fonti per approfondire.</p>`;
   o+=`<div class="st-head"><span class="pill st-ed">${N.updated?esc(stQuando()):"in attesa della prima edizione"}</span><button class="btn sm" id="stRefresh">🔄 Aggiorna</button></div>`;
   if(N.updated&&old)o+=`<p class="st-old">⚠️ Questa edizione ha più di un giorno: la prossima arriva alle ${new Date().getHours()<22&&new Date().getHours()>=6?"22":"6"}.</p>`;
-  const tabs=[["","📰","Tutte"]].concat(ST_SEZ.filter(([k])=>(S[k]||[]).length));
-  o+=`<div class="seg" role="tablist" style="margin:12px 0 14px;width:max-content;max-width:100%">${tabs.map(([k,i,t])=>`<button role="tab" data-sts="${k}" class="${stSez===k?"on":""}">${i} ${t}</button>`).join("")}</div>`;
+  /* 3/11/2026: niente schede «Tutte»/sezioni: le sezioni stanno in colonne affiancate (4 per riga) che scorrono dentro */
   if(!N.updated)return o+`<div class="card k-st nofold"><p class="empty">Le notizie arrivano da internet: apri la sezione quando sei collegato.</p></div>`;
-  (stSez?ST_SEZ.filter(([k])=>k===stSez):ST_SEZ).forEach(([k,ic,t])=>{const A=S[k]||[];if(!A.length)return;
-    o+=`<h2>${ic} ${t}</h2><div class="card k-st nofold">${A.map((n,i)=>`<article class="st-n${i===0?" st-top":""}${L[n.id]?" st-read":""}"><h3 class="st-t">${esc(n.t)}</h3><p class="st-s">${esc(n.s)}</p>
+  o+=`<div class="cols4">`;
+  ST_SEZ.forEach(([k,ic,t])=>{const A=S[k]||[];if(!A.length)return;
+    o+=`<div class="card k-st nofold"><h3>${ic} ${t} <span class="lbl" style="margin-left:auto">${A.length}</span></h3>${A.map((n,i)=>`<article class="st-n${i===0?" st-top":""}${L[n.id]?" st-read":""}"><h3 class="st-t">${esc(n.t)}</h3><p class="st-s">${esc(n.s)}</p>
       <div class="st-f">${(n.fonti||[]).map(f=>`<a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">${esc(f.n)}${f.l&&f.l!=="it"?` <span class="st-lang">${esc(f.l.toUpperCase())}</span>`:""} ›</a>${f.l&&f.l!=="it"?`<a class="st-tr" href="${stTrad(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">🔤 leggi tradotto</a>`:""}`).join("")}${(n.link||[]).map(f=>`<a class="st-ap" href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">🔎 ${esc(f.n)}</a>`).join("")}</div></article>`).join("")}</div>`;});
+  o+=`</div>`;
   o+=`<p class="lbl" style="margin-top:12px">Titoli e sintesi sono scritti per questa app con parole proprie, in tono neutro, partendo dalle testate indicate: per il testo completo apri la fonte (alcuni articoli sono riservati agli abbonati). Non sono opinioni né consigli.</p>`;
   return o;}
 

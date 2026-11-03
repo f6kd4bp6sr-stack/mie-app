@@ -47,6 +47,13 @@ main[data-sec=pens]>.card:has(table,textarea,input:not([type=checkbox]):not([typ
 main[data-sec=pens]>.card h2,main[data-sec=inv]>.card h2,main[data-sec=dia]>.card h2,main[data-sec=cd]>.card h2,main[data-sec=st]>.card h2,main[data-sec=pens]>.card h3,main[data-sec=inv]>.card h3,main[data-sec=dia]>.card h3,main[data-sec=cd]>.card h3,main[data-sec=st]>.card h3{font-size:16px;margin-top:0}
 main[data-sec=pens]>.card .big,main[data-sec=inv]>.card .big,main[data-sec=dia]>.card .big,main[data-sec=cd]>.card .big,main[data-sec=st]>.card .big{font-size:28px}
 }
+/* 📰 colonne affiancate che scorrono dentro (3/11/2026): Novità della pensione, Stampa, Novità di Cultura */
+.cols4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:start;margin:0 0 12px}
+.cols4>.card{margin:0;padding:10px 12px;font-size:14px;max-height:68vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.cols4>.card>h3{display:flex;align-items:center;gap:6px;font-size:15px;margin:0 0 6px;position:sticky;top:-10px;background:var(--card,#fff);z-index:1;padding:4px 0}
+.cols4 .fx,.cols4 .row{font-size:14px}.cols4 .st-t{font-size:15px}
+@media (max-width:1000px){.cols4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.cols4{grid-template-columns:1fr}}
 /* 🎖️ Pensione: numeri e linea del tempo affiancati */
 .pn-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:12px;align-items:start;margin:0 0 14px}
 .pn-top>.kpi{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pn-top>.kpi>div{margin:0}
@@ -235,7 +242,7 @@ a.btn{text-decoration:none;display:inline-block}
 @media (max-width:600px){.dia-qt{font-size:18px}.dia-temp button small{font-size:10.5px}}
 
 </style>
-<script>window.APP_VERSION="253b439d51";window.APP_BUILD="2026-11-03T12:09+02:00";</script>
+<script>window.APP_VERSION="1cdd695c38";window.APP_BUILD="2026-11-03T12:15+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -1786,11 +1793,13 @@ const newsNew=()=>{if(!pensHas())return 0;const seen=new Set(PENS().newsSeen);re
 function pensNews(){
   const N=newsData(),L=newsList().filter(n=>!newsTema||(n.temi||[]).includes(newsTema)),seen=new Set(PENS().newsSeen),A=N.attesa||[];
   let o=`<div class="card k-pens"><h3>⏳ Parametri in attesa <span class="lbl" style="margin-left:auto;font-weight:600">servono al ricalcolo</span></h3>${A.map(x=>`<div class="row"><span class="pill ${x.stato==="uscito"?"ok":"soon"}">${x.stato==="uscito"?"uscito":"atteso"}</span><div class="grow"><b>${esc(x.t)}</b><small>${[x.valore!=null&&x.valore!==""?"valore: "+(x.id==="tasso2026"?"+"+String(Math.round((x.valore-1)*1e4)/100).replace(".",",")+"%":esc(String(x.valore))):"",x.stima!=null&&(x.valore==null||x.valore==="")?"stima non ufficiale: "+(x.id==="tasso2026"?"+"+String(Math.round((x.stima-1)*1e4)/100).replace(".",",")+"%":esc(String(x.stima))):"",x.quando?esc(x.quando):"",x.nota?esc(x.nota):""].filter(Boolean).join(" · ")}</small>${x.url?`<small><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.fonte||"fonte")} ›</a></small>`:""}</div></div>`).join("")||'<p class="empty">Nessun parametro in attesa.</p>'}</div>`;
-  o+=`<div class="seg" style="margin:0 0 12px;width:max-content;max-width:100%"><button data-nt="" class="${newsTema?"":"on"}">Tutte</button>${Object.entries(TEMI).map(([k,v])=>`<button data-nt="${k}" class="${newsTema===k?"on":""}">${v[0]} ${v[1]}</button>`).join("")}</div>`;
-  o+=`<div class="card k-pens">${L.map(n=>{const tc=newsTouch(n),nw=!seen.has(n.id);return `<div class="fx"><div class="row" style="border:0;padding:0;align-items:flex-start"><span class="pill ${nw?"soon":"pens"}">${fmt(n.d,{day:"numeric",month:"short",year:"2-digit"})}</span><div class="grow"><b>${nw?"🆕 ":""}${esc(n.titolo)}</b><small style="color:var(--ink);margin-top:2px">${esc(n.sintesi)}</small>
+  /* 3/11/2026: niente filtro «Tutte»: quattro colonne affiancate (una per tema) che scorrono dentro; ogni notizia sta nel suo primo tema */
+  const nItem=n=>{const tc=newsTouch(n),nw=!seen.has(n.id);return `<div class="fx"><div class="row" style="border:0;padding:0;align-items:flex-start"><span class="pill ${nw?"soon":"pens"}">${fmt(n.d,{day:"numeric",month:"short",year:"2-digit"})}</span><div class="grow"><b>${nw?"🆕 ":""}${esc(n.titolo)}</b><small style="color:var(--ink);margin-top:2px">${esc(n.sintesi)}</small>
       <small>${(n.temi||[]).map(t=>TEMI[t]?TEMI[t][0]+" "+TEMI[t][1]:"").filter(Boolean).join(" · ")}${n.url?` · <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.fonte||"fonte")} ›</a>`:""}</small>
-      ${n.effetto||tc.length?`<div class="warnbox" style="margin-top:6px;background:var(--pens-bg);border-color:var(--pens)"><b>Cosa cambia per te.</b> ${esc(n.effetto||"")}${tc.length?`<br>${tc.slice(0,3).map(x=>"• "+esc(x.t)).join("<br>")}${tc.length>3?`<br><span class="lbl">e altre ${tc.length-3} voci della tua scheda</span>`:""}`:""}</div>`:""}</div></div></div>`;}).join("")||'<p class="empty">Ancora nessuna notizia scaricata: serve internet una volta.</p>'}</div>
-    <p class="lbl">Dati e fonti si aggiornano da soli alle 13, alle 17 e alle 23${N.updated?" · ultimo controllo "+whenIt(N.updated):""}. Sono informazioni con data e fonte, non consigli: per decidere vale il testo ufficiale.</p>`;
+      ${n.effetto||tc.length?`<div class="warnbox" style="margin-top:6px;background:var(--pens-bg);border-color:var(--pens)"><b>Cosa cambia per te.</b> ${esc(n.effetto||"")}${tc.length?`<br>${tc.slice(0,3).map(x=>"• "+esc(x.t)).join("<br>")}${tc.length>3?`<br><span class="lbl">e altre ${tc.length-3} voci della tua scheda</span>`:""}`:""}</div>`:""}</div></div></div>`;};
+  const colT=Object.keys(TEMI),byT={};colT.forEach(k=>byT[k]=[]);const alt=[];newsList().forEach(n=>{const k=(n.temi||[]).find(x=>byT[x]);if(k)byT[k].push(n);else alt.push(n);});
+  o+=`<div class="cols4">${colT.map(k=>`<div class="card k-pens"><h3>${TEMI[k][0]} ${TEMI[k][1]} <span class="lbl" style="margin-left:auto">${byT[k].length}</span></h3>${byT[k].map(nItem).join("")||'<p class="empty">Nessuna notizia.</p>'}</div>`).join("")}${alt.length?`<div class="card k-pens"><h3>📌 Altro</h3>${alt.map(nItem).join("")}</div>`:""}</div>
+    <p class="lbl">Dati e fonti si aggiornano da soli ogni giorno alle 13${N.updated?" · ultimo controllo "+whenIt(N.updated):""}. Sono informazioni con data e fonte, non consigli: per decidere vale il testo ufficiale.</p>`;
   const F=N.fonti||[],G={};F.forEach(f=>(G[f.tipo]=G[f.tipo]||[]).push(f));
   if(F.length)o+=`<details class="more"><summary>🔎 Fonti controllate (${F.length})</summary><div class="card k-pens">${Object.entries(G).map(([tp,L])=>`<h3 style="color:var(--ink);font-size:14.5px;margin:6px 0 4px">${esc(tp.charAt(0).toUpperCase()+tp.slice(1))}</h3>${L.map(f=>`<div class="row" style="padding:5px 0"><div class="grow"><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.n)}</a></div><small class="lbl" style="${f.esito&&f.esito!=="ok"?"color:var(--scad)":""}">${f.ultimo?(f.esito&&f.esito!=="ok"?esc(f.esito)+" · ":"")+whenIt(f.ultimo):"da controllare"}</small></div>`).join("")}`).join("")}</div></details>`;
   const K=(N.controlli||[]).slice(-6).reverse();
@@ -2512,10 +2521,12 @@ function cdRipasso(){const due=cdDue();
   if(!cdRip||(!cdRip.a&&!due.includes(cdRip.id)))cdRip={id:due[0],a:null};const {q,s}=cdQ(cdRip.id),a=cdRip.a,opts=cdMix(q,q.id+"r");
   return `<div class="card k-cd nofold"><div class="lbl">🔁 ${due.length||"ultima"} da ripassare · dalla scheda «${esc(s.t)}»</div><div class="cd-q"><b>${esc(q.q)}</b><div class="cd-opts">${opts.map(x=>`<button class="cd-opt${a?(x===q.ok?" ok":x===a?" no":""):""}" data-cdr="${esc(x)}"${a?" disabled":""}>${esc(x)}</button>`).join("")}</div>${a?`<p class="cd-e">${a===q.ok?"✅ Giusto.":"❌ La risposta giusta è quella in verde."} ${esc(q.e)}</p><button class="btn pri" data-cdrnext="1">Avanti</button>`:""}</div></div>`;}
 
-function cdNovita(){const N=cdNov(),V=(N.voci||[]).slice().sort((a,b)=>a.d<b.d?1:-1).filter(v=>!cdTema||v.tema===cdTema),seen=CD().novVisto||"";
-  let o=`<div class="seg" role="tablist" style="margin:0 0 12px;width:max-content;max-width:100%"><button data-cdt="" class="${cdTema?"":"on"}">Tutte</button>${Object.keys(CD_D.temi).map(k=>`<button data-cdt="${k}" class="${cdTema===k?"on":""}">${CD_D.temi[k][0]} ${esc(CD_D.temi[k][1])}</button>`).join("")}</div>`;
-  if(!V.length)return o+`<p class="empty">${N.updated?"Nessuna novità su questo tema.":"Le novità arrivano da internet: riapri la pagina quando sei collegato."}</p>`;
-  o+=`<div class="card k-cd nofold">${V.map(v=>`<div class="row cd-nov"><span class="pill${v.d>seen?" cd-new":""}">${fmt(v.d,{day:"numeric",month:"short",year:"numeric"})}</span><div class="grow"><b>${CD_D.temi[v.tema]?CD_D.temi[v.tema][0]+" ":""}${esc(v.t)}</b><p>${esc(v.s)}</p><small>👉 ${esc(v.perche)}</small><small><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${esc(v.fonte)} ›</a></small></div></div>`).join("")}</div>`;
+function cdNovita(){const N=cdNov(),V=(N.voci||[]).slice().sort((a,b)=>a.d<b.d?1:-1),seen=CD().novVisto||"";
+  /* 3/11/2026: niente filtro «Tutte»: una colonna per tema, affiancate, che scorrono dentro */
+  let o="";
+  if(!V.length)return o+`<p class="empty">${N.updated?"Nessuna novità.":"Le novità arrivano da internet: riapri la pagina quando sei collegato."}</p>`;
+  const cdRow=v=>`<div class="row cd-nov"><span class="pill${v.d>seen?" cd-new":""}">${fmt(v.d,{day:"numeric",month:"short",year:"numeric"})}</span><div class="grow"><b>${CD_D.temi[v.tema]?CD_D.temi[v.tema][0]+" ":""}${esc(v.t)}</b><p>${esc(v.s)}</p><small>👉 ${esc(v.perche)}</small><small><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${esc(v.fonte)} ›</a></small></div></div>`;
+  o+=`<div class="cols4">${Object.keys(CD_D.temi).map(k=>{const L=V.filter(v=>v.tema===k);return `<div class="card k-cd nofold"><h3>${CD_D.temi[k][0]} ${esc(CD_D.temi[k][1])} <span class="lbl" style="margin-left:auto">${L.length}</span></h3>${L.map(cdRow).join("")||'<p class="empty">Nessuna novità.</p>'}</div>`;}).join("")}</div>`;
   o+=`<p class="lbl">Aggiornate ${N.updated?fmt(N.updated.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):"—"} dall'attività programmata, una volta al mese, solo da fonti verificate. Non sono consigli.</p>`;
   return o;}
 
@@ -2586,12 +2597,13 @@ function vSt(){const N=stData(),S=N.sezioni||{},L=stLette(),old=stOre()>30;
   let o=`<h1>🗞️ Stampa di oggi</h1><p class="sub">Le notizie principali dai quotidiani online italiani ed esteri (tradotte in italiano), generali e di Torino: aggiornate ogni giorno alle 6 e alle 22, con le fonti per approfondire.</p>`;
   o+=`<div class="st-head"><span class="pill st-ed">${N.updated?esc(stQuando()):"in attesa della prima edizione"}</span><button class="btn sm" id="stRefresh">🔄 Aggiorna</button></div>`;
   if(N.updated&&old)o+=`<p class="st-old">⚠️ Questa edizione ha più di un giorno: la prossima arriva alle ${new Date().getHours()<22&&new Date().getHours()>=6?"22":"6"}.</p>`;
-  const tabs=[["","📰","Tutte"]].concat(ST_SEZ.filter(([k])=>(S[k]||[]).length));
-  o+=`<div class="seg" role="tablist" style="margin:12px 0 14px;width:max-content;max-width:100%">${tabs.map(([k,i,t])=>`<button role="tab" data-sts="${k}" class="${stSez===k?"on":""}">${i} ${t}</button>`).join("")}</div>`;
+  /* 3/11/2026: niente schede «Tutte»/sezioni: le sezioni stanno in colonne affiancate (4 per riga) che scorrono dentro */
   if(!N.updated)return o+`<div class="card k-st nofold"><p class="empty">Le notizie arrivano da internet: apri la sezione quando sei collegato.</p></div>`;
-  (stSez?ST_SEZ.filter(([k])=>k===stSez):ST_SEZ).forEach(([k,ic,t])=>{const A=S[k]||[];if(!A.length)return;
-    o+=`<h2>${ic} ${t}</h2><div class="card k-st nofold">${A.map((n,i)=>`<article class="st-n${i===0?" st-top":""}${L[n.id]?" st-read":""}"><h3 class="st-t">${esc(n.t)}</h3><p class="st-s">${esc(n.s)}</p>
+  o+=`<div class="cols4">`;
+  ST_SEZ.forEach(([k,ic,t])=>{const A=S[k]||[];if(!A.length)return;
+    o+=`<div class="card k-st nofold"><h3>${ic} ${t} <span class="lbl" style="margin-left:auto">${A.length}</span></h3>${A.map((n,i)=>`<article class="st-n${i===0?" st-top":""}${L[n.id]?" st-read":""}"><h3 class="st-t">${esc(n.t)}</h3><p class="st-s">${esc(n.s)}</p>
       <div class="st-f">${(n.fonti||[]).map(f=>`<a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">${esc(f.n)}${f.l&&f.l!=="it"?` <span class="st-lang">${esc(f.l.toUpperCase())}</span>`:""} ›</a>${f.l&&f.l!=="it"?`<a class="st-tr" href="${stTrad(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">🔤 leggi tradotto</a>`:""}`).join("")}${(n.link||[]).map(f=>`<a class="st-ap" href="${esc(f.url)}" target="_blank" rel="noopener noreferrer" data-stl="${esc(n.id)}">🔎 ${esc(f.n)}</a>`).join("")}</div></article>`).join("")}</div>`;});
+  o+=`</div>`;
   o+=`<p class="lbl" style="margin-top:12px">Titoli e sintesi sono scritti per questa app con parole proprie, in tono neutro, partendo dalle testate indicate: per il testo completo apri la fonte (alcuni articoli sono riservati agli abbonati). Non sono opinioni né consigli.</p>`;
   return o;}
 

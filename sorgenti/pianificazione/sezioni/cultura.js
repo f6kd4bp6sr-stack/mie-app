@@ -59,10 +59,12 @@ function cdRipasso(){const due=cdDue();
   if(!cdRip||(!cdRip.a&&!due.includes(cdRip.id)))cdRip={id:due[0],a:null};const {q,s}=cdQ(cdRip.id),a=cdRip.a,opts=cdMix(q,q.id+"r");
   return `<div class="card k-cd nofold"><div class="lbl">🔁 ${due.length||"ultima"} da ripassare · dalla scheda «${esc(s.t)}»</div><div class="cd-q"><b>${esc(q.q)}</b><div class="cd-opts">${opts.map(x=>`<button class="cd-opt${a?(x===q.ok?" ok":x===a?" no":""):""}" data-cdr="${esc(x)}"${a?" disabled":""}>${esc(x)}</button>`).join("")}</div>${a?`<p class="cd-e">${a===q.ok?"✅ Giusto.":"❌ La risposta giusta è quella in verde."} ${esc(q.e)}</p><button class="btn pri" data-cdrnext="1">Avanti</button>`:""}</div></div>`;}
 
-function cdNovita(){const N=cdNov(),V=(N.voci||[]).slice().sort((a,b)=>a.d<b.d?1:-1).filter(v=>!cdTema||v.tema===cdTema),seen=CD().novVisto||"";
-  let o=`<div class="seg" role="tablist" style="margin:0 0 12px;width:max-content;max-width:100%"><button data-cdt="" class="${cdTema?"":"on"}">Tutte</button>${Object.keys(CD_D.temi).map(k=>`<button data-cdt="${k}" class="${cdTema===k?"on":""}">${CD_D.temi[k][0]} ${esc(CD_D.temi[k][1])}</button>`).join("")}</div>`;
-  if(!V.length)return o+`<p class="empty">${N.updated?"Nessuna novità su questo tema.":"Le novità arrivano da internet: riapri la pagina quando sei collegato."}</p>`;
-  o+=`<div class="card k-cd nofold">${V.map(v=>`<div class="row cd-nov"><span class="pill${v.d>seen?" cd-new":""}">${fmt(v.d,{day:"numeric",month:"short",year:"numeric"})}</span><div class="grow"><b>${CD_D.temi[v.tema]?CD_D.temi[v.tema][0]+" ":""}${esc(v.t)}</b><p>${esc(v.s)}</p><small>👉 ${esc(v.perche)}</small><small><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${esc(v.fonte)} ›</a></small></div></div>`).join("")}</div>`;
+function cdNovita(){const N=cdNov(),V=(N.voci||[]).slice().sort((a,b)=>a.d<b.d?1:-1),seen=CD().novVisto||"";
+  /* 3/11/2026: niente filtro «Tutte»: una colonna per tema, affiancate, che scorrono dentro */
+  let o="";
+  if(!V.length)return o+`<p class="empty">${N.updated?"Nessuna novità.":"Le novità arrivano da internet: riapri la pagina quando sei collegato."}</p>`;
+  const cdRow=v=>`<div class="row cd-nov"><span class="pill${v.d>seen?" cd-new":""}">${fmt(v.d,{day:"numeric",month:"short",year:"numeric"})}</span><div class="grow"><b>${CD_D.temi[v.tema]?CD_D.temi[v.tema][0]+" ":""}${esc(v.t)}</b><p>${esc(v.s)}</p><small>👉 ${esc(v.perche)}</small><small><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${esc(v.fonte)} ›</a></small></div></div>`;
+  o+=`<div class="cols4">${Object.keys(CD_D.temi).map(k=>{const L=V.filter(v=>v.tema===k);return `<div class="card k-cd nofold"><h3>${CD_D.temi[k][0]} ${esc(CD_D.temi[k][1])} <span class="lbl" style="margin-left:auto">${L.length}</span></h3>${L.map(cdRow).join("")||'<p class="empty">Nessuna novità.</p>'}</div>`;}).join("")}</div>`;
   o+=`<p class="lbl">Aggiornate ${N.updated?fmt(N.updated.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):"—"} dall'attività programmata, una volta al mese, solo da fonti verificate. Non sono consigli.</p>`;
   return o;}
 

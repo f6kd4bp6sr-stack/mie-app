@@ -47,6 +47,13 @@ main[data-sec=pens]>.card:has(table,textarea,input:not([type=checkbox]):not([typ
 main[data-sec=pens]>.card h2,main[data-sec=inv]>.card h2,main[data-sec=dia]>.card h2,main[data-sec=cd]>.card h2,main[data-sec=st]>.card h2,main[data-sec=pens]>.card h3,main[data-sec=inv]>.card h3,main[data-sec=dia]>.card h3,main[data-sec=cd]>.card h3,main[data-sec=st]>.card h3{font-size:16px;margin-top:0}
 main[data-sec=pens]>.card .big,main[data-sec=inv]>.card .big,main[data-sec=dia]>.card .big,main[data-sec=cd]>.card .big,main[data-sec=st]>.card .big{font-size:28px}
 }
+/* 📰 colonne affiancate che scorrono dentro (3/11/2026): Novità della pensione, Stampa, Novità di Cultura */
+.cols4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;align-items:start;margin:0 0 12px}
+.cols4>.card{margin:0;padding:10px 12px;font-size:14px;max-height:68vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.cols4>.card>h3{display:flex;align-items:center;gap:6px;font-size:15px;margin:0 0 6px;position:sticky;top:-10px;background:var(--card,#fff);z-index:1;padding:4px 0}
+.cols4 .fx,.cols4 .row{font-size:14px}.cols4 .st-t{font-size:15px}
+@media (max-width:1000px){.cols4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.cols4{grid-template-columns:1fr}}
 /* 🎖️ Pensione: numeri e linea del tempo affiancati */
 .pn-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:12px;align-items:start;margin:0 0 14px}
 .pn-top>.kpi{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pn-top>.kpi>div{margin:0}
