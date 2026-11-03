@@ -1,115 +1,150 @@
 {
   "app": "stampa-oggi",
-  "edizione": "sera",
-  "updated": "2026-11-02T21:55+01:00",
-  "nota": "Edizione della sera del 2 novembre 2026.",
+  "edizione": "mattina",
+  "updated": "2026-11-03T05:55+01:00",
+  "nota": "Edizione della mattina del 3 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-bosnia-salme",
-        "t": "Elicottero caduto in Bosnia: le salme dei quattro militari a Ciampino, domani i funerali",
-        "s": "Le salme dei quattro caduti dell'incidente del 29 ottobre, durante la missione Eufor Althea, sono arrivate a Ciampino, accolte da Meloni e Crosetto. I funerali solenni sono previsti domani nella basilica di Santa Maria degli Angeli. Eufor e la Procura militare di Roma indagano sulle cause.",
+        "id": "it-bosnia-funerali",
+        "t": "Elicottero caduto in Bosnia: oggi a Roma le esequie solenni dei quattro caduti",
+        "s": "Le salme dei quattro morti dell'incidente del 29 ottobre in Bosnia, durante la missione Eufor Althea, sono rientrate a Ciampino. Le esequie sono previste oggi nella basilica di Santa Maria degli Angeli. Eufor e la Procura militare di Roma indagano sulle cause.",
+        "d": "2026-11-03",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://adnkronos.com/cronaca/bosnia-militari-italiani-morti-rientro-salme-oggi_oAHRxfiZpYb8C9P9LDH9i"
+          }
+        ]
+      },
+      {
+        "id": "it-hacker-freezer",
+        "t": "Attacchi informatici ai sistemi di refrigerazione: riunione a Palazzo Chigi alle 11.30",
+        "s": "Guasti ai freezer in Sicilia, Toscana ed Emilia-Romagna sarebbero legati ad attacchi hacker, simili a quelli in sette Paesi europei. Oggi vertice coordinato dal sottosegretario Mantovano; il Copasir sente il direttore dell'Aisi e domani quello dell'Acn. L'Agenzia consiglia di isolare i sistemi di controllo dalla rete.",
         "d": "2026-11-02",
         "fonti": [
           {
             "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/cronaca/bosnia-militari-italiani-morti-rientro-salme-oggi_oAHRxfiZpYb8C9P9LDH9i"
+            "url": "https://www.adnkronos.com/cronaca/freezer-guasti-europa-italia_3pWhD3dMFOaDUGAhrEDYnv"
           }
         ]
       },
       {
-        "id": "it-scuola-sindacati",
-        "t": "Manovra, tagli alla scuola: i sindacati chiedono modifiche e preparano una mobilitazione unitaria",
-        "s": "Dal settembre 2027 la manovra riduce di 4.925 i docenti e di 2.049 il personale Ata. I sindacati chiedono di cambiare la norma e si vedranno nei prossimi giorni; la Flc Cgil sciopera già il 20 novembre. Fonti del ministero avrebbero espresso sorpresa per la norma.",
-        "d": "2026-11-02",
+        "id": "it-manovra-scuola-sanita",
+        "t": "Manovra, tagli a scuola e sanità: sindacati uniti e Regioni chiedono modifiche",
+        "s": "I sindacati della scuola, tradizionalmente divisi, chiedono insieme di ritirare i tagli, circa 7mila posti in meno. Sulla sanità l'assessore lombardo Bertolaso, di centrodestra, parla di tagli «insostenibili» (quasi mezzo miliardo per la Lombardia) e chiede correzioni in Parlamento; il Pd parla di propaganda del governo.",
+        "d": "2026-11-03",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/02/i-sindacati-della-scuola-pronti-alla-mobilitazione-contro-i-tagli-previsti-nella_ade17b33-28ec-4e0d-8182-d5235c910705.html"
-          }
-        ]
-      },
-      {
-        "id": "it-giovani-polizia",
-        "t": "Criminalità giovanile: in due settimane 644 arresti e oltre 1.600 denunce in un'operazione della polizia",
-        "s": "Secondo i dati della polizia, i controlli in tutta Italia hanno riguardato oltre 236mila giovani, di cui circa 23mila minorenni. Gli arresti sono 644 (575 maggiorenni e 69 minorenni), le denunce a piede libero 1.695. Reati più frequenti: rissa, lesioni, spaccio, armi.",
-        "d": "2026-11-02",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/contrasto-alla-criminalita-giovanile-644-arrestati-dalla-polizia_db556012-898f-436a-be31-d9e57d4e9ccc.html"
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/in-edicola/articoli/2026/11/03/meno-posti-e-piu-precari-contro-i-tagli-alla-scuola-meloni-unisce-i-sindacati/8558534/"
           },
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/cronaca/maxi-blitz-polizia-italia-criminalita-giovanile-arresti-denunce_6SCCehq5PEFXg5psxYMFiF"
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/2026/11/02/sanita-bertolaso-manovra-tagli-insostenibili-pd-denuncia/8558085/"
           }
         ]
       },
       {
-        "id": "it-maltempo-centrosud",
-        "t": "Maltempo al Centro-Sud: allerta arancione, scuole chiuse, allagamenti e neve sull'Appennino",
-        "s": "Il maltempo colpisce soprattutto i versanti adriatico e ionico, tra Calabria, Puglia, Abruzzo e Molise. Disagi a Pescara, Crotone, Trani e Chieti, lezioni sospese in molti Comuni. In Abruzzo i fiumi Pescara e Aterno-Sagittario hanno superato la soglia di pre-allarme.",
-        "d": "2026-11-02",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/02/maltempo-al-centro-sud-nevicate-allagamenti-e-scuole-chiuse_89bf9972-1692-4d72-95d7-ad0c9b4a5a3e.html"
-          }
-        ]
-      },
-      {
-        "id": "it-calenda-azione",
-        "t": "Calenda: Azione correrà da sola alle prossime elezioni, puntando a un centro decisivo",
-        "s": "In un'intervista al Corriere della Sera, il leader di Azione esclude alleanze con il centrodestra e con il Campo largo. Punta a una lista di centro che, con quattro poli e nessuno oltre il 42%, possa risultare determinante. Critica sia la manovra del Governo sia la linea di Conte.",
-        "d": "2026-11-02",
+        "id": "it-maltempo",
+        "t": "Maltempo: allerta arancione in Puglia e parte della Basilicata, scuole chiuse in Abruzzo e Campania",
+        "s": "Per oggi la Protezione civile segnala allerta arancione per temporali e rischio idrogeologico in Puglia e in parte della Basilicata; gialla in Abruzzo, Calabria, Campania e Sicilia. A Chieti lezioni sospese per verifiche sugli edifici; chiuse anche scuole a Lanciano e San Michele di Serino.",
+        "d": "2026-11-03",
         "fonti": [
           {
             "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-carlo-calenda-azione-campo-largo_3sjiJdWduugh1UrK9r5fSh"
+            "url": "https://www.adnkronos.com/cronaca/maltempo-allerta-oggi-3-novembre-2026_BB6lhicwFOucew9ZjQAv8"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-zaporizhzhia-attacco",
-        "t": "Ucraina, bombardamento russo su Komyshuvakha: almeno 24 morti, tra cui soccorritori e agenti",
-        "s": "Secondo i servizi di emergenza ucraini, un attacco aereo russo ha colpito una scuola usata per distribuire aiuti nella regione di Zaporizhzhia. Zelensky parla di un secondo attacco sul rifugio vicino. Intanto è finita la tregua di sei giorni a Oleshky, nel Kherson.",
-        "d": "2026-11-02",
+        "id": "mo-midterm",
+        "t": "Stati Uniti al voto per le elezioni di metà mandato: in palio il controllo del Congresso",
+        "s": "Oggi si vota per rinnovare il Congresso. Secondo un sondaggio Nbc del 28-30 ottobre, il 52% preferirebbe un Congresso a guida democratica contro il 45% per i repubblicani; il gradimento di Trump è al 40%. Pesano guerra in Iran, prezzo della benzina e costo della vita.",
+        "d": "2026-11-03",
         "fonti": [
           {
             "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucriana-russia-news-2-novembre-2026_7tbXUaID3Cux0Co0Gnh7ND"
+            "url": "https://www.adnkronos.com/internazionale/esteri/midterm-usa-voto-trump-oggi_3iy7nwWeRwONEeOIsVUXU5"
+          }
+        ]
+      },
+      {
+        "id": "mo-qeshm",
+        "t": "Iran, attacco limitato Usa sull'isola di Qeshm alla vigilia del voto americano",
+        "s": "Funzionari Usa citati dal Wall Street Journal confermano attacchi «difensivi» contro forze iraniane nello Stretto di Hormuz; i media iraniani riferiscono cinque esplosioni a Qeshm. Non ci sono dati su vittime. Trump parla di possibile accordo; Teheran dice di trattare indirettamente tramite mediatori.",
+        "d": "2026-11-03",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/03/wsj-attacco-limitato-usa-contro-lisola-iraniana-di-qeshm_f97443bf-f3fb-4715-a644-7b851526f148.html"
           },
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/02/hopes-of-progress-toward-peace-knocked-by-deadly-russian-attack-on-zaporizhzhia-zelenskyy-",
+            "url": "https://www.euronews.com/2026/11/03/us-strikes-irans-qeshm-island-ahead-of-midterm-elections",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-iran-hormuz",
-        "t": "Iran e Stati Uniti: trattativa tramite il Qatar, Trump dice che la guerra finirà presto",
-        "s": "Teheran afferma di aver inviato una proposta tramite i mediatori del Qatar e di attendere la risposta di Washington: se sarà accettata, la sicurezza di Hormuz verrebbe ripristinata. Trump parla di un'intesa o di un'azione militare. Nei giorni scorsi alcune navi sono state colpite nell'area.",
-        "d": "2026-11-02",
+        "id": "mo-ucraina-ottobre",
+        "t": "Ucraina: a ottobre la Russia ha perso terreno, Zelensky teme un nuovo attacco",
+        "s": "Secondo un'analisi Afp su dati dell'Institute for the Study of War, a ottobre le forze russe hanno perso circa 28 km², avanzando solo a Sumy e Zaporizhzhia. Kiev stima 54.400 perdite russe nel mese. Zelensky avverte di un possibile massiccio attacco oggi e chiede pressioni sui proventi del petrolio russo.",
+        "d": "2026-11-03",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-guerra-news-oggi-3-novembre_2P47326BVTeziiCmDKvVup"
+          }
+        ]
+      }
+    ],
+    "estero": [
+      {
+        "id": "es-hormuz-aljazeera",
+        "t": "Al Jazeera: esplosioni a Qeshm e a Bandar Lengeh, gli Usa parlano di attacchi difensivi",
+        "s": "L'emittente del Qatar riferisce di esplosioni ravvicinate nella notte a Qeshm e nella città portuale di Bandar Lengeh, con due aerei avvistati. Wall Street Journal e Associated Press, citando fonti Usa, parlano di raid contro le minacce alle navi commerciali. Nessun bilancio dei danni.",
+        "d": "2026-11-03",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/2/iran-war-live-tankers-hit-in-hormuz-trump-again-says-conflict-to-end-soon",
-            "l": "en"
-          },
-          {
-            "n": "CBS News",
-            "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-diplomacy-threat-resume-attacks/",
+            "url": "https://www.aljazeera.com/news/2026/11/3/explosions-hit-irans-qeshm-island-as-us-media-report-us-strikes-in-hormuz",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-ebola",
-        "t": "Ebola: oltre 5.300 morti nell'epidemia più rapida mai registrata, soprattutto in Congo",
-        "s": "Secondo l'Africa Cdc i morti sono 5.376, quasi tutti nella Repubblica Democratica del Congo. I casi superano i 10mila. Il ceppo Bundibugyo non ha vaccini né cure approvati; casi anche in Uganda, Kenya e Nigeria.",
+        "id": "es-ucraina-prestiti",
+        "t": "Euronews: fino a un miliardo di prestiti Ue all'Ucraina per progetti di difesa comuni",
+        "s": "Secondo Euronews, Kiev userà fino a un miliardo di euro di prestiti europei per progetti di difesa condotti insieme a partner europei. Lo stesso notiziario apre con l'attacco russo contro un centro di aiuti a Zaporizhzhia, che Zelensky dice mini i progressi verso la pace.",
+        "d": "2026-11-02",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/02/ukraine-to-channel-up-to-1bn-in-eu-loans-into-joint-defence-projects",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-belgio-crisi",
+        "t": "Belgio: fallisce la trattativa sul bilancio, il premier De Wever offre le dimissioni",
+        "s": "Secondo Euronews, dopo una notte di trattative sul bilancio finite senza accordo, il premier Bart De Wever presenterà le dimissioni al sovrano; il Palazzo reale fa sapere che il re sta valutando la richiesta.",
+        "d": "2026-11-02",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/02/belgiums-pm-bart-de-wever-to-offer-resignation-to-king-after-overnight-budget-talks-fail",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-ebola",
+        "t": "Ebola: oltre 5.300 morti, è l'epidemia a crescita più rapida mai registrata",
+        "s": "Euronews riporta che il bilancio dell'epidemia di Ebola ha superato i 5.300 morti e che si tratta del focolaio che si è diffuso più velocemente da quando esistono i rilevamenti.",
         "d": "2026-11-02",
         "fonti": [
           {
@@ -120,106 +155,102 @@
         ]
       }
     ],
-    "estero": [
-      {
-        "id": "es-polonia-tribunale",
-        "t": "Euronews: Polonia in crisi costituzionale, scontro tra il governo Tusk e il presidente Nawrocki",
-        "s": "Lo stallo sulla nomina dei giudici del Tribunale costituzionale è diventato uno scontro aperto. Il governo parla di ripristino dello Stato di diritto, il partito PiS di colpo di Stato. La Commissione di Venezia attribuisce la nomina al Sejm; la Commissione europea segue la vicenda.",
-        "d": "2026-11-02",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/02/an-unprecedented-situation-constitutional-crisis-wobbles-warsaw",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-cina-iran-oman",
-        "t": "Al Jazeera: la Cina tratta con Iran e Oman e chiede di riaprire Hormuz",
-        "s": "Il ministro cinese Wang Yi ha incontrato a Pechino un alto funzionario iraniano e ha parlato di dialogo come unica strada. Con l'Oman, Pechino ha chiesto la ripresa della navigazione nello Stretto e del dialogo tra Usa e Iran.",
-        "d": "2026-11-02",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/2/china-steps-up-middle-east-diplomacy-with-iran-and-oman-meetings",
-            "l": "en"
-          }
-        ]
-      }
-    ],
     "economia": [
       {
-        "id": "ec-borsa-spread",
-        "t": "Piazza Affari in lieve rialzo, A2a giù del 4%; lo spread Btp-Bund scende a 116",
-        "s": "Alle 10 il Ftse Mib saliva dello 0,2%. Bene Unicredit e Campari, male A2a, Stellantis e Prysmian. Il rendimento del Btp decennale è al 4,48%, quello del Bund al 3,32%.",
+        "id": "ec-delfin",
+        "t": "Delfin: Leonardo Maria Del Vecchio propone ai soci di rilevare tutte le quote",
+        "s": "Il presidente di Lmdv Capital ha scritto una lettera, pubblicata su Qn, offrendo l'acquisto di tutte le quote Delfin con pagamento immediato o dilazionato, finanziato da un istituto internazionale non nominato. Invita i soci a incontrarlo entro il 7 novembre. Prezzo e percentuali non sono indicati.",
         "d": "2026-11-02",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/topnews/2026/11/02/borsa-milano-positiva-02-sale-unicredit-scivola-a2a-giu-prysmian_a9a291c5-3140-477c-8ffa-2242096b8d99.html"
+            "url": "https://ansa.it/sito/notizie/economia/2026/11/02/leonardo-maria-del-vecchio-ci-riprova-inviata-unofferta-per-acquistare-tutte_600e29d0-2e87-46d0-85e0-2ef80439af6c.html"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-stura-treno",
-        "t": "Torino Stura: persona investita da un treno della linea Sfm1, circolazione rallentata",
-        "s": "Il fatto è avvenuto in serata alla stazione di Torino Stura, su un treno diretto a Chieri. Sul posto Polfer, 118 e vigili del fuoco. Treni rallentati o limitati nelle tratte Chivasso, Settimo e Lingotto.",
-        "d": "2026-11-02",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/02/leggi-notizia/argomenti/cronaca-11/articolo/tragedia-sui-binari-una-persona-investita-alla-stazione-torino-stura.html"
-          }
-        ]
-      },
-      {
-        "id": "to-processo-collegno",
-        "t": "Collegno, al via il processo per l'omicidio di Marco Veronese: l'imputato ha confessato",
-        "s": "Davanti alla Corte d'assise di Torino è iniziato il processo a Michele Nicastri, accusato di omicidio premeditato. Il delitto risale al 23 ottobre 2025. Previsti circa ottanta testimoni; la difesa ha chiesto una perizia psichiatrica.",
-        "d": "2026-11-02",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/02/leggi-notizia/argomenti/cronaca-11/articolo/omicidio-di-marco-veronese-a-collegno-al-via-il-processo.html"
-          }
-        ]
-      },
-      {
-        "id": "to-finto-prete",
-        "t": "Torino, un 25enne si spacciava per sacerdote copto: denunciato dalla diocesi",
-        "s": "Per alcuni mesi ha celebrato messe in tre parrocchie con documenti falsi. Il segnale di un fedele ha fatto partire i controlli, che hanno smentito sia l'ordinazione sia l'iscrizione al Politecnico. La diocesi lo ha allontanato e denunciato.",
+        "id": "to-stellantis",
+        "t": "Stellantis: possibili stop a Mirafiori e Pomigliano per mancanza di un componente",
+        "s": "L'ANSA segnala il rischio di fermate produttive negli stabilimenti di Mirafiori, a Torino, e di Pomigliano per la carenza di un componente. Al momento non risultano date o numeri precisi nel titolo della notizia.",
         "d": "2026-11-02",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/finto-prete-celebrava-messa-25enne-denunciato-a-torino_1e354c6c-4892-4a56-814c-b4bfa309731e.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/stellantis-possibili-stop-a-mirafiori-e-pomigliano-per-mancanza-componente_7c34f5cb-d861-411b-91c2-2420ee1cf5c3.html"
           }
         ]
       },
       {
-        "id": "to-forno-crematorio",
-        "t": "Torino valuta un nuovo forno crematorio al cimitero Parco, gestito dalla municipalizzata Afc",
-        "s": "Il progetto è nella fase preliminare, ha spiegato l'assessora Foglietta. L'obiettivo è avviare un servizio comunale e rendersi autonomi da Socrem, dopo una controversia legale durata dodici anni. Non ci sono ancora costi né tempi.",
+        "id": "to-metro-sera",
+        "t": "Metro 1 di Torino: dall'8 novembre torna aperta fino a dopo mezzanotte",
+        "s": "Dopo il completamento della migrazione al sistema di segnalamento, da domenica 8 novembre il servizio arriva alle 0:30 (martedì-giovedì, domenica e festivi) e alle 1:30 venerdì e sabato; il lunedì si ferma alle 22. Sul prolungamento a Cascine Vica, secondo Torino Oggi, la manovra non prevede fondi.",
+        "d": "2026-10-28",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/10/28/leggi-notizia/argomenti/viabilita-1/articolo/dall8-novembre-metro-1-di-torino-di-nuovo-aperta-fino-a-dopo-mezzanotte-dopo-3-anni.html"
+          }
+        ],
+        "link": [
+          {
+            "n": "Metro 1, nulla in manovra per Cascine Vica",
+            "url": "https://www.torinoggi.it/2026/11/02/leggi-notizia/argomenti/viabilita-1/articolo/doccia-gelata-sulla-metro-1-in-manovra-nulla-per-il-prolungamento-a-cascine-vica.html"
+          }
+        ]
+      },
+      {
+        "id": "to-asti-trofarello",
+        "t": "Linea Asti-Trofarello: treni fermi dal 2 al 7 novembre, attivi i bus sostitutivi",
+        "s": "Per lavori sulla linea ferroviaria tra Asti e Trofarello i treni restano sospesi fino al 7 novembre; il servizio è sostituito da autobus.",
         "d": "2026-11-02",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/02/leggi-notizia/argomenti/attualita-31/articolo/ipotesi-nuovo-forno-crematorio-al-cimitero-parco.html"
+            "url": "https://www.torinoggi.it/2026/10/29/leggi-notizia/argomenti/viabilita-1/articolo/lavori-sulla-linea-asti-trofarello-treni-fermi-dal-2-al-7-novembre-scattano-i-bus-sostitutivi.html"
           }
         ]
       },
       {
-        "id": "to-salone-libro-mic",
-        "t": "Salone del libro: il nuovo presidente del Circolo dei lettori non esclude il Ministero della Cultura",
-        "s": "Andrea Ganelli dice di non avere preclusioni sull'ingresso del ministero nella governance e vuole prima incontrare ministro, privati e Città. Le regole attuali scadono a fine anno e per cambiarle serve l'unanimità dei soci.",
+        "id": "to-giovani-arresti",
+        "t": "Criminalità giovanile: 65 arresti nel Torinese, sequestrate droga e armi",
+        "s": "Nell'operazione nazionale di contrasto alla criminalità giovanile, in provincia di Torino la polizia ha eseguito 65 arresti e sequestrato droga e armi.",
         "d": "2026-11-02",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/presidente-circolo-lettori-di-torino-mic-nel-salone-del-libro-nessuna_7bbc3e9d-dbbd-45f7-901a-c2d987aee816.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/contrasto-alla-criminalita-giovanile-65-gli-arresti-nel-torinese_3267d3c5-4548-4474-8432-082c1d715ded.html"
+          }
+        ]
+      },
+      {
+        "id": "to-unito-campus",
+        "t": "UniTo: il Campus resta occupato, lezioni a distanza",
+        "s": "L'Università di Torino si dice preoccupata perché il Campus risulta ancora occupato e ha avviato le lezioni a distanza.",
+        "d": "2026-11-01",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/01/unito-preoccupati-per-campus-ancora-occupato-al-via-lezioni-a-distanza_d627b291-980f-40f7-a6fc-0b05b796b610.html"
+          }
+        ]
+      }
+    ],
+    "cultura": [
+      {
+        "id": "cu-artissima-paratissima",
+        "t": "Torino, chiudono Artissima e Paratissima: oltre 34mila e 13mila presenze",
+        "s": "Artissima 2026 si è chiusa dopo quattro giorni con oltre 34mila presenze; Paratissima ha superato i 13mila ingressi.",
+        "d": "2026-11-02",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/01/chiude-artissima-2026-oltre-34mila-presenze-in-quattro-giorni_5b3639fd-d1d4-4aa0-b1dd-5e5b98f4e7c7.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/arte-paratissima-2026-chiude-con-oltre-13mila-ingressi_93734a15-e32a-4e7c-a8f6-6fc6ea91471c.html"
           }
         ]
       }
@@ -303,6 +334,12 @@
       "edizione": "sera",
       "notizie": 16,
       "note": "Fonti lette: ANSA, Adnkronos, Torino Oggi, Euronews (en), Al Jazeera (en), CBS News (en). Ricerca rifiutata: reuters.com. Lettura non riuscita: torinotoday.it (4 pagine). Testate estere maggiori non interrogate (bloccate il 31/10)."
+    },
+    {
+      "at": "2026-11-03T05:55+01:00",
+      "edizione": "mattina",
+      "notizie": 18,
+      "note": "Fonti lette: ANSA, Adnkronos, Il Fatto Quotidiano, Torino Oggi, Euronews (en), Al Jazeera (en). Ricerca rifiutata: reuters.com e testate Regno Unito (bbc, guardian, politico.eu). Lettura non riuscita: torinotoday.it (3 pagine) e alcune pagine Euronews/ANSA Piemonte (permesso non concesso)."
     }
   ]
 }
