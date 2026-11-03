@@ -155,12 +155,12 @@ nav.tabs button.on{color:var(--accent)}
   nav.tabs{justify-content:center;gap:40px}
   nav.tabs button{flex:0 0 160px}
 }
-/* 3/11/2026: Situazione più compatta su iPad orizzontale: i riquadri scorrono su due colonne bilanciate e sono più piccoli */
+/* 3/11/2026: Situazione più compatta su iPad orizzontale: riquadri più piccoli, calendario in alto a destra, senza «Prossime date» */
 @media (min-width:820px){
-  #pg1 .cols{display:block;column-count:2;column-gap:20px}
-  #pg1 .cols>div{display:contents}
-  #pg1 .cols h2{break-after:avoid;margin:6px 4px 6px}
-  #pg1 .cols .card,#pg1 .cols .tiles{break-inside:avoid}
+  #pg1 .cols{gap:18px}
+  #pg1 .cols h2{margin:6px 4px 6px}
+  #pg1 #events{display:none}
+  #pg1 .cell{height:52px;padding-top:5px;font-size:15px}   /* «Prossime date»: le date sono già nei numeri di Oggi e nel calendario */
   #pg1 .card{padding:10px 12px;margin-bottom:10px;border-radius:14px}
   #pg1 .row{padding:5px 0;font-size:15px}
   #pg1 .big{font-size:30px}
