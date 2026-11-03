@@ -133,7 +133,8 @@ PAGES.home = el => {
   const tile = (go, ic, n, sm, c) => '<button type="button" class="v2-tile h-tile" data-go="' + go + '"' + (c ? ' style="--uc:' + c + '"' : '') + '><span class="v2-ti">' + ic + '</span><b>' + esc(n) + '</b>' + (sm ? '<small>' + esc(sm) + '</small>' : '') + '</button>';
   const ut = u => tile('u:' + u.id, u.ic, u.name, '', u.c);
   el.innerHTML = '<div class="v2-hello"><div><h1 class="v2-h1">' + (childName() ? 'Ciao ' + esc(childName()) + '!' : 'Ciao!') + '</h1><p class="v2-sub">Che cosa facciamo?</p></div>' +
-    (typeof openVesto2 === 'function' ? '<button type="button" class="v2-hl" id="h-vesto"><span>👗🎨</span><b>Come mi vesto</b><small>' + (typeof vestoMisDue === 'function' && vestoMisDue() && store.get('misure', []).length ? '⏰ È ora di misurarti!' : 'Componi il look · La mia taglia') + '</small><i>Nuovo</i></button>' : '') + '</div>' +
+    (typeof openVesto2 === 'function' ? '<button type="button" class="v2-hl" id="h-vesto"><span>👗🎨</span><b>Come mi vesto</b><small>' + (typeof vestoMisDue === 'function' && vestoMisDue() && store.get('misure', []).length ? '⏰ È ora di misurarti!' : 'Componi il look · La mia taglia') + '</small><i>Nuovo</i></button>' : '') +
+    (typeof openTrucco === 'function' ? '<button type="button" class="v2-hl tr-hl" id="h-trucco"><span>💄✨</span><b>Come mi trucco</b><small>Pelle, sicurezza e truccabimbi</small><i>Nuovo</i></button>' : '') + '</div>' +
     (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
     '<input type="search" class="h-find" id="h-find" placeholder="🔎 Cerca un argomento in tutte le materie (es. acqua, Romani, frazioni)" autocomplete="off" enterkeyhint="search"><div id="h-res" hidden></div><div id="h-rest">' +
     '<section class="h-part h-scuola"><h2 class="h-h2">🏫 La mia scuola</h2><p class="h-note">Le materie del programma di 5ª, come in classe.</p><div class="v2-grid h-grid">' + pathUnits().filter(u => !HOME_VITA.includes(u.id) && !HOME_SCUOLA_EXTRA.includes(u.id)).map(ut).join('') + '</div>' +
@@ -142,6 +143,7 @@ PAGES.home = el => {
     '<h3 class="h-h3">🎨 Fare e scoprire</h3><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[0] === 'io' ? AV() : x[1], x[2])).join('') + '</div></section></div>';
   el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { const g = b.dataset.go; if (g.startsWith('u:')) openMateria(g.slice(2)); else if (g === 'vita') openVita(); else go(g); }));
   if ($('h-vesto')) $('h-vesto').addEventListener('click', () => openVesto2());
+  if ($('h-trucco')) $('h-trucco').addEventListener('click', () => openTrucco());
   if ($('h-cont')) $('h-cont').addEventListener('click', () => startLesson(last.id, nextNode(last)));
   if ($('h-rip')) $('h-rip').addEventListener('click', () => startLesson(null, 0, { daily: true }));
   homeSearchWire(el);

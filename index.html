@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="30e2c4799e";</script>
+<script>window.APP_VERSION="f4ed6c5132";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -403,6 +403,15 @@
 .vv-res div{background:var(--c6-soft);border-radius:16px;padding:12px;display:grid}.vv-res span{font-size:34px}.vv-res b{font-size:20px}.vv-res small{font-weight:700;color:var(--ink-soft)}
 .vv-note{font-weight:700;text-align:left;margin-top:10px}.vv-sport{text-align:left;display:grid;gap:8px}.vv-sport summary{cursor:pointer;font-size:18px}
 .vv-sport ul,.vv-check{list-style:none;padding:0;text-align:left;display:grid;gap:6px;font-weight:700}
+/* 💄 Come mi trucco (js/sezioni/trucco.js) */
+.v2-hello{align-items:flex-start}.v2-hello>div:first-child{flex:1 1 260px}
+.tr-hl{border-color:var(--c1);background:linear-gradient(135deg,var(--c1-soft),#fff)}
+.tr-face{width:230px;display:block}
+.tr-dis{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}.tr-dis .chip.on{outline:3px solid var(--c1)}
+.tr-pel{display:flex;gap:10px;margin-top:6px}.tr-pel button{width:44px;height:44px;border-radius:50%;border:2px solid #1d2433;cursor:pointer}.tr-pel button.on{outline:4px solid var(--c1)}
+.tr-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left}
+.tr-et{display:grid;gap:10px;text-align:left}.tr-et>div{display:grid;grid-template-columns:48px 1fr auto;gap:10px;align-items:center;background:var(--c1-soft);border-radius:16px;padding:10px 12px}
+.tr-et span{font-size:34px}.tr-et p{margin:2px 0 0;font-weight:700}
   /* Giochi */
   .sgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 360px; margin: 16px auto 0; }
   .pad { aspect-ratio: 1; max-width: 100%; border: 0; border-radius: 28px; background: var(--pad); opacity: .45; font-size: 38px; color: #fff; transition: opacity .1s, transform .1s; }
@@ -8320,6 +8329,75 @@ const VESTO2 = {
   ]
 };
 
+/* «Come mi trucco»: nozioni verificate (autore + revisore) — fonti in TRUCCO.fonti */
+const TRUCCO = {
+  schede: [
+    { id: 'pelle', ic: '🧴', t: 'Prima la pelle', facts: [
+      ['Pulita con dolcezza', 'La tua pelle è delicata. Per lavarla basta un detergente delicato. Strofinare forte o usare prodotti aggressivi può irritarla. Con acqua e mano leggera fai già benissimo.'],
+      ['Crema senza profumo', 'Se usi una crema idratante, meglio una senza profumo aggiunto: i profumi possono dare fastidio alla pelle. Chiedi a un adulto di aiutarti a scegliere guardando l\'etichetta.'],
+      ['Proteggiti dal sole', 'I dermatologi consigliano ogni giorno una protezione solare ad ampio spettro, resistente all\'acqua, con fattore 30 o più. Metterla è un gesto di cura per la tua pelle, a un adulto puoi chiedere quale scegliere.'],
+      ['Meno è meglio', 'Non servono tanti prodotti. Contano di più pochi gesti fatti con costanza che una lunga lista di cose da mettere. Più prodotti non vuol dire pelle più sana.'],
+      ['Uno alla volta', 'Se provi un prodotto nuovo, provane uno per volta. Così, se la pelle si arrossa o ti prude, sai subito qual è stato. Prima prova una piccola quantità su un pezzetto di pelle, mai subito su tutto il viso.']
+    ] },
+    { id: 'sicura', ic: '🔍', t: 'Truccarsi in sicurezza', facts: [
+      ['Prodotti fatti per la pelle', 'In Europa i cosmetici devono essere sicuri per la salute, se usati nel modo giusto: lo dice il Regolamento (CE) 1223/2009. I prodotti comprati in posti poco affidabili, come bancarelle o siti sconosciuti, possono non rispettare queste regole. Compra con un adulto.'],
+      ['Solo cosmetici sul viso', 'Sul viso vanno solo prodotti fatti per la pelle. Mai usare colori da disegno, pennarelli, tempere o glitter da lavoretti: non sono pensati per la pelle e possono farle male.'],
+      ['Prima la prova', 'Prima di usare un prodotto mai provato, mettine pochissimo su un pezzetto di pelle, per esempio dietro l\'orecchio o sul braccio, e aspetta qualche giorno. Se brucia, prude o arrossa, toglilo subito e dillo a un adulto.'],
+      ['Occhi e labbra non si prestano', 'Non prestare e non farti prestare i prodotti per occhi e labbra: si passano fastidi e infezioni.'],
+      ['Mani pulite, prodotti in ordine', 'Prima di truccarti lavati le mani. Tieni i prodotti lontano da caldo e umidità. Se un prodotto ha un cattivo odore, buttalo. Una volta aperto, ogni prodotto si usa solo per il tempo scritto sul vasetto aperto. Il trucco per gli occhi non fa parte dei primi passi: gli occhi sono delicati.'],
+      ['Struccarsi prima di dormire', 'Non andare a letto truccata: il trucco può irritare la pelle e sbriciolarsi negli occhi. Toglilo con delicatezza, seguendo quello che dice l\'etichetta. La pelle intorno agli occhi è sottilissima.']
+    ] },
+    { id: 'gioco', ic: '🎭', t: 'Trucco per giocare', facts: [
+      ['Il truccabimbi', 'Il truccabimbi è un gioco: farfalle, gattini, supereroi. Usa solo prodotti pensati per la pelle e segui le istruzioni scritte sulla confezione. Prima di cominciare fai la prova su un pezzetto di pelle, qualche giorno prima.'],
+      ['Lontano da occhi e bocca', 'Non mettere colore vicino agli occhi e alla bocca: potrebbe irritarli o finire in bocca. Per gli occhi esistono regole speciali sui colori, quindi lasciali al naturale e disegna più in là, anche se sulla confezione c\'è un bambino truccato vicino agli occhi.'],
+      ['Carnevale e saggi', 'Per Carnevale, una recita o un saggio scegli cosmetici sicuri, non scaduti e adatti all\'età, con un adulto. Prima di truccarti la pelle deve essere ben pulita. Controlla scadenza e simbolo del vasetto aperto.'],
+      ['Come si toglie', 'A fine festa togli il trucco con uno struccante delicato oppure come indica l\'etichetta, poi sciacqua il viso con tanta acqua. Se hai usato colla per il viso, per esempio per una barba finta, la mette e la toglie un adulto, con il prodotto indicato sulla confezione.']
+    ] },
+    { id: 'primi', ic: '✨', t: 'Primi passi', facts: [
+      ['Solo per occasioni speciali', 'Un burrocacao colorato o un lucidalabbra leggero possono essere un gioco per una festa o un\'occasione speciale. Decidi sempre insieme a un adulto, che sceglie il prodotto con te e ti guarda mentre lo provi.'],
+      ['Leggi gli ingredienti', 'Insieme a un adulto leggi la lista degli ingredienti e la scadenza prima di usare un prodotto nuovo. Se qualcosa non si capisce, chiedi. Fai sempre la prova su un pezzetto di pelle e non condividerlo con altre persone.'],
+      ['Lo smalto', 'Lo smalto per bambini, all\'acqua o da staccare, si usa come dice l\'etichetta, con un adulto vicino. Non mettere le dita in bocca finché è bagnato. Il solvente per unghie lo usa solo un adulto. Prima di usare un prodotto nuovo fai la prova e leggi le istruzioni con calma.'],
+      ['Poi si toglie', 'Alla fine della giornata il trucco si toglie, anche se è leggero. Pelle pulita e mani lavate: è la regola di sempre. Se la pelle si irrita, smetti di usare il prodotto e avvisa un adulto.']
+    ] },
+    { id: 'bella', ic: '💛', t: 'Bella così', facts: [
+      ['Il trucco è un gioco', 'Il trucco serve per divertirsi, inventare personaggi e giocare con i colori. Non serve per essere belle o per piacere agli altri. Puoi truccarti per gioco e puoi anche non farlo mai: va bene tutto.'],
+      ['Foto e filtri non sono la realtà', 'Molte foto sui social sono ritoccate con filtri e app. Sembrano perfette ma non sono vere. Paragonarsi a immagini così può far venire ansia e tristezza, mentre il tuo viso vero è quello giusto.'],
+      ['Ognuna ha il suo viso', 'Ogni viso è diverso e nessuno è uguale a un altro: è questo che lo rende tuo. Se ti senti triste o a disagio guardando certe immagini, parlane con un adulto di cui ti fidi: parlarne aiuta.']
+    ] }
+  ],
+  prima: [
+    'Chiedi a un adulto di stare con te e di scegliere il prodotto insieme a te.',
+    'Lavati le mani e controlla che la pelle del viso sia ben pulita.',
+    'Leggi l\'etichetta: scadenza, simbolo del vasetto aperto e istruzioni.',
+    'Se il prodotto è nuovo, fai la prova su un pezzetto di pelle qualche giorno prima.'
+  ],
+  dopo: [
+    'Togli il trucco con uno struccante delicato o come dice l\'etichetta, poi sciacqua con acqua.',
+    'Non andare a dormire truccata, nemmeno un po\'.',
+    'Chiudi bene i prodotti e conservali lontano da caldo e umidità; butta quelli che hanno cambiato odore, colore o consistenza.',
+    'Se la pelle brucia, prude o si arrossa, smetti e dillo subito a un adulto.'
+  ],
+  etichette: [
+    { ic: '🫙', t: 'Il vasetto aperto (PAO)', x: 'È un disegno di un vasetto aperto con un numero e una M, per esempio 12M. Dice per quanto tempo il prodotto si può usare dopo averlo aperto senza problemi. Passato quel tempo, meglio buttarlo.' },
+    { ic: '⏳', t: 'La clessidra e «usare entro»', x: 'La clessidra, oppure la scritta «Usare preferibilmente entro», indica fino a quando il prodotto, se conservato bene e ancora chiuso, mantiene le sue caratteristiche. Per sicurezza, quando la data è passata non si usa più.' },
+    { ic: '📋', t: 'La lista degli ingredienti (INCI)', x: 'Sulla confezione c\'è l\'elenco degli ingredienti, con nomi uguali in tutta Europa. Il profumo si legge «parfum» o «aroma». Serve per scoprire cosa c\'è dentro, soprattutto se qualcosa ti ha già dato fastidio.' },
+    { ic: '🩺', t: '«Dermatologicamente testato»', x: 'Vuol dire che il prodotto è stato provato sotto la supervisione di un dermatologo. Ma la scritta non dice quale prova è stata fatta e non assicura che vada bene per ogni pelle: per questo si fa sempre la prova sulla pelle.' },
+    { ic: '📖', t: 'Il libro con la mano', x: 'Questo simbolo vuol dire: leggi le istruzioni. Le informazioni e le avvertenze sono scritte su un foglietto, un\'etichetta o una linguetta, perché sulla confezione non c\'era posto. Leggile prima di usarlo.' }
+  ],
+  fonti: [
+    { t: 'FDA (autorità USA sui cosmetici): Novelty Makeup, il trucco per feste e Carnevale', u: 'https://www.fda.gov/cosmetics/cosmetic-products/novelty-makeup' },
+    { t: 'American Academy of Pediatrics (HealthyChildren.org): Face Paints and Makeup', u: 'https://www.healthychildren.org/English/safety-prevention/at-home/Pages/Face-Paints-Makeup-Toxic-Ingredients.aspx' },
+    { t: 'American Academy of Dermatology: A dermatologist\'s guide to skin care', u: 'https://www.aad.org/news/dermatologist-guide-skincare' },
+    { t: 'American Academy of Ophthalmology (via HealthDay): Using Eye Makeup', u: 'https://www.healthday.com/health-news/general-health/health-tip-using-eye-makeup-742545.html' },
+    { t: 'Ministero della Salute (decalogo Carnevale, via Quotidiano Sanità): trucchi e cosmetici', u: 'https://www.quotidianosanita.it/?p=22413' },
+    { t: 'Quotidiano Sanità: Leggi l\'etichetta (simboli dei cosmetici, Regolamento CE 1223/2009)', u: 'https://www.quotidianosanita.it/insights/leggi-l-etichetta/' },
+    { t: 'Regolamento (CE) n. 1223/2009, articolo 3: Sicurezza', u: 'https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32009R1223' },
+    { t: 'Commissione europea: portale di notifica dei prodotti cosmetici (CPNP)', u: 'https://single-market-economy.ec.europa.eu/sectors/cosmetics/cosmetic-product-notification-portal_it' },
+    { t: 'Teknoscienze: Dermatologicamente testato, ipoallergenico o clinicamente testato?', u: 'https://www.teknoscienze.com/?p=21482' },
+    { t: 'American Academy of Pediatrics (HealthyChildren.org): Social media, body image and self-esteem', u: 'https://healthychildren.org/English/family-life/Media/Pages/social-media-body-image-and-self-esteem-whats-the-connection.aspx' }
+  ]
+};
+
 /* ================= SCOPRI: PERCHÉ MI LAVO (fonti e verifica indipendente: data/verifiche/rev6) ================= */
 SCOPRI.push({
  "id": "lavo",
@@ -9657,6 +9735,124 @@ function openTaglia(tab) {
 
 /* colori: le curiosità entrano anche nella lezione «Come mi vesto» */
 (function () { try { if (V2OK() && typeof SCOPRI !== 'undefined') { const u = SCOPRI.find(x => x.id === 'vesto'); if (u && !u._v2) { u._v2 = 1; VESTO2.colFacts.forEach(f => u.facts.push(f)); } } } catch (e) {} })();
+
+/* ================= COME MI TRUCCO (3/11/2026, scelta del genitore) =================
+   Primi passi adatti a 10 anni: pelle, sicurezza, trucco per giocare, primi passi leggeri con un adulto, «Bella così».
+   - 📖 Schede di nozioni (niente quiz) da data/domande/trucco.js (TRUCCO, verificato: autore + revisore)
+   - 🎨 Truccabimbi: un disegno da viso con i colori scelti, si salva (chiave trucchi [{d,dis,c,s}])
+   - ✅ Prima e dopo: checklist (chiave trucco-check {data: {p:[..], d:[..]}})
+   - 🔎 Detective delle etichette
+   Le chiavi trucchi e trucco-check vanno anche in Pianificazione → Progressi. */
+const TR_OK = () => typeof TRUCCO !== 'undefined';
+const TR_PELLE = ['#F6D7C3', '#E5B48F', '#C68A5E', '#8D5A3B'];
+const TR_COL = ['#E02B2B', '#FF8C1A', '#FFE135', '#2EA84A', '#2456C9', '#7B2D9B', '#FF7A9C', '#FFFFFF', '#222222', '#C9A227'];
+const TR_DIS = [
+  ['farfalla', '🦋', 'Farfalla'], ['stella', '⭐', 'Stelline'], ['arcobaleno', '🌈', 'Arcobaleno'], ['gatto', '🐱', 'Gattino'], ['cuore', '💛', 'Cuori'], ['fiori', '🌸', 'Fiori']
+];
+/* disegni sul viso: restano su guance e fronte, lontani dagli occhi (sicurezza) */
+function trDisegno(id, c) {
+  const C = c[0], D = c[1] || c[0];
+  const star = (x, y, r, f) => { let p = ''; for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * .45 : r; p += (x + rr * Math.cos(a)).toFixed(1) + ',' + (y + rr * Math.sin(a)).toFixed(1) + ' '; } return '<polygon points="' + p + '" fill="' + f + '" stroke="#1d2433" stroke-width="1.5"/>'; };
+  const heart = (x, y, s, f) => '<path d="M' + x + ' ' + (y + s * .9) + ' C' + (x - s * 1.4) + ' ' + (y - s * .1) + ' ' + (x - s * .6) + ' ' + (y - s * 1.1) + ' ' + x + ' ' + (y - s * .3) + ' C' + (x + s * .6) + ' ' + (y - s * 1.1) + ' ' + (x + s * 1.4) + ' ' + (y - s * .1) + ' ' + x + ' ' + (y + s * .9) + 'Z" fill="' + f + '" stroke="#1d2433" stroke-width="1.5"/>';
+  const flower = (x, y, s, f, m) => [0, 72, 144, 216, 288].map(a => '<circle cx="' + (x + s * Math.cos(a * Math.PI / 180)).toFixed(1) + '" cy="' + (y + s * Math.sin(a * Math.PI / 180)).toFixed(1) + '" r="' + (s * .7).toFixed(1) + '" fill="' + f + '" stroke="#1d2433" stroke-width="1.2"/>').join('') + '<circle cx="' + x + '" cy="' + y + '" r="' + (s * .55).toFixed(1) + '" fill="' + m + '"/>';
+  if (id === 'farfalla') return '<g transform="translate(150 114) scale(.62) translate(-150 -76)"><path d="M150 70 C120 40 100 60 112 82 C100 92 112 110 150 92 C188 110 200 92 188 82 C200 60 180 40 150 70Z" fill="' + C + '" stroke="#1d2433" stroke-width="2" opacity=".9"/><path d="M150 66 L150 96" stroke="' + D + '" stroke-width="5" stroke-linecap="round"/></g>';
+  if (id === 'stella') return star(92, 178, 16, C) + star(116, 196, 9, D) + star(208, 178, 16, C) + star(184, 196, 9, D);
+  if (id === 'arcobaleno') return ['#E02B2B', '#FF8C1A', '#FFE135', '#2EA84A', '#2456C9'].map((k, i) => '<path d="M' + (76 + i * 5) + ' 205 A' + (28 - i * 5) + ' ' + (28 - i * 5) + ' 0 0 1 ' + (132 - i * 5) + ' 205" fill="none" stroke="' + k + '" stroke-width="5"/>').join('') + '<circle cx="80" cy="207" r="7" fill="#fff"/><circle cx="128" cy="207" r="7" fill="#fff"/>';
+  if (id === 'gatto') return '<circle cx="150" cy="186" r="9" fill="' + C + '" stroke="#1d2433" stroke-width="1.5"/>' + [-1, 1].map(s => [-10, 0, 10].map(dy => '<path d="M' + (150 + s * 18) + ' ' + (196 + dy / 2) + ' L' + (150 + s * 62) + ' ' + (190 + dy) + '" stroke="' + D + '" stroke-width="3" stroke-linecap="round"/>').join('')).join('');
+  if (id === 'cuore') return heart(96, 186, 13, C) + heart(204, 186, 13, C) + heart(150, 112, 8, D);
+  if (id === 'fiori') return flower(94, 186, 9, C, D) + flower(206, 186, 9, C, D) + flower(134, 112, 5, D, C) + flower(166, 112, 5, D, C);
+  return '';
+}
+function trFaccia(dis, c, s) {
+  const pel = TR_PELLE[s || 0];
+  return '<svg viewBox="0 0 300 300" class="tr-face" role="img" aria-label="Il viso con il truccabimbi">' +
+    '<ellipse cx="150" cy="96" rx="104" ry="70" fill="#5b3a29"/>' +
+    '<ellipse cx="150" cy="160" rx="98" ry="118" fill="' + pel + '" stroke="#1d2433" stroke-width="3"/>' +
+    '<path d="M52 140 C56 70 100 46 150 46 C200 46 244 70 248 140 C226 104 190 88 150 92 C110 88 74 104 52 140Z" fill="#5b3a29"/>' +
+    '<ellipse cx="112" cy="150" rx="11" ry="13" fill="#fff" stroke="#1d2433" stroke-width="2"/><ellipse cx="188" cy="150" rx="11" ry="13" fill="#fff" stroke="#1d2433" stroke-width="2"/>' +
+    '<circle cx="114" cy="152" r="6" fill="#1d2433"/><circle cx="190" cy="152" r="6" fill="#1d2433"/>' +
+    '<path d="M144 172 Q150 184 156 172" fill="none" stroke="#1d2433" stroke-width="2.5" stroke-linecap="round"/>' +
+    '<path d="M124 214 Q150 236 176 214" fill="none" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>' +
+    (dis ? trDisegno(dis, c) : '') + '</svg>';
+}
+
+function openTrucco() {
+  openModal('<div class="big" style="font-size:28px">💄✨ Come mi trucco</div><p class="vd-sub">Prima la pelle, poi il gioco. Sempre con un adulto!</p>' +
+    '<div class="v2-grid">' +
+    (TR_OK() ? TRUCCO.schede.map(s => '<button type="button" class="v2-tile" data-sk="' + s.id + '"><span class="v2-ti">' + s.ic + '</span><b>' + esc(s.t) + '</b><small>' + s.facts.length + ' schede</small></button>').join('') : '') +
+    '<button type="button" class="v2-tile" id="tr-face"><span class="v2-ti">🎨</span><b>Truccabimbi</b><small>Disegna sul viso</small></button>' +
+    '<button type="button" class="v2-tile" id="tr-chk"><span class="v2-ti">✅</span><b>Prima e dopo</b><small>Le regole d’oro</small></button>' +
+    '<button type="button" class="v2-tile" id="tr-et"><span class="v2-ti">🔎</span><b>Detective delle etichette</b><small>Che cosa vogliono dire i simboli</small></button>' +
+    '</div><div class="row center"><button type="button" class="btn ghost" id="tr-x">Chiudi</button></div>');
+  document.querySelectorAll('[data-sk]').forEach(b => b.onclick = () => openTrScheda(b.dataset.sk, 0));
+  $('tr-face').onclick = () => openTrFace();
+  $('tr-chk').onclick = () => openTrCheck();
+  $('tr-et').onclick = () => openTrEtichette();
+  $('tr-x').onclick = closeModal;
+}
+function openTrScheda(id, k) {
+  if (!TR_OK()) return;
+  const S = TRUCCO.schede.find(s => s.id === id); if (!S) return;
+  const n = S.facts.length, f = S.facts[(k + n) % n];
+  openModal('<div style="font-size:46px">' + S.ic + '</div><div class="vd-sub" style="font-weight:800">' + esc(S.t) + ' · ' + ((k + n) % n + 1) + '/' + n + '</div><div class="big" style="font-size:24px">' + esc(f[0]) + '</div><p style="font-weight:700;font-size:19px">' + esc(f[1]) + '</p>' +
+    '<div class="row center" style="gap:8px"><button type="button" class="btn ghost" id="tr-b">← Indietro</button>' + sayBtn(f[0] + '. ' + f[1]) + '<button type="button" class="btn" id="tr-n" style="--bc:var(--v2-green)">Avanti →</button></div>');
+  $('tr-b').onclick = () => openTrucco(); $('tr-n').onclick = () => openTrScheda(id, k + 1);
+  const seen = store.get('trucco-visti', {}); if (!seen[id + k]) { seen[id + k] = 1; store.set('trucco-visti', seen); }
+}
+function openTrFace() {
+  const st = { dis: null, c: [TR_COL[6], TR_COL[5]], s: store.get('trucco-pelle', 0), i: 0 };
+  const paint = () => {
+    openModal('<div class="big" style="font-size:26px">🎨 Truccabimbi</div>' +
+      '<div class="vv-look"><div>' + trFaccia(st.dis, st.c, st.s) + '</div><div>' +
+      '<b>1. Il disegno</b><div class="tr-dis">' + TR_DIS.map(d => '<button type="button" class="chip' + (st.dis === d[0] ? ' on' : '') + '" data-d="' + d[0] + '">' + d[1] + ' ' + d[2] + '</button>').join('') + '</div>' +
+      '<b>2. I colori</b><div class="vv-parts" style="margin-top:6px">' + [0, 1].map(i => '<button type="button" class="chip' + (st.i === i ? ' on' : '') + '" data-ci="' + i + '"><span class="vv-dot" style="background:' + st.c[i] + '"></span>' + (i ? 'Secondo colore' : 'Colore principale') + '</button>').join('') + '</div>' +
+      '<div class="vv-pal">' + TR_COL.map(h => '<button type="button" aria-label="colore" data-h="' + h + '" style="background:' + h + '"></button>').join('') + '</div>' +
+      '<b style="display:block;margin-top:10px">3. La pelle</b><div class="tr-pel">' + TR_PELLE.map((h, i) => '<button type="button" aria-label="tono di pelle" data-s="' + i + '" class="' + (i === st.s ? 'on' : '') + '" style="background:' + h + '"></button>').join('') + '</div>' +
+      '<p class="vv-note">🎭 Nella realtà si usano solo colori per truccabimbi, fatti per il viso, lontano dagli occhi, con un adulto. E alla fine ci si strucca!</p>' +
+      '</div></div>' +
+      '<div class="row center" style="gap:8px"><button type="button" class="btn ghost" id="tr-b">← Indietro</button>' + (st.dis ? '<button type="button" class="btn" id="tr-s" style="--bc:var(--v2-green)">💾 Salva il mio trucco</button>' : '') + '</div>' + trSaved());
+    const box = $('modal-box'); if (box) box.classList.add('wide');
+    document.querySelectorAll('[data-d]').forEach(b => b.onclick = () => { st.dis = b.dataset.d; paint(); });
+    document.querySelectorAll('[data-ci]').forEach(b => b.onclick = () => { st.i = +b.dataset.ci; paint(); });
+    document.querySelectorAll('.vv-pal [data-h]').forEach(b => b.onclick = () => { st.c[st.i] = b.dataset.h; paint(); });
+    document.querySelectorAll('.tr-pel [data-s]').forEach(b => b.onclick = () => { st.s = +b.dataset.s; store.set('trucco-pelle', st.s); paint(); });
+    $('tr-b').onclick = () => openTrucco();
+    if ($('tr-s')) $('tr-s').onclick = () => {
+      const L = store.get('trucchi', []); L.push({ d: todayIso(), dis: st.dis, c: st.c.slice(), s: st.s }); store.set('trucchi', L.slice(-30));
+      const g = vitaGems(2); try { fanfare(); } catch (e) {} floatText($('tr-s'), g ? '+' + g + ' 💎' : 'Salvato!'); setTimeout(paint, 700);
+    };
+    document.querySelectorAll('[data-tk]').forEach(b => b.onclick = () => { const t = store.get('trucchi', [])[+b.dataset.tk]; if (t) { st.dis = t.dis; st.c = t.c.slice(); st.s = t.s || 0; paint(); } });
+  };
+  paint();
+}
+function trSaved() {
+  const L = store.get('trucchi', []); if (!L.length) return '';
+  return '<div class="vv-saved"><b>💄 I miei trucchi (' + L.length + ')</b><div>' + L.slice(-8).map((t, k) => { const d = TR_DIS.find(x => x[0] === t.dis); return '<button type="button" data-tk="' + (L.length - Math.min(8, L.length) + k) + '" aria-label="Trucco salvato" style="font-size:22px">' + (d ? d[1] : '🎨') + '<i style="background:' + t.c[0] + '"></i></button>'; }).join('') + '</div></div>';
+}
+function openTrCheck() {
+  if (!TR_OK()) return;
+  const day = todayIso(), C = store.get('trucco-check', {}), T = C[day] || { p: [], d: [] };
+  const list = (k, arr) => '<ul class="vv-check">' + arr.map((x, j) => '<li><label><input type="checkbox" data-k="' + k + '" data-j="' + j + '"' + (T[k].includes(j) ? ' checked' : '') + '> ' + esc(x) + '</label></li>').join('') + '</ul>';
+  openModal('<div class="big" style="font-size:26px">✅ Prima e dopo</div><p class="vd-sub">Le regole d’oro, ogni volta che ti trucchi (anche per gioco).</p>' +
+    '<div class="tr-cols"><div><b>👐 Prima</b>' + list('p', TRUCCO.prima) + '</div><div><b>🌙 Dopo</b>' + list('d', TRUCCO.dopo) + '</div></div>' +
+    '<div class="row center"><button type="button" class="btn ghost" id="tr-b">← Indietro</button></div>');
+  const box = $('modal-box'); if (box) box.classList.add('wide');
+  $('tr-b').onclick = () => openTrucco();
+  document.querySelectorAll('input[data-k]').forEach(c => c.onchange = () => {
+    const A = store.get('trucco-check', {}), t = A[day] || { p: [], d: [] }, k = c.dataset.k, j = +c.dataset.j;
+    t[k] = c.checked ? [...new Set(t[k].concat(j))] : t[k].filter(x => x !== j); A[day] = t;
+    const keys = Object.keys(A).sort().slice(-60), B = {}; keys.forEach(x => B[x] = A[x]); store.set('trucco-check', B);
+    if (t.p.length === TRUCCO.prima.length && t.d.length === TRUCCO.dopo.length && !t.ok) { t.ok = 1; store.set('trucco-check', B); try { fanfare(); } catch (e) {} floatText(c, 'Bravissima!'); }
+  });
+}
+function openTrEtichette() {
+  if (!TR_OK()) return;
+  openModal('<div class="big" style="font-size:26px">🔎 Detective delle etichette</div><div class="tr-et">' +
+    TRUCCO.etichette.map(e => '<div><span>' + e.ic + '</span><div><b>' + esc(e.t) + '</b><p>' + esc(e.x) + '</p></div>' + sayBtn(e.t + '. ' + e.x) + '</div>').join('') +
+    '</div><div class="row center"><button type="button" class="btn ghost" id="tr-b">← Indietro</button></div>');
+  const box = $('modal-box'); if (box) box.classList.add('wide');
+  $('tr-b').onclick = () => openTrucco();
+}
 
 /* 🎭 Teatro: «Dietro le quinte» (autore + revisore indipendente, ottobre 2026) */
 const TEATRO = {
@@ -13121,7 +13317,8 @@ PAGES.home = el => {
   const tile = (go, ic, n, sm, c) => '<button type="button" class="v2-tile h-tile" data-go="' + go + '"' + (c ? ' style="--uc:' + c + '"' : '') + '><span class="v2-ti">' + ic + '</span><b>' + esc(n) + '</b>' + (sm ? '<small>' + esc(sm) + '</small>' : '') + '</button>';
   const ut = u => tile('u:' + u.id, u.ic, u.name, '', u.c);
   el.innerHTML = '<div class="v2-hello"><div><h1 class="v2-h1">' + (childName() ? 'Ciao ' + esc(childName()) + '!' : 'Ciao!') + '</h1><p class="v2-sub">Che cosa facciamo?</p></div>' +
-    (typeof openVesto2 === 'function' ? '<button type="button" class="v2-hl" id="h-vesto"><span>👗🎨</span><b>Come mi vesto</b><small>' + (typeof vestoMisDue === 'function' && vestoMisDue() && store.get('misure', []).length ? '⏰ È ora di misurarti!' : 'Componi il look · La mia taglia') + '</small><i>Nuovo</i></button>' : '') + '</div>' +
+    (typeof openVesto2 === 'function' ? '<button type="button" class="v2-hl" id="h-vesto"><span>👗🎨</span><b>Come mi vesto</b><small>' + (typeof vestoMisDue === 'function' && vestoMisDue() && store.get('misure', []).length ? '⏰ È ora di misurarti!' : 'Componi il look · La mia taglia') + '</small><i>Nuovo</i></button>' : '') +
+    (typeof openTrucco === 'function' ? '<button type="button" class="v2-hl tr-hl" id="h-trucco"><span>💄✨</span><b>Come mi trucco</b><small>Pelle, sicurezza e truccabimbi</small><i>Nuovo</i></button>' : '') + '</div>' +
     (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
     '<input type="search" class="h-find" id="h-find" placeholder="🔎 Cerca un argomento in tutte le materie (es. acqua, Romani, frazioni)" autocomplete="off" enterkeyhint="search"><div id="h-res" hidden></div><div id="h-rest">' +
     '<section class="h-part h-scuola"><h2 class="h-h2">🏫 La mia scuola</h2><p class="h-note">Le materie del programma di 5ª, come in classe.</p><div class="v2-grid h-grid">' + pathUnits().filter(u => !HOME_VITA.includes(u.id) && !HOME_SCUOLA_EXTRA.includes(u.id)).map(ut).join('') + '</div>' +
@@ -13130,6 +13327,7 @@ PAGES.home = el => {
     '<h3 class="h-h3">🎨 Fare e scoprire</h3><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[0] === 'io' ? AV() : x[1], x[2])).join('') + '</div></section></div>';
   el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { const g = b.dataset.go; if (g.startsWith('u:')) openMateria(g.slice(2)); else if (g === 'vita') openVita(); else go(g); }));
   if ($('h-vesto')) $('h-vesto').addEventListener('click', () => openVesto2());
+  if ($('h-trucco')) $('h-trucco').addEventListener('click', () => openTrucco());
   if ($('h-cont')) $('h-cont').addEventListener('click', () => startLesson(last.id, nextNode(last)));
   if ($('h-rip')) $('h-rip').addEventListener('click', () => startLesson(null, 0, { daily: true }));
   homeSearchWire(el);

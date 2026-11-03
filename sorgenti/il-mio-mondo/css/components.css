@@ -244,3 +244,12 @@
 .vv-res div{background:var(--c6-soft);border-radius:16px;padding:12px;display:grid}.vv-res span{font-size:34px}.vv-res b{font-size:20px}.vv-res small{font-weight:700;color:var(--ink-soft)}
 .vv-note{font-weight:700;text-align:left;margin-top:10px}.vv-sport{text-align:left;display:grid;gap:8px}.vv-sport summary{cursor:pointer;font-size:18px}
 .vv-sport ul,.vv-check{list-style:none;padding:0;text-align:left;display:grid;gap:6px;font-weight:700}
+/* 💄 Come mi trucco (js/sezioni/trucco.js) */
+.v2-hello{align-items:flex-start}.v2-hello>div:first-child{flex:1 1 260px}
+.tr-hl{border-color:var(--c1);background:linear-gradient(135deg,var(--c1-soft),#fff)}
+.tr-face{width:230px;display:block}
+.tr-dis{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}.tr-dis .chip.on{outline:3px solid var(--c1)}
+.tr-pel{display:flex;gap:10px;margin-top:6px}.tr-pel button{width:44px;height:44px;border-radius:50%;border:2px solid #1d2433;cursor:pointer}.tr-pel button.on{outline:4px solid var(--c1)}
+.tr-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left}
+.tr-et{display:grid;gap:10px;text-align:left}.tr-et>div{display:grid;grid-template-columns:48px 1fr auto;gap:10px;align-items:center;background:var(--c1-soft);border-radius:16px;padding:10px 12px}
+.tr-et span{font-size:34px}.tr-et p{margin:2px 0 0;font-weight:700}
