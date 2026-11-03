@@ -1500,7 +1500,7 @@ setSaveStat("init");
 window.__flush=()=>{ try{ flushAll(); }catch(e){} };
 })();
 </script>
-<script>window.APP_VERSION="2b823806a9";window.APP_BUILD="2026-10-31T16:19+02:00";</script>
+<script>window.APP_VERSION="a3ba8c9be0";window.APP_BUILD="2026-11-03T10:04+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
@@ -1764,6 +1764,39 @@ window.__flush=()=>{ try{ flushAll(); }catch(e){} };
   document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check(false);});
   window.addEventListener("pageshow",function(e){if(e.persisted)check(false);});
   setInterval(function(){check(false);},30*60*1000);
+})();
+
+/* ===== 📊 Progressi di «Il mio mondo» visti da ogni sezione (3/11/2026): un controllo leggero all'apertura e ogni 30 minuti.
+   Se l'iPad della bimba ha inviato qualcosa di nuovo, o non invia da più di un giorno e mezzo, compare un avviso che porta a Progressi
+   (lì i dati si aprono e si salvano). Non legge né decifra niente: guarda solo la data dell'ultimo invio. ===== */
+(function(){
+  if(/progressi\.html$/.test(location.pathname))return;
+  var KEY="prog-link-v1";
+  function link(){try{return JSON.parse(localStorage.getItem(KEY)||"null");}catch(e){return null;}}
+  function pill(txt,warn){
+    var b=document.getElementById("prog-pill");
+    if(!b){b=document.createElement("a");b.id="prog-pill";b.href="progressi.html";
+      b.style.cssText="position:fixed;right:16px;bottom:72px;z-index:9000;padding:12px 16px;border-radius:16px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.18);max-width:360px";
+      document.body.appendChild(b);}
+    b.style.background=warn?"#fff4e5":"#e8f7ee";b.style.color=warn?"#9a3412":"#14532d";b.style.border="2px solid "+(warn?"#f59e0b":"#22c55e");
+    b.textContent=txt;
+    var x=document.createElement("span");x.textContent=" ✕";x.setAttribute("aria-label","Nascondi per oggi");x.style.cssText="margin-left:8px;opacity:.6";
+    x.onclick=function(e){e.preventDefault();e.stopPropagation();try{localStorage.setItem("pn-prog-pill-off",new Date().toDateString());}catch(_){}b.remove();};b.appendChild(x);
+  }
+  function check(){
+    var L=link();if(!L||!L.gist||navigator.onLine===false)return;
+    try{if(localStorage.getItem("pn-prog-pill-off")===new Date().toDateString())return;}catch(e){}
+    var sent=L.sent?new Date(L.sent).getTime():0,days=sent?(Date.now()-sent)/864e5:null;
+    fetch("https://api.github.com/gists/"+L.gist,{cache:"no-store",headers:{Accept:"application/vnd.github+json"}}).then(function(r){return r.ok?r.json():null;}).then(function(g){
+      var up=g&&g.updated_at?new Date(g.updated_at).getTime():0;
+      if(up&&up>sent+60e3)pill("📊 Nuovi progressi da «Il mio mondo» · apri",false);
+      else if(days!=null&&days>1.5)pill("⚠️ «Il mio mondo» non invia da "+Math.floor(days)+(Math.floor(days)===1?" giorno":" giorni")+" · apri Progressi",true);
+      else if(!g&&days!=null&&days>1.5)pill("⚠️ Progressi: collegamento da controllare · apri",true);
+    }).catch(function(){});
+  }
+  setTimeout(check,2500);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(check,1500);});
+  setInterval(check,30*60*1000);
 })();
 </script>
 </body>

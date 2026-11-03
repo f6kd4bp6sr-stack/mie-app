@@ -5,7 +5,10 @@
      cifrato sull'iPad con una chiave casuale lunga (256 bit) che passa solo nel QR del genitore: chi non ha il QR vede solo dati illeggibili.
    - Sicurezza (versione 2, 24/10/2026): lo spazio su GitHub è PRIVATO (gist segreto), la descrizione non contiene niente che dipenda
      dalla chiave; i collegamenti vecchi (spazio pubblico, chiave ricavata da un codice corto) vengono cancellati da soli e si rifà il QR.
-   - Invio: all'apertura, quando l'app va in secondo piano e ogni 30 minuti; almeno una volta al giorno anche senza novità. */
+   - Invio: all'apertura, quando l'app va in secondo piano, ogni minuto se è cambiato qualcosa (app aperta) e almeno una volta ogni 12 ore.
+   - Versione 3 (3/11/2026): dati compressi (deflate-raw) prima della cifratura, così anche l'invio alla chiusura sta sotto i 64 KB;
+     se lo spazio su GitHub non c'è più (404) se ne crea uno nuovo con la STESSA chiave: Pianificazione lo ritrova da sola;
+     il collegamento è salvato anche in IndexedDB, così non si perde se localStorage viene svuotato. */
 (function () {
   "use strict";
   if (window.__mondoSyncLoaded) return; window.__mondoSyncLoaded = true;
@@ -14,7 +17,25 @@
   var KEEP_PREFIX = ["deck-", "mis-"];
 
   function cfg() { try { return JSON.parse(localStorage.getItem(CFG) || "null"); } catch (e) { return null; } }
-  function setCfg(c) { try { if (c) localStorage.setItem(CFG, JSON.stringify(c)); else localStorage.removeItem(CFG); } catch (e) {} }
+  function setCfg(c) { try { if (c) localStorage.setItem(CFG, JSON.stringify(c)); else localStorage.removeItem(CFG); } catch (e) {} idb(c ? JSON.stringify(c) : null); }
+  /* copia del collegamento in IndexedDB (seconda copia, se localStorage si svuota) */
+  function idb(val) {
+    return new Promise(function (res) {
+      try {
+        var q = indexedDB.open("mondo-sync", 1);
+        q.onupgradeneeded = function () { q.result.createObjectStore("kv"); };
+        q.onsuccess = function () {
+          try {
+            var t = q.result.transaction("kv", val === undefined ? "readonly" : "readwrite"), st = t.objectStore("kv");
+            var r = val === undefined ? st.get("cfg") : val === null ? st.delete("cfg") : st.put(val, "cfg");
+            r.onsuccess = function () { res(val === undefined ? r.result : true); }; r.onerror = function () { res(null); };
+          } catch (e) { res(null); }
+        };
+        q.onerror = function () { res(null); };
+      } catch (e) { res(null); }
+    });
+  }
+  async function restoreCfg() { try { if (!localStorage.getItem(CFG)) { var v = await idb(); if (v) localStorage.setItem(CFG, v); } else idb(localStorage.getItem(CFG)); } catch (e) {} }
   function b64(buf) { var s = "", a = new Uint8Array(buf); for (var i = 0; i < a.length; i++) s += String.fromCharCode(a[i]); return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); }
   function unb64(s) { s = s.replace(/-/g, "+").replace(/_/g, "/"); while (s.length % 4) s += "="; var b = atob(s), a = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; }
 
@@ -92,8 +113,11 @@
   async function encrypt(keyStr, obj) {
     var key = await crypto.subtle.importKey("raw", unb64(keyStr), "AES-GCM", false, ["encrypt"]);
     var iv = crypto.getRandomValues(new Uint8Array(12));
-    var ct = await crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, key, new TextEncoder().encode(JSON.stringify(obj)));
-    return JSON.stringify({ app: "mondo-sync", v: 1, iv: b64(iv), ct: b64(ct) });
+    var raw = new TextEncoder().encode(JSON.stringify(obj)), z = null;
+    /* compressione: il pacchetto diventa molto più piccolo (Pianificazione la riconosce da «z») */
+    if (window.CompressionStream) { try { z = new Uint8Array(await new Response(new Blob([raw]).stream().pipeThrough(new CompressionStream("deflate-raw"))).arrayBuffer()); } catch (e) { z = null; } }
+    var ct = await crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, key, z || raw);
+    return JSON.stringify(z ? { app: "mondo-sync", v: 3, z: "deflate-raw", n: raw.length, iv: b64(iv), ct: b64(ct) } : { app: "mondo-sync", v: 1, iv: b64(iv), ct: b64(ct) });
   }
   function headers(token) { return { "Authorization": "Bearer " + token, "Accept": "application/vnd.github+json", "Content-Type": "application/json" }; }
 
@@ -114,6 +138,12 @@
       var r = await fetch(API + "/gists/" + c.gist, { method: "PATCH", headers: headers(c.token), body: body, keepalive: body.length < 60000, cache: "no-store" });
       c = cfg() || c;
       if (r.ok) { c.last = Date.now(); c.h = h; c.err = ""; setCfg(c); paint(); if (window.onMondoSync) try { window.onMondoSync(); } catch (e) {} return true; }
+      /* lo spazio non c'è più (per esempio cancellato da un collegamento rifatto): se ne crea uno nuovo con la stessa chiave */
+      if (r.status === 404 && c.token) {
+        var n = await fetch(API + "/gists", { method: "POST", headers: headers(c.token), body: JSON.stringify({ description: DESC2 + randTag(), public: false, files: f }), cache: "no-store" });
+        if (n.ok) { var g = await n.json(); c = cfg() || c; c.gist = g.id; c.healed = Date.now(); c.last = Date.now(); c.h = h; c.err = ""; setCfg(c); paint(); if (window.onMondoSync) try { window.onMondoSync(); } catch (e) {} return true; }
+        r = n;
+      }
       c.err = r.status === 401 ? "chiave GitHub non valida o scaduta" : r.status === 404 ? "spazio di collegamento non trovato" : "errore " + r.status;
       setCfg(c); paint(); return false;
     } catch (e) { return false; } finally { busy = false; }
@@ -204,11 +234,13 @@
   function start() {
     try { new MutationObserver(addButton).observe(document.body, { childList: true, subtree: true }); } catch (e) {}
     addButton();
+    restoreCfg().then(function () { paint(); });
     setTimeout(function () { push(false); }, 4000);
     document.addEventListener("visibilitychange", function () { if (document.visibilityState === "hidden") push(false); else setTimeout(function () { push(false); }, 2000); });
     window.addEventListener("pagehide", function () { push(false); });
     window.addEventListener("online", function () { push(false); });
-    setInterval(function () { push(false); }, 30 * 60e3);
+    /* ogni minuto, se l'app è aperta: parte solo se è cambiato qualcosa (o sono passate 12 ore) */
+    setInterval(function () { if (document.visibilityState === "visible") push(false); }, 60e3);
   }
   window.__mondoSyncPush = push;
   window.__mondoSyncOpen = openPanel;

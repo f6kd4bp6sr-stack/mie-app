@@ -232,9 +232,9 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
     <div class="lbl" id="pairSt">Il modo più semplice: la chiave GitHub si scrive solo qui; sull’iPad della bimba basta inquadrare un QR.</div>
     <details id="pairBox" style="margin-top:6px"><summary class="lbl" style="cursor:pointer"><b>Prepara il QR di collegamento (anche per una chiave nuova)</b></summary>
       <ol class="lbl" style="padding-left:20px;margin:6px 0">
-        <li>Crea la chiave: <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> → spunta solo <b>gist</b>, scadenza <b>1 anno</b> (l’app avvisa prima che scada) → <b>Generate token</b> → copia la chiave.</li>
+        <li>Crea la chiave: <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> → spunta solo <b>gist</b>, scadenza <b>No expiration</b> (nessuna scadenza: così il collegamento non si rompe più; la chiave può toccare solo gli spazi cifrati e si revoca quando vuoi da GitHub) → <b>Generate token</b> → copia la chiave.</li>
         <li>Incollala qui sotto e tocca <b>Prepara il QR</b>: l’app crea uno spazio privato su GitHub con una chiave casuale lunga (e cancella gli spazi vecchi pubblici).</li>
-        <li>Sull’iPad della bimba: <b>🐉 Io → 💾 Salvataggi → 📷 Collegati con il QR</b> e inquadra questo schermo.</li>
+        <li>Sull’iPad della bimba: <b>Io → 💾 Salvataggi → 📷 Collegati con il QR</b> e inquadra questo schermo.</li>
       </ol>
       <div class="btns"><input id="pairTok" type="password" placeholder="Chiave GitHub (inizia con ghp_)" autocomplete="off" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line,#ccc);background:transparent;color:inherit"></div>
       <div class="btns"><button id="pairGo" class="primary">Prepara il QR</button></div>
@@ -246,11 +246,11 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
     <b>🔗 Collegamento automatico con «Il mio mondo»</b>
     <div class="lbl" id="lnkSt">Non collegato: i dati arrivano solo caricando i file.</div>
     <div id="lnkSet">
-      <div class="lbl" style="margin-top:6px">Una volta sola: sull’iPad di «Il mio mondo» apri <b>🐉 Io</b> → riquadro <b>💾 Salvataggi</b> → <b>🔗 Oppure collega a mano con la chiave GitHub</b>, incolla la chiave GitHub, e tocca «Collega»; poi copia qui il codice lungo MM2-… che compare sull’iPad (più semplice: usa il QR qui sopra). Da quel momento l’iPad invia i progressi da solo, cifrati, ogni volta che l’app si apre e almeno una volta al giorno, e questa pagina li scarica da sola.</div>
+      <div class="lbl" style="margin-top:6px">Una volta sola: sull’iPad di «Il mio mondo» apri <b>Io</b> → riquadro <b>💾 Salvataggi</b> → <b>🔗 Oppure collega a mano con la chiave GitHub</b>, incolla la chiave GitHub, e tocca «Collega»; poi copia qui il codice lungo MM2-… che compare sull’iPad (più semplice: usa il QR qui sopra). Da quel momento l’iPad invia i progressi da solo, cifrati, ogni volta che l’app si apre e almeno una volta al giorno, e questa pagina li scarica da sola.</div>
       <details style="margin-top:8px"><summary class="lbl" style="cursor:pointer"><b>Come creare la chiave GitHub (5 minuti, una volta sola)</b></summary>
         <ol class="lbl" style="padding-left:20px;margin:6px 0">
           <li>In Safari apri <a href="https://github.com/settings/tokens/new?scopes=gist&amp;description=mie-app%20progressi" target="_blank" rel="noopener">github.com/settings/tokens/new</a> ed entra con il tuo account GitHub.</li>
-          <li>In «Note» lascia <i>mie-app progressi</i>; in «Expiration» scegli <b>1 anno</b> (l’app ti avvisa prima che scada; poi prepari un QR nuovo).</li>
+          <li>In «Note» lascia <i>mie-app progressi</i>; in «Expiration» scegli <b>No expiration</b> (nessuna scadenza: il collegamento si fa una volta sola). Se preferisci una scadenza, scegli 1 anno: l’app ti avvisa prima.</li>
           <li>Spunta <b>solo</b> la casella <b>gist</b>; tutto il resto vuoto.</li>
           <li>Tocca <b>Generate token</b> e copia la chiave (inizia con <i>ghp_</i>): si vede una volta sola. Mandala all’iPad con AirDrop o Note e incollala in «🔗 Oppure collega a mano con la chiave GitHub».</li>
         </ol>
@@ -263,7 +263,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 
   <div class="card">
     <b>📥 Carica i dati a mano</b>
-    <div class="lbl"><b>Il modo più semplice:</b> sull’iPad apri <b>🐉 Io</b> → riquadro 💾 Salvataggi → <b>📱 Mostra il QR</b>, poi qui tocca <b>📷 Leggi il QR dall’iPad</b> e inquadralo (niente internet, niente chiavi). In alternativa, sull’iPad di «Il mio mondo» ci sono due modi: <b>🐉 Io → 💾 Salvataggi → 💾 Copia su iCloud</b> crea la copia completa (<i>drago-progressi-…json</i>: utilizzo, materie, tabelline, risposte); <b>🐉 Io → 📊 Progressi → 📤 Condividi</b> manda il file <i>progressi-…csv</i> con le risposte giuste e sbagliate per materia. Salvali in File / iCloud Drive (o inviali con AirDrop) e aprili qui con «Carica la copia»: vanno bene tutti e due, e il CSV aggiorna le percentuali della copia già caricata. I dati restano solo su questo dispositivo.</div>
+    <div class="lbl"><b>Il modo più semplice:</b> sull’iPad apri <b>Io</b> → riquadro 💾 Salvataggi → <b>📱 Mostra il QR</b>, poi qui tocca <b>📷 Leggi il QR dall’iPad</b> e inquadralo (niente internet, niente chiavi). In alternativa, sull’iPad di «Il mio mondo» ci sono due modi: <b>Io → 💾 Salvataggi → 💾 Copia su iCloud</b> crea la copia completa (<i>drago-progressi-…json</i>: utilizzo, materie, tabelline, risposte); <b>Io → 📊 Progressi → 📤 Condividi</b> manda il file <i>progressi-…csv</i> con le risposte giuste e sbagliate per materia. Salvali in File / iCloud Drive (o inviali con AirDrop) e aprili qui con «Carica la copia»: vanno bene tutti e due, e il CSV aggiorna le percentuali della copia già caricata. I dati restano solo su questo dispositivo.</div>
     <div class="btns">
       <label class="btn primary" style="cursor:pointer">📂 Carica la copia<input type="file" id="fIn" accept="application/json,.json,text/csv,.csv,text/plain" hidden></label>
       <button id="fQR">📷 Leggi il QR dall’iPad</button>
@@ -1109,7 +1109,7 @@ function loadJsQR(){return new Promise((res,rej)=>{if(window.jsQR)return res();c
 async function scanQR(){
   try{await loadJsQR();}catch(e){toast("Non riesco a caricare il lettore: "+e.message);return;}
   const ov=document.createElement("div");ov.style.cssText="position:fixed;inset:0;z-index:9999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px";
-  ov.innerHTML='<video playsinline muted style="max-width:100%;max-height:70vh;border-radius:16px"></video><div style="color:#fff;font:600 17px system-ui;text-align:center">Inquadra il QR che l’iPad mostra in<br>🐉 Io → 💾 Salvataggi → 📱 Mostra il QR</div><button class="primary" id="qrStop">Chiudi</button>';
+  ov.innerHTML='<video playsinline muted style="max-width:100%;max-height:70vh;border-radius:16px"></video><div style="color:#fff;font:600 17px system-ui;text-align:center">Inquadra il QR che l’iPad mostra in<br>Io → 💾 Salvataggi → 📱 Mostra il QR</div><button class="primary" id="qrStop">Chiudi</button>';
   document.body.appendChild(ov);const v=ov.querySelector("video");let stream=null,done=false;
   const stop=()=>{done=true;try{stream&&stream.getTracks().forEach(t=>t.stop());}catch(e){}ov.remove();};
   ov.querySelector("#qrStop").onclick=stop;
@@ -1156,7 +1156,13 @@ async function wipeOldGists(token){let n=0;const H={Authorization:"Bearer "+toke
   return n;}
 async function decrypt(key,txt){const o=JSON.parse(txt);if(o.app!=="mondo-sync")throw new Error("contenuto non riconosciuto");
   const k=await crypto.subtle.importKey("raw",unb64(key),"AES-GCM",false,["decrypt"]);
-  const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:unb64(o.iv)},k,unb64(o.ct));return JSON.parse(new TextDecoder().decode(pt));}
+  const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:unb64(o.iv)},k,unb64(o.ct));
+  /* versione 3: dati compressi prima della cifratura */
+  if(o.z==="deflate-raw"){const u=new Uint8Array(pt);let js=null;
+    if(window.DecompressionStream){try{js=await new Response(new Blob([u]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).text();}catch(e){js=null;}}
+    if(js==null){const out=new Uint8Array(+o.n);tinyInflate(u,out);js=new TextDecoder().decode(out);}
+    return JSON.parse(js);}
+  return JSON.parse(new TextDecoder().decode(pt));}
 let LINK=lsGet(LKEY), pulling=false;
 function whenTxt(t){if(!t)return "mai";const d=new Date(t);return (d.toDateString()===new Date().toDateString()?"oggi":d.toLocaleDateString("it-IT",{weekday:"short",day:"numeric",month:"short"}))+" alle "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});}
 function paintLink(){
@@ -1166,11 +1172,36 @@ function paintLink(){
   if(!on){$("lnkSt").textContent="Non collegato: i dati arrivano solo caricando i file.";return;}
   const age=LINK.sent?(Date.now()-new Date(LINK.sent).getTime())/36e5:null;
   $("lnkSt").innerHTML=(LINK.err?`⚠️ ${esc(LINK.err)}<br>`:"")+`✅ Collegato. Ultimo invio dall’iPad: <b>${whenTxt(LINK.sent)}</b> · controllato ${whenTxt(LINK.checked)}`+
-    (age!=null&&age>36?`<div class="lnkwarn"><b>⚠️ L’iPad non invia da ${Math.floor(age/24)} ${Math.floor(age/24)===1?"giorno":"giorni"}.</b> Perché succede e cosa fare:<ol><li>«Il mio mondo» non è stato aperto con internet: aprilo e aspetta 10 secondi.</li><li><b>La chiave GitHub è scaduta</b> (la causa più comune): sull’iPad della bimba vai in <b>🐉 Io</b> → riquadro <b>💾 Salvataggi</b>. Se vedi ⚠️, crea una chiave nuova e prepara il QR qui sotto (<b>📲 Collega con un QR</b>), poi sull’iPad della bimba tocca <b>📷 Collegati con il QR</b>. In alternativa: <b>🔑 Nuova chiave</b> e incollala a mano.</li><li>Se in quel riquadro non c’è più «Invio automatico attivo», ricollega con il QR (stesso codice).</li></ol></div>`:"");
+    (age!=null&&age>36?`<div class="lnkwarn"><b>⚠️ L’iPad non invia da ${Math.floor(age/24)} ${Math.floor(age/24)===1?"giorno":"giorni"}.</b> Perché succede e cosa fare:<ol><li>«Il mio mondo» non è stato aperto con internet: aprilo e aspetta 10 secondi.</li><li><b>La chiave GitHub è scaduta</b> (la causa più comune): sull’iPad della bimba vai in <b>Io</b> → riquadro <b>💾 Salvataggi</b>. Se vedi ⚠️, crea una chiave nuova e prepara il QR qui sotto (<b>📲 Collega con un QR</b>), poi sull’iPad della bimba tocca <b>📷 Collegati con il QR</b>. In alternativa: <b>🔑 Nuova chiave</b> e incollala a mano.</li><li>Se in quel riquadro non c’è più «Invio automatico attivo», ricollega con il QR (stesso codice).</li></ol></div>`:"");
+}
+/* ritrova da solo lo spazio giusto: tra gli spazi «mie-app-mondo2» del genitore (con la sua chiave GitHub) e quelli dei collegamenti
+   precedenti, prende il più recente che si apre con una delle chiavi conosciute. Così rifare il collegamento non fa perdere niente. */
+async function relink(){
+  const keys=[LINK.key,...((LINK.prev||[]).map(p=>p.key))].filter(Boolean);if(!keys.length)return false;
+  const since=LINK.sent?new Date(LINK.sent).getTime():0,cand=new Map();
+  (LINK.prev||[]).forEach(p=>p.gist&&cand.set(p.gist,0));
+  const g=lsGet(GKEY);
+  if(g&&g.token){try{const r=await fetch(GH+"/gists?per_page=100",{cache:"no-store",headers:{Authorization:"Bearer "+g.token,Accept:"application/vnd.github+json"}});
+    if(r.ok)(await r.json()).forEach(x=>{if(String(x.description||"").indexOf("mie-app-mondo2 ")===0&&x.files&&x.files["mondo.json"])cand.set(x.id,new Date(x.updated_at).getTime());});}catch(e){}}
+  cand.delete(LINK.gist);
+  const list=[...cand.entries()].filter(([,t])=>!t||t>since).sort((a,b)=>b[1]-a[1]).slice(0,6);
+  for(const [id] of list){
+    try{const r=await fetch(GH+"/gists/"+id,{cache:"no-store",headers:{Accept:"application/vnd.github+json"}});if(!r.ok)continue;
+      const gg=await r.json(),f=gg.files&&gg.files["mondo.json"];if(!f)continue;let txt=f.content;if(f.truncated&&f.raw_url)txt=await (await fetch(f.raw_url,{cache:"no-store"})).text();
+      if(/"wait":1/.test(txt))continue;
+      for(const k of keys){try{const pack=normalize(await decrypt(k,txt));if(since&&pack.saved&&new Date(pack.saved).getTime()<=since)break;
+        const prev=[{gist:LINK.gist,key:LINK.key},...(LINK.prev||[])].filter(p=>p.gist!==id).slice(0,4);
+        LINK={gist:id,key:k,v:2,prev,sent:pack.saved,checked:new Date().toISOString(),err:"",found:new Date().toISOString()};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});
+        await accept(pack,"collegamento automatico",true);toast("Collegamento ritrovato da solo: progressi aggiornati");return true;}catch(e){}}
+    }catch(e){}
+  }
+  return false;
 }
 async function pull(manual){
   if(!LINK||!LINK.gist||pulling||linkOld(LINK))return; pulling=true;
   try{
+    const stale=!LINK.sent||Date.now()-new Date(LINK.sent).getTime()>20*36e5;
+    if(stale&&(manual||!LINK.rl||Date.now()-LINK.rl>36e5)){LINK.rl=Date.now();lsSet(LKEY,LINK);if(await relink())return;}
     const r=await fetch("https://api.github.com/gists/"+LINK.gist,{cache:"no-store",headers:{Accept:"application/vnd.github+json"}});
     if(!r.ok)throw new Error(r.status===404?"collegamento non trovato: rifai il collegamento":r.status===403?"troppi controlli in un’ora, riprova più tardi":"errore "+r.status);
     const g=await r.json(),f=g.files&&g.files["mondo.json"];if(!f)throw new Error("nessun dato inviato ancora");
@@ -1221,12 +1252,13 @@ $("pairGo").onclick=async()=>{const t=$("pairTok").value.trim()||((lsGet(GKEY)||
     const desc="mie-app-mondo2 "+Array.from(rb(10)).map(x=>("0"+x.toString(16)).slice(-2)).join(""),H={Authorization:"Bearer "+t,Accept:"application/vnd.github+json","Content-Type":"application/json"};
     const r=await fetch(GH+"/gists",{method:"POST",headers:H,body:JSON.stringify({description:desc,public:false,files:{"mondo.json":{content:JSON.stringify({app:"mondo-sync",v:1,wait:1})}}})});
     if(!r.ok)throw new Error(r.status===403||r.status===404?"alla chiave manca il permesso «gist»":"GitHub ha risposto "+r.status);const id=(await r.json()).id;
-    const wiped=await wipeOldGists(t)+(LINK&&LINK.gist&&LINK.gist!==id?await fetch(GH+"/gists/"+LINK.gist,{method:"DELETE",headers:H}).then(x=>x.ok||x.status===204?1:0).catch(()=>0):0);
+    /* lo spazio precedente NON si cancella: l'iPad della bimba potrebbe usarlo ancora finché non inquadra il QR nuovo */
+    const wiped=await wipeOldGists(t),prev=LINK&&LINK.gist&&LINK.key&&!linkOld(LINK)?[{gist:LINK.gist,key:LINK.key},...(LINK.prev||[])].slice(0,4):[];
     lsSet(GKEY,Object.assign({token:t,checked:new Date().toISOString()},chk));
-    LINK={gist:id,key,v:2};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();ghPaint();
+    LINK={gist:id,key,v:2,prev};lsSet(LKEY,LINK);kv("readwrite","progressi-link",JSON.stringify(LINK)).catch(()=>{});paintLink();ghPaint();
     await new Promise((res,rej)=>{if(window.qrcode)return res();const s=document.createElement("script");s.src="qrcode.js";s.onload=res;s.onerror=()=>rej(new Error("serve internet la prima volta"));document.head.appendChild(s);});
     const q=qrcode(0,"M");q.addData("MMQR1."+b64u(JSON.stringify({t,g:id,k:key,v:2})));q.make();
-    box.innerHTML=`<div style="background:#fff;display:inline-block;padding:14px;border-radius:14px;margin:10px 0">${q.createSvgTag({cellSize:6,margin:2,scalable:false})}</div><div class="btns" style="justify-content:center"><button id="pairHide">Chiudi il QR</button></div><p class="lbl">Sull’iPad della bimba: 🐉 Io → 💾 Salvataggi → 📷 Collegati con il QR.${wiped?` 🗑️ Cancellati ${wiped} spazi vecchi pubblici.`:""}</p>`;
+    box.innerHTML=`<div style="background:#fff;display:inline-block;padding:14px;border-radius:14px;margin:10px 0">${q.createSvgTag({cellSize:6,margin:2,scalable:false})}</div><div class="btns" style="justify-content:center"><button id="pairHide">Chiudi il QR</button></div><p class="lbl">Sull’iPad della bimba: Io → 💾 Salvataggi → 📷 Collegati con il QR.${wiped?` 🗑️ Cancellati ${wiped} spazi vecchi pubblici.`:""}</p>`;
     $("pairTok").value="";const hide=()=>{clearTimeout(pairTimer);box.innerHTML="";};$("pairHide").onclick=hide;clearTimeout(pairTimer);pairTimer=setTimeout(hide,180000);
   }catch(e){box.innerHTML=`<p class="lbl" style="color:#c2410c">⚠️ ${esc(e.message||String(e))}</p>`;}
 };
@@ -1240,7 +1272,7 @@ window.__analyze=analyze; window.__normalize=normalize;
 
 })();
 </script>
-<script>window.APP_VERSION="2b823806a9";window.APP_BUILD="2026-10-31T16:19+02:00";</script>
+<script>window.APP_VERSION="a3ba8c9be0";window.APP_BUILD="2026-11-03T10:04+02:00";</script>
 <script>
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
@@ -1504,6 +1536,39 @@ window.__analyze=analyze; window.__normalize=normalize;
   document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check(false);});
   window.addEventListener("pageshow",function(e){if(e.persisted)check(false);});
   setInterval(function(){check(false);},30*60*1000);
+})();
+
+/* ===== 📊 Progressi di «Il mio mondo» visti da ogni sezione (3/11/2026): un controllo leggero all'apertura e ogni 30 minuti.
+   Se l'iPad della bimba ha inviato qualcosa di nuovo, o non invia da più di un giorno e mezzo, compare un avviso che porta a Progressi
+   (lì i dati si aprono e si salvano). Non legge né decifra niente: guarda solo la data dell'ultimo invio. ===== */
+(function(){
+  if(/progressi\.html$/.test(location.pathname))return;
+  var KEY="prog-link-v1";
+  function link(){try{return JSON.parse(localStorage.getItem(KEY)||"null");}catch(e){return null;}}
+  function pill(txt,warn){
+    var b=document.getElementById("prog-pill");
+    if(!b){b=document.createElement("a");b.id="prog-pill";b.href="progressi.html";
+      b.style.cssText="position:fixed;right:16px;bottom:72px;z-index:9000;padding:12px 16px;border-radius:16px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.18);max-width:360px";
+      document.body.appendChild(b);}
+    b.style.background=warn?"#fff4e5":"#e8f7ee";b.style.color=warn?"#9a3412":"#14532d";b.style.border="2px solid "+(warn?"#f59e0b":"#22c55e");
+    b.textContent=txt;
+    var x=document.createElement("span");x.textContent=" ✕";x.setAttribute("aria-label","Nascondi per oggi");x.style.cssText="margin-left:8px;opacity:.6";
+    x.onclick=function(e){e.preventDefault();e.stopPropagation();try{localStorage.setItem("pn-prog-pill-off",new Date().toDateString());}catch(_){}b.remove();};b.appendChild(x);
+  }
+  function check(){
+    var L=link();if(!L||!L.gist||navigator.onLine===false)return;
+    try{if(localStorage.getItem("pn-prog-pill-off")===new Date().toDateString())return;}catch(e){}
+    var sent=L.sent?new Date(L.sent).getTime():0,days=sent?(Date.now()-sent)/864e5:null;
+    fetch("https://api.github.com/gists/"+L.gist,{cache:"no-store",headers:{Accept:"application/vnd.github+json"}}).then(function(r){return r.ok?r.json():null;}).then(function(g){
+      var up=g&&g.updated_at?new Date(g.updated_at).getTime():0;
+      if(up&&up>sent+60e3)pill("📊 Nuovi progressi da «Il mio mondo» · apri",false);
+      else if(days!=null&&days>1.5)pill("⚠️ «Il mio mondo» non invia da "+Math.floor(days)+(Math.floor(days)===1?" giorno":" giorni")+" · apri Progressi",true);
+      else if(!g&&days!=null&&days>1.5)pill("⚠️ Progressi: collegamento da controllare · apri",true);
+    }).catch(function(){});
+  }
+  setTimeout(check,2500);
+  document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")setTimeout(check,1500);});
+  setInterval(check,30*60*1000);
 })();
 </script>
 </body>
