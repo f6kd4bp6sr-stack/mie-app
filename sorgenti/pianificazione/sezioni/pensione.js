@@ -108,9 +108,18 @@ function cassaCalc(){const p=PENS(),C=p.cassa,D=p.dati,t=today(),T=t.slice(0,7),
   const put=(k,d,tipo,t,exp,x)=>{if(MV[k])d=dayIn(MV[k],d.slice(8,10));const s=SP[k]||{};
     items.push(Object.assign({k,d,ym:d.slice(0,7),tipo,t,exp,imp:has(s.imp)?+s.imp:exp,real:has(s.imp),ok:!!s.ok,moved:!!MV[k]},x||{}));return items[items.length-1];};
   /* niente doppioni: se c'è già uno stipendio tuo ricorrente in quel mese (per esempio il 23), lo stipendio del Cedolino non si aggiunge (arretrati e tredicesima restano) */
-  const stipMov=p.mov.filter(x=>x.tipo==="e"&&/stipend/i.test(x.t||"")),stipAmt=c=>{const x=stipMov.find(x=>movDates(x,c.ym+"-01",c.ym+"-31").length);return x?+x.imp||0:null;};
+  /* doppioni (3/11/2026): ogni voce del Cedolino ha un tipo (stipendio, tredicesima, arretrati); se nello stesso mese c'è già una tua entrata
+     dello stesso tipo (anche con un altro nome: un'entrata «ogni mese» con importo simile allo stipendio conta come stipendio), la voce del
+     Cedolino non si aggiunge. Le tue entrate «stipendio» si fermano da sole quando parte la pensione. */
+  const cat=t=>/tredic/i.test(t||"")?"13":/arretr/i.test(t||"")&&!/stipend/i.test(t||"")?"arr":/stipend|cedolin|busta paga|\bpaga\b/i.test(t||"")?"stip":"";
+  const cedStip=p.cedolini.filter(c=>cat(c.t)==="stip").map(c=>+c.netto||0).filter(v=>v>0),stipRef=cedStip.length?cedStip.sort((a,b)=>a-b)[Math.floor(cedStip.length/2)]:0;
+  const movCat=x=>{if(x.tipo!=="e"||x.inv)return "";const k=cat(x.t);if(k)return k;return x.freq==="m"&&stipRef&&+x.imp>0&&Math.abs(+x.imp-stipRef)<=0.25*stipRef?"stip":"";};
+  const ownIn=(ym,k)=>p.mov.filter(x=>movCat(x)===k&&movDates(x,ym+"-01",ym+"-31").length);
+  const stipMov=p.mov.filter(x=>movCat(x)==="stip"),stipAmt=c=>{const x=stipMov.find(x=>movDates(x,c.ym+"-01",c.ym+"-31").length);return x?+x.imp||0:null;};
+  const dupSkip=[];
   p.cedolini.forEach(c=>{if(!c.ym)return;
-    if(/^\s*stipend/i.test(c.t||"")&&!/tredic/i.test(c.t||"")){const sa=stipAmt(c);if(sa!=null){
+    const ck=cat(c.t);if((ck==="13"||ck==="arr")&&ownIn(c.ym,ck).length){dupSkip.push({ym:c.ym,t:c.t,why:"c’è già la tua entrata «"+ownIn(c.ym,ck)[0].t+"»"});return;}
+    if(ck==="stip"){const sa=stipAmt(c);if(sa!=null){if(!/arretr/i.test(c.t||""))dupSkip.push({ym:c.ym,t:c.t,why:"c’è già il tuo stipendio del mese"});
       /* lo stipendio c'è già (il tuo, per esempio il 23): del Cedolino resta solo la parte in più degli arretrati */
       if(!/arretr/i.test(c.t||""))return;const extra=Math.round((has(c.ric)?+c.ric:+c.netto||0)-sa);if(extra<=0)return;
       const ia=put("ced:"+c.id,c.ym+"-27","e","Arretrati (dal Cedolino, oltre lo stipendio)",extra,{src:"Cedolino"});if(has(c.ric)){ia.ok=true;}return;}}
@@ -126,7 +135,10 @@ function cassaCalc(){const p=PENS(),C=p.cassa,D=p.dati,t=today(),T=t.slice(0,7),
   p.incassi.forEach(x=>{if(!x.d)return;if(!x.una&&(/pension|cedolino/i.test(x.t)||p.cedolini.some(c=>kw(c.t)===kw(x.t))))return;
     const ri=x.una&&!x.ok&&+(C.ritInc||0)?+C.ritInc:0,dd=ri?dayIn(ymAdd(x.d.slice(0,7),ri),x.d.slice(8,10)):x.d;
     const it=put("inc:"+x.id,dd,"e",x.t,+x.netto||0,{src:"Scheda"+(ri?" · in ritardo di "+ri+" "+(ri===1?"mese":"mesi"):""),inc:x.id,nd:!x.netto,d0:x.d});if(x.ok)it.ok=true;});
-  p.mov.forEach(x=>movDates(x,start+"-01",csFineYM()+"-31").forEach(d=>put("mov:"+x.id+":"+d,d,x.tipo,x.t,+x.imp||0,{mov:x.id,freq:x.freq,src:x.inv?"🌱 Investimenti":undefined})));
+  p.mov.forEach(x=>{const st=movCat(x)==="stip"&&x.freq!=="una"&&pen;movDates(x,start+"-01",csFineYM()+"-31").forEach(d=>{if(st&&d.slice(0,7)>=dec){if(!dupSkip.some(z=>z.stop===x.id))dupSkip.push({ym:dec,t:x.t,stop:x.id,why:"da qui c’è la pensione: lo stipendio si ferma"});return;}put("mov:"+x.id+":"+d,d,x.tipo,x.t,+x.imp||0,{mov:x.id,freq:x.freq,src:x.inv?"🌱 Investimenti":undefined});});});
+  /* controllo finale: se in un mese restano due stipendi o due tredicesime, lo segnalo */
+  const dupLeft=[];{const by={};items.filter(i=>i.tipo==="e").forEach(i=>{const k=cat(i.t)||(i.mov&&movCat(p.mov.find(m=>m.id===i.mov)||{}));if(k!=="stip"&&k!=="13")return;const z=i.ym+"|"+k;(by[z]=by[z]||[]).push(i);});
+    Object.keys(by).forEach(z=>{if(by[z].length>1)dupLeft.push({ym:z.split("|")[0],k:z.split("|")[1],L:by[z].map(i=>i.t+" "+eur0(i.imp))});});}
   items.sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0);
   /* saldi veri: partenza, fine mese (saldi) e a una data qualsiasi (punti); da ognuno il conto riparte */
   const eom=ym=>ym+"-"+String(ymDays(ym)).padStart(2,"0"),cps=[];
@@ -141,12 +153,15 @@ function cassaCalc(){const p=PENS(),C=p.cassa,D=p.dati,t=today(),T=t.slice(0,7),
     const e=L.filter(i=>i.tipo==="e").reduce((a,i)=>a+i.imp,0),u=L.filter(i=>i.tipo==="u").reduce((a,i)=>a+i.imp,0),fin=balAt(eom(ym)),real=has(SA[ym])?+SA[ym]:null;
     rows.push({ym,E,L,open,e,u,fin,prev:fin,real,veri:E.filter(x=>x.ev==="c"&&x.cp!=="ini").length});if(ym>=T&&fin<min){min=fin;minM=ym;}}
   const oggi=balAt(t);
-  return{ini,start,T,t,rows,items,min,minM,oggi,balAt,fine:rows.length?rows[rows.length-1]:null};}
+  return{ini,start,T,t,rows,items,min,minM,oggi,balAt,fine:rows.length?rows[rows.length-1]:null,dupSkip,dupLeft};}
 /* riquadro della Cassa che si apre e si chiude: titolo a sinistra, totali a destra (stato ricordato fra un disegno e l'altro) */
 function csBox(k,title,right,open,body){return `<details class="card k-pens csm csb" data-k="cb-${k}"${open?" open":""}><summary><span class="csm-h"><b class="csb-t">${title}</b></span><span class="csm-v">${right||""}</span></summary>${body}</details>`;}
 function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,man}=cassaPen(),rit=+(C.rit||0),T=K.T;
   const c=v=>`<span class="amt ${v<0?"u":""}">${eur0(v)}</span>`;
   let o="";
+  const mn=ym=>new Date(ym+"-15T12:00").toLocaleDateString("it-IT",{month:"long",year:"numeric"});
+  if(K.dupLeft&&K.dupLeft.length)o+=`<div class="card k-pens"><h3>⚠️ Possibili doppioni</h3>${K.dupLeft.map(d=>`<div class="row"><div class="grow"><b>${mn(d.ym)}</b> · ${d.k==="13"?"due tredicesime":"due stipendi"}<small>${d.L.map(esc).join(" · ")}</small></div></div>`).join("")}<p class="lbl">Se è un errore, togli o sposta una delle due entrate qui sotto.</p></div>`;
+  if(K.dupSkip&&K.dupSkip.length)o+=`<details class="more"><summary>🔍 Doppioni evitati: ${K.dupSkip.length}</summary>${K.dupSkip.map(d=>`<div class="row"><div class="grow">${mn(d.ym)} · ${esc(d.t)}<small>${esc(d.why)}</small></div></div>`).join("")}</details>`;
   if(!K.ini||csIniEd)o+=`<div class="card k-pens"><h3>💶 Da dove parti</h3><p class="lbl" style="margin-top:0">Scrivi quanto hai sul conto (o sui conti, insieme) in una data: da lì l’app conta entrate e uscite fino a giugno 2029.</p>
     <div class="form"><label>Soldi disponibili €<input id="csIniI" inputmode="decimal" value="${K.ini?esc(String(K.ini.imp).replace(".",",")):""}" placeholder="0"></label><label>Al giorno<input id="csIniD" type="date" value="${esc(K.ini?K.ini.d:K.t)}"></label></div>
     ${(()=>{const F=contoStorico();return F?`<p class="lbl">Nei Conti il conto ${esc(F.n)} risulta ${eur0(Math.round(F.oggi))} al ${fmt(F.last<K.t?F.last:K.t,{day:"numeric",month:"short",year:"numeric"})}. <button class="lnk" data-csx="conto">Usa questo</button></p>`:"";})()}
