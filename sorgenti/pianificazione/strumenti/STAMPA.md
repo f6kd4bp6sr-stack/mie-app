@@ -39,6 +39,8 @@ Usa la regola «prima cerca, poi leggi»: fai una WebSearch limitata al sito (al
   - torinotoday.it
   - comune.torino.it (Torinoclick e le notizie del Comune)
   - regione.piemonte.it
+- **Piemonte** (dal 3/11/2026): ansa.it/piemonte, regione.piemonte.it (notizie e comunicati), cittametropolitana.torino.it, torinotoday.it e le pagine Piemonte dei quotidiani (lastampa.it, torino.corriere.it, torino.repubblica.it).
+- **Cose da fare a Torino e in Piemonte** (dal 3/11/2026): fonti ufficiali e affidabili degli eventi: turismotorino.org, comune.torino.it (eventi), torinomusei.it, museitorino/musei civici, visitpiemonte.com, cittametropolitana.torino.it, regione.piemonte.it, siti ufficiali di teatri, musei e festival, torinotoday.it (eventi). Prima WebSearch sul sito, poi WebFetch per verificare date, orari, luogo e prezzo.
 
 ## Che cosa scegliere
 - **italia**: da 3 a 6 notizie. Politica, cronaca di rilievo nazionale, scuola, sanità, giustizia, lavoro.
@@ -46,6 +48,8 @@ Usa la regola «prima cerca, poi leggi»: fai una WebSearch limitata al sito (al
 - **estero**, cioè «🌐 Stampa estera»: da 2 a 5 notizie. Contiene i temi su cui aprono i giornali stranieri e, quando c'è, come la stampa estera racconta l'Italia. Ogni notizia ha almeno una fonte estera. Scegli testate di Paesi e orientamenti diversi.
 - **economia**: da 1 a 4 notizie. Prezzi, mercati, pensioni e fisco solo quando la notizia riguarda tutti.
 - **torino**: da 3 a 6 notizie. Città e area metropolitana: trasporti, lavori, servizi, eventi, cronaca di rilievo.
+- **piemonte**: da 2 a 4 notizie dal resto del Piemonte (fuori dall'area di Torino): Regione, province, trasporti, sanità, lavoro, ambiente, montagna, cronaca di rilievo. Non ripetere le notizie di «torino».
+- **eventi**, cioè «🎟️ Cose da fare a Torino e in Piemonte»: da 4 a 8 proposte per i prossimi 7 giorni (mostre, musei, concerti, teatro, feste, mercatini, sagre, camminate, iniziative gratuite), varie per genere e prezzo, con almeno 2 gratuite o a basso costo quando ci sono. Solo eventi confermati dalla pagina ufficiale. Per ogni proposta servono anche `quando` (es. «sab 8 nov, 10-18» oppure «fino al 30 nov») e `dove` (luogo e comune); `costo` è facoltativo (es. «gratis», «12 €»). Niente pubblicità né consigli di acquisto.
 - **cultura** e **sport** (facoltative): da 0 a 3 notizie ciascuna.
 
 Per decidere l'ordine, conta quanto spazio danno alla notizia più testate. Le notizie più importanti vanno per prime.
@@ -85,10 +89,10 @@ Lascia fuori:
 ## Il file
 ```json
 {"app": "stampa-oggi", "edizione": "mattina", "updated": "AAAA-MM-GGTHH:MM+01:00", "nota": "facoltativa",
- "sezioni": {"italia": […], "mondo": […], "estero": […], "economia": […], "torino": […], "cultura": […], "sport": […]},
+ "sezioni": {"italia": […], "mondo": […], "estero": […], "economia": […], "torino": […], "piemonte": […], "eventi": […], "cultura": […], "sport": […]},
  "controlli": [{"at": "…", "edizione": "mattina", "notizie": 18, "note": "fonti lette, siti non raggiungibili"}]}
 ```
-In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti dalla sezione (`it-…`, `mo-…`, `es-…`, `ec-…`, `to-…`, `cu-…`, `sp-…`).
+In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti dalla sezione (`it-…`, `mo-…`, `es-…`, `ec-…`, `to-…`, `pi-…`, `ev-…`, `cu-…`, `sp-…`). Le proposte di «eventi» hanno in più `quando`, `dove` e, se vuoi, `costo`; `d` è la data di pubblicazione della pagina (o di oggi)..
 
 ## Pubblicazione
 1. `git pull`.
