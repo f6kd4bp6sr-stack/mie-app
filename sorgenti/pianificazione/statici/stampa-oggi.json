@@ -1,7 +1,7 @@
 {
   "app": "stampa-oggi",
   "edizione": "mattina",
-  "updated": "2026-11-03T05:55+01:00",
+  "updated": "2026-11-03T09:30+01:00",
   "nota": "Edizione della mattina del 3 novembre 2026.",
   "sezioni": {
     "italia": [
@@ -254,6 +254,482 @@
           }
         ]
       }
+    ],
+    "eventi": [
+      {
+        "id": "ev-courts",
+        "t": "Courts of Champions: la mostra sulla storia delle Nitto ATP Finals e dei suoi campioni",
+        "s": "Esposizione dedicata alla storia del torneo di tennis e ai campioni che l'hanno vinto, con aneddoti e curiosità. Fa parte degli eventi collaterali alle Nitto ATP Finals di Torino.",
+        "d": "2026-11-03",
+        "quando": "fino al 22 nov",
+        "dove": "Torino",
+        "fonti": [
+          {
+            "n": "TurismoTorino",
+            "url": "https://turismotorino.org/en/visit/events/courts-of-champions-2026"
+          }
+        ]
+      },
+      {
+        "id": "ev-best-of-torino",
+        "t": "Best of Torino: in piazza San Carlo le foto delle ATP Finals",
+        "s": "Mostra fotografica con le immagini migliori delle cinque edizioni del torneo giocate a Torino, allestita nella piazza centrale della città.",
+        "d": "2026-11-03",
+        "quando": "fino al 22 nov",
+        "dove": "Piazza San Carlo, Torino",
+        "fonti": [
+          {
+            "n": "TurismoTorino",
+            "url": "https://turismotorino.org/en/visit/events/best-of-torino-2026"
+          }
+        ]
+      },
+      {
+        "id": "ev-road-to-torino",
+        "t": "Road to Torino: i tennisti delle ATP Finals in foto sotto i portici",
+        "s": "Percorso fotografico lungo i portici di via Po con i giocatori che si contendono il titolo delle Nitto ATP Finals.",
+        "d": "2026-11-03",
+        "quando": "fino al 22 nov",
+        "dove": "Portici di via Po, Torino",
+        "fonti": [
+          {
+            "n": "TurismoTorino",
+            "url": "https://turismotorino.org/en/visit/events/road-to-torino-2026"
+          }
+        ]
+      },
+      {
+        "id": "ev-luci-artista",
+        "t": "Luci d'Artista: le installazioni luminose all'aperto illuminano di nuovo le strade di Torino",
+        "s": "Ventottesima edizione della rassegna di opere luminose, nata nel 1998, che trasforma la città in un museo a cielo aperto. Esiste anche un tour in bus panoramico con commento in italiano, inglese e francese.",
+        "d": "2026-11-03",
+        "quando": "fino al 10 gen 2027",
+        "dove": "In tutta la città, Torino",
+        "fonti": [
+          {
+            "n": "TurismoTorino",
+            "url": "https://turismotorino.org/en/visit/events/luci-dartista"
+          }
+        ]
+      },
+      {
+        "id": "ev-kusama-ogr",
+        "t": "Yayoi Kusama alle OGR: la stanza a specchi «Infinity Mirrored Room»",
+        "s": "Mostra alle Officine Grandi Riparazioni su come la teoria quantistica ha influenzato la cultura visiva, dal cinema all'arte contemporanea.",
+        "d": "2026-11-03",
+        "quando": "fino al 25 feb 2027, apertura settimanale",
+        "dove": "OGR Torino",
+        "fonti": [
+          {
+            "n": "TurismoTorino",
+            "url": "https://turismotorino.org/en/visit/events/yayoi-kusama-infinity-mirrored-room"
+          }
+        ],
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-world-press-photo",
+        "t": "World Press Photo 2026: i migliori lavori di fotogiornalismo della 69ª edizione",
+        "s": "Esposizione delle opere vincitrici del concorso internazionale di fotogiornalismo e fotografia documentaria.",
+        "d": "2026-11-03",
+        "quando": "fino al 13 dic",
+        "dove": "Torino",
+        "fonti": [
+          {
+            "n": "TurismoTorino",
+            "url": "https://turismotorino.org/en/visit/events/world-press-photo-exhibition-2026"
+          }
+        ],
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-jessica-lange",
+        "t": "Still image: a Torino la grande retrospettiva fotografica di Jessica Lange",
+        "s": "Oltre 200 immagini dell'attrice e fotografa, in gran parte mai esposte prima: la più ampia retrospettiva sul suo lavoro.",
+        "d": "2026-11-03",
+        "quando": "fino al 7 feb 2027, apertura settimanale",
+        "dove": "Torino",
+        "fonti": [
+          {
+            "n": "TurismoTorino",
+            "url": "https://turismotorino.org/en/visit/events/still-image-fotografie-di-jessica-lange"
+          }
+        ],
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      }
+    ],
+    "spettacoli": [
+      {
+        "id": "spe-dio-ride",
+        "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
+        "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
+        "d": "2026-11-03",
+        "quando": "oggi 3 nov spettacoli dalle 14:30 alle 22 circa; orari dei giorni successivi sulle pagine delle sale",
+        "dove": "Eliseo, Romano, Fratelli Marx, Reposi, The Space, UCI Lingotto, Ideal e Massaua Cityplex",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2026/dio-ride/"
+          }
+        ]
+      },
+      {
+        "id": "spe-nel-silenzio",
+        "t": "Nel silenzio delle stanze: dramma in costume di Jérôme Bonnell",
+        "s": "Nella Normandia di inizio Novecento una donna sposata e la giovane cameriera si ribellano al patriarcato borghese. Regia di Jérôme Bonnell.",
+        "d": "2026-11-03",
+        "quando": "oggi 3 nov: 15:30, 17:30, 19:30; giorni successivi da verificare",
+        "dove": "Cinema Romano, Torino",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2025/nel-silenzio-delle-stanze/"
+          }
+        ]
+      },
+      {
+        "id": "spe-shaun",
+        "t": "Shaun, vita da pecora: Operazione Z.U.C.C.A., film d'animazione per tutti",
+        "s": "Shaun e gli animali della fattoria cercano di salvare il contadino scomparso da un mostro prima di Halloween. Regia di Matthew Walker e Steve Cox. Adatto anche ai ragazzi.",
+        "d": "2026-11-03",
+        "quando": "oggi 3 nov spettacoli pomeridiani (14-19 circa); altri giorni da verificare",
+        "dove": "Fratelli Marx, The Space, UCI Lingotto, Ideal e Massaua Cityplex",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2026/shaun-vita-da-pecora-operazione-zucca/"
+          }
+        ]
+      },
+      {
+        "id": "spe-je-so-pazzo",
+        "t": "Je so' pazzo, il film su Pino Daniele diretto da Nicola Prosatore",
+        "s": "Racconta la crescita del musicista napoletano, dall'infanzia difficile fino al concerto del 1981. Regia di Nicola Prosatore.",
+        "d": "2026-11-03",
+        "quando": "oggi 3 nov spettacoli dalle 15:20 alle 21:30 circa; altri giorni da verificare",
+        "dove": "Eliseo, Romano, Reposi, The Space, UCI Lingotto, Ideal Cityplex",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2026/je-so-pazzo/"
+          }
+        ]
+      },
+      {
+        "id": "spe-orgasmo",
+        "t": "Orgasmo: commedia satirica di Niccolò Fettarappa al Teatro Gobetti",
+        "s": "In un futuro vicino una coppia in crisi vive in un mondo dove il desiderio sparisce, mentre una giornalista e uno zoologo indagano su orsi in preda a un'inconsueta frenesia. Con Gianni D'Addario, Niccolò Fettarappa, Lorenzo Guerrieri e Rebecca Sisti; durata 1 ora e 20.",
+        "d": "2026-11-03",
+        "quando": "mar 3 e gio 5 nov 19:30; mer 4 e ven 6 nov 20:45; sab 7 nov 19:30; dom 8 nov 16:00",
+        "dove": "Teatro Gobetti, Torino",
+        "fonti": [
+          {
+            "n": "Teatro Stabile Torino",
+            "url": "https://www.teatrostabiletorino.it/cartellone/orgasmo-3-8-nov-2026/"
+          }
+        ],
+        "costo": "prezzo non indicato sulla pagina; biglietti su Vivaticket"
+      },
+      {
+        "id": "spe-ultime-lune",
+        "t": "Le ultime lune in scena al Teatro Carignano fino all'8 novembre",
+        "s": "Spettacolo della stagione 2026/27 del Teatro Stabile di Torino, in cartellone al Carignano dal 27 ottobre all'8 novembre.",
+        "d": "2026-11-03",
+        "quando": "fino a dom 8 nov; orari e prezzi sulla pagina del teatro",
+        "dove": "Teatro Carignano, Torino",
+        "fonti": [
+          {
+            "n": "Teatro Stabile Torino",
+            "url": "https://www.teatrostabiletorino.it/en/cartellone/le-ultime-lune-27-ott-8-nov-2026/"
+          }
+        ]
+      },
+      {
+        "id": "spe-escaped-alone",
+        "t": "Escaped Alone di Caryl Churchill, prima italiana di lacasadargilla al Carignano",
+        "s": "Prima italiana del testo di Caryl Churchill, proposto dalla compagnia lacasadargilla.",
+        "d": "2026-11-03",
+        "quando": "dal 10 al 15 nov; orari e prezzi sulla pagina del teatro",
+        "dove": "Teatro Carignano, Torino",
+        "fonti": [
+          {
+            "n": "Teatro Stabile Torino",
+            "url": "https://www.teatrostabiletorino.it/en/cartellone/escaped-alone-10-15-nov-2026/"
+          }
+        ]
+      }
+    ],
+    "concerti": [
+      {
+        "id": "co-coez",
+        "t": "Coez porta a Torino «Live 2026 - From The Rooftop»",
+        "s": "Concerto del cantautore romano pop-rap nell'ambito del tour 2026.",
+        "d": "2026-11-03",
+        "quando": "dom 8 nov 2026, 21:00",
+        "dove": "Auditorium del Lingotto, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/coez-live-2026-from-the-rooftop-auditorium-del-lingotto-g-agnelli-21719904/"
+          }
+        ]
+      },
+      {
+        "id": "co-coe-pappano",
+        "t": "Chamber Orchestra of Europe con Pappano e Kantorow: Brahms e Dvořák",
+        "s": "Antonio Pappano dirige la Chamber Orchestra of Europe; al pianoforte Alexandre Kantorow nel Concerto n. 1 di Brahms, poi la Settima di Dvořák.",
+        "d": "2026-11-03",
+        "quando": "gio 12 nov 2026, 20:30",
+        "dove": "Auditorium Giovanni Agnelli, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Lingotto Musica",
+            "url": "https://lingottomusica.it/en/evento/chamber-orchestra-of-europe-2/"
+          }
+        ]
+      },
+      {
+        "id": "co-regio-rapture",
+        "t": "«Rapture» al Regio: Battistoni dirige l'Orchestra del Regio",
+        "s": "Concerto sinfonico con l'esotismo di Saint-Saëns e il Boléro di Ravel.",
+        "d": "2026-11-03",
+        "quando": "gio 12 nov 2026 (orario sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/rapture"
+          }
+        ]
+      },
+      {
+        "id": "co-mara-sattei",
+        "t": "Mara Sattei in concerto con «Live 2026»",
+        "s": "Data torinese del tour della cantautrice pop.",
+        "d": "2026-11-03",
+        "quando": "mer 18 nov 2026, 22:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/mara-sattei-live-2026-hiroshima-mon-amour-21454913/"
+          }
+        ]
+      },
+      {
+        "id": "co-cremonini",
+        "t": "Cesare Cremonini in due serate con l'«Amatour»",
+        "s": "Due date torinesi del tour nei palasport del cantautore bolognese.",
+        "d": "2026-11-03",
+        "quando": "mer 9 e gio 10 dic 2026, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/cesare-cremonini-amatour-inalpi-arena-22089842/"
+          }
+        ]
+      },
+      {
+        "id": "co-matheus-jaroussky",
+        "t": "Ensemble Matheus e Philippe Jaroussky con Spinosi: Corelli, Händel, Vivaldi",
+        "s": "Jean-Christophe Spinosi dirige l'ensemble barocco; solista il controtenore Philippe Jaroussky.",
+        "d": "2026-11-03",
+        "quando": "gio 10 dic 2026 (orario sul sito)",
+        "dove": "Auditorium Giovanni Agnelli, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Lingotto Musica",
+            "url": "https://lingottomusica.it/en/evento/ensemble-matheus/"
+          }
+        ]
+      },
+      {
+        "id": "co-anna",
+        "t": "ANNA, «Million Dollar Babe Tour 2026»",
+        "s": "Tappa torinese del tour della cantante e rapper.",
+        "d": "2026-11-03",
+        "quando": "mar 15 dic 2026, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/anna-million-dollar-babe-tour-2026-inalpi-arena-21871443/"
+          }
+        ]
+      },
+      {
+        "id": "co-irama",
+        "t": "Irama con «A chi ci sarà sempre»",
+        "s": "Concerto nei palasport del cantautore pop.",
+        "d": "2026-11-03",
+        "quando": "lun 21 dic 2026, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/irama-a-chi-ci-sara-sempre-palasport-2026-inalpi-arena-21793168/"
+          }
+        ]
+      },
+      {
+        "id": "co-dalessio",
+        "t": "Gigi D'Alessio al Palasport 2026",
+        "s": "Concerto del cantautore napoletano nel tour dei palasport.",
+        "d": "2026-11-03",
+        "quando": "mer 23 dic 2026, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/gigi-dalessio-palasport-2026-inalpi-arena-21138289/"
+          }
+        ]
+      },
+      {
+        "id": "co-morricone",
+        "t": "Alla scoperta di Morricone con la Ensemble Symphony Orchestra",
+        "s": "Concerto sinfonico dedicato alle colonne sonore di Ennio Morricone.",
+        "d": "2026-11-03",
+        "quando": "dom 27 dic 2026, 18:00",
+        "dove": "Teatro Colosseo, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/alla-scoperta-di-morricone-ensemble-symphony-orchestra-teatro-colosseo-21159924/"
+          }
+        ]
+      },
+      {
+        "id": "co-trifonov",
+        "t": "Daniil Trifonov in recital: da Händel a Schubert, Stravinskij e Villa-Lobos",
+        "s": "Recital del pianista russo con un programma che include anche brani di sua composizione.",
+        "d": "2026-11-03",
+        "quando": "mer 13 gen 2027 (orario sul sito)",
+        "dove": "Auditorium Giovanni Agnelli, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Lingotto Musica",
+            "url": "https://lingottomusica.it/en/evento/daniil-trifonov/"
+          }
+        ]
+      },
+      {
+        "id": "co-boosta-fusions",
+        "t": "«Fusions»: Boosta e la Filarmonica TRT tra sintetizzatori e orchestra",
+        "s": "Il compositore Davide «Boosta» Dileo con la Filarmonica TRT diretta da Valentino Corvino.",
+        "d": "2026-11-03",
+        "quando": "lun 18 gen 2027 (orario sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/fusions"
+          }
+        ]
+      },
+      {
+        "id": "co-tedua",
+        "t": "Tedua al Palasport 2027",
+        "s": "Concerto del rapper genovese.",
+        "d": "2026-11-03",
+        "quando": "mar 26 gen 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/tedua-palasport-2027-inalpi-arena-21719066/"
+          }
+        ]
+      },
+      {
+        "id": "co-kammerphilharmonie",
+        "t": "Kammerphilharmonie Bremen con Peltokoski e Vilde Frang: Mendelssohn, Schumann, Sollima",
+        "s": "Tarmo Peltokoski dirige l'orchestra tedesca; solista la violinista Vilde Frang.",
+        "d": "2026-11-03",
+        "quando": "mer 27 gen 2027 (orario sul sito)",
+        "dove": "Auditorium Giovanni Agnelli, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Lingotto Musica",
+            "url": "https://lingottomusica.it/en/evento/die-deutsche-kammerphilharmonie-bremen-3/"
+          }
+        ]
+      },
+      {
+        "id": "co-sfera",
+        "t": "Sfera Ebbasta al Palasport 2027",
+        "s": "Concerto del rapper nel tour dei palasport.",
+        "d": "2026-11-03",
+        "quando": "sab 30 gen 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/sfera-ebbasta-palasport-2027-inalpi-arena-21931775/"
+          }
+        ]
+      },
+      {
+        "id": "co-sokolov",
+        "t": "Grigory Sokolov in recital per «Absolute»",
+        "s": "Recital per pianoforte solo di Grigory Sokolov nella stagione dei concerti del Regio.",
+        "d": "2026-11-03",
+        "quando": "lun 15 feb 2027 (orario sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/absolute"
+          }
+        ]
+      },
+      {
+        "id": "co-tjeknavorian",
+        "t": "«Horizons»: Tjeknavorian dirige la Filarmonica TRT",
+        "s": "Concerto sinfonico con Emmanuel Tjeknavorian sul podio della Filarmonica TRT.",
+        "d": "2026-11-03",
+        "quando": "lun 22 feb 2027 (orario sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/horizons"
+          }
+        ]
+      },
+      {
+        "id": "co-pezzali",
+        "t": "Max Pezzali con «Max Forever» in due serate",
+        "s": "Due date torinesi del tour con i brani della storia di Max Pezzali.",
+        "d": "2026-11-03",
+        "quando": "lun 8 e mar 9 mar 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/max-forever-stessa-storia-stesso-posto-stesso-bar-inalpi-arena-22293427/"
+          }
+        ]
+      }
     ]
   },
   "controlli": [
@@ -340,6 +816,12 @@
       "edizione": "mattina",
       "notizie": 18,
       "note": "Fonti lette: ANSA, Adnkronos, Il Fatto Quotidiano, Torino Oggi, Euronews (en), Al Jazeera (en). Ricerca rifiutata: reuters.com e testate Regno Unito (bbc, guardian, politico.eu). Lettura non riuscita: torinotoday.it (3 pagine) e alcune pagine Euronews/ANSA Piemonte (permesso non concesso)."
+    },
+    {
+      "at": "2026-11-03T09:30+01:00",
+      "edizione": "mattina",
+      "notizie": 32,
+      "note": "3/11 prova: aggiornate solo eventi, spettacoli e concerti. Fonti lette: TurismoTorino, MYmovies, Teatro Stabile Torino, Teatro Regio, Lingotto Musica, TicketOne. Non raggiungibili: torinotoday.it e alcune pagine di dettaglio (permesso non concesso)."
     }
   ]
 }
