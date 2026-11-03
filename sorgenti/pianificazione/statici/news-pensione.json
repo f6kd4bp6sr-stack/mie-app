@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-02T13:05:00+01:00",
+ "updated": "2026-11-03T13:05:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
@@ -320,7 +320,7 @@
    "id": "dpr2527",
    "t": "DPR di recepimento del contratto 2025-2027 in Gazzetta Ufficiale",
    "stato": "atteso",
-   "quando": "non ancora in Gazzetta al 2/11/2026 (nessun DPR nelle S.G. fino alla n. 254 del 31/10); attesa entro la prima metà di novembre 2026 (previsione SIULP)",
+   "quando": "non ancora in Gazzetta al 3/11/2026 (nessun DPR nelle S.G. fino alla n. 254 del 31/10); attesa entro la prima metà di novembre 2026 (previsione SIULP del 28/9)",
    "fonte": "SIULP",
    "url": "https://siulp.it/articolo/pubblicazione-del-dpr-di-recepimento-del-contratto-di-lavoro-per-gli-anni-2025-2027/",
    "valore": null
@@ -359,7 +359,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-02",
+   "ultimo": "2026-11-03",
    "esito": "ok"
   },
   {
@@ -401,7 +401,7 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-01T13:05:00+01:00",
+   "ultimo": "2026-11-03",
    "esito": "ok"
   },
   {
@@ -478,7 +478,7 @@
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-02",
+   "ultimo": "2026-11-03",
    "esito": "ok"
   },
   {
@@ -492,7 +492,7 @@
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-11-02",
+   "ultimo": "2026-11-03",
    "esito": "ok"
   },
   {
@@ -879,6 +879,11 @@
    "at": "2026-11-02T13:05:00+01:00",
    "notizie": 0,
    "note": "giro delle 13 (lunedì 2/11): nessuna notizia nuova. Gazzetta: ultimo numero leggibile S.G. n. 254 del 31/10, DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. SILF (ultimo 31/10 ddl bilancio), USIF (ultimo 19/10) e SIULP (ultimo 30/10) senza comunicati nuovi su contratto o pensione; INPS: ricerca sul sito senza messaggi nuovi sul tema. Mercati: BTP 10 anni Trading Economics 4,49% (30/10), invariato; conti deposito riletti su conti-deposito.net (2/11), invariati (libero: 3,50% Revolut promozionale, non banca italiana, escluso). Prodotti invariati. Volontariato fatto. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, Funzione Pubblica, MEF"
+  },
+  {
+   "at": "2026-11-03T13:05:00+01:00",
+   "notizie": 0,
+   "note": "giro delle 13 (martedì 3/11): nessuna notizia nuova. Gazzetta: ricerca sul sito senza DPR di recepimento del contratto 2025-2027; SIULP (28/9) lo dà ancora atteso entro la prima metà di novembre; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. SILF: ultimo comunicato 31/10 (ddl bilancio), nessuno nuovo su contratto o pensione; USIF e SINAFI senza novità nelle ricerche; INPS: ultimo messaggio trovato n. 3422 del 23/10, non sul tema. Mercati: conti deposito riletti su conti-deposito.net (3/11), invariati; BTP, BCE, inflazione e BBVA invariati (nessun dato nuovo verificabile con due fonti). Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, Funzione Pubblica, MEF"
   }
  ],
  "mercati": [
@@ -946,7 +951,7 @@
    "id": "cdl",
    "t": "Conto deposito libero, miglior tasso lordo",
    "valore": 3.25,
-   "d": "2026-11-02",
+   "d": "2026-11-03",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/miglior-conto-deposito-libero.php",
    "nota": "tasso promozionale: Conto deposito X Risparmio Flexi, Banca AideXa (Revolut Bank UAB al 3,50% non è una banca italiana del Fondo Interbancario)",
@@ -956,7 +961,7 @@
    "id": "cd12",
    "t": "Conto deposito vincolato 12 mesi, miglior tasso lordo",
    "valore": 4.0,
-   "d": "2026-11-02",
+   "d": "2026-11-03",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -965,7 +970,7 @@
    "id": "cd24",
    "t": "Conto deposito vincolato 24 mesi, miglior tasso lordo",
    "valore": 4.0,
-   "d": "2026-11-02",
+   "d": "2026-11-03",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
@@ -974,7 +979,7 @@
    "id": "cd36",
    "t": "Conto deposito vincolato 36 mesi, miglior tasso lordo",
    "valore": 3.75,
-   "d": "2026-11-02",
+   "d": "2026-11-03",
    "fonte": "conti-deposito.net",
    "url": "https://www.conti-deposito.net/confronto-conti-deposito.php",
    "unita": "%"
