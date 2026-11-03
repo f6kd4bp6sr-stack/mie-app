@@ -28,13 +28,14 @@ function lastPresence(){const S=licS();if(!S)return null;for(let s=add(S.end,-1)
 function vPens(){
   const p=PENS(),t=today(),D=p.dati,cess=D.cess||(licS()||{}).end;
   let o=`<h1>🎖️ Pensione</h1>`;
+  if(pensHas()&&window.innerWidth>=640)o=`<div class="pn-h"><h1>🎖️ Pensione</h1>${pensTlLine()}</div>`;
   if(!pensHas())return o+`<p class="sub">Il passaggio dal servizio alla pensione: adempimenti, leve, cifre, incassi e cassa fino al TFS.</p>`+skCard()+pensImport(true);
   const op=pensOpen(),late=op.filter(a=>a.d<t),next=op.filter(a=>a.d>=t).slice(0,1)[0],lp=lastPresence();
   o+=`<p class="sub">${esc(p.src||"Dati della scheda pensione")}${p.rev?" · scheda rev. "+esc(String(p.rev))+(p.revAt?" del "+fmt(p.revAt.slice(0,10),{day:"numeric",month:"long"}):""):""}${p.at?" · caricati il "+fmt(p.at.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):""}</p>
   <div class="pn-top"><div class="kpi">${cess?`<div><b>${Math.max(0,diff(t,cess))}</b><span>giorni alla cessazione (${fmt(cess,{day:"numeric",month:"short",year:"numeric"})})</span></div>`:""}
     ${lp?`<div><b>${fmt(lp,{day:"numeric",month:"short"})}</b><span>ultimo giorno in ufficio (dalle Licenze)</span></div>`:""}
     <div><b style="${late.length?"color:var(--scad)":""}">${late.length||op.length}</b><span>${late.length?"scadenze passate da guardare":"adempimenti e leve aperti"}</span></div>
-    ${next?`<div><b>${fmt(next.d,{day:"numeric",month:"short"})}</b><span>prossima: ${esc(next.t.slice(0,60))}</span></div>`:""}</div>${pensTimeline2()}</div>`;
+    ${next?`<div><b>${fmt(next.d,{day:"numeric",month:"short"})}</b><span>prossima: ${esc(next.t.slice(0,60))}</span></div>`:""}</div>${window.innerWidth<640?pensTimeline2():""}</div>`;
   /* 3/11/2026: la linea del tempo sta accanto ai numeri; il riquadro dei promemoria per il Calendario non c'è più qui (resta nel Calendario) */
   if(D.rientro){const S=licS();if(S&&S.start&&S.start!==D.rientro)o+=`<div class="warnbox" style="margin:0 0 12px">In Licenze il rientro è il ${fmt(S.start,{day:"numeric",month:"long"})}, nella scheda il ${fmt(D.rientro,{day:"numeric",month:"long"})}: controlla quale è giusto in <a href="licenze.html">Licenze</a>.</div>`;}
   o+=`<div class="seg" role="tablist" style="margin:0 0 14px;width:max-content;max-width:100%">${PV.map(([k,n])=>`<button role="tab" data-pv="${k}" class="${pensV===k?"on":""}" aria-selected="${pensV===k}">${n}${k==="adem"&&late.length?`<span class="n">${late.length}</span>`:""}${k==="news"&&newsNew()?`<span class="n">${newsNew()}</span>`:""}</button>`).join("")}</div>`;
@@ -509,6 +510,19 @@ function pensIcsNag(){try{const opt=P.ics.opt||{abs:true,app:true,scad:true,pens
   const n=icsItems(opt).filter(i=>/^pens-/.test(i.uid)&&P.ics.sent[i.uid]!==i.sig).length;if(!n)return "";
   return `<div class="card k-cal icsnag"><div class="row" style="border:0;padding:0"><span style="font-size:24px">📆</span><div class="grow"><b>${n} ${n===1?"promemoria della Pensione":"promemoria della Pensione"} da mandare al Calendario dell’iPad</b><small>Scadenze (avviso una settimana prima) ed entrate e uscite della Cassa (avviso il giorno prima), anche ad app chiusa.</small></div><button class="btn pri sm" data-pics="1">Aggiungi al Calendario</button></div></div>`;}catch(e){return "";}}
 /* ---------- 🗓️ linea del tempo: tappe vicine raggruppate, verticale sul telefono ---------- */
+/* 🗓️ linea del tempo accanto al titolo (3/11/2026): solo la linea con le date e «oggi»; toccando una tappa compare la descrizione */
+function pensTlLine(){const L=pensTappe();if(!L.length)return "";const t=today(),s=L.find(x=>x.id===pensTp);
+  const d0=t.slice(0,7)+"-01",d1=ymAdd(csFineYM(),1)+"-01",W=1000,H=92,X=q=>24+(W-48)*Math.max(0,Math.min(1,diff(d0,q)/diff(d0,d1)));
+  const sh=(d,y)=>fmt(d,{day:y?undefined:"numeric",month:"short",year:"2-digit"});
+  let g=`<line x1="24" x2="${W-24}" y1="44" y2="44" stroke="var(--line)" stroke-width="4" stroke-linecap="round"/><line x1="24" x2="${X(t)}" y1="44" y2="44" stroke="var(--pens)" stroke-width="4" stroke-linecap="round"/>`;
+  const groups=[];L.forEach(x=>{const cx=x.a?(X(x.da)+X(x.a))/2:X(x.da),gr=groups.find(q=>Math.abs(q.cx-cx)<40);if(gr)gr.L.push(x);else groups.push({cx,L:[x]});});
+  L.forEach(x=>{const a=X(x.da),b=x.a?X(x.a):a,on=pensTp===x.id;g+=x.a?`<rect x="${a}" y="39" width="${Math.max(6,b-a)}" height="10" rx="5" fill="var(--pens)" opacity="${on?1:.45}" data-tp="${x.id}" style="cursor:pointer"/>`:`<circle cx="${a}" cy="44" r="${on?8:6}" fill="var(--pens)" stroke="var(--card)" stroke-width="2" data-tp="${x.id}" style="cursor:pointer"/>`;});
+  groups.forEach((gr,i)=>{const n=gr.L.length;gr.L.forEach((x,j)=>{const cx=gr.cx+(n>1?(j-(n-1)/2)*26:0),on=pensTp===x.id;
+    g+=`<text x="${cx}" y="26" font-size="${on?22:19}" text-anchor="middle" data-tp="${x.id}" style="cursor:pointer">${x.ic||"•"}</text>`;});
+    const x=gr.L[0];g+=`<text x="${gr.cx<90?Math.max(4,gr.cx-12):gr.cx>W-90?Math.min(W-4,gr.cx+12):gr.cx}" y="${i%2?84:68}" font-size="13" text-anchor="${gr.cx<90?"start":gr.cx>W-90?"end":"middle"}" fill="${gr.L.some(z=>z.id===pensTp)?"var(--pens)":"var(--muted)"}" font-weight="${gr.L.some(z=>z.id===pensTp)?800:600}" data-tp="${x.id}" style="cursor:pointer">${sh(x.da,x.a)}${x.a?"–"+fmt(x.a,{month:"short",year:"2-digit"}):""}${n>1?" +"+(n-1):""}</text>`;});
+  g+=`<circle cx="${X(t)}" cy="44" r="7" fill="var(--cal)" stroke="var(--card)" stroke-width="2"/><text x="${X(t)<90?Math.max(4,X(t)-10):X(t)}" y="${groups.some((q,i)=>!(i%2)&&Math.abs(q.cx-X(t))<60)?84:68}" font-size="12" text-anchor="${X(t)<90?"start":"middle"}" fill="var(--cal)" font-weight="800">oggi</text>`;
+  const det=s?`<div class="pn-tld"><b>${s.ic||""} ${esc(s.t)}</b> <span class="lbl">· ${sh(s.da,s.a)}${s.a?" – "+fmt(s.a,{month:"short",year:"numeric"}):""}${s.nota?" · "+esc(s.nota):""}</span></div>`:"";
+  return `<div class="pn-tl"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Linea del tempo: tocca una tappa">${g}</svg>${det}</div>`;}
 function pensTimeline2(){const L=pensTappe();if(!L.length)return "";const t=today(),narrow=window.innerWidth<640,s=L.find(x=>x.id===pensTp);
   const det=s?`<p style="margin:8px 2px 0"><b>${s.ic||""} ${esc(s.t)}</b>${s.nota?` <span class="lbl">· ${esc(s.nota)}</span>`:""}</p>`:"";
   if(narrow){const items=L.map(x=>({k:x.da,x})).concat([{k:t,oggi:1}]).sort((a,b)=>a.k<b.k?-1:a.k>b.k?1:(a.oggi?-1:1));
