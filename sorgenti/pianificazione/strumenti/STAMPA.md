@@ -50,6 +50,10 @@ Usa la regola «prima cerca, poi leggi»: fai una WebSearch limitata al sito (al
 - **torino**: da 3 a 6 notizie. Città e area metropolitana: trasporti, lavori, servizi, eventi, cronaca di rilievo.
 - **piemonte**: da 2 a 4 notizie dal resto del Piemonte (fuori dall'area di Torino): Regione, province, trasporti, sanità, lavoro, ambiente, montagna, cronaca di rilievo. Non ripetere le notizie di «torino».
 - **eventi**, cioè «🎟️ Cose da fare a Torino e in Piemonte»: da 4 a 8 proposte per i prossimi 7 giorni (mostre, musei, concerti, teatro, feste, mercatini, sagre, camminate, iniziative gratuite), varie per genere e prezzo, con almeno 2 gratuite o a basso costo quando ci sono. Solo eventi confermati dalla pagina ufficiale. Per ogni proposta servono anche `quando` (es. «sab 8 nov, 10-18» oppure «fino al 30 nov») e `dove` (luogo e comune); `costo` è facoltativo (es. «gratis», «12 €»). Niente pubblicità né consigli di acquisto.
+- **spettacoli**, cioè «🎬 Cinema e teatro a Torino» (dal 3/11/2026): da 4 a 8 proposte in programmazione nei prossimi 7 giorni, metà circa cinema e metà teatro (prosa, musica, danza, opera).
+  - **Cinema**: per ogni film titolo (nella forma italiana), in `s` di che cosa parla in 1-2 frasi tue e regista, e soprattutto **dove vederlo**: in `dove` le sale di Torino che lo proiettano (es. «Massimo, Nazionale, Romano»), in `quando` i giorni o «tutti i giorni, spettacoli 16-21». Fonti: le pagine ufficiali delle sale (Museo Nazionale del Cinema - Cinema Massimo, Cinema Nazionale, Romano, Eliseo, Centrale, Classico, Greenwich, Ambrosio, Reposi, Uci/The Space…) e le programmazioni di mymovies.it, comingsoon.it, torinotoday.it per la città di Torino. Varia i generi; segnala con «per tutti» i film adatti anche ai ragazzi.
+  - **Teatro**: titolo, compagnia o interpreti principali, in `dove` il teatro (Teatro Stabile: Carignano, Gobetti, Fonderie Limone; Teatro Regio; Alfieri; Colosseo; Juvarra; Astra; Erba; Concordia di Venaria…), in `quando` le date e l'orario, in `costo` il prezzo se indicato. Fonti: i siti ufficiali dei teatri e di Torino Spettacoli.
+  - Solo programmazione confermata sulla pagina ufficiale o sulla programmazione delle sale; niente recensioni né giudizi, niente pubblicità.
 - **cultura** e **sport** (facoltative): da 0 a 3 notizie ciascuna.
 
 Per decidere l'ordine, conta quanto spazio danno alla notizia più testate. Le notizie più importanti vanno per prime.
@@ -89,10 +93,10 @@ Lascia fuori:
 ## Il file
 ```json
 {"app": "stampa-oggi", "edizione": "mattina", "updated": "AAAA-MM-GGTHH:MM+01:00", "nota": "facoltativa",
- "sezioni": {"italia": […], "mondo": […], "estero": […], "economia": […], "torino": […], "piemonte": […], "eventi": […], "cultura": […], "sport": […]},
+ "sezioni": {"italia": […], "mondo": […], "estero": […], "economia": […], "torino": […], "piemonte": […], "eventi": […], "spettacoli": […], "cultura": […], "sport": […]},
  "controlli": [{"at": "…", "edizione": "mattina", "notizie": 18, "note": "fonti lette, siti non raggiungibili"}]}
 ```
-In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti dalla sezione (`it-…`, `mo-…`, `es-…`, `ec-…`, `to-…`, `pi-…`, `ev-…`, `cu-…`, `sp-…`). Le proposte di «eventi» hanno in più `quando`, `dove` e, se vuoi, `costo`; `d` è la data di pubblicazione della pagina (o di oggi)..
+In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti dalla sezione (`it-…`, `mo-…`, `es-…`, `ec-…`, `to-…`, `pi-…`, `ev-…`, `spe-…`, `cu-…`, `sp-…`). Le proposte di «eventi» e «spettacoli» hanno in più `quando`, `dove` e, se vuoi, `costo`; `d` è la data di pubblicazione della pagina (o di oggi)..
 
 ## Pubblicazione
 1. `git pull`.

@@ -4,7 +4,7 @@
    seguendo strumenti/STAMPA.md: titoli e sintesi con parole nostre, tono neutro, fonti e link di approfondimento.
    Sull'iPad resta una copia (pn-stampa) per quando manca internet; quali notizie hai aperto: pn-stampa-lette (solo su questo iPad). */
 const ST_KEY="pn-stampa",ST_LKEY="pn-stampa-lette";
-const ST_SEZ=[["italia","🇮🇹","Italia"],["mondo","🌍","Mondo"],["estero","🌐","Stampa estera"],["economia","💶","Economia"],["torino","🏙️","Torino"],["piemonte","🏔️","Piemonte"],["eventi","🎟️","Cose da fare a Torino e in Piemonte"],["cultura","🎭","Cultura"],["sport","⚽","Sport"]];
+const ST_SEZ=[["italia","🇮🇹","Italia"],["mondo","🌍","Mondo"],["estero","🌐","Stampa estera"],["economia","💶","Economia"],["torino","🏙️","Torino"],["piemonte","🏔️","Piemonte"],["eventi","🎟️","Cose da fare a Torino e in Piemonte"],["spettacoli","🎬","Cinema e teatro a Torino"],["cultura","🎭","Cultura"],["sport","⚽","Sport"]];
 let stSez="",stBusy=false;
 const stData=()=>lsJ(ST_KEY)||{sezioni:{}};
 /* articoli stranieri: titolo e sintesi sono già in italiano; «leggi tradotto» apre l'originale tradotto in italiano da Google Traduttore */

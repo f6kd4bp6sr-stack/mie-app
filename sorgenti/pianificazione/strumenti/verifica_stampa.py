@@ -7,7 +7,7 @@ import json, os, re, sys, datetime
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'tools'))
 from guardia import guarda  # impronte dei dati da non pubblicare, con chiave segreta (tools/guardia.py)
 
-SEZ = {'italia': (3, 8), 'mondo': (3, 8), 'estero': (0, 6), 'economia': (1, 5), 'torino': (3, 8), 'piemonte': (0, 6), 'eventi': (0, 10), 'cultura': (0, 4), 'sport': (0, 4)}
+SEZ = {'italia': (3, 8), 'mondo': (3, 8), 'estero': (0, 6), 'economia': (1, 5), 'torino': (3, 8), 'piemonte': (0, 6), 'eventi': (0, 10), 'spettacoli': (0, 10), 'cultura': (0, 4), 'sport': (0, 4)}
 # lingua dell'articolo originale (per le testate estere): l'app offre «leggi tradotto»
 LINGUE = {'it', 'en', 'fr', 'es', 'de', 'pt', 'nl', 'ar', 'zh', 'ja', 'ru', 'uk', 'pl'}
 # stesse impronte usate per le novità della Pensione
@@ -62,8 +62,8 @@ def controlla(o):
                 if f.get('url') in urls:
                     E.append(w + ': stesso articolo usato per due notizie')
                 urls.add(f.get('url'))
-            if k == 'eventi' and not (n.get('quando') and n.get('dove')):
-                E.append(w + ': per le cose da fare servono «quando» e «dove»')
+            if k in ('eventi', 'spettacoli') and not (n.get('quando') and n.get('dove')):
+                E.append(w + ': per cose da fare, cinema e teatro servono «quando» e «dove»')
             if len(n.get('link') or []) > 3:
                 E.append(w + ': massimo 3 link di approfondimento')
             # niente citazioni lunghe: le sintesi sono scritte con parole nostre

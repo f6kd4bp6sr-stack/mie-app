@@ -246,7 +246,7 @@ a.btn{text-decoration:none;display:inline-block}
 @media (max-width:600px){.dia-qt{font-size:18px}.dia-temp button small{font-size:10.5px}}
 
 </style>
-<script>window.APP_VERSION="bb12d500c5";window.APP_BUILD="2026-11-03T13:15+02:00";</script>
+<script>window.APP_VERSION="1d85fefcd1";window.APP_BUILD="2026-11-03T13:20+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -2596,7 +2596,7 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
    seguendo strumenti/STAMPA.md: titoli e sintesi con parole nostre, tono neutro, fonti e link di approfondimento.
    Sull'iPad resta una copia (pn-stampa) per quando manca internet; quali notizie hai aperto: pn-stampa-lette (solo su questo iPad). */
 const ST_KEY="pn-stampa",ST_LKEY="pn-stampa-lette";
-const ST_SEZ=[["italia","🇮🇹","Italia"],["mondo","🌍","Mondo"],["estero","🌐","Stampa estera"],["economia","💶","Economia"],["torino","🏙️","Torino"],["piemonte","🏔️","Piemonte"],["eventi","🎟️","Cose da fare a Torino e in Piemonte"],["cultura","🎭","Cultura"],["sport","⚽","Sport"]];
+const ST_SEZ=[["italia","🇮🇹","Italia"],["mondo","🌍","Mondo"],["estero","🌐","Stampa estera"],["economia","💶","Economia"],["torino","🏙️","Torino"],["piemonte","🏔️","Piemonte"],["eventi","🎟️","Cose da fare a Torino e in Piemonte"],["spettacoli","🎬","Cinema e teatro a Torino"],["cultura","🎭","Cultura"],["sport","⚽","Sport"]];
 let stSez="",stBusy=false;
 const stData=()=>lsJ(ST_KEY)||{sezioni:{}};
 /* articoli stranieri: titolo e sintesi sono già in italiano; «leggi tradotto» apre l'originale tradotto in italiano da Google Traduttore */
