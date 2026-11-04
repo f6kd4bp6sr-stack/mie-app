@@ -1,59 +1,43 @@
 {
   "app": "stampa-oggi",
   "edizione": "mattina",
-  "updated": "2026-11-03T09:30+01:00",
-  "nota": "Edizione della mattina del 3 novembre 2026.",
+  "updated": "2026-11-04T05:40+01:00",
+  "nota": "Edizione della mattina del 4 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-bosnia-funerali",
-        "t": "Elicottero caduto in Bosnia: oggi a Roma le esequie solenni dei quattro caduti",
-        "s": "Le salme dei quattro morti dell'incidente del 29 ottobre in Bosnia, durante la missione Eufor Althea, sono rientrate a Ciampino. Le esequie sono previste oggi nella basilica di Santa Maria degli Angeli. Eufor e la Procura militare di Roma indagano sulle cause.",
-        "d": "2026-11-03",
+        "id": "it-mattarella",
+        "t": "Mattarella per il 4 novembre: serve una difesa comune europea e una Nato più forte",
+        "s": "Nel messaggio per la festa dell'Unità nazionale e delle Forze Armate il presidente della Repubblica chiede uno sforzo europeo più integrato sulla difesa e rafforza l'Alleanza Atlantica. Ricorda i quattro militari morti in Bosnia e dice che il diritto internazionale è «a pezzi».",
+        "d": "2026-11-04",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://adnkronos.com/cronaca/bosnia-militari-italiani-morti-rientro-salme-oggi_oAHRxfiZpYb8C9P9LDH9i"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/03/allarme-di-mattarella-subito-la-difesa-comune-ue-e-il-rafforzamento-della-nato_40e4cb7d-9452-4872-ad6f-3982a0a63655.html"
           }
         ]
       },
       {
-        "id": "it-hacker-freezer",
-        "t": "Attacchi informatici ai sistemi di refrigerazione: riunione a Palazzo Chigi alle 11.30",
-        "s": "Guasti ai freezer in Sicilia, Toscana ed Emilia-Romagna sarebbero legati ad attacchi hacker, simili a quelli in sette Paesi europei. Oggi vertice coordinato dal sottosegretario Mantovano; il Copasir sente il direttore dell'Aisi e domani quello dell'Acn. L'Agenzia consiglia di isolare i sistemi di controllo dalla rete.",
-        "d": "2026-11-02",
+        "id": "it-sanita-manovra",
+        "t": "Manovra, le Regioni si riuniscono sui fondi alla sanità: governo e critici divisi sui numeri",
+        "s": "Il governo dice che il Fondo sanitario sale a 146,3 miliardi nel 2027; le Regioni, soprattutto di centrosinistra, parlano di tagli e di risorse che non coprono l'inflazione. La Conferenza delle Regioni ha convocato una riunione straordinaria.",
+        "d": "2026-11-04",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/cronaca/freezer-guasti-europa-italia_3pWhD3dMFOaDUGAhrEDYnv"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/03/tagli-alla-sanita-in-manovra-riunione-straordinaria-delle-regioni_7cdaa1d1-eb50-4b15-b477-81428d29baa6.html"
           }
         ]
       },
       {
-        "id": "it-manovra-scuola-sanita",
-        "t": "Manovra, tagli a scuola e sanità: sindacati uniti e Regioni chiedono modifiche",
-        "s": "I sindacati della scuola, tradizionalmente divisi, chiedono insieme di ritirare i tagli, circa 7mila posti in meno. Sulla sanità l'assessore lombardo Bertolaso, di centrodestra, parla di tagli «insostenibili» (quasi mezzo miliardo per la Lombardia) e chiede correzioni in Parlamento; il Pd parla di propaganda del governo.",
-        "d": "2026-11-03",
+        "id": "it-tetto-stranieri",
+        "t": "Scuola, la Commissione Ue richiama l'Italia sul tetto agli alunni stranieri: Valditara risponde",
+        "s": "Rispondendo a un'interrogazione del Pd, la Commissione ricorda che i trattati vietano discriminazioni per nazionalità. Il ministro Valditara replica che la norma favorisce l'integrazione, riguarda chi non conosce la lingua e non è discriminatoria.",
+        "d": "2026-11-04",
         "fonti": [
           {
-            "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/in-edicola/articoli/2026/11/03/meno-posti-e-piu-precari-contro-i-tagli-alla-scuola-meloni-unisce-i-sindacati/8558534/"
-          },
-          {
-            "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/2026/11/02/sanita-bertolaso-manovra-tagli-insostenibili-pd-denuncia/8558085/"
-          }
-        ]
-      },
-      {
-        "id": "it-maltempo",
-        "t": "Maltempo: allerta arancione in Puglia e parte della Basilicata, scuole chiuse in Abruzzo e Campania",
-        "s": "Per oggi la Protezione civile segnala allerta arancione per temporali e rischio idrogeologico in Puglia e in parte della Basilicata; gialla in Abruzzo, Calabria, Campania e Sicilia. A Chieti lezioni sospese per verifiche sugli edifici; chiuse anche scuole a Lanciano e San Michele di Serino.",
-        "d": "2026-11-03",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/cronaca/maltempo-allerta-oggi-3-novembre-2026_BB6lhicwFOucew9ZjQAv8"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/03/lue-richiama-litalia-sul-tetto-agli-stranieri-a-scuola.-valditara-andiamo_264b57eb-6c24-4ef2-a41d-dc73ebaa3c3f.html"
           }
         ]
       }
@@ -61,95 +45,98 @@
     "mondo": [
       {
         "id": "mo-midterm",
-        "t": "Stati Uniti al voto per le elezioni di metà mandato: in palio il controllo del Congresso",
-        "s": "Oggi si vota per rinnovare il Congresso. Secondo un sondaggio Nbc del 28-30 ottobre, il 52% preferirebbe un Congresso a guida democratica contro il 45% per i repubblicani; il gradimento di Trump è al 40%. Pesano guerra in Iran, prezzo della benzina e costo della vita.",
-        "d": "2026-11-03",
+        "t": "Midterm Usa: i democratici in vantaggio per la Camera, partita aperta al Senato",
+        "s": "Secondo le proiezioni diffuse nella notte, i democratici conquisterebbero la Camera (la soglia è 218 seggi). Al Senato ne servono ancora tre per la maggioranza di 51: i dati sono parziali e il Maine è ancora in bilico.",
+        "d": "2026-11-04",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/midterm-usa-voto-trump-oggi_3iy7nwWeRwONEeOIsVUXU5"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/midterm-media-i-dem-vincono-il-controllo-della-camera.-avanti-per-la-conquista_cac22026-2d64-44b0-8b5f-ee46bcd00316.html"
           }
         ]
       },
       {
-        "id": "mo-qeshm",
-        "t": "Iran, attacco limitato Usa sull'isola di Qeshm alla vigilia del voto americano",
-        "s": "Funzionari Usa citati dal Wall Street Journal confermano attacchi «difensivi» contro forze iraniane nello Stretto di Hormuz; i media iraniani riferiscono cinque esplosioni a Qeshm. Non ci sono dati su vittime. Trump parla di possibile accordo; Teheran dice di trattare indirettamente tramite mediatori.",
-        "d": "2026-11-03",
+        "id": "mo-iran",
+        "t": "Trump: nessun piano immediato di attacco all'Iran, ma gli Usa sono pronti ad agire",
+        "s": "Intervistato dal Financial Times, il presidente americano dice di non voler colpire subito l'Iran e che gli Stati Uniti stanno ottenendo ciò che vogliono. Teheran, riferisce Al Jazeera, prepara un piano di «massima deterrenza» in caso di nuovo attacco.",
+        "d": "2026-11-04",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/03/wsj-attacco-limitato-usa-contro-lisola-iraniana-di-qeshm_f97443bf-f3fb-4715-a644-7b851526f148.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/04/trump-nessun-piano-immediato-per-attaccare-liran_d6dab7ef-5200-4bc2-8114-9fa9ec26ffa9.html"
           },
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/03/us-strikes-irans-qeshm-island-ahead-of-midterm-elections",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/4/iran-war-live-tehran-prepares-maximum-deterrence-plan-for-any-new-attack",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-ucraina-ottobre",
-        "t": "Ucraina: a ottobre la Russia ha perso terreno, Zelensky teme un nuovo attacco",
-        "s": "Secondo un'analisi Afp su dati dell'Institute for the Study of War, a ottobre le forze russe hanno perso circa 28 km², avanzando solo a Sumy e Zaporizhzhia. Kiev stima 54.400 perdite russe nel mese. Zelensky avverte di un possibile massiccio attacco oggi e chiede pressioni sui proventi del petrolio russo.",
-        "d": "2026-11-03",
+        "id": "mo-ucraina",
+        "t": "Ucraina: raid russo su un ospedale a Kharkiv, 62 feriti; Witkoff annuncia colloqui ad Abu Dhabi",
+        "s": "Un attacco ha colpito una struttura sanitaria di Kharkiv: 62 feriti e oltre 200 pazienti evacuati. Intanto l'inviato Usa Witkoff dice che Washington faciliterà colloqui tecnici tra Russia e Ucraina ad Abu Dhabi, con delegati europei e Nato.",
+        "d": "2026-11-04",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-guerra-news-oggi-3-novembre_2P47326BVTeziiCmDKvVup"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/03/attacco-russo-su-struttura-sanitaria-a-kharkiv-62-feriti_abfb640f-ce8e-428e-bea0-525c514ba306.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/03/witkoff-usa-medieranno-colloqui-abu-dhabi-a-livello-tecnico-tra-russia_673a7d30-31d6-44ab-8403-e3e302bc08e3.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-giappone",
+        "t": "Il Giappone prepara un piano di difesa da 500 miliardi di dollari in cinque anni",
+        "s": "Il programma, quasi il doppio dei fondi attuali, punta su droni e armamenti statunitensi, secondo quanto riportato dall'ANSA.",
+        "d": "2026-11-04",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/03/giappone-piano-difesa-da-500-miliardi-di-dollari-in-cinque-anni_484287d3-9f53-4013-807f-c414536fef08.html"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-hormuz-aljazeera",
-        "t": "Al Jazeera: esplosioni a Qeshm e a Bandar Lengeh, gli Usa parlano di attacchi difensivi",
-        "s": "L'emittente del Qatar riferisce di esplosioni ravvicinate nella notte a Qeshm e nella città portuale di Bandar Lengeh, con due aerei avvistati. Wall Street Journal e Associated Press, citando fonti Usa, parlano di raid contro le minacce alle navi commerciali. Nessun bilancio dei danni.",
-        "d": "2026-11-03",
+        "id": "es-bombe-voli",
+        "t": "Allarmi bomba su voli e una nave da crociera in Europa: nessun ordigno trovato",
+        "s": "Al Jazeera racconta che almeno sette voli e una nave con circa 1.500 persone sono stati oggetto di falsi allarmi. Tra gli aeroporti coinvolti Varsavia, Sofia, Heathrow e Roma Fiumicino, dove un volo Ryanair è atterrato scortato da caccia italiani.",
+        "d": "2026-11-04",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/3/explosions-hit-irans-qeshm-island-as-us-media-report-us-strikes-in-hormuz",
+            "url": "https://www.aljazeera.com/news/2026/11/4/bomb-threats-disrupt-flights-across-europe-no-explosive-devices-found",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-ucraina-prestiti",
-        "t": "Euronews: fino a un miliardo di prestiti Ue all'Ucraina per progetti di difesa comuni",
-        "s": "Secondo Euronews, Kiev userà fino a un miliardo di euro di prestiti europei per progetti di difesa condotti insieme a partner europei. Lo stesso notiziario apre con l'attacco russo contro un centro di aiuti a Zaporizhzhia, che Zelensky dice mini i progressi verso la pace.",
-        "d": "2026-11-02",
+        "id": "es-cyber-supermercati",
+        "t": "Attacchi informatici ai frigoriferi dei supermercati in almeno undici Paesi europei",
+        "s": "Gli hacker hanno alzato la temperatura dei sistemi di refrigerazione. Colpiti Germania, Romania, Regno Unito e Belgio; circa venti punti vendita in Italia, con effetti «limitati» secondo il governo. L'Ue parla di attacchi «non isolati» e coordina la risposta.",
+        "d": "2026-11-04",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/02/ukraine-to-channel-up-to-1bn-in-eu-loans-into-joint-defence-projects",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/4/eu-urges-action-as-germany-romania-and-uk-report-supermarket-cyberattacks",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-belgio-crisi",
-        "t": "Belgio: fallisce la trattativa sul bilancio, il premier De Wever offre le dimissioni",
-        "s": "Secondo Euronews, dopo una notte di trattative sul bilancio finite senza accordo, il premier Bart De Wever presenterà le dimissioni al sovrano; il Palazzo reale fa sapere che il re sta valutando la richiesta.",
-        "d": "2026-11-02",
+        "id": "es-bce-lagarde",
+        "t": "Bce, si apre la corsa alla successione di Lagarde: candidature entro venerdì",
+        "s": "Euronews riferisce che i Paesi dell'euro hanno tempo fino a venerdì per proporre i nomi per la presidenza della Banca centrale europea. I ministri delle Finanze faranno il punto il 9 novembre; Lagarde lascerà a febbraio.",
+        "d": "2026-11-04",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/02/belgiums-pm-bart-de-wever-to-offer-resignation-to-king-after-overnight-budget-talks-fail",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-ebola",
-        "t": "Ebola: oltre 5.300 morti, è l'epidemia a crescita più rapida mai registrata",
-        "s": "Euronews riporta che il bilancio dell'epidemia di Ebola ha superato i 5.300 morti e che si tratta del focolaio che si è diffuso più velocemente da quando esistono i rilevamenti.",
-        "d": "2026-11-02",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/02/ebola-kills-over-5300-in-fastest-growing-outbreak-on-record",
+            "url": "https://www.euronews.com/video/2026/11/03/who-will-replace-lagarde-eurozone-picks-nominees-as-race-for-ecb-top-job-begins",
             "l": "en"
           }
         ]
@@ -157,110 +144,170 @@
     ],
     "economia": [
       {
-        "id": "ec-delfin",
-        "t": "Delfin: Leonardo Maria Del Vecchio propone ai soci di rilevare tutte le quote",
-        "s": "Il presidente di Lmdv Capital ha scritto una lettera, pubblicata su Qn, offrendo l'acquisto di tutte le quote Delfin con pagamento immediato o dilazionato, finanziato da un istituto internazionale non nominato. Invita i soci a incontrarlo entro il 7 novembre. Prezzo e percentuali non sono indicati.",
-        "d": "2026-11-02",
+        "id": "ec-spread-petrolio",
+        "t": "Spread Btp-Bund a 113 punti, il petrolio scende: sui mercati pesano le speranze su Iran",
+        "s": "Il differenziale è calato di quasi 6 punti e il rendimento del Btp decennale è al 4,42%. Il petrolio ha chiuso a New York a 96,09 dollari; il gas ad Amsterdam è risalito sopra i 92 euro al megawattora.",
+        "d": "2026-11-04",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/economia/2026/11/02/leonardo-maria-del-vecchio-ci-riprova-inviata-unofferta-per-acquistare-tutte_600e29d0-2e87-46d0-85e0-2ef80439af6c.html"
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/02/lo-spread-btp-bund-chiude-in-calo-di-quasi-6-punti-a-quota-113_6676e9b0-00f2-4936-85c9-d4aec3522af5.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/02/borsa-leuropa-riduce-il-rialzo-calano-greggio-e-gas-milano-02_297d17cf-e943-49a4-aaf0-8c54b88bb013.html"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-stellantis",
-        "t": "Stellantis: possibili stop a Mirafiori e Pomigliano per mancanza di un componente",
-        "s": "L'ANSA segnala il rischio di fermate produttive negli stabilimenti di Mirafiori, a Torino, e di Pomigliano per la carenza di un componente. Al momento non risultano date o numeri precisi nel titolo della notizia.",
-        "d": "2026-11-02",
+        "id": "to-iveco-tata",
+        "t": "Iveco Group, con Tata Motors la sede resta a Torino",
+        "s": "Tata Motors ha acquisito l'89,42% di Iveco Group con l'offerta pubblica; il gruppo è entrato nell'orbita Tata il 30 ottobre. I vertici, a Torino, assicurano la sede, i marchi e la presenza industriale, ma senza cifre su stabilimenti e occupati.",
+        "d": "2026-11-04",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/stellantis-possibili-stop-a-mirafiori-e-pomigliano-per-mancanza-componente_7c34f5cb-d861-411b-91c2-2420ee1cf5c3.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/tata-motors-iveco-group-continuera-ad-avere-la-sede-a-torino_f39ae461-dfba-4d7f-a298-ac0735b99f2c.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/english/news/business/2026/11/03/iveco-to-continue-to-have-hq-in-turin-after-tata-motors-takeover_0b317162-4402-45bc-b970-de625a9265ab.html"
           }
         ]
       },
       {
-        "id": "to-metro-sera",
-        "t": "Metro 1 di Torino: dall'8 novembre torna aperta fino a dopo mezzanotte",
-        "s": "Dopo il completamento della migrazione al sistema di segnalamento, da domenica 8 novembre il servizio arriva alle 0:30 (martedì-giovedì, domenica e festivi) e alle 1:30 venerdì e sabato; il lunedì si ferma alle 22. Sul prolungamento a Cascine Vica, secondo Torino Oggi, la manovra non prevede fondi.",
-        "d": "2026-10-28",
+        "id": "to-campus-einaudi",
+        "t": "Campus Einaudi occupato dal 26 ottobre: lezioni online e sciopero della fame per la riapertura",
+        "s": "Il collettivo Cambiare Rotta protesta contro caro studi, residenze e riarmo. UniTo ha spostato online le lezioni dal 2 novembre e chiede la fine dell'occupazione; una dirigente dei Radicali digiuna per riaprire la struttura.",
+        "d": "2026-11-04",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/10/28/leggi-notizia/argomenti/viabilita-1/articolo/dall8-novembre-metro-1-di-torino-di-nuovo-aperta-fino-a-dopo-mezzanotte-dopo-3-anni.html"
-          }
-        ],
-        "link": [
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/01/unito-preoccupati-per-campus-ancora-occupato-al-via-lezioni-a-distanza_d627b291-980f-40f7-a6fc-0b05b796b610.html"
+          },
           {
-            "n": "Metro 1, nulla in manovra per Cascine Vica",
-            "url": "https://www.torinoggi.it/2026/11/02/leggi-notizia/argomenti/viabilita-1/articolo/doccia-gelata-sulla-metro-1-in-manovra-nulla-per-il-prolungamento-a-cascine-vica.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/tesoriera-radicali-in-sciopero-della-fame-per-riaprire-il-campus-einaudi_2f05682f-0e24-4503-a55d-00bf36ffddee.html"
           }
         ]
       },
       {
-        "id": "to-asti-trofarello",
-        "t": "Linea Asti-Trofarello: treni fermi dal 2 al 7 novembre, attivi i bus sostitutivi",
-        "s": "Per lavori sulla linea ferroviaria tra Asti e Trofarello i treni restano sospesi fino al 7 novembre; il servizio è sostituito da autobus.",
-        "d": "2026-11-02",
+        "id": "to-metro-orari",
+        "t": "Metropolitana di Torino aperta più a lungo la sera dall'8 novembre",
+        "s": "Dopo tre anni e mezzo tornano gli orari serali estesi sulla linea: le novità partono l'8 novembre, secondo TorinoToday.",
+        "d": "2026-11-04",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/10/29/leggi-notizia/argomenti/viabilita-1/articolo/lavori-sulla-linea-asti-trofarello-treni-fermi-dal-2-al-7-novembre-scattano-i-bus-sostitutivi.html"
+            "n": "TorinoToday",
+            "url": "https://www.torinotoday.it/attualita/estensione-orari-metropolitana-mezzanotte-novembre-2026-sera.html"
           }
         ]
       },
       {
-        "id": "to-giovani-arresti",
-        "t": "Criminalità giovanile: 65 arresti nel Torinese, sequestrate droga e armi",
-        "s": "Nell'operazione nazionale di contrasto alla criminalità giovanile, in provincia di Torino la polizia ha eseguito 65 arresti e sequestrato droga e armi.",
-        "d": "2026-11-02",
+        "id": "to-sciopero-28-nov",
+        "t": "Sciopero generale di 24 ore il 28 novembre: a rischio treni, mezzi Gtt e voli",
+        "s": "TorinoToday segnala che venerdì 28 novembre sono previsti disagi ai trasporti in città, tra servizio urbano, ferrovie e aerei.",
+        "d": "2026-11-04",
+        "fonti": [
+          {
+            "n": "TorinoToday",
+            "url": "https://www.torinotoday.it/attualita/sciopero-trasporti-treni-28-novembre-mezzi-Gtt-aerei.html"
+          }
+        ]
+      },
+      {
+        "id": "to-65-arresti",
+        "t": "Criminalità giovanile nel Torinese: 65 arresti e sequestri di droga e armi",
+        "s": "Un'operazione contro la criminalità giovanile ha portato a 65 arresti nel Torinese, con sequestro di stupefacenti e armi, riferisce l'ANSA.",
+        "d": "2026-11-04",
         "fonti": [
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/contrasto-alla-criminalita-giovanile-65-gli-arresti-nel-torinese_3267d3c5-4548-4474-8432-082c1d715ded.html"
           }
         ]
-      },
+      }
+    ],
+    "piemonte": [
       {
-        "id": "to-unito-campus",
-        "t": "UniTo: il Campus resta occupato, lezioni a distanza",
-        "s": "L'Università di Torino si dice preoccupata perché il Campus risulta ancora occupato e ha avviato le lezioni a distanza.",
-        "d": "2026-11-01",
+        "id": "pi-ex-ilva-novi",
+        "t": "Ex Ilva di Novi Ligure: scorte fino al 20 novembre, poi rischio cassa integrazione",
+        "s": "In audizione al Senato il sindaco Muliere chiede ammortizzatori oltre giugno, tutele per l'indotto e forniture esterne: le 10.000 tonnellate promesse bastano per 15-20 giorni di lavoro. Ha chiesto di mantenere il tavolo di crisi con Piemonte e Liguria.",
+        "d": "2026-11-04",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/01/unito-preoccupati-per-campus-ancora-occupato-al-via-lezioni-a-distanza_d627b291-980f-40f7-a6fc-0b05b796b610.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/sindaco-novi-ligure-assicurare-lattivita-produttiva-ex-ilva-dellarea-a-freddo_f6066254-dd20-43a5-a1f7-0ce57195ad36.html"
+          }
+        ],
+        "link": [
+          {
+            "n": "Piemonte e Liguria, cinque richieste al governo per salvare gli stabilimenti ex Ilva",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/21/piemonte-e-liguria-cinque-richieste-al-governo-per-salvare-gli-stabilimenti-ex-ilva_75dfd472-86b4-4824-9909-6287a11b7eda.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-vercelli-truffa",
+        "t": "Vercelli, arrestato un 42enne per la truffa del finto carabiniere",
+        "s": "L'uomo è accusato di aver ottenuto gioielli e contanti da un anziano fingendosi un carabiniere.",
+        "d": "2026-11-04",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/truffa-del-finto-carabiniere-arrestato-un-42enne-a-vercelli_ac482543-34d1-486b-b925-58bb0a85ef67.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-verbania-riemann",
+        "t": "Verbania celebra Riemann, il matematico che cambiò il modo di pensare lo spazio",
+        "s": "La città del Lago Maggiore ricorda la figura del matematico tedesco e il suo contributo alla geometria.",
+        "d": "2026-11-04",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/verbania-celebra-riemann-il-matematico-cheha-cambiato-il-modo-di-pensare-lo-spazio_102b280d-6697-48e8-8350-17a5c9f8a0c2.html"
           }
         ]
       }
     ],
     "cultura": [
       {
-        "id": "cu-artissima-paratissima",
-        "t": "Torino, chiudono Artissima e Paratissima: oltre 34mila e 13mila presenze",
-        "s": "Artissima 2026 si è chiusa dopo quattro giorni con oltre 34mila presenze; Paratissima ha superato i 13mila ingressi.",
-        "d": "2026-11-02",
+        "id": "cu-tff-travolta",
+        "t": "John Travolta al Torino Film Festival con il suo primo film da regista",
+        "s": "L'attore presenterà in anteprima italiana «Propeller One-Way Night Coach», tratto da un suo racconto. Il 44° festival si tiene dal 24 novembre al 2 dicembre.",
+        "d": "2026-11-04",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/01/chiude-artissima-2026-oltre-34mila-presenze-in-quattro-giorni_5b3639fd-d1d4-4aa0-b1dd-5e5b98f4e7c7.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/arte-paratissima-2026-chiude-con-oltre-13mila-ingressi_93734a15-e32a-4e7c-a8f6-6fc6ea91471c.html"
+            "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/11/03/john-travolta-sara-ospite-del-torino-film-festival_1b1aae9a-3377-452c-bb57-365cb5ff6183.html"
           }
         ]
       }
     ],
     "eventi": [
       {
+        "id": "ev-torino-contemporanea",
+        "t": "Torino Contemporanea Film Festival: anteprime, classici e videoarte",
+        "s": "Cinque giornate con concorso per registe emergenti, anteprime come «La Gradiva» e «Blue Heron» e la rassegna su Claudia Cardinale. Prezzi non indicati.",
+        "d": "2026-11-04",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/torna-a-torino-contemporanea-film-festival_ea33b1ab-62c7-437e-8190-81c79663801a.html"
+          }
+        ],
+        "quando": "fino a sab 7 nov",
+        "dove": "Torino (sedi sul sito del festival)"
+      },
+      {
         "id": "ev-courts",
         "t": "Courts of Champions: la mostra sulla storia delle Nitto ATP Finals e dei suoi campioni",
         "s": "Esposizione dedicata alla storia del torneo di tennis e ai campioni che l'hanno vinto, con aneddoti e curiosità. Fa parte degli eventi collaterali alle Nitto ATP Finals di Torino.",
-        "d": "2026-11-03",
+        "d": "2026-11-04",
         "quando": "fino al 22 nov",
         "dove": "Torino",
         "fonti": [
@@ -271,24 +318,10 @@
         ]
       },
       {
-        "id": "ev-best-of-torino",
-        "t": "Best of Torino: in piazza San Carlo le foto delle ATP Finals",
-        "s": "Mostra fotografica con le immagini migliori delle cinque edizioni del torneo giocate a Torino, allestita nella piazza centrale della città.",
-        "d": "2026-11-03",
-        "quando": "fino al 22 nov",
-        "dove": "Piazza San Carlo, Torino",
-        "fonti": [
-          {
-            "n": "TurismoTorino",
-            "url": "https://turismotorino.org/en/visit/events/best-of-torino-2026"
-          }
-        ]
-      },
-      {
         "id": "ev-road-to-torino",
         "t": "Road to Torino: i tennisti delle ATP Finals in foto sotto i portici",
         "s": "Percorso fotografico lungo i portici di via Po con i giocatori che si contendono il titolo delle Nitto ATP Finals.",
-        "d": "2026-11-03",
+        "d": "2026-11-04",
         "quando": "fino al 22 nov",
         "dove": "Portici di via Po, Torino",
         "fonti": [
@@ -302,7 +335,7 @@
         "id": "ev-luci-artista",
         "t": "Luci d'Artista: le installazioni luminose all'aperto illuminano di nuovo le strade di Torino",
         "s": "Ventottesima edizione della rassegna di opere luminose, nata nel 1998, che trasforma la città in un museo a cielo aperto. Esiste anche un tour in bus panoramico con commento in italiano, inglese e francese.",
-        "d": "2026-11-03",
+        "d": "2026-11-04",
         "quando": "fino al 10 gen 2027",
         "dove": "In tutta la città, Torino",
         "fonti": [
@@ -316,7 +349,7 @@
         "id": "ev-kusama-ogr",
         "t": "Yayoi Kusama alle OGR: la stanza a specchi «Infinity Mirrored Room»",
         "s": "Mostra alle Officine Grandi Riparazioni su come la teoria quantistica ha influenzato la cultura visiva, dal cinema all'arte contemporanea.",
-        "d": "2026-11-03",
+        "d": "2026-11-04",
         "quando": "fino al 25 feb 2027, apertura settimanale",
         "dove": "OGR Torino",
         "fonti": [
@@ -331,7 +364,7 @@
         "id": "ev-world-press-photo",
         "t": "World Press Photo 2026: i migliori lavori di fotogiornalismo della 69ª edizione",
         "s": "Esposizione delle opere vincitrici del concorso internazionale di fotogiornalismo e fotografia documentaria.",
-        "d": "2026-11-03",
+        "d": "2026-11-04",
         "quando": "fino al 13 dic",
         "dove": "Torino",
         "fonti": [
@@ -346,7 +379,7 @@
         "id": "ev-jessica-lange",
         "t": "Still image: a Torino la grande retrospettiva fotografica di Jessica Lange",
         "s": "Oltre 200 immagini dell'attrice e fotografa, in gran parte mai esposte prima: la più ampia retrospettiva sul suo lavoro.",
-        "d": "2026-11-03",
+        "d": "2026-11-04",
         "quando": "fino al 7 feb 2027, apertura settimanale",
         "dove": "Torino",
         "fonti": [
@@ -356,6 +389,20 @@
           }
         ],
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-moncalieri-jazz",
+        "t": "Moncalieri Jazz Festival 2026",
+        "s": "Rassegna jazz nella città di Moncalieri; programma completo sulla scheda ufficiale.",
+        "d": "2026-11-04",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/moncalieri-jazz-festival-2026"
+          }
+        ],
+        "quando": "fino a dom 8 nov",
+        "dove": "Moncalieri (Torino)"
       }
     ],
     "spettacoli": [
@@ -363,8 +410,8 @@
         "id": "spe-cin-dio-ride",
         "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
         "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-        "d": "2026-11-03",
-        "quando": "in programmazione oggi 3 nov; giorni e orari sulle pagine delle due sale",
+        "d": "2026-11-04",
+        "quando": "Ideal oggi 15:00, 17:10, 19:20, 21:30; altri giorni e The Space sulle pagine delle sale",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "fonti": [
           {
@@ -377,8 +424,8 @@
         "id": "spe-cin-shaun",
         "t": "Shaun, vita da pecora: Operazione Z.U.C.C.A., film d'animazione per tutti",
         "s": "Shaun e gli animali della fattoria cercano di salvare il contadino scomparso da un mostro prima di Halloween. Regia di Matthew Walker e Steve Cox. Adatto anche ai ragazzi.",
-        "d": "2026-11-03",
-        "quando": "in programmazione oggi 3 nov; giorni e orari sulle pagine delle due sale",
+        "d": "2026-11-04",
+        "quando": "Ideal oggi 15:50, 17:40; altri giorni e The Space sulle pagine delle sale",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "fonti": [
           {
@@ -391,8 +438,8 @@
         "id": "spe-cin-je-so-pazzo",
         "t": "Je so' pazzo, il film su Pino Daniele diretto da Nicola Prosatore",
         "s": "Racconta la crescita del musicista napoletano, dall'infanzia difficile fino al concerto del 1981. Regia di Nicola Prosatore.",
-        "d": "2026-11-03",
-        "quando": "in programmazione oggi 3 nov; giorni e orari sulle pagine delle due sale",
+        "d": "2026-11-04",
+        "quando": "Ideal oggi 15:20, 19:25; altri giorni e The Space sulle pagine delle sale",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "fonti": [
           {
@@ -405,7 +452,7 @@
         "id": "spe-tea-orgasmo",
         "t": "Orgasmo: commedia satirica di Niccolò Fettarappa al Teatro Gobetti",
         "s": "In un futuro vicino una coppia in crisi vive in un mondo dove il desiderio sparisce, mentre una giornalista e uno zoologo indagano su orsi in preda a un'inconsueta frenesia. Con Gianni D'Addario, Niccolò Fettarappa, Lorenzo Guerrieri e Rebecca Sisti; durata 1 ora e 20.",
-        "d": "2026-11-03",
+        "d": "2026-11-04",
         "quando": "mar 3 e gio 5 nov 19:30; mer 4 e ven 6 nov 20:45; sab 7 nov 19:30; dom 8 nov 16:00",
         "dove": "Teatro Gobetti, Torino",
         "fonti": [
@@ -420,7 +467,7 @@
         "id": "spe-tea-ultime-lune",
         "t": "Le ultime lune in scena al Teatro Carignano fino all'8 novembre",
         "s": "Spettacolo della stagione 2026/27 del Teatro Stabile di Torino, in cartellone al Carignano dal 27 ottobre all'8 novembre.",
-        "d": "2026-11-03",
+        "d": "2026-11-04",
         "quando": "fino a dom 8 nov; orari e prezzi sulla pagina del teatro",
         "dove": "Teatro Carignano, Torino",
         "fonti": [
@@ -434,7 +481,7 @@
         "id": "spe-tea-escaped-alone",
         "t": "Escaped Alone di Caryl Churchill, prima italiana di lacasadargilla al Carignano",
         "s": "Prima italiana del testo di Caryl Churchill, proposto dalla compagnia lacasadargilla.",
-        "d": "2026-11-03",
+        "d": "2026-11-04",
         "quando": "dal 10 al 15 nov; orari e prezzi sulla pagina del teatro",
         "dove": "Teatro Carignano, Torino",
         "fonti": [
@@ -809,6 +856,12 @@
       "notizie": 32,
       "note": "3/11 prova: aggiornate solo eventi, spettacoli e concerti. Fonti lette: TurismoTorino, MYmovies, Teatro Stabile Torino, Teatro Regio, Lingotto Musica, TicketOne. Non raggiungibili: torinotoday.it e alcune pagine di dettaglio (permesso non concesso)."
     },
-    "3/11 13:30: cinema limitato a The Space Cinema e Cinema Ideal (scelta del proprietario); tolto un film proiettato solo al Romano"
+    "3/11 13:30: cinema limitato a The Space Cinema e Cinema Ideal (scelta del proprietario); tolto un film proiettato solo al Romano",
+    {
+      "at": "2026-11-04T05:40+01:00",
+      "edizione": "mattina",
+      "notizie": 52,
+      "note": "Fonti lette: ANSA, Al Jazeera, Euronews, TorinoToday (solo ricerca), Comingsoon, MYmovies, Turismo Torino, Teatro Stabile. Non raggiungibili: reuters.com (ricerca rifiutata), torinotoday.it (pagine non leggibili), thespacecinema.it. Concerti copiati dall'edizione del 3/11 (non è lunedì)."
+    }
   ]
 }
