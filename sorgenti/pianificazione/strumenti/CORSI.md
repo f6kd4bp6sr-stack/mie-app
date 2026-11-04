@@ -17,7 +17,7 @@ La sezione «🎓 Corsi» di Pianificazione mostra corsi online **gratuiti** di 
 - **Fonti:** prima WebSearch con allowed_domains sul sito, poi WebFetch solo sugli URL usciti dalla ricerca. Mai URL scritti a mano. I dati vanno letti sulla pagina ufficiale del corso.
 
 ## Università popolari e della terza età
-Oltre alle università (italiane, Svizzera italiana USI, Helsinki - Elements of AI, …) cerca le **università popolari** e le università della terza età di Torino (es. Università Popolare di Torino, UNITRE Torino) e di altre città italiane, solo per le proposte **gratuite e aperte a tutti** (lezioni online, conferenze o cicli gratuiti). Campo `tipo`: «Università» o «Università popolare». Annota a parte, senza inserirle, le università popolari di Torino con corsi a quota (nome, quota di iscrizione indicata, URL): il proprietario deciderà se aggiungerle.
+Oltre alle università (italiane, Svizzera italiana USI, Helsinki - Elements of AI, …) cerca le **università popolari** e le università della terza età di Torino (es. Università Popolare di Torino, UNITRE Torino) e di altre città italiane, solo per le proposte **gratuite e aperte a tutti** (lezioni online, conferenze o cicli gratuiti). Campo `tipo`: «Università» o «Università popolare». Le università popolari con corsi a quota (scelta del proprietario, 4/11/2026) vanno nella lista a parte «a_quota», non in «corsi»: campi id (q-…), nome, citta, quota (come indicata sul sito, con l'anno), comprende, iscrizione, modalita, url, verificato; l'url va anche in «proposti». Si cercano prima a Torino.
 
 ## Aree e temi
 - `ia`, «IA e digitale»: Intelligenza artificiale; Informatica e programmazione; Dati e statistica; Sicurezza e privacy; Competenze digitali.
