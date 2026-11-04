@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-03T13:05:00+01:00",
+ "updated": "2026-11-04T13:05:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
@@ -359,7 +359,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-03",
+   "ultimo": "2026-11-04T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -471,14 +471,14 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-02",
+   "ultimo": "2026-11-04T13:05:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-03",
+   "ultimo": "2026-11-04T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -492,7 +492,7 @@
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-11-03",
+   "ultimo": "2026-11-04T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -884,6 +884,11 @@
    "at": "2026-11-03T13:05:00+01:00",
    "notizie": 0,
    "note": "giro delle 13 (martedì 3/11): nessuna notizia nuova. Gazzetta: ricerca sul sito senza DPR di recepimento del contratto 2025-2027; SIULP (28/9) lo dà ancora atteso entro la prima metà di novembre; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. SILF: ultimo comunicato 31/10 (ddl bilancio), nessuno nuovo su contratto o pensione; USIF e SINAFI senza novità nelle ricerche; INPS: ultimo messaggio trovato n. 3422 del 23/10, non sul tema. Mercati: conti deposito riletti su conti-deposito.net (3/11), invariati; BTP, BCE, inflazione e BBVA invariati (nessun dato nuovo verificabile con due fonti). Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, Funzione Pubblica, MEF"
+  },
+  {
+   "at": "2026-11-04T13:05:00+01:00",
+   "notizie": 0,
+   "note": "giro delle 13 (mercoledì 4/11): nessuna notizia nuova. Gazzetta: ricerca sul sito senza DPR di recepimento del contratto 2025-2027 (SIULP lo dà atteso entro la prima metà di novembre); tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. SIULP, USIF e SILF: nessun comunicato nuovo su contratto o pensione nelle ricerche; INPS: nessun messaggio nuovo sul tema. Mercati: BTP 10 anni chiuso al 4,46% il 3/11 (ANSA, spread 113,2) ma senza seconda fonte verificabile, valore lasciato invariato; conti deposito riletti su conti-deposito.net (3/11), invariati; BCE, inflazione e BBVA invariati. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, Funzione Pubblica, MEF"
   }
  ],
  "mercati": [
