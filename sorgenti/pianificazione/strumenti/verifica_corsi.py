@@ -70,6 +70,11 @@ def controlla(path):
             e.append('%s: verificato deve essere AAAA-MM-GG' % w)
     prop = d.get('proposti') or []
     if not isinstance(prop, list): e.append('proposti deve essere una lista')
+    for q in d.get('a_quota') or []:
+        for k in ('id','nome','citta','quota','comprende','iscrizione','modalita','url','verificato'):
+            if not str(q.get(k) or '').strip(): e.append('a quota %s: manca «%s»' % (q.get('id','?'), k))
+        if not str(q.get('url','')).startswith('https://'): e.append('a quota %s: url deve iniziare con https://' % q.get('id'))
+        if q.get('url') not in prop: e.append('a quota %s: l\'url deve essere anche in «proposti»' % q.get('id'))
     lotti = {}
     for c in corsi:
         lo = c.get('lotto')

@@ -14,6 +14,8 @@ function coCard(c,C){const s=C.st[c.id];
     `<p>${esc(c.sintesi)}</p><div class="co-b"><a class="btn sm" href="${esc(c.url)}" target="_blank" rel="noopener">Apri il corso ›</a>`+
     Object.keys(CO_ST).map(k=>`<button class="btn sm${s===k?" on":""}" data-cos="${esc(c.id)}" data-v="${k}" title="${CO_ST[k][1]}">${CO_ST[k][0]}</button>`).join("")+
     `</div><div class="lbl">Controllato il ${new Date(c.verificato+"T12:00").toLocaleDateString("it-IT")}</div></div>`;}
+function coQuota(){const Q=CO_D.a_quota||[];if(!Q.length)return "";
+  return `<div class="card k-corsi"><h2>💶 Università popolari a quota <span class="pill">${Q.length}</span></h2><p class="lbl">${esc(CO_D.a_quota_nota||"")}</p>`+Q.map(q=>`<div class="co-c"><b>🏛️ ${esc(q.nome)}</b><div class="co-e">📍 ${esc(q.citta)} · ${esc(q.modalita)}</div><div class="co-t"><span>💶 ${esc(q.quota)}</span><span>controllato il ${new Date(q.verificato+"T12:00").toLocaleDateString("it-IT")}</span></div><p>${esc(q.comprende)}</p><p>${esc(q.iscrizione)}</p><div class="co-b"><a class="btn sm" href="${esc(q.url)}" target="_blank" rel="noopener">Apri il sito ›</a></div></div>`).join("")+`</div>`;}
 function vCorsi(){
   const C=coD(),f=C.f,L=CO_D.corsi.filter(c=>coVisibile(c,C)),R=coFiltra(C),LN=coLotto(),nuovi=L.filter(c=>(c.lotto||1)===LN&&!C.st[c.id]).length;
   let o=`<h1>🎓 Corsi online</h1><p class="sub">Corsi gratuiti e aperti a tutti, senza essere studenti universitari: università italiane e straniere e università popolari, in italiano. Tocca ⭐ ▶️ ✅ per segnare i tuoi: lo stato resta su questo iPad.</p>`;
@@ -29,10 +31,10 @@ function vCorsi(){
     (nuovi?`<div class="lbl">🆕 <b>${nuovi} corsi da scegliere</b>: segna con ⭐ quelli che ti interessano. Alla prossima ricerca gli altri spariscono e non verranno più proposti; quelli segnati restano.</div>`:"")+
     (mie.length?`<div class="lbl">I miei corsi: ⭐ ${nn("da")} da seguire · ▶️ ${nn("in")} in corso · ✅ ${nn("ok")} finiti</div>`:"")+
     `<div class="lbl">${esc(CO_D.criteri)}${CO_D.updated?" Lista aggiornata il "+new Date(CO_D.updated+"T12:00").toLocaleDateString("it-IT")+".":""}</div></div>`;
-  if(!R.length)return o+`<p class="empty">Nessun corso con questi filtri.</p>`;
+  if(!R.length)return o+`<p class="empty">Nessun corso con questi filtri.</p>`+coQuota();
   const temi=[].concat(...Object.keys(CO_AREE).map(a=>CO_D.temi[a]));
   o+=`<div class="cols4">`+temi.map(t=>{const g=R.filter(c=>c.tema===t);if(!g.length)return "";
-    return `<div class="card k-corsi"><h3>${esc(t)} <span class="pill">${g.length}</span></h3>${g.map(c=>coCard(c,C)).join("")}</div>`;}).join("")+`</div>`;
+    return `<div class="card k-corsi"><h3>${esc(t)} <span class="pill">${g.length}</span></h3>${g.map(c=>coCard(c,C)).join("")}</div>`;}).join("")+`</div>`+coQuota();
   return o;
 }
 function bindCorsi(){
