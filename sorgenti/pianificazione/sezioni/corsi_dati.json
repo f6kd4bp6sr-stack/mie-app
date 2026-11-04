@@ -43,7 +43,8 @@
       "gratuito": true,
       "aperto": true,
       "tipo": "Università",
-      "modalita": "Online"
+      "modalita": "Online",
+      "lotto": 1
     },
     {
       "id": "c-pok-ia-industria",
@@ -64,7 +65,8 @@
       "gratuito": true,
       "aperto": true,
       "tipo": "Università",
-      "modalita": "Online"
+      "modalita": "Online",
+      "lotto": 1
     },
     {
       "id": "c-pok-numeri-scegliere",
@@ -85,7 +87,8 @@
       "gratuito": true,
       "aperto": true,
       "tipo": "Università",
-      "modalita": "Online"
+      "modalita": "Online",
+      "lotto": 1
     },
     {
       "id": "c-pok-pagamenti-digitali",
@@ -106,7 +109,8 @@
       "gratuito": true,
       "aperto": true,
       "tipo": "Università",
-      "modalita": "Online"
+      "modalita": "Online",
+      "lotto": 1
     },
     {
       "id": "c-pok-economia-verde",
@@ -127,7 +131,8 @@
       "gratuito": true,
       "aperto": true,
       "tipo": "Università",
-      "modalita": "Online"
+      "modalita": "Online",
+      "lotto": 1
     },
     {
       "id": "c-pok-made-in-italy",
@@ -148,7 +153,8 @@
       "gratuito": true,
       "aperto": true,
       "tipo": "Università",
-      "modalita": "Online"
+      "modalita": "Online",
+      "lotto": 1
     },
     {
       "id": "c-pok-imparare-ad-imparare",
@@ -169,7 +175,21 @@
       "gratuito": true,
       "aperto": true,
       "tipo": "Università",
-      "modalita": "Online"
+      "modalita": "Online",
+      "lotto": 1
     }
-  ]
+  ],
+  "proposti": [
+    "https://course.elementsofai.com/it/",
+    "https://www.pok.polimi.it/course/view.php?id=219",
+    "https://www.pok.polimi.it/course/view.php?id=265",
+    "https://www.pok.polimi.it/course/view.php?id=121",
+    "https://www.pok.polimi.it/course/view.php?id=161",
+    "https://www.pok.polimi.it/course/view.php?id=114",
+    "https://www.pok.polimi.it/course/view.php?id=270",
+    "https://lms.federica.eu/course/view.php?id=540",
+    "https://lms.federica.eu/course/view.php?id=919",
+    "https://lms.federica.eu/course/view.php?id=277"
+  ],
+  "nota_lotti": "Ogni ricerca aggiunge al massimo 10 corsi nuovi con lotto = ultimo lotto + 1. Non togliere i corsi dei lotti precedenti (l'app nasconde da sola quelli non segnati sull'iPad). Ogni URL proposto va aggiunto a «proposti» e non va mai riproposto."
 }

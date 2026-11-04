@@ -45,3 +45,10 @@ Una volta al mese, insieme alle novità:
 - si ricontrollano tutti gli URL;
 - si tolgono i corsi chiusi o non più gratuiti;
 - si aggiungono i corsi nuovi.
+
+## Ricerca a lotti (scelta del proprietario, 4/11/2026)
+- Ogni ricerca porta al massimo 10 corsi nuovi, con «lotto» uguale all'ultimo lotto più 1.
+- Il proprietario segna con ⭐ ▶️ ✅ i corsi che gli interessano. Quando arriva il lotto nuovo, l'app nasconde da sola i corsi dei lotti precedenti che non ha segnato; quelli segnati restano.
+- Non togliere mai dal file i corsi dei lotti precedenti: la scelta è salvata sull'iPad, non qui.
+- «proposti» contiene tutti gli URL già proposti, compresi quelli tolti in revisione. Un URL che è già in «proposti» non va mai riproposto: va scelto un corso diverso.
+- Costo di riferimento: circa 100.000 token per l'autore e 95.000 per il revisore mirato, per 10 corsi (3/11/2026).

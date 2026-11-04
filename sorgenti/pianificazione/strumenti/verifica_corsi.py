@@ -68,6 +68,16 @@ def controlla(path):
                 e.append('%s: data di verifica fuori intervallo' % w)
         except ValueError:
             e.append('%s: verificato deve essere AAAA-MM-GG' % w)
+    prop = d.get('proposti') or []
+    if not isinstance(prop, list): e.append('proposti deve essere una lista')
+    lotti = {}
+    for c in corsi:
+        lo = c.get('lotto')
+        if not isinstance(lo, int) or lo < 1: e.append('corso %s: serve «lotto» (numero da 1)' % c.get('id'))
+        else: lotti[lo] = lotti.get(lo, 0) + 1
+        if c.get('url') not in prop: e.append('corso %s: l\'url deve essere anche in «proposti»' % c.get('id'))
+    for lo, n in lotti.items():
+        if n > 10: e.append('lotto %d: massimo 10 corsi per ricerca (ora %d)' % (lo, n))
     if d.get('pronto'):
         if len(corsi) < 10:
             e.append('pronto: servono almeno 10 corsi (ora %d)' % len(corsi))

@@ -4,7 +4,10 @@
 const CO_AREE={ia:["🤖","IA e digitale"],pens:["🌿","Pensione e tempo libero"]};
 const CO_ST={da:["⭐","Da seguire"],in:["▶️","In corso"],ok:["✅","Finito"]};
 function coD(){P.corsi=P.corsi||{};const C=P.corsi;C.st=C.st||{};C.f=C.f||{};return C;}
-function coFiltra(C){const f=C.f;return CO_D.corsi.filter(c=>(!f.a||c.area===f.a)&&(!f.t||c.tipo===f.t)&&(!f.it||c.lingua!=="Sottotitoli in italiano")&&(!f.at||c.attestato==="Gratis")&&(!f.st||C.st[c.id]));}
+/* 4/11/2026 (scelta del proprietario): la ricerca arriva a lotti di 10; i corsi dei lotti precedenti che non hai segnato (⭐ ▶️ ✅) spariscono e non vengono più proposti */
+const coLotto=()=>Math.max(1,...CO_D.corsi.map(c=>c.lotto||1));
+const coVisibile=(c,C)=>(c.lotto||1)>=coLotto()||!!C.st[c.id];
+function coFiltra(C){const f=C.f;return CO_D.corsi.filter(c=>coVisibile(c,C)&&(!f.a||c.area===f.a)&&(!f.t||c.tipo===f.t)&&(!f.it||c.lingua!=="Sottotitoli in italiano")&&(!f.at||c.attestato==="Gratis")&&(!f.st||C.st[c.id]));}
 function coCard(c,C){const s=C.st[c.id];
   return `<div class="co-c${s?" co-"+s:""}"><b>${esc(c.titolo)}</b><div class="co-e">${c.tipo==='Università popolare'?'🏛️ ':''}${esc(c.ente)}${c.paese!=="Italia"?" · "+esc(c.paese):""} · ${esc(c.piattaforma)}</div>`+
     `<div class="co-t"><span>${c.lingua==="Sottotitoli in italiano"?"💬":"🇮🇹"} ${esc(c.lingua)}</span><span>${c.modalita==='Online'?'💻 Online':'📍 '+esc(c.modalita)+(c.citta?' · '+esc(c.citta):'')}</span><span>${esc(c.livello)}</span><span>⏱️ ${esc(c.durata)}</span><span>${esc(c.formato)}</span><span>🎓 attestato: ${esc(c.attestato)}</span></div>`+
@@ -12,7 +15,7 @@ function coCard(c,C){const s=C.st[c.id];
     Object.keys(CO_ST).map(k=>`<button class="btn sm${s===k?" on":""}" data-cos="${esc(c.id)}" data-v="${k}" title="${CO_ST[k][1]}">${CO_ST[k][0]}</button>`).join("")+
     `</div><div class="lbl">Controllato il ${new Date(c.verificato+"T12:00").toLocaleDateString("it-IT")}</div></div>`;}
 function vCorsi(){
-  const C=coD(),f=C.f,L=CO_D.corsi,R=coFiltra(C);
+  const C=coD(),f=C.f,L=CO_D.corsi.filter(c=>coVisibile(c,C)),R=coFiltra(C),LN=coLotto(),nuovi=L.filter(c=>(c.lotto||1)===LN&&!C.st[c.id]).length;
   let o=`<h1>🎓 Corsi online</h1><p class="sub">Corsi gratuiti e aperti a tutti, senza essere studenti universitari: università italiane e straniere e università popolari, in italiano. Tocca ⭐ ▶️ ✅ per segnare i tuoi: lo stato resta su questo iPad.</p>`;
   if(!L.length)return o+`<div class="card k-corsi nofold"><h2>📚 La lista è in preparazione</h2><p>${esc(CO_D.criteri)}</p><p class="empty">I corsi arrivano dopo la ricerca e il controllo: ogni corso viene aperto sulla pagina ufficiale prima di entrare nella lista.</p></div>`;
   const mie=L.filter(c=>C.st[c.id]),nn=k=>mie.filter(c=>C.st[c.id]===k).length;
@@ -23,6 +26,7 @@ function vCorsi(){
     `<label class="co-ck"><input type="checkbox" data-cok="it"${f.it?" checked":""}> solo in italiano (senza sottotitoli)</label>`+
     `<label class="co-ck"><input type="checkbox" data-cok="at"${f.at?" checked":""}> attestato gratis</label>`+
     `<label class="co-ck"><input type="checkbox" data-cok="st"${f.st?" checked":""}> solo i miei (${mie.length})</label></div>`+
+    (nuovi?`<div class="lbl">🆕 <b>${nuovi} corsi da scegliere</b>: segna con ⭐ quelli che ti interessano. Alla prossima ricerca gli altri spariscono e non verranno più proposti; quelli segnati restano.</div>`:"")+
     (mie.length?`<div class="lbl">I miei corsi: ⭐ ${nn("da")} da seguire · ▶️ ${nn("in")} in corso · ✅ ${nn("ok")} finiti</div>`:"")+
     `<div class="lbl">${esc(CO_D.criteri)}${CO_D.updated?" Lista aggiornata il "+new Date(CO_D.updated+"T12:00").toLocaleDateString("it-IT")+".":""}</div></div>`;
   if(!R.length)return o+`<p class="empty">Nessun corso con questi filtri.</p>`;
