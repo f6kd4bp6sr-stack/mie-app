@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-04T13:05:00+01:00",
+ "updated": "2026-11-05T13:05:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
@@ -359,21 +359,21 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-04T13:05:00+01:00",
+   "ultimo": "2026-11-05T13:05:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T09:15:00+01:00",
-   "esito": "non raggiungibile"
+   "ultimo": "2026-11-05T13:05:00+01:00",
+   "esito": "ok"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-01T13:05:00+01:00",
+   "ultimo": "2026-11-05T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -401,7 +401,7 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-03",
+   "ultimo": "2026-11-05T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -471,28 +471,28 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-04T13:05:00+01:00",
+   "ultimo": "2026-11-05T13:05:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-04T13:05:00+01:00",
+   "ultimo": "2026-11-05T13:05:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-10-31T12:58:00+01:00",
+   "ultimo": "2026-11-05T13:05:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-11-04T13:05:00+01:00",
+   "ultimo": "2026-11-05T13:05:00+01:00",
    "esito": "ok"
   },
   {
@@ -889,6 +889,11 @@
    "at": "2026-11-04T13:05:00+01:00",
    "notizie": 0,
    "note": "giro delle 13 (mercoledì 4/11): nessuna notizia nuova. Gazzetta: ricerca sul sito senza DPR di recepimento del contratto 2025-2027 (SIULP lo dà atteso entro la prima metà di novembre); tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. SIULP, USIF e SILF: nessun comunicato nuovo su contratto o pensione nelle ricerche; INPS: nessun messaggio nuovo sul tema. Mercati: BTP 10 anni chiuso al 4,46% il 3/11 (ANSA, spread 113,2) ma senza seconda fonte verificabile, valore lasciato invariato; conti deposito riletti su conti-deposito.net (3/11), invariati; BCE, inflazione e BBVA invariati. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati Governo, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, Funzione Pubblica, MEF"
+  },
+  {
+   "at": "2026-11-05T13:05:00+01:00",
+   "notizie": 0,
+   "note": "giro delle 13 (giovedì 5/11): nessuna notizia nuova. Gazzetta, Governo e Funzione Pubblica: ricerca sul sito senza DPR di recepimento del contratto 2025-2027 (SIULP lo dà atteso entro la prima metà di novembre); tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. SILF, USIF, SINAFI e SIULP: nessun comunicato nuovo su contratto o pensione (ultimo SILF 28/10). INPS: circolare n. 109 e messaggio n. 3527 del 2/11 trovati ma il testo non è leggibile sulla pagina, quindi non verificabili e non inseriti. Mercati: BTP 10 anni del 3/11 (4,46%) ancora senza seconda fonte, valore lasciato invariato; conti-deposito.net non apribile in questo giro, conti deposito lasciati al 3/11; BCE, inflazione e BBVA invariati. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
   }
  ],
  "mercati": [
