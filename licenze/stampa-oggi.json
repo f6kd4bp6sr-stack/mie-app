@@ -1,142 +1,137 @@
 {
   "app": "stampa-oggi",
   "edizione": "mattina",
-  "updated": "2026-11-04T05:40+01:00",
-  "nota": "Edizione della mattina del 4 novembre 2026.",
+  "updated": "2026-11-05T05:40+01:00",
+  "nota": "Edizione della mattina del 5 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-mattarella",
-        "t": "Mattarella per il 4 novembre: serve una difesa comune europea e una Nato più forte",
-        "s": "Nel messaggio per la festa dell'Unità nazionale e delle Forze Armate il presidente della Repubblica chiede uno sforzo europeo più integrato sulla difesa e rafforza l'Alleanza Atlantica. Ricorda i quattro militari morti in Bosnia e dice che il diritto internazionale è «a pezzi».",
-        "d": "2026-11-04",
+        "id": "it-tajani-midterm",
+        "t": "Tajani dopo le elezioni Usa: «Mai stati trumpiani», i rapporti con Washington non cambiano",
+        "s": "Il vicepremier e ministro degli Esteri dice che il centrodestra italiano è conservatore ma non Maga e che la sconfitta repubblicana non modifica l'alleanza con gli Stati Uniti. L'Italia, aggiunge, sostiene le scelte americane ma non in modo incondizionato.",
+        "d": "2026-11-05",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/03/allarme-di-mattarella-subito-la-difesa-comune-ue-e-il-rafforzamento-della-nato_40e4cb7d-9452-4872-ad6f-3982a0a63655.html"
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/politica/midterm-usa-tajani-mai-stati-trumpiani_rbCnwtJa7EpbGgMRPWeHS"
+          },
+          {
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/2026/11/04/midterm-tajani-trump-maga-notizie/8560449/"
           }
         ]
       },
       {
-        "id": "it-sanita-manovra",
-        "t": "Manovra, le Regioni si riuniscono sui fondi alla sanità: governo e critici divisi sui numeri",
-        "s": "Il governo dice che il Fondo sanitario sale a 146,3 miliardi nel 2027; le Regioni, soprattutto di centrosinistra, parlano di tagli e di risorse che non coprono l'inflazione. La Conferenza delle Regioni ha convocato una riunione straordinaria.",
-        "d": "2026-11-04",
+        "id": "it-manovra-condono",
+        "t": "Manovra, alla Camera partono gli emendamenti: condono edilizio, pensioni e contributo delle banche",
+        "s": "Fratelli d'Italia, con il sostegno di Forza Italia, vuole riaprire la sanatoria edilizia del 2003. Salvini chiede di usare gli 850 milioni annui per l'uscita anticipata verso «quota 64». Il contributo di banche e finanza alla manovra è di 5,8 miliardi.",
+        "d": "2026-11-05",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/03/tagli-alla-sanita-in-manovra-riunione-straordinaria-delle-regioni_7cdaa1d1-eb50-4b15-b477-81428d29baa6.html"
+            "n": "il Giornale",
+            "url": "https://www.ilgiornale.it/news/governo/manovra-spunta-il-condono-edilizio-scuola-e-pensioni-battaglia-di-salvini/"
+          },
+          {
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/in-edicola/articoli/2026/11/05/29-mld-di-deficit-in-piu-e-il-parlamento-non-sa-cosa-ne-fara-il-governo/8560910/"
           }
         ]
       },
       {
-        "id": "it-tetto-stranieri",
-        "t": "Scuola, la Commissione Ue richiama l'Italia sul tetto agli alunni stranieri: Valditara risponde",
-        "s": "Rispondendo a un'interrogazione del Pd, la Commissione ricorda che i trattati vietano discriminazioni per nazionalità. Il ministro Valditara replica che la norma favorisce l'integrazione, riguarda chi non conosce la lingua e non è discriminatoria.",
-        "d": "2026-11-04",
+        "id": "it-francia-cgil",
+        "t": "La Cgil manda una delegazione a Parigi per lo sciopero generale francese del 5 novembre",
+        "s": "Il sindacato italiano partecipa alla manifestazione in solidarietà con i lavoratori francesi, che chiedono aumenti salariali, rivalutazione di pensioni e Smic e più risorse per i servizi pubblici. La Cgil sarà in Spagna l'11 novembre e organizza uno sciopero il 20.",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/03/lue-richiama-litalia-sul-tetto-agli-stranieri-a-scuola.-valditara-andiamo_264b57eb-6c24-4ef2-a41d-dc73ebaa3c3f.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/03/la-cgil-manda-una-delegazione-allo-sciopero-in-francia-del-5-novembre_753cffb5-5c2a-4598-9ef0-75d658c800f4.html"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-midterm",
-        "t": "Midterm Usa: i democratici in vantaggio per la Camera, partita aperta al Senato",
-        "s": "Secondo le proiezioni diffuse nella notte, i democratici conquisterebbero la Camera (la soglia è 218 seggi). Al Senato ne servono ancora tre per la maggioranza di 51: i dati sono parziali e il Maine è ancora in bilico.",
-        "d": "2026-11-04",
+        "id": "mo-midterm-senato",
+        "t": "Midterm Usa: i democratici conquistano anche il Senato, fine del controllo repubblicano del Congresso",
+        "s": "Secondo le proiezioni i democratici ottengono almeno 51 seggi su 100 al Senato, dopo aver vinto la Camera (228 seggi contro 139 con alcune sfide aperte). Hanno strappato seggi in Texas, Ohio, Kansas e Carolina del Nord. Trump dice di accettare il voto.",
+        "d": "2026-11-05",
         "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/midterm-media-i-dem-vincono-il-controllo-della-camera.-avanti-per-la-conquista_cac22026-2d64-44b0-8b5f-ee46bcd00316.html"
-          }
-        ]
-      },
-      {
-        "id": "mo-iran",
-        "t": "Trump: nessun piano immediato di attacco all'Iran, ma gli Usa sono pronti ad agire",
-        "s": "Intervistato dal Financial Times, il presidente americano dice di non voler colpire subito l'Iran e che gli Stati Uniti stanno ottenendo ciò che vogliono. Teheran, riferisce Al Jazeera, prepara un piano di «massima deterrenza» in caso di nuovo attacco.",
-        "d": "2026-11-04",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/04/trump-nessun-piano-immediato-per-attaccare-liran_d6dab7ef-5200-4bc2-8114-9fa9ec26ffa9.html"
-          },
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/4/iran-war-live-tehran-prepares-maximum-deterrence-plan-for-any-new-attack",
+            "url": "https://www.aljazeera.com/news/2026/11/4/democratic-party-flips-us-senate-in-2026-midterm-elections",
+            "l": "en"
+          },
+          {
+            "n": "CBS News",
+            "url": "https://www.cbsnews.com/live-updates/senate-election-results-2026/",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-ucraina",
-        "t": "Ucraina: raid russo su un ospedale a Kharkiv, 62 feriti; Witkoff annuncia colloqui ad Abu Dhabi",
-        "s": "Un attacco ha colpito una struttura sanitaria di Kharkiv: 62 feriti e oltre 200 pazienti evacuati. Intanto l'inviato Usa Witkoff dice che Washington faciliterà colloqui tecnici tra Russia e Ucraina ad Abu Dhabi, con delegati europei e Nato.",
-        "d": "2026-11-04",
+        "id": "mo-iran-trump",
+        "t": "Iran: Trump ammette che la guerra ha pesato sulla sconfitta, Khamenei dice che l'ostilità Usa resterà",
+        "s": "Il presidente americano riconosce che il conflitto con l'Iran è stato il fattore principale del voto negativo, ma sostiene che era necessario per impedire la bomba atomica. La Guida suprema Mojtaba Khamenei afferma che l'esito elettorale non cambia nulla.",
+        "d": "2026-11-05",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/03/attacco-russo-su-struttura-sanitaria-a-kharkiv-62-feriti_abfb640f-ce8e-428e-bea0-525c514ba306.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/03/witkoff-usa-medieranno-colloqui-abu-dhabi-a-livello-tecnico-tra-russia_673a7d30-31d6-44ab-8403-e3e302bc08e3.html"
+            "n": "Al Jazeera",
+            "url": "https://aljazeera.com/news/liveblog/2026/11/5/iran-war-live-trump-admits-war-caused-election-loss-but-had-to-do-it",
+            "l": "en"
           }
         ]
       },
       {
-        "id": "mo-giappone",
-        "t": "Il Giappone prepara un piano di difesa da 500 miliardi di dollari in cinque anni",
-        "s": "Il programma, quasi il doppio dei fondi attuali, punta su droni e armamenti statunitensi, secondo quanto riportato dall'ANSA.",
-        "d": "2026-11-04",
+        "id": "mo-ucraina-komyshuvakha",
+        "t": "Ucraina, raid russo su un centro aiuti a Komyshuvakha: 33 morti, oltre 50 dispersi",
+        "s": "Zelensky parla di uno dei peggiori attacchi della guerra, avvenuto lunedì 2 novembre in un ex edificio scolastico usato per distribuire aiuti. Un altro attacco ha colpito un ospedale a Kharkiv. Il 10 e 11 novembre sono attesi colloqui a tre ad Abu Dhabi.",
+        "d": "2026-11-05",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/03/giappone-piano-difesa-da-500-miliardi-di-dollari-in-cinque-anni_484287d3-9f53-4013-807f-c414536fef08.html"
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/04/more-than-50-trapped-under-rubble-after-russian-strike-on-school-turned-aid-centre-zelensk",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-francia-sciopero",
+        "t": "Francia, giovedì sciopero generale intersindacale su salari, costo della vita e servizi pubblici",
+        "s": "I sindacati, delusi dall'incontro con il premier Lecornu, hanno indetto la mobilitazione del 5 novembre nel settore pubblico e privato. Si aggiungono le proteste di studenti e liceali contro Parcoursup e la carenza di docenti.",
+        "d": "2026-11-05",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/10/21/disappointed-after-meeting-french-unions-call-for-5-november-action",
+            "l": "en"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-bombe-voli",
-        "t": "Allarmi bomba su voli e una nave da crociera in Europa: nessun ordigno trovato",
-        "s": "Al Jazeera racconta che almeno sette voli e una nave con circa 1.500 persone sono stati oggetto di falsi allarmi. Tra gli aeroporti coinvolti Varsavia, Sofia, Heathrow e Roma Fiumicino, dove un volo Ryanair è atterrato scortato da caccia italiani.",
-        "d": "2026-11-04",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/4/bomb-threats-disrupt-flights-across-europe-no-explosive-devices-found",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-cyber-supermercati",
-        "t": "Attacchi informatici ai frigoriferi dei supermercati in almeno undici Paesi europei",
-        "s": "Gli hacker hanno alzato la temperatura dei sistemi di refrigerazione. Colpiti Germania, Romania, Regno Unito e Belgio; circa venti punti vendita in Italia, con effetti «limitati» secondo il governo. L'Ue parla di attacchi «non isolati» e coordina la risposta.",
-        "d": "2026-11-04",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/4/eu-urges-action-as-germany-romania-and-uk-report-supermarket-cyberattacks",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-bce-lagarde",
-        "t": "Bce, si apre la corsa alla successione di Lagarde: candidature entro venerdì",
-        "s": "Euronews riferisce che i Paesi dell'euro hanno tempo fino a venerdì per proporre i nomi per la presidenza della Banca centrale europea. I ministri delle Finanze faranno il punto il 9 novembre; Lagarde lascerà a febbraio.",
-        "d": "2026-11-04",
+        "id": "es-midterm-europa",
+        "t": "Euronews: dopo la sconfitta di Trump, dazi e aiuti all'Ucraina restano incerti per l'Europa",
+        "s": "Secondo il giornale è improbabile che il Congresso fermi i dazi, ora spostati sulla Sezione 301, e i democratici presiederanno le commissioni del Senato solo da gennaio. Le Borse europee salgono e l'oro supera i 4.000 dollari.",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/video/2026/11/03/who-will-replace-lagarde-eurozone-picks-nominees-as-race-for-ecb-top-job-begins",
+            "url": "https://www.euronews.com/2026/11/04/us-midterms-what-trumps-defeat-means-for-europe-and-global-markets",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-proteste-europa",
+        "t": "Al Jazeera: proteste giovanili in almeno otto Paesi europei, dalla Francia alla Spagna, anche in Italia",
+        "s": "La testata qatariota descrive proteste «plurali e non coordinate» su scuola, spese militari, casa e costo della vita. Cita lo sgombero di Puerta del Sol a Madrid e la stretta italiana sulle manifestazioni violente.",
+        "d": "2026-11-05",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/4/why-are-europes-governments-struggling-to-respond-to-growing-protests",
             "l": "en"
           }
         ]
@@ -144,52 +139,60 @@
     ],
     "economia": [
       {
-        "id": "ec-spread-petrolio",
-        "t": "Spread Btp-Bund a 113 punti, il petrolio scende: sui mercati pesano le speranze su Iran",
-        "s": "Il differenziale è calato di quasi 6 punti e il rendimento del Btp decennale è al 4,42%. Il petrolio ha chiuso a New York a 96,09 dollari; il gas ad Amsterdam è risalito sopra i 92 euro al megawattora.",
-        "d": "2026-11-04",
+        "id": "ec-piazza-affari",
+        "t": "Piazza Affari chiude a +2,18% a 51.031 punti, spread Btp-Bund a 104 punti",
+        "s": "Spinta dalle banche (Intesa Sanpaolo +5,45%, UniCredit +5,48%), la Borsa di Milano torna ai livelli di un mese fa. In calo Technoprobe, Prysmian, Avio e STMicroelectronics. Il differenziale con i titoli tedeschi si restringe.",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/02/lo-spread-btp-bund-chiude-in-calo-di-quasi-6-punti-a-quota-113_6676e9b0-00f2-4936-85c9-d4aec3522af5.html"
+            "url": "https://ansa.it/sito/notizie/topnews/2026/11/04/borsa-milano-chiude-in-rialzo-ftse-mib-218_6b1ff5b1-2ea1-46d4-a105-704bea08cd98.html"
           },
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/02/borsa-leuropa-riduce-il-rialzo-calano-greggio-e-gas-milano-02_297d17cf-e943-49a4-aaf0-8c54b88bb013.html"
+            "n": "ANSA (spread)",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/04/lo-spread-btp-bund-si-stringe-a-1042-punti_f2b87979-079c-40de-b654-369817f86f7f.html"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-iveco-tata",
-        "t": "Iveco Group, con Tata Motors la sede resta a Torino",
-        "s": "Tata Motors ha acquisito l'89,42% di Iveco Group con l'offerta pubblica; il gruppo è entrato nell'orbita Tata il 30 ottobre. I vertici, a Torino, assicurano la sede, i marchi e la presenza industriale, ma senza cifre su stabilimenti e occupati.",
-        "d": "2026-11-04",
+        "id": "to-unito-spazi-regione",
+        "t": "Unito accetta gli spazi della Regione per le lezioni in presenza, col Campus Einaudi occupato",
+        "s": "Su proposta del presidente Cirio l'ateneo accetta le sedi regionali; è in corso un sopralluogo. La rettrice Prandi ribadisce che la didattica online continua e punta a restituire presto il Campus all'università.",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/tata-motors-iveco-group-continuera-ad-avere-la-sede-a-torino_f39ae461-dfba-4d7f-a298-ac0735b99f2c.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/english/news/business/2026/11/03/iveco-to-continue-to-have-hq-in-turin-after-tata-motors-takeover_0b317162-4402-45bc-b970-de625a9265ab.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/universita-torino-si-agli-spazi-della-regione-per-le-lezioni-in-presenza_27f56f26-d227-49ce-945a-b395146d3f5d.html"
           }
         ]
       },
       {
-        "id": "to-campus-einaudi",
-        "t": "Campus Einaudi occupato dal 26 ottobre: lezioni online e sciopero della fame per la riapertura",
-        "s": "Il collettivo Cambiare Rotta protesta contro caro studi, residenze e riarmo. UniTo ha spostato online le lezioni dal 2 novembre e chiede la fine dell'occupazione; una dirigente dei Radicali digiuna per riaprire la struttura.",
-        "d": "2026-11-04",
+        "id": "to-monossido-rivalta",
+        "t": "Rivalta di Torino: famiglia di cinque persone intossicata dal monossido di carbonio, nessuno è grave",
+        "s": "L'allarme è scattato verso le 5:30 del 4 novembre. Due adulti e tre bambini sono stati portati all'ospedale di Rivoli e alcuni trasferiti in un centro per l'ossigenoterapia iperbarica.",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/01/unito-preoccupati-per-campus-ancora-occupato-al-via-lezioni-a-distanza_d627b291-980f-40f7-a6fc-0b05b796b610.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/famiglia-intossicata-da-monossido-di-carbonio-nel-torinese_4875449c-4807-4a50-8dea-b15a6a5f3dc0.html"
           },
           {
+            "n": "TorinoToday",
+            "url": "https://torinotoday.it/cronaca/intossicati-monossido-gozzano-pasta-rivalta-4-novembre-2026.html"
+          }
+        ]
+      },
+      {
+        "id": "to-protesta-aerospazio",
+        "t": "Torino, il 4 novembre protesta antimilitarista davanti al cantiere della Città dell'aerospazio",
+        "s": "Esponenti dell'Assemblea antimilitarista hanno chiuso l'ingresso dell'area di corso Marche. Contestano la celebrazione delle Forze armate e il progetto, che definiscono industria bellica.",
+        "d": "2026-11-05",
+        "fonti": [
+          {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/tesoriera-radicali-in-sciopero-della-fame-per-riaprire-il-campus-einaudi_2f05682f-0e24-4503-a55d-00bf36ffddee.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/4-novembre-protesta-antimilitarista-alla-citta-dellaerospazio-a-torino_eac63011-0311-47f0-9345-fafd72b0d7b1.html"
           }
         ]
       },
@@ -216,60 +219,30 @@
             "url": "https://www.torinotoday.it/attualita/sciopero-trasporti-treni-28-novembre-mezzi-Gtt-aerei.html"
           }
         ]
-      },
-      {
-        "id": "to-65-arresti",
-        "t": "Criminalità giovanile nel Torinese: 65 arresti e sequestri di droga e armi",
-        "s": "Un'operazione contro la criminalità giovanile ha portato a 65 arresti nel Torinese, con sequestro di stupefacenti e armi, riferisce l'ANSA.",
-        "d": "2026-11-04",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/contrasto-alla-criminalita-giovanile-65-gli-arresti-nel-torinese_3267d3c5-4548-4474-8432-082c1d715ded.html"
-          }
-        ]
       }
     ],
     "piemonte": [
       {
-        "id": "pi-ex-ilva-novi",
-        "t": "Ex Ilva di Novi Ligure: scorte fino al 20 novembre, poi rischio cassa integrazione",
-        "s": "In audizione al Senato il sindaco Muliere chiede ammortizzatori oltre giugno, tutele per l'indotto e forniture esterne: le 10.000 tonnellate promesse bastano per 15-20 giorni di lavoro. Ha chiesto di mantenere il tavolo di crisi con Piemonte e Liguria.",
-        "d": "2026-11-04",
+        "id": "pi-lupo-piano",
+        "t": "Piemonte, piano per il lupo: la Regione potrà intervenire senza il parere di Ispra ogni volta",
+        "s": "Si stimano circa 464 lupi sul territorio. La bozza del piano è attesa a fine gennaio; poi osservazioni, adozione della Giunta e voto del Consiglio. Ispra giudica positivamente l'iniziativa.",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/sindaco-novi-ligure-assicurare-lattivita-produttiva-ex-ilva-dellarea-a-freddo_f6066254-dd20-43a5-a1f7-0ce57195ad36.html"
-          }
-        ],
-        "link": [
-          {
-            "n": "Piemonte e Liguria, cinque richieste al governo per salvare gli stabilimenti ex Ilva",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/10/21/piemonte-e-liguria-cinque-richieste-al-governo-per-salvare-gli-stabilimenti-ex-ilva_75dfd472-86b4-4824-9909-6287a11b7eda.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/bongioanni-il-piemonte-e-al-lavoro-per-la-gestione-del-lupo_95d0320c-289a-4599-98fb-5f239fb8815f.html"
           }
         ]
       },
       {
-        "id": "pi-vercelli-truffa",
-        "t": "Vercelli, arrestato un 42enne per la truffa del finto carabiniere",
-        "s": "L'uomo è accusato di aver ottenuto gioielli e contanti da un anziano fingendosi un carabiniere.",
-        "d": "2026-11-04",
+        "id": "pi-start-cup",
+        "t": "Start Cup Piemonte Valle d'Aosta: vince Exajoint, che misura l'orientamento delle protesi d'anca",
+        "s": "La 22ª edizione, con circa 180 progetti e dieci finalisti, assegna 60.000 euro di montepremi. Secondo posto a SelSkin, terzo a Sense-maiking; i primi sei vanno al premio nazionale di Bari il 3-4 dicembre.",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/truffa-del-finto-carabiniere-arrestato-un-42enne-a-vercelli_ac482543-34d1-486b-b925-58bb0a85ef67.html"
-          }
-        ]
-      },
-      {
-        "id": "pi-verbania-riemann",
-        "t": "Verbania celebra Riemann, il matematico che cambiò il modo di pensare lo spazio",
-        "s": "La città del Lago Maggiore ricorda la figura del matematico tedesco e il suo contributo alla geometria.",
-        "d": "2026-11-04",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/verbania-celebra-riemann-il-matematico-cheha-cambiato-il-modo-di-pensare-lo-spazio_102b280d-6697-48e8-8350-17a5c9f8a0c2.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/start-cup-piemonte-la-startup-exajoint-vince-la-22a-edizione_a9bc0bbd-f93f-4c1a-b167-be0a41e719fe.html"
           }
         ]
       }
@@ -279,7 +252,7 @@
         "id": "cu-tff-travolta",
         "t": "John Travolta al Torino Film Festival con il suo primo film da regista",
         "s": "L'attore presenterà in anteprima italiana «Propeller One-Way Night Coach», tratto da un suo racconto. Il 44° festival si tiene dal 24 novembre al 2 dicembre.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "ANSA",
@@ -293,7 +266,7 @@
         "id": "ev-torino-contemporanea",
         "t": "Torino Contemporanea Film Festival: anteprime, classici e videoarte",
         "s": "Cinque giornate con concorso per registe emergenti, anteprime come «La Gradiva» e «Blue Heron» e la rassegna su Claudia Cardinale. Prezzi non indicati.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "ANSA",
@@ -307,7 +280,7 @@
         "id": "ev-courts",
         "t": "Courts of Champions: la mostra sulla storia delle Nitto ATP Finals e dei suoi campioni",
         "s": "Esposizione dedicata alla storia del torneo di tennis e ai campioni che l'hanno vinto, con aneddoti e curiosità. Fa parte degli eventi collaterali alle Nitto ATP Finals di Torino.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "quando": "fino al 22 nov",
         "dove": "Torino",
         "fonti": [
@@ -321,7 +294,7 @@
         "id": "ev-road-to-torino",
         "t": "Road to Torino: i tennisti delle ATP Finals in foto sotto i portici",
         "s": "Percorso fotografico lungo i portici di via Po con i giocatori che si contendono il titolo delle Nitto ATP Finals.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "quando": "fino al 22 nov",
         "dove": "Portici di via Po, Torino",
         "fonti": [
@@ -335,7 +308,7 @@
         "id": "ev-luci-artista",
         "t": "Luci d'Artista: le installazioni luminose all'aperto illuminano di nuovo le strade di Torino",
         "s": "Ventottesima edizione della rassegna di opere luminose, nata nel 1998, che trasforma la città in un museo a cielo aperto. Esiste anche un tour in bus panoramico con commento in italiano, inglese e francese.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "quando": "fino al 10 gen 2027",
         "dove": "In tutta la città, Torino",
         "fonti": [
@@ -349,7 +322,7 @@
         "id": "ev-kusama-ogr",
         "t": "Yayoi Kusama alle OGR: la stanza a specchi «Infinity Mirrored Room»",
         "s": "Mostra alle Officine Grandi Riparazioni su come la teoria quantistica ha influenzato la cultura visiva, dal cinema all'arte contemporanea.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "quando": "fino al 25 feb 2027, apertura settimanale",
         "dove": "OGR Torino",
         "fonti": [
@@ -364,7 +337,7 @@
         "id": "ev-world-press-photo",
         "t": "World Press Photo 2026: i migliori lavori di fotogiornalismo della 69ª edizione",
         "s": "Esposizione delle opere vincitrici del concorso internazionale di fotogiornalismo e fotografia documentaria.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "quando": "fino al 13 dic",
         "dove": "Torino",
         "fonti": [
@@ -379,7 +352,7 @@
         "id": "ev-jessica-lange",
         "t": "Still image: a Torino la grande retrospettiva fotografica di Jessica Lange",
         "s": "Oltre 200 immagini dell'attrice e fotografa, in gran parte mai esposte prima: la più ampia retrospettiva sul suo lavoro.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "quando": "fino al 7 feb 2027, apertura settimanale",
         "dove": "Torino",
         "fonti": [
@@ -394,7 +367,7 @@
         "id": "ev-moncalieri-jazz",
         "t": "Moncalieri Jazz Festival 2026",
         "s": "Rassegna jazz nella città di Moncalieri; programma completo sulla scheda ufficiale.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -410,13 +383,17 @@
         "id": "spe-cin-dio-ride",
         "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
         "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-        "d": "2026-11-04",
-        "quando": "Ideal oggi 15:00, 17:10, 19:20, 21:30; altri giorni e The Space sulle pagine delle sale",
+        "d": "2026-11-05",
+        "quando": "Ideal, orari indicativi 15:00, 17:10, 19:20, 21:30; The Space Cinema Torino sulla pagina della sala",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/dio-ride/"
+          },
+          {
+            "n": "Comingsoon (Cinema Ideal)",
+            "url": "https://www.comingsoon.it/cinema/torino/ideal/1072/"
           }
         ]
       },
@@ -424,8 +401,8 @@
         "id": "spe-cin-shaun",
         "t": "Shaun, vita da pecora: Operazione Z.U.C.C.A., film d'animazione per tutti",
         "s": "Shaun e gli animali della fattoria cercano di salvare il contadino scomparso da un mostro prima di Halloween. Regia di Matthew Walker e Steve Cox. Adatto anche ai ragazzi.",
-        "d": "2026-11-04",
-        "quando": "Ideal oggi 15:50, 17:40; altri giorni e The Space sulle pagine delle sale",
+        "d": "2026-11-05",
+        "quando": "Ideal, orari indicativi 15:50, 17:40; The Space Cinema Torino sulla pagina della sala",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "fonti": [
           {
@@ -438,8 +415,8 @@
         "id": "spe-cin-je-so-pazzo",
         "t": "Je so' pazzo, il film su Pino Daniele diretto da Nicola Prosatore",
         "s": "Racconta la crescita del musicista napoletano, dall'infanzia difficile fino al concerto del 1981. Regia di Nicola Prosatore.",
-        "d": "2026-11-04",
-        "quando": "Ideal oggi 15:20, 19:25; altri giorni e The Space sulle pagine delle sale",
+        "d": "2026-11-05",
+        "quando": "Ideal, orari indicativi 15:20, 19:25; The Space Cinema Torino sulla pagina della sala",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "fonti": [
           {
@@ -452,7 +429,7 @@
         "id": "spe-tea-orgasmo",
         "t": "Orgasmo: commedia satirica di Niccolò Fettarappa al Teatro Gobetti",
         "s": "In un futuro vicino una coppia in crisi vive in un mondo dove il desiderio sparisce, mentre una giornalista e uno zoologo indagano su orsi in preda a un'inconsueta frenesia. Con Gianni D'Addario, Niccolò Fettarappa, Lorenzo Guerrieri e Rebecca Sisti; durata 1 ora e 20.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "quando": "mar 3 e gio 5 nov 19:30; mer 4 e ven 6 nov 20:45; sab 7 nov 19:30; dom 8 nov 16:00",
         "dove": "Teatro Gobetti, Torino",
         "fonti": [
@@ -467,7 +444,7 @@
         "id": "spe-tea-ultime-lune",
         "t": "Le ultime lune in scena al Teatro Carignano fino all'8 novembre",
         "s": "Spettacolo della stagione 2026/27 del Teatro Stabile di Torino, in cartellone al Carignano dal 27 ottobre all'8 novembre.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "quando": "fino a dom 8 nov; orari e prezzi sulla pagina del teatro",
         "dove": "Teatro Carignano, Torino",
         "fonti": [
@@ -481,7 +458,7 @@
         "id": "spe-tea-escaped-alone",
         "t": "Escaped Alone di Caryl Churchill, prima italiana di lacasadargilla al Carignano",
         "s": "Prima italiana del testo di Caryl Churchill, proposto dalla compagnia lacasadargilla.",
-        "d": "2026-11-04",
+        "d": "2026-11-05",
         "quando": "dal 10 al 15 nov; orari e prezzi sulla pagina del teatro",
         "dove": "Teatro Carignano, Torino",
         "fonti": [
@@ -497,7 +474,7 @@
         "id": "co-coez",
         "t": "Coez porta a Torino «Live 2026 - From The Rooftop»",
         "s": "Concerto del cantautore romano pop-rap nell'ambito del tour 2026.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "dom 8 nov 2026, 21:00",
         "dove": "Auditorium del Lingotto, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -512,7 +489,7 @@
         "id": "co-coe-pappano",
         "t": "Chamber Orchestra of Europe con Pappano e Kantorow: Brahms e Dvořák",
         "s": "Antonio Pappano dirige la Chamber Orchestra of Europe; al pianoforte Alexandre Kantorow nel Concerto n. 1 di Brahms, poi la Settima di Dvořák.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "gio 12 nov 2026, 20:30",
         "dove": "Auditorium Giovanni Agnelli, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -527,7 +504,7 @@
         "id": "co-regio-rapture",
         "t": "«Rapture» al Regio: Battistoni dirige l'Orchestra del Regio",
         "s": "Concerto sinfonico con l'esotismo di Saint-Saëns e il Boléro di Ravel.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "gio 12 nov 2026 (orario sul sito)",
         "dove": "Teatro Regio, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -542,7 +519,7 @@
         "id": "co-mara-sattei",
         "t": "Mara Sattei in concerto con «Live 2026»",
         "s": "Data torinese del tour della cantautrice pop.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "mer 18 nov 2026, 22:00",
         "dove": "Hiroshima Mon Amour, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -557,7 +534,7 @@
         "id": "co-cremonini",
         "t": "Cesare Cremonini in due serate con l'«Amatour»",
         "s": "Due date torinesi del tour nei palasport del cantautore bolognese.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "mer 9 e gio 10 dic 2026, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -572,7 +549,7 @@
         "id": "co-matheus-jaroussky",
         "t": "Ensemble Matheus e Philippe Jaroussky con Spinosi: Corelli, Händel, Vivaldi",
         "s": "Jean-Christophe Spinosi dirige l'ensemble barocco; solista il controtenore Philippe Jaroussky.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "gio 10 dic 2026 (orario sul sito)",
         "dove": "Auditorium Giovanni Agnelli, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -587,7 +564,7 @@
         "id": "co-anna",
         "t": "ANNA, «Million Dollar Babe Tour 2026»",
         "s": "Tappa torinese del tour della cantante e rapper.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "mar 15 dic 2026, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -602,7 +579,7 @@
         "id": "co-irama",
         "t": "Irama con «A chi ci sarà sempre»",
         "s": "Concerto nei palasport del cantautore pop.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "lun 21 dic 2026, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -617,7 +594,7 @@
         "id": "co-dalessio",
         "t": "Gigi D'Alessio al Palasport 2026",
         "s": "Concerto del cantautore napoletano nel tour dei palasport.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "mer 23 dic 2026, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -632,7 +609,7 @@
         "id": "co-morricone",
         "t": "Alla scoperta di Morricone con la Ensemble Symphony Orchestra",
         "s": "Concerto sinfonico dedicato alle colonne sonore di Ennio Morricone.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "dom 27 dic 2026, 18:00",
         "dove": "Teatro Colosseo, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -647,7 +624,7 @@
         "id": "co-trifonov",
         "t": "Daniil Trifonov in recital: da Händel a Schubert, Stravinskij e Villa-Lobos",
         "s": "Recital del pianista russo con un programma che include anche brani di sua composizione.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "mer 13 gen 2027 (orario sul sito)",
         "dove": "Auditorium Giovanni Agnelli, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -662,7 +639,7 @@
         "id": "co-boosta-fusions",
         "t": "«Fusions»: Boosta e la Filarmonica TRT tra sintetizzatori e orchestra",
         "s": "Il compositore Davide «Boosta» Dileo con la Filarmonica TRT diretta da Valentino Corvino.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "lun 18 gen 2027 (orario sul sito)",
         "dove": "Teatro Regio, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -677,7 +654,7 @@
         "id": "co-tedua",
         "t": "Tedua al Palasport 2027",
         "s": "Concerto del rapper genovese.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "mar 26 gen 2027, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -692,7 +669,7 @@
         "id": "co-kammerphilharmonie",
         "t": "Kammerphilharmonie Bremen con Peltokoski e Vilde Frang: Mendelssohn, Schumann, Sollima",
         "s": "Tarmo Peltokoski dirige l'orchestra tedesca; solista la violinista Vilde Frang.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "mer 27 gen 2027 (orario sul sito)",
         "dove": "Auditorium Giovanni Agnelli, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -707,7 +684,7 @@
         "id": "co-sfera",
         "t": "Sfera Ebbasta al Palasport 2027",
         "s": "Concerto del rapper nel tour dei palasport.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "sab 30 gen 2027, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -722,7 +699,7 @@
         "id": "co-sokolov",
         "t": "Grigory Sokolov in recital per «Absolute»",
         "s": "Recital per pianoforte solo di Grigory Sokolov nella stagione dei concerti del Regio.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "lun 15 feb 2027 (orario sul sito)",
         "dove": "Teatro Regio, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -737,7 +714,7 @@
         "id": "co-tjeknavorian",
         "t": "«Horizons»: Tjeknavorian dirige la Filarmonica TRT",
         "s": "Concerto sinfonico con Emmanuel Tjeknavorian sul podio della Filarmonica TRT.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "lun 22 feb 2027 (orario sul sito)",
         "dove": "Teatro Regio, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -752,7 +729,7 @@
         "id": "co-pezzali",
         "t": "Max Pezzali con «Max Forever» in due serate",
         "s": "Due date torinesi del tour con i brani della storia di Max Pezzali.",
-        "d": "2026-11-03",
+        "d": "2026-11-05",
         "quando": "lun 8 e mar 9 mar 2027, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -862,6 +839,12 @@
       "edizione": "mattina",
       "notizie": 52,
       "note": "Fonti lette: ANSA, Al Jazeera, Euronews, TorinoToday (solo ricerca), Comingsoon, MYmovies, Turismo Torino, Teatro Stabile. Non raggiungibili: reuters.com (ricerca rifiutata), torinotoday.it (pagine non leggibili), thespacecinema.it. Concerti copiati dall'edizione del 3/11 (non è lunedì)."
+    },
+    {
+      "at": "2026-11-05T05:40+01:00",
+      "edizione": "mattina",
+      "notizie": 50,
+      "note": "Fonti lette: ANSA, Adnkronos, il Giornale, Il Fatto Quotidiano, Al Jazeera, Euronews, CBS News, Comingsoon, Turismo Torino. Non raggiungibili: reuters.com (ricerca rifiutata), eventi.comune.torino.it (robots), thespacecinema.it non consultato. Concerti ed eventi copiati dall'edizione precedente (non è lunedì)."
     }
   ]
 }
