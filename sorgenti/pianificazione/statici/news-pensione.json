@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-05T13:05:00+01:00",
+ "updated": "2026-11-06T13:05:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
@@ -894,6 +894,11 @@
    "at": "2026-11-05T13:05:00+01:00",
    "notizie": 0,
    "note": "giro delle 13 (giovedì 5/11): nessuna notizia nuova. Gazzetta, Governo e Funzione Pubblica: ricerca sul sito senza DPR di recepimento del contratto 2025-2027 (SIULP lo dà atteso entro la prima metà di novembre); tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. SILF, USIF, SINAFI e SIULP: nessun comunicato nuovo su contratto o pensione (ultimo SILF 28/10). INPS: circolare n. 109 e messaggio n. 3527 del 2/11 trovati ma il testo non è leggibile sulla pagina, quindi non verificabili e non inseriti. Mercati: BTP 10 anni del 3/11 (4,46%) ancora senza seconda fonte, valore lasciato invariato; conti-deposito.net non apribile in questo giro, conti deposito lasciati al 3/11; BCE, inflazione e BBVA invariati. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-11-06T13:05:00+01:00",
+   "notizie": 0,
+   "note": "giro delle 13 (venerdì 6/11): nessuna notizia nuova. Ricerche su DPR di recepimento 2025-2027, previdenza dedicata, SILF, SIULP, USIF e BTP: nessun risultato nuovo e verificabile dal 5/11; i siti diretti (Gazzetta, SILF, SIULP, GrNet) non apribili in questo giro, quindi DPR ancora dato atteso (SIULP: prima metà di novembre) e niente inserito senza doppia verifica. Tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Mercati e prodotti invariati (nessun dato nuovo con due fonti). Volontariato: già fatto il 2/11. Cultura digitale: già fatta il 1/11. Scheda invariata."
   }
  ],
  "mercati": [
