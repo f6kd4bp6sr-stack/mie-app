@@ -34,8 +34,7 @@ function pathUnits() {
   u.sort((a, b) => { const ia = PATH_ORDER.indexOf(a.id), ib = PATH_ORDER.indexOf(b.id); return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib); });
   u.forEach(x => { if (x.items) x.items = x.items.filter(it => it.q && Array.isArray(it.o) && it.o.length >= 2); });
   /* domande dalla fonte unica, con il loro codice fisso (data/domande/quiz/*.json) */
-  if (typeof QUIZ !== 'undefined') u.forEach(x => { if (x.items && QUIZ[x.id]) x.items = QUIZ[x.id].map(z => ({ id: z.id, q: z.q, o: [z.ok].concat(z.wrong), a: 0, e: z.e || '', k: z.k || '', enl: z.en || null, kind: z.kind || '', say: z.say || '', it: z.it || '', arg: z.arg || z.t || '' })); else if (x.items) x.items = rev5Items(x.id, x.items); });
-  else u.forEach(x => { if (x.items) x.items = rev5Items(x.id, x.items); });
+  if (typeof QUIZ !== 'undefined') u.forEach(x => { if (x.items && QUIZ[x.id]) x.items = QUIZ[x.id].map(z => ({ id: z.id, q: z.q, o: [z.ok].concat(z.wrong), a: 0, e: z.e || '', k: z.k || '', enl: z.en || null, kind: z.kind || '', say: z.say || '', it: z.it || '', arg: z.arg || z.t || '' })); else if (x.items) x.items.forEach(it => { it.k = it.k || ''; }); });
   /* argomenti: ogni domanda ha il suo (data/domande/argomenti.json); le lezioni sono gli argomenti, non più blocchi da 10 */
   u.forEach(x => { if (!x.items) return; const A = (typeof ARGOMENTI !== 'undefined' && ARGOMENTI[x.id]) || [];
     const T = A.map(a => ({ id: a[0], n: a[1], ic: a[2], items: [] })), by = {}; T.forEach(t => by[t.id] = t);
@@ -56,22 +55,6 @@ function pathUnits() {
   /* materie tolte da 🏫 La mia scuola (scelta del genitore, 24/10/2026): i dati restano, non si vedono né vanno in ripasso */
   const out = u.filter(x => x.id !== 'parlo' && !HIDE_UNITS.includes(x.id));
   return (__units = out);
-}
-/* righe chiave brevi (la spiegazione lunga resta dietro «Perché?»), correzioni e domande nuove di 5ª */
-function rev5Items(uid, items) {
-  const F = (typeof FIX5 !== 'undefined' && FIX5[uid]) || {}, K = (typeof KEYS !== 'undefined' && KEYS[uid]) || {};
-  items.forEach(it => {
-    const h = hashQ(it.q), f = F[h];
-    if (f) { if (f.e) it.e = f.e; if (f.ok) { it.o = it.o.slice(); it.o[it.a] = f.ok; } }
-    it.k = (typeof KEYS_OK !== 'undefined' && KEYS_OK[hashQ(it.q + '|' + it.o[it.a])]) || K[h] || '';
-  });
-  const N = (typeof NEWQ !== 'undefined' && NEWQ[uid]) || [];
-  if (!N.length) return items;
-  /* le nuove si alternano alle vecchie (una ogni 3), così compaiono subito nel percorso */
-  const out = [], have = new Set(items.map(it => it.q)); let j = 0;
-  items.forEach((it, i) => { out.push(it); if (i % 3 === 2 && j < N.length) { while (j < N.length && have.has(N[j].q)) j++; if (j < N.length) out.push(Object.assign({}, N[j++])); } });
-  while (j < N.length) { if (!have.has(N[j].q)) out.push(Object.assign({}, N[j])); j++; }
-  return out;
 }
 /* riga chiave: quella scritta apposta, altrimenti la prima frase della spiegazione */
 function splitExpl(q) {
@@ -369,7 +352,7 @@ function endLesson() {
   fanfare(); try { confetti(window.innerWidth / 2, window.innerHeight / 3, perfect ? 80 : 40); } catch (e) {}
   const c = dcol(), lv = levelOf(D.energy);
   box.innerHTML = '<div class="ls-end">' +
-    '<div class="ls-dragon">' + dragonSVG(lv, D.color, 'bob') + '</div>' +
+    '<div class="ls-dragon">' + avatarSVG(lv, D.color, 'bob') + '</div>' +
     '<div class="big" style="font-size:30px">' + (perfect ? 'Lezione perfetta!' : conqNow ? (L.node && L.node.t === 'arg' ? 'Argomento conquistato!' : 'Tappa conquistata!') : 'Lezione completata!') + '</div>' +
     '<div class="ls-stats">' +
       '<div><b>' + L.firstOk + '/' + n + '</b><small>giuste al primo colpo</small></div>' +

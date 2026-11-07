@@ -81,7 +81,7 @@ function openShop() {
   $('modal-box').classList.add('wide');
   const prev = () => {
     const el = $('shop-prev'); if (!el) return;
-    if (shopTab === 'd') { el.innerHTML = dragonSVG(Math.max(1, levelOf(D.energy)), D.color); return; }
+    if (shopTab === 'd') { el.innerHTML = avatarSVG(Math.max(1, levelOf(D.energy)), D.color); return; }
     if (shopTab === 't') { const th = store.get('path-theme', '') || 'base'; el.innerHTML = '<div class="path theme-' + th + ' mini-path">' + PATH_DECO[th].map(e => '<span>' + e + '</span>').join('') + '</div>'; return; }
     const t0 = performance.now(); cancelAnimationFrame(shopRaf);
     const anim = now => { const e = $('shop-prev'); if (!e || $('modal').hidden || shopTab !== 'g') return; e.innerHTML = Girl.at('wave', now - t0, 'var(--c1)'); shopRaf = requestAnimationFrame(anim); };

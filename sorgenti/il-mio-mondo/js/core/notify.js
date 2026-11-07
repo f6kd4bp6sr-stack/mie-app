@@ -60,7 +60,7 @@ function notifMarkAll() { const r = notifRead(), now = Date.now(); newsItems().f
 function dotDragon(n, cls) {
   /* la testa del SUO drago (stesso colore, stessa età, stessi accessori), ritagliata in un medaglione */
   const st = D ? Math.max(1, levelOf(D.energy)) : 1, c = (D && DCOLORS[D.color]) || DCOLORS.verde;
-  let svg = dragonSVG(st, D ? D.color : 'verde', '');
+  let svg = avatarSVG(st, D ? D.color : 'verde', '');
   svg = svg.replace(/viewBox="0 0 200 200"/, 'viewBox="' + (st >= 5 ? '44 8 112 112' : st >= 3 ? '48 22 104 104' : '52 32 96 96') + '"').replace(/ role="img" aria-label="[^"]*"/, ' aria-hidden="true" focusable="false"');
   return '<i class="dd ' + (cls || '') + '" aria-hidden="true" style="--dd-b:' + c[0] + ';--dd-l:' + c[1] + '"><span class="dd-h">' + svg + '</span>' +
     (n ? '<b>' + (n > 9 ? '9+' : n) + '</b>' : '') + '<span class="dd-sp">✦</span></i>';
@@ -104,7 +104,7 @@ function greetLine() {
 }
 function openNews(greet) {
   const N = newsItems(), unread = notifUnread().map(n => n.k), i = levelOf(D.energy);
-  openModal('<div class="v2-greet"><div class="v2-gd">' + dragonSVG(Math.max(1, i), D.color, 'bob') + '</div><div class="v2-gb">' + esc(greet ? greetLine() : 'Ecco le novità di oggi:') + '</div></div>' +
+  openModal('<div class="v2-greet"><div class="v2-gd">' + avatarSVG(Math.max(1, i), D.color, 'bob') + '</div><div class="v2-gb">' + esc(greet ? greetLine() : 'Ecco le novità di oggi:') + '</div></div>' +
     '<div class="v2-news">' + (N.length ? N.map((n, k) => '<button type="button" class="v2-nw' + (unread.includes(n.k) ? ' new' : '') + '" data-n="' + k + '"' + (n.go ? '' : ' data-nogo="1"') + '><span class="v2-ni">' + n.ic + '</span><span style="flex:1;min-width:0"><b>' + esc(n.t) + '</b><small>' + esc(n.s) + '</small></span>' + (n.go ? '<span class="v2-na">›</span>' : '') + '</button>').join('') : '<p style="font-weight:800">Hai fatto tutto per oggi! Sono fiero di te. 🌟</p>') + '</div>' +
     '<div class="row center" style="margin-top:12px"><button type="button" class="btn" id="nw-ok" data-focus style="--bc:var(--v2-green)">' + (greet ? 'Andiamo!' : 'Ok') + '</button></div>');
   notifMarkAll();
@@ -127,7 +127,7 @@ function badgeInvite() {
   if (Notification.permission !== 'default' || store.get('badge-asked', '') === todayIso() || (store.get('badge-asked-n', 0) >= 3)) return;
   if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy()) || ($('sr-ov') && !$('sr-ov').hidden)) { setTimeout(badgeInvite, 4000); return; }
   store.set('badge-asked', todayIso()); store.set('badge-asked-n', store.get('badge-asked-n', 0) + 1);
-  openModal('<div class="v2-greet"><div class="v2-gd">' + dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob') + '</div><div class="v2-gb">Posso mettere un <b style="color:#ff3b30">pallino rosso</b> sulla mia icona quando ho novità per te? Tocca «Sì» e poi «Consenti».</div></div>' +
+  openModal('<div class="v2-greet"><div class="v2-gd">' + avatarSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob') + '</div><div class="v2-gb">Posso mettere un <b style="color:#ff3b30">pallino rosso</b> sulla mia icona quando ho novità per te? Tocca «Sì» e poi «Consenti».</div></div>' +
     '<div class="row center" style="gap:10px;margin-top:12px"><button type="button" class="btn ghost" id="bi-no">Più tardi</button><button type="button" class="btn" id="bi-ok" data-focus style="--bc:var(--v2-green)">Sì! 🔴</button></div>');
   $('bi-no').addEventListener('click', closeModal);
   $('bi-ok').addEventListener('click', async () => { const pr = Notification.requestPermission(); closeModal(); try { const r = await pr; if (r === 'granted') { toastV2('🔴 Fatto! Il pallino rosso ti avviserà'); appBadge(); } } catch (e) {} });

@@ -213,7 +213,7 @@ function tryBreak() {
   breakPending = false;
   const m = pick(MOVES);
   const txt = 'Pausa movimento! Hai studiato tanto: 2 minuti di movimento sul posto e poi riprendiamo con il cervello pieno di energia.';
-  openModal('<div>' + dragonSVG(levelOf(D.energy), D.color, 'bob') + '</div><div class="big">Pausa movimento!</div>' +
+  openModal('<div>' + avatarSVG(levelOf(D.energy), D.color, 'bob') + '</div><div class="big">Pausa movimento!</div>' +
     '<p>' + esc(txt) + '</p><p style="font-size:20px">' + m.ic + ' ' + esc(m.name) + '</p>' +
     '<div class="row"><button type="button" class="btn" id="brk-go" data-focus style="--bc:' + m.c + ';--bs:' + m.s + '">Muoviamoci! 🤸‍♀️</button>' +
     '<button type="button" class="btn ghost" id="brk-later">Tra 5 minuti</button>' + sayBtn(txt) + '</div>', [m.c, m.s]);

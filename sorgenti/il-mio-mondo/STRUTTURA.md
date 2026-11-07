@@ -15,7 +15,7 @@ app/
 │   └── festa.css       la festa di compleanno
 ├── js/
 │   ├── lib/            librerie esterne (generatore QR, licenza)
-│   ├── core/           base: salvataggi e avatar (core: MASCOTTE='avatar', AV(), avatarSVG, stelle ⭐ in D.energy; dati ancora in mm2-dragon) (core, cloud), progressi, notifiche, sfondi,
+│   ├── core/           base: salvataggi e avatar (core: avatar scelto con AV() e avatarSVG, stelle ⭐ in D.energy; dati ancora in mm2-dragon; il drago è stato tolto dal codice il 7/11/2026) (core, cloud), progressi, notifiche, sfondi,
 │   │                   musica, microfono (mic: registra e riascolta), guscio dell'app (shell), avvio (boot),
 │   │                   applicatore delle correzioni
 │   ├── sezioni/        routine, giochi, matematica, scienze, sport, scopri, diario, orologio, schede,

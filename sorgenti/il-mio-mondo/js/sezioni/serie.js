@@ -24,7 +24,7 @@ const SR_VID_AUTO = true;
 const srVidVede = id => SR_VID_AUTO ? srVidOk()[id] !== -1 : srVidOk()[id] === 1;
 const srVidAll = () => typeof SERIE === 'undefined' ? [] : Object.entries(SERIE.storia.video).flatMap(([ep, L]) => L.map(v => Object.assign({ ep, u: 'storia' }, v)));
 const srVidDa = () => { const ok = srVidOk(); return srVidAll().filter(v => !(v.id in ok)); };
-const srDrago = cls => dragonSVG(D ? levelOf(D.energy) : 1, D ? D.color : 'verde', cls);
+const srDrago = cls => avatarSVG(D ? levelOf(D.energy) : 1, D ? D.color : 'verde', cls);
 if (!$('p-serie')) { const sec = document.createElement('section'); sec.id = 'p-serie'; sec.dataset.page = ''; sec.hidden = true; $('main').appendChild(sec); } /* episodio in corso: {id, k, i, play, timer} */
 
 /* ---- pagina della serie ---- */

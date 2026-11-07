@@ -227,21 +227,14 @@ function openUnits() {
   $('modal-box').querySelectorAll('.v2-u:not(.lock)').forEach(b => b.addEventListener('click', () => { pathSel = b.dataset.u; store.set('path-sel', pathSel); closeModal(); go('home'); }));
 }
 
-/* ---------- 🔭 ESPLORA: gli strumenti di prima, tutti insieme ---------- */
-const EXPLORE = [['mate', '🔢', 'Officina dei numeri', 'Tabelline turbo, frazioni, orologio, problemi'], ['scienze', '🔬', 'Laboratorio', 'Esperimenti e quiz di scienze'], ['scopri', '🌍', 'Scopri il mondo', 'Storia, geografia, arte, lingue e curiosità'], ['sport', '🤸‍♀️', 'Pausa movimento', 'Pattinaggio, aerea, nuoto: muoviti!'], ['vita', '🧼', 'Io e il mio corpo', 'Armadio del meteo, timer di mani e denti'], ['teatro', '🎭', 'Teatro', 'La mia parte e i segreti del palco'], ['disegno', '🎨', 'Disegno', 'Tela libera, impara a disegnare, il mio museo'], ['routine', '☀️', 'Le mie routine', 'Mattino, compiti, sera e borse dello sport'], ['metodo', '🧠', 'Il mio metodo', 'Trucchi per studiare e concentrarsi']];
+/* ---------- 🔭 ESPLORA: pagina tolta, i vecchi collegamenti portano a Casa ---------- */
 PAGES.esplora = el => { setTimeout(() => go('home'), 0); };
-PAGES.esploraOld = el => {
-  el.innerHTML = '<h1 class="v2-h1">🔭 Esplora</h1><p class="v2-sub">Gli strumenti per allenarti e scoprire di più.</p><div class="v2-grid">' +
-    EXPLORE.map(e => '<button type="button" class="v2-tile" data-go="' + e[0] + '"><span class="v2-ti">' + e[1] + '</span><b>' + esc(e[2]) + '</b><small>' + esc(e[3]) + '</small></button>').join('') + '</div>';
-  el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => b.dataset.go === 'vita' ? openVita() : go(b.dataset.go)));
-};
-
 /* ---------- 🐉 IO: drago, collezioni, negozio, impostazioni, salvataggi ---------- */
 PAGES.io = el => {
   if (!D) { el.innerHTML = ''; return; }
   const i = levelOf(D.energy), ni = nextInfo(), b = birthday(), cnt = (n, t) => '<div class="v2-stat"><b>' + n + '</b><small>' + t + '</small></div>';
   el.innerHTML =
-    '<div class="v2-me"><div class="v2-dragon">' + dragonSVG(i, D.color, 'bob') + '</div><div style="flex:1;min-width:0"><h1 class="v2-h1" style="margin:0">' + esc(childName() || 'Io') + '</h1>' +
+    '<div class="v2-me"><div class="v2-dragon">' + avatarSVG(i, D.color, 'bob') + '</div><div style="flex:1;min-width:0"><h1 class="v2-h1" style="margin:0">' + esc(childName() || 'Io') + '</h1>' +
       '<div class="v2-sub" style="margin:2px 0 8px">' + esc(LEVELS[i].n) + ' · ' + D.energy + ' ⭐</div>' + '<div class="v2-bar big"><i style="width:' + ni.pct + '%;background:var(--v2-orange)"></i></div><small class="v2-sub">' + esc(ni.text) + '</small></div></div>' +
     (typeof linkWarn === 'function' ? linkWarn() : '') +
     '<div class="v2-stats">' + cnt(streakDays(), 'giorni di fila') + cnt(knowTotal(), 'nozioni imparate') + cnt(figOwned() + '/' + figTotal(), 'figurine') + cnt(tesoriFound() + '/' + TESORI.length, 'tesori trovati') + '</div>' +
