@@ -1,8 +1,8 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-07T05:40+01:00",
-  "nota": "Edizione della mattina del 7 novembre 2026.",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-07T13:30+01:00",
+  "nota": "Edizione del pomeriggio del 7 novembre 2026.",
   "sezioni": {
     "italia": [
       {
@@ -19,13 +19,29 @@
       },
       {
         "id": "it-altieri-anac",
-        "t": "Anac, le opposizioni contestano la nomina di Altieri alla presidenza; Meloni: «Era nelle nostre competenze»",
-        "s": "Pd, M5s e Italia Viva criticano la scelta di un esponente della Lega, già politico di lungo corso, al vertice dell'Autorità anticorruzione e chiedono di ritirarla, temendone l'indipendenza. La premier, interpellata a margine dell'Eicma, ha risposto che la nomina rientrava tra le competenze del Governo.",
+        "t": "Anac, Altieri ritira la disponibilità dopo le critiche delle opposizioni; Meloni difende la scelta del Governo",
+        "s": "Trifone Altieri, indicato dalla Lega alla presidenza dell'Autorità anticorruzione, ha rinunciato dopo un confronto con la premier e i vicepremier, per ragioni di opportunità. Pd, M5s e Avs chiedevano di annullare anche la nomina di Centemero alla Consob. Meloni aveva detto che la scelta spettava al Governo.",
         "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/opposizioni-allattacco-su-altieri-allanac-meloni-era-nelle-nostre-competenze_f62f5871-1581-45e0-8e5f-a5550e6e6e2b.html"
+          },
+          {
+            "n": "il Giornale",
+            "url": "https://www.ilgiornale.it/news/governo/meloni-in-sella-fissati-col-voto-anac-altieri-fa-un-passo-indietro/"
+          }
+        ]
+      },
+      {
+        "id": "it-hacker-tajani",
+        "t": "Hacker filorussi mettono una taglia su Tajani e Lo Voi; indaga la procura di Roma",
+        "s": "Il gruppo Noname057(16) diffonde da circa due settimane dati e offre denaro per informazioni su Tajani, Lo Voi e sul capo della Polizia postale Gabrielli. Tajani ha confermato la diffusione dei dati e ha detto di non farsi intimidire; Meloni ha espresso solidarietà. Intanto il gestore del tunnel del Brennero ha segnalato un attacco informatico del 17 ottobre.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/taglia-degli-hacker-sul-dark-web-su-tajani-e-lo-voi.-cyberattacco-alla_2902e339-ba05-423b-b761-27735ead1323.html"
           }
         ]
       },
@@ -44,9 +60,21 @@
     ],
     "mondo": [
       {
+        "id": "mo-kiev-missili",
+        "t": "Missili balistici russi su Kiev nella notte: almeno cinque feriti, chiuso il ponte Nord",
+        "s": "Più ondate di missili hanno colpito la capitale ucraina tra il 6 e il 7 novembre, poche ore dopo l'allarme di Zelensky su un nuovo attacco alle infrastrutture. Secondo il sindaco Klitschko i feriti sono almeno cinque, tra cui una ragazza di 14 anni; il ponte Nord, danneggiato, è chiuso al traffico.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/missili-balistici-russi-su-kiev-almeno-cinque-feriti_c4ecddfa-023b-4d8d-810c-b7ba31731286.html"
+          }
+        ]
+      },
+      {
         "id": "mo-iran-qeshm",
         "t": "Iran, Trump conferma nuovi attacchi americani sull'isola di Qeshm: trattative ancora aperte",
-        "s": "Venerdì 6 novembre gli Stati Uniti hanno colpito le difese aeree sull'isola di Qeshm, nello Stretto di Hormuz; Trump parla di «attacchi minori». Teheran dice di aver abbattuto un drone MQ-9. Il Qatar smentisce che i negoziati siano falliti: le parti esaminano le proposte dei mediatori.",
+        "s": "Venerdì 6 novembre gli Stati Uniti hanno colpito le difese aeree sull'isola di Qeshm, nello Stretto di Hormuz; Trump parla di «attacchi minori». Il Qatar media: Teheran valuta le nuove proposte ma chiede, tra l'altro, la fine del blocco dei porti.",
         "d": "2026-11-07",
         "fonti": [
           {
@@ -57,6 +85,11 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/iran-il-nostro-esercito-piu-forte-rispetto-allinizio-della-guerra_3e8c0a95-4b9a-4cbc-ad30-ed76e48f6dca.html"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/07/us-launches-new-targeted-strikes-on-iran-as-trump-claims-progress-in-talks-with-tehran",
+            "l": "en"
           }
         ]
       },
@@ -181,13 +214,33 @@
     "torino": [
       {
         "id": "to-corteo-7nov",
-        "t": "Torino, oggi corteo di lavoratori e studenti: possibili deviazioni dei mezzi GTT in centro",
-        "s": "TorinoToday segnala per sabato 7 novembre una manifestazione di lavoratori e studenti, partita dal Campus occupato, con percorso in centro, deviazioni delle linee GTT e chiusure di strade e parcheggi. Il dettaglio di percorso e orari è sulla pagina della testata.",
+        "t": "Torino, oggi alle 15 corteo contro carovita e riarmo da piazza Castello a piazza Crispi",
+        "s": "Promosso da Cobas, collettivi studenteschi e reti pacifiste, il corteo parte da piazza Castello e arriva in piazza Crispi passando per via Po, corso San Maurizio e corso Regina Margherita. Si protesta contro carovita, guerra, riarmo, caro affitti e tagli a scuola e sanità. Possibili deviazioni dei mezzi GTT in centro.",
         "d": "2026-11-07",
         "fonti": [
           {
             "n": "TorinoToday",
             "url": "https://www.torinotoday.it/cronaca/manifestazione-corteo-7-novembre-percorso-lavoratori-studenti-campus-occupazioni-gtt-deviazioni-chiusure-parcheggi-centro.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/domani-a-torino-un-nuovo-corteo-contro-carovita-e-riarmo_7eac7ac6-eaaf-4e72-9c72-5142eecb9744.html"
+          }
+        ]
+      },
+      {
+        "id": "to-fuochi-denuncia",
+        "t": "Torino, 188 chili di fuochi d'artificio in casa a Borgo Filadelfia: denunciato un 44enne",
+        "s": "Nei controlli in vista della manifestazione di sabato 7 novembre sono stati trovati 188 chili di fuochi d'artificio in un appartamento e in una cantina del quartiere. L'uomo, 44 anni, è stato denunciato.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cronaca-11/articolo/188-chili-di-fuochi-dartificio-in-salotto-e-in-cantina-44enne-incastrato-e-denunciato-a-borgo-fila.html"
+          },
+          {
+            "n": "TorinoToday",
+            "url": "https://www.torinotoday.it/cronaca/denuncia-fuochi-artificio-illegali-manifestazione-7-novembre-2026.html"
           }
         ]
       },
@@ -218,6 +271,22 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/10/28/torino-dall8-novembre-la-metro-torna-allorario-serale-completo_a60ad358-e285-4986-b49a-2cd7305bd407.html"
+          }
+        ]
+      },
+      {
+        "id": "to-spaccio-arresti",
+        "t": "Torino, sette arresti in tre giorni per spaccio: controlli dei carabinieri sui pusher",
+        "s": "In tre giorni i controlli contro lo spaccio hanno portato a sette arresti in città; in alcuni casi gli spacciatori hanno ingoiato le dosi davanti ai militari e sono finiti in ospedale.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/a-torino-sette-arresti-in-tre-giorni-per-spaccio-di-droga_84fb2997-d7c0-47b3-ba4e-0f6f51f63560.html"
+          },
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cronaca-11/articolo/sette-arresti-in-tre-giorni-per-spaccio-la-strategia-dei-corrieri-della-droga-per-ingoiare-le-dosi.html"
           }
         ]
       }
@@ -791,12 +860,6 @@
   },
   "controlli": [
     {
-      "at": "2026-10-31T10:58+01:00",
-      "edizione": "mattina",
-      "notizie": 28,
-      "note": "Nuovo giro: aggiunte perquisizioni dopo i cortei, crisi in Polonia (aggiornata), vertice Ue-Canada, Bolsonaro, Francia, Corea del Nord, exit tax, cimiteri e Festival dell'Accoglienza a Torino. Fonti lette: ANSA (anche Piemonte), AGI, Il Post, Torino Oggi, Euronews (en), Al Jazeera. Ricerca rifiutata: reuters.com, theguardian.com, bbc.com, lemonde.fr. Senza risultati: skytg24.it. Lettura non riuscita: torinotoday.it."
-    },
-    {
       "at": "2026-10-31T21:50+01:00",
       "edizione": "sera",
       "notizie": 23,
@@ -904,6 +967,12 @@
       "edizione": "mattina",
       "notizie": 53,
       "note": "Fonti lette: ANSA, Adnkronos (solo ricerca), il Fatto Quotidiano, il Giornale (ricerca), Al Jazeera, Euronews, Torino Oggi, TorinoToday (ricerca), ComingSoon (Cinema Ideal), MYmovies, Turismo Torino, Teatro Stabile. Non raggiungibili: reuters.com (ricerca rifiutata), thespacecinema.it (pagine non lette, film indicati solo per il Cinema Ideal), torinotoday.it (pagine non leggibili). Concerti copiati dall'edizione precedente (non è lunedì)."
+    },
+    {
+      "at": "2026-11-07T13:30+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 57,
+      "note": "Fonti lette: ANSA, il Giornale, Euronews (en), Al Jazeera (ricerca). Ricerca rifiutata: reuters, bbc, guardian. Lettura non riuscita: torinotoday.it, ilsole24ore.com (Borsa), una pagina ANSA (permesso non concesso). Spettacoli, eventi e concerti copiati dal mattino (non è lunedì)."
     }
   ]
 }
