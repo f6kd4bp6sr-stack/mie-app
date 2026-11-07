@@ -382,6 +382,7 @@ function valeInfo(){
   o.w=(o.days||[]).filter(x=>String(x)>=add(today(),-7)).length;o.linked=ok2;o.err=inb&&inb.err;
   if(L&&L.gist&&L.v!==2)o.err=err2;o.age=o.saved?(Date.now()-new Date(o.saved).getTime())/864e5:null;return o;}
 /* «Il mio mondo»: Oggi scarica da sola l'ultimo invio cifrato dell'iPad (stesso collegamento della sezione Progressi; massimo ogni 10 minuti) */
+/*@INFLATE*/
 const VIN="prog-mm-in";let valeBusy=false;
 const vub=s=>{s=String(s).replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";const b=atob(s),a=new Uint8Array(b.length);for(let i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;};
 /* chiave GitHub (salvata da Progressi → 📲 Collega con un QR): controllo una volta al giorno */
@@ -402,7 +403,11 @@ async function valePull(force){
     let txt=f.content;if(f.truncated&&f.raw_url)txt=await(await fetch(f.raw_url,{cache:"no-store"})).text();
     const o=JSON.parse(txt);if(o.app!=="mondo-sync")throw new Error("contenuto non riconosciuto");if(o.wait)throw new Error("collegato: aspetto il primo invio dall’iPad della bimba");
     const k=await crypto.subtle.importKey("raw",vub(L.key),"AES-GCM",false,["decrypt"]);
-    const pt=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:vub(o.iv)},k,vub(o.ct))));
+    const raw=new Uint8Array(await crypto.subtle.decrypt({name:"AES-GCM",iv:vub(o.iv)},k,vub(o.ct)));let js=null;
+    /* versione 3: l’iPad comprime i dati prima di cifrarli (come in Progressi) */
+    if(o.z==="deflate-raw"){if(window.DecompressionStream){try{js=await new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream("deflate-raw"))).text();}catch(e){js=null;}}
+      if(js==null){const out=new Uint8Array(+o.n);tinyInflate(raw,out);js=new TextDecoder().decode(out);}}else js=new TextDecoder().decode(raw);
+    const pt=JSON.parse(js);
     const d=(pt.state&&pt.state.data)||pt.data||{},now=new Date().toISOString();
     try{const prev=lsJ(VIN)||{};localStorage.setItem(VIN,JSON.stringify(Object.assign({saved:pt.saved,checked:now,err:""},valeSum(d),valeWeekData(d,prev))));}catch(e){}
     L.sent=pt.saved;L.checked=now;L.err="";try{localStorage.setItem("prog-link-v1",JSON.stringify(L));}catch(e){}

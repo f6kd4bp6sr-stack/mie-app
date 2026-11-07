@@ -35,6 +35,10 @@ _lic = pages['licenze.html']
 _dati = '\n'.join(re.search(r'const %s=.*?;(?=\s*(?:const|let|function|/\*|\n))' % n, _lic, re.S).group(0) for n in ('HOL', 'DEF', 'PROV_START'))
 _cena = re.search(r'const VCENA=\{.*?\]\]\};', pages['index.html'], re.S).group(0)
 pages['progressi.html'] = pages['progressi.html'].replace('/*@VCENA*/', _cena)
+# «Il mio mondo» in Oggi: stesso decompressore della sezione Progressi (invii v3 compressi)
+_infl = re.search(r'const tinyInflate=\(function\(\)\{.*?\n\}\)\(\);', pages['progressi.html'], re.S).group(0)
+assert pages['index.html'].count('/*@INFLATE*/') == 1
+pages['index.html'] = pages['index.html'].replace('/*@INFLATE*/', _infl)
 # 🤝 Metodo: schede e sfide da sezioni/metodo_dati.json, controllate prima di pubblicare
 sys.path.insert(0, D + 'strumenti'); import verifica_metodo
 import verifica_cultura
