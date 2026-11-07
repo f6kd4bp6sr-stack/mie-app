@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="ac790b5ed2";</script>
+<script>window.APP_VERSION="65c10fdae2";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -376,9 +376,11 @@
 .av-b[aria-pressed="true"]{border-color:var(--mc,var(--c3));background:var(--ms,var(--c3-soft))}
 /* 👗🎨 Come mi vesto: colori e taglia (js/sezioni/vesto2.js) */
 .v2-hello{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.v2-hl{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;column-gap:12px;align-items:center;text-align:left;padding:12px 18px;border-radius:20px;border:3px solid var(--c6);background:linear-gradient(135deg,var(--c6-soft),#fff);cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.08);max-width:420px}
-.v2-hl span{grid-row:1/3;font-size:34px}.v2-hl b{font-size:19px}.v2-hl small{grid-column:2;font-weight:700;color:var(--ink-soft)}
-.v2-hl i{grid-row:1/3;grid-column:3;font-style:normal;font-weight:900;font-size:13px;background:var(--c1);color:#fff;border-radius:999px;padding:4px 10px;animation:vvPulse 2s ease-in-out infinite}
+.v2-hl{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;column-gap:8px;row-gap:0;align-items:center;text-align:left;padding:5px 12px;border-radius:14px;border:2px solid var(--c6);background:linear-gradient(135deg,var(--c6-soft),var(--surface,#fff));color:var(--ink);cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,.07);max-width:330px;line-height:1.2}
+.v2-hl span{grid-row:1/3;font-size:24px;line-height:1}.v2-hl b{font-size:16px;white-space:nowrap}.v2-hl small{grid-column:2;font-size:12px;font-weight:700;color:var(--ink-soft)}
+.v2-hl i{grid-row:1/3;grid-column:3;font-style:normal;font-weight:900;font-size:11px;background:var(--c1);color:#fff;border-radius:999px;padding:2px 7px;animation:vvPulse 2s ease-in-out infinite}
+/* 🖼️ disegni delle sezioni (js/core/sezimg.js) */
+.sez-img{margin:4px 0 14px;color:var(--ink)}.sez-img svg{width:100%;height:auto;max-height:150px;display:block}.sez-img.sez-m{margin:10px 0 6px}
 @keyframes vvPulse{50%{transform:scale(1.08)}}
 @media (prefers-reduced-motion:reduce){.v2-hl i{animation:none}}
 .vv-ruota{width:min(300px,70vw);display:block;margin:6px auto}
@@ -405,7 +407,8 @@
 .vv-sport ul,.vv-check{list-style:none;padding:0;text-align:left;display:grid;gap:6px;font-weight:700}
 /* 💄 Come mi trucco (js/sezioni/trucco.js) */
 .v2-hello{align-items:flex-start}.v2-hello>div:first-child{flex:1 1 260px}
-.tr-hl{border-color:var(--c1);background:linear-gradient(135deg,var(--c1-soft),#fff)}
+@media (min-width:1000px){.v2-hello{flex-wrap:nowrap;align-items:center}.v2-hello>div:first-child{min-width:0}.v2-hl{flex:0 1 auto;min-width:0}}
+.tr-hl{border-color:var(--c1);background:linear-gradient(135deg,var(--c1-soft),var(--surface,#fff))}
 .tr-face{width:230px;display:block}
 .tr-dis{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}.tr-dis .chip.on{outline:3px solid var(--c1)}
 .tr-pel{display:flex;gap:10px;margin-top:6px}.tr-pel button{width:44px;height:44px;border-radius:50%;border:2px solid #1d2433;cursor:pointer}.tr-pel button.on{outline:4px solid var(--c1)}
@@ -779,7 +782,7 @@
   .alb-ic { font-size: 30px; } .alb-t { font-weight: 800; font-size: 12px; line-height: 1.15; text-align: center; }
   #alb-view .fig { margin: 8px auto; }
   .piggy { display: flex; gap: 12px; align-items: flex-start; text-align: left; border: 3px solid var(--c3); background: var(--c3-soft); border-radius: 20px; padding: 10px 12px; margin-top: 8px; }
-  .pg-ic { font-size: 44px; line-height: 1; } .piggy b { font-family: var(--font-display); font-size: 19px; display: block; } .piggy small { display: block; font-weight: 700; color: var(--ink-soft); margin-top: 2px; }
+  .pg-ic { font-size: 44px; line-height: 1; } .piggy b { font-family: var(--font-display); font-size: 19px; display: block; } .piggy small { display: block; font-weight: 700; color: var(--ink-soft); margin-top: 2px; } .piggy small b { display: inline; font-family: inherit; font-size: inherit; }
   .pg-goal { font-weight: 800; margin-top: 6px; } .pg-goal .ebig { margin-top: 4px; }
   .si-goal { border: 0; background: transparent; font-size: 18px; opacity: .45; cursor: pointer; padding: 2px 6px; } .si-goal.on { opacity: 1; }
   .shop-it.special { border-color: var(--c4); } .si-req { font-weight: 800; font-size: 12px; color: var(--ink-soft); }
@@ -8163,7 +8166,31 @@ const VESTO2 = {
     ['Caldi e freddi', 'I colori caldi, come rosso, arancione e giallo, ricordano il fuoco e la luce del sole. I colori freddi, come azzurro, blu e viola, ricordano acqua, cielo e ghiaccio. Ognuno ci dà un\'impressione diversa, ma non c\'è un colore giusto per tutte.'],
     ['Neutri e tono su tono', 'Bianco, nero, grigio e beige sono colori neutri: stanno bene con quasi tutto. Tono su tono vuol dire usare lo stesso colore in versioni più chiare e più scure, per esempio un azzurro chiaro con un blu scuro.'],
     ['La luce bianca è fatta di colori', 'La luce del sole sembra bianca, ma contiene tutti i colori. Dopo un temporale le gocce d\'acqua nell\'aria la separano nei colori dell\'arcobaleno. Con un prisma di vetro puoi vedere la stessa magia in classe o a casa.'],
-    ['Il tuo gusto conta', 'Il cerchio dei colori è un aiuto, non una regola da rispettare. Tanti artisti rompono le regole e creano cose bellissime. Prova gli abbinamenti, guarda allo specchio come ti senti e scegli quello che ti fa stare bene.']
+    ['Il tuo gusto conta', 'Il cerchio dei colori è un aiuto, non una regola da rispettare. Tanti artisti rompono le regole e creano cose bellissime. Prova gli abbinamenti, guarda allo specchio come ti senti e scegli quello che ti fa stare bene.'],
+
+    /* ===== NUOVI (7/11/2026, richiesta del papà: sezioni più ricche). Fonti, tutte lette:
+       - misure (altezza a muro, metro morbido, vita, «tra due taglie scegli la più grande»): https://www.nostrofiglio.it/famiglia/moda-e-bellezza/guida-alle-taglie-per-bambini
+       - piede (foglio, tallone e dito più lungo, piede più lungo, pomeriggio): testi già verificati sopra in VESTO2.fonti (Nostro Figlio, Pianeta Mamma)
+       - etichetta di composizione (ordine decrescente, percentuali, 100%/puro, nomi per esteso): https://fe.camcom.it/regmercato/sicurezza-prodotti/folder-mise/guida-tessile
+       - simboli di lavaggio (catino, temperature, barrette, mano, triangolo, quadrato, ferro, cerchio): GINETEX (ISO 3758) https://www.ginetex.net/GB/labelling/care-symbols.asp
+         e controllo incrociato con Altroconsumo https://www.altroconsumo.it/elettrodomestici/lavatrici/speciali/simboli-etichette-lavaggio
+       - vestirsi a strati, sudore, cappello e guanti, sport: https://www.nostrofiglio.it/bambino/come-vestire-bambini-inverno-freddo
+       - colori caldi e freddi: https://www.cosedicasa.com/arredamento/abbinamenti-stili-colori/colori-caldi-e-freddi-quali-sono-e-come-abbinarli-47097
+       - revisione 7/11: ferro con un pallino reso «poco caldo» senza gradi (GINETEX indica 120 °C, la tabella ISO/camcom 110 °C);
+         colori caldi/freddi riscritti come teoria generale del cerchio di Itten (vedi fonti Studentville ed Eroica Fenice);
+         tolto il mito «la testa perde calore più in fretta»; «vestiti sottili» spiegato con il perché (buon senso).
+       - «Che cosa metto?»: consigli di buon senso scritti dall'autore, con i punti sul freddo/uscire dalla fonte Nostro Figlio sopra ===== */
+    ['Come si misura l\'altezza', 'Chiedi aiuto a un adulto. Primo: togli le scarpe e mettiti con la schiena dritta contro un muro libero, guardando davanti a te. Secondo: l\'adulto appoggia un libro piatto sulla tua testa, contro il muro, e fa un piccolo segno con la matita. Terzo: con un metro rigido misura dal pavimento fino al segno. Scrivi il numero in centimetri. Su molti vestiti per bambini la taglia è proprio l\'altezza in centimetri, per questo è la misura più utile!'],
+    ['Come si misura il piede', 'Anche qui serve un adulto. Stai in piedi con il piede appoggiato su un foglio. L\'adulto segna con la matita dove finisce il tallone e dove arriva la punta del dito più lungo (non sempre è l\'alluce!). Poi misura la distanza tra i due segni, in centimetri. Misura tutti e due i piedi: possono essere un po\' diversi, e vale il più lungo. Il pomeriggio è il momento migliore, perché il piede si è un po\' allargato durante la giornata.'],
+    ['Giro petto e giro vita', 'Servono un metro morbido da sarta e un adulto. Meglio avere addosso vestiti sottili: quelli pesanti rendono la misura più grande del vero. Il giro petto si prende nel punto più largo del petto, il giro vita più o meno all\'altezza dell\'ombelico. Il metro deve stare appoggiato in piano e morbido: aderente, ma senza stringere. Queste misure servono solo a scegliere vestiti comodi, come pantaloni e gonne. Sono numeri come l\'altezza, niente di più. Se le misure stanno tra due taglie della tabella, scegli la più grande.'],
+    ['Leggere l\'etichetta: di che cosa è fatto?', 'Dentro al vestito c\'è un\'etichetta cucita con i nomi dei materiali, che si chiamano fibre, e le percentuali. Il primo nome è il materiale che ce n\'è di più, poi gli altri in ordine. «70% cotone, 30% poliestere» vuol dire 70 parti su 100 di cotone e 30 di poliestere. «100%» o «puro» vuol dire una fibra sola. Cotone e lino vengono dalle piante, lana e seta dagli animali, poliestere ed elastan sono fatti in fabbrica (l\'elastan rende il tessuto elastico). Se un vestito ti pizzica sulla pelle, guarda l\'etichetta e dillo a un adulto: ci sono tanti tessuti e puoi sceglierne uno che ti sta comodo.'],
+    ['I simboli di lavaggio: il catino', 'Accanto alla composizione ci sono dei disegnini, usati in tanti Paesi, anche in Italia (li ha inventati un\'associazione chiamata GINETEX). Ogni forma ha un lavoro: catino = lavare, triangolo = sbiancare, quadrato = asciugare, ferro = stirare, cerchio = lavanderia. Nel catino, il numero è la temperatura massima dell\'acqua in gradi: con 30 non si va oltre 30. Una mano nel catino vuol dire lavare a mano, con acqua al massimo a 40 gradi, con delicatezza. Una barretta sotto il catino vuol dire programma delicato, due barrette molto delicato. Una croce sopra un simbolo vuol dire sempre «no, non farlo»: sul catino, non lavare in acqua.'],
+    ['I simboli: triangolo e quadrato', 'Il triangolo parla dei prodotti sbiancanti. Triangolo vuoto: si possono usare. Triangolo con due righe oblique: solo quelli senza cloro. Triangolo con la croce: nessuno sbiancante. Il quadrato parla dell\'asciugatura. Quadrato con un cerchio dentro: si può usare l\'asciugatrice, e i pallini dicono quanto calore (uno è poco, due è normale). Se il cerchio ha la croce, niente asciugatrice. Un quadrato con delle righe dentro dice come asciugare all\'aria: riga orizzontale = stendi il capo in piano, righe verticali = appendilo, riga obliqua = all\'ombra.'],
+    ['I simboli: ferro e lavanderia', 'Il ferro da stiro ha dei pallini che dicono quanto può essere caldo: uno è poco caldo, due è medio, tre è molto caldo (di solito per cotone e lino). Ferro con la croce: non si stira. Attenzione, il ferro scotta: stirare lo fa sempre un adulto! Il cerchio vuol dire pulizia in lavanderia: è un lavaggio fatto da professionisti con macchine speciali, spesso con liquidi al posto dell\'acqua (per questo si chiama «a secco»). Le lettere dentro al cerchio servono a chi lavora in lavanderia. Cerchio con la croce: non va portato in lavanderia a secco.'],
+    ['Vestirsi a strati', 'Quando fa freddo, tanti strati leggeri sono meglio di uno solo molto pesante: se hai caldo, per esempio in classe, ne togli uno, e se ti raffreddi lo rimetti. Si chiama «vestirsi a cipolla». Vicino alla pelle metti una maglia leggera e traspirante, di cotone o di tessuto tecnico. Sopra una felpa o un pile. Per giocare fuori, una giacca leggera da mettere quando ti raffreddi. Cappello, sciarpa e guanti proteggono testa, collo e mani, che altrimenti resterebbero scoperti al freddo. Col caldo vale la stessa idea al contrario: vestiti leggeri e che lasciano passare l\'aria.'],
+    ['Ho caldo o freddo? Ascolta il tuo corpo', 'Il modo più facile per capirlo è toccarti la schiena o il collo: se sei sudata anche senza correre, forse sei troppo coperta, quindi togli uno strato. Il sudore non è dannoso, anzi, aiuta il corpo a raffreddarsi. Ognuno sente la temperatura a modo suo: un adulto fermo può avere freddo mentre tu, che giochi, stai benissimo. Se non sai che cosa fare, parlane con un adulto. Quando fai sport il corpo si scalda, quindi alleggerisciti pian piano. Anche quando fa freddo si può giocare fuori: basta vestirsi bene.'],
+    ['Caldi e freddi: come abbinarli', 'Nel cerchio dei colori, da una parte ci sono i colori caldi: rosso, arancione, giallo e le loro sfumature, come terracotta e senape. Dall\'altra i colori freddi: azzurro, blu, tanti verdi e viola. A molte persone i caldi fanno pensare all\'energia, i freddi alla calma. Mettere insieme un po\' di caldo e un po\' di freddo dà ritmo e contrasto, per esempio una maglia gialla con pantaloni blu. Bianco, grigio e beige fanno da sfondo e legano tutto. Anche i neutri possono essere un po\' caldi o un po\' freddi: un bianco panna è più caldo, un grigio azzurrato più freddo. Guarda i colori alla luce del giorno, perché la luce cambia il loro aspetto.'],
+    ['Che cosa metto oggi?', 'Prova a farti tre domande. Che cosa farò? Se corri e giochi servono vestiti comodi che si muovono con te e scarpe ben allacciate. Se vai a una festa, scegli ciò che ti piace e in cui ti senti comoda. Per scuola e sport segui le indicazioni di scuola e insegnanti. Che tempo fa? Guarda il cielo e la temperatura e, se il tempo cambia, porta uno strato in più nello zaino. Come mi sento? Se un vestito pizzica, stringe o ti fa stare scomoda, scegline un altro: ti devi sentire bene in quello che indossi.']
   ],
 
   taglie: [
@@ -8247,7 +8274,9 @@ const VESTO2 = {
     'Il girovita deve stare comodo anche quando ti siedi, senza segnare la pelle.',
     'Cammina e fai due passi di corsa: l\'orlo e i pantaloni non devono impicciarti e le scarpe non devono dare fastidio.',
     'Siediti e piegati in avanti: niente deve tirare dietro la schiena né scoprirti.',
-    'Controlla l\'etichetta e leggi cosa dice sul lavaggio: dopo il bucato può restringersi un po\'.'
+    'Controlla l\'etichetta e leggi cosa dice sul lavaggio: dopo il bucato può restringersi un po\'.',
+    'Leggi sull\'etichetta di che cosa è fatto il vestito: se ti pizzica sulla pelle, dillo a un adulto e provane un altro.',
+    'Se è un vestito per il freddo, provalo con la maglia che metterai sotto: devi muoverti bene, anche con gli strati.'
   ],
 
   fonti: [
@@ -8266,6 +8295,11 @@ const VESTO2 = {
     { t: 'Nostro Figlio: scarpe da ginnastica per bambini (suola flessibile e antiscivolo, tallone fermo, spazio davanti alle dita)', u: 'https://www.nostrofiglio.it/shopping/sneakers-e-scarpe-da-ginnastica-ammortizzati' },
     { t: 'Studentville: cerchio cromatico di Itten (primari rosso-giallo-blu, secondari, complementari)', u: 'https://www.studentville.it/appunti/cerchio-cromatico-di-itten-cose-e-come-si-disegna/' },
     { t: 'Eroica Fenice: cerchio di Itten (colori analoghi, caldi e freddi, complementari)', u: 'https://www.eroicafenice.com/salotto-culturale/cerchio-di-itten/' },
+    { t: 'GINETEX: simboli di manutenzione (ISO 3758): catino, temperature, barrette, mano, triangolo, quadrato, ferro, cerchio', u: 'https://www.ginetex.net/GB/labelling/care-symbols.asp' },
+    { t: 'Altroconsumo: simboli delle etichette di lavaggio (controllo incrociato dei significati)', u: 'https://www.altroconsumo.it/elettrodomestici/lavatrici/speciali/simboli-etichette-lavaggio' },
+    { t: 'Camera di Commercio di Ferrara: guida tessile (come leggere la composizione: ordine decrescente, percentuali, 100% o puro)', u: 'https://fe.camcom.it/regmercato/sicurezza-prodotti/folder-mise/guida-tessile' },
+    { t: 'Nostro Figlio: come vestire i bambini col freddo (strati, sudore, cappello e guanti, sport)', u: 'https://www.nostrofiglio.it/bambino/come-vestire-bambini-inverno-freddo' },
+    { t: 'Cose di Casa: colori caldi e freddi e come abbinarli (esempi presi dall\'arredamento; la regola generale è quella del cerchio dei colori)', u: 'https://www.cosedicasa.com/arredamento/abbinamenti-stili-colori/colori-caldi-e-freddi-quali-sono-e-come-abbinarli-47097' },
     { t: 'Studenti.it: colori e arcobaleno (la luce bianca si scompone nei colori dello spettro)', u: 'https://www.studenti.it/colori.html' }
   ]
 };
@@ -8280,24 +8314,52 @@ const TRUCCO = {
       ['Meno è meglio', 'Non servono tanti prodotti. Contano di più pochi gesti fatti con costanza che una lunga lista di cose da mettere. Più prodotti non vuol dire pelle più sana.'],
       ['Uno alla volta', 'Se provi un prodotto nuovo, provane uno per volta. Così, se la pelle si arrossa o ti prude, sai subito qual è stato. Prima prova una piccola quantità su un pezzetto di pelle, mai subito su tutto il viso.']
     ] },
+    /* NUOVO (7/11/2026) — fonti lette: AAD «Face washing 101» https://www.aad.org/skin-care-basics/face-washing-101 ;
+       AAD «Practice safe sun» https://www.aad.org/public/everyday-care/sun-protection/shade-clothing-sunscreen/practice-safe-sun ;
+       FDA «Novelty Makeup» https://www.fda.gov/cosmetics/cosmetic-products/novelty-makeup ;
+       FDA «Using Cosmetics Safely» https://www.fda.gov/cosmetics/resources-consumers-cosmetics/using-cosmetics-safely ;
+       protezione solare (fonte italiana: fattore alto per i bambini, almeno ogni 2 ore e dopo il bagno): Altroconsumo https://www.altroconsumo.it/salute/creme-solari/consigli/creme-solari-bambini
+       Revisione 7/11: protezione solare resa prudente (scelta con un adulto, come dice la confezione o il pediatra). */
+    { id: 'routine', ic: '🚿', t: 'La routine della pelle', facts: [
+      ['1. Acqua tiepida', 'Il primo passo è bagnare il viso con acqua tiepida, né calda né fredda. Lavare il viso va bene la mattina e la sera, e anche dopo aver sudato tanto, per esempio dopo lo sport.'],
+      ['2. Detergente delicato', 'Scegli con un adulto un detergente delicato, senza alcol. Strofinalo piano con la punta delle dita, senza spugne dure o prodotti ruvidi. Poi sciacqua bene con acqua tiepida.'],
+      ['3. Asciuga tamponando', 'Asciuga il viso con un asciugamano morbido e pulito, premendo piano senza strofinare. Strofinare forte può irritare la pelle.'],
+      ['4. Crema idratante', 'Se la pelle è secca o tira, puoi mettere un po\' di crema idratante. Ne basta poca, stesa con delicatezza. Se la pelle è a posto, può non servire. Scegli la crema con un adulto.'],
+      ['5. Protezione solare', 'Quando stai all\'aperto di giorno, la protezione solare è un gesto molto importante. Per i bambini si consiglia una protezione alta: sceglila con un adulto. Va rimessa spesso, come dice la confezione o il pediatra (di solito almeno ogni 2 ore), e sempre dopo il bagno o se hai sudato tanto.'],
+      ['Ombra, cappello e vestiti', 'Oltre alla crema aiutano ombra, cappellino e magliette leggere. Nelle ore centrali della giornata il sole è più forte: se la tua ombra è più corta di te, è il momento di cercare un posto all\'ombra.'],
+      ['Se la pelle si irrita', 'Se la pelle brucia, prude o diventa rossa, smetti di usare il prodotto e dillo subito a un adulto. Sarà l\'adulto a chiedere aiuto al medico: tu non devi curarti da sola.']
+    ] },
     { id: 'sicura', ic: '🔍', t: 'Truccarsi in sicurezza', facts: [
       ['Prodotti fatti per la pelle', 'In Europa i cosmetici devono essere sicuri per la salute, se usati nel modo giusto: lo dice il Regolamento (CE) 1223/2009. I prodotti comprati in posti poco affidabili, come bancarelle o siti sconosciuti, possono non rispettare queste regole. Compra con un adulto.'],
       ['Solo cosmetici sul viso', 'Sul viso vanno solo prodotti fatti per la pelle. Mai usare colori da disegno, pennarelli, tempere o glitter da lavoretti: non sono pensati per la pelle e possono farle male.'],
       ['Prima la prova', 'Prima di usare un prodotto mai provato, mettine pochissimo su un pezzetto di pelle, per esempio dietro l\'orecchio o sul braccio, e aspetta qualche giorno. Se brucia, prude o arrossa, toglilo subito e dillo a un adulto.'],
       ['Occhi e labbra non si prestano', 'Non prestare e non farti prestare i prodotti per occhi e labbra: si passano fastidi e infezioni.'],
       ['Mani pulite, prodotti in ordine', 'Prima di truccarti lavati le mani. Tieni i prodotti lontano da caldo e umidità. Se un prodotto ha un cattivo odore, buttalo. Una volta aperto, ogni prodotto si usa solo per il tempo scritto sul vasetto aperto. Il trucco per gli occhi non fa parte dei primi passi: gli occhi sono delicati.'],
-      ['Struccarsi prima di dormire', 'Non andare a letto truccata: il trucco può irritare la pelle e sbriciolarsi negli occhi. Toglilo con delicatezza, seguendo quello che dice l\'etichetta. La pelle intorno agli occhi è sottilissima.']
+      ['Struccarsi prima di dormire', 'Non andare a letto truccata: il trucco può irritare la pelle e sbriciolarsi negli occhi. Toglilo con delicatezza, seguendo quello che dice l\'etichetta. La pelle intorno agli occhi è sottilissima.'],
+      /* NUOVO — fonti: FDA «Using Cosmetics Safely», HealthyChildren.org «Face Paints & Makeup» https://www.healthychildren.org/English/safety-prevention/at-home/Pages/Face-Paints-Makeup-Toxic-Ingredients.aspx */
+      ['Come ci si strucca, passo passo', 'Primo: lavati le mani. Secondo: togli il trucco con lo struccante o il metodo scritto sull\'etichetta, con un dischetto o un panno pulito, piano e senza strofinare. Terzo: lava il viso con acqua tiepida e un detergente delicato. Quarto: asciuga tamponando. Se serve, un po\' di crema idratante.'],
+      ['La prova sulla pelle, come si fa', 'Con un adulto, metti una piccolissima goccia del prodotto nuovo sull\'interno del braccio e controlla quel pezzetto di pelle per un paio di giorni. Se non succede niente, puoi usarlo. Se brucia, prude o arrossa, lavalo via con delicatezza, non lo usare più e dillo a un adulto. È meglio scoprire un problema con una goccia che su tutto il viso.'],
+      ['Non si scambiano i prodotti', 'Ognuno usa il proprio trucco: non si presta e non si prende in prestito, nemmeno tra migliori amiche. Così i germi non passano da una persona all\'altra.'],
+      ['Pennelli e spugnette puliti', 'Pennelli e spugnette devono essere puliti, perché lo sporco porta germi. Come e quando lavarli lo decide un adulto, seguendo le istruzioni. I dischetti di cotone si usano una volta e si buttano.'],
+      ['Saliva no, mani pulite', 'Usa ogni prodotto solo come dicono le istruzioni: non aggiungere niente di tuo, mai la saliva, e non toccarlo con le dita sporche, perché i germi ci entrano. Tieni i prodotti ben chiusi, in un posto non caldo e non umido.'],
+      ['Quando buttare un prodotto', 'Butta un prodotto se cambia odore, colore o consistenza, anche se la data non è passata. Un prodotto scaduto o vecchio può far venire problemi alla pelle.']
     ] },
     { id: 'gioco', ic: '🎭', t: 'Trucco per giocare', facts: [
       ['Il truccabimbi', 'Il truccabimbi è un gioco: farfalle, gattini, supereroi. Usa solo prodotti pensati per la pelle e segui le istruzioni scritte sulla confezione. Prima di cominciare fai la prova su un pezzetto di pelle, qualche giorno prima.'],
       ['Lontano da occhi e bocca', 'Non mettere colore vicino agli occhi e alla bocca: potrebbe irritarli o finire in bocca. Per gli occhi esistono regole speciali sui colori, quindi lasciali al naturale e disegna più in là, anche se sulla confezione c\'è un bambino truccato vicino agli occhi.'],
       ['Carnevale e saggi', 'Per Carnevale, una recita o un saggio scegli cosmetici sicuri, non scaduti e adatti all\'età, con un adulto. Prima di truccarti la pelle deve essere ben pulita. Controlla scadenza e simbolo del vasetto aperto.'],
+      /* NUOVO — fonti: FDA «Novelty Makeup» (prova sul braccio per un paio di giorni; «not for use near the eyes» anche se in foto; togliere come dice l'etichetta, non dormire truccati); HealthyChildren.org (ognuno il suo trucco; buttare se odora male) */
+      ['Prodotti adatti ai bambini', 'Per il truccabimbi scegli prodotti fatti per essere usati sulla pelle, con la lista degli ingredienti scritta in modo chiaro sulla confezione. Sono da evitare colori da disegno, vernici o prodotti senza etichetta. Se non sai se un prodotto va bene, chiedi a un adulto e non usarlo.'],
+      ['La prova prima della festa', 'Qualche giorno prima della festa metti una goccia del colore sull\'interno del braccio e aspetta un paio di giorni. Meglio scoprire un fastidio con una goccia, che con un disegno su tutta la faccia. Se compare rossore, prurito o bruciore, quel colore non si usa.'],
+      ['Ognuno il suo colore', 'A casa ognuno usa i suoi colori, il suo pennello e la sua spugnetta. Se a una festa c\'è un truccatore, un adulto può chiedergli di usare pennelli e spugnette puliti per ogni bambino. I germi passano facilmente da un viso all\'altro.'],
       ['Come si toglie', 'A fine festa togli il trucco con uno struccante delicato oppure come indica l\'etichetta, poi sciacqua il viso con tanta acqua. Se hai usato colla per il viso, per esempio per una barba finta, la mette e la toglie un adulto, con il prodotto indicato sulla confezione.']
     ] },
     { id: 'primi', ic: '✨', t: 'Primi passi', facts: [
       ['Solo per occasioni speciali', 'Un burrocacao colorato o un lucidalabbra leggero possono essere un gioco per una festa o un\'occasione speciale. Decidi sempre insieme a un adulto, che sceglie il prodotto con te e ti guarda mentre lo provi.'],
       ['Leggi gli ingredienti', 'Insieme a un adulto leggi la lista degli ingredienti e la scadenza prima di usare un prodotto nuovo. Se qualcosa non si capisce, chiedi. Fai sempre la prova su un pezzetto di pelle e non condividerlo con altre persone.'],
       ['Lo smalto', 'Lo smalto per bambini, all\'acqua o da staccare, si usa come dice l\'etichetta, con un adulto vicino. Non mettere le dita in bocca finché è bagnato. Il solvente per unghie lo usa solo un adulto. Prima di usare un prodotto nuovo fai la prova e leggi le istruzioni con calma.'],
+      /* NUOVO — fonte: Quotidiano Sanità «Leggi l'etichetta» https://www.quotidianosanita.it/insights/leggi-l-etichetta/ ; Reg. CE 1223/2009 art. 19 https://www.legislation.gov.uk/eur/2009/1223/article/19/data.pdf */
+      ['Il percorso di un prodotto nuovo', 'Prima di usare un prodotto nuovo fai sempre questi passi, con un adulto: 1) leggi l\'etichetta e gli ingredienti; 2) guarda la data o il vasetto aperto; 3) fai la prova su un pezzetto di pelle; 4) se va tutto bene, usalo poco e per giocare. Se qualcosa non ti convince, non si usa.'],
       ['Poi si toglie', 'Alla fine della giornata il trucco si toglie, anche se è leggero. Pelle pulita e mani lavate: è la regola di sempre. Se la pelle si irrita, smetti di usare il prodotto e avvisa un adulto.']
     ] },
     { id: 'bella', ic: '💛', t: 'Bella così', facts: [
@@ -8310,28 +8372,40 @@ const TRUCCO = {
     'Chiedi a un adulto di stare con te e di scegliere il prodotto insieme a te.',
     'Lavati le mani e controlla che la pelle del viso sia ben pulita.',
     'Leggi l\'etichetta: scadenza, simbolo del vasetto aperto e istruzioni.',
-    'Se il prodotto è nuovo, fai la prova su un pezzetto di pelle qualche giorno prima.'
+    'Se il prodotto è nuovo, fai la prova su un pezzetto di pelle qualche giorno prima: una goccia sull\'interno del braccio.',
+    'Controlla che pennelli e spugnette siano puliti e che i prodotti siano solo tuoi, non prestati.'
   ],
   dopo: [
     'Togli il trucco con uno struccante delicato o come dice l\'etichetta, poi sciacqua con acqua.',
     'Non andare a dormire truccata, nemmeno un po\'.',
+    'Lava il viso con acqua tiepida e un detergente delicato, asciuga tamponando e, se la pelle tira, metti un po\' di crema idratante.',
+    'Se pennelli e spugnette sono sporchi, falli lavare a un adulto come dicono le istruzioni; i dischetti usati si buttano.',
     'Chiudi bene i prodotti e conservali lontano da caldo e umidità; butta quelli che hanno cambiato odore, colore o consistenza.',
     'Se la pelle brucia, prude o si arrossa, smetti e dillo subito a un adulto.'
   ],
+  /* NUOVO etichette — fonti: Reg. CE 1223/2009 art. 19(1)(c) (periodo dopo l'apertura in mesi/anni; solo se durata minima oltre 30 mesi) https://www.legislation.gov.uk/eur/2009/1223/article/19/data.pdf ; Quotidiano Sanità https://www.quotidianosanita.it/insights/leggi-l-etichetta/ (ripubblica la guida «Belli e in salute» del Ministero della Salute) ; ECC-Net Italia, leaflet cosmetici 2026 (PAO per durata oltre 30 mesi) ; prova sulla pelle: FDA https://www.fda.gov/cosmetics/cosmetic-products/novelty-makeup e HealthyChildren.org */
   etichette: [
-    { ic: '🫙', t: 'Il vasetto aperto (PAO)', x: 'È un disegno di un vasetto aperto con un numero e una M, per esempio 12M. Dice per quanto tempo il prodotto si può usare dopo averlo aperto senza problemi. Passato quel tempo, meglio buttarlo.' },
+    { ic: '🫙', t: 'Il vasetto aperto (PAO)', x: 'È un disegno di un vasetto aperto con un numero e una M, per esempio 12M. Dice per quanto tempo il prodotto si può usare dopo averlo aperto senza problemi. Passato quel tempo, meglio buttarlo. 12M = 12 mesi, 6M = 6 mesi. Conta dal giorno in cui lo apri.' },
+    { ic: '🧾', t: 'PAO o data: quale c\'è?', x: 'Su alcuni prodotti c\'è il vasetto aperto, su altri la clessidra o la scritta «Usare preferibilmente entro» con la data. Il vasetto aperto compare sui prodotti che durano a lungo (più di 30 mesi); gli altri hanno la data. Se non vedi né l\'uno né l\'altro, o la confezione non ha etichetta, chiedi a un adulto.' },
+    { ic: '🧪', t: 'La prova su un pezzetto di pelle', x: 'Non è un simbolo, ma è la cosa più importante da fare con un prodotto nuovo: una goccia sull\'interno del braccio per un paio di giorni. Se non succede niente, va bene provarlo. Se arrossa, prude o brucia, si lava via con delicatezza e si dice a un adulto.' },
     { ic: '⏳', t: 'La clessidra e «usare entro»', x: 'La clessidra, oppure la scritta «Usare preferibilmente entro», indica fino a quando il prodotto, se conservato bene e ancora chiuso, mantiene le sue caratteristiche. Per sicurezza, quando la data è passata non si usa più.' },
     { ic: '📋', t: 'La lista degli ingredienti (INCI)', x: 'Sulla confezione c\'è l\'elenco degli ingredienti, con nomi uguali in tutta Europa. Il profumo si legge «parfum» o «aroma». Serve per scoprire cosa c\'è dentro, soprattutto se qualcosa ti ha già dato fastidio.' },
     { ic: '🩺', t: '«Dermatologicamente testato»', x: 'Vuol dire che il prodotto è stato provato sotto la supervisione di un dermatologo. Ma la scritta non dice quale prova è stata fatta e non assicura che vada bene per ogni pelle: per questo si fa sempre la prova sulla pelle.' },
     { ic: '📖', t: 'Il libro con la mano', x: 'Questo simbolo vuol dire: leggi le istruzioni. Le informazioni e le avvertenze sono scritte su un foglietto, un\'etichetta o una linguetta, perché sulla confezione non c\'era posto. Leggile prima di usarlo.' }
   ],
   fonti: [
+    { t: 'AAD: Face washing 101 (lavare il viso)', u: 'https://www.aad.org/skin-care-basics/face-washing-101' },
+    { t: 'AAD: Practice safe sun (protezione solare)', u: 'https://www.aad.org/public/everyday-care/sun-protection/shade-clothing-sunscreen/practice-safe-sun' },
+    { t: 'FDA: Using Cosmetics Safely (non condividere, igiene, conservazione)', u: 'https://www.fda.gov/cosmetics/resources-consumers-cosmetics/using-cosmetics-safely' },
+    { t: 'Regolamento (CE) 1223/2009, articolo 19: Etichettatura (PAO)', u: 'https://www.legislation.gov.uk/eur/2009/1223/article/19/data.pdf' },
     { t: 'FDA (autorità USA sui cosmetici): Novelty Makeup, il trucco per feste e Carnevale', u: 'https://www.fda.gov/cosmetics/cosmetic-products/novelty-makeup' },
     { t: 'American Academy of Pediatrics (HealthyChildren.org): Face Paints and Makeup', u: 'https://www.healthychildren.org/English/safety-prevention/at-home/Pages/Face-Paints-Makeup-Toxic-Ingredients.aspx' },
     { t: 'American Academy of Dermatology: A dermatologist\'s guide to skin care', u: 'https://www.aad.org/news/dermatologist-guide-skincare' },
     { t: 'American Academy of Ophthalmology (via HealthDay): Using Eye Makeup', u: 'https://www.healthday.com/health-news/general-health/health-tip-using-eye-makeup-742545.html' },
     { t: 'Ministero della Salute (decalogo Carnevale, via Quotidiano Sanità): trucchi e cosmetici', u: 'https://www.quotidianosanita.it/?p=22413' },
-    { t: 'Quotidiano Sanità: Leggi l\'etichetta (simboli dei cosmetici, Regolamento CE 1223/2009)', u: 'https://www.quotidianosanita.it/insights/leggi-l-etichetta/' },
+    { t: 'Altroconsumo: creme solari per bambini (protezione alta, rimetterla almeno ogni 2 ore e dopo il bagno)', u: 'https://www.altroconsumo.it/salute/creme-solari/consigli/creme-solari-bambini' },
+    { t: 'ECC-Net Italia (Centro europeo consumatori): prodotti cosmetici, leaflet 2026 (data di durata minima e PAO)', u: 'https://www.provincia.tn.it/po/ocmultibinary/download/82281/6055393/3/820df81bd528daf86fa87c27fa81ca5c.pdf/file/Leaflet_prodotti-cosmetici-2026.pdf' },
+    { t: 'Ministero della Salute, guida «Belli e in salute» (via Quotidiano Sanità): Leggi l\'etichetta, simboli dei cosmetici', u: 'https://www.quotidianosanita.it/insights/leggi-l-etichetta/' },
     { t: 'Regolamento (CE) n. 1223/2009, articolo 3: Sicurezza', u: 'https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32009R1223' },
     { t: 'Commissione europea: portale di notifica dei prodotti cosmetici (CPNP)', u: 'https://single-market-economy.ec.europa.eu/sectors/cosmetics/cosmetic-product-notification-portal_it' },
     { t: 'Teknoscienze: Dermatologicamente testato, ipoallergenico o clinicamente testato?', u: 'https://www.teknoscienze.com/?p=21482' },
@@ -15911,6 +15985,151 @@ function openBg() {
   });
 }
 applyBg();
+
+/* ================= 🖼️ DISEGNI DELLE SEZIONI =================
+   Una striscia disegnata (SVG, 1100×150; 720×150 nelle finestre) sotto il titolo di ogni sezione:
+   fa capire a colpo d'occhio di che cosa parla la sezione. Solo il senso della sezione, niente nozioni nuove.
+   Chiavi: nome della pagina (go), «u-<materia>» per le materie (pagina materia), «m-<nome>» per le finestre.
+   Un solo aggancio: dopo ogni go() e quando una pagina si ridisegna, la striscia va subito sotto l'h1. */
+const SEZ_IMG = (() => {
+  const T = (x, y, s, t, o) => { o = o || {}; return '<text x="' + x + '" y="' + y + '" font-size="' + s + '" text-anchor="' + (o.a || 'middle') + '"' + (o.b ? ' font-weight="' + o.b + '"' : '') + ' fill="' + (o.c || 'currentColor') + '"' + (o.op ? ' opacity="' + o.op + '"' : '') + '>' + t + '</text>'; };
+  const E = (x, y, s, e) => '<text x="' + x + '" y="' + y + '" font-size="' + s + '" text-anchor="middle">' + e + '</text>';
+  const R = (x, y, w, h, c, o) => { o = o || {}; return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="' + (o.rx === undefined ? 14 : o.rx) + '" fill="' + c + '" fill-opacity="' + (o.f || .14) + '" stroke="' + c + '" stroke-opacity="' + (o.s || .7) + '" stroke-width="2"' + (o.d ? ' stroke-dasharray="7 5"' : '') + '/>'; };
+  const S = (a, b, W) => '<svg viewBox="0 0 ' + (W || 1100) + ' 150" role="img" aria-label="' + a + '">' + b + '</svg>';
+  const H = (t, W, x) => T(x || (W || 1100) / 2, 22, 16, t, { b: 800 });
+  const PAL = ['#e85d75', '#f59e0b', '#16a34a', '#2563eb', '#8b5cf6', '#0d9488', '#db2777', '#ea580c'];
+  const col = (it, i) => it[3] || PAL[i % PAL.length];
+  /* K: riquadri in fila (emoji, nome, riga piccola), con un grande emoji a sinistra se serve */
+  const K = (a, title, items, o) => {
+    o = o || {}; const W = o.W || 1100, x0 = o.big ? 150 : 20, gap = o.arrows ? 30 : 14, n = items.length, w = (W - 20 - x0 - gap * (n - 1)) / n;
+    let b = H(title, W, o.big ? (x0 + W - 20) / 2 : 0);
+    if (o.big) b += E(76, 100, 60, o.big[0]) + T(76, 140, 14, o.big[1], { b: 800 });
+    items.forEach((it, i) => { const x = x0 + i * (w + gap), c = col(it, i);
+      b += R(x.toFixed(1), 36, w.toFixed(1), 106, c) + E((x + w / 2).toFixed(1), 76, 30, it[0]) + T((x + w / 2).toFixed(1), 106, 15, it[1], { b: 800 }) + (it[2] ? T((x + w / 2).toFixed(1), 127, 14, it[2], { op: '.85' }) : '');
+      if (o.arrows && i < n - 1) b += T((x + w + gap / 2).toFixed(1), 96, 24, '›', { b: 800, op: '.6' }); });
+    return S(a, (o.pre || '') + b + (o.post || ''), W);
+  };
+  /* P: un cammino a tappe (emoji sopra, pallino, nome e riga piccola sotto) */
+  const P = (a, title, steps, o) => {
+    o = o || {}; const W = o.W || 1100, n = steps.length, x0 = o.x0 || 90, x1 = W - (o.x1 || 90), y = 74, c0 = o.c || '#8b5cf6';
+    const xs = steps.map((_, i) => x0 + (n === 1 ? 0 : i * (x1 - x0) / (n - 1)));
+    let b = H(title, W) + '<path d="M' + (x0 - 50) + ',' + y + ' C' + (W * .3) + ',' + (y - 14) + ' ' + (W * .6) + ',' + (y + 14) + ' ' + (x1 + 50) + ',' + y + '" stroke="' + c0 + '" stroke-width="22" stroke-linecap="round" fill="none" opacity=".18"/>' +
+      '<path d="M' + (x0 - 50) + ',' + y + ' C' + (W * .3) + ',' + (y - 14) + ' ' + (W * .6) + ',' + (y + 14) + ' ' + (x1 + 50) + ',' + y + '" stroke="' + c0 + '" stroke-width="2.5" stroke-dasharray="9 7" fill="none" opacity=".7"/>';
+    steps.forEach((s, i) => { const x = xs[i].toFixed(1), c = col(s, i);
+      b += '<circle cx="' + x + '" cy="' + y + '" r="23" fill="' + c + '" fill-opacity=".25" stroke="' + c + '" stroke-width="2.5"/>' + E(x, y + 10, 27, s[0]) + T(x, y + 42, 15, s[1], { b: 800 }) + (s[2] ? T(x, y + 62, 14, s[2], { op: '.85' }) : ''); });
+    return S(a, (o.pre || '') + b + (o.post || ''), W);
+  };
+  /* B: bolle rotonde con l'emoji dentro e il nome sotto */
+  const B = (a, title, items, o) => {
+    o = o || {}; const W = o.W || 1100, n = items.length, x0 = o.x0 || 70, x1 = W - (o.x1 || 70), r = o.r || 34;
+    let b = H(title, W);
+    items.forEach((it, i) => { const x = (x0 + (n === 1 ? 0 : i * (x1 - x0) / (n - 1))).toFixed(1), c = col(it, i);
+      b += '<circle cx="' + x + '" cy="78" r="' + r + '" fill="' + c + '" fill-opacity=".2" stroke="' + c + '" stroke-opacity=".75" stroke-width="2.5"/>' + E(x, 89, 30, it[0]) + T(x, 133, 15, it[1], { b: 800 }) + (it[2] ? T(x, 149, 13.5, it[2], { op: '.85' }) : ''); });
+    return S(a, (o.pre || '') + b + (o.post || ''), W);
+  };
+  /* G: gradini che salgono */
+  const G = (a, title, steps, o) => {
+    o = o || {}; const W = o.W || 1100, n = steps.length, x0 = o.x0 || 30, w = o.w || 200, dh = n > 1 ? 48 / (n - 1) : 0;
+    let b = T(x0, 22, 16, title, { a: 'start', b: 800 });
+    steps.forEach((s, i) => { const x = x0 + i * w, y = Math.round(56 + (n - 1 - i) * dh), c = col(s, i);
+      b += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + (150 - y) + '" fill="' + c + '" fill-opacity="' + (.12 + i * .06).toFixed(2) + '" stroke="' + c + '" stroke-opacity=".6" stroke-width="2"/>' + E(x + w / 2, y - 6, 26, s[0]) + T(x + w / 2, y + 22, 15, s[1], { b: 800 }) + (s[2] ? T(x + w / 2, y + 41, 14, s[2], { op: '.85' }) : ''); });
+    return S(a, (o.pre || '') + b + (o.post || ''), W);
+  };
+  const waves = (y, c) => '<path d="M0,' + y + ' Q55,' + (y - 12) + ' 110,' + y + ' T220,' + y + ' T330,' + y + ' T440,' + y + ' T550,' + y + ' T660,' + y + ' T770,' + y + ' T880,' + y + ' T990,' + y + ' T1100,' + y + ' V150 H0Z" fill="' + c + '" opacity=".18"/>';
+  const blocks = (x, y) => [[0, 40, '#ef4444'], [40, 40, '#3b82f6'], [20, 0, '#f59e0b'], [80, 40, '#22c55e']].map(([dx, dy, c]) => '<rect x="' + (x + dx) + '" y="' + (y + dy) + '" width="38" height="38" rx="5" fill="' + c + '" fill-opacity=".55" stroke="' + c + '" stroke-width="2"/>').join('');
+
+  return {
+    /* ---------- 🏫 La mia scuola: le materie ---------- */
+    'u-mate': K('Matematica: numeri, misure, figure, problemi e dati, un passo alla volta', 'la matematica è un allenamento: si impara un passo alla volta', [['🔢', 'i numeri', 'contare e calcolare'], ['📏', 'le misure', 'lungo, pesante, quanto'], ['📐', 'le figure', 'forme e spazio'], ['🧩', 'i problemi', 'ragionare con calma'], ['📊', 'i dati', 'tabelle e grafici']], { big: ['🧠', 'ci penso io'] }),
+    'u-ita': K('Italiano: leggere, scrivere, le regole delle parole e raccontare', 'le parole sono attrezzi: per leggere, scrivere e raccontare', [['📖', 'leggere', 'storie e testi'], ['✏️', 'scrivere', 'pensieri e racconti'], ['🔤', 'le regole', 'parole e frasi giuste'], ['💬', 'parlare', 'raccontare e spiegare'], ['📜', 'le poesie', 'suoni e immagini']], { big: ['📚', 'la mia lingua'] }),
+    'u-eng': B('Inglese: ascoltare, ripetere e parlare, con le parole di tutti i giorni', 'l’inglese si impara a voce: ascolto, ripeto, parlo', [['👂', 'ascolto'], ['🗣️', 'ripeto'], ['👋', 'saluti'], ['🔢', 'numeri'], ['🎨', 'colori'], ['🐶', 'animali'], ['👨‍👩‍👧', 'famiglia']], { x0: 300, x1: 60, r: 30,
+      pre: '<rect x="20" y="38" width="210" height="62" rx="20" fill="#2563eb" fill-opacity=".14" stroke="#2563eb" stroke-opacity=".7" stroke-width="2"/><polygon points="60,99 88,99 62,120" fill="#2563eb" fill-opacity=".35"/>' + T(125, 78, 22, 'Hello!', { b: 900 }) + E(44, 134, 24, '🇬🇧') + E(80, 134, 24, '🇮🇹') + T(160, 131, 14, 'due lingue', { b: 800 }) }),
+    'u-storia': P('Storia: un viaggio nel tempo, dalle fonti alla preistoria, alle prime civiltà, ai Greci e ai Romani', 'un viaggio nel tempo: le fonti raccontano il passato', [['🔍', 'le fonti', 'indizi del passato', '#64748b'], ['🦴', 'la preistoria', 'i primi esseri umani', '#a16207'], ['🏺', 'le civiltà', 'fiumi e città', '#ea580c'], ['🏛️', 'i Greci', 'polis e pensatori', '#2563eb'], ['🛡️', 'i Romani', 'strade e leggi', '#dc2626'], ['⏳', 'e poi…', 'fino a oggi', '#8b5cf6']], { c: '#a16207' }),
+    'u-geo': K('Geografia: orientarsi, montagne, acque, città e regioni', 'la geografia guarda il mondo dall’alto: dove sono le cose?', [['🧭', 'orientarsi', 'carte e punti cardinali', '#0d9488'], ['🏔️', 'il rilievo', 'monti e colline', '#a16207'], ['🌊', 'le acque', 'mari, fiumi e laghi', '#2563eb'], ['🏙️', 'le regioni', 'città e capoluoghi', '#ea580c'], ['🌍', 'il mondo', 'continenti e Paesi', '#16a34a']], { big: ['🗺️', 'una carta'] }),
+    'u-sci-corpo': B('Il corpo umano: tante parti che lavorano in squadra', 'il corpo è una squadra: ogni parte ha il suo lavoro', [['🦴', 'le ossa'], ['💪', 'i muscoli'], ['🫀', 'il cuore'], ['🫁', 'il respiro'], ['🍎', 'la digestione'], ['🧠', 'il cervello'], ['👀', 'i sensi']], { x0: 90, x1: 90 }),
+    'u-sci-spazio': (() => { const it = [['☀️', 'il Sole', '#f59e0b'], ['🌍', 'la Terra', '#2563eb'], ['🌙', 'la Luna', '#64748b'], ['🪐', 'i pianeti', '#8b5cf6'], ['✨', 'le stelle', '#db2777'], ['🔭', 'osservare', '#0d9488']];
+      return S('Il sistema solare: il Sole, la Terra, la Luna, i pianeti e le stelle da osservare', '<circle cx="-40" cy="96" r="120" fill="#f59e0b" opacity=".22"/>' + [150, 195].map(r => '<circle cx="-40" cy="96" r="' + r + '" fill="none" stroke="currentColor" stroke-opacity=".22" stroke-width="2" stroke-dasharray="5 6"/>').join('') + E(36, 110, 46, '☀️') +
+        H('guardare il cielo: che cosa c’è lassù?', 1100, 640) + it.map((x, i) => { const cx = 250 + i * 140; return '<circle cx="' + cx + '" cy="78" r="30" fill="' + x[2] + '" fill-opacity=".2" stroke="' + x[2] + '" stroke-opacity=".75" stroke-width="2.5"/>' + E(cx, 89, 28, x[0]) + T(cx, 133, 15, x[1], { b: 800 }); }).join('') + ['⭐', '✨', '⭐'].map((s, i) => E(1030 + i * 28, 50 + (i % 2) * 50, 16, s)).join('')); })(),
+    'u-civica': B('Cittadinanza attiva: rispetto, regole, diritti, Comune, Italia ed Europa', 'vivere insieme: rispetto, regole e diritti per tutti', [['🤝', 'rispetto'], ['📜', 'le regole'], ['🧒', 'i diritti'], ['🏛️', 'il Comune'], ['🇮🇹', 'l’Italia'], ['🇪🇺', 'l’Europa'], ['🌍', 'il mondo']], { x0: 90, x1: 90 }),
+    'u-tecno': K('Tecnologia: computer, coding, internet con prudenza, robot ed elettricità', 'capire come funzionano le macchine e usarle con giudizio', [['💻', 'il computer', 'come è fatto'], ['🧩', 'il coding', 'istruzioni in fila'], ['🌐', 'internet', 'con prudenza'], ['🤖', 'i robot', 'macchine che aiutano'], ['💡', 'l’elettricità', 'circuiti e energia']], { big: ['⚙️', 'come funziona?'] }),
+    'u-media': G('Verso la prima media: una scala di gradini, dalla quinta alla prima media', 'un gradino alla volta verso la scuola media', [['🎒', 'la 5ª', 'quello che sai già', '#16a34a'], ['🔢', 'numeri nuovi', 'per allenarsi', '#2563eb'], ['📐', 'figure e misure', 'un po’ più in là', '#8b5cf6'], ['🧠', 'il metodo', 'studiare da grandi', '#ea580c'], ['🏫', 'la 1ª media', 'pronta a partire', '#db2777']], { w: 208 }),
+    'u-arte': K('Arte: guardare e creare con colori, linee, forme e tante tecniche', 'guardare e creare: ogni artista ha i suoi strumenti', [['🎨', 'i colori', 'mescolare e scegliere'], ['🖼️', 'i quadri', 'ritratti e paesaggi'], ['✏️', 'linee e forme', 'luce e ombra'], ['🗿', 'la scultura', 'creta e ceramica'], ['📷', 'foto e fumetti', 'immagini che raccontano']], { big: ['🖌️', 'creare'] }),
+    'u-musica': K('Musica: leggere la musica, il ritmo, il suono, gli strumenti e la voce', 'la musica si ascolta, si legge e si suona', [['🎼', 'leggere', 'le note sul rigo'], ['🥁', 'il ritmo', 'veloce, lento, forte'], ['🔊', 'il suono', 'come nasce'], ['🎻', 'gli strumenti', 'e l’orchestra'], ['🎤', 'la voce', 'cantare insieme']], { big: ['🎶', 'ascoltare'] }),
+    'u-motoria': K('Motoria: movimento, coordinazione, gioco di squadra e lealtà', 'muoversi insieme: coordinazione, squadra e lealtà', [['🤸‍♀️', 'il movimento', 'equilibrio e agilità'], ['🏐', 'la pallavolo', 'bagher e palleggio'], ['🏀', 'il basket', 'passare e tirare'], ['🤝', 'la squadra', 'giocare lealmente'], ['💧', 'la pausa', 'acqua e respiro']], { big: ['🏅', 'in palestra'] }),
+    'u-religione': B('Religione: le feste e le grandi religioni del mondo, conosciute con rispetto', 'conoscere le feste e le religioni del mondo, con rispetto', [['🕊️', 'la pace'], ['🎄', 'il Natale'], ['🌍', 'tante religioni'], ['🕯️', 'feste e luci'], ['🤝', 'il rispetto'], ['💬', 'ascoltare']], { x0: 110, x1: 110 }),
+    /* ---------- 🌟 Fuori scuola ---------- */
+    'u-sp-aerea': K('Ginnastica aerea: attrezzi in alto, forza, flessibilità e sicurezza', 'in alto con forza, equilibrio e sicurezza', [['🎪', 'gli attrezzi', 'tessuti, cerchio, trapezio'], ['🛡️', 'la sicurezza', 'sempre con chi insegna'], ['💪', 'la forza', 'braccia e pancia'], ['🧘‍♀️', 'la flessibilità', 'allungarsi piano'], ['✨', 'le figure', 'una alla volta']], { big: ['🤸‍♀️', 'in volo'] }),
+    'u-sp-patt': P('Pattinaggio: un passo dopo l’altro sul ghiaccio, dai primi passi alle figure', 'sul ghiaccio: un passo dopo l’altro', [['⛸️', 'i pattini', 'lame e lacci', '#0ea5e9'], ['👣', 'i primi passi', 'equilibrio', '#2563eb'], ['〰️', 'le curve', 'i fili della lama', '#0d9488'], ['🌀', 'le trottole', 'girare su sé', '#8b5cf6'], ['✨', 'i salti', 'con calma', '#db2777']], { c: '#0ea5e9', pre: '<ellipse cx="550" cy="108" rx="560" ry="46" fill="#7dd3fc" opacity=".2"/>' }),
+    'u-sp-nuoto': B('Nuoto: galleggiare, respirare e i quattro stili', 'in acqua: galleggiare, respirare, nuotare', [['🛟', 'galleggiare'], ['🫧', 'respirare'], ['🏊‍♀️', 'lo stile libero'], ['🔙', 'il dorso'], ['🐸', 'la rana'], ['🐬', 'il delfino']], { x0: 110, x1: 110, pre: waves(110, '#0ea5e9') }),
+    'u-sp-corpo': K('Corpo in movimento: forza, resistenza, agilità, acqua e riposo', 'muoversi fa bene: allenamento, acqua e riposo', [['💪', 'la forza', 'muscoli e ossa'], ['🏃‍♀️', 'il fiato', 'il cuore lavora'], ['🤸‍♀️', 'l’agilità', 'equilibrio e salti'], ['💧', 'bere', 'prima e dopo'], ['😴', 'riposare', 'sonno e pause']], { big: ['❤️', 'sto bene'] }),
+    'u-roblox': K('Giochi a blocchi online: costruire, giocare, restare sicuri e rispettosi', 'giochi a blocchi: costruire, giocare e restare al sicuro', [['🧱', 'costruire', 'mondi a blocchi'], ['🎮', 'giocare', 'tanti tipi di gioco'], ['🔒', 'la sicurezza', 'i miei dati restano miei'], ['🤝', 'il rispetto', 'gentili con tutti'], ['🙋', 'gli acquisti', 'prima chiedo a un adulto']], { big: ['', ''], pre: blocks(18, 50) }),
+    'u-soldi': K('Soldi e risparmio: monete, banconote, risparmio, spesa e sconti', 'i soldi si contano, si risparmiano e si spendono con giudizio', [['🪙', 'le monete', 'euro e centesimi'], ['💶', 'le banconote', 'vere e false'], ['🐷', 'risparmiare', 'poco alla volta'], ['🛒', 'la spesa', 'pagare e il resto'], ['🏷️', 'gli sconti', 'leggere i cartellini']], { big: ['👛', 'il mio borsellino'] }),
+    'u-lavo': B('Perché mi lavo: mani, denti, doccia, capelli, piscina e microbi', 'puliti per stare bene: piccoli gesti ogni giorno', [['🦠', 'i microbi'], ['🧼', 'le mani'], ['🪥', 'i denti'], ['🚿', 'la doccia'], ['💇‍♀️', 'i capelli'], ['🏊‍♀️', 'la piscina']], { x0: 110, x1: 110, pre: '<circle cx="1040" cy="40" r="10" fill="#7dd3fc" opacity=".5"/><circle cx="1066" cy="62" r="6" fill="#7dd3fc" opacity=".5"/><circle cx="40" cy="46" r="8" fill="#7dd3fc" opacity=".5"/>' }),
+    'u-vesto': K('Come mi vesto: vestiti giusti per il tempo, il sole, lo sport, con tessuti ed etichette', 'vestirsi giusti per il tempo e per quello che fai', [['🧣', 'a strati', 'quando fa freddo', '#2563eb'], ['🧢', 'il sole', 'cappello e crema', '#f59e0b'], ['👟', 'lo sport', 'comodi e sicuri', '#16a34a'], ['🧵', 'i tessuti', 'di che cosa sono', '#8b5cf6'], ['🏷️', 'le etichette', 'come si lavano', '#db2777'], ['♻️', 'scegliere bene', 'per il pianeta', '#0d9488']]),
+    /* ---------- 🎨 Fare e scoprire e altre pagine ---------- */
+    disegno: P('Disegno: dalla tela libera alle tappe, fino al mio museo', 'disegnare: libera, poi un passo alla volta, fino al mio museo', [['🖌️', 'la tela libera', 'disegno quello che voglio', '#db2777'], ['✏️', 'le basi', 'linee e forme', '#2563eb'], ['🎨', 'i colori', 'matite e acquerello', '#f59e0b'], ['🪜', 'le tappe', 'una alla volta', '#16a34a'], ['🖼️', 'il mio museo', 'i miei disegni', '#8b5cf6']], { c: '#db2777' }),
+    mappe: (() => { const sat = [[230, 52], [230, 118], [870, 52], [870, 118]];
+      return S('Una mappa concettuale: un’idea al centro, le altre intorno, collegate da frecce con le parole', H('un’idea al centro, le altre intorno, unite da frecce che parlano') +
+        sat.map(([x, y], i) => { const l = x < 550, x1 = l ? 452 : 648, y1 = y < 90 ? 80 : 100, x2 = l ? x + 85 : x - 85; return '<line x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y + '" stroke="' + PAL[i + 2] + '" stroke-width="2.5" stroke-opacity=".75"/><circle cx="' + x2 + '" cy="' + y + '" r="4" fill="' + PAL[i + 2] + '"/>'; }).join('') +
+        '<rect x="450" y="62" width="200" height="56" rx="28" fill="#8b5cf6" fill-opacity=".28" stroke="#8b5cf6" stroke-width="2.5"/>' + E(488, 100, 26, '💡') + T(574, 97, 16, 'l’idea', { b: 900 }) +
+        sat.map(([x, y], i) => R(x - 85, y - 20, 170, 40, PAL[i + 2], { rx: 20, f: .2 }) + T(x, y + 6, 15, 'un’altra idea', { b: 800 })).join('') +
+        T(372, 58, 14, 'perché', { op: '.9', b: 700 }) + T(384, 132, 14, 'serve a', { op: '.9', b: 700 }) + T(728, 58, 14, 'come', { op: '.9', b: 700 }) + T(716, 132, 14, 'è fatta di', { op: '.9', b: 700 }) +
+        E(60, 104, 40, '🗺️') + T(60, 138, 14, 'la mia mappa', { b: 800 }) + E(1040, 104, 40, '✍️') + T(1040, 138, 14, 'la creo io', { b: 800 })); })(),
+    giochi: K('La palestra del cervello: giochi brevi per memoria, attenzione e velocità', 'giochi brevi per allenare il cervello: alla fine, una barzelletta!', [['🧠', 'la memoria', 'ricordare'], ['🎯', 'l’attenzione', 'concentrarsi'], ['⚡', 'la velocità', 'pronti, via!'], ['🧩', 'la logica', 'trovare la strada'], ['😂', 'la barzelletta', 'il premio finale']], { big: ['🏋️‍♀️', 'la palestra'], arrows: false }),
+    diario: (() => { const d = [['lun', '😊'], ['mar', '😐'], ['mer', '🤩'], ['gio', '😴'], ['ven', '😊'], ['sab', '🏖️'], ['dom', '🌈']];
+      return S('Il diario: il calendario della scuola, le vacanze e le emozioni giorno per giorno', H('il calendario dei giorni e, ogni giorno, come mi sento', 1100, 560) +
+        E(62, 98, 54, '📓') + T(62, 138, 14, 'il mio diario', { b: 800 }) +
+        d.map(([g, e], i) => { const x = 140 + i * 116; return R(x, 38, 104, 104, i > 4 ? '#f59e0b' : '#2563eb', { f: i > 4 ? .18 : .1 }) + T(x + 52, 62, 15, g, { b: 800 }) + E(x + 52, 112, 36, e); }).join('') +
+        R(970, 38, 112, 104, '#db2777', { f: .16 }) + E(1026, 84, 30, '💬') + T(1026, 112, 15, 'come mi', { b: 800 }) + T(1026, 130, 15, 'sento?', { b: 800 })); })(),
+    mate: G('Matematica da campionessa: ogni esercizio è un gradino, anche quando si sbaglia', 'ogni esercizio è un gradino, anche quando sbagli', [['✏️', 'provo', 'un esercizio', '#2563eb'], ['🤔', 'sbaglio?', 'va bene così', '#f59e0b'], ['💡', 'capisco', 'il perché', '#16a34a'], ['💪', 'riprovo', 'più forte', '#8b5cf6'], ['🏆', 'campionessa', 'un passo alla volta', '#db2777']], { w: 208 }),
+    scienze: P('Il laboratorio: fare domande, osservare, provare e capire', 'fare domande è da scienziate: chi chiede «perché?» impara il doppio', [['❓', 'mi chiedo', 'perché?', '#f59e0b'], ['👀', 'osservo', 'guardo bene', '#2563eb'], ['🧪', 'provo', 'un esperimento', '#16a34a'], ['📝', 'annoto', 'che cosa succede', '#8b5cf6'], ['💡', 'capisco', 'e ne so di più', '#db2777']], { c: '#16a34a' }),
+    scopri: B('Scopri il mondo: tante materie, tante curiosità da esplorare', 'esploratrice: tante materie, tante curiosità', [['🏛️', 'storia'], ['🗺️', 'geografia'], ['📖', 'italiano'], ['🎤', 'inglese'], ['🎨', 'arte'], ['🎼', 'musica'], ['🤝', 'civica'], ['🤖', 'tecnologia']], { x0: 180, x1: 60, r: 30, pre: E(66, 104, 52, '🧭') + T(66, 140, 14, 'si parte!', { b: 800 }) }),
+    teatro: S('Il teatro: un palco con le tende, la mia parte da provare a voce e i segreti del palco',
+      '<path d="M0,0 H170 Q120,70 150,150 H0Z" fill="#dc2626" opacity=".45"/><path d="M1100,0 H930 Q980,70 950,150 H1100Z" fill="#dc2626" opacity=".45"/><rect x="0" y="0" width="1100" height="6" fill="#dc2626" opacity=".55"/><ellipse cx="550" cy="150" rx="420" ry="26" fill="#f59e0b" opacity=".22"/>' +
+      H('la mia parte e i segreti del palco') + [['📜', 'la mia parte', 'il copione'], ['🗣️', 'provare a voce', 'una battuta alla volta'], ['🎭', 'le emozioni', 'farle vedere'], ['🌟', 'in scena', 'con calma e coraggio']].map((x, i) => { const cx = 295 + i * 170; return E(cx, 82, 36, x[0]) + T(cx, 112, 15, x[1], { b: 800 }) + T(cx, 131, 14, x[2], { op: '.85' }); }).join('')),
+    sport: P('Pausa movimento: si studia, ci si muove, si beve e si torna concentrate', 'tra un esercizio e l’altro: una pausa per muoversi', [['📚', 'studio', 'un pezzo alla volta', '#2563eb'], ['⏰', 'è ora!', 'la pausa', '#f59e0b'], ['🤸‍♀️', 'mi muovo', 'qualche minuto', '#16a34a'], ['💧', 'bevo', 'un po’ d’acqua', '#0ea5e9'], ['🎯', 'riparto', 'più concentrata', '#8b5cf6']], { c: '#16a34a' }),
+    routine: P('Le routine: le tappe della giornata, dal mattino alla sera, con una spunta quando sono fatte', 'le tappe della giornata: tocca ✅ quando l’hai fatta', [['🌅', 'il mattino', 'pronta per uscire', '#f59e0b'], ['🎒', 'lo zaino', 'tutto al suo posto', '#ea580c'], ['📚', 'i compiti', 'con le pause', '#2563eb'], ['🛁', 'la sera', 'lavarsi e preparare', '#8b5cf6'], ['🌙', 'la nanna', 'riposare bene', '#4338ca']], { c: '#f59e0b' }),
+    metodo: K('Il mio metodo: i trucchi per far restare le cose in testa', 'i trucchi per far restare le cose in testa', [['🔁', 'ripassare', 'un po’ ogni tanto'], ['🙈', 'mettermi alla prova', 'senza guardare'], ['🗣️', 'spiegare', 'come una maestra'], ['🖼️', 'immaginare', 'una scena in testa'], ['😴', 'riposare', 'il sonno aiuta']], { big: ['🧠', 'il mio cervello'] }),
+    io: B('Il mio spazio: aspetto, negozio, album, tesori, progressi e impostazioni', 'il mio spazio: chi sono, che cosa ho raccolto, come sto andando', [['✨', 'il mio aspetto'], ['🛍️', 'il negozio'], ['📒', 'l’album'], ['🔍', 'i tesori'], ['📊', 'i progressi'], ['⚙️', 'le impostazioni']], { x0: 110, x1: 110 }),
+    classe: K('La mia classe: progetti, uscite e date dell’anno, che restano solo su questo iPad', 'la mia classe: progetti, uscite e date dell’anno', [['📁', 'i progetti', 'che cosa facciamo'], ['🚌', 'le uscite', 'dove andiamo'], ['📌', 'le date', 'quando succede'], ['🔒', 'solo qui', 'restano su questo iPad']], { big: ['🗓️', 'l’anno'] }),
+    serie: (() => { const f = [['🎬', 'guardo', 'il cartone'], ['💡', 'scopro', 'le pillole'], ['🏆', 'provo', 'la sfida'], ['⏭️', 'continuo', 'l’episodio dopo']];
+      return S('La serie di Storia: episodi in fila come una pellicola, si guarda, si scopre, si prova', H('la Storia a episodi: guardo, scopro, provo') + '<rect x="30" y="34" width="1040" height="112" rx="10" fill="#1e293b" fill-opacity=".22" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/>' +
+        Array.from({ length: 26 }, (_, i) => '<rect x="' + (44 + i * 40) + '" y="40" width="22" height="10" rx="3" fill="currentColor" opacity=".3"/><rect x="' + (44 + i * 40) + '" y="130" width="22" height="10" rx="3" fill="currentColor" opacity=".3"/>').join('') +
+        f.map((x, i) => { const cx = 160 + i * 260; return R(cx - 115, 56, 230, 68, PAL[i + 3], { rx: 8, f: .22 }) + E(cx - 78, 101, 30, x[0]) + T(cx + 20, 86, 15, x[1], { b: 800 }) + T(cx + 20, 108, 14, x[2]); }).join('')); })(),
+    /* ---------- finestre (720 di larghezza) ---------- */
+    'm-vesto2': S('Come mi vesto: la ruota dei colori, il look, i miei colori e la taglia giusta', H('colori che stanno bene insieme e la taglia giusta', 720) +
+      ['#ef4444', '#f97316', '#facc15', '#22c55e', '#3b82f6', '#8b5cf6'].map((c, i) => { const a = i * Math.PI / 3; return '<circle cx="' + (66 + 34 * Math.cos(a)).toFixed(1) + '" cy="' + (90 + 34 * Math.sin(a)).toFixed(1) + '" r="16" fill="' + c + '" fill-opacity=".7"/>'; }).join('') +
+      [['👗', 'il look'], ['❤️', 'i miei colori'], ['📏', 'la mia taglia'], ['🌦️', 'il meteo']].map((x, i) => { const cx = 205 + i * 140; return R(cx - 62, 38, 124, 104, PAL[i], {}) + E(cx, 80, 30, x[0]) + T(cx, 116, 15, x[1], { b: 800 }); }).join(''), 720),
+    'm-trucco': P('Come mi trucco: prima la pelle, poi la sicurezza, poi il gioco, sempre con un adulto', 'prima la pelle, poi il gioco: sempre con un adulto', [['🧴', 'la pelle', '', '#0d9488'], ['🔍', 'la sicurezza', '', '#2563eb'], ['🎨', 'il gioco', '', '#db2777'], ['💖', 'bella così', '', '#e85d75']], { W: 720, x0: 80, x1: 80, c: '#db2777', post: '<rect x="160" y="128" width="400" height="20" rx="10" fill="#f59e0b" fill-opacity=".18"/>' + T(360, 143, 13.5, '👩 con un adulto accanto, a ogni tappa', { b: 800 }) }),
+    'm-vita': K('Io e il mio corpo: buone abitudini per vestirsi, lavarsi le mani e i denti', 'le buone abitudini e il loro perché', [['🌦️', 'il meteo', 'che cosa metto'], ['🧼', 'le mani', 'pulite bene'], ['🪥', 'i denti', 'ogni giorno'], ['📚', 'le lezioni', 'il perché']], { W: 720 }),
+    'm-shop': P('Il negozio: le gemme si guadagnano imparando, si mettono nel salvadanaio o si spendono', 'le gemme si guadagnano imparando', [['📚', 'imparo', '', '#2563eb'], ['💎', 'le gemme', '', '#0ea5e9'], ['🐷', 'risparmio', '', '#db2777'], ['🛍️', 'scelgo', '', '#8b5cf6']], { W: 720, x0: 80, x1: 80, c: '#0ea5e9' })
+  };
+})();
+
+(function sezImgHook() {
+  const keyOf = id => id === 'materia' ? 'u-' + ((typeof pathSel !== 'undefined' && pathSel) || store.get('path-sel', '')) : id;
+  const put = (sec, k) => {
+    if (!sec || sec.hidden) return;
+    const old = sec.querySelector('.sez-img');
+    if (old && old.dataset.k === k && old.isConnected) return;
+    const svg = SEZ_IMG[k], h = sec.querySelector('h1');
+    if (old && (!svg || old.dataset.k !== k)) old.remove();
+    if (!svg || !h) return;
+    const t = h.parentElement === sec ? h : (h.closest('#' + sec.id + ' > *') || h);
+    t.insertAdjacentHTML('afterend', '<div class="sez-img" data-k="' + k + '">' + svg + '</div>');
+  };
+  const fill = () => document.querySelectorAll('[data-page]').forEach(s => { if (!s.hidden) put(s, keyOf(s.id.slice(2))); });
+  const orig = go;
+  go = function (id) { orig.apply(this, arguments); try { put($('p-' + id), keyOf(id)); } catch (e) {} };
+  /* quando una pagina si ridisegna da sola (per esempio Mappa/Elenco di una materia) */
+  try { const mo = new MutationObserver(() => { try { fill(); } catch (e) {} }); document.querySelectorAll('[data-page]').forEach(s => mo.observe(s, { childList: true })); } catch (e) {}
+  /* finestre: subito sotto il titolo grande */
+  [['openVesto2', 'm-vesto2'], ['openTrucco', 'm-trucco'], ['openVita', 'm-vita'], ['openShop', 'm-shop']].forEach(([fn, k]) => {
+    const f = window[fn]; if (typeof f !== 'function') return;
+    window[fn] = function () { const r = f.apply(this, arguments); try { const box = $('modal-box'), big = box && box.querySelector('.big');
+      if (big && !box.querySelector('.sez-img') && SEZ_IMG[k]) { box.classList.add('wide'); big.insertAdjacentHTML('afterend', '<div class="sez-img sez-m" data-k="' + k + '">' + SEZ_IMG[k] + '</div>'); setTimeout(() => { box.scrollTop = 0; }, 80); } } catch (e) {} return r; };
+  });
+})();
 
 /* ================= AVVIO ================= */
 (function boot() {

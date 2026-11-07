@@ -217,9 +217,11 @@
 .av-b[aria-pressed="true"]{border-color:var(--mc,var(--c3));background:var(--ms,var(--c3-soft))}
 /* 👗🎨 Come mi vesto: colori e taglia (js/sezioni/vesto2.js) */
 .v2-hello{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.v2-hl{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;column-gap:12px;align-items:center;text-align:left;padding:12px 18px;border-radius:20px;border:3px solid var(--c6);background:linear-gradient(135deg,var(--c6-soft),#fff);cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.08);max-width:420px}
-.v2-hl span{grid-row:1/3;font-size:34px}.v2-hl b{font-size:19px}.v2-hl small{grid-column:2;font-weight:700;color:var(--ink-soft)}
-.v2-hl i{grid-row:1/3;grid-column:3;font-style:normal;font-weight:900;font-size:13px;background:var(--c1);color:#fff;border-radius:999px;padding:4px 10px;animation:vvPulse 2s ease-in-out infinite}
+.v2-hl{display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;column-gap:8px;row-gap:0;align-items:center;text-align:left;padding:5px 12px;border-radius:14px;border:2px solid var(--c6);background:linear-gradient(135deg,var(--c6-soft),var(--surface,#fff));color:var(--ink);cursor:pointer;box-shadow:0 3px 8px rgba(0,0,0,.07);max-width:330px;line-height:1.2}
+.v2-hl span{grid-row:1/3;font-size:24px;line-height:1}.v2-hl b{font-size:16px;white-space:nowrap}.v2-hl small{grid-column:2;font-size:12px;font-weight:700;color:var(--ink-soft)}
+.v2-hl i{grid-row:1/3;grid-column:3;font-style:normal;font-weight:900;font-size:11px;background:var(--c1);color:#fff;border-radius:999px;padding:2px 7px;animation:vvPulse 2s ease-in-out infinite}
+/* 🖼️ disegni delle sezioni (js/core/sezimg.js) */
+.sez-img{margin:4px 0 14px;color:var(--ink)}.sez-img svg{width:100%;height:auto;max-height:150px;display:block}.sez-img.sez-m{margin:10px 0 6px}
 @keyframes vvPulse{50%{transform:scale(1.08)}}
 @media (prefers-reduced-motion:reduce){.v2-hl i{animation:none}}
 .vv-ruota{width:min(300px,70vw);display:block;margin:6px auto}
@@ -246,7 +248,8 @@
 .vv-sport ul,.vv-check{list-style:none;padding:0;text-align:left;display:grid;gap:6px;font-weight:700}
 /* 💄 Come mi trucco (js/sezioni/trucco.js) */
 .v2-hello{align-items:flex-start}.v2-hello>div:first-child{flex:1 1 260px}
-.tr-hl{border-color:var(--c1);background:linear-gradient(135deg,var(--c1-soft),#fff)}
+@media (min-width:1000px){.v2-hello{flex-wrap:nowrap;align-items:center}.v2-hello>div:first-child{min-width:0}.v2-hl{flex:0 1 auto;min-width:0}}
+.tr-hl{border-color:var(--c1);background:linear-gradient(135deg,var(--c1-soft),var(--surface,#fff))}
 .tr-face{width:230px;display:block}
 .tr-dis{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 12px}.tr-dis .chip.on{outline:3px solid var(--c1)}
 .tr-pel{display:flex;gap:10px;margin-top:6px}.tr-pel button{width:44px;height:44px;border-radius:50%;border:2px solid #1d2433;cursor:pointer}.tr-pel button.on{outline:4px solid var(--c1)}

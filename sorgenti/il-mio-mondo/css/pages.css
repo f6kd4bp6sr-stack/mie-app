@@ -365,7 +365,7 @@
   .alb-ic { font-size: 30px; } .alb-t { font-weight: 800; font-size: 12px; line-height: 1.15; text-align: center; }
   #alb-view .fig { margin: 8px auto; }
   .piggy { display: flex; gap: 12px; align-items: flex-start; text-align: left; border: 3px solid var(--c3); background: var(--c3-soft); border-radius: 20px; padding: 10px 12px; margin-top: 8px; }
-  .pg-ic { font-size: 44px; line-height: 1; } .piggy b { font-family: var(--font-display); font-size: 19px; display: block; } .piggy small { display: block; font-weight: 700; color: var(--ink-soft); margin-top: 2px; }
+  .pg-ic { font-size: 44px; line-height: 1; } .piggy b { font-family: var(--font-display); font-size: 19px; display: block; } .piggy small { display: block; font-weight: 700; color: var(--ink-soft); margin-top: 2px; } .piggy small b { display: inline; font-family: inherit; font-size: inherit; }
   .pg-goal { font-weight: 800; margin-top: 6px; } .pg-goal .ebig { margin-top: 4px; }
   .si-goal { border: 0; background: transparent; font-size: 18px; opacity: .45; cursor: pointer; padding: 2px 6px; } .si-goal.on { opacity: 1; }
   .shop-it.special { border-color: var(--c4); } .si-req { font-weight: 800; font-size: 12px; color: var(--ink-soft); }

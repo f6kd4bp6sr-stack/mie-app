@@ -95,6 +95,7 @@ js=''.join(open(D+f,encoding='utf-8').read()+'\n' for f in
   'data/domande/cartoni-roma.js',
   'js/sezioni/serie.js',
   'js/core/bg.js',
+  'js/core/sezimg.js',
   'js/core/boot.js']
 )
 js=js.replace('/*SUBJECTS*/',open(D+'data/testi/_subjects.txt',encoding='utf-8').read())

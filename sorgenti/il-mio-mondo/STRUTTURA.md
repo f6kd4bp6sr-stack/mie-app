@@ -17,7 +17,7 @@ app/
 │   ├── lib/            librerie esterne (generatore QR, licenza)
 │   ├── core/           base: salvataggi e avatar (core: avatar scelto con AV() e avatarSVG, stelle ⭐ in D.energy; dati ancora in mm2-dragon; il drago è stato tolto dal codice il 7/11/2026) (core, cloud), progressi, notifiche, sfondi,
 │   │                   musica, microfono (mic: registra e riascolta), guscio dell'app (shell), avvio (boot),
-│   │                   applicatore delle correzioni
+│   │                   applicatore delle correzioni, disegni delle sezioni (sezimg: SEZ_IMG, una striscia SVG sotto il titolo di ogni sezione e delle finestre Come mi vesto, Come mi trucco, Io e il mio corpo, Negozio)
 │   ├── sezioni/        routine, giochi, matematica, scienze, sport, scopri, diario, orologio, schede,
 │   │                   teatro (la mia parte), festa (compleanno: vigilia, festa, 10 sorprese, capsula),
 │   │                   disegno (tela libera, percorso in 5 tappe, Il mio museo)
