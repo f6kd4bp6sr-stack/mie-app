@@ -42,7 +42,7 @@ const diaFmtL=s=>fmt(s,{weekday:"long",day:"numeric",month:"long",year:"numeric"
 
 /* ---- vista ---- */
 function vDia(){const t=today(),f=diaFase(t),F=DIA_D.fasi[f],c=diaCess();
-  let o=`<h1>📓 Diario del passaggio</h1><p class="sub">Dal servizio alla pensione: una domanda alla settimana, le idee che diventano abitudini, le giornate di prova. Qui scrivi solo per te.</p>`;
+  let o=`<h1>📓 Diario</h1><p class="sub">Dal servizio alla pensione: una domanda alla settimana, le idee che diventano abitudini, le giornate di prova. Qui scrivi solo per te.</p>`;
   o+=`<div class="dia-fasi">${Object.keys(DIA_D.fasi).map(k=>`<span class="pill${k===f?" dia-on":""}">${DIA_D.fasi[k][0]} ${esc(DIA_D.fasi[k][1])}</span>`).join("")}<span class="lbl">${c?`Ultimo giorno di servizio: <b>${fmt(c,{day:"numeric",month:"long",year:"numeric"})}</b> · ${rel(c)}`:"Scrivi in fondo la data dell'ultimo giorno di servizio"}</span></div>`;
   o+=`<div class="seg" role="tablist" style="margin:12px 0 14px;width:max-content;max-width:100%">${DIA_V.map(([k,n])=>`<button role="tab" data-dv="${k}" class="${diaV===k?"on":""}" aria-selected="${diaV===k}">${n}</button>`).join("")}</div>`;
   o+=({sett:diaSett,idee:diaIdee,prove:diaProve,insieme:diaInsieme,tappe:diaTappeV,rileggi:diaRileggi}[diaV]||diaSett)();
