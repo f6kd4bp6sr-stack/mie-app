@@ -1,187 +1,148 @@
 {
   "app": "stampa-oggi",
   "edizione": "mattina",
-  "updated": "2026-11-06T05:40+01:00",
-  "nota": "Edizione della mattina del 5 novembre 2026.",
+  "updated": "2026-11-07T05:40+01:00",
+  "nota": "Edizione della mattina del 7 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-allarmi-bomba",
-        "t": "Allarmi bomba su tre voli diretti a Roma o partiti da Malpensa: due aerei dirottati",
-        "s": "Tre aerei sono stati interessati da allarmi bomba. Due sono stati deviati e un terzo è stato scortato dai caccia fino a Fiumicino. Episodi analoghi sono stati segnalati anche in Bulgaria e Repubblica Ceca. Le Procure ricevono le informative.",
-        "d": "2026-11-06",
+        "id": "it-manovra-audizioni",
+        "t": "Manovra, da lunedì le audizioni in Parlamento e venerdì 13 il confronto a Palazzo Chigi",
+        "s": "Da lunedì 9 a giovedì 12 novembre le commissioni Bilancio di Camera e Senato ascoltano enti e parti sociali sulla legge di bilancio; giovedì tocca al ministro Giorgetti. Venerdì 13 il Governo incontra imprese, categorie e sindacati. Meloni, a Verona, ha detto che difesa e sanità non sono in alternativa.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/05/triplo-allarme-bomba-coinvolti-due-voli-diretti-a-roma-e-uno-partito_746dfd38-9293-4c05-b2a2-c4fd0d609e5c.html"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/05/airbus-plane-from-dublin-to-rome-diverted-to-france-after-bomb-alert",
-            "l": "en"
-          }
-        ],
-        "link": [
-          {
-            "n": "ANSA: informative alle Procure sugli allarmi bomba",
-            "url": "https://ansa.it/sito/notizie/cronaca/2026/11/05/in-arrivo-informative-alle-procure-su-allarmi-bomba_eeaac407-6de2-4b26-bc38-15d1070dd3a5.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/manovra-lunedi-al-via-le-audizioni-attese-imprese-banche-sindacati-e-regioni_0ec0aa84-e641-47e8-af76-d966564ce5a0.html"
           }
         ]
       },
       {
-        "id": "it-scuola-sit-in",
-        "t": "Scuola, i sindacati annunciano un sit-in l'11 novembre contro i tagli previsti",
-        "s": "I sindacati della scuola hanno lanciato la mobilitazione con una manifestazione fissata per l'11 novembre. Nella stessa notizia ANSA riferisce che l'Unione europea non prevede azioni verso Roma sul decreto legge.",
-        "d": "2026-11-06",
+        "id": "it-altieri-anac",
+        "t": "Anac, le opposizioni contestano la nomina di Altieri alla presidenza; Meloni: «Era nelle nostre competenze»",
+        "s": "Pd, M5s e Italia Viva criticano la scelta di un esponente della Lega, già politico di lungo corso, al vertice dell'Autorità anticorruzione e chiedono di ritirarla, temendone l'indipendenza. La premier, interpellata a margine dell'Eicma, ha risposto che la nomina rientrava tra le competenze del Governo.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/canale_legalita_scuola/notizie/mim/2026/11/05/i-sindacati-della-scuola-lanciano-la-mobilitazione-sit-in-l11-novembre_3188904d-1b3c-4505-943d-bde93cdf3946.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/opposizioni-allattacco-su-altieri-allanac-meloni-era-nelle-nostre-competenze_f62f5871-1581-45e0-8e5f-a5550e6e6e2b.html"
           }
         ]
       },
       {
-        "id": "it-mattarella-napoli",
-        "t": "Mattarella a Napoli per i vent'anni della Fondazione con il Sud",
-        "s": "Il presidente della Repubblica ha partecipato a Napoli alla cerimonia per il ventesimo anniversario della Fondazione con il Sud.",
-        "d": "2026-11-06",
+        "id": "it-trieste-corteo",
+        "t": "Trieste, tensione al corteo davanti alla Questura: feriti tre poliziotti, una donna fermata e poi rilasciata",
+        "s": "Nella serata di venerdì 6 novembre scontri tra manifestanti e agenti. Tre poliziotti sono rimasti feriti, tra cui il vicequestore vicario, colpito alla testa forse da un grosso petardo e portato a Cattinara. Una donna è stata fermata, poi denunciata a piede libero. Oltre cento persone si erano radunate fuori dalla Questura.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/dirette_live/2026/11/05/mattarella-a-napoli-per-il-20mo-anniversario-della-fondazione-con-il-sud_a695cab3-c227-46c1-bebb-c9cb0dbb89ea.html"
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/tensione-a-manifestazione-trieste-feriti-tre-poliziotti-fermata-una-donna_3ddb3dce-d2bd-4867-9bd5-f33b75e339c1.html"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-hegseth",
-        "t": "Dopo la sconfitta alle midterm cresce la pressione su Hegseth, capo del Pentagono",
-        "s": "I repubblicani si smarcano dal segretario alla Difesa e si parla di un possibile avvio di impeachment la prossima settimana. Trump invece lo difende, definendo il suo lavoro «fantastico», mentre esponenti di entrambi i partiti ne chiedono la rimozione.",
-        "d": "2026-11-06",
+        "id": "mo-iran-qeshm",
+        "t": "Iran, Trump conferma nuovi attacchi americani sull'isola di Qeshm: trattative ancora aperte",
+        "s": "Venerdì 6 novembre gli Stati Uniti hanno colpito le difese aeree sull'isola di Qeshm, nello Stretto di Hormuz; Trump parla di «attacchi minori». Teheran dice di aver abbattuto un drone MQ-9. Il Qatar smentisce che i negoziati siano falliti: le parti esaminano le proposte dei mediatori.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/05/midterm-i-repubblicani-scaricano-hegseth-possibile-avvio-impeachment-prossima-settimana_41c6d3d5-6a37-40d2-8014-42eb277efc2c.html"
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/7/trump-confirms-new-us-strikes-on-irans-qeshm-island",
+            "l": "en"
           },
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/4/us-midterm-election-results-live-trump-reacts-as-more-results-awaited",
-            "l": "en"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/iran-il-nostro-esercito-piu-forte-rispetto-allinizio-della-guerra_3e8c0a95-4b9a-4cbc-ad30-ed76e48f6dca.html"
           }
         ]
       },
       {
-        "id": "mo-trump-dmitriev",
-        "t": "Trump incontra l'inviato di Putin e dice che un accordo Russia-Ucraina è vicino",
-        "s": "Giovedì alla Casa Bianca Trump ha ricevuto Kirill Dmitriev e ha parlato di un'intesa più ampia che potrebbe coinvolgere anche l'Europa, senza fornire dettagli. Nelle stesse ore Melania Trump aveva ospitato funzionari russi e ucraini. Il 10 e 11 novembre sono previsti colloqui ad Abu Dhabi.",
-        "d": "2026-11-06",
+        "id": "mo-ucraina-trump",
+        "t": "Ucraina, Trump: «Molti progressi». Negoziati a Abu Dhabi la prossima settimana",
+        "s": "Trump afferma che con Russia e Ucraina si fanno passi avanti, che per la prima volta entrambe vogliono un accordo e che l'intesa coinvolgerebbe l'Europa; ha incontri previsti lunedì e martedì. I colloqui guidati dagli Usa tra Kiev e Mosca dovrebbero riprendere ad Abu Dhabi.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/6/trump-met-russian-envoy-after-he-appeared-with-melania-trump-and-ukrainians",
-            "l": "en"
-          },
-          {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/05/zelensky-spero-che-lesito-delle-midterm-significhi-piu-aiuti-a-kiev_b010e2c3-d27d-4213-8a9b-0001e81fd7d8.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/trump-stiamo-facendo-molti-progressi-con-russia-e-ucraina_7f5f832d-deeb-4ae1-b2d9-b58505e2741a.html"
           }
         ]
       },
       {
-        "id": "mo-francia-sciopero",
-        "t": "Francia, sciopero nazionale e cortei in centinaia di città per salari e costo della vita",
-        "s": "I sindacati hanno organizzato una giornata di astensione e manifestazioni in circa 260 città, con attese fino a 700.000 persone. Al centro la richiesta di salari più alti, mentre il governo sostiene una manovra di rigore.",
-        "d": "2026-11-06",
+        "id": "mo-paraguay-pena",
+        "t": "Paraguay, arrestato l'ex presidente Peña per il caso Ueno Bank; proteste davanti alla sua casa",
+        "s": "Santiago Peña, destituito con un impeachment politico, è stato arrestato a casa sua ad Asunción su ordine della magistratura, per la crisi legata alla risoluzione di Ueno Bank. Nelle stesse ore giurava il nuovo presidente Pedro Alliana. Alle prime ore del 7 novembre si sono registrati incidenti.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/05/francia-giornata-di-sciopero-cortei-in-260-citta-attesi-fino-a-700.000-manifestanti_df510ebe-b004-47ce-9763-a6b8755813ea.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/paraguay-arrestato-lex-presidente-pena-per-il-caso-ueno-bank_2c34c06b-3361-4145-a093-29a0dd046ae4.html"
           },
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/5/workers-strike-across-france-hundreds-of-thousands-expected-to-protest",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-joshua-wong",
-        "t": "Hong Kong, nuova condanna a dieci anni per l'attivista Joshua Wong",
-        "s": "Un tribunale di Hong Kong ha inflitto all'attivista pro-democrazia altri dieci anni di carcere con l'accusa di collusione.",
-        "d": "2026-11-06",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/05/hong-kong-altri-10-anni-di-carcere-allattivista-pro-democrazia-joshua-wong_962392ed-0165-4457-9157-0fa7b666ff8c.html"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/05/hong-kong-democracy-activist-joshua-wong-sentenced-to-10-more-years-for-collusion",
-            "l": "en"
+            "n": "ANSA (proteste)",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/paraguay-nuove-proteste-e-incidenti-di-fronte-alla-casa-dellex-presidente_146d34ea-9db7-441f-b600-90efdf133935.html"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-meloni-costa",
-        "t": "Meloni scrive a Costa: l'Europa sui negoziati per l'Ucraina procede «in ordine sparso»",
-        "s": "Secondo Euronews, che ha visto la lettera, la premier critica le iniziative sovrapposte dei leader europei e chiede una sola voce dell'Ue. Propone di discutere il tema al Consiglio europeo informale di Dublino della prossima settimana.",
-        "d": "2026-11-06",
+        "id": "es-ue-trump-russia",
+        "t": "La stampa europea: Bruxelles respinge un accordo di sicurezza Usa-Russia deciso senza l'Europa",
+        "s": "Dopo le parole di Trump su un'intesa che «potrebbe coinvolgere tutta l'Europa», Kallas ha detto che Putin non ha diritto di veto sulla sicurezza europea; Sikorski e il ministro ucraino Sybiha hanno respinto un patto fatto senza gli europei.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/06/eu-rejects-trumps-big-beautiful-security-deal-with-russia-and-all-of-europe",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-meloni-lettera",
+        "t": "Euronews: Meloni scrive a Costa contro i troppi formati negoziali sull'Ucraina",
+        "s": "Secondo Euronews la premier italiana ha denunciato in una lettera al presidente del Consiglio europeo un approccio europeo scoordinato ai colloqui di pace. Costa ha risposto che il ruolo dell'Ue va organizzato; il tema sarà discusso al vertice informale di Dublino. Critiche simili da Polonia e Austria.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/06/cracks-emerge-over-europes-fragmented-approach-to-ukraine-peace-talks",
+            "l": "en"
+          },
+          {
+            "n": "Euronews (video)",
             "url": "https://www.euronews.com/2026/11/05/italian-pm-slams-eus-fragmented-approach-to-ukraine-peace-talks",
             "l": "en"
-          },
-          {
-            "n": "Euronews Italia",
-            "url": "https://it.euronews.com/2026/11/05/ucraina-lettera-di-meloni-allue-sui-negoziati-leuropa-va-in-ordine-sparso-scrive-la-premie",
-            "l": "it"
           }
         ]
       },
       {
-        "id": "es-midterm-europa",
-        "t": "Sconfitta di Trump alle midterm: i media europei guardano agli effetti su Europa e mercati",
-        "s": "I democratici conquistano il Congresso: Euronews si chiede se Trump diventerà più imprevedibile e quali ricadute ci saranno sull'Europa e sui mercati globali.",
-        "d": "2026-11-06",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/04/us-midterms-what-trumps-defeat-means-for-europe-and-global-markets",
-            "l": "en"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/05/europe-today-trump-loses-congress-will-he-now-be-even-more-unpredictable",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-cina-ue",
-        "t": "La Cina minaccia ritorsioni se l'Ue adotterà un «interruttore» commerciale contro le importazioni a basso costo",
-        "s": "Pechino avverte che risponderà con contromisure se Bruxelles introdurrà strumenti per proteggere il mercato europeo dai prodotti cinesi a prezzi bassi.",
-        "d": "2026-11-06",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/05/china-threatens-eu-with-retaliation-as-eu-mulls-kill-switch-to-defend-its-market",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-iran-trump",
-        "t": "Iran, Trump minaccia di «distruggere» il resto del Paese; Teheran propone un testo sul nucleare",
-        "s": "Secondo la diretta di Al Jazeera, Trump ha lasciato intendere nuove azioni militari, mentre l'Iran avrebbe inviato a Washington una proposta sul nucleare tramite mediatori del Qatar. Gli Usa la stanno esaminando.",
-        "d": "2026-11-06",
+        "id": "es-allarmi-bomba",
+        "t": "Falsi allarmi bomba su voli in tutta Europa: dirottamenti e scorte di caccia, nessun ordigno",
+        "s": "Tra giovedì e venerdì minacce telefoniche e via e-mail hanno colpito voli in 16 Paesi. Un aereo Finnair è stato scortato a Roma dall'Aeronautica italiana e un volo Wizz Air Parigi-Roma è atterrato a Venezia. Non sono stati trovati esplosivi e nessun responsabile è stato indicato.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/6/iran-war-live-trump-warns-us-may-have-to-destroy-rest-of-iran",
+            "url": "https://www.aljazeera.com/news/2026/11/6/hoax-or-bomb-threats-what-we-know-about-flight-disruptions-across-europe",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-morbillo-usa",
+        "t": "Stati Uniti, oltre 5.000 casi di morbillo nel 2026: il dato più alto da 35 anni",
+        "s": "I Cdc contano 5.182 casi confermati, più del doppio del 2025; il 59% riguarda bambini e ragazzi. La copertura vaccinale all'asilo è scesa al 92,4%. È in corso una disputa su come contare i decessi, dopo che i Cdc hanno tolto due morti della Pennsylvania dal conteggio nazionale.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/7/cdc-reports-more-than-5000-measles-cases-highest-number-in-35-years",
             "l": "en"
           }
         ]
@@ -189,142 +150,112 @@
     ],
     "economia": [
       {
-        "id": "ec-istat-alimentari",
-        "t": "Istat: a settembre calano i consumi alimentari, -0,3% rispetto ad agosto",
-        "s": "Secondo l'Istat la spesa delle famiglie per i beni alimentari è diminuita dello 0,3% su base mensile.",
-        "d": "2026-11-05",
+        "id": "ec-borse-tech",
+        "t": "Borse in calo dopo il crollo tech a Wall Street: Milano limita le perdite",
+        "s": "Dopo il «giovedì nero» legato ai titoli di data center e intelligenza artificiale (Nasdaq oltre -5%), Seul e Tokyo hanno perso circa il 6%. In Europa le aperture sono state negative (Francoforte -1,7%, Milano -1,68%); poi Piazza Affari ha ridotto il calo a circa -1%. Spread Btp-Bund a 108 punti, gas in calo.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/05/istat-a-settembre-in-calo-consumi-alimentari-03-su-agosto_03c5771b-b5da-4569-93e9-bdd2d1e1cd53.html"
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/2026/11/06/crollo-wall-street-borse-europee-asia-oggi/8562723/"
+          },
+          {
+            "n": "il Giornale",
+            "url": "https://www.ilgiornale.it/news/aziende/borse-oggi-il-crollo-del-tech-scuote-i-mercati-tokyo-e-seul-perdono-il-6-milano-apre-in-rosso/"
           }
         ]
       },
       {
-        "id": "ec-tesla-spacex",
-        "t": "Tesla e SpaceX in calo in Borsa: pesa il timore di indagini democratiche su Musk",
-        "s": "Dopo il voto di midterm, i titoli legati a Elon Musk sono scesi: gli investitori temono possibili inchieste del Congresso a maggioranza democratica.",
-        "d": "2026-11-04",
+        "id": "ec-accise-gasolio",
+        "t": "Accise sul gasolio: lo sconto di circa 4,9 centesimi al litro vale fino al 7 novembre",
+        "s": "Il decreto in Gazzetta Ufficiale riduce l'accisa sul gasolio per compensare il maggior gettito Iva dovuto al petrolio più caro: circa 4 centesimi, 4,9 con l'Iva. Copertura di 38,7 milioni. La misura riguarda solo il gasolio e scade oggi.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/speciali/usa-midterm-2026/2026/11/04/a-picco-tesla-e-spacex-in-borsa-su-musk-lo-spettro-di-indagini-dem_eb872c94-3562-4bae-801a-0a58eea7ecba.html"
-          }
-        ]
-      },
-      {
-        "id": "ec-iveco",
-        "t": "Iveco Group chiude il trimestre in perdita ma con ricavi in crescita",
-        "s": "Il gruppo torinese, legato a Tata Motors, ha presentato un trimestre in rosso mentre i ricavi aumentano, come riferisce ANSA Piemonte.",
-        "d": "2026-11-04",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/iveco-group-tata-motors-trimestre-in-rosso-ma-crescono-ricavi_94d423f7-38fa-4d7a-a80d-253b361b3804.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/28/nuovo-taglio-accise-fino-al-7-novembre-circa-49-centesimi-sul-gasolio_a267cefb-76e9-4df7-bde1-1b038149443b.html"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-askatasuna-cautelari",
-        "t": "Askatasuna, misure cautelari per 16 persone dopo gli scontri seguiti allo sgombero",
-        "s": "La polizia ha eseguito provvedimenti cautelari nei confronti di 16 persone ritenute coinvolte negli scontri avvenuti dopo lo sgombero del centro sociale torinese.",
-        "d": "2026-11-06",
+        "id": "to-corteo-7nov",
+        "t": "Torino, oggi corteo di lavoratori e studenti: possibili deviazioni dei mezzi GTT in centro",
+        "s": "TorinoToday segnala per sabato 7 novembre una manifestazione di lavoratori e studenti, partita dal Campus occupato, con percorso in centro, deviazioni delle linee GTT e chiusure di strade e parcheggi. Il dettaglio di percorso e orari è sulla pagina della testata.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/05/scontri-dopo-lo-sgombero-di-askatasuna-misure-cautelari-per-16-antagonisti_fe897f35-a575-4b9e-9aba-4abba68aa84a.html"
-          },
-          {
             "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/cronaca/arresti-misure-scontri-askatasuna-31-gennaio-2026-nomi.html"
+            "url": "https://www.torinotoday.it/cronaca/manifestazione-corteo-7-novembre-percorso-lavoratori-studenti-campus-occupazioni-gtt-deviazioni-chiusure-parcheggi-centro.html"
           }
         ]
       },
       {
-        "id": "to-corteo-7-nov",
-        "t": "Torino, corteo il 7 novembre di studenti e lavoratori dopo l'occupazione del Campus",
-        "s": "TorinoToday racconta la manifestazione di sabato 7 novembre, promossa da lavoratori e studenti insieme, che parte dal Campus occupato.",
-        "d": "2026-11-06",
+        "id": "to-cantieri-32mln",
+        "t": "Torino, piano cantieri da lunedì 9 novembre: 32 milioni per asfalti e sicurezza del Po",
+        "s": "Fondi del programma «Torino Cambia» (Fondazione CRT) finanziano riasfaltature in via Germagnano, corso Re Umberto e corso Novara, oltre alla stabilizzazione della sponda del Po in viale Turr per circa 60 giorni. Proseguono i lavori di Iren in corso Mediterraneo e di Smat in via Palli, chiusa fino al 12 dicembre.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/manifestazione-corteo-7-novembre-percorso-lavoratori-studenti-campus-occupazioni.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/06/leggi-notizia/argomenti/viabilita-1/articolo/maxi-piano-cantieri-a-torino-32-milioni-per-riasfaltare-le-strade-e-mettere-in-sicurezza-il-po.html"
           }
-        ]
-      },
-      {
-        "id": "to-unito-spazi-regione",
-        "t": "Unito accetta gli spazi della Regione per le lezioni in presenza, col Campus Einaudi occupato",
-        "s": "Su proposta del presidente Cirio l'ateneo accetta le sedi regionali; è in corso un sopralluogo. La rettrice Prandi ribadisce che la didattica online continua e punta a restituire presto il Campus all'università.",
-        "d": "2026-11-06",
-        "fonti": [
+        ],
+        "link": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/universita-torino-si-agli-spazi-della-regione-per-le-lezioni-in-presenza_27f56f26-d227-49ce-945a-b395146d3f5d.html"
+            "n": "Corso Vittorio: riaperta la carreggiata centrale, lavori sui binari del 15",
+            "url": "https://www.torinoggi.it/2026/11/06/leggi-notizia/argomenti/viabilita-1/articolo/riaperta-la-carreggiata-centrale-di-corso-vittorio-continuano-i-lavori-sui-binari-del-15.html"
           }
         ]
       },
       {
         "id": "to-metro-orari",
-        "t": "Metropolitana di Torino aperta più a lungo la sera dall'8 novembre",
-        "s": "Dopo tre anni e mezzo tornano gli orari serali estesi sulla linea: le novità partono l'8 novembre, secondo TorinoToday.",
-        "d": "2026-11-06",
-        "fonti": [
-          {
-            "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/attualita/estensione-orari-metropolitana-mezzanotte-novembre-2026-sera.html"
-          }
-        ]
-      },
-      {
-        "id": "to-lancia-design-days",
-        "t": "Lancia compie 120 anni: i «Design Days» all'Heritage Hub di Torino",
-        "s": "Il marchio celebra l'anniversario con una serie di giornate dedicate al design all'Heritage Hub della città.",
-        "d": "2026-11-06",
+        "t": "Metro di Torino, da domenica 8 novembre torna l'orario serale completo",
+        "s": "Dopo la riduzione del maggio 2023 per i lavori al sistema di segnalamento, la linea 1 tornerà a servire fino alle 00:30 da martedì a giovedì, la domenica e nei festivi, con ultime partenze a mezzanotte. Invariati venerdì e sabato (fino all'1:30) e il lunedì (stop alle 22).",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/lancia-design-days-i-120-anni-del-brand-allheritage-hub-di-torino_ad34995c-5575-450c-bed0-f30bda9452a2.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/28/torino-dall8-novembre-la-metro-torna-allorario-serale-completo_a60ad358-e285-4986-b49a-2cd7305bd407.html"
           }
         ]
       }
     ],
     "piemonte": [
       {
-        "id": "pi-quargnento",
-        "t": "Quargnento, ricordo dei tre vigili del fuoco morti nello scoppio del 2019",
-        "s": "A sette anni dall'esplosione in un cascinale, messa e deposizione di una corona a Quargnento e commemorazione ad Alessandria davanti alla lapide.",
-        "d": "2026-11-06",
+        "id": "pi-lupo-piano",
+        "t": "Piemonte, un piano regionale per gestire il lupo: stimati circa 464 esemplari",
+        "s": "L'assessore Bongioanni annuncia un piano con regole generali che permetterebbe di intervenire sui conflitti con l'uomo senza chiedere ogni volta il parere preventivo dell'Ispra. Bozza attesa a fine gennaio, poi consultazione pubblica e approvazione in Consiglio regionale.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/morti-scoppio-quargnento-il-ricordo-del-corpo-nazionale-dei-vigili-del_7b9a5957-02b9-4485-9737-3bdb1a10006a.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/bongioanni-il-piemonte-e-al-lavoro-per-la-gestione-del-lupo_95d0320c-289a-4599-98fb-5f239fb8815f.html"
           }
         ]
       },
       {
-        "id": "pi-biella-officina",
-        "t": "Biella, scoperta un'officina abusiva con lavoratori in nero",
-        "s": "I carabinieri hanno trovato dietro una concessionaria un'officina priva di autorizzazioni: attività sospesa, titolare denunciato e sanzioni per circa 11.400 euro più ammende oltre 7.100 euro.",
-        "d": "2026-11-06",
+        "id": "pi-polizia-locale",
+        "t": "Regione Piemonte, 6,7 milioni per polizia locale e unioni di comuni",
+        "s": "La Giunta ha approvato due delibere: 2 milioni (tra 2026 e 2027) per le spese correnti delle polizie locali e 4,7 milioni per il 2026 a sostegno dei servizi gestiti in forma associata dalle unioni di comuni, con fondi regionali e nazionali.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/a-biella-scoperta-officina-abusiva-con-lavoratori-in-nero_753eadfa-610f-4425-afd3-9d0a001401dc.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/dalla-regione-piemonte-67-milioni-di-euro-per-la-polizia-locale_c6d82504-ce85-48a7-86e0-a66771496747.html"
           }
         ]
       },
       {
-        "id": "pi-fondazione-vezza",
-        "t": "Nelle Langhe nasce la Fondazione Vezza, dedicata all'arte contemporanea",
-        "s": "ANSA Piemonte segnala la nascita nelle Langhe di una nuova fondazione per l'arte contemporanea.",
-        "d": "2026-11-06",
+        "id": "pi-fiere-sagre",
+        "t": "Regione Piemonte, oltre un milione per partecipare a fiere e sagre",
+        "s": "La Regione destina più di un milione di euro a sostegno della partecipazione a fiere e sagre del territorio, secondo quanto comunicato il 2 novembre.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/nasce-nelle-langhe-la-fondazione-vezza-dedicata-allarte-contemporanea_b3c99951-7814-4556-b93c-c2853a0a255c.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/piemonte-dalla-regione-oltre-1-milione-per-partecipare-a-fiere-e-sagre_060833d0-56f1-464e-9a83-4fb49de32531.html"
           }
         ]
       }
@@ -360,24 +291,38 @@
     ],
     "eventi": [
       {
-        "id": "ev-torino-contemporanea",
-        "t": "Torino Contemporanea Film Festival: anteprime, classici e videoarte",
-        "s": "Cinque giornate con concorso per registe emergenti, anteprime come «La Gradiva» e «Blue Heron» e la rassegna su Claudia Cardinale. Prezzi non indicati.",
-        "d": "2026-11-06",
+        "id": "ev-san-martino-chieri",
+        "t": "Fiera Nazionale di San Martino a Chieri",
+        "s": "Tradizionale fiera di San Martino nella città delle colline torinesi.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/torna-a-torino-contemporanea-film-festival_ea33b1ab-62c7-437e-8190-81c79663801a.html"
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/fiera-nazionale-di-san-martino-2026"
           }
         ],
-        "quando": "fino a sab 7 nov",
-        "dove": "Torino (sedi sul sito del festival)"
+        "quando": "fino a mar 10 nov",
+        "dove": "Chieri (Torino)"
+      },
+      {
+        "id": "ev-tartufo-rivalba",
+        "t": "Fiera del Tartufo Bianco d'Alba delle Colline Torinesi",
+        "s": "Fiera dedicata al tartufo bianco nelle colline torinesi.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/fiera-nazionale-del-tartufo-bianco-d-alba-delle-colline-torinesi"
+          }
+        ],
+        "quando": "fino a dom 8 nov",
+        "dove": "Rivalba (Torino)"
       },
       {
         "id": "ev-moncalieri-jazz",
-        "t": "Moncalieri Jazz Festival 2026",
-        "s": "Rassegna jazz nella città di Moncalieri; programma completo sulla scheda ufficiale.",
-        "d": "2026-11-06",
+        "t": "Moncalieri Jazz Festival 2026: ultimo giorno",
+        "s": "Rassegna di concerti jazz che si chiude domenica.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -389,71 +334,56 @@
       },
       {
         "id": "ev-luci-artista",
-        "t": "Luci d'Artista: le installazioni luminose all'aperto illuminano di nuovo le strade di Torino",
-        "s": "Ventottesima edizione della rassegna di opere luminose, nata nel 1998, che trasforma la città in un museo a cielo aperto. Esiste anche un tour in bus panoramico con commento in italiano, inglese e francese.",
-        "d": "2026-11-06",
-        "quando": "fino al 10 gen 2027",
-        "dove": "In tutta la città, Torino",
-        "fonti": [
-          {
-            "n": "TurismoTorino",
-            "url": "https://turismotorino.org/en/visit/events/luci-dartista"
-          }
-        ]
-      },
-      {
-        "id": "ev-courts",
-        "t": "Courts of Champions: la mostra sulla storia delle Nitto ATP Finals e dei suoi campioni",
-        "s": "Esposizione dedicata alla storia del torneo di tennis e ai campioni che l'hanno vinto, con aneddoti e curiosità. Fa parte degli eventi collaterali alle Nitto ATP Finals di Torino.",
-        "d": "2026-11-06",
-        "quando": "fino al 22 nov",
-        "dove": "Torino",
-        "fonti": [
-          {
-            "n": "TurismoTorino",
-            "url": "https://turismotorino.org/en/visit/events/courts-of-champions-2026"
-          }
-        ]
-      },
-      {
-        "id": "ev-road-to-torino",
-        "t": "Road to Torino: i tennisti delle ATP Finals in foto sotto i portici",
-        "s": "Percorso fotografico lungo i portici di via Po con i giocatori che si contendono il titolo delle Nitto ATP Finals.",
-        "d": "2026-11-06",
-        "quando": "fino al 22 nov",
-        "dove": "Portici di via Po, Torino",
-        "fonti": [
-          {
-            "n": "TurismoTorino",
-            "url": "https://turismotorino.org/en/visit/events/road-to-torino-2026"
-          }
-        ]
-      },
-      {
-        "id": "ev-kusama-ogr",
-        "t": "Yayoi Kusama alle OGR: la stanza a specchi «Infinity Mirrored Room»",
-        "s": "Mostra alle Officine Grandi Riparazioni su come la teoria quantistica ha influenzato la cultura visiva, dal cinema all'arte contemporanea.",
-        "d": "2026-11-06",
-        "quando": "fino al 25 feb 2027, apertura settimanale",
-        "dove": "OGR Torino",
-        "fonti": [
-          {
-            "n": "TurismoTorino",
-            "url": "https://turismotorino.org/en/visit/events/yayoi-kusama-infinity-mirrored-room"
-          }
-        ],
-        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-      },
-      {
-        "id": "ev-banksy",
-        "t": "Banksy. Street is the Museum: la mostra a Torino",
-        "s": "Mostra dedicata all'artista di strada, con apertura settimanale fino a fine gennaio.",
-        "d": "2026-11-06",
+        "t": "Luci d'Artista: installazioni luminose in tutta la città",
+        "s": "Le opere luminose d'artista illuminano le vie e le piazze di Torino per l'inverno.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/banksy-street-is-the-museum",
-            "l": "en"
+            "url": "https://turismotorino.org/en/visit/events/luci-dartista"
+          }
+        ],
+        "quando": "fino al 10 gen 2027",
+        "dove": "In tutta la città, Torino",
+        "costo": "gratis (all'aperto)"
+      },
+      {
+        "id": "ev-courts",
+        "t": "Courts of Champions: la mostra sulla storia delle Nitto ATP Finals",
+        "s": "Mostra legata alle ATP Finals di Torino.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/courts-of-champions-2026"
+          }
+        ],
+        "quando": "fino al 22 nov",
+        "dove": "Torino"
+      },
+      {
+        "id": "ev-basilico-ivrea",
+        "t": "Gabriele Basilico: paesaggio industriale Olivetti",
+        "s": "Mostra fotografica sul paesaggio industriale Olivetti di Ivrea.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/gabriele-basilico-paesaggio-industriale-olivetti"
+          }
+        ],
+        "quando": "dal 5 nov al 31 dic",
+        "dove": "Ivrea (Torino)"
+      },
+      {
+        "id": "ev-banksy",
+        "t": "Banksy. Street is the Museum",
+        "s": "Mostra dedicata all'artista di strada Banksy.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/banksy-street-is-the-museum"
           }
         ],
         "quando": "fino al 31 gen 2027, apertura settimanale",
@@ -461,17 +391,17 @@
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
       },
       {
-        "id": "ev-asti-magico-natale",
-        "t": "Magico Paese di Natale ad Asti: al via la ventesima edizione",
-        "s": "Mercatini con casette di legno, street food e villaggio degli elfi; inaugurazione con il coro di 600 bambini. Tema «Il Valore del Tempo».",
-        "d": "2026-11-06",
+        "id": "ev-asti-natale",
+        "t": "Magico Paese di Natale ad Asti: ventesima edizione",
+        "s": "Mercatini e iniziative natalizie nel centro storico.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/al-via-ad-asti-la-ventesima-edizione-del-magico-paese-di-natale_021f61c6-de2e-4d9d-81cc-5786467ddda3.html"
           }
         ],
-        "quando": "dal 13 nov al 20 dic (inaugurazione ven 13 nov, 18:30; mercatini dal 14 nov)",
+        "quando": "dal 13 nov al 20 dic (inaugurazione ven 13 nov, 18:30)",
         "dove": "Centro storico, Asti",
         "costo": "mercatini gratuiti"
       }
@@ -481,7 +411,7 @@
         "id": "spe-cin-tranquillo-funerale",
         "t": "Un tranquillo funerale di famiglia, la commedia corale di Massimiliano Bruno",
         "s": "Alla morte del patriarca Mancuso i parenti si ritrovano per il funerale, che degenera in una guerra familiare. Regia di Massimiliano Bruno.",
-        "d": "2026-11-06",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "MYmovies",
@@ -492,7 +422,7 @@
             "url": "https://www.comingsoon.it/cinema/torino/ideal/1072/"
           }
         ],
-        "quando": "Ideal: oggi 15:45, 17:40, 19:35 (orari indicativi)",
+        "quando": "Ideal: 15:45, 17:40, 19:35 (orari indicativi)",
         "dove": "Cinema Ideal",
         "costo": "da 9 € (ridotto 6,50 € nel pomeriggio)"
       },
@@ -500,31 +430,31 @@
         "id": "spe-cin-dio-ride",
         "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
         "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-        "d": "2026-11-06",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/dio-ride/"
           }
         ],
-        "quando": "Ideal: oggi 15:00, 17:10, 21:30 (orari indicativi)",
+        "quando": "Ideal: 15:00, 17:10, 21:30 (orari indicativi)",
         "dove": "Cinema Ideal",
         "costo": "da 9 € (6,50 € nel pomeriggio)"
       },
       {
-        "id": "spe-cin-shaun",
-        "t": "Shaun, vita da pecora: Operazione Z.U.C.C.A., film d'animazione per tutti",
-        "s": "Shaun e gli animali della fattoria cercano di salvare il contadino scomparso da un mostro prima di Halloween. Regia di Matthew Walker e Steve Cox. Per tutti.",
-        "d": "2026-11-06",
+        "id": "spe-cin-gatto-cappello",
+        "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
+        "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "MYmovies",
-            "url": "https://www.mymovies.it/film/2026/shaun-vita-da-pecora-operazione-zucca/"
+            "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
           }
         ],
-        "quando": "Ideal: oggi 15:40 (orario indicativo)",
+        "quando": "Ideal: 15:20, 19:20 (orari indicativi)",
         "dove": "Cinema Ideal",
-        "costo": "6,50 € nel pomeriggio"
+        "costo": "da 9 € (6,50 € nel pomeriggio)"
       },
       {
         "id": "spe-tea-orgasmo",
@@ -542,18 +472,34 @@
         "costo": "prezzo non indicato sulla pagina; biglietti su Vivaticket"
       },
       {
-        "id": "spe-tea-ultime-lune",
-        "t": "Le ultime lune in scena al Teatro Carignano fino all'8 novembre",
-        "s": "Spettacolo della stagione 2026/27 del Teatro Stabile di Torino, in cartellone al Carignano dal 27 ottobre all'8 novembre.",
-        "d": "2026-11-06",
-        "quando": "fino a dom 8 nov; orari e prezzi sulla pagina del teatro",
-        "dove": "Teatro Carignano, Torino",
+        "id": "spe-tea-cattivo",
+        "t": "C.A.T.T.I.V.O. del Gruppo Kapushka alle Fonderie Limone",
+        "s": "Con Antonio Careddu, Michele Puleio e Michele Scarcella; durata un'ora senza intervallo, nella rassegna Energie Nove.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/en/cartellone/le-ultime-lune-27-ott-8-nov-2026/"
+            "url": "https://www.teatrostabiletorino.it/cartellone/cattivo-13-nov-2026/"
           }
-        ]
+        ],
+        "quando": "ven 13 nov, 21:30",
+        "dove": "Fonderie Limone, Sala piccola, Moncalieri",
+        "costo": "10 € (biglietto unico; carnet da 5 spettacoli 35 €)"
+      },
+      {
+        "id": "spe-tea-non-ho-chiesto",
+        "t": "«Non ho chiesto (io) di venire al mondo» di Alessandra e Roberta Indolfi",
+        "s": "Coreografia e performance di Alessandra e Roberta Indolfi, con Alessia Lombradi, nella rassegna Energie Nove.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Teatro Stabile Torino",
+            "url": "https://www.teatrostabiletorino.it/cartellone/non-ho-chiesto-io-14-nov-2026/"
+          }
+        ],
+        "quando": "sab 14 nov, 19:30",
+        "dove": "Fonderie Limone, Sala piccola, Moncalieri",
+        "costo": "10 € (biglietto unico)"
       },
       {
         "id": "spe-tea-escaped-alone",
@@ -845,18 +791,6 @@
   },
   "controlli": [
     {
-      "at": "2026-10-31T10:30+01:00",
-      "edizione": "mattina",
-      "notizie": 18,
-      "note": "Fonti lette: ANSA (anche Piemonte), AGI, Il Post. Ricerca rifiutata: rainews.it, lastampa.it, repubblica.it, corriere.it, torino.corriere.it e torino.repubblica.it senza risultati. Lettura non riuscita: ilsole24ore.com, torinotoday.it, comune.torino.it, regione.piemonte.it."
-    },
-    {
-      "at": "2026-10-31T10:41+01:00",
-      "edizione": "mattina",
-      "notizie": 23,
-      "note": "Aggiunta la sezione estero (5 notizie) e una fonte estera alle 5 notizie del mondo. Fonti estere lette: Euronews (en, fr, de, es), Al Jazeera, CBS News, SWI swissinfo.ch/EFE. Ricerca rifiutata: reuters.com, apnews.com, bbc.com, bbc.co.uk, theguardian.com, nytimes.com, ft.com, lemonde.fr, lefigaro.fr, elpais.com, elmundo.es, spiegel.de, faz.net, dw.com, politico.eu, sueddeutsche.de, welt.de, zeit.de, tagesschau.de, lavanguardia.com, rfi.fr. Lettura non riuscita: france24.com, npr.org, washingtonpost.com."
-    },
-    {
       "at": "2026-10-31T10:58+01:00",
       "edizione": "mattina",
       "notizie": 28,
@@ -958,6 +892,18 @@
       "edizione": "mattina",
       "notizie": 56,
       "note": "Fonti lette: ANSA, Al Jazeera, Euronews (it/en), ComingSoon (Cinema Ideal), MYmovies, Turismo Torino, Teatro Stabile, TorinoToday (solo ricerca). Non raggiungibili: thespacecinema.it (pagina non letta, film indicati solo per il Cinema Ideal), torinotoday.it (pagine non leggibili), reuters.com non cercato; Euronews Francia non letto. Concerti copiati dall'edizione precedente (non è lunedì)."
+    },
+    {
+      "at": "2026-11-07T05:40+01:00",
+      "edizione": "mattina",
+      "notizie": 53,
+      "note": "Fonti lette: ANSA, Adnkronos (solo ricerca), il Fatto Quotidiano, il Giornale (ricerca), Al Jazeera, Euronews, Torino Oggi, TorinoToday (ricerca), ComingSoon (Cinema Ideal), MYmovies, Turismo Torino, Teatro Stabile. Non raggiungibili: reuters.com (ricerca rifiutata), thespacecinema.it (pagine non lette, film indicati solo per il Cinema Ideal), torinotoday.it (pagine non leggibili). Concerti copiati dall'edizione precedente (non è lunedì)."
+    },
+    {
+      "at": "2026-11-07T05:40+01:00",
+      "edizione": "mattina",
+      "notizie": 53,
+      "note": "Fonti lette: ANSA, Adnkronos (solo ricerca), il Fatto Quotidiano, il Giornale (ricerca), Al Jazeera, Euronews, Torino Oggi, TorinoToday (ricerca), ComingSoon (Cinema Ideal), MYmovies, Turismo Torino, Teatro Stabile. Non raggiungibili: reuters.com (ricerca rifiutata), thespacecinema.it (pagine non lette, film indicati solo per il Cinema Ideal), torinotoday.it (pagine non leggibili). Concerti copiati dall'edizione precedente (non è lunedì)."
     }
   ]
 }
