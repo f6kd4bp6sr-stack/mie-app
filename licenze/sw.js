@@ -1,6 +1,6 @@
-// Pianificazione: funziona anche senza internet. Versione 1113f9f793
-const CACHE = 'licenze-1113f9f793';
-const FILES = ['./', './index.html', './licenze.html', './taichi.html', './metodo.html', './progressi.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './jsqr.js', './qrcode.js'];
+// Pianificazione: funziona anche senza internet. Versione c3495283a5
+const CACHE = 'licenze-c3495283a5';
+const FILES = ['./', './index.html', './licenze.html', './taichi.html', './metodo.html', './progressi.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './jsqr.js', './qrcode.js', './cultura-dati.js', './investimenti.js'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('licenze-') && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {

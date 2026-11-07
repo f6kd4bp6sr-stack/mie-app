@@ -12,10 +12,12 @@ const cdScheda=id=>CD_D.schede.find(s=>s.id===id);
 const cdDel=l=>CD_D.schede.filter(s=>s.liv===l);
 const cdFatteL=l=>cdDel(l).filter(s=>CD().fatte[s.id]).length;
 /* il livello 1 (Base) è stato tolto il 27/10/2026, dopo che il proprietario l'ha completato: si parte dal primo livello rimasto */
-const CD_LIV=Object.keys(CD_D.livelli).map(Number).sort();
+let CD_LIV=[];
+/* i dati arrivano da cultura-dati.js, caricato alla prima richiesta (apertura più veloce, 4/11/2026) */
+function cdPronto(){if(CD_D){if(!CD_LIV.length)CD_LIV=Object.keys(CD_D.livelli).map(Number).sort();return true;}lazyJS("cultura-dati.js",()=>{cdPronto();softRender();});return false;}
 const cdAperto=l=>l===CD_LIV[0]||cdFatteL(l-1)>=CD_SBLOCCO;
 const cdQ=qid=>{for(const s of CD_D.schede)for(const q of s.quiz)if(q.id===qid)return{q,s};return null;};
-function cdDue(){const t=today(),S=CD().srs;return Object.keys(S).filter(k=>S[k].due<=t&&cdQ(k)).sort((a,b)=>S[a].due<S[b].due?-1:1);}
+function cdDue(){if(!cdPronto())return[];const t=today(),S=CD().srs;return Object.keys(S).filter(k=>S[k].due<=t&&cdQ(k)).sort((a,b)=>S[a].due<S[b].due?-1:1);}
 function cdMix(q,seed){const o=[q.ok].concat(q.wrong);let h=7;for(const ch of seed)h=(h*31+ch.charCodeAt(0))|0;for(let i=o.length-1;i>0;i--){h=(h*1103515245+12345)|0;const j=Math.abs(h)%(i+1);[o[i],o[j]]=[o[j],o[i]];}return o;}
 async function cdCopy(t){try{await navigator.clipboard.writeText(t);return true;}catch(e){}try{const x=document.createElement("textarea");x.value=t;x.style.cssText="position:fixed;opacity:0";document.body.appendChild(x);x.select();const ok=document.execCommand("copy");x.remove();return ok;}catch(e){return false;}}
 /* novità: copia sull'iPad per quando manca internet */
@@ -28,7 +30,7 @@ async function cdNovFetch(){const N=cdNov();if(cdNBusy||navigator.onLine===false
 const cdNovNew=()=>{const N=cdNov(),seen=CD().novVisto||"";return (N.voci||[]).filter(v=>(v.d||"")>seen).length;};
 setTimeout(cdNovFetch,2500);
 
-function vCd(){const c=CD(),due=cdDue().length,tot=CD_D.schede.length,fatte=CD_D.schede.filter(s=>c.fatte[s.id]).length,nn=cdNovNew();
+function vCd(){if(!cdPronto())return lazyAtt();const c=CD(),due=cdDue().length,tot=CD_D.schede.length,fatte=CD_D.schede.filter(s=>c.fatte[s.id]).length,nn=cdNovNew();
   let o=`<h1>🤖 Cultura digitale</h1><p class="sub">Che cos'è l'intelligenza artificiale, come chiederle le cose e come usarla senza rischi. Un passo alla volta: ogni scheda ha una prova pratica e tre domande.</p>`;
   o+=`<div class="kpi" style="margin-bottom:12px"><div><b>${fatte}/${tot}</b><span>schede fatte</span></div>${CD_LIV.map(l=>`<div><b>${cdAperto(l)?cdFatteL(l)+"/"+cdDel(l).length:"🔒"}</b><span>${l} · ${esc(CD_D.livelli[l])}</span></div>`).join("")}<div><b>${due}</b><span>domande da ripassare oggi</span></div></div>`;
   o+=`<div class="seg" role="tablist" style="margin:0 0 14px;width:max-content;max-width:100%">${CD_V.map(([k,n])=>`<button role="tab" data-cv2="${k}" class="${cdV===k?"on":""}" aria-selected="${cdV===k}">${n}${k==="rip"&&due?`<span class="n">${due}</span>`:""}${k==="nov"&&nn?`<span class="n">${nn}</span>`:""}</button>`).join("")}</div>`;
@@ -82,7 +84,7 @@ function cdLetture(){const c=CD(),St=c.lib||{},L=(CD_D.letture||[]).filter(x=>!c
     <div class="dia-bar"><button class="btn sm${op?"":" pri"}" data-cdlo="${x.id}">${op?"Chiudi il riassunto":"📝 Leggi il riassunto"}</button>${st!=="voglio"&&st!=="letto"?`<button class="btn sm" data-cdls="${x.id}:voglio">🔖 Da leggere</button>`:""}${st!=="letto"?`<button class="btn sm ok" data-cdls="${x.id}:letto">✓ Letta</button>`:`<button class="btn sm" data-cdls="${x.id}:">↩︎</button>`}</div></div>`;}).join("");
   return o+`<p class="lbl">Riassunti scritti per questa app e controllati da un revisore; non sostituiscono la lettura. Molti libri si trovano anche nelle biblioteche civiche.</p>`;}
 /* riquadro nel riepilogo di oggi */
-function cdCard(){const due=cdDue().length,nn=cdNovNew(),c=CD(),last=Object.values(c.fatte).sort().pop(),nx=CD_LIV.filter(cdAperto).map(cdDel).flat().find(s=>!c.fatte[s.id]),rows=[];
+function cdCard(){if(!cdPronto())return "";const due=cdDue().length,nn=cdNovNew(),c=CD(),last=Object.values(c.fatte).sort().pop(),nx=CD_LIV.filter(cdAperto).map(cdDel).flat().find(s=>!c.fatte[s.id]),rows=[];
   if(due)rows.push(`<div class="row"><div class="grow"><b>🔁 Ripasso di oggi</b><small>${due} ${due===1?"domanda":"domande"}</small></div><button class="btn sm" data-cdgo="rip">Ripassa</button></div>`);
   if(nn)rows.push(`<div class="row"><div class="grow"><b>📰 Novità sull'IA</b><small>${nn} ${nn===1?"nuova":"nuove"}</small></div><button class="btn sm" data-cdgo="nov">Leggi</button></div>`);
   if(nx&&(!last||diff(last,today())>=7))rows.push(`<div class="row"><div class="grow"><b>${nx.ic} Prossima scheda</b><small>${esc(nx.t)}</small></div><button class="btn sm" data-cdgo="perc" data-cdid="${nx.id}">Apri</button></div>`);
