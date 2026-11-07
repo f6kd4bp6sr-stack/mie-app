@@ -140,8 +140,6 @@ function cassaCalc(){const p=PENS(),C=p.cassa,D=p.dati,t=today(),T=t.slice(0,7),
   const stipOf={},stipPick=ym=>{if(!(ym in stipOf)){const c=stipMov.filter(m=>movDates(m,ym+"-01",ym+"-31").length);stipOf[ym]=c.length>1?c.slice().sort((a,b)=>(a.da||"")<(b.da||"")?1:(a.da||"")>(b.da||"")?-1:p.mov.indexOf(b)-p.mov.indexOf(a))[0].id:null;}return stipOf[ym];};
   p.mov.forEach(x=>{const st=movCat(x)==="stip"&&x.freq!=="una"&&pen;movDates(x,start+"-01",csFineYM()+"-31").forEach(d=>{if(movCat(x)==="stip"){const k=stipPick(d.slice(0,7));if(k&&k!==x.id)return;}if(st&&d.slice(0,7)>=dec){if(!dupSkip.some(z=>z.stop===x.id))dupSkip.push({ym:dec,t:x.t,stop:x.id,why:"da qui c’è la pensione: lo stipendio si ferma"});return;}put("mov:"+x.id+":"+d,d,x.tipo,x.t,+x.imp||0,{mov:x.id,freq:x.freq,src:x.inv?"🌱 Investimenti":undefined});});});
   /* controllo finale: se in un mese restano due stipendi o due tredicesime, lo segnalo */
-  const dupLeft=[];{const by={};items.filter(i=>i.tipo==="e").forEach(i=>{const k=cat(i.t)||(i.mov&&movCat(p.mov.find(m=>m.id===i.mov)||{}));if(k!=="stip"&&k!=="13")return;const z=i.ym+"|"+k;(by[z]=by[z]||[]).push(i);});
-    Object.keys(by).forEach(z=>{if(by[z].length>1)dupLeft.push({ym:z.split("|")[0],k:z.split("|")[1],L:by[z].map(i=>i.t+" "+eur0(i.imp))});});}
   items.sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0);
   /* saldi veri: partenza, fine mese (saldi) e a una data qualsiasi (punti); da ognuno il conto riparte */
   const eom=ym=>ym+"-"+String(ymDays(ym)).padStart(2,"0"),cps=[];
@@ -156,15 +154,13 @@ function cassaCalc(){const p=PENS(),C=p.cassa,D=p.dati,t=today(),T=t.slice(0,7),
     const e=L.filter(i=>i.tipo==="e").reduce((a,i)=>a+i.imp,0),u=L.filter(i=>i.tipo==="u").reduce((a,i)=>a+i.imp,0),fin=balAt(eom(ym)),real=has(SA[ym])?+SA[ym]:null;
     rows.push({ym,E,L,open,e,u,fin,prev:fin,real,veri:E.filter(x=>x.ev==="c"&&x.cp!=="ini").length});if(ym>=T&&fin<min){min=fin;minM=ym;}}
   const oggi=balAt(t);
-  return{ini,start,T,t,rows,items,min,minM,oggi,balAt,fine:rows.length?rows[rows.length-1]:null,dupSkip,dupLeft};}
+  return{ini,start,T,t,rows,items,min,minM,oggi,balAt,fine:rows.length?rows[rows.length-1]:null,dupSkip};}
 /* riquadro della Cassa che si apre e si chiude: titolo a sinistra, totali a destra (stato ricordato fra un disegno e l'altro) */
 function csBox(k,title,right,open,body){return `<details class="card k-pens csm csb" data-k="cb-${k}"${open?" open":""}><summary><span class="csm-h"><b class="csb-t">${title}</b></span><span class="csm-v">${right||""}</span></summary>${body}</details>`;}
 function pensCassa(){const p=PENS(),C=p.cassa,D=p.dati,K=cassaCalc(),{pen,penRc,man}=cassaPen(),rit=+(C.rit||0),T=K.T;
   const c=v=>`<span class="amt ${v<0?"u":""}">${eur0(v)}</span>`;
   let o="";
   const mn=ym=>new Date(ym+"-15T12:00").toLocaleDateString("it-IT",{month:"long",year:"numeric"});
-  if(false&&K.dupLeft&&K.dupLeft.length)o+=`<div class="card k-pens"><h3>⚠️ Possibili doppioni</h3>${K.dupLeft.map(d=>`<div class="row"><div class="grow"><b>${mn(d.ym)}</b> · ${d.k==="13"?"due tredicesime":"due stipendi"}<small>${d.L.map(esc).join(" · ")}</small></div></div>`).join("")}<p class="lbl">Se è un errore, togli o sposta una delle due entrate qui sotto.</p></div>`;
-  if(false&&K.dupSkip&&K.dupSkip.length)o+=`<details class="more"><summary>🔍 Doppioni evitati: ${K.dupSkip.length}</summary>${K.dupSkip.map(d=>`<div class="row"><div class="grow">${mn(d.ym)} · ${esc(d.t)}<small>${esc(d.why)}</small></div></div>`).join("")}</details>`;
   if(!K.ini||csIniEd)o+=`<div class="card k-pens"><h3>💶 Da dove parti</h3><p class="lbl" style="margin-top:0">Scrivi quanto hai sul conto (o sui conti, insieme) in una data: da lì l’app conta entrate e uscite fino a giugno 2029.</p>
     <div class="form"><label>Soldi disponibili €<input id="csIniI" inputmode="decimal" value="${K.ini?esc(String(K.ini.imp).replace(".",",")):""}" placeholder="0"></label><label>Al giorno<input id="csIniD" type="date" value="${esc(K.ini?K.ini.d:K.t)}"></label></div>
     ${(()=>{const F=contoStorico();return F?`<p class="lbl">Nei Conti il conto ${esc(F.n)} risulta ${eur0(Math.round(F.oggi))} al ${fmt(F.last<K.t?F.last:K.t,{day:"numeric",month:"short",year:"numeric"})}. <button class="lnk" data-csx="conto">Usa questo</button></p>`:"";})()}
@@ -507,10 +503,6 @@ function pensDocAttesi(){const p=PENS(),L=p.docAttesi;if(!L.length)return "";con
     return `<div class="row"><button class="chk${d.ok?" done":""}" data-dak="${d.id}" aria-label="Segna">✓</button><div class="grow${d.ok?" lbl":""}"><b>${esc(d.t)}</b><small>${esc(d.da||"")}${d.quando?" · "+esc(d.quando):""}${f?" · 📎 "+esc(f.n):""}</small></div>
       ${f?`<button class="btn sm" data-pfo2="${f.id}">Apri</button>`:`<label class="btn sm" style="cursor:pointer">📎<input type="file" data-daf="${d.id}" accept="application/pdf,image/*" hidden></label>`}</div>`;}).join("")}
     <p class="lbl" style="margin:8px 0 0">Spunta quando lo hai; con 📎 alleghi direttamente il PDF o la foto (resta su questo iPad e nelle copie).</p></div>`;}
-/* ---------- 📆 avviso: scadenze della Pensione non ancora mandate al Calendario dell'iPad ---------- */
-function pensIcsNag(){try{const opt=P.ics.opt||{abs:true,app:true,scad:true,pens:true,prat:true,pay:true,fam:true};if(opt.pens===false)return "";
-  const n=icsItems(opt).filter(i=>/^pens-/.test(i.uid)&&P.ics.sent[i.uid]!==i.sig).length;if(!n)return "";
-  return `<div class="card k-cal icsnag"><div class="row" style="border:0;padding:0"><span style="font-size:24px">📆</span><div class="grow"><b>${n} ${n===1?"promemoria della Pensione":"promemoria della Pensione"} da mandare al Calendario dell’iPad</b><small>Scadenze (avviso una settimana prima) ed entrate e uscite della Cassa (avviso il giorno prima), anche ad app chiusa.</small></div><button class="btn pri sm" data-pics="1">Aggiungi al Calendario</button></div></div>`;}catch(e){return "";}}
 /* ---------- 🗓️ linea del tempo: tappe vicine raggruppate, verticale sul telefono ---------- */
 /* 🗓️ linea del tempo accanto al titolo (3/11/2026): solo la linea con le date e «oggi»; toccando una tappa compare la descrizione */
 function pensTlLine(){const L=pensTappe();if(!L.length)return "";const t=today(),s=L.find(x=>x.id===pensTp);
@@ -547,7 +539,6 @@ function bindPens3(p,num){const R=()=>render();
   document.querySelectorAll("[data-daf]").forEach(inp=>inp.onchange=async()=>{const f=inp.files&&inp.files[0],d=p.docAttesi.find(x=>x.id===inp.dataset.daf);inp.value="";if(!f||!d)return;if(f.size>15*1024*1024)return toast("File troppo grande (massimo 15 MB)");
     const id=uid();try{await kv("readwrite","pf-"+id,f);}catch(e){return toast("Non riesco a salvare il file su questo iPad");}
     p.files.push({id,n:f.name||d.t,type:f.type||"",size:f.size,at:new Date().toISOString()});d.file=id;d.ok=d.ok||today();save();R();toast("📎 "+d.t+" allegato");if(window.__pfRefresh)window.__pfRefresh();});
-  document.querySelectorAll("[data-pics]").forEach(b=>b.onclick=()=>exportIcs(false));
   bindCassa(p,num);
 }
 

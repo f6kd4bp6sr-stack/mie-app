@@ -1,7 +1,7 @@
 # Novità su contratto e pensione — istruzioni per l'agente (un giro al giorno, alle 13)
 
 Pianificazione → 🎖️ Pensione → **Novità** legge il file pubblico `licenze/news-pensione.json`.
-Un'attività programmata lo aggiorna **tre volte al giorno: alle 13, alle 17 e alle 23** (ora italiana; parte qualche minuto prima). Il file è **pubblico**: solo notizie generali, mai dati personali.
+Un'attività programmata lo aggiorna **una volta al giorno, di notte, alle 1:01** (dal 3/11/2026) (ora italiana; parte qualche minuto prima). Il file è **pubblico**: solo notizie generali, mai dati personali.
 
 ## Che cosa cercare (dall'ultimo controllo e negli ultimi 7 giorni, personale della Guardia di Finanza e del comparto sicurezza-difesa)
 - **contratto**: accordi 2025-2027 (e successivi), DPR di recepimento, Gazzetta Ufficiale, aumenti, arretrati, F.E.S.I., circolari NoiPA o del Comando Generale.
