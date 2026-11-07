@@ -94,18 +94,13 @@ function tlCard(){const t=today(),h=add(t,14),V=TL().voci.filter(v=>v.st!=="fatt
   if(!dt.length&&!co.length)return "";
   return `<div class="card k-tl"><h3>🎟️ Tempo libero <button class="lnk" data-go="tl">Apri ›</button></h3>${dt.map(v=>`<div class="row"><span class="pill">${v.quando===t?"oggi":fmt(v.quando,{weekday:"short",day:"numeric",month:"short"})}</span><div class="grow"><b>${tlL(v.l)[1]} ${esc(v.t)}</b>${v.ora||v.dove?`<small>${[v.ora,v.dove].filter(Boolean).map(esc).join(" · ")}</small>`:""}</div></div>`).join("")}${co.map(v=>`<div class="row"><span class="pill">▶️</span><div class="grow"><b>${tlL(v.l)[1]} ${esc(v.t)}</b>${tlInfo(v)?`<small>${tlInfo(v)}</small>`:""}</div></div>`).join("")}</div>`;}
 
-/* spunti per le 🧪 Prove del Diario */
-function tlSpunti(){const V=TL().voci.filter(v=>v.st!=="fatto"&&["fare","palco","film"].includes(v.l)).slice(0,6);
-  return V.length?`<div class="dia-chips"><span class="lbl">🎟️ Dal Tempo libero:</span>${V.map(v=>`<button type="button" class="btn sm" data-tlsp="${esc(v.t)}">${tlL(v.l)[1]} ${esc(v.t)}</button>`).join("")}</div>`:"";}
-
 /* ➕ da una proposta della Stampa (qui o nella sezione 🗞️) */
 function tlDaStampa(id){if(typeof stAll!=="function")return;const n=stAll().find(x=>x.id===id);if(!n)return toast("Proposta non trovata: aggiorna la Stampa");
   if(TL().voci.some(v=>v.src===id))return toast("È già nelle tue liste");
   const cin=/the space|ideal/i.test((n.dove||"")+" "+(n.t||"")),l=n.sez==="spettacoli"?(cin?"film":"palco"):n.sez==="concerti"?"palco":"fare";
   TL().voci.push({id:uid(),l,t:n.t,st:"voglio",qt:n.quando||"",dove:n.dove||"",dovev:cin?"al cinema":"",note:n.costo?"💶 "+n.costo:"",src:id,link:((n.fonti||[])[0]||{}).url||"",add:today()});
   save();toast("➕ In 🎟️ Tempo libero → "+tlL(l)[2]);if(cur==="tl"||cur==="st")render();}
-document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("[data-tladd]");if(a){e.preventDefault();tlDaStampa(a.dataset.tladd);return;}
-  const s=e.target.closest&&e.target.closest("[data-tlsp]");if(s){const ta=document.getElementById("diaPPiano");if(ta){ta.value=(ta.value.trim()?ta.value.trim()+"\n":"")+s.dataset.tlsp;ta.focus();}}});
+document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("[data-tladd]");if(a){e.preventDefault();tlDaStampa(a.dataset.tladd);}});
 
 /* legge la scheda aperta e la scrive nella voce */
 function tlRead(v){const g=id=>{const e=$(id);return e?(e.type==="checkbox"?e.checked:e.value.trim()):undefined;},set=(k,id)=>{const x=g(id);if(x!==undefined)v[k]=x;};
