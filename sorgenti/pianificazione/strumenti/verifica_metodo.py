@@ -47,7 +47,7 @@ def controlla(path):
     sit = d.get('situazioni', {})
     for s in SITUAZIONI_BASE + ('vol',):
         if s not in sit: err.append('situazione mancante: ' + s)
-    for k in ('intro', 'intro_base'):
+    for k in ('intro',):
         if not d.get(k): err.append('manca ' + k)
     ids = set()
     # schede: 3 per abilità, campi completi e brevi
@@ -56,7 +56,7 @@ def controlla(path):
         if x.get('id') in ids: err.append(w + ': id ripetuto')
         ids.add(x.get('id'))
         if x.get('ab') not in ab: err.append(w + ': abilità sconosciuta')
-        for k, mx in (('tit', 8), ('princ', 45), ('es', 40), ('frase', 14), ('base', 50)):
+        for k, mx in (('tit', 8), ('princ', 45), ('es', 40), ('frase', 14)):
             if not x.get(k): err.append(w + ': manca ' + k)
             elif parole(x[k]) > mx: err.append('%s: «%s» troppo lungo (%d parole, massimo %d)' % (w, k, parole(x[k]), mx))
         cu = x.get('curio') or {}
@@ -103,8 +103,6 @@ def controlla(path):
     for c in d.get('frasi', []):
         if len(c.get('f', [])) < 4: err.append('frasi «%s»: servono almeno 4 frasi' % c.get('n'))
     if len(d.get('frasi', [])) < 4: err.append('servono almeno 4 gruppi di frasi di scorta')
-    q = d.get('domande_idee', [])
-    if len(q) < 5: err.append('servono almeno 5 idee di domande')
     testo = json.dumps(d, ensure_ascii=False)
     if VIETATE.search(testo): err.append('termine escluso dalla sezione: «%s»' % VIETATE.search(testo).group(0))
     return err

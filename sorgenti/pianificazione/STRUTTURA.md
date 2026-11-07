@@ -8,16 +8,13 @@ pian/
 ├── deploy.sh       pubblica solo la cartella /licenze/ del sito
 ├── pagine/
 │   ├── index.html     🏠 Pianificazione: 📆 Calendario (pagina iniziale: Giorno/Settimana/Mese/Anno/Scadenze, con famiglia
-│   │                  e benessere), 🗂️ Pratiche, ⚙️ Impostazioni (blocco, Calendario dell'iPad, copie); 💶 Conti nascosta (CONTI_ON)
+│   │                  e benessere), ⚙️ Impostazioni (blocco, Calendario dell'iPad, copie)
 │   ├── licenze.html   📅 Licenze (prima era index.html)
 │   ├── taichi.html    🧘 Tai Chi
 │   ├── metodo.html    🤝 Metodo: Oggi (3 carte da girare), Lo sapevi?, Frasi di scorta, Volontariato; finestre apri/chiudi (`pn-v1` → `met`)
 │   └── progressi.html 📊 Progressi di «Il mio mondo»
 ├── comune/blocco.html blocco con Face ID (passkey WebAuthn) inserito in testa a ogni pagina; sposta le vecchie chiavi mie-app-… in pn-…
 ├── comune/tema.css   tema comune: colore di ogni app nel menu in alto, riquadri morbidi di Licenze e Progressi
-├── comune/fogli.js   lettura dei file della banca (CSV, XLSX, XLS, HTML) sull'iPad
-├── sezioni/conti.js  Conti (NASCOSTA, codice conservato): banche e carte, importazione, categorie, budget, rate, proiezione
-├── sezioni/conti_stat.js  statistiche e risparmio dei Conti
 ├── sezioni/calendario.js 📆 Calendario: viste Giorno/Settimana/Mese/Anno; un giorno si modifica da qui e la modifica
 │                     va nella sezione di origine (Licenze `licenze-…-v1` + database `stato`, Scadenze, Conti,
 │                     Famiglia, Benessere, Tai Chi `tc_sessions`); istruzioni del Calendario iPad dietro un pulsante;
@@ -38,21 +35,21 @@ pian/
 ├── sezioni/investimenti.js 🌱 Investimenti (`pn-v1` → `inv`: prof, ris, som, deb, sim, ipo): legge Cassa e scheda della Pensione,
 │                     tassi da `news-pensione.json` → `mercati` (aggiornati dall’attività) o scritti a mano
 ├── sezioni/metodo_dati.json  🤝 Metodo: 4 abilità con motto, 30 schede (curiosità + scienza con fonti), oltre 100 missioni (nome in codice, bonus, livello, situazione), 12 gruppi di frasi di scorta; inserito nella pagina dal build
-├── sezioni/pratiche.js 🗂️ Pratiche, nascosta dal 25/10/2026 (`PRAT_ON=false` in pagine/index.html; dati in `pn-v1` → `prat` conservati nelle copie; da qui viene anche il visore dei file usato dalla Pensione): stato, prossimo passo, documenti, contatti, diario, note;
+├── sezioni/pratiche.js solo il visore dei file usato dalla Pensione (l'interfaccia di 🗂️ Pratiche è stata tolta il 7/11/2026; i dati `pn-v1` → `prat` e i file `pf-…` restano nelle copie)
 │                     file allegati nel database `licenze-…`, chiavi `pf-…` (non vanno nella copia su iCloud)
 ├── docs/             ricerca sui formati di esportazione delle banche
 ├── comune/barra.html  riga in fondo a ogni pagina (si apre al tocco): aggiornamenti, copie giornaliere, copia su File/iCloud, copia automatica
 ├── tools/sorgenti_pubbliche.py  copia queste sorgenti in /sorgenti/pianificazione/ del repository (con controllo dei dati personali)
 └── statici/           icone, manifest, service worker, jsQR, mondo-sync.js (usato da «Il mio mondo»), guida
 ```
-Segnaposto nelle pagine: `<!--@NAV-->` (menu), `<!--@BARRA-->` (barra comune), `/*@LICENZE_DATI*/` (festivi e valori iniziali presi dalla pagina Licenze), `/*@FOGLI*/` (comune/fogli.js), `/*@CONTI*/` (sezioni/conti.js + conti_stat.js + calendario.js + pratiche.js + pensione.js), `/*@VCENA*/` in progressi (domande per la cena, prese da index.html).
+Segnaposto nelle pagine: `<!--@NAV-->` (menu), `<!--@BARRA-->` (barra comune), `/*@LICENZE_DATI*/` (festivi e valori iniziali presi dalla pagina Licenze), `/*@CONTI*/` (sezioni/calendario.js + pratiche.js + pensione.js e le altre sezioni), `/*@VCENA*/` in progressi (domande per la cena, prese da index.html).
 
 Dati sul dispositivo: Licenze `licenze-…-v1`, Tai Chi `tc_*`, Progressi `prog-*` (con il diario di «Il mio mondo»), Pianificazione `pn-v1` (note dei giorni in `dn`), vista del calendario `pn-calv`, copie `pn-lastSnap`, `pn-lastBackup`, `pn-copia-cloud`, blocco `pn-lock`; copia nel database `licenze-…` (kv). Tutte le sezioni entrano nelle copie giornaliere e nel file su iCloud.
 Regola: nessun dato personale nel codice (il sito è pubblico).
 
 Collegamento della scheda: `#sk=<chiave>` salva la chiave della scheda cifrata su questo iPad, la toglie subito dall'indirizzo e apre Pensione → Documenti.
 
-Vecchi indirizzi: `#oggi` e `#ben` aprono il Calendario sul giorno di oggi, `#fam` la vista Settimana, `#scad` la vista Scadenze, `#sic` le Impostazioni, `#conti` (nascosta) il Calendario.
+Vecchi indirizzi: `#oggi` e `#ben` aprono il Calendario sul giorno di oggi, `#fam` la vista Settimana, `#scad` la vista Scadenze, `#sic` le Impostazioni, `#conti` e `#prat` (tolte) Oggi.
 
 Colori delle sezioni (variabili in `pagine/index.html`): `--cal` blu, `--scad` rosso, `--prat` arancio, `--fam` viola, `--ben` verde acqua, `--lic` terracotta, `--mondo` rosa, `--ipad` ardesia, `--set` grigio. Un riquadro prende il colore con la classe `k-<sezione>`.
 

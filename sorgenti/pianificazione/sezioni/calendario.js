@@ -43,11 +43,9 @@ function dayData(s,V){
   if(S&&s===S.end)it.push({ic:"🎉",t:"Congedo",c:"lic",k:"congedo"});
   if(HOL[s])it.push({ic:"🇮🇹",t:HOL[s],c:"hol",k:"hol"});
   scadOn(s).forEach(o=>it.push({ic:(CAT[o.x.cat]||CAT.altro)[0],t:o.x.t,c:o.proj?"scad proj":scadState(o.x)==="warn"?"scad warn":"scad",k:"scad",id:o.x.id,proj:o.proj,sub:RIC[o.x.ric]&&o.x.ric!=="no"?RIC[o.x.ric]:""}));
-  if(CONTI_ON)try{C().ric.forEach(r=>{if(ricDates(r,s,s).length)it.push({ic:r.tipo==="e"?"💰":"💶",t:r.t,amt:(r.tipo==="e"?"+":"−")+euro(r.imp),c:"pay"+(r.tipo==="e"?" in":""),k:"pay",id:r.id});});}catch(e){}
   famOn(s).forEach(a=>it.push({ic:"👨‍👧",t:(a.chi?a.chi+": ":"")+a.t,o:a.o||"",f:a.f||"",c:"fam",k:a.tipo==="att"?"att":"fev",id:a.id,sub:[a.tipo==="att"?(+a.ogni===2?"ogni 2 settimane":"ogni settimana"):"",a.acc?"🚗 "+a.acc:""].filter(Boolean).join(" · ")}));
   if(typeof pensOn==="function")pensOn(s).forEach(a=>it.push({ic:"🎖️",t:a.t,c:"pens",k:"pens",id:a.id}));
   if(typeof cassaOn==="function")cassaOn(s).forEach(x=>it.push(x));
-  if(PRAT_ON&&typeof pratOn==="function")pratOn(s).forEach(x=>it.push({ic:"🗂️",t:x.passo.t,c:"prat",k:"prat",id:x.id,sub:x.t}));
   calOn(s).forEach(e=>it.push({ic:calIc(e),t:e.t,o:e.o||"",f:e.f||"",c:"ipad",k:"ipad",sub:[e.cal,e.loc].filter(Boolean).join(" · ")}));
   const dn=(P.dn||{})[s];
   it.sort((a,b)=>(a.o||"99")<(b.o||"99")?-1:(a.o||"99")>(b.o||"99")?1:0);
@@ -127,12 +125,11 @@ function dayEditor(s,compact){
   // elenco
   const it=D.it;
   o+=it.length?it.map(x=>`<div class="row"><span class="pill cc ${x.c}">${x.o?esc(x.o)+(x.f?"–"+esc(x.f):""):x.ic}</span><div class="grow"><b>${x.o?x.ic+" ":""}${esc(x.t)}</b>${x.sub||x.proj?`<small>${esc([x.sub,x.proj?"prossima volta (si ripete)":""].filter(Boolean).join(" · "))}</small>`:""}</div>${x.amt?`<span class="amt ${/in/.test(x.c)?"e":"u"}">${x.amt}</span>`:""}
-    ${x.k==="scad"&&!x.proj?`<button class="chk" data-done="${x.id}" aria-label="Segna fatto">✓</button>`:""}${x.k==="fev"||x.k==="att"?`<button class="btn sm" data-ca="fedit:${x.k}:${x.id}">Modifica</button>`:""}${x.k==="pay"?`<button class="lnk" data-go="conti">Conti ›</button>`:""}${x.k==="prat"?`<button class="lnk" data-psel="${x.id}">Pratica ›</button>`:""}${x.k==="pens"?`<button class="lnk" data-go="pens">Pensione ›</button>`:""}</div>`).join(""):`<p class="empty">Niente in programma.</p>`;
+    ${x.k==="scad"&&!x.proj?`<button class="chk" data-done="${x.id}" aria-label="Segna fatto">✓</button>`:""}${x.k==="fev"||x.k==="att"?`<button class="btn sm" data-ca="fedit:${x.k}:${x.id}">Modifica</button>`:""}${x.k==="pens"?`<button class="lnk" data-go="pens">Pensione ›</button>`:""}</div>`).join(""):`<p class="empty">Niente in programma.</p>`;
   if(D.dn)o+=`<div class="row"><span class="pill">📝</span><div class="grow">${esc(D.dn)}</div><button class="btn sm" data-ca="add:nota">Modifica</button></div>`;
   // aggiungi
-  o+=`<div class="addbar">${[["scad","📌 Scadenza"]].concat(CONTI_ON?[["pay","💶 Pagamento"]]:[],[["fam","👨‍👧 Impegno"],["nota","📝 Nota"]]).map(([k,n])=>`<button class="btn sm${calAdd===k?" pri":""}" data-ca="add:${k}">${n}</button>`).join("")}</div>`;
+  o+=`<div class="addbar">${[["scad","📌 Scadenza"],["fam","👨‍👧 Impegno"],["nota","📝 Nota"]].map(([k,n])=>`<button class="btn sm${calAdd===k?" pri":""}" data-ca="add:${k}">${n}</button>`).join("")}</div>`;
   if(calAdd==="scad")o+=`<div class="form addf"><label class="wide">Che cosa<input id="caT" maxlength="120" placeholder="es. revisione auto, rinnovo documento"></label><label>Categoria<select id="caC">${Object.entries(CAT).map(([k,v])=>`<option value="${k}">${v[0]} ${v[1]}</option>`).join("")}</select></label><label>Si ripete<select id="caR">${Object.entries(RIC).map(([k,v])=>`<option value="${k}">${v}</option>`).join("")}</select></label><label>Avvisami<select id="caA">${[[0,"il giorno stesso"],[1,"1 giorno prima"],[3,"3 giorni prima"],[7,"1 settimana prima"],[14,"2 settimane prima"],[30,"1 mese prima"]].map(([k,v])=>`<option value="${k}"${k===7?" selected":""}>${v}</option>`).join("")}</select></label><div class="btns wide"><button class="btn pri" data-ca="save:scad">Aggiungi la scadenza</button></div></div>`;
-  if(CONTI_ON&&calAdd==="pay")o+=`<div class="form addf"><label>Voce<input id="caT" maxlength="60" placeholder="es. bollo, rata, affitto"></label><label>Importo €<input id="caI" inputmode="decimal" placeholder="0,00"></label><label>Tipo<select id="caTp"><option value="u">uscita</option><option value="e">entrata</option></select></label><label>Si ripete<select id="caF"><option value="1">una volta</option>${Object.entries(FREQ).map(([k,v])=>`<option value="${k}">${v[0]}</option>`).join("")}</select></label><label>Ultima data (facoltativa)<input id="caE" type="date"></label><div class="btns wide"><button class="btn pri" data-ca="save:pay">Aggiungi il pagamento</button></div></div>`;
   if(calAdd==="fam"){const E=calEdit?(calEdit.k==="att"?P.fam.att:P.fam.ev).find(a=>a.id===calEdit.id):null,att=calEdit&&calEdit.k==="att",rip=att?String(+E.ogni===2?2:1):"0";
     o+=`<div class="form addf"><label class="wide">Che cosa<input id="caT" maxlength="80" value="${esc(E?E.t:"")}" placeholder="es. pattinaggio, colloquio con le maestre, gara"></label>
       <label>Chi<input id="caC2" list="chiL2" maxlength="40" value="${esc(E&&E.chi||"")}" placeholder="facoltativo"><datalist id="chiL2">${chiList().map(c=>`<option value="${esc(c)}">`).join("")}</datalist></label>
@@ -184,8 +181,6 @@ function bindCal(){
     if(a==="lav"){calOpenLav=!calOpenLav;return R();}
     if(a.startsWith("add:")){const k=a.slice(4);calEdit=null;calAdd=calAdd===k?"":k;R();const f=document.getElementById("caT")||document.getElementById("caN");if(f)f.focus();return;}
     if(a==="save:scad"){const t=$("caT").value.trim();if(!t)return toast("Scrivi che cosa");P.scad.push({id:uid(),t,d:s,cat:$("caC").value,ric:$("caR").value,av:+$("caA").value,note:"",done:false});calAdd="";save();R();return toast("📌 Scadenza aggiunta");}
-    if(a==="save:pay"){const t=$("caT").value.trim(),i=parseFloat(String($("caI").value).replace(/\./g,"").replace(",","."));if(!t||!(i>0))return toast("Scrivi voce e importo");
-      const f=$("caF").value,one=f==="1";C().ric.push({id:uid(),t,imp:Math.round(i*100)/100,tipo:$("caTp").value,kind:"",freq:one?"m":f,d0:s,fine:one?s:($("caE").value||""),cat:"altro"});calAdd="";save();R();return toast("💶 Pagamento aggiunto in Conti");}
     if(a==="save:fam"){const t=$("caT").value.trim();if(!t)return toast("Scrivi che cosa");const o={t,chi:$("caC2").value.trim(),o:$("caO").value,f:$("caF2").value,acc:$("caAc").value.trim()},rp=$("caRp").value,fi=$("caFi").value;
       if(calEdit){const L=calEdit.k==="att"?P.fam.att:P.fam.ev,E=L.find(x=>x.id===calEdit.id);if(E){Object.assign(E,o);if(calEdit.k==="att"){E.ogni=rp==="2"?2:1;E.fino=fi||"";}}calEdit=null;calAdd="";save();R();return toast("Modificato");}
       if(rp==="0")P.fam.ev.push(Object.assign({id:uid(),d:s},o));else P.fam.att.push(Object.assign({id:uid(),g:(parse(s).getDay()+6)%7+1,dal:s,ogni:rp==="2"?2:1,fino:fi||"",pause:[]},o));

@@ -248,7 +248,7 @@ function cassaChart(K){const F=contoStorico(),P2=[{ym:K.ini.d.slice(0,7),d:K.ini
   big.forEach(i=>{const p=P2.find(q=>q.ym===i.ym);if(p)g+=`<circle cx="${x(p.d)}" cy="${y(p.v)}" r="4.5" class="cm p"/><text x="${x(p.d)}" y="${y(p.v)-10}" class="ct" text-anchor="middle">${esc(/TFS/.test(i.t)?"TFS":/F\.A\.F/.test(i.t)?"F.A.F.":/premio/i.test(i.t)?"premio":i.t.split(" ")[0])}</text>`;});
   cps.forEach(c=>g+=`<circle cx="${x(c.d)}" cy="${y(c.imp)}" r="5" class="cm v"/>`);
   g+=`<g id="csX" style="display:none"><line y1="${TP}" y2="${H-B}" class="cx"/><circle r="5" class="cm p"/><circle r="5" class="cm s"/></g><rect x="${L}" y="${TP}" width="${W-L-R}" height="${H-TP-B}" fill="transparent" id="csHit"/>`;
-  window.__csCh={x0:L,x1:W-R,W,D0,D1,P2,F:F?F.pts:[],y,x,day};
+  window.__csCh={x0:L,x1:W-R,W,D0,D1,P2,F:F?F.pts:[],Fn:F&&F.n||"conto",y,x,day};
   const leg=`<div class="cs-leg"><span><i class="sw p"></i>Cassa prevista</span>${F?`<span><i class="sw s"></i>${esc(F.n)} (storico dai Conti)</span>`:""}${cps.length?`<span><i class="sw v"></i>saldo vero</span>`:""}${big.length?`<span><i class="sw u"></i>periodo possibile degli incassi (3 mesi)</span>`:""}</div>`;
   const note=F?(F.last<add(t,-10)?`<p class="lbl" style="margin:6px 0 0">Storico del conto fino al ${fmt(F.last,{day:"numeric",month:"short",year:"numeric"})}, ultimo movimento importato: per allungarlo importa l’estratto nei Conti.</p>`:"")
     :`<p class="lbl" style="margin:6px 0 0">Per vedere anche lo storico, la linea del conto principale usa i movimenti importati nei Conti (sezione nascosta): finora non ce ne sono su questo iPad.</p>`;
@@ -260,7 +260,7 @@ function bindChart(){const S=$("csHit"),C=window.__csCh;if(!S||!C)return;const s
     const p=near(C.P2,dd),f=C.F.length?near(C.F,dd):null,pp=p&&Math.abs(C.day(p.d)-dd)<=20?p:null,ff=f&&Math.abs(C.day(f.d)-dd)<=20?f:null;if(!pp&&!ff)return;const ref=pp||ff;
     X.style.display="";const ln=X.querySelector("line"),cs=X.querySelectorAll("circle");ln.setAttribute("x1",C.x(ref.d));ln.setAttribute("x2",C.x(ref.d));
     [[cs[0],pp],[cs[1],ff]].forEach(([c,q])=>{if(q){c.style.display="";c.setAttribute("cx",C.x(q.d));c.setAttribute("cy",C.y(q.v));}else c.style.display="none";});
-    tip.innerHTML=`<b>${fmt(ref.d,{day:"numeric",month:"long",year:"numeric"})}</b>${pp?` · prevista <b>${eur0(Math.round(pp.v))}</b>`:""}${ff?` · ${esc(F.n||"conto")} <b>${eur0(Math.round(ff.v))}</b>`:""}`;};
+    tip.innerHTML=`<b>${fmt(ref.d,{day:"numeric",month:"long",year:"numeric"})}</b>${pp?` · prevista <b>${eur0(Math.round(pp.v))}</b>`:""}${ff?` · ${esc(C.Fn||"conto")} <b>${eur0(Math.round(ff.v))}</b>`:""}`;};
   S.onpointerdown=show;S.onpointermove=show;}
 /* giorni del Calendario e promemoria dell'iPad per i movimenti segnati «nel Calendario» */
 function cassaOn(s){return P.pens?(PENS().mov||[]).filter(x=>x.cal&&movDates(x,s,s).length).map(x=>({ic:x.tipo==="e"?"💰":"💶",t:x.t,amt:(x.tipo==="e"?"+":"−")+eur0(x.imp),c:"pens",k:"pens",id:"mov-"+x.id,sub:(x.tipo==="e"?"+":"−")+eur0(x.imp)+" · "+(CS_FREQ[x.freq]||CS_FREQ.una)[0]})):[];}

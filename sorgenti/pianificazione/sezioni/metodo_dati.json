@@ -42,7 +42,6 @@
   "3": "Da leoni"
  },
  "intro": "Allenamento alla simpatia, un giorno alla volta. Niente compiti: missioni da pescare, curiosità che sorprendono e qualche figuraccia da ridere.",
- "intro_base": "Boothby e colleghi (2018) lo chiamano «liking gap»: dopo una conversazione tra sconosciuti, ognuno in media sottovaluta quanto è piaciuto all'altro.",
  "schede": [
   {
    "id": "a1",
@@ -51,7 +50,6 @@
    "princ": "Un saluto per primo, con un sorriso e guardando negli occhi, dice «mi fa piacere vederti» prima di ogni parola.",
    "es": "Al bar, prima di ordinare: «Buongiorno! Come va stamattina?»",
    "frase": "Buongiorno, come va oggi?",
-   "base": "Sandstrom e Dunn (2014): in un esperimento, i clienti di una caffetteria a cui era stato chiesto di scambiare due parole sincere con chi serviva uscivano di umore migliore di quelli a cui era stato chiesto di essere il più rapidi possibile.",
    "app": {
     "come": "Nello studio, alcuni clienti di una caffetteria dovevano essere il più rapidi possibile; altri dovevano avere uno scambio sincero con chi serviva: sorridere, guardarlo negli occhi, fare due chiacchiere. Chi aveva chiacchierato usciva di umore migliore e si sentiva più parte di una comunità.",
     "prova": [
@@ -81,7 +79,6 @@
    "princ": "Sentire il proprio nome fa sentire riconosciuti. Quando ti presentano qualcuno, ripeti subito il nome e usalo ancora una volta mentre parlate.",
    "es": "«Piacere, Laura! Da quanto vieni qui?» E più avanti, salutando: «Ciao Laura, a presto!»",
    "frase": "Scusa, mi ripeti il nome? Ci tengo a ricordarlo.",
-   "base": "Dire subito il nome, provare a richiamarlo a mente dopo qualche minuto e collegarlo a qualcosa (il posto, un dettaglio) aiuta a ricordarlo: lo mostrano gli studi sulla memoria dei nomi.",
    "app": {
     "come": "Per ricordare un nome conta soprattutto richiamarlo a mente: chi prova a ricordarselo dopo poco, poi a intervalli sempre più lunghi, lo ricorda meglio di chi si limita a risentirlo o rileggerlo. Aiuta anche dargli un significato, collegandolo a qualcosa che il nome ti fa venire in mente o che sai di quella persona.",
     "prova": [
@@ -116,7 +113,6 @@
    "princ": "Non serve una frase brillante: basta un'osservazione su quello che condividete in quel momento (il posto, l'attesa, l'evento) e una domanda.",
    "es": "In fila: «C'è sempre così tanta gente il sabato?»",
    "frase": "È la prima volta che vieni qui?",
-   "base": "Epley e Schroeder (2014): chi sui mezzi pubblici attaccava discorso con uno sconosciuto faceva un viaggio più piacevole di chi restava in silenzio. Si temeva di essere respinti, ma per quanto risultò ai ricercatori nessuno lo fu.",
    "app": {
     "come": "Sui treni e sugli autobus di Chicago, ad alcuni pendolari fu chiesto di parlare con uno sconosciuto, ad altri di restare per conto proprio. Altri pendolari, a cui si chiedeva solo di immaginare la scena, pensavano che il silenzio sarebbe stato più piacevole e che gli altri non avessero voglia di parlare. Invece chi aveva chiacchierato raccontava un viaggio più piacevole.",
     "prova": [
@@ -151,7 +147,6 @@
    "princ": "Non contano solo gli amici stretti: anche gli scambi con i conoscenti (il vicino, il giornalaio, chi incontri al corso) fanno stare meglio e sentire parte di una comunità.",
    "es": "Due parole con il fornaio sul pane del giorno, un saluto al vicino che porta fuori il cane.",
    "frase": "Allora, come va oggi?",
-   "base": "Sandstrom e Dunn (2014): nei giorni in cui le persone avevano più scambi con conoscenti si sentivano più felici e più legate agli altri.",
    "app": {
     "come": "Per alcuni giorni i partecipanti hanno contato le persone con cui parlavano. Nei giorni in cui avevano parlato con più conoscenti, e non solo con amici e familiari, si sentivano più felici e più legati agli altri.",
     "prova": [
@@ -181,7 +176,6 @@
    "princ": "Più vediamo una faccia, più ci sta simpatica, anche senza parlarci. Frequentare spesso gli stessi posti (il bar, il mercato, la bocciofila) prepara il terreno.",
    "es": "Fare la spesa sempre il sabato mattina, allo stesso banco del mercato.",
    "frase": "Ci vediamo sabato, come sempre!",
-   "base": "Moreland e Beach (1992): una studentessa vista più volte a lezione, senza mai parlare con nessuno, veniva giudicata più simpatica.",
    "curio": {
     "tit": "La faccia nota piace di più",
     "fatto": "In un'aula universitaria quattro ragazze sono venute a lezione 0, 5, 10 o 15 volte, senza parlare con nessuno. A fine corso, più erano venute, più gli studenti le trovavano simpatiche.",
@@ -216,7 +210,6 @@
    "princ": "Pensiamo che gli altri notino ogni nostro errore o ogni macchia sulla camicia: in realtà ci guardano molto meno di quanto crediamo. Saperlo toglie un po' di paura di sbagliare.",
    "es": "Ti si incastra una parola mentre ti presenti? Sorridi e vai avanti: quasi nessuno ci fa caso.",
    "frase": "Scusa, mi sono incartato: ricomincio!",
-   "base": "Gilovich e colleghi (2000): chi indossava una maglietta imbarazzante pensava che l'avesse notata circa metà dei presenti; in realtà se n'era accorto circa un quarto.",
    "curio": {
     "tit": "L'effetto riflettore",
     "fatto": "Studenti con una maglietta imbarazzante pensavano che metà della stanza l'avesse notata. In realtà se n'era accorto circa un quarto dei presenti. Il riflettore che senti addosso è molto più piccolo.",
@@ -246,7 +239,6 @@
    "princ": "Parlare con gli sconosciuti si impara: dopo qualche giorno di prove, la paura cala e ci si sente più capaci di conversare. È proprio l'idea delle missioni di questa pagina.",
    "es": "Una missione al giorno per una settimana: il barista, il vicino in fila, la signora con il cane.",
    "frase": "Posso chiederle una cosa?",
-   "base": "Sandstrom, Boothby e Cooney (2022): dopo cinque giorni di «caccia al tesoro» con missioni per parlare con sconosciuti, i partecipanti temevano meno di essere respinti.",
    "curio": {
     "tit": "Le missioni funzionano (lo dice uno studio)",
     "fatto": "In un esperimento, alcuni studenti hanno ricevuto per cinque giorni da un'app missioni per parlare con sconosciuti, un po' come qui. Alla fine temevano meno di essere respinti, e l'effetto c'era ancora una settimana dopo.",
@@ -276,7 +268,6 @@
    "princ": "Ci piace chi sentiamo simile a noi. Trovare presto un punto in comune (un posto, una passione, un ricordo) accorcia le distanze.",
    "es": "«Anche lei va al mercato di Porta Palazzo? Qual è il suo banco preferito?»",
    "frase": "Ah, anche tu? Allora dobbiamo parlarne!",
-   "base": "Montoya e colleghi (2008): mettendo insieme oltre 300 studi, sentirsi simili all'altro va con una maggiore attrazione, soprattutto quando la somiglianza è percepita.",
    "curio": {
     "tit": "Anche tu? Allora parliamone",
     "fatto": "Mettendo insieme oltre 300 studi, i ricercatori hanno visto che ci piace di più chi sentiamo simile a noi. Conta soprattutto la somiglianza che percepiamo: a volte basta scoprire un punto in comune.",
@@ -306,7 +297,6 @@
    "princ": "Dopo una risposta, fai una domanda proprio su quello che l'altro ha appena detto. È il segno più chiaro che lo stai ascoltando.",
    "es": "«Sono stato in montagna.» «Ah sì? Dove? Che cosa ti è piaciuto di più?»",
    "frase": "E poi com'è andata?",
-   "base": "Huang e colleghi (Harvard, 2017): chi faceva più domande di approfondimento piaceva di più alle persone con cui parlava.",
    "app": {
     "come": "I ricercatori hanno analizzato centinaia di conversazioni, anche in chat e negli incontri di speed date. Chi faceva più domande piaceva di più, e a fare la differenza erano proprio le domande di approfondimento, quelle che riprendono quello che l'altro ha appena detto. Un altro studio mostra che parlare di sé è piacevole per il cervello: per questo una buona domanda è un regalo.",
     "prova": [
@@ -346,7 +336,6 @@
    "princ": "Mentre l'altro parla, ascolta invece di pensare a cosa dirai. Poi ripeti con parole tue quello che hai capito, senza spostare subito il discorso su di te.",
    "es": "«Quindi il trasloco ti ha sfinito, ma la casa nuova ti piace?»",
    "frase": "Quindi, se ho capito bene…",
-   "base": "È il cuore dell'«ascolto attivo»: in uno studio (Weger e colleghi, 2014) chi si sentiva riformulare ciò che aveva detto si sentiva più capito di chi riceveva consigli o solo cenni di assenso.",
    "app": {
     "come": "In uno studio, alcuni studenti parlavano con un compagno addestrato dai ricercatori dei loro programmi per il fine settimana e di una delusione vissuta all'università. Chi si sentiva riformulare quello che aveva detto, con l'invito a raccontare di più, si sentiva più capito di chi riceveva consigli o solo cenni di assenso. In uno studio precedente riformulare rendeva l'ascoltatore più simpatico, ma non faceva sentire più capiti: meglio usarlo con misura e con parole proprie.",
     "prova": [
@@ -386,7 +375,6 @@
    "princ": "Una chiacchierata è uno scambio: dopo aver ascoltato, racconta un tuo pezzetto simile, poi ripassa la parola. La confidenza cresce un passo alla volta, da tutte e due le parti.",
    "es": "«Anch'io ho cambiato casa due anni fa: il peggio sono stati gli scatoloni dei libri! A te che cosa è pesato di più?»",
    "frase": "Mi è successa una cosa simile…",
-   "base": "Aron e colleghi (1997): due sconosciuti che, a turno, rispondevano a domande sempre più personali si sentivano più vicini di chi faceva solo chiacchiere superficiali.",
    "app": {
     "come": "Coppie di sconosciuti passavano circa 45 minuti a rispondere, a turno, a 36 domande sempre più personali, dai gusti di tutti i giorni ai ricordi importanti. Alla fine si sentivano più vicini delle coppie che avevano fatto solo chiacchiere superficiali. Il segreto è la reciprocità: un passo io, un passo tu.",
     "prova": [
@@ -426,7 +414,6 @@
    "princ": "Le conversazioni non finiscono quasi mai quando tutti e due lo vorrebbero, e spesso non sappiamo indovinare che cosa vuole l'altro. Chiudere con calore, quando la chiacchierata è ancora piacevole, lascia un buon ricordo e la voglia di rivedersi.",
    "es": "«Che bello sentirti! Ti lascio andare, ma riprendiamo presto il discorso del viaggio.»",
    "frase": "Mi ha fatto piacere parlare con te: riprendiamo presto!",
-   "base": "Mastroianni e colleghi (2021): quasi nessuna conversazione finisce quando lo vogliono entrambi (tra sconosciuti in laboratorio, il 2% circa), e le persone non sanno indovinare quando l'altro vorrebbe smettere.",
    "app": {
     "come": "I ricercatori hanno chiesto a centinaia di persone, dopo una conversazione, quando avrebbero voluto che finisse e quando pensavano che lo volesse l'altro. Quasi mai era finita quando lo volevano tutti e due; spesso uno avrebbe voluto continuare o smettere prima, e le previsioni su che cosa voleva l'altro erano molto imprecise.",
     "prova": [
@@ -456,7 +443,6 @@
    "princ": "Pensiamo che con chi conosciamo poco si possa parlare solo del tempo. In realtà anche gli sconosciuti apprezzano una domanda più personale, e la conversazione riesce meglio del previsto.",
    "es": "«Che cosa ti ha reso contento quest'anno?» al posto di «Brutto tempo, eh?»",
    "frase": "Posso farti una domanda un po' diversa dal solito?",
-   "base": "Kardas, Kumar ed Epley (2022): le persone si aspettavano che le conversazioni profonde con sconosciuti fossero più imbarazzanti e meno piacevoli di come poi sono state.",
    "curio": {
     "tit": "Il tempo è sopravvalutato (come argomento)",
     "fatto": "In una serie di esperimenti, coppie di sconosciuti rispondevano a domande più personali del solito. Prima pensavano che sarebbe stato imbarazzante; poi è risultato più piacevole e meno imbarazzante del previsto.",
@@ -486,7 +472,6 @@
    "princ": "Temiamo che chiedere un consiglio ci faccia sembrare meno capaci. Spesso succede il contrario: chi chiede un consiglio a chi se ne intende sembra più competente, e l'altro si sente stimato.",
    "es": "«Tu che di vini te ne intendi: per una cena con amici che cosa porteresti?»",
    "frase": "Tu che te ne intendi: che cosa mi consigli?",
-   "base": "Brooks, Gino e Schweitzer (2015): chi chiedeva un consiglio veniva giudicato più competente, soprattutto se il compito era difficile e il consiglio era chiesto proprio a chi giudicava.",
    "curio": {
     "tit": "Il consiglio che ti fa sembrare più bravo",
     "fatto": "Chiedere un consiglio sembra un segno di debolezza, ma negli esperimenti succedeva il contrario: chi lo chiedeva sembrava più competente, soprattutto se la domanda era difficile. E chi riceve la domanda si sente stimato.",
@@ -516,7 +501,6 @@
    "princ": "Le chiacchiere leggere vanno benissimo per cominciare, ma sono le conversazioni con un po' di sostanza (idee, esperienze, progetti) a lasciare il segno.",
    "es": "Dal «Che caldo oggi» a «Tu come passi l'estate, di solito?»",
    "frase": "E tu che cosa ne pensi, davvero?",
-   "base": "Mehl e colleghi (2010): le persone più felici passavano più tempo a parlare con altri e avevano più conversazioni di sostanza; uno studio più ampio (2018) ha confermato il legame con le conversazioni di sostanza.",
    "curio": {
     "tit": "Il registratore della felicità",
     "fatto": "Un piccolo registratore ha catturato frammenti delle giornate di alcuni studenti: i più felici parlavano di più con gli altri, con meno chiacchiere leggere e più conversazioni di sostanza. Uno studio più ampio ha confermato il legame con la sostanza.",
@@ -551,7 +535,6 @@
    "princ": "Non serve un'occasione per farsi sentire: «ho pensato a te» basta, ed è proprio la sorpresa che fa piacere.",
    "es": "«Ciao! Sono passato davanti alla pizzeria dove andavamo e mi sei venuto in mente. Come stai?»",
    "frase": "Mi sei venuto in mente: come stai?",
-   "base": "Liu e colleghi (2023): chi riceve un messaggio inatteso lo apprezza più di quanto immagini chi lo manda, soprattutto quando è una sorpresa e il legame è meno stretto.",
    "app": {
     "come": "In una serie di esperimenti, alcune persone mandavano un breve messaggio o un piccolo pensiero a qualcuno che non sentivano da tempo, e prima dovevano indovinare quanto gli avrebbe fatto piacere. Chi lo riceveva lo apprezzava più di quanto si aspettasse chi lo mandava, soprattutto quando era una sorpresa.",
     "prova": [
@@ -586,7 +569,6 @@
    "princ": "Ricordati di una cosa importante che l'altro ti ha raccontato (un esame, un viaggio, un trasloco) e chiedine notizie dopo. Annota in «Com'è andata» solo quello che ti serve per chiedere notizie.",
    "es": "«Allora, com'è andato poi il colloquio di tuo figlio?»",
    "frase": "Com'è andata poi con…?",
-   "base": "Sentirsi capiti, apprezzati e seguiti con attenzione è al centro dei legami stretti: Harry Reis e Phillip Shaver (1988) lo chiamano «responsività».",
    "app": {
     "come": "Secondo il modello dell'intimità di Reis e Shaver, un legame cresce quando una persona si apre e l'altra risponde mostrando di aver capito, di apprezzarla e di tenerci. Ricordarsi di una cosa importante e chiederne notizie in seguito è uno dei modi più chiari per dimostrarlo.",
     "prova": [
@@ -620,7 +602,6 @@
    "princ": "Un grazie preciso, anche dopo tanto tempo, o gli auguri in un giorno importante tengono vivi i legami.",
    "es": "«Ripensavo a quando mi hai aiutato col trasloco: grazie ancora, per me è stato importante.»",
    "frase": "Volevo dirti grazie per…",
-   "base": "Kumar ed Epley (2018): chi scrive un ringraziamento sottovaluta quanto farà piacere a chi lo riceve e sopravvaluta l'imbarazzo che proverà.",
    "app": {
     "come": "Nei loro esperimenti, i partecipanti scrivevano una lettera di ringraziamento a una persona importante per loro e provavano a indovinare la sua reazione. Chi la riceveva era più contento e meno in imbarazzo di quanto avessero previsto gli autori della lettera.",
     "prova": [
@@ -655,7 +636,6 @@
    "princ": "Un'amicizia non nasce da un incontro solo: cresce con il tempo passato insieme. Per questo conviene rivedere spesso le stesse persone, in un gruppo, un corso o un'attività con un orario fisso.",
    "es": "Invece di tanti incontri sporadici, frequentare un corso del giovedì e restare dopo a fare due chiacchiere.",
    "frase": "Ci vediamo giovedì prossimo?",
-   "base": "Hall (2019): servono circa 40–60 ore insieme per passare da conoscente ad amico «alla buona», circa 80–100 per un amico e più di 200 per un amico stretto.",
    "app": {
     "come": "Lo studio ha interrogato adulti trasferiti da poco in una nuova città e ha seguito per alcune settimane studenti appena arrivati all'università, chiedendo quante ore passavano con le persone conosciute da poco. Le amicizie diventavano più strette con più ore insieme, soprattutto se passate ad aggiornarsi, scherzare, parlare di cose che contano e svagarsi; il tempo passato solo a lavorare o studiare fianco a fianco non aiutava.",
     "prova": [
@@ -685,7 +665,6 @@
    "princ": "Coltivare le relazioni non è solo piacevole: è legato anche a una vita più lunga. Farsi vivi con regolarità è una piccola abitudine che conta.",
    "es": "Una telefonata al cugino la domenica, un caffè con l'ex collega, una passeggiata con il vicino.",
    "frase": "Ci sentiamo domenica, come sempre?",
-   "base": "Holt-Lunstad e colleghi (2010): in una meta-analisi di 148 studi, le persone con relazioni sociali più solide avevano circa il 50% di probabilità in più di essere ancora in vita alla fine del periodo studiato.",
    "curio": {
     "tit": "L'amicizia allunga la vita",
     "fatto": "Mettendo insieme 148 studi su oltre 300.000 persone, i ricercatori hanno visto che chi ha relazioni sociali più solide ha circa il 50% di probabilità in più di essere ancora in vita alla fine degli studi. Un effetto paragonabile a quello di smettere di fumare.",
@@ -715,7 +694,6 @@
    "princ": "Chi arriva più sereno e in salute alla vecchiaia non è il più ricco o il più famoso, ma chi ha buoni rapporti. E i rapporti, come la forma fisica, si mantengono con l'esercizio.",
    "es": "Dedicare ogni settimana un'ora alle persone a cui tieni, come si fa con la palestra.",
    "frase": "Ci teniamo a vederci: fissiamo una data?",
-   "base": "Waldinger e Schulz (2023): nello studio di Harvard che segue le stesse persone dal 1938, la soddisfazione nei rapporti a 50 anni prevedeva la salute a 80 meglio del colesterolo.",
    "curio": {
     "tit": "Lo studio più lungo sulla felicità",
     "fatto": "Dal 1938 l'Università di Harvard segue le stesse persone, e oggi anche i loro figli. La lezione principale: chi a 50 anni era più soddisfatto dei propri rapporti era più in salute a 80. Più del colesterolo.",
@@ -749,7 +727,6 @@
    "princ": "Il volontariato regala nuove relazioni, uno scopo e una routine. Per chi esce dal lavoro è uno dei modi più naturali per incontrare persone nuove ogni settimana.",
    "es": "Un turno fisso il martedì mattina in biblioteca, con gli stessi compagni di turno.",
    "frase": "Che cosa fa un volontario nuovo il primo giorno?",
-   "base": "Jenkinson e colleghi (2013): negli studi che seguono le persone nel tempo, chi fa volontariato ha meno depressione, più soddisfazione e una mortalità più bassa; gli esperimenti veri e propri sono però ancora pochi.",
    "curio": {
     "tit": "Il turno che fa bene",
     "fatto": "Una grande rassegna di studi ha trovato che chi fa volontariato tende a essere meno depresso e più soddisfatto della vita; negli studi che seguono le persone per anni, il rischio di morte era più basso di circa un quinto.",
@@ -779,7 +756,6 @@
    "princ": "Un complimento sincero su una cosa concreta (una scelta, un impegno, un lavoro ben fatto) vale più di tanti complimenti generici.",
    "es": "«Hai organizzato la cena benissimo: si vede che ci hai messo cura.»",
    "frase": "Mi piace come hai…",
-   "base": "Zhao ed Epley (2021): chi fa un complimento sottovaluta quanto farà piacere e crede di mettere l'altro in imbarazzo più di quanto accada.",
    "app": {
     "come": "I partecipanti facevano un complimento sincero a un amico o a una persona che conoscevano e provavano a indovinare come l'avrebbe presa. Chi lo riceveva si sentiva meglio e meno a disagio di quanto immaginasse chi lo faceva. Per questo, spesso, i complimenti restano nella testa e non vengono detti.",
     "prova": [
@@ -809,7 +785,6 @@
    "princ": "Quando qualcuno ti racconta una cosa bella, mostra gioia e fai domande. Una risposta tiepida («ah, bene») spegne la conversazione.",
    "es": "«Diventi nonno? Ma è bellissimo! Quando nasce? Come vi sentite?»",
    "frase": "Che bella notizia! Raccontami tutto.",
-   "base": "Gable e colleghi (2004): nelle coppie in cui si risponde alle buone notizie dell'altro con entusiasmo e interesse (la «risposta attiva e costruttiva») i rapporti risultano più intimi e soddisfacenti.",
    "app": {
     "come": "Gable e colleghi distinguono quattro modi di rispondere a una buona notizia: con entusiasmo e domande (attivo e costruttivo), con un tiepido «bene» (passivo), sminuendo («sì, ma…») oppure cambiando discorso. Solo il primo è legato a rapporti più intimi e soddisfacenti. Esperimenti successivi, anche tra sconosciuti, mostrano che una risposta entusiasta aumenta la fiducia e la voglia di confidarsi.",
     "prova": [
@@ -844,7 +819,6 @@
    "princ": "Quando conosciamo qualcuno, notiamo prima di tutto se sembra ben disposto. Un sorriso, un tono morbido e un pizzico di ironia su te stesso abbassano le difese.",
    "es": "Invece di un «Salve» con la mano rigida, un «Ciao, piacere!» con un sorriso. E se sbagli strada: «Ecco, il mio famoso senso dell'orientamento!»",
    "frase": "Se ti va, possiamo darci del tu.",
-   "base": "Fiske, Cuddy e Glick (2007): di una persona giudichiamo prima il calore e poi la competenza, e il calore pesa di più.",
    "app": {
     "come": "Secondo gli studi raccolti da Fiske, Cuddy e Glick, quando incontriamo qualcuno ci chiediamo subito due cose: ha buone intenzioni verso di me (calore)? È capace (competenza)? Il calore viene giudicato per primo e pesa di più sulle nostre reazioni.",
     "prova": [
@@ -874,7 +848,6 @@
    "princ": "Un gesto gentile e inatteso (un caffè offerto, un aiuto, un pensiero) fa più piacere di quanto crediamo, e spesso mette di buon umore anche chi lo fa.",
    "es": "Al bar, offrire il caffè al collega che ti ha dato una mano in settimana.",
    "frase": "Oggi offro io: grazie per l'altro giorno.",
-   "base": "Kumar ed Epley (2023): chi fa un piccolo gesto gentile sottovaluta quanto farà piacere a chi lo riceve.",
    "app": {
     "come": "Nei loro esperimenti, alcune persone offrivano per esempio una cioccolata calda a sconosciuti in un parco, oppure facevano un piccolo regalo. Chi lo riceveva era più contento di quanto prevedesse chi lo faceva; in un esperimento, chi aveva ricevuto un gesto gentile era poi più generoso a sua volta con altri.",
     "prova": [
@@ -909,7 +882,6 @@
    "princ": "Non serve essere comici: si ride soprattutto in compagnia, e quasi mai per le barzellette. Ridere insieme di piccole cose è il segnale che si sta bene.",
    "es": "«Questo ascensore ha più anni di noi due messi insieme!»",
    "frase": "Questa me la segno!",
-   "base": "Provine (1989, 1993): si ride circa 30 volte di più in compagnia che da soli, e la maggior parte delle risate segue frasi normalissime, non battute.",
    "curio": {
     "tit": "Le barzellette sono sopravvalutate",
     "fatto": "Annotando oltre mille risate nella vita di tutti i giorni, uno psicologo ha scoperto che solo una piccola parte seguiva una battuta vera: quasi sempre si rideva dopo frasi normalissime. E si ride circa 30 volte di più in compagnia che da soli.",
@@ -944,7 +916,6 @@
    "princ": "Una persona brava che fa una piccola gaffe sembra più umana. Non serve essere impeccabili: un piccolo errore, preso con il sorriso, avvicina.",
    "es": "Rovesci il caffè durante una riunione: «Ecco, questo era il mio numero di prestigio.»",
    "frase": "Ecco il mio numero di prestigio!",
-   "base": "Aronson e colleghi (1966): un concorrente bravissimo che si rovesciava addosso il caffè piaceva di più; lo stesso errore, invece, rendeva meno simpatico chi era sembrato mediocre.",
    "curio": {
     "tit": "L'effetto caffè rovesciato",
     "fatto": "In un esperimento degli anni Sessanta, gli studenti ascoltavano un concorrente bravissimo a un quiz che alla fine si rovesciava il caffè addosso: piaceva più di quello impeccabile. Si chiama «pratfall effect», l'effetto del capitombolo.",
@@ -974,7 +945,6 @@
    "princ": "Ammettere un errore, chiedere aiuto o dire «mi sono emozionato» ci sembra una debolezza. Gli altri, invece, lo vedono soprattutto come coraggio e sincerità.",
    "es": "«Ieri ti ho risposto male: ho sbagliato, scusami.»",
    "frase": "Ho sbagliato io, scusami.",
-   "base": "Bruk, Scholl e Bless (2018): mostrarsi vulnerabili (ammettere un errore, chiedere aiuto) sembra peggio a chi lo fa che a chi guarda, che lo giudica in modo più positivo.",
    "curio": {
     "tit": "L'effetto «bel pasticcio»",
     "fatto": "In una serie di esperimenti, le persone giudicavano più negativo mostrarsi vulnerabili loro stesse (ammettere uno sbaglio, chiedere aiuto) che vederlo fare a un altro. Quando lo fa un altro, ci sembra coraggio. Gli psicologi l'hanno chiamato «beautiful mess», bel pasticcio.",
@@ -1004,7 +974,6 @@
    "princ": "La gratitudine non è solo buona educazione: ci fa notare le persone che si prendono cura di noi, ci ricorda quanto valgono e ci lega a loro.",
    "es": "«Grazie per avermi accompagnato dal meccanico: mi hai salvato la mattinata.»",
    "frase": "Grazie, mi hai proprio salvato la giornata.",
-   "base": "Algoe, Haidt e Gable (2008): più gratitudine provavano le nuove arrivate in un'associazione studentesca verso chi le aveva accolte, più il loro legame era forte un mese dopo.",
    "curio": {
     "tit": "Trova, ricorda, lega",
     "fatto": "Secondo la psicologa Sara Algoe la gratitudine ha tre compiti: ci fa trovare le persone giuste, ci ricorda quanto valgono e ci lega a loro. In uno studio, la gratitudine provata durante una settimana di accoglienza prevedeva un legame più stretto un mese dopo.",
@@ -1979,19 +1948,6 @@
    "t": "Durante un'attività di volontariato, impara il nome di almeno due persone che aiuti o con cui fai il turno.",
    "bonus": "La prossima volta salutale per nome: ti ricorderanno."
   }
- ],
- "domande_idee": [
-  "Qual è la cosa più inutile che hai comprato quest'anno?",
-  "Se domani potessi partire per un viaggio, dove andresti?",
-  "Che cosa ti piace fare in una giornata libera?",
-  "Stai leggendo o guardando qualcosa che ti piace?",
-  "Qual è il piatto che ti riesce meglio?",
-  "C'è qualcosa che aspetti con piacere nei prossimi mesi?",
-  "Com'è cambiato il quartiere da quando ci abiti?",
-  "Qual è stata la cosa più bella di questo periodo?",
-  "E poi com'è andata?",
-  "Che cosa ti è piaciuto di più?",
-  "Come ci sei arrivato?"
  ],
  "intro_app": {
   "come": "Coppie di sconosciuti chiacchieravano per qualche minuto; poi ognuno diceva quanto gli era piaciuto l'altro e quanto pensava di essere piaciuto. In media si sottovalutavano: l'altro li aveva apprezzati più di quanto credessero. È successo anche tra compagni di alloggio all'università, per diversi mesi, e in uno studio successivo nei gruppi e nei team di lavoro.",
