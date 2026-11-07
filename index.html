@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="f4ed6c5132";</script>
+<script>window.APP_VERSION="ac790b5ed2";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -4079,8 +4079,7 @@ function closeModal() { $('modal').hidden = true; try { speechSynthesis.cancel()
 $('modal').addEventListener('click', e => { if (e.target.id === 'modal' && !$('modal').dataset.lock) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('modal').hidden && !$('modal').dataset.lock) closeModal(); });
 
-/* ---------- Mascotte: dal 2/11/2026 un avatar scelto dalla bambina (MASCOTTE = 'drago' rimette il drago) ---------- */
-const MASCOTTE = 'avatar';
+/* ---------- Mascotte: dal 2/11/2026 un avatar scelto dalla bambina (il drago è stato tolto dal codice il 7/11/2026; i dati restano nella chiave «dragon») ---------- */
 const AVATARS = ['🦊', '🐱', '🐶', '🐰', '🐼', '🐨', '🐯', '🦁', '🐸', '🐢', '🐬', '🦋', '🦄', '🐧', '🌸', '🌈', '⭐', '🎨'];
 let AVP = null; /* anteprima mentre si sceglie */
 const AV = () => AVP || (D && D.avatar) || '🦊';
@@ -4112,22 +4111,15 @@ function dragonAcc(a) {
   if (a === 'corona') return '<path d="M80 40 L86 18 L95 32 L100 12 L105 32 L114 18 L120 40 Z" fill="#ffd23f" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round"/><circle cx="100" cy="30" r="3.5" fill="#ff5c8a"/>';
   return '';
 }
-const LEVELS = MASCOTTE === 'avatar' ? [
+const LEVELS = [
   { n: 'Stellina', min: 0 },
   { n: 'Stella curiosa', min: 15 },
   { n: 'Stella coraggiosa', min: 50 },
   { n: 'Stella tenace', min: 120 },
   { n: 'Stella brillante', min: 250 },
   { n: 'Stella leggendaria', min: 450 }
-] : [
-  { n: 'Uovo magico', min: 0 },
-  { n: 'Cucciolo curioso', min: 15 },
-  { n: 'Draghetto coraggioso', min: 50 },
-  { n: 'Drago tenace', min: 120 },
-  { n: 'Drago volante', min: 250 },
-  { n: 'Drago leggendario', min: 450 }
 ];
-const EIC = MASCOTTE === 'avatar' ? '⭐' : '🔥';
+const EIC = '⭐';
 let D = store.get('dragon', null);
 function levelOf(e) { let i = 0; LEVELS.forEach((l, k) => { if (e >= l.min) i = k; }); return i; }
 function dcol() { return DCOLORS[(D && D.color) || 'verde']; }
@@ -4141,52 +4133,6 @@ function avatarSVG(stage, colorKey, cls) {
     (stage ? '<text x="100" y="190" font-size="20" text-anchor="middle">' + '⭐'.repeat(stage) + '</text>' : '') +
     '<g transform="translate(0 20)">' + dragonAcc((typeof festaHat === 'function' && festaHat()) || store.get('dragon-acc', '')) + '</g></svg>';
 }
-function dragonSVG(stage, colorKey, cls) {
-  if (MASCOTTE === 'avatar') return avatarSVG(stage, colorKey, cls);
-  const c = DCOLORS[colorKey] || DCOLORS.verde;
-  const body = c[0], belly = c[1];
-  const ink = '#33304a';
-  if (stage === 0) {
-    const e = D ? D.energy : 0;
-    const crack = e >= 8 ? '<path d="M70 110 l12 -10 l10 12 l12 -12 l10 10 l12 -8" fill="none" stroke="' + ink + '" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>' : '';
-    return '<svg class="dragon ' + (cls || '') + '" viewBox="0 0 200 200" role="img" aria-label="Un uovo di drago">' +
-      '<ellipse cx="100" cy="182" rx="56" ry="9" fill="' + ink + '" opacity=".12"/>' +
-      '<ellipse cx="100" cy="112" rx="60" ry="74" fill="' + belly + '" stroke="' + body + '" stroke-width="6"/>' +
-      '<circle cx="78" cy="80" r="11" fill="' + body + '" opacity=".75"/><circle cx="122" cy="98" r="15" fill="' + body + '" opacity=".75"/>' +
-      '<circle cx="86" cy="140" r="13" fill="' + body + '" opacity=".75"/><circle cx="126" cy="146" r="8" fill="' + body + '" opacity=".75"/>' +
-      '<ellipse cx="80" cy="66" rx="10" ry="16" fill="#fff" opacity=".6" transform="rotate(-20 80 66)"/>' + crack + '</svg>';
-  }
-  const wingS = [0, 0, .7, .85, 1, 1.15][stage];
-  const wings = wingS ? (
-    '<g transform="translate(100 118) scale(' + wingS + ') translate(-100 -118)">' +
-    '<path d="M62 112 C30 70 10 80 14 104 C24 100 30 108 28 118 C38 112 46 120 44 130 C52 124 58 124 64 128 Z" fill="' + body + '" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round"/>' +
-    '<path d="M138 112 C170 70 190 80 186 104 C176 100 170 108 172 118 C162 112 154 120 156 130 C148 124 142 124 136 128 Z" fill="' + body + '" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round"/>' +
-    '</g>') : '';
-  const horns = stage >= 3 ? '<path d="M78 46 L72 22 L90 40 Z M122 46 L128 22 L110 40 Z" fill="' + c[1] + '" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round"/>' : '';
-  const spikes = stage >= 2 ? '<path d="M92 36 L100 22 L108 36 Z" fill="' + belly + '" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round"/>' : '';
-  const crown = stage >= 5 ? '<path d="M82 26 L88 10 L96 22 L100 6 L104 22 L112 10 L118 26 Z" fill="#ffd23f" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round"/>' : '';
-  const sparkle = stage >= 4 ? '<g fill="#ffd23f"><path d="M30 40 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4z"/><path d="M170 150 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3z"/><path d="M168 36 l2.5 6 l6 2.5 l-6 2.5 l-2.5 6 l-2.5 -6 l-6 -2.5 l6 -2.5z"/></g>' : '';
-  const flame = stage >= 3 ? '<path d="M150 84 C160 76 170 80 176 72 C176 84 168 90 176 96 C164 98 158 94 150 92 Z" fill="#ff8a3d"/><path d="M152 86 C160 82 166 84 170 80 C170 88 164 90 168 94 C160 94 156 92 152 90 Z" fill="#ffd23f"/>' : '';
-  const shell = stage === 1 ? '<path d="M56 168 L64 150 L74 162 L86 148 L98 162 L110 148 L122 162 L134 150 L144 168 C130 186 70 186 56 168 Z" fill="' + belly + '" stroke="' + body + '" stroke-width="4" stroke-linejoin="round"/>' : '';
-  const tail = '<path d="M140 150 C168 156 176 140 184 128 C186 144 176 170 142 168 Z" fill="' + body + '" stroke="' + ink + '" stroke-width="3" stroke-linejoin="round"/>';
-  return '<svg class="dragon ' + (cls || '') + '" viewBox="0 0 200 200" role="img" aria-label="Il drago, livello ' + esc(LEVELS[stage].n) + '">' +
-    '<ellipse cx="100" cy="186" rx="52" ry="8" fill="' + ink + '" opacity=".12"/>' + sparkle + wings + tail +
-    '<ellipse cx="100" cy="140" rx="46" ry="42" fill="' + body + '" stroke="' + ink + '" stroke-width="3"/>' +
-    '<ellipse cx="100" cy="148" rx="28" ry="28" fill="' + belly + '"/>' +
-    '<path d="M86 136 h28 M84 148 h32 M86 160 h28" stroke="' + body + '" stroke-width="3" stroke-linecap="round" opacity=".5"/>' +
-    '<ellipse cx="78" cy="180" rx="14" ry="8" fill="' + body + '" stroke="' + ink + '" stroke-width="3"/><ellipse cx="122" cy="180" rx="14" ry="8" fill="' + body + '" stroke="' + ink + '" stroke-width="3"/>' +
-    spikes + horns + crown +
-    '<circle cx="100" cy="80" r="42" fill="' + body + '" stroke="' + ink + '" stroke-width="3"/>' +
-    '<ellipse cx="100" cy="96" rx="22" ry="14" fill="' + belly + '"/>' +
-    '<circle cx="93" cy="94" r="2.5" fill="' + ink + '"/><circle cx="107" cy="94" r="2.5" fill="' + ink + '"/>' +
-    '<circle cx="82" cy="74" r="12" fill="#fff" stroke="' + ink + '" stroke-width="2.5"/><circle cx="118" cy="74" r="12" fill="#fff" stroke="' + ink + '" stroke-width="2.5"/>' +
-    '<circle cx="84" cy="76" r="6.5" fill="' + ink + '"/><circle cx="120" cy="76" r="6.5" fill="' + ink + '"/>' +
-    '<circle cx="86.5" cy="73" r="2.2" fill="#fff"/><circle cx="122.5" cy="73" r="2.2" fill="#fff"/>' +
-    '<ellipse cx="66" cy="92" rx="7" ry="4.5" fill="#ff7a9c" opacity=".55"/><ellipse cx="134" cy="92" rx="7" ry="4.5" fill="#ff7a9c" opacity=".55"/>' +
-    '<path d="M92 104 Q100 111 108 104" fill="none" stroke="' + ink + '" stroke-width="3" stroke-linecap="round"/>' +
-    flame + shell + dragonAcc((typeof festaHat === 'function' && festaHat()) || store.get('dragon-acc', '')) + '</svg>';
-}
-
 function nextInfo() {
   const e = D.energy, i = levelOf(e);
   if (i >= LEVELS.length - 1) return { pct: 100, text: 'Livello massimo! Sei una leggenda!' };
@@ -4197,8 +4143,8 @@ function updateBar() {
   if (!D) return;
   const c = dcol(), i = levelOf(D.energy);
   $('mini').style.setProperty('--dsoft', c[3]);
-  $('mini').innerHTML = dragonSVG(i, D.color);
-  $('bar-name').textContent = MASCOTTE === 'avatar' ? (childName() || 'Io') : D.name;
+  $('mini').innerHTML = avatarSVG(i, D.color);
+  $('bar-name').textContent = childName() || 'Io';
   $('bar-level').textContent = LEVELS[i].n;
   $('bar-e').style.width = nextInfo().pct + '%';
   $('bar-energy').textContent = D.energy;
@@ -4219,8 +4165,8 @@ function gain(n, el) {
 }
 function levelUp(i) {
   fanfare();
-  const txt = MASCOTTE === 'avatar' ? 'Sei diventata ' + LEVELS[i].n + '! Tutto grazie alla tua forza di volontà, ' + NAME + '!' : D.name + ' è diventato ' + LEVELS[i].n + '! Tutto grazie alla tua forza di volontà, ' + NAME + '!';
-  openModal('<div>' + dragonSVG(i, D.color, 'bob') + '</div><div class="big">Evviva!</div><p>' + esc(txt) + '</p>' +
+  const txt = 'Sei diventata ' + LEVELS[i].n + '! Tutto grazie alla tua forza di volontà, ' + NAME + '!';
+  openModal('<div>' + avatarSVG(i, D.color, 'bob') + '</div><div class="big">Evviva!</div><p>' + esc(txt) + '</p>' +
     '<div class="row"><button type="button" class="btn" data-focus id="lv-ok">Che forza!</button>' + sayBtn(txt) + '</div>', [dcol()[2], dcol()[3]]);
   $('lv-ok').addEventListener('click', closeModal);
   confetti(window.innerWidth / 2, window.innerHeight / 3, 40);
@@ -4521,13 +4467,13 @@ PAGES.home = el => {
   el.innerHTML =
     '<p class="hello">' + greeting() + '</p>' +
     '<h1 class="page-title rainbow">Forza, ' + esc(NAME) + '!</h1>' +
-    '<p class="page-sub">Ogni volta che ci provi, anche quando sbagli, ' + (MASCOTTE === 'avatar' ? 'guadagni stelle e diventi più forte.' : esc(D.name) + ' prende energia e diventa più forte.') + '</p>' +
+    '<p class="page-sub">Ogni volta che ci provi, anche quando sbagli, ' + 'guadagni stelle e diventi più forte.' + '</p>' +
     '<div id="h-path"></div>' +
     '<div class="home-top">' +
       '<div class="den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '">' +
         '<div class="bubble"><span>«' + esc(phrase) + '»</span>' + sayBtn(phrase) + '</div>' +
-        '<div class="kp-wrap">' + dragonSVG(i, D.color, 'bob') + (typeof keeperBadge === 'function' ? keeperBadge() : '') + '</div>' +
-        '<div class="dname">' + esc(MASCOTTE === 'avatar' ? (childName() || 'Io') : D.name) + '</div><div class="dlevel">' + esc(LEVELS[i].n) + ' · ' + D.energy + ' ' + EIC + '</div>' +
+        '<div class="kp-wrap">' + avatarSVG(i, D.color, 'bob') + (typeof keeperBadge === 'function' ? keeperBadge() : '') + '</div>' +
+        '<div class="dname">' + esc(childName() || 'Io') + '</div><div class="dlevel">' + esc(LEVELS[i].n) + ' · ' + D.energy + ' ' + EIC + '</div>' +
         (typeof keeperHome === 'function' ? keeperHome() : '') + '<div class="ebig" aria-hidden="true"><i style="width:' + ni.pct + '%"></i></div><div class="enext">' + esc(ni.text) + '</div>' +
         '<div class="row center" style="margin-top:12px"><button type="button" class="btn small ghost" id="h-next">Un’altra frase</button><button type="button" class="btn small ghost" id="h-edit">⚙️ Impostazioni</button><button type="button" class="btn small ghost" id="h-cust">✨ Personalizza</button><button type="button" class="btn small ghost" id="h-prog">📊 Progressi</button></div>' +
       '</div>' +
@@ -4543,12 +4489,12 @@ PAGES.home = el => {
           '<div style="color:var(--ink-soft);font-weight:700;font-size:14px">' + esc(b.label) + '</div></div></div></div>' : '<button type="button" class="today" id="h-setbd" style="--ts:var(--c1-soft);border-color:var(--c1)"><span class="ic" aria-hidden="true">🎂</span><span class="tx">' + (childName() ? 'Quando è il tuo compleanno?' : 'Come ti chiami? Quando compi gli anni?') + '<small>Scrivilo nelle ⚙️ Impostazioni: resta solo su questo iPad 🔒</small></span><span class="st" aria-hidden="true">→</span></button>') +
       '</div>' +
     '</div>' +
-    '<div class="sec">' + (MASCOTTE === 'avatar' ? secHead('⭐', 'Le tue stelle', 'Le stelle arrivano da ogni cosa che fai: routine, esercizi, giochi, missioni. Anche dagli errori!', c[3]) : secHead('🌱', 'Come cresce ' + D.name, 'L’energia arriva da ogni cosa che fai: routine, esercizi, giochi, missioni. Anche dagli errori!', c[3])) +
+    '<div class="sec">' + secHead('⭐', 'Le tue stelle', 'Le stelle arrivano da ogni cosa che fai: routine, esercizi, giochi, missioni. Anche dagli errori!', c[3]) +
       '<div class="grid3" id="h-levels"></div>' +
-      '<div class="stat-row"><span class="pill">📅 ' + days + (days === 1 ? ' giorno' : ' giorni') + ' di allenamento</span><span class="pill">' + EIC + ' ' + D.energy + (MASCOTTE === 'avatar' ? ' stelle in tutto' : ' energia totale') + '</span></div>' +
+      '<div class="stat-row"><span class="pill">📅 ' + days + (days === 1 ? ' giorno' : ' giorni') + ' di allenamento</span><span class="pill">' + EIC + ' ' + D.energy + ' stelle in tutto' + '</span></div>' +
     '</div>' +
     (typeof backupCard === 'function' ? backupCard() : '') +
-    '<footer class="note">' + (MASCOTTE === 'avatar' ? 'Torna anche domani!' : esc(D.name) + ' ti aspetta ogni giorno!') + '</footer>';
+    '<footer class="note">' + 'Torna anche domani!' + '</footer>';
 
   const tl = $('h-today');
   TODAY.forEach(t => {
@@ -4567,7 +4513,7 @@ PAGES.home = el => {
     const d = document.createElement('div');
     d.className = 'card';
     d.style.cssText = 'padding:12px;text-align:center;' + (k === i ? '--kc:' + c[2] + ';--ks:' + c[3] : '') + (reached ? '' : ';opacity:.55');
-    d.innerHTML = '<div style="width:90px;margin:0 auto">' + (reached ? dragonSVG(k, D.color) : '<div style="font-size:54px;line-height:90px">❔</div>') + '</div>' +
+    d.innerHTML = '<div style="width:90px;margin:0 auto">' + (reached ? avatarSVG(k, D.color) : '<div style="font-size:54px;line-height:90px">❔</div>') + '</div>' +
       '<div style="font-family:var(--font-display);font-weight:800;font-size:17px;line-height:1.1">' + esc(l.n) + '</div>' +
       '<div style="font-size:13px;font-weight:800;color:var(--ink-soft)">' + (k === 0 ? 'si parte!' : 'da ' + l.min + ' ' + EIC) + '</div>';
     lv.appendChild(d);
@@ -4585,7 +4531,7 @@ PAGES.home = el => {
   if ($('h-sport')) $('h-sport').addEventListener('click', () => { routineSel = sportToday().r.id; go('routine'); });
 };
 
-/* ---------- Primo avvio: si sceglie l'avatar (o nasce il drago se MASCOTTE = 'drago') ---------- */
+/* ---------- Primo avvio: si sceglie l'avatar ---------- */
 function childFields(cf) {
   const opt = (v, t, sel) => '<option value="' + v + '"' + (String(sel) === String(v) ? ' selected' : '') + '>' + t + '</option>';
   const days = (id, sel) => '<select id="' + id + '" class="cf-sel">' + opt('', '—  nessuno', sel) + ['lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato', 'domenica'].map((g, k) => opt((k + 1) % 7, g, sel)).join('') + '</select>';
@@ -4604,23 +4550,18 @@ function readChildFields() {
 }
 function onboarding(edit) {
   let color = (D && D.color) || 'verde', av = AV();
-  const AVM = MASCOTTE === 'avatar';
   let cf = JSON.parse(JSON.stringify(CHILD || {}));
   const draw = () => {
     openModal(
-      '<div>' + dragonSVG(0, color) + '</div>' +
-      (AVM ? '<div class="big">' + (edit ? 'Il tuo avatar' : 'Scegli il tuo avatar!') + '</div>' +
+      '<div>' + avatarSVG(0, color) + '</div>' +
+      '<div class="big">' + (edit ? 'Il tuo avatar' : 'Scegli il tuo avatar!') + '</div>' +
         '<p>' + (edit ? 'Puoi cambiare avatar, colore, compleanno e giorni dello sport quando vuoi.' : 'Ciao! Scegli chi ti rappresenta. Ogni volta che ci provi, anche quando sbagli, guadagni stelle ⭐.') + '</p>' +
         '<p style="margin-top:14px;font-weight:800">Chi sei oggi?</p><div class="av-grid" id="ob-av">' + AVATARS.map(a => '<button type="button" class="av-b" data-a="' + a + '" aria-pressed="' + (a === av) + '">' + a + '</button>').join('') + '</div>' +
-        '<input type="hidden" id="ob-name" value="' + esc((D && D.name) || 'avatar') + '">'
-      : '<div class="big">' + (edit ? 'Il tuo drago' : 'Un uovo per te!') + '</div>' +
-      '<p>' + (edit ? 'Puoi cambiare nomi, colore, compleanno e giorni dello sport quando vuoi.' : 'Ciao! Dentro quest’uovo c’è un drago. Crescerà con la tua forza di volontà: ogni volta che ci provi, prende energia.') + '</p>' +
-      '<label for="ob-name" style="display:block;font-weight:800;margin-top:14px">Come lo vuoi chiamare?</label>' +
-      '<input type="text" id="ob-name" maxlength="16" autocomplete="off" placeholder="Scrivi il suo nome" value="' + esc((D && D.name) || '') + '">') +
+        '<input type="hidden" id="ob-name" value="' + esc((D && D.name) || 'avatar') + '">' +
       '<p style="margin-top:14px">Di che colore?</p><div class="swatches" id="ob-sw"></div>' + childFields(cf) +
-      '<div class="row"><button type="button" class="btn" id="ob-go" style="--bc:' + DCOLORS[color][2] + ';--bs:' + DCOLORS[color][3] + '">' + (edit ? 'Salva' : AVM ? 'Iniziamo!' : 'Fai nascere il mio drago!') + '</button>' +
+      '<div class="row"><button type="button" class="btn" id="ob-go" style="--bc:' + DCOLORS[color][2] + ';--bs:' + DCOLORS[color][3] + '">' + (edit ? 'Salva' : 'Iniziamo!') + '</button>' +
       (edit ? '<button type="button" class="btn ghost" id="ob-x">Annulla</button>' : '') + '</div>' +
-      (edit ? '' : '<div class="row center" style="margin-top:10px"><button type="button" class="btn small ghost" id="ob-restore">📂 ' + (AVM ? 'Ho già usato l’app' : 'Ho già un drago') + ': ripristina i miei progressi</button></div>'),
+      (edit ? '' : '<div class="row center" style="margin-top:10px"><button type="button" class="btn small ghost" id="ob-restore">📂 ' + 'Ho già usato l’app' + ': ripristina i miei progressi</button></div>'),
       [DCOLORS[color][2], DCOLORS[color][3]]);
     const sw = $('ob-sw');
     Object.keys(DCOLORS).filter(colorUsable).forEach(k => {
@@ -4644,7 +4585,7 @@ function onboarding(edit) {
       AVP = null; delete $('modal').dataset.lock;
       closeModal(); updateBar(); go('home');
       if (first) {
-        setTimeout(() => { cheer($('mini'), 'Ciao' + (AVM ? (childName() ? ' ' + childName() : '') : ' ' + n) + '!'); fanfare(); Voice.ok && Voice.say(AVM ? 'Ciao ' + (childName() || '') + '! Ogni volta che ci provi guadagni una stella. Iniziamo!' : 'Ciao ' + (childName() || '') + '! Io sono ' + n + '. Allenati con me e diventerò un drago fortissimo!'); }, 300);
+        setTimeout(() => { cheer($('mini'), 'Ciao' + (childName() ? ' ' + childName() : '') + '!'); fanfare(); Voice.ok && Voice.say('Ciao ' + (childName() || '') + '! Ogni volta che ci provi guadagni una stella. Iniziamo!'); }, 300);
       }
     });
     if (edit) $('ob-x').addEventListener('click', () => { AVP = null; closeModal(); });
@@ -6179,7 +6120,7 @@ function tryBreak() {
   breakPending = false;
   const m = pick(MOVES);
   const txt = 'Pausa movimento! Hai studiato tanto: 2 minuti di movimento sul posto e poi riprendiamo con il cervello pieno di energia.';
-  openModal('<div>' + dragonSVG(levelOf(D.energy), D.color, 'bob') + '</div><div class="big">Pausa movimento!</div>' +
+  openModal('<div>' + avatarSVG(levelOf(D.energy), D.color, 'bob') + '</div><div class="big">Pausa movimento!</div>' +
     '<p>' + esc(txt) + '</p><p style="font-size:20px">' + m.ic + ' ' + esc(m.name) + '</p>' +
     '<div class="row"><button type="button" class="btn" id="brk-go" data-focus style="--bc:' + m.c + ';--bs:' + m.s + '">Muoviamoci! 🤸‍♀️</button>' +
     '<button type="button" class="btn ghost" id="brk-later">Tra 5 minuti</button>' + sayBtn(txt) + '</div>', [m.c, m.s]);
@@ -9270,7 +9211,7 @@ PAGES.diario = el => {
         (st >= 3 ? '<div class="card" style="--kc:var(--c6);--ks:var(--c6-soft)">' + secHead('💜', 'Da ' + st + ' giorni ti senti giù', 'Succede a tutti. Adesso però è il momento di dirlo più forte.', 'var(--c6-soft)') +
           '<ul class="feel-list"><li><b>Dillo ad alta voce</b> a mamma, papà o alla maestra: «Da qualche giorno mi sento… perché…».</li><li><b>Disegna</b> la tua emozione: che colore ha? che forma?</li><li><b>Scrivi una lettera a te stessa</b> nel campo «Perché?», più lunga del solito.</li><li><b>Fai 3 respiri del drago</b> e una pausa movimento: il corpo aiuta la testa.</li></ul>' +
           '<p style="font-weight:800;margin:8px 0 0">Non devi tenerti tutto dentro: chi ti vuole bene vuole saperlo. 🤗</p></div>' : '') +
-        '<div class="den mini-den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '"><div style="width:110px;flex:none">' + dragonSVG(lv, D.color, 'bob') + '</div><div style="min-width:0"><b>Ti ascolto</b><p>Ogni emozione che racconti dà <b>+2 ⭐</b>, se scrivi anche il perché <b>+3 ⭐</b>, la <b>📝 nota del giorno</b> altri <b>+3 ⭐</b> e il racconto di un’uscita <b>+3 ⭐</b>. Felice o triste vale uguale: conta il coraggio di dirlo.</p></div></div>' +
+        '<div class="den mini-den" style="--dcol:' + c[2] + ';--dsoft:' + c[3] + '"><div style="width:110px;flex:none">' + avatarSVG(lv, D.color, 'bob') + '</div><div style="min-width:0"><b>Ti ascolto</b><p>Ogni emozione che racconti dà <b>+2 ⭐</b>, se scrivi anche il perché <b>+3 ⭐</b>, la <b>📝 nota del giorno</b> altri <b>+3 ⭐</b> e il racconto di un’uscita <b>+3 ⭐</b>. Felice o triste vale uguale: conta il coraggio di dirlo.</p></div></div>' +
         '<div class="card" id="d-trips-card" hidden>' + secHead('🚌', 'Com’è andata?', 'Racconta le uscite e gli appuntamenti della classe', 'var(--c4-soft)') + '<div id="d-trips"></div></div>' +
         '<div class="card">' + secHead('📒', 'Le mie note', 'Quello che hai scritto per pensarci su', 'var(--c2-soft)') + '<div id="d-notes"></div></div>' +
         '<div class="card">' + secHead('🧠', 'Le emozioni sono normali', 'Toccane una per scoprire di più', 'var(--c5-soft)') + '<div id="d-facts"></div></div>' +
@@ -12367,8 +12308,7 @@ function pathUnits() {
   u.sort((a, b) => { const ia = PATH_ORDER.indexOf(a.id), ib = PATH_ORDER.indexOf(b.id); return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib); });
   u.forEach(x => { if (x.items) x.items = x.items.filter(it => it.q && Array.isArray(it.o) && it.o.length >= 2); });
   /* domande dalla fonte unica, con il loro codice fisso (data/domande/quiz/*.json) */
-  if (typeof QUIZ !== 'undefined') u.forEach(x => { if (x.items && QUIZ[x.id]) x.items = QUIZ[x.id].map(z => ({ id: z.id, q: z.q, o: [z.ok].concat(z.wrong), a: 0, e: z.e || '', k: z.k || '', enl: z.en || null, kind: z.kind || '', say: z.say || '', it: z.it || '', arg: z.arg || z.t || '' })); else if (x.items) x.items = rev5Items(x.id, x.items); });
-  else u.forEach(x => { if (x.items) x.items = rev5Items(x.id, x.items); });
+  if (typeof QUIZ !== 'undefined') u.forEach(x => { if (x.items && QUIZ[x.id]) x.items = QUIZ[x.id].map(z => ({ id: z.id, q: z.q, o: [z.ok].concat(z.wrong), a: 0, e: z.e || '', k: z.k || '', enl: z.en || null, kind: z.kind || '', say: z.say || '', it: z.it || '', arg: z.arg || z.t || '' })); else if (x.items) x.items.forEach(it => { it.k = it.k || ''; }); });
   /* argomenti: ogni domanda ha il suo (data/domande/argomenti.json); le lezioni sono gli argomenti, non più blocchi da 10 */
   u.forEach(x => { if (!x.items) return; const A = (typeof ARGOMENTI !== 'undefined' && ARGOMENTI[x.id]) || [];
     const T = A.map(a => ({ id: a[0], n: a[1], ic: a[2], items: [] })), by = {}; T.forEach(t => by[t.id] = t);
@@ -12389,22 +12329,6 @@ function pathUnits() {
   /* materie tolte da 🏫 La mia scuola (scelta del genitore, 24/10/2026): i dati restano, non si vedono né vanno in ripasso */
   const out = u.filter(x => x.id !== 'parlo' && !HIDE_UNITS.includes(x.id));
   return (__units = out);
-}
-/* righe chiave brevi (la spiegazione lunga resta dietro «Perché?»), correzioni e domande nuove di 5ª */
-function rev5Items(uid, items) {
-  const F = (typeof FIX5 !== 'undefined' && FIX5[uid]) || {}, K = (typeof KEYS !== 'undefined' && KEYS[uid]) || {};
-  items.forEach(it => {
-    const h = hashQ(it.q), f = F[h];
-    if (f) { if (f.e) it.e = f.e; if (f.ok) { it.o = it.o.slice(); it.o[it.a] = f.ok; } }
-    it.k = (typeof KEYS_OK !== 'undefined' && KEYS_OK[hashQ(it.q + '|' + it.o[it.a])]) || K[h] || '';
-  });
-  const N = (typeof NEWQ !== 'undefined' && NEWQ[uid]) || [];
-  if (!N.length) return items;
-  /* le nuove si alternano alle vecchie (una ogni 3), così compaiono subito nel percorso */
-  const out = [], have = new Set(items.map(it => it.q)); let j = 0;
-  items.forEach((it, i) => { out.push(it); if (i % 3 === 2 && j < N.length) { while (j < N.length && have.has(N[j].q)) j++; if (j < N.length) out.push(Object.assign({}, N[j++])); } });
-  while (j < N.length) { if (!have.has(N[j].q)) out.push(Object.assign({}, N[j])); j++; }
-  return out;
 }
 /* riga chiave: quella scritta apposta, altrimenti la prima frase della spiegazione */
 function splitExpl(q) {
@@ -12702,7 +12626,7 @@ function endLesson() {
   fanfare(); try { confetti(window.innerWidth / 2, window.innerHeight / 3, perfect ? 80 : 40); } catch (e) {}
   const c = dcol(), lv = levelOf(D.energy);
   box.innerHTML = '<div class="ls-end">' +
-    '<div class="ls-dragon">' + dragonSVG(lv, D.color, 'bob') + '</div>' +
+    '<div class="ls-dragon">' + avatarSVG(lv, D.color, 'bob') + '</div>' +
     '<div class="big" style="font-size:30px">' + (perfect ? 'Lezione perfetta!' : conqNow ? (L.node && L.node.t === 'arg' ? 'Argomento conquistato!' : 'Tappa conquistata!') : 'Lezione completata!') + '</div>' +
     '<div class="ls-stats">' +
       '<div><b>' + L.firstOk + '/' + n + '</b><small>giuste al primo colpo</small></div>' +
@@ -12947,7 +12871,7 @@ function openShop() {
   $('modal-box').classList.add('wide');
   const prev = () => {
     const el = $('shop-prev'); if (!el) return;
-    if (shopTab === 'd') { el.innerHTML = dragonSVG(Math.max(1, levelOf(D.energy)), D.color); return; }
+    if (shopTab === 'd') { el.innerHTML = avatarSVG(Math.max(1, levelOf(D.energy)), D.color); return; }
     if (shopTab === 't') { const th = store.get('path-theme', '') || 'base'; el.innerHTML = '<div class="path theme-' + th + ' mini-path">' + PATH_DECO[th].map(e => '<span>' + e + '</span>').join('') + '</div>'; return; }
     const t0 = performance.now(); cancelAnimationFrame(shopRaf);
     const anim = now => { const e = $('shop-prev'); if (!e || $('modal').hidden || shopTab !== 'g') return; e.innerHTML = Girl.at('wave', now - t0, 'var(--c1)'); shopRaf = requestAnimationFrame(anim); };
@@ -13411,21 +13335,14 @@ function openUnits() {
   $('modal-box').querySelectorAll('.v2-u:not(.lock)').forEach(b => b.addEventListener('click', () => { pathSel = b.dataset.u; store.set('path-sel', pathSel); closeModal(); go('home'); }));
 }
 
-/* ---------- 🔭 ESPLORA: gli strumenti di prima, tutti insieme ---------- */
-const EXPLORE = [['mate', '🔢', 'Officina dei numeri', 'Tabelline turbo, frazioni, orologio, problemi'], ['scienze', '🔬', 'Laboratorio', 'Esperimenti e quiz di scienze'], ['scopri', '🌍', 'Scopri il mondo', 'Storia, geografia, arte, lingue e curiosità'], ['sport', '🤸‍♀️', 'Pausa movimento', 'Pattinaggio, aerea, nuoto: muoviti!'], ['vita', '🧼', 'Io e il mio corpo', 'Armadio del meteo, timer di mani e denti'], ['teatro', '🎭', 'Teatro', 'La mia parte e i segreti del palco'], ['disegno', '🎨', 'Disegno', 'Tela libera, impara a disegnare, il mio museo'], ['routine', '☀️', 'Le mie routine', 'Mattino, compiti, sera e borse dello sport'], ['metodo', '🧠', 'Il mio metodo', 'Trucchi per studiare e concentrarsi']];
+/* ---------- 🔭 ESPLORA: pagina tolta, i vecchi collegamenti portano a Casa ---------- */
 PAGES.esplora = el => { setTimeout(() => go('home'), 0); };
-PAGES.esploraOld = el => {
-  el.innerHTML = '<h1 class="v2-h1">🔭 Esplora</h1><p class="v2-sub">Gli strumenti per allenarti e scoprire di più.</p><div class="v2-grid">' +
-    EXPLORE.map(e => '<button type="button" class="v2-tile" data-go="' + e[0] + '"><span class="v2-ti">' + e[1] + '</span><b>' + esc(e[2]) + '</b><small>' + esc(e[3]) + '</small></button>').join('') + '</div>';
-  el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => b.dataset.go === 'vita' ? openVita() : go(b.dataset.go)));
-};
-
 /* ---------- 🐉 IO: drago, collezioni, negozio, impostazioni, salvataggi ---------- */
 PAGES.io = el => {
   if (!D) { el.innerHTML = ''; return; }
   const i = levelOf(D.energy), ni = nextInfo(), b = birthday(), cnt = (n, t) => '<div class="v2-stat"><b>' + n + '</b><small>' + t + '</small></div>';
   el.innerHTML =
-    '<div class="v2-me"><div class="v2-dragon">' + dragonSVG(i, D.color, 'bob') + '</div><div style="flex:1;min-width:0"><h1 class="v2-h1" style="margin:0">' + esc(childName() || 'Io') + '</h1>' +
+    '<div class="v2-me"><div class="v2-dragon">' + avatarSVG(i, D.color, 'bob') + '</div><div style="flex:1;min-width:0"><h1 class="v2-h1" style="margin:0">' + esc(childName() || 'Io') + '</h1>' +
       '<div class="v2-sub" style="margin:2px 0 8px">' + esc(LEVELS[i].n) + ' · ' + D.energy + ' ⭐</div>' + '<div class="v2-bar big"><i style="width:' + ni.pct + '%;background:var(--v2-orange)"></i></div><small class="v2-sub">' + esc(ni.text) + '</small></div></div>' +
     (typeof linkWarn === 'function' ? linkWarn() : '') +
     '<div class="v2-stats">' + cnt(streakDays(), 'giorni di fila') + cnt(knowTotal(), 'nozioni imparate') + cnt(figOwned() + '/' + figTotal(), 'figurine') + cnt(tesoriFound() + '/' + TESORI.length, 'tesori trovati') + '</div>' +
@@ -14167,7 +14084,7 @@ function notifMarkAll() { const r = notifRead(), now = Date.now(); newsItems().f
 function dotDragon(n, cls) {
   /* la testa del SUO drago (stesso colore, stessa età, stessi accessori), ritagliata in un medaglione */
   const st = D ? Math.max(1, levelOf(D.energy)) : 1, c = (D && DCOLORS[D.color]) || DCOLORS.verde;
-  let svg = dragonSVG(st, D ? D.color : 'verde', '');
+  let svg = avatarSVG(st, D ? D.color : 'verde', '');
   svg = svg.replace(/viewBox="0 0 200 200"/, 'viewBox="' + (st >= 5 ? '44 8 112 112' : st >= 3 ? '48 22 104 104' : '52 32 96 96') + '"').replace(/ role="img" aria-label="[^"]*"/, ' aria-hidden="true" focusable="false"');
   return '<i class="dd ' + (cls || '') + '" aria-hidden="true" style="--dd-b:' + c[0] + ';--dd-l:' + c[1] + '"><span class="dd-h">' + svg + '</span>' +
     (n ? '<b>' + (n > 9 ? '9+' : n) + '</b>' : '') + '<span class="dd-sp">✦</span></i>';
@@ -14211,7 +14128,7 @@ function greetLine() {
 }
 function openNews(greet) {
   const N = newsItems(), unread = notifUnread().map(n => n.k), i = levelOf(D.energy);
-  openModal('<div class="v2-greet"><div class="v2-gd">' + dragonSVG(Math.max(1, i), D.color, 'bob') + '</div><div class="v2-gb">' + esc(greet ? greetLine() : 'Ecco le novità di oggi:') + '</div></div>' +
+  openModal('<div class="v2-greet"><div class="v2-gd">' + avatarSVG(Math.max(1, i), D.color, 'bob') + '</div><div class="v2-gb">' + esc(greet ? greetLine() : 'Ecco le novità di oggi:') + '</div></div>' +
     '<div class="v2-news">' + (N.length ? N.map((n, k) => '<button type="button" class="v2-nw' + (unread.includes(n.k) ? ' new' : '') + '" data-n="' + k + '"' + (n.go ? '' : ' data-nogo="1"') + '><span class="v2-ni">' + n.ic + '</span><span style="flex:1;min-width:0"><b>' + esc(n.t) + '</b><small>' + esc(n.s) + '</small></span>' + (n.go ? '<span class="v2-na">›</span>' : '') + '</button>').join('') : '<p style="font-weight:800">Hai fatto tutto per oggi! Sono fiero di te. 🌟</p>') + '</div>' +
     '<div class="row center" style="margin-top:12px"><button type="button" class="btn" id="nw-ok" data-focus style="--bc:var(--v2-green)">' + (greet ? 'Andiamo!' : 'Ok') + '</button></div>');
   notifMarkAll();
@@ -14234,7 +14151,7 @@ function badgeInvite() {
   if (Notification.permission !== 'default' || store.get('badge-asked', '') === todayIso() || (store.get('badge-asked-n', 0) >= 3)) return;
   if (!$('modal').hidden || ($('lesson') && !$('lesson').hidden) || (typeof festaBusy === 'function' && festaBusy()) || ($('sr-ov') && !$('sr-ov').hidden)) { setTimeout(badgeInvite, 4000); return; }
   store.set('badge-asked', todayIso()); store.set('badge-asked-n', store.get('badge-asked-n', 0) + 1);
-  openModal('<div class="v2-greet"><div class="v2-gd">' + dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob') + '</div><div class="v2-gb">Posso mettere un <b style="color:#ff3b30">pallino rosso</b> sulla mia icona quando ho novità per te? Tocca «Sì» e poi «Consenti».</div></div>' +
+  openModal('<div class="v2-greet"><div class="v2-gd">' + avatarSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob') + '</div><div class="v2-gb">Posso mettere un <b style="color:#ff3b30">pallino rosso</b> sulla mia icona quando ho novità per te? Tocca «Sì» e poi «Consenti».</div></div>' +
     '<div class="row center" style="gap:10px;margin-top:12px"><button type="button" class="btn ghost" id="bi-no">Più tardi</button><button type="button" class="btn" id="bi-ok" data-focus style="--bc:var(--v2-green)">Sì! 🔴</button></div>');
   $('bi-no').addEventListener('click', closeModal);
   $('bi-ok').addEventListener('click', async () => { const pr = Notification.requestPermission(); closeModal(); try { const r = await pr; if (r === 'granted') { toastV2('🔴 Fatto! Il pallino rosso ti avviserà'); appBadge(); } } catch (e) {} });
@@ -14531,7 +14448,7 @@ function fsSong(I) {
   const head = I.age ? (I.kind === 'after' ? 'Ieri hai compiuto ' + I.age + ' anni!' : 'Oggi compi ' + I.age + ' anni!') : 'Buon compleanno!';
   const lines = ['Tanti auguri a te', 'Tanti auguri a te', 'Tanti auguri a ' + (nm || 'te'), 'Tanti auguri a te!'];
   fsScene((I.age ? '<div class="fs-age">' + I.age + '</div>' : '<div class="fs-age emo">🎂</div>') + '<h2 class="fs-h">' + esc(head) + '</h2>' +
-    '<div class="fs-dance"><div class="fs-girl" id="fs-girl"></div><div class="fs-drg">' + dragonSVG(i, D.color, 'fs-dancing') + '</div></div>' +
+    '<div class="fs-dance"><div class="fs-girl" id="fs-girl"></div><div class="fs-drg">' + avatarSVG(i, D.color, 'fs-dancing') + '</div></div>' +
     '<div class="fs-lyr" id="fs-lyr">' + lines.map((l, k) => { const w = l.split(' '), ws = [w[0], w[1], w[2], w.slice(3).join(' ')]; return '<p class="fs-l" data-l="' + k + '">' + ws.map((x, j) => '<span data-w="' + j + '">' + esc(x) + '</span>').join(' ') + '</p>'; }).join('') + '</div>' +
     '<div id="fs-bub"></div><div class="fs-act" id="fs-act"></div>', 'fs-song');
   // la bambina balla accanto al drago
@@ -14711,7 +14628,7 @@ function fsGift(I) {
     fOwn(id); store.set('dragon-acc', v); fRecSet(I.year, { gift: 1 }); updateBar();
     FS.t(() => {
       fTada(); fClap(1.6); fsRain(60);
-      g.outerHTML = '<div class="fs-drg big">' + dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'fs-dancing') + '</div>';
+      g.outerHTML = '<div class="fs-drg big">' + avatarSVG(Math.max(1, levelOf(D.energy)), D.color, 'fs-dancing') + '</div>';
       $('fs-g2p').innerHTML = '<b>👑 ' + esc(nmC.charAt(0).toUpperCase() + nmC.slice(1)) + '!</b><br>È tua per sempre: la trovi nel 🛍️ Negozio, «Per il tuo avatar».' + (first ? '<br>E in più: +10 💎' : '');
       if (first) Gems.add(10, $('fs-g2p'));
       fSay('Ecco ' + nmC + ' per te. È tua per sempre!');
@@ -14743,7 +14660,7 @@ function fsAnno(I) {
   const S = fAnnoSlides(I); let k = 0;
   const paint = () => {
     const x = S[k], txt = (x.n !== undefined ? x.n + ' ' : '') + x.t + '. ' + x.s;
-    fsScene('<div class="fs-slide">' + (x.dr ? '<div class="fs-drg">' + dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob') + '</div>' : '<div class="fs-em">' + x.em + '</div>') +
+    fsScene('<div class="fs-slide">' + (x.dr ? '<div class="fs-drg">' + avatarSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob') + '</div>' : '<div class="fs-em">' + x.em + '</div>') +
       (x.n !== undefined ? '<div class="fs-big">' + x.n + '</div>' : '') + '<b>' + esc(x.t) + '</b><small>' + esc(x.s) + '</small><div style="margin-top:10px">' + sayBtn(txt) + '</div></div>' +
       '<div class="fs-dots">' + S.map((_, j) => '<i class="' + (j === k ? 'on' : '') + '"></i>').join('') + '</div>' +
       '<div class="fs-act">' + (k > 0 ? '<button type="button" class="fs-btn ghost" id="fs-ap">⬅</button>' : '') +
@@ -14816,7 +14733,7 @@ function festaSorp(I) {
     if (k === 'fig' && typeof figUnlock === 'function') {
       const f = figUnlock(); if (f) { p.textContent = '🃏 Una figurina nuova per il tuo album!'; figShow(box, f, ends); return; }
     }
-    if (k === 'hat') { fOwn('d-festa'); p.innerHTML = '<b>🥳 Il cappellino della festa!</b><br>Lo trovi nel 🛍️ Negozio, «Per il tuo avatar».'; __fAccPreview = 'festa'; const hsvg = dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob'); __fAccPreview = ''; box.innerHTML = '<div class="fs-drg">' + hsvg + '</div><div class="fs-act"><button type="button" class="fs-btn ghost" id="fs-hat">Mettilo adesso</button></div>'; $('fs-hat').addEventListener('click', e => { store.set('dragon-acc', 'festa'); updateBar(); e.currentTarget.textContent = 'Fatto! 🥳'; e.currentTarget.disabled = true; }); ends(); return; }
+    if (k === 'hat') { fOwn('d-festa'); p.innerHTML = '<b>🥳 Il cappellino della festa!</b><br>Lo trovi nel 🛍️ Negozio, «Per il tuo avatar».'; __fAccPreview = 'festa'; const hsvg = avatarSVG(Math.max(1, levelOf(D.energy)), D.color, 'bob'); __fAccPreview = ''; box.innerHTML = '<div class="fs-drg">' + hsvg + '</div><div class="fs-act"><button type="button" class="fs-btn ghost" id="fs-hat">Mettilo adesso</button></div>'; $('fs-hat').addEventListener('click', e => { store.set('dragon-acc', 'festa'); updateBar(); e.currentTarget.textContent = 'Fatto! 🥳'; e.currentTarget.disabled = true; }); ends(); return; }
     if (k === 'shop' && typeof SHOP !== 'undefined') {
       const own = ownedShop(), opts = SHOP.filter(x => x.who === 'd' && x.p > 0 && x.p <= 200 && !own.includes(x.id)).slice(0, 8);
       if (opts.length) {
@@ -14824,7 +14741,7 @@ function festaSorp(I) {
         box.innerHTML = '<div class="fs-pick">' + opts.map(x => '<button type="button" class="fs-pk" data-pk="' + x.id + '"><span>' + x.ic + '</span>' + esc(x.n) + '</button>').join('') + '</div>';
         box.querySelectorAll('[data-pk]').forEach(b => b.addEventListener('click', () => {
           const it = SHOP.find(x => x.id === b.dataset.pk); if (!it) return; fOwn(it.id); try { shopEquip(it, true); } catch (e) {}
-          box.innerHTML = '<div class="fs-drg">' + dragonSVG(Math.max(1, levelOf(D.energy)), D.color, 'fs-dancing') + '</div><p class="fs-p"><b>' + it.ic + ' ' + esc(it.n) + ': è tuo!</b></p>'; fTada(); fsRain(60); ends();
+          box.innerHTML = '<div class="fs-drg">' + avatarSVG(Math.max(1, levelOf(D.energy)), D.color, 'fs-dancing') + '</div><p class="fs-p"><b>' + it.ic + ' ' + esc(it.n) + ': è tuo!</b></p>'; fTada(); fsRain(60); ends();
         }));
         return;
       }
@@ -15781,7 +15698,7 @@ const SR_VID_AUTO = true;
 const srVidVede = id => SR_VID_AUTO ? srVidOk()[id] !== -1 : srVidOk()[id] === 1;
 const srVidAll = () => typeof SERIE === 'undefined' ? [] : Object.entries(SERIE.storia.video).flatMap(([ep, L]) => L.map(v => Object.assign({ ep, u: 'storia' }, v)));
 const srVidDa = () => { const ok = srVidOk(); return srVidAll().filter(v => !(v.id in ok)); };
-const srDrago = cls => dragonSVG(D ? levelOf(D.energy) : 1, D ? D.color : 'verde', cls);
+const srDrago = cls => avatarSVG(D ? levelOf(D.energy) : 1, D ? D.color : 'verde', cls);
 if (!$('p-serie')) { const sec = document.createElement('section'); sec.id = 'p-serie'; sec.dataset.page = ''; sec.hidden = true; $('main').appendChild(sec); } /* episodio in corso: {id, k, i, play, timer} */
 
 /* ---- pagina della serie ---- */
@@ -16001,7 +15918,7 @@ applyBg();
   current = TABS.some(t => t[0] === saved) ? saved : 'home';
   if (!D) {
     current = 'home';
-    D = { name: MASCOTTE === 'avatar' ? 'avatar' : 'il tuo drago', color: 'verde', energy: 0 };
+    D = { name: 'avatar', color: 'verde', energy: 0 };
     renderTabs(); updateBar();
     PAGES.home($('p-home'));
     D = null;
@@ -16009,7 +15926,7 @@ applyBg();
   } else {
     updateBar(); go(current);
     /* chi aveva già il drago sceglie una volta l'avatar: i progressi restano */
-    if (MASCOTTE === 'avatar' && !D.avatar) setTimeout(() => { if (!$('modal') || $('modal').hidden !== false) onboarding(true); }, 1200);
+    if (!D.avatar) setTimeout(() => { if (!$('modal') || $('modal').hidden !== false) onboarding(true); }, 1200);
   }
 })();
 
