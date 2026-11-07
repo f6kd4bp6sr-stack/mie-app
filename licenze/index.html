@@ -251,7 +251,7 @@ a.btn{text-decoration:none;display:inline-block}
 /* 9 sezioni nel menu (7/11/2026, 🎟️ Tempo libero): un po' più compatte per stare su una riga con l'iPad in orizzontale */
 @media(min-width:900px){.sect{gap:4px}.sect button{padding:8px 8px;gap:4px;font-size:14.5px}.sect .gear{padding:8px 10px}}
 </style>
-<script>window.APP_VERSION="1c6506ebab";window.APP_BUILD="2026-11-07T07:48+01:00";</script>
+<script>window.APP_VERSION="d7017e0923";window.APP_BUILD="2026-11-07T09:26+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -2704,7 +2704,7 @@ document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest
 
 /* ---------- 🗞️ STAMPA DI OGGI: le notizie principali, generali e di Torino ----------
    Sezioni: Italia, Mondo, 🌐 Stampa estera (testate straniere, sintesi tradotte in italiano + link «leggi tradotto»), Economia, Torino, Cultura, Sport.
-   File pubblico stampa-oggi.json, scritto dall'attività programmata alle 6 (edizione del mattino) e alle 22 (edizione della sera)
+   File pubblico stampa-oggi.json, scritto dall'attività programmata alle 5:01 (edizione del mattino) e alle 13:01 (edizione del pomeriggio)
    seguendo strumenti/STAMPA.md: titoli e sintesi con parole nostre, tono neutro, fonti e link di approfondimento.
    Sull'iPad resta una copia (pn-stampa) per quando manca internet; quali notizie hai aperto: pn-stampa-lette (solo su questo iPad). */
 const ST_KEY="pn-stampa",ST_LKEY="pn-stampa-lette";
@@ -2723,12 +2723,12 @@ document.addEventListener("visibilitychange",()=>{if(!document.hidden)stFetch();
 const stAll=()=>{const S=stData().sezioni||{};return ST_SEZ.flatMap(([k])=>(S[k]||[]).map(n=>Object.assign({sez:k},n)));};
 const stOre=()=>{const u=stData().updated;return u?(Date.now()-new Date(u).getTime())/36e5:Infinity;};
 function stQuando(){const N=stData();if(!N.updated)return "";const d=new Date(N.updated);
-  return (N.edizione==="sera"?"🌙 Edizione della sera":"☀️ Edizione del mattino")+" · "+d.toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"})+", "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});}
+  return (N.edizione==="pomeriggio"?"🌤️ Edizione del pomeriggio":N.edizione==="sera"?"🌙 Edizione della sera":"☀️ Edizione del mattino")+" · "+d.toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"})+", "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});}
 
 function vSt(){const N=stData(),S=N.sezioni||{},L=stLette(),old=stOre()>30;
-  let o=`<h1>🗞️ Stampa di oggi</h1><p class="sub">Le notizie principali dai quotidiani online italiani ed esteri (tradotte in italiano), generali e di Torino: aggiornate ogni giorno alle 6 e alle 22, con le fonti per approfondire.</p>`;
+  let o=`<h1>🗞️ Stampa di oggi</h1><p class="sub">Le notizie principali dai quotidiani online italiani ed esteri (tradotte in italiano), generali e di Torino: aggiornate ogni giorno alle 6 e alle 13, con le fonti per approfondire.</p>`;
   o+=`<div class="st-head"><span class="pill st-ed">${N.updated?esc(stQuando()):"in attesa della prima edizione"}</span><button class="btn sm" id="stRefresh">🔄 Aggiorna</button></div>`;
-  if(N.updated&&old)o+=`<p class="st-old">⚠️ Questa edizione ha più di un giorno: la prossima arriva alle ${new Date().getHours()<22&&new Date().getHours()>=6?"22":"6"}.</p>`;
+  if(N.updated&&old)o+=`<p class="st-old">⚠️ Questa edizione ha più di un giorno: la prossima arriva alle ${new Date().getHours()<13&&new Date().getHours()>=6?"13":"6"}.</p>`;
   /* 3/11/2026: niente schede «Tutte»/sezioni: le sezioni stanno in colonne affiancate (4 per riga) che scorrono dentro */
   if(!N.updated)return o+`<div class="card k-st nofold"><p class="empty">Le notizie arrivano da internet: apri la sezione quando sei collegato.</p></div>`;
   o+=`<div class="cols4">`;

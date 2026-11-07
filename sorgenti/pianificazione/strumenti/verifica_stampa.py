@@ -7,7 +7,7 @@ import json, os, re, sys, datetime
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'tools'))
 from guardia import guarda  # impronte dei dati da non pubblicare, con chiave segreta (tools/guardia.py)
 
-SEZ = {'italia': (3, 8), 'mondo': (3, 8), 'estero': (0, 6), 'economia': (1, 5), 'torino': (3, 8), 'piemonte': (0, 6), 'eventi': (0, 10), 'spettacoli': (0, 10), 'concerti': (0, 24), 'cultura': (0, 4), 'sport': (0, 4)}
+SEZ = {'italia': (3, 8), 'mondo': (3, 8), 'estero': (0, 6), 'economia': (1, 5), 'torino': (3, 8), 'piemonte': (0, 6), 'eventi': (0, 14), 'spettacoli': (0, 14), 'concerti': (0, 32), 'cultura': (0, 4), 'sport': (0, 4)}
 # lingua dell'articolo originale (per le testate estere): l'app offre «leggi tradotto»
 LINGUE = {'it', 'en', 'fr', 'es', 'de', 'pt', 'nl', 'ar', 'zh', 'ja', 'ru', 'uk', 'pl'}
 # stesse impronte usate per le novità della Pensione
@@ -23,8 +23,8 @@ def controlla(o):
     E = []
     if o.get('app') != 'stampa-oggi':
         E.append('«app» deve essere «stampa-oggi»')
-    if o.get('edizione') not in ('mattina', 'sera'):
-        E.append('«edizione» deve essere «mattina» o «sera»')
+    if o.get('edizione') not in ('mattina', 'pomeriggio', 'sera'):
+        E.append('«edizione» deve essere «mattina» o «pomeriggio»')
     up = str(o.get('updated', ''))
     if not re.match(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}', up):
         E.append('«updated» mancante')

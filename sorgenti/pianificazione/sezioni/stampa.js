@@ -1,6 +1,6 @@
 /* ---------- 🗞️ STAMPA DI OGGI: le notizie principali, generali e di Torino ----------
    Sezioni: Italia, Mondo, 🌐 Stampa estera (testate straniere, sintesi tradotte in italiano + link «leggi tradotto»), Economia, Torino, Cultura, Sport.
-   File pubblico stampa-oggi.json, scritto dall'attività programmata alle 6 (edizione del mattino) e alle 22 (edizione della sera)
+   File pubblico stampa-oggi.json, scritto dall'attività programmata alle 5:01 (edizione del mattino) e alle 13:01 (edizione del pomeriggio)
    seguendo strumenti/STAMPA.md: titoli e sintesi con parole nostre, tono neutro, fonti e link di approfondimento.
    Sull'iPad resta una copia (pn-stampa) per quando manca internet; quali notizie hai aperto: pn-stampa-lette (solo su questo iPad). */
 const ST_KEY="pn-stampa",ST_LKEY="pn-stampa-lette";
@@ -19,12 +19,12 @@ document.addEventListener("visibilitychange",()=>{if(!document.hidden)stFetch();
 const stAll=()=>{const S=stData().sezioni||{};return ST_SEZ.flatMap(([k])=>(S[k]||[]).map(n=>Object.assign({sez:k},n)));};
 const stOre=()=>{const u=stData().updated;return u?(Date.now()-new Date(u).getTime())/36e5:Infinity;};
 function stQuando(){const N=stData();if(!N.updated)return "";const d=new Date(N.updated);
-  return (N.edizione==="sera"?"🌙 Edizione della sera":"☀️ Edizione del mattino")+" · "+d.toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"})+", "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});}
+  return (N.edizione==="pomeriggio"?"🌤️ Edizione del pomeriggio":N.edizione==="sera"?"🌙 Edizione della sera":"☀️ Edizione del mattino")+" · "+d.toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"})+", "+d.toLocaleTimeString("it-IT",{hour:"2-digit",minute:"2-digit"});}
 
 function vSt(){const N=stData(),S=N.sezioni||{},L=stLette(),old=stOre()>30;
-  let o=`<h1>🗞️ Stampa di oggi</h1><p class="sub">Le notizie principali dai quotidiani online italiani ed esteri (tradotte in italiano), generali e di Torino: aggiornate ogni giorno alle 6 e alle 22, con le fonti per approfondire.</p>`;
+  let o=`<h1>🗞️ Stampa di oggi</h1><p class="sub">Le notizie principali dai quotidiani online italiani ed esteri (tradotte in italiano), generali e di Torino: aggiornate ogni giorno alle 6 e alle 13, con le fonti per approfondire.</p>`;
   o+=`<div class="st-head"><span class="pill st-ed">${N.updated?esc(stQuando()):"in attesa della prima edizione"}</span><button class="btn sm" id="stRefresh">🔄 Aggiorna</button></div>`;
-  if(N.updated&&old)o+=`<p class="st-old">⚠️ Questa edizione ha più di un giorno: la prossima arriva alle ${new Date().getHours()<22&&new Date().getHours()>=6?"22":"6"}.</p>`;
+  if(N.updated&&old)o+=`<p class="st-old">⚠️ Questa edizione ha più di un giorno: la prossima arriva alle ${new Date().getHours()<13&&new Date().getHours()>=6?"13":"6"}.</p>`;
   /* 3/11/2026: niente schede «Tutte»/sezioni: le sezioni stanno in colonne affiancate (4 per riga) che scorrono dentro */
   if(!N.updated)return o+`<div class="card k-st nofold"><p class="empty">Le notizie arrivano da internet: apri la sezione quando sei collegato.</p></div>`;
   o+=`<div class="cols4">`;
