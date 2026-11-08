@@ -1,6 +1,6 @@
 // Il mio mondo: funziona anche senza internet. Versione b8e91e27fc
 const CACHE = 'mondo-b8e91e27fc';
-const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
+const FILES = ['./', './index.html', './manifest.webmanifest', './icona-c2-180.png', './icona-c2-192.png', './icona-c2-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 const SCOPE = new URL(self.registration.scope).pathname;
 // tiene solo la copia attuale di questa app: le copie delle altre app dello stesso sito (Pianificazione, Semestre filtro…) non si toccano

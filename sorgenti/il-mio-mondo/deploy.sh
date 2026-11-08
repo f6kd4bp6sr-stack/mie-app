@@ -1,7 +1,7 @@
 #!/bin/sh
 # Pubblica l'ultima versione dell'app su GitHub Pages
 set -e
-cd /home/claude/app && python3 build.py >/dev/null && { [ -f /tmp/claude-0/icons.js ] && node /tmp/claude-0/icons.js || true; }
+cd /home/claude/app && python3 build.py >/dev/null && node /home/claude/app/tools/icone_png.js
 cd /home/claude/mie-app && git fetch -q origin main && git reset -q --hard origin/main
 # aggiorna solo i file di «Il mio mondo» nella cartella principale: /licenze/, /semestre/ e /sorgenti/ restano intatte
 cp -r /home/claude/mondo-out/. /home/claude/mie-app/

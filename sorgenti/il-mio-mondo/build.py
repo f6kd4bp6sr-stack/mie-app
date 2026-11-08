@@ -132,7 +132,8 @@ import os, json
 P='/home/claude/mondo-out/'
 os.makedirs(P, exist_ok=True)
 open(P+'icon.svg','w').write(icon)
-pwa_head = ('<link rel="manifest" href="manifest.webmanifest">\n<link rel="apple-touch-icon" href="icon-180.png">\n')
+open(P+'icona-c2.svg','w').write(icon)  # 8/11/2026: nome nuovo, così Safari non ripropone l'icona vecchia dalla sua cache (le PNG le crea tools/icone_png.js)
+pwa_head = ('<link rel="manifest" href="manifest.webmanifest">\n<link rel="apple-touch-icon" href="icona-c2-180.png" sizes="180x180">\n')
 pwa_sw = ("<script>/* aggiornamento automatico e silenzioso */\n"
  "if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {\n"
  "  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').then(reg => {\n"
@@ -161,12 +162,12 @@ open(P+'index.html','w',encoding='utf-8').write(idx)
 open(P+'manifest.webmanifest','w').write(json.dumps({
   "name": "Il mio mondo", "short_name": "Il mio mondo", "start_url": "./", "scope": "./",
   "display": "standalone", "background_color": "#fff8ec", "theme_color": "#fff8ec", "lang": "it",
-  "icons": [{"src": "icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}, {"src": "icon.svg", "sizes": "any", "type": "image/svg+xml"}]
+  "icons": [{"src": "icona-c2-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "icona-c2-512.png", "sizes": "512x512", "type": "image/png"}, {"src": "icona-c2.svg", "sizes": "any", "type": "image/svg+xml"}]
 }, ensure_ascii=False, indent=1))
 import hashlib
 open(P+'sw.js','w').write('''// Il mio mondo: funziona anche senza internet. Versione %s
 const CACHE = 'mondo-%s';
-const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
+const FILES = ['./', './index.html', './manifest.webmanifest', './icona-c2-180.png', './icona-c2-192.png', './icona-c2-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 const SCOPE = new URL(self.registration.scope).pathname;
 // tiene solo la copia attuale di questa app: le copie delle altre app dello stesso sito (Pianificazione, Semestre filtro…) non si toccano
