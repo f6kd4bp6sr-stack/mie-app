@@ -1,8 +1,8 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-07T13:30+01:00",
-  "nota": "Edizione del pomeriggio del 7 novembre 2026.",
+  "edizione": "mattina",
+  "updated": "2026-11-08T05:09+01:00",
+  "nota": "Edizione della mattina dell'8 novembre 2026.",
   "sezioni": {
     "italia": [
       {
@@ -14,6 +14,18 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/manovra-lunedi-al-via-le-audizioni-attese-imprese-banche-sindacati-e-regioni_0ec0aa84-e641-47e8-af76-d966564ce5a0.html"
+          }
+        ]
+      },
+      {
+        "id": "it-pensioni-risparmi",
+        "t": "Pensioni, Il Fatto: risparmi per 100 miliardi entro il 2036; Salvini promette Quota 64 nel 2027",
+        "s": "Secondo il quotidiano le manovre dal 2022 pesano soprattutto sui pensionati con redditi alti e medi. Lo Spi Cgil stima perdite per chi prende 2.700 euro al mese. Salvini sostiene che nel 2027 Quota 64 supererà la legge Fornero; il fondo previsto è di 850 milioni.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/in-edicola/articoli/2026/11/08/pensioni-100-miliardi-di-risparmi-entro-il-2036/8564445/"
           }
         ]
       },
@@ -44,38 +56,47 @@
             "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/taglia-degli-hacker-sul-dark-web-su-tajani-e-lo-voi.-cyberattacco-alla_2902e339-ba05-423b-b761-27735ead1323.html"
           }
         ]
-      },
-      {
-        "id": "it-trieste-corteo",
-        "t": "Trieste, tensione al corteo davanti alla Questura: feriti tre poliziotti, una donna fermata e poi rilasciata",
-        "s": "Nella serata di venerdì 6 novembre scontri tra manifestanti e agenti. Tre poliziotti sono rimasti feriti, tra cui il vicequestore vicario, colpito alla testa forse da un grosso petardo e portato a Cattinara. Una donna è stata fermata, poi denunciata a piede libero. Oltre cento persone si erano radunate fuori dalla Questura.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/07/tensione-a-manifestazione-trieste-feriti-tre-poliziotti-fermata-una-donna_3ddb3dce-d2bd-4867-9bd5-f33b75e339c1.html"
-          }
-        ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-kiev-missili",
-        "t": "Missili balistici russi su Kiev nella notte: almeno cinque feriti, chiuso il ponte Nord",
-        "s": "Più ondate di missili hanno colpito la capitale ucraina tra il 6 e il 7 novembre, poche ore dopo l'allarme di Zelensky su un nuovo attacco alle infrastrutture. Secondo il sindaco Klitschko i feriti sono almeno cinque, tra cui una ragazza di 14 anni; il ponte Nord, danneggiato, è chiuso al traffico.",
-        "d": "2026-11-07",
+        "id": "mo-israele-eisenkot",
+        "t": "Israele, Herzog sceglie Eisenkot per formare il governo; Netanyahu chiede un esecutivo di unità nazionale",
+        "s": "Il presidente incaricherà formalmente Gadi Eisenkot oggi alle 17: ha 28 giorni, prorogabili di 14. Lo hanno indicato partiti con 67 deputati, mentre 46 hanno indicato Netanyahu, che propone un governo di unità nazionale senza i partiti arabi.",
+        "d": "2026-11-08",
         "fonti": [
           {
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/2026/11/07/israele-eisenkot-governo-incarico-notizie/8564397/"
+          },
+          {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/missili-balistici-russi-su-kiev-almeno-cinque-feriti_c4ecddfa-023b-4d8d-810c-b7ba31731286.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/netanyahu-chiede-un-governo-di-unita-nazionale_cd9ca7fa-957d-4b0a-bfcc-8b3fa3b9803e.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-cracovia",
+        "t": "Cracovia, spari sulla folla in piazza: cinque morti e circa quindici feriti, Tusk parla di attentato",
+        "s": "Sabato pomeriggio un uomo in abiti militari ha sparato dalla sua auto in piazza Rynek Główny ed è stato fermato dalla polizia. È un cittadino polacco e agiva da solo. Il premier ha definito l'accaduto un attentato; le indagini proseguono.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://it.euronews.com/2026/11/07/polonia-spari-sulla-folla-a-cracovia-5-morti-tusk-parla-di-attentato",
+            "l": "it"
+          },
+          {
+            "n": "ANSA (ANSAmed)",
+            "url": "https://www.ansa.it/ansamed/it/notizie/rubriche/politica/2026/11/08/notiziario-ansamed_ed3b1de8-fd5b-4557-b708-de9d3e855e11.html"
           }
         ]
       },
       {
         "id": "mo-iran-qeshm",
-        "t": "Iran, Trump conferma nuovi attacchi americani sull'isola di Qeshm: trattative ancora aperte",
-        "s": "Venerdì 6 novembre gli Stati Uniti hanno colpito le difese aeree sull'isola di Qeshm, nello Stretto di Hormuz; Trump parla di «attacchi minori». Il Qatar media: Teheran valuta le nuove proposte ma chiede, tra l'altro, la fine del blocco dei porti.",
-        "d": "2026-11-07",
+        "t": "Iran, nuove esplosioni sull'isola di Qeshm: Trump parla di attacchi «minori» e di trattative con Teheran",
+        "s": "Il presidente americano ha confermato nuovi raid sull'isola iraniana e ha detto che Teheran vuole ancora un accordo, mentre proseguono i colloqui mediati dal Qatar. L'agenzia iraniana Irna segnala altre esplosioni vicino a Jask, Sirik e Bandar Abbas.",
+        "d": "2026-11-08",
         "fonti": [
           {
             "n": "Al Jazeera",
@@ -83,164 +104,87 @@
             "l": "en"
           },
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/iran-il-nostro-esercito-piu-forte-rispetto-allinizio-della-guerra_3e8c0a95-4b9a-4cbc-ad30-ed76e48f6dca.html"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/07/us-launches-new-targeted-strikes-on-iran-as-trump-claims-progress-in-talks-with-tehran",
+            "n": "Al Jazeera (diretta)",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/8/iran-war-live-explosions-hit-qeshm-us-moves-to-block-land-supply-routes",
             "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-ucraina-trump",
-        "t": "Ucraina, Trump: «Molti progressi». Negoziati a Abu Dhabi la prossima settimana",
-        "s": "Trump afferma che con Russia e Ucraina si fanno passi avanti, che per la prima volta entrambe vogliono un accordo e che l'intesa coinvolgerebbe l'Europa; ha incontri previsti lunedì e martedì. I colloqui guidati dagli Usa tra Kiev e Mosca dovrebbero riprendere ad Abu Dhabi.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/trump-stiamo-facendo-molti-progressi-con-russia-e-ucraina_7f5f832d-deeb-4ae1-b2d9-b58505e2741a.html"
-          }
-        ]
-      },
-      {
-        "id": "mo-paraguay-pena",
-        "t": "Paraguay, arrestato l'ex presidente Peña per il caso Ueno Bank; proteste davanti alla sua casa",
-        "s": "Santiago Peña, destituito con un impeachment politico, è stato arrestato a casa sua ad Asunción su ordine della magistratura, per la crisi legata alla risoluzione di Ueno Bank. Nelle stesse ore giurava il nuovo presidente Pedro Alliana. Alle prime ore del 7 novembre si sono registrati incidenti.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/paraguay-arrestato-lex-presidente-pena-per-il-caso-ueno-bank_2c34c06b-3361-4145-a093-29a0dd046ae4.html"
-          },
-          {
-            "n": "ANSA (proteste)",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/paraguay-nuove-proteste-e-incidenti-di-fronte-alla-casa-dellex-presidente_146d34ea-9db7-441f-b600-90efdf133935.html"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-ue-trump-russia",
-        "t": "La stampa europea: Bruxelles respinge un accordo di sicurezza Usa-Russia deciso senza l'Europa",
-        "s": "Dopo le parole di Trump su un'intesa che «potrebbe coinvolgere tutta l'Europa», Kallas ha detto che Putin non ha diritto di veto sulla sicurezza europea; Sikorski e il ministro ucraino Sybiha hanno respinto un patto fatto senza gli europei.",
-        "d": "2026-11-07",
+        "id": "es-iran-iron-gate",
+        "t": "Al Jazeera: gli Usa creano la «Task Force Iron Gate» contro le rotte terrestri dell'Iran",
+        "s": "Il Comando centrale americano, con base a Tampa, vuole fermare il passaggio di armi e materiali sanzionati attraverso i confini terrestri e il Caspio, ampliando il blocco navale. Da luglio sono state deviate 147 navi commerciali e cinque disabilitate perché non hanno rispettato gli ordini.",
+        "d": "2026-11-08",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/06/eu-rejects-trumps-big-beautiful-security-deal-with-russia-and-all-of-europe",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/8/us-launches-task-force-to-disrupt-irans-land-based-supply-routes",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-meloni-lettera",
-        "t": "Euronews: Meloni scrive a Costa contro i troppi formati negoziali sull'Ucraina",
-        "s": "Secondo Euronews la premier italiana ha denunciato in una lettera al presidente del Consiglio europeo un approccio europeo scoordinato ai colloqui di pace. Costa ha risposto che il ruolo dell'Ue va organizzato; il tema sarà discusso al vertice informale di Dublino. Critiche simili da Polonia e Austria.",
-        "d": "2026-11-07",
+        "id": "es-yemen-taiz",
+        "t": "Yemen, missile su un mercato a Taiz: decine di vittime mentre l'offensiva governativa continua",
+        "s": "Governo e ribelli huthi si accusano a vicenda per il colpo al mercato. Dall'inizio dell'escalation l'Onu conta oltre 323.000 sfollati, mentre circa 800.000 persone sono isolate a Taiz dall'assedio; molti ospedali sono chiusi.",
+        "d": "2026-11-08",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/06/cracks-emerge-over-europes-fragmented-approach-to-ukraine-peace-talks",
+            "n": "Al Jazeera",
+            "url": "https://aljazeera.com/news/2026/11/7/dozens-killed-as-humanitarian-crisis-mounts-in-yemen-what-next-for-war",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-cracovia-stampa",
+        "t": "Cracovia sulla stampa estera: sei morti e 15 feriti per Al Jazeera, solidarietà europea",
+        "s": "Al Jazeera riporta almeno sei morti e 15 feriti, due poliziotti compresi, uno in condizioni critiche. Tusk elogia la risposta «eroica» della polizia; Kallas, Zelensky e l'ambasciatore americano esprimono vicinanza alla Polonia. Il bilancio varia tra le testate.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/7/casualties-reported-after-shooting-in-polands-krakow",
             "l": "en"
           },
           {
-            "n": "Euronews (video)",
-            "url": "https://www.euronews.com/2026/11/05/italian-pm-slams-eus-fragmented-approach-to-ukraine-peace-talks",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-allarmi-bomba",
-        "t": "Falsi allarmi bomba su voli in tutta Europa: dirottamenti e scorte di caccia, nessun ordigno",
-        "s": "Tra giovedì e venerdì minacce telefoniche e via e-mail hanno colpito voli in 16 Paesi. Un aereo Finnair è stato scortato a Roma dall'Aeronautica italiana e un volo Wizz Air Parigi-Roma è atterrato a Venezia. Non sono stati trovati esplosivi e nessun responsabile è stato indicato.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/6/hoax-or-bomb-threats-what-we-know-about-flight-disruptions-across-europe",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-morbillo-usa",
-        "t": "Stati Uniti, oltre 5.000 casi di morbillo nel 2026: il dato più alto da 35 anni",
-        "s": "I Cdc contano 5.182 casi confermati, più del doppio del 2025; il 59% riguarda bambini e ragazzi. La copertura vaccinale all'asilo è scesa al 92,4%. È in corso una disputa su come contare i decessi, dopo che i Cdc hanno tolto due morti della Pennsylvania dal conteggio nazionale.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/7/cdc-reports-more-than-5000-measles-cases-highest-number-in-35-years",
-            "l": "en"
+            "n": "Euronews (spagnolo)",
+            "url": "https://es.euronews.com/2026/11/07/tiroteo-mortal-en-el-centro-de-cracovia-al-menos-5-muertos-y-mas-de-10-heridos",
+            "l": "es"
           }
         ]
       }
     ],
     "economia": [
       {
-        "id": "ec-borse-tech",
-        "t": "Borse in calo dopo il crollo tech a Wall Street: Milano limita le perdite",
-        "s": "Dopo il «giovedì nero» legato ai titoli di data center e intelligenza artificiale (Nasdaq oltre -5%), Seul e Tokyo hanno perso circa il 6%. In Europa le aperture sono state negative (Francoforte -1,7%, Milano -1,68%); poi Piazza Affari ha ridotto il calo a circa -1%. Spread Btp-Bund a 108 punti, gas in calo.",
-        "d": "2026-11-07",
+        "id": "ec-accise-gasolio",
+        "t": "Gasolio, scade lo sconto sulle accise: da oggi possibili rincari senza proroga",
+        "s": "Il taglio di 4,9 centesimi al litro, deciso il 28 ottobre e finanziato con 38,7 milioni, è scaduto l'8 novembre e in Gazzetta non c'è una proroga. Il 7 novembre il gasolio self costava in media 2,224 euro al litro; il price cap delle compagnie dovrebbe contenere gli aumenti.",
+        "d": "2026-11-08",
         "fonti": [
           {
             "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/2026/11/06/crollo-wall-street-borse-europee-asia-oggi/8562723/"
+            "url": "https://www.ilfattoquotidiano.it/2026/11/07/accise-gasolio-scadenza-prezzi-notizie/8564288/"
           },
           {
-            "n": "il Giornale",
-            "url": "https://www.ilgiornale.it/news/aziende/borse-oggi-il-crollo-del-tech-scuote-i-mercati-tokyo-e-seul-perdono-il-6-milano-apre-in-rosso/"
-          }
-        ]
-      },
-      {
-        "id": "ec-accise-gasolio",
-        "t": "Accise sul gasolio: lo sconto di circa 4,9 centesimi al litro vale fino al 7 novembre",
-        "s": "Il decreto in Gazzetta Ufficiale riduce l'accisa sul gasolio per compensare il maggior gettito Iva dovuto al petrolio più caro: circa 4 centesimi, 4,9 con l'Iva. Copertura di 38,7 milioni. La misura riguarda solo il gasolio e scade oggi.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/10/28/nuovo-taglio-accise-fino-al-7-novembre-circa-49-centesimi-sul-gasolio_a267cefb-76e9-4df7-bde1-1b038149443b.html"
+            "url": "https://www.ansa.it/canale_motori/notizie/mondo_motori/2026/11/07/niente-proroga-sulle-accise-rischio-rincari-del-gasolio-_622eb62a-12b6-4716-8e39-b9ed79ac363a.html"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-corteo-7nov",
-        "t": "Torino, oggi alle 15 corteo contro carovita e riarmo da piazza Castello a piazza Crispi",
-        "s": "Promosso da Cobas, collettivi studenteschi e reti pacifiste, il corteo parte da piazza Castello e arriva in piazza Crispi passando per via Po, corso San Maurizio e corso Regina Margherita. Si protesta contro carovita, guerra, riarmo, caro affitti e tagli a scuola e sanità. Possibili deviazioni dei mezzi GTT in centro.",
+        "id": "to-metro-orari",
+        "t": "Metro di Torino, da domenica 8 novembre torna l'orario serale completo",
+        "s": "Dopo la riduzione del maggio 2023 per i lavori al sistema di segnalamento, la linea 1 tornerà a servire fino alle 00:30 da martedì a giovedì, la domenica e nei festivi, con ultime partenze a mezzanotte. Invariati venerdì e sabato (fino all'1:30) e il lunedì (stop alle 22).",
         "d": "2026-11-07",
         "fonti": [
-          {
-            "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/cronaca/manifestazione-corteo-7-novembre-percorso-lavoratori-studenti-campus-occupazioni-gtt-deviazioni-chiusure-parcheggi-centro.html"
-          },
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/domani-a-torino-un-nuovo-corteo-contro-carovita-e-riarmo_7eac7ac6-eaaf-4e72-9c72-5142eecb9744.html"
-          }
-        ]
-      },
-      {
-        "id": "to-fuochi-denuncia",
-        "t": "Torino, 188 chili di fuochi d'artificio in casa a Borgo Filadelfia: denunciato un 44enne",
-        "s": "Nei controlli in vista della manifestazione di sabato 7 novembre sono stati trovati 188 chili di fuochi d'artificio in un appartamento e in una cantina del quartiere. L'uomo, 44 anni, è stato denunciato.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cronaca-11/articolo/188-chili-di-fuochi-dartificio-in-salotto-e-in-cantina-44enne-incastrato-e-denunciato-a-borgo-fila.html"
-          },
-          {
-            "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/cronaca/denuncia-fuochi-artificio-illegali-manifestazione-7-novembre-2026.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/10/28/torino-dall8-novembre-la-metro-torna-allorario-serale-completo_a60ad358-e285-4986-b49a-2cd7305bd407.html"
           }
         ]
       },
@@ -263,35 +207,67 @@
         ]
       },
       {
-        "id": "to-metro-orari",
-        "t": "Metro di Torino, da domenica 8 novembre torna l'orario serale completo",
-        "s": "Dopo la riduzione del maggio 2023 per i lavori al sistema di segnalamento, la linea 1 tornerà a servire fino alle 00:30 da martedì a giovedì, la domenica e nei festivi, con ultime partenze a mezzanotte. Invariati venerdì e sabato (fino all'1:30) e il lunedì (stop alle 22).",
-        "d": "2026-11-07",
+        "id": "to-egizio-ricerca",
+        "t": "Museo Egizio, lunedì in Consiglio dei ministri la trasformazione in ente pubblico di ricerca",
+        "s": "La ministra dell'Università Anna Maria Bernini ha annunciato che il Consiglio dei ministri di lunedì esaminerà il riconoscimento del Museo Egizio di Torino come ente pubblico di ricerca.",
+        "d": "2026-11-06",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/10/28/torino-dall8-novembre-la-metro-torna-allorario-serale-completo_a60ad358-e285-4986-b49a-2cd7305bd407.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/bernini-lunedi-in-cdm-museo-egizio-come-ente-pubblico-di-ricerca_75b3bb11-af26-415d-af1a-e3c55e05e3fb.html"
           }
         ]
       },
       {
-        "id": "to-spaccio-arresti",
-        "t": "Torino, sette arresti in tre giorni per spaccio: controlli dei carabinieri sui pusher",
-        "s": "In tre giorni i controlli contro lo spaccio hanno portato a sette arresti in città; in alcuni casi gli spacciatori hanno ingoiato le dosi davanti ai militari e sono finiti in ospedale.",
-        "d": "2026-11-07",
+        "id": "to-bernini-campus",
+        "t": "Torino, la ministra Bernini incontra gli studenti contrari all'occupazione del Campus",
+        "s": "Durante la visita in città la ministra ha visto gli universitari che si oppongono all'occupazione del Campus; in mattinata alcuni studenti avevano tentato di contestarla.",
+        "d": "2026-11-06",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/a-torino-sette-arresti-in-tre-giorni-per-spaccio-di-droga_84fb2997-d7c0-47b3-ba4e-0f6f51f63560.html"
-          },
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/bernini-incontra-a-torino-gli-studenti-contrari-alloccupazione-campus_ce534a40-ebf7-4403-88b4-100395542f67.html"
+          }
+        ]
+      },
+      {
+        "id": "to-santanna-chirurgia",
+        "t": "Ospedale Sant'Anna di Torino, 3,8 milioni per la chirurgia ginecologica",
+        "s": "Un finanziamento di 3,8 milioni di euro è destinato alla chirurgia ginecologica dell'ospedale Sant'Anna di Torino, secondo quanto riferito il 6 novembre.",
+        "d": "2026-11-06",
+        "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cronaca-11/articolo/sette-arresti-in-tre-giorni-per-spaccio-la-strategia-dei-corrieri-della-droga-per-ingoiare-le-dosi.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/ospedale-santanna-di-torino-38-milioni-per-la-chirurgia-ginecologica_ef5eaaee-d2b6-4726-8a2e-406a1bf3bb61.html"
           }
         ]
       }
     ],
     "piemonte": [
+      {
+        "id": "pi-terzo-valico",
+        "t": "Novi Ligure, il sindaco incontra i sindacati sulle criticità legate al Terzo Valico",
+        "s": "Il sindaco di Novi Ligure ha visto le organizzazioni sindacali per discutere i problemi legati ai lavori del Terzo Valico ferroviario, secondo l'ANSA del 6 novembre.",
+        "d": "2026-11-06",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/novi-ligure-sindaco-incontra-sindacati-per-criticita-terzo-valico_710b9936-577e-4ed1-8f8c-24788ee127bb.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-crosetto-alessandria",
+        "t": "Il ministro Crosetto ad Alessandria in visita alla redazione del Piccolo",
+        "s": "Il ministro della Difesa Guido Crosetto ha visitato ad Alessandria la redazione del quotidiano locale il Piccolo.",
+        "d": "2026-11-06",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/crosetto-ad-alessandria-in-visita-alla-redazione-del-piccolo_b64711ff-3e3f-42e1-ba39-d9e320f1a168.html"
+          }
+        ]
+      },
       {
         "id": "pi-lupo-piano",
         "t": "Piemonte, un piano regionale per gestire il lupo: stimati circa 464 esemplari",
@@ -301,30 +277,6 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/bongioanni-il-piemonte-e-al-lavoro-per-la-gestione-del-lupo_95d0320c-289a-4599-98fb-5f239fb8815f.html"
-          }
-        ]
-      },
-      {
-        "id": "pi-polizia-locale",
-        "t": "Regione Piemonte, 6,7 milioni per polizia locale e unioni di comuni",
-        "s": "La Giunta ha approvato due delibere: 2 milioni (tra 2026 e 2027) per le spese correnti delle polizie locali e 4,7 milioni per il 2026 a sostegno dei servizi gestiti in forma associata dalle unioni di comuni, con fondi regionali e nazionali.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/03/dalla-regione-piemonte-67-milioni-di-euro-per-la-polizia-locale_c6d82504-ce85-48a7-86e0-a66771496747.html"
-          }
-        ]
-      },
-      {
-        "id": "pi-fiere-sagre",
-        "t": "Regione Piemonte, oltre un milione per partecipare a fiere e sagre",
-        "s": "La Regione destina più di un milione di euro a sostegno della partecipazione a fiere e sagre del territorio, secondo quanto comunicato il 2 novembre.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/02/piemonte-dalla-regione-oltre-1-milione-per-partecipare-a-fiere-e-sagre_060833d0-56f1-464e-9a83-4fb49de32531.html"
           }
         ]
       }
@@ -345,15 +297,14 @@
     ],
     "sport": [
       {
-        "id": "sp-ronaldo",
-        "t": "Cristiano Ronaldo annuncia il ritiro dalla nazionale portoghese",
-        "s": "Il miglior marcatore nella storia del Portogallo ha comunicato che lascia la maglia della nazionale.",
-        "d": "2026-11-05",
+        "id": "sp-bagnaia",
+        "t": "MotoGP, Bagnaia si rompe il piede nella Sprint del Qatar e sarà operato in Italia",
+        "s": "Il pilota torinese è caduto nella gara Sprint del Gran Premio del Qatar riportando la frattura di un piede; sarà sottoposto a intervento chirurgico in Italia.",
+        "d": "2026-11-08",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/05/portugal-great-cristiano-ronaldo-announces-retirement-from-international-football",
-            "l": "en"
+            "n": "TorinoToday",
+            "url": "https://torinotoday.it/sport/altro/incidente-bagnaia-sprint-qatar-piede-rotto.html"
           }
         ]
       }
@@ -473,6 +424,21 @@
         "quando": "dal 13 nov al 20 dic (inaugurazione ven 13 nov, 18:30)",
         "dove": "Centro storico, Asti",
         "costo": "mercatini gratuiti"
+      },
+      {
+        "id": "ev-wpp",
+        "t": "World Press Photo Exhibition 2026 a Torino",
+        "s": "Mostra dei premi di fotogiornalismo, aperta ogni settimana; altre mostre in corso (Kusama alle OGR, Jessica Lange, Tiepolo) nell'agenda di Turismo Torino.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/agenda"
+          }
+        ],
+        "quando": "fino al 13 dic",
+        "dove": "Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
       }
     ],
     "spettacoli": [
@@ -524,6 +490,21 @@
         "quando": "Ideal: 15:20, 19:20 (orari indicativi)",
         "dove": "Cinema Ideal",
         "costo": "da 9 € (6,50 € nel pomeriggio)"
+      },
+      {
+        "id": "spe-cin-wild-horse-nine",
+        "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
+        "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
+          }
+        ],
+        "quando": "Ideal: 17:30, 19:20, 21:35 (orari indicativi)",
+        "dove": "Cinema Ideal",
+        "costo": "da 9 €"
       },
       {
         "id": "spe-tea-orgasmo",
@@ -860,12 +841,6 @@
   },
   "controlli": [
     {
-      "at": "2026-10-31T21:50+01:00",
-      "edizione": "sera",
-      "notizie": 23,
-      "note": "Fonti lette: ANSA (anche Piemonte), AGI, Torino Oggi, Il Sole 24 Ore, Al Jazeera (en), Euronews (en). Ricerca rifiutata: reuters.com. Lettura non riuscita: euronews.com archivio, torinotoday.it (elenco e articoli). Non cercati: bbc, guardian, lemonde, elpais, spiegel."
-    },
-    {
       "at": "2026-11-01T05:40+01:00",
       "edizione": "mattina",
       "notizie": 21,
@@ -973,6 +948,12 @@
       "edizione": "pomeriggio",
       "notizie": 57,
       "note": "Fonti lette: ANSA, il Giornale, Euronews (en), Al Jazeera (ricerca). Ricerca rifiutata: reuters, bbc, guardian. Lettura non riuscita: torinotoday.it, ilsole24ore.com (Borsa), una pagina ANSA (permesso non concesso). Spettacoli, eventi e concerti copiati dal mattino (non è lunedì)."
+    },
+    {
+      "at": "2026-11-08T05:09+01:00",
+      "edizione": "mattina",
+      "notizie": 56,
+      "note": "Fonti lette: Il Fatto Quotidiano, ANSA, Adnkronos (solo ricerca), Al Jazeera (en), Euronews (it), ComingSoon, MYmovies, Turismo Torino. Ricerca rifiutata: reuters.com. Lettura non riuscita: torinotoday.it (eventi e concerti), teatrostabiletorino.it (pagina), eventi.comune.torino.it (robots), mymovies.it Cinema Ideal (vuota), alcune pagine ANSA. thespacecinema.it non consultato. Concerti copiati dall'edizione precedente (non è lunedì)."
     }
   ]
 }
