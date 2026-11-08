@@ -15,7 +15,8 @@ const cdFatteL=l=>cdDel(l).filter(s=>CD().fatte[s.id]).length;
 let CD_LIV=[];
 /* i dati arrivano da cultura-dati.js, caricato alla prima richiesta (apertura più veloce, 4/11/2026) */
 function cdPronto(){if(CD_D){if(!CD_LIV.length)CD_LIV=Object.keys(CD_D.livelli).map(Number).sort();return true;}lazyJS("cultura-dati.js",()=>{cdPronto();softRender();});return false;}
-const cdAperto=l=>l===CD_LIV[0]||cdFatteL(l-1)>=CD_SBLOCCO;
+/* 8/11/2026: il livello 1 torna solo per 💻 Programmare app; i livelli 1 e 2 sono sempre aperti, il 3 dopo 4 schede del 2 */
+const cdAperto=l=>l<=2||cdFatteL(l-1)>=CD_SBLOCCO;
 const cdQ=qid=>{for(const s of CD_D.schede)for(const q of s.quiz)if(q.id===qid)return{q,s};return null;};
 function cdDue(){if(!cdPronto())return[];const t=today(),S=CD().srs;return Object.keys(S).filter(k=>S[k].due<=t&&cdQ(k)).sort((a,b)=>S[a].due<S[b].due?-1:1);}
 function cdMix(q,seed){const o=[q.ok].concat(q.wrong);let h=7;for(const ch of seed)h=(h*31+ch.charCodeAt(0))|0;for(let i=o.length-1;i>0;i--){h=(h*1103515245+12345)|0;const j=Math.abs(h)%(i+1);[o[i],o[j]]=[o[j],o[i]];}return o;}
@@ -81,7 +82,7 @@ function cdNovita(){const N=cdNov(),V=(N.voci||[]).slice().sort((a,b)=>a.d<b.d?1
   if(!V.length)return o+`<p class="empty">${N.updated?"Nessuna novità.":"Le novità arrivano da internet: riapri la pagina quando sei collegato."}</p>`;
   const cdRow=v=>`<div class="row cd-nov"><span class="pill${v.d>seen?" cd-new":""}">${fmt(v.d,{day:"numeric",month:"short",year:"numeric"})}</span><div class="grow"><b>${CD_D.temi[v.tema]?CD_D.temi[v.tema][0]+" ":""}${esc(v.t)}</b><p>${esc(v.s)}</p><small>👉 ${esc(v.perche)}</small><small><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${esc(v.fonte)} ›</a></small></div></div>`;
   /* 8/11/2026: un riquadro per tema, su due colonne, chiuso all'inizio */
-  o+=`<div class="cd-g">${Object.keys(CD_D.temi).map(k=>{const L=V.filter(v=>v.tema===k),nw=L.filter(v=>v.d>seen).length;
+  o+=`<div class="cd-g">${Object.keys(CD_D.temi).map(k=>{const L=V.filter(v=>v.tema===k),nw=L.filter(v=>v.d>seen).length;if(!L.length&&k==="app")return "";
     return cdW("n:"+k,`<span class="cd-wt">${CD_D.temi[k][0]} ${esc(CD_D.temi[k][1])}</span><span class="cd-wm"><span class="pill">${L.length} ${L.length===1?"notizia":"notizie"}</span>${nw?`<span class="pill cd-new">${nw} ${nw===1?"nuova":"nuove"}</span>`:""}${L[0]?`<span>l'ultima: ${fmt(L[0].d,{day:"numeric",month:"short",year:"numeric"})}</span>`:""}</span>`,L.map(cdRow).join("")||'<p class="empty">Nessuna novità.</p>',"cd-nw");}).join("")}</div>`;
   o+=`<p class="lbl">Aggiornate ${N.updated?fmt(N.updated.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):"—"} dall'attività programmata, una volta al mese, solo da fonti verificate. Non sono consigli.</p>`;
   return o;}

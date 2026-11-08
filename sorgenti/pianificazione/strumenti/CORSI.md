@@ -51,4 +51,6 @@ Una volta al mese, insieme alle novità:
 - Il proprietario segna con ⭐ ▶️ ✅ i corsi che gli interessano. Quando arriva il lotto nuovo, l'app nasconde da sola i corsi dei lotti precedenti che non ha segnato; quelli segnati restano.
 - Non togliere mai dal file i corsi dei lotti precedenti: la scelta è salvata sull'iPad, non qui.
 - «proposti» contiene tutti gli URL già proposti, compresi quelli tolti in revisione. Un URL che è già in «proposti» non va mai riproposto: va scelto un corso diverso.
+- **Archivio** (8/11/2026): i corsi segnati ✅ escono dalla lista e vanno nell'«🗄️ Archivio · corsi finiti» in fondo alla sezione (con la data in cui sono stati segnati). Si possono rimettere in corso con ↩️.
+- **Più approfonditi e legati alle scelte** (8/11/2026): ogni tappa nuova parte dai corsi finiti e propone il passo successivo: soprattutto livello Intermedio, niente introduzioni di base o corsi per studenti delle superiori e matricole. Dal lotto 3 ogni corso ha anche `programma` (3-5 argomenti, massimo 12 parole ciascuno) e `perche` (massimo 30 parole: a quale corso finito si collega). Meglio 7 corsi buoni che 10 deboli.
 - Costo di riferimento: circa 100.000 token per l'autore e 95.000 per il revisore mirato, per 10 corsi (3/11/2026).

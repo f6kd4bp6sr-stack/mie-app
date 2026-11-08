@@ -81,6 +81,12 @@ def controlla(path):
         if not isinstance(lo, int) or lo < 1: e.append('corso %s: serve «lotto» (numero da 1)' % c.get('id'))
         else: lotti[lo] = lotti.get(lo, 0) + 1
         if c.get('url') not in prop: e.append('corso %s: l\'url deve essere anche in «proposti»' % c.get('id'))
+        if isinstance(lo, int) and lo >= 3:  # 8/11/2026: dalla tappa 3 ogni corso spiega il programma e perché è il passo dopo i corsi finiti
+            pg = c.get('programma')
+            if not isinstance(pg, list) or not 3 <= len(pg) <= 5 or any(len(str(x).split()) > 12 for x in pg):
+                e.append('corso %s: «programma» deve avere da 3 a 5 argomenti di massimo 12 parole' % c.get('id'))
+            if not str(c.get('perche') or '').strip() or len(str(c.get('perche')).split()) > 30:
+                e.append('corso %s: «perche» mancante o oltre 30 parole' % c.get('id'))
     for lo, n in lotti.items():
         if n > 10: e.append('lotto %d: massimo 10 corsi per ricerca (ora %d)' % (lo, n))
     if d.get('pronto'):

@@ -7,7 +7,7 @@ Uso a mano:
 import json, re, sys
 from datetime import date
 
-TEMI = ('basi', 'usi', 'prudenza', 'bimba')
+TEMI = ('basi', 'usi', 'prudenza', 'bimba', 'app')  # 8/11/2026: «app» = 💻 Programmare app, livello Base
 # parole che non devono comparire nei testi pubblici
 VIETATE = re.compile(r'finanzier|guardia di finanza|\bgdf\b|caserm|codice fiscale:\s*\w|iban:\s*\w', re.I)
 # nelle richieste da copiare i dati veri non ci vanno: solo segnaposto tra [parentesi quadre]
@@ -50,6 +50,8 @@ def controlla(path):
         ids.add(s.get('id'))
         if s.get('liv') not in (1, 2, 3):
             err.append(w + ': «liv» deve essere 1, 2 o 3')
+        elif s['liv'] == 1 and s.get('tema') != 'app':
+            err.append(w + ': il livello 1 (Base) ora è solo per il tema app')
         else:
             per[s['liv']] += 1
         if s.get('tema') not in TEMI:
@@ -99,9 +101,9 @@ def controlla(path):
         tutto = json.dumps(s, ensure_ascii=False)
         if VIETATE.search(tutto):
             err.append(w + ': contiene una parola da non pubblicare')
-    # il livello 1 (Base) è stato tolto il 27/10/2026, dopo che il proprietario l'ha completato
-    if per[1] or per[2] < 5 or per[3] < 10:
-        err.append('servono 0 schede di livello 1, almeno 5 di livello 2 e almeno 10 di livello 3 (ora %s)' % per)
+    # il livello 1 (Base) generale è stato tolto il 27/10/2026 (completato); dall'8/11/2026 torna solo per il tema app (💻 Programmare app)
+    if per[2] < 5 or per[3] < 10:
+        err.append('servono almeno 5 schede di livello 2 e almeno 10 di livello 3 (ora %s)' % per)
     err += controlla_letture(d.get('letture') or [])
     return err
 
@@ -125,8 +127,8 @@ def controlla_letture(L):
             err.append(w + ': anno mancante o non valido')
         if x.get('tipo') not in TIPI:
             err.append(w + ': tipo sconosciuto (' + ', '.join(TIPI) + ')')
-        if x.get('liv') not in (2, 3):
-            err.append(w + ': «liv» deve essere 2 o 3')
+        if x.get('liv') not in (1, 2, 3) or (x.get('liv') == 1 and x.get('tema') != 'app'):
+            err.append(w + ': «liv» deve essere 2 o 3 (1 solo per il tema app)')
         if x.get('tema') not in TEMI:
             err.append(w + ': tema sconosciuto')
         r = x.get('riassunto') or []
