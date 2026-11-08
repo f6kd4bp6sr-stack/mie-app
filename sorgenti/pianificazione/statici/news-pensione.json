@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-07T01:03:00+01:00",
+ "updated": "2026-11-08T01:01:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
@@ -359,7 +359,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-07T01:03:00+01:00",
+   "ultimo": "2026-11-08T01:01:00+01:00",
    "esito": "ok"
   },
   {
@@ -471,7 +471,7 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-07T01:03:00+01:00",
+   "ultimo": "2026-11-08T01:01:00+01:00",
    "esito": "ok"
   },
   {
@@ -485,14 +485,14 @@
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-05T13:05:00+01:00",
+   "ultimo": "2026-11-08T01:01:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-11-07T01:03:00+01:00",
+   "ultimo": "2026-11-08T01:01:00+01:00",
    "esito": "ok"
   },
   {
@@ -904,6 +904,11 @@
    "at": "2026-11-07T01:03:00+01:00",
    "notizie": 0,
    "note": "giro delle 13 (sabato 7/11): nessuna notizia nuova. Gazzetta, Governo e Funzione Pubblica: ricerca sul sito senza DPR di recepimento del contratto 2025-2027 (SIULP, pagina del 28/9 riletta: atteso entro la prima metà di novembre, passaggio in CdM e Corte dei conti ancora da fare; archivio flash SIULP fermo al 24/7). SILF, USIF e SINAFI: nessun comunicato nuovo su contratto o pensione. Tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Mercati: BTP 10 anni aggiornato al 4,32% (chiusura 6/11, ANSA + QuiFinanza); altri valori invariati (nessun dato nuovo con due fonti). Prodotti invariati. Volontariato: non è lunedì, già fatto il 2/11. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati MEF, NoiPA, INPS, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
+  },
+  {
+   "at": "2026-11-08T01:01:00+01:00",
+   "notizie": 0,
+   "note": "giro di domenica 8/11 (1:01): nessuna notizia nuova. Ricerche su Gazzetta, SINAFI, SIULP e USIF e sul tema DPR/previdenza dedicata: nessun DPR di recepimento 2025-2027 in Gazzetta, nessun comunicato nuovo e verificabile rispetto al 7/11. Tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Mercati e prodotti invariati (nessun dato nuovo con due fonti). Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati le altre fonti"
   }
  ],
  "mercati": [
