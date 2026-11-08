@@ -1,310 +1,357 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-08T05:09+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-08T13:30+01:00",
   "nota": "Edizione della mattina dell'8 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-manovra-audizioni",
-        "t": "Manovra, da lunedì le audizioni in Parlamento e venerdì 13 il confronto a Palazzo Chigi",
-        "s": "Da lunedì 9 a giovedì 12 novembre le commissioni Bilancio di Camera e Senato ascoltano enti e parti sociali sulla legge di bilancio; giovedì tocca al ministro Giorgetti. Venerdì 13 il Governo incontra imprese, categorie e sindacati. Meloni, a Verona, ha detto che difesa e sanità non sono in alternativa.",
-        "d": "2026-11-07",
+        "id": "it-cyber",
+        "t": "Hacker contro Tajani e cantiere del Brennero: Piantedosi convoca il Comitato per la sicurezza",
+        "s": "Tajani denuncia che i suoi dati circolano sul dark web e lo lega al sostegno italiano all'Ucraina. La società della Galleria di Base del Brennero conferma un attacco informatico del 17 ottobre. Il ministro dell'Interno riunisce il Comitato per l'ordine e la sicurezza martedì 10 novembre.",
+        "d": "2026-11-08",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/manovra-lunedi-al-via-le-audizioni-attese-imprese-banche-sindacati-e-regioni_0ec0aa84-e641-47e8-af76-d966564ce5a0.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_a6695c00-6b7a-4dd2-926d-c94b2efad7f7.html"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/07/cyberattacks-target-italian-foreign-minister-and-company-behind-brenner-base-tunnel-projec",
+            "l": "en"
           }
         ]
       },
       {
-        "id": "it-pensioni-risparmi",
-        "t": "Pensioni, Il Fatto: risparmi per 100 miliardi entro il 2036; Salvini promette Quota 64 nel 2027",
-        "s": "Secondo il quotidiano le manovre dal 2022 pesano soprattutto sui pensionati con redditi alti e medi. Lo Spi Cgil stima perdite per chi prende 2.700 euro al mese. Salvini sostiene che nel 2027 Quota 64 supererà la legge Fornero; il fondo previsto è di 850 milioni.",
+        "id": "it-manovra",
+        "t": "Manovra 2027: critiche da sindacati, Comuni e assicurazioni, audizioni da lunedì alla Camera",
+        "s": "Cisl contesta flat tax per gli autonomi, stretta sulle pensioni e tagli alla scuola; Anci e assicurazioni chiedono un confronto. Le audizioni in commissione Bilancio della Camera partono lunedì 9 novembre; venerdì 13 sindacati e imprese sono convocati a Palazzo Chigi.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/07/manovra-sotto-assedio.-anche-cisl-e-assicurazioni-contro_2efcbae9-1991-46ee-9bc2-974537302281.html"
+          }
+        ]
+      },
+      {
+        "id": "it-gualtieri",
+        "t": "Gualtieri annuncia la ricandidatura al Campidoglio con una coalizione allargata a M5s e Azione",
+        "s": "Il sindaco di Roma Roberto Gualtieri dichiara che si ripresenterà alle comunali, con un'alleanza più ampia del centrosinistra che comprende anche Movimento 5 Stelle e Azione.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/07/gualtieri-si-ricandida-al-campidoglio-con-il-campo-larghissimo_0f4fc042-27c3-44be-a704-866450fec849.html"
+          }
+        ]
+      },
+      {
+        "id": "it-lazio-sanraffaele",
+        "t": "Lazio condannata a pagare 77 milioni al San Raffaele; le opposizioni fermano il pagamento di 82",
+        "s": "Secondo Il Fatto Quotidiano la Regione Lazio dovrà versare 77 milioni al San Raffaele del gruppo Angelucci. La giunta Rocca intendeva pagarne 82; le opposizioni sono intervenute per fermare questa ipotesi.",
         "d": "2026-11-08",
         "fonti": [
           {
             "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/in-edicola/articoli/2026/11/08/pensioni-100-miliardi-di-risparmi-entro-il-2036/8564445/"
-          }
-        ]
-      },
-      {
-        "id": "it-altieri-anac",
-        "t": "Anac, Altieri ritira la disponibilità dopo le critiche delle opposizioni; Meloni difende la scelta del Governo",
-        "s": "Trifone Altieri, indicato dalla Lega alla presidenza dell'Autorità anticorruzione, ha rinunciato dopo un confronto con la premier e i vicepremier, per ragioni di opportunità. Pd, M5s e Avs chiedevano di annullare anche la nomina di Centemero alla Consob. Meloni aveva detto che la scelta spettava al Governo.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/06/opposizioni-allattacco-su-altieri-allanac-meloni-era-nelle-nostre-competenze_f62f5871-1581-45e0-8e5f-a5550e6e6e2b.html"
-          },
-          {
-            "n": "il Giornale",
-            "url": "https://www.ilgiornale.it/news/governo/meloni-in-sella-fissati-col-voto-anac-altieri-fa-un-passo-indietro/"
-          }
-        ]
-      },
-      {
-        "id": "it-hacker-tajani",
-        "t": "Hacker filorussi mettono una taglia su Tajani e Lo Voi; indaga la procura di Roma",
-        "s": "Il gruppo Noname057(16) diffonde da circa due settimane dati e offre denaro per informazioni su Tajani, Lo Voi e sul capo della Polizia postale Gabrielli. Tajani ha confermato la diffusione dei dati e ha detto di non farsi intimidire; Meloni ha espresso solidarietà. Intanto il gestore del tunnel del Brennero ha segnalato un attacco informatico del 17 ottobre.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/taglia-degli-hacker-sul-dark-web-su-tajani-e-lo-voi.-cyberattacco-alla_2902e339-ba05-423b-b761-27735ead1323.html"
+            "url": "https://www.ilfattoquotidiano.it/2026/11/08/regione-lazio-condannata-a-pagare-77-milioni-al-san-raffaele-di-angelucci-rocca-ne-voleva-versare-82-le-opposizioni-lo-fermano/8563619/"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-israele-eisenkot",
-        "t": "Israele, Herzog sceglie Eisenkot per formare il governo; Netanyahu chiede un esecutivo di unità nazionale",
-        "s": "Il presidente incaricherà formalmente Gadi Eisenkot oggi alle 17: ha 28 giorni, prorogabili di 14. Lo hanno indicato partiti con 67 deputati, mentre 46 hanno indicato Netanyahu, che propone un governo di unità nazionale senza i partiti arabi.",
-        "d": "2026-11-08",
+        "id": "mo-cracovia",
+        "t": "Sparatoria a Cracovia: sei morti in piazza, tra i presenti 34 liceali italiani salvi",
+        "s": "Sabato un venticinquenne polacco ha sparato sui passanti nella piazza principale con un fucile semiautomatico: sei vittime, circa quindici feriti. Altri tre corpi trovati a casa sua. Per Tusk è terrorismo; il ministro dell'Interno parla di ideologie di estrema destra. Gli studenti di Albano Laziale sono al sicuro.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/2026/11/07/israele-eisenkot-governo-incarico-notizie/8564397/"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/cracovia-6-persone-uccise-e-almeno-15-ferite-in-una-sparatoria-in-centro_11361587-bf90-4d62-b3eb-4175e14055f6.html"
           },
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/07/netanyahu-chiede-un-governo-di-unita-nazionale_cd9ca7fa-957d-4b0a-bfcc-8b3fa3b9803e.html"
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/07/at-least-five-killed-in-shooting-in-krakow-polish-police-say",
+            "l": "en"
           }
         ]
       },
       {
-        "id": "mo-cracovia",
-        "t": "Cracovia, spari sulla folla in piazza: cinque morti e circa quindici feriti, Tusk parla di attentato",
-        "s": "Sabato pomeriggio un uomo in abiti militari ha sparato dalla sua auto in piazza Rynek Główny ed è stato fermato dalla polizia. È un cittadino polacco e agiva da solo. Il premier ha definito l'accaduto un attentato; le indagini proseguono.",
-        "d": "2026-11-08",
+        "id": "mo-iran-usa",
+        "t": "Raid Usa a Qeshm e negoziati con Teheran: Washington divisa tra escalation e accordo",
+        "s": "Dopo un attacco di pochi minuti contro le difese aeree dell'isola iraniana, Trump parla di azione «minore» e dice che l'Iran vuole un accordo. Il Qatar smentisce il fallimento dei colloqui; nell'amministrazione c'è chi spinge per nuove azioni militari e chi per sanzioni e intesa.",
+        "d": "2026-11-07",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://it.euronews.com/2026/11/07/polonia-spari-sulla-folla-a-cracovia-5-morti-tusk-parla-di-attentato",
-            "l": "it"
+            "url": "https://www.euronews.com/2026/11/07/us-launches-new-targeted-strikes-on-iran-as-trump-claims-progress-in-talks-with-tehran",
+            "l": "en"
           },
           {
-            "n": "ANSA (ANSAmed)",
-            "url": "https://www.ansa.it/ansamed/it/notizie/rubriche/politica/2026/11/08/notiziario-ansamed_ed3b1de8-fd5b-4557-b708-de9d3e855e11.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/07/liran-esercito-piu-forte-dallinizio-della-guerra.-attacco-rapido-usa_d3eb6266-aaec-4271-9d11-336fd196698b.html"
           }
         ]
       },
       {
-        "id": "mo-iran-qeshm",
-        "t": "Iran, nuove esplosioni sull'isola di Qeshm: Trump parla di attacchi «minori» e di trattative con Teheran",
-        "s": "Il presidente americano ha confermato nuovi raid sull'isola iraniana e ha detto che Teheran vuole ancora un accordo, mentre proseguono i colloqui mediati dal Qatar. L'agenzia iraniana Irna segnala altre esplosioni vicino a Jask, Sirik e Bandar Abbas.",
-        "d": "2026-11-08",
+        "id": "mo-ucraina",
+        "t": "Kiev colpita da 36 missili balistici: Zelensky parla di KN-23 nordcoreani contro le centrali elettriche",
+        "s": "Nella notte di sabato la Russia ha lanciato 36 missili balistici contro Kiev e dintorni, quattro intercettati. Colpite sottostazioni e un ponte della capitale, con problemi a riscaldamento e acqua. Zelensky chiede più intercettori e collega gli attacchi ai prossimi colloqui ad Abu Dhabi.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/7/trump-confirms-new-us-strikes-on-irans-qeshm-island",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/07/russia-fires-north-korean-missiles-at-key-ukrainian-energy-facility-zelenskyy-says",
             "l": "en"
           },
           {
-            "n": "Al Jazeera (diretta)",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/8/iran-war-live-explosions-hit-qeshm-us-moves-to-block-land-supply-routes",
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/nuovo-attacco-missilistico-su-kiev.-situazione-energetica-estremamente-difficile_13a8100b-3b2c-44f6-850d-ef81b4af5cab.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-israele",
+        "t": "Israele: Herzog affida a Eisenkot l'incarico di formare il governo dopo il voto del 27 ottobre",
+        "s": "Nessuna coalizione ha la maggioranza alla Knesset. L'ex capo di stato maggiore Gadi Eisenkot ha 28 giorni, prorogabili di 14, per riuscirci; se fallisce, il presidente potrebbe tentare con Netanyahu e poi indire nuove elezioni.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/herzog-affida-a-eisenkot-lincarico-di-formare-il-governo-in-israele_a23fdf32-f6f2-45a5-ac13-96235962585a.html"
+          },
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/8/the-anti-netanyahu-can-gadi-eisenkot-give-the-world-a-different-israel",
             "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-trump-veto",
+        "t": "Trump ai sostenitori dopo le elezioni di metà mandato: userò il veto, il movimento Maga resta",
+        "s": "In un messaggio ai suoi elettori il presidente dice che nei prossimi due anni difenderà i risultati ottenuti e bloccherà l'agenda dei democratici, ricordando di avere potere di veto. Euronews colloca il messaggio dopo la vittoria democratica alle midterm.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/08/trump-ai-sostenitori-usero-il-potere-di-veto-maga-non-molla-se-risultati-deludenti_217d82e7-6eb8-4712-ae99-53db47194642.html"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-iran-iron-gate",
-        "t": "Al Jazeera: gli Usa creano la «Task Force Iron Gate» contro le rotte terrestri dell'Iran",
-        "s": "Il Comando centrale americano, con base a Tampa, vuole fermare il passaggio di armi e materiali sanzionati attraverso i confini terrestri e il Caspio, ampliando il blocco navale. Da luglio sono state deviate 147 navi commerciali e cinque disabilitate perché non hanno rispettato gli ordini.",
-        "d": "2026-11-08",
+        "id": "es-francia",
+        "t": "Francia, protesta sociale e Mélenchon presenta il programma per le presidenziali",
+        "s": "Euronews racconta un movimento di studenti delle superiori che si allarga al carovita. A Le Bourget Mélenchon propone salario minimo a 1.700 euro e pensione a 60 anni con 40 di contributi; nei sondaggi è secondo con circa il 18%, dietro Le Pen al 35-37%.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/8/us-launches-task-force-to-disrupt-irans-land-based-supply-routes",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-yemen-taiz",
-        "t": "Yemen, missile su un mercato a Taiz: decine di vittime mentre l'offensiva governativa continua",
-        "s": "Governo e ribelli huthi si accusano a vicenda per il colpo al mercato. Dall'inizio dell'escalation l'Onu conta oltre 323.000 sfollati, mentre circa 800.000 persone sono isolate a Taiz dall'assedio; molti ospedali sono chiusi.",
-        "d": "2026-11-08",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/7/dozens-killed-as-humanitarian-crisis-mounts-in-yemen-what-next-for-war",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-cracovia-stampa",
-        "t": "Cracovia sulla stampa estera: sei morti e 15 feriti per Al Jazeera, solidarietà europea",
-        "s": "Al Jazeera riporta almeno sei morti e 15 feriti, due poliziotti compresi, uno in condizioni critiche. Tusk elogia la risposta «eroica» della polizia; Kallas, Zelensky e l'ambasciatore americano esprimono vicinanza alla Polonia. Il bilancio varia tra le testate.",
-        "d": "2026-11-08",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/7/casualties-reported-after-shooting-in-polands-krakow",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/07/melenchon-presents-party-manifesto-as-social-unrest-continues-across-france",
             "l": "en"
           },
           {
-            "n": "Euronews (spagnolo)",
-            "url": "https://es.euronews.com/2026/11/07/tiroteo-mortal-en-el-centro-de-cracovia-al-menos-5-muertos-y-mas-de-10-heridos",
-            "l": "es"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/al-via-manifestazione-a-parigi-e-in-decine-di-citta-francesi-gilet-gialli-a-concorde_2512b182-5718-410c-86bb-9c42b570373b.html"
+          }
+        ]
+      },
+      {
+        "id": "es-canarie",
+        "t": "Canarie: El Hierro dichiara l'emergenza per l'ondata di sbarchi di migranti",
+        "s": "Secondo Al Jazeera, a inizio novembre sono arrivate oltre 3.300 persone su circa 30 barche nell'isola di 11.400 abitanti. Il governo regionale chiede aiuto a Madrid. Da gennaio a ottobre gli arrivi in Spagna restano però il 5,5% in meno rispetto al 2025.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/8/canary-islands-el-hierro-declares-emergency-amid-migrant-refugee-influx",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-papa-uruguay",
+        "t": "Papa Leone XIV in Uruguay: 40.000 persone a Paysandú, poi il viaggio prosegue in Argentina",
+        "s": "Nel sesto viaggio apostolico il Papa ha invitato a costruire la pace davanti a una folla di 40.000 persone. Domenica lascia l'Uruguay per l'Argentina, come riferisce la stampa italiana.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/07/peace-is-possible-and-we-are-called-to-build-it-pope-leo-xiv-says-in-uruguay",
+            "l": "en"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/ultimo-giorno-in-uruguay-per-il-papa-oggi-vola-in-argentina_b1a9c1ef-f58d-4638-863e-926dd7986a78.html"
           }
         ]
       }
     ],
     "economia": [
       {
-        "id": "ec-accise-gasolio",
-        "t": "Gasolio, scade lo sconto sulle accise: da oggi possibili rincari senza proroga",
-        "s": "Il taglio di 4,9 centesimi al litro, deciso il 28 ottobre e finanziato con 38,7 milioni, è scaduto l'8 novembre e in Gazzetta non c'è una proroga. Il 7 novembre il gasolio self costava in media 2,224 euro al litro; il price cap delle compagnie dovrebbe contenere gli aumenti.",
+        "id": "ec-accise",
+        "t": "Scaduto il taglio delle accise sul gasolio: mancata proroga in Gazzetta, rischio rincari",
+        "s": "Lo sconto di 4,9 centesimi al litro, in vigore dal 28 ottobre, è terminato a mezzanotte del 7 novembre perché il decreto di proroga non è comparso in Gazzetta Ufficiale. Il gasolio rischia di costare di più già da oggi.",
         "d": "2026-11-08",
         "fonti": [
           {
-            "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/2026/11/07/accise-gasolio-scadenza-prezzi-notizie/8564288/"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/07/rischio-rincari-per-il-gasolio-da-domani-in-gu-non-ce-proroga-taglio-accise_d507854b-172b-4e83-b142-79fdc1bc11ac.html"
           },
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/canale_motori/notizie/mondo_motori/2026/11/07/niente-proroga-sulle-accise-rischio-rincari-del-gasolio-_622eb62a-12b6-4716-8e39-b9ed79ac363a.html"
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/in-edicola/articoli/2026/11/08/carburanti-il-governo-ferma-gli-sconti-sul-diesel/8564450/"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-metro-orari",
-        "t": "Metro di Torino, da domenica 8 novembre torna l'orario serale completo",
-        "s": "Dopo la riduzione del maggio 2023 per i lavori al sistema di segnalamento, la linea 1 tornerà a servire fino alle 00:30 da martedì a giovedì, la domenica e nei festivi, con ultime partenze a mezzanotte. Invariati venerdì e sabato (fino all'1:30) e il lunedì (stop alle 22).",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/10/28/torino-dall8-novembre-la-metro-torna-allorario-serale-completo_a60ad358-e285-4986-b49a-2cd7305bd407.html"
-          }
-        ]
-      },
-      {
-        "id": "to-cantieri-32mln",
-        "t": "Torino, piano cantieri da lunedì 9 novembre: 32 milioni per asfalti e sicurezza del Po",
-        "s": "Fondi del programma «Torino Cambia» (Fondazione CRT) finanziano riasfaltature in via Germagnano, corso Re Umberto e corso Novara, oltre alla stabilizzazione della sponda del Po in viale Turr per circa 60 giorni. Proseguono i lavori di Iren in corso Mediterraneo e di Smat in via Palli, chiusa fino al 12 dicembre.",
+        "id": "to-bilancio",
+        "t": "Torino, bilancio 2027-2029: tariffe bloccate, disavanzo sceso da 705 a 496 milioni",
+        "s": "Il sindaco Lo Russo e l'assessora Nardelli presentano il bilancio: nessun aumento di tariffe e canoni, sostegni ISEE invariati. Giunta il 10 novembre, commissioni dal 17, voto finale in Sala Rossa il 14 dicembre.",
         "d": "2026-11-07",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/06/leggi-notizia/argomenti/viabilita-1/articolo/maxi-piano-cantieri-a-torino-32-milioni-per-riasfaltare-le-strade-e-mettere-in-sicurezza-il-po.html"
-          }
-        ],
-        "link": [
-          {
-            "n": "Corso Vittorio: riaperta la carreggiata centrale, lavori sui binari del 15",
-            "url": "https://www.torinoggi.it/2026/11/06/leggi-notizia/argomenti/viabilita-1/articolo/riaperta-la-carreggiata-centrale-di-corso-vittorio-continuano-i-lavori-sui-binari-del-15.html"
+            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/politica-11/articolo/torino-presenta-il-bilancio-2027-2029-conti-in-ripresa-nessun-aumeto-e-tariffe-bloccate-per-le-fa.html"
           }
         ]
       },
       {
-        "id": "to-egizio-ricerca",
-        "t": "Museo Egizio, lunedì in Consiglio dei ministri la trasformazione in ente pubblico di ricerca",
-        "s": "La ministra dell'Università Anna Maria Bernini ha annunciato che il Consiglio dei ministri di lunedì esaminerà il riconoscimento del Museo Egizio di Torino come ente pubblico di ricerca.",
-        "d": "2026-11-06",
+        "id": "to-corteo",
+        "t": "A Torino corteo di migliaia contro carovita e riarmo, guidato dagli agricoltori",
+        "s": "In piazza agricoltori con un trattore, studenti, lavoratori della logistica e il comitato dei teleriscaldati: chiedono fondi per salari, scuola e sanità. Simbolico rogo di bollette alle 17:10. Nessun incidente riferito.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/bernini-lunedi-in-cdm-museo-egizio-come-ente-pubblico-di-ricerca_75b3bb11-af26-415d-af1a-e3c55e05e3fb.html"
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/2026/11/08/protesta-contro-riarmo-carovita-torino-studenti-agricoltori-video/8564588/"
+          },
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cronaca-11/articolo/solo-il-popolo-salva-il-popolo-partita-la-marcia-contro-carovita-e-riarmo.html"
           }
         ]
       },
       {
-        "id": "to-bernini-campus",
-        "t": "Torino, la ministra Bernini incontra gli studenti contrari all'occupazione del Campus",
-        "s": "Durante la visita in città la ministra ha visto gli universitari che si oppongono all'occupazione del Campus; in mattinata alcuni studenti avevano tentato di contestarla.",
+        "id": "to-einaudi",
+        "t": "Campus Einaudi occupato: Fuan, Regione e ministra Bernini chiedono all'ateneo di liberare gli spazi",
+        "s": "Il Fuan incontra Bernini, Cirio e Marrone. Cirio offre il Centro congressi regionale come aula per 500 studenti; Marrone chiede alla rettrice Prandi di liberare le palazzine. Obiettivo Studenti è contrario all'occupazione ma anche a sgomberi forzati.",
         "d": "2026-11-06",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/bernini-incontra-a-torino-gli-studenti-contrari-alloccupazione-campus_ce534a40-ebf7-4403-88b4-100395542f67.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/06/leggi-notizia/argomenti/scuola-e-lavoro/articolo/campus-einaudi-occupato-si-alza-pressione-sulla-rettrice-prandi-fuan-cirio-e-marrone-incontrano.html"
           }
         ]
       },
       {
-        "id": "to-santanna-chirurgia",
-        "t": "Ospedale Sant'Anna di Torino, 3,8 milioni per la chirurgia ginecologica",
-        "s": "Un finanziamento di 3,8 milioni di euro è destinato alla chirurgia ginecologica dell'ospedale Sant'Anna di Torino, secondo quanto riferito il 6 novembre.",
+        "id": "to-egizio",
+        "t": "Museo Egizio verso lo status di ente pubblico di ricerca, Bernini al Consiglio dei ministri",
+        "s": "La ministra dell'Università annuncia un provvedimento per trasformare il museo torinese in ente pubblico di ricerca; il testo sarà portato all'esame del Consiglio dei ministri.",
         "d": "2026-11-06",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/ospedale-santanna-di-torino-38-milioni-per-la-chirurgia-ginecologica_ef5eaaee-d2b6-4726-8a2e-406a1bf3bb61.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/06/leggi-notizia/argomenti/attualita-31/articolo/museo-egizio-presto-ente-pubblico-di-ricerca-bernini-portero-il-provvedimento-in-consiglio-dei.html"
+          }
+        ]
+      },
+      {
+        "id": "to-fuochi",
+        "t": "Borgo Filadelfia: 188 chili di fuochi d'artificio in casa, un 44enne denunciato",
+        "s": "Gli agenti hanno sequestrato i materiali pirotecnici in salotto e cantina di un'abitazione del quartiere; l'uomo è stato denunciato.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cronaca-11/articolo/188-chili-di-fuochi-dartificio-in-salotto-e-in-cantina-44enne-incastrato-e-denunciato-a-borgo-fila.html"
           }
         ]
       }
     ],
     "piemonte": [
       {
-        "id": "pi-terzo-valico",
-        "t": "Novi Ligure, il sindaco incontra i sindacati sulle criticità legate al Terzo Valico",
-        "s": "Il sindaco di Novi Ligure ha visto le organizzazioni sindacali per discutere i problemi legati ai lavori del Terzo Valico ferroviario, secondo l'ANSA del 6 novembre.",
-        "d": "2026-11-06",
+        "id": "pi-colletta",
+        "t": "Colletta alimentare sabato 14 novembre: in Piemonte 1.300 supermercati e oltre 12.000 volontari",
+        "s": "Nel 2025 la regione ha raccolto 691 tonnellate di cibo, distribuito a più di 111.000 persone da 560 organizzazioni. La spesa si può donare online dal 2 novembre.",
+        "d": "2026-11-08",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/novi-ligure-sindaco-incontra-sindacati-per-criticita-terzo-valico_710b9936-577e-4ed1-8f8c-24788ee127bb.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/08/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/aiutare-chi-e-in-difficolta-il-14-novembre-torna-la-giornata-della-colletta-alimentare.html"
           }
         ]
       },
       {
-        "id": "pi-crosetto-alessandria",
-        "t": "Il ministro Crosetto ad Alessandria in visita alla redazione del Piccolo",
-        "s": "Il ministro della Difesa Guido Crosetto ha visitato ad Alessandria la redazione del quotidiano locale il Piccolo.",
-        "d": "2026-11-06",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/crosetto-ad-alessandria-in-visita-alla-redazione-del-piccolo_b64711ff-3e3f-42e1-ba39-d9e320f1a168.html"
-          }
-        ]
-      },
-      {
-        "id": "pi-lupo-piano",
-        "t": "Piemonte, un piano regionale per gestire il lupo: stimati circa 464 esemplari",
-        "s": "L'assessore Bongioanni annuncia un piano con regole generali che permetterebbe di intervenire sui conflitti con l'uomo senza chiedere ogni volta il parere preventivo dell'Ispra. Bozza attesa a fine gennaio, poi consultazione pubblica e approvazione in Consiglio regionale.",
+        "id": "pi-asti-aula",
+        "t": "Asti: aula consiliare riaperta ma inaccessibile, l'assessora in carrozzina segue la seduta da remoto",
+        "s": "Dopo tre anni di lavori l'aula di piazza San Secondo è stata riaperta, ma un ascensore guasto impedisce l'accesso a chi ha disabilità motorie. L'opposizione parla di discriminazione; l'assessora Zollo parla di sfortunata coincidenza.",
         "d": "2026-11-07",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/04/bongioanni-il-piemonte-e-al-lavoro-per-la-gestione-del-lupo_95d0320c-289a-4599-98fb-5f239fb8815f.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/aula-inaccessibile-ad-asti-assessora-in-carrozzina-collegata-da-remoto_2a6c322a-9f0f-4650-9ebd-d9d815ff229d.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-atp-isola-bella",
+        "t": "Il trofeo delle Nitto ATP Finals esposto sull'Isola Bella, sul Lago Maggiore",
+        "s": "Fino a lunedì il trofeo resta a Palazzo Borromeo, ultima tappa di un tour partito a settembre. Le Finals si giocano a Torino dal 15 al 22 novembre.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/isola-bella-il-trofeo-delle-atp-finals-e-arrivato-sul-lago-maggiore_043d56ec-6c42-4250-99d6-deea88a32b25.html"
+          },
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/nitto-atp-finals-2026"
           }
         ]
       }
     ],
     "cultura": [
       {
-        "id": "cu-premio-cardinale",
-        "t": "A Torino nasce il Premio Claudia Cardinale: il primo riconoscimento ad Alma Noce",
-        "s": "Nasce un premio dedicato all'attrice e il primo riconoscimento va ad Alma Noce, come riferisce ANSA.",
-        "d": "2026-11-05",
+        "id": "cu-contemporanea",
+        "t": "Chiuso il Contemporanea Film Festival al Circolo dei lettori, premiata la regia femminile",
+        "s": "Si è conclusa la quinta edizione della rassegna torinese: premi alle registe e ai cortometraggi vincitori.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/11/05/a-torino-nasce-il-premio-claudia-cardinale-il-primo-riconoscimento-va-ad-alma-noce_1a9ce4f9-ecdc-4b6b-8f7d-1fe0018bbf3d.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cultura-e-spettacoli-7/articolo/contemporanea-film-festival-trionfano-a-south-facing-window-e-sante-la-regia-femminile-premia.html"
           }
         ]
       }
     ],
     "sport": [
       {
-        "id": "sp-bagnaia",
-        "t": "MotoGP, Bagnaia si rompe il piede nella Sprint del Qatar e sarà operato in Italia",
-        "s": "Il pilota torinese è caduto nella gara Sprint del Gran Premio del Qatar riportando la frattura di un piede; sarà sottoposto a intervento chirurgico in Italia.",
-        "d": "2026-11-08",
+        "id": "sp-roma",
+        "t": "Serie A: la Roma batte il Sassuolo 3-0 e si avvicina alla vetta",
+        "s": "Successo netto dei giallorossi sabato, che accorciano le distanze dalla testa della classifica.",
+        "d": "2026-11-07",
         "fonti": [
           {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/sport/altro/incidente-bagnaia-sprint-qatar-piede-rotto.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/07/serie-a-la-roma-ne-fa-3-al-sassuolo-e-avvicina-la-vetta_c28c3f9c-9303-4700-a3ee-f99f68e3995f.html"
+          }
+        ]
+      },
+      {
+        "id": "sp-motogp",
+        "t": "MotoGP in Qatar: Marquez vince la sprint ed è vicino al titolo, Bagnaia si infortuna",
+        "s": "Lo spagnolo precede Di Giannantonio nella gara sprint e si avvicina al mondiale; Bagnaia cade e si fa male.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/11/07/motogp-marquez-vince-la-sprint-in-qatar-davanti-a-di-giannantonio_38ec265f-4ca2-4dea-abfd-38c2a768f664.html"
           }
         ]
       }
@@ -325,34 +372,6 @@
         "dove": "Chieri (Torino)"
       },
       {
-        "id": "ev-tartufo-rivalba",
-        "t": "Fiera del Tartufo Bianco d'Alba delle Colline Torinesi",
-        "s": "Fiera dedicata al tartufo bianco nelle colline torinesi.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/fiera-nazionale-del-tartufo-bianco-d-alba-delle-colline-torinesi"
-          }
-        ],
-        "quando": "fino a dom 8 nov",
-        "dove": "Rivalba (Torino)"
-      },
-      {
-        "id": "ev-moncalieri-jazz",
-        "t": "Moncalieri Jazz Festival 2026: ultimo giorno",
-        "s": "Rassegna di concerti jazz che si chiude domenica.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/moncalieri-jazz-festival-2026"
-          }
-        ],
-        "quando": "fino a dom 8 nov",
-        "dove": "Moncalieri (Torino)"
-      },
-      {
         "id": "ev-luci-artista",
         "t": "Luci d'Artista: installazioni luminose in tutta la città",
         "s": "Le opere luminose d'artista illuminano le vie e le piazze di Torino per l'inverno.",
@@ -368,32 +387,78 @@
         "costo": "gratis (all'aperto)"
       },
       {
-        "id": "ev-courts",
-        "t": "Courts of Champions: la mostra sulla storia delle Nitto ATP Finals",
-        "s": "Mostra legata alle ATP Finals di Torino.",
-        "d": "2026-11-07",
+        "id": "ev-atp-finals",
+        "t": "Nitto ATP Finals: da domenica 15 novembre i migliori otto del tennis a Torino",
+        "s": "Il torneo di fine stagione riunisce gli otto migliori singolaristi e le otto migliori coppie di doppio.",
+        "d": "2026-11-08",
         "fonti": [
           {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/courts-of-champions-2026"
+            "n": "Visit Piemonte",
+            "url": "https://www.visitpiemonte.com/nitto-atp-finals-2026"
           }
         ],
-        "quando": "fino al 22 nov",
-        "dove": "Torino"
+        "quando": "dal 15 al 22 nov",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "biglietti sul sito ufficiale"
       },
       {
-        "id": "ev-basilico-ivrea",
-        "t": "Gabriele Basilico: paesaggio industriale Olivetti",
-        "s": "Mostra fotografica sul paesaggio industriale Olivetti di Ivrea.",
-        "d": "2026-11-07",
+        "id": "ev-abilmente",
+        "t": "Abilmente Autunno: la fiera di hobbistica e creatività al Lingotto",
+        "s": "Salone dedicato ad hobby creativi, fai da te e arti manuali.",
+        "d": "2026-11-08",
         "fonti": [
           {
             "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/gabriele-basilico-paesaggio-industriale-olivetti"
+            "url": "https://turismotorino.org/en/visit/events/abilmente-autunno-torino-2026-"
           }
         ],
-        "quando": "dal 5 nov al 31 dic",
-        "dove": "Ivrea (Torino)"
+        "quando": "12-14 nov 9:30-18; dom 15 nov 9:30-17",
+        "dove": "Lingotto Fiere, via Nizza 294, Torino",
+        "costo": "13 € alla cassa (ridotto 11 €); online 11 €"
+      },
+      {
+        "id": "ev-tmm",
+        "t": "Torino Music Meeting: quattro giorni di musica diffusa nei luoghi culturali della città",
+        "s": "Evento in formula diffusa tra diverse sedi culturali torinesi; programma e orari sul sito degli organizzatori.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/it/visita/eventi/torino-music-meeting-tmm-2026"
+          }
+        ],
+        "quando": "dal 12 al 15 nov",
+        "dove": "Sedi varie, Torino"
+      },
+      {
+        "id": "ev-asti-natale",
+        "t": "Magico Paese di Natale ad Asti: inaugurazione venerdì 13 novembre",
+        "s": "Mercatini e iniziative natalizie nel centro storico.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/al-via-ad-asti-la-ventesima-edizione-del-magico-paese-di-natale_021f61c6-de2e-4d9d-81cc-5786467ddda3.html"
+          }
+        ],
+        "quando": "dal 13 nov al 20 dic (inaugurazione ven 13 nov, 18:30)",
+        "dove": "Centro storico, Asti",
+        "costo": "mercatini gratuiti"
+      },
+      {
+        "id": "ev-kusama",
+        "t": "Yayoi Kusama. Infinity Mirrored Room alle OGR di Torino",
+        "s": "Mostra con la Infinity Mirrored Room dell'artista giapponese; dettagli e orari sulla pagina di Turismo Torino.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/yayoi-kusama-infinity-mirrored-room"
+          }
+        ],
+        "quando": "fino al 25 feb 2027, apertura settimanale",
+        "dove": "OGR, Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
       },
       {
         "id": "ev-banksy",
@@ -411,21 +476,6 @@
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
       },
       {
-        "id": "ev-asti-natale",
-        "t": "Magico Paese di Natale ad Asti: ventesima edizione",
-        "s": "Mercatini e iniziative natalizie nel centro storico.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/al-via-ad-asti-la-ventesima-edizione-del-magico-paese-di-natale_021f61c6-de2e-4d9d-81cc-5786467ddda3.html"
-          }
-        ],
-        "quando": "dal 13 nov al 20 dic (inaugurazione ven 13 nov, 18:30)",
-        "dove": "Centro storico, Asti",
-        "costo": "mercatini gratuiti"
-      },
-      {
         "id": "ev-wpp",
         "t": "World Press Photo Exhibition 2026 a Torino",
         "s": "Mostra dei premi di fotogiornalismo, aperta ogni settimana; altre mostre in corso (Kusama alle OGR, Jessica Lange, Tiepolo) nell'agenda di Turismo Torino.",
@@ -439,6 +489,35 @@
         "quando": "fino al 13 dic",
         "dove": "Torino",
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-egizio-sguardi",
+        "t": "Sguardi contemporanei sull'antico al Museo Egizio",
+        "s": "Percorso espositivo che mette in dialogo la collezione del museo con lo sguardo contemporaneo.",
+        "d": "2026-11-08",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/sguardi-contemporanei-sull-antico"
+          }
+        ],
+        "quando": "fino all'11 gen 2027, apertura settimanale",
+        "dove": "Museo Egizio, Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-courts",
+        "t": "Courts of Champions: la mostra sulla storia delle Nitto ATP Finals",
+        "s": "Mostra legata alle ATP Finals di Torino.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/courts-of-champions-2026"
+          }
+        ],
+        "quando": "fino al 22 nov",
+        "dove": "Torino"
       }
     ],
     "spettacoli": [
@@ -505,21 +584,6 @@
         "quando": "Ideal: 17:30, 19:20, 21:35 (orari indicativi)",
         "dove": "Cinema Ideal",
         "costo": "da 9 €"
-      },
-      {
-        "id": "spe-tea-orgasmo",
-        "t": "Orgasmo: commedia satirica di Niccolò Fettarappa al Teatro Gobetti",
-        "s": "In un futuro vicino una coppia in crisi vive in un mondo dove il desiderio sparisce, mentre una giornalista e uno zoologo indagano su orsi in preda a un'inconsueta frenesia. Con Gianni D'Addario, Niccolò Fettarappa, Lorenzo Guerrieri e Rebecca Sisti.",
-        "d": "2026-11-06",
-        "fonti": [
-          {
-            "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/en/cartellone/orgasmo-3-8-nov-2026/"
-          }
-        ],
-        "quando": "ven 6 nov 20:45; sab 7 nov 19:30; dom 8 nov 16:00",
-        "dove": "Teatro Gobetti, Torino",
-        "costo": "prezzo non indicato sulla pagina; biglietti su Vivaticket"
       },
       {
         "id": "spe-tea-cattivo",
@@ -841,12 +905,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-01T05:40+01:00",
-      "edizione": "mattina",
-      "notizie": 21,
-      "note": "Fonti lette: ANSA, AGI, Torino Oggi, Euronews (en), Al Jazeera (en). Ricerca rifiutata: reuters, bbc, guardian, lemonde, elpais, spiegel (query combinata). Lettura non riuscita: torinotoday.it, comune.torino.it (robots)."
-    },
-    {
       "at": "2026-11-01T21:50+01:00",
       "edizione": "sera",
       "notizie": 24,
@@ -954,6 +1012,12 @@
       "edizione": "mattina",
       "notizie": 56,
       "note": "Fonti lette: Il Fatto Quotidiano, ANSA, Adnkronos (solo ricerca), Al Jazeera (en), Euronews (it), ComingSoon, MYmovies, Turismo Torino. Ricerca rifiutata: reuters.com. Lettura non riuscita: torinotoday.it (eventi e concerti), teatrostabiletorino.it (pagina), eventi.comune.torino.it (robots), mymovies.it Cinema Ideal (vuota), alcune pagine ANSA. thespacecinema.it non consultato. Concerti copiati dall'edizione precedente (non è lunedì)."
+    },
+    {
+      "at": "2026-11-08T13:30+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 60,
+      "note": "Fonti lette: ANSA, Il Fatto Quotidiano, Torino Oggi, Euronews (en), Al Jazeera (en), Turismo Torino. Ricerca di reuters, bbc e altre grandi testate estere non tentata (bloccate nei giri precedenti). Lettura non riuscita: thespacecinema.it e teatrostabiletorino.it (errore del sito). Cinema e teatro dall'edizione del mattino, tolto lo spettacolo finito; eventi aggiornati; concerti copiati (non è lunedì)."
     }
   ]
 }
