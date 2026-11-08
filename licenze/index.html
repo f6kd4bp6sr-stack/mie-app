@@ -248,6 +248,13 @@ a.btn{text-decoration:none;display:inline-block}
 .cd-opt.ok{border-color:var(--ok);background:var(--ok-bg);font-weight:700}.cd-opt.no{border-color:var(--warn);background:var(--warn-bg)}.cd-opt:disabled{cursor:default;color:var(--ink)}
 .cd-e{margin:8px 0 0}.cd-done{font-weight:700;color:var(--ok);margin:10px 0 0}.cd-nov{align-items:flex-start}.cd-nov p{margin:4px 0}.cd-nov small{display:block;margin-top:3px}.pill.cd-new{background:var(--cd-bg);color:var(--cd)}
 .cd-let{margin-bottom:12px}.cd-lt{display:block;font-size:17px;margin-top:2px}.cd-let small{display:block;color:var(--muted)}.cd-ris{background:var(--cd-bg);border-radius:12px;padding:10px 14px;margin-top:10px}.cd-ris p{margin:6px 0;line-height:1.55}.cd-ris ul{margin:6px 0;padding-left:20px}
+/* 🤖 Cultura digitale su due colonne (8/11/2026): riquadri che si aprono e chiudono, con un disegno per scheda */
+.cd-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start;margin:0 0 16px}.cd-g>.card{margin:0}@media (max-width:700px){.cd-g{grid-template-columns:1fr}}
+.cd-lh{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin:16px 2px 8px;font-size:18px;font-weight:800}.cd-lh .lbl{margin:0;font-weight:600}
+details.cd-w>summary{align-items:flex-start}details.cd-w>summary>h3{display:block;font-size:16px;line-height:1.3}.cd-wt{display:block}.cd-wm{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-top:5px;font-size:13px;font-weight:600;color:var(--muted)}.cd-wm .pill{font-size:12.5px}
+.cd-wb{max-height:62vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}.cd-wb h4{margin:14px 0 4px;font-size:15px}.cd-wb>p:first-of-type{margin-top:4px}.cd-wb .cd-q:first-of-type{border-top:0}
+.cd-svg{width:100%;height:auto;display:block;margin:2px 0 8px}.cd-intro .cd-svg{max-height:260px;margin:0}
+.pill.cd-todo{background:var(--cd-bg);color:var(--cd)}details.cd-fatta{box-shadow:inset 4px 0 0 var(--ok),var(--shadow)}details.cd-lock>summary{opacity:.75}
 .st-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.st-ed{background:var(--st-bg);color:var(--st);font-size:13.5px}
 .st-old{background:var(--soon-bg);color:var(--soon);border-radius:10px;padding:8px 12px;font-weight:700}
 .st-n{padding:12px 0;border-top:1px solid var(--line)}.st-n:first-child{border-top:0;padding-top:2px}.st-t{font-size:17px;margin:0 0 4px;line-height:1.3;color:var(--ink)}.st-top .st-t{font-size:20px}
@@ -260,7 +267,7 @@ a.btn{text-decoration:none;display:inline-block}
 /* 9 sezioni nel menu (7/11/2026, 🎟️ Tempo libero): un po' più compatte per stare su una riga con l'iPad in orizzontale */
 @media(min-width:900px){.sect{gap:4px}.sect button{padding:8px 8px;gap:4px;font-size:14.5px}.sect .gear{padding:8px 10px}}
 </style>
-<script>window.APP_VERSION="76f3960206";window.APP_BUILD="2026-11-07T16:59+02:00";</script>
+<script>window.APP_VERSION="52a52fbf7f";window.APP_BUILD="2026-11-08T10:17+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -1979,22 +1986,36 @@ function vCd(){if(!cdPronto())return lazyAtt();const c=CD(),due=cdDue().length,t
   if(cdV==="perc")o+=cdSel?cdSchedaV(cdScheda(cdSel)):cdPercorso();else if(cdV==="let")o+=cdLetture();else if(cdV==="rip")o+=cdRipasso();else o+=cdNovita();
   return o;}
 
-function cdPercorso(){const c=CD();let o="";
+/* 8/11/2026: schede, letture e novità sono riquadri che si aprono e chiudono, su due colonne (come l'Ikigai nel Metodo);
+   chiusi all'inizio, lo stato resta su questo iPad (pn-fold, chiavi «cd|s:…», «cd|l:…», «cd|n:…»). Disegni in sezioni/cultura_img.js (caricato con i dati). */
+let CD_IMG={},CD_INTRO="";const cdScr={},CD_LV=["","🌱","🌿","🌳"];
+const cdW=(k,h3,body,cls,at)=>`<details class="card k-cd fold cd-w${cls?" "+cls:""}" data-k="${k}" data-fk="cd|${k}"${at||""}${foldSt["cd|"+k]===true?" open":""}><summary><h3>${h3}</h3></summary><div class="cd-wb" data-k2="${k}">${body}</div></details>`;
+const cdTesto=s=>`${s.testo.map(p=>`<p>${esc(p)}</p>`).join("")}<div class="cd-punti"><b>📌 Da ricordare</b><ul>${s.punti.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div>`;
+const cdProvaH=(s,full)=>`<p style="margin-top:0">${esc(s.prova.t)}</p><pre class="cd-prompt"${full?' id="cdPrompt"':""}>${esc(s.prova.prompt)}</pre><div class="dia-bar"><button class="btn pri" data-cdcopy="${s.id}">📋 Copia la richiesta</button><span class="lbl">poi incollala in un assistente (Claude, ChatGPT, Gemini o Copilot) e sostituisci i [segnaposto]</span></div><p class="lbl" style="margin:8px 0 0">👀 ${esc(s.prova.guarda)}</p>`;
+function cdQuizH(s){const c=CD(),A=cdAns[s.id]||{};
+  return `${s.quiz.map((q,k)=>{const a=A[q.id],opts=cdMix(q,q.id);return `<div class="cd-q"><b>${k+1}. ${esc(q.q)}</b><div class="cd-opts">${opts.map(x=>`<button class="cd-opt${a?(x===q.ok?" ok":x===a?" no":""):""}" data-cdq="${q.id}" data-cds="${s.id}" data-cdx="${esc(x)}"${a===q.ok?" disabled":""}>${esc(x)}</button>`).join("")}</div>${a?`<p class="cd-e">${a===q.ok?"✅ Giusto.":"❌ Non è questa: riprova."} ${a===q.ok?esc(q.e):""}</p>`:""}</div>`;}).join("")}
+    ${c.fatte[s.id]?`<p class="cd-done">✓ Scheda fatta il ${fmt(c.fatte[s.id],{day:"numeric",month:"long"})}: le domande tornano nel ripasso.</p>`:""}`;}
+const cdFonti=(s,k)=>s.fonti&&s.fonti.length?`<details class="more" data-k="${k}"><summary>🔎 Fonti</summary><div class="card k-cd nofold">${s.fonti.map(f=>`<div class="row"><div class="grow">${esc(f.c)}</div><a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer">Apri ›</a></div>`).join("")}</div></details>`:"";
+
+function cdPercorso(){let o=`<div class="card k-cd cd-intro"><h3>🧭 Come funziona il percorso</h3><div class="wide">${CD_INTRO}</div></div>`;
   CD_LIV.forEach(l=>{const ap=cdAperto(l),L=cdDel(l);
-    o+=`<div class="card k-cd${ap?"":" cd-lock"}"><h3>${["","🌱","🌿","🌳"][l]} Livello ${l} · ${esc(CD_D.livelli[l])} <span class="lbl">${ap?cdFatteL(l)+" di "+L.length+" fatte":"si apre dopo "+CD_SBLOCCO+" schede del livello "+(l-1)+" (ne hai fatte "+cdFatteL(l-1)+")"}</span></h3>
-      ${L.map(s=>{const T=CD_D.temi[s.tema],f=c.fatte[s.id];return `<div class="row"><span class="cd-ic">${s.ic}</span><div class="grow"><b>${esc(s.t)}</b><small>${T[0]} ${esc(T[1])}${f?" · ✓ fatta il "+fmt(f,{day:"numeric",month:"short"}):c.lette[s.id]?" · letta, mancano le domande":""}</small></div>${ap?`<button class="btn sm${f?"":" pri"}" data-cdopen="${s.id}">${f?"Rivedi":"Apri"}</button>`:`<span class="pill">🔒</span>`}</div>`;}).join("")}</div>`;});
+    o+=`<div class="cd-lh${ap?"":" cd-lock"}">${CD_LV[l]} Livello ${l} · ${esc(CD_D.livelli[l])} <span class="lbl">${ap?cdFatteL(l)+" di "+L.length+" fatte":"si apre dopo "+CD_SBLOCCO+" schede del livello "+(l-1)+" (ne hai fatte "+cdFatteL(l-1)+")"}</span></div>
+      <div class="cd-g">${L.map(s=>cdBox(s,ap)).join("")}</div>`;});
   return o;}
+function cdBox(s,ap){const c=CD(),T=CD_D.temi[s.tema],f=c.fatte[s.id];
+  const st=!ap?`<span class="pill">🔒 bloccata</span>`:f?`<span class="pill ok">✓ fatta il ${fmt(f,{day:"numeric",month:"short"})}</span>`:`<span class="pill cd-todo">da fare</span>${c.lette[s.id]?`<span>letta, mancano le domande</span>`:""}`;
+  const h=`<span class="cd-wt">${s.ic} ${esc(s.t)}</span><span class="cd-wm"><span>${CD_LV[s.liv]} Livello ${s.liv} · ${T[0]} ${esc(T[1])}</span>${st}</span>`;
+  const b=(CD_IMG[s.id]||"")+(!ap?`<p class="lbl">🔒 Si apre dopo ${CD_SBLOCCO} schede del livello ${s.liv-1} (ne hai fatte ${cdFatteL(s.liv-1)}).</p>`:
+    cdTesto(s)+(s.prova?`<h4>🧪 Prova adesso</h4>${cdProvaH(s,false)}`:"")+`<h4>❓ Tre domande</h4>${cdQuizH(s)}`+cdFonti(s,"sf:"+s.id)+`<div class="dia-bar"><button class="btn sm" data-cdopen="${s.id}">⤢ Apri la scheda a pagina intera</button></div>`);
+  return cdW("s:"+s.id,h,b,f?"cd-fatta":ap?"":"cd-lock",ap?` data-cdw="${s.id}"`:"");}
 
 function cdSchedaV(s){if(!s)return cdPercorso();const c=CD(),T=CD_D.temi[s.tema],L=cdDel(s.liv),i=L.indexOf(s),prev=L[i-1],next=L[i+1];
   if(!c.lette[s.id]){c.lette[s.id]=today();save();}
-  let o=`<button class="btn sm" data-cdback="1">← Percorso</button><div class="card k-cd nofold cd-sch" style="margin-top:10px"><div class="lbl">${["","🌱","🌿","🌳"][s.liv]} Livello ${s.liv} · ${T[0]} ${esc(T[1])}</div><h2 class="cd-t">${s.ic} ${esc(s.t)}</h2>${s.testo.map(p=>`<p>${esc(p)}</p>`).join("")}
-    <div class="cd-punti"><b>📌 Da ricordare</b><ul>${s.punti.map(p=>`<li>${esc(p)}</li>`).join("")}</ul></div></div>`;
-  if(s.prova)o+=`<div class="card k-cd nofold"><h3>🧪 Prova adesso</h3><p style="margin-top:0">${esc(s.prova.t)}</p><pre class="cd-prompt" id="cdPrompt">${esc(s.prova.prompt)}</pre><div class="dia-bar"><button class="btn pri" data-cdcopy="1">📋 Copia la richiesta</button><span class="lbl">poi incollala in un assistente (Claude, ChatGPT, Gemini o Copilot) e sostituisci i [segnaposto]</span></div><p class="lbl" style="margin:8px 0 0">👀 ${esc(s.prova.guarda)}</p></div>`;
+  let o=`<button class="btn sm" data-cdback="1">← Percorso</button><div class="card k-cd nofold cd-sch" style="margin-top:10px"><div class="lbl">${CD_LV[s.liv]} Livello ${s.liv} · ${T[0]} ${esc(T[1])}</div><h2 class="cd-t">${s.ic} ${esc(s.t)}</h2>${cdTesto(s)}</div>`;
+  if(s.prova)o+=`<div class="card k-cd nofold"><h3>🧪 Prova adesso</h3>${cdProvaH(s,true)}</div>`;
   /* quiz */
-  const A=cdAns[s.id]||{};
-  o+=`<div class="card k-cd nofold"><h3>❓ Tre domande</h3>${s.quiz.map((q,k)=>{const a=A[q.id],opts=cdMix(q,q.id);return `<div class="cd-q"><b>${k+1}. ${esc(q.q)}</b><div class="cd-opts">${opts.map(x=>`<button class="cd-opt${a?(x===q.ok?" ok":x===a?" no":""):""}" data-cdq="${q.id}" data-cds="${s.id}" data-cdx="${esc(x)}"${a===q.ok?" disabled":""}>${esc(x)}</button>`).join("")}</div>${a?`<p class="cd-e">${a===q.ok?"✅ Giusto.":"❌ Non è questa: riprova."} ${a===q.ok?esc(q.e):""}</p>`:""}</div>`;}).join("")}
-    ${c.fatte[s.id]?`<p class="cd-done">✓ Scheda fatta il ${fmt(c.fatte[s.id],{day:"numeric",month:"long"})}: le domande tornano nel ripasso.</p>`:""}</div>`;
-  if(s.fonti&&s.fonti.length)o+=`<details class="more"><summary>🔎 Fonti</summary><div class="card k-cd nofold">${s.fonti.map(f=>`<div class="row"><div class="grow">${esc(f.c)}</div><a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer">Apri ›</a></div>`).join("")}</div></details>`;
+  o+=`<div class="card k-cd nofold"><h3>❓ Tre domande</h3>${cdQuizH(s)}</div>`;
+  o+=cdFonti(s,"sfp:"+s.id);
   o+=`<div class="dia-bar" style="margin-top:12px">${prev?`<button class="btn" data-cdopen="${prev.id}">← ${esc(prev.t)}</button>`:""}${next?`<button class="btn" data-cdopen="${next.id}">${esc(next.t)} →</button>`:""}</div>`;
   return o;}
 
@@ -2008,7 +2029,9 @@ function cdNovita(){const N=cdNov(),V=(N.voci||[]).slice().sort((a,b)=>a.d<b.d?1
   let o="";
   if(!V.length)return o+`<p class="empty">${N.updated?"Nessuna novità.":"Le novità arrivano da internet: riapri la pagina quando sei collegato."}</p>`;
   const cdRow=v=>`<div class="row cd-nov"><span class="pill${v.d>seen?" cd-new":""}">${fmt(v.d,{day:"numeric",month:"short",year:"numeric"})}</span><div class="grow"><b>${CD_D.temi[v.tema]?CD_D.temi[v.tema][0]+" ":""}${esc(v.t)}</b><p>${esc(v.s)}</p><small>👉 ${esc(v.perche)}</small><small><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${esc(v.fonte)} ›</a></small></div></div>`;
-  o+=`<div class="cols4">${Object.keys(CD_D.temi).map(k=>{const L=V.filter(v=>v.tema===k);return `<div class="card k-cd nofold"><h3>${CD_D.temi[k][0]} ${esc(CD_D.temi[k][1])} <span class="lbl" style="margin-left:auto">${L.length}</span></h3>${L.map(cdRow).join("")||'<p class="empty">Nessuna novità.</p>'}</div>`;}).join("")}</div>`;
+  /* 8/11/2026: un riquadro per tema, su due colonne, chiuso all'inizio */
+  o+=`<div class="cd-g">${Object.keys(CD_D.temi).map(k=>{const L=V.filter(v=>v.tema===k),nw=L.filter(v=>v.d>seen).length;
+    return cdW("n:"+k,`<span class="cd-wt">${CD_D.temi[k][0]} ${esc(CD_D.temi[k][1])}</span><span class="cd-wm"><span class="pill">${L.length} ${L.length===1?"notizia":"notizie"}</span>${nw?`<span class="pill cd-new">${nw} ${nw===1?"nuova":"nuove"}</span>`:""}${L[0]?`<span>l'ultima: ${fmt(L[0].d,{day:"numeric",month:"short",year:"numeric"})}</span>`:""}</span>`,L.map(cdRow).join("")||'<p class="empty">Nessuna novità.</p>',"cd-nw");}).join("")}</div>`;
   o+=`<p class="lbl">Aggiornate ${N.updated?fmt(N.updated.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):"—"} dall'attività programmata, una volta al mese, solo da fonti verificate. Non sono consigli.</p>`;
   return o;}
 
@@ -2020,10 +2043,12 @@ function cdLetture(){const c=CD(),St=c.lib||{},L=(CD_D.letture||[]).filter(x=>!c
   let o=`<p class="lbl" style="margin-top:0">Libri e risorse scelti per andare oltre le schede: per ognuno un riassunto e le idee chiave, poi decidi tu se leggerlo. ${n} lette su ${(CD_D.letture||[]).length}.</p>`;
   o+=`<div class="seg" role="tablist" style="margin:0 0 12px;width:max-content;max-width:100%">${[["","Tutte"],["da","Da leggere"],["lette","Lette"],["gratis","Gratuite"]].map(([k,t])=>`<button data-cdlf="${k}" class="${cdLF===k?"on":""}">${t}</button>`).join("")}</div>`;
   if(!L.length)return o+`<p class="empty">Nessuna lettura qui.</p>`;
-  o+=L.map(x=>{const T=CD_D.temi[x.tema]||["",""],st=St[x.id],op=cdLOpen===x.id;return `<div class="card k-cd nofold cd-let"><div class="row" style="border:0;padding:0;align-items:flex-start"><div class="grow"><div class="lbl">${TIP[x.tipo]||""} · ${T[0]} ${esc(T[1])} · livello ${x.liv}${x.gratis?" · gratuita":""}</div><b class="cd-lt">${esc(x.t)}</b><small>${esc(x.autore)} · ${esc(x.editore)}, ${x.anno}</small></div>${st==="letto"?`<span class="pill cd-new">✓ letta</span>`:st==="voglio"?`<span class="pill">🔖 da leggere</span>`:""}</div>
-    <p style="margin:8px 0 0">${esc(x.perche)}</p>
-    ${op?`<div class="cd-ris"><b>📝 Riassunto</b>${x.riassunto.map(p=>`<p>${esc(p)}</p>`).join("")}<b>💡 Idee chiave</b><ul>${x.idee.map(i=>`<li>${esc(i)}</li>`).join("")}</ul><p class="lbl">📍 ${esc(x.dove)} · <a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">Apri ›</a></p></div>`:""}
-    <div class="dia-bar"><button class="btn sm${op?"":" pri"}" data-cdlo="${x.id}">${op?"Chiudi il riassunto":"📝 Leggi il riassunto"}</button>${st!=="voglio"&&st!=="letto"?`<button class="btn sm" data-cdls="${x.id}:voglio">🔖 Da leggere</button>`:""}${st!=="letto"?`<button class="btn sm ok" data-cdls="${x.id}:letto">✓ Letta</button>`:`<button class="btn sm" data-cdls="${x.id}:">↩︎</button>`}</div></div>`;}).join("");
+  /* 8/11/2026: ogni lettura è un riquadro (chiuso all'inizio): aprendolo si leggono riassunto e idee chiave */
+  o+=`<div class="cd-g">`+L.map(x=>{const T=CD_D.temi[x.tema]||["",""],st=St[x.id];
+    return cdW("l:"+x.id,`<span class="cd-wt">${esc(x.t)}</span><span class="cd-wm"><span>${TIP[x.tipo]||""} · ${T[0]} ${esc(T[1])} · livello ${x.liv}${x.gratis?" · gratuita":""}</span>${st==="letto"?`<span class="pill cd-new">✓ letta</span>`:st==="voglio"?`<span class="pill">🔖 da leggere</span>`:""}</span>`,
+    `<small class="cd-la">${esc(x.autore)} · ${esc(x.editore)}, ${x.anno}</small><p style="margin:8px 0 0">${esc(x.perche)}</p>
+    <div class="cd-ris"><b>📝 Riassunto</b>${x.riassunto.map(p=>`<p>${esc(p)}</p>`).join("")}<b>💡 Idee chiave</b><ul>${x.idee.map(i=>`<li>${esc(i)}</li>`).join("")}</ul><p class="lbl">📍 ${esc(x.dove)} · <a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">Apri ›</a></p></div>
+    <div class="dia-bar">${st!=="voglio"&&st!=="letto"?`<button class="btn sm" data-cdls="${x.id}:voglio">🔖 Da leggere</button>`:""}${st!=="letto"?`<button class="btn sm ok" data-cdls="${x.id}:letto">✓ Letta</button>`:`<button class="btn sm" data-cdls="${x.id}:">↩︎</button>`}</div>`,st==="letto"?"cd-let cd-fatta":"cd-let");}).join("")+`</div>`;
   return o+`<p class="lbl">Riassunti scritti per questa app e controllati da un revisore; non sostituiscono la lettura. Molti libri si trovano anche nelle biblioteche civiche.</p>`;}
 /* riquadro nel riepilogo di oggi */
 function cdCard(){if(!cdPronto())return "";const due=cdDue().length,nn=cdNovNew(),c=CD(),last=Object.values(c.fatte).sort().pop(),nx=CD_LIV.filter(cdAperto).map(cdDel).flat().find(s=>!c.fatte[s.id]),rows=[];
@@ -2040,7 +2065,7 @@ function bindCd(){const R=()=>render(),qa=s=>document.querySelectorAll(s),c=CD()
   qa("[data-cdls]").forEach(b=>b.onclick=()=>{const [id,st]=b.dataset.cdls.split(":");c.lib=c.lib||{};if(st)c.lib[id]=st;else delete c.lib[id];save();toast(st==="letto"?"✓ Segnata come letta":st?"🔖 Nella lista da leggere":"Tolta dalle lette");R();});
   qa("[data-cdopen]").forEach(b=>b.onclick=()=>{cdSel=b.dataset.cdopen;R();window.scrollTo(0,0);});
   qa("[data-cdback]").forEach(b=>b.onclick=()=>{cdSel=null;R();});
-  qa("[data-cdcopy]").forEach(b=>b.onclick=async()=>{const s=cdScheda(cdSel);if(s&&s.prova&&await cdCopy(s.prova.prompt))toast("📋 Richiesta copiata");else toast("Copia non riuscita: seleziona il testo a mano");});
+  qa("[data-cdcopy]").forEach(b=>b.onclick=async()=>{const s=cdScheda(b.dataset.cdcopy)||cdScheda(cdSel);if(s&&s.prova&&await cdCopy(s.prova.prompt))toast("📋 Richiesta copiata");else toast("Copia non riuscita: seleziona il testo a mano");});
   qa("[data-cdq]").forEach(b=>b.onclick=()=>{const s=cdScheda(b.dataset.cds),qid=b.dataset.cdq,x=b.dataset.cdx,q=s.quiz.find(z=>z.id===qid);
     const A=cdAns[s.id]=cdAns[s.id]||{};A[qid]=x;
     if(s.quiz.every(z=>A[z.id]===z.ok)&&!c.fatte[s.id]){c.fatte[s.id]=today();s.quiz.forEach(z=>{if(!c.srs[z.id])c.srs[z.id]={n:0,due:add(today(),CD_STEP[0])};});save();toast("✓ Scheda fatta");
@@ -2049,6 +2074,10 @@ function bindCd(){const R=()=>render(),qa=s=>document.querySelectorAll(s),c=CD()
   qa("[data-cdr]").forEach(b=>b.onclick=()=>{if(!cdRip)return;cdRip.a=b.dataset.cdr;const {q}=cdQ(cdRip.id),S=c.srs[cdRip.id]||{n:0};
     if(cdRip.a===q.ok)S.n=Math.min(S.n+1,CD_STEP.length-1);else S.n=0;S.due=add(today(),CD_STEP[S.n]);S.ult=today();c.srs[cdRip.id]=S;save();R();});
   qa("[data-cdrnext]").forEach(b=>b.onclick=()=>{cdRip=null;R();});
+  /* aprire il riquadro di una scheda vale come aprirla (come prima a pagina intera): «letta, mancano le domande» */
+  qa("details[data-cdw]").forEach(d=>d.addEventListener("toggle",()=>{const id=d.dataset.cdw;if(d.open&&!c.lette[id]){c.lette[id]=today();save();}}));
+  /* lo scorrimento dentro i riquadri resta dov'era quando la pagina si ridisegna (per esempio dopo una risposta) */
+  qa(".cd-wb").forEach(w=>{const k=w.dataset.k2;if(cdScr[k])w.scrollTop=cdScr[k];w.addEventListener("scroll",()=>{cdScr[k]=w.scrollTop;},{passive:true});});
 }
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-cdgo]");if(!b)return;cdV=b.dataset.cdgo;cdSel=b.dataset.cdid||null;go("cd");});
 
