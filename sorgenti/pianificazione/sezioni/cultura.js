@@ -1,5 +1,5 @@
 /* ---------- 🤖 CULTURA DIGITALE: che cos'è l'intelligenza artificiale e come usarla bene ----------
-   Percorso a livelli (2 Intermedio · 3 Avanzato; il Base è stato tolto il 27/10/2026, completato): l'Avanzato si apre con 4 schede fatte dell'Intermedio.
+   Percorso a livelli (1 Base solo per 💻 Programmare app, dall'8/11/2026 · 2 Intermedio · 3 Avanzato; il Base generale è stato tolto il 27/10/2026, completato): l'Avanzato si apre con 4 schede fatte dell'Intermedio.
    📚 Letture: libri e risorse ufficiali con riassunto e idee chiave (P.cd.lib: voglio / letto).
    Ogni scheda: testo breve, «da ricordare», 🧪 Prova adesso (richiesta pronta da copiare, con [segnaposto] al posto dei dati),
    3 domande; quando sono giuste tutte e tre la scheda è fatta e le domande entrano nel 🔁 ripasso a intervalli (1, 3, 7, 14, 30, 60 giorni).

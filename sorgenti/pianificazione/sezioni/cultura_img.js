@@ -88,5 +88,57 @@ CD_IMG={
  T(260,22,15,"un chatbot «amico» imita l'affetto: le persone vere no",{b:800})+B(22,38,150,128,C.k)+E(97,80,30,"🤖")+T(97,112,14,"«sempre",{b:700})+T(97,130,14,"d'accordo»",{b:700})+T(97,154,14,"imita l'affetto",{b:800,c:C.p})
  +B(184,38,150,128,C.g)+E(259,84,36,"👨‍👧")+T(259,120,15,"persone vere:",{b:800})+T(259,142,14,"genitori, amici",{b:700})
  +B(346,38,152,128,C.u)+T(422,62,15,"controlli",{b:800})+T(360,92,14,"⏱️ tempo",{a:"start"})+T(360,118,14,"✅ app approvate",{a:"start"})+T(360,144,14,"🧰 filtri",{a:"start"})
- +T(260,190,14,"sotto i 14 anni: consenso dei genitori",{b:800}))
+ +T(260,190,14,"sotto i 14 anni: consenso dei genitori",{b:800})),
+/* 8/11/2026: 💻 Programmare app (livello Base) e 3 schede nuove di livello 3 */
+"a1-web":S("Tre ingredienti di una web app: HTML la struttura, CSS l'aspetto, JavaScript il comportamento; sotto, la memoria del browser dove restano i dati",
+ T(260,22,15,"tre ingredienti e una memoria",{b:800})
+ +[["🧱","HTML","la struttura",C.u],["🎨","CSS","l'aspetto",C.k],["⚙️","JavaScript","il comportamento",C.w]].map(([e,a,b,c],i)=>{const x=22+i*162;return B(x,36,150,100,c)+E(x+75,70,30,e)+T(x+75,102,16,a,{b:800})+T(x+75,124,14,b,{b:600});}).join("")
+ +B(22,148,476,40,C.g)+T(260,173,14,"💾 la memoria del browser: i dati restano sul dispositivo",{b:700})),
+"a1-richiesta":S("Tre tappe: una richiesta chiara con cosa, per chi e un esempio; poi un piano da correggere; solo dopo il via, il codice",
+ T(260,22,15,"una richiesta chiara, poi il piano",{b:800})
+ +[["📝","la richiesta","cosa e per chi",C.u],["🗺️","il piano","da correggere",C.v],["💻","il codice","dopo il tuo via",C.g]].map(([e,a,b,c],i)=>{const x=22+i*168;return B(x,38,140,112,c)+E(x+70,74,30,e)+T(x+70,104,15,a,{b:800})+T(x+70,126,14,b,{b:600});}).join("")
+ +A(166,94,190,"currentColor")+A(334,94,358,"currentColor")
+ +T(260,184,14,"prima il piano, poi il codice",{b:800})),
+"a1-passi":S("Un ciclo corto: una modifica, salva e ricarica, prova con il dito sull'iPad vero; solo se funziona si passa alla modifica successiva",
+ T(260,22,15,"un cambiamento alla volta, poi la prova",{b:800})
+ +[["✏️","una modifica",C.u],["💾","salva e ricarica",C.w],["👆","prova sull'iPad",C.g]].map(([e,a,c],i)=>{const x=22+i*168;return B(x,38,140,84,c)+E(x+70,76,30,e)+T(x+70,108,14,a,{b:800});}).join("")
+ +A(166,80,190,"currentColor")+A(334,80,358,"currentColor")
+ +`<path d="M432,128 Q260,186 92,134" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".55"/><polygon points="92,134 104,126 104,140" fill="currentColor" opacity=".55"/>`
+ +T(260,194,14,"funziona? solo allora passa alla prossima",{b:700})),
+"a1-versioni":S("Una linea del tempo di versioni salvate: primo passo, aggiunta della lista, una modifica rotta; si torna all'ultima versione che funzionava",
+ T(260,22,15,"ogni commit è un punto sicuro",{b:800})
+ +`<line x1="40" y1="78" x2="480" y2="78" stroke="currentColor" stroke-width="3" opacity=".35"/>`
+ +[[90,"commit 1","primo passo",C.g],[230,"commit 2","aggiunta lista",C.g],[370,"commit 3","modifica rotta ✗",C.p]].map(([x,a,b,c])=>T(x,54,14,a,{b:800})+`<circle cx="${x}" cy="78" r="13" fill="${c}" fill-opacity=".3" stroke="${c}" stroke-width="3"/>`+T(x,112,14,b,{b:600})).join("")
+ +`<path d="M370,124 Q300,176 236,126" fill="none" stroke="${C.g}" stroke-width="3" opacity=".8"/><polygon points="232,122 246,124 238,136" fill="${C.g}" opacity=".8"/>`
+ +T(300,194,14,"torni all'ultima versione che funzionava",{b:800,c:C.g})),
+"a1-segreti":S("A sinistra una chiave scritta nel codice di un progetto pubblico, che chiunque può leggere; a destra la chiave tenuta fuori dal codice e dati inventati per le prove",
+ T(260,22,15,"password e dati veri restano fuori dal codice",{b:800})
+ +B(22,38,232,114,C.p)+E(70,88,34,"🔑")+T(166,80,14,"chiave nel codice",{b:800})+T(166,102,14,"progetto pubblico:",{b:600})+T(138,126,14,"la legge chiunque",{b:800,c:C.p})
+ +B(268,38,230,114,C.g)+E(316,88,34,"🔒")+T(412,80,14,"fuori dal codice",{b:800})+T(412,102,14,"dati inventati",{b:600})+T(412,126,14,"nelle prove",{b:600})
+ +T(260,184,14,"finita online? revocala subito e creane una nuova",{b:800,c:C.p})),
+"a1-errori":S("Un messaggio d'errore da leggere, poi una descrizione chiara all'assistente con cosa volevi, cosa è successo, errore e codice, infine una spiegazione riga per riga",
+ T(260,22,15,"leggi l'errore, descrivilo, chiedi di capire",{b:800})
+ +B(22,38,150,110,C.p)+E(97,76,30,"⚠️")+T(97,108,14,"messaggio",{b:800})+T(97,128,14,"d'errore",{b:800})
+ +A(174,93,194,"currentColor")
+ +B(198,38,158,110,C.u)+T(210,64,14,"📝 descrivi:",{a:"start",b:800})+T(210,88,14,"cosa volevi",{a:"start"})+T(210,108,14,"cosa è successo",{a:"start"})+T(210,128,14,"errore e codice",{a:"start"})
+ +A(358,93,378,"currentColor")
+ +B(382,38,116,110,C.g)+E(440,76,30,"🤖")+T(440,108,14,"spiega ogni",{b:800})+T(440,128,14,"riga",{b:800})
+ +T(260,180,14,"codice che non capisci? non incollarlo",{b:800,c:C.p})),
+"b3-alfabetizza":S("Tre competenze dell'alfabetizzazione sull'IA: capire come funziona, conoscere limiti e rischi, controllare ogni volta; non serve un attestato",
+ T(260,22,15,"capire per usare bene",{b:800})
+ +[["🧠","come","funziona",C.b],["⚠️","limiti","e rischi",C.w],["✅","controlli","ogni volta",C.g]].map(([e,a,b,c],i)=>{const x=22+i*162;return B(x,36,150,112,c)+E(x+75,72,32,e)+T(x+75,106,15,a,{b:800})+T(x+75,128,15,b,{b:800});}).join("")
+ +T(260,184,14,"nessun attestato: contano contesto e rischio",{b:700})),
+"p3-diritti":S("Una persona manda una richiesta al servizio che tratta i dati, che risponde di regola entro un mese; i diritti principali sono accesso, cancellazione e opposizione",
+ T(260,22,15,"scrivi al titolare: accesso, cancellazione, opposizione",{b:800})
+ +E(52,80,36,"🙋")+T(52,110,14,"tu",{b:800})+A(82,72,170)+T(126,62,14,"richiesta",{b:600})
+ +B(176,40,150,94,C.u)+T(251,70,15,"il servizio",{b:800})+T(251,92,14,"(titolare)",{b:600})+T(251,116,14,"risponde",{b:600})
+ +A(328,88,346)
+ +[["👁️","accesso"],["🗑️","cancellazione"],["✋","opposizione"]].map(([e,t],i)=>`<rect x="350" y="${42+i*32}" width="148" height="28" rx="9" fill="${C.g}" fill-opacity=".15" stroke="${C.g}" stroke-opacity=".6" stroke-width="1.5"/>`+T(362,62+i*32,14,e+" "+t,{a:"start",b:700})).join("")
+ +B(22,150,476,34,C.w)+T(260,172,14,"risposta di regola entro un mese · di regola gratuita",{b:700})),
+"k3-foto":S("Prima di pubblicare una foto dei figli: volto coperto, visibile solo a persone fidate, niente inoltro senza consenso; chiediti se a lui da grande piacerà",
+ T(260,22,15,"prima di pubblicare, pensaci",{b:800})
+ +B(22,36,150,112,C.k)+`<rect x="62" y="48" width="70" height="52" rx="6" fill="${C.s}" fill-opacity=".3"/>`+E(97,86,34,"🧒")+`<rect x="80" y="58" width="34" height="34" rx="9" fill="${C.s}" fill-opacity=".8"/>`+T(97,124,14,"volto coperto",{b:800})
+ +B(184,36,150,112,C.g)+E(259,82,34,"👨‍👩‍👧")+T(259,114,14,"solo persone",{b:800})+T(259,134,14,"fidate",{b:800})
+ +B(346,36,152,112,C.p)+E(422,82,34,"🚫")+T(422,114,14,"niente inoltro",{b:800})+T(422,134,14,"senza consenso",{b:800})
+ +T(260,182,14,"a lui, da grande, piacerà?",{b:800}))
 };})();
