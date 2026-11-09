@@ -1,357 +1,233 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-08T13:30+01:00",
+  "edizione": "mattina",
+  "updated": "2026-11-09T05:55+01:00",
   "nota": "Edizione della mattina dell'8 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-cyber",
-        "t": "Hacker contro Tajani e cantiere del Brennero: Piantedosi convoca il Comitato per la sicurezza",
-        "s": "Tajani denuncia che i suoi dati circolano sul dark web e lo lega al sostegno italiano all'Ucraina. La società della Galleria di Base del Brennero conferma un attacco informatico del 17 ottobre. Il ministro dell'Interno riunisce il Comitato per l'ordine e la sicurezza martedì 10 novembre.",
-        "d": "2026-11-08",
+        "id": "it-g7-ibrida",
+        "t": "Tajani porta la guerra ibrida al G7 degli Esteri di Parigi",
+        "s": "Il ministro degli Esteri chiede un segnale forte contro minacce cyber e ibride. La Francia ha accettato di inserire il tema nell'agenda della riunione di oggi. Tajani attribuisce i recenti attacchi a hacker filorussi del gruppo Noname, senza responsabilità statali accertate.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_a6695c00-6b7a-4dd2-926d-c94b2efad7f7.html"
-          },
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/tajani-chiama-il-g7-la-guerra-ibrida-colpisce-la-democrazia-serve-un-segnale-forte_c0006410-7b97-4655-b2c1-a8417994e23a.html"
+          }
+        ]
+      },
+      {
+        "id": "it-allarmi-bomba",
+        "t": "Allarmi bomba sui voli europei: anche Roma-Lisbona e Praga-Roma coinvolti",
+        "s": "Venerdì una telefonata anonima ha messo in allerta un volo Ryanair da Fiumicino, atterrato a Lisbona; un Wizz Air da Praga è stato dirottato a Venezia. Nessun esplosivo trovato. Il giorno prima gli allarmi avevano riguardato almeno 25 voli.",
+        "d": "2026-11-09",
+        "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/07/cyberattacks-target-italian-foreign-minister-and-company-behind-brenner-base-tunnel-projec",
+            "url": "https://www.euronews.com/2026/11/06/bomb-threat-targets-ryanair-flight-to-lisbon-as-scares-continue-across-europe",
             "l": "en"
           }
         ]
       },
       {
-        "id": "it-manovra",
-        "t": "Manovra 2027: critiche da sindacati, Comuni e assicurazioni, audizioni da lunedì alla Camera",
-        "s": "Cisl contesta flat tax per gli autonomi, stretta sulle pensioni e tagli alla scuola; Anci e assicurazioni chiedono un confronto. Le audizioni in commissione Bilancio della Camera partono lunedì 9 novembre; venerdì 13 sindacati e imprese sono convocati a Palazzo Chigi.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/07/manovra-sotto-assedio.-anche-cisl-e-assicurazioni-contro_2efcbae9-1991-46ee-9bc2-974537302281.html"
-          }
-        ]
-      },
-      {
-        "id": "it-gualtieri",
-        "t": "Gualtieri annuncia la ricandidatura al Campidoglio con una coalizione allargata a M5s e Azione",
-        "s": "Il sindaco di Roma Roberto Gualtieri dichiara che si ripresenterà alle comunali, con un'alleanza più ampia del centrosinistra che comprende anche Movimento 5 Stelle e Azione.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/07/gualtieri-si-ricandida-al-campidoglio-con-il-campo-larghissimo_0f4fc042-27c3-44be-a704-866450fec849.html"
-          }
-        ]
-      },
-      {
-        "id": "it-lazio-sanraffaele",
-        "t": "Lazio condannata a pagare 77 milioni al San Raffaele; le opposizioni fermano il pagamento di 82",
-        "s": "Secondo Il Fatto Quotidiano la Regione Lazio dovrà versare 77 milioni al San Raffaele del gruppo Angelucci. La giunta Rocca intendeva pagarne 82; le opposizioni sono intervenute per fermare questa ipotesi.",
-        "d": "2026-11-08",
+        "id": "it-manovra-critiche",
+        "t": "Manovra, dopo le critiche di sindacati e opposizioni il Siulp minaccia la piazza",
+        "s": "Il sindacato di polizia Siulp parla di impegni sulla previdenza dedicata non rispettati e si dice pronto a scendere in piazza. Opposizioni e sindacati contestano sanità, scuola e pensioni; il Governo difende le misure.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/2026/11/08/regione-lazio-condannata-a-pagare-77-milioni-al-san-raffaele-di-angelucci-rocca-ne-voleva-versare-82-le-opposizioni-lo-fermano/8563619/"
+            "url": "https://www.ilfattoquotidiano.it/2026/11/05/il-sindacato-siulp-contro-la-manovra-traditi-gli-impegni-sulla-previdenza-dedicata-pronti-a-scendere-in-piazza/8562140/"
+          },
+          {
+            "n": "Il Fatto Quotidiano",
+            "url": "https://www.ilfattoquotidiano.it/2026/11/01/manovra-legge-di-bilancio-sindacati-caritas-critiche-sanita-scuola-pensioni-notizie/8556881/"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-cracovia",
-        "t": "Sparatoria a Cracovia: sei morti in piazza, tra i presenti 34 liceali italiani salvi",
-        "s": "Sabato un venticinquenne polacco ha sparato sui passanti nella piazza principale con un fucile semiautomatico: sei vittime, circa quindici feriti. Altri tre corpi trovati a casa sua. Per Tusk è terrorismo; il ministro dell'Interno parla di ideologie di estrema destra. Gli studenti di Albano Laziale sono al sicuro.",
-        "d": "2026-11-07",
+        "id": "mo-iran-blocco",
+        "t": "Iran, Trump annuncia in vigore il blocco delle vie di terra",
+        "s": "Il presidente americano dice che il blocco dei rifornimenti terrestri all'Iran è attivo e che nuovi raid sono improbabili se avanzano i negoziati su nucleare e Hormuz. In Iraq un drone ha colpito il giacimento di Khor Mor, con produzione sospesa e oltre il 70% del Kurdistan senza corrente.",
+        "d": "2026-11-09",
         "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/cracovia-6-persone-uccise-e-almeno-15-ferite-in-una-sparatoria-in-centro_11361587-bf90-4d62-b3eb-4175e14055f6.html"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/07/at-least-five-killed-in-shooting-in-krakow-polish-police-say",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-iran-usa",
-        "t": "Raid Usa a Qeshm e negoziati con Teheran: Washington divisa tra escalation e accordo",
-        "s": "Dopo un attacco di pochi minuti contro le difese aeree dell'isola iraniana, Trump parla di azione «minore» e dice che l'Iran vuole un accordo. Il Qatar smentisce il fallimento dei colloqui; nell'amministrazione c'è chi spinge per nuove azioni militari e chi per sanzioni e intesa.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/07/us-launches-new-targeted-strikes-on-iran-as-trump-claims-progress-in-talks-with-tehran",
-            "l": "en"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/07/liran-esercito-piu-forte-dallinizio-della-guerra.-attacco-rapido-usa_d3eb6266-aaec-4271-9d11-336fd196698b.html"
-          }
-        ]
-      },
-      {
-        "id": "mo-ucraina",
-        "t": "Kiev colpita da 36 missili balistici: Zelensky parla di KN-23 nordcoreani contro le centrali elettriche",
-        "s": "Nella notte di sabato la Russia ha lanciato 36 missili balistici contro Kiev e dintorni, quattro intercettati. Colpite sottostazioni e un ponte della capitale, con problemi a riscaldamento e acqua. Zelensky chiede più intercettori e collega gli attacchi ai prossimi colloqui ad Abu Dhabi.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/07/russia-fires-north-korean-missiles-at-key-ukrainian-energy-facility-zelenskyy-says",
-            "l": "en"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/nuovo-attacco-missilistico-su-kiev.-situazione-energetica-estremamente-difficile_13a8100b-3b2c-44f6-850d-ef81b4af5cab.html"
-          }
-        ]
-      },
-      {
-        "id": "mo-israele",
-        "t": "Israele: Herzog affida a Eisenkot l'incarico di formare il governo dopo il voto del 27 ottobre",
-        "s": "Nessuna coalizione ha la maggioranza alla Knesset. L'ex capo di stato maggiore Gadi Eisenkot ha 28 giorni, prorogabili di 14, per riuscirci; se fallisce, il presidente potrebbe tentare con Netanyahu e poi indire nuove elezioni.",
-        "d": "2026-11-08",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/herzog-affida-a-eisenkot-lincarico-di-formare-il-governo-in-israele_a23fdf32-f6f2-45a5-ac13-96235962585a.html"
-          },
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/8/the-anti-netanyahu-can-gadi-eisenkot-give-the-world-a-different-israel",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/9/iran-war-live-trump-says-land-blockade-in-effect-drone-cuts-power-in-iraq",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-trump-veto",
-        "t": "Trump ai sostenitori dopo le elezioni di metà mandato: userò il veto, il movimento Maga resta",
-        "s": "In un messaggio ai suoi elettori il presidente dice che nei prossimi due anni difenderà i risultati ottenuti e bloccherà l'agenda dei democratici, ricordando di avere potere di veto. Euronews colloca il messaggio dopo la vittoria democratica alle midterm.",
-        "d": "2026-11-08",
+        "id": "mo-rubio-ucraina",
+        "t": "Rubio: progressi sulle garanzie di sicurezza per l'Ucraina dopo la guerra",
+        "s": "Il segretario di Stato americano parla di avanzamenti sull'architettura di sicurezza per Ucraina ed Europa e di nuovi colloqui nei prossimi giorni ad Abu Dhabi. Prima di partire per Parigi, dove partecipa al G7 degli Esteri.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/08/trump-ai-sostenitori-usero-il-potere-di-veto-maga-non-molla-se-risultati-deludenti_217d82e7-6eb8-4712-ae99-53db47194642.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/09/rubio-progressi-sullinfrastruttura-di-sicurezza-dopo-la-guerra-in-ucraina_5da65613-14ff-4424-9520-06c11764387b.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-balakliya",
+        "t": "Ucraina, attacco russo su Balakliya nel Kharkiv: tre feriti",
+        "s": "Secondo il capo dell'amministrazione militare locale, nella notte sono stati colpiti il centro della città, edifici residenziali e un'istituzione culturale. Tre persone ferite.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/topnews/2026/11/09/kiev-colpita-dai-russi-la-citta-di-balakliya-nel-kharkiv-tre-feriti_982df3d1-338f-4d00-9017-91ffc14692e3.html"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-francia",
-        "t": "Francia, protesta sociale e Mélenchon presenta il programma per le presidenziali",
-        "s": "Euronews racconta un movimento di studenti delle superiori che si allarga al carovita. A Le Bourget Mélenchon propone salario minimo a 1.700 euro e pensione a 60 anni con 40 di contributi; nei sondaggi è secondo con circa il 18%, dietro Le Pen al 35-37%.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/07/melenchon-presents-party-manifesto-as-social-unrest-continues-across-france",
-            "l": "en"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/07/al-via-manifestazione-a-parigi-e-in-decine-di-citta-francesi-gilet-gialli-a-concorde_2512b182-5718-410c-86bb-9c42b570373b.html"
-          }
-        ]
-      },
-      {
-        "id": "es-canarie",
-        "t": "Canarie: El Hierro dichiara l'emergenza per l'ondata di sbarchi di migranti",
-        "s": "Secondo Al Jazeera, a inizio novembre sono arrivate oltre 3.300 persone su circa 30 barche nell'isola di 11.400 abitanti. Il governo regionale chiede aiuto a Madrid. Da gennaio a ottobre gli arrivi in Spagna restano però il 5,5% in meno rispetto al 2025.",
-        "d": "2026-11-08",
+        "id": "es-moldova-linea",
+        "t": "La Moldova inaugura la linea elettrica da 400 kV con la Romania",
+        "s": "Collega Vulcanesti a Chisinau e la rete moldava a quella europea, riducendo la dipendenza dalla centrale di Cuciurgan in Transnistria. La presidente Sandu dice che il Paese non compra più gas russo e annuncia altre due linee.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/8/canary-islands-el-hierro-declares-emergency-amid-migrant-refugee-influx",
+            "url": "https://www.aljazeera.com/news/2026/11/9/moldova-launches-new-power-line-to-romania-to-cut-reliance-on-russia",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-papa-uruguay",
-        "t": "Papa Leone XIV in Uruguay: 40.000 persone a Paysandú, poi il viaggio prosegue in Argentina",
-        "s": "Nel sesto viaggio apostolico il Papa ha invitato a costruire la pace davanti a una folla di 40.000 persone. Domenica lascia l'Uruguay per l'Argentina, come riferisce la stampa italiana.",
-        "d": "2026-11-08",
+        "id": "es-khor-mor",
+        "t": "La stampa araba segue l'attacco al giacimento di Khor Mor, in Iraq",
+        "s": "Un drone ha sospeso la produzione del giacimento di gas nel Kurdistan iracheno. Il blackout colpisce gran parte della regione, mentre Stati Uniti e Iran trattano su nucleare e Hormuz.",
+        "d": "2026-11-09",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/07/peace-is-possible-and-we-are-called-to-build-it-pope-leo-xiv-says-in-uruguay",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/9/drone-attack-suspends-production-at-iraqs-khor-mor-gasfield",
             "l": "en"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/vaticano/notizie/2026/11/08/ultimo-giorno-in-uruguay-per-il-papa-oggi-vola-in-argentina_b1a9c1ef-f58d-4638-863e-926dd7986a78.html"
           }
         ]
       }
     ],
     "economia": [
       {
-        "id": "ec-accise",
-        "t": "Scaduto il taglio delle accise sul gasolio: mancata proroga in Gazzetta, rischio rincari",
-        "s": "Lo sconto di 4,9 centesimi al litro, in vigore dal 28 ottobre, è terminato a mezzanotte del 7 novembre perché il decreto di proroga non è comparso in Gazzetta Ufficiale. Il gasolio rischia di costare di più già da oggi.",
-        "d": "2026-11-08",
+        "id": "ec-nikkei",
+        "t": "Borsa di Tokyo in rialzo dell'1,86% con il rimbalzo dei titoli tecnologici",
+        "s": "Il Nikkei apre a 58.502 punti dopo il recupero di Wall Street e dei semiconduttori. Lo yen si rafforza a 158,20 sul dollaro.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/07/rischio-rincari-per-il-gasolio-da-domani-in-gu-non-ce-proroga-taglio-accise_d507854b-172b-4e83-b142-79fdc1bc11ac.html"
-          },
-          {
-            "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/in-edicola/articoli/2026/11/08/carburanti-il-governo-ferma-gli-sconti-sul-diesel/8564450/"
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/borsa-tokyo-apertura-in-rialzo-186_8ac37e70-bfef-4627-9b32-cc82f206cf5f.html"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-bilancio",
-        "t": "Torino, bilancio 2027-2029: tariffe bloccate, disavanzo sceso da 705 a 496 milioni",
-        "s": "Il sindaco Lo Russo e l'assessora Nardelli presentano il bilancio: nessun aumento di tariffe e canoni, sostegni ISEE invariati. Giunta il 10 novembre, commissioni dal 17, voto finale in Sala Rossa il 14 dicembre.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/politica-11/articolo/torino-presenta-il-bilancio-2027-2029-conti-in-ripresa-nessun-aumeto-e-tariffe-bloccate-per-le-fa.html"
-          }
-        ]
-      },
-      {
         "id": "to-corteo",
-        "t": "A Torino corteo di migliaia contro carovita e riarmo, guidato dagli agricoltori",
-        "s": "In piazza agricoltori con un trattore, studenti, lavoratori della logistica e il comitato dei teleriscaldati: chiedono fondi per salari, scuola e sanità. Simbolico rogo di bollette alle 17:10. Nessun incidente riferito.",
-        "d": "2026-11-07",
+        "t": "Corteo a Torino contro caro-vita e riarmo, in piazza anche gli agricoltori",
+        "s": "Sabato 7 novembre manifestazione contro il rincaro della vita e le spese militari; sono state bruciate bollette simboliche.",
+        "d": "2026-11-09",
         "fonti": [
           {
-            "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/2026/11/08/protesta-contro-riarmo-carovita-torino-studenti-agricoltori-video/8564588/"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/corteo-contro-caro-vita-e-riarmo-a-torino-in-piazza-anche-agricoltori_4874f7d3-3f3e-491f-8bea-7dbf23408dd0.html"
           },
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cronaca-11/articolo/solo-il-popolo-salva-il-popolo-partita-la-marcia-contro-carovita-e-riarmo.html"
-          }
-        ]
-      },
-      {
-        "id": "to-einaudi",
-        "t": "Campus Einaudi occupato: Fuan, Regione e ministra Bernini chiedono all'ateneo di liberare gli spazi",
-        "s": "Il Fuan incontra Bernini, Cirio e Marrone. Cirio offre il Centro congressi regionale come aula per 500 studenti; Marrone chiede alla rettrice Prandi di liberare le palazzine. Obiettivo Studenti è contrario all'occupazione ma anche a sgomberi forzati.",
-        "d": "2026-11-06",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/06/leggi-notizia/argomenti/scuola-e-lavoro/articolo/campus-einaudi-occupato-si-alza-pressione-sulla-rettrice-prandi-fuan-cirio-e-marrone-incontrano.html"
-          }
-        ]
-      },
-      {
-        "id": "to-egizio",
-        "t": "Museo Egizio verso lo status di ente pubblico di ricerca, Bernini al Consiglio dei ministri",
-        "s": "La ministra dell'Università annuncia un provvedimento per trasformare il museo torinese in ente pubblico di ricerca; il testo sarà portato all'esame del Consiglio dei ministri.",
-        "d": "2026-11-06",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/06/leggi-notizia/argomenti/attualita-31/articolo/museo-egizio-presto-ente-pubblico-di-ricerca-bernini-portero-il-provvedimento-in-consiglio-dei.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/corteo-a-torino-bruciate-bollette-contro-il-carovita_88912461-1a37-4fe8-b801-96842f883f0c.html"
           }
         ]
       },
       {
         "id": "to-fuochi",
-        "t": "Borgo Filadelfia: 188 chili di fuochi d'artificio in casa, un 44enne denunciato",
-        "s": "Gli agenti hanno sequestrato i materiali pirotecnici in salotto e cantina di un'abitazione del quartiere; l'uomo è stato denunciato.",
-        "d": "2026-11-07",
+        "t": "Sequestrati a Torino 188 chili di fuochi d'artificio prima del corteo",
+        "s": "Il materiale è stato trovato in casa di un 44enne durante controlli preventivi legati alla manifestazione.",
+        "d": "2026-11-09",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cronaca-11/articolo/188-chili-di-fuochi-dartificio-in-salotto-e-in-cantina-44enne-incastrato-e-denunciato-a-borgo-fila.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/sequestrati-a-torino-188-chilogrammi-di-fuochi-dartificio-prima-del-corteo_14d85658-8325-4560-b72a-cc913a8b28c1.html"
+          }
+        ]
+      },
+      {
+        "id": "to-santanna",
+        "t": "Ospedale Sant'Anna: 3,8 milioni per la chirurgia ginecologica",
+        "s": "Il finanziamento serve per un nuovo robot chirurgico e sei sale operatorie collegate in rete.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/ospedale-santanna-di-torino-38-milioni-per-la-chirurgia-ginecologica_ef5eaaee-d2b6-4726-8a2e-406a1bf3bb61.html"
+          }
+        ]
+      },
+      {
+        "id": "to-aeroporto",
+        "t": "Aeroporto di Torino, record storico: superati i 5 milioni di passeggeri",
+        "s": "Il traguardo arriva quasi due mesi prima rispetto al primato del 2025.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/aeroporto-di-torino-nuovo-record-storico-superati-i-5-milioni-di-passeggeri_0c9b50a8-3695-4ed1-8486-0c2f27cb65fe.html"
+          }
+        ]
+      },
+      {
+        "id": "to-spaccio",
+        "t": "Torino, sette arresti in tre giorni per spaccio di droga",
+        "s": "Sette misure cautelari eseguite tra giovedì e sabato in città.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/a-torino-sette-arresti-in-tre-giorni-per-spaccio-di-droga_84fb2997-d7c0-47b3-ba4e-0f6f51f63560.html"
           }
         ]
       }
     ],
     "piemonte": [
       {
-        "id": "pi-colletta",
-        "t": "Colletta alimentare sabato 14 novembre: in Piemonte 1.300 supermercati e oltre 12.000 volontari",
-        "s": "Nel 2025 la regione ha raccolto 691 tonnellate di cibo, distribuito a più di 111.000 persone da 560 organizzazioni. La spesa si può donare online dal 2 novembre.",
-        "d": "2026-11-08",
+        "id": "pi-isola-bella",
+        "t": "Il trofeo delle Atp Finals arriva sull'Isola Bella, sul Lago Maggiore",
+        "s": "Il trofeo del torneo di tennis in programma a Torino è stato portato sull'isola borromea.",
+        "d": "2026-11-09",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/08/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/aiutare-chi-e-in-difficolta-il-14-novembre-torna-la-giornata-della-colletta-alimentare.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/isola-bella-il-trofeo-delle-atp-finals-e-arrivato-sul-lago-maggiore_043d56ec-6c42-4250-99d6-deea88a32b25.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-asti-longevita",
+        "t": "Delegazione cinese all'Asl di Asti per studiare la longevità",
+        "s": "La visita ha approfondito i temi dell'assistenza agli anziani e dell'invecchiamento in salute.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/delegazione-cinese-in-visita-allasl-di-asti-focus-sulla-longevita_64c36259-7a8e-448b-861f-ea4150315a07.html"
           }
         ]
       },
       {
         "id": "pi-asti-aula",
-        "t": "Asti: aula consiliare riaperta ma inaccessibile, l'assessora in carrozzina segue la seduta da remoto",
-        "s": "Dopo tre anni di lavori l'aula di piazza San Secondo è stata riaperta, ma un ascensore guasto impedisce l'accesso a chi ha disabilità motorie. L'opposizione parla di discriminazione; l'assessora Zollo parla di sfortunata coincidenza.",
-        "d": "2026-11-07",
+        "t": "Asti, aula consiliare inaccessibile: assessora in carrozzina collegata da remoto",
+        "s": "Un'assessora ha seguito la seduta a distanza perché la sala non era accessibile.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/aula-inaccessibile-ad-asti-assessora-in-carrozzina-collegata-da-remoto_2a6c322a-9f0f-4650-9ebd-d9d815ff229d.html"
-          }
-        ]
-      },
-      {
-        "id": "pi-atp-isola-bella",
-        "t": "Il trofeo delle Nitto ATP Finals esposto sull'Isola Bella, sul Lago Maggiore",
-        "s": "Fino a lunedì il trofeo resta a Palazzo Borromeo, ultima tappa di un tour partito a settembre. Le Finals si giocano a Torino dal 15 al 22 novembre.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/07/isola-bella-il-trofeo-delle-atp-finals-e-arrivato-sul-lago-maggiore_043d56ec-6c42-4250-99d6-deea88a32b25.html"
-          },
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/nitto-atp-finals-2026"
-          }
-        ]
-      }
-    ],
-    "cultura": [
-      {
-        "id": "cu-contemporanea",
-        "t": "Chiuso il Contemporanea Film Festival al Circolo dei lettori, premiata la regia femminile",
-        "s": "Si è conclusa la quinta edizione della rassegna torinese: premi alle registe e ai cortometraggi vincitori.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/07/leggi-notizia/argomenti/cultura-e-spettacoli-7/articolo/contemporanea-film-festival-trionfano-a-south-facing-window-e-sante-la-regia-femminile-premia.html"
-          }
-        ]
-      }
-    ],
-    "sport": [
-      {
-        "id": "sp-roma",
-        "t": "Serie A: la Roma batte il Sassuolo 3-0 e si avvicina alla vetta",
-        "s": "Successo netto dei giallorossi sabato, che accorciano le distanze dalla testa della classifica.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/11/07/serie-a-la-roma-ne-fa-3-al-sassuolo-e-avvicina-la-vetta_c28c3f9c-9303-4700-a3ee-f99f68e3995f.html"
-          }
-        ]
-      },
-      {
-        "id": "sp-motogp",
-        "t": "MotoGP in Qatar: Marquez vince la sprint ed è vicino al titolo, Bagnaia si infortuna",
-        "s": "Lo spagnolo precede Di Giannantonio nella gara sprint e si avvicina al mondiale; Bagnaia cade e si fa male.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/11/07/motogp-marquez-vince-la-sprint-in-qatar-davanti-a-di-giannantonio_38ec265f-4ca2-4dea-abfd-38c2a768f664.html"
           }
         ]
       }
@@ -361,7 +237,7 @@
         "id": "ev-san-martino-chieri",
         "t": "Fiera Nazionale di San Martino a Chieri",
         "s": "Tradizionale fiera di San Martino nella città delle colline torinesi.",
-        "d": "2026-11-07",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -375,7 +251,7 @@
         "id": "ev-luci-artista",
         "t": "Luci d'Artista: installazioni luminose in tutta la città",
         "s": "Le opere luminose d'artista illuminano le vie e le piazze di Torino per l'inverno.",
-        "d": "2026-11-07",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -390,7 +266,7 @@
         "id": "ev-atp-finals",
         "t": "Nitto ATP Finals: da domenica 15 novembre i migliori otto del tennis a Torino",
         "s": "Il torneo di fine stagione riunisce gli otto migliori singolaristi e le otto migliori coppie di doppio.",
-        "d": "2026-11-08",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Visit Piemonte",
@@ -405,7 +281,7 @@
         "id": "ev-abilmente",
         "t": "Abilmente Autunno: la fiera di hobbistica e creatività al Lingotto",
         "s": "Salone dedicato ad hobby creativi, fai da te e arti manuali.",
-        "d": "2026-11-08",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -420,7 +296,7 @@
         "id": "ev-tmm",
         "t": "Torino Music Meeting: quattro giorni di musica diffusa nei luoghi culturali della città",
         "s": "Evento in formula diffusa tra diverse sedi culturali torinesi; programma e orari sul sito degli organizzatori.",
-        "d": "2026-11-08",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -434,7 +310,7 @@
         "id": "ev-asti-natale",
         "t": "Magico Paese di Natale ad Asti: inaugurazione venerdì 13 novembre",
         "s": "Mercatini e iniziative natalizie nel centro storico.",
-        "d": "2026-11-08",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
@@ -449,7 +325,7 @@
         "id": "ev-kusama",
         "t": "Yayoi Kusama. Infinity Mirrored Room alle OGR di Torino",
         "s": "Mostra con la Infinity Mirrored Room dell'artista giapponese; dettagli e orari sulla pagina di Turismo Torino.",
-        "d": "2026-11-08",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -464,7 +340,7 @@
         "id": "ev-banksy",
         "t": "Banksy. Street is the Museum",
         "s": "Mostra dedicata all'artista di strada Banksy.",
-        "d": "2026-11-07",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -479,7 +355,7 @@
         "id": "ev-wpp",
         "t": "World Press Photo Exhibition 2026 a Torino",
         "s": "Mostra dei premi di fotogiornalismo, aperta ogni settimana; altre mostre in corso (Kusama alle OGR, Jessica Lange, Tiepolo) nell'agenda di Turismo Torino.",
-        "d": "2026-11-08",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -494,7 +370,7 @@
         "id": "ev-egizio-sguardi",
         "t": "Sguardi contemporanei sull'antico al Museo Egizio",
         "s": "Percorso espositivo che mette in dialogo la collezione del museo con lo sguardo contemporaneo.",
-        "d": "2026-11-08",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -506,26 +382,84 @@
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
       },
       {
-        "id": "ev-courts",
-        "t": "Courts of Champions: la mostra sulla storia delle Nitto ATP Finals",
-        "s": "Mostra legata alle ATP Finals di Torino.",
-        "d": "2026-11-07",
+        "id": "ev-basilico-ivrea",
+        "t": "Gabriele Basilico: paesaggio industriale Olivetti a Ivrea",
+        "s": "Mostra fotografica sul paesaggio industriale Olivetti, inaugurata il 5 novembre.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/courts-of-champions-2026"
+            "url": "https://turismotorino.org/en/visit/events/gabriele-basilico-paesaggio-industriale-olivetti"
           }
         ],
-        "quando": "fino al 22 nov",
-        "dove": "Torino"
+        "quando": "fino al 31 dic, apertura settimanale",
+        "dove": "Ivrea (Torino)"
+      },
+      {
+        "id": "ev-mauto-mcqueen",
+        "t": "Lightning McQueen al Museo dell'Automobile",
+        "s": "Mostra dedicata al protagonista di Cars nella Sala Formula del MAUTO, adatta anche ai bambini.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/lightning-mc-queen-at-the-museum"
+          }
+        ],
+        "quando": "fino al 31 gen 2027, apertura settimanale",
+        "dove": "MAUTO, Torino"
+      },
+      {
+        "id": "ev-circul",
+        "t": "I Venerdì de L'Circul: serate a Pessinetto",
+        "s": "Ciclo di serate del venerdì, dal 6 novembre al 18 dicembre.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/i-venerdi-de-l-circul-2026"
+          }
+        ],
+        "quando": "ven 13 nov, 21-23",
+        "dove": "Pessinetto (Torino)"
       }
     ],
     "spettacoli": [
       {
+        "id": "spe-cin-dio-ride",
+        "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
+        "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2026/dio-ride/"
+          }
+        ],
+        "quando": "Space: 12:45, 17:10, 21:55; Ideal: 15:00, 17:10, 21:30 (orari indicativi)",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "costo": "Space 9,10 €; Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-wild-horse-nine",
+        "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
+        "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
+          }
+        ],
+        "quando": "Space: 11:10, 16:50, 18:35, 20:50; Ideal: 17:30, 19:20, 21:35 (orari indicativi)",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "costo": "Space 9,10 €; Ideal 9 €"
+      },
+      {
         "id": "spe-cin-tranquillo-funerale",
         "t": "Un tranquillo funerale di famiglia, la commedia corale di Massimiliano Bruno",
         "s": "Alla morte del patriarca Mancuso i parenti si ritrovano per il funerale, che degenera in una guerra familiare. Regia di Massimiliano Bruno.",
-        "d": "2026-11-07",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "MYmovies",
@@ -536,60 +470,74 @@
             "url": "https://www.comingsoon.it/cinema/torino/ideal/1072/"
           }
         ],
-        "quando": "Ideal: 15:45, 17:40, 19:35 (orari indicativi)",
-        "dove": "Cinema Ideal",
-        "costo": "da 9 € (ridotto 6,50 € nel pomeriggio)"
-      },
-      {
-        "id": "spe-cin-dio-ride",
-        "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
-        "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-        "d": "2026-11-07",
-        "fonti": [
-          {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/film/2026/dio-ride/"
-          }
-        ],
-        "quando": "Ideal: 15:00, 17:10, 21:30 (orari indicativi)",
-        "dove": "Cinema Ideal",
-        "costo": "da 9 € (6,50 € nel pomeriggio)"
+        "quando": "Space: 14:00, 19:40; Ideal: 15:45, 17:40, 19:35 (orari indicativi)",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "costo": "Space 9,10 €; Ideal 9 €"
       },
       {
         "id": "spe-cin-gatto-cappello",
         "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
         "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
-        "d": "2026-11-07",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
           }
         ],
-        "quando": "Ideal: 15:20, 19:20 (orari indicativi)",
-        "dove": "Cinema Ideal",
-        "costo": "da 9 € (6,50 € nel pomeriggio)"
+        "quando": "Space: 11:15, 13:15, 15:30, 18:10; Ideal: 15:00, 17:10, 19:20 (orari indicativi)",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "costo": "Space 9,10 €; Ideal 9 €"
       },
       {
-        "id": "spe-cin-wild-horse-nine",
-        "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
-        "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
-        "d": "2026-11-08",
+        "id": "spe-cin-shaun",
+        "t": "Shaun, Vita da Pecora: Operazione Z.U.C.C.A., film d'animazione per tutti",
+        "s": "Nuova avventura animata della pecora Shaun, per famiglie; durata 91 minuti.",
+        "d": "2026-11-09",
         "fonti": [
           {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
+            "n": "MYmovies The Space Cinema Torino",
+            "url": "https://www.mymovies.it/cinema/torino/5884/"
           }
         ],
-        "quando": "Ideal: 17:30, 19:20, 21:35 (orari indicativi)",
-        "dove": "Cinema Ideal",
-        "costo": "da 9 €"
+        "quando": "Space: 11:00, 15:20; Ideal: 15:40 (orari indicativi)",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "costo": "Space 9,10 €; Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-george-michael",
+        "t": "George Michael: The Faith Tour, il film-concerto in lingua originale",
+        "s": "Documentario musicale sul tour di George Michael, proiettato in versione originale.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "MYmovies Cinema Ideal",
+            "url": "https://www.mymovies.it/cinema/torino/5071/"
+          }
+        ],
+        "quando": "Space: 15:50, 18:00; Ideal: 21:30 (orari indicativi)",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "costo": "Space 9,10 €; Ideal 9 €"
+      },
+      {
+        "id": "spe-tea-escaped-alone",
+        "t": "Escaped Alone di Caryl Churchill, prima italiana di lacasadargilla al Carignano",
+        "s": "Prima italiana del testo di Caryl Churchill, proposto dalla compagnia lacasadargilla.",
+        "d": "2026-11-09",
+        "quando": "dal 10 al 15 nov; orari e prezzi sulla pagina del teatro",
+        "dove": "Teatro Carignano, Torino",
+        "fonti": [
+          {
+            "n": "Teatro Stabile Torino",
+            "url": "https://www.teatrostabiletorino.it/en/cartellone/escaped-alone-10-15-nov-2026/"
+          }
+        ]
       },
       {
         "id": "spe-tea-cattivo",
         "t": "C.A.T.T.I.V.O. del Gruppo Kapushka alle Fonderie Limone",
         "s": "Con Antonio Careddu, Michele Puleio e Michele Scarcella; durata un'ora senza intervallo, nella rassegna Energie Nove.",
-        "d": "2026-11-07",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Teatro Stabile Torino",
@@ -604,7 +552,7 @@
         "id": "spe-tea-non-ho-chiesto",
         "t": "«Non ho chiesto (io) di venire al mondo» di Alessandra e Roberta Indolfi",
         "s": "Coreografia e performance di Alessandra e Roberta Indolfi, con Alessia Lombradi, nella rassegna Energie Nove.",
-        "d": "2026-11-07",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "Teatro Stabile Torino",
@@ -614,43 +562,14 @@
         "quando": "sab 14 nov, 19:30",
         "dove": "Fonderie Limone, Sala piccola, Moncalieri",
         "costo": "10 € (biglietto unico)"
-      },
-      {
-        "id": "spe-tea-escaped-alone",
-        "t": "Escaped Alone di Caryl Churchill, prima italiana di lacasadargilla al Carignano",
-        "s": "Prima italiana del testo di Caryl Churchill, proposto dalla compagnia lacasadargilla.",
-        "d": "2026-11-06",
-        "quando": "dal 10 al 15 nov; orari e prezzi sulla pagina del teatro",
-        "dove": "Teatro Carignano, Torino",
-        "fonti": [
-          {
-            "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/en/cartellone/escaped-alone-10-15-nov-2026/"
-          }
-        ]
       }
     ],
     "concerti": [
       {
-        "id": "co-coez",
-        "t": "Coez porta a Torino «Live 2026 - From The Rooftop»",
-        "s": "Concerto del cantautore romano pop-rap nell'ambito del tour 2026.",
-        "d": "2026-11-05",
-        "quando": "dom 8 nov 2026, 21:00",
-        "dove": "Auditorium del Lingotto, Torino",
-        "costo": "prezzi e disponibilità sul sito del venditore",
-        "fonti": [
-          {
-            "n": "TicketOne",
-            "url": "https://www.ticketone.it/event/coez-live-2026-from-the-rooftop-auditorium-del-lingotto-g-agnelli-21719904/"
-          }
-        ]
-      },
-      {
         "id": "co-coe-pappano",
         "t": "Chamber Orchestra of Europe con Pappano e Kantorow: Brahms e Dvořák",
         "s": "Antonio Pappano dirige la Chamber Orchestra of Europe; al pianoforte Alexandre Kantorow nel Concerto n. 1 di Brahms, poi la Settima di Dvořák.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "gio 12 nov 2026, 20:30",
         "dove": "Auditorium Giovanni Agnelli, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -665,7 +584,7 @@
         "id": "co-regio-rapture",
         "t": "«Rapture» al Regio: Battistoni dirige l'Orchestra del Regio",
         "s": "Concerto sinfonico con l'esotismo di Saint-Saëns e il Boléro di Ravel.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "gio 12 nov 2026 (orario sul sito)",
         "dove": "Teatro Regio, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -677,17 +596,111 @@
         ]
       },
       {
+        "id": "co-dove-liana",
+        "t": "Dov'è Liana in concerto",
+        "s": "Concerto della band indie nel club torinese; la seconda serata, del 13 novembre, è esaurita.",
+        "d": "2026-11-09",
+        "quando": "gio 12 nov 2026, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "25 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/dove-liana-3/"
+          }
+        ]
+      },
+      {
         "id": "co-mara-sattei",
         "t": "Mara Sattei in concerto con «Live 2026»",
         "s": "Data torinese del tour della cantautrice pop.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "mer 18 nov 2026, 22:00",
         "dove": "Hiroshima Mon Amour, Torino",
-        "costo": "prezzi e disponibilità sul sito del venditore",
+        "costo": "32 €",
         "fonti": [
           {
             "n": "TicketOne",
             "url": "https://www.ticketone.it/event/mara-sattei-live-2026-hiroshima-mon-amour-21454913/"
+          },
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/mara-sattei/"
+          }
+        ]
+      },
+      {
+        "id": "co-sio",
+        "t": "Sio e Auroro Borealo dal vivo",
+        "s": "Rap e cantautorato con il fumettista-musicista Sio e Auroro Borealo.",
+        "d": "2026-11-09",
+        "quando": "gio 19 nov 2026, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "20 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/sio-e-auroro-borealo/"
+          }
+        ]
+      },
+      {
+        "id": "co-canali",
+        "t": "Giorgio Canali & Rossofuoco",
+        "s": "Rock d'autore italiano con la band di Giorgio Canali.",
+        "d": "2026-11-09",
+        "quando": "ven 20 nov 2026, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "15 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/giorgio-canali-rossofuoco-3/"
+          }
+        ]
+      },
+      {
+        "id": "co-ariete",
+        "t": "Ariete in concerto",
+        "s": "Concerto della cantautrice pop in un club torinese.",
+        "d": "2026-11-09",
+        "quando": "sab 21 nov 2026, 19:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "25 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/ariete-2/"
+          }
+        ]
+      },
+      {
+        "id": "co-lotr-mystery",
+        "t": "Musiche da The Lord of the Rings: tribute a Howard Shore",
+        "s": "Mystery Ensemble esegue le colonne sonore della trilogia di Howard Shore.",
+        "d": "2026-11-09",
+        "quando": "sab 28 nov 2026, 21:30",
+        "dove": "Conservatorio Giuseppe Verdi, Torino",
+        "costo": "prezzi sul sito TicketOne",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/musiche-da-the-lord-of-the-rings-tribute-to-howard-shore-conservatorio-giuseppe-verdi-22366959/"
+          }
+        ]
+      },
+      {
+        "id": "co-cmon-tigre",
+        "t": "C'Mon Tigre dal vivo",
+        "s": "Concerto della band italiana tra jazz, rock e world music.",
+        "d": "2026-11-09",
+        "quando": "gio 3 dic 2026, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "22 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/cmon-tigre-3/"
           }
         ]
       },
@@ -695,7 +708,7 @@
         "id": "co-cremonini",
         "t": "Cesare Cremonini in due serate con l'«Amatour»",
         "s": "Due date torinesi del tour nei palasport del cantautore bolognese.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "mer 9 e gio 10 dic 2026, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -710,7 +723,7 @@
         "id": "co-matheus-jaroussky",
         "t": "Ensemble Matheus e Philippe Jaroussky con Spinosi: Corelli, Händel, Vivaldi",
         "s": "Jean-Christophe Spinosi dirige l'ensemble barocco; solista il controtenore Philippe Jaroussky.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "gio 10 dic 2026 (orario sul sito)",
         "dove": "Auditorium Giovanni Agnelli, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -722,10 +735,25 @@
         ]
       },
       {
+        "id": "co-mcr",
+        "t": "Modena City Ramblers in concerto",
+        "s": "Folk-rock italiano della storica band emiliana.",
+        "d": "2026-11-09",
+        "quando": "ven 11 dic 2026, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "20 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/modena-city-ramblers-5/"
+          }
+        ]
+      },
+      {
         "id": "co-anna",
         "t": "ANNA, «Million Dollar Babe Tour 2026»",
         "s": "Tappa torinese del tour della cantante e rapper.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "mar 15 dic 2026, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -740,7 +768,7 @@
         "id": "co-irama",
         "t": "Irama con «A chi ci sarà sempre»",
         "s": "Concerto nei palasport del cantautore pop.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "lun 21 dic 2026, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -755,7 +783,7 @@
         "id": "co-dalessio",
         "t": "Gigi D'Alessio al Palasport 2026",
         "s": "Concerto del cantautore napoletano nel tour dei palasport.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "mer 23 dic 2026, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -770,7 +798,7 @@
         "id": "co-morricone",
         "t": "Alla scoperta di Morricone con la Ensemble Symphony Orchestra",
         "s": "Concerto sinfonico dedicato alle colonne sonore di Ennio Morricone.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "dom 27 dic 2026, 18:00",
         "dove": "Teatro Colosseo, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -785,7 +813,7 @@
         "id": "co-trifonov",
         "t": "Daniil Trifonov in recital: da Händel a Schubert, Stravinskij e Villa-Lobos",
         "s": "Recital del pianista russo con un programma che include anche brani di sua composizione.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "mer 13 gen 2027 (orario sul sito)",
         "dove": "Auditorium Giovanni Agnelli, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -800,7 +828,7 @@
         "id": "co-boosta-fusions",
         "t": "«Fusions»: Boosta e la Filarmonica TRT tra sintetizzatori e orchestra",
         "s": "Il compositore Davide «Boosta» Dileo con la Filarmonica TRT diretta da Valentino Corvino.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "lun 18 gen 2027 (orario sul sito)",
         "dove": "Teatro Regio, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -815,7 +843,7 @@
         "id": "co-tedua",
         "t": "Tedua al Palasport 2027",
         "s": "Concerto del rapper genovese.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "mar 26 gen 2027, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -830,7 +858,7 @@
         "id": "co-kammerphilharmonie",
         "t": "Kammerphilharmonie Bremen con Peltokoski e Vilde Frang: Mendelssohn, Schumann, Sollima",
         "s": "Tarmo Peltokoski dirige l'orchestra tedesca; solista la violinista Vilde Frang.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "mer 27 gen 2027 (orario sul sito)",
         "dove": "Auditorium Giovanni Agnelli, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -845,7 +873,7 @@
         "id": "co-sfera",
         "t": "Sfera Ebbasta al Palasport 2027",
         "s": "Concerto del rapper nel tour dei palasport.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "sab 30 gen 2027, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -857,10 +885,40 @@
         ]
       },
       {
+        "id": "co-quintorigo",
+        "t": "Quintorigo & John De Leo",
+        "s": "Incontro tra il quintetto romagnolo e il cantante John De Leo, tra rock e jazz.",
+        "d": "2026-11-09",
+        "quando": "ven 5 feb 2027, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "30 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/quintorigo-john-de-leo-2/"
+          }
+        ]
+      },
+      {
+        "id": "co-zen-circus",
+        "t": "The Zen Circus, due serate",
+        "s": "Rock indipendente italiano; due date consecutive il 11 e 12 febbraio.",
+        "d": "2026-11-09",
+        "quando": "gio 11 e ven 12 feb 2027, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "28 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/the-zen-circus-2/"
+          }
+        ]
+      },
+      {
         "id": "co-sokolov",
         "t": "Grigory Sokolov in recital per «Absolute»",
         "s": "Recital per pianoforte solo di Grigory Sokolov nella stagione dei concerti del Regio.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "lun 15 feb 2027 (orario sul sito)",
         "dove": "Teatro Regio, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -875,7 +933,7 @@
         "id": "co-tjeknavorian",
         "t": "«Horizons»: Tjeknavorian dirige la Filarmonica TRT",
         "s": "Concerto sinfonico con Emmanuel Tjeknavorian sul podio della Filarmonica TRT.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "lun 22 feb 2027 (orario sul sito)",
         "dove": "Teatro Regio, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -887,10 +945,25 @@
         ]
       },
       {
+        "id": "co-bruford",
+        "t": "Pete Roth Trio con Bill Bruford",
+        "s": "Serata jazz con il trio di Pete Roth e l'ex batterista Bill Bruford; due repliche.",
+        "d": "2026-11-09",
+        "quando": "ven 26 feb 2027, 19:00 e 21:30",
+        "dove": "Piazza dei Mestieri, Torino (da URL)",
+        "costo": "prezzi sul sito TicketOne",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/pete-roth-trio-featuring-bill-bruford-piazza-dei-mestieri-21947372/"
+          }
+        ]
+      },
+      {
         "id": "co-pezzali",
         "t": "Max Pezzali con «Max Forever» in due serate",
         "s": "Due date torinesi del tour con i brani della storia di Max Pezzali.",
-        "d": "2026-11-05",
+        "d": "2026-11-09",
         "quando": "lun 8 e mar 9 mar 2027, 21:00",
         "dove": "Inalpi Arena, Torino",
         "costo": "prezzi e disponibilità sul sito del venditore",
@@ -900,16 +973,57 @@
             "url": "https://www.ticketone.it/event/max-forever-stessa-storia-stesso-posto-stesso-bar-inalpi-arena-22293427/"
           }
         ]
+      },
+      {
+        "id": "co-de-gregori",
+        "t": "Francesco De Gregori, tour nei teatri 2027",
+        "s": "Concerto del cantautore romano nella tournée teatrale «Nevergreen».",
+        "d": "2026-11-09",
+        "quando": "dom 14 mar 2027, 20:30",
+        "dove": "Teatro Colosseo, Torino",
+        "costo": "prezzi sul sito TicketOne",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/francesco-de-gregori-nevergreen-perfette-sconosciute-teatri-2027-teatro-colosseo-22129990/"
+          }
+        ]
+      },
+      {
+        "id": "co-gazzelle",
+        "t": "Gazzelle in concerto",
+        "s": "Concerto del cantautore romano di pop-rock.",
+        "d": "2026-11-09",
+        "quando": "mar 6 apr 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi sul sito TicketOne",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/gazzelle-inalpi-arena-22251667/"
+          }
+        ]
+      },
+      {
+        "id": "co-nannini",
+        "t": "Gianna Nannini al Palasport 2027",
+        "s": "Concerto della rocker senese nel tour nei palasport.",
+        "d": "2026-11-09",
+        "quando": "dom 11 apr 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi sul sito TicketOne",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/gianna-nannini-palasport-2027-inalpi-arena-22048574/"
+          }
+        ]
       }
-    ]
+    ],
+    "cultura": [],
+    "sport": []
   },
   "controlli": [
-    {
-      "at": "2026-11-01T21:50+01:00",
-      "edizione": "sera",
-      "notizie": 24,
-      "note": "Fonti lette: ANSA, AGI, Torino Oggi, Al Jazeera (en), Euronews (en, fr), CBS. Ricerca rifiutata: reuters.com, theguardian.com, bbc.com, spiegel.de, elpais.com. Lettura non riuscita: torinotoday.it, torinoggi.it (robots), ansa.it (una pagina)."
-    },
     {
       "at": "2026-11-01T21:50+01:00",
       "edizione": "sera",
@@ -1018,6 +1132,12 @@
       "edizione": "pomeriggio",
       "notizie": 60,
       "note": "Fonti lette: ANSA, Il Fatto Quotidiano, Torino Oggi, Euronews (en), Al Jazeera (en), Turismo Torino. Ricerca di reuters, bbc e altre grandi testate estere non tentata (bloccate nei giri precedenti). Lettura non riuscita: thespacecinema.it e teatrostabiletorino.it (errore del sito). Cinema e teatro dall'edizione del mattino, tolto lo spettacolo finito; eventi aggiornati; concerti copiati (non è lunedì)."
+    },
+    {
+      "at": "2026-11-09T05:55+01:00",
+      "edizione": "mattina",
+      "notizie": 69,
+      "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), Il Fatto Quotidiano e Adnkronos (solo ricerca), ComingSoon (The Space Cinema, Ideal), Turismo Torino, TicketOne, Hiroshima Mon Amour. Non raggiungibili: reuters.com (ricerca rifiutata), torinotoday.it (lettura), pagine singole del Teatro Stabile (lettura negata). Concerti rifatti per intero (lunedì). Teatro dall'edizione precedente."
     }
   ]
 }
