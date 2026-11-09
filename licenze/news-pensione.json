@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-08T01:01:00+01:00",
+ "updated": "2026-11-09T01:20:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
@@ -909,6 +909,11 @@
    "at": "2026-11-08T01:01:00+01:00",
    "notizie": 0,
    "note": "giro di domenica 8/11 (1:01): nessuna notizia nuova. Ricerche su Gazzetta, SINAFI, SIULP e USIF e sul tema DPR/previdenza dedicata: nessun DPR di recepimento 2025-2027 in Gazzetta, nessun comunicato nuovo e verificabile rispetto al 7/11. Tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Mercati e prodotti invariati (nessun dato nuovo con due fonti). Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollati le altre fonti"
+  },
+  {
+   "at": "2026-11-09T01:20:00+01:00",
+   "notizie": 0,
+   "note": "giro di lunedì 9/11 (1:01): nessuna notizia nuova. Ricerche su DPR di recepimento 2025-2027 (Gazzetta, difesa.it), previdenza dedicata e sindacati GdF/polizia: nessun DPR in Gazzetta e nessun comunicato nuovo e verificabile; pagina pmi.it non leggibile. Tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Mercati: BTP 10 anni visto al 4,43% il 4/11 (apertura, QuiFinanza) e 4,46% il 3/11 (Teleborsa) ma non una chiusura con due fonti coincidenti, quindi lasciato il valore precedente; altri valori invariati. Prodotti invariati. Volontariato: fatto. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [

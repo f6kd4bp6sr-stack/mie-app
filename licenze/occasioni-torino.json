@@ -1,6 +1,6 @@
 {
  "app": "pianificazione-occasioni",
- "updated": "2026-11-02T13:05:00+01:00",
+ "updated": "2026-11-09T01:20:00+01:00",
  "nota": "Volontariato a Torino con molto contatto con le persone. Solo informazioni pubbliche, con fonte e data del controllo; niente consigli. Esclusi i gruppi legati al lavoro e alla categoria.",
  "voci": [
   {
@@ -374,6 +374,10 @@
   {
    "at": "2026-11-02T13:05:00+01:00",
    "note": "giro del lunedì: riletti Vol.To (recapiti invariati: via Giolitti 21, 011 81 38 711, 800 59 00 00) e Colletta Alimentare (sabato 14/11/2026, modulo online, volontari.colletta@bancoalimentare.it, 02 8965 8459); la bacheca annunci di Vol.To non era leggibile (verifica anti-bot), annunci e altre voci non ricontrollati e lasciati invariati; nessuna voce nuova o tolta"
+  },
+  {
+   "at": "2026-11-09T01:20:00+01:00",
+   "note": "giro del lunedì: Vol.To riletto (recapiti invariati: via Giolitti 21, 011 81 38 711, 800 59 00 00, centroservizi@volontariatotorino.it); bacheca letta, nessuna opportunità nuova con scadenza e fuori dal già presente; altre voci e pagine del Comune non ricontrollate e lasciate invariate; nessuna voce nuova o tolta"
   }
  ]
 }
