@@ -1,99 +1,96 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-10T05:05+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-10T13:25+01:00",
   "nota": "Edizione del mattino del 10 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-aiuti-ucraina",
-        "t": "Pacchetto di aiuti militari a Kiev: la firma di Giorgetti agita la maggioranza",
-        "s": "Il tredicesimo pacchetto di aiuti all'Ucraina, secretato, richiede la firma del ministro dell'Economia Giorgetti. La Lega protesta e porterà i dubbi al Copasir; Salvini chiede di ridurre gli aiuti militari. Meloni e Forza Italia confermano il sostegno a Kiev. Tajani ha poi detto che il pacchetto è stato firmato.",
+        "id": "it-giorgetti-ucraina",
+        "t": "Aiuti all'Ucraina: manca la firma di Giorgetti sul tredicesimo pacchetto, la Lega è irritata",
+        "s": "Il ministro dell'Economia non ha ancora firmato il decreto sul tredicesimo pacchetto di aiuti militari a Kiev, senza cui non può partire. La Lega è contraria agli aiuti. Fonti di governo spiegano che era a Bruxelles e il documento è riservato; Crosetto non prevede sorprese.",
         "d": "2026-11-10",
         "fonti": [
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/lira-della-lega-sul-decreto-armi-giorgetti-non-lo-firma_bd84e8d5-bb54-4f9e-ab20-c050f5ae3632.html"
-          }
-        ]
-      },
-      {
-        "id": "it-gimbe-sanita",
-        "t": "Gimbe: 22,7 miliardi di «tagli invisibili» alla sanità dal 2022",
-        "s": "Nelle audizioni sulla manovra la Fondazione Gimbe stima che il Fondo sanitario, pur salito in valore assoluto, perda peso sul Pil: dal 6,27% del 2022 al 6,11% previsto nel 2027. Le Regioni hanno chiuso il 2025 con 2,3 miliardi di disavanzo.",
-        "d": "2026-11-09",
-        "fonti": [
+          },
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/manovra-gimbe-227-miliardi-di-tagli-invisibili-alla-sanita-dal-2022_e63ef446-7ccf-4805-92fb-12bba1e7e2f6.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/telefonata-giorgetti-meloni-ieri-sera-mancata-firma-solo-perche-fuori_83808254-a528-4178-aee1-ade2f46fc15d.html"
           },
           {
             "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/2026/11/09/gimbe-tagli-sanita-pubblica-manovra-notizie/8565970/"
+            "url": "https://www.ilfattoquotidiano.it/2026/11/10/aiuti-ucraina-giorgetti-firma-notizie/8566564/"
           }
         ]
       },
       {
-        "id": "it-cyber-viminale",
-        "t": "Attacchi informatici: oggi al Viminale il comitato per l'ordine pubblico",
-        "s": "Il ministro dell'Interno Piantedosi riunisce a Roma il comitato nazionale per l'ordine e la sicurezza pubblica per valutare i rischi legati agli attacchi informatici. Tajani ha detto che i suoi dati personali sono finiti sul dark web; Meloni parla di hacker filorussi.",
+        "id": "it-manovra-superbonus",
+        "t": "Manovra, l'Abi in Parlamento: la norma sui crediti Superbonus contrasterebbe con la Consulta",
+        "s": "L'associazione delle banche sostiene che spalmare in dieci rate annuali la quota di crediti Superbonus usabile nel 2027 cambierebbe a posteriori il valore dei crediti acquistati. Secondo l'Abi sarebbe una ristrutturazione forzata del debito pubblico, con effetti su bilanci, patrimonio e liquidità delle banche.",
         "d": "2026-11-10",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_a6695c00-6b7a-4dd2-926d-c94b2efad7f7.html"
+            "url": "https://ansa.it/sito/notizie/topnews/2026/11/10/abi-norme-manovra-su-crediti-superbonus-contrasta-con-sentenze-consulta_6eee80b9-95b0-42fc-9b69-b1ee92ef5fea.html"
           }
         ]
       },
       {
-        "id": "it-campo-largo",
-        "t": "Centrosinistra: da lunedì dieci tavoli tematici per scrivere il programma comune",
-        "s": "Dal 9 al 17 novembre i partiti del campo largo discutono per temi: oggi clima ed energia, poi lavoro, diritti e politica estera (con il nodo Ucraina), sanità e scuola, economia con la patrimoniale, giustizia. Alla fine i leader faranno una sintesi.",
+        "id": "it-manovra-studenti",
+        "t": "Manovra, gli studenti in audizione: pochi fondi per i giovani, sciopero il 20 novembre",
+        "s": "Udu e Rete degli Studenti Medi dicono che le misure per gli under 35 non arrivano a 600 milioni su oltre 26 miliardi. Chiedono emendamenti per 6 miliardi (casa, borse di studio, università gratuita) e annunciano la partecipazione allo sciopero del 20 novembre.",
         "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/09/al-via-i-dieci-tavoli-programmatici-per-il-campo-largo_faa820dd-585d-4bcb-96e5-167ac3d853d3.html"
+            "url": "https://ansa.it/canale_legalita_scuola/notizie/2026/11/09/gli-studenti-in-parlamento-non-e-una-manovra-per-giovani_b18f2dc2-4367-4884-bb19-4ef4e69aace4.html"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-iran-trump",
-        "t": "Trump: la guerra con l'Iran è «di fatto finita», Teheran respinge",
-        "s": "Dopo l'incontro col premier del Qatar, Trump dice che militarmente la guerra è finita e propone di mantenere lo status quo, con il blocco navale dei porti iraniani. Teheran parla di «notizie false», si dice aperta al negoziato ma non alla resa e chiede sette condizioni, tra cui la fine delle sanzioni.",
-        "d": "2026-11-09",
+        "id": "mo-abu-dhabi",
+        "t": "Ucraina, ad Abu Dhabi nuovo round di colloqui tra Russia, Ucraina e Stati Uniti",
+        "s": "Si riunisce il terzo round negoziale mediato dagli inviati americani Witkoff e Kushner. Secondo media Usa Kiev e Mosca mostrerebbero una certa flessibilità sui territori, ma Washington avverte che non ci saranno svolte rapide. Zelensky parla di perdite record russe, che Mosca nega.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm",
+            "url": "https://www.aljazeera.com/news/2026/11/10/russia-ukraine-and-us-to-meet-as-zelenskyy-claims-battlefield-successes",
+            "l": "en"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/10/ukraine-and-russia-reportedly-show-a-little-bit-of-flexibility-on-territory-as-abu-dhabi-t",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-ucraina-abu-dhabi",
-        "t": "Ucraina e Russia a Abu Dhabi: l'Ue invia una squadra congiunta ai colloqui",
-        "s": "Il 10 e 11 novembre si tengono i colloqui a tre tra Ucraina, Russia e Stati Uniti. Commissione e Consiglio europeo mandano funzionari, con Francia, Germania e Regno Unito; non è chiaro se incontreranno la delegazione russa. Meloni ha criticato la diplomazia europea frammentata.",
-        "d": "2026-11-09",
+        "id": "mo-houthi-riad",
+        "t": "Arabia Saudita: intercettati missili su Riad dopo l'attacco huthi all'oleodotto",
+        "s": "La coalizione guidata dai sauditi dice di aver abbattuto due missili diretti a Riad e un terzo verso il sud del Paese, attribuiti agli huthi. Un giorno prima un attacco all'oleodotto est-ovest aveva causato un incendio spento, senza conseguenze sulle operazioni. Nessun ferito.",
+        "d": "2026-11-10",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/09/eu-to-send-joint-team-to-ukraine-russia-peace-talks-in-abu-dhabi",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/10/saudi-arabia-downs-missiles-fired-at-riyadh-after-houthi-attack-on-pipeline",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-turchia-acciaieria",
-        "t": "Turchia: esplosione in un'acciaieria vicino a Smirne, almeno 17 morti",
-        "s": "Un'esplosione nello stabilimento Habaş di Aliağa ha causato almeno 17 vittime. Secondo il governatore, durante lavori di manutenzione una gru è caduta in un forno ad arco elettrico, danneggiando una condotta del gas. Cinque persone sono state fermate e quattro procuratori indagano.",
-        "d": "2026-11-09",
+        "id": "mo-hegseth",
+        "t": "Stati Uniti: proposta di impeachment contro il capo del Pentagono Hegseth",
+        "s": "Il deputato repubblicano Thomas Massie ha presentato otto capi d'accusa contro Pete Hegseth: operazioni militari in Iran oltre i 90 giorni senza via libera del Congresso. Vuole un voto alla Camera in settimana; Trump ha detto di sostenere Hegseth.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/video/2026/11/09/turkey-steel-plant-explosion-kills-17-in-izmir-province",
+            "url": "https://www.euronews.com/video/2026/11/10/trump-vows-to-back-pete-hegseth-as-republican-lawmaker-pushes-impeachment-vote",
             "l": "en"
           }
         ]
@@ -101,37 +98,40 @@
     ],
     "estero": [
       {
-        "id": "es-meloni-envoy",
-        "t": "Euronews: Meloni chiede un inviato europeo per l'Ucraina, Varsavia la sostiene",
-        "s": "Secondo Euronews, la premier italiana ha scritto a Costa criticando la diplomazia Ue frammentata e chiedendo un inviato speciale. Costa porterà il tema al vertice informale di Dublino; il ministro polacco Sikorski appoggia Meloni.",
-        "d": "2026-11-09",
+        "id": "es-rasmussen",
+        "t": "Ex capo della Nato: l'Europa smetta di «implorare» un posto ai colloqui sull'Ucraina",
+        "s": "Anders Fogh Rasmussen dice a Euronews che l'Europa deve dimostrare di avere qualcosa da offrire. Funzionari europei discutono ad Abu Dhabi ma non partecipano al tavolo principale. Definisce «imbarazzanti» i ritardi Usa sulle consegne di Patriot e Nasams.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/05/italian-pm-slams-eus-fragmented-approach-to-ukraine-peace-talks",
-            "l": "en"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/06/cracks-emerge-over-europes-fragmented-approach-to-ukraine-peace-talks",
+            "url": "https://www.euronews.com/2026/11/10/europe-must-stop-begging-for-seat-at-ukraine-peace-talks-ex-nato-chief-warns",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-tajani-hacker",
-        "t": "La stampa estera racconta i dati di Tajani sul dark web",
-        "s": "Al Jazeera e CBS News riportano che il ministro degli Esteri italiano ha denunciato la pubblicazione dei suoi dati personali. Meloni attribuisce l'attacco a hacker filorussi; Tajani lo collega alla posizione italiana sull'Ucraina e dice di non farsi intimidire.",
-        "d": "2026-11-07",
+        "id": "es-francia-iran",
+        "t": "Francia convoca l'ambasciatore iraniano per un attacco informatico ai frigoriferi dei supermercati",
+        "s": "Parigi accusa i Guardiani della Rivoluzione di aver sbrinato da remoto i frigoriferi di oltre 700 supermercati l'11 e 12 ottobre. La procura indaga e ha chiesto mandati d'arresto internazionali per due funzionari; la Francia chiederà sanzioni Ue.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/7/pro-russian-hackers-leak-italian-foreign-ministers-data-on-dark-web",
+            "url": "https://www.aljazeera.com/news/2026/11/10/france-summons-irans-ambassador-over-supermarket-fridge-sabotage",
             "l": "en"
-          },
+          }
+        ]
+      },
+      {
+        "id": "es-california-tassa",
+        "t": "California: gli elettori bocciano la tassa una tantum sui miliardari",
+        "s": "Con circa il 60% dei voti scrutinati, la Proposition 40 è respinta al 55,6% contro il 44,4%. Prevedeva un prelievo del 5% sui patrimoni oltre il miliardo di dollari, per circa 100 miliardi destinati soprattutto alla sanità. Contrari il governatore Newsom e miliardari come Sergey Brin.",
+        "d": "2026-11-10",
+        "fonti": [
           {
-            "n": "CBS News",
-            "url": "https://www.cbsnews.com/news/italy-giorgia-meloni-ukraine-russia-hack-data-leak/",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/10/california-voters-reject-billionaire-tax",
             "l": "en"
           }
         ]
@@ -139,67 +139,55 @@
     ],
     "economia": [
       {
-        "id": "ec-tokyo-nikkei",
-        "t": "Borse: Tokyo sale oltre il 3%, il Nikkei torna sopra quota 60mila",
-        "s": "Apertura in forte rialzo (+3,13%) grazie al rimbalzo di tecnologia e semiconduttori e al calo del petrolio. Lo yen è stabile poco sopra 158 sul dollaro.",
+        "id": "ec-accise-diesel",
+        "t": "Gasolio, in vigore da oggi un nuovo taglio delle accise di 4,9 centesimi al litro",
+        "s": "Un decreto Mef-Mase pubblicato in Gazzetta riduce le accise sul gasolio di 4,88 centesimi al litro, Iva inclusa, fino al 23 novembre. Sostituisce lo sconto scaduto domenica.",
         "d": "2026-11-10",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/borsa-tokyo-guadagna-oltre-il-3-in-apertura-il-nikkei-torna-sopra-quota-60mila_e3130e6a-6427-4255-a7d8-74eabdbae893.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/10/in-vigore-nuovo-taglio-accise-sul-diesel-49-centesimi-fino-al-23-novembre_baf1cfa3-6952-4048-a1ed-ffea26193721.html"
+          },
+          {
+            "n": "Il Sole 24 Ore",
+            "url": "https://www.ilsole24ore.com/art/carburanti-tornano-accise-mobili-taglio-49-centesimi-gasolio-fino-23-novembre-AJJWJvAC"
           }
         ]
       },
       {
-        "id": "ec-milano-banche",
-        "t": "Piazza Affari tra le migliori d'Europa con le banche, petrolio in calo",
-        "s": "Ieri Milano ha chiuso in forte rialzo (circa +2%) con Banco Bpm a +10%. Il Brent è sceso del 5,6% per le attese di progressi in Medio Oriente, il gas europeo è calato a 82,2 euro/MWh, lo spread Btp-Bund a 103 punti.",
-        "d": "2026-11-09",
+        "id": "ec-newprinces",
+        "t": "NewPrinces: ricavi a 4,55 miliardi nei nove mesi, utile netto frenato dal caro energia",
+        "s": "Il gruppo chiude i nove mesi 2026 con ricavi consolidati in crescita del 135% e Ebitda di 262,8 milioni (+67,8%). Il risultato netto è una perdita di 5,5 milioni per circa 19 milioni di maggiori costi di energia e trasporto.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/borsa-milano-la-migliore-in-europa-con-il-credito-banco-bpm-10_2f989b3c-ac40-4f66-b8f6-6ec553a97620.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/borsa-leuropa-sale-con-il-petrolio-in-calo-milano-2_d6abc1c6-e2ed-4f41-9fcb-e97fe880f9dc.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/10/newprinces-ricavi-a-455-miliardi-nei-9-mesi-utile-netto-penalizzato-da-caro_f41b53f0-1776-4583-8470-e4bc3e832e3a.html"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-cnh-kobelco",
-        "t": "Cnh vende il 70% delle macchine movimento terra ai giapponesi di Kobelco",
-        "s": "Cnh incasserà 700 milioni di dollari e manterrà il 30% di una joint venture a controllo giapponese; chiusura prevista a fine 2027. La Fiom parla di disimpegno industriale e di circa 200 addetti coinvolti, e chiederà garanzie.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/09/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/torino-perde-un-altro-pezzo-cnh-cede-il-70-dei-mezzi-da-costruzione-ai-giapponesi.html"
-          }
-        ]
-      },
-      {
-        "id": "to-rettorato-tensione",
-        "t": "Università di Torino: tensione tra studenti e polizia davanti al rettorato",
-        "s": "Gli studenti, usciti dal Campus Einaudi occupato, chiedevano di incontrare la rettrice Prandi durante il Senato accademico straordinario. Dopo un'ora di stallo ci sono stati spintoni con gli agenti; la Digos ha sequestrato uno striscione.",
-        "d": "2026-11-09",
+        "id": "to-stadio",
+        "t": "Stadio Olimpico Grande Torino: il Torino FC presenta al Comune la proposta di gestione",
+        "s": "La società ha depositato un progetto di partenariato pubblico-privato per lo stadio e il centro Robaldo. Il sindaco Lo Russo dice che i tecnici lo esamineranno; il passo successivo è la dichiarazione di pubblico interesse, con diritto di superficie di lunga durata e non la proprietà.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/cronaca/2026/11/09/tensione-tra-studenti-e-polizia-davanti-al-rettorato-a-torino_3188e417-6a21-4a3a-a82d-ad974f22a10e.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/10/stadio-grande-torino-arrivata-la-proposta-della-societa-granata_88f30bdf-9134-4bc2-83e4-e3cae37a185d.html"
           },
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/regione-piemonte-da-spazi-per-didattica-alluniversita-di-torino-occupata_0ade5400-7342-4392-b294-d301a6ed99e9.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/10/leggi-notizia/argomenti/attualita-31/articolo/si-apre-un-nuovo-futuro-per-lo-stadio-olimpico-il-toro-fc-deposita-la-proposta-per-la-gestione.html"
           }
         ]
       },
       {
         "id": "to-atp-viabilita",
-        "t": "Atp Finals: chiusure in via Filadelfia e mezzi potenziati",
-        "s": "Dal 15 al 22 novembre all'Inalpi Arena: via Filadelfia chiusa nel tratto indicato, limite di 30 km/h, sosta a pagamento a 10 euro al giorno. Potenziate le linee 4 e 10; metro aperta fino all'1 il 12 novembre.",
+        "t": "Nitto ATP Finals: chiusure, sosta a tariffa fissa e mezzi pubblici potenziati",
+        "s": "Il torneo è all'Inalpi Arena dal 15 al 22 novembre. Via Filadelfia sarà chiusa nel tratto tra piazzale San Gabriele di Gorizia e corso Agnelli; sosta intorno all'arena a 10 euro al giorno; linee 4 e 10 potenziate, metro attiva ogni giorno e fino all'1 il 12 novembre.",
         "d": "2026-11-09",
         "fonti": [
           {
@@ -209,26 +197,14 @@
         ]
       },
       {
-        "id": "to-ex-askatasuna",
-        "t": "Ex Askatasuna: nove proposte per il riuso dell'immobile comunale",
-        "s": "Si è chiuso l'avviso pubblico per l'edificio di corso Regina Margherita 47, sgomberato il 18 dicembre 2025. Gli uffici verificheranno la legittimità delle nove proposte; la vicesindaca Favaro parla di restituirlo alla comunità.",
+        "id": "to-altissime",
+        "t": "Altissime chiude la seconda edizione in piazza Vittorio: oltre 5mila visitatori",
+        "s": "L'evento della Fondazione Contrada Torino sul legame tra la città e le montagne si è svolto in tre giorni. Ha avuto oltre 500 partecipanti a incontri e degustazioni e 40 stand di produttori, associazioni e imprese di montagna.",
         "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/trasformazione-ex-askatasuna-nove-proposte-per-lavviso-pubblico_6ff83b71-288b-489a-8033-94dd4da9ac02.html"
-          }
-        ]
-      },
-      {
-        "id": "to-egizio-ricerca",
-        "t": "Il Museo Egizio diventa anche ente pubblico di ricerca",
-        "s": "Il Consiglio dei ministri ha istituito l'Istituto nazionale di ricerca egizia, con 5,6 milioni l'anno, per rafforzare l'attività scientifica del museo torinese: archeologia, restauro, archeologia digitale e intelligenza artificiale.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/cultura/arte/2026/11/09/museo-egizio-diventa-anche-ente-pubblico-di-ricerca-via-libera-dal_c4b5273a-5e3e-4a45-b14c-93c6242a4d4f.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/altissime-archivia-la-seconda-edizione-5mila-visitatori-e-oltre-500-partecipanti_fa4d64e2-fba7-48ff-ba3f-4d3b7419a67c.html"
           }
         ]
       }
@@ -236,8 +212,8 @@
     "piemonte": [
       {
         "id": "pi-cna-credito",
-        "t": "Imprese piemontesi: solo il 18,6% chiede finanziamenti",
-        "s": "Secondo l'Osservatorio Cna su 703 piccole imprese, l'89,1% delle richieste viene accolto per intero, ma molte aziende non chiedono più credito: mancano garanzie (34,5%) o storia finanziaria (25,8%). Il 56% si aspetta un peggioramento.",
+        "t": "Piemonte: solo il 18,6% delle piccole imprese chiede finanziamenti",
+        "s": "Secondo l'Osservatorio Cna su 703 aziende, quasi nove richieste su dieci (89,1%) sono accolte per intero. Ostacoli principali: mancanza di garanzie (34,5%) e di storico finanziario (25,8%); il 54,6% giudica negativo il primo semestre 2026.",
         "d": "2026-11-09",
         "fonti": [
           {
@@ -247,9 +223,9 @@
         ]
       },
       {
-        "id": "pi-lavoro-domestico",
-        "t": "Oltre 60mila lavoratori domestici in Piemonte, ma calano del 19,7% in quattro anni",
-        "s": "Rapporto Domina: 60.433 addetti nel 2025, il 50,4% badanti, il 92,1% donne e il 67,9% straniere. Le famiglie datrici di lavoro sono 64.859 e hanno speso 603 milioni di euro; oltre metà dei lavoratori è nell'area di Torino.",
+        "id": "pi-domestici",
+        "t": "Piemonte: oltre 60mila lavoratori domestici, la metà sono badanti",
+        "s": "Nel 2025 erano 60.433, il 50,4% badanti, ma il settore è calato del 19,7% in quattro anni. Le famiglie hanno speso circa 603 milioni di euro; gli over 80 piemontesi dovrebbero crescere del 39,9% entro il 2050.",
         "d": "2026-11-09",
         "fonti": [
           {
@@ -1070,12 +1046,6 @@
     {
       "at": "2026-11-02T05:55+01:00",
       "edizione": "mattina",
-      "notizie": 20,
-      "note": "Fonti lette: ANSA, AGI, Torino Oggi, Al Jazeera (en), Euronews (en). Ricerca rifiutata: reuters.com, theguardian.com, bbc.com, lemonde.fr, spiegel.de, elpais.com. Lettura non riuscita: alcune pagine ANSA non uscite da ricerca; torinotoday.it non letto."
-    },
-    {
-      "at": "2026-11-02T05:55+01:00",
-      "edizione": "mattina",
       "notizie": 19,
       "note": "Fonti lette: ANSA, AGI, Torino Oggi, Al Jazeera (en), Euronews (en). Ricerca rifiutata: reuters.com, theguardian.com, bbc.com, lemonde.fr, spiegel.de, elpais.com. Lettura non riuscita: alcune pagine ANSA non uscite da ricerca; torinotoday.it non letto."
     },
@@ -1181,6 +1151,12 @@
       "edizione": "mattina",
       "notizie": 71,
       "note": "Fonti lette: ANSA, Torino Oggi, Al Jazeera (en), Euronews (en), CBS News (solo ricerca), MYmovies, ComingSoon, Ideal Cityplex, Turismo Torino. Non raggiungibili: thespacecinema.it (lettura), eventi.comune.torino.it (robots), idealcityplex.it scheda film. Reuters, BBC e altre grandi testate estere non tentate. Concerti dall'edizione precedente (non è lunedì), nessuno già passato; teatro dall'edizione precedente. Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-10T13:25+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 69,
+      "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), Torino Oggi; Il Fatto, Adnkronos, Avvenire, Il Giornale, Il Sole 24 Ore solo ricerca. Non leggibili: TorinoToday (pagine di cronaca e università), Il Sole 24 Ore (lettura); ricerca Reuters/BBC/Guardian rifiutata dal proxy. Eventi, cinema, teatro e concerti dall'edizione del mattino (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (storia riscritta, ramo staccato)."
     }
   ]
 }
