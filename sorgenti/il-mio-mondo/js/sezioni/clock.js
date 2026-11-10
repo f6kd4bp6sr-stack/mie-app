@@ -34,6 +34,7 @@ const pad2 = n => (n < 10 ? '0' : '') + n;
 const digital = (h, m) => h + ':' + pad2(m);
 
 /* ---------- disegno del quadrante ---------- */
+let CLK_NONUM = false;   // quadrante senza numeri, solo tacchette (prova difficile dell'interrogazione)
 function clockSVG(h24, m, o) {
   o = o || {};
   const cx = 110, cy = 110, R = 100;
@@ -51,7 +52,7 @@ function clockSVG(h24, m, o) {
     const big = i % 5 === 0, a = pt(i * 6, R - 3), b = pt(i * 6, R - (big ? 13 : 7));
     s += '<line x1="' + a[0].toFixed(1) + '" y1="' + a[1].toFixed(1) + '" x2="' + b[0].toFixed(1) + '" y2="' + b[1].toFixed(1) + '" stroke="var(--ink)" stroke-width="' + (big ? 3 : 1.4) + '" stroke-linecap="round"/>';
   }
-  for (let n = 1; n <= 12; n++) {
+  if (!(o.nonum || CLK_NONUM)) for (let n = 1; n <= 12; n++) {
     const p = pt(n * 30, R - 30);
     s += '<text x="' + p[0].toFixed(1) + '" y="' + (p[1] + 8).toFixed(1) + '" text-anchor="middle" font-size="22" font-weight="800" fill="var(--ink)" font-family="var(--font-display)">' + n + '</text>';
   }

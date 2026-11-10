@@ -192,8 +192,8 @@ function oroGioca(box) {
   p.querySelectorAll('h4').forEach(h => { if (/Giochi/.test(h.textContent)) h.remove(); });
 }
 
-/* ---------- 🎓 Interrogazione finale: 10 domande, una per ogni cosa imparata, dalla più facile alla più difficile ---------- */
-const ORO_ESAME = [
+/* ---------- 🎓 Interrogazione finale: 20 domande. Le prime 10 con i numeri delle ore, le altre 10 con il quadrante senza numeri ---------- */
+const ORO_ESAME1 = [
   ['Le ore in punto', () => oroLeggi(...oroOraPasso(0), false)], ['La mezza', () => oroLeggi(...oroOraPasso(1), false)],
   ['Un quarto e meno un quarto', () => oroLeggi(...oroOraPasso(2), false)], ['I minuti di 5 in 5', () => oroLeggi(...oroOraPasso(3), false)],
   ['Tutti i minuti', () => oroLeggi(...oroOraPasso(4), false)], ['Metti le lancette', null],
@@ -201,23 +201,25 @@ const ORO_ESAME = [
   ['Nella giornata', () => { let q = oroGiornata(2); while (!/comincia/.test(q.q)) q = oroGiornata(2); return q; }],
   ['Nella giornata', () => { let q = oroGiornata(3); while (!/comincia/.test(q.q)) q = oroGiornata(3); return q; }]
 ];
-const oroMedaglia = r => r >= 10 ? '🥇' : r >= 8 ? '🥈' : r >= 6 ? '🥉' : '';
+const ORO_ESAME = ORO_ESAME1.concat(ORO_ESAME1), ORO_META = ORO_ESAME1.length;   // dalla domanda 11: quadrante senza numeri
+const oroMedaglia = r => r >= 20 ? '🥇' : r >= 16 ? '🥈' : r >= 12 ? '🥉' : '';
 function oroEsame(box) {
   let voce = store.get('oro-modo', 's') === 'v';
-  const E = store.get('oro-esame', null);
+  const E = store.get('oro-esame20', null);
   box.innerHTML = '<div class="panel" style="--gc:var(--c6);--gs:var(--c6-soft)"><h3>🎓 Interrogazione</h3>' +
-    '<p class="oro-sp">Mettiti alla prova: <b>10 domande</b>, una per ogni cosa che hai imparato. Qui gli aiuti sono spenti: sull’orologio restano solo i numeri delle ore, da 1 a 12, come su un orologio vero. I numeri piccoli dei minuti (05, 10, 15…) non ci sono: i minuti li conti tu. Alla fine ricevi il risultato e, se va bene, una medaglia.</p>' +
-    '<div class="oro-leg oro-med"><span>🥇 10 su 10</span><span>🥈 8 o 9</span><span>🥉 6 o 7</span></div>' +
-    '<p class="oro-nota" id="oro-rec">' + (E ? 'Il tuo risultato migliore: <b>' + E.best + ' su 10</b> ' + oroMedaglia(E.best) + ' · ultima volta: ' + E.last + ' su 10 · interrogazioni fatte: ' + E.n : 'Non l’hai ancora fatta: la prima è per allenarsi!') + '</p>' +
+    '<p class="oro-sp">Mettiti alla prova: <b>20 domande</b> in due parti. <b>Prima parte (1–10)</b>: sull’orologio restano solo i numeri delle ore, da 1 a 12; i numeri piccoli dei minuti non ci sono. <b>Seconda parte (11–20), la prova difficile</b>: il quadrante è <b>senza numeri</b>, ci sono solo le tacchette. Alla fine ricevi il risultato e, se va bene, una medaglia.</p>' +
+    '<div class="oro-leg oro-med"><span>🥇 20 su 20</span><span>🥈 da 16 a 19</span><span>🥉 da 12 a 15</span></div>' +
+    '<p class="oro-nota" id="oro-rec">' + (E ? 'Il tuo risultato migliore: <b>' + E.best + ' su 20</b> ' + oroMedaglia(E.best) + ' · ultima volta: ' + E.last + ' su 20 · interrogazioni fatte: ' + E.n : 'Non l’hai ancora fatta: la prima è per allenarsi!') + '</p>' +
     '<div class="oro-modi"><button type="button" class="cu-chip" data-md="s" aria-pressed="' + !voce + '">✍️ Rispondo scrivendo</button><button type="button" class="cu-chip" data-md="v" aria-pressed="' + voce + '">🎙️ Rispondo a voce</button></div>' +
     '<div class="row center"><button type="button" class="btn" id="oro-via" style="--bc:var(--c6)">Comincia l’interrogazione →</button></div><div class="m-stage" id="oro-stage"></div></div>';
   box.querySelectorAll('[data-md]').forEach(b => b.addEventListener('click', () => { voce = b.dataset.md === 'v'; store.set('oro-modo', voce ? 'v' : 's'); box.querySelectorAll('[data-md]').forEach(x => x.setAttribute('aria-pressed', x === b)); }));
   $('oro-via').addEventListener('click', () => oroGiro({ stage: $('oro-stage'), get voce() { return voce; }, N: ORO_ESAME.length, titolo: '🎓 Interrogazione', lvl: 3,
-    set: i => !ORO_ESAME[i][1], gen: i => ORO_ESAME[i][1](),
-    fine: right => { const e = store.get('oro-esame', { best: 0, n: 0, last: 0 }); e.n++; e.last = right; e.best = Math.max(e.best, right); store.set('oro-esame', e);
-      const r = $('oro-rec'); if (r) r.innerHTML = 'Il tuo risultato migliore: <b>' + e.best + ' su 10</b> ' + oroMedaglia(e.best) + ' · ultima volta: ' + e.last + ' su 10 · interrogazioni fatte: ' + e.n;
+    set: i => !ORO_ESAME[i][1], nonum: i => i >= ORO_META, gen: i => { CLK_NONUM = i >= ORO_META; try { return ORO_ESAME[i][1](); } finally { CLK_NONUM = false; } },
+    parte: i => i === ORO_META ? '🔥 Seconda parte: adesso il quadrante è senza numeri!' : '',
+    fine: right => { const e = store.get('oro-esame20', { best: 0, n: 0, last: 0 }); e.n++; e.last = right; e.best = Math.max(e.best, right); store.set('oro-esame20', e);
+      const r = $('oro-rec'); if (r) r.innerHTML = 'Il tuo risultato migliore: <b>' + e.best + ' su 20</b> ' + oroMedaglia(e.best) + ' · ultima volta: ' + e.last + ' su 20 · interrogazioni fatte: ' + e.n;
       const m = oroMedaglia(right);
-      return m ? m + (right >= 10 ? ' Perfetto! Sai leggere l’orologio.' : right >= 8 ? ' Bravissima! Ti manca pochissimo.' : ' Brava! Ripassa i passi dove hai sbagliato e riprova.') : '💪 Ripassa «Come si legge» e riprova: ogni volta va meglio.'; } }));
+      return m ? m + (right >= 20 ? ' Perfetto! Sai leggere l’orologio, anche senza numeri.' : right >= 16 ? ' Bravissima! Ti manca pochissimo.' : ' Brava! Ripassa i passi dove hai sbagliato e riprova.') : '💪 Ripassa «Come si legge» e riprova: ogni volta va meglio.'; } }));
 }
 
 /* ---------- un giro di domande: scritte oppure a voce ----------
@@ -227,7 +229,7 @@ function oroGiro(o) {
   const isSet = () => typeof o.set === 'function' ? o.set(i) : o.set;
   Mic.clear();
   stage.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  const testa = () => '<div class="quiz"><div class="qn">' + esc(o.titolo) + ' · ' + (i + 1) + ' di ' + N + (o.voce && !isSet() ? ' · 🎙️ a voce' : '') + '</div><div class="progress" style="--gc:var(--c5)"><i style="width:' + (i / N * 100) + '%"></i></div>';
+  const testa = () => '<div class="quiz"><div class="qn">' + esc(o.titolo) + ' · ' + (i + 1) + ' di ' + N + (o.voce && !isSet() ? ' · 🎙️ a voce' : '') + '</div><div class="progress" style="--gc:var(--c5)"><i style="width:' + (i / N * 100) + '%"></i></div>' + (o.parte && o.parte(i) ? '<p class="oro-parte">' + o.parte(i) + '</p>' : '');
   function finish() {
     Mic.clear();
     const good = right >= N - 1, extra = o.fine ? o.fine(right, N) : '';
@@ -299,7 +301,7 @@ function oroGiro(o) {
       '<div class="row center ck-btns"><button type="button" class="btn small ghost" data-s="-60">−1 ora</button><button type="button" class="btn small ghost" data-s="-5">−5</button><button type="button" class="btn small ghost" data-s="5">+5</button><button type="button" class="btn small ghost" data-s="60">+1 ora</button></div>' +
       '<div class="row center" style="margin-top:8px"><button type="button" class="btn" id="oro-check" style="--bc:var(--c1)">Controlla ✓</button></div><div class="fb"></div></div>';
     oroDi('Metti le lancette su ' + w);
-    const draw = () => { T = ((T % 720) + 720) % 720; const h = Math.floor(T / 60) || 12, mm = T % 60; $('oro-set').innerHTML = clockSVG(h, mm, { mins: (o.lvl || 1) <= 2, cls: 'big drag' }); $('oro-set-t').innerHTML = '<span class="ck-dig">' + digital(h, mm) + '</span>'; };
+    const draw = () => { T = ((T % 720) + 720) % 720; const h = Math.floor(T / 60) || 12, mm = T % 60; $('oro-set').innerHTML = clockSVG(h, mm, { mins: (o.lvl || 1) <= 2, nonum: !!(o.nonum && o.nonum(i)), cls: 'big drag' }); $('oro-set-t').innerHTML = '<span class="ck-dig">' + digital(h, mm) + '</span>'; };
     draw();
     dragClock($('oro-set'), () => T, v => { T = v; draw(); }, (o.lvl || 1) >= 4 ? 1 : 5);
     stage.querySelectorAll('[data-s]').forEach(b => b.addEventListener('click', () => { T += +b.dataset.s; draw(); tock(); }));
