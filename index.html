@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="e80fbdb071";</script>
+<script>window.APP_VERSION="4b46919a29";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -13710,7 +13710,7 @@ function oroEsame(box) {
   let voce = store.get('oro-modo', 's') === 'v';
   const E = store.get('oro-esame', null);
   box.innerHTML = '<div class="panel" style="--gc:var(--c6);--gs:var(--c6-soft)"><h3>🎓 Interrogazione</h3>' +
-    '<p class="oro-sp">Mettiti alla prova: <b>10 domande</b>, una per ogni cosa che hai imparato. Qui non ci sono aiuti: sull’orologio non ci sono i numeri dei minuti. Alla fine ricevi il risultato e, se va bene, una medaglia.</p>' +
+    '<p class="oro-sp">Mettiti alla prova: <b>10 domande</b>, una per ogni cosa che hai imparato. Qui gli aiuti sono spenti: sull’orologio restano solo i numeri delle ore, da 1 a 12, come su un orologio vero. I numeri piccoli dei minuti (05, 10, 15…) non ci sono: i minuti li conti tu. Alla fine ricevi il risultato e, se va bene, una medaglia.</p>' +
     '<div class="oro-leg oro-med"><span>🥇 10 su 10</span><span>🥈 8 o 9</span><span>🥉 6 o 7</span></div>' +
     '<p class="oro-nota" id="oro-rec">' + (E ? 'Il tuo risultato migliore: <b>' + E.best + ' su 10</b> ' + oroMedaglia(E.best) + ' · ultima volta: ' + E.last + ' su 10 · interrogazioni fatte: ' + E.n : 'Non l’hai ancora fatta: la prima è per allenarsi!') + '</p>' +
     '<div class="oro-modi"><button type="button" class="cu-chip" data-md="s" aria-pressed="' + !voce + '">✍️ Rispondo scrivendo</button><button type="button" class="cu-chip" data-md="v" aria-pressed="' + voce + '">🎙️ Rispondo a voce</button></div>' +
