@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="7c0eeac2a1";</script>
+<script>window.APP_VERSION="4a53326e94";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -11380,7 +11380,7 @@ function wireLinkWarn() { const w = $('io-lkw'); if (!w) return; w.addEventListe
 /* ---------- 📱 QR per i genitori: i progressi passano inquadrando lo schermo ---------- */
 const QR_BASE = 'https://f6kd4bp6sr-stack.github.io/mie-app/licenze/progressi.html#';
 function qrData(days) {
-  const P = 'mm2-', KEEP = ['days', 'prog', 'math-done', 'sci-done', 'games-done', 'tab-best', 'simon-best', 'clock-level', 'cuoca-level', 'moves-done', 'path-day', 'gems', 'piggy', 'diff-level'], d = {};
+  const P = 'mm2-', KEEP = ['days', 'prog', 'math-done', 'sci-done', 'games-done', 'tab-best', 'simon-best', 'clock-level', 'oro-passi', 'oro-esame20', 'cuoca-level', 'moves-done', 'path-day', 'gems', 'piggy', 'diff-level'], d = {};
   KEEP.forEach(k => { const v = store.get(k, undefined); if (v !== undefined) d[k] = v; });
   const ref = iso(addDays(new Date(), -days));
   const pd = store.get('prog-days', {}); d['prog-days'] = {}; Object.keys(pd).filter(x => x >= ref).forEach(x => d['prog-days'][x] = pd[x]);
