@@ -212,7 +212,7 @@ function fromThisDevice(){ // stesso indirizzo: se «Il mio mondo» è usato su 
 }
 
 /* ---------- materie e argomenti di «Il mio mondo» ---------- */
-const MATH=[["tab","⚡","Tabelline"],["fraz","🍕","Frazioni, decimali, %"],["prob","🕵️","Problemi"],["geo","📐","Aree e perimetri"],["media","🎒","Verso la media"],["ore","🕐","L’orologio"]];
+const MATH=[["tab","⚡","Tabelline"],["fraz","🍕","Frazioni, decimali, %"],["prob","🕵️","Problemi"],["geo","📐","Aree e perimetri"],["media","🎒","Verso la media"]];
 const SCI=[["corpo","🫀","Il corpo umano"],["spazio","🪐","Sistema solare"],["energia","⚡","Energia e materia"],["animali","🦊","Animali e ambienti"]];
 const SCOPRI={ita:["📖","Italiano",1],storia:["🏛️","Storia",1],geo:["🗺️","Geografia",1],eng:["🇬🇧","Inglese",1],parlo:["🇬🇧","Parlo inglese",1],arte:["🎨","Arte",0],musica:["🎵","Musica",0],civica:["🤝","Ed. civica",0],tecno:["💡","Tecnologia",0],media:["🎒","Verso la 1ª media",0],roblox:["🧱","Roblox",0],soldi:["🐷","Soldi e risparmio",0],lavo:["🧼","Perché mi lavo",0],vesto:["👗","Come mi vesto",0]};
 const SPORTN={patt:["⛸️","Pattinaggio"],aerea:["🤸","Ginnastica aerea"],nuoto:["🏊","Nuoto"],corpo:["💪","Corpo in movimento"]};
@@ -270,7 +270,14 @@ function analyze(pack){
    if(clock>=3) good.push([`Orologio: livello ${clock} di 4`,"legge bene le ore"]); else if((+md.ore||0)>=2&&clock<=1) bad.push(["Orologio: ancora al livello 1",`provato ${md.ore} volte`]);
    accEval("mate","Matematica");
    const st=mix(tot===0&&!pl("mate")?"none":pl("mate")&&!tbBad.length?"good":mathNever.length>=3||tbBad.length>=3?"bad":mathNever.length||tbBad.length?"mid":"good","mate");
-   S.push({c:"var(--c1)",t:"🔢 Matematica",st,html:accRow("mate")+rows+`<div class="lbl" style="margin-top:10px">Tabelline: record di risposte giuste al primo tentativo (su 10)</div><div class="tabs-grid">${grid}</div>`+(clock?`<div class="row"><span>🕐 Livello orologio</span><span class="v">${clock} / 4</span></div>`:"")});}
+   S.push({c:"var(--c1)",t:"🔢 Matematica",st,html:accRow("mate")+rows+`<div class="lbl" style="margin-top:10px">Tabelline: record di risposte giuste al primo tentativo (su 10)</div><div class="tabs-grid">${grid}</div>`});
+   // OROLOGIO (sezione autonoma di «Il mio mondo»): giri fatti, livello, passi di «Come si legge», interrogazione finale
+   {const op=D["oro-passi"]&&typeof D["oro-passi"]==="object"?Object.keys(D["oro-passi"]).length:0, oe=D["oro-esame20"]&&typeof D["oro-esame20"]==="object"?D["oro-esame20"]:null, giri=+md.ore||0;
+    const med=r=>r>=20?" 🥇":r>=16?" 🥈":r>=12?" 🥉":"";
+    let r2=`<div class="row"><span>🔁 Giri di domande completati</span><span class="v">${giri||"—"}</span></div><div class="row"><span>📶 Livello delle domande</span><span class="v">${clock?clock+" / 4":"—"}</span></div><div class="row"><span>👀 Passi di «Come si legge» con la stella</span><span class="v">${op} / 6</span></div>`;
+    r2+=oe?`<div class="row"><span>🎓 Interrogazione · risultato migliore</span><span class="v">${+oe.best||0} / 20${med(+oe.best||0)}</span></div><div class="row"><span>🎓 Interrogazione · ultima volta</span><span class="v">${+oe.last||0} / 20 · fatta ${+oe.n||0} ${+oe.n===1?"volta":"volte"}</span></div>`:`<div class="row"><span>🎓 Interrogazione finale (20 domande)</span><span class="v">non ancora fatta</span></div>`;
+    if(oe&&+oe.best>=16) good.push([`Orologio: interrogazione ${oe.best} su 20`,"legge bene l’orologio"]); else if(oe&&+oe.last<12) bad.push([`Orologio: interrogazione ${oe.last} su 20`,"da ripassare «Come si legge»"]);
+    S.push({c:"var(--c5)",t:"🕐 Orologio",st:!giri&&!op&&!oe?"none":oe&&+oe.best>=16||op>=6?"good":oe&&+oe.last<12?"bad":"mid",html:r2});}}
 
   // SCIENZE
   {let rows="",done=0,never=[];
