@@ -165,9 +165,11 @@ function randTime(lvl) {
   return [h, m];
 }
 const tlabel = (h, m) => digital(h, m) + ' · ' + clockWords(h, m, false).main.replace(/^(Sono|È) /, '');
+const ART_L = n => n === 1 || n === 8 || n === 11;   // l’1, l’8, l’11
+const sulN = n => (ART_L(n) ? 'sull’' : 'sul ') + n, ilN = n => (ART_L(n) ? 'l’' : 'il ') + n;
 function explainRead(h, m) {
-  const corta = m === 0 ? 'La corta è proprio sul ' + h : 'La corta ha appena superato il ' + h;
-  const lunga = m === 0 ? 'la lunga è sul 12: in punto' : m % 5 === 0 ? 'la lunga è sul ' + (m / 5) + ': ' + (m / 5) + ' × 5 = ' + m + ' minuti' : 'la lunga è ' + (m % 5) + (m % 5 === 1 ? ' tacchetta' : ' tacchette') + ' dopo il ' + (Math.floor(m / 5) || 12) + ': ' + (Math.floor(m / 5) * 5) + ' + ' + (m % 5) + ' = ' + m + ' minuti';
+  const corta = m === 0 ? 'La corta è proprio ' + sulN(h) : 'La corta ha superato ' + ilN(h);
+  const lunga = m === 0 ? 'la lunga è sul 12: in punto' : m % 5 === 0 ? 'la lunga è ' + sulN(m / 5) + ': ' + (m / 5) + ' × 5 = ' + m + ' minuti' : 'la lunga è ' + (m % 5) + (m % 5 === 1 ? ' tacchetta' : ' tacchette') + ' dopo ' + ilN(Math.floor(m / 5) || 12) + ': ' + (Math.floor(m / 5) * 5) + ' + ' + (m % 5) + ' = ' + m + ' minuti';
   return corta + ', ' + lunga + '.';
 }
 function qRead(lvl) {
@@ -192,12 +194,12 @@ function qDur(lvl) {
   const wrong = [...new Set(durs.filter(x => x !== d).sort(() => Math.random() - .5))].slice(0, 2);
   return { svg: '<div class="clk-pair"><div>' + clockSVG(h, m, { mins: true, cls: 'sm' }) + '<b>Inizio</b></div><div class="arrow">→</div><div>' + clockSVG(eh, em, { mins: true, cls: 'sm' }) + '<b>Fine</b></div></div>',
     q: 'Quanto tempo è passato?', o: [fmt(d), fmt(wrong[0]), fmt(wrong[1])], a: 0,
-    e: 'Dalle ' + digital(h, m) + ' alle ' + digital(eh, em) + ': ' + (d >= 60 ? 'un giro intero della lancetta lunga è 1 ora' + (d > 60 ? ', più ' + (d - 60) + ' minuti' : '') : 'la lancetta lunga avanza di ' + d + ' minuti, cioè ' + (d / 5) + ' numeri × 5') + '.' };
+    e: (h === 1 ? 'Dall’' : 'Dalle ') + digital(h, m) + (eh === 1 ? ' all’' : ' alle ') + digital(eh, em) + ': ' + (d >= 60 ? 'un giro intero della lancetta lunga è 1 ora' + (d > 60 ? ', più ' + (d - 60) + ' minuti' : '') : 'la lancetta lunga avanza di ' + d + ' minuti, cioè ' + (d / 5) + ' numeri × 5') + '.' };
 }
 function qDay(lvl) {
   const kinds = [
-    () => { const h = rndi(1, 11); return { q: 'Le ' + NUM_IT(h) + ' del pomeriggio sull’orologio digitale sono…', o: [(h + 12) + ':00', pad2(h) + ':00', (h + 10) + ':00'], e: 'Dopo mezzogiorno aggiungi 12: ' + h + ' + 12 = ' + (h + 12) + '.' }; },
-    () => { const h = rndi(13, 23), m = [0, 15, 30, 45][rndi(0, 3)]; const w = clockWords(h, m, true).main; return { q: 'Sull’orologio digitale c’è ' + digital(h, m) + '. Come si dice?', o: [w, clockWords(h - 12, m, false).main + ' di mattina', clockWords((h - 11) % 12 || 12, m, false).main + (h < 18 ? ' del pomeriggio' : ' di sera')], e: h + ' − 12 = ' + (h - 12) + ', e dopo mezzogiorno è ' + (h < 18 ? 'pomeriggio' : 'sera') + '.' }; },
+    () => { const h = rndi(1, 5); return { q: (h === 1 ? 'L’una' : 'Le ' + NUM_IT(h)) + ' del pomeriggio sull’orologio digitale sono…', o: [(h + 12) + ':00', pad2(h) + ':00', (h + 10) + ':00'], e: 'Dopo mezzogiorno aggiungi 12: ' + h + ' + 12 = ' + (h + 12) + '.' }; },
+    () => { const h = rndi(13, 21), m = [0, 15, 30, 45][rndi(0, 3)]; const w = clockWords(h, m, true).main; return { q: 'Sull’orologio digitale c’è ' + digital(h, m) + '. Come si dice?', o: [w, clockWords(h - 12, m, false).main + ' di mattina', clockWords((h - 11) % 12 || 12, m, false).main + (h < 18 ? ' del pomeriggio' : ' di sera')], e: h + ' − 12 = ' + (h - 12) + ', e dopo mezzogiorno è ' + (h < 18 ? 'pomeriggio' : 'sera') + '.' }; },
     () => { const h = rndi(7, 11); return { q: 'Le ' + digital(h, 0) + ' sono di mattina o di sera?', o: ['Di mattina', 'Di sera', 'Di notte'], e: 'Prima delle 12 è mattina: alle ' + h + ' di solito sei già sveglia!' }; },
     () => ({ q: 'Quante ore ha un giorno intero?', o: ['24', '12', '60'], e: 'La lancetta corta fa 2 giri da 12 ore: 12 + 12 = 24.' }),
     () => ({ q: 'Che ore sono quando le lancette sono tutte e due sul 12, a metà giornata?', o: ['Mezzogiorno', 'Le sei', 'Mezzanotte e mezza'], e: 'Alle 12:00 di giorno è mezzogiorno; alle 00:00 di notte è mezzanotte.' }),

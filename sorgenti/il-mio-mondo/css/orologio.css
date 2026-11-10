@@ -1,0 +1,33 @@
+/* 🕐 Orologio: sezione autonoma */
+.oro-top { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
+.oro-tabs, .oro-modi { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; }
+.oro-tabs .cu-chip { font-size: 16px; padding: 8px 16px; min-height: 46px; }
+.oro-tabs .cu-chip[aria-pressed="true"], .oro-modi .cu-chip[aria-pressed="true"], #oro-voce[aria-pressed="true"] { background: var(--c5-soft); border-color: var(--c5); }
+.oro-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+@media (max-width: 700px) { .oro-grid { grid-template-columns: minmax(0, 1fr); } }
+.oro-c { padding: 12px 14px; text-align: left; }
+.oro-c summary { display: flex; align-items: center; justify-content: space-between; gap: 8px; cursor: pointer; list-style: none; font-family: var(--font-display); font-size: 18px; min-height: 40px; }
+.oro-c summary::-webkit-details-marker { display: none; }
+.oro-c summary span { transition: transform .15s; } .oro-c[open] summary span { transform: rotate(180deg); }
+.oro-c p { font-weight: 700; font-size: 16px; line-height: 1.45; margin: 8px 0; }
+.oro-img { margin: 8px 0 4px; text-align: center; }
+.oro-svg { width: 100%; max-width: 300px; height: auto; }
+.oro-leg { display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: center; font-weight: 700; font-size: 14px; margin-top: 6px; }
+.oro-leg i { display: inline-block; width: 22px; height: 7px; border-radius: 4px; margin-right: 5px; vertical-align: middle; }
+.oro-cat { display: grid; grid-template-columns: auto auto; gap: 6px 10px; justify-content: center; align-items: center; font-size: 17px; }
+.oro-cat b { background: var(--c5-soft); border: 2px solid var(--c5); border-radius: 12px; padding: 4px 10px; font-family: var(--font-display); }
+.oro-cat span { font-weight: 800; text-align: left; }
+.oro-due { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.oro-due > span { font-size: 26px; font-weight: 800; } .oro-due .clk { margin: 0; }
+.oro-col { display: grid; gap: 4px; justify-items: center; font-size: 14px; }
+.oro-dig { display: inline-block; background: #1d2433; color: #7dffb0; font-family: ui-monospace, Menlo, monospace; font-weight: 800; font-size: 30px; letter-spacing: 2px; padding: 4px 12px; border-radius: 12px; font-variant-numeric: tabular-nums; }
+.oro-dig i { font-style: normal; opacity: .8; }
+.oro-big { text-align: center; } .oro-big .oro-dig { font-size: 52px; padding: 8px 22px; }
+.oro-passi { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 6px; }
+@media (max-width: 700px) { .oro-passi { grid-template-columns: minmax(0, 1fr); } }
+.oro-sp { font-weight: 700; font-size: 17px; line-height: 1.5; text-align: left; }
+.oro-es { font-weight: 700; font-size: 15px; color: var(--ink-soft); text-align: center; margin: 6px 0 0; }
+.oro-modi.row { justify-content: center; margin-top: 14px; }
+.oro-nota { font-weight: 700; font-size: 14px; color: var(--ink-soft); margin: 0 0 10px; }
+.oro-risp { font-size: 20px; margin: 4px 0 6px; } .oro-risp b { font-family: var(--font-display); } .oro-risp small { display: block; font-size: 14px; color: var(--ink-soft); font-weight: 700; }
+.oro-v { margin-top: 12px; }
