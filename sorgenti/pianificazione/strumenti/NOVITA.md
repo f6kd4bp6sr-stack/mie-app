@@ -1,4 +1,4 @@
-# Novità su contratto e pensione — istruzioni per l'agente (un giro al giorno, alle 13)
+# Novità su contratto e pensione — istruzioni per l'agente (un giro al giorno, all'1:01 di notte)
 
 Pianificazione → 🎖️ Pensione → **Novità** legge il file pubblico `licenze/news-pensione.json`.
 Un'attività programmata lo aggiorna **una volta al giorno, di notte, alle 1:01** (dal 3/11/2026) (ora italiana; parte qualche minuto prima). Il file è **pubblico**: solo notizie generali, mai dati personali.

@@ -106,3 +106,7 @@ In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti 
 3. `python3 sorgenti/pianificazione/strumenti/verifica_stampa.py licenze/stampa-oggi.json sorgenti/pianificazione/statici/stampa-oggi.json` deve dire ✅.
 4. Commit dei soli due file, con il messaggio «Pianificazione: stampa di oggi AAAA-MM-GG mattina|sera». Push su main; se viene rifiutato, `git pull --rebase` e riprova.
 5. Non toccare nessun altro file.
+
+
+## Ora di «updated» (10/11/2026)
+In «updated» va l'ora italiana VERA del momento in cui scrivi il file, presa con `TZ=Europe/Rome date +%Y-%m-%dT%H:%M%:z`: mai un'ora stimata e mai nel futuro.
