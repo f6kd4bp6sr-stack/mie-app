@@ -30,7 +30,7 @@ const FEEL_FACTS = [
   ['Perché è utile dire come mi sento?', 'Dare un nome a un’emozione aiuta il cervello a calmarla. E quando la racconti, chi ti vuole bene può capirti e aiutarti: le emozioni fanno parte della vita con gli altri.'],
   ['Anche i grandi hanno giorni no?', 'Sì, tutti: mamma, papà, le maestre e anche i campioni olimpici. Le emozioni cambiano come il tempo: dopo la pioggia torna il sole.'],
   ['Perché scrivere le cose belle?', 'Quando scrivi un momento felice lo rivivi una seconda volta, e rileggerlo nei giorni grigi ti aiuta a ricordare che le cose belle tornano.'],
-  ['Che cosa fa il corpo quando sono arrabbiata?', 'Il cuore accelera e i muscoli si tendono: il corpo si prepara all’azione. Tre respiri lenti del drago (dentro col naso, fuori piano con la bocca) aiutano a farlo calmare.']
+  ['Che cosa fa il corpo quando sono arrabbiata?', 'Il cuore accelera e i muscoli si tendono: il corpo si prepara all’azione. Tre respiri lenti (dentro col naso, fuori piano con la bocca) aiutano a farlo calmare.']
 ];
 const pad = n => (n < 10 ? '0' : '') + n;
 const iso = d => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());

@@ -15,7 +15,7 @@
 .sr-stage{flex:1;position:relative;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;min-height:0;overflow:hidden}
 .sr-chips{display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start;flex:1;overflow:auto;padding-top:8px}
 .sr-chip{background:rgba(255,255,255,.18);border-radius:14px;padding:8px 12px;font-weight:800;font-size:16px;display:flex;flex-direction:column;animation:srPop .5s ease}
-.sr-chip small{font-weight:700;opacity:.85;font-size:12px}.sr-chip.new{background:#fff;color:var(--a)}
+.sr-chip small{font-weight:700;opacity:.85;font-size:13px}.sr-chip.new{background:#fff;color:var(--a)}
 .sr-scene{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-size:min(30vh,200px);line-height:1;opacity:.95;filter:drop-shadow(0 10px 18px rgba(0,0,0,.25));pointer-events:none}.sr-scene.in{animation:srScene .8s ease}
 .sr-drago{width:170px;align-self:flex-start;position:relative;z-index:1}.sr-drago svg{width:100%;height:auto}.sr-drago.talk{animation:srTalk .9s ease}
 .sr-bubble{background:#fff;color:#1d2433;border-radius:20px;padding:14px 16px;font-size:20px;font-weight:700;line-height:1.4;box-shadow:0 6px 18px rgba(0,0,0,.25)}

@@ -10,6 +10,6 @@ python3 /home/claude/app/tools/sorgenti_pubbliche.py /home/claude/app il-mio-mon
 cd /home/claude/mie-app && touch .nojekyll && git add -A . ':!semestre' ':!sorgenti/semestre' ':!licenze'
 git -c user.name="mie-app" -c user.email="mie-app@users.noreply.github.com" commit -q -m "${1:-Aggiornamento dell'app}
 
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Co-Authored-By: Claude Fable 5.2 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01WZ9PCYVjkAFsCmPtVbZLCu" || true
 git push -q origin main

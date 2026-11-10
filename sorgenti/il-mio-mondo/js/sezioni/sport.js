@@ -35,7 +35,7 @@ const MOVES = [
       { e: '🫨', n: 'Scuoti tutto', t: 'Scuoti le mani, poi le braccia, poi una gamba e l’altra. Come un cane bagnato!', tip: 'Scuoti via la stanchezza!', d: 15, a: 'shake' },
       { e: '🦘', n: 'Saltelli del canguro', t: 'Piccoli saltelli sul posto a piedi uniti.', tip: 'Atterra morbida: prima le punte, poi tutto il piede, ginocchia piegate.', d: 15, a: 'hop' },
       { e: '🙆‍♀️', n: 'Allunga al cielo', t: 'Intreccia le dita e spingi le mani verso il soffitto. Poi piegati un po’ a destra e a sinistra.', tip: 'Senti la schiena che si allunga.', d: 15, a: 'stretch' },
-      { e: '😮‍💨', n: 'Respiro del drago', t: 'Inspira forte dal naso, poi butta fuori l’aria come un drago che sputa fuoco. Per 3 volte.', tip: 'Respira con calma: sei bravissima!', d: 15, a: 'belly' }
+      { e: '😮‍💨', n: 'Respiro del vento', t: 'Inspira forte dal naso, poi butta fuori l’aria come un vento forte. Per 3 volte.', tip: 'Respira con calma: sei bravissima!', d: 15, a: 'belly' }
     ] }
 ];
 

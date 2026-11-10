@@ -49,7 +49,7 @@
   .isl.on { background: linear-gradient(180deg, #a6e3a1, #f2e3b6 75%); color: #2b2f3a; } .isl.on .isl-ic { filter: none; opacity: 1; }
   .isl.gold { background: linear-gradient(180deg, #ffe58a, #f2c94c); color: #3a2e1c; box-shadow: 0 0 0 3px #e0b100, 0 6px 0 rgba(0, 60, 120, .18); } .isl.gold .isl-ic { filter: none; opacity: 1; }
   .isl i { position: absolute; top: -8px; right: 10px; font-style: normal; font-size: 22px; }
-  .isl em { font-style: normal; font-size: 11.5px; font-weight: 900; color: #6b5a3c; background: #fbf6ea; border-radius: 999px; padding: 2px 8px; }
+  .isl em { font-style: normal; font-size:13px; font-weight: 900; color: #6b5a3c; background: #fbf6ea; border-radius: 999px; padding: 2px 8px; }
   /* =================== ✏️ LE MIE MAPPE =================== */
   .mp-title { font: inherit; font-family: var(--font-display); font-size: 18px; font-weight: 800; background: none; border: 0; color: var(--ink); cursor: pointer; flex: 1 1 200px; text-align: left; min-width: 0; }
   .mp-tools { display: flex; gap: 6px; flex-wrap: wrap; } .mp-tools .on { background: var(--v2-blue, #3fa9f5); color: #fff; border-color: var(--v2-blue, #3fa9f5); }
@@ -86,7 +86,7 @@
   .ct-pt.no { opacity: .55; }
   .ct-pt.hint circle:not(.ct-hit), .ct-pt.hint rect, .ct-pt.hint path { animation: ct-blink .6s ease-in-out infinite alternate; stroke: #ffd23f; stroke-width: 6; }
   @keyframes ct-blink { to { opacity: .25; } }
-  .ct-badge { display: inline-block; font-size: 12px; font-weight: 900; color: #fff; background: var(--c); border-radius: 999px; padding: 2px 8px; vertical-align: middle; }
+  .ct-badge { display: inline-block; font-size:13px; font-weight: 900; color: #fff; background: var(--c); border-radius: 999px; padding: 2px 8px; vertical-align: middle; }
   .ct-leg { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 14px; margin: 4px 0; }
   .ct-leg i { width: 16px; height: 16px; border-radius: 50%; background: var(--c); border: 2px solid #fff; box-shadow: 0 0 0 1px #ccc; } .ct-leg i.antica { border-radius: 3px; } .ct-leg i.monte { border-radius: 0; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
   .sp-cta { display: flex; width: 100%; align-items: center; gap: 10px; font: inherit; font-weight: 900; font-size: 16px; color: var(--ink); background: #e3f1ff; border: 2px solid #3fa9f5; border-radius: 16px; padding: 12px; cursor: pointer; }
