@@ -1,116 +1,81 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-09T13:20+01:00",
-  "nota": "Edizione del pomeriggio del 9 novembre 2026.",
+  "edizione": "mattina",
+  "updated": "2026-11-10T05:05+01:00",
+  "nota": "Edizione del mattino del 10 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-dia-hacker",
-        "t": "Possibile attacco hacker alla Dia, verifiche in corso: Piantedosi parla di nessuna emergenza",
-        "s": "La Direzione investigativa antimafia controlla se i suoi sistemi siano stati violati. Sui social si parla di un archivio da oltre 220 MB in vendita sul dark web, dato non verificato. Il ministro dell'Interno esclude un'emergenza in atto; martedì è convocato il Comitato per l'ordine e la sicurezza.",
-        "d": "2026-11-09",
+        "id": "it-aiuti-ucraina",
+        "t": "Pacchetto di aiuti militari a Kiev: la firma di Giorgetti agita la maggioranza",
+        "s": "Il tredicesimo pacchetto di aiuti all'Ucraina, secretato, richiede la firma del ministro dell'Economia Giorgetti. La Lega protesta e porterà i dubbi al Copasir; Salvini chiede di ridurre gli aiuti militari. Meloni e Forza Italia confermano il sostegno a Kiev. Tajani ha poi detto che il pacchetto è stato firmato.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/09/verifiche-in-corso-su-un-possibile-attacco-hacker-alla-dia_63e3a7bc-d248-429a-8413-1cc12d66ef7e.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/lira-della-lega-sul-decreto-armi-giorgetti-non-lo-firma_bd84e8d5-bb54-4f9e-ab20-c050f5ae3632.html"
           }
         ]
       },
       {
-        "id": "it-g7-ibrida",
-        "t": "Tajani porta la guerra ibrida al G7 degli Esteri di Parigi",
-        "s": "Il ministro degli Esteri chiede un segnale forte contro minacce cyber e ibride. La Francia ha accettato di inserire il tema nell'agenda della riunione di oggi. Tajani attribuisce i recenti attacchi a hacker filorussi del gruppo Noname, senza responsabilità statali accertate.",
+        "id": "it-gimbe-sanita",
+        "t": "Gimbe: 22,7 miliardi di «tagli invisibili» alla sanità dal 2022",
+        "s": "Nelle audizioni sulla manovra la Fondazione Gimbe stima che il Fondo sanitario, pur salito in valore assoluto, perda peso sul Pil: dal 6,27% del 2022 al 6,11% previsto nel 2027. Le Regioni hanno chiuso il 2025 con 2,3 miliardi di disavanzo.",
         "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/tajani-chiama-il-g7-la-guerra-ibrida-colpisce-la-democrazia-serve-un-segnale-forte_c0006410-7b97-4655-b2c1-a8417994e23a.html"
-          }
-        ]
-      },
-      {
-        "id": "it-manovra-audizioni",
-        "t": "Manovra in Parlamento: al via le audizioni con circa settanta invitati",
-        "s": "La legge di bilancio entra nella fase delle audizioni, dopo le critiche di sindacati e opposizioni su sanità, scuola e pensioni, mentre il Governo difende le misure. Il sindacato di polizia Siulp parla di impegni sulla previdenza non rispettati.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/economia/manovra-danze-al-via-lunedi-raffica-audizioni-con-circa-70-invitati_1HTfi6NDhhZ2oagXsKNbsc"
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/manovra-gimbe-227-miliardi-di-tagli-invisibili-alla-sanita-dal-2022_e63ef446-7ccf-4805-92fb-12bba1e7e2f6.html"
           },
           {
             "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/2026/11/05/il-sindacato-siulp-contro-la-manovra-traditi-gli-impegni-sulla-previdenza-dedicata-pronti-a-scendere-in-piazza/8562140/"
+            "url": "https://www.ilfattoquotidiano.it/2026/11/09/gimbe-tagli-sanita-pubblica-manovra-notizie/8565970/"
           }
         ]
       },
       {
-        "id": "it-meteo-piogge",
-        "t": "Meteo: due perturbazioni portano piogge diffuse al Centro-Nord fino a venerdì",
-        "s": "La prima perturbazione arriva oggi e dura fino a mercoledì 11, la seconda interessa giovedì 12 e venerdì 13. Al Nord piogge sparse e neve sulle Alpi sopra i 1.500-1.700 metri; rischio di nubifragi in Liguria giovedì. Miglioramento graduale da sabato pomeriggio.",
+        "id": "it-cyber-viminale",
+        "t": "Attacchi informatici: oggi al Viminale il comitato per l'ordine pubblico",
+        "s": "Il ministro dell'Interno Piantedosi riunisce a Roma il comitato nazionale per l'ordine e la sicurezza pubblica per valutare i rischi legati agli attacchi informatici. Tajani ha detto che i suoi dati personali sono finiti sul dark web; Meloni parla di hacker filorussi.",
+        "d": "2026-11-10",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/08/attacchi-informatici-piantedosi-convoca-comitato-sicurezza-pubblica_a6695c00-6b7a-4dd2-926d-c94b2efad7f7.html"
+          }
+        ]
+      },
+      {
+        "id": "it-campo-largo",
+        "t": "Centrosinistra: da lunedì dieci tavoli tematici per scrivere il programma comune",
+        "s": "Dal 9 al 17 novembre i partiti del campo largo discutono per temi: oggi clima ed energia, poi lavoro, diritti e politica estera (con il nodo Ucraina), sanità e scuola, economia con la patrimoniale, giustizia. Alla fine i leader faranno una sintesi.",
         "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/09/in-arrivo-piogge-diffuse-per-tutta-la-settimana-soprattutto-al-centro-nord_015d5d3e-2737-432a-b8ee-25bb4c77e393.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/09/al-via-i-dieci-tavoli-programmatici-per-il-campo-largo_faa820dd-585d-4bcb-96e5-167ac3d853d3.html"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-cracovia",
-        "t": "Polonia, strage a Cracovia: nove morti in totale, indagine per terrorismo",
-        "s": "Sabato un venticinquenne armato ha sparato nella piazza del Mercato: sei vittime in piazza e tre familiari uccisi prima a casa. Sedici i ricoverati. La Procura indaga per terrorismo; il ministro dell'Interno parla di fascinazione per l'estrema destra, senza legami accertati. Due giorni di lutto nazionale.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/in-polonia-si-indaga-per-terrorismo-ancora-gravi-i-feriti-della-strage-di-cracovia_83b09fd3-1468-4bbc-80be-f708664a5b9a.html"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/09/europe-searches-for-a-seat-at-the-table-in-abu-dhabi",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-eisenkot",
-        "t": "Israele, Herzog affida a Eisenkot l'incarico di formare il governo",
-        "s": "Dopo le elezioni del 27 ottobre il leader di Yashar ha 28 giorni, prorogabili di 14, per riuscirci; 67 parlamentari lo hanno indicato contro i 46 di Netanyahu. Restano i nodi dei partiti arabi (19 seggi) e dell'arruolamento degli ultraortodossi.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/08/herzog-affida-a-eisenkot-lincarico-di-formare-il-nuovo-governo_9bce6d47-9f8f-434e-b62a-b429a911d586.html"
-          },
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/israele-eisenkot-compito-formare-nuovo-governo_3dh30PletgS2afXdrQpePK"
-          }
-        ]
-      },
-      {
-        "id": "mo-iran-rubio",
-        "t": "Iran, Rubio: guerra impopolare ma necessaria; Teheran offre di riaprire Hormuz in due giorni",
-        "s": "Il segretario di Stato americano esclude una svolta imminente nei negoziati. Trump dice che nuovi raid sarebbero improbabili in caso di accordo solido e incontra oggi il premier del Qatar. Teheran propone di riaprire lo stretto entro due giorni se Washington accetta le sue condizioni.",
+        "id": "mo-iran-trump",
+        "t": "Trump: la guerra con l'Iran è «di fatto finita», Teheran respinge",
+        "s": "Dopo l'incontro col premier del Qatar, Trump dice che militarmente la guerra è finita e propone di mantenere lo status quo, con il blocco navale dei porti iraniani. Teheran parla di «notizie false», si dice aperta al negoziato ma non alla resa e chiede sette condizioni, tra cui la fine delle sanzioni.",
         "d": "2026-11-09",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/9/rubio-says-war-on-iran-unpopular-but-necessary-to-stop-nuclear-threat",
+            "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm",
             "l": "en"
           }
         ]
-      }
-    ],
-    "estero": [
+      },
       {
-        "id": "es-ue-abu-dhabi",
-        "t": "L'Ue invia una squadra a Abu Dhabi per i colloqui Ucraina-Russia del 10-11 novembre",
-        "s": "Commissione e Consiglio europeo mandano funzionari di alto livello, con Francia, Germania e Regno Unito. Von der Leyen sostiene la tregua su cibo ed energia. Meloni ha scritto a Costa denunciando la confusione dei formati diplomatici e chiedendo un inviato europeo; Sikorski la appoggia.",
+        "id": "mo-ucraina-abu-dhabi",
+        "t": "Ucraina e Russia a Abu Dhabi: l'Ue invia una squadra congiunta ai colloqui",
+        "s": "Il 10 e 11 novembre si tengono i colloqui a tre tra Ucraina, Russia e Stati Uniti. Commissione e Consiglio europeo mandano funzionari, con Francia, Germania e Regno Unito; non è chiaro se incontreranno la delegazione russa. Meloni ha criticato la diplomazia europea frammentata.",
         "d": "2026-11-09",
         "fonti": [
           {
@@ -121,132 +86,180 @@
         ]
       },
       {
-        "id": "es-nvidia",
-        "t": "Nvidia, il consiglio di amministrazione indaga sui rischi per la sicurezza legati al presidente Jensen Huang",
-        "s": "Il board del gruppo statunitense verifica se il suo amministratore delegato sia stato preso di mira da una presunta spia cinese. Dell'indagine riferiscono sia Euronews sia Il Fatto Quotidiano; i fatti restano da accertare.",
+        "id": "mo-turchia-acciaieria",
+        "t": "Turchia: esplosione in un'acciaieria vicino a Smirne, almeno 17 morti",
+        "s": "Un'esplosione nello stabilimento Habaş di Aliağa ha causato almeno 17 vittime. Secondo il governatore, durante lavori di manutenzione una gru è caduta in un forno ad arco elettrico, danneggiando una condotta del gas. Cinque persone sono state fermate e quattro procuratori indagano.",
         "d": "2026-11-09",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/09/nvidia-investigates-whether-ceo-jensen-huang-was-targeted-by-chinese-spy-following-alleged",
+            "url": "https://www.euronews.com/video/2026/11/09/turkey-steel-plant-explosion-kills-17-in-izmir-province",
+            "l": "en"
+          }
+        ]
+      }
+    ],
+    "estero": [
+      {
+        "id": "es-meloni-envoy",
+        "t": "Euronews: Meloni chiede un inviato europeo per l'Ucraina, Varsavia la sostiene",
+        "s": "Secondo Euronews, la premier italiana ha scritto a Costa criticando la diplomazia Ue frammentata e chiedendo un inviato speciale. Costa porterà il tema al vertice informale di Dublino; il ministro polacco Sikorski appoggia Meloni.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/05/italian-pm-slams-eus-fragmented-approach-to-ukraine-peace-talks",
             "l": "en"
           },
           {
-            "n": "Il Fatto Quotidiano",
-            "url": "https://ilfattoquotidiano.it/2026/11/09/nvidia-jensen-huang-spia-cinese-notizie/8565366"
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/06/cracks-emerge-over-europes-fragmented-approach-to-ukraine-peace-talks",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-tajani-hacker",
+        "t": "La stampa estera racconta i dati di Tajani sul dark web",
+        "s": "Al Jazeera e CBS News riportano che il ministro degli Esteri italiano ha denunciato la pubblicazione dei suoi dati personali. Meloni attribuisce l'attacco a hacker filorussi; Tajani lo collega alla posizione italiana sull'Ucraina e dice di non farsi intimidire.",
+        "d": "2026-11-07",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/7/pro-russian-hackers-leak-italian-foreign-ministers-data-on-dark-web",
+            "l": "en"
+          },
+          {
+            "n": "CBS News",
+            "url": "https://www.cbsnews.com/news/italy-giorgia-meloni-ukraine-russia-hack-data-leak/",
+            "l": "en"
           }
         ]
       }
     ],
     "economia": [
       {
-        "id": "ec-gasolio",
-        "t": "Carburanti: finito lo sconto sulle accise, il gasolio torna a salire",
-        "s": "Dal 9 novembre non vale più il taglio di 4 centesimi al litro. Prezzi medi self: gasolio 2,232 euro al litro (+0,5 centesimi), benzina 2,000 (-0,2). Eni alza di 3 centesimi il gasolio consigliato.",
-        "d": "2026-11-09",
+        "id": "ec-tokyo-nikkei",
+        "t": "Borse: Tokyo sale oltre il 3%, il Nikkei torna sopra quota 60mila",
+        "s": "Apertura in forte rialzo (+3,13%) grazie al rimbalzo di tecnologia e semiconduttori e al calo del petrolio. Lo yen è stabile poco sopra 158 sul dollaro.",
+        "d": "2026-11-10",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://adnkronos.com/economia/gasolio-diesel-accise-taglio-accise-aumenti_Ryoouro5BvBnIP2zCWDtY"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/borsa-tokyo-guadagna-oltre-il-3-in-apertura-il-nikkei-torna-sopra-quota-60mila_e3130e6a-6427-4255-a7d8-74eabdbae893.html"
           }
         ]
       },
       {
-        "id": "ec-bollette-manovra",
-        "t": "Manovra, nuovi oneri in bolletta per aiutare le imprese: fino a 1,7 miliardi nel 2029",
-        "s": "Il disegno di legge prevede sostegni a imprese energivore e Pmi, finanziati dal bilancio nel 2027-2028 e dal 2029 con la componente Asos delle bollette. Costo potenziale per gli utenti: 1,7 miliardi nel 2029 e 1,5 nel 2030; Arera deciderà il riparto.",
+        "id": "ec-milano-banche",
+        "t": "Piazza Affari tra le migliori d'Europa con le banche, petrolio in calo",
+        "s": "Ieri Milano ha chiuso in forte rialzo (circa +2%) con Banco Bpm a +10%. Il Brent è sceso del 5,6% per le attese di progressi in Medio Oriente, il gas europeo è calato a 82,2 euro/MWh, lo spread Btp-Bund a 103 punti.",
         "d": "2026-11-09",
         "fonti": [
           {
-            "n": "Il Fatto Quotidiano",
-            "url": "https://www.ilfattoquotidiano.it/2026/11/09/bollette-la-manovra-prepara-nuovi-oneri-per-finanziare-gli-aiuti-alle-imprese-fino-a-17-miliardi-nel-2029/8564873/"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/borsa-milano-la-migliore-in-europa-con-il-credito-banco-bpm-10_2f989b3c-ac40-4f66-b8f6-6ec553a97620.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/09/borsa-leuropa-sale-con-il-petrolio-in-calo-milano-2_d6abc1c6-e2ed-4f41-9fcb-e97fe880f9dc.html"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-campus-spazi",
-        "t": "Università di Torino occupata: la Regione mette a disposizione aule per le lezioni in presenza",
-        "s": "La Giunta regionale concede sale del Centro Congressi con 500 posti agli studenti che non accedono al Campus Einaudi, chiuso da circa due settimane per l'occupazione. Cirio difende sia il dissenso sia il diritto allo studio; la ministra Bernini ha incontrato gli studenti contrari all'occupazione.",
+        "id": "to-cnh-kobelco",
+        "t": "Cnh vende il 70% delle macchine movimento terra ai giapponesi di Kobelco",
+        "s": "Cnh incasserà 700 milioni di dollari e manterrà il 30% di una joint venture a controllo giapponese; chiusura prevista a fine 2027. La Fiom parla di disimpegno industriale e di circa 200 addetti coinvolti, e chiederà garanzie.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/09/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/torino-perde-un-altro-pezzo-cnh-cede-il-70-dei-mezzi-da-costruzione-ai-giapponesi.html"
+          }
+        ]
+      },
+      {
+        "id": "to-rettorato-tensione",
+        "t": "Università di Torino: tensione tra studenti e polizia davanti al rettorato",
+        "s": "Gli studenti, usciti dal Campus Einaudi occupato, chiedevano di incontrare la rettrice Prandi durante il Senato accademico straordinario. Dopo un'ora di stallo ci sono stati spintoni con gli agenti; la Digos ha sequestrato uno striscione.",
         "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/regione-piemonte-da-spazi-per-didattica-alluniversita-di-torino-occupata_0ade5400-7342-4392-b294-d301a6ed99e9.html"
+            "url": "https://ansa.it/sito/notizie/cronaca/2026/11/09/tensione-tra-studenti-e-polizia-davanti-al-rettorato-a-torino_3188e417-6a21-4a3a-a82d-ad974f22a10e.html"
           },
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/06/bernini-incontra-a-torino-gli-studenti-contrari-alloccupazione-campus_ce534a40-ebf7-4403-88b4-100395542f67.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/regione-piemonte-da-spazi-per-didattica-alluniversita-di-torino-occupata_0ade5400-7342-4392-b294-d301a6ed99e9.html"
           }
         ]
       },
       {
-        "id": "to-carcere-pennarelli",
-        "t": "Torino, droga nascosta nei pennarelli scoperta nel carcere",
-        "s": "La Polizia penitenziaria ha trovato sostanze stupefacenti occultate in pennarelli all'interno dell'istituto penitenziario cittadino, secondo il resoconto ANSA dell'8 novembre.",
-        "d": "2026-11-08",
+        "id": "to-atp-viabilita",
+        "t": "Atp Finals: chiusure in via Filadelfia e mezzi potenziati",
+        "s": "Dal 15 al 22 novembre all'Inalpi Arena: via Filadelfia chiusa nel tratto indicato, limite di 30 km/h, sosta a pagamento a 10 euro al giorno. Potenziate le linee 4 e 10; metro aperta fino all'1 il 12 novembre.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/08/droga-nei-pennarelli-la-scoperta-nel-carcere-di-torino_3e62fa6f-d0cd-4a8d-9fde-ff6f952136d2.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/modifiche-alla-viabilita-e-mezzi-pubblici-potenziati-per-le-atp-finals_09b3208e-cb77-4603-8319-909f09eabdce.html"
           }
         ]
       },
       {
-        "id": "to-maria-vittoria",
-        "t": "Medico dell'ospedale Maria Vittoria aggredito da un giovane agitato, arrestato",
-        "s": "Sabato 7 novembre un medico del pronto soccorso è stato aggredito da un ragazzo in stato di agitazione, poi arrestato dalle forze dell'ordine.",
-        "d": "2026-11-07",
+        "id": "to-ex-askatasuna",
+        "t": "Ex Askatasuna: nove proposte per il riuso dell'immobile comunale",
+        "s": "Si è chiuso l'avviso pubblico per l'edificio di corso Regina Margherita 47, sgomberato il 18 dicembre 2025. Gli uffici verificheranno la legittimità delle nove proposte; la vicesindaca Favaro parla di restituirlo alla comunità.",
+        "d": "2026-11-09",
         "fonti": [
           {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/aggressione-ospedale-maria-vittoria-7-novembre-2026.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/trasformazione-ex-askatasuna-nove-proposte-per-lavviso-pubblico_6ff83b71-288b-489a-8033-94dd4da9ac02.html"
+          }
+        ]
+      },
+      {
+        "id": "to-egizio-ricerca",
+        "t": "Il Museo Egizio diventa anche ente pubblico di ricerca",
+        "s": "Il Consiglio dei ministri ha istituito l'Istituto nazionale di ricerca egizia, con 5,6 milioni l'anno, per rafforzare l'attività scientifica del museo torinese: archeologia, restauro, archeologia digitale e intelligenza artificiale.",
+        "d": "2026-11-09",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/cultura/arte/2026/11/09/museo-egizio-diventa-anche-ente-pubblico-di-ricerca-via-libera-dal_c4b5273a-5e3e-4a45-b14c-93c6242a4d4f.html"
           }
         ]
       }
     ],
     "piemonte": [
       {
-        "id": "pi-vercelli-paracadute",
-        "t": "Vercelli, muore un paracadutista di 35 anni al campo volo",
-        "s": "L'incidente è avvenuto l'8 novembre intorno alle 14:30 in via Lamporo; secondo le prime informazioni il paracadute si sarebbe aperto solo in parte. Sul posto 118, vigili del fuoco e forze dell'ordine.",
-        "d": "2026-11-08",
+        "id": "pi-cna-credito",
+        "t": "Imprese piemontesi: solo il 18,6% chiede finanziamenti",
+        "s": "Secondo l'Osservatorio Cna su 703 piccole imprese, l'89,1% delle richieste viene accolto per intero, ma molte aziende non chiedono più credito: mancano garanzie (34,5%) o storia finanziaria (25,8%). Il 56% si aspetta un peggioramento.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/08/incidente-con-paracadute-muore-nel-campo-volo-di-vercelli_cbeedb20-1c02-4791-9fce-9713f09765df.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/credito-alle-imprese-in-piemonte-solo-il-186-chiede-finanziamenti_e53bda14-43de-4d37-8f49-197ee334658c.html"
           }
         ]
       },
       {
-        "id": "pi-alessandria-baudolino",
-        "t": "Alessandria celebra Baudolino nel segno di Umberto Eco",
-        "s": "Nella città, che ispirò il romanzo, un evento ricorda l'opera di Umberto Eco; in parallelo si è chiusa la mostra «Nebbie, storie, memorie», con un intervento di Carlotta Eco.",
-        "d": "2026-11-08",
+        "id": "pi-lavoro-domestico",
+        "t": "Oltre 60mila lavoratori domestici in Piemonte, ma calano del 19,7% in quattro anni",
+        "s": "Rapporto Domina: 60.433 addetti nel 2025, il 50,4% badanti, il 92,1% donne e il 67,9% straniere. Le famiglie datrici di lavoro sono 64.859 e hanno speso 603 milioni di euro; oltre metà dei lavoratori è nell'area di Torino.",
+        "d": "2026-11-09",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/08/alessandria-celebra-baudolino-nel-segno-di-umberto-eco_55cd980a-8ca0-4e03-b2d9-256e32ddf296.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/oltre-60mila-lavoratori-domestici-in-piemonte-cresce-il-peso-delle-badanti_d4313baa-a4e2-44ab-bc36-69bcd1c3d1af.html"
           }
         ]
       }
     ],
     "eventi": [
-      {
-        "id": "ev-san-martino-chieri",
-        "t": "Fiera Nazionale di San Martino a Chieri",
-        "s": "Tradizionale fiera di San Martino nella città delle colline torinesi.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/fiera-nazionale-di-san-martino-2026"
-          }
-        ],
-        "quando": "fino a mar 10 nov",
-        "dove": "Chieri (Torino)"
-      },
       {
         "id": "ev-luci-artista",
         "t": "Luci d'Artista: installazioni luminose in tutta la città",
@@ -382,46 +395,46 @@
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
       },
       {
-        "id": "ev-basilico-ivrea",
-        "t": "Gabriele Basilico: paesaggio industriale Olivetti a Ivrea",
-        "s": "Mostra fotografica sul paesaggio industriale Olivetti, inaugurata il 5 novembre.",
-        "d": "2026-11-09",
+        "id": "ev-sagra-rapa",
+        "t": "Sagra della Rapa a Druento",
+        "s": "Una settimana di menu a base di rapa nei locali del paese, laboratori per bambini in biblioteca e cene degustazione.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/gabriele-basilico-paesaggio-industriale-olivetti"
+            "url": "https://turismotorino.org/en/visit/events/sagra-della-rapa-2026"
           }
         ],
-        "quando": "fino al 31 dic, apertura settimanale",
-        "dove": "Ivrea (Torino)"
+        "quando": "dal 7 al 14 nov (orari non indicati)",
+        "dove": "viale Papa Giovanni XXIII, Druento (Torino)"
       },
       {
-        "id": "ev-mauto-mcqueen",
-        "t": "Lightning McQueen al Museo dell'Automobile",
-        "s": "Mostra dedicata al protagonista di Cars nella Sala Formula del MAUTO, adatta anche ai bambini.",
-        "d": "2026-11-09",
+        "id": "ev-best-of-torino",
+        "t": "Best of Torino in piazza San Carlo, nella settimana delle Atp Finals",
+        "s": "Iniziativa cittadina collegata alle Nitto ATP Finals, in programma fino al 22 novembre.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/lightning-mc-queen-at-the-museum"
+            "url": "https://turismotorino.org/en/visit/events/best-of-torino-2026"
           }
         ],
-        "quando": "fino al 31 gen 2027, apertura settimanale",
-        "dove": "MAUTO, Torino"
+        "quando": "fino al 22 nov",
+        "dove": "piazza San Carlo, Torino"
       },
       {
-        "id": "ev-circul",
-        "t": "I Venerdì de L'Circul: serate a Pessinetto",
-        "s": "Ciclo di serate del venerdì, dal 6 novembre al 18 dicembre.",
-        "d": "2026-11-09",
+        "id": "ev-ciurma",
+        "t": "CIURMA! Quattro domeniche a teatro in famiglia",
+        "s": "Rassegna di teatro per famiglie a Pinerolo, con appuntamenti la domenica fino al 29 novembre (prossimo: 15 nov).",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/i-venerdi-de-l-circul-2026"
+            "url": "https://turismotorino.org/en/visit/events/ciurma-quattro-domeniche-a-teatro-in-famiglia-a-novembre"
           }
         ],
-        "quando": "ven 13 nov, 21-23",
-        "dove": "Pessinetto (Torino)"
+        "quando": "dom 15 nov (rassegna 8-29 nov)",
+        "dove": "Pinerolo (Torino)"
       }
     ],
     "spettacoli": [
@@ -429,14 +442,14 @@
         "id": "spe-cin-dio-ride",
         "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
         "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-        "d": "2026-11-09",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/dio-ride/"
           }
         ],
-        "quando": "Space: 12:45, 17:10, 21:55; Ideal: 15:00, 17:10, 21:30 (orari indicativi)",
+        "quando": "Space: 17:20; Ideal: 15:00, 17:10, 21:30 (orari indicativi)",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Space 9,10 €; Ideal 9 €"
       },
@@ -444,14 +457,14 @@
         "id": "spe-cin-wild-horse-nine",
         "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
         "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
-        "d": "2026-11-09",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
           }
         ],
-        "quando": "Space: 11:10, 16:50, 18:35, 20:50; Ideal: 17:30, 19:20, 21:35 (orari indicativi)",
+        "quando": "Space: 14:55, 17:00, 18:50, 20:50; Ideal: 17:30, 19:20, 21:35 (orari indicativi)",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Space 9,10 €; Ideal 9 €"
       },
@@ -459,7 +472,7 @@
         "id": "spe-cin-tranquillo-funerale",
         "t": "Un tranquillo funerale di famiglia, la commedia corale di Massimiliano Bruno",
         "s": "Alla morte del patriarca Mancuso i parenti si ritrovano per il funerale, che degenera in una guerra familiare. Regia di Massimiliano Bruno.",
-        "d": "2026-11-09",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "MYmovies",
@@ -470,7 +483,7 @@
             "url": "https://www.comingsoon.it/cinema/torino/ideal/1072/"
           }
         ],
-        "quando": "Space: 14:00, 19:40; Ideal: 15:45, 17:40, 19:35 (orari indicativi)",
+        "quando": "Space: 14:50; Ideal: 15:45, 17:40, 19:35 (orari indicativi)",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Space 9,10 €; Ideal 9 €"
       },
@@ -478,14 +491,29 @@
         "id": "spe-cin-gatto-cappello",
         "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
         "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
-        "d": "2026-11-09",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
           }
         ],
-        "quando": "Space: 11:15, 13:15, 15:30, 18:10; Ideal: 15:00, 17:10, 19:20 (orari indicativi)",
+        "quando": "Space: 15:30, 18:10; Ideal: 15:20, 19:20 (orari indicativi); per tutti",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "costo": "Space 9,10 €; Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-george-michael",
+        "t": "George Michael: The Faith Tour, il film-concerto in lingua originale",
+        "s": "Documentario musicale sul tour di George Michael, proiettato in versione originale.",
+        "d": "2026-11-10",
+        "fonti": [
+          {
+            "n": "MYmovies Cinema Ideal",
+            "url": "https://www.mymovies.it/cinema/torino/5071/"
+          }
+        ],
+        "quando": "Space: 15:15, 18:00, 19:50 (v.o. sottotitolata); Ideal: 21:30 (v.o.) (orari indicativi)",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Space 9,10 €; Ideal 9 €"
       },
@@ -496,26 +524,41 @@
         "d": "2026-11-09",
         "fonti": [
           {
-            "n": "MYmovies The Space Cinema Torino",
+            "n": "MYmovies",
             "url": "https://www.mymovies.it/cinema/torino/5884/"
           }
         ],
-        "quando": "Space: 11:00, 15:20; Ideal: 15:40 (orari indicativi)",
+        "quando": "Space: 17:45; Ideal: 15:40 (orari indicativi); per tutti",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Space 9,10 €; Ideal 9 €"
       },
       {
-        "id": "spe-cin-george-michael",
-        "t": "George Michael: The Faith Tour, il film-concerto in lingua originale",
-        "s": "Documentario musicale sul tour di George Michael, proiettato in versione originale.",
-        "d": "2026-11-09",
+        "id": "spe-cin-se-domani",
+        "t": "Se domani non torno, il dramma di Paola Randi",
+        "s": "Film drammatico diretto da Paola Randi, in programmazione in entrambe le sale.",
+        "d": "2026-11-10",
         "fonti": [
           {
-            "n": "MYmovies Cinema Ideal",
-            "url": "https://www.mymovies.it/cinema/torino/5071/"
+            "n": "MYmovies",
+            "url": "https://www.idealcityplex.it/scheda/se-domani-non-torno/48959/"
           }
         ],
-        "quando": "Space: 15:50, 18:00; Ideal: 21:30 (orari indicativi)",
+        "quando": "Space: 14:20, 16:25, 19:05, 21:00, 22:30; Ideal: 15:25, 17:30, 19:35 (orari indicativi)",
+        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "costo": "Space 9,10 €; Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-clayface",
+        "t": "Clayface, l'horror di James Watkins",
+        "s": "Film horror-azione diretto da James Watkins, vietato ai minori di 14 anni.",
+        "d": "2026-11-10",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.idealcityplex.it/"
+          }
+        ],
+        "quando": "Space: 21:55; Ideal: 21:40 (orari indicativi)",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Space 9,10 €; Ideal 9 €"
       },
@@ -1025,12 +1068,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-01T21:50+01:00",
-      "edizione": "sera",
-      "notizie": 24,
-      "note": "Fonti lette: ANSA, AGI, Torino Oggi, Al Jazeera (en), Euronews (en, fr), CBS. Ricerca rifiutata: reuters.com, theguardian.com, bbc.com, spiegel.de, elpais.com. Lettura non riuscita: torinotoday.it, torinoggi.it (robots), ansa.it (una pagina)."
-    },
-    {
       "at": "2026-11-02T05:55+01:00",
       "edizione": "mattina",
       "notizie": 20,
@@ -1138,6 +1175,12 @@
       "edizione": "pomeriggio",
       "notizie": 68,
       "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Il Fatto Quotidiano, Adnkronos; TorinoToday e pagine ANSA/Adnkronos non tutte leggibili (solo ricerca). Reuters, BBC e altre grandi testate estere non tentate (bloccate nei giri precedenti). Cinema, teatro, eventi e concerti dall'edizione del mattino (non è lunedì mattina); nessun concerto passato. Copia locale riallineata a origin/main (storia riscritta)."
+    },
+    {
+      "at": "2026-11-10T05:05+01:00",
+      "edizione": "mattina",
+      "notizie": 71,
+      "note": "Fonti lette: ANSA, Torino Oggi, Al Jazeera (en), Euronews (en), CBS News (solo ricerca), MYmovies, ComingSoon, Ideal Cityplex, Turismo Torino. Non raggiungibili: thespacecinema.it (lettura), eventi.comune.torino.it (robots), idealcityplex.it scheda film. Reuters, BBC e altre grandi testate estere non tentate. Concerti dall'edizione precedente (non è lunedì), nessuno già passato; teatro dall'edizione precedente. Copia locale riallineata a origin/main (era staccata)."
     }
   ]
 }
