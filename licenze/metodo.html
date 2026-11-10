@@ -83,10 +83,11 @@ details.app h4{margin:10px 0 4px;font-size:14px}details.app p,details.app ol,det
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 
 @media (max-width:600px){h1{font-size:24px}.mtabs button{font-size:14.5px;padding:9px 12px}}
-.iki-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start}.iki-g>.card,.iki-g>details{margin:0}.iki-g>details>.wb{max-height:62vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}.iki-svg{width:100%;height:auto;margin:4px 0 6px}.iki-intro{max-height:250px}.iki-p{opacity:.7}.iki-c h4{margin:10px 0 4px;font-size:14px}.iki-c ul,.iki-c ol{margin:0;padding-left:20px}
+.iki-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start}
+#ikiSv{margin:4px 0 6px;font-size:13px;color:var(--muted);min-height:18px}.iki-mio{display:grid;grid-template-columns:1fr;gap:10px}.iki-l{display:block;border-left:4px solid var(--k);padding:2px 0 2px 10px;margin:0 0 10px}.iki-l b{display:block}.iki-l small{display:block;color:var(--muted);font-size:13px;margin:1px 0 4px}.iki-l textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--seg);border:0;border-radius:10px;padding:8px 10px;resize:vertical}.iki-g>.card,.iki-g>details{margin:0}.iki-g>details>.wb{max-height:62vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}.iki-svg{width:100%;height:auto;margin:4px 0 6px}.iki-intro{max-height:250px}.iki-p{opacity:.7}.iki-c h4{margin:10px 0 4px;font-size:14px}.iki-c ul,.iki-c ol{margin:0;padding-left:20px}
 .pg-img{margin:2px 0 12px}.pg-img svg{width:100%;height:auto;max-height:150px;display:block}
 </style>
-<script>window.APP_VERSION="846d4346ac";window.APP_BUILD="2026-11-10T15:41+02:00";</script>
+<script>window.APP_VERSION="c157441d6f";window.APP_BUILD="2026-11-10T16:00+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -390,9 +391,43 @@ const MET_TAB_IMG={
 /*@/IMG-NUOVE*/
 function ikiAppro(c){const A=c.appro;if(!A)return "";const L=a=>`<ul>${(a||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`,S=A.studio;
   return sub("iki-a-"+c.id,"🔍 Approfondisci",`${IKI_APPRO_IMG[c.id]||""}<h4>📜 Storia</h4><p>${esc(A.storia)}</p><h4>⚙️ Come funziona</h4><p>${esc(A.come)}</p><h4>🏙️ Esempi</h4>${L(A.esempi)}<h4>⚠️ Errori da evitare</h4>${L(A.errori)}<h4>📓 Domande per il Diario</h4>${L(A.domande)}${S?`<h4>🔬 Che cosa dice la ricerca</h4><p>${esc(S.cosa)}</p><p class="lbl"><b>Limiti:</b> ${esc(S.limiti)}</p><p class="lbl">Fonte: ${S.fonte&&S.fonte.url?`<a href="${esc(S.fonte.url)}" target="_blank" rel="noopener">${esc(S.fonte.c)}</a>`:esc((S.fonte||{}).c||"")}</p>`:""}`,false);}
+/* ✍️ Il mio schema e Naikan della settimana (10/11/2026). Dati solo sull'iPad, in M.iki: c = i quattro cerchi, centro, nk[lunedì] = {chi, r, d, f, at}.
+   Il Naikan salvato si aggiunge anche alla nota di oggi del 📓 Diario (localStorage «pn-diario-v1» + database del dispositivo). */
+const IKI_C=[["ama","❤️","Ciò che amo","Le cose che faresti anche gratis, che ti fanno perdere la cognizione del tempo.","#e11d48"],["bravo","💪","Ciò in cui sono bravo","Capacità ed esperienza: quello per cui gli altri ti chiedono una mano.","#2563eb"],["serve","🌍","Ciò di cui c'è bisogno","A chi può servire: famiglia, amici, quartiere, associazioni.","#0d9488"],["paga","🪙","Ciò che dà un ritorno","Un compenso, ma anche riconoscimento o un ruolo utile.","#d97706"]];
+const ikiD=()=>{M.iki=M.iki&&typeof M.iki==="object"?M.iki:{};const k=M.iki;k.c=k.c||{};k.nk=k.nk||{};return k;};
+const ikiWk=()=>{const d=new Date();d.setDate(d.getDate()-(d.getDay()+6)%7);return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2);};
+function ikiMio(){const K=ikiD(),wk=ikiWk(),N=K.nk[wk]||{},n=IKI_C.filter(c=>(K.c[c[0]]||"").trim()).length,past=Object.keys(K.nk).filter(w=>w!==wk).sort().reverse();
+  const svg=`<svg viewBox="0 0 300 250" role="img" aria-label="Quattro cerchi che si sovrappongono: ciò che amo, ciò in cui sono bravo, ciò di cui c'è bisogno, ciò che dà un ritorno; al centro il punto in cui si incontrano" style="width:100%;max-width:300px;display:block;margin:0 auto">`+
+    [[150,82,"#e11d48"],[100,128,"#2563eb"],[200,128,"#0d9488"],[150,172,"#d97706"]].map(c=>`<circle cx="${c[0]}" cy="${c[1]}" r="66" fill="${c[2]}" fill-opacity=".16" stroke="${c[2]}" stroke-width="2"/>`).join("")+
+    `<text x="150" y="44" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">❤️ amo</text><text x="62" y="132" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">💪 so fare</text><text x="238" y="132" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">🌍 serve</text><text x="150" y="222" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">🪙 ritorno</text><text x="150" y="134" text-anchor="middle" font-size="22">🌸</text></svg>`;
+  const schema=`<p class="lbl">Lo schema a quattro cerchi è un adattamento occidentale e recente (vedi il capitolo 1), ma è un buon modo per mettere in ordine le idee. Non è un test e non ha una risposta giusta: scrivi con parole tue, anche poche, e torna a cambiarle quando vuoi. Si salva da solo, solo su questo iPad.</p>
+    <div class="iki-mio"><div>${svg}</div><div>${IKI_C.map(c=>`<label class="iki-l" style="--k:${c[4]}"><b>${c[1]} ${c[2]}</b><small>${c[3]}</small><textarea data-ikc="${c[0]}" rows="2" maxlength="600" placeholder="scrivi qui…">${esc(K.c[c[0]]||"")}</textarea></label>`).join("")}
+    <label class="iki-l" style="--k:#be185d"><b>🌸 Dove si incontrano</b><small>Una frase: che cosa rende buona una mia giornata? Può essere anche una cosa piccola.</small><textarea data-ikc="centro" rows="2" maxlength="600" placeholder="scrivi qui…">${esc(K.c.centro||"")}</textarea></label></div></div><p class="saved" id="ikiSv">${K.at?"Salvato il "+new Date(K.at).toLocaleDateString("it-IT",{day:"numeric",month:"long"}):""}</p>`;
+  const nai=`<p class="lbl">Una volta a settimana, 10 minuti (capitolo 4). Scegli una persona e ripensa alla settimana: per ogni domanda un fatto concreto, non un giudizio su di te.</p>
+    <div class="form"><label>La persona a cui penso<input data-nk="chi" maxlength="60" value="${esc(N.chi||"")}" placeholder="per esempio: un collega, un amico"></label></div>
+    ${[["r","🎁 Che cosa ho ricevuto da lei?"],["d","🤲 Che cosa le ho dato?"],["f","🌧️ Quali difficoltà le ho causato?"]].map(q=>`<label class="iki-l" style="--k:#be185d"><b>${q[1]}</b><textarea data-nk="${q[0]}" rows="2" maxlength="800" placeholder="un fatto concreto…">${esc(N[q[0]]||"")}</textarea></label>`).join("")}
+    <div class="btns"><button class="btn pri" id="nkSave">${N.at?"✓ Aggiorna e riscrivi nel 📓 Diario":"✓ Salva e scrivi nel 📓 Diario"}</button>${N.at?`<span class="lbl">Fatto ${new Date(N.at).toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long"})}</span>`:""}</div>
+    ${past.length?sub("iki-nkp",`Le settimane passate (${past.length})`,past.slice(0,26).map(w=>{const x=K.nk[w];return `<div class="row"><div class="grow"><b>Settimana del ${fmt(w,{day:"numeric",month:"long",year:"numeric"})}${x.chi?" · "+esc(x.chi):""}</b><small>🎁 ${esc(x.r||"—")}<br>🤲 ${esc(x.d||"—")}<br>🌧️ ${esc(x.f||"—")}</small></div></div>`;}).join(""),false):""}`;
+  return `<div class="iki-g">`+win("iki-mio",`✍️ Il mio schema <span class="pill">${n}/4</span>`,schema,true,"iki-c")+win("iki-nk",`🪞 Naikan della settimana ${N.at?'<span class="pill m">fatto ✓</span>':'<span class="pill">da fare</span>'}`,nai,true,"iki-c")+`</div>`;}
+function bindIkiMio(){const K=ikiD();let t=null;
+  document.querySelectorAll("[data-ikc]").forEach(a=>a.oninput=()=>{K.c[a.dataset.ikc]=a.value;K.at=new Date().toISOString();clearTimeout(t);t=setTimeout(()=>{save();const s=$("ikiSv");if(s)s.textContent="Salvato ✓";},500);});
+  const b=$("nkSave");if(b)b.onclick=()=>{const wk=ikiWk(),v={};document.querySelectorAll("[data-nk]").forEach(a=>v[a.dataset.nk]=a.value.trim());
+    if(!v.r&&!v.d&&!v.f){toast("Scrivi almeno una risposta");return;}
+    const old=K.nk[wk],td=today();v.at=new Date().toISOString();v.day=td;K.nk[wk]=v;save();
+    /* nota del Diario: il blocco «🪞 Naikan» del giorno si sostituisce, il resto della nota resta */
+    try{const D=lsJ("pn-diario-v1")||{v:1};D.giorni=D.giorni&&typeof D.giorni==="object"?D.giorni:{};
+      const blk="🪞 Naikan"+(v.chi?" · "+v.chi:"")+"\n🎁 Ho ricevuto: "+(v.r||"—")+"\n🤲 Ho dato: "+(v.d||"—")+"\n🌧️ Difficoltà causate: "+(v.f||"—");
+      const dd=old&&old.day&&typeof D.giorni[old.day]==="string"?old.day:td;let n=typeof D.giorni[dd]==="string"?D.giorni[dd]:"";
+      n=n.replace(/(^|\n\n?)🪞 Naikan[^\n]*\n🎁[^\n]*\n🤲[^\n]*\n🌧️[^\n]*/,"").trim();
+      if(dd!==td&&!n)delete D.giorni[dd];else if(dd!==td)D.giorni[dd]=n;
+      let m=dd===td?n:(typeof D.giorni[td]==="string"?D.giorni[td]:"");D.giorni[td]=(m?m+"\n\n":"")+blk;D.savedAt=new Date().toISOString();
+      const j=JSON.stringify(D);localStorage.setItem("pn-diario-v1",j);kv("readwrite","diario",j).catch(()=>{});toast("✓ Salvato e scritto nel Diario di oggi");}
+    catch(e){toast("✓ Salvato (il Diario non è raggiungibile)");}
+    render();};}
 function vIki(){const I=MD.ikigai;if(!I)return "";
   let o=`<div class="card"><h3>🌸 Ikigai: la ragione delle giornate</h3>${IKI_INTRO}<p>${esc(I.intro)}</p><p class="lbl">${esc(I.nota)}</p>${I.bozza?`<p class="lbl">${esc(I.bozza)}</p>`:""}</div>`;
   const L=a=>`<ul>${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`;
+  o+=ikiMio();
   o+=`<div class="iki-g">`+I.capitoli.map((c,n)=>{const t=`${c.ic} ${n+1}. ${esc(c.tit)}`;
     const body=!c.pronto?`<p class="lbl">${esc(c.sotto)}</p><p class="lbl">🔜 In preparazione</p>`:
       `<p class="lbl">${esc(c.sotto)}</p>${IKI_IMG[c.id]||""}<h4>Principi</h4>${L(c.princ)}<h4>Regole</h4>${L(c.regole)}<h4>Spiegazione</h4><p>${esc(c.spiega)}</p><h4>✍️ Esercizio: ${esc(c.es.t)} · ${c.es.min} min</h4><ol>${c.es.passi.map(x=>`<li>${esc(x)}</li>`).join("")}</ol><p class="lbl">Fonti: ${c.fonti.map(f=>typeof f==="string"?esc(f):(f.url?`<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.c)}</a>`:esc(f.c))).join(" · ")}</p>`;
@@ -417,6 +452,7 @@ function vVol(){
 
 /* ---------- azioni ---------- */
 function bind(){
+  if(tab==="iki")bindIkiMio();
   document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
   document.querySelectorAll("details[data-fk]").forEach(d=>d.ontoggle=()=>{FOLD[d.dataset.fk]=d.open?1:0;foldSave();});
   document.querySelectorAll("[data-all]").forEach(b=>b.onclick=()=>{const v=b.dataset.all==="1";document.querySelectorAll("#main details[data-fk]").forEach(d=>{d.open=v;FOLD[d.dataset.fk]=v?1:0;});foldSave();});
@@ -440,6 +476,10 @@ document.addEventListener("visibilitychange",()=>{if(document.visibilityState===
 render();recover();occPull();
 </script>
 <script>
+/* 🔠 Testo più grande (10/11/2026): tre misure, valide in tutte le pagine; scelta in ⚙️ Impostazioni, salvata in «pn-aa» */
+(function(){var Z=[1,1.1,1.2];function ap(){var v=0;try{v=+localStorage.getItem("pn-aa")||0;}catch(e){}document.documentElement.style.zoom=Z[v]||1;return v;}
+  ap();window.pnAa=function(v){if(v==null)return ap();try{localStorage.setItem("pn-aa",String(v));}catch(e){}return ap();};
+  window.addEventListener("storage",function(e){if(e.key==="pn-aa")ap();});})();
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
    - se c'è una versione nuova salva i dati e ricarica, ma mai mentre si sta compilando qualcosa o durante una seduta;
@@ -795,6 +835,11 @@ render();recover();occPull();
     else{var hc=ore(cb.last);R.push({k:cb.err||hc==null||hc>48?"w":"ok",ic:"☁️",t:"Copia automatica",x:(cb.err?String(cb.err):"ultima "+quando(cb.last))+(cb.pw?" · parola per ripristinare su un altro iPad: "+cb.pw+" (scrivila in un posto sicuro)":"")});}
     if(st&&st.updated){var a=ore(st.updated),c=ore(st.checked);R.push({k:a>30&&c!=null&&c<3?"w":"ok",ic:"🗞️",t:"Stampa di oggi",x:"edizione di "+quando(st.updated)+(a>30&&c!=null&&c<3?" · la nuova edizione non è arrivata":"")});}
     if(nw&&nw.updated){var a2=ore(nw.updated),c2=ore(nw.checked);R.push({k:a2>36&&c2!=null&&c2<3?"w":"ok",ic:"🎖️",t:"Novità su contratto e pensione",x:"aggiornate "+quando(nw.updated)+(a2>36&&c2!=null&&c2<3?" · il giro di oggi non è arrivato":"")});}
+    /* 10/11/2026: ora nel futuro o file fermo da troppo, e ultima tappa dei corsi */
+    [[st,"🗞️","Stampa di oggi",48],[nw,"🎖️","Novità su contratto e pensione",72]].forEach(function(q){var f=q[0];if(!f||!f.updated)return;var h=ore(f.updated);
+      if(h!=null&&h<-0.25)R.push({k:"w",ic:q[1],t:q[2]+": ora nel futuro",x:"il file dice "+new Date(f.updated).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+" · il giro automatico ha scritto un’ora sbagliata"});
+      else if(h!=null&&h>q[3])R.push({k:"w",ic:q[1],t:q[2]+": ferme da "+Math.floor(h/24)+" giorni",x:"il giro automatico non sta pubblicando"});});
+    try{if(typeof CO_D!=="undefined"&&CO_D&&CO_D.updated){var hc2=ore(CO_D.updated+"T12:00"),gg=Math.max(0,Math.floor(hc2/24));R.push({k:"i",ic:"🎓",t:"Corsi online",x:"ultima tappa "+(gg===0?"oggi":gg===1?"ieri":gg+" giorni fa")+(gg>30?" · puoi chiedere una tappa nuova":"")});}}catch(e){}
     if(!lk||!lk.gist)R.push({k:"i",ic:"📊",t:"Progressi di «Il mio mondo»",x:"non collegato (Progressi → 📲 Collega con un QR)"});
     else{var hl=ore(lk.sent);R.push({k:lk.err||hl==null||hl>36?"w":"ok",ic:"📊",t:"Progressi di «Il mio mondo»",x:(lk.err?String(lk.err)+" · ":"")+"ultimo invio "+quando(lk.sent)+(hl!=null&&hl>36?" · apri «Il mio mondo» sull’iPad della bimba con internet":"")});}
     var rt=J("pn-restore-test");

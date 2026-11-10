@@ -1571,8 +1571,12 @@ else document.getElementById('heroFig').innerHTML=still(EXM.apertura,1,false);
 })();
 window.__flush=()=>{ try{ TCM.flush(); }catch(e){} };
 </script>
-<script>window.APP_VERSION="846d4346ac";window.APP_BUILD="2026-11-10T15:41+02:00";</script>
+<script>window.APP_VERSION="c157441d6f";window.APP_BUILD="2026-11-10T16:00+02:00";</script>
 <script>
+/* 🔠 Testo più grande (10/11/2026): tre misure, valide in tutte le pagine; scelta in ⚙️ Impostazioni, salvata in «pn-aa» */
+(function(){var Z=[1,1.1,1.2];function ap(){var v=0;try{v=+localStorage.getItem("pn-aa")||0;}catch(e){}document.documentElement.style.zoom=Z[v]||1;return v;}
+  ap();window.pnAa=function(v){if(v==null)return ap();try{localStorage.setItem("pn-aa",String(v));}catch(e){}return ap();};
+  window.addEventListener("storage",function(e){if(e.key==="pn-aa")ap();});})();
 /* ===== Aggiornamento automatico e controllo versione (uguale in tutte le sezioni di Pianificazione: costruita da comune/barra.html) =====
    - all'apertura, al ritorno sull'app e ogni 30 minuti legge version.json saltando ogni copia vecchia (anche quella del server di GitHub);
    - se c'è una versione nuova salva i dati e ricarica, ma mai mentre si sta compilando qualcosa o durante una seduta;
@@ -1928,6 +1932,11 @@ window.__flush=()=>{ try{ TCM.flush(); }catch(e){} };
     else{var hc=ore(cb.last);R.push({k:cb.err||hc==null||hc>48?"w":"ok",ic:"☁️",t:"Copia automatica",x:(cb.err?String(cb.err):"ultima "+quando(cb.last))+(cb.pw?" · parola per ripristinare su un altro iPad: "+cb.pw+" (scrivila in un posto sicuro)":"")});}
     if(st&&st.updated){var a=ore(st.updated),c=ore(st.checked);R.push({k:a>30&&c!=null&&c<3?"w":"ok",ic:"🗞️",t:"Stampa di oggi",x:"edizione di "+quando(st.updated)+(a>30&&c!=null&&c<3?" · la nuova edizione non è arrivata":"")});}
     if(nw&&nw.updated){var a2=ore(nw.updated),c2=ore(nw.checked);R.push({k:a2>36&&c2!=null&&c2<3?"w":"ok",ic:"🎖️",t:"Novità su contratto e pensione",x:"aggiornate "+quando(nw.updated)+(a2>36&&c2!=null&&c2<3?" · il giro di oggi non è arrivato":"")});}
+    /* 10/11/2026: ora nel futuro o file fermo da troppo, e ultima tappa dei corsi */
+    [[st,"🗞️","Stampa di oggi",48],[nw,"🎖️","Novità su contratto e pensione",72]].forEach(function(q){var f=q[0];if(!f||!f.updated)return;var h=ore(f.updated);
+      if(h!=null&&h<-0.25)R.push({k:"w",ic:q[1],t:q[2]+": ora nel futuro",x:"il file dice "+new Date(f.updated).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+" · il giro automatico ha scritto un’ora sbagliata"});
+      else if(h!=null&&h>q[3])R.push({k:"w",ic:q[1],t:q[2]+": ferme da "+Math.floor(h/24)+" giorni",x:"il giro automatico non sta pubblicando"});});
+    try{if(typeof CO_D!=="undefined"&&CO_D&&CO_D.updated){var hc2=ore(CO_D.updated+"T12:00"),gg=Math.max(0,Math.floor(hc2/24));R.push({k:"i",ic:"🎓",t:"Corsi online",x:"ultima tappa "+(gg===0?"oggi":gg===1?"ieri":gg+" giorni fa")+(gg>30?" · puoi chiedere una tappa nuova":"")});}}catch(e){}
     if(!lk||!lk.gist)R.push({k:"i",ic:"📊",t:"Progressi di «Il mio mondo»",x:"non collegato (Progressi → 📲 Collega con un QR)"});
     else{var hl=ore(lk.sent);R.push({k:lk.err||hl==null||hl>36?"w":"ok",ic:"📊",t:"Progressi di «Il mio mondo»",x:(lk.err?String(lk.err)+" · ":"")+"ultimo invio "+quando(lk.sent)+(hl!=null&&hl>36?" · apri «Il mio mondo» sull’iPad della bimba con internet":"")});}
     var rt=J("pn-restore-test");
