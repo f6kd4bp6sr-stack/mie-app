@@ -60,7 +60,7 @@ const updLab=()=>NEWS&&NEWS.updated?([8,11].includes(new Date(NEWS.updated).getD
 function vNovita(){const L=newsItems();const tags=[...new Set(L.map(i=>i.tag).filter(Boolean))];const F=NFILT==="tutte"?L:L.filter(i=>i.tag===NFILT||i.scope===NFILT);
   const grp=[["Ultimi 7 giorni",i=>newsAge(i.date)<=7],["Dall'8° al 30° giorno",i=>newsAge(i.date)>7&&newsAge(i.date)<=30],["Prima",i=>newsAge(i.date)>30]];
   setTimeout(markNewsSeen,500);
-  let o=`<h1>📰 Novità del giorno</h1><p class="sub">Notizie sul semestre filtro dalle fonti ufficiali (MUR, Universitaly, UPO) e da testate affidabili, in ordine di data, ognuna con il link alla fonte.${updLab()?` Aggiornate ${updLab()}.`:""}</p>
+  let o=`<h1>📰 Novità</h1><p class="sub">Notizie sul semestre filtro dalle fonti ufficiali (MUR, Universitaly, UPO) e da testate affidabili, in ordine di data, ognuna con il link alla fonte.${updLab()?` Aggiornate ${updLab()}.`:""}</p>
   <div class="chips">${["tutte","UPO",...tags.filter(t=>t!=="UPO")].map(t=>`<button class="chip${NFILT===t?" on":""}" data-nf="${esc(t)}">${t==="tutte"?"Tutte":esc(t)}</button>`).join("")}<button class="chip" id="newsUpd">↻ Aggiorna</button></div>`;
   if(!L.length)o+=`<div class="card"><p class="empty">Nessuna notizia scaricata finora: si caricano appena c'è la connessione.</p></div>`;
   grp.forEach(([t,fn])=>{const g=F.filter(fn);if(!g.length)return;o+=`<h2>${t}</h2><div class="card news">${g.map(i=>{let host="";try{host=new URL(i.url).hostname.replace(/^www\./,"");}catch(e){}
@@ -68,7 +68,7 @@ function vNovita(){const L=newsItems();const tags=[...new Set(L.map(i=>i.tag).fi
   if(NEWS&&Array.isArray(NEWS.sources)&&NEWS.sources.length)o+=fold("news-fonti",`<h3>🔗 Fonti consultate (${NEWS.sources.length})</h3>`,NEWS.sources.map(s=>`<div class="row"><div class="grow"><b>${esc(s.name)}</b><small>${esc(s.what||"")}</small></div>${s.url?`<a class="btn sm" href="${esc(s.url)}" target="_blank" rel="noopener">Apri</a>`:""}</div>`).join(""),false);
   o+=`<p class="lbl">Per decisioni importanti (date, scadenze) apri sempre la fonte ufficiale.</p>`;
   return o;}
-function newsBanner(){const L=newsItems();const top=L[0];return `<button class="newsbtn" data-go="novita"><span class="nb-ic">📰</span><span class="grow"><b>Novità del giorno</b><small>${updLab()?`Aggiornate ${esc(updLab())}`:"Notizie dalle fonti ufficiali"}${top?` · ${esc(top.title)}`:""}</small></span><span class="chev r"></span></button>`;}
+function newsBanner(){const L=newsItems();const top=L[0];return `<button class="newsbtn" data-go="novita"><span class="nb-ic">📰</span><span class="grow"><b>Novità</b><small>${updLab()?`Aggiornate ${esc(updLab())}`:"Notizie dalle fonti ufficiali"}${top?` · ${esc(top.title)}`:""}</small></span><span class="chev r"></span></button>`;}
 
 /* ---------- materiali ufficiali pubblicati (piattaforma MUR-CRUI-CISIA, avvisi UPO): solo informazioni datate ---------- */
 const UKEY="semestre-ufficiale";let UFF=/*UFF0*/null;try{const c=JSON.parse(localStorage.getItem(UKEY)||"null");if(c&&c.updated&&(!UFF||c.updated>=UFF.updated))UFF=c;}catch(e){}

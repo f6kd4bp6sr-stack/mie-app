@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" href="icon-192.png">
 <title>Semestre filtro</title>
-<script>window.APP_VERSION="fc6c1ec3c6";window.APP_BUILD="2026-11-01T05:48+00:00";</script>
+<script>window.APP_VERSION="30586f3145";window.APP_BUILD="2026-11-10T14:51+01:00";</script>
 <style>
 :root{--bg:#f3f4f7;--card:#ffffff;--ink:#15181d;--muted:#6b7280;--line:#e4e6eb;--navy:#163054;--accent:#1f5fae;--seg:#e6e8ee;
   --ok:#2e7d5b;--ok-bg:#e3f3ea;--warn:#b3261e;--warn-bg:#fdecea;--soon:#b7791f;--soon-bg:#fdf1dc;--lp:#a24a24;--lp-bg:#f9e6dc;--fam:#6d4bb8;--fam-bg:#ece6fa;--ben:#2b7a83;--ben-bg:#dff1f2;--euro:#1f5fae;--euro-bg:#e3edf9;
@@ -31,14 +31,14 @@ body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 -apple-system
 .side button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:0;background:none;font:inherit;font-weight:700;font-size:16px;color:var(--muted);padding:11px 12px;border-radius:12px;cursor:pointer}
 .side button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
 .side .ic{font-size:20px;width:26px;text-align:center}
-.sidel{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:14px 12px 2px}
-.side .pct{margin-left:auto;font-size:12.5px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+.sidel{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:14px 12px 2px}
+.side .pct{margin-left:auto;font-size:13px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
 .subnav{display:grid;gap:2px;margin:2px 0 6px 14px;padding-left:8px;border-left:2px solid var(--line)}
 .subnav button{font-size:15px;padding:8px 10px}
 .crumb{margin:0 0 6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .lnk{border:0;background:none;color:var(--accent);font-weight:700;cursor:pointer;font:inherit;font-weight:700;padding:0}
 .excard .hero{margin-top:4px}
-.side .n{margin-left:6px;font-size:12px;font-weight:800;background:var(--accent);color:#fff;border-radius:999px;padding:1px 7px}
+.side .n{margin-left:6px;font-size:13px;font-weight:800;background:var(--accent);color:#fff;border-radius:999px;padding:1px 7px}
 main{min-width:0;padding-bottom:20px}
 h1{font-size:28px;margin:4px 0 2px;letter-spacing:-.01em}
 .sub{color:var(--muted);margin:0 0 14px}
@@ -54,7 +54,7 @@ h2{font-size:18px;margin:20px 0 8px}
 .row:first-of-type{border-top:0}
 .row .grow{flex:1;min-width:0}
 .row small{display:block;color:var(--muted)}
-.pill{display:inline-block;font-size:12.5px;font-weight:800;padding:2px 9px;border-radius:999px;background:var(--seg);color:var(--ink);white-space:nowrap}
+.pill{display:inline-block;font-size:13px;font-weight:800;padding:2px 9px;border-radius:999px;background:var(--seg);color:var(--ink);white-space:nowrap}
 .pill.warn{background:var(--warn-bg);color:var(--warn)}.pill.soon{background:var(--soon-bg);color:var(--soon)}.pill.ok{background:var(--ok-bg);color:var(--ok)}.pill.acc{background:var(--euro-bg);color:var(--accent)}
 button,input,select,textarea{font:inherit}
 .btn{border:0;border-radius:12px;padding:10px 14px;font-weight:700;background:var(--seg);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
@@ -70,7 +70,7 @@ a.btn{text-decoration:none}
 .empty{color:var(--muted);padding:6px 0}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#15181d;color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;z-index:50;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.on{opacity:1}
-.saved{font-size:12.5px;color:var(--muted);margin:10px 2px 0}
+.saved{font-size:13px;color:var(--muted);margin:10px 2px 0}
 [hidden]{display:none!important}
 /* unità e argomenti */
 .ubadge{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:9px;font-size:16px;background:color-mix(in srgb,var(--uc) 14%,transparent);flex:none}
@@ -90,13 +90,13 @@ a.btn{text-decoration:none}
 .med{border-left:4px solid var(--accent)}
 .ptr{border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:12px;padding:10px 12px;margin:10px 0}.ptr.ok{border-left-color:var(--ok)}.ptl{margin:6px 0 0}.ptl.no{color:var(--warn)}.ptl.si{color:var(--ok)}.ptl b{color:var(--ink)}.ptw{margin:4px 0 0;line-height:1.5;font-size:14.5px}.ptgood{margin-top:12px}.ptgood summary{cursor:pointer;font-weight:700;color:var(--ok)}
 .goal{border:2px solid var(--accent)}.grow-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:10px 0;border-top:1px solid var(--line)}.grow-row .grow{min-width:220px}.grow-row.done{opacity:.7}.bar.sm{height:6px;margin-top:6px}.rv summary{cursor:pointer;font-size:16px;line-height:1.5}.rv[open] summary{margin-bottom:8px}.rvk{margin:8px 0}.btn.armed{background:var(--warn);color:#fff}
-.realb{display:inline-block;margin:4px 0 0 6px;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:700;background:var(--soon-bg);color:var(--ink);border:1px solid var(--soon);vertical-align:middle}
-.srcrow{display:flex;gap:10px;align-items:center;padding:10px 4px;border-top:1px solid var(--line);color:var(--ink);text-decoration:none;line-height:1.4}.srcrow:first-of-type{border-top:0}.srcrow small{display:block;color:var(--muted);font-size:12px}.srcrow span[aria-hidden]{color:var(--accent);font-weight:700}.srcrow:hover{background:var(--seg)}
+.realb{display:inline-block;margin:4px 0 0 6px;padding:2px 8px;border-radius:999px;font-size:13px;font-weight:700;background:var(--soon-bg);color:var(--ink);border:1px solid var(--soon);vertical-align:middle}
+.srcrow{display:flex;gap:10px;align-items:center;padding:10px 4px;border-top:1px solid var(--line);color:var(--ink);text-decoration:none;line-height:1.4}.srcrow:first-of-type{border-top:0}.srcrow small{display:block;color:var(--muted);font-size:13px}.srcrow span[aria-hidden]{color:var(--accent);font-weight:700}.srcrow:hover{background:var(--seg)}
 .formula{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:15px;background:var(--seg);border-radius:10px;padding:8px 12px;margin:6px 0;overflow-x:auto;white-space:nowrap}
 .formula small{font-family:-apple-system,BlinkMacSystemFont,sans-serif;color:var(--muted);margin-left:10px;white-space:normal}
 .trap{background:var(--soon-bg);color:var(--ink);border-left:4px solid var(--soon);border-radius:10px;padding:10px 12px;margin:10px 0}
 .note{background:var(--euro-bg);border-left:4px solid var(--accent);border-radius:10px;padding:10px 12px;margin:10px 0}
-.tag26{font-size:11.5px;font-weight:800;color:var(--fam);background:var(--fam-bg);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:2px}
+.tag26{font-size:13px;font-weight:800;color:var(--fam);background:var(--fam-bg);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:2px}
 /* animazioni */
 .anim{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);margin:10px 0}
 .anim canvas{display:block;width:100%;background:color-mix(in srgb,var(--seg) 45%,var(--card))}
@@ -142,7 +142,7 @@ a.btn{text-decoration:none}
 .lvl.l0{color:var(--warn)}.lvl.l1{color:var(--soon)}.lvl.l2{color:var(--ok)}
 table.t{width:100%;border-collapse:collapse;font-size:14.5px}
 table.t td,table.t th{padding:7px 6px;border-top:1px solid var(--line);text-align:left;vertical-align:top}
-table.t th{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-top:0}
+table.t th{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-top:0}
 .src{font-size:13px;color:var(--muted)}
 .qrbox{background:#fff;border-radius:14px;padding:12px;width:max-content;margin:6px 0}.qrbox svg{display:block;width:200px;height:200px}
 .src a{color:var(--accent)}
@@ -170,12 +170,12 @@ details.fold[open]>summary .chev{transform:rotate(180deg)}
 .newsbtn .grow{flex:1;min-width:0}.newsbtn small{display:block;color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .newsbtn.hot{border:2px solid var(--accent);box-shadow:0 4px 16px color-mix(in srgb,var(--accent) 18%,transparent)}
 .nb-ic{font-size:26px;width:44px;height:44px;border-radius:12px;background:var(--euro-bg);display:flex;align-items:center;justify-content:center;flex:none}
-.nbadge{display:inline-block;margin-left:6px;font-size:12px;font-weight:800;background:var(--accent);color:#fff;border-radius:999px;padding:1px 8px;vertical-align:middle}
+.nbadge{display:inline-block;margin-left:6px;font-size:13px;font-weight:800;background:var(--accent);color:#fff;border-radius:999px;padding:1px 8px;vertical-align:middle}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 6px}
 .chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font-weight:700;font-size:13.5px;cursor:pointer}
 .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 .news .nrow{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line)}.news .nrow:first-child{border-top:0}
-.nd{flex:none;width:46px;text-align:center;background:var(--seg);border-radius:10px;padding:4px 0;align-self:flex-start}.nd b{display:block;font-size:20px;line-height:1.1}.nd span{font-size:12px;color:var(--muted)}
+.nd{flex:none;width:46px;text-align:center;background:var(--seg);border-radius:10px;padding:4px 0;align-self:flex-start}.nd b{display:block;font-size:20px;line-height:1.1}.nd span{font-size:13px;color:var(--muted)}
 .nt{margin:0 0 3px;font-weight:700}.ns{margin:0 0 4px;font-size:14.5px}
 .srch{width:100%;font-size:17px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 .drow{padding:6px 0;border-top:1px solid var(--line);font-size:14px}.drow:first-of-type{border-top:0}.drow.fx{color:var(--ok)}.drow.wn{color:var(--soon)}
@@ -193,7 +193,7 @@ body[data-dens="snella"] .kpi b{font-size:21px}
 body[data-dens="snella"] .sub{margin-bottom:10px}
 .menutog{display:none!important}
 @media (max-width:760px){.menutog{display:flex!important;width:100%!important;align-items:center;gap:10px;background:var(--card)!important;border:1px solid var(--line)!important;color:var(--ink)!important;border-radius:14px!important;padding:10px 12px!important}
- .menutog .grow{flex:1;min-width:0;text-align:left}.menutog small{display:block;font-size:12.5px;color:var(--muted);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .menutog .grow{flex:1;min-width:0;text-align:left}.menutog small{display:block;font-size:13px;color:var(--muted);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
  .side.mclosed>:not(.menutog){display:none!important}}
 @media (max-width:760px){.formula{white-space:normal}.formula small{display:block;margin:2px 0 0}.wrap{grid-template-columns:minmax(0,1fr)}.side{position:static;display:flex;flex-wrap:wrap;gap:6px}.sidel{width:100%;margin:6px 4px 0}.subnav{width:100%;display:flex;flex-wrap:wrap;margin:0;border:0;padding:0}.side button{width:auto;white-space:nowrap;padding:8px 12px;font-size:15px}.pstep{grid-template-columns:96px 1fr}}
 @media (prefers-color-scheme:dark){:root{--bg:#0f1216;--card:#1a1e24;--ink:#eef0f3;--muted:#9aa3ae;--line:#2a3038;--seg:#242a32;--ok-bg:#16301f;--warn-bg:#3a1b19;--soon-bg:#33270f;--lp-bg:#3a2218;--fam-bg:#271f3d;--ben-bg:#14302f;--euro-bg:#172739;--accent:#6ea3ea;--ok:#5cc494;--warn:#ff8a80;--soon:#e7b35a;--fam:#b39af0;--ben:#6fd0d8;--lp:#f2a37c;
@@ -7958,7 +7958,7 @@ const updLab=()=>NEWS&&NEWS.updated?([8,11].includes(new Date(NEWS.updated).getD
 function vNovita(){const L=newsItems();const tags=[...new Set(L.map(i=>i.tag).filter(Boolean))];const F=NFILT==="tutte"?L:L.filter(i=>i.tag===NFILT||i.scope===NFILT);
   const grp=[["Ultimi 7 giorni",i=>newsAge(i.date)<=7],["Dall'8° al 30° giorno",i=>newsAge(i.date)>7&&newsAge(i.date)<=30],["Prima",i=>newsAge(i.date)>30]];
   setTimeout(markNewsSeen,500);
-  let o=`<h1>📰 Novità del giorno</h1><p class="sub">Notizie sul semestre filtro dalle fonti ufficiali (MUR, Universitaly, UPO) e da testate affidabili, in ordine di data, ognuna con il link alla fonte.${updLab()?` Aggiornate ${updLab()}.`:""}</p>
+  let o=`<h1>📰 Novità</h1><p class="sub">Notizie sul semestre filtro dalle fonti ufficiali (MUR, Universitaly, UPO) e da testate affidabili, in ordine di data, ognuna con il link alla fonte.${updLab()?` Aggiornate ${updLab()}.`:""}</p>
   <div class="chips">${["tutte","UPO",...tags.filter(t=>t!=="UPO")].map(t=>`<button class="chip${NFILT===t?" on":""}" data-nf="${esc(t)}">${t==="tutte"?"Tutte":esc(t)}</button>`).join("")}<button class="chip" id="newsUpd">↻ Aggiorna</button></div>`;
   if(!L.length)o+=`<div class="card"><p class="empty">Nessuna notizia scaricata finora: si caricano appena c'è la connessione.</p></div>`;
   grp.forEach(([t,fn])=>{const g=F.filter(fn);if(!g.length)return;o+=`<h2>${t}</h2><div class="card news">${g.map(i=>{let host="";try{host=new URL(i.url).hostname.replace(/^www\./,"");}catch(e){}
@@ -7966,7 +7966,7 @@ function vNovita(){const L=newsItems();const tags=[...new Set(L.map(i=>i.tag).fi
   if(NEWS&&Array.isArray(NEWS.sources)&&NEWS.sources.length)o+=fold("news-fonti",`<h3>🔗 Fonti consultate (${NEWS.sources.length})</h3>`,NEWS.sources.map(s=>`<div class="row"><div class="grow"><b>${esc(s.name)}</b><small>${esc(s.what||"")}</small></div>${s.url?`<a class="btn sm" href="${esc(s.url)}" target="_blank" rel="noopener">Apri</a>`:""}</div>`).join(""),false);
   o+=`<p class="lbl">Per decisioni importanti (date, scadenze) apri sempre la fonte ufficiale.</p>`;
   return o;}
-function newsBanner(){const L=newsItems();const top=L[0];return `<button class="newsbtn" data-go="novita"><span class="nb-ic">📰</span><span class="grow"><b>Novità del giorno</b><small>${updLab()?`Aggiornate ${esc(updLab())}`:"Notizie dalle fonti ufficiali"}${top?` · ${esc(top.title)}`:""}</small></span><span class="chev r"></span></button>`;}
+function newsBanner(){const L=newsItems();const top=L[0];return `<button class="newsbtn" data-go="novita"><span class="nb-ic">📰</span><span class="grow"><b>Novità</b><small>${updLab()?`Aggiornate ${esc(updLab())}`:"Notizie dalle fonti ufficiali"}${top?` · ${esc(top.title)}`:""}</small></span><span class="chev r"></span></button>`;}
 
 /* ---------- materiali ufficiali pubblicati (piattaforma MUR-CRUI-CISIA, avvisi UPO): solo informazioni datate ---------- */
 const UKEY="semestre-ufficiale";let UFF={
@@ -8284,7 +8284,7 @@ function answerImmediate(box,q,val){if(box.dataset.done)return;box.dataset.done=
   rec(q,ok);try{logAns(box.dataset.ctx,q,val,ok);}catch(e){}save();return ok;}
 
 /* ================= NAVIGAZIONE ================= */
-const PLAT=[["home","🩺","Semestre filtro"],["novita","📰","Novità del giorno"],["cerca","🔎","Cerca"],["guida","ℹ️","Che cosa fa l'app"],["regole","🎓","Regole e UPO"],["fonti","🔗","Fonti"],["prog","📈","Progressi e copie"],["installa","📲","Installa su altri iPad"]];
+const PLAT=[["home","🩺","Semestre filtro"],["novita","📰","Novità"],["cerca","🔎","Cerca"],["guida","ℹ️","Che cosa fa l'app"],["regole","🎓","Regole e UPO"],["fonti","🔗","Fonti"],["prog","📈","Progressi e copie"],["installa","📲","Installa su altri iPad"]];
 function exSects(){const s=[["","🏠","Percorso"]];if(PT.length)s.push(["test","🧭","Test d'ingresso"]);s.push(["arg","📚",E.ready?"Argomenti":"Programma"]);
   if(QB.length){s.push(["es","✏️","Esercizi"]);s.push(["sim","⏱️","Simulazione"]);s.push(["storico","🗂️","Errori e storico"]);}if(TOPICS.some(t=>t.form))s.push(["form",E.formLab?"📌":"📐",E.formT||"Formulario"]);s.push(["info","📜","Storia e syllabus"]);return s;}
 let view="home",curT=null,PR=null,SIMV=null,simTimer=null,PTA=null,argU=null;
@@ -8488,7 +8488,7 @@ function vInfo(){let o=exHead()+`<h1>📜 Storia e syllabus · ${esc(ename(EX))}
 
 /* ----- Fonti ----- */
 const srcRow=([t,u])=>{let h="";try{h=new URL(u).hostname.replace(/^www\./,"");}catch(e){}return `<a class="srcrow" href="${u}" target="_blank" rel="noopener"><span class="grow">${esc(t)}<small>${esc(h)}</small></span><span aria-hidden="true">↗</span></a>`;};
-function vFonti(){const n=SOURCES.reduce((a,g)=>a+g.it.length,0);return `<h1>🔗 Fonti</h1><p class="sub">Tutte le ${n} fonti usate per costruire l'app, consultate tra il 9 e l'11 ottobre 2026. Le novità successive arrivano ogni giorno nella pagina «📰 Novità del giorno». Quando un'analisi non ufficiale e il testo ufficiale non coincidono, l'app segue il testo ufficiale (syllabus MUR e pagina UPO).</p>
+function vFonti(){const n=SOURCES.reduce((a,g)=>a+g.it.length,0);return `<h1>🔗 Fonti</h1><p class="sub">Tutte le ${n} fonti usate per costruire l'app, consultate tra il 9 e l'11 ottobre 2026. Le novità successive arrivano ogni giorno nella pagina «📰 Novità». Quando un'analisi non ufficiale e il testo ufficiale non coincidono, l'app segue il testo ufficiale (syllabus MUR e pagina UPO).</p>
  ${SOURCES.map(g=>`<div class="card"><h3>${g.g}</h3>${g.it.map(srcRow).join("")}</div>`).join("")}
  <div class="card"><h3>ℹ️ Come sono usate</h3><ul class="breve"><li>Programma e argomenti: solo dai syllabus ufficiali 2026/27.</li><li>Formato, date e regole: decreti MUR, pagina UPO e articoli che li riportano.</li><li>Domande «tipo 2025»: riprendono gli argomenti degli appelli 2025 ricostruiti dalle correzioni pubblicate; i testi originali sono sul sito del MUR (accesso riservato).</li><li>Spiegazioni, esempi ed esercizi sono scritti apposta per l'app: nessun testo è copiato dalle fonti.</li></ul></div>`;}
 
@@ -8509,7 +8509,7 @@ function vRegole(){return `<h1>🎓 Regole e UPO</h1><p class="sub">Regole 2026/
   <li><b>18 settembre</b>: la piattaforma nazionale aggiunge esercizi di Fisica, Chimica e Biologia; simulazioni da novembre.</li>
   <li><b>4–5 agosto</b>: il Consiglio di Stato (ordinanza 3347/2026) chiede al MUR di far scorrere la graduatoria 2025/26 sui posti rimasti vacanti; non cambia le regole 2026/27.</li>
   <li><b>28 settembre</b> (UPO): dal 1° ottobre lezioni solo online su Zoom/DIR; registrazioni valide per la frequenza.</li></ul>
-  <p class="lbl">Le notizie successive, con data e fonte, sono nella pagina <button class="lnk" data-go="novita">📰 Novità del giorno</button>, che si aggiorna da sola.</p>
+  <p class="lbl">Le notizie successive, con data e fonte, sono nella pagina <button class="lnk" data-go="novita">📰 Novità</button>, che si aggiorna da sola.</p>
   <p class="src">Fonti: ${LK("nov","Futura, novità 2026/27")} · ${LK("guida","Orizzonte Scuola, guida date")} · ${LK("tar","News Istruzione, TAR")} · ${LK("upoen","UPO, aggiornamenti")} · tutte le fonti nella pagina <button class="lnk" data-go="fonti">🔗 Fonti</button></p></div>
  <div class="card"><h3>📚 Syllabus ufficiali 2026/27</h3>${EXORD.map(k=>`<div class="row"><span class="ubadge" style="--uc:var(${EXAMS[k].col})">${EXAMS[k].ic}</span><div class="grow">${esc(EXAMS[k].t)}</div><a class="btn sm" href="${EXAMS[k].syl}" target="_blank" rel="noopener">PDF</a></div>`).join("")}<p class="src">Pagina MUR: ${LK("mur","syllabus del semestre aperto 2026/27")} · ${LK("date","date e formato delle prove")}</p></div>`;}
 
@@ -8533,7 +8533,7 @@ function vGuida(){return `<h1>ℹ️ Che cosa fa questa app</h1><p class="sub">�
   <li>📚 <b>Argomenti:</b> spiegazione, animazione interattiva, esempi svolti, formule e trappole d'esame.</li>
   <li>✏️ <b>Esercizi e simulazioni:</b> serie da 10 domande corrette e spiegate, simulazioni a tempo e le prove reali del 2025 da rifare. Le domande cambiano ogni volta; quelle uscite davvero all'esame sono segnate con 📌.</li>
   <li>🗂️ <b>Errori:</b> dai tuoi errori nasce un obiettivo di studio con ripasso guidato; ogni prova resta salvata con data e ora.</li>
-  <li>📰 <b>Novità del giorno:</b> le notizie ufficiali sul semestre filtro, con la fonte.</li>
+  <li>📰 <b>Novità:</b> le notizie ufficiali sul semestre filtro, con la fonte.</li>
   <li>💾 Salva tutto da sola sull'iPad e funziona anche senza internet.</li></ul>
   <p class="src" style="margin-top:10px"><b>Da dove vengono le informazioni:</b> programmi d'esame dai ${LK("mur","syllabus ufficiali del MUR 2026/27")}; regole, date e formato della prova dal ${SOURCES[0]&&SOURCES.find(g=>g.g.startsWith("🏛️"))?`<a href="${SOURCES.find(g=>g.g.startsWith("🏛️")).it[1][1]}" target="_blank" rel="noopener">D.M. 941/2026</a> e dal <a href="${SOURCES.find(g=>g.g.startsWith("🏛️")).it[2][1]}" target="_blank" rel="noopener">D.D. 249/2026</a> del MUR`:"MUR"}; organizzazione a Novara e Alessandria dalla ${LK("upo","pagina UPO sull'accesso a Medicina 2026/27")}; domande reali dalle ${LK("prove","prove nazionali del 2025")}. Spiegazioni ed esercizi sono scritti apposta sulla base di questi testi. Elenco completo nella pagina <button class="lnk" data-go="fonti">🔗 Fonti</button>.</p>
   <div class="btns"><button class="btn pri" data-go="fis/test">Inizia dal test d'ingresso</button><button class="btn" data-go="home">Torna alla home</button></div></div>`;}

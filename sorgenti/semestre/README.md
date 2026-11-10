@@ -43,7 +43,7 @@ Per ogni esame ci sono anche:
 - **Storia e syllabus**: cosa è uscito nel 2025, novità 2026 e fonti. In Fisica c'è anche la mappa del syllabus voce per voce.
 
 Pagine comuni:
-- **📰 Novità del giorno**: in evidenza all'apertura; notizie con data e fonte dalle fonti indicizzate (MUR, Universitaly, UPO…), aggiornate ogni mattina da un agente di ricerca e scaricate in background (restano salvate anche senza rete);
+- **📰 Novità**: in evidenza all'apertura; notizie con data e fonte dalle fonti indicizzate (MUR, Universitaly, UPO…), aggiornate ogni mattina da un agente di ricerca e scaricate in background (restano salvate anche senza rete);
 - **🔎 Cerca** in argomenti, spiegazioni e domande delle tre materie;
 - **Regole e UPO**: date, graduatoria, recuperi, aggiornamenti datati;
 - **Fonti**: 44 link;
@@ -73,7 +73,7 @@ Pagine comuni:
 | `f_gen.js`, `f2_gen_plus.js` | Calcoli a numeri sempre nuovi (`GEN`, 102 tipi): ogni variante si ricostruisce dal suo identificativo `g~esame~tipo~seme`. |
 | `d4_extra.js` | Emoji degli argomenti, tendine, sfondi a tema, novità del giorno, ricerca, autodiagnosi. |
 | `ufficiale.json` | Materiali ufficiali pubblicati (esercitazioni per materia e unità didattica, simulazioni, piattaforma) con data, fonte e dati della doppia verifica; l'app li mostra solo con la loro data in «Storia e syllabus», «Regole e UPO» e nelle unità. |
-| `news.json`, `diagnosi.json` | Novità del giorno e esito della verifica serale: li aggiornano ogni giorno gli agenti automatici. |
+| `news.json`, `diagnosi.json` | Novità e esito della verifica serale: li aggiornano ogni giorno gli agenti automatici. |
 | `strumenti/` | `verifica_contenuti.js`, `verifica_app.py`, `verifica_ufficiale.py` (controllo di `ufficiale.json`), `uniforma_prove_reali.py` (predisposto: sposta la marcatura 📌 di Chimica e Biologia dentro le domande; si lancia a secco, con `--applica` modifica i file) e `AGENTI.md` (istruzioni dei due agenti giornalieri). |
 | `d2_storico.js` | **Storico delle prove** (ogni test, serie di esercizi e simulazione salvati con data, ora e risposte, sempre riapribili), **obiettivo di studio** creato in automatico dagli errori e **ripasso guidato** degli errori (concetti chiave, trappola, spiegazione di ogni errore, «Rifai gli errori»). |
 | `d_app.js` | Motore dell'app: navigazione, test, esercizi, simulazione, piano di studio, progressi, copie, installazione. |
@@ -101,7 +101,7 @@ Le pagine pubblicate **non si modificano a mano**: si modificano questi sorgenti
 - Animazione nuova: `AN.<nome> = {h, c:[controlli], init(st,p), f(g,p,st,dt,W,H)}`. `f` disegna e restituisce il testo da mostrare sotto.
 
 ## Agenti automatici
-- **Ogni mattina** un agente cerca le novità sulle fonti indicizzate e aggiorna `news.json`; controlla anche la pagina UPO, il MUR e la piattaforma ufficiale e registra in `ufficiale.json` esercitazioni, simulazioni e unità didattiche pubblicate, solo dopo doppia verifica (due letture indipendenti + seconda fonte).
+- **Una volta a settimana (dal 10/11/2026, fino agli esami)** un agente cerca le novità sulle fonti indicizzate e aggiorna `news.json`; controlla anche la pagina UPO, il MUR e la piattaforma ufficiale e registra in `ufficiale.json` esercitazioni, simulazioni e unità didattiche pubblicate, solo dopo doppia verifica (due letture indipendenti + seconda fonte).
 - **Ogni sera** un agente ricostruisce l'app, lancia le verifiche di `strumenti/` (con una terza verifica delle voci ufficiali nuove), corregge gli errori trovati, scrive `diagnosi.json` e pubblica.
 Dettagli in `strumenti/AGENTI.md`.
 

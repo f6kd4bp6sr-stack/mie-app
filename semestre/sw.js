@@ -1,5 +1,5 @@
-// Semestre filtro: funziona anche senza internet. Versione fc6c1ec3c6
-const CACHE = 'semestre-fc6c1ec3c6';
+// Semestre filtro: funziona anche senza internet. Versione 30586f3145
+const CACHE = 'semestre-30586f3145';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('semestre-') && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });

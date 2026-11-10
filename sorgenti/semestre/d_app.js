@@ -115,7 +115,7 @@ function answerImmediate(box,q,val){if(box.dataset.done)return;box.dataset.done=
   rec(q,ok);try{logAns(box.dataset.ctx,q,val,ok);}catch(e){}save();return ok;}
 
 /* ================= NAVIGAZIONE ================= */
-const PLAT=[["home","🩺","Semestre filtro"],["novita","📰","Novità del giorno"],["cerca","🔎","Cerca"],["guida","ℹ️","Che cosa fa l'app"],["regole","🎓","Regole e UPO"],["fonti","🔗","Fonti"],["prog","📈","Progressi e copie"],["installa","📲","Installa su altri iPad"]];
+const PLAT=[["home","🩺","Semestre filtro"],["novita","📰","Novità"],["cerca","🔎","Cerca"],["guida","ℹ️","Che cosa fa l'app"],["regole","🎓","Regole e UPO"],["fonti","🔗","Fonti"],["prog","📈","Progressi e copie"],["installa","📲","Installa su altri iPad"]];
 function exSects(){const s=[["","🏠","Percorso"]];if(PT.length)s.push(["test","🧭","Test d'ingresso"]);s.push(["arg","📚",E.ready?"Argomenti":"Programma"]);
   if(QB.length){s.push(["es","✏️","Esercizi"]);s.push(["sim","⏱️","Simulazione"]);s.push(["storico","🗂️","Errori e storico"]);}if(TOPICS.some(t=>t.form))s.push(["form",E.formLab?"📌":"📐",E.formT||"Formulario"]);s.push(["info","📜","Storia e syllabus"]);return s;}
 let view="home",curT=null,PR=null,SIMV=null,simTimer=null,PTA=null,argU=null;
@@ -319,7 +319,7 @@ function vInfo(){let o=exHead()+`<h1>📜 Storia e syllabus · ${esc(ename(EX))}
 
 /* ----- Fonti ----- */
 const srcRow=([t,u])=>{let h="";try{h=new URL(u).hostname.replace(/^www\./,"");}catch(e){}return `<a class="srcrow" href="${u}" target="_blank" rel="noopener"><span class="grow">${esc(t)}<small>${esc(h)}</small></span><span aria-hidden="true">↗</span></a>`;};
-function vFonti(){const n=SOURCES.reduce((a,g)=>a+g.it.length,0);return `<h1>🔗 Fonti</h1><p class="sub">Tutte le ${n} fonti usate per costruire l'app, consultate tra il 9 e l'11 ottobre 2026. Le novità successive arrivano ogni giorno nella pagina «📰 Novità del giorno». Quando un'analisi non ufficiale e il testo ufficiale non coincidono, l'app segue il testo ufficiale (syllabus MUR e pagina UPO).</p>
+function vFonti(){const n=SOURCES.reduce((a,g)=>a+g.it.length,0);return `<h1>🔗 Fonti</h1><p class="sub">Tutte le ${n} fonti usate per costruire l'app, consultate tra il 9 e l'11 ottobre 2026. Le novità successive arrivano ogni giorno nella pagina «📰 Novità». Quando un'analisi non ufficiale e il testo ufficiale non coincidono, l'app segue il testo ufficiale (syllabus MUR e pagina UPO).</p>
  ${SOURCES.map(g=>`<div class="card"><h3>${g.g}</h3>${g.it.map(srcRow).join("")}</div>`).join("")}
  <div class="card"><h3>ℹ️ Come sono usate</h3><ul class="breve"><li>Programma e argomenti: solo dai syllabus ufficiali 2026/27.</li><li>Formato, date e regole: decreti MUR, pagina UPO e articoli che li riportano.</li><li>Domande «tipo 2025»: riprendono gli argomenti degli appelli 2025 ricostruiti dalle correzioni pubblicate; i testi originali sono sul sito del MUR (accesso riservato).</li><li>Spiegazioni, esempi ed esercizi sono scritti apposta per l'app: nessun testo è copiato dalle fonti.</li></ul></div>`;}
 
@@ -340,7 +340,7 @@ function vRegole(){return `<h1>🎓 Regole e UPO</h1><p class="sub">Regole 2026/
   <li><b>18 settembre</b>: la piattaforma nazionale aggiunge esercizi di Fisica, Chimica e Biologia; simulazioni da novembre.</li>
   <li><b>4–5 agosto</b>: il Consiglio di Stato (ordinanza 3347/2026) chiede al MUR di far scorrere la graduatoria 2025/26 sui posti rimasti vacanti; non cambia le regole 2026/27.</li>
   <li><b>28 settembre</b> (UPO): dal 1° ottobre lezioni solo online su Zoom/DIR; registrazioni valide per la frequenza.</li></ul>
-  <p class="lbl">Le notizie successive, con data e fonte, sono nella pagina <button class="lnk" data-go="novita">📰 Novità del giorno</button>, che si aggiorna da sola.</p>
+  <p class="lbl">Le notizie successive, con data e fonte, sono nella pagina <button class="lnk" data-go="novita">📰 Novità</button>, che si aggiorna da sola.</p>
   <p class="src">Fonti: ${LK("nov","Futura, novità 2026/27")} · ${LK("guida","Orizzonte Scuola, guida date")} · ${LK("tar","News Istruzione, TAR")} · ${LK("upoen","UPO, aggiornamenti")} · tutte le fonti nella pagina <button class="lnk" data-go="fonti">🔗 Fonti</button></p></div>
  <div class="card"><h3>📚 Syllabus ufficiali 2026/27</h3>${EXORD.map(k=>`<div class="row"><span class="ubadge" style="--uc:var(${EXAMS[k].col})">${EXAMS[k].ic}</span><div class="grow">${esc(EXAMS[k].t)}</div><a class="btn sm" href="${EXAMS[k].syl}" target="_blank" rel="noopener">PDF</a></div>`).join("")}<p class="src">Pagina MUR: ${LK("mur","syllabus del semestre aperto 2026/27")} · ${LK("date","date e formato delle prove")}</p></div>`;}
 
@@ -364,7 +364,7 @@ function vGuida(){return `<h1>ℹ️ Che cosa fa questa app</h1><p class="sub">�
   <li>📚 <b>Argomenti:</b> spiegazione, animazione interattiva, esempi svolti, formule e trappole d'esame.</li>
   <li>✏️ <b>Esercizi e simulazioni:</b> serie da 10 domande corrette e spiegate, simulazioni a tempo e le prove reali del 2025 da rifare. Le domande cambiano ogni volta; quelle uscite davvero all'esame sono segnate con 📌.</li>
   <li>🗂️ <b>Errori:</b> dai tuoi errori nasce un obiettivo di studio con ripasso guidato; ogni prova resta salvata con data e ora.</li>
-  <li>📰 <b>Novità del giorno:</b> le notizie ufficiali sul semestre filtro, con la fonte.</li>
+  <li>📰 <b>Novità:</b> le notizie ufficiali sul semestre filtro, con la fonte.</li>
   <li>💾 Salva tutto da sola sull'iPad e funziona anche senza internet.</li></ul>
   <p class="src" style="margin-top:10px"><b>Da dove vengono le informazioni:</b> programmi d'esame dai ${LK("mur","syllabus ufficiali del MUR 2026/27")}; regole, date e formato della prova dal ${SOURCES[0]&&SOURCES.find(g=>g.g.startsWith("🏛️"))?`<a href="${SOURCES.find(g=>g.g.startsWith("🏛️")).it[1][1]}" target="_blank" rel="noopener">D.M. 941/2026</a> e dal <a href="${SOURCES.find(g=>g.g.startsWith("🏛️")).it[2][1]}" target="_blank" rel="noopener">D.D. 249/2026</a> del MUR`:"MUR"}; organizzazione a Novara e Alessandria dalla ${LK("upo","pagina UPO sull'accesso a Medicina 2026/27")}; domande reali dalle ${LK("prove","prove nazionali del 2025")}. Spiegazioni ed esercizi sono scritti apposta sulla base di questi testi. Elenco completo nella pagina <button class="lnk" data-go="fonti">🔗 Fonti</button>.</p>
   <div class="btns"><button class="btn pri" data-go="fis/test">Inizia dal test d'ingresso</button><button class="btn" data-go="home">Torna alla home</button></div></div>`;}
