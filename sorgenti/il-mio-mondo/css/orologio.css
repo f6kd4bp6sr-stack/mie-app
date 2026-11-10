@@ -31,3 +31,4 @@
 .oro-nota { font-weight: 700; font-size: 14px; color: var(--ink-soft); margin: 0 0 10px; }
 .oro-risp { font-size: 20px; margin: 4px 0 6px; } .oro-risp b { font-family: var(--font-display); } .oro-risp small { display: block; font-size: 14px; color: var(--ink-soft); font-weight: 700; }
 .oro-v { margin-top: 12px; }
+.oro-med { font-size: 16px; margin: 8px 0; }
