@@ -12,7 +12,7 @@ const coVisibile=(c,C)=>(c.lotto||1)>=coLotto()||!!C.st[c.id];
 /* 11/11/2026 (richiesta del proprietario): i corsi segnati ⭐ o ▶️ stanno nella sezione «I miei corsi» in alto e non compaiono più nella scelta generale */
 function coMiei(C){const o={in:0,da:1};return CO_D.corsi.filter(c=>C.st[c.id]==='da'||C.st[c.id]==='in').sort((a,b)=>o[C.st[a.id]]-o[C.st[b.id]]);}
 function coMieiH(C){const M=coMiei(C);if(!M.length)return '';const n=k=>M.filter(c=>C.st[c.id]===k).length;
-  return `<div class="card k-corsi nofold co-miei"><h2>⭐ I miei corsi <span class="pill">${M.length}</span></h2><p class="lbl">I corsi che hai scelto: ▶️ ${n('in')} in corso · ⭐ ${n('da')} da seguire. Tocca di nuovo ⭐ o ▶️ per rimetterne uno nella scelta generale; con ✅ va nell'archivio.</p><div class="co-mie">${M.map(c=>coCard(c,C)).join('')}</div></div>`;}
+  return `<div class="card k-corsi co-miei"><h3>⭐ I miei corsi <span class="pill">${M.length}</span></h3><p class="lbl">I corsi che hai scelto: ▶️ ${n('in')} in corso · ⭐ ${n('da')} da seguire. Tocca di nuovo ⭐ o ▶️ per rimetterne uno nella scelta generale; con ✅ va nell'archivio.</p><div class="co-mie">${M.map(c=>coCard(c,C)).join('')}</div></div>`;}
 function coFiltra(C){const f=C.f;return CO_D.corsi.filter(c=>coVisibile(c,C)&&!C.st[c.id]&&(!f.a||c.area===f.a)&&(!f.t||c.tipo===f.t)&&(!f.it||c.lingua!=="Sottotitoli in italiano")&&(!f.at||c.attestato==="Gratis"));}
 function coCard(c,C){const s=C.st[c.id];
   return `<div class="co-c${s?" co-"+s:""}"><b>${esc(c.titolo)}</b><div class="co-e">${c.tipo==='Università popolare'?'🏛️ ':''}${esc(c.ente)}${c.paese!=="Italia"?" · "+esc(c.paese):""} · ${esc(c.piattaforma)}</div>`+
@@ -21,7 +21,7 @@ function coCard(c,C){const s=C.st[c.id];
     Object.keys(CO_ST).map(k=>`<button class="btn sm${s===k?" on":""}" data-cos="${esc(c.id)}" data-v="${k}" title="${CO_ST[k][1]}">${CO_ST[k][0]}</button>`).join("")+
     `</div><div class="lbl">Controllato il ${new Date(c.verificato+"T12:00").toLocaleDateString("it-IT")}</div></div>`;}
 function coQuota(){const Q=CO_D.a_quota||[];if(!Q.length)return "";
-  return `<div class="card k-corsi"><h2>💶 Università popolari a quota <span class="pill">${Q.length}</span></h2><p class="lbl">${esc(CO_D.a_quota_nota||"")}</p>`+Q.map(q=>`<div class="co-c"><b>🏛️ ${esc(q.nome)}</b><div class="co-e">📍 ${esc(q.citta)} · ${esc(q.modalita)}</div><div class="co-t"><span>💶 ${esc(q.quota)}</span><span>controllato il ${new Date(q.verificato+"T12:00").toLocaleDateString("it-IT")}</span></div><p>${esc(q.comprende)}</p><p>${esc(q.iscrizione)}</p><div class="co-b"><a class="btn sm" href="${esc(q.url)}" target="_blank" rel="noopener">Apri il sito ›</a></div></div>`).join("")+`</div>`;}
+  return `<div class="card k-corsi"><h3>💶 Università popolari a quota <span class="pill">${Q.length}</span></h3><p class="lbl">${esc(CO_D.a_quota_nota||"")}</p>`+Q.map(q=>`<div class="co-c"><b>🏛️ ${esc(q.nome)}</b><div class="co-e">📍 ${esc(q.citta)} · ${esc(q.modalita)}</div><div class="co-t"><span>💶 ${esc(q.quota)}</span><span>controllato il ${new Date(q.verificato+"T12:00").toLocaleDateString("it-IT")}</span></div><p>${esc(q.comprende)}</p><p>${esc(q.iscrizione)}</p><div class="co-b"><a class="btn sm" href="${esc(q.url)}" target="_blank" rel="noopener">Apri il sito ›</a></div></div>`).join("")+`</div>`;}
 function coArchivio(C){const A=CO_D.corsi.filter(c=>coFinito(c,C)).sort((a,b)=>(C.fine[b.id]||"").localeCompare(C.fine[a.id]||""));if(!A.length)return "";
   return `<details class="card k-corsi fold co-arch" data-fk="co|arch"${foldSt["co|arch"]===true?" open":""}><summary><h2>🗄️ Archivio · corsi finiti <span class="pill">${A.length}</span></h2></summary>`+
     `<p class="lbl">I corsi segnati ✅ finiscono qui. Le nuove ricerche partono da questi per proporre il passo successivo.</p><div class="co-al">`+
@@ -33,7 +33,7 @@ function vCorsi(){
   if(!L.length&&nArch)return o+`<div class="card k-corsi nofold"><h2>🎉 Hai finito tutti i corsi proposti</h2><p>La prossima tappa porta corsi nuovi, scelti come passo successivo di quelli finiti.</p></div>`+coArchivio(C);
   if(!L.length)return o+`<div class="card k-corsi nofold"><h2>📚 La lista è in preparazione</h2><p>${esc(CO_D.criteri)}</p><p class="empty">I corsi arrivano dopo la ricerca e il controllo: ogni corso viene aperto sulla pagina ufficiale prima di entrare nella lista.</p></div>`;
   const nn=k=>CO_D.corsi.filter(c=>C.st[c.id]===k).length;
-  o+=coMieiH(C)+`<div class="card k-corsi nofold co-f"><div class="co-fr">`+
+  o+=coMieiH(C)+`<div class="card k-corsi co-f"><h3>🔎 Scegli tra i corsi <span class="pill">${L.length}</span></h3><div class="co-fr">`+
     `<button class="og-p${!f.a?" on":""}" data-cof="a" data-v="">Da scegliere · ${L.length}</button>`+
     Object.keys(CO_AREE).map(a=>`<button class="og-p${f.a===a?" on":""}" data-cof="a" data-v="${a}">${CO_AREE[a][0]} ${CO_AREE[a][1]} · ${L.filter(c=>c.area===a).length}</button>`).join("")+
     [['','Tutti gli enti'],['Università','🎓 Università'],['Università popolare','🏛️ Università popolari']].map(([v,t])=>`<button class="og-p${(f.t||'')===v?' on':''}" data-cof="t" data-v="${v}">${t}</button>`).join('')+
