@@ -140,5 +140,38 @@ CD_IMG={
  +B(22,36,150,112,C.k)+`<rect x="62" y="48" width="70" height="52" rx="6" fill="${C.s}" fill-opacity=".3"/>`+E(97,86,34,"🧒")+`<rect x="80" y="58" width="34" height="34" rx="9" fill="${C.s}" fill-opacity=".8"/>`+T(97,124,14,"volto coperto",{b:800})
  +B(184,36,150,112,C.g)+E(259,82,34,"👨‍👩‍👧")+T(259,114,14,"solo persone",{b:800})+T(259,134,14,"fidate",{b:800})
  +B(346,36,152,112,C.p)+E(422,82,34,"🚫")+T(422,114,14,"niente inoltro",{b:800})+T(422,134,14,"senza consenso",{b:800})
- +T(260,182,14,"a lui, da grande, piacerà?",{b:800}))
+ +T(260,182,14,"a lui, da grande, piacerà?",{b:800})),
+/* 11/11/2026: dieci schede sull'intelligenza artificiale (gruppo 1) */
+"b2-impara":S("Una pila di libri e pagine web che entra in un cervello robot; una linea del tempo che si ferma alla data limite, con un punto interrogativo dopo",
+ T(260,22,15,"prima impara, poi risponde",{b:800})+E(60,92,40,"📚")+E(112,92,34,"🌐")+A(140,88,206)+E(250,92,44,"🤖")+B(300,52,200,64,C.b,14)+T(400,80,15,"stima il testo",{b:700})+T(400,102,15,"più probabile",{b:700})
+ +`<line x1="30" y1="156" x2="300" y2="156" stroke="${C.b}" stroke-width="5" stroke-linecap="round" opacity=".6"/><line x1="300" y1="156" x2="490" y2="156" stroke="${C.b}" stroke-width="3" stroke-dasharray="6 7" opacity=".45"/>`+E(300,146,22,"📅")+T(160,184,14,"ciò che ha letto",{b:600})+T(300,184,14,"data limite",{b:800})+T(456,150,18,"?",{op:".7",b:900})),
+"u2-modello":S("Due bilance a confronto: un modello piccolo, veloce ed economico per i compiti semplici e un modello grande e capace per i compiti difficili",
+ T(260,22,15,"il lavoro decide il modello",{b:800})+B(24,40,226,120,C.u,16)+E(70,98,36,"⚡")+T(160,76,15,"piccolo e veloce",{b:800})+T(160,102,14,"compiti semplici",{b:600})+T(160,126,14,"costa meno",{b:600})
+ +B(270,40,226,120,C.v,16)+E(316,98,36,"🧠")+T(406,76,15,"grande e capace",{b:800})+T(406,102,14,"compiti difficili",{b:600})+T(406,126,14,"consuma di più",{b:600})+T(260,186,14,"prova sulle tue richieste vere",{b:700})),
+"u3-consumi":S("Una batteria che si scarica con chat lunghe, strumenti attivi e impegno alto; accanto, una chat nuova che la ricarica",
+ T(260,22,15,"il budget si consuma",{b:800})+E(60,100,46,"🔋")+B(116,48,170,36,C.w,12)+T(201,72,14,"chat molto lunga",{b:700})+B(116,92,170,36,C.w,12)+T(201,116,14,"strumenti attivi",{b:700})+B(116,136,170,36,C.w,12)+T(201,160,14,"impegno alto",{b:700})
+ +A(296,110,350,C.g)+B(350,56,160,104,C.g,14)+E(430,92,30,"💬")+T(430,124,14,"chat nuova",{b:800})+T(430,146,14,"meno strumenti",{b:600})),
+"b3-richieste":S("Una richiesta ordinata in blocchi: ruolo, istruzioni, esempio e testo, ciascuno nel proprio riquadro",
+ T(260,22,15,"una richiesta in quattro riquadri",{b:800})+B(24,40,226,56,C.b,12)+E(52,76,26,"🎭")+T(170,74,15,"ruolo",{b:800})+T(170,92,14,"una frase",{b:600})
+ +B(270,40,226,56,C.u,12)+E(298,76,26,"📋")+T(416,74,15,"istruzioni",{b:800})+T(416,92,14,"passi numerati",{b:600})
+ +B(24,108,226,56,C.v,12)+E(52,144,26,"💡")+T(170,142,15,"esempio",{b:800})+T(170,160,14,"come lo vuoi",{b:600})
+ +B(270,108,226,56,C.g,12)+E(298,144,26,"📄")+T(416,142,15,"testo",{b:800})+T(416,160,14,"da elaborare",{b:600})+T(260,190,14,"formato: di' che cosa vuoi",{b:700})),
+"b2-web":S("Una lente sulla domanda: l'assistente cerca sul web, mostra le fonti con un link, e tu apri il link per controllare",
+ T(260,22,15,"cerca, cita, e tu controlli",{b:800})+B(20,56,100,76,C.b,14)+E(70,94,28,"❓")+T(70,120,14,"domanda",{b:700})+A(126,94,176,C.b)+E(212,104,38,"🌐")+A(250,94,300,C.b)
+ +B(306,52,92,84,C.u,14)+T(352,86,14,"risposta",{b:800})+T(352,108,14,"[1] [2]",{b:700})+A(402,94,440,C.g)+E(472,104,32,"🔎")+T(472,138,14,"apri il link",{b:800})+T(260,184,14,"la citazione dice ciò che è scritto?",{b:700})),
+"u3-sottoagenti":S("Un coordinatore affida il lavoro a un autore, un revisore lo controlla e la persona decide alla fine",
+ T(260,22,15,"il lavoro diviso",{b:800})+E(60,96,40,"🧑‍💼")+T(60,126,14,"coordinatore",{b:700})+A(88,86,160,C.u)+B(162,52,92,64,C.u,14)+E(208,84,24,"✍️")+T(208,108,14,"autore",{b:800})+A(256,86,300,C.v)+B(302,52,92,64,C.v,14)+E(348,84,24,"🔍")+T(348,108,14,"revisore",{b:800})
+ +A(396,86,440,C.g)+E(472,96,40,"🙋")+T(472,126,14,"decidi tu",{b:800})+T(260,170,14,"più agenti consumano più token",{b:700})),
+"u3-programmate":S("Un orologio e un calendario: l'assistente lavora a un'ora fissa e poi tu leggi il resoconto e controlli",
+ T(260,22,15,"lavora da solo, poi controlli",{b:800})+E(60,98,44,"⏰")+T(60,134,14,"ogni mattina",{b:700})+A(96,92,170,C.w)+E(210,98,40,"🤖")+T(210,134,14,"fa il compito",{b:700})+A(250,92,324,C.w)+B(330,56,100,72,C.g,14)+E(380,86,24,"📝")+T(380,108,14,"resoconto",{b:800})+T(380,124,14,"da leggere",{b:600})+A(434,92,468,C.g)+E(494,98,28,"✅")+T(260,176,14,"«riuscita» non vuol dire «fatta bene»",{b:700})),
+"p3-connettori":S("L'assistente collegato con un filo a una cartella di documenti e a una posta; un lucchetto mostra che vede solo ciò che puoi vedere tu",
+ T(260,22,15,"un collegamento, tanti permessi",{b:800})+E(70,98,46,"🤖")+`<line x1="102" y1="92" x2="212" y2="70" stroke="${C.v}" stroke-width="3" opacity=".6"/><line x1="102" y1="100" x2="212" y2="134" stroke="${C.v}" stroke-width="3" opacity=".6"/>`+E(250,78,34,"🗂️")+T(330,84,14,"documenti",{b:700})+E(250,142,34,"📧")+T(322,148,14,"posta",{b:700})
+ +B(368,48,144,100,C.p,14)+E(440,84,26,"🔒")+T(440,112,14,"vede solo",{b:800})+T(440,132,14,"ciò che vedi tu",{b:800})+T(260,182,14,"collega solo ciò che serve",{b:700})),
+"b3-valutare":S("Una risposta scritta con sicurezza passa tre prove di controllo: ripeti la domanda, chiedi le frasi esatte, ricontrolla la fonte",
+ T(260,22,15,"sicura non vuol dire vera",{b:800})+B(20,46,130,68,C.b,14)+T(85,76,14,"risposta sicura",{b:800})+T(85,98,14,"ma è vera?",{b:600})+A(154,80,196,C.s)
+ +E(226,72,26,"🔁")+T(226,102,14,"ripeti",{b:700})+E(290,72,26,"💬")+T(290,102,14,"frasi esatte",{b:700})+E(360,72,26,"🔎")+T(360,102,14,"fonte",{b:700})+A(390,80,430,C.g)+E(468,84,34,"✅")
+ +T(260,150,14,"informazioni importanti: verifica sempre",{b:700})+T(260,176,14,"le prove riducono gli errori, non li eliminano",{b:600})),
+"p3-sicurezza":S("Una pagina web con del testo nascosto che sussurra un comando a un assistente; uno scudo con un lucchetto lo ferma, e i dati sensibili restano fuori dalla chat",
+ T(260,22,15,"istruzioni nascoste e dati",{b:800})+B(20,44,150,86,C.s,14)+E(52,88,28,"🌐")+Ln(80,70,76,.3)+Ln(80,86,60,.3)+T(95,118,14,"«fai questo…»",{c:C.p,b:700})+A(176,104,246,C.p)+E(212,84,28,"🛡️")+E(280,100,40,"🤖")
+ +B(330,44,170,86,C.g,14)+E(362,88,28,"🔒")+T(436,80,14,"dati sensibili",{b:800})+T(436,102,14,"restano fuori",{b:800})+T(260,164,14,"conferma tu le azioni importanti",{b:700})+T(260,188,14,"il rischio si riduce, non sparisce",{b:600}))
 };})();
