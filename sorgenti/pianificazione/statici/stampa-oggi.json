@@ -1,10 +1,48 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-11T05:14+01:00",
-  "nota": "Edizione del mattino dell'11 novembre 2026.",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-11T13:04+01:00",
+  "nota": "Edizione del pomeriggio dell'11 novembre 2026.",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-allarme-bomba-scuole",
+        "t": "Allarme bomba via mail in oltre 300 scuole italiane: evacuazioni, Meloni convoca una riunione",
+        "s": "Una mail anonima ha annunciato ordigni in più di 300 istituti, 25 segnalazioni a Torino, con evacuazioni e controlli. Il ministro Valditara parla di rischio pressoché nullo e di una strategia dietro i messaggi; Palazzo Chigi ha convocato una riunione per le 16.",
+        "d": "2026-11-11",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/cronaca/2026/11/11/allarme-bomba-in-decine-di-scuole-in-italia-partito-da-una-mail-anonima_870b0024-72d2-4b15-bab5-0c74dcc1d653.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/11/allarmi-bomba-nelle-scuole-meloni-convoca-una-riunione-alle-16_e58eabf9-137a-456d-9320-3a0b6e271cd8.html"
+          }
+        ]
+      },
+      {
+        "id": "it-manovra-bollo-banche",
+        "t": "Manovra: Meloni annuncia stop al bollo sulla prima auto, Tajani si smarca dalla Lega sulle banche",
+        "s": "Dal 2027 niente bollo sulla prima auto fino a 80 kW e sulle moto, risparmio stimato dal Governo in 2,3 miliardi. Forza Italia dice di non voler «vessare le banche», la Lega ha una linea diversa; Tajani e Salvini chiedono un vertice di maggioranza, ancora senza data.",
+        "d": "2026-11-11",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/politica/2026/11/11/meloni-senza-il-bollo-auto-gli-italiani-risparmiano-23-miliardi_ff1ef14e-a7fd-4903-90e4-0749aaa6ba51.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/11/tajani-fi-non-vuole-vessare-le-banche-la-nostra-posizione-e-diversa-dalla-lega_02f7edf5-bea9-4d3f-ab18-7b8f3facd2b5.html"
+          }
+        ],
+        "link": [
+          {
+            "n": "Verso un nuovo vertice di maggioranza sulla manovra (ANSA)",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/verso-un-nuovo-vertice-maggioranza-sulla-manovra-per-fare-il-punto-sulle_5a86a332-6d2c-420b-aeb5-6bd2eb586258.html"
+          }
+        ]
+      },
       {
         "id": "it-giorgetti-ucraina",
         "t": "Aiuti all'Ucraina, slitta la firma di Giorgetti: la Lega avverte gli alleati, Meloni minimizza",
@@ -22,31 +60,49 @@
         ]
       },
       {
-        "id": "it-manovra-vertice",
-        "t": "Manovra: Tajani e Salvini chiedono a Meloni un vertice di maggioranza sulle modifiche",
-        "s": "Pensioni, risorse per il Superbonus ed exit tax sono tra le richieste di modifica alla legge di bilancio, ma i fondi sono limitati e i tecnici attendono indicazioni dalla politica. Secondo fonti di maggioranza, i due vicepremier hanno chiesto un vertice a Meloni; la data non è ancora stabilita.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/10/verso-un-nuovo-vertice-maggioranza-sulla-manovra-per-fare-il-punto-sulle_5a86a332-6d2c-420b-aeb5-6bd2eb586258.html"
-          }
-        ]
-      },
-      {
-        "id": "it-scuola-sitin",
-        "t": "Scuola: oggi sit-in a Roma contro i tagli agli organici previsti dalla manovra",
-        "s": "Cisl Scuola, Uil Scuola Rua, Snals Confsal e Anief manifestano in piazza Vidoni, a Roma, dalle 14 alle 17, per chiedere di cancellare le norme della legge di bilancio che riducono gli organici di docenti e personale Ata. La Flc Cgil scenderà in piazza il 20 novembre.",
+        "id": "it-valditara-dl-scuola",
+        "t": "Valditara sul decreto Scuola: «speculazione politica, nessun problema con l'Ue»",
+        "s": "Il ministro dell'Istruzione respinge le critiche sul decreto Scuola e dice che non ci sono problemi con la Commissione europea; intanto i sindacati manifestano contro i tagli agli organici.",
         "d": "2026-11-11",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/05/sindacati-della-scuola-lanciano-la-mobilitazione-sit-in-l11-novembre_ce814bf9-2c88-4eb7-b4a4-834a3e37c512.html"
+            "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/11/11/valditara-sul-dl-scuola-speculazione-politica-nessun-problema-con-lue_c9332286-2b20-4c82-a405-b77d899b47ff.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/05/sindacati-della-scuola-lanciano-la-mobilitazione-sit-in-l11-novembre_370b1964-d14b-4d62-9559-8919b1a1e695.html"
           }
         ]
       }
     ],
     "mondo": [
+      {
+        "id": "mo-iran-hormuz",
+        "t": "Iran nega trattative con gli Usa: Hormuz resta chiuso finché non saranno accolte le sue richieste",
+        "s": "Il responsabile della sicurezza iraniano Rezaei dice che Teheran attende la risposta di Washington a sette condizioni; i Pasdaran riferiscono di tre petroliere colpite da mine. Rubio afferma che la pressione economica rende superflue grandi operazioni militari.",
+        "d": "2026-11-11",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-abu-dhabi",
+        "t": "Ucraina-Russia: seconda giornata di colloqui ad Abu Dhabi, restano distanti territori e tregua",
+        "s": "I negoziati mediati dagli Usa proseguono: Mosca chiede il ritiro ucraino dalle regioni orientali e si oppone a una tregua immediata; si discute di scambi di 1.000-1.500 prigionieri per parte, senza conferme ufficiali.",
+        "d": "2026-11-11",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/11/ukraine-russia-peace-talks-enter-second-day-with-territory-and-security-guarantees-in-focu",
+            "l": "en"
+          }
+        ]
+      },
       {
         "id": "mo-hegseth",
         "t": "Stati Uniti: la Camera blocca l'impeachment contro il capo del Pentagono Hegseth",
@@ -65,6 +121,19 @@
         ]
       },
       {
+        "id": "mo-israele-eisenkot",
+        "t": "Israele: incarico a Eisenkot per formare il governo dopo il voto, Netanyahu perde terreno",
+        "s": "Dopo le elezioni di ottobre il presidente Herzog ha affidato l'incarico a Gadi Eisenkot; secondo un analista, con l'Ebraismo unito nella Torah avrebbe 67 seggi su 120.",
+        "d": "2026-11-11",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/11/netanyahu-fights-to-stay-relevant-as-israels-opposition-closes-in",
+            "l": "en"
+          }
+        ]
+      },
+      {
         "id": "mo-baltici",
         "t": "Baltici: allarme aereo per un oggetto dalla Bielorussia, decollano caccia Nato",
         "s": "Secondo Reuters, citata dall'ANSA, caccia Nato sono decollati dopo l'avvistamento di un oggetto diretto verso i Paesi baltici. Vilnius ha diramato un allarme aereo e in Lettonia la popolazione della regione di Ludza è stata invitata a cercare riparo; l'allerta è rientrata alle 23:35 italiane.",
@@ -75,68 +144,49 @@
             "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/media-minaccia-a-spazio-aereo-baltici-dalla-bielorussia-in-volo-caccia-nato_d22c687e-00d6-4855-bb61-9c07549ff89e.html"
           }
         ]
-      },
-      {
-        "id": "mo-bbc-trump",
-        "t": "Usa: il giudice respinge la richiesta Bbc di chiudere la causa di Trump",
-        "s": "Secondo i media americani citati dall'ANSA, un giudice federale ha respinto l'istanza con cui la Bbc chiedeva di archiviare il procedimento avviato dal presidente Trump, che quindi prosegue. La notizia non riporta le motivazioni né una cifra di risarcimento.",
-        "d": "2026-11-11",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/11/giudice-respinge-richiesta-bbc-di-archiviare-causa-per-diffamazione-di-trump_d337005c-a3a8-4ed2-9c87-e2bd59f1b2d4.html"
-          }
-        ]
-      },
-      {
-        "id": "mo-israele-knesset",
-        "t": "Israele: giurato il nuovo Knesset, Herzog chiede concessioni per evitare nuove elezioni",
-        "s": "Dopo il voto del 27 ottobre il blocco di Netanyahu non ha la maggioranza e il presidente Herzog ha incaricato Gadi Eisenkot di formare il governo: ha 28 giorni, prorogabili di 14, e non ha ancora i 61 seggi. Herzog ha invitato i partiti a evitare un altro voto.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/10/israeli-president-warns-against-repeat-election-in-new-knesset-session",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-ecuador",
-        "t": "Ecuador: finito il coprifuoco di dieci giorni, oltre 2.600 arresti secondo il presidente Noboa",
-        "s": "Il coprifuoco notturno in cinque province, iniziato il 1° novembre, si è chiuso martedì. Noboa parla di oltre 2.600 arrestati, circa due tonnellate e mezza di droga sequestrate e 750 veicoli recuperati; è la quarta misura del genere quest'anno contro le bande.",
-        "d": "2026-11-11",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/11/in-ecuador-si-chiude-il-coprifuoco-di-10-giorni-con-oltre-2.600-arresti_e5e9434f-2d7b-4025-bafd-89d3c31c9ba7.html"
-          }
-        ]
       }
     ],
     "estero": [
       {
-        "id": "es-epstein",
-        "t": "Stati Uniti: rapporto repubblicano alla Camera sul caso Epstein denuncia negligenze di procuratori e carcere",
-        "s": "La commissione Vigilanza, guidata dal repubblicano Comer, pubblica 137 pagine dopo 15 mesi di indagine: accordo giudiziario del 2007 troppo morbido e controlli saltati nella cella di Epstein nel 2019. Chiede al Dipartimento di Giustizia di riascoltare i testimoni; i democratici, alla guida della Camera da gennaio, vogliono la presidenza della commissione.",
+        "id": "es-bomba-italia",
+        "t": "Euronews: almeno 300 scuole italiane evacuate dopo minacce di bomba via mail",
+        "s": "La testata europea riferisce delle mail firmate «Mikhail Andropov», con minacce anche alla premier Meloni; il contenuto non è verificato e i controlli sono in corso.",
         "d": "2026-11-11",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/11/gop-led-house-report-slams-systemic-failures-in-handling-of-epstein-case",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/11/at-least-300-schools-in-italy-evacuated-after-emailed-bomb-threats",
+            "l": "en"
+          },
+          {
+            "n": "Euronews Italia",
+            "url": "https://it.euronews.com/2026/11/11/italia-allarme-bomba-in-300-scuole-minacce-via-mail-anche-alla-premier-meloni",
+            "l": "it"
+          }
+        ]
+      },
+      {
+        "id": "es-cop31",
+        "t": "Cop31 in Turchia: Thunberg attacca i vertici pieni di lobbisti, Guterres contro i combustibili fossili",
+        "s": "Ad Antalya, fino al 20 novembre, Greta Thunberg parla di vertici ipocriti; il segretario Onu Guterres chiede di tassare i profitti extra delle compagnie petrolifere. Si attendono pochi passi avanti.",
+        "d": "2026-11-11",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/11/everything-we-love-is-at-stake-greta-thunberg-blasts-cop-climate-summits-as-being-full-of-",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-italia-kiev",
-        "t": "Euronews: governo italiano diviso sugli aiuti a Kiev mentre ad Abu Dhabi si tratta",
-        "s": "Il sito europeo racconta le tensioni nella coalizione sul pacchetto di aiuti militari, nel giorno in cui Roma ha ottenuto un posto al tavolo dei colloqui di Abu Dhabi.",
-        "d": "2026-11-10",
+        "id": "es-nvidia-cina",
+        "t": "Al Jazeera: università cinese legata ai militari compra chip Nvidia H200 nonostante il divieto Usa",
+        "s": "Secondo documenti di acquisto, la Northwestern Polytechnical University ha comprato due chip H200 per circa 123.000 dollari e ne ha noleggiato l'uso con cinque contratti; Washington esamina il caso.",
+        "d": "2026-11-11",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/10/italian-government-debates-aid-to-kyiv-while-abu-dhabi-holds-talks-on-ukraines-future",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/11/chinese-university-buys-nvidia-ai-h200-chips-despite-us-ban-records-show",
             "l": "en"
           }
         ]
@@ -153,22 +203,29 @@
             "l": "en"
           }
         ]
-      },
-      {
-        "id": "es-midterm-analisi",
-        "t": "Euronews analizza il voto di metà mandato: i democratici conquistano Camera e Senato",
-        "s": "Un'analisi del sito europeo prova a individuare vincitori e sconfitti dopo il successo democratico del 3 novembre, che cambia gli equilibri a Washington.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/10/democrats-took-the-house-senate-and-a-good-deal-of-republican-pride-so-who-are-the-real-wi",
-            "l": "en"
-          }
-        ]
       }
     ],
     "economia": [
+      {
+        "id": "ec-borsa-brent",
+        "t": "Piazza Affari apre in rialzo, spread a 103 punti; il Brent risale a 92,5 dollari",
+        "s": "Il Ftse Mib guadagna lo 0,79% a 52.161 punti, lo spread tra Btp e Bund scende a 103,4. Il Brent sale dell'1,15% dopo i cali dei giorni scorsi e il gas resta sopra gli 86 euro ad Amsterdam.",
+        "d": "2026-11-11",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/11/borsa-milano-apre-in-rialzo-079_4442ba73-fc2b-46af-bb32-06e25cbbf454.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/11/petrolio-in-rialzo-brent-a-9254-dollari-al-barile_0def3e9a-e7fe-4b34-912a-bd99cc708c95.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/11/il-gas-si-mantiene-sopra-gli-86-euro-sulla-piazza-ttf-di-amsterdam_75c0cda7-ab64-40e9-bd52-f5fa1923011d.html"
+          }
+        ]
+      },
       {
         "id": "ec-inflazione-usa",
         "t": "Stati Uniti: a ottobre i prezzi salgono dello 0,4% sul mese, sopra le attese",
@@ -180,30 +237,46 @@
             "url": "https://www.ansa.it/sito/notizie/economia/2026/11/10/linflazione-sale-a-ottobre-negli-usa-oltre-le-attese-04-mensile_582d93a0-dc0f-4f94-ab08-c2e402c01620.html"
           }
         ]
-      },
-      {
-        "id": "ec-borsa-milano",
-        "t": "Piazza Affari chiude in rialzo dello 0,69% a 51.755 punti, bene Fincantieri e banche",
-        "s": "Il rialzo è frenato dai dati sull'inflazione americana e dal dollaro più forte. Salgono Fincantieri (+3,34%), Bper (+2,9%) e Unicredit (+2,36%); scendono Stellantis (-3,21%), A2a (-2,54%) ed Eni (-0,94%) con il greggio in calo.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/topnews/2026/11/10/borsa-milano-chiude-in-rialzo-069-con-fincantieri-bper-e-unicredit_6c437363-b253-4fde-b6db-6776b74f6369.html"
-          }
-        ]
       }
     ],
     "torino": [
       {
-        "id": "to-callcenter",
-        "t": "Call center: sciopero nazionale, presidio a Torino sotto il grattacielo della Regione",
-        "s": "Slc Cgil, Fistel Cisl e Uilfpc Uil fermano per l'intera giornata il settore contro il calo dei volumi vocali e la sostituzione con chatbot e intelligenza artificiale. Il presidio è alle 9:30 in piazza Piemonte 1; in Piemonte il comparto conta circa 3mila addetti.",
+        "id": "to-scuole-bomba",
+        "t": "Allarme bomba nelle scuole: almeno 25-30 istituti torinesi coinvolti, evacuazioni e rientri",
+        "s": "Tra i primi, Gioberti, Bodoni, Ferraris, Berti e Segrè; alcune scuole, come l'Abba e la Gobetti Marchesini, hanno fatto uscire gli studenti, altre hanno ripreso le lezioni dopo i controlli. Cirio segue la situazione con i prefetti.",
         "d": "2026-11-11",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/10/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/call-center-lo-sciopero-nazionale-chiama-anche-torino-mercoledi-la-manifestazione-sotto-il-grat.html"
+            "url": "https://www.torinoggi.it/2026/11/11/leggi-notizia/argomenti/scuola-e-lavoro/articolo/allarme-bomba-nelle-scuole-anche-torino-coinvolta-dalla-mail-delirante-di-mikhail-andropov-leader.html"
+          }
+        ]
+      },
+      {
+        "id": "to-callcenter-11",
+        "t": "Call center: sciopero nazionale, presidio sotto il grattacielo della Regione per 3.000 addetti",
+        "s": "Sindacati confederali e M5S denunciano il calo delle commesse per effetto di chatbot e intelligenza artificiale; una delegazione è stata ricevuta dalla Giunta. Domani è previsto un tavolo interministeriale al Mimit.",
+        "d": "2026-11-11",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/11/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/sciopero-nazionale-dei-call-center-presidio-sotto-il-grattacielo-della-regione-tremila-posti-mina.html"
+          }
+        ]
+      },
+      {
+        "id": "to-palazzo-nuovo",
+        "t": "Palazzo Nuovo occupato dagli studenti dopo la fine della protesta al Campus Einaudi",
+        "s": "Gli occupanti parlano di scelta meditata e dicono di non fidarsi delle aperture del rettore; l'occupazione non ha una durata. Il 20 novembre è prevista una manifestazione in città con lo sciopero Cgil.",
+        "d": "2026-11-11",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/10/studenti-palazzo-nuovo-occupazione-no-a-priori-ma-frutto-di-elaborazione_79ac1aea-a0a5-45cd-9ab3-2fc2730df545.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/regione-piemonte-da-spazi-per-didattica-alluniversita-di-torino-occupata_0ade5400-7342-4392-b294-d301a6ed99e9.html"
           }
         ]
       },
@@ -220,34 +293,6 @@
           {
             "n": "Torino Oggi",
             "url": "https://www.torinoggi.it/2026/11/10/leggi-notizia/argomenti/attualita-31/articolo/pnrr-a-torino-e-provincia-oltre-21-mila-progetti-e-37-miliardi-di-investimenti-sul-territorio.html"
-          }
-        ]
-      },
-      {
-        "id": "to-campus-einaudi",
-        "t": "Campus Einaudi occupato: la Regione offre il Centro congressi per lezioni in presenza a Unito",
-        "s": "La giunta regionale ha approvato un protocollo che mette a disposizione dell'Università di Torino spazi per circa 500 posti, subito utilizzabili, dopo due settimane di occupazione del campus. Cirio parla di tutelare sia il dissenso sia il diritto allo studio.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/09/regione-piemonte-da-spazi-per-didattica-alluniversita-di-torino-occupata_0ade5400-7342-4392-b294-d301a6ed99e9.html"
-          }
-        ]
-      },
-      {
-        "id": "to-stadio",
-        "t": "Stadio Olimpico Grande Torino: il Torino FC presenta al Comune la proposta di gestione",
-        "s": "La società ha depositato un progetto di partenariato pubblico-privato per lo stadio e il centro Robaldo. Il sindaco Lo Russo dice che i tecnici lo esamineranno; il passo successivo è la dichiarazione di pubblico interesse, con diritto di superficie di lunga durata e non la proprietà.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/10/stadio-grande-torino-arrivata-la-proposta-della-societa-granata_88f30bdf-9134-4bc2-83e4-e3cae37a185d.html"
-          },
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/10/leggi-notizia/argomenti/attualita-31/articolo/si-apre-un-nuovo-futuro-per-lo-stadio-olimpico-il-toro-fc-deposita-la-proposta-per-la-gestione.html"
           }
         ]
       },
@@ -1111,12 +1156,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-02T05:55+01:00",
-      "edizione": "mattina",
-      "notizie": 19,
-      "note": "Fonti lette: ANSA, AGI, Torino Oggi, Al Jazeera (en), Euronews (en). Ricerca rifiutata: reuters.com, theguardian.com, bbc.com, lemonde.fr, spiegel.de, elpais.com. Lettura non riuscita: alcune pagine ANSA non uscite da ricerca; torinotoday.it non letto."
-    },
-    {
       "at": "2026-11-02T21:55+01:00",
       "edizione": "sera",
       "notizie": 16,
@@ -1224,6 +1263,12 @@
       "edizione": "mattina",
       "notizie": 75,
       "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en, solo elenco titoli), Torino Oggi; Il Fatto Quotidiano solo come link. Reuters rifiutata dal proxy di ricerca; BBC e altre grandi testate estere non tentate. mymovies: pagina The Space senza programmazione leggibile, thespacecinema.it non tentato. Cinema, teatro, eventi e concerti dall'edizione precedente (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-11T13:04+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 76,
+      "note": "Fonti lette: ANSA, Torino Oggi, Al Jazeera (en), Euronews (en, it). Reuters rifiutata dal proxy di ricerca; BBC e altre grandi testate estere non tentate. Non leggibili: TorinoToday e Euronews/Al Jazeera su alcune pagine (errore di lettura). Eventi, cinema, teatro e concerti dall'edizione del mattino (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (era staccata)."
     }
   ]
 }
