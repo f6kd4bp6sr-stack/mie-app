@@ -253,7 +253,7 @@ a.btn{text-decoration:none;display:inline-block}
 .cd-let{margin-bottom:12px}.cd-lt{display:block;font-size:17px;margin-top:2px}.cd-let small{display:block;color:var(--muted)}.cd-ris{background:var(--cd-bg);border-radius:12px;padding:10px 14px;margin-top:10px}.cd-ris p{margin:6px 0;line-height:1.55}.cd-ris ul{margin:6px 0;padding-left:20px}
 /* 🤖 Cultura digitale su due colonne (8/11/2026): riquadri che si aprono e chiudono, con un disegno per scheda */
 .cd-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start;margin:0 0 16px}.cd-g>.card{margin:0}@media (max-width:700px){.cd-g{grid-template-columns:1fr}}
-.cd-lh{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin:16px 2px 8px;font-size:18px;font-weight:800}.cd-lh .lbl{margin:0;font-weight:600}
+.cd-arch{margin:18px 0 16px}.cd-arch .cd-g{margin:0}.cd-tutte{margin:0 2px 16px}.cd-lh{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin:16px 2px 8px;font-size:18px;font-weight:800}.cd-lh .lbl{margin:0;font-weight:600}
 details.cd-w>summary{align-items:flex-start}details.cd-w>summary>h3{display:block;font-size:16px;line-height:1.3}.cd-wt{display:block}.cd-wm{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-top:5px;font-size:13px;font-weight:600;color:var(--muted)}.cd-wm .pill{font-size:12.5px}
 .cd-wb{max-height:62vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}.cd-wb h4{margin:14px 0 4px;font-size:15px}.cd-wb>p:first-of-type{margin-top:4px}.cd-wb .cd-q:first-of-type{border-top:0}
 .cd-svg{width:100%;height:auto;display:block;margin:2px 0 8px}.cd-intro .cd-svg{max-height:260px;margin:0}
@@ -606,8 +606,8 @@ function pnCerca(q){const W=pnNorm(q).split(/\s+/).filter(x=>x.length>1);if(!W.l
   Object.keys(DIA.giorni||{}).sort().reverse().forEach(d=>{const v=DIA.giorni[d];if(typeof v==="string"&&ok(v))R.push({ic:"📓",g:"Diario",t:fmt(d,{weekday:"long",day:"numeric",month:"long",year:"numeric"}),x:cut(v),a:"dia",d});});
   Object.keys(DIA.sett||{}).sort().reverse().forEach(w=>{const v=(DIA.sett[w]||{}).t;if(typeof v==="string"&&ok(v))R.push({ic:"📓",g:"Diario · settimana",t:"Settimana del "+fmt(w,{day:"numeric",month:"long",year:"numeric"}),x:cut(v),a:"dia",d:w});});
   if(typeof CO_D!=="undefined")CO_D.corsi.forEach(c=>{if(ok([c.titolo,c.ente,c.tema,c.sintesi,(c.programma||[]).join(" ")].join(" ")))R.push({ic:"🎓",g:"Corsi"+((P.corsi&&P.corsi.st||{})[c.id]==="ok"?" · finito":""),t:c.titolo,x:c.ente+" · "+c.livello,a:"corsi"});});
-  if(typeof cdPronto==="function"&&cdPronto()){CD_D.schede.forEach(s=>{if(ok([s.t,(s.testo||[]).join(" "),(s.punti||[]).join(" ")].join(" ")))R.push({ic:"🤖",g:"Cultura digitale · livello "+s.liv,t:s.t,x:cut((s.testo||[]).join(" ")),a:"cd",fk:"cd|s:"+s.id});});
-    (CD_D.letture||[]).forEach(l=>{if(ok([l.t,l.autore,l.riassunto,(l.idee||[]).join(" ")].join(" ")))R.push({ic:"📚",g:"Cultura digitale · letture",t:l.t,x:l.autore||"",a:"cd"});});}
+  if(typeof cdPronto==="function"&&cdPronto()){CD_D.schede.filter(cdVis).forEach(s=>{if(ok([s.t,(s.testo||[]).join(" "),(s.punti||[]).join(" ")].join(" ")))R.push({ic:"🤖",g:"Cultura digitale · livello "+s.liv,t:s.t,x:cut((s.testo||[]).join(" ")),a:"cd",fk:"cd|s:"+s.id});});
+    (CD_D.letture||[]).filter(cdVis).forEach(l=>{if(ok([l.t,l.autore,l.riassunto,(l.idee||[]).join(" ")].join(" ")))R.push({ic:"📚",g:"Cultura digitale · letture",t:l.t,x:l.autore||"",a:"cd"});});}
   (typeof IKI_IDX!=="undefined"?IKI_IDX:[]).forEach(c=>{if(ok(c.t+" "+c.x))R.push({ic:"🌸",g:"Ikigai",t:c.t,x:cut(c.x),href:"metodo.html#iki"});});
   return R;}
 function pnCercaHtml(q){const R=pnCerca(q);if(pnNorm(q).trim().length<2)return "";

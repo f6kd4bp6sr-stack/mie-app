@@ -7,18 +7,22 @@
    Contenuti: sezioni/cultura_dati.json (autore + revisore indipendente, controllo strumenti/verifica_cultura.py). Progressi in P.cd. */
 const CD_V=[["perc","🧭 Percorso"],["let","📚 Letture"],["rip","🔁 Ripasso"],["nov","📰 Novità"]],CD_STEP=[1,3,7,14,30,60],CD_SBLOCCO=4,CD_NKEY="pn-cd-novita";
 let cdV="perc",cdSel=null,cdAns={},cdRip=null,cdTema="";
+/* 11/11/2026 (scelta del proprietario): il tema «bimba» è nascosto, non cancellato. I dati e i progressi restano: per farlo tornare basta svuotare questo elenco. */
+const CD_NASCOSTI=["bimba"],cdVis=x=>!CD_NASCOSTI.includes(x.tema);
 function CD(){if(!P.cd||typeof P.cd!=="object")P.cd={};const c=P.cd;["fatte","srs","lette"].forEach(k=>{if(!c[k]||typeof c[k]!=="object")c[k]={};});return c;}
 const cdScheda=id=>CD_D.schede.find(s=>s.id===id);
-const cdDel=l=>CD_D.schede.filter(s=>s.liv===l);
+const cdDel=l=>CD_D.schede.filter(s=>s.liv===l&&cdVis(s));
 const cdFatteL=l=>cdDel(l).filter(s=>CD().fatte[s.id]).length;
+/* per aprire il livello dopo contano anche le schede fatte dei temi nascosti: un livello già aperto non si richiude */
+const cdFatteU=l=>CD_D.schede.filter(s=>s.liv===l&&CD().fatte[s.id]).length;
 /* il livello 1 (Base) è stato tolto il 27/10/2026, dopo che il proprietario l'ha completato: si parte dal primo livello rimasto */
 let CD_LIV=[];
 /* i dati arrivano da cultura-dati.js, caricato alla prima richiesta (apertura più veloce, 4/11/2026) */
 function cdPronto(){if(CD_D){if(!CD_LIV.length)CD_LIV=Object.keys(CD_D.livelli).map(Number).sort();return true;}lazyJS("cultura-dati.js",()=>{cdPronto();softRender();});return false;}
 /* 8/11/2026: il livello 1 torna solo per 💻 Programmare app; i livelli 1 e 2 sono sempre aperti, il 3 dopo 4 schede del 2 */
-const cdAperto=l=>l<=2||cdFatteL(l-1)>=CD_SBLOCCO;
+const cdAperto=l=>l<=2||cdFatteU(l-1)>=CD_SBLOCCO;
 const cdQ=qid=>{for(const s of CD_D.schede)for(const q of s.quiz)if(q.id===qid)return{q,s};return null;};
-function cdDue(){if(!cdPronto())return[];const t=today(),S=CD().srs;return Object.keys(S).filter(k=>S[k].due<=t&&cdQ(k)).sort((a,b)=>S[a].due<S[b].due?-1:1);}
+function cdDue(){if(!cdPronto())return[];const t=today(),S=CD().srs;return Object.keys(S).filter(k=>{const x=S[k].due<=t&&cdQ(k);return x&&cdVis(x.s);}).sort((a,b)=>S[a].due<S[b].due?-1:1);}
 function cdMix(q,seed){const o=[q.ok].concat(q.wrong);let h=7;for(const ch of seed)h=(h*31+ch.charCodeAt(0))|0;for(let i=o.length-1;i>0;i--){h=(h*1103515245+12345)|0;const j=Math.abs(h)%(i+1);[o[i],o[j]]=[o[j],o[i]];}return o;}
 async function cdCopy(t){try{await navigator.clipboard.writeText(t);return true;}catch(e){}try{const x=document.createElement("textarea");x.value=t;x.style.cssText="position:fixed;opacity:0";document.body.appendChild(x);x.select();const ok=document.execCommand("copy");x.remove();return ok;}catch(e){return false;}}
 /* novità: copia sull'iPad per quando manca internet */
@@ -28,10 +32,10 @@ async function cdNovFetch(){const N=cdNov();if(cdNBusy||navigator.onLine===false
   try{const r=await fetch("cultura-novita.json?t="+Date.now(),{cache:"no-store"});if(!r.ok)throw 0;const o=await r.json();if(o.app!=="cultura-digitale"||!Array.isArray(o.voci))throw 0;
     const before=N.updated;o.checked=new Date().toISOString();try{localStorage.setItem(CD_NKEY,JSON.stringify(o));}catch(e){}if(o.updated!==before&&(cur==="cd"||cur==="cal"))softRender();}
   catch(e){try{N.checked=new Date().toISOString();localStorage.setItem(CD_NKEY,JSON.stringify(N));}catch(x){}}finally{cdNBusy=false;}}
-const cdNovNew=()=>{const N=cdNov(),seen=CD().novVisto||"";return (N.voci||[]).filter(v=>(v.d||"")>seen).length;};
+const cdNovNew=()=>{const N=cdNov(),seen=CD().novVisto||"";return (N.voci||[]).filter(v=>(v.d||"")>seen&&cdVis(v)).length;};
 setTimeout(cdNovFetch,2500);
 
-function vCd(){if(!cdPronto())return lazyAtt();const c=CD(),due=cdDue().length,tot=CD_D.schede.length,fatte=CD_D.schede.filter(s=>c.fatte[s.id]).length,nn=cdNovNew();
+function vCd(){if(!cdPronto())return lazyAtt();const c=CD(),due=cdDue().length,tot=CD_D.schede.filter(cdVis).length,fatte=CD_D.schede.filter(s=>cdVis(s)&&c.fatte[s.id]).length,nn=cdNovNew();
   let o=`<h1>🤖 Cultura digitale</h1><p class="sub">Che cos'è l'intelligenza artificiale, come chiederle le cose e come usarla senza rischi. Un passo alla volta: ogni scheda ha una prova pratica e tre domande.</p>`;
   o+=`<div class="kpi" style="margin-bottom:12px"><div><b>${fatte}/${tot}</b><span>schede fatte</span></div>${CD_LIV.map(l=>`<div><b>${cdAperto(l)?cdFatteL(l)+"/"+cdDel(l).length:"🔒"}</b><span>${l} · ${esc(CD_D.livelli[l])}</span></div>`).join("")}<div><b>${due}</b><span>domande da ripassare oggi</span></div></div>`;
   o+=`<div class="seg" role="tablist" style="margin:0 0 14px;width:max-content;max-width:100%">${CD_V.map(([k,n])=>`<button role="tab" data-cv2="${k}" class="${cdV===k?"on":""}" aria-selected="${cdV===k}">${n}${k==="rip"&&due?`<span class="n">${due}</span>`:""}${k==="nov"&&nn?`<span class="n">${nn}</span>`:""}</button>`).join("")}</div>`;
@@ -51,13 +55,16 @@ const cdFonti=(s,k)=>s.fonti&&s.fonti.length?`<details class="more" data-k="${k}
 
 function cdPercorso(){let o=`<div class="card k-cd cd-intro"><h3>🧭 Come funziona il percorso</h3><div class="wide">${CD_INTRO}</div></div>`;
   CD_LIV.forEach(l=>{const ap=cdAperto(l),L=cdDel(l);
-    o+=`<div class="cd-lh${ap?"":" cd-lock"}">${CD_LV[l]} Livello ${l} · ${esc(CD_D.livelli[l])} <span class="lbl">${ap?cdFatteL(l)+" di "+L.length+" fatte":"si apre dopo "+CD_SBLOCCO+" schede del livello "+(l-1)+" (ne hai fatte "+cdFatteL(l-1)+")"}</span></div>
-      <div class="cd-g">${L.map(s=>cdBox(s,ap)).join("")}</div>`;});
+    o+=`<div class="cd-lh${ap?"":" cd-lock"}">${CD_LV[l]} Livello ${l} · ${esc(CD_D.livelli[l])} <span class="lbl">${ap?cdFatteL(l)+" di "+L.length+" fatte":"si apre dopo "+CD_SBLOCCO+" schede del livello "+(l-1)+" (ne hai fatte "+cdFatteU(l-1)+")"}</span></div>
+      ${(()=>{const A=L.filter(s=>!CD().fatte[s.id]);return A.length?`<div class="cd-g">${A.map(s=>cdBox(s,ap)).join("")}</div>`:`<p class="lbl cd-tutte">✅ Tutte fatte: le trovi nell'archivio qui sotto.</p>`;})()}`;});
+  /* 11/11/2026: le schede fatte passano nell'archivio (un riquadro che si apre e chiude); le loro domande restano nel ripasso */
+  const F=CD_D.schede.filter(s=>cdVis(s)&&CD().fatte[s.id]).sort((a,b)=>CD().fatte[a.id]<CD().fatte[b.id]?1:-1);
+  if(F.length)o+=`<details class="card k-cd fold cd-arch" data-fk="cd|arch"${foldSt["cd|arch"]===true?" open":""}><summary><h3>✅ Archivio · ${F.length} ${F.length===1?"scheda fatta":"schede fatte"}</h3></summary><p class="lbl" style="margin-top:0">Dalla più recente. Puoi riaprirle quando vuoi; le domande continuano a tornare nel 🔁 Ripasso.</p><div class="cd-g">${F.map(s=>cdBox(s,true)).join("")}</div></details>`;
   return o;}
 function cdBox(s,ap){const c=CD(),T=CD_D.temi[s.tema],f=c.fatte[s.id];
   const st=!ap?`<span class="pill">🔒 bloccata</span>`:f?`<span class="pill ok">✓ fatta il ${fmt(f,{day:"numeric",month:"short"})}</span>`:`<span class="pill cd-todo">da fare</span>${c.lette[s.id]?`<span>letta, mancano le domande</span>`:""}`;
   const h=`<span class="cd-wt">${s.ic} ${esc(s.t)}</span><span class="cd-wm"><span>${CD_LV[s.liv]} Livello ${s.liv} · ${T[0]} ${esc(T[1])}</span>${st}</span>`;
-  const b=(CD_IMG[s.id]||"")+(!ap?`<p class="lbl">🔒 Si apre dopo ${CD_SBLOCCO} schede del livello ${s.liv-1} (ne hai fatte ${cdFatteL(s.liv-1)}).</p>`:
+  const b=(CD_IMG[s.id]||"")+(!ap?`<p class="lbl">🔒 Si apre dopo ${CD_SBLOCCO} schede del livello ${s.liv-1} (ne hai fatte ${cdFatteU(s.liv-1)}).</p>`:
     cdTesto(s)+(s.prova?`<h4>🧪 Prova adesso</h4>${cdProvaH(s,false)}`:"")+`<h4>❓ Tre domande</h4>${cdQuizH(s)}`+cdFonti(s,"sf:"+s.id)+`<div class="dia-bar"><button class="btn sm" data-cdopen="${s.id}">⤢ Apri la scheda a pagina intera</button></div>`);
   return cdW("s:"+s.id,h,b,f?"cd-fatta":ap?"":"cd-lock",ap?` data-cdw="${s.id}"`:"");}
 
@@ -82,7 +89,7 @@ function cdNovita(){const N=cdNov(),V=(N.voci||[]).slice().sort((a,b)=>a.d<b.d?1
   if(!V.length)return o+`<p class="empty">${N.updated?"Nessuna novità.":"Le novità arrivano da internet: riapri la pagina quando sei collegato."}</p>`;
   const cdRow=v=>`<div class="row cd-nov"><span class="pill${v.d>seen?" cd-new":""}">${fmt(v.d,{day:"numeric",month:"short",year:"numeric"})}</span><div class="grow"><b>${CD_D.temi[v.tema]?CD_D.temi[v.tema][0]+" ":""}${esc(v.t)}</b><p>${esc(v.s)}</p><small>👉 ${esc(v.perche)}</small><small><a href="${esc(v.url)}" target="_blank" rel="noopener noreferrer">${esc(v.fonte)} ›</a></small></div></div>`;
   /* 8/11/2026: un riquadro per tema, su due colonne, chiuso all'inizio */
-  o+=`<div class="cd-g">${Object.keys(CD_D.temi).map(k=>{const L=V.filter(v=>v.tema===k),nw=L.filter(v=>v.d>seen).length;if(!L.length&&k==="app")return "";
+  o+=`<div class="cd-g">${Object.keys(CD_D.temi).filter(k=>!CD_NASCOSTI.includes(k)).map(k=>{const L=V.filter(v=>v.tema===k),nw=L.filter(v=>v.d>seen).length;if(!L.length&&k==="app")return "";
     return cdW("n:"+k,`<span class="cd-wt">${CD_D.temi[k][0]} ${esc(CD_D.temi[k][1])}</span><span class="cd-wm"><span class="pill">${L.length} ${L.length===1?"notizia":"notizie"}</span>${nw?`<span class="pill cd-new">${nw} ${nw===1?"nuova":"nuove"}</span>`:""}${L[0]?`<span>l'ultima: ${fmt(L[0].d,{day:"numeric",month:"short",year:"numeric"})}</span>`:""}</span>`,L.map(cdRow).join("")||'<p class="empty">Nessuna novità.</p>',"cd-nw");}).join("")}</div>`;
   o+=`<p class="lbl">Aggiornate ${N.updated?fmt(N.updated.slice(0,10),{day:"numeric",month:"long",year:"numeric"}):"—"} dall'attività programmata, una volta al mese, solo da fonti verificate. Non sono consigli.</p>`;
   return o;}
@@ -90,17 +97,19 @@ function cdNovita(){const N=cdNov(),V=(N.voci||[]).slice().sort((a,b)=>a.d<b.d?1
 
 /* ---- 📚 letture consigliate, con riassunto (scritto con parole nostre) e idee chiave ---- */
 let cdLF="",cdLOpen=null;
-function cdLetture(){const c=CD(),St=c.lib||{},L=(CD_D.letture||[]).filter(x=>!cdLF||(cdLF==="da"?St[x.id]!=="letto":cdLF==="lette"?St[x.id]==="letto":cdLF==="gratis"?x.gratis:true));
-  const TIP={libro:"📕 Libro",guida:"📘 Guida",corso:"🎓 Corso",articolo:"📰 Articolo",rapporto:"📊 Rapporto"},n=(CD_D.letture||[]).filter(x=>St[x.id]==="letto").length;
-  let o=`<p class="lbl" style="margin-top:0">Libri e risorse scelti per andare oltre le schede: per ognuno un riassunto e le idee chiave, poi decidi tu se leggerlo. ${n} lette su ${(CD_D.letture||[]).length}.</p>`;
-  o+=`<div class="seg" role="tablist" style="margin:0 0 12px;width:max-content;max-width:100%">${[["","Tutte"],["da","Da leggere"],["lette","Lette"],["gratis","Gratuite"]].map(([k,t])=>`<button data-cdlf="${k}" class="${cdLF===k?"on":""}">${t}</button>`).join("")}</div>`;
-  if(!L.length)return o+`<p class="empty">Nessuna lettura qui.</p>`;
+function cdLetture(){const c=CD(),St=c.lib||{},TUT=(CD_D.letture||[]).filter(cdVis),L=TUT.filter(x=>cdLF==="lette"?St[x.id]==="letto":St[x.id]!=="letto"&&(cdLF==="gratis"?x.gratis:true)),LA=cdLF==="lette"?[]:TUT.filter(x=>St[x.id]==="letto"&&(cdLF==="gratis"?x.gratis:true));
+  const TIP={libro:"📕 Libro",guida:"📘 Guida",corso:"🎓 Corso",articolo:"📰 Articolo",rapporto:"📊 Rapporto"},n=TUT.filter(x=>St[x.id]==="letto").length;
+  let o=`<p class="lbl" style="margin-top:0">Libri e risorse scelti per andare oltre le schede: per ognuno un riassunto e le idee chiave, poi decidi tu se leggerlo. ${n} lette su ${TUT.length}.</p>`;
+  o+=`<div class="seg" role="tablist" style="margin:0 0 12px;width:max-content;max-width:100%">${[["","Da leggere"],["gratis","Gratuite"],["lette","Lette"]].map(([k,t])=>`<button data-cdlf="${k}" class="${cdLF===k?"on":""}">${t}</button>`).join("")}</div>`;
+  if(!L.length&&!LA.length)return o+`<p class="empty">Nessuna lettura qui.</p>`;
+  const cdLBox=x=>{const T=CD_D.temi[x.tema]||["",""],st=St[x.id];
   /* 8/11/2026: ogni lettura è un riquadro (chiuso all'inizio): aprendolo si leggono riassunto e idee chiave */
-  o+=`<div class="cd-g">`+L.map(x=>{const T=CD_D.temi[x.tema]||["",""],st=St[x.id];
     return cdW("l:"+x.id,`<span class="cd-wt">${esc(x.t)}</span><span class="cd-wm"><span>${TIP[x.tipo]||""} · ${T[0]} ${esc(T[1])} · livello ${x.liv}${x.gratis?" · gratuita":""}</span>${st==="letto"?`<span class="pill cd-new">✓ letta</span>`:st==="voglio"?`<span class="pill">🔖 da leggere</span>`:""}</span>`,
     `<small class="cd-la">${esc(x.autore)} · ${esc(x.editore)}, ${x.anno}</small><p style="margin:8px 0 0">${esc(x.perche)}</p>
     <div class="cd-ris"><b>📝 Riassunto</b>${x.riassunto.map(p=>`<p>${esc(p)}</p>`).join("")}<b>💡 Idee chiave</b><ul>${x.idee.map(i=>`<li>${esc(i)}</li>`).join("")}</ul><p class="lbl">📍 ${esc(x.dove)} · <a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">Apri ›</a></p></div>
-    <div class="dia-bar">${st!=="voglio"&&st!=="letto"?`<button class="btn sm" data-cdls="${x.id}:voglio">🔖 Da leggere</button>`:""}${st!=="letto"?`<button class="btn sm ok" data-cdls="${x.id}:letto">✓ Letta</button>`:`<button class="btn sm" data-cdls="${x.id}:">↩︎</button>`}</div>`,st==="letto"?"cd-let cd-fatta":"cd-let");}).join("")+`</div>`;
+    <div class="dia-bar">${st!=="voglio"&&st!=="letto"?`<button class="btn sm" data-cdls="${x.id}:voglio">🔖 Da leggere</button>`:""}${st!=="letto"?`<button class="btn sm ok" data-cdls="${x.id}:letto">✓ Letta</button>`:`<button class="btn sm" data-cdls="${x.id}:">↩︎</button>`}</div>`,st==="letto"?"cd-let cd-fatta":"cd-let");};
+  o+=L.length?`<div class="cd-g">`+L.map(cdLBox).join("")+`</div>`:`<p class="lbl cd-tutte">✅ Qui le hai lette tutte: sono nell'archivio qui sotto.</p>`;
+  if(LA.length)o+=`<details class="card k-cd fold cd-arch" data-fk="cd|archl"${foldSt["cd|archl"]===true?" open":""}><summary><h3>✅ Archivio · ${LA.length} ${LA.length===1?"lettura letta":"letture lette"}</h3></summary><div class="cd-g">${LA.map(cdLBox).join("")}</div></details>`;
   return o+`<p class="lbl">Riassunti scritti per questa app e controllati da un revisore; non sostituiscono la lettura. Molti libri si trovano anche nelle biblioteche civiche.</p>`;}
 /* riquadro nel riepilogo di oggi */
 function cdCard(){if(!cdPronto())return "";const due=cdDue().length,nn=cdNovNew(),c=CD(),last=Object.values(c.fatte).sort().pop(),nx=CD_LIV.filter(cdAperto).map(cdDel).flat().find(s=>!c.fatte[s.id]),rows=[];
@@ -121,7 +130,7 @@ function bindCd(){const R=()=>render(),qa=s=>document.querySelectorAll(s),c=CD()
   qa("[data-cdq]").forEach(b=>b.onclick=()=>{const s=cdScheda(b.dataset.cds),qid=b.dataset.cdq,x=b.dataset.cdx,q=s.quiz.find(z=>z.id===qid);
     const A=cdAns[s.id]=cdAns[s.id]||{};A[qid]=x;
     if(s.quiz.every(z=>A[z.id]===z.ok)&&!c.fatte[s.id]){c.fatte[s.id]=today();s.quiz.forEach(z=>{if(!c.srs[z.id])c.srs[z.id]={n:0,due:add(today(),CD_STEP[0])};});save();toast("✓ Scheda fatta");
-      const l=s.liv;if(l<3&&cdFatteL(l)===CD_SBLOCCO)setTimeout(()=>toast("🔓 Si è aperto il livello "+(l+1)),1900);}
+      const l=s.liv;if(l<3&&cdFatteU(l)===CD_SBLOCCO)setTimeout(()=>toast("🔓 Si è aperto il livello "+(l+1)),1900);}
     R();});
   qa("[data-cdr]").forEach(b=>b.onclick=()=>{if(!cdRip)return;cdRip.a=b.dataset.cdr;const {q}=cdQ(cdRip.id),S=c.srs[cdRip.id]||{n:0};
     if(cdRip.a===q.ok)S.n=Math.min(S.n+1,CD_STEP.length-1);else S.n=0;S.due=add(today(),CD_STEP[S.n]);S.ult=today();c.srs[cdRip.id]=S;save();R();});
