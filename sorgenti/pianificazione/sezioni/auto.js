@@ -28,15 +28,15 @@ function auGiorni(d){if(!d)return null;return Math.round((new Date(d+"T12:00")-n
 function vAuto(){
   const A=auD(),g=auGiorni(A.scad),done=AU_CHECK.filter((_,i)=>A.chk[i]).length;
   let o=`<h1>🚗 Auto</h1><p class="sub">Fine del noleggio, riconsegna e confronto dei costi della prossima auto. I dati restano solo su questo iPad.</p>`;
-  o+=`<div class="card k-auto nofold"><h2>📅 Riconsegna</h2>`+
+  o+=`<div class="card k-auto"><h3>📅 Riconsegna</h3>`+
     (A.scad?`<p class="au-big">${g>0?`Mancano <b>${g}</b> ${g===1?"giorno":"giorni"}`:g===0?"<b>È oggi!</b>":`Era ${-g} ${g===-1?"giorno":"giorni"} fa`} · ${new Date(A.scad+"T12:00").toLocaleDateString("it-IT",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}${A.ora?" alle "+esc(A.ora):""}</p>`:`<p class="empty">Scrivi la data di fine del noleggio: la metto anche nelle Scadenze del Calendario.</p>`)+
     `<div class="au-form"><label>Data<input type="date" id="auScad" value="${esc(A.scad||"")}"></label><label>Ora<input type="time" id="auOra" value="${esc(A.ora||"")}"></label><label class="au-w">Dove<input id="auLuogo" maxlength="80" placeholder="es. sede o concessionaria" value="${esc(A.luogo||"")}"></label><label>Km attuali<input id="auKm" inputmode="numeric" maxlength="7" value="${esc(A.km||"")}"></label></div>`+
     `<div class="btns"><button class="btn" id="auSave">💾 Salva</button>${A.scad?`<button class="btn sm" id="auCal">📌 ${P.scad.some(x=>x.id==="auto-riconsegna")?"Aggiorna nel":"Metti nel"} Calendario</button>`:""}</div></div>`;
-  o+=`<div class="card k-auto nofold"><h2>✅ Checklist della riconsegna <span class="pill">${done} su ${AU_CHECK.length}</span></h2>`+
+  o+=`<div class="card k-auto"><h3>✅ Checklist della riconsegna <span class="pill">${done} su ${AU_CHECK.length}</span></h3>`+
     Object.keys(AU_FASI).map(f=>`<h3>${AU_FASI[f]}</h3><ul class="au-chk">`+AU_CHECK.map((c,i)=>c[0]!==f?"":`<li><label><input type="checkbox" data-auc="${i}"${A.chk[i]?" checked":""}> ${c[1]} ${esc(c[2])}</label></li>`).join("")+`</ul>`).join("")+
     `<p class="lbl">Consigli generali: per i dettagli vale sempre il tuo contratto.</p></div>`;
   const R=A.opz.map((x,i)=>({x,i,c:auTot(x)}));
-  o+=`<div class="card k-auto nofold"><h2>🔢 Confronto dei costi della prossima auto</h2><p class="lbl">Scrivi le offerte che stai valutando: l’app somma anticipo, canoni e spese all’anno per tutta la durata. Fa solo i conti, non sceglie per te. Bollo, assicurazione e manutenzione spesso sono già nel canone: scrivi solo le spese <b>non comprese</b>, e metti tutti gli importi con l’IVA (oppure tutti senza).</p>`+
+  o+=`<div class="card k-auto"><h3>🔢 Confronto dei costi della prossima auto</h3><p class="lbl">Scrivi le offerte che stai valutando: l’app somma anticipo, canoni e spese all’anno per tutta la durata. Fa solo i conti, non sceglie per te. Bollo, assicurazione e manutenzione spesso sono già nel canone: scrivi solo le spese <b>non comprese</b>, e metti tutti gli importi con l’IVA (oppure tutti senza).</p>`+
     (R.length?`<div class="au-tab"><div class="au-row au-h"><span>Offerta</span><span>Durata</span><span>Totale</span><span>Al mese</span><span>Km/anno</span><span></span></div>`+R.map(r=>`<div class="au-row"><span><b>${esc(r.x.n||"Offerta "+(r.i+1))}</b></span><span>${r.c?r.c.m+" mesi":"–"}</span><span>${r.c?auEur(r.c.t):"–"}</span><span>${r.c?auEur(r.c.mese):"–"}</span><span>${auNum(r.x.km)?auNum(r.x.km).toLocaleString("it-IT"):"–"}</span><span><button class="btn sm" data-aue="${r.i}">✏️</button></span></div>`).join("")+`</div>`:`<p class="empty">Nessuna offerta ancora.</p>`)+
     (auEdit>=-1&&auEdit!==-2?auForm(auEdit>=0?A.opz[auEdit]:null):"")+`</div>`;
   return o;
