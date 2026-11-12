@@ -1,146 +1,123 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-12T05:09+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-12T13:03+01:00",
   "nota": "Edizione del pomeriggio dell'11 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-allarme-bomba",
-        "t": "Falso allarme bomba in circa 6.000 scuole italiane: evacuazioni, nessun ordigno trovato",
-        "s": "Una mail anonima, partita poco prima delle 10 da un profilo compromesso di un ateneo taiwanese, ha minacciato circa 6.000 scuole. Evacuazioni in Toscana, Abruzzo e Torino; non è stato trovato nulla. Meloni parla di strategia per creare caos; la Procura di Genova ha aperto un'inchiesta.",
-        "d": "2026-11-11",
+        "id": "it-tavolo-allarmi",
+        "t": "Allarmi bomba nelle scuole: Meloni incontra a Palazzo Chigi i leader delle opposizioni",
+        "s": "Dopo le email anonime con minacce arrivate l'11 novembre a circa 6.000 scuole, la premier ha riunito i leader dell'opposizione. Schlein si dice disponibile a collaborare «ma senza deleghe in bianco», Conte lascia le proposte al governo. Le opposizioni chiedono che Meloni riferisca alle Camere.",
+        "d": "2026-11-12",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/cronaca/2026/11/11/vi-annienteremo-lallarme-bomba-in-6.000-scuole-italiane.-meloni-strategia-per-il-caos_870b0024-72d2-4b15-bab5-0c74dcc1d653.html"
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/12/si-rientra-in-classe-dopo-gli-allarmi-nelle-scuole-oggi-il-vertice-a-palazzo_cd319cf3-a1cf-4b88-b35a-77a0eaa9c9fc.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/topnews/2026/11/12/schlein-disponibili-a-collaborare-su-allarmi-bomba-ma-nessuna-delega-in-bianco_02e6b040-8651-4ad7-a225-f14252256fd2.html"
           }
         ]
       },
       {
-        "id": "it-meloni-opposizioni",
-        "t": "Meloni convoca i leader delle opposizioni a Palazzo Chigi su allarmi e attacchi hacker",
-        "s": "L'incontro è fissato per giovedì 12 novembre alle 9. Secondo Palazzo Chigi servirà a condividere le informazioni su allarmi e segnalazioni degli ultimi giorni, legati ad attività hacker e a presunti ordigni nelle scuole, considerati una questione di sicurezza nazionale.",
-        "d": "2026-11-11",
+        "id": "it-rappresentanza",
+        "t": "Firmata l'intesa sulla rappresentanza tra imprese e sindacati: Meloni parla di «traguardo storico»",
+        "s": "L'accordo tra le parti sociali riguarda qualità del lavoro e rappresentanza. Secondo la presidente del Consiglio serve a modernizzare le relazioni sindacali, sostenere i salari e rendere più competitivo il sistema. Ringraziati il ministro Calderone e le organizzazioni coinvolte.",
+        "d": "2026-11-12",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/topnews/2026/11/11/attacchi-hacker-domani-meloni-incontra-i-leader-di-opposizione_0a47d9d6-e98a-460b-b877-4fc7cdeff123.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/12/meloni-lintesa-sulla-rappresentanza-traguardo-storico_f6c3681f-c8ba-4091-a11a-8eedb77c8402.html"
           }
         ]
       },
       {
-        "id": "it-manovra-correttivi",
-        "t": "Manovra, vertice di maggioranza a Palazzo Chigi: correttivi su sanità, pensioni e scuola",
-        "s": "Dopo l'incontro tra Meloni, Tajani, Salvini, Lupi e Giorgetti, fonti di maggioranza parlano di emendamenti concordati nel rispetto dei conti, con interventi mirati su sanità, pensioni, scuola e università. Lupi esclude nuovi contributi a carico delle banche. Non sono indicati importi.",
-        "d": "2026-11-11",
+        "id": "it-nassiriya",
+        "t": "Anniversario di Nassiriya: Meloni ricorda il prezzo pagato dall'Italia al servizio della pace",
+        "s": "Nell'anniversario dell'attentato di Nassiriya la presidente del Consiglio parla di «una ferita viva» e del prezzo altissimo pagato dal Paese nelle missioni internazionali.",
+        "d": "2026-11-12",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/11/fonti-maggioranza-per-la-manovra-correttivi-mirati-su-sanita-pensioni-e-scuola_09437de5-2df2-4abc-a320-a006dc025be6.html"
-          }
-        ]
-      },
-      {
-        "id": "it-bollo-auto",
-        "t": "Bollo auto, dal 2027 stop sulla prima auto fino a 80 kW e sulle moto",
-        "s": "Meloni rivendica la misura, che secondo lei restituisce alle famiglie 2,3 miliardi di euro e vale per la prima auto di proprietà fino a 80 kW e per le moto senza limiti di cilindrata. Nei prossimi giorni illustrerà la manovra con brevi video.",
-        "d": "2026-11-11",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/politica/2026/11/11/meloni-senza-il-bollo-auto-gli-italiani-risparmiano-23-miliardi_ff1ef14e-a7fd-4903-90e4-0749aaa6ba51.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/12/meloni-nassiriya-una-ferita-viva-pagato-un-prezzo-altissimo-al-servizio-della_b09c10a6-61c7-4072-a478-ff15a71c0f7a.html"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-hegseth",
-        "t": "Stati Uniti: la Camera blocca la procedura di impeachment contro il segretario alla Difesa Hegseth",
-        "s": "Con 211 voti a 204 la Camera, a maggioranza repubblicana fino a gennaio, ha mandato in commissione la risoluzione presentata dal repubblicano Massie sulla guerra a Iran, fermandola di fatto. Undici democratici erano assenti. Teheran nega trattative in corso con Washington.",
-        "d": "2026-11-11",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/11/iran-war-live-hegseth-survives-impeachment-bid-iran-denies-us-talks",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-ucraina-abu-dhabi",
-        "t": "Ucraina, a Abu Dhabi riprendono i negoziati con Russia e Stati Uniti",
-        "s": "Ucraina, Russia e Stati Uniti si sono rimessi al tavolo; presenti anche una squadra comune dell'Ue e funzionari di Francia, Germania e Regno Unito. Si parla di un po' di flessibilità da entrambe le parti sul tema dei territori.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/10/europe-today-eu-joins-ukraine-peace-talks-in-abu-dhabi-as-race-to-replace-lagarde-heats-up",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-brooklyn",
-        "t": "New York, crolla un edificio a Brooklyn: due morti e oltre dieci feriti",
-        "s": "Il bilancio provvisorio del crollo è di due vittime e più di una dozzina di feriti.",
+        "id": "mo-ucraina-mosca",
+        "t": "Ucraina, gli inviati Usa Kushner e Witkoff da Putin a Mosca dopo Abu Dhabi",
+        "s": "Senza svolte ad Abu Dhabi, restano le distanze su territori e Donbass; c'è l'intesa su un nuovo scambio di prigionieri. Domani i due inviati vedranno Zelensky a Dublino.",
         "d": "2026-11-12",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/12/building-collapse-in-brooklyn-kills-two-injures-more-than-a-dozen",
+            "url": "https://www.aljazeera.com/news/2026/11/12/us-envoys-arrive-in-moscow-for-russia-ukraine-talks-with-putin",
+            "l": "en"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/12/zelenskyy-to-meet-us-envoys-in-dublin-after-russia-peace-talks",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-bulgaria",
-        "t": "Bulgaria, incidente in autostrada nel sud-est: almeno 12 morti",
-        "s": "Un grave incidente stradale su un'autostrada del sud-est del Paese ha causato almeno dodici vittime.",
-        "d": "2026-11-10",
+        "id": "mo-vdl-sanzioni",
+        "t": "Von der Leyen: nuove sanzioni alla Russia e opzioni di sostegno a Kiev entro novembre",
+        "s": "Al vertice della Comunità politica europea a Dublino la presidente della Commissione ha annunciato il 22° pacchetto di sanzioni e le opzioni di finanziamento all'Ucraina prima del Consiglio europeo di fine mese.",
+        "d": "2026-11-12",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/von-der-leyen-annuncia-nuove-sanzioni-e-opzioni-per-sostegno-a-kiev_5326c949-8d25-430d-a6a7-c30330b69066.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-israele-iran",
+        "t": "Iran avverte di rappresaglie più ampie mentre Israele si prepara a un possibile attacco",
+        "s": "Secondo i media israeliani il gabinetto di sicurezza ha chiesto all'esercito maggiore prontezza. Teheran minaccia le basi coinvolte; Trump è pronto a riprendere i combattimenti se fallisce la via diplomatica. Il petrolio sale: Brent a 92,76 dollari.",
+        "d": "2026-11-12",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/10/at-least-12-people-killed-in-motorway-crash-in-southeastern-bulgaria",
+            "url": "https://www.aljazeera.com/news/2026/11/12/iran-warns-of-expanded-retaliation-as-israel-reportedly-readies-to-attack",
             "l": "en"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/12/netanyahu-e-eisenkot-si-incontreranno-oggi-per-aggiornamento-di-sicurezza_91b87a1d-4240-408d-a4fb-4ebd802273b7.html"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-allarmi-europa",
-        "t": "Allarmi bomba nelle scuole di Italia, Irlanda e Regno Unito: si parla di guerra ibrida",
-        "s": "Secondo la CBS almeno 6.300 scuole italiane sono state prese di mira, più centinaia in Irlanda e Regno Unito; nessun esplosivo. Le mail minacciavano anche Meloni, che ha escluso pericoli concreti. Nessuno è stato indicato come responsabile, ma cresce il timore di operazioni ibride attribuite a Russia o Iran.",
-        "d": "2026-11-11",
+        "id": "es-dublino-negoziatore",
+        "t": "Dublino: i leader europei discutono se nominare un solo negoziatore Ue con la Russia",
+        "s": "Più di 45 Paesi al vertice; Kushner ha suggerito un rappresentante unico dell'Europa e Zelensky vuole una decisione entro fine novembre. Meloni è tra i leader favorevoli.",
+        "d": "2026-11-12",
         "fonti": [
           {
-            "n": "CBS News",
-            "url": "https://www.cbsnews.com/news/bomb-threat-schools-europe-italy-uk-ireland-hoaxes-hybrid-warfare-iran-russia/",
-            "l": "en"
-          },
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/11/at-least-300-italian-schools-evacuated-after-email-bomb-alerts",
-            "l": "en"
-          },
-          {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/11/at-least-300-schools-in-italy-evacuated-after-emailed-bomb-threats",
+            "url": "https://www.euronews.com/2026/11/12/from-abu-dhabi-to-dublin-via-moscow-peace-talks-and-a-row-over-who-speaks-for-europe",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-hezbollah-usa",
-        "t": "Il capo di Hezbollah: il risultato delle elezioni americane può essere positivo per il Libano",
-        "s": "Secondo Al Jazeera, il leader di Hezbollah ha commentato l'esito del voto statunitense dicendo che potrebbe avere effetti favorevoli per il Libano.",
+        "id": "es-xi-taiwan",
+        "t": "Xi Jinping: la «riunificazione» di Taiwan con la Cina deve avvenire",
+        "s": "Il presidente cinese ribadisce l'obiettivo, secondo l'emittente qatariota.",
         "d": "2026-11-12",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/12/us-election-results-could-be-positive-for-lebanon-hezbollah-chief-says",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/11/12/xi-jinping-says-taiwan-reunification-with-china-must-happen",
             "l": "en"
           }
         ]
@@ -148,56 +125,52 @@
     ],
     "economia": [
       {
-        "id": "ec-borsa-milano",
-        "t": "Piazza Affari chiude in rialzo vicino a quota 52.000, crolla BFF",
-        "s": "Il Ftse Mib termina a 51.946 punti (+0,37%). Bene Technoprobe (+7,73%), Stm (+5,16%) e Prysmian (+4,29%); in fondo Fincantieri, A2A e Stellantis. BFF perde il 22% dopo conti sotto le attese, mentre Cerberus tratta l'acquisto della banca.",
-        "d": "2026-11-11",
+        "id": "ec-rappresentanza-sole",
+        "t": "Intesa su rappresentanza, contratti e salari tra imprese e sindacati",
+        "s": "Il Sole 24 Ore riporta la firma del nuovo accordo tra parti sociali; il Governo lo giudica un passo per sostenere i salari.",
+        "d": "2026-11-12",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/11/borsa-milano-chiude-a-ridosso-dei-52.000-punti-037-brilla-stm_24231352-450f-4939-ab85-98c82c5aef40.html"
+            "n": "Il Sole 24 Ore",
+            "url": "https://www.ilsole24ore.com/art/lavoro-firmato-nuovo-accordo-rappresentanza-imprese-e-sindacati-AJxIOiDC"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-allarmi-scuole",
-        "t": "Torino, circa 40 scuole evacuate per il falso allarme bomba",
-        "s": "Anche nelle scuole torinesi sono scattate evacuazioni dopo la mail anonima; in provincia le segnalazioni sono state 190. Nessun ordigno trovato. Una scuola di via Bettazzi è stata evacuata anche per un falso allarme fuga di gas.",
-        "d": "2026-11-11",
+        "id": "to-lavoro-nero",
+        "t": "Lavoro nero a Torino e provincia: multe per oltre 72mila euro e attività sospese",
+        "s": "Controlli sul lavoro irregolare nel territorio metropolitano: sanzioni complessive superiori a 72mila euro e diverse attività sospese.",
+        "d": "2026-11-12",
         "fonti": [
           {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/falsi-allarmi-bomba-scuole-11-novembre-2026.html"
-          },
-          {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/evacuata-scuola-bettazzi-11-novembre-2026.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/12/leggi-notizia/argomenti/cronaca-11/articolo/lavoro-in-nero-a-torino-e-provincia-multe-per-oltre-72mila-euro-e-numerose-attivita-sospese.html"
           }
         ]
       },
       {
-        "id": "to-campus-einaudi",
-        "t": "Campus Einaudi: da oggi lezioni in presenza negli edifici vetrati, riapre la biblioteca Bobbio",
-        "s": "Dal 12 novembre riprendono le lezioni in aula; la Palazzina Einaudi resta chiusa per pulizie fino al 14, con lezioni online, e torna in presenza dal 16 novembre.",
-        "d": "2026-11-11",
+        "id": "to-circoscrizione-2",
+        "t": "Circoscrizione 2: consiglio di quasi otto ore sul bilancio, restano 140 emendamenti",
+        "s": "La seduta del 10 novembre si è chiusa all'una di notte tra tensioni; servono almeno altre due sedute prima del voto finale.",
+        "d": "2026-11-12",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/11/leggi-notizia/argomenti/scuola-e-lavoro/articolo/campus-luigi-einaudi-riaprono-gli-edifici-vetrati-e-la-biblioteca-bobbio-lezioni-in-presenza-da-gi.html"
+            "url": "https://www.torinoggi.it/2026/11/12/leggi-notizia/argomenti/politica-11/articolo/maratona-di-quasi-otto-ore-in-circoscrizione-2-il-consiglio-si-chiude-alluna-di-notte-tra-tensioni.html"
           }
         ]
       },
       {
-        "id": "to-atp-opening",
-        "t": "Nitto ATP Finals: stasera il Grand Opening Show con Achille Lauro all'Inalpi Arena",
-        "s": "Il torneo si gioca dal 15 al 22 novembre; l'apertura è prevista oggi alle 21 con il concerto di Achille Lauro.",
-        "d": "2026-11-10",
+        "id": "to-boccadoro",
+        "t": "È morta Milena Boccadoro, giornalista Rai torinese: camera ardente domani",
+        "s": "Aveva 70 anni, è stata caposervizio Rai e conduttrice del Tg del Piemonte. Camera ardente venerdì 13, funerale sabato 14 alle 11.30 al Monumentale.",
+        "d": "2026-11-12",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/10/leggi-notizia/argomenti/cultura-e-spettacoli-7/articolo/achille-lauro-per-lopening-delle-atp-finals-malika-ayane-e-francesca-michielin-cosa-fare-fino-a-d.html"
+            "url": "https://www.torinoggi.it/2026/11/12/leggi-notizia/argomenti/cronaca-11/articolo/lutto-per-il-giornalismo-torinese-e-morta-milena-boccadoro-volto-noto-della-tv.html"
           }
         ]
       }
@@ -205,9 +178,9 @@
     "piemonte": [
       {
         "id": "pi-allarmi-province",
-        "t": "Piemonte, 463 segnalazioni di allarme bomba nelle scuole: scuole aperte oggi",
-        "s": "Un'ondata di mail ha prodotto segnalazioni in tutte le province: Alessandria 63, Cuneo 60, Novara 43, Vercelli 38, Verbano-Cusio-Ossola 33, Asti 25, Biella 11 (Torino 190). Circa il 20% degli istituti è stato evacuato. Cirio: «Siamo pronti».",
-        "d": "2026-11-11",
+        "t": "Piemonte, 463 segnalazioni di allarme bomba: Cirio chiede di evitare allarmismi",
+        "s": "Circa il 20% delle scuole coinvolte è stato evacuato. Per province: Alessandria 63, Cuneo 60, Novara 43, Vercelli 38, Vco 33, Asti 25, Biella 11. Il tavolo regionale si riunisce ancora oggi.",
+        "d": "2026-11-12",
         "fonti": [
           {
             "n": "ANSA",
@@ -216,26 +189,14 @@
         ]
       },
       {
-        "id": "pi-carmagnola",
-        "t": "Consiglio regionale: via libera a chiedere l'abolizione del pedaggio al casello di Carmagnola",
-        "s": "L'ordine del giorno, primo firmatario Fabrizio Ricca (Lega), approvato all'unanimità dei votanti, impegna la Giunta a ottenere l'abolizione del pedaggio sull'A6 e ad accelerare la Bretella Est. Cirio ha avviato un confronto con il gestore sui costi; giovedì è prevista una riunione operativa.",
-        "d": "2026-11-10",
+        "id": "pi-pluriclassi",
+        "t": "Save the Children: in Piemonte il maggior aumento di pluriclassi in Italia",
+        "s": "468 pluriclassi alla primaria, 111 in più; il 46,6% delle scuole è senza certificato di agibilità. La dispersione è al 7,2% contro l'8,2% nazionale.",
+        "d": "2026-11-12",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/10/consiglio-regionale-chiede-abolizione-pedaggio-del-casello-di-carmagnola_3360cdd9-5300-4449-8a80-4fe197dfbca0.html"
-          }
-        ]
-      },
-      {
-        "id": "pi-cop31",
-        "t": "Cop31: il Piemonte presenta il piano per l'aria e il «Patto del Verbano» sull'acqua",
-        "s": "L'assessore Marnati ha illustrato ad Antalya il nuovo piano sulla qualità dell'aria, con una task force e misure compensative al posto dei blocchi automatici dei diesel Euro 5, e l'accordo biennale tra i gestori idrici delle due sponde del Lago Maggiore.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/10/clima-il-piemonte-presenta-alla-cop31-i-piani-su-aria-e-acqua_5bddb25d-ca1e-4fd3-914d-d2f37a0a064d.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/12/save-the-children-in-piemonte-il-maggior-aumento-di-pluriclassi_3715353f-f5d9-458c-8b16-54bc21678777.html"
           }
         ]
       }
@@ -1034,12 +995,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-02T21:55+01:00",
-      "edizione": "sera",
-      "notizie": 16,
-      "note": "Fonti lette: ANSA, Adnkronos, Torino Oggi, Euronews (en), Al Jazeera (en), CBS News (en). Ricerca rifiutata: reuters.com. Lettura non riuscita: torinotoday.it (4 pagine). Testate estere maggiori non interrogate (bloccate il 31/10)."
-    },
-    {
       "at": "2026-11-03T05:55+01:00",
       "edizione": "mattina",
       "notizie": 18,
@@ -1147,6 +1102,12 @@
       "edizione": "mattina",
       "notizie": 69,
       "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), CBS News (en), Torino Oggi. Reuters rifiutata dal proxy di ricerca; BBC e altre grandi testate estere non tentate. Non leggibili: TorinoToday (pagina allarmi) e una pagina Al Jazeera (Gaza). Cinema, teatro, eventi e concerti dall'edizione precedente con qualche aggiunta (non è lunedì; orari dei film non riverificati). Copia riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-12T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 66,
+      "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), Torino Oggi. Il Sole 24 Ore e un articolo di Torino Oggi non leggibili; Reuters e altre grandi testate estere non tentate; ricerca su Il Sole 24 Ore/Adnkronos/Sky TG24 solo in parte letta. Eventi, cinema, teatro e concerti dall'edizione del mattino (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (era staccata)."
     }
   ]
 }
