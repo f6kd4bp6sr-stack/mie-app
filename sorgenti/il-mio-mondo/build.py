@@ -24,12 +24,14 @@ _cur = {}
 for _f in sorted(glob.glob(D+'data/verifiche/rev4/cur_*.json')):
     _cur[_f.split('cur_')[1][:-5]] = _json.load(open(_f, encoding='utf-8'))
 open(D+'data/_gen/cur.js','w',encoding='utf-8').write('/* figurine della curiosità (verificate, fonti in rev4) */\nconst CURIOSITA = ' + _json.dumps(_cur, ensure_ascii=False) + ';\n')
+# 🌙 Raccontami una storia: una raccolta per file (data/storie/raccolta-N.json), controllate da tools/controlla.py
+open(D+'data/_gen/storie.js','w',encoding='utf-8').write('/* storie: generato da data/storie/*.json */\nconst STORIE = ' + _json.dumps([{k: v for k, v in _json.load(open(_f, encoding='utf-8')).items() if not k.startswith('_')} for _f in sorted(glob.glob(D+'data/storie/*.json'))], ensure_ascii=False, separators=(',', ':')) + ';\n')
 _quiz = {}
 for _f in sorted(glob.glob(D+'data/domande/quiz/*.json')):
     _quiz[_f.split('/')[-1][:-5]] = _json.load(open(_f, encoding='utf-8'))
 _lex = sorted({w for _L in _quiz.values() for _x in _L for _p in _x.get('en', []) for w in re.findall(r"[a-z']+", _p.lower().replace('’', "'"))})
 open(D+'data/_gen/quiz.js','w',encoding='utf-8').write('/* domande: generato da data/domande/quiz/*.json */\nconst QUIZ = ' + _json.dumps(_quiz, ensure_ascii=False, separators=(',', ':')) + ';\n/* argomenti di ogni materia (data/domande/argomenti.json): [id, nome, icona] */\nconst ARGOMENTI = ' + _json.dumps(_json.load(open(D+'data/domande/argomenti.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')) + ';\n/* cartine interattive (data/cartine/<id>.json) */\nconst CARTINE = ' + _json.dumps({_f.split('/')[-1][:-5]: _json.load(open(_f, encoding='utf-8')) for _f in sorted(glob.glob(D+'data/cartine/*.json'))}, ensure_ascii=False, separators=(',', ':')) + ';\n/* spiegazioni con racconto e mappa (data/spiegazioni/<materia>.json) */\nconst SPIEGA = ' + _json.dumps({_f.split('/')[-1][:-5]: _json.load(open(_f, encoding='utf-8')) for _f in sorted(glob.glob(D+'data/spiegazioni/*.json'))}, ensure_ascii=False, separators=(',', ':')) + ';\n/* parole inglesi conosciute (dai campi «en»): per leggere in inglese le parti tra «» */\nconst EN_LEX = new Set(' + _json.dumps(_lex) + ');\n')
-css=''.join(open(D+'css/'+f+'.css',encoding='utf-8').read() for f in ['base','components','pages','themes','festa','disegno','spiega','serie','orologio'])
+css=''.join(open(D+'css/'+f+'.css',encoding='utf-8').read() for f in ['base','components','pages','themes','festa','disegno','spiega','serie','orologio','storie'])
 body=open(D+'body.html',encoding='utf-8').read()
 # ordine di caricamento: librerie, base, sezioni, contenuti, percorso, guscio dell'app
 js=''.join(open(D+f,encoding='utf-8').read()+'\n' for f in 
@@ -95,6 +97,9 @@ js=''.join(open(D+f,encoding='utf-8').read()+'\n' for f in
   'data/domande/cartoni-grecia.js',
   'data/domande/cartoni-roma.js',
   'js/sezioni/serie.js',
+  'data/_gen/storie.js',
+  'data/domande/storie-disegni.js',
+  'js/sezioni/storie.js',
   'js/core/bg.js',
   'js/core/sezimg.js',
   'js/core/boot.js']

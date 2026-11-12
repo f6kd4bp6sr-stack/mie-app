@@ -2,6 +2,7 @@
 Si esegue da solo a ogni build (build.py). Se trova ERRORI il build si ferma: niente viene pubblicato.
 - ogni domanda: codice (id) unico, 3 risposte diverse e non vuote, riga chiave fino a 12 parole, spiegazione presente
 - i codici non spariscono mai (registro data/domande/quiz/_codici.txt): una domanda tolta va scritta in _ritirati.txt
+- storie (data/storie): codici, lunghezza, domanda finale, fonti delle storie vere
 - spiegazioni: mappa (raggiera, ciclo, linea, scala), racconto breve, argomenti «da guardare insieme» senza domande
 - nessun termine da non pubblicare (elenco a impronte con chiave segreta, tools/guardia.py)
 - rapporto: data/_gen/rapporto.md con il conteggio per materia e la copertura del programma (data/programma/*.json)
@@ -132,6 +133,31 @@ def run(write=True):
                 else: ok = ct in ARG_IDS.get(cu, set())
                 if not ok: err.append(f'{w}: collegamento «{c}» inesistente')
                 if cu == u and ct == t: err.append(f'{w}: collegamento a se stesso')
+    # 🌙 Raccontami una storia (data/storie/raccolta-N.json): codici fissi, testo breve, domanda finale, niente termini vietati
+    st_ids = set()
+    for f in sorted(glob.glob(D + 'data/storie/*.json')):
+        b = os.path.basename(f)
+        try: R = json.load(open(f, encoding='utf-8'))
+        except Exception as e: err.append(f'storie/{b}: JSON non valido ({e})'); continue
+        if not R.get('id') or not isinstance(R.get('storie'), list): err.append(f'storie/{b}: servono «id» e «storie»'); continue
+        for x in R['storie']:
+            w = f'storie/{b} [{x.get("id", "?")}]'
+            for k in ('id', 'ic', 't', 'tema', 'p', 'd'):
+                if not x.get(k): err.append(f'{w}: manca «{k}»')
+            if x.get('id') in st_ids: err.append(f'{w}: codice ripetuto')
+            st_ids.add(x.get('id'))
+            if not x.get('bonus') and x.get('g') not in (1, 2, 3, 4, 5, 6, 7): err.append(f'{w}: «g» deve essere il giorno (1-7), oppure «bonus»')
+            P = x.get('p') or []
+            if not isinstance(P, list) or not all(isinstance(t, str) and t.strip() for t in P): err.append(f'{w}: «p» deve essere un elenco di paragrafi'); continue
+            n = words(' '.join(P))
+            if n < 250 or n > 520: err.append(f'{w}: {n} parole (una storia sta tra 250 e 520: 2-4 minuti)')
+            if len(P) < 4 or len(P) > 9: err.append(f'{w}: {len(P)} paragrafi (da 4 a 9)')
+            for i, t in enumerate(P):
+                if words(t) > 110: warn.append(f'{w}: paragrafo {i + 1} lungo ({words(t)} parole)')
+            txt = ' '.join([str(x.get('t', '')), str(x.get('d', '')), *P])
+            if re.search(r'\{(?!N\})', txt) or '}' in txt.replace('{N}', ''): err.append(f'{w}: nel testo si usa solo il segnaposto {{N}}')
+            if x.get('vera') and not x.get('fonti'): err.append(f'{w}: una storia vera deve avere le «fonti»')
+            if guarda(txt.lower(), REGOLE): err.append(f'{w}: termine vietato')
     # curiosità, missioni e testi delle materie (data/domande/*.js)
     for f in sorted(glob.glob(D + 'data/domande/*.js')):
         if guarda(open(f, encoding='utf-8').read(), REGOLE): err.append(f'{os.path.basename(f)}: termine vietato')
