@@ -23,6 +23,7 @@ app/
 │   │                   disegno (tela libera, percorso in 5 tappe, Il mio museo)
 │   │                   spiega (racconto + mappa concettuale, Le mie mappe), cartina (cartine interattive),
 │   │                   classe (🗓️ La mia classe: progetti, uscite e date, solo sull'iPad)
+│   │                   storie (🌙 Raccontami una storia: libreria, lettore leggo/ascolto, finale con l'avatar che russa)
 │   └── percorso/       percorso e lezioni, tappe di matematica di 5ª, negozio, collezioni, video
 ├── tools/controlla.py  controllo automatico (parte da solo a ogni build; con errori non si pubblica)
 ├── tools/sorgenti_pubbliche.py  copia le sorgenti in /sorgenti/il-mio-mondo/ del repository (senza revisioni di lavoro, con controllo dei dati personali)
@@ -34,6 +35,8 @@ app/
 │   ├── domande/cartoni.js  🎨 cartoni disegnati della serie: una scena SVG animata per ogni frase del racconto (le parole restano quelle verificate in SPIEGA; se manca la scena si vede l'icona). Tutti i 12 episodi di Storia: cartoni.js (aiutanti CH + Torino), cartoni-grecia.js, cartoni-roma.js. I video YouTube sono archiviati in data/_archivio/serie-video.json (non entra nel sito)
 │   (🔗 inviti WhatsApp: docs/episodi/ → /episodi/index.html e /episodi/N.html con anteprima img/N.jpg; si rigenerano con node tools/episodi.js; nell'app #serie e #serie=N aprono la serie o l'episodio N se già aperto)
 │   ├── spiegazioni/    racconto + mappa concettuale per argomento (198, tutta La mia scuola; mappe raggiera, ciclo, linea, scala; «solo» = da guardare insieme), controllati da tools/controlla.py
+│   ├── storie/         🌙 raccolte di racconti (raccolta-N.json: id fisso, giorno «g» 1-7 o «bonus», paragrafi «p», domanda «d», {N} = nome scelto; storie vere con «fonti»), controllate da tools/controlla.py
+│   ├── domande/storie-disegni.js  🌙 un disegno animato per storia (tela 400×240, momenti f1/f2; animazioni sd-… in css/storie.css)
 │   ├── cartine/        cartine interattive (grecia.json: coste Natural Earth semplificate + 13 luoghi)
 │   ├── domande/argomenti.json  nomi e icone degli argomenti di ogni materia (ogni domanda ha il campo «arg»)
 │   ├── domande/quiz/   ★ FONTE UNICA delle domande: un file per materia, una scheda per domanda

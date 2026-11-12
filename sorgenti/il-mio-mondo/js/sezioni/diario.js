@@ -131,7 +131,7 @@ function downStreak() {
 function dayForm(box, key, onSaved) {
   const dd = diary();
   const e = Object.assign({ p: null, m: null, f: 3, w: '', nx: '' }, dd[key] || {});
-  let qShift = 0; if (!e.nq) e.nq = noteQOf(key);
+  let qShift = 0; if (!e.nq) e.nq = (typeof stNotaQ === 'function' && stNotaQ(key)) || noteQOf(key);   /* dopo una storia: la sua domanda «E tu?» (js/sezioni/storie.js) */
   const school = isSchoolDay(key), h = holOf(key), isToday = key === todayIso();
   const streak = downStreak();
   const render = () => {

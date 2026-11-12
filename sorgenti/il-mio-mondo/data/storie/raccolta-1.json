@@ -1,0 +1,112 @@
+{
+ "id": "r1",
+ "titolo": "Crescere",
+ "_info": "Raccolta 1 di «Raccontami una storia». {N} = nome della protagonista, scelto dalla bambina (resta solo sull'iPad). «g» = giorno della settimana (1 lunedì … 7 domenica); «bonus» = storia in più, si apre dopo 3 storie ascoltate. «id» non si cambia mai. Autore: novembre 2026; in attesa del revisore indipendente.",
+ "storie": [
+  {
+   "id": "s01", "g": 1, "ic": "💬", "t": "Il gruppo senza di me", "tema": "restare fuori",
+   "p": [
+    "Era lunedì e pioveva. {N} e Giada facevano i compiti sul tappeto, con il tablet di Giada appoggiato a un cuscino. A un certo punto lo schermo si accese da solo. In alto comparve una scritta: «Le Fantastiche: 14 nuovi messaggi».",
+    "Giada girò il tablet a faccia in giù, veloce. Troppo veloce. «Che cos'è Le Fantastiche?» chiese {N}. «Niente. Un gruppo» disse Giada, e si mise a cercare la gomma, che aveva già in mano.",
+    "Quella sera {N} fece i conti. In classe le bambine erano undici. Quante erano nel gruppo? Non lo sapeva, e non saperlo era la parte peggiore. La sua testa cominciò a scrivere messaggi che nessuno aveva mai scritto: «Meno male che lei non c'è». Più ci pensava, più le sembravano veri.",
+    "Il giorno dopo, all'intervallo, le uscì tutto insieme: «So del gruppo. Non mi importa del gruppo. Mi importa che tu me l'hai nascosto.» Che del gruppo non le importasse non era proprio vero. Il resto sì.",
+    "Giada diventò rossa. Raccontò che il gruppo l'aveva fatto Amira per la sua festa, e che sua mamma aveva detto: al massimo sei invitate. «Non sapevo come dirtelo. Così non te l'ho detto. E dopo era troppo tardi per dirtelo.»",
+    "Non era una bella risposta. Però era una risposta vera, e {N} si accorse che una cosa vera, anche se brutta, pesa meno di una cosa immaginata. I quattordici messaggi cattivi che aveva in testa sparirono: parlavano di palloncini.",
+    "Tornando a casa le venne in mente un altro gruppo: quello che aveva fatto lei, sul telefono della mamma, con due amiche, per scambiarsi i disegni. Dentro Giada non c'era. Non l'aveva fatto apposta. Semplicemente, non ci aveva pensato. Rimase ferma un momento sul marciapiede. Poi riprese a camminare, più piano, con un pensiero nuovo da portare a casa."
+   ],
+   "d": "Ti è mai capitato di restare fuori da qualcosa? E di lasciare fuori qualcuno senza accorgertene?"
+  },
+  {
+   "id": "s02", "g": 2, "ic": "🎮", "t": "L'amico di Roblox", "tema": "sicurezza online",
+   "p": [
+    "Su Roblox {N} stava costruendo una casa sull'albero, con uno scivolo che finiva in piscina. Un martedì un giocatore si fermò a guardare. Si chiamava LupoBlu. Scrisse: «Che casa stupenda! Posso aiutarti?»",
+    "LupoBlu era simpatico. Sapeva dove trovare i pezzi rari, faceva ballare il suo personaggio sul tetto e le regalò un tappeto volante. Per una settimana giocarono insieme tutti i pomeriggi. {N} pensava: ho un amico nuovo.",
+    "Poi arrivarono le domande. «In che città abiti?» «Come si chiama la tua scuola?» {N} rispose solo: «È un segreto!», con una faccina. LupoBlu scrisse: «Dai, siamo amici. Mandami una foto, così vedo come sei. E non dirlo ai tuoi: è il nostro segreto.»",
+    "{N} guardò lo schermo. Non era successo niente di brutto. Eppure sentiva nella pancia un sasso piccolo e freddo. Chiuse il gioco. Il sasso restò lì.",
+    "Dirlo a papà? E se le toglieva Roblox? E se si arrabbiava per il tappeto volante, che lei aveva accettato? Era questo il pensiero più storto di tutti: le sembrava di avere sbagliato lei, perché LupoBlu era stato gentile.",
+    "A cena il sasso pesava troppo. Raccontò tutto, guardando il piatto. Papà non si arrabbiò e non le tolse niente. Disse: «Hai fatto la cosa più difficile: dirlo.» Insieme bloccarono LupoBlu e lo segnalarono al gioco. Ci vollero due minuti.",
+    "«Ma chi era?» chiese {N}. «Forse un bambino curioso. Forse un adulto che fa finta di essere un bambino. Non possiamo saperlo, ed è proprio per questo che non gli diciamo dove abiti.» Poi papà aggiunse una cosa che {N} si scrisse nella testa: «Un amico vero non ti chiede mai di tenere un segreto con i tuoi genitori.» Il tappeto volante lo tenne. La casa sull'albero la finì da sola, ed era bella lo stesso."
+   ],
+   "d": "Se qualcuno online ti chiedesse di tenere un segreto, a chi lo racconteresti per primo?"
+  },
+  {
+   "id": "s03", "g": 3, "ic": "👟", "t": "La scarpa che non entrava più", "tema": "il corpo che cresce",
+   "p": [
+    "Le scarpe rosse erano di settembre. A novembre il piede di {N} entrò fino a metà e si fermò. Spinse. Niente. «Ma le ho messe ieri!» «Ieri ti stringevano già» disse la mamma. «Non volevi dirlo.»",
+    "Era vero. Da un po' di tempo il suo corpo faceva le cose senza avvisarla. Le maniche si erano accorciate. Le ginocchia sbattevano sotto il banco. In palestra le gambe arrivavano prima di lei, e inciampava in piedi che non ricordava così lontani.",
+    "E poi c'erano i grandi. «Come sei cresciuta!» dicevano tutti: la zia, la vicina, la signora del pane. Lo dicevano contenti, come un complimento. {N} sorrideva, ma dentro pensava: non l'ho fatto io. È successo. E nessuno mi ha chiesto se ero pronta.",
+    "Quella sera tenne le scarpe rosse sulle ginocchia. Con quelle aveva vinto la corsa in cortile. Con quelle era caduta nella pozzanghera più grande del mondo. Darle via le sembrava come dare via un pezzo dell'estate.",
+    "La mamma aprì un cassetto, in fondo all'armadio, e tirò fuori una scarpina bianca, lunga quanto un dito. «La tua prima. Non entra più a nessuno, ma io la tengo.» {N} la girò tra le mani. Era stata sua, quella cosa minuscola? Non se la ricordava. Eppure era lei.",
+    "«Allora anche i grandi tengono le cose che non entrano più.» «Soprattutto i grandi» disse la mamma.",
+    "{N} scelse una scarpa rossa sola, la sinistra, quella con la stringa annodata tre volte. Andò alla libreria per metterla sul ripiano alto, quello dove non era mai arrivata. Si alzò in punta di piedi, per abitudine. Non ce n'era bisogno: ci arrivava. Rimase lì un momento, con la mano sul ripiano, a guardare la stanza da un po' più in alto."
+   ],
+   "d": "C'è una cosa che non ti va più ma che vorresti tenere? Che cosa ti ricorda?"
+  },
+  {
+   "id": "s04", "g": 4, "ic": "🌋", "t": "Il vulcano nello zaino", "tema": "la rabbia",
+   "p": [
+    "Giovedì, ora di matematica. La punta della matita si spezzò per la terza volta. Dietro, qualcuno ridacchiò. Forse non rideva di lei. Ma {N} era già esplosa: l'astuccio volò, i pennarelli rotolarono fino alla cattedra e la gomma colpì Leo su un orecchio.",
+    "Silenzio. Tutti la guardavano. La rabbia se ne andò in un attimo, com'era venuta, e al suo posto arrivò una cosa peggiore: la vergogna. {N} raccolse i pennarelli a testa bassa. Pensava: sono fatta male. Gli altri non esplodono.",
+    "Il pomeriggio lo raccontò alla nonna, che da giovane aveva abitato vicino a un vulcano. «E avevate paura?» «Poca. Perché c'erano i vulcanologi.» «E loro fermano il vulcano?» La nonna rise. «Nessuno ferma un vulcano. Loro lo ascoltano. Prima di un'eruzione la terra trema un po', escono più gas, il suolo si gonfia. Chi conosce i segnali, di solito, fa in tempo a spostarsi.»",
+    "{N} ci pensò su. «Io non ho segnali. Io scoppio e basta.» «Tutti hanno dei segnali. Tu non li hai ancora cercati.»",
+    "Li cercò per una settimana, come una scienziata, e li scrisse in fondo al diario. Uno: le orecchie diventano calde. Due: stringo i denti. Tre: comincio a pensare «sempre» e «mai». Capita sempre a me. Non ci riesco mai. Erano tre, e arrivavano ogni volta in quell'ordine.",
+    "Il giovedì dopo la matita si spezzò di nuovo. Orecchie calde. Denti stretti. {N} alzò la mano: «Posso andare a bere?» Nel corridoio contò le piastrelle fino al rubinetto. Quarantadue. Quando tornò era ancora arrabbiata, ma l'astuccio rimase sul banco.",
+    "Non funzionò tutte le volte. Il lunedì seguente sbatté una porta, e forte. Però adesso sapeva una cosa che prima non sapeva: il vulcano non era un difetto. Era suo, e avvisava. A Leo regalò la gomma, quella famosa. Lui la tenne sul banco tutto l'anno, e la chiamava «il meteorite»."
+   ],
+   "d": "Quali sono i tuoi segnali, quando sta per arrivare la rabbia?"
+  },
+  {
+   "id": "s05", "g": 5, "ic": "📸", "t": "La foto perfetta", "tema": "piacersi",
+   "p": [
+    "Alla festa della cugina Dalia, che compiva quattordici anni, tutte si misero in posa. Dalia scattò, toccò lo schermo due volte e mostrò la foto. Erano bellissime. Pelle liscia come un uovo, occhi grandi, luce dorata.",
+    "{N} si cercò. Si trovò. Quella lì era lei, ma senza la cicatrice sul mento, senza il neo, con il naso più piccolo. «È un filtro» disse Dalia. «Lo usano tutti.»",
+    "A casa {N} andò allo specchio. La cicatrice era al suo posto, il neo anche, il naso era il solito. Prima di quel pomeriggio non ci aveva mai fatto caso. Adesso le sembrava che lo specchio fosse la versione sbagliata, e la foto quella giusta.",
+    "Prese il telefono della mamma e provò. Ventitré foto. In una rideva troppo, in una sembrava arrabbiata, in una aveva un occhio chiuso. Le cancellò tutte. Era stanca, e non aveva fatto niente.",
+    "Sul frigorifero, sotto una calamita a forma di limone, c'era la foto preferita di tutta la famiglia. {N} a sette anni, sul pedalò, senza due denti davanti, i capelli dritti per il vento, la bocca spalancata in una risata. Era una foto piena di difetti. Nessuno l'aveva mai tolta da lì.",
+    "«Perché vi piace questa?» chiese. La mamma non dovette pensarci: «Perché si sente il rumore. Guardala: si sente che stai ridendo.» {N} guardò. Era vero. Nella foto di Dalia, invece, c'era silenzio. Dieci facce perfette, e non si capiva che cosa stesse succedendo.",
+    "Qualche giorno dopo Dalia le confidò una cosa, sottovoce: prima di pubblicarne una, ne cancellava anche cinquanta. «E dopo sto lì a guardare quanti cuori prende.» Mentre lo diceva non sembrava contenta. {N} non seppe che cosa rispondere. Le fece solo una foto a tradimento, mentre sbadigliava. Dalia urlò, la rincorse per tutto il corridoio e poi, senza farsi vedere, quella foto la tenne."
+   ],
+   "d": "Qual è la foto di te che ti piace di più? Che cosa stava succedendo in quel momento?"
+  },
+  {
+   "id": "s06", "g": 6, "ic": "⏳", "t": "Ancora cinque minuti", "tema": "gli schermi",
+   "p": [
+    "«Spegni, per favore.» «Ancora cinque minuti!» {N} lo diceva sul serio. Ogni volta lo diceva sul serio. Ma i cinque minuti del gioco non erano come quelli dell'orologio: erano fatti di gomma, e si allungavano.",
+    "Quel sabato si allungarono fino a quaranta. Papà spense lui, e {N} gridò che non era giusto, che stava per vincere, che lui non capiva niente. Poi rimase sul divano a braccia incrociate, con una domanda che non le piaceva: perché non riesco a smettere? Le altre cose le smetto. I compiti li smetto benissimo.",
+    "La domenica venne a pranzo lo zio, che di lavoro faceva videogiochi. {N} glielo chiese di nascosto. Lo zio non rise. «Vuoi sapere un segreto del mestiere? Guarda bene il tuo gioco. Dove c'è scritto: fine?»",
+    "{N} cercò. Non c'era. Finito un livello ne partiva subito un altro. C'era un premio che arrivava «tra due minuti». C'era una barra quasi piena, sempre quasi piena. «Un libro ha l'ultima pagina» disse lo zio. «Un film ha i titoli di coda. Certi giochi, invece, sono costruiti apposta senza porte d'uscita. C'è gente molto brava che lavora perché tu resti lì.»",
+    "{N} sentì due cose insieme. Sollievo: allora non era lei a essere debole. E fastidio: qualcuno decideva al posto suo, e lei non se n'era mai accorta.",
+    "«E come si esce da un posto senza porte?» «La porta te la costruisci tu. Ma prima di entrare, non dopo. Dopo è troppo tardi: sei già dentro.»",
+    "Il sabato seguente, prima di accendere, {N} disse ad alta voce: «Gioco fino alla fine di questa gara, e poi basta.» Mise sul tavolo anche la sveglia a forma di gallina. La prima volta la gallina suonò e lei andò avanti lo stesso, per un bel pezzo. La seconda volta spense a metà di un livello, con le dita che le prudevano. Fu difficilissimo. Papà stava entrando per dire «spegni» e trovò lo schermo nero. Rimase sulla porta con la bocca aperta. {N} fece finta di niente. Ma quella faccia valeva più di un premio tra due minuti."
+   ],
+   "d": "Qual è la tua «porta d'uscita» quando giochi? La decidi prima di cominciare, o dopo?"
+  },
+  {
+   "id": "s07", "g": 7, "ic": "🚪", "t": "La porta della scuola grande", "tema": "verso le medie",
+   "p": [
+    "Il giorno della scuola aperta, {N} entrò per la prima volta alle medie. Il portone era alto il doppio di quello della sua scuola. Dentro, i corridoi non finivano mai, e ogni porta aveva una targhetta: Scienze, Musica, Arte, Tecnologia.",
+    "«Qui avrete un professore diverso per ogni materia» spiegò una signora con gli occhiali sulla testa. I genitori facevano di sì. {N} contava le porte e pensava: come farò a ricordarmi dove andare?",
+    "Nella sua scuola lei era una dei grandi. I piccoli di prima la guardavano dal basso e le chiedevano di allacciare le scarpe. Qui passò un gruppo di ragazzi di terza, altissimi, con le voci grosse, e nessuno la vide nemmeno. A settembre sarebbe stata di nuovo la più piccola. Che fregatura, pensò. Arrivi in cima e ti rimettono in fondo.",
+    "A fare da guida c'era un ragazzo di prima, con un cartellino sul petto e le orecchie rosse. Mostrò il laboratorio, la palestra, la biblioteca. Poi una mamma gli chiese: «E tu ti sei trovato bene, all'inizio?» Lui guardò la professoressa. Poi si guardò le scarpe.",
+    "«La prima settimana mi sono perso due volte. Una volta sono entrato in una terza, e mi sono pure seduto.» I genitori risero. «Nessuno mi ha preso in giro. Un ragazzo mi ha accompagnato alla classe giusta. Adesso i nuovi li accompagno io.»",
+    "{N} lo guardò meglio. Un anno prima quel ragazzo era in quinta, come lei adesso. Aveva avuto paura in questi stessi corridoi. E adesso li conosceva a memoria, e ci portava in giro gli altri. In mezzo c'era stato solo un anno.",
+    "All'uscita la mamma chiese: «Allora? Ti piace?» {N} cercò la parola e non la trovò, perché ne servivano due. «Ho paura e ho voglia.» «Tutte e due?» «Tutte e due. Stanno nella stessa tasca.» Nella tasca vera, intanto, teneva il foglio con la piantina della scuola. Quella sera lo aprì sul letto e, con il dito, fece la strada dall'ingresso fino all'aula di Arte. Due volte. Alla terza la sapeva."
+   ],
+   "d": "Pensando alla scuola nuova: di che cosa hai un po' paura? E di che cosa hai voglia?"
+  },
+  {
+   "id": "s08", "bonus": true, "vera": true, "ic": "🦴", "t": "Mary e il mostro nella roccia", "tema": "la curiosità",
+   "fonti": ["Natural History Museum, Londra: «Mary Anning: the unsung hero of fossil discovery» (nhm.ac.uk/discover/mary-anning-unsung-hero.html)", "Lyme Regis Museum (lymeregismuseum.co.uk)"],
+   "p": [
+    "Questa storia è vera. Più di duecento anni fa, in Inghilterra, in un paese sul mare che si chiama Lyme Regis, viveva una bambina di nome Mary Anning. La sua famiglia era povera. Per guadagnare qualcosa, Mary e suo fratello Joseph cercavano sulla spiaggia delle strane pietre a forma di conchiglia e le vendevano ai turisti.",
+    "Quelle pietre erano fossili: resti di animali vissuti milioni di anni prima, diventati roccia. A quel tempo quasi nessuno sapeva che cosa fossero davvero. Il momento migliore per cercarli era l'inverno, dopo le tempeste, quando pezzi di scogliera franavano sulla spiaggia. Era anche il momento più pericoloso.",
+    "Nel 1811 Joseph trovò nella roccia un cranio enorme, lungo più di un metro, con una fila di denti aguzzi. Sembrava un coccodrillo. Ma il resto del corpo dov'era? Mary aveva dodici anni. Continuò a cercarlo.",
+    "Lo trovò circa un anno dopo. Poi, con molta pazienza, scavò tutto intorno allo scheletro e lo liberò dalla roccia, un pezzetto alla volta. Era lungo circa cinque metri. Non era un coccodrillo. Era un ittiosauro: un rettile marino del tempo dei dinosauri, con il corpo simile a quello di un delfino.",
+    "Mary non smise più. Non aveva potuto studiare come i bambini ricchi, ma imparò da sola a riconoscere le ossa, a disegnarle, a capire come vivevano quegli animali. Nel 1823 scoprì il primo scheletro completo di plesiosauro, un rettile marino con il collo lunghissimo. Era così strano che, all'inizio, un famoso scienziato pensò che fosse un falso.",
+    "Gli scienziati compravano i suoi fossili e li studiavano. Scrivevano libri e articoli su quelle scoperte. Il nome di Mary, però, spesso non c'era: era una donna, era povera, e allora la scienza era una cosa da signori ricchi. Lei lo sapeva. Continuò lo stesso a scendere sulla spiaggia, inverno dopo inverno.",
+    "Oggi i fossili di Mary sono al Museo di Storia Naturale di Londra, e accanto c'è il suo nome. Tantissimi bambini si fermano a guardarli. Tutto è cominciato perché una ragazzina di dodici anni, davanti a una testa nella roccia, si è fatta una domanda semplice: e il resto, dov'è?"
+   ],
+   "d": "C'è una cosa che ti incuriosisce così tanto che la cercheresti per un anno intero?"
+  }
+ ]
+}
