@@ -22,8 +22,10 @@ function cnRate(y){const A=cnD().anni[y]||{},R=[];
   (A.rateStr||[]).forEach((r,i)=>R.push({k:y+"-s"+i,d:r.d,i:cnN(r.i),n:r.n||((i+1)+"ª rata straordinaria"),t:"s"}));
   return R.sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0);}
 const cnTutte=()=>cnAnni().flatMap(cnRate);
+/* le rate degli anni passati sono storia: non contano come «scadute» e non vanno nel Calendario */
+const cnVive=()=>{const y=today().slice(0,4);return cnTutte().filter(r=>r.d.slice(0,4)>=y);};
 /* la prossima rata non pagata (serve anche alla pagina Oggi) */
-function cnProssima(){const C=cnD();return cnTutte().filter(r=>!C.pag[r.k]).sort((a,b)=>a.d<b.d?-1:1)[0]||null;}
+function cnProssima(){const C=cnD();return cnVive().filter(r=>!C.pag[r.k]).sort((a,b)=>a.d<b.d?-1:1)[0]||null;}
 function cnUnisci(o){const C=cnD();if(o.info)C.info=Object.assign({},C.info,o.info);
   Object.keys(o.anni||{}).forEach(y=>{if(!/^\d{4}$/.test(y))return;const s=o.anni[y]||{},d=C.anni[y]=C.anni[y]||{};
     ["prev","cons","str","rateStr","docs"].forEach(k=>{if(s[k]!=null)d[k]=s[k];});});
@@ -34,8 +36,8 @@ const cnCrit=v=>v.crit?esc(v.crit)+(v.num!=null&&v.den?` <span class="cn-dim">($
 function cnTabVoci(V,conTot){
   return `<div class="cn-tw"><table class="cn-t"><thead><tr><th>Voce</th><th>Come si divide</th>${conTot?"<th class=\"r\">Totale condominio</th>":""}<th class="r">La tua quota</th></tr></thead><tbody>`+
     V.map(v=>`<tr><td>${esc(v.n)}</td><td>${cnCrit(v)}</td>${conTot?`<td class="r">${v.tot!=null?euro(v.tot):"—"}</td>`:""}<td class="r"><b>${euro(v.q)}</b></td></tr>`).join("")+`</tbody></table></div>`;}
-function cnRigaRata(r,C){const g=cnGiorni(r.d),ok=C.pag[r.k];
-  return `<div class="row cn-r${ok?" cn-ok":!ok&&g<0?" cn-late":""}"><button class="cn-ck" data-cnp="${r.k}" aria-pressed="${ok?"true":"false"}" aria-label="${ok?"Segna come non pagata":"Segna come pagata"}">${ok?"✅":"⬜"}</button><div class="grow"><b>${esc(r.n)}</b> · ${fmt(r.d,{weekday:"short",day:"numeric",month:"long",year:"numeric"})}<div class="cn-dim">${ok?"pagata il "+fmt(ok,{day:"numeric",month:"long"}):g>0?"tra "+g+(g===1?" giorno":" giorni"):g===0?"scade oggi":"scaduta da "+(-g)+(g===-1?" giorno":" giorni")}</div></div><b class="cn-i">${euro(r.i)}</b></div>`;}
+function cnRigaRata(r,C){const g=cnGiorni(r.d),ok=C.pag[r.k],old=r.d.slice(0,4)<today().slice(0,4);
+  return `<div class="row cn-r${ok?" cn-ok":!ok&&g<0&&!old?" cn-late":""}"><button class="cn-ck" data-cnp="${r.k}" aria-pressed="${ok?"true":"false"}" aria-label="${ok?"Segna come non pagata":"Segna come pagata"}">${ok?"✅":"⬜"}</button><div class="grow"><b>${esc(r.n)}</b> · ${fmt(r.d,{weekday:"short",day:"numeric",month:"long",year:"numeric"})}<div class="cn-dim">${ok?"pagata il "+fmt(ok,{day:"numeric",month:"long",year:"numeric"}):old?"anno passato":g>0?"tra "+g+(g===1?" giorno":" giorni"):g===0?"scade oggi":"scaduta da "+(-g)+(g===-1?" giorno":" giorni")}</div></div><b class="cn-i">${euro(r.i)}</b></div>`;}
 function cnCarica(primo){
   return `<p class="lbl">Per preparare il file, manda in chat a Claude i documenti dell'amministratore (convocazione, consuntivo, preventivo, riparti dei lavori): ricevi un file «condominio-….json» da caricare qui. Ogni file nuovo si aggiunge agli anni già presenti, senza toccare le tue spunte.</p>
   <div class="btns"><label class="btn${primo?" pri":" sm"}" style="cursor:pointer">📥 Carica il file dei dati<input type="file" id="cnIn" accept="application/json,.json" hidden></label></div>`;}
@@ -73,7 +75,7 @@ function vCondo(){
   return o;}
 /* analisi del rendiconto: l'ultimo consuntivo caricato, con le quote ricalcolate e il confronto con il preventivo dell'anno dopo */
 function cnAnalisi(C){
-  const yc=cnAnni().filter(y=>C.anni[y].cons).pop();
+  const yc=coY&&C.anni[coY]&&C.anni[coY].cons?coY:cnAnni().filter(y=>C.anni[y].cons).pop();   // l'anno scelto, se ha il consuntivo; altrimenti l'ultimo
   if(!yc)return `<div class="card k-condo"><h3>🔎 Analisi del rendiconto</h3><p class="empty">Non c'è ancora un consuntivo caricato.</p></div>`;
   const cs=C.anni[yc].cons,V=cs.voci||[],chk=V.map(cnCheck),nOk=chk.filter(x=>x&&x.ok).length,nNo=chk.filter(x=>x&&!x.ok).length;
   let o=`<div class="card k-condo"><h3>🔎 Analisi del rendiconto ${yc} <span class="pill">${euro(cs.tot)}</span></h3><div class="cols2 cn-in">`;
@@ -128,7 +130,7 @@ function bindCondo(){
       cnUnisci(o);save();coY=null;render();toast("🏢 Dati del condominio caricati: "+nuovi.join(", "));}catch(e){toast("Questo file non è un file del condominio");}};
   if($("cnDel"))$("cnDel").onclick=()=>{if(!confirm("Cancellare da questo iPad tutti i dati del condominio (anni, spunte e documenti allegati)?"))return;
     C.files.forEach(f=>kv("readwrite","cf-"+f.id,undefined).catch(()=>{}));P.scad=P.scad.filter(x=>!String(x.id).startsWith("condo-"));P.condo={};coY=null;save();render();toast("Dati del condominio cancellati");};
-  if($("cnCal"))$("cnCal").onclick=()=>{let n=0;cnTutte().forEach(r=>{const id="condo-"+r.k,s=P.scad.find(x=>x.id===id),t="🏢 Condominio: "+r.n,note=euro(r.i);
+  if($("cnCal"))$("cnCal").onclick=()=>{let n=0;cnVive().forEach(r=>{const id="condo-"+r.k,s=P.scad.find(x=>x.id===id),t="🏢 Condominio: "+r.n,note=euro(r.i);
     if(s){s.d=r.d;s.t=t;s.note=note;s.done=!!C.pag[r.k];}else{P.scad.push({id,t,d:r.d,cat:"casa",ric:"",av:5,note,done:!!C.pag[r.k]});n++;}});
     save();render();toast(n?"📌 "+n+(n===1?" rata messa":" rate messe")+" nel Calendario":"📌 Rate aggiornate nel Calendario");};
   const fin=$("cnFin");if(fin)fin.onchange=async()=>{const f=fin.files&&fin.files[0];fin.value="";if(!f)return;if(f.size>15*1024*1024)return toast("File troppo grande (massimo 15 MB)");
