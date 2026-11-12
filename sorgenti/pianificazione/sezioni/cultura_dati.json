@@ -2703,6 +2703,736 @@
      "url": "https://www.ncsc.gov.uk/blog-post/chatgpt-and-large-language-models-whats-the-risk"
     }
    ]
+  },
+  {
+   "id": "a2-leggere",
+   "liv": 2,
+   "tema": "app",
+   "ic": "📖",
+   "t": "Leggere codice scritto da altri, a colpo d'occhio",
+   "testo": [
+    "Non devi scrivere codice, ma ti aiuta riconoscerlo. Il file di una web app mescola tre linguaggi: capire quale stai guardando ti aiuta a capire a che cosa serve quel pezzo.",
+    "HTML: di regola un elemento ha un tag di apertura e uno di chiusura, che ha una barra prima del nome. Gli attributi, come href in un link, stanno dentro il tag di apertura: il nome, un segno uguale e il valore tra virgolette.",
+    "CSS: una regola ha un selettore, che dice a quali elementi si applica, e tra parentesi graffe le dichiarazioni. Ogni dichiarazione è una coppia «proprietà: valore», chiusa da un punto e virgola, come color: blue;.",
+    "JavaScript: le variabili sono nomi per i valori, le funzioni sono blocchi di codice riutilizzabili. Con addEventListener una funzione viene collegata a un evento, come il click su un bottone. Un pezzo oscuro? Chiedi all'assistente di spiegarlo."
+   ],
+   "punti": [
+    "HTML: tag di apertura e di chiusura; gli attributi stanno nell'apertura.",
+    "CSS: un selettore, poi tra graffe le dichiarazioni «proprietà: valore».",
+    "JavaScript: variabili, funzioni ed eventi collegati con addEventListener.",
+    "Riconoscere il linguaggio aiuta a capire a che cosa serve il pezzo.",
+    "Una riga oscura? Chiedi: «spiegami queste righe»."
+   ],
+   "prova": {
+    "t": "Fatti guidare in una lettura.",
+    "prompt": "Ti incollo il file della mia app: [codice]. Dividilo nelle parti HTML, CSS e JavaScript e per ognuna dimmi in una frase a che cosa serve. Poi scegli tre righe di JavaScript e spiegamele come a chi non programma, dicendo che cosa succede quando [azione, per esempio: tocco il bottone «Aggiungi»]. Non cambiare il codice.",
+    "guarda": "Se la spiegazione ti permette di trovare nel file il punto che gestisce [azione]. Se una riga resta oscura, chiedi un esempio con valori inventati."
+   },
+   "quiz": [
+    {
+     "id": "g2lq1",
+     "q": "In una regola CSS, che cosa c'è tra le parentesi graffe?",
+     "ok": "Le dichiarazioni, cioè coppie proprietà e valore",
+     "wrong": [
+      "Il titolo della pagina",
+      "Il tag di chiusura"
+     ],
+     "e": "Secondo MDN una regola ha un selettore e un blocco tra graffe con le dichiarazioni: coppie proprietà-valore separate da punto e virgola."
+    },
+    {
+     "id": "g2lq2",
+     "q": "Dove si scrivono gli attributi di un elemento HTML?",
+     "ok": "Dentro il tag di apertura",
+     "wrong": [
+      "Dentro il tag di chiusura",
+      "Solo in un file CSS"
+     ],
+     "e": "MDN: gli attributi contengono informazioni extra sull'elemento e si scrivono nel tag di apertura, dopo il nome dell'elemento."
+    },
+    {
+     "id": "g2lq3",
+     "q": "Che cosa fa addEventListener in JavaScript?",
+     "ok": "Collega una funzione a un evento, come il click",
+     "wrong": [
+      "Cambia il colore della pagina",
+      "Salva i dati sull'iPad"
+     ],
+     "e": "Nell'esempio di MDN, addEventListener con «click» su un bottone indica al browser quale funzione eseguire quando avviene quell'evento."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "MDN Web Docs, Basic HTML syntax, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+    },
+    {
+     "c": "MDN Web Docs, Introduction to CSS syntax: declarations, rulesets, and statements, in inglese (2025)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Syntax/Introduction"
+    },
+    {
+     "c": "MDN Web Docs, A first splash into JavaScript, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/A_first_splash"
+    }
+   ]
+  },
+  {
+   "id": "a2-strumenti",
+   "liv": 2,
+   "tema": "app",
+   "ic": "🔍",
+   "t": "Gli strumenti del browser per trovare gli errori",
+   "testo": [
+    "Quando una pagina non va, i browser offrono strumenti per sviluppatori. Tre parti servono più spesso: l'ispezione degli elementi, la console e la rete.",
+    "Ispezione: mostra l'HTML della pagina com'è adesso e i CSS applicati a ogni elemento. Puoi modificarli e vedere subito l'effetto. Ma le modifiche all'HTML fatte lì non si possono salvare: vanno riportate nel file vero.",
+    "Console: esegue righe di JavaScript e segnala gli errori. Rete: elenca le richieste e le risposte per ogni file; il codice 200 indica che il file è arrivato, 404 che non è stato trovato.",
+    "Su iPad Apple descrive questa strada: attivare Web Inspector nelle impostazioni di Safari (sezione Avanzate), collegare l'iPad a un Mac con un cavo e usare il menu Develop di Safari sul Mac. Vale anche per un'app della schermata Home, mentre è aperta in primo piano."
+   ],
+   "punti": [
+    "Ispezione: vedi HTML e CSS della pagina e li provi in diretta.",
+    "Console: mostra gli errori e prova righe di JavaScript.",
+    "Rete: mostra quali file arrivano; 404 vuol dire non trovato.",
+    "Le modifiche all'HTML fatte negli strumenti non si salvano: ripetile nel file.",
+    "Su iPad serve un Mac collegato con cavo e Web Inspector attivo."
+   ],
+   "prova": {
+    "t": "Raccogli gli indizi per l'assistente.",
+    "prompt": "La mia app [nome dell'app] non fa [che cosa non funziona]. La uso [in Safari, oppure dalla schermata Home] e [ho un Mac, oppure non ho un Mac]. Spiegami passo passo come aprire la console e l'ispezione degli elementi e come guardare la scheda Rete. Se senza Mac non si può, dimmelo chiaramente. Poi dimmi quali tre informazioni copiarti qui: il messaggio d'errore, il nome del file e la riga.",
+    "guarda": "Se tiene conto di che cosa hai: secondo Apple, per ispezionare l'iPad serve un Mac collegato. Il messaggio d'errore incollalo per intero, senza riassumerlo."
+   },
+   "quiz": [
+    {
+     "id": "g2tq1",
+     "q": "Nella scheda Rete vedi una richiesta con codice 404. Che cosa significa?",
+     "ok": "Il file richiesto non è stato trovato",
+     "wrong": [
+      "Il file è arrivato correttamente",
+      "La pagina è stata salvata"
+     ],
+     "e": "Per MDN il codice 200 indica che la risorsa è stata consegnata e il 404 che non è stata trovata."
+    },
+    {
+     "id": "g2tq2",
+     "q": "Hai cambiato un elemento con l'ispezione e ti piace il risultato. Che cosa fai?",
+     "ok": "Ripeti la modifica nel file, o la chiedi all'assistente",
+     "wrong": [
+      "Niente: si è salvata da sola",
+      "Riavvii l'iPad"
+     ],
+     "e": "MDN dice che le modifiche all'HTML fatte nell'ispezione non si possono salvare: vanno riportate nel codice vero."
+    },
+    {
+     "id": "g2tq3",
+     "q": "Che cosa serve, secondo Apple, per ispezionare una pagina aperta su iPad?",
+     "ok": "Un Mac collegato e Web Inspector attivo sull'iPad",
+     "wrong": [
+      "Toccare tre volte lo schermo",
+      "Un secondo iPad"
+     ],
+     "e": "Apple descrive: attivare Web Inspector nelle impostazioni di Safari, collegare il dispositivo a un Mac con un cavo e usare il menu Develop di Safari."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "MDN Web Docs, What are browser developer tools?, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools"
+    },
+    {
+     "c": "Apple, Safari Developer Tools: Inspecting iOS and iPadOS, in inglese (s.d.)",
+     "url": "https://developer.apple.com/documentation/safari-developer-tools/inspecting-ios"
+    }
+   ]
+  },
+  {
+   "id": "a2-dati",
+   "liv": 2,
+   "tema": "app",
+   "ic": "💾",
+   "t": "Dove vivono i dati e come copiarli",
+   "testo": [
+    "I dati di una web app stanno sul dispositivo, nel browser, e ogni indirizzo (origine) ha i suoi, separati dagli altri. Per poche cose basta localStorage; per molti dati strutturati, anche file, esiste IndexedDB, più capace e asincrono.",
+    "Di regola il browser li conserva finché c'è spazio e tu non li cancelli, ma non lo garantisce. Con poco spazio può eliminare i dati dei siti usati meno di recente, e li elimina tutti insieme, non a pezzi.",
+    "Anche tu puoi cancellarli, dalle impostazioni del browser. Un sito può chiedere che i suoi dati siano «persistenti», cioè protetti dalle eliminazioni automatiche; ma secondo MDN neanche questi resistono se è l'utente a cancellarli.",
+    "Perciò una copia dei dati importanti va tenuta altrove. Chiedi un pulsante «Esporta», che salva i dati in un file, e uno «Importa», che li rimette a posto. Provali con dati inventati prima di fidarti."
+   ],
+   "punti": [
+    "localStorage per poco; IndexedDB per molti dati strutturati.",
+    "Ogni indirizzo ha i suoi dati, separati da quelli degli altri siti.",
+    "Il browser può eliminare i dati di un sito, tutti insieme.",
+    "Neanche i dati «persistenti» resistono se li cancelli dalle impostazioni.",
+    "Esporta e importa: la tua copia, da provare con dati inventati."
+   ],
+   "prova": {
+    "t": "Fatti dire dove sono i tuoi dati.",
+    "prompt": "Guarda il codice della mia app [nome dell'app]: [codice]. Dimmi dove salva i dati (localStorage, IndexedDB o altro) e quali andrebbero persi se il browser li cancellasse. Poi aggiungi un pulsante «Esporta» che crea un file con tutti i dati e un pulsante «Importa» che li rimette a posto. Spiegami come provarli sull'iPad con dati inventati, senza toccare quelli veri.",
+    "guarda": "Se la risposta dice con chiarezza che cosa viene salvato e dove. Prova l'esportazione, poi cancella i dati inventati, importa il file e controlla che tornino."
+   },
+   "quiz": [
+    {
+     "id": "g2dq1",
+     "q": "Il browser garantisce di non cancellare mai i dati salvati da una web app?",
+     "ok": "No: può eliminarli, per esempio se manca spazio",
+     "wrong": [
+      "Sì: restano per sempre",
+      "Sì, ma solo se usi IndexedDB"
+     ],
+     "e": "MDN: di regola i dati restano finché c'è spazio e l'utente non li cancella; con poco spazio il browser può eliminare quelli dei siti usati meno di recente. Vale anche per IndexedDB."
+    },
+    {
+     "id": "g2dq2",
+     "q": "Quale scelta ti protegge meglio dalla perdita dei dati importanti?",
+     "ok": "Un'esportazione in un file conservato altrove",
+     "wrong": [
+      "Tenerli solo in localStorage",
+      "Chiudere sempre il browser"
+     ],
+     "e": "Il browser può eliminare i dati e ogni indirizzo ha i suoi: una copia esportata e conservata altrove resta tua, anche se i dati del sito spariscono."
+    },
+    {
+     "id": "g2dq3",
+     "q": "Che differenza c'è tra localStorage e IndexedDB, secondo MDN?",
+     "ok": "IndexedDB è pensato per quantità maggiori di dati strutturati",
+     "wrong": [
+      "localStorage è l'unico che funziona su iPad",
+      "IndexedDB cancella i dati alla chiusura"
+     ],
+     "e": "MDN: Web Storage è utile per piccole quantità di dati; IndexedDB è un'API per grandi quantità di dati strutturati, anche file, e lavora in modo asincrono."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "MDN Web Docs, Storage quotas and eviction criteria, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria"
+    },
+    {
+     "c": "MDN Web Docs, IndexedDB API, in inglese (2025)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API"
+    }
+   ]
+  },
+  {
+   "id": "a2-pubblicare",
+   "liv": 2,
+   "tema": "app",
+   "ic": "🚀",
+   "t": "Pubblicare un'app web e usarla senza rete",
+   "testo": [
+    "Una pagina statica è fatta di file pronti (HTML, CSS, JavaScript, immagini) che un servizio di hosting consegna così come sono. Pubblicare un'app piccola vuol dire caricare i file su un servizio di questo tipo.",
+    "Per usarla dalla schermata Home, su iPad apri l'indirizzo in Safari, tocchi il tasto Condividi e scegli la voce per aggiungerla alla schermata Home (nella guida Apple in inglese «Add to Home Screen»). Toccando l'icona, il sito si apre come un'app.",
+    "Il manifest è un piccolo file JSON con informazioni sull'app, come nome e icona: secondo MDN il suo uso più comune è dare al browser ciò che serve per installarla. Si collega alla pagina con un elemento link.",
+    "Per funzionare senza rete serve un service worker: uno script che sta tra l'app e la rete e può rispondere con copie salvate. Richiede HTTPS. Durante l'installazione salva i file; se il salvataggio non riesce, l'installazione fallisce. Provalo con la rete spenta."
+   ],
+   "punti": [
+    "Pagina statica: file pronti, caricati su un servizio di hosting.",
+    "Manifest: file JSON con nome, icone e altre informazioni sull'app.",
+    "Service worker: script che risponde con file salvati. Serve HTTPS.",
+    "Durante l'installazione salva i file; se non ci riesce, fallisce.",
+    "Prova sempre l'app con la rete spenta."
+   ],
+   "prova": {
+    "t": "Chiedi la versione che funziona offline.",
+    "prompt": "Voglio che la mia app [nome dell'app], fatta dai file [elenco dei file], funzioni anche senza rete sull'iPad. Aggiungi un manifest con nome e icona e un service worker che salva i file dell'app. Dimmi quali file nuovi crei, dove vanno messi e come verificare, passo per passo, che l'app si apra con la rete spenta. Spiegami anche come si pubblica una nuova versione.",
+    "guarda": "Se elenca i file nuovi e dice come provare con la rete spenta. Se non nomina HTTPS, chiedilo: i service worker lo richiedono."
+   },
+   "quiz": [
+    {
+     "id": "g2pq1",
+     "q": "A che cosa serve il manifest di una web app?",
+     "ok": "A dare al browser nome, icona e altre informazioni per installarla",
+     "wrong": [
+      "A salvare i dati dell'utente",
+      "A controllare gli errori di JavaScript"
+     ],
+     "e": "Per MDN l'uso più comune del manifest è fornire al browser le informazioni per installare l'app, come nome e icona."
+    },
+    {
+     "id": "g2pq2",
+     "q": "Che cosa fa un service worker?",
+     "ok": "Sta tra l'app e la rete e può rispondere con copie salvate",
+     "wrong": [
+      "Cripta i dati dell'app",
+      "Disegna i bottoni della pagina"
+     ],
+     "e": "MDN: un service worker funziona come un proxy e può sostituire le risposte con elementi della propria cache."
+    },
+    {
+     "id": "g2pq3",
+     "q": "Che cosa richiede un service worker per funzionare?",
+     "ok": "HTTPS (o localhost per le prove)",
+     "wrong": [
+      "Un computer Mac",
+      "Una connessione Wi-Fi sempre attiva"
+     ],
+     "e": "MDN: i service worker sono limitati a funzionare su HTTPS, per motivi di sicurezza; localhost vale come origine sicura per lo sviluppo."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "MDN Web Docs, Progressive web apps, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+    },
+    {
+     "c": "MDN Web Docs, Web application manifest, in inglese (2025)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest"
+    },
+    {
+     "c": "MDN Web Docs, Using Service Workers, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers"
+    },
+    {
+     "c": "GitHub Docs, What is GitHub Pages?, in inglese (s.d.)",
+     "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
+    },
+    {
+     "c": "Apple, Manuale utente di iPad: Turn a website into an app in Safari on iPad, in inglese (s.d.)",
+     "url": "https://support.apple.com/guide/ipad/open-as-web-app-ipad8f1f7a29/ipados"
+    }
+   ]
+  },
+  {
+   "id": "a2-prove",
+   "liv": 2,
+   "tema": "app",
+   "ic": "✅",
+   "t": "Provare prima di pubblicare: controlli e lista di verifica",
+   "testo": [
+    "La lista di ciò che deve funzionare diventa una serie di passi, ognuno con una domanda: MDN propone per esempio «il testo si legge?». E consiglia di mettere l'accessibilità tra i requisiti principali.",
+    "I controlli si fanno a mano o con strumenti automatici, che ripetono le verifiche a ogni modifica. Un controllo automatico può essere uno script che dà esito riuscito o fallito; MDN cita anche i linter, che segnalano problemi nel codice.",
+    "Per un assistente IA un controllo che può eseguire è molto utile: la guida di Claude Code osserva che, senza, l'unico segnale è «sembra finito». Chiedi di mostrare le prove, cioè l'esito del controllo, non solo «funziona».",
+    "Poi provi tu, sull'iPad. Attenzione ai test scritti dall'IA: per OWASP non sono una prova di sicurezza, e i test modificati o tolti dall'assistente vanno giustificati e la giustificazione va rivista da una persona."
+   ],
+   "punti": [
+    "Ogni controllo: un passo e una domanda con risposta sì o no.",
+    "Un controllo automatico dà un esito chiaro: riuscito o fallito.",
+    "Chiedi all'assistente di mostrare l'esito, non solo «fatto».",
+    "I test scritti dall'IA non bastano come prova di sicurezza.",
+    "Test cambiati o tolti dall'assistente: li rivede una persona."
+   ],
+   "prova": {
+    "t": "Costruisci la lista di verifica.",
+    "prompt": "Per la mia app [nome dell'app], che serve a [scopo], scrivi una lista di verifica di al massimo dieci controlli da fare sull'iPad prima di pubblicare: che cosa deve funzionare, i casi strani (campi vuoti, nomi molto lunghi, rete assente) e la leggibilità. Per ognuno una domanda con risposta sì o no. Poi proponi quali controlli si possono automatizzare con un piccolo script e come lanciarlo.",
+    "guarda": "Se ogni controllo ha una domanda sì/no e la lista include casi strani. Esegui tu i controlli sull'iPad, segna gli esiti e allega i «no» alla richiesta di correzione."
+   },
+   "quiz": [
+    {
+     "id": "g2vq1",
+     "q": "Che cosa fa un linter, come quelli citati da MDN?",
+     "ok": "Controlla il codice e segnala gli errori comuni",
+     "wrong": [
+      "Pubblica l'app su internet",
+      "Disegna le icone dell'app"
+     ],
+     "e": "MDN cita csslint e jshint tra gli strumenti che analizzano il codice CSS e JavaScript e riportano gli errori comuni."
+    },
+    {
+     "id": "g2vq2",
+     "q": "L'assistente scrive: «Ho finito, funziona». Che cosa chiedi?",
+     "ok": "Di mostrare l'esito di un controllo che ha eseguito",
+     "wrong": [
+      "Di ripetere la frase con più sicurezza",
+      "Niente: se lo dice, è vero"
+     ],
+     "e": "La guida di Claude Code consiglia un controllo che dia riuscito o fallito e di chiedere le prove: il comando eseguito e il suo risultato, non un semplice «fatto»."
+    },
+    {
+     "id": "g2vq3",
+     "q": "Per OWASP, i test scritti dall'IA bastano come prova di sicurezza?",
+     "ok": "No, non vanno considerati una prova di sicurezza",
+     "wrong": [
+      "Sì, se passano tutti",
+      "Sì, se sono molti"
+     ],
+     "e": "OWASP elenca tra le cose da non fare il considerare i test generati dall'IA come prova di sicurezza: servono analisi indipendenti e revisione umana."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "MDN Web Docs, Strategies for carrying out testing, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Testing_strategies"
+    },
+    {
+     "c": "MDN Web Docs, Introduction to automated testing, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing/Automated_testing"
+    },
+    {
+     "c": "Anthropic, Best practices for Claude Code, in inglese (s.d.)",
+     "url": "https://code.claude.com/docs/en/best-practices"
+    },
+    {
+     "c": "OWASP, Secure Coding with AI Cheat Sheet, in inglese (s.d.)",
+     "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secure_Coding_with_AI_Cheat_Sheet.html"
+    }
+   ]
+  },
+  {
+   "id": "a2-accessibile",
+   "liv": 2,
+   "tema": "app",
+   "ic": "👓",
+   "t": "Leggibilità e accessibilità: testi, contrasto, tocco",
+   "testo": [
+    "Un'app è accessibile se più persone riescono a usarla: con la vista debole, con mani poco ferme, con una mano sola. Per una piccola app bastano tre cose: testi leggibili, buon contrasto, bottoni facili da toccare.",
+    "Contrasto: le linee guida WCAG (livello AA) chiedono per il testo un rapporto di almeno 4,5 a 1 con lo sfondo, e 3 a 1 per il testo grande (circa 24 pixel, o 18,5 in grassetto). Fallo calcolare, non giudicarlo a occhio.",
+    "Bersagli di tocco: WCAG 2.2 chiede almeno 24 per 24 pixel CSS, con alcune eccezioni, per esempio se intorno c'è abbastanza spazio. Serve a non toccare per sbaglio il bottone vicino. Per i comandi importanti W3C suggerisce di puntare ai 44 per 44 del criterio più rigido.",
+    "Dimensione: il testo deve poter crescere fino al 200% senza perdere contenuti o funzioni. Prova la pagina con il testo ingrandito."
+   ],
+   "punti": [
+    "Contrasto del testo: almeno 4,5 a 1 (3 a 1 se grande).",
+    "Bersagli di tocco: minimo 24 per 24 pixel CSS; meglio 44.",
+    "Spazio tra i bottoni: aiuta a non toccare quello vicino.",
+    "Il testo deve poter crescere fino al 200% senza rotture.",
+    "Chiedi all'assistente i numeri misurati, non solo «migliorato»."
+   ],
+   "prova": {
+    "t": "Fai controllare leggibilità e tocco.",
+    "prompt": "Controlla l'accessibilità della mia app [nome dell'app]: [codice]. Elenca i testi con contrasto sotto 4,5 a 1 (3 a 1 se grandi), i bottoni più piccoli di 24 per 24 pixel CSS e quelli sotto 44 per 44. Poi correggi solo questi punti, senza cambiare lo stile del resto, e dimmi i colori scelti con il rapporto di contrasto calcolato.",
+    "guarda": "Se riporta numeri (rapporto di contrasto, dimensioni in pixel) e non solo «migliorato». Poi prova tu: ingrandisci il testo e tocca ogni bottone con il dito."
+   },
+   "quiz": [
+    {
+     "id": "g2aq1",
+     "q": "Quale rapporto di contrasto minimo chiede WCAG per il testo normale?",
+     "ok": "4,5 a 1",
+     "wrong": [
+      "2 a 1",
+      "10 a 1"
+     ],
+     "e": "Il criterio 1.4.3 di WCAG 2.2 chiede almeno 4,5 a 1 per il testo e 3 a 1 per il testo grande."
+    },
+    {
+     "id": "g2aq2",
+     "q": "Qual è la misura minima WCAG 2.2 per un bersaglio di tocco, con eccezioni?",
+     "ok": "24 per 24 pixel CSS",
+     "wrong": [
+      "10 per 10 pixel CSS",
+      "100 per 100 pixel CSS"
+     ],
+     "e": "Il criterio 2.5.8 (livello AA) chiede almeno 24 per 24 pixel CSS; per i comandi importanti W3C suggerisce i 44 per 44 del criterio 2.5.5."
+    },
+    {
+     "id": "g2aq3",
+     "q": "Un utente ingrandisce il testo al 200%. Che cosa deve succedere?",
+     "ok": "Tutto resta leggibile e funzionante",
+     "wrong": [
+      "Si possono perdere dei bottoni: è normale",
+      "La pagina deve bloccarsi"
+     ],
+     "e": "Il criterio 1.4.4 chiede che il testo si possa ridimensionare fino al 200% senza perdita di contenuto o di funzioni."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "W3C, WCAG 2.2: Understanding SC 1.4.3 Contrast (Minimum), in inglese (2026)",
+     "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+    },
+    {
+     "c": "W3C, WCAG 2.2: Understanding SC 2.5.8 Target Size (Minimum), in inglese (2026)",
+     "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"
+    },
+    {
+     "c": "W3C, WCAG 2.2: Understanding SC 1.4.4 Resize Text, in inglese (2026)",
+     "url": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+    }
+   ]
+  },
+  {
+   "id": "a2-insieme",
+   "liv": 2,
+   "tema": "app",
+   "ic": "🤝",
+   "t": "Programmare insieme all'IA: chiedere, rivedere, capire",
+   "testo": [
+    "Con l'assistente conta la precisione. La guida di Claude Code consiglia di nominare il file, descrivere il sintomo e dire come sarà il risultato «risolto»: così di solito si risparmia un giro di correzioni. Se preferisci una strada tra due possibili, dillo subito.",
+    "Se hai corretto due volte la stessa cosa e non va ancora, la guida sconsiglia una terza correzione: la conversazione è piena di tentativi falliti. Meglio ripartire con una richiesta nuova che includa ciò che hai imparato.",
+    "Rivedi ogni modifica: chiedi l'elenco dei file toccati e perché. OWASP consiglia di rivedere uno per uno tutti i file cambiati dall'assistente e avverte che l'approvazione di un'IA non sostituisce la revisione di una persona.",
+    "La guida propone anche una revisione indipendente: una sessione nuova, che non ha visto come è nato il codice, lo rilegge cercando errori, senza farsi influenzare dal ragionamento che l'ha prodotto."
+   ],
+   "punti": [
+    "Richiesta precisa: file, sintomo, come sarà il risultato «risolto».",
+    "Dopo due correzioni fallite, riparti con una richiesta migliore.",
+    "Rivedi tutti i file modificati e chiedi perché.",
+    "L'approvazione di un'IA non sostituisce la revisione di una persona.",
+    "Una sessione nuova può rileggere il codice in modo indipendente."
+   ],
+   "prova": {
+    "t": "Chiedi un piano e l'elenco delle modifiche.",
+    "prompt": "Voglio [modifica desiderata] nella mia app [nome dell'app]. Prima non scrivere codice: dimmi quali file toccheresti, che rischi vedi e come verificheremo che funziona. Aspetta il mio via. Dopo la modifica dammi l'elenco di tutti i file cambiati con una frase per ciascuno e dimmi come provare sull'iPad che il resto dell'app funziona come prima.",
+    "guarda": "Se il piano nomina file e rischi e se, dopo, l'elenco dei file cambiati corrisponde al piano. Un file non previsto? Chiedi perché è stato toccato."
+   },
+   "quiz": [
+    {
+     "id": "g2iq1",
+     "q": "L'assistente ha cambiato la tua app. Che cosa consiglia OWASP?",
+     "ok": "Rivedere ogni file modificato",
+     "wrong": [
+      "Fidarsi se l'assistente dice che è tutto a posto",
+      "Guardare solo il file che avevi chiesto"
+     ],
+     "e": "OWASP consiglia di rivedere uno per uno i file di una modifica fatta dall'IA e di non considerare l'approvazione di un'IA un sostituto della revisione umana."
+    },
+    {
+     "id": "g2iq2",
+     "q": "Hai corretto due volte la stessa cosa e non va ancora. Che cosa suggerisce la guida di Claude Code?",
+     "ok": "Ripartire con una richiesta nuova che includa ciò che hai imparato",
+     "wrong": [
+      "Insistere con la stessa richiesta",
+      "Cambiare dispositivo"
+     ],
+     "e": "La guida: una terza correzione aggiunge altro a una conversazione già piena di tentativi falliti; ripartire con una richiesta nuova funziona meglio quasi sempre."
+    },
+    {
+     "id": "g2iq3",
+     "q": "Perché una sessione nuova è utile per rivedere il codice, secondo la guida?",
+     "ok": "Non ha visto il ragionamento che ha prodotto il codice",
+     "wrong": [
+      "Scrive codice più in fretta",
+      "Non può sbagliare"
+     ],
+     "e": "La guida: un revisore in una sessione nuova vede solo il risultato e non si lascia influenzare dal ragionamento che ha prodotto il codice."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "Anthropic, Best practices for Claude Code, in inglese (s.d.)",
+     "url": "https://code.claude.com/docs/en/best-practices"
+    },
+    {
+     "c": "OWASP, Secure Coding with AI Cheat Sheet, in inglese (s.d.)",
+     "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secure_Coding_with_AI_Cheat_Sheet.html"
+    }
+   ]
+  },
+  {
+   "id": "a2-progetto",
+   "liv": 2,
+   "tema": "app",
+   "ic": "🗂️",
+   "t": "Organizzare un progetto: cartelle, README, appunti",
+   "testo": [
+    "Un progetto ordinato si riprende anche dopo mesi. Metti ogni app in una cartella sua, con tutti i suoi file, e dai ai file nomi chiari. L'assistente può proporti la struttura e spiegartela.",
+    "Il README è un file che dice che cosa fa il progetto, perché è utile, come si inizia, dove trovare aiuto e chi se ne occupa. Su GitHub è spesso la prima cosa che vede chi visita il progetto; GitHub lo cerca in «.github», nella cartella principale o in «docs».",
+    "Alcuni assistenti leggono un file di istruzioni a inizio lavoro. In Claude Code si chiama CLAUDE.md: ogni sessione parte con un contesto nuovo, e il file porta le regole del progetto. La documentazione lo tratta come contesto, non come obbligo.",
+    "Ci vanno i comandi per verificare il lavoro, le decisioni che non stanno nel codice, le trappole note e ciò che hai già corretto due volte. Meglio breve: la documentazione indica meno di 200 righe. A fine lavoro chiedi un file «appunti»: a che punto siamo, che cosa manca."
+   ],
+   "punti": [
+    "Una cartella per ogni app, con nomi di file chiari.",
+    "README: che cosa fa il progetto, come si usa, chi lo cura.",
+    "File di istruzioni: l'assistente lo legge a ogni nuova sessione.",
+    "Breve e concreto: comandi, decisioni prese, trappole note.",
+    "Appunti a fine lavoro: a che punto siamo e che cosa manca."
+   ],
+   "prova": {
+    "t": "Prepara i file per riprendere il lavoro.",
+    "prompt": "Guarda il progetto della mia app [nome dell'app]. Scrivi un README in italiano semplice: che cosa fa, come si apre, come si pubblica, dove sono i file importanti. Poi scrivi un breve file di istruzioni per te, con le regole da rispettare (per esempio [regola, come: una modifica alla volta, dati sempre inventati]) e come provare l'app. Infine un file «appunti» con a che punto siamo e i prossimi tre passi. Niente password né dati veri.",
+    "guarda": "Se i file sono brevi, concreti e senza segreti. Rileggi il README come se non conoscessi l'app: se manca qualcosa, chiedi di aggiungerlo."
+   },
+   "quiz": [
+    {
+     "id": "g2gq1",
+     "q": "Che cosa dovrebbe dire un README, secondo GitHub?",
+     "ok": "Che cosa fa il progetto, perché è utile e come iniziare",
+     "wrong": [
+      "Solo le password del progetto",
+      "Tutte le versioni del codice, riga per riga"
+     ],
+     "e": "GitHub: il README comunica che cosa fa il progetto, perché è utile, come iniziare, dove trovare aiuto e chi lo mantiene."
+    },
+    {
+     "id": "g2gq2",
+     "q": "Come tratta Claude Code il file CLAUDE.md?",
+     "ok": "Come contesto che orienta il lavoro, non come obbligo assoluto",
+     "wrong": [
+      "Come un blocco che impedisce ogni errore",
+      "Lo ignora sempre"
+     ],
+     "e": "La documentazione dice che Claude tratta CLAUDE.md come contesto, non come configurazione obbligatoria: le istruzioni orientano il comportamento ma non lo impongono."
+    },
+    {
+     "id": "g2gq3",
+     "q": "Perché serve un file di istruzioni in Claude Code?",
+     "ok": "Ogni sessione parte con un contesto nuovo",
+     "wrong": [
+      "Perché l'assistente non sa scrivere codice",
+      "Per risparmiare spazio sull'iPad"
+     ],
+     "e": "La documentazione: ogni sessione inizia con una finestra di contesto nuova; CLAUDE.md porta istruzioni persistenti da una sessione all'altra."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "GitHub Docs, About READMEs, in inglese (s.d.)",
+     "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes"
+    },
+    {
+     "c": "Anthropic, How Claude remembers your project (CLAUDE.md), in inglese (s.d.)",
+     "url": "https://code.claude.com/docs/en/memory"
+    },
+    {
+     "c": "Anthropic, Best practices for Claude Code, in inglese (s.d.)",
+     "url": "https://code.claude.com/docs/en/best-practices"
+    }
+   ]
+  },
+  {
+   "id": "a2-git",
+   "liv": 2,
+   "tema": "app",
+   "ic": "🌿",
+   "t": "Git oltre le basi: rami, storia, tornare indietro",
+   "testo": [
+    "Un ramo (branch) è un puntatore mobile a un commit, e crearlo è leggero. Serve a provare una novità senza toccare la versione che funziona. «git switch -c prova» crea il ramo «prova» e ci passa sopra.",
+    "La storia si legge con «git log --oneline»: un commit per riga, dal più recente. Quando la prova va bene, la riunisci con «git merge». Se due rami cambiano lo stesso punto di un file, Git segnala un conflitto e si ferma finché non lo risolvi.",
+    "Per annullare un commit già fatto c'è «git revert»: registra un nuovo commit che ne annulla gli effetti, e la storia resta intera. «git restore» su un file invece lo riporta all'ultima versione registrata: le modifiche non ancora registrate vanno perse.",
+    "Pro Git dice che ciò che è stato registrato in un commit si può quasi sempre recuperare; ciò che non lo è stato, se lo perdi, probabilmente non lo rivedrai più. «git reflog» mostra i recenti spostamenti di HEAD e aiuta a ritrovare commit che sembrano persi."
+   ],
+   "punti": [
+    "Ramo: puntatore a un commit; per le prove, «git switch -c nome».",
+    "«git log --oneline»: la storia, un commit per riga.",
+    "«git revert»: nuovo commit che annulla un commit vecchio.",
+    "«git restore» su un file cancella le modifiche non registrate: attenzione.",
+    "Fai un commit prima di rischiare: i commit si recuperano quasi sempre."
+   ],
+   "prova": {
+    "t": "Fatti guidare in una prova su un ramo.",
+    "prompt": "Nel progetto della mia app [nome dell'app] voglio provare [idea da provare] senza rischiare la versione che funziona. Crea un ramo con un nome chiaro, fai la modifica e un commit. Poi mostrami la storia in modo semplice e spiegami in due frasi come unire il ramo alla versione principale o come lasciarlo da parte. Prima di ogni comando che cancella qualcosa, fermati e chiedimi conferma.",
+    "guarda": "Se l'assistente fa un commit prima di ogni modifica rischiosa e chiede conferma prima dei comandi che cancellano. Se un comando non ti è chiaro, chiedi che cosa farà."
+   },
+   "quiz": [
+    {
+     "id": "g2fq1",
+     "q": "Che cosa fa «git revert» su un vecchio commit?",
+     "ok": "Registra un nuovo commit che ne annulla gli effetti",
+     "wrong": [
+      "Cancella il commit dalla storia",
+      "Scarta le modifiche non registrate di un file"
+     ],
+     "e": "Il manuale di Git: revert registra nuovi commit che annullano gli effetti di commit precedenti; i commit vecchi restano al loro posto."
+    },
+    {
+     "id": "g2fq2",
+     "q": "Il comando «git restore nome-del-file» è…",
+     "ok": "Pericoloso: le modifiche non registrate a quel file vanno perse",
+     "wrong": [
+      "Sicuro: le modifiche si ritrovano sempre",
+      "Un modo per fare un commit"
+     ],
+     "e": "Pro Git lo definisce un comando pericoloso: le modifiche locali a quel file vanno perse, perché Git lo sostituisce con l'ultima versione registrata."
+    },
+    {
+     "id": "g2fq3",
+     "q": "Che cosa dice Pro Git su ciò che non è mai stato salvato in un commit?",
+     "ok": "Se lo perdi, probabilmente non lo rivedrai più",
+     "wrong": [
+      "Git lo conserva comunque per sempre",
+      "Si recupera con «git revert»"
+     ],
+     "e": "Pro Git: ciò che è stato registrato in un commit si può quasi sempre recuperare; ciò che non lo è stato, se lo perdi, probabilmente non si rivedrà più."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "Pro Git, Git Branching: Branches in a Nutshell, in inglese (s.d.)",
+     "url": "https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell"
+    },
+    {
+     "c": "Pro Git, Git Branching: Basic Branching and Merging, in inglese (s.d.)",
+     "url": "https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging"
+    },
+    {
+     "c": "Pro Git, Git Basics: Viewing the Commit History, in inglese (s.d.)",
+     "url": "https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History"
+    },
+    {
+     "c": "Pro Git, Git Basics: Undoing Things, in inglese (s.d.)",
+     "url": "https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things"
+    },
+    {
+     "c": "Pro Git, Git Internals: Maintenance and Data Recovery, in inglese (s.d.)",
+     "url": "https://git-scm.com/book/en/v2/Git-Internals-Maintenance-and-Data-Recovery"
+    },
+    {
+     "c": "Git, documentazione di git-revert, in inglese (2026)",
+     "url": "https://git-scm.com/docs/git-revert"
+    }
+   ]
+  },
+  {
+   "id": "a2-cache",
+   "liv": 2,
+   "tema": "app",
+   "ic": "🔄",
+   "t": "Aggiornamenti e cache: perché l'app non cambia",
+   "testo": [
+    "Dopo una modifica, a volte l'app mostra ancora la versione vecchia. Il motivo è la cache: copie dei file che il browser riusa per non riscaricarli. Una risposta resta «fresca» per il tempo indicato dal server, per esempio con max-age.",
+    "Con un service worker c'è un secondo livello. Il nuovo service worker si installa in background e resta in attesa finché nessuna pagina usa il vecchio. Ricaricare non basta: web.dev dice di chiudere tutte le schede che lo usano; la versione nuova parte alla visita successiva.",
+    "Rimedi per chi costruisce: dare alla cache un nome con la versione (da v1 a v2) e cancellare le vecchie; mettere la versione nel nome dei file; per la pagina principale chiedere al server di rivalidare con no-cache. Li applica l'assistente.",
+    "Cancellare i dati del sito dalle impostazioni del browser è l'ultima risorsa: secondo MDN così si eliminano tutti i dati che quel sito ha salvato. Esporta prima una copia."
+   ],
+   "punti": [
+    "Cache: copie dei file che il browser riusa, fresche per max-age.",
+    "Il nuovo service worker aspetta che il vecchio non sia più in uso.",
+    "Per aggiornare: chiudi tutte le schede che usano l'app, poi riapri.",
+    "Per chi sviluppa: cache con numero di versione e pulizia delle vecchie.",
+    "Cancellare i dati del sito toglie tutto: esporta prima."
+   ],
+   "prova": {
+    "t": "Chiedi una procedura di aggiornamento sicura.",
+    "prompt": "La mia app [nome dell'app] dopo una modifica mostra ancora la versione vecchia sull'iPad. Spiegami le cause possibili (cache del browser, service worker in attesa) e come controllarle una alla volta. Poi sistema l'app perché a ogni nuova versione cambi il nome della cache, cancelli quelle vecchie e mostri il numero di versione in basso nella pagina. Spiegami come aggiornare senza perdere i dati salvati.",
+    "guarda": "Se la risposta distingue le due cause e l'app mostra il numero di versione. Dopo ogni modifica controlla quel numero: dice subito se vedi il codice nuovo."
+   },
+   "quiz": [
+    {
+     "id": "g2cq1",
+     "q": "Perché una pagina può mostrare ancora la versione vecchia?",
+     "ok": "Il browser o il service worker riusano copie salvate",
+     "wrong": [
+      "Il codice si cancella da solo",
+      "Il server dimentica i file"
+     ],
+     "e": "MDN: la cache HTTP riusa le risposte salvate finché sono fresche; con un service worker, la cache first non aggiorna finché non si installa una nuova versione del service worker."
+    },
+    {
+     "id": "g2cq2",
+     "q": "Un nuovo service worker è installato ma l'app è aperta. Quando diventa attivo, di regola?",
+     "ok": "Quando nessuna pagina usa più il vecchio service worker",
+     "wrong": [
+      "Subito, appena scaricato",
+      "Solo dopo 30 giorni"
+     ],
+     "e": "MDN e web.dev: la nuova versione resta in attesa e si attiva quando nessuna pagina usa la vecchia; skipWaiting() può anticiparla, ma è una scelta di chi sviluppa."
+    },
+    {
+     "id": "g2cq3",
+     "q": "Che cosa significa Cache-Control: no-cache, secondo MDN?",
+     "ok": "Il browser può salvare la risposta ma deve confermarla con il server prima di riusarla",
+     "wrong": [
+      "Il browser non salva nulla",
+      "Il file si cancella ogni ora"
+     ],
+     "e": "MDN: no-cache non impedisce di salvare la risposta, ma di riusarla senza rivalidazione. Per non salvare nulla serve no-store."
+    }
+   ],
+   "fonti": [
+    {
+     "c": "MDN Web Docs, HTTP caching, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching"
+    },
+    {
+     "c": "web.dev, The service worker lifecycle, in inglese (2016)",
+     "url": "https://web.dev/articles/service-worker-lifecycle"
+    },
+    {
+     "c": "MDN Web Docs, Using Service Workers, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers"
+    },
+    {
+     "c": "MDN Web Docs, Caching, guida alle app web progressive, in inglese (2025)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Caching"
+    },
+    {
+     "c": "MDN Web Docs, Storage quotas and eviction criteria, in inglese (2026)",
+     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria"
+    }
+   ]
   }
  ],
  "letture": [

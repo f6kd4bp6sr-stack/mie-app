@@ -173,5 +173,62 @@ CD_IMG={
  +T(260,150,14,"informazioni importanti: verifica sempre",{b:700})+T(260,176,14,"le prove riducono gli errori, non li eliminano",{b:600})),
 "p3-sicurezza":S("Una pagina web con del testo nascosto che sussurra un comando a un assistente; uno scudo con un lucchetto lo ferma, e i dati sensibili restano fuori dalla chat",
  T(260,22,15,"istruzioni nascoste e dati",{b:800})+B(20,44,150,86,C.s,14)+E(52,88,28,"🌐")+Ln(80,70,76,.3)+Ln(80,86,60,.3)+T(95,118,14,"«fai questo…»",{c:C.p,b:700})+A(176,104,246,C.p)+E(212,84,28,"🛡️")+E(280,100,40,"🤖")
- +B(330,44,170,86,C.g,14)+E(362,88,28,"🔒")+T(436,80,14,"dati sensibili",{b:800})+T(436,102,14,"restano fuori",{b:800})+T(260,164,14,"conferma tu le azioni importanti",{b:700})+T(260,188,14,"il rischio si riduce, non sparisce",{b:600}))
+ +B(330,44,170,86,C.g,14)+E(362,88,28,"🔒")+T(436,80,14,"dati sensibili",{b:800})+T(436,102,14,"restano fuori",{b:800})+T(260,164,14,"conferma tu le azioni importanti",{b:700})+T(260,188,14,"il rischio si riduce, non sparisce",{b:600})),
+/* 12/11/2026: dieci schede «Programmare app» di livello intermedio (gruppo 2) */
+"a2-leggere":S("Tre pezzi di codice da riconoscere: HTML con tag e attributi, CSS con selettore e dichiarazioni, JavaScript con funzioni ed eventi; riconosciuto il linguaggio, si capisce a che cosa serve il pezzo",
+ T(260,22,15,"riconosci il linguaggio, capisci il pezzo",{b:800})
+ +[["🧱","HTML","tag e attributi",C.u],["🎨","CSS","proprietà: valore",C.k],["⚙️","JavaScript","funzioni ed eventi",C.w]].map(([e,a,b,c],i)=>{const x=22+i*162;return B(x,36,150,104,c)+E(x+75,70,30,e)+T(x+75,102,16,a,{b:800})+T(x+75,126,14,b,{b:600});}).join("")
+ +B(22,152,476,38,C.g)+T(260,176,14,"🔎 una riga oscura? chiedi: «spiegami queste righe»",{b:700})),
+"a2-strumenti":S("Tre strumenti del browser: ispezione per vedere HTML e CSS, console per gli errori, rete per i file che arrivano; su iPad servono un cavo e un Mac",
+ T(260,22,15,"tre strumenti per trovare l'errore",{b:800})
+ +[["🔍","ispezione","HTML e CSS",C.u],["🖥️","console","gli errori",C.p],["🌐","rete","200 o 404",C.g]].map(([e,a,b,c],i)=>{const x=22+i*162;return B(x,36,150,104,c)+E(x+75,70,30,e)+T(x+75,102,16,a,{b:800})+T(x+75,126,14,b,{b:600});}).join("")
+ +B(22,152,476,38,C.w)+T(260,176,14,"📱 iPad + cavo + 💻 Mac: Web Inspector",{b:700})),
+"a2-dati":S("I dati stanno nella memoria del browser, che può essere cancellata; per questo si tiene una copia in un file, con esporta e importa",
+ T(260,22,15,"i dati importanti hanno sempre una copia",{b:800})
+ +B(22,38,150,108,C.b)+E(97,76,30,"🗄️")+T(97,108,14,"memoria",{b:800})+T(97,128,14,"del browser",{b:800})
+ +A(174,92,200,"currentColor")
+ +B(204,38,130,108,C.p)+E(269,76,30,"🗑️")+T(269,108,14,"può sparire",{b:800,c:C.p})+T(269,128,14,"tutta insieme",{b:600})
+ +B(348,38,150,108,C.g)+E(423,76,30,"📤")+T(423,108,14,"esporta:",{b:800})+T(423,128,14,"file di copia",{b:800})
+ +T(260,180,14,"prova «Importa» con dati inventati",{b:700})),
+"a2-pubblicare":S("File statici caricati su un servizio di hosting, poi aggiunti alla schermata Home; il manifest dà nome e icona, il service worker salva copie per usare l'app senza rete",
+ T(260,22,15,"dai file all'app che funziona senza rete",{b:800})
+ +[["📁","file statici",C.u],["🌍","indirizzo web",C.v],["📲","schermata Home",C.g]].map(([e,a,c],i)=>{const x=22+i*168;return B(x,36,140,84,c)+E(x+70,72,30,e)+T(x+70,106,14,a,{b:800});}).join("")
+ +A(166,78,190,"currentColor")+A(334,78,358,"currentColor")
+ +B(22,134,236,56,C.w)+T(140,158,14,"📜 manifest:",{b:800})+T(140,178,14,"nome e icona",{b:600})
+ +B(268,134,230,56,C.b)+T(383,158,14,"⚙️ service worker:",{b:800})+T(383,178,14,"copie per la rete spenta",{b:600})),
+"a2-prove":S("A sinistra una lista di controlli da fare; a destra l'assistente che mostra l'esito dei controlli e tu che provi sull'iPad vero; chiedi l'esito, non solo «fatto»",
+ T(260,22,15,"prima i controlli, poi la pubblicazione",{b:800})
+ +B(22,36,236,112,C.g)+T(36,64,14,"☑️ cosa deve funzionare",{a:"start",b:700})+T(36,92,14,"☑️ i casi strani",{a:"start",b:700})+T(36,120,14,"☑️ la prova sull'iPad",{a:"start",b:700})
+ +A(260,92,286,"currentColor")
+ +B(290,36,208,112,C.u)+E(394,74,30,"🤖")+T(394,106,14,"mostra l'esito",{b:800})+T(394,128,14,"poi provi tu 👆",{b:600})
+ +T(260,180,14,"chiedi l'esito, non solo «fatto»",{b:800,c:C.p})),
+"a2-accessibile":S("Tre attenzioni per una app leggibile: contrasto del testo di almeno 4,5 a 1, bersagli di tocco di almeno 24 pixel e meglio 44, testo ingrandibile fino al 200 per cento",
+ T(260,22,15,"leggibile da tutti, comoda da toccare",{b:800})
+ +[["🌗","contrasto","4,5 a 1",C.v],["👆","tocco","24 px, meglio 44",C.g],["🔎","testo","fino al 200%",C.u]].map(([e,a,b,c],i)=>{const x=22+i*162;return B(x,36,150,104,c)+E(x+75,70,30,e)+T(x+75,102,16,a,{b:800})+T(x+75,126,14,b,{b:600});}).join("")
+ +B(22,152,476,38,C.w)+T(260,176,14,"📏 chiedi i numeri misurati, non solo «migliorato»",{b:700})),
+"a2-insieme":S("Il lavoro con l'assistente a tappe: una richiesta precisa, la modifica, la revisione di ogni file, infine la prova sull'iPad",
+ T(260,22,15,"a tappe, e rivedi ogni modifica",{b:800})
+ +[["🎯","richiesta",C.v],["✍️","modifica",C.u],["🔍","rivedi",C.w],["👆","prova",C.g]].map(([e,a,c],i)=>{const x=14+i*126;return B(x,36,104,92,c)+E(x+52,74,30,e)+T(x+52,114,14,a,{b:800});}).join("")
+ +A(120,82,138,"currentColor")+A(246,82,264,"currentColor")+A(372,82,390,"currentColor")
+ +B(22,142,476,46,C.b)+T(260,171,14,"💬 chiedi: «che cosa fa questa riga? quali file hai toccato?»",{b:700})),
+"a2-progetto":S("Una cartella di progetto con README, file di istruzioni e appunti; l'assistente li legge a ogni nuova sessione e tu li usi per riprendere il lavoro dopo mesi",
+ T(260,22,15,"tutto in ordine per riprendere il lavoro",{b:800})
+ +B(22,36,236,128,C.w)+E(52,66,26,"📁")+T(76,72,15,"mia-app",{a:"start",b:800})+T(46,100,14,"📄 README",{a:"start",b:700})+T(46,126,14,"📝 istruzioni",{a:"start",b:700})+T(46,152,14,"🗒️ appunti",{a:"start",b:700})
+ +A(260,100,286,"currentColor")
+ +B(290,36,208,128,C.u)+E(394,76,30,"🤖")+T(394,108,14,"li legge a ogni",{b:700})+T(394,128,14,"nuova sessione",{b:700})+T(394,152,14,"e tu dopo mesi",{b:600})
+ +T(260,188,14,"brevi, concreti, senza password",{b:800})),
+"a2-git":S("Una linea principale di commit; da un commit parte un ramo di prova che poi si riunisce alla linea principale; per tornare indietro si aggiunge un commit che annulla, senza cancellare la storia",
+ T(260,22,15,"un ramo per provare, la storia resta intera",{b:800})
+ +`<line x1="40" y1="64" x2="480" y2="64" stroke="currentColor" stroke-width="3" opacity=".35"/>`
+ +[90,200,310,420].map((x,i)=>`<circle cx="${x}" cy="64" r="12" fill="${C.g}" fill-opacity=".3" stroke="${C.g}" stroke-width="3"/>`+T(x,44,14,"commit "+(i+1),{b:700})).join("")
+ +`<path d="M200,64 Q215,124 250,124 L360,124 Q410,124 420,64" fill="none" stroke="${C.v}" stroke-width="3" opacity=".8"/>`
+ +[270,340].map(x=>`<circle cx="${x}" cy="124" r="9" fill="${C.v}" fill-opacity=".3" stroke="${C.v}" stroke-width="3"/>`).join("")
+ +T(305,152,14,"ramo di prova",{b:800,c:C.v})
+ +B(14,100,160,60,C.w)+T(94,126,14,"git revert:",{b:800})+T(94,146,14,"annulla un commit",{b:600})
+ +T(260,188,14,"commit prima di rischiare: si recuperano quasi sempre",{b:700})),
+"a2-cache":S("Il server ha la versione nuova, ma la cache e il service worker mostrano ancora la copia vecchia; si chiudono tutte le schede che la usano e alla visita successiva parte il service worker nuovo",
+ T(260,22,15,"la copia vecchia resta finché non la cambi",{b:800})
+ +[["🌐","server","versione 2",C.g],["🗄️","cache","copia versione 1",C.w],["📱","app","mostra la 1",C.p]].map(([e,a,b,c],i)=>{const x=22+i*168;return B(x,36,140,104,c)+E(x+70,70,30,e)+T(x+70,100,15,a,{b:800})+T(x+70,122,14,b,{b:600});}).join("")
+ +A(166,88,190,"currentColor")+A(334,88,358,"currentColor")
+ +B(22,152,476,38,C.b)+T(260,176,14,"🔄 ricaricare non basta: chiudi tutte le schede e riapri",{b:700}))
 };})();
