@@ -1,8 +1,8 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-13T05:04+01:00",
-  "nota": "Edizione del mattino del 13 novembre 2026.",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-13T13:08+01:00",
+  "nota": "Edizione del pomeriggio del 13 novembre 2026.",
   "sezioni": {
     "italia": [
       {
@@ -23,13 +23,13 @@
       },
       {
         "id": "it-maltempo",
-        "t": "Maltempo al Centro-Nord: allerta arancione in cinque Regioni, fiumi in piena e sfollati",
-        "s": "Per venerdì 13 la Protezione civile conferma l'allerta arancione su parti di Liguria, Emilia-Romagna, Toscana, Umbria e Lazio. Il Magra è in piena, il Serchio è esondato sulla statale 12 e a Massa circa cento persone sono sfollate per le frane. Aliscafi sospesi per Ischia e Procida.",
-        "d": "2026-11-12",
+        "t": "Maltempo: frane e sfollati in Liguria, piene in Toscana, allerta arancione in cinque Regioni",
+        "s": "Nella notte tra 12 e 13 novembre a Carasco, nel Genovese, una palazzina è stata evacuata per una frana (dieci persone fuori casa). A La Spezia due edifici sono stati sgomberati; il Magra in piena ha fatto evacuare alcune case ad Arcola. In Toscana l'Ombrone Pistoiese ha toccato un massimo storico di 3,53 metri senza gravi danni.",
+        "d": "2026-11-13",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/cronaca/2026/11/12/ondata-di-maltempo-al-centro-preoccupano-i-fiumi.-disagi-per-le-isole-del-golfo_2188f77a-8b0c-4674-af13-637b6ac4bfea.html"
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/frane-nella-notte-ed-evacuazioni-in-provincia-di-genova_1a6f2dbc-539e-4a57-aab6-351140c778d0.html"
           },
           {
             "n": "AGI",
@@ -50,6 +50,18 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/vi-annienteremo-lallarme-bomba-in-6.000-scuole-italiane.-meloni-strategia-per-il-caos_870b0024-72d2-4b15-bab5-0c74dcc1d653.html"
+          }
+        ]
+      },
+      {
+        "id": "it-manovra-parti-sociali",
+        "t": "Manovra 2027: Giorgetti alle parti sociali, il governo lavora a modificare l'exit tax",
+        "s": "Al tavolo di Palazzo Chigi sulla legge di bilancio il ministro dell'Economia ha detto che si studia un cambio dell'exit tax, il prelievo su chi porta la residenza fiscale all'estero, senza dare dettagli. L'Ance chiede una soluzione sullo spalma-crediti del Superbonus e segnala 1,8 miliardi di pagamenti attesi dalle imprese.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/giorgetti-alle-parti-sociali-governo-al-lavoro-sulla-modifica-dellexit-tax_74ba2c0f-fd3f-47c9-b8c2-4aec76a05d5d.html"
           }
         ]
       }
@@ -102,6 +114,31 @@
             "l": "en"
           }
         ]
+      },
+      {
+        "id": "mo-ucraina-droni",
+        "t": "Ucraina e Russia: attacchi di droni nella notte mentre prosegue la spinta diplomatica Usa",
+        "s": "Mosca dice di aver intercettato 1.198 droni ucraini su oltre 15 regioni; a Volgograd quattro morti, secondo il governatore. A Odessa almeno due vittime per gli attacchi russi. Dopo i colloqui di Abu Dhabi, un grande scambio di prigionieri è stato concordato, ma senza passi verso la fine della guerra.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/13/russia-and-ukraine-report-overnight-attacks-amid-us-diplomatic-push",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-ue-negoziatore",
+        "t": "Ue a Dublino: entro due settimane si deve decidere chi rappresenta l'Europa sull'Ucraina",
+        "s": "Al vertice informale dei leader a Dublino il premier irlandese Martin, presidente di turno, ha detto che serve una scelta prima del Consiglio straordinario tra due settimane. Prevede una componente E3 e vuole coinvolgere anche Paesi non Ue della coalizione dei volenterosi, come Regno Unito e Norvegia.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/13/presidenza-ue-decidere-entro-due-settimane-chi-rappresenta-leuropa-su-ucraina_02f92c01-7ce9-42ac-8b7c-0d2659bb82ff.html"
+          }
+        ]
       }
     ],
     "estero": [
@@ -135,6 +172,19 @@
             "l": "en"
           }
         ]
+      },
+      {
+        "id": "es-bombe-scuole",
+        "t": "Euronews: allarmi bomba nelle scuole italiane, Meloni convoca le opposizioni",
+        "s": "La testata europea racconta che l'11 novembre le mail minatorie, firmate con lo stesso nome, hanno raggiunto circa 6.300 scuole italiane e il giorno dopo una nuova ondata. Meloni ha riunito maggioranza e opposizioni; la bozza di protocollo prevede di non evacuare per la sola mail, salvo rischi concreti.",
+        "d": "2026-11-12",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/12/italy-hit-by-second-day-of-school-bomb-threats-as-meloni-summons-opposition",
+            "l": "en"
+          }
+        ]
       }
     ],
     "economia": [
@@ -154,9 +204,41 @@
             "l": "en"
           }
         ]
+      },
+      {
+        "id": "ec-microsoft-blackout",
+        "t": "Blackout Microsoft: Outlook e Teams in tilt in 74 Paesi, ripristino lento",
+        "s": "Il guasto, iniziato il 12 novembre, ha colpito posta e servizi cloud con quasi 140.000 segnalazioni su Outlook in serata. Microsoft parla di carico eccessivo sull'infrastruttura e di server non disponibili, ed esclude attività malevola. Problemi anche per servizi che usano il suo cloud.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "AGI",
+            "url": "https://www.agi.it/estero/news/2026-11-13/blackout-microsoft-cosa-sappiamo-40007760/"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/13/microsoft-non-a-conoscenza-di-attivita-malevola-su-interruzione-outlook_a6dc4a99-3b7c-4903-a0bb-124b9561ebfe.html"
+          }
+        ]
       }
     ],
     "torino": [
+      {
+        "id": "to-palazzo-nuovo",
+        "t": "Palazzo Nuovo: due uomini cadono da una scala durante un graffito, uno è grave",
+        "s": "Intorno alle 4:30 del 13 novembre due uomini sono caduti dalla scala al secondo piano dell'edificio universitario, sul lato di corso San Maurizio. Uno è stato operato al San Giovanni Bosco in condizioni gravi; l'altro al CTO per frattura del femore. L'Università è a disposizione degli inquirenti.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/cadono-da-una-scala-a-palazzo-nuovo-occupato-uno-e-intubato_ac6a9ebb-ef0f-4613-a944-0254ed13b07e.html"
+          },
+          {
+            "n": "TorinoToday",
+            "url": "https://torinotoday.it/cronaca/precipitati-palazzo-nuovo-13-novembre-2026.html"
+          }
+        ]
+      },
       {
         "id": "to-allarmi-scuole",
         "t": "Torino, nuovi allarmi bomba nelle scuole: evacuazioni dopo le oltre 190 segnalazioni del giorno prima",
@@ -224,6 +306,18 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/12/coldiretti-in-piemonte-calano-rese-riso-e-mais-bene-vino-e-allevamenti_2d7cc1cd-fc53-4c93-819f-9c137d9ee07c.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-acqua-mit",
+        "t": "Acqua: dal Ministero delle Infrastrutture 37,8 milioni per interventi in Piemonte",
+        "s": "Il finanziamento riguarda opere idriche in regione, con fondi per il Novarese e tre lavori nel Cuneese, secondo l'elenco pubblicato da ANSA Piemonte il 12 novembre.",
+        "d": "2026-11-12",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/12/dal-mit-378-milioni-di-euro-per-interventi-per-lacqua-in-piemonte_c76626e7-9231-485c-a1d1-4c404b43f3ef.html"
           }
         ]
       }
@@ -1008,12 +1102,6 @@
     ]
   },
   "controlli": [
-    {
-      "at": "2026-11-03T09:30+01:00",
-      "edizione": "mattina",
-      "notizie": 32,
-      "note": "3/11 prova: aggiornate solo eventi, spettacoli e concerti. Fonti lette: TurismoTorino, MYmovies, Teatro Stabile Torino, Teatro Regio, Lingotto Musica, TicketOne. Non raggiungibili: torinotoday.it e alcune pagine di dettaglio (permesso non concesso)."
-    },
     "3/11 13:30: cinema limitato a The Space Cinema e Cinema Ideal (scelta del proprietario); tolto un film proiettato solo al Romano",
     {
       "at": "2026-11-04T05:40+01:00",
@@ -1122,6 +1210,12 @@
       "edizione": "mattina",
       "notizie": 65,
       "note": "Fonti lette: ANSA, AGI, Adnkronos, Al Jazeera (en), Euronews (en, es), Torino Oggi, Turismo Torino. Non leggibili: TorinoToday (due pagine). Reuters, BBC e altre grandi testate estere non tentate. Cinema, teatro, eventi e concerti dall'edizione precedente con l'aggiunta di un evento (non è lunedì; orari dei film non riverificati); tolti i concerti già passati. Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-13T13:08+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 72,
+      "note": "Fonti lette: ANSA, AGI, Al Jazeera (en), Euronews (en). Non leggibili: TorinoToday (pagina Palazzo Nuovo). Ricerca su Reuters/BBC/Guardian rifiutata dal proxy. Due pagine ANSA Piemonte (acqua, Diasorin) non aperte per mancata approvazione: sintesi dall'elenco. Cinema, teatro, eventi e concerti dall'edizione del mattino (non è lunedì, nessun concerto già passato). Copia locale riallineata a origin/main (era staccata)."
     }
   ]
 }
