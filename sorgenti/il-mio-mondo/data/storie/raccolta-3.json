@@ -1,0 +1,194 @@
+{
+ "id": "r3",
+ "titolo": "Fiabe e meraviglie",
+ "_info": "Raccolta di «Raccontami una storia». Fiabe tradizionali e di autori di pubblico dominio riscritte con parole nostre, più una storia vera («vera», con fonti). «da» = origine, mostrata nella libreria e nel lettore; «g» = giorno della settimana (1 lunedì … 7 domenica); «bonus» = storia in più. «id» non si cambia mai. Autore e revisore indipendente (origini e fatti verificati sulle fonti): 13/11/2026.",
+ "storie": [
+  {
+   "id": "s17",
+   "g": 1,
+   "ic": "🎺",
+   "t": "I musicanti di Brema",
+   "tema": "una seconda possibilità insieme",
+   "da": "fratelli Grimm, Germania",
+   "fonti": [
+    "Wikipedia: «The Bremen Town Musicians» (fiaba numero ventisette dei fratelli Grimm, 1819) https://en.wikipedia.org/wiki/The_Bremen_Town_Musicians",
+    "D. L. Ashliman, University of Pittsburgh: «The Bremen Town Musicians and other tales of type 130» https://sites.pitt.edu/~dash/type0130.html"
+   ],
+   "p": [
+    "Questa storia viene dalla Germania. L'hanno raccolta i fratelli Grimm, più di duecento anni fa, e da allora la raccontano in tutto il mondo. Parla di quattro amici che non sapevano ancora di esserlo.",
+    "Un asino aveva portato sacchi al mulino per tanti anni. Ora era vecchio e stanco, e il padrone non sapeva più che cosa farsene. L'asino pensò: «Andrò a Brema, una grande città. Lì farò il musicante.» E si mise in cammino, con passo lento ma deciso.",
+    "Lungo la strada incontrò un cane che ansimava, perché non riusciva più a correre dietro ai cacciatori. «Vieni con me a Brema» disse l'asino. «Faremo musica insieme.» Poco più avanti trovarono un gatto dal muso triste, che non aveva più voglia di inseguire i topi. Poi un gallo che cantava forte sopra un cancello, anche se nessuno lo ascoltava più. «Vieni con noi!» dissero tutti e tre.",
+    "Brema era lontana e la notte li sorprese nel bosco. Il gallo salì in cima a un albero e vide una piccola luce. Era una casetta. L'asino, il più alto, guardò dentro. Vide una tavola piena di cose buone e alcuni briganti che mangiavano e ridevano.",
+    "«Ho un'idea» sussurrò l'asino. Appoggiò le zampe davanti sul davanzale della finestra. Il cane gli salì sulla schiena, il gatto salì sul cane e il gallo salì sul gatto. Poi, tutti insieme, cominciarono la loro musica: l'asino ragliò, il cane abbaiò, il gatto miagolò e il gallo cantò con tutto il fiato che aveva.",
+    "I briganti non avevano mai sentito un concerto così forte. Pensarono che stesse arrivando chissà quale creatura e scapparono fuori, nel buio del bosco, senza voltarsi indietro. Nessuno si fece male. I quattro amici entrarono, mangiarono finalmente a sazietà e poi spensero la luce.",
+    "Ognuno scelse il suo angolo. L'asino si sdraiò nel cortile. Il cane si accucciò dietro la porta. Il gatto si arrotolò vicino al camino ancora tiepido. Il gallo si posò su una trave, in alto. I briganti, nel bosco, decisero che quella casa non era più loro. Andarono lontano e non tornarono mai.",
+    "I quattro amici a Brema non ci arrivarono mai. Non importava: avevano trovato un posto dove restare, insieme. Le braci del camino erano ancora tiepide e il gatto faceva le fusa. Uno dopo l'altro, si addormentarono."
+   ],
+   "d": "Se ognuno portasse qualcosa che sa fare bene, che cosa potrebbe nascere con i tuoi amici?"
+  },
+  {
+   "id": "s18",
+   "g": 2,
+   "ic": "👑",
+   "t": "Il vestito nuovo dell'imperatore",
+   "tema": "dire quello che si vede",
+   "da": "Hans Christian Andersen, Danimarca, 1837",
+   "fonti": [
+    "Wikipedia: «The Emperor's New Clothes» (prima pubblicazione 7 aprile 1837, Copenaghen) https://en.wikipedia.org/wiki/The_Emperor%27s_New_Clothes",
+    "Hans Christian Andersen Centre, Università della Danimarca del Sud: «The Emperor's New Clothes» https://andersen.sdu.dk/vaerk/hersholt/TheEmperorsNewClothes_e.html"
+   ],
+   "p": [
+    "Questa storia viene dalla Danimarca. L'ha scritta Hans Christian Andersen, un grande scrittore di fiabe, nel milleottocentotrentasette. È diventata così famosa che molte persone ne usano ancora le parole.",
+    "C'era una volta un imperatore a cui piacevano moltissimo i vestiti nuovi. Ne aveva uno per ogni ora del giorno. Un giorno arrivarono in città due uomini che dicevano di essere tessitori. «Sappiamo fare una stoffa bellissima» dissero. «Ha una magia speciale: non la vede chi non è adatto al proprio lavoro, e nemmeno chi è molto sciocco.»",
+    "L'imperatore pensò: «Che bella idea! Così saprò chi, nel mio regno, non è adatto al suo posto.» Diede ai due uomini tanto filo d'oro e di seta. Loro misero due telai in una stanza e cominciarono a lavorare, ma i telai erano vuoti e le loro mani tessevano l'aria.",
+    "Dopo qualche giorno l'imperatore mandò a guardare il suo vecchio ministro, che era un uomo onesto. Il ministro spalancò gli occhi: non vedeva niente! Ma pensò: «Se lo dico, tutti penseranno che io non sia adatto al mio posto.» Così disse: «Che colori meravigliosi!» Lo stesso fecero gli altri che andarono a guardare dopo di lui.",
+    "Alla fine l'imperatore andò di persona. Anche lui non vide niente, ma non lo disse. «Bellissima!» esclamò. I due uomini finsero di tagliare, di cucire, di vestirlo da capo a piedi. Per la grande festa della città, l'imperatore uscì a sfilare sotto un baldacchino. Faceva un passo dopo l'altro, serio, convinto di indossare il vestito più bello del mondo.",
+    "Tutta la gente lungo la strada diceva: «Che vestito splendido! Che bella coda!» Nessuno voleva essere quello che non vedeva. Poi, in mezzo alla folla, un bambino piccolo alzò la voce, chiara come una campanella: «Ma non ha niente addosso!»",
+    "«Sentite che cosa dice il bambino!» disse il suo papà. E la frase passò di bocca in bocca, finché tutti la ripeterono. L'imperatore sentì un piccolo brivido. Pensò che avessero ragione. Ma la sfilata doveva finire, e così continuò a camminare, ancora più dritto di prima, mentre i nobili reggevano una coda che non c'era.",
+    "La fiaba di Andersen finisce qui, con la sfilata. A noi piace immaginare che quella sera, tornato nel suo palazzo, l'imperatore si mise una vestaglia calda, di lana vera. Si sedette vicino al fuoco e ripensò a quella voce chiara in mezzo alla strada. Poi, pian piano, chiuse gli occhi."
+   ],
+   "d": "Ti è mai capitato di vedere una cosa chiara e di non dirla? Che cosa ti sarebbe piaciuto dire, a voce piano o forte?"
+  },
+  {
+   "id": "s19",
+   "g": 3,
+   "ic": "🕷️",
+   "t": "Anansi e le storie del cielo",
+   "tema": "l'ingegno",
+   "da": "popolo Ashanti, Ghana",
+   "fonti": [
+    "Wikipedia: «Anansi» (personaggio della religione e del folklore Akan, Ghana meridionale) https://en.wikipedia.org/wiki/Anansi",
+    "R. S. Rattray, «Akan-Ashanti Folk-Tales» (Oxford, Clarendon Press, 1930), racconto «How it came about that the Sky-god's stories came to be known as Spider-stories»: Internet Archive https://archive.org/details/akanashantifolkt0000ratt"
+   ],
+   "p": [
+    "Questa storia viene dal Ghana, in Africa, dove il popolo Ashanti la racconta da moltissimo tempo. Il protagonista è Anansi, che nella lingua akan vuol dire ragno. Ci sono tante versioni di questo racconto: noi seguiamo quella scritta in un libro di fiabe ashanti nel millenovecentotrenta.",
+    "Tanto tempo fa, tutte le storie appartenevano a Nyame, il dio del cielo. Anansi, il ragno, andò da lui e chiese di comprarle. «Città grandi e potenti ci hanno provato, e nessuna ci è riuscita» disse Nyame. «Il prezzo è questo: il pitone, il leopardo, la piccola fata del bosco e i calabroni.» «Li porterò» rispose Anansi.",
+    "Per prima cosa Anansi andò dal pitone, con un lungo ramo di palma. Si mise a discutere ad alta voce: «Questo pitone è più lungo di un ramo di palma, o più corto?» Il pitone, curioso, si distese lungo il ramo per misurarsi. «Aspetta, ti aiuto a stare dritto» disse Anansi, e lo legò al ramo con una liana. Poi lo portò al dio del cielo.",
+    "Per i calabroni riempì d'acqua una zucca vuota. Ne spruzzò un po' sul loro nido e il resto se lo versò addosso; poi si coprì la testa con una foglia di banano. «Sta piovendo!» gridò. «Entrate nella mia zucca, qui è asciutto!» I calabroni entrarono, e Anansi chiuse la zucca. Poi la portò al dio del cielo.",
+    "Per il leopardo scavò una buca profonda lungo il suo sentiero e la coprì di rami. Il leopardo ci scivolò dentro. «Ti aiuto io!» disse Anansi, e gli porse due lunghi bastoni. «Appoggia le zampe qui.» Il leopardo si fidò, e Anansi lo legò ben stretto con i suoi fili. Poi lo portò al dio del cielo.",
+    "Per la piccola fata intagliò una bambola di legno e la ricoprì di una gomma appiccicosa, presa da un albero. Le mise davanti una ciotola di purè di igname, ai piedi dell'albero dove le fate venivano a giocare. La fata arrivò e chiese: «Posso assaggiare?» La bambola, mossa da un filo, fece sì con la testa. La fata mangiò e disse grazie. La bambola non rispose. «Che maleducata!» disse la fata, e le diede un colpetto. Ma le sue mani rimasero attaccate alla gomma. Anansi la prese con delicatezza e la portò al dio del cielo.",
+    "Nyame chiamò i suoi capi e i suoi anziani e disse: «Anansi ha pagato il prezzo.» Poi si rivolse al ragno: «Da oggi e per sempre, le mie storie sono tue. Non si chiameranno più storie del dio del cielo: si chiameranno storie del ragno.»",
+    "Anansi tornò sulla terra con le sue storie e cominciò a raccontarle. Ancora oggi, in Ghana, molti racconti si chiamano anansesem, che vuol dire storie del ragno. E la sera, sotto le stelle, qualcuno comincia così: «Una volta, Anansi...»"
+   ],
+   "d": "Ti ricordi una volta in cui hai risolto un problema con un'idea tutta tua?"
+  },
+  {
+   "id": "s20",
+   "g": 4,
+   "ic": "👠",
+   "t": "Le dodici principesse danzanti",
+   "tema": "osservare con attenzione",
+   "da": "fratelli Grimm, Germania",
+   "fonti": [
+    "Wikipedia: «The Twelve Dancing Princesses» (fiaba numero centotrentatré dei Grimm, 1815) https://en.wikipedia.org/wiki/The_Twelve_Dancing_Princesses",
+    "D. L. Ashliman, University of Pittsburgh: «The Shoes That Were Danced to Pieces» (traduzione del testo dei Grimm) https://sites.pitt.edu/~dash/grimm133.html"
+   ],
+   "p": [
+    "Questa storia viene dalla Germania. L'hanno raccolta i fratelli Grimm, più di duecento anni fa. In tedesco il titolo vuol dire: le scarpe consumate dal ballo.",
+    "C'era una volta un re che aveva dodici figlie bellissime. Dormivano tutte insieme in una grande stanza, con dodici letti in fila. Ogni sera il re chiudeva la porta a chiave. Ma ogni mattina le dodici paia di scarpe erano tutte logore, consumate dal ballare. Nessuno capiva come fosse possibile.",
+    "Il re fece sapere in tutto il regno: «Chi scoprirà il segreto avrà il regno e una principessa.» Chi ci provava aveva tre notti di tempo. Chi non scopriva niente tornava a casa a mani vuote. Ci provarono in tanti, ma si addormentavano tutti.",
+    "Un giorno arrivò un vecchio soldato, che non poteva più servire nell'esercito. Incontrò una donna anziana che gli disse: «Non bere il vino che ti porteranno la sera. Fingi di dormire.» E gli diede un mantello. «Quando lo indossi, nessuno ti vede.»",
+    "La sera la principessa più grande gli portò un bicchiere di vino. Il soldato lo versò di nascosto in una spugna e cominciò a russare. Le principesse si vestirono per il ballo. Poi la più grande bussò sul suo letto: il letto sprofondò nel pavimento e si aprì un passaggio, con una scala che scendeva. Il soldato indossò il mantello e le seguì in silenzio. Per sbaglio calpestò il vestito della più piccola. «Qualcuno mi ha tirato il vestito!» disse lei. «Ti sarai impigliata a un chiodo» rispose la sorella più grande.",
+    "In fondo alla scala c'erano tre boschi magici: nel primo gli alberi erano d'argento, nel secondo d'oro, nel terzo di diamanti. Il soldato staccò un rametto da ogni bosco. Poi arrivarono a un lago, dove dodici principi aspettavano con dodici barche. Il soldato salì in quella della più piccola, che sembrava più pesante del solito. Dall'altra parte c'era un castello illuminato, e tutti ballarono fino a consumare le scarpe.",
+    "Il soldato tornò di corsa, si coricò e finse di dormire. Anche le due notti dopo andò, e alla terza portò via una coppa d'oro. Quando venne il momento di rispondere, davanti al re mostrò i rametti e la coppa e raccontò tutto quello che aveva visto. Le principesse capirono che il loro segreto era stato scoperto, e lo ammisero. Il re mantenne la promessa. Quella sera le dodici paia di scarpe restarono in fila, una accanto all'altra, ad aspettare il mattino."
+   ],
+   "d": "Quali sono le cose che noti più degli altri, quando ti fermi a guardare con attenzione?"
+  },
+  {
+   "id": "s21",
+   "g": 5,
+   "ic": "🐭",
+   "t": "Il marito della signorina Talpa",
+   "tema": "valere così come si è",
+   "da": "Corea",
+   "fonti": [
+    "D. L. Ashliman, University of Pittsburgh: racconti del tipo 2031C, con «A Bridegroom for Miss Mole» (Corea) da W. E. Griffis, «The Unmannerly Tiger and Other Korean Tales», 1911 https://sites.pitt.edu/~dash/type2031c.html",
+    "Wikipedia: «The Husband of the Rat's Daughter» (versione giapponese, con il muro) https://en.wikipedia.org/wiki/The_Husband_of_the_Rat%27s_Daughter",
+    "Wikipedia: «The Mouse Turned into a Maid» (origine nel Panchatantra indiano e versioni giapponese e coreana) https://en.wikipedia.org/wiki/The_Mouse_Turned_into_a_Maid"
+   ],
+   "p": [
+    "Questa storia viene dall'Asia orientale. In Corea la raccontano con una talpa, in Giappone con un topo. Più di cento anni fa uno scrittore americano, William Griffis, l'ha messa in un libro di fiabe coreane. Noi seguiamo quella versione.",
+    "C'era una volta una famiglia di talpe che viveva sotto un prato. La signorina Talpa aveva il pelo morbido come velluto e un nasino rosa. Il suo papà era molto orgoglioso di lei. «Una figlia così» diceva «merita il marito più forte del mondo!»",
+    "Il papà uscì dalla terra e guardò in alto. «Il sole è il più forte» pensò. «Scalda tutto, illumina tutto.» Salutò e chiese: «Sole, vuoi sposare mia figlia?» Il sole rispose con gentilezza: «Sono onorato, ma non sono io il più forte. Quando arriva la nuvola, la mia luce si nasconde.»",
+    "Il papà Talpa andò dalla nuvola. «Nuvola, tu sei la più forte?» La nuvola rispose: «Sono grande e porto la pioggia, ma il vento mi spinge dove vuole, e io non posso fare niente.» Così il papà andò dal vento.",
+    "«Vento, sei tu il più forte?» Il vento soffiò con un po' di allegria: «Spingo le nuvole e piego gli alberi. Ma vicino al fiume c'è una grande statua di pietra: per quanto io soffi, non si muove di un dito.» E il papà andò fino al fiume.",
+    "Davanti alla statua, che era alta e silenziosa, chiese: «Statua di pietra, vuoi sposare mia figlia?» La statua rispose con una voce profonda, ma gentile: «Io non temo né il sole né il vento. Però c'è qualcuno che scava sotto i miei piedi, e mi fa un poco di solletico. È la talpa. Nessuno è forte come lei.»",
+    "Il papà restò un momento in silenzio. Poi sorrise: la talpa era proprio come lui, come sua figlia, come tutta la sua famiglia! Tornò a casa, nel buio caldo della terra, e trovò un giovane signor Talpa, che scavava gallerie lunghe e dritte. Fu una festa piccola e allegra, con tanti dolcetti per tutti.",
+    "La signorina Talpa e il suo sposo si fecero una casa comoda, con un letto di foglie e di muschio. Sopra di loro il sole tramontava, la nuvola scivolava via e il vento si calmava. Sotto, nel silenzio morbido della terra, le talpe si addormentarono."
+   ],
+   "d": "Qual è una cosa che sai fare bene e che a volte dimentichi?"
+  },
+  {
+   "id": "s22",
+   "g": 6,
+   "ic": "🌌",
+   "t": "Come nacquero la luna e le stelle",
+   "tema": "la cura delle cose",
+   "da": "popolo Bukidnon, Filippine",
+   "fonti": [
+    "D. L. Ashliman, University of Pittsburgh: «Creation myths of the Philippines» («How the Moon and the Stars Came to Be», raccolto da Mabel Cook Cole, Philippine Folk Tales, 1916) https://sites.pitt.edu/~dash/creation-phil.html",
+    "Progetto Gutenberg: Mabel Cook Cole, «Philippine Folk Tales» (Chicago, A. C. McClurg, 1916), racconti bukidnon, «How the Moon and Stars Came to Be» https://www.gutenberg.org/ebooks/12814"
+   ],
+   "p": [
+    "Questa storia viene dalle Filippine, un paese fatto di tante isole. Il popolo Bukidnon, che vive sull'isola di Mindanao, la racconta da moltissimo tempo. Una studiosa americana l'ha scritta in un libro nel millenovecentosedici.",
+    "Tanto, tanto tempo fa, il cielo era molto vicino alla terra. Era così basso che quasi toccava il suolo, e sembrava una grande roccia di corallo.",
+    "Un giorno una donna uscì di casa per pestare il riso. Metteva i chicchi in un grande mortaio di legno e li batteva con un lungo pestello. Era un lavoro che richiedeva forza e pazienza, e lei lo faceva con cura.",
+    "Prima di cominciare, la donna si tolse la sua collana di perline e il suo pettine, perché non voleva che si rovinassero. «Dove li metto?» pensò. Guardò in alto. Il cielo era lì, così vicino. Appese le perline e il pettine al cielo, e cominciò a lavorare.",
+    "Pestò il riso con il suo ritmo di sempre: toc, toc, toc. Ma il pestello era lungo, e il cielo era vicino. A ogni colpo, la punta del pestello sfiorava il cielo. Toc. Il cielo tremava un poco. Toc. La donna alzò il pestello più in alto per dare un colpo più forte.",
+    "E fu proprio quello il colpo che fece la differenza. Il pestello urtò il cielo, e il cielo si sollevò, piano, come un grande respiro. Salì sempre più su, sopra le palme, sopra le nuvole, sempre più in alto. La donna alzò le braccia per riprendere le sue cose, ma non ci arrivò più.",
+    "Il cielo non tornò giù. Il pettine e le perline restarono lassù. Di notte, qualcuno guarda in alto e vede il pettine che brilla in una curva chiara: è la luna. E le perline, sparse nel buio, sono le stelle.",
+    "La donna posò il pestello, si sedette sulla soglia e guardò. Poi, con un piccolo sorriso, rimise a posto il mortaio. Quella sera si mise a dormire sotto un cielo grandissimo, pieno di luci."
+   ],
+   "d": "Quali sono le cose a cui tieni di più, e come fai per averne cura?"
+  },
+  {
+   "id": "s23",
+   "g": 7,
+   "ic": "🪕",
+   "t": "L'arpa delle fate",
+   "tema": "l'armonia",
+   "da": "Galles",
+   "fonti": [
+    "Wirt Sikes, «British Goblins» (1880), libro primo, capitolo settimo «Fairy Music», con la leggenda dell'arpa magica: sacred-texts.com https://sacred-texts.com/neu/celt/wfl/wfl07.htm",
+    "Progetto Gutenberg: Wirt Sikes, «British Goblins: Welsh Folk-lore, Fairy Mythology, Legends and Traditions» (indice del libro) https://gutenberg.org/cache/epub/34704/pg34704-images.html"
+   ],
+   "p": [
+    "Questa storia viene dal Galles, un paese di montagne verdi e di nebbia, nel Regno Unito. È una leggenda antica, che Wirt Sikes ha raccolto in un libro di racconti popolari gallesi nel milleottocentoottanta. In gallese le fate si chiamano Tylwyth Teg, cioè «la bella famiglia», e si dice che tra tutti gli strumenti preferiscano l'arpa.",
+    "In una zona del Galles dove, si diceva, passavano le fate della grande montagna di Cader Idris, viveva un uomo di nome Morgan. Era un tipo allegro e rumoroso, che amava cantare a voce alta, anche se cantava piuttosto male. Una sera, mentre se ne stava accanto al fuoco, qualcuno bussò.",
+    "Alla porta c'erano tre viaggiatori stanchi. «Ci daresti qualcosa da mangiare per il viaggio?» chiesero. «Certo, entrate» rispose Morgan. E li lasciò tagliare tutto il pane e il formaggio che volevano. Non sapeva che erano fate, travestite da viaggiatori.",
+    "Prima di andarsene dissero: «Sei stato generoso. Esprimi un desiderio.» Morgan ci pensò. Voleva una cosa sola: «Un'arpa che, sotto le mie dita, suoni sempre musiche allegre, anche se io non so suonare bene.» In un attimo i viaggiatori sparirono, e sul focolare comparve un'arpa.",
+    "Quando sua moglie tornò a casa con alcuni amici, Morgan provò a suonarla. Le note erano così vivaci che tutti, grandi e piccoli, cominciarono a ballare: giravano, saltavano, e non riuscivano più a fermarsi. Morgan rideva e continuava a suonare, finché gli altri, senza fiato, dovettero sedersi.",
+    "Da quel giorno Morgan usò l'arpa per divertirsi alle spalle degli altri. Faceva ballare i vicini anche quando erano stanchi, e perfino chi faticava a camminare. Così le persone smisero di andare a trovarlo, e la casa diventò silenziosa.",
+    "Una notte le fate tornarono a riprendersi l'arpa, senza far rumore. Al mattino Morgan guardò il focolare vuoto. L'arpa non c'era più, e non tornò mai.",
+    "Si racconta che in certe valli del Galles, nelle sere calme, si senta ancora il suono delle arpe delle fate. Piano piano si allontana, oltre le cime, finché non resta altro che il vento. E chi lo ascolta si addormenta tranquillo."
+   ],
+   "d": "Quando una musica o un gioco fa stare bene tutti, e quando invece fa stare bene solo uno?"
+  },
+  {
+   "id": "s24",
+   "bonus": true,
+   "vera": true,
+   "ic": "🦋",
+   "t": "La bambina dei bruchi",
+   "tema": "guardare da vicino",
+   "da": "storia vera, Germania",
+   "fonti": [
+    "Encyclopaedia Britannica: «Maria Sibylla Merian» (nata a Francoforte sul Meno il 2 aprile 1647) https://www.britannica.com/biography/Maria-Sibylla-Merian",
+    "Natural History Museum, Londra: «Maria Sibylla Merian: metamorphosis unmasked by art and science» https://www.nhm.ac.uk/discover/maria-sibylla-merian-metamorphosis-art-and-science.html",
+    "Rijksmuseum, Amsterdam: «10 things to know about Maria Sibylla Merian's insects of Suriname» https://www.rijksmuseum.nl/en/stories/10-things/story/maria-sibylla-merian-en",
+    "Wikipedia: «Maria Sibylla Merian» (anni dei libri e del viaggio) https://en.wikipedia.org/wiki/Maria_Sibylla_Merian"
+   ],
+   "p": [
+    "Questa storia è vera. Maria Sibylla Merian è nata a Francoforte, in Germania, il due aprile del milleseicentoquarantasette. Suo padre era un incisore e pubblicava libri. Maria era una bambina che guardava le cose da vicino.",
+    "Quando aveva tredici anni, Maria allevava bachi da seta. Li teneva con cura, li guardava crescere e scriveva e disegnava tutto quello che vedeva. Allevava anche altri bruchi, quelli dei giardini e dei prati, e li vedeva trasformarsi in farfalle e in falene. Li osservava uno per uno.",
+    "A quel tempo molte persone credevano che gli insetti nascessero dal fango o dalle cose che marciscono. Maria non lo credeva. Guardava con pazienza e annotava ogni passo: l'uovo, il bruco, la crisalide, la farfalla. Ogni farfalla e ogni falena nasceva da un uovo e da un bruco, mai dal fango.",
+    "Disegnava ogni bruco insieme alla pianta di cui si nutriva, perché era lì che lo trovava. Poi imparò a incidere le immagini su lastre di rame, per stamparle. Nel milleseicentosettantanove uscì il suo primo libro sui bruchi, e quattro anni dopo il secondo. Erano pieni di disegni bellissimi.",
+    "Maria non si accontentò. Nel milleseicentonovantanove, a cinquantadue anni, salì su una nave con sua figlia Dorothea e partì per il Suriname, in America del Sud. Per pagare il viaggio vendette molti dei suoi dipinti. Voleva vedere con i suoi occhi gli insetti di un paese lontano.",
+    "Per quasi due anni, in mezzo a piante e animali che non aveva mai visto, Maria e Dorothea disegnarono e osservarono. Le persone che vivevano lì le portavano insetti e piante e le insegnavano i loro nomi. Poi tornarono in Europa, nel millesettecentouno, con tanti appunti e disegni.",
+    "Nel millesettecentocinque Maria pubblicò il suo grande libro: «Metamorphosis insectorum Surinamensium», con sessanta tavole di insetti e di piante. Oggi i suoi libri e i suoi disegni sono custoditi in molti musei.",
+    "E tutto era cominciato con una bambina, un baco da seta e un po' di pazienza. Guardando da vicino, con occhi calmi, Maria aveva mostrato a tante persone come un bruco diventa farfalla, e su quale pianta vive."
+   ],
+   "d": "C'è qualcosa, in giardino o dalla finestra, che potresti guardare da vicino per qualche giorno?"
+  }
+ ]
+}

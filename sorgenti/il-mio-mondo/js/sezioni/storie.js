@@ -30,6 +30,13 @@ function stOggi() {
 function stNotaQ(key) { const q = stState().nq; return q && q.k === key ? q.q : ''; }
 const stPet = cls => '<div class="st-pet ' + (cls || '') + '">' + avatarSVG(levelOf(D.energy), D.color) + '<span class="st-zz" aria-hidden="true"><i>z</i><i>z</i><i>Z</i></span></div>';
 
+/* cielo di stelline (posizioni fisse, calcolate una volta): sfondo del lettore, del finale e della testata */
+const stCielo = (n, cls) => '<div class="st-sky ' + (cls || '') + '" aria-hidden="true">' + Array.from({ length: n }, (_, k) => { const a = (k * 73 + 11) % 100, b = (k * 37 + 7) % 100, z = 2 + (k * 13) % 4; return '<i style="left:' + a + '%;top:' + b + '%;width:' + z + 'px;height:' + z + 'px;animation-delay:' + ((k * 0.41) % 3).toFixed(2) + 's"></i>'; }).join('') + '<b class="st-cometa"></b></div>';
+const stLucciole = n => '<div class="st-lucciole" aria-hidden="true">' + Array.from({ length: n }, (_, k) => '<i style="left:' + ((k * 29 + 9) % 92) + '%;animation-delay:-' + (k * 1.7).toFixed(1) + 's;animation-duration:' + (9 + (k * 3) % 7) + 's"></i>').join('') + '</div>';
+/* le raccolte, ognuna con il suo scaffale */
+const stRaccolte = () => (typeof STORIE !== 'undefined' ? STORIE : []).map(r => ({ id: r.id, titolo: r.titolo || 'Storie', storie: r.storie.map(x => Object.assign({ r: r.id }, x)) }));
+const ST_RIC = { r1: '🌱', r2: '🌍', r3: '✨' };
+
 /* ---------- la pagina: la libreria, dove sceglie lei il racconto ---------- */
 const stScena = (id, cls) => { const d = typeof ST_DISEGNI !== 'undefined' && ST_DISEGNI[id]; return d ? '<svg class="sd ' + (cls || '') + '" viewBox="0 0 400 240" aria-hidden="true">' + d.svg + '</svg>' : ''; };
 PAGES.storie = el => {
@@ -37,12 +44,15 @@ PAGES.storie = el => {
   const s = stState();
   if (!s.n) return stScegliNome(el);
   const x = stOggi(), T = stTutte(), oggi = todayIso(), n = T.filter(y => s.visti[y.id]).length, asc = s.modo !== 'leggo';
-  el.innerHTML = '<div class="st-hero"><svg class="st-cielo" viewBox="0 0 400 60" preserveAspectRatio="xMidYMin slice" aria-hidden="true">' + SD_STELLE + '</svg>' + stPet('sveglio') + '<div class="st-hi"><div class="st-kick">🌙 Raccontami una storia</div>' +
+  let kk = 0;
+  const libro = y => '<button type="button" class="st-book' + (x && y.id === x.id ? ' oggi' : '') + (s.visti[y.id] ? ' letto' : '') + (y.vera ? ' vera' : '') + '" data-st="' + y.id + '" style="--k:' + (kk++) + '">' +
+      '<span class="st-cover">' + (stScena(y.id) || '<span class="st-ci">' + y.ic + '</span>') + '<i class="st-lucido" aria-hidden="true"></i>' + (x && y.id === x.id ? '<i class="st-nastro">' + (s.visti[y.id] === oggi ? '✅ letta oggi' : stSera() ? '⭐ per stasera' : '⭐ per oggi') + '</i>' : s.visti[y.id] ? '<i class="st-nastro ok">✅</i>' : '') + (y.vera ? '<i class="st-vera">storia vera</i>' : '') + '</span>' +
+      '<b>' + y.ic + ' ' + esc(stTxt(y.t)) + '</b><small>' + (y.da ? '<span class="st-da">' + esc(y.da) + '</span> · ' : '') + esc(y.tema) + ' · ' + stMin(y) + ' min</small></button>';
+  el.innerHTML = '<div class="st-hero">' + stCielo(26, 'hero') + '<span class="st-luna" aria-hidden="true"></span>' + stPet('sveglio') + '<div class="st-hi"><div class="st-kick">🌙 Raccontami una storia</div>' +
     '<h1 class="st-title">La libreria di ' + esc(s.n) + '</h1><p class="st-meta">Scegli un libro: ogni storia dura circa 3 minuti. ' + (n ? 'Ne hai già ' + (n === 1 ? 'aperto 1' : 'aperti ' + n) + ' su ' + T.length + '.' : 'Quale apri per primo?') + '</p>' +
-    '<div class="st-modo" role="group" aria-label="Come vuoi la storia"><button type="button" data-m="ascolta" aria-pressed="' + asc + '">🔊 Ascolto</button><button type="button" data-m="leggo" aria-pressed="' + !asc + '">📖 Leggo io</button></div></div></div>' +
-    '<div class="st-shelf">' + T.map((y, k) => '<button type="button" class="st-book' + (x && y.id === x.id ? ' oggi' : '') + (s.visti[y.id] ? ' letto' : '') + '" data-st="' + y.id + '" style="--k:' + k + '">' +
-      '<span class="st-cover">' + (stScena(y.id) || '<span class="st-ci">' + y.ic + '</span>') + (x && y.id === x.id ? '<i class="st-nastro">' + (s.visti[y.id] === oggi ? '✅ letta oggi' : stSera() ? '⭐ per stasera' : '⭐ per oggi') + '</i>' : s.visti[y.id] ? '<i class="st-nastro ok">✅</i>' : '') + '</span>' +
-      '<b>' + y.ic + ' ' + esc(stTxt(y.t)) + '</b><small>' + (y.vera ? 'storia vera · ' : '') + esc(y.tema) + ' · ' + stMin(y) + ' min</small></button>').join('') + '</div>' +
+    '<div class="st-modo" role="group" aria-label="Come vuoi la storia"><button type="button" data-m="ascolta" aria-pressed="' + asc + '">🔊 Ascolto</button><button type="button" data-m="leggo" aria-pressed="' + !asc + '">📖 Leggo io</button></div>' +
+    '<div class="st-prog" role="img" aria-label="Storie aperte: ' + n + ' su ' + T.length + '">' + T.map(y => '<i class="' + (s.visti[y.id] ? 'on' : '') + '">★</i>').join('') + '</div></div></div>' +
+    stRaccolte().map(r => { const m = r.storie.filter(y => s.visti[y.id]).length; return '<section class="st-racc"><h2 class="st-rh"><span>' + (ST_RIC[r.id] || '📚') + ' ' + esc(r.titolo) + '</span><small>' + (m === r.storie.length ? '✅ lette tutte' : m + ' di ' + r.storie.length) + '</small></h2><div class="st-shelf">' + r.storie.map(libro).join('') + '</div></section>'; }).join('') +
     '<p class="st-who">La bambina delle storie si chiama <b>' + esc(s.n) + '</b>. <button type="button" class="btn small ghost" id="st-ren">✏️ Cambia nome</button></p>';
   el.querySelectorAll('[data-st]').forEach(b => b.addEventListener('click', () => { b.classList.add('apre'); setTimeout(() => stOpen(b.dataset.st, stState().modo), reduce ? 0 : 420); }));
   el.querySelectorAll('.st-modo button').forEach(b => b.addEventListener('click', () => { const t = stState(); t.modo = b.dataset.m; stSave(t); el.querySelectorAll('.st-modo button').forEach(c => c.setAttribute('aria-pressed', c === b)); }));
@@ -74,8 +84,8 @@ function stOpen(id, mode) {
   const s = stState(); s.modo = mode === 'leggo' ? 'leggo' : 'ascolta'; stSave(s);
   ST = { x, mode: s.modo, P: x.p.map(stSplit), i: 0, j: 0, play: s.modo === 'ascolta', solo: false, timer: null, wd: null, snore: null };
   let ov = $('st-ov'); if (!ov) { ov = document.createElement('div'); ov.id = 'st-ov'; ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-label', 'La storia'); document.body.appendChild(ov); }
-  ov.hidden = false; document.body.classList.add('in-lesson');
-  ov.innerHTML = '<div class="st-top"><span class="st-epn">' + x.ic + '</span><b>' + esc(stTxt(x.t)) + '</b><button type="button" class="st-sw" id="st-sw"></button><button type="button" class="st-x" id="st-x" aria-label="Chiudi">✕</button></div>' +
+  ov.hidden = false; ov.classList.remove('fine'); document.body.classList.add('in-lesson');
+  ov.innerHTML = stCielo(40) + '<span class="st-luna" aria-hidden="true"></span>' + stLucciole(6) + '<div class="st-top"><span class="st-epn">' + x.ic + '</span><b>' + esc(stTxt(x.t)) + (x.da ? '<small class="st-da">' + esc(x.da) + '</small>' : '') + '</b><button type="button" class="st-sw" id="st-sw"></button><button type="button" class="st-x" id="st-x" aria-label="Chiudi">✕</button></div>' +
     '<div class="st-stage" id="st-stage"><div class="st-scene" id="st-scene">' + (stScena(x.id) || '<span class="st-ci">' + x.ic + '</span>') + stPet('sveglio') + '</div><div class="st-text" id="st-text" aria-live="off"></div></div>' +
     '<div class="st-dots" id="st-dots">' + x.p.map(() => '<i></i>').join('') + '</div><div class="st-ctl" id="st-ctl"></div>';
   $('st-x').onclick = () => stClose();
@@ -103,9 +113,11 @@ function stHi() {   /* illumina la frase che la voce sta leggendo */
 function stGo(i, j) {
   if (!ST) return; stStop();
   if (i >= ST.P.length) return stFine();
-  if (i < 0) i = 0; ST.i = i; ST.j = j || 0;
-  const box = $('st-text'); box.classList.remove('in'); void box.offsetWidth;
-  box.innerHTML = '<p>' + ST.P[i].map(t => '<span>' + esc(t) + '</span>').join('') + '</p>'; box.classList.add('in'); box.scrollTop = 0;
+  if (i < 0) i = 0; const prima = ST.i; ST.i = i; ST.j = j || 0;
+  const box = $('st-text'), indietro = i < prima; box.classList.remove('in', 'back'); void box.offsetWidth;
+  $('st-ov').style.setProperty('--pg', ST.P.length > 1 ? (i / (ST.P.length - 1)).toFixed(3) : '0');   /* la luna sale mentre la storia va avanti */
+  const scn = $('st-scene'); if (scn && i !== prima) { scn.classList.remove('cambia'); void scn.offsetWidth; scn.classList.add('cambia'); }
+  box.innerHTML = '<p>' + ST.P[i].map(t => '<span>' + esc(t) + '</span>').join('') + '</p>'; box.classList.add('in'); if (indietro) box.classList.add('back'); box.scrollTop = 0;
   $('st-dots').querySelectorAll('i').forEach((e, k) => { e.className = k < i ? 'on' : k === i ? 'cur' : ''; });
   const sc = document.querySelector('#st-scene .sd'), dd = typeof ST_DISEGNI !== 'undefined' && ST_DISEGNI[ST.x.id]; if (sc && dd) sc.classList.toggle('fase2', i >= dd.f2);   /* il disegno cambia a metà storia */
   stCtl(); stHi();
@@ -157,6 +169,7 @@ function stFine() {
   s.visti[x.id] = todayIso(); stSave(s);
   ST.play = false; ST.fine = true;
   ['st-dots', 'st-ctl', 'st-sw'].forEach(k => { const e = $(k); if (e) e.style.display = 'none'; });
+  $('st-ov').classList.add('fine');
   $('st-stage').innerHTML = '<div class="st-end"><svg class="st-notte sd" viewBox="0 0 400 60" preserveAspectRatio="xMidYMin slice" aria-hidden="true">' + SD_STELLE + '<circle cx="340" cy="34" r="15" fill="#fff5cf"/><circle cx="333" cy="29" r="14" fill="#1c1e4c"/></svg>' + stPet('sbadiglio') + '<div class="st-card-end" id="st-ce" hidden><div class="st-fine">Fine</div><div class="st-etu">E tu?</div><p>' + esc(q) + '</p>' +
     '<div class="st-acts">' + (typeof dayForm === 'function' ? '<button type="button" class="btn st-b2" id="st-dia">📝 Lo scrivo nel diario</button>' : '') + '<button type="button" class="btn st-b1" id="st-notte">🌙 Buonanotte</button></div>' +
     '<button type="button" class="st-again" id="st-again">🔁 Da capo</button></div></div>';

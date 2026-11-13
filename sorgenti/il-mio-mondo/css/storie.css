@@ -140,3 +140,75 @@ body.v2 .btn.st-b2,.btn.st-b2{--bc:#a879ff;background:#a879ff;color:#fff;box-sha
   .st-pet.dorme .dragon{transform:rotate(72deg) translate(6px,8px)}
   .st-cover{transition:none}
 }
+
+/* ================= 13/11/2026 · nuova grafica: cielo, luna, scaffali per raccolta, passaggi di scena ================= */
+/* cielo di stelline e cometa */
+.st-sky{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.st-sky i{position:absolute;border-radius:50%;background:#fff8dc;box-shadow:0 0 6px rgba(255,248,220,.8);opacity:.3;animation:st-luccica 3.2s ease-in-out infinite}
+.st-sky.hero i{top:auto}
+.st-cometa{position:absolute;left:-12%;top:14%;width:110px;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,#fff8dc);opacity:0;transform:rotate(14deg);animation:st-cometa 13s ease-in 4s infinite}
+@keyframes st-luccica{0%,100%{opacity:.22;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+@keyframes st-cometa{0%{opacity:0;transform:translate(0,0) rotate(14deg)}3%{opacity:.9}9%{opacity:0;transform:translate(125vw,30vh) rotate(14deg)}100%{opacity:0;transform:translate(125vw,30vh) rotate(14deg)}}
+/* la luna: nella testata sta ferma; nel lettore sale mentre la storia va avanti (--pg da 0 a 1) */
+.st-luna{position:absolute;z-index:0;right:26px;top:16px;width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 34% 32%,#fffbe6,#ffe9a3 62%,#f3cf6b);box-shadow:0 0 0 8px rgba(255,236,170,.10),0 0 34px 10px rgba(255,236,170,.30);pointer-events:none;animation:st-alone 5s ease-in-out infinite}
+.st-luna::before,.st-luna::after{content:"";position:absolute;border-radius:50%;background:rgba(214,170,70,.35)}
+.st-luna::before{width:14px;height:14px;left:14px;top:26px}.st-luna::after{width:8px;height:8px;left:34px;top:14px}
+#st-ov>.st-luna{right:auto;left:calc(6% + var(--pg,0) * 80%);top:calc(96px - var(--pg,0) * 46px + (var(--pg,0) * var(--pg,0)) * 0px);width:46px;height:46px;opacity:.9;transition:left 1.6s ease,top 1.6s ease}
+#st-ov.fine>.st-luna{left:50%;top:70px;width:86px;height:86px;margin-left:-43px;opacity:1;transition:all 2.2s ease}
+#st-ov.fine .st-notte{display:none}
+@keyframes st-alone{0%,100%{box-shadow:0 0 0 8px rgba(255,236,170,.10),0 0 34px 10px rgba(255,236,170,.28)}50%{box-shadow:0 0 0 12px rgba(255,236,170,.14),0 0 46px 16px rgba(255,236,170,.40)}}
+/* lucciole che salgono piano */
+.st-lucciole{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.st-lucciole i{position:absolute;bottom:-12px;width:7px;height:7px;border-radius:50%;background:#ffe98a;box-shadow:0 0 12px 4px rgba(255,233,138,.55);opacity:0;animation:st-lucciola 11s ease-in-out infinite}
+@keyframes st-lucciola{0%{opacity:0;transform:translate(0,0)}15%{opacity:.85}50%{transform:translate(26px,-46vh)}85%{opacity:.6}100%{opacity:0;transform:translate(-18px,-92vh)}}
+#st-ov>.st-top,#st-ov>.st-stage,#st-ov>.st-dots,#st-ov>.st-ctl{position:relative;z-index:1}
+#st-ov{overflow:hidden}
+.st-hero>.st-pet,.st-hero>.st-hi{z-index:1}
+.st-hero{padding-right:104px;box-shadow:0 6px 0 #1a1c45}
+.st-cielo{display:none}
+/* stelline del progresso: una per storia */
+.st-prog{display:flex;flex-wrap:wrap;gap:3px;margin-top:10px;font-size:15px;line-height:1}
+.st-prog i{font-style:normal;color:rgba(255,255,255,.28)}
+.st-prog i.on{color:#ffd23f;text-shadow:0 0 8px rgba(255,210,63,.7)}
+/* uno scaffale per raccolta */
+.st-racc{margin-top:22px}
+.st-rh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 4px 2px;font-family:var(--font-display);font-size:23px;color:var(--ink)}
+.st-rh small{font-family:inherit;font-size:14px;font-weight:800;color:var(--ink-soft);background:var(--card,#fff);border:2px solid rgba(51,48,74,.14);border-radius:999px;padding:3px 12px;white-space:nowrap}
+.st-racc .st-shelf{margin:12px 0 8px;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 18px}
+@media (max-width:900px){.st-racc .st-shelf{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.st-book::after{height:12px;background:linear-gradient(#d9a36f,#b47a45 55%,#9a6535);box-shadow:0 5px 0 #7c4f28,0 12px 14px -6px rgba(51,48,74,.35)}
+.st-book:nth-child(odd) .st-cover{transform:rotate(-.8deg)}.st-book:nth-child(even) .st-cover{transform:rotate(.7deg)}
+.st-book:hover .st-cover,.st-book:focus-visible .st-cover{transform:translateY(-6px) rotate(0);box-shadow:8px 12px 0 rgba(51,48,74,.16)}
+.st-book:active .st-cover,.st-book.apre .st-cover{transform:perspective(700px) rotateY(-28deg) scale(1.03);box-shadow:16px 8px 0 rgba(51,48,74,.14)}
+.st-cover{border-radius:6px 16px 16px 6px}
+.st-lucido{position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg,rgba(255,255,255,.34) 0,rgba(255,255,255,0) 16%,rgba(255,255,255,0) 60%,rgba(255,255,255,.12) 61%,rgba(255,255,255,0) 72%),linear-gradient(90deg,rgba(0,0,0,.16),rgba(0,0,0,0) 7%)}
+.st-book.letto .st-cover::after{content:"";position:absolute;left:18px;top:-2px;width:16px;height:34px;background:#ff5c8a;border:2px solid #33304a;border-top:0;clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%)}
+.st-vera{position:absolute;left:10px;bottom:8px;font-style:normal;font-weight:900;font-size:13px;padding:3px 10px;border-radius:999px;background:#fff;color:#33304a;border:2px solid #33304a}
+.st-da{font-weight:900;color:var(--ink)}
+.st-top b .st-da{display:block;font-family:var(--font-body,inherit);font-size:13px;font-weight:800;color:#fdf6e3;opacity:.75;margin-top:1px}
+/* il lettore: la scena respira e cambia con una dissolvenza; il testo gira come una pagina */
+.st-scene{box-shadow:0 14px 34px -12px rgba(0,0,0,.6),0 0 0 6px rgba(255,255,255,.06);overflow:visible}
+.st-scene .sd{animation:st-respiro 16s ease-in-out infinite alternate}
+.st-scene.cambia .sd{animation:st-scena .9s ease-out 1,st-respiro 16s ease-in-out .9s infinite alternate}
+@keyframes st-respiro{from{transform:scale(1)}to{transform:scale(1.035)}}
+@keyframes st-scena{0%{opacity:.35;transform:scale(1.06)}100%{opacity:1;transform:scale(1)}}
+.st-scene{overflow:hidden}.st-scene .st-pet{z-index:2}
+.st-stage>.st-scene{overflow:visible}.st-scene .sd{clip-path:inset(0 round 17px)}
+.st-text.in{animation:st-pagina .5s cubic-bezier(.2,.7,.2,1) both}
+.st-text.in.back{animation-name:st-pagina-b}
+@keyframes st-pagina{from{opacity:0;transform:translateX(34px)}to{opacity:1;transform:none}}
+@keyframes st-pagina-b{from{opacity:0;transform:translateX(-34px)}to{opacity:1;transform:none}}
+.st-text span.cur{background:linear-gradient(transparent 58%,rgba(255,210,63,.42) 58%);box-shadow:none;color:#fff;text-shadow:0 0 18px rgba(255,236,170,.35)}
+#st-ov.leggo .st-text p{line-height:1.75}
+.st-dots i{transition:background .5s,width .5s}.st-dots i.cur{width:34px;box-shadow:0 0 10px rgba(255,210,63,.6)}
+.st-ctl button{transition:transform .12s}.st-ctl button:active{transform:scale(.94)}
+/* il finale: la luna grande al centro, il biglietto che compare piano */
+.st-end{padding-top:120px}
+.st-card-end{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 18px 40px -18px rgba(0,0,0,.7);animation:st-biglietto .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes st-biglietto{from{opacity:0;transform:translateY(22px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .st-sky i,.st-cometa,.st-luna,.st-lucciole i,.st-scene .sd,.st-scene.cambia .sd,.st-text.in,.st-text.in.back,.st-card-end{animation:none!important}
+  .st-sky i{opacity:.6}.st-lucciole{display:none}
+  #st-ov>.st-luna,#st-ov.fine>.st-luna{transition:none}
+  .st-book:nth-child(odd) .st-cover,.st-book:nth-child(even) .st-cover{transform:none}
+}

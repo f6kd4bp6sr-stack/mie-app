@@ -1,0 +1,193 @@
+{
+ "id": "r2",
+ "titolo": "Storie dal mondo",
+ "_info": "Raccolta di «Raccontami una storia». Fiabe tradizionali e di autori di pubblico dominio riscritte con parole nostre, più una storia vera («vera», con fonti). «da» = origine, mostrata nella libreria e nel lettore; «g» = giorno della settimana (1 lunedì … 7 domenica); «bonus» = storia in più. «id» non si cambia mai. Autore e revisore indipendente (origini e fatti verificati sulle fonti): 13/11/2026.",
+ "storie": [
+  {
+   "id": "s09",
+   "g": 1,
+   "ic": "🍲",
+   "t": "La zuppa di pietra",
+   "tema": "condividere",
+   "da": "fiaba popolare europea",
+   "fonti": [
+    "D. L. Ashliman, University of Pittsburgh, «Stone Soup: Folktales of Type 1548» https://sites.pitt.edu/~dash/type1548.html",
+    "Wikipedia: «Stone Soup» https://en.wikipedia.org/wiki/Stone_Soup"
+   ],
+   "p": [
+    "Questa è una fiaba che si racconta in tanti paesi d'Europa, da moltissimo tempo. Ogni paese ha la sua versione. Questa è la nostra.",
+    "Una sera di vento, due viaggiatori arrivarono in un villaggio. Avevano camminato tutto il giorno: i piedi facevano male e la pancia brontolava. Bussarono a una porta, poi a un'altra. «Mi dispiace, non abbiamo niente» dicevano tutti, e chiudevano piano.",
+    "I viaggiatori non si arrabbiarono. Si guardarono, e uno dei due sorrise. In mezzo alla piazza c'era un grande paiolo vuoto, di quelli che si usano per le feste. Lo riempirono con l'acqua del pozzo, accesero il fuoco e raccolsero da terra una pietra liscia e rotonda. La lavarono bene e la lasciarono cadere nell'acqua. Plof.",
+    "Una bambina si affacciò alla finestra. «Che cosa cucinate?» «Zuppa di pietra» rispose un viaggiatore. «Sarà buonissima. Manca solo un pizzico di sale.» La bambina corse a casa e tornò con il sale, tenuto stretto nel pugno.",
+    "Poi arrivò un vicino. Il viaggiatore assaggiò e disse: «La zuppa di pietra viene ancora meglio con una carota.» «Ne ho una in cantina» disse il vicino, e la portò. Dopo la carota vennero le patate, una cipolla, un pezzo di formaggio, qualche foglia di alloro e un cucchiaio d'orzo. Ognuno portava una cosa piccola.",
+    "Il profumo si sparse per tutte le strade. Qualcuno accese le lanterne, qualcuno portò un tavolo, qualcuno un pane ancora caldo, qualcuno una fisarmonica. Quando il paiolo fu pieno di zuppa dorata, i viaggiatori tolsero la pietra con il mestolo, e tutti si sedettero insieme, sotto le stelle.",
+    "Nessuno, in quel villaggio, aveva mai mangiato una zuppa così buona. Dopo cena si cantò piano, con le pance calde e gli occhi un po' pesanti. I due viaggiatori trovarono un letto di paglia profumata. E la pietra? Restò sul bordo del paiolo, pulita e lucida, a godersi anche lei una bella notte tranquilla."
+   ],
+   "d": "E tu? Che cosa porteresti tu, se tutto un villaggio preparasse una zuppa insieme?"
+  },
+  {
+   "id": "s10",
+   "g": 2,
+   "ic": "🕊️",
+   "t": "La gru riconoscente",
+   "tema": "la gratitudine",
+   "da": "Giappone",
+   "fonti": [
+    "Governo del Giappone, «Highlighting Japan» (dicembre 2023): «The Home of Folk Tales about Cranes» https://gov-online.go.jp/eng/publicity/book/hlj/html/202312/202312_02_en.html",
+    "Wikipedia: «Tsuru no Ongaeshi» https://en.wikipedia.org/wiki/Tsuru_no_Ongaeshi"
+   ],
+   "p": [
+    "Questa storia viene dal Giappone, dove si racconta da moltissimo tempo. In giapponese si chiama «Tsuru no Ongaeshi», che vuol dire: la gru che ricambia un favore.",
+    "In un villaggio di montagna, d'inverno, viveva un giovane povero e gentile. Una mattina, mentre raccoglieva la legna, sentì un battere d'ali nella neve. Una gru bianca era rimasta impigliata in una rete e si agitava, stanca e spaventata.",
+    "Il giovane si inginocchiò piano. «Calma, calma» sussurrò. Con le dita fredde sciolse i nodi uno a uno e liberò la gru. L'uccello lo guardò, volò in cerchio sopra la sua testa tre volte e sparì nel cielo chiaro.",
+    "Quella sera, mentre fuori scendeva la neve, qualcuno bussò alla porta. Era una giovane donna con un vestito bianco. «Mi sono persa» disse. «Posso restare qui?» Il giovane le fece posto accanto al fuoco. Il giorno dopo lei non se ne andò, e i due cominciarono a vivere insieme.",
+    "Un giorno la donna disse: «Vorrei tessere una stoffa. Ma devi promettermi una cosa: non aprire la porta della stanza finché non ho finito.» Il giovane promise. Per giorni sentì il telaio fare tac tac, tac tac, piano nella notte.",
+    "Dopo sette giorni lei uscì, stanca ma sorridente, con una stoffa bianca e luminosa come la neve al mattino. Il giovane la portò in città e la vendette a un buon prezzo. Con quei soldi comprò riso e legna, e per un po' non mancò niente.",
+    "Poi lei chiese di tessere ancora, e lui promise ancora. Ma questa volta la curiosità fu più forte, e una sera socchiuse la porta. Nella stanza non c'era una donna. C'era una gru bianca, davanti al telaio, che tesseva con le sue piume morbide.",
+    "La gru si voltò, e tornò donna. «Sono la gru che hai liberato» disse con voce dolce. «Volevo ringraziarti. Ora che mi hai vista, devo tornare al cielo.» Gli lasciò l'ultima stoffa e volò via sopra le montagne. Ogni inverno, quando il giovane vedeva passare le gru, alzava la mano per salutare. E gli sembrava sempre che una di loro facesse un giro in più sopra la sua casa. Poi il cielo tornava quieto, la neve scendeva piano e il villaggio si addormentava."
+   ],
+   "d": "E tu? C'è qualcuno che ti ha aiutata e che vorresti ringraziare in un modo speciale, tutto tuo?"
+  },
+  {
+   "id": "s11",
+   "g": 3,
+   "ic": "🐦",
+   "t": "L'usignolo dell'imperatore",
+   "tema": "ciò che è vero",
+   "da": "Hans Christian Andersen, Danimarca",
+   "fonti": [
+    "H.C. Andersen Centre, University of Southern Denmark: «The Nightingale» (prima pubblicazione 11 novembre 1843) https://andersen.sdu.dk/vaerk/register/info_e.html?vid=64",
+    "H.C. Andersen Centre: testo inglese «The Nightingale» (trad. Hersholt) https://andersen.sdu.dk/vaerk/hersholt/TheNightingale_e.html",
+    "Wikipedia: «The Nightingale (fairy tale)» https://en.wikipedia.org/wiki/The_Nightingale_(fairy_tale)"
+   ],
+   "p": [
+    "Questa storia l'ha scritta tanto tempo fa un signore danese, Hans Christian Andersen. Fu stampata nel milleottocentoquarantatré, e si svolge in Cina.",
+    "Il giardino del palazzo dell'imperatore era così grande che finiva in un bosco, e il bosco arrivava fino al mare. Lì viveva un usignolo. Era un uccellino piccolo e grigio, ma il suo canto era così bello che i pescatori, di notte, smettevano di tirare le reti per ascoltarlo.",
+    "L'imperatore lo scoprì da un libro, e volle sentirlo subito. I cortigiani cercarono dappertutto, finché una ragazza della cucina disse: «Io lo conosco. Canta nel bosco, vicino alla riva.» L'usignolo fu portato a palazzo, cantò, e all'imperatore si riempirono gli occhi di lacrime.",
+    "Un giorno arrivò un regalo da un altro paese: un usignolo meccanico, tutto d'oro e di gemme, che cantava sempre la stessa canzone senza mai sbagliare. «Che meraviglia!» dissero tutti. E nessuno si accorse che il vero usignolo, zitto zitto, era volato via dalla finestra, verso il bosco.",
+    "La corte si abituò al suo canto sempre uguale. Dopo un anno, una sera, l'uccello d'oro fece un rumore strano e si fermò. Un orologiaio lo aggiustò come poteva, ma da allora poteva cantare solo una volta all'anno. Passarono altri anni, e l'imperatore, stanco e malato, restò solo nel suo grande letto. «Musica, ti prego, un po' di musica» sussurrò. Ma l'uccello d'oro restava muto: non c'era nessuno a caricarlo.",
+    "Allora, dalla finestra aperta, arrivò un suono leggero. Era il vero usignolo, posato su un ramo. Aveva saputo che l'imperatore stava male ed era tornato a cantare per lui. Cantò del giardino, del mare, delle notti fresche e delle barche che tornano a riva con le prime stelle. L'imperatore sentì il cuore farsi leggero, e respirò meglio.",
+    "«Resta con me per sempre» disse. «Un palazzo non è casa mia» rispose l'usignolo. «Ma verrò ogni sera, mi poserò sul ramo davanti alla tua finestra e ti canterò tutto ciò che vedo.» Così fu. L'imperatore si addormentava ascoltando, con la finestra aperta e il profumo del giardino."
+   ],
+   "d": "E tu? Che cosa preferisci: qualcosa di perfetto che è sempre uguale, o qualcosa di vero che ogni volta è un po' diverso?"
+  },
+  {
+   "id": "s12",
+   "g": 4,
+   "ic": "🌹",
+   "t": "Biancaneve e Rosarossa",
+   "tema": "la gentilezza",
+   "da": "fratelli Grimm, Germania",
+   "fonti": [
+    "Fratelli Grimm, «Snow-White and Rose-Red» (trad. Margaret Hunt), Lit2Go, University of South Florida https://etc.usf.edu/lit2go/175/grimms-fairy-tales/3182/snow-white-and-rose-red/",
+    "Wikipedia: «Snow-White and Rose-Red» https://en.wikipedia.org/wiki/Snow-White_and_Rose-Red"
+   ],
+   "p": [
+    "Questa storia l'hanno raccolta i fratelli Grimm, in Germania, tanto tempo fa. Si chiama «Biancaneve e Rosarossa». Non è la Biancaneve con la mela e i sette nani: è un'altra storia, e qui la raccontiamo in una versione più dolce.",
+    "In una casetta ai margini del bosco viveva una vedova con le sue due figlie. Davanti alla casa crescevano due rosai, uno con le rose bianche e uno con le rose rosse. Per questo le bambine si chiamavano Biancaneve e Rosarossa. Biancaneve era tranquilla e amava stare vicino al fuoco. Rosarossa correva nei prati a inseguire le farfalle.",
+    "Una sera d'inverno, con la neve alta, qualcuno bussò alla porta. Rosarossa aprì e vide un grande orso. «Non abbiate paura» disse l'orso, con voce gentile. «Ho solo freddo. Vorrei scaldarmi un poco.» «Entra pure» disse la mamma. Le bambine gli spazzolarono la neve dal pelo, e giocarono con lui vicino al fuoco. L'orso tornò ogni sera, per tutto l'inverno.",
+    "Quando arrivò la primavera, l'orso salutò. «Devo andare nel bosco a custodire il mio tesoro, perché un nano dispettoso vuole rubarmelo.»",
+    "Un giorno, nel bosco, le sorelle trovarono un nano con una lunga barba bianca, rimasta incastrata nel tronco di un albero. Si agitava e brontolava. Le bambine tagliarono un pezzetto di barba con le forbici e lo liberarono. Il nano, invece di dire grazie, borbottò: «Che pasticcione! Mi avete rovinato la barba!» Prese un sacco pieno d'oro e se ne andò. Le sorelle lo aiutarono ancora altre volte, e lui si lamentò sempre.",
+    "Un pomeriggio lo trovarono in una radura, con le pietre preziose sparse sull'erba, che brillavano nella luce della sera. Dal bosco uscì un grande orso, e il nano si spaventò. «Prendi tutto! Prendi tutto!» gridò, e corse a nascondersi in un buco. Allora la pelliccia dell'orso cadde a terra come un mantello, e al suo posto c'era un giovane principe vestito d'oro.",
+    "«Sono io» disse sorridendo. «Il nano mi aveva trasformato. Voi mi avete accolto e scaldato per tutto l'inverno.» Il principe riprese il suo tesoro e venne spesso a trovarle. E i due rosai della mamma, uno bianco e uno rosso, continuarono a fiorire ogni anno. Fuori cadeva la neve, e nella casetta il fuoco era acceso."
+   ],
+   "d": "E tu? Ti è mai capitato di fare una gentilezza e di non ricevere nemmeno un grazie? Che cosa hai sentito?"
+  },
+  {
+   "id": "s13",
+   "g": 5,
+   "ic": "👑",
+   "t": "Il segreto del re con le orecchie di cavallo",
+   "tema": "dire la verità",
+   "da": "Irlanda",
+   "fonti": [
+    "Geoffrey Keating, «The History of Ireland» (Foras Feasa ar Éirinn), libro I, sezione 30, CELT, University College Cork https://celt.ucc.ie/published/T100054/text040.html",
+    "Wikipedia: «Labraid Loingsech» https://en.wikipedia.org/wiki/Labraid_Loingsech"
+   ],
+   "p": [
+    "Questa è una leggenda dell'Irlanda, che si racconta da moltissimo tempo. Parla di un re che si chiamava Labraid.",
+    "Il re Labraid aveva un segreto: sotto la corona, le sue orecchie erano lunghe e pelose, come quelle di un cavallo. Per questo teneva sempre i capelli lunghi e un cappuccio, e nessuno le aveva mai viste.",
+    "Solo una volta all'anno il re doveva farsi tagliare i capelli. Il barbiere era un giovane del regno, scelto a sorte. Un anno toccò a un ragazzo gentile. Vide le orecchie e rimase a bocca aperta. «Ti chiedo solo di tenere il segreto» disse il re. Il ragazzo promise.",
+    "Ma un segreto grande, dentro, pesa. Il barbiere camminava per il villaggio e sentiva una gran voglia di dirlo. Non mangiava, non dormiva e ogni giorno diventava più pallido.",
+    "Un druido, un vecchio saggio del villaggio, gli diede un consiglio: «Vai dove si incontrano quattro strade, gira a destra e racconta il segreto al primo albero che trovi. Un albero non lo ripeterà a nessuno.» Il ragazzo trovò un grande salice, gli avvicinò la bocca e sussurrò: «Il re ha le orecchie di cavallo.» Subito si sentì leggero come una piuma, e tornò a casa a mangiare.",
+    "Passò del tempo. Un arpista ruppe la sua arpa e andò a cercare del legno per farne una nuova. Tagliò un ramo di quel salice. Alla festa del re, appena toccò le corde, l'arpa cantò da sola, forte e chiara: «Il re Labraid ha le orecchie di cavallo!» Tutti si voltarono a guardare il re.",
+    "Il re si alzò e si tolse il cappuccio. Nella sala ci fu un gran silenzio. «È vero» disse. «Per tanti anni ho avuto vergogna di una cosa che non avevo scelto. Ora lo sapete.» Nessuno rise. Qualcuno sorrise, e la festa continuò. Quella sera l'arpa suonò una melodia dolce, e il re, per la prima volta, andò a dormire senza cappuccio."
+   ],
+   "d": "E tu? Hai mai tenuto dentro una cosa che pesava? Con chi ti piacerebbe parlarne, per sentirti più leggera?"
+  },
+  {
+   "id": "s14",
+   "g": 6,
+   "ic": "🐸",
+   "t": "Tiddalik, la rana assetata",
+   "tema": "ridere insieme",
+   "da": "popoli aborigeni, Australia",
+   "fonti": [
+    "Museums Victoria, Bunjilaka: «Tiddalik the frog» https://museumsvictoria.com.au/childrens-week/look-and-listen/tiddalik-the-frog/",
+    "Museums Victoria, Bunjilaka: «Creation Stories» https://museumsvictoria.com.au/bunjilaka/about-us/creation-stories/",
+    "Bataluk Cultural Trail (Gippsland): «The Port Albert Frog and the Whiterock» https://batalukculturaltrail.com.au/stories/frog_whiterock.php",
+    "Gunaikurnai Land and Waters Aboriginal Corporation: «Who we are» https://gunaikurnai.org/our-story/glawac-who-we-are",
+    "Wikipedia: «Tiddalik» https://en.wikipedia.org/wiki/Tiddalik"
+   ],
+   "p": [
+    "Questo è un racconto tradizionale aborigeno dell'Australia, che si tramanda di voce in voce da moltissimo tempo. Si racconta in molte parti dell'Australia, in tante versioni diverse. Una di queste appartiene al popolo Gunaikurnai, del Gippsland, nel sud-est del paese. Noi ne raccontiamo una versione semplice, con rispetto per chi la custodisce.",
+    "Tanto tempo fa viveva una rana che si chiamava Tiddalik. Una mattina si svegliò con una sete enorme. Andò al fiume e bevve. Poi bevve al lago. Bevve negli stagni e nelle pozze, finché non rimase nemmeno una goccia. Tiddalik era diventata grossa come una collina, con la pancia tonda e tesa.",
+    "Senza acqua, gli alberi si piegarono e i prati ingiallirono. I pesci non avevano più dove nuotare. Gli uccelli e i canguri avevano la gola secca. Gli animali si riunirono all'ombra di un albero. «Dobbiamo farci restituire l'acqua» disse uno. «Ma come?» chiese un altro. «Tiddalik ha la pancia piena. Se la facessimo ridere, l'acqua uscirebbe da sola.»",
+    "Uno dopo l'altro, ci provarono. Un animale fece le capriole, un altro fece le smorfie, un altro cantò una canzone stonata. Tiddalik li guardava, seria e immobile, senza nemmeno sorridere.",
+    "Alla fine si fece avanti l'anguilla. Non disse una parola. Cominciò a muoversi: si attorcigliò, si annodò, si srotolò, si fece a spirale e a otto, sempre con una faccia serissima. Tiddalik la fissò. Un angolo della bocca tremò. Poi arrivò un singhiozzo. E poi scoppiò a ridere, con una risata che fece tremare tutta la terra.",
+    "L'acqua uscì dalla bocca di Tiddalik e scorse via, riempiendo il fiume, il lago, gli stagni e le pozze. Gli animali bevvero e si tuffarono nell'acqua fresca. Gli alberi si rialzarono, e l'erba tornò verde.",
+    "Quella sera il cielo si fece rosa e poi blu. Gli animali restarono vicino all'acqua e risero ancora, piano, ripensando all'anguilla. Tiddalik, con la pancia di nuovo leggera, si accoccolò sulla riva. Le rane cantarono per tutta la notte, e il fiume cantò con loro."
+   ],
+   "d": "E tu? Qual è l'ultima volta che hai riso così tanto con qualcuno da non riuscire a smettere?"
+  },
+  {
+   "id": "s15",
+   "g": 7,
+   "ic": "🌸",
+   "t": "Il gigante egoista",
+   "tema": "la generosità",
+   "da": "Oscar Wilde, Irlanda e Inghilterra",
+   "fonti": [
+    "Project Gutenberg: Oscar Wilde, «The Happy Prince and Other Tales» (1888) https://www.gutenberg.org/ebooks/902",
+    "Wikipedia: «The Selfish Giant» https://en.wikipedia.org/wiki/The_Selfish_Giant"
+   ],
+   "p": [
+    "Questa storia l'ha scritta Oscar Wilde, uno scrittore nato in Irlanda. Fu pubblicata nel milleottocentoottantotto, in un libro di fiabe.",
+    "C'era una volta un grande giardino, con l'erba morbida, i fiori simili a stelle e dodici peschi. In primavera i peschi si coprivano di fiori rosa, e in autunno di frutti. Ogni pomeriggio, all'uscita da scuola, i bambini andavano a giocarci. Gli uccelli cantavano sui rami.",
+    "Il giardino era di un gigante, che era stato sette anni lontano, da un amico. Quando tornò, trovò i bambini che giocavano. «Che cosa fate nel mio giardino?» gridò, con una voce che fece tremare i vetri. I bambini scapparono. Il gigante costruì un alto muro, e vi mise un cartello: «Vietato entrare».",
+    "I bambini non avevano più un posto dove giocare. Sulla strada c'erano solo polvere e sassi. Passavano accanto al muro e sospiravano, ripensando al bel giardino.",
+    "Arrivò la primavera, e in tutto il paese ci furono fiori e uccellini. Ma nel giardino del gigante era sempre inverno. Gli uccelli non cantavano, gli alberi non fiorivano. La neve copriva l'erba, il gelo faceva tutto d'argento e il vento del nord ruggiva. «Non capisco perché la primavera tardi» diceva il gigante.",
+    "Una mattina sentì una musica dolce: un uccellino cantava fuori dalla finestra. «Finalmente è primavera!» pensò, e guardò fuori. I bambini erano entrati da un buco nel muro e sedevano sui rami, e gli alberi si erano coperti di fiori. Solo in un angolo era ancora inverno: là c'era un bambino piccolo, troppo piccolo per arrivare al ramo, che piangeva.",
+    "Il gigante sentì il cuore sciogliersi. «Come sono stato egoista» pensò. Uscì in punta di piedi. I bambini lo videro e scapparono, ma il piccolo no, perché aveva gli occhi pieni di lacrime e non lo vide arrivare. Il gigante lo prese con dolcezza e lo posò sul ramo. Subito l'albero fiorì, e il bambino gli buttò le braccia al collo.",
+    "Gli altri bambini tornarono. «Ora il giardino è vostro» disse il gigante, e con una grande ascia abbatté il muro. Quando la gente andò al mercato, trovò il gigante che giocava con i bambini nel più bel giardino che avesse mai visto. Venne la sera, i bambini tornarono a casa, e il gigante, stanco e contento, restò ad ascoltare gli uccelli."
+   ],
+   "d": "E tu? Se avessi un posto bellissimo tutto tuo, che cosa vorresti condividere, e con chi?"
+  },
+  {
+   "id": "s16",
+   "bonus": true,
+   "vera": true,
+   "ic": "🧮",
+   "t": "Ada e la macchina dei numeri",
+   "tema": "fantasia e logica",
+   "da": "storia vera, Inghilterra",
+   "fonti": [
+    "Science Museum Group: «Ada Lovelace: visionary of the computer age» https://blog.sciencemuseum.org.uk/ada-lovelace-visionary-of-the-computer-age/",
+    "Computer History Museum: «Ada Lovelace» https://www.computerhistory.org/babbage/adalovelace/",
+    "Computer History Museum: «A Brief History» (Babbage) https://www.computerhistory.org/babbage/history",
+    "Bodleian Libraries, Oxford: «Ada Lovelace and the Analytical Engine» https://blogs.bodleian.ox.ac.uk/adalovelace/2018/07/26/ada-lovelace-and-the-analytical-engine/",
+    "Britannica: «Ada Lovelace» https://www.britannica.com/biography/Ada-Lovelace"
+   ],
+   "p": [
+    "Questa storia è vera. Parla di una ragazza che è vissuta in Inghilterra tanto tempo fa, e si chiamava Ada.",
+    "Ada nacque nel milleottocentoquindici. Suo padre era un famoso poeta, lord Byron. Sua madre amava la matematica e volle che anche Ada la studiasse, cosa non comune per le ragazze di allora. Ada studiò a casa con insegnanti privati e passò molto tempo sui numeri.",
+    "Quando aveva diciassette anni, a una festa, conobbe Charles Babbage, un inventore che progettava macchine per fare i conti. Poco dopo Babbage le mostrò un piccolo pezzo funzionante di una sua macchina, fatto di ingranaggi. Ada rimase affascinata e voleva capire come funzionasse.",
+    "Babbage stava pensando a una macchina ancora più grande, la Macchina Analitica. Avrebbe potuto seguire una lunga serie di istruzioni scritte su schede forate, simili a quelle dei telai che tessevano disegni nella stoffa. Fu disegnata con molti particolari, ma non fu mai costruita per intero.",
+    "Nel milleottocentoquarantatré Ada pubblicò un lavoro importante. Aveva tradotto dal francese un articolo su quella macchina e vi aveva aggiunto le sue Note. In una di queste spiegò, passo dopo passo, come la macchina avrebbe potuto calcolare i numeri di Bernoulli, una famiglia di numeri speciali studiati in matematica. Era la prima spiegazione di questo tipo mai pubblicata, e molti la considerano il primo programma per computer della storia.",
+    "Ma nelle Note c'era anche un'idea ancora più grande. Ada capì che i numeri possono rappresentare anche altre cose, come le note musicali o i simboli. Allora una macchina così non avrebbe lavorato solo con i conti: forse avrebbe potuto anche comporre musica. A quel tempo nessun computer esisteva ancora, e lei aveva già immaginato quante cose avrebbe potuto fare.",
+    "Oggi i computer fanno musica, disegni e giochi. Un linguaggio per programmarli si chiama Ada, in suo onore. E ogni anno, in ottobre, c'è un giorno dedicato a lei e alle donne che lavorano nella scienza e nella tecnologia. Tutto è cominciato da una ragazza con tanti numeri nella testa e una grande fantasia."
+   ],
+   "d": "E tu? Se una macchina potesse imparare a fare una cosa che ami, come la musica o il disegno, che cosa le insegneresti per prima?"
+  }
+ ]
+}
