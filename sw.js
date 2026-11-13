@@ -1,5 +1,5 @@
-// Il mio mondo: funziona anche senza internet. Versione 4b64c48222
-const CACHE = 'mondo-4b64c48222';
+// Il mio mondo: funziona anche senza internet. Versione 6396e56380
+const CACHE = 'mondo-6396e56380';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icona-c2-180.png', './icona-c2-192.png', './icona-c2-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 const SCOPE = new URL(self.registration.scope).pathname;
