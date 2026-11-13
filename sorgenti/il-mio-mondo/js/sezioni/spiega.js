@@ -309,86 +309,224 @@ const mpAll = () => store.get('mappe', []);
 const mpSaveAll = L => store.set('mappe', L);
 const MP_COL = ['#3fa9f5', '#ff9a3c', '#58c46b', '#a879ff', '#ff6b6b', '#e0b100'];
 let MP = null;
-function mpNew(center, words) {
-  const m = { id: Date.now().toString(36), t: center || 'La mia mappa', d: todayIso(), n: [{ id: 'c', x: 600, y: 400, t: center || 'La mia idea', c: 1 }], l: [], words: (words || []).slice(0, 8) };
+/* center: idea centrale · words: parole proposte come etichette da toccare · q: la domanda (diventa il titolo) · metti: parole già messe intorno al centro */
+function mpNew(center, words, q, metti) {
+  const m = { id: Date.now().toString(36), t: q || center || 'La mia mappa', d: todayIso(), n: [{ id: 'c', x: 600, y: 400, t: center || 'La mia idea', c: 1 }], l: [], words: (words || []).slice(0, 8) };
+  (metti || []).slice(0, 8).forEach((w, k) => { const p = mpPosto(m, k); m.n.push({ id: 'n' + k + Date.now().toString(36), x: p.x, y: p.y, t: w, c: (k + 2) % MP_COL.length }); });
   const L = mpAll(); if (L.length >= 60) { openModal('<div style="font-size:44px">🗺️</div><p style="font-weight:800">Hai già 60 mappe! Per farne una nuova, cancellane prima una vecchia in Le mie mappe.</p><button type="button" class="btn" id="mp-full" data-focus>Ok</button>'); $('mp-full').addEventListener('click', closeModal); return; }
   L.unshift(m); mpSaveAll(L);
   mpOpen(m.id);
 }
 function mpOpen(id) {
   const m = mpAll().find(x => x.id === id); if (!m) return;
-  MP = { m, sel: null, mode: 'muovi', from: null };
+  MP = { m, sel: null, selL: null, from: null }; MPD = null;
   let ov = $('mp-ed'); if (!ov) { ov = document.createElement('div'); ov.id = 'mp-ed'; ov.className = 'mp-ed'; document.body.appendChild(ov); }
   ov.hidden = false; document.body.classList.add('in-lesson'); mpPaint();
 }
 function mpStore() { const L = mpAll(), i = L.findIndex(x => x.id === MP.m.id); MP.m.d = todayIso(); if (i >= 0) L[i] = MP.m; else L.unshift(MP.m); mpSaveAll(L); }
-function mpClose() { const ov = $('mp-ed'); if (ov) ov.hidden = true; document.body.classList.remove('in-lesson'); MP = null; if (current === 'mappe') go('mappe'); }
-const mpW = t => Math.max(120, Math.min(300, String(t).length * 11 + 40));
-function mpSVG(m, sel, from, small) {
-  const N = {}; m.n.forEach(n => N[n.id] = n);
+function mpClose() { try { speechSynthesis.cancel(); } catch (e) {} const ov = $('mp-ed'); if (ov) ov.hidden = true; document.body.classList.remove('in-lesson'); MP = null; if (current === 'mappe') go('mappe'); }
+const mpW = t => Math.max(120, Math.min(330, String(t).length * 11 + 40));
+/* la frase di una freccia: «il Sole» + «scalda» + «l'acqua» */
+const mpFrase = (m, l) => { const a = m.n.find(n => n.id === l.a), b = m.n.find(n => n.id === l.b); if (!a || !b) return ''; const s = (a.t + ' ' + (l.w || 'è collegato a') + ' ' + b.t).replace(/\s+/g, ' ').trim(); return s.charAt(0).toUpperCase() + s.slice(1) + '.'; };
+/* o: { selL: freccia scelta, rd: freccia che la voce sta leggendo, nn: quante idee mostrare, nl: quante frecce mostrare (per l'esempio animato) } */
+function mpSVG(m, sel, from, small, o) {
+  o = o || {}; const N = {}; m.n.forEach(n => N[n.id] = n);
+  const nodi = o.nn == null ? m.n : m.n.slice(0, o.nn), frecce = o.nl == null ? m.l : m.l.slice(0, o.nl);
   const cut = (p, q) => { const dx = q.x - p.x, dy = q.y - p.y, w = mpW(p.t) / 2 + 8, h = 34, t = Math.min(w / Math.abs(dx || 1e-6), h / Math.abs(dy || 1e-6)); return [p.x + dx * t, p.y + dy * t]; };
-  const L = m.l.map((l, i) => { const a = N[l.a], b = N[l.b]; if (!a || !b) return ''; const p = cut(a, b), q = cut(b, a), mx = (p[0] + q[0]) / 2, my = (p[1] + q[1]) / 2, w = String(l.w || '').length * 8.5 + 20;
-    return '<g class="mp-l" data-l="' + i + '"><path d="M' + p[0].toFixed(0) + ' ' + p[1].toFixed(0) + ' L' + q[0].toFixed(0) + ' ' + q[1].toFixed(0) + '"/>' + (l.w ? '<rect x="' + (mx - w / 2) + '" y="' + (my - 15) + '" width="' + w + '" height="30" rx="15"/><text x="' + mx + '" y="' + (my + 6) + '">' + esc(l.w) + '</text>' : '') + '</g>'; }).join('');
-  const B = m.n.map(n => { const w = mpW(n.t), c = MP_COL[(n.c || 0) % MP_COL.length];
-    return '<g class="mp-n' + (sel === n.id ? ' sel' : '') + (from === n.id ? ' from' : '') + '" data-n="' + n.id + '" transform="translate(' + n.x + ' ' + n.y + ')"><rect x="' + (-w / 2) + '" y="-30" width="' + w + '" height="60" rx="18" fill="#fff" stroke="' + c + '"/><text y="8">' + esc(n.t) + '</text></g>'; }).join('');
+  const L = frecce.map((l, i) => { const a = N[l.a], b = N[l.b]; if (!a || !b) return ''; const p = cut(a, b), q = cut(b, a), mx = (p[0] + q[0]) / 2, my = (p[1] + q[1]) / 2, w = String(l.w || '?').length * 8.5 + 22;
+    return '<g class="mp-l' + (o.selL === i ? ' sel' : '') + (o.rd === i ? ' rd' : '') + (l.w ? '' : ' vuota') + (o.nl != null && i === o.nl - 1 ? ' nuova' : '') + '" data-l="' + i + '"><path class="mp-hit" d="M' + p[0].toFixed(0) + ' ' + p[1].toFixed(0) + ' L' + q[0].toFixed(0) + ' ' + q[1].toFixed(0) + '"/><path class="mp-lp" marker-end="url(#mp-ar)" d="M' + p[0].toFixed(0) + ' ' + p[1].toFixed(0) + ' L' + q[0].toFixed(0) + ' ' + q[1].toFixed(0) + '"/>' +
+      '<rect x="' + (mx - w / 2) + '" y="' + (my - 16) + '" width="' + w + '" height="32" rx="16"/><text x="' + mx + '" y="' + (my + 6) + '">' + esc(l.w || '?') + '</text></g>'; }).join('');
+  const B = nodi.map((n, k) => { const w = mpW(n.t), c = MP_COL[(n.c || 0) % MP_COL.length];
+    return '<g class="mp-n' + (sel === n.id ? ' sel' : '') + (from === n.id ? ' from' : '') + (n.id === 'c' ? ' centro' : '') + (o.nn != null && k === o.nn - 1 && k > 0 ? ' nuova' : '') + '" data-n="' + n.id + '" transform="translate(' + n.x + ' ' + n.y + ')"><g class="mp-nb"><rect x="' + (-w / 2) + '" y="-30" width="' + w + '" height="60" rx="18" fill="' + (n.id === 'c' ? '#fff7d6' : '#fff') + '" stroke="' + c + '"/><text y="8">' + esc(n.t) + '</text></g></g>'; }).join('');
   return '<svg class="mp-svg' + (small ? ' small' : '') + '" viewBox="0 0 1200 800"><defs><marker id="mp-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7d8697"/></marker></defs>' + L + B + '</svg>';
 }
-function mpAsk(title, val, cb) {
-  openModal('<div class="big" style="font-size:22px">' + esc(title) + '</div><input type="text" id="mp-in" class="mp-in" maxlength="40" value="' + esc(val || '') + '" autocomplete="off"><div class="row center" style="margin-top:12px"><button type="button" class="btn" id="mp-ok">Ok</button><button type="button" class="btn ghost" id="mp-no">Annulla</button></div>');
+function mpAsk(title, val, cb, sub) {
+  openModal('<div class="big" style="font-size:22px">' + esc(title) + '</div>' + (sub ? '<p class="mp-sub">' + esc(sub) + '</p>' : '') + '<input type="text" id="mp-in" class="mp-in" maxlength="40" value="' + esc(val || '') + '" autocomplete="off"><div class="row center" style="margin-top:12px"><button type="button" class="btn" id="mp-ok">Ok</button><button type="button" class="btn ghost" id="mp-no">Annulla</button></div>');
   const ok = () => { const v = $('mp-in').value.trim(); closeModal(); cb(v); };
   $('mp-ok').addEventListener('click', ok); $('mp-no').addEventListener('click', closeModal);
   $('mp-in').addEventListener('keydown', e => { if (e.key === 'Enter') ok(); });
   setTimeout(() => { try { $('mp-in').focus(); $('mp-in').select(); } catch (e) {} }, 60);
 }
+/* le parole della freccia: etichette pronte (quasi sempre verbi) oppure scritte da lei */
+const MP_LEGAMI = ['è', 'ha', 'fa', 'serve a', 'diventa', 'è fatto di', 'vive in', 'viene da', 'perché', 'per esempio'];
+function mpAskLink(m, a, b, val, cb) {
+  const A = m.n.find(n => n.id === a), B = m.n.find(n => n.id === b);
+  openModal('<div class="big" style="font-size:22px">Che cosa c’è scritto sulla freccia?</div><p class="mp-sub">Scegli o scrivi le parole che uniscono le due idee: insieme devono fare una frase.</p>' +
+    '<div class="mp-prova"><b>' + esc(A.t) + '</b> <span id="mp-pw">…</span> <b>' + esc(B.t) + '</b></div>' +
+    '<div class="mp-chips">' + MP_LEGAMI.map(w => '<button type="button" class="mp-w" data-lw="' + esc(w) + '">' + esc(w) + '</button>').join('') + '</div>' +
+    '<input type="text" id="mp-in" class="mp-in" maxlength="28" placeholder="oppure scrivi tu…" value="' + esc(val || '') + '" autocomplete="off"><div class="row center" style="margin-top:12px"><button type="button" class="btn" id="mp-ok">Ok</button><button type="button" class="btn ghost" id="mp-no">Annulla</button></div>');
+  const inp = $('mp-in'), upd = () => { $('mp-pw').textContent = inp.value.trim() || '…'; }; upd();
+  const ok = () => { const v = inp.value.trim(); closeModal(); cb(v); };
+  inp.addEventListener('input', upd); inp.addEventListener('keydown', e => { if (e.key === 'Enter') ok(); });
+  document.querySelectorAll('[data-lw]').forEach(c => c.addEventListener('click', () => { inp.value = c.dataset.lw; upd(); }));
+  $('mp-ok').addEventListener('click', ok); $('mp-no').addEventListener('click', closeModal);
+}
+/* posto libero intorno al centro per la k-esima idea */
+function mpPosto(m, k) { const c0 = m.n[0] || { x: 600, y: 400 }, a = -Math.PI / 2 + k * (Math.PI * 2 / 6) + Math.floor(k / 6) * 0.5, r = 1 + 0.16 * Math.floor(k / 6); return { x: Math.round(Math.max(120, Math.min(1080, c0.x + Math.cos(a) * 400 * r))), y: Math.round(Math.max(50, Math.min(750, c0.y + Math.sin(a) * 270 * r))) }; }
+/* che cosa manca alla mappa: il prossimo passo, detto con gentilezza */
+function mpStato(m) {
+  const usate = new Set(); m.l.forEach(l => { usate.add(l.a); usate.add(l.b); });
+  const sole = m.n.filter(n => n.id !== 'c' && !usate.has(n.id)).length, vuote = m.l.filter(l => !l.w).length;
+  const passo = m.n.length < 4 ? '① Aggiungi le parole chiave con «➕ Idea»: ne bastano da 4 a 8.' : !m.l.length ? '② Collega: tocca un’idea, poi «🔗 Collega», poi un’altra idea.' : sole ? '② Ci sono ' + (sole === 1 ? '1 idea ancora da sola' : sole + ' idee ancora da sole') + ': collegale alle altre.' : vuote ? '③ ' + (vuote === 1 ? 'Una freccia è senza parole' : vuote + ' frecce sono senza parole') + ': toccala e scrivi le parole.' : '④ Ora tocca «📖 Leggi la mappa»: se le frasi suonano bene, è fatta!';
+  return { sole, vuote, passo };
+}
 function mpPaint() {
-  const S = MP, m = S.m, ov = $('mp-ed');
-  const hint = { muovi: 'Trascina le idee per metterle dove vuoi. Tocca un’idea per sceglierla.', collega: S.from ? 'Ora tocca l’idea da collegare.' : 'Tocca la prima idea, poi la seconda: nasce una freccia.', togli: 'Tocca un’idea o una freccia per toglierla.' }[S.mode];
+  const S = MP, m = S.m, ov = $('mp-ed'), st = mpStato(m), nSel = m.n.find(x => x.id === S.sel), lSel = S.selL != null ? m.l[S.selL] : null;
+  const hint = S.from ? 'Ora tocca l’idea a cui vuoi arrivare con la freccia.' : nSel ? 'Hai scelto «' + nSel.t + '»: puoi spostarla, cambiarla, colorarla o collegarla.' : lSel ? 'Hai scelto una freccia: puoi cambiare le parole o toglierla.' : st.passo;
   ov.innerHTML = '<div class="sp-top"><button type="button" class="ls-x" id="mp-x" aria-label="Chiudi">✕</button><button type="button" class="mp-title" id="mp-t">✏️ ' + esc(m.t) + '</button>' +
-    '<div class="mp-tools"><button type="button" class="btn small" id="mp-add">➕ Idea</button><button type="button" class="btn small ghost' + (S.mode === 'collega' ? ' on' : '') + '" id="mp-link">🔗 Collega</button>' +
-    '<button type="button" class="btn small ghost" id="mp-edit"' + (S.sel ? '' : ' disabled') + '>✏️ Scrivi</button><button type="button" class="btn small ghost" id="mp-col"' + (S.sel ? '' : ' disabled') + '>🎨</button><button type="button" class="btn small ghost' + (S.mode === 'togli' ? ' on' : '') + '" id="mp-del">🗑️ Togli</button></div></div>' +
-    '<p class="mp-hint">' + hint + '</p>' +
-    (m.words && m.words.length ? '<div class="mp-words"><span>Parole del racconto:</span>' + m.words.map((w, i) => '<button type="button" class="mp-w" data-w="' + i + '">' + esc(w) + '</button>').join('') + '</div>' : '') +
-    '<div class="mp-stage" id="mp-stage">' + mpSVG(m, S.sel, S.from) + '</div>';
+    '<div class="mp-tools"><button type="button" class="btn small" id="mp-add">➕ Idea</button><button type="button" class="btn small ghost" id="mp-read"' + (m.l.length ? '' : ' disabled') + '>📖 Leggi la mappa</button><button type="button" class="btn small ghost" id="mp-help">💡 Come si fa</button></div></div>' +
+    '<p class="mp-hint">' + esc(hint) + '</p>' +
+    (m.words && m.words.length ? '<div class="mp-words"><span>Parole da mettere (toccale):</span>' + m.words.map((w, i) => '<button type="button" class="mp-w" data-w="' + i + '">' + esc(w) + '</button>').join('') + '</div>' : '') +
+    '<div class="mp-stage" id="mp-stage">' + mpSVG(m, S.sel, S.from, false, { selL: S.selL }) +
+    (nSel && !S.from ? '<div class="mp-pop" style="left:' + (nSel.x / 12).toFixed(1) + '%;top:' + ((nSel.y + (nSel.y > 620 ? -96 : 44)) / 8).toFixed(1) + '%"><button type="button" data-a="scrivi">✏️ Scrivi</button><button type="button" data-a="collega">🔗 Collega</button><button type="button" data-a="colore" aria-label="Cambia colore">🎨</button>' + (nSel.id === 'c' ? '' : '<button type="button" data-a="togli" aria-label="Togli">🗑️</button>') + '</div>' : '') +
+    (lSel ? (() => { const a = m.n.find(n => n.id === lSel.a), b = m.n.find(n => n.id === lSel.b); return a && b ? '<div class="mp-pop" style="left:' + ((a.x + b.x) / 24).toFixed(1) + '%;top:' + (((a.y + b.y) / 2 + 26) / 8).toFixed(1) + '%"><button type="button" data-a="parole">✏️ Parole</button><button type="button" data-a="gira" aria-label="Gira la freccia">🔄 Gira</button><button type="button" data-a="toglil" aria-label="Togli">🗑️</button></div>' : ''; })() : '') + '</div>';
   const svg = ov.querySelector('svg'), pt = e => { const r = svg.getBoundingClientRect(); return { x: (e.clientX - r.left) / r.width * 1200, y: (e.clientY - r.top) / r.height * 800 }; };
-  const add = (t, x, y) => { const c0 = m.n[0] || { x: 600, y: 400 }, k = m.n.length - 1, a = -Math.PI / 2 + k * 1.05, r = 280 + 40 * Math.floor(k / 6);
-    const n = { id: 'n' + Date.now().toString(36) + Math.floor(Math.random() * 99), x: x || Math.max(110, Math.min(1090, c0.x + Math.cos(a) * r * 1.3)), y: y || Math.max(50, Math.min(750, c0.y + Math.sin(a) * r)), t, c: m.n.length % MP_COL.length }; m.n.push(n); S.sel = n.id; mpStore(); mpPaint(); };
+  const add = t => { const p = mpPosto(m, m.n.length - 1), n = { id: 'n' + Date.now().toString(36) + Math.floor(Math.random() * 99), x: p.x, y: p.y, t, c: m.n.length % MP_COL.length }; m.n.push(n); S.sel = n.id; S.selL = null; mpStore(); mpPaint(); };
   $('mp-x').addEventListener('click', mpClose);
   $('mp-t').addEventListener('click', () => mpAsk('Titolo della mappa', m.t, v => { if (v) { m.t = v; mpStore(); } mpPaint(); }));
-  $('mp-add').addEventListener('click', () => mpAsk('Scrivi un’idea', '', v => { if (v) add(v); }));
-  $('mp-link').addEventListener('click', () => { S.mode = S.mode === 'collega' ? 'muovi' : 'collega'; S.from = null; mpPaint(); });
-  $('mp-del').addEventListener('click', () => { S.mode = S.mode === 'togli' ? 'muovi' : 'togli'; S.from = null; mpPaint(); });
-  $('mp-edit').addEventListener('click', () => { const n = m.n.find(x => x.id === S.sel); if (n) mpAsk('Cambia la scritta', n.t, v => { if (v) { n.t = v; mpStore(); } mpPaint(); }); });
-  $('mp-col').addEventListener('click', () => { const n = m.n.find(x => x.id === S.sel); if (n) { n.c = ((n.c || 0) + 1) % MP_COL.length; mpStore(); mpPaint(); } });
+  $('mp-add').addEventListener('click', () => mpAsk('Scrivi un’idea', '', v => { if (v) add(v); }, 'Una parola chiave o poche parole, non una frase intera.'));
+  $('mp-help').addEventListener('click', () => { openModal('<div class="big" style="font-size:24px">💡 Come si fa una buona mappa</div>' + mpRegole() + '<div class="row center" style="margin-top:10px"><button type="button" class="btn" id="mp-hk" data-focus>Ho capito</button></div>'); $('mp-hk').addEventListener('click', closeModal); });
+  $('mp-read').addEventListener('click', () => mpLeggi());
   ov.querySelectorAll('.mp-w').forEach(b => b.addEventListener('click', () => { const w = m.words.splice(+b.dataset.w, 1)[0]; add(w); }));
-  ov.querySelectorAll('.mp-l').forEach(g => g.addEventListener('click', () => { if (S.mode === 'togli') { m.l.splice(+g.dataset.l, 1); mpStore(); mpPaint(); } }));
+  ov.querySelectorAll('.mp-pop [data-a]').forEach(b => b.addEventListener('click', e => {
+    e.stopPropagation(); const a = b.dataset.a;
+    if (a === 'scrivi') mpAsk('Cambia la scritta', nSel.t, v => { if (v) { nSel.t = v; if (nSel.id === 'c' && (m.t === 'La mia mappa' || !m.t)) m.t = v; mpStore(); } mpPaint(); });
+    else if (a === 'collega') { S.from = nSel.id; mpPaint(); }
+    else if (a === 'colore') { nSel.c = ((nSel.c || 0) + 1) % MP_COL.length; mpStore(); mpPaint(); }
+    else if (a === 'togli') { m.n = m.n.filter(x => x.id !== nSel.id); m.l = m.l.filter(l => l.a !== nSel.id && l.b !== nSel.id); S.sel = null; mpStore(); mpPaint(); }
+    else if (a === 'parole') mpAskLink(m, lSel.a, lSel.b, lSel.w, v => { lSel.w = v; mpStore(); mpPaint(); });
+    else if (a === 'gira') { const t = lSel.a; lSel.a = lSel.b; lSel.b = t; mpStore(); mpPaint(); }
+    else if (a === 'toglil') { m.l.splice(S.selL, 1); S.selL = null; mpStore(); mpPaint(); }
+  }));
+  ov.querySelectorAll('.mp-l').forEach(g => g.addEventListener('pointerdown', e => { e.stopPropagation(); S.selL = +g.dataset.l; S.sel = null; S.from = null; mpPaint(); }));
+  $('mp-stage').addEventListener('pointerdown', e => { if (e.target.closest('.mp-n,.mp-l,.mp-pop')) return; if (S.sel || S.selL != null || S.from) { S.sel = null; S.selL = null; S.from = null; mpPaint(); } });
   let drag = null;
   ov.querySelectorAll('.mp-n').forEach(g => {
     g.addEventListener('pointerdown', e => {
-      const id = g.dataset.n, n = m.n.find(x => x.id === id); e.preventDefault();
-      if (S.mode === 'togli') { if (id === 'c' && m.n.length > 1) { floatText(g, 'L’idea centrale resta'); return; } m.n = m.n.filter(x => x.id !== id); m.l = m.l.filter(l => l.a !== id && l.b !== id); S.sel = null; mpStore(); mpPaint(); return; }
-      if (S.mode === 'collega') {
-        if (!S.from) { S.from = id; mpPaint(); return; }
+      const id = g.dataset.n, n = m.n.find(x => x.id === id); e.preventDefault(); e.stopPropagation();
+      if (S.from) {
         if (S.from === id) { S.from = null; mpPaint(); return; }
         const a = S.from; S.from = null;
-        mpAsk('Parole sulla freccia (puoi lasciare vuoto)', '', v => { m.l.push({ a, b: id, w: v }); mpStore(); mpPaint(); }); return;
+        if (m.l.some(l => (l.a === a && l.b === id) || (l.a === id && l.b === a))) { S.sel = id; mpPaint(); floatText($('mp-stage'), 'Queste due idee sono già collegate'); return; }
+        mpAskLink(m, a, id, '', v => { m.l.push({ a, b: id, w: v }); S.sel = null; S.selL = m.l.length - 1; mpStore(); mpPaint(); }); return;
       }
-      S.sel = id; const p = pt(e); drag = { n, dx: n.x - p.x, dy: n.y - p.y, moved: false, g };
+      const era = S.sel === id; S.sel = id; S.selL = null; const p = pt(e); drag = { n, dx: n.x - p.x, dy: n.y - p.y, moved: false, g, era };
       try { g.setPointerCapture(e.pointerId); } catch (x) {}
-      ov.querySelectorAll('.mp-n').forEach(x => x.classList.toggle('sel', x === g)); $('mp-edit').disabled = false; $('mp-col').disabled = false;
+      ov.querySelectorAll('.mp-n').forEach(x => x.classList.toggle('sel', x === g)); const pop = ov.querySelector('.mp-pop'); if (pop) pop.remove();
     });
-    g.addEventListener('pointermove', e => { if (!drag || drag.g !== g) return; const p = pt(e); drag.n.x = Math.max(70, Math.min(1130, p.x + drag.dx)); drag.n.y = Math.max(40, Math.min(760, p.y + drag.dy)); drag.moved = true; g.setAttribute('transform', 'translate(' + drag.n.x + ' ' + drag.n.y + ')'); });
-    const up = () => { if (drag && drag.g === g) { const mv = drag.moved; drag = null; if (mv) { mpStore(); $('mp-stage').innerHTML = mpSVG(m, S.sel, S.from); mpPaint(); } } };
+    g.addEventListener('pointermove', e => { if (!drag || drag.g !== g) return; const p = pt(e), nx = Math.max(70, Math.min(1130, p.x + drag.dx)), ny = Math.max(40, Math.min(760, p.y + drag.dy)); if (!drag.moved && Math.abs(nx - drag.n.x) + Math.abs(ny - drag.n.y) < 6) return; drag.n.x = nx; drag.n.y = ny; drag.moved = true; g.setAttribute('transform', 'translate(' + nx + ' ' + ny + ')'); });
+    const up = () => { if (drag && drag.g === g) { const mv = drag.moved; drag = null; if (mv) mpStore(); mpPaint(); } };
     g.addEventListener('pointerup', up); g.addEventListener('pointercancel', up);
   });
 }
+/* 📖 la voce legge le frasi della mappa, una freccia alla volta: se suonano bene, la mappa è giusta */
+function mpLeggi() {
+  const S = MP; if (!S) return; const m = S.m; let i = 0; S.sel = null; S.selL = null; S.from = null;
+  const fine = () => { if (MP !== S) return; mpPaint(); const v = m.l.filter(l => !l.w).length; floatText($('mp-stage'), v ? 'Alcune frecce non hanno ancora le parole' : '🌟 Tutte le frasi sono complete!'); };
+  const step = () => {
+    if (MP !== S) return; if (i >= m.l.length) return fine();
+    const k = i++, f = mpFrase(m, m.l[k]);
+    $('mp-stage').innerHTML = mpSVG(m, null, null, false, { rd: k }) + '<div class="mp-letta">' + esc(f) + '</div>';
+    let done = false; const next = () => { if (done) return; done = true; setTimeout(step, 350); };
+    if (Voice.ok) { setTimeout(next, 2500 + 420 * f.split(/\s+/).length); Voice.say(f, null, { onend: next }); } else setTimeout(next, 1600 + 260 * f.split(/\s+/).length);
+  };
+  step();
+}
+const mpRegole = () => '<ol class="mp-regole"><li><b>Parti da una domanda.</b> «Come fa l’acqua a tornare nel mare?» aiuta più di un titolo.</li><li><b>Poche parole chiave</b>, da 4 a 8: nomi o poche parole, non frasi intere.</li><li><b>Metti in ordine:</b> al centro l’idea più importante, vicino le più grandi, lontano i dettagli.</li><li><b>Su ogni freccia poche parole, di solito un verbo:</b> idea + parole della freccia + idea devono fare una frase, come «il Sole scalda l’acqua».</li><li><b>Rileggi ad alta voce.</b> Se una frase non ha senso, cambia la freccia o le parole.</li></ol><p class="mp-perche"><b>Perché funziona?</b> Per scegliere il verbo di una freccia devi aver capito come sono legate due idee. Così la mappa ti aiuta a vedere che cosa hai capito e che cosa no. Prova a farla a libro chiuso, poi controlla sul libro e correggi: di solito si ricorda meglio che copiandola.</p>';
+
+/* ---------- ▶️ gli esempi: una mappa che nasce un passo alla volta ---------- */
+const MP_ESEMPI = [
+  { id: 'acqua', ic: '💧', mat: 'Scienze', t: 'Il viaggio dell’acqua', q: 'Come fa l’acqua a tornare nel mare?',
+    n: [['c', 600, 400, 'l’acqua', 0], ['a', 600, 110, 'il Sole', 1], ['b', 990, 250, 'il vapore', 3], ['d', 1000, 560, 'le nuvole', 5], ['e', 600, 700, 'la pioggia', 0], ['f', 200, 540, 'i fiumi e il mare', 2]],
+    l: [['a', 'c', 'scalda'], ['c', 'b', 'evaporando forma'], ['b', 'd', 'sale, si raffredda e forma'], ['d', 'e', 'fanno cadere'], ['e', 'f', 'riempie'], ['f', 'c', 'raccolgono']],
+    fine: 'Vedi? Seguendo le frecce fai tutto il giro: è il ciclo dell’acqua.' },
+  { id: 'nome', ic: '🔤', mat: 'Grammatica', t: 'Che cos’è un nome', q: 'Che cos’è un nome e come può essere?',
+    n: [['c', 600, 400, 'il nome', 1], ['a', 600, 110, 'persone, animali, cose e luoghi', 0], ['b', 230, 400, 'un nome comune', 2], ['d', 970, 400, 'un nome proprio', 3], ['e', 230, 680, 'cane', 2], ['f', 800, 680, 'Roma', 3], ['g', 1050, 620, 'la maiuscola', 4]],
+    l: [['c', 'a', 'indica'], ['c', 'b', 'può essere'], ['c', 'd', 'può essere'], ['b', 'e', 'è per esempio'], ['d', 'f', 'è per esempio'], ['d', 'g', 'si scrive con']],
+    fine: 'Le idee più grandi stanno vicino al centro, gli esempi più lontano.' },
+  { id: 'strade', ic: '🏛️', mat: 'Storia', t: 'Le strade dei Romani', q: 'A che cosa servivano le strade dei Romani?',
+    n: [['c', 600, 400, 'le strade romane', 1], ['a', 260, 180, 'Roma e le province', 4], ['b', 940, 180, 'strati di pietre', 5], ['d', 240, 620, 'i soldati', 0], ['e', 960, 620, 'le merci', 2]],
+    l: [['c', 'a', 'collegavano'], ['c', 'b', 'erano fatte di'], ['c', 'd', 'facevano viaggiare veloci'], ['c', 'e', 'servivano a trasportare']],
+    fine: 'Una mappa può essere anche piccola: quattro frecce chiare bastano.' },
+  { id: 'festa', ic: '🎈', mat: 'Per organizzarsi', t: 'La mia festa', q: 'Che cosa serve per la mia festa?',
+    n: [['c', 600, 400, 'la mia festa', 3], ['a', 600, 110, 'una data', 0], ['b', 220, 300, 'gli inviti', 1], ['d', 230, 640, 'amiche e amici', 2], ['e', 980, 300, 'la torta', 4], ['f', 960, 640, 'i giochi', 5]],
+    l: [['a', 'c', 'serve per'], ['b', 'c', 'servono per'], ['b', 'd', 'sono per'], ['e', 'c', 'rende dolce'], ['f', 'd', 'fanno divertire']],
+    fine: 'Le mappe non servono solo per studiare: aiutano anche a organizzare le idee.' }
+].map(e => Object.assign(e, { n: e.n.map(x => ({ id: x[0], x: x[1], y: x[2], t: x[3], c: x[4] })), l: e.l.map(x => ({ a: x[0], b: x[1], w: x[2] })) }));
+let MPD = null;
+function mpDemo(id) {
+  const e = MP_ESEMPI.find(x => x.id === id); if (!e) return;
+  /* passi: 0 la domanda · 1 le parole chiave · 2… una freccia per passo · ultimo: rileggo */
+  MPD = { e, i: 0, tot: 2 + e.l.length + 1, t: [] };
+  let ov = $('mp-ed'); if (!ov) { ov = document.createElement('div'); ov.id = 'mp-ed'; ov.className = 'mp-ed'; document.body.appendChild(ov); }
+  ov.hidden = false; document.body.classList.add('in-lesson'); mpDemoPaint();
+}
+function mpDemoStop() { if (MPD) { MPD.t.forEach(clearTimeout); MPD.t = []; } try { speechSynthesis.cancel(); } catch (x) {} }
+function mpDemoClose() { mpDemoStop(); MPD = null; const ov = $('mp-ed'); if (ov) ov.hidden = true; document.body.classList.remove('in-lesson'); if (current === 'mappe') go('mappe'); }
+function mpDemoPaint() {
+  const S = MPD; if (!S) return; mpDemoStop(); const e = S.e, i = S.i, ov = $('mp-ed'), ult = i === S.tot - 1, nl = i < 2 ? 0 : Math.min(e.l.length, i - 1);
+  const tit = i === 0 ? '① Parto da una domanda' : i === 1 ? '② Scrivo poche parole chiave' : ult ? '④ Rileggo le frasi' : '③ Collego con una freccia e le sue parole';
+  const txt = i === 0 ? '«' + e.q + '» Al centro metto l’idea più importante: ' + e.n[0].t + '.' : i === 1 ? 'Intorno metto le parole che mi servono per rispondere: ' + e.n.slice(1).map(n => n.t).join(', ') + '.' : ult ? 'Leggo ogni freccia come una frase. ' + e.fine : mpFrase(e, e.l[nl - 1]) + (nl === 1 ? ' Idea, parole della freccia, idea: insieme fanno una frase.' : '');
+  ov.innerHTML = '<div class="sp-top"><button type="button" class="ls-x" id="mp-x" aria-label="Chiudi">✕</button><b class="mp-title">' + e.ic + ' ' + esc(e.t) + ' · esempio</b><span class="mp-passo">passo ' + (i + 1) + ' di ' + S.tot + '</span></div>' +
+    '<div class="mp-demo"><div class="mp-dt">' + tit + '</div><p>' + esc(txt) + '</p></div>' +
+    '<div class="mp-stage demo" id="mp-stage">' + mpSVG(e, null, null, false, { nn: i === 0 ? 1 : i === 1 ? 1 : e.n.length, nl: nl, rd: !ult && nl ? nl - 1 : undefined }) + '</div>' +
+    '<div class="mp-dctl"><button type="button" class="btn ghost" id="mp-dp"' + (i ? '' : ' disabled') + '>◀ Indietro</button>' + (ult ? '<button type="button" class="btn ghost" id="mp-dr">🔁 Da capo</button><button type="button" class="btn" id="mp-dc">✏️ Continua tu questa mappa</button>' : '<button type="button" class="btn" id="mp-dn">Avanti ▶</button>') + '</div>';
+  $('mp-x').addEventListener('click', mpDemoClose);
+  $('mp-dp').addEventListener('click', () => { S.i = Math.max(0, S.i - 1); mpDemoPaint(); });
+  if ($('mp-dn')) $('mp-dn').addEventListener('click', () => { S.i++; mpDemoPaint(); });
+  if ($('mp-dr')) $('mp-dr').addEventListener('click', () => { S.i = 0; mpDemoPaint(); });
+  if ($('mp-dc')) $('mp-dc').addEventListener('click', () => { const c = JSON.parse(JSON.stringify(e)); mpDemoStop(); MPD = null; const m = { id: Date.now().toString(36), t: e.t, d: todayIso(), n: c.n, l: c.l, words: [] }; const L = mpAll(); L.unshift(m); mpSaveAll(L); mpOpen(m.id); });
+  if (Voice.ok) Voice.say(txt);
+  /* al passo 2 le parole chiave compaiono una alla volta; nell'ultimo le frecce si accendono in fila */
+  if (i === 1) e.n.slice(1).forEach((n, k) => S.t.push(setTimeout(() => { if (MPD === S && S.i === 1) $('mp-stage').innerHTML = mpSVG(e, null, null, false, { nn: k + 2, nl: 0 }); }, 500 + k * (reduce ? 0 : 650))));
+  if (ult && !reduce) e.l.forEach((l, k) => S.t.push(setTimeout(() => { if (MPD === S && S.i === S.tot - 1) $('mp-stage').innerHTML = mpSVG(e, null, null, false, { rd: k }); }, 2600 + k * 1500)));
+}
+/* ---------- ➕ mappa nuova, guidata: domanda → parole chiave → poi si sposta e si collega ---------- */
+function mpGuida() {
+  mpAsk('① Qual è la tua domanda?', '', q => {
+    if (!q) return;
+    mpAsk('Qual è l’idea più importante?', '', c => {
+      if (!c) return; const W = [];
+      const passo = () => {
+        openModal('<div class="big" style="font-size:22px">② Le parole chiave</div><p class="mp-sub">«' + esc(q) + '» Scrivi le parole che ti servono per rispondere, una alla volta (da 4 a 8).</p>' +
+          '<div class="mp-chips" id="mp-gw">' + (W.length ? W.map((w, k) => '<button type="button" class="mp-w" data-gx="' + k + '">' + esc(w) + ' ✕</button>').join('') : '<span class="mp-sub">Ancora nessuna.</span>') + '</div>' +
+          '<div class="mp-riga"><input type="text" id="mp-in" class="mp-in" maxlength="40" placeholder="una parola chiave…" autocomplete="off"><button type="button" class="btn" id="mp-gadd">➕</button></div>' +
+          '<div class="row center" style="margin-top:12px"><button type="button" class="btn" id="mp-gok">' + (W.length ? 'Avanti: le metto sulla mappa ▶' : 'Le aggiungo dopo ▶') + '</button></div>');
+        const agg = () => { const v = $('mp-in').value.trim(); if (v && W.length < 8 && !W.includes(v)) W.push(v); passo(); };
+        $('mp-gadd').addEventListener('click', agg); $('mp-in').addEventListener('keydown', e => { if (e.key === 'Enter') agg(); });
+        document.querySelectorAll('[data-gx]').forEach(b => b.addEventListener('click', () => { W.splice(+b.dataset.gx, 1); passo(); }));
+        $('mp-gok').addEventListener('click', () => { const v = $('mp-in').value.trim(); if (v && W.length < 8 && !W.includes(v)) W.push(v); closeModal(); mpNew(c, [], q, W); });
+        setTimeout(() => { try { $('mp-in').focus(); } catch (e) {} }, 60);
+      };
+      passo();
+    }, 'Va al centro della mappa: una parola o poche parole.');
+  }, 'Per esempio: «Come fanno le piante a nutrirsi?»');
+}
+/* ---------- 📚 parto da un argomento studiato: l'idea centrale e le sue parole chiave arrivano dall'app ---------- */
+function mpDaArgomento() {
+  const visti = Object.keys(spState().visto || {}).filter(k => spData(k)), tutti = [];
+  if (typeof SPIEGA !== 'undefined') Object.keys(SPIEGA).forEach(u => Object.keys(SPIEGA[u]).forEach(t => { const k = u + ':' + t; if (spData(k) && spData(k).centro && spData(k).nodi) tutti.push(k); }));
+  const L = (visti.length ? visti : tutti).filter(k => spData(k).centro && spData(k).nodi).slice(0, 60);
+  openModal('<div class="big" style="font-size:22px">📚 Da quale argomento parti?</div><p class="mp-sub">' + (visti.length ? 'Argomenti che hai già ascoltato.' : 'Scegli un argomento.') + ' Ricevi l’idea centrale e le parole chiave: le frecce le metti tu, a libro chiuso.</p>' +
+    (L.length ? '<div class="mp-args">' + L.map(k => { const t = spTitle(k); return '<button type="button" class="mp-arg" data-ak="' + esc(k) + '">' + (t.ic || '🗺️') + ' ' + esc(t.n) + '</button>'; }).join('') + '</div>' : '<p class="mp-sub">Non ci sono ancora argomenti con la spiegazione.</p>') +
+    '<div class="row center" style="margin-top:12px"><button type="button" class="btn ghost" id="mp-ano">Annulla</button></div>');
+  $('mp-ano').addEventListener('click', closeModal);
+  document.querySelectorAll('[data-ak]').forEach(b => b.addEventListener('click', () => { const d = spData(b.dataset.ak); closeModal(); mpNew(d.centro.n, d.nodi.map(n => n.n)); }));
+}
+
 ['mappe'].forEach(id => { if (!$('p-' + id)) { const s = document.createElement('section'); s.id = 'p-' + id; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); } });
 PAGES.mappe = el => {
   const L = mpAll();
   el.innerHTML = '<h1 class="v2-h1">🗺️ Le mie mappe</h1><p class="v2-sub">Le mappe concettuali che costruisci tu: un’idea al centro, le altre intorno, e le frecce con le parole che le collegano.</p>' +
-    '<button type="button" class="v2-btn" id="mp-new" style="max-width:420px">➕ Nuova mappa</button>' +
-    (L.length ? '<div class="mp-grid">' + L.map(m => '<div class="mp-card"><button type="button" class="mp-open" data-id="' + m.id + '">' + mpSVG(m, null, null, true) + '<b>' + esc(m.t) + '</b><small>' + esc(typeof fmtShort === 'function' ? fmtShort(m.d) : m.d) + ' · ' + m.n.length + (m.n.length === 1 ? ' idea' : ' idee') + '</small></button><button type="button" class="mp-x" data-del="' + m.id + '" aria-label="Togli la mappa">🗑️</button></div>').join('') + '</div>'
-      : '<p class="v2-sub" style="margin-top:16px">Ancora nessuna mappa. Puoi farne una qui, oppure alla fine di un argomento con la 🗺️.</p>');
-  $('mp-new').addEventListener('click', () => mpAsk('Di che cosa parla la tua mappa?', '', v => { if (v) mpNew(v, []); }));
+    '<details class="card mp-box" open><summary><b>▶️ Guarda come si fa</b><span aria-hidden="true">▾</span></summary><p class="mp-sub">Quattro piccole mappe che nascono un passo alla volta. Alla fine puoi continuarle tu.</p><div class="mp-es">' +
+      MP_ESEMPI.map(e => '<button type="button" class="mp-esb" data-es="' + e.id + '"><span>' + e.ic + '</span><b>' + esc(e.t) + '</b><small>' + esc(e.mat) + ' · ' + esc(e.q) + '</small></button>').join('') + '</div></details>' +
+    '<details class="card mp-box"><summary><b>💡 Come si fa una buona mappa</b><span aria-hidden="true">▾</span></summary>' + mpRegole() + '</details>' +
+    '<div class="mp-azioni"><button type="button" class="v2-btn" id="mp-new">➕ Nuova mappa</button><button type="button" class="v2-btn mp-b2" id="mp-arg">📚 Parto da un argomento studiato</button></div>' +
+    (L.length ? '<div class="mp-grid">' + L.map(m => '<div class="mp-card"><button type="button" class="mp-open" data-id="' + m.id + '">' + mpSVG(m, null, null, true) + '<b>' + esc(m.t) + '</b><small>' + esc(typeof fmtShort === 'function' ? fmtShort(m.d) : m.d) + ' · ' + m.n.length + (m.n.length === 1 ? ' idea' : ' idee') + ' · ' + m.l.length + (m.l.length === 1 ? ' freccia' : ' frecce') + '</small></button><button type="button" class="mp-x" data-del="' + m.id + '" aria-label="Togli la mappa">🗑️</button></div>').join('') + '</div>'
+      : '<p class="v2-sub" style="margin-top:16px">Ancora nessuna mappa. Guarda un esempio, poi prova con «➕ Nuova mappa».</p>');
+  $('mp-new').addEventListener('click', mpGuida);
+  $('mp-arg').addEventListener('click', mpDaArgomento);
+  el.querySelectorAll('[data-es]').forEach(b => b.addEventListener('click', () => mpDemo(b.dataset.es)));
   el.querySelectorAll('.mp-open').forEach(b => b.addEventListener('click', () => mpOpen(b.dataset.id)));
   el.querySelectorAll('[data-del]').forEach(b => b.addEventListener('click', () => {
     openModal('<div class="big" style="font-size:22px">Togliere questa mappa?</div><div class="row center" style="margin-top:12px"><button type="button" class="btn" id="mx-ok">Sì, toglila</button><button type="button" class="btn ghost" id="mx-no" data-focus>No</button></div>');

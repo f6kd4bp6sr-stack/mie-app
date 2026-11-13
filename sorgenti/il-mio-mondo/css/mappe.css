@@ -1,0 +1,41 @@
+/* 🗺️ Le mie mappe (13/11/2026): esempi animati, guida, comandi accanto all'idea scelta, lettura delle frasi */
+.mp-box{padding:10px 14px;margin:10px 0;text-align:left}
+.mp-box summary{display:flex;justify-content:space-between;align-items:center;gap:8px;cursor:pointer;list-style:none;min-height:44px;font-family:var(--font-display);font-size:19px}
+.mp-box summary::-webkit-details-marker{display:none}
+.mp-box summary span{transition:transform .15s}.mp-box[open] summary span{transform:rotate(180deg)}
+.mp-sub{margin:4px 0 8px;font-weight:700;font-size:15px;color:var(--ink-soft)}
+.mp-es{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:8px 0 6px}
+.mp-esb{display:grid;gap:2px;justify-items:start;text-align:left;padding:10px 12px;border:2px solid var(--line);border-radius:16px;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer;box-shadow:0 4px 0 var(--line)}
+.mp-esb span{font-size:30px}.mp-esb b{font-family:var(--font-display);font-size:17px}.mp-esb small{font-weight:700;font-size:13px;color:var(--ink-soft);line-height:1.3}
+.mp-regole{margin:6px 0 6px 0;padding-left:22px;font-weight:700;font-size:16px;line-height:1.45;text-align:left}.mp-regole li{margin:4px 0}
+.mp-perche{margin:8px 0 4px;padding:10px 12px;border-radius:14px;background:#fff7d6;color:#3a3320;font-weight:700;font-size:15px;line-height:1.45;text-align:left}
+.mp-azioni{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px;max-width:760px}
+.mp-azioni .v2-btn{margin:0}.v2-btn.mp-b2{background:#a879ff;box-shadow:0 5px 0 #6f47c4}
+.mp-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}
+.mp-chips .mp-w{min-height:44px;font-size:16px;padding:8px 14px}
+.mp-prova{margin:8px 0;padding:10px 12px;border-radius:14px;background:#eef6ff;font-size:19px;font-weight:700;line-height:1.4}
+.mp-prova span{display:inline-block;padding:0 8px;border-bottom:3px dashed #3fa9f5;color:#1f6fb5;font-weight:900;min-width:40px}
+.mp-riga{display:flex;gap:8px;align-items:center}.mp-riga .mp-in{margin-top:0;flex:1}
+.mp-args{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:46vh;overflow:auto;margin-top:8px;text-align:left}
+.mp-arg{font:inherit;font-weight:800;font-size:15px;text-align:left;padding:10px 12px;min-height:44px;border:2px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);cursor:pointer}
+.mp-stage{position:relative}
+.mp-pop{position:absolute;z-index:3;transform:translateX(-50%);display:flex;gap:6px;padding:6px;border-radius:16px;background:#2b2f3a;box-shadow:0 8px 20px -6px rgba(0,0,0,.45);white-space:nowrap}
+.mp-pop button{font:inherit;font-weight:900;font-size:15px;min-height:44px;min-width:44px;padding:6px 12px;border:0;border-radius:11px;background:#fff;color:#2b2f3a;cursor:pointer}
+.mp-letta{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);max-width:92%;padding:10px 18px;border-radius:16px;background:#2b2f3a;color:#fff;font-weight:800;font-size:20px;text-align:center}
+.mp-svg .mp-l path.mp-hit{stroke:transparent;stroke-width:34;fill:none;marker-end:none}
+.mp-svg .mp-l{cursor:pointer}
+.mp-svg .mp-l.sel .mp-lp,.mp-svg .mp-l.rd .mp-lp{stroke:#ff9a3c;stroke-width:7}
+.mp-svg .mp-l.sel rect,.mp-svg .mp-l.rd rect{fill:#ffe9c9}
+.mp-svg .mp-l.vuota rect{fill:#fff;stroke:#ff6b6b;stroke-width:2;stroke-dasharray:5 4}.mp-svg .mp-l.vuota text{fill:#d14343}
+.mp-svg .mp-n.centro rect{stroke-width:6}
+.mp-svg .nuova .mp-nb,.mp-svg .mp-l.nuova{animation:mp-nasce .5s cubic-bezier(.2,.8,.2,1.2) both;transform-box:fill-box;transform-origin:center}
+@keyframes mp-nasce{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+.mp-demo{margin:8px 16px 0;padding:10px 14px;border-radius:16px;background:#fff7d6;color:#3a3320;min-height:86px}
+.mp-dt{font-family:var(--font-display);font-size:19px}.mp-demo p{margin:2px 0 0;font-weight:700;font-size:17px;line-height:1.4}
+.mp-passo{font-weight:800;font-size:14px;color:var(--ink-soft);white-space:nowrap}
+.mp-stage.demo{touch-action:auto}.mp-stage.demo .mp-n,.mp-stage.demo .mp-l{cursor:default}
+.mp-dctl{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:0 16px max(12px,env(safe-area-inset-bottom))}
+.mp-stage.demo{margin-bottom:10px}
+.mp-hint{font-size:15px}
+@media (max-width:800px){.mp-es{grid-template-columns:repeat(2,minmax(0,1fr))}.mp-azioni{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.mp-svg .nuova .mp-nb,.mp-svg .mp-l.nuova{animation:none}}
