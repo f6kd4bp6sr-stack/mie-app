@@ -434,6 +434,27 @@ function mpLeggi() {
 }
 const mpRegole = () => '<ol class="mp-regole"><li><b>Parti da una domanda.</b> «Come fa l’acqua a tornare nel mare?» aiuta più di un titolo.</li><li><b>Poche parole chiave</b>, da 4 a 8: nomi o poche parole, non frasi intere.</li><li><b>Metti in ordine:</b> al centro l’idea più importante, vicino le più grandi, lontano i dettagli.</li><li><b>Su ogni freccia poche parole, di solito un verbo:</b> idea + parole della freccia + idea devono fare una frase, come «il Sole scalda l’acqua».</li><li><b>Rileggi ad alta voce.</b> Se una frase non ha senso, cambia la freccia o le parole.</li></ol><p class="mp-perche"><b>Perché funziona?</b> Per scegliere il verbo di una freccia devi aver capito come sono legate due idee. Così la mappa ti aiuta a vedere che cosa hai capito e che cosa no. Prova a farla a libro chiuso, poi controlla sul libro e correggi: di solito si ricorda meglio che copiandola.</p>';
 
+/* la spiegazione illustrata nella pagina: per ogni passo il «come» e il «perché», più due confronti così sì / così no */
+const mpMini = (inner, w) => '<svg class="mp-mini" viewBox="0 0 ' + (w || 220) + ' 80" aria-hidden="true">' + inner + '</svg>';
+const mpBox = (x, y, w, t, col, fill) => '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="28" rx="10" fill="' + (fill || '#fff') + '" stroke="' + col + '" stroke-width="3"/><text x="' + (x + w / 2) + '" y="' + (y + 19) + '" text-anchor="middle" font-size="13" font-weight="800" fill="#2b2f3a">' + t + '</text>';
+const mpFr = (x1, y1, x2, y2, w, rosso) => '<path d="M' + x1 + ' ' + y1 + ' L' + x2 + ' ' + y2 + '" stroke="' + (rosso ? '#e05252' : '#7d8697') + '" stroke-width="3" fill="none"' + (rosso ? ' stroke-dasharray="5 4"' : '') + '/><path d="M' + x2 + ' ' + y2 + ' l-9 -5 v10z" fill="' + (rosso ? '#e05252' : '#7d8697') + '"/>' + (w ? '<text x="' + ((x1 + x2) / 2) + '" y="' + (y1 - 6) + '" text-anchor="middle" font-size="13" font-weight="800" fill="#5b6475">' + w + '</text>' : '');
+const MP_PASSI = [
+  ['1', 'Parti da una domanda', 'Scrivi che cosa vuoi capire: «Come fa l’acqua a tornare nel mare?»', 'La domanda ti dice quali idee servono e quali no.',
+    mpMini('<rect x="14" y="14" width="192" height="46" rx="16" fill="#fff7d6" stroke="#e0b100" stroke-width="3"/><text x="110" y="43" text-anchor="middle" font-size="15" font-weight="800" fill="#2b2f3a">Come fa…?  Perché…?</text><path d="M60 60 l-8 14 l20 -14z" fill="#fff7d6" stroke="#e0b100" stroke-width="3"/>')],
+  ['2', 'Scegli poche parole chiave', 'Da 4 a 8: nomi o poche parole, non frasi intere.', 'Con le frasi intere copi il libro. Con le parole chiave il resto lo devi pensare tu.',
+    mpMini(mpBox(8, 8, 64, 'il Sole', '#ff9a3c') + mpBox(80, 8, 62, 'l’acqua', '#3fa9f5') + mpBox(150, 8, 62, 'vapore', '#a879ff') + mpBox(40, 44, 66, 'nuvole', '#e0b100') + mpBox(114, 44, 66, 'pioggia', '#58c46b'))],
+  ['3', 'Metti in ordine', 'L’idea più importante al centro o in alto, le idee generali vicino, i dettagli più lontano.', 'Così si vede subito che cosa conta di più.',
+    mpMini(mpBox(72, 4, 76, 'idea grande', '#ff9a3c', '#fff7d6') + '<path d="M90 32 L48 50 M130 32 L172 50" stroke="#7d8697" stroke-width="3"/>' + mpBox(10, 48, 76, 'più piccola', '#3fa9f5') + mpBox(134, 48, 76, 'più piccola', '#58c46b'))],
+  ['4', 'Scrivi sulle frecce', 'Poche parole, di solito un verbo: idea + parole + idea devono fare una frase.', 'Per scegliere le parole devi aver capito come sono legate le due idee: è qui che capisci davvero.',
+    mpMini(mpBox(6, 30, 62, 'il Sole', '#ff9a3c') + mpFr(72, 44, 146, 44, 'scalda') + mpBox(150, 30, 64, 'l’acqua', '#3fa9f5'))],
+  ['5', 'Rileggi la mappa', 'Leggila ad alta voce, oppure tocca «📖 Leggi la mappa» e ascolta le frasi, una freccia alla volta.', 'Se una frase suona strana, hai trovato il punto da sistemare.',
+    mpMini('<text x="4" y="52" font-size="30">📖</text><rect x="46" y="22" width="170" height="36" rx="14" fill="#2b2f3a"/><text x="131" y="45" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">«Il Sole scalda l’acqua»</text>')]
+];
+const mpSpiega = () => '<div class="mp-passi">' + MP_PASSI.map(p => '<div class="mp-ps"><div class="mp-pn">' + p[0] + '</div>' + p[4] + '<b>' + p[1] + '</b><p><span class="mp-come">Come</span> ' + p[2] + '</p><p><span class="mp-pq">Perché</span> ' + p[3] + '</p></div>').join('') + '</div>' +
+  '<div class="mp-sino"><div class="mp-no"><b>❌ Così no</b>' + mpMini(mpBox(4, 26, 150, 'il Sole è molto caldo e…', '#e05252') + mpFr(158, 40, 200, 40, '', true) + mpBox(204, 26, 62, 'l’acqua', '#3fa9f5'), 270) + '<small>Una frase intera dentro l’idea e una freccia muta: non si capisce il legame.</small></div>' +
+  '<div class="mp-si"><b>✅ Così sì</b>' + mpMini(mpBox(30, 26, 62, 'il Sole', '#ff9a3c') + mpFr(96, 40, 170, 40, 'scalda') + mpBox(174, 26, 64, 'l’acqua', '#3fa9f5'), 270) + '<small>Due parole chiave e un verbo sulla freccia: si legge «il Sole scalda l’acqua».</small></div></div>' +
+  '<div class="mp-perche"><b>A che cosa serve una mappa?</b><ul><li><b>Per capire:</b> ti aiuta a vedere che cosa hai capito e che cosa no.</li><li><b>Per ricordare:</b> prova a farla a libro chiuso, poi controlla sul libro e correggi: di solito si ricorda meglio che copiandola.</li><li><b>Per ripassare:</b> rileggendo le frecce rivedi le idee principali in poco tempo.</li><li><b>Per organizzarti:</b> una festa, lo zaino, la camera… le mappe mettono ordine anche fuori dalla scuola.</li></ul></div>';
+
 /* ---------- ▶️ gli esempi: una mappa che nasce un passo alla volta ---------- */
 const MP_ESEMPI = [
   { id: 'acqua', ic: '💧', mat: 'Scienze', t: 'Il viaggio dell’acqua', q: 'Come fa l’acqua a tornare nel mare?',
@@ -451,7 +472,19 @@ const MP_ESEMPI = [
   { id: 'festa', ic: '🎈', mat: 'Per organizzarsi', t: 'La mia festa', q: 'Che cosa serve per la mia festa?',
     n: [['c', 600, 400, 'la mia festa', 3], ['a', 600, 110, 'una data', 0], ['b', 220, 300, 'gli inviti', 1], ['d', 230, 640, 'amiche e amici', 2], ['e', 980, 300, 'la torta', 4], ['f', 960, 640, 'i giochi', 5]],
     l: [['a', 'c', 'serve per'], ['b', 'c', 'servono per'], ['b', 'd', 'sono per'], ['e', 'c', 'rende dolce'], ['f', 'd', 'fanno divertire']],
-    fine: 'Le mappe non servono solo per studiare: aiutano anche a organizzare le idee.' }
+    fine: 'Le mappe non servono solo per studiare: aiutano anche a organizzare le idee.' },
+  { id: 'zaino', ic: '🎒', mat: 'Per organizzarsi', t: 'Lo zaino per la gita', q: 'Che cosa metto nello zaino per la gita?',
+    n: [['c', 600, 120, 'lo zaino', 1], ['a', 230, 400, 'la borraccia', 0], ['b', 600, 400, 'la merenda', 2], ['d', 970, 400, 'la giacca a vento', 3], ['e', 230, 680, 'la sete', 0], ['f', 600, 680, 'la fame', 2], ['g', 970, 680, 'pioggia e vento', 3]],
+    l: [['c', 'a', 'contiene'], ['c', 'b', 'contiene'], ['c', 'd', 'contiene'], ['a', 'e', 'toglie'], ['b', 'f', 'toglie'], ['d', 'g', 'ripara da']],
+    fine: 'Ogni cosa nello zaino ha il suo perché: la mappa lo fa vedere, ed è più difficile dimenticare qualcosa.' },
+  { id: 'cucciolo', ic: '🐶', mat: 'Per capire', t: 'Un cucciolo in casa', q: 'Di che cosa ha bisogno un cucciolo?',
+    n: [['c', 600, 400, 'il cucciolo', 1], ['a', 230, 200, 'le crocchette', 4], ['b', 970, 200, 'l’acqua fresca', 0], ['d', 970, 610, 'le passeggiate', 2], ['e', 230, 610, 'il veterinario', 3], ['f', 600, 710, 'io', 5]],
+    l: [['c', 'a', 'mangia'], ['c', 'b', 'beve'], ['c', 'd', 'ama'], ['e', 'c', 'cura'], ['f', 'c', 'porto fuori']],
+    fine: 'Guarda le frecce: ognuna ha un verbo diverso, e alcune arrivano al centro invece di partire da lì.' },
+  { id: 'camera', ic: '🧸', mat: 'Per mettere ordine', t: 'La mia camera in ordine', q: 'Dove metto le cose della mia camera?',
+    n: [['c', 600, 120, 'la mia camera', 3], ['a', 230, 400, 'lo scaffale', 0], ['b', 600, 400, 'l’armadio', 1], ['d', 970, 400, 'il cesto', 2], ['e', 230, 680, 'i libri', 0], ['f', 600, 680, 'i vestiti', 1], ['g', 970, 680, 'i giochi', 2]],
+    l: [['c', 'a', 'ha'], ['c', 'b', 'ha'], ['c', 'd', 'ha'], ['a', 'e', 'tiene'], ['b', 'f', 'tiene'], ['d', 'g', 'raccoglie']],
+    fine: 'Prima le cose grandi, poi quello che ci sta dentro: così si mette ordine, anche nelle idee.' }
 ].map(e => Object.assign(e, { n: e.n.map(x => ({ id: x[0], x: x[1], y: x[2], t: x[3], c: x[4] })), l: e.l.map(x => ({ a: x[0], b: x[1], w: x[2] })) }));
 let MPD = null;
 function mpDemo(id) {
@@ -518,9 +551,9 @@ function mpDaArgomento() {
 PAGES.mappe = el => {
   const L = mpAll();
   el.innerHTML = '<h1 class="v2-h1">🗺️ Le mie mappe</h1><p class="v2-sub">Le mappe concettuali che costruisci tu: un’idea al centro, le altre intorno, e le frecce con le parole che le collegano.</p>' +
-    '<details class="card mp-box" open><summary><b>▶️ Guarda come si fa</b><span aria-hidden="true">▾</span></summary><p class="mp-sub">Quattro piccole mappe che nascono un passo alla volta. Alla fine puoi continuarle tu.</p><div class="mp-es">' +
-      MP_ESEMPI.map(e => '<button type="button" class="mp-esb" data-es="' + e.id + '"><span>' + e.ic + '</span><b>' + esc(e.t) + '</b><small>' + esc(e.mat) + ' · ' + esc(e.q) + '</small></button>').join('') + '</div></details>' +
-    '<details class="card mp-box"><summary><b>💡 Come si fa una buona mappa</b><span aria-hidden="true">▾</span></summary>' + mpRegole() + '</details>' +
+    '<details class="card mp-box" open><summary><b>▶️ Guarda come si fa</b><span aria-hidden="true">▾</span></summary><p class="mp-sub">Sette piccole mappe che nascono un passo alla volta: per studiare e per organizzarsi. Alla fine puoi continuarle tu.</p><div class="mp-es">' +
+      MP_ESEMPI.map(e => '<button type="button" class="mp-esb" data-es="' + e.id + '" aria-label="' + esc(e.t + ': ' + e.q) + '"><span>' + e.ic + '</span><b>' + esc(e.t) + '</b><small>' + esc(e.mat) + '</small></button>').join('') + '</div></details>' +
+    '<details class="card mp-box"><summary><b>💡 Come si fa una buona mappa, e perché</b><span aria-hidden="true">▾</span></summary>' + mpSpiega() + '</details>' +
     '<div class="mp-azioni"><button type="button" class="v2-btn" id="mp-new">➕ Nuova mappa</button><button type="button" class="v2-btn mp-b2" id="mp-arg">📚 Parto da un argomento studiato</button></div>' +
     (L.length ? '<div class="mp-grid">' + L.map(m => '<div class="mp-card"><button type="button" class="mp-open" data-id="' + m.id + '">' + mpSVG(m, null, null, true) + '<b>' + esc(m.t) + '</b><small>' + esc(typeof fmtShort === 'function' ? fmtShort(m.d) : m.d) + ' · ' + m.n.length + (m.n.length === 1 ? ' idea' : ' idee') + ' · ' + m.l.length + (m.l.length === 1 ? ' freccia' : ' frecce') + '</small></button><button type="button" class="mp-x" data-del="' + m.id + '" aria-label="Togli la mappa">🗑️</button></div>').join('') + '</div>'
       : '<p class="v2-sub" style="margin-top:16px">Ancora nessuna mappa. Guarda un esempio, poi prova con «➕ Nuova mappa».</p>');
