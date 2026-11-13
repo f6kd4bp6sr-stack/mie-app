@@ -59,3 +59,7 @@
 .mp-sino .mp-mini{max-width:300px}
 .mp-perche ul{margin:4px 0 0;padding-left:20px}.mp-perche li{margin:3px 0}
 @media (max-width:900px){.mp-es{grid-template-columns:repeat(4,minmax(0,1fr))}.mp-passi{grid-template-columns:repeat(2,minmax(0,1fr))}.mp-sino{grid-template-columns:1fr}}
+
+/* 13/11/2026: tema scuro. I riquadri con fondo chiaro fisso hanno il testo scuro fisso, così restano leggibili */
+.mp-prova,.mp-no,.mp-si{color:#2b2f3a}.mp-no small,.mp-si small{color:#2b2f3a}
+.mp-w{color:#3a3320}

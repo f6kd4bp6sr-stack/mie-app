@@ -173,7 +173,7 @@ body.v2 .btn.st-b2,.btn.st-b2{--bc:#a879ff;background:#a879ff;color:#fff;box-sha
 /* uno scaffale per raccolta */
 .st-racc{margin-top:22px}
 .st-rh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 4px 2px;font-family:var(--font-display);font-size:23px;color:var(--ink)}
-.st-rh small{font-family:inherit;font-size:14px;font-weight:800;color:var(--ink-soft);background:var(--card,#fff);border:2px solid rgba(51,48,74,.14);border-radius:999px;padding:3px 12px;white-space:nowrap}
+.st-rh small{font-family:inherit;font-size:14px;font-weight:800;color:var(--ink-soft);background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:3px 12px;white-space:nowrap}
 .st-racc .st-shelf{margin:12px 0 8px;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 18px}
 @media (max-width:900px){.st-racc .st-shelf{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .st-book::after{height:12px;background:linear-gradient(#d9a36f,#b47a45 55%,#9a6535);box-shadow:0 5px 0 #7c4f28,0 12px 14px -6px rgba(51,48,74,.35)}
@@ -222,7 +222,7 @@ body.v2 .btn.st-b2,.btn.st-b2{--bc:#a879ff;background:#a879ff;color:#fff;box-sha
 .st-hero .st-kick,.st-hero .st-title,.st-hero .st-meta,.st-hero .st-prog{grid-column:1}
 .st-hero .st-modo{grid-column:2;grid-row:1 / span 3;align-self:center}
 .st-prog{margin-top:4px}
-details.st-racc{margin-top:12px;border-radius:18px;background:var(--card,#fff);border:2px solid rgba(51,48,74,.12);padding:0 12px}
+details.st-racc{margin-top:12px;border-radius:18px;background:var(--surface);border:2px solid var(--line);padding:0 12px}
 details.st-racc[open]{padding-bottom:6px}
 summary.st-rh{list-style:none;cursor:pointer;min-height:48px;align-items:center;margin:0;font-size:21px}
 summary.st-rh::-webkit-details-marker{display:none}
