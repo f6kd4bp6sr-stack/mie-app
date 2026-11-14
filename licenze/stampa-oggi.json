@@ -1,187 +1,155 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-13T13:08+01:00",
-  "nota": "Edizione del pomeriggio del 13 novembre 2026.",
+  "edizione": "mattina",
+  "updated": "2026-11-14T05:09+01:00",
+  "nota": "Edizione del mattino del 14 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-allarmi-bomba",
-        "t": "Mail minatorie a quasi 3.800 scuole: poche evacuazioni, il governo prepara un protocollo",
-        "s": "Il 12 novembre nuove mail anonime con minacce di bombe hanno raggiunto 3.778 istituti, secondo dati provvisori. Le evacuazioni sono state 77, in forte calo rispetto al giorno prima. Il governo indica ai prefetti di far proseguire le lezioni salvo fondati motivi di allarme; da oggi un tavolo tecnico definisce nuove misure.",
-        "d": "2026-11-12",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/cronaca/allarme-bomba-ultime-notizie-oggi_kR2rchYkTUnhGOd4xtFUT"
-          },
-          {
-            "n": "AGI",
-            "url": "https://www.agi.it/cronaca/news/2026-11-11/scuole-allarmi-bomba-evacuazioni-39977223/"
-          }
-        ]
-      },
-      {
-        "id": "it-maltempo",
-        "t": "Maltempo: frane e sfollati in Liguria, piene in Toscana, allerta arancione in cinque Regioni",
-        "s": "Nella notte tra 12 e 13 novembre a Carasco, nel Genovese, una palazzina è stata evacuata per una frana (dieci persone fuori casa). A La Spezia due edifici sono stati sgomberati; il Magra in piena ha fatto evacuare alcune case ad Arcola. In Toscana l'Ombrone Pistoiese ha toccato un massimo storico di 3,53 metri senza gravi danni.",
+        "id": "it-manovra-scuola",
+        "t": "Manovra, il Governo ritira i tagli al personale scolastico dopo il vertice con le parti sociali",
+        "s": "Dopo quasi otto ore di incontro a Palazzo Chigi, l'esecutivo rinuncia alle misure che avrebbero toccato circa 7.000 posti tra docenti e personale ATA, con risparmi attesi di 85 milioni nel 2027. Meloni dice che non erano tagli. Cgil conferma lo sciopero generale del 20 novembre; restano aperti pensioni, Superbonus ed exit tax.",
         "d": "2026-11-13",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/frane-nella-notte-ed-evacuazioni-in-provincia-di-genova_1a6f2dbc-539e-4a57-aab6-351140c778d0.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/manovra-il-governo-apre-alle-modifiche-saltano-i-tagli-alla-scuola-piu_a9e7d8e3-ebe1-4229-a908-26b2f2a973d6.html"
           },
           {
             "n": "AGI",
-            "url": "https://www.agi.it/cronaca/news/2026-11-12/maltempo-previsioni-allerta-regioni-40002234/"
+            "url": "https://www.agi.it/vista-tv/video/2026-11-13/manovra-bocognani-ance-dopo-tavolo-con-governo-imprese-aspettano-1-8-miliardi-per-caro-materiali-40013008/"
           }
         ]
       },
       {
-        "id": "it-meloni-opposizioni",
-        "t": "Allarmi nelle scuole: Meloni convoca le opposizioni, «nessun pericolo concreto ma guardia alta»",
-        "s": "La premier ha riunito i leader dell'opposizione sul tema sicurezza dopo le mail minatorie alle scuole. Secondo il Governo non c'è un pericolo concreto, ma l'attenzione resta alta; Meloni ha detto che una mail anonima non deciderà il calendario scolastico.",
+        "id": "it-allarmi-scuole-protocollo",
+        "t": "Mail minatorie alle scuole: il Governo fissa le regole su quando evacuare",
+        "s": "Dopo le mail anonime arrivate a migliaia di istituti, l'esecutivo ha indicato una procedura: lezioni che proseguono salvo fondati motivi di allarme. Meloni ha riunito le opposizioni, escludendo pericoli concreti e cambi al calendario scolastico.",
         "d": "2026-11-12",
         "fonti": [
           {
             "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/allarme-bomba-scuole-meloni-vertice-opposizioni-news-oggi_1S4vfq6Dxulm54ySZXTM31"
+            "url": "https://www.adnkronos.com/politica/allarmi-bomba-mail-protocollo-regole-governo_3eoC4ioeCWJBGJ552wjL1I"
           },
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/11/vi-annienteremo-lallarme-bomba-in-6.000-scuole-italiane.-meloni-strategia-per-il-caos_870b0024-72d2-4b15-bab5-0c74dcc1d653.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/11/non-cambieranno-il-calendario-delle-scuole-e-meloni-chiama-le-opposizioni_777ad9b7-5940-4f12-a318-bab5b8c213c7.html"
           }
         ]
       },
       {
-        "id": "it-manovra-parti-sociali",
-        "t": "Manovra 2027: Giorgetti alle parti sociali, il governo lavora a modificare l'exit tax",
-        "s": "Al tavolo di Palazzo Chigi sulla legge di bilancio il ministro dell'Economia ha detto che si studia un cambio dell'exit tax, il prelievo su chi porta la residenza fiscale all'estero, senza dare dettagli. L'Ance chiede una soluzione sullo spalma-crediti del Superbonus e segnala 1,8 miliardi di pagamenti attesi dalle imprese.",
+        "id": "it-cop31-guterres",
+        "t": "Cop31, Guterres: superare la soglia di 1,5 gradi è ormai inevitabile",
+        "s": "Alla conferenza sul clima il segretario generale dell'Onu ha detto che il limite fissato dall'Accordo di Parigi sarà superato; resta il tema di come limitare l'entità e la durata dello sforamento.",
         "d": "2026-11-13",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/giorgetti-alle-parti-sociali-governo-al-lavoro-sulla-modifica-dellexit-tax_74ba2c0f-fd3f-47c9-b8c2-4aec76a05d5d.html"
+            "url": "https://www.ansa.it/sito/notizie/ansa2030/notizie/energia_energie/2026/11/13/guterres-alla-cop31-inevitabile-il-superamento-della-soglia-di-15-gradi_91375da0-e1c4-4657-8e05-9ae28baaecf7.html"
           }
         ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-ucraina-negoziati",
-        "t": "Ucraina: gli inviati Usa vedono Putin e Zelensky, in vista uno scambio di prigionieri",
-        "s": "Witkoff e Kushner hanno incontrato Putin a Mosca e poi Zelensky in Irlanda. Kushner parla di «progressi significativi» e di un possibile grande scambio di prigionieri, che secondo l'agenzia russa Tass potrebbe avvenire fra due-tre settimane. Zelensky dice che gli europei saranno al prossimo round.",
-        "d": "2026-11-13",
+        "id": "mo-voli-usa",
+        "t": "Stati Uniti, bloccati per ore tutti i voli: oltre 3.000 cancellati, esclusa la pista cyber",
+        "s": "Nella notte tra 13 e 14 novembre la FAA ha fermato il traffico aereo nazionale per un guasto alle telecomunicazioni; sospesi anche i voli europei diretti negli Usa. Secondo le autorità non ci sono segni di attacco informatico. Il blocco è stato revocato verso le 2:40 italiane.",
+        "d": "2026-11-14",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/topnews/2026/11/13/kushner-progressi-significativi-nei-negoziati-ucraina-russia_0393c901-faa1-466e-9cda-fc878fd4cb61.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/revocato-il-blocco-dei-voli-negli-stati-uniti-decine-di-migliaia-di-passeggeri_d2a6ded1-a075-4399-8855-8bc69e436c24.html"
+          },
+          {
+            "n": "AGI",
+            "url": "https://www.agi.it/estero/news/2026-11-13/aerei-bloccati-usa-guasto-40021088/"
+          }
+        ]
+      },
+      {
+        "id": "mo-shenzhen",
+        "t": "Casa Bianca: Trump, Xi e Putin a Shenzhen, si parlerà di Iran e non di Ucraina",
+        "s": "Il colloquio trilaterale è previsto giovedì prossimo a margine del vertice Apec in Cina. Secondo la Casa Bianca al centro ci sarà l'Iran, non la guerra in Ucraina.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/14/casa-bianca-trump-discutera-di-iran-con-xi-e-putin-non-di-ucraina_4070f4cc-6dc8-4cf7-b146-40449b162ac5.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-ucraina-negoziati",
+        "t": "Ucraina, dopo Abu Dhabi nessuna intesa sui territori ma nuovo scambio di prigionieri",
+        "s": "Al primo negoziato dopo febbraio con Usa, Russia e Ucraina, Mosca chiede cessioni territoriali e il ritiro Nato da parte dell'Est Europa; Kiev cerca garanzie di sicurezza. Prevista la liberazione di almeno mille prigionieri per parte. Continuano gli attacchi con droni e missili.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/13/russias-demands-come-from-different-reality-as-war-efforts-stagnates",
+            "l": "en"
           },
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/11/abu-dhabi-peace-talks-end-with-prisoner-exchange-agreement-as-us-envoys-prepare-to-meet-pu",
+            "url": "https://www.euronews.com/2026/11/12/russia-plays-down-peace-talks-with-europe-after-witkoff-raises-hopes-of-breakthrough",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-iran-trump",
-        "t": "Guerra con l'Iran: Trump dice di aver rinviato nuovi attacchi su richiesta dei Paesi del Golfo",
-        "s": "Il presidente americano afferma che gli alleati del Golfo gli hanno chiesto una pausa nei raid contro l'Iran. Teheran, il giorno prima, aveva avvertito che la risposta a un eventuale attacco sarebbe «dieci volte più severa».",
+        "id": "mo-microsoft",
+        "t": "Microsoft, disservizio mondiale a Outlook, Teams e Copilot in 74 Paesi",
+        "s": "Il problema, partito dalle Americhe, è stato attribuito a un carico elevato su parte dell'infrastruttura. Microsoft esclude attacchi informatici; alcuni sistemi restano in errore e il ripristino è in corso.",
         "d": "2026-11-13",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/13/iran-war-live-riyadh-china-discuss-houthis-as-group-claims-aramco-attacks",
-            "l": "en"
+            "n": "AGI",
+            "url": "https://www.agi.it/estero/news/2026-11-13/microsoft-down-74-paesi-outlook-40007551/"
           },
           {
-            "n": "Al Jazeera (12 novembre)",
-            "url": "https://aljazeera.com/news/liveblog/2026/11/12/iran-war-live-tehran-warns-of-wider-retaliation-israel-kills-in-gaza?update=5145331",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/12/microsoft-outage-hits-outlook-teams-and-copilot-disrupting-thousands",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-cuba-trump",
-        "t": "Trump non esclude l'uso della forza contro Cuba prima della fine del mandato",
-        "s": "In un'intervista radiofonica Trump ha detto che prenderebbe «certamente in considerazione» un'azione militare e che vuole chiudere la questione cubana entro il 2029. Dal gennaio scorso gli Usa applicano un blocco petrolifero de facto all'isola, con blackout e carenze di cibo e carburante.",
+        "id": "mo-meloni-macron-droghe",
+        "t": "Meloni e Macron a Dublino guidano la riunione della Coalizione europea contro la droga",
+        "s": "I due leader hanno presieduto l'incontro dei capi di governo della coalizione europea per il contrasto al traffico di stupefacenti.",
         "d": "2026-11-13",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/13/trump-moots-toppling-cuba-authorities-before-leaving-office",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-ucraina-droni",
-        "t": "Ucraina e Russia: attacchi di droni nella notte mentre prosegue la spinta diplomatica Usa",
-        "s": "Mosca dice di aver intercettato 1.198 droni ucraini su oltre 15 regioni; a Volgograd quattro morti, secondo il governatore. A Odessa almeno due vittime per gli attacchi russi. Dopo i colloqui di Abu Dhabi, un grande scambio di prigionieri è stato concordato, ma senza passi verso la fine della guerra.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/13/russia-and-ukraine-report-overnight-attacks-amid-us-diplomatic-push",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-ue-negoziatore",
-        "t": "Ue a Dublino: entro due settimane si deve decidere chi rappresenta l'Europa sull'Ucraina",
-        "s": "Al vertice informale dei leader a Dublino il premier irlandese Martin, presidente di turno, ha detto che serve una scelta prima del Consiglio straordinario tra due settimane. Prevede una componente E3 e vuole coinvolgere anche Paesi non Ue della coalizione dei volenterosi, come Regno Unito e Norvegia.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/13/presidenza-ue-decidere-entro-due-settimane-chi-rappresenta-leuropa-su-ucraina_02f92c01-7ce9-42ac-8b7c-0d2659bb82ff.html"
+            "n": "AGI",
+            "url": "https://www.agi.it/vista-tv/video/2026-11-13/meloni-e-macron-presiedono-a-dublino-riunione-dei-leader-della-coalizione-europea-contro-le-droghe-40010286/"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-sciopero-spagna",
-        "t": "Spagna, primo sciopero generale in 14 anni: piazze piene per casa e salari",
-        "s": "L'11 novembre i sindacati hanno protestato contro affitti saliti di circa l'80% in dieci anni e stipendi fermi. Gli organizzatori parlano di oltre 500.000 persone a Madrid, la polizia di 120.000; più di 70 arresti in tutto il Paese e scontri a Madrid e Barcellona. Sindacati e imprese danno giudizi opposti sull'adesione.",
-        "d": "2026-11-12",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/12/spain-holds-its-first-general-strike-in-14-years-amid-mass-protests-and-police-charges",
-            "l": "en"
-          },
-          {
-            "n": "Euronews (spagnolo)",
-            "url": "https://es.euronews.com/2026/11/11/la-huelga-general-por-la-vivienda-los-salarios-saca-miles-de-personas-a-la-calle-espana",
-            "l": "es"
-          }
-        ]
-      },
-      {
-        "id": "es-finlandia-nave",
-        "t": "Finlandia rileva un attacco a una nave da guerra russa nel Golfo di Finlandia",
-        "s": "L'esercito finlandese dice di aver rilevato l'attacco e di non vedere minacce militari immediate. Secondo l'emittente Yle, il servizio di sicurezza ucraino lo avrebbe rivendicato; Mosca parla di almeno 146 droni ucraini intercettati nella regione di Leningrado. Dettagli e eventuali vittime non sono chiari.",
+        "id": "es-turchia-qatar",
+        "t": "Turchia e Qatar firmano un patto di difesa reciproca",
+        "s": "A Istanbul Erdogan e l'emiro Tamim hanno siglato l'accordo, presentato come mezzo per evitare un nuovo conflitto nel Golfo. Secondo un analista, i Paesi del Golfo dubitano delle garanzie di sicurezza americane. È il terzo accordo simile della regione dall'estate.",
         "d": "2026-11-13",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/13/finland-detects-strike-on-russian-warship-as-zelenskyy-meets-us-envoys",
+            "url": "https://www.aljazeera.com/news/2026/11/13/turkiye-and-qatar-sign-mutual-defence-agreement",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-bombe-scuole",
-        "t": "Euronews: allarmi bomba nelle scuole italiane, Meloni convoca le opposizioni",
-        "s": "La testata europea racconta che l'11 novembre le mail minatorie, firmate con lo stesso nome, hanno raggiunto circa 6.300 scuole italiane e il giorno dopo una nuova ondata. Meloni ha riunito maggioranza e opposizioni; la bozza di protocollo prevede di non evacuare per la sola mail, salvo rischi concreti.",
-        "d": "2026-11-12",
+        "id": "es-iran-trump",
+        "t": "Al Jazeera: perché Trump dice che con l'Iran «non serve un accordo»",
+        "s": "L'analisi dell'emittente del Qatar guarda al cambio di toni di Trump sull'Iran e al ruolo del vicepresidente Vance, messo ai margini del dossier.",
+        "d": "2026-11-13",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/12/italy-hit-by-second-day-of-school-bomb-threats-as-meloni-summons-opposition",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/features/2026/11/13/why-is-trump-saying-no-deal-necessary-with-iran-as-he-sidelines-jd-vance",
             "l": "en"
           }
         ]
@@ -189,171 +157,109 @@
     ],
     "economia": [
       {
-        "id": "ec-nvidia-huang",
-        "t": "Nvidia, si dimette il fondatore Jensen Huang: Colette Kress amministratrice delegata ad interim",
-        "s": "Il titolo è sceso di circa il 13% all'apertura del Nasdaq. Il consiglio cerca un successore; le dimissioni arrivano mentre negli Usa si parla di possibili rischi per la sicurezza nazionale legati a una presunta agente cinese. Pechino respinge le accuse. La notizia è seguita da vicino per l'impatto sul settore dei chip.",
-        "d": "2026-11-12",
+        "id": "ec-spread-rating",
+        "t": "Spread Btp-Bund a 104 punti base, Borsa di Milano in lieve rialzo",
+        "s": "Lo spread ha chiuso a 104 punti base con il rendimento del decennale al 4,41%; la Borsa di Milano ha chiuso in lieve rialzo.",
+        "d": "2026-11-13",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/12/huang-getta-la-spugna-lamante-cinese-legata-a-huawei_0b01f8ad-f5ea-4fd2-a7a4-7ccfc68be774.html"
-          },
-          {
-            "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/12/why-did-nvidia-ceo-jensen-huang-resign-and-who-is-colette-kress",
-            "l": "en"
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/13/lo-spread-tra-btp-e-bund-chiude-poco-mosso-a-104-punti-base_afb5e3a1-e8bb-4da9-b684-bbb34a0424ba.html"
           }
         ]
       },
       {
-        "id": "ec-microsoft-blackout",
-        "t": "Blackout Microsoft: Outlook e Teams in tilt in 74 Paesi, ripristino lento",
-        "s": "Il guasto, iniziato il 12 novembre, ha colpito posta e servizi cloud con quasi 140.000 segnalazioni su Outlook in serata. Microsoft parla di carico eccessivo sull'infrastruttura e di server non disponibili, ed esclude attività malevola. Problemi anche per servizi che usano il suo cloud.",
-        "d": "2026-11-13",
+        "id": "ec-mercedes",
+        "t": "Mercedes-Benz ferma i nuovi investimenti negli stabilimenti tedeschi e valuta chiusure",
+        "s": "Secondo Euronews il gruppo sospende nuovi investimenti nelle fabbriche in Germania e prende in considerazione la chiusura di alcuni impianti.",
+        "d": "2026-11-12",
         "fonti": [
           {
-            "n": "AGI",
-            "url": "https://www.agi.it/estero/news/2026-11-13/blackout-microsoft-cosa-sappiamo-40007760/"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/13/microsoft-non-a-conoscenza-di-attivita-malevola-su-interruzione-outlook_a6dc4a99-3b7c-4903-a0bb-124b9561ebfe.html"
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/12/mercedes-benz-halts-new-investment-in-german-plants-considers-closures",
+            "l": "en"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-palazzo-nuovo",
-        "t": "Palazzo Nuovo: due uomini cadono da una scala durante un graffito, uno è grave",
-        "s": "Intorno alle 4:30 del 13 novembre due uomini sono caduti dalla scala al secondo piano dell'edificio universitario, sul lato di corso San Maurizio. Uno è stato operato al San Giovanni Bosco in condizioni gravi; l'altro al CTO per frattura del femore. L'Università è a disposizione degli inquirenti.",
+        "id": "to-corteo-14nov",
+        "t": "Torino, corteo in piazza Castello sabato 14 novembre: possibili deviazioni dei bus GTT",
+        "s": "Nuova manifestazione cittadina nel pomeriggio di sabato; il percorso può causare deviazioni delle linee GTT. Orari e percorso aggiornati sulla pagina di TorinoToday.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "TorinoToday",
+            "url": "https://www.torinotoday.it/cronaca/manifestazione-sabato-14-novembre-2026-piazza-castello-corteo-percorso-traffico-linee-gtt-deviate.html"
+          }
+        ]
+      },
+      {
+        "id": "to-dolcissimarte",
+        "t": "DolcissimArte: weekend di pasticceria piemontese nel centro di Torino",
+        "s": "Fino a domenica 15 novembre, al Museo del Risorgimento oltre cento creazioni di pasticcieri; dimostrazioni in tredici esercizi del centro e mercatino dei biscotti sabato 14.",
         "d": "2026-11-13",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/cadono-da-una-scala-a-palazzo-nuovo-occupato-uno-e-intubato_ac6a9ebb-ef0f-4613-a944-0254ed13b07e.html"
-          },
-          {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/precipitati-palazzo-nuovo-13-novembre-2026.html"
-          }
-        ]
-      },
-      {
-        "id": "to-allarmi-scuole",
-        "t": "Torino, nuovi allarmi bomba nelle scuole: evacuazioni dopo le oltre 190 segnalazioni del giorno prima",
-        "s": "Il 12 novembre altre segnalazioni via mail anonima hanno portato all'evacuazione di diversi istituti. Il giorno prima a Torino erano arrivate più di 190 segnalazioni. Le forze dell'ordine controllano ogni messaggio.",
-        "d": "2026-11-12",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/12/nuovi-allarmi-bomba-nelle-scuole-di-torino-in-corso-evacuazioni_96f03788-6191-473b-9c79-0011ccf808c9.html"
-          },
-          {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/12/leggi-notizia/argomenti/cronaca-11/articolo/ancora-allarmi-bomba-in-alcune-scuole-del-torinese.html"
+            "url": "https://www.torinoggi.it/2026/11/13/leggi-notizia/argomenti/gusto-e-gusti-3/articolo/torino-a-prova-di-golosi-parte-il-weekend-di-dolcissimarte-4.html"
           }
         ]
       },
       {
-        "id": "to-atp-apertura",
-        "t": "Nitto ATP Finals: con Achille Lauro e Beppe Fiorello lo show d'apertura all'Inalpi Arena",
-        "s": "Il torneo dei migliori otto tennisti del mondo è stato inaugurato il 12 novembre con uno spettacolo musicale. Le partite proseguono fino al 22 novembre.",
-        "d": "2026-11-12",
+        "id": "to-paranoia",
+        "t": "Paranoia Festival a Torino: due giorni sul benessere mentale dei giovani",
+        "s": "Secondo ANSA Piemonte la rassegna dedica due giornate al tema della salute mentale tra i più giovani.",
+        "d": "2026-11-10",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/11/12/beppe-fiorello-e-achille-lauro-accendono-la-notte-delle-atp-finals_06096c9c-4c84-4e4b-b357-697a38004f58.html"
-          },
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/12/leggi-notizia/argomenti/attualita-31/articolo/atp-finals-con-il-concerto-di-achilla-lauro-iniziato-lo-show.html"
-          }
-        ]
-      },
-      {
-        "id": "to-piscina-sempione",
-        "t": "Piscina Sempione: presentato il progetto da oltre 20 milioni per un nuovo centro sportivo",
-        "s": "La società Supera, del gruppo spagnolo Sidecu, ha presentato al Comune lo studio di fattibilità per via Gottardo, su circa 23.000 metri quadrati: piscine coperte e scoperte, fitness, campi e parcheggio interrato. È stata l'unica offerta al bando; l'obiettivo è partire con i lavori entro l'estate.",
-        "d": "2026-11-12",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/12/piscina-sempione-a-torino-presentato-il-progetto-da-20-milioni_37518122-469b-4e5a-838b-af2bd13b31af.html"
+            "url": "https://www.ansa.it/sito/notizie/piemonte/2026/11/10/paranoia-festival-a-torino-due-giorni-dedicati-al-benessere-mentale-dei-giovani_14ae4647-3e54-4f9f-bd0e-2fcb5b46eea9.html"
           }
         ]
       }
     ],
     "piemonte": [
       {
-        "id": "pi-scuole-pluriclassi",
-        "t": "Save the Children: in Piemonte il maggiore aumento italiano di pluriclassi alla primaria",
-        "s": "Secondo l'Atlante dell'infanzia a rischio, le pluriclassi sono 468 (+111) e in dieci anni sono state chiuse otto sedi. Il 46,6% delle scuole non ha il certificato di agibilità; la dispersione scolastica è al 7,2%, sotto la media nazionale dell'8,2%.",
-        "d": "2026-11-12",
+        "id": "pi-colletta",
+        "t": "Colletta Alimentare, sabato 14 novembre in Piemonte: 1.300 supermercati e oltre 12.000 volontari",
+        "s": "Trentesima edizione: si lasciano alimenti a lunga conservazione ai volontari. Per le Valli di Lanzo la raccolta è nei tre supermercati di Lanzo e in alcuni punti vendita della zona.",
+        "d": "2026-11-10",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/12/save-the-children-in-piemonte-il-maggior-aumento-di-pluriclassi_3715353f-f5d9-458c-8b16-54bc21678777.html"
-          }
-        ]
-      },
-      {
-        "id": "pi-coldiretti-annata",
-        "t": "Coldiretti: annata agraria piemontese con cali per riso, mais e nocciole, bene il vino",
-        "s": "Il bilancio di San Martino segnala vendemmia in anticipo di circa dieci giorni e di buona qualità, allevamenti stabili e api in ripresa. Caldo e poca pioggia hanno ridotto le rese di riso, mais, nocciole e castagne.",
-        "d": "2026-11-12",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/12/coldiretti-in-piemonte-calano-rese-riso-e-mais-bene-vino-e-allevamenti_2d7cc1cd-fc53-4c93-819f-9c137d9ee07c.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/10/leggi-notizia/argomenti/attualita-31/articolo/colletta-alimentare-sabato-14-novembre-torna-lappuntamento-con-la-solidarieta.html"
           }
         ]
       },
       {
         "id": "pi-acqua-mit",
-        "t": "Acqua: dal Ministero delle Infrastrutture 37,8 milioni per interventi in Piemonte",
-        "s": "Il finanziamento riguarda opere idriche in regione, con fondi per il Novarese e tre lavori nel Cuneese, secondo l'elenco pubblicato da ANSA Piemonte il 12 novembre.",
+        "t": "Dal ministero delle Infrastrutture 37,8 milioni per interventi sull'acqua in Piemonte",
+        "s": "Il finanziamento riguarda interventi sulle risorse idriche della Regione, secondo ANSA Piemonte.",
         "d": "2026-11-12",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/12/dal-mit-378-milioni-di-euro-per-interventi-per-lacqua-in-piemonte_c76626e7-9231-485c-a1d1-4c404b43f3ef.html"
+            "url": "https://www.ansa.it/sito/notizie/piemonte/2026/11/12/dal-mit-378-milioni-di-euro-per-interventi-per-lacqua-in-piemonte_c76626e7-9231-485c-a1d1-4c404b43f3ef.html"
           }
         ]
-      }
-    ],
-    "cultura": [
+      },
       {
-        "id": "cu-capuozzo",
-        "t": "È morto il giornalista Toni Capuozzo, pochi giorni fa aveva annunciato di avere un tumore",
-        "s": "Inviato e volto televisivo, Capuozzo è morto il 12 novembre. L'annuncio della malattia era arrivato pochi giorni prima.",
+        "id": "pi-borse-studio",
+        "t": "Borse di studio universitarie: dal ministero 60,6 milioni al Piemonte, +18,8%",
+        "s": "Le risorse statali per il diritto allo studio universitario piemontese crescono del 18,8%.",
         "d": "2026-11-12",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/cultura/2026/11/12/e-morto-toni-capuozzo-pochi-giorni-fa-lannuncio-del-tumore_d91e7c63-c965-4b50-b4d9-931c2a6fd56f.html"
+            "url": "https://www.ansa.it/sito/notizie/piemonte/2026/11/12/dal-mur-606-milioni-per-borse-di-studio-universitari-piemonte-188_afeb7a78-f71e-4aa8-ba50-8f50c04e724e.html"
           }
         ]
       }
     ],
-    "sport": [
-      {
-        "id": "sp-italia-francia",
-        "t": "Nations League: l'Italia batte la Francia 3-1 a San Siro",
-        "s": "Doppietta di Pio Esposito e gol di Frattesi dopo il vantaggio francese di Olise. Domenica 15 novembre gli azzurri giocano in Belgio; un pareggio basterebbe per i quarti.",
-        "d": "2026-11-12",
-        "fonti": [
-          {
-            "n": "AGI",
-            "url": "https://www.agi.it/sport/news/2026-11-12/italia-francia-gol-nations-40004823/"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/sport/calcio/2026/11/12/in-campo-italia-francia-0-0-diretta-e-foto_9abbe0f2-e908-4b0b-820e-37f829bbca46.html"
-          }
-        ]
-      }
-    ],
+    "cultura": [],
+    "sport": [],
     "eventi": [
       {
         "id": "ev-luci-artista",
@@ -672,21 +578,6 @@
             "url": "https://www.teatrostabiletorino.it/en/cartellone/escaped-alone-10-15-nov-2026/"
           }
         ]
-      },
-      {
-        "id": "spe-tea-cattivo",
-        "t": "C.A.T.T.I.V.O. del Gruppo Kapushka alle Fonderie Limone",
-        "s": "Con Antonio Careddu, Michele Puleio e Michele Scarcella; durata un'ora senza intervallo, nella rassegna Energie Nove.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/cartellone/cattivo-13-nov-2026/"
-          }
-        ],
-        "quando": "ven 13 nov, 21:30",
-        "dove": "Fonderie Limone, Sala piccola, Moncalieri",
-        "costo": "10 € (biglietto unico; carnet da 5 spettacoli 35 €)"
       },
       {
         "id": "spe-tea-non-ho-chiesto",
@@ -1102,7 +993,6 @@
     ]
   },
   "controlli": [
-    "3/11 13:30: cinema limitato a The Space Cinema e Cinema Ideal (scelta del proprietario); tolto un film proiettato solo al Romano",
     {
       "at": "2026-11-04T05:40+01:00",
       "edizione": "mattina",
@@ -1216,6 +1106,12 @@
       "edizione": "pomeriggio",
       "notizie": 72,
       "note": "Fonti lette: ANSA, AGI, Al Jazeera (en), Euronews (en). Non leggibili: TorinoToday (pagina Palazzo Nuovo). Ricerca su Reuters/BBC/Guardian rifiutata dal proxy. Due pagine ANSA Piemonte (acqua, Diasorin) non aperte per mancata approvazione: sintesi dall'elenco. Cinema, teatro, eventi e concerti dall'edizione del mattino (non è lunedì, nessun concerto già passato). Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-14T05:09+01:00",
+      "edizione": "mattina",
+      "notizie": 66,
+      "note": "Fonti lette: ANSA, AGI, Adnkronos (solo ricerca), Al Jazeera (en), Euronews (en), Torino Oggi. Non leggibili: TorinoToday (pagina corteo); ricerca Reuters rifiutata dal proxy. Alcune pagine ANSA Piemonte, Euronews (Spagna) non aperte per mancata approvazione: sintesi dall'elenco. Cinema, teatro, eventi e concerti dall'edizione precedente (sabato, non lunedì) con tolti gli spettacoli passati e aggiunto DolcissimArte. Copia locale riallineata a origin/main (era staccata)."
     }
   ]
 }
