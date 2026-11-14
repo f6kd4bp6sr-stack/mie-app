@@ -41,12 +41,14 @@ function trFaccia(dis, c, s) {
 function openTrucco() {
   openModal('<div class="big" style="font-size:28px">💄✨ Come mi trucco</div><p class="vd-sub">Prima la pelle, poi il gioco. Sempre con un adulto!</p>' +
     '<div class="v2-grid">' +
+    (typeof SCOPI !== 'undefined' ? '<button type="button" class="v2-tile" id="tr-sc"><span class="v2-ti">🎯</span><b>Che cosa voglio ottenere?</b><small>10 esempi con uno scopo</small></button>' : '') +
     (TR_OK() ? TRUCCO.schede.map(s => '<button type="button" class="v2-tile" data-sk="' + s.id + '"><span class="v2-ti">' + s.ic + '</span><b>' + esc(s.t) + '</b><small>' + s.facts.length + ' schede</small></button>').join('') : '') +
     '<button type="button" class="v2-tile" id="tr-face"><span class="v2-ti">🎨</span><b>Truccabimbi</b><small>Disegna sul viso</small></button>' +
     '<button type="button" class="v2-tile" id="tr-chk"><span class="v2-ti">✅</span><b>Prima e dopo</b><small>Le regole d’oro</small></button>' +
     '<button type="button" class="v2-tile" id="tr-et"><span class="v2-ti">🔎</span><b>Detective delle etichette</b><small>Che cosa vogliono dire i simboli</small></button>' +
     '</div><div class="row center"><button type="button" class="btn ghost" id="tr-x">Chiudi</button></div>');
   document.querySelectorAll('[data-sk]').forEach(b => b.onclick = () => openTrScheda(b.dataset.sk, 0));
+  if ($('tr-sc')) $('tr-sc').onclick = () => openScopi('trucco');
   $('tr-face').onclick = () => openTrFace();
   $('tr-chk').onclick = () => openTrCheck();
   $('tr-et').onclick = () => openTrEtichette();
@@ -61,8 +63,8 @@ function openTrScheda(id, k) {
   $('tr-b').onclick = () => openTrucco(); $('tr-n').onclick = () => openTrScheda(id, k + 1);
   const seen = store.get('trucco-visti', {}); if (!seen[id + k]) { seen[id + k] = 1; store.set('trucco-visti', seen); }
 }
-function openTrFace() {
-  const st = { dis: null, c: [TR_COL[6], TR_COL[5]], s: store.get('trucco-pelle', 0), i: 0 };
+function openTrFace(pre) {
+  const st = { dis: pre || null, c: [TR_COL[6], TR_COL[5]], s: store.get('trucco-pelle', 0), i: 0 };
   const paint = () => {
     openModal('<div class="big" style="font-size:26px">🎨 Truccabimbi</div>' +
       '<div class="vv-look"><div>' + trFaccia(st.dis, st.c, st.s) + '</div><div>' +

@@ -278,7 +278,7 @@ function wireLinkWarn() { const w = $('io-lkw'); if (!w) return; w.addEventListe
 /* ---------- 📱 QR per i genitori: i progressi passano inquadrando lo schermo ---------- */
 const QR_BASE = 'https://f6kd4bp6sr-stack.github.io/mie-app/licenze/progressi.html#';
 function qrData(days) {
-  const P = 'mm2-', KEEP = ['days', 'prog', 'math-done', 'sci-done', 'games-done', 'tab-best', 'simon-best', 'clock-level', 'oro-passi', 'oro-esame20', 'cuoca-level', 'moves-done', 'path-day', 'gems', 'piggy', 'diff-level'], d = {};
+  const P = 'mm2-', KEEP = ['days', 'prog', 'math-done', 'sci-done', 'games-done', 'tab-best', 'simon-best', 'clock-level', 'oro-passi', 'oro-esame20', 'scopi-visti', 'cuoca-level', 'moves-done', 'path-day', 'gems', 'piggy', 'diff-level'], d = {};
   KEEP.forEach(k => { const v = store.get(k, undefined); if (v !== undefined) d[k] = v; });
   const ref = iso(addDays(new Date(), -days));
   const pd = store.get('prog-days', {}); d['prog-days'] = {}; Object.keys(pd).filter(x => x >= ref).forEach(x => d['prog-days'][x] = pd[x]);

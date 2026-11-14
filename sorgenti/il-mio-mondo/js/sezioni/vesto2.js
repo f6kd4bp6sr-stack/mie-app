@@ -21,6 +21,7 @@ function openVesto2() {
   const due = vestoMisDue();
   openModal('<div class="big" style="font-size:28px">👗 Come mi vesto</div><p class="vd-sub">Colori che stanno bene insieme e la taglia giusta per ogni cosa che fai.</p>' +
     '<div class="v2-grid">' +
+    (typeof SCOPI !== 'undefined' ? '<button type="button" class="v2-tile" id="vv-sc"><span class="v2-ti">🎯</span><b>Che cosa voglio ottenere?</b><small>10 esempi con uno scopo</small></button>' : '') +
     '<button type="button" class="v2-tile" id="vv-ruota"><span class="v2-ti">🎨</span><b>La ruota dei colori</b><small>Opposti, vicini, caldi e freddi</small></button>' +
     '<button type="button" class="v2-tile" id="vv-look"><span class="v2-ti">👗</span><b>Componi il look</b><small>Scegli i colori, scopri l’effetto</small></button>' +
     '<button type="button" class="v2-tile" id="vv-fav"><span class="v2-ti">❤️</span><b>I miei colori</b><small>E gli abbinamenti giusti</small></button>' +
@@ -28,6 +29,7 @@ function openVesto2() {
     '<button type="button" class="v2-tile" id="vv-arm"><span class="v2-ti">🌦️</span><b>L’armadio del meteo</b><small>Che cosa metto oggi?</small></button>' +
     '<button type="button" class="v2-tile" id="vv-cur"><span class="v2-ti">💡</span><b>Curiosità sui colori</b><small>Lo sapevi che…</small></button>' +
     '</div><div class="row center"><button type="button" class="btn ghost" id="vv-x">Chiudi</button></div>');
+  if ($('vv-sc')) $('vv-sc').onclick = () => openScopi('vesto');
   $('vv-ruota').onclick = () => openRuota();
   $('vv-look').onclick = () => openLook();
   $('vv-fav').onclick = () => openFav();

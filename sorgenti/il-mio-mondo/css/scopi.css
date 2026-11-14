@@ -1,0 +1,23 @@
+/* 🎯 Che cosa voglio ottenere? (Come mi vesto · Come mi trucco) */
+#modal-box.wide.xwide { width: min(1080px, 100%); }
+.sc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-items: start; text-align: left; margin-top: 10px; }
+@media (max-width: 700px) { .sc-grid { grid-template-columns: minmax(0, 1fr); } }
+.sc-c { background: var(--surface); border: 2px solid var(--line); border-radius: 16px; padding: 8px 12px; color: var(--ink); }
+.sc-c[open] { border-color: var(--v2-green, #2e9e6b); }
+.sc-c summary { display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; min-height: 44px; font-size: 16px; line-height: 1.25; }
+.sc-c summary::-webkit-details-marker { display: none; }
+.sc-c summary b { flex: 1; font-family: var(--font-display); font-weight: 800; }
+.sc-ic { font-size: 24px; }
+.sc-ok { font-style: normal; font-weight: 900; color: #2e9e6b; }
+.sc-fz { transition: transform .15s; color: var(--ink-soft); } .sc-c[open] .sc-fz { transform: rotate(180deg); }
+.sc-dis { display: flex; align-items: flex-start; justify-content: center; gap: 6px; margin: 8px 0; padding: 8px 6px 4px; border-radius: 12px; background: var(--bg); color: var(--ink); }
+.sc-f { flex: 1 1 0; min-width: 0; max-width: 132px; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.sc-f small { font-size: 13px; font-weight: 800; line-height: 1.2; text-align: center; color: var(--ink); }
+.sc-fig { width: 100%; height: auto; display: block; }
+.sc-fig.notte { border-radius: 12px; }
+.sc-fr { font-size: 22px; font-weight: 900; color: var(--ink-soft); align-self: center; }
+.sc-p { font-weight: 700; font-size: 15px; line-height: 1.45; margin: 8px 0; }
+.sc-p ol { margin: 4px 0 0; padding-left: 22px; } .sc-p li { margin: 2px 0; }
+.sc-e { display: inline-block; font-size: 13px; font-weight: 900; border-radius: 9px; padding: 1px 8px; margin-right: 4px; color: #1d2433; }
+.sc-e1 { background: #ffd9a8; } .sc-e2 { background: #bfe3ff; } .sc-e3 { background: #d6f2c4; }
+.sc-nota { font-weight: 700; font-size: 14px; line-height: 1.4; color: var(--ink-soft); border-left: 4px solid var(--line); padding-left: 8px; margin: 8px 0; }

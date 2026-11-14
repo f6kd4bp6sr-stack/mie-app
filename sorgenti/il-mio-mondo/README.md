@@ -46,3 +46,8 @@ Dettagli dei file: `STRUTTURA.md`.
 - Per sezioni nuove si chiede prima come procedere.
 
 🗺️ Le mie mappe (13/11/2026, richiesta del proprietario: «poco chiaro come costruire»): in cima quattro **esempi animati** (`MP_ESEMPI` in `js/sezioni/spiega.js`: acqua, nome, strade romane, festa, zaino per la gita, cucciolo, camera in ordine: sette, su una riga sola; la spiegazione illustrata «come e perché» è `mpSpiega`/`MP_PASSI`) che nascono un passo alla volta e si possono continuare; il riquadro «Come si fa una buona mappa» (`mpRegole`); la **mappa nuova guidata** (domanda → idea centrale → parole chiave già messe intorno, `mpGuida`); «Parto da un argomento studiato» (`mpDaArgomento`); nell'editor i comandi compaiono accanto all'idea o alla freccia scelta, le parole della freccia si scelgono da etichette pronte (`MP_LEGAMI`) e «📖 Leggi la mappa» legge ad alta voce ogni freccia come frase. Stili in `css/mappe.css`. Esempi e regole rivisti dal revisore indipendente.
+
+## 🎯 Che cosa voglio ottenere? (14/11/2026)
+In «Come mi vesto» e «Come mi trucco»: 10 esempi con uno scopo ciascuno (scopo · come si fa · perché funziona · nota · disegno · «Prova tu»).
+Testi in `data/domande/scopi.js` (autore + revisore, fonti in `SCOPI.fonti`), finestra e disegni in `js/sezioni/scopi.js`, stile in `css/scopi.css`.
+Si salva solo `scopi-visti` (quali esempi sono stati aperti); va anche in Progressi.
