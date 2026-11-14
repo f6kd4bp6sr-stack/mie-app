@@ -51,3 +51,8 @@ Dettagli dei file: `STRUTTURA.md`.
 In «Come mi vesto» e «Come mi trucco»: 10 esempi con uno scopo ciascuno (scopo · come si fa · perché funziona · nota · disegno · «Prova tu»).
 Testi in `data/domande/scopi.js` (autore + revisore, fonti in `SCOPI.fonti`), finestra e disegni in `js/sezioni/scopi.js`, stile in `css/scopi.css`.
 Si salva solo `scopi-visti` (quali esempi sono stati aperti); va anche in Progressi.
+
+## 🎨 Disegno: spessori, colori con uno scopo, forme a mano libera (14/11/2026)
+- 19 progetti nuovi in `data/domande/disegno.js`: d108–d111 (lo spessore della linea), d206–d208 (perché questo colore), d601–d612 (tappa «✋ Forme a mano libera», `libera: true`: sempre aperta, non blocca le altre).
+- Campo nuovo `w` (spessore consigliato) su progetto o passo: l'app imposta il cursore e disegna la guida più grossa o più fine.
+- `js/sezioni/disegno.js`: riquadro «💡 Come si disegna, e perché» (`DS_COME`, `dsComeHtml`) in Disegno e in Impara; riga di aiuto sotto «Spessore» (`DS_AIUTO`, `dsAiutoW`).

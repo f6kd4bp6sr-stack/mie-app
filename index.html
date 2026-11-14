@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="5475f26e37";</script>
+<script>window.APP_VERSION="dc4e6492d8";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -1353,6 +1353,25 @@
     .ds-side { width: auto; max-height: 34vh; border-left: 0; border-top: 2px solid var(--line); }
     .ds-lez { flex-direction: column; align-items: stretch; }
   }
+  /* 💡 come si disegna, e perché · aiuto degli strumenti (14/11/2026) */
+  .ds-come { margin-top: 14px; padding: 10px 14px; }
+  .ds-come summary { display: flex; align-items: center; gap: 10px; cursor: pointer; list-style: none; min-height: 44px; }
+  .ds-come summary::-webkit-details-marker { display: none; }
+  .ds-come summary span { font-size: 26px; } .ds-come summary b { font-family: var(--font-display); font-size: 18px; }
+  .ds-come summary small { flex: 1; color: var(--ink-soft); font-weight: 700; font-size: 14px; }
+  .ds-come summary i { font-style: normal; transition: transform .15s; } .ds-come[open] summary i { transform: rotate(180deg); }
+  .ds-cgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 8px; }
+  @media (max-width: 700px) { .ds-cgrid { grid-template-columns: minmax(0, 1fr); } }
+  .ds-cc { border: 2px solid var(--line); border-radius: 14px; padding: 10px 12px; background: var(--bg); }
+  .ds-ct { display: block; font-family: var(--font-display); font-size: 16px; }
+  .ds-cc p { margin: 6px 0; font-weight: 700; font-size: 15px; line-height: 1.45; }
+  .ds-cdue { display: flex; gap: 10px; justify-content: center; margin: 8px 0; }
+  .ds-cm { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 150px; max-width: 46%; }
+  .ds-cm svg { width: 100%; height: auto; display: block; }
+  .ds-cm small { font-size: 13px; font-weight: 800; }
+  .ds-ce { display: inline-block; font-size: 13px; font-weight: 900; border-radius: 9px; padding: 1px 8px; margin-right: 4px; color: #1d2433; }
+  .ds-ce.a { background: #bfe3ff; } .ds-ce.b { background: #d6f2c4; }
+  .ds-aiuto { display: block; font-size: 13px; font-weight: 700; line-height: 1.3; color: var(--ink-soft); }
   /* =================== 🗺️ SPIEGAZIONE CON LA MAPPA =================== */
   .sp-ov, .mp-ed { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; background: var(--bg, #f6f4ef); color: var(--ink); overflow: hidden; }
   .sp-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: max(10px, env(safe-area-inset-top)) 16px 10px; background: var(--surface, #fff); border-bottom: 2px solid var(--line); }
@@ -10952,7 +10971,10 @@ const DIS_FASI = [
   { id: 'spazio', ic: '🏞️', n: 'Prospettiva e paesaggio', sala: 'Sala dei paesaggi',
     t: 'Le cose lontane sembrano più piccole, più vicine alla linea dell’orizzonte e più chiare. Con questi trucchi un foglio piatto diventa profondo.' },
   { id: 'figura', ic: '🙂', n: 'Il viso e la figura', sala: 'Sala dei ritratti',
-    t: 'Il viso e il corpo hanno misure che si ripetono: gli occhi stanno a metà della testa, il gomito all’altezza della vita.' }
+    t: 'Il viso e il corpo hanno misure che si ripetono: gli occhi stanno a metà della testa, il gomito all’altezza della vita.' },
+  /* 14/11/2026: palestra sempre aperta (libera: true), non blocca e non è bloccata dalle altre tappe */
+  { id: 'mano', ic: '✋', n: 'Forme a mano libera', sala: 'Sala della mano libera', libera: true,
+    t: 'Una palestra per la mano: cerchi, ovali e linee fatti con un gesto solo, poi animali e oggetti costruiti con forme semplici. Più la mano si scalda, più le forme vengono bene.' }
 ];
 const DIS_PROG = [
   /* ---------- ✏️ FASE 1: linee e forme ---------- */
@@ -11020,6 +11042,33 @@ const DIS_PROG = [
       { t: 'Continua tu: rametti sempre più sottili, anche un po’ storti, come nella natura. Nessun albero è uguale a un altro!', g: [['txt', 600, 70, 'sempre più sottili…']] },
       { t: 'Colora: il tronco marrone e, sulle punte, tante foglie piccole.', g: [['dot', 600, 760, '#8b5a2b', 'tronco'], ['dot', 412, 136, '#2e9e44', 'foglie'], ['dot', 788, 136, '#9bd770', 'foglie']], tool: 'pastello', col: 'verde' }
     ] },
+  /* 14/11/2026: lo spessore della linea (autore + revisore) */
+  {"id": "d108", "f": "linee", "lv": 2, "ic": "🍎", "n": "La mela che si stacca dal foglio", "tool": "pennarello", "col": "nero", "impara": "contorno spesso e dettagli sottili", "passi": [
+      {"t": "Disegna il contorno della mela con una linea spessa: lo Spessore è già alto e, con l’Apple Pencil, premi bene. Il contorno spesso rende la forma forte e la fa staccare dal foglio.", "w": 18, "g": [["p", "M600 330 C520 270 380 310 380 500 C380 680 500 780 600 740 C700 780 820 680 820 500 C820 310 680 270 600 330 Z"]]},
+      {"t": "Ora il gambo e la foglia, con una linea sottile: lo Spessore è già basso e, con la Pencil, appoggi appena. I particolari piccoli vogliono un tratto fine, altrimenti si impastano.", "w": 4, "g": [["p", "M600 335 Q592 270 625 215"], ["p", "M609 249 Q690 170 780 215 Q705 300 609 249 Z"]]},
+      {"t": "Dentro la mela aggiungi due segni sottili: un riflesso curvo a sinistra e una piccola curva in basso. Contorno spesso fuori e linee sottili dentro: così si capisce subito qual è la forma e quali sono i particolari.", "w": 4, "g": [["p", "M455 430 Q440 500 470 575"], ["p", "M545 705 Q600 725 655 705"]]},
+      {"t": "Colora la mela di rosso e la foglia di verde. Guarda come il contorno spesso tiene ferma la forma anche con i colori.", "tool": "secchiello", "col": "rosso", "g": [["dot", 600, 540, "#d62828", "mela"], ["dot", 705, 232, "#2e9e44", "foglia"]]}
+    ] },
+  {"id": "d109", "f": "linee", "lv": 2, "ic": "🌳", "n": "Tre alberi: vicino, di mezzo, lontano", "tool": "pennarello", "col": "nero", "impara": "linea spessa per ciò che è vicino, sottile per ciò che è lontano", "passi": [
+      {"t": "Comincia dal più lontano: un alberello piccolo e la linea dell’orizzonte, con linea sottile. Lascia due spazi vuoti dove passeranno i tronchi. Una linea fine aiuta a far sembrare le cose lontane.", "w": 4, "g": [["p", "M80 540 L282 540 M378 540 L684 540 M716 540 L1120 540"], ["c", 980, 470, 40], ["p", "M975 509 L975 545 M985 509 L985 545"]]},
+      {"t": "Poi l’albero di mezzo, più grande, con una linea media. Più è vicino, più lo fai grande e più la linea diventa robusta.", "w": 10, "g": [["c", 700, 400, 85], ["p", "M686 484 L678 590 M714 484 L722 590"]]},
+      {"t": "Infine l’albero vicino: grandissimo, con la linea spessa (lo Spessore è già alto; con la Pencil premi bene). La linea grossa lo fa venire avanti, verso chi guarda.", "w": 20, "g": [["c", 330, 330, 160], ["p", "M295 485 C305 600 285 700 262 780 M365 485 C355 600 380 700 398 780 M240 782 Q330 765 420 782"]]},
+      {"t": "Colora le chiome: verde per l’albero vicino e verde chiaro per gli altri due. I colori più chiari aiutano a far sembrare le cose lontane. Poi colora di marrone il tronco dell’albero vicino.", "tool": "secchiello", "col": "verde", "g": [["dot", 330, 330, "#2e9e44", "verde"], ["dot", 700, 400, "#9bd770", "verde chiaro"], ["dot", 980, 470, "#9bd770", ""], ["dot", 330, 650, "#8b5a2b", "tronco"]]}
+    ] },
+  {"id": "d110", "f": "linee", "lv": 3, "ic": "🌿", "n": "Premere e alleggerire", "tool": "matita", "col": "nero", "w": 16, "impara": "una linea che parte sottile, si allarga e torna sottile", "passi": [
+      {"t": "Ecco la forma da imparare: sottile, larga al centro, di nuovo sottile. Ricalca il contorno con la linea sottile e poi riempilo con il secchiello. Così la ottieni anche senza Pencil.", "tool": "pennarello", "w": 4, "g": [["p", "M200 130 Q600 30 1000 130 Q600 230 200 130 Z"]]},
+      {"t": "Ora la stessa forma con un tratto solo. Con l’Apple Pencil parti leggera, premi a metà e alleggerisci alla fine. Col dito lo spessore non cambia dentro la linea: ripassa due o tre volte la parte di mezzo.", "w": 16, "g": [["l", 200, 270, 1000, 270]]},
+      {"t": "Tre fili d’erba, ognuno con un tratto solo: premi vicino a terra e alleggerisci salendo, così la punta resta sottile. Col dito: ripassa ancora la parte bassa, che deve essere più larga.", "g": [["p", "M300 620 Q310 480 220 360"], ["p", "M420 620 Q430 460 430 340"], ["p", "M540 620 Q540 480 640 370"]]},
+      {"t": "Un ciuffo di foglie lunghe che partono tutte dallo stesso punto, come un piccolo ramo. Ogni linea parte sottile, si allarga a metà e finisce a punta. Col dito: ripassa la parte di mezzo.", "g": [["p", "M850 620 Q780 520 760 400"], ["p", "M850 620 Q850 480 880 360"], ["p", "M850 620 Q930 500 1000 420"]]},
+      {"t": "Le ciocche di capelli sono linee lunghe e ondulate: premi e alleggerisci più volte, con calma. Col dito: ripassa le parti che vuoi più larghe. Le ciocche affusolate sembrano morbide e leggere.", "g": [["p", "M150 700 C300 650 400 750 550 700 S800 660 950 720"], ["p", "M150 760 C300 710 400 810 550 760 S800 720 950 780"], ["p", "M150 820 C300 770 400 870 550 820 S800 780 950 840"]]}
+    ] },
+  {"id": "d111", "f": "linee", "lv": 2, "ic": "☕", "n": "Prima leggero, poi deciso", "tool": "matita", "col": "grigio", "impara": "schizzo leggero e poi ripasso deciso", "passi": [
+      {"t": "Fai uno schizzo leggero del corpo della tazza: lo Spessore è già sottile e, con l’Apple Pencil, appoggi appena. Se una linea non ti convince, rifalla accanto, come mostra la guida a sinistra: nello schizzo si prova più volte.", "w": 3, "g": [["p", "M360 330 L388 700 Q560 790 732 700 L760 330"], ["p", "M374 336 L366 704 Q560 764 746 690"]]},
+      {"t": "Aggiungi l’ovale della bocca e il manico, sempre leggeri. Le linee leggere si correggono con facilità e, quando poi ripassi, quasi non si notano.", "w": 3, "g": [["e", 560, 330, 200, 55], ["p", "M755 400 C900 400 900 640 735 640"]]},
+      {"t": "Ora scegli le linee che ti piacciono e ripassa il corpo con una linea nera e decisa: lo Spessore è già medio e, con la Pencil, premi di più. Ripassi solo le linee scelte: le altre restano chiare.", "tool": "matita", "col": "nero", "w": 10, "g": [["p", "M360 330 L388 700 Q560 790 732 700 L760 330"]]},
+      {"t": "Ripassa decisa anche la bocca e il manico. Prima le forme grandi leggere, poi le linee forti: il disegno resta pulito.", "tool": "matita", "col": "nero", "w": 10, "g": [["e", 560, 330, 200, 55], ["p", "M755 400 C900 400 900 640 735 640"]]},
+      {"t": "Per ultimo il vapore, con una linea sottile: sono tre ondine che salgono dalla tazza. I particolari leggeri si aggiungono alla fine.", "tool": "matita", "col": "nero", "w": 4, "g": [["p", "M480 270 Q460 220 480 170 Q500 120 480 80"], ["p", "M560 270 Q540 220 560 170 Q580 120 560 80"], ["p", "M640 270 Q620 220 640 170 Q660 120 640 80"]]}
+    ] },
   /* ---------- 🎨 FASE 2: il colore ---------- */
   { id: 'd201', f: 'colore', lv: 1, ic: '🎡', n: 'La ruota dei colori', tool: 'secchiello', col: 'giallo', impara: 'colori primari e secondari',
     base: [['c', 600, 450, 330], ['l', 600, 450, 600, 120], ['l', 600, 450, 886, 285], ['l', 600, 450, 886, 615], ['l', 600, 450, 600, 780], ['l', 600, 450, 314, 615], ['l', 600, 450, 314, 285]],
@@ -11054,6 +11103,28 @@ const DIS_PROG = [
       { t: 'In alto il rosa e il viola.', g: [['r', 0, 80, 1200, 300]], tool: 'acquerello', col: 'viola' },
       { t: 'Con lo sfumino passa dove i colori si toccano, avanti e indietro: il confine sparisce e il cielo diventa morbido (con l’acquerello vero si fa passando il pennello bagnato quando il colore è ancora umido).', g: [['l', 0, 570, 1200, 570], ['l', 0, 370, 1200, 370]], tool: 'sfumino', col: 'giallo' },
       { t: 'Per finire, una collina scura in basso: sembrerà davanti al tramonto.', g: [['p', 'M0 770 Q350 620 650 720 Q900 800 1200 680 L1200 900 L0 900 Z']], tool: 'pennarello', col: 'viola' }
+    ] },
+  /* 14/11/2026: perché questo colore (autore + revisore) */
+  {"id": "d206", "f": "colore", "lv": 2, "ic": "☂️", "n": "Un colore per attirare lo sguardo", "tool": "matita", "col": "nero", "w": 5, "impara": "un solo colore acceso tra tanti colori tenui", "passi": [
+      {"t": "Disegna quattro ombrelli piccoli, uno per angolo: la cupola con tre spicchi e il manico che scende da sotto. Saranno lo sfondo: avranno tutti colori delicati.", "g": [["p", "M110 330 C110 277.2 164 234 230 234 C296 234 350 277.2 350 330 Q310 363.6 270 330 Q230 363.6 190 330 Q150 363.6 110 330"], ["p", "M230 234 Q176 291.6 190 330"], ["p", "M230 234 Q284 291.6 270 330"], ["p", "M230 346.8 L230 486 Q230 528 182 510"], ["p", "M870 300 C870 251.6 919.5 212 980 212 C1040.5 212 1090 251.6 1090 300 Q1053.3333333333333 330.8 1016.6666666666666 300 Q980 330.8 943.3333333333333 300 Q906.6666666666667 330.8 870 300"], ["p", "M980 212 Q930.5 264.8 943.3333333333334 300"], ["p", "M980 212 Q1029.5 264.8 1016.6666666666666 300"], ["p", "M980 315.4 L980 443 Q980 481.5 936 465"], ["p", "M150 680 C150 636 195 600 250 600 C305 600 350 636 350 680 Q316.66666666666663 708 283.3333333333333 680 Q249.99999999999997 708 216.66666666666663 680 Q183.33333333333331 708 150 680"], ["p", "M250 600 Q205 648 216.66666666666666 680"], ["p", "M250 600 Q295 648 283.3333333333333 680"], ["p", "M250 694 L250 810 Q250 845 210 830"], ["p", "M860 660 C860 616 905 580 960 580 C1015 580 1060 616 1060 660 Q1026.6666666666667 688 993.3333333333334 660 Q960 688 926.6666666666667 660 Q893.3333333333333 688 860 660"], ["p", "M960 580 Q915 628 926.6666666666666 660"], ["p", "M960 580 Q1005 628 993.3333333333334 660"], ["p", "M960 674 L960 790 Q960 825 920 810"]]},
+      {"t": "Al centro disegna un ombrello molto più grande, sempre con tre spicchi e il manico. Sarà lui il protagonista del disegno.", "g": [["p", "M400 440 C400 352 490 280 600 280 C710 280 800 352 800 440 Q733.3333333333333 496 666.6666666666666 440 Q600 496 533.3333333333333 440 Q466.6666666666666 496 399.9999999999999 440"], ["p", "M600 280 Q510 376 533.3333333333334 440"], ["p", "M600 280 Q690 376 666.6666666666666 440"], ["p", "M600 468 L600 700 Q600 770 520 740"]]},
+      {"t": "Con linee sottili e leggere disegna la pioggia: tanti tratti obliqui, tutti nella stessa direzione.", "col": "grigio", "w": 3, "g": [["l", 140, 120, 115, 180], ["l", 360, 100, 335, 160], ["l", 520, 150, 495, 210], ["l", 740, 110, 715, 170], ["l", 1060, 110, 1035, 170], ["l", 130, 500, 105, 560], ["l", 1090, 500, 1065, 560], ["l", 440, 780, 415, 840], ["l", 780, 770, 755, 830], ["l", 600, 800, 575, 860], ["l", 110, 800, 85, 860], ["l", 1090, 800, 1065, 860], ["l", 420, 600, 395, 660], ["l", 820, 560, 795, 620]]},
+      {"t": "Colora i quattro ombrelli piccoli con colori tenui, grigio chiaro e celestino: ogni spicchio è una zona da riempire. I colori pallidi e delicati restano in secondo piano.", "tool": "secchiello", "col": "g2", "g": [["dot", 158, 305, "#c8c8c8", ""], ["dot", 230, 298, "#c8c8c8", "grigio chiaro"], ["dot", 302, 305, "#c8c8c8", ""], ["dot", 914, 275, "#cfe8fb", ""], ["dot", 980, 268, "#cfe8fb", "celestino"], ["dot", 1046, 275, "#cfe8fb", ""], ["dot", 190, 655, "#c8c8c8", ""], ["dot", 250, 648, "#c8c8c8", "grigio chiaro"], ["dot", 310, 655, "#c8c8c8", ""], ["dot", 900, 635, "#cfe8fb", ""], ["dot", 960, 628, "#cfe8fb", "celestino"], ["dot", 1020, 635, "#cfe8fb", ""]]},
+      {"t": "Ora l’ombrello grande: colora di rosso acceso i suoi tre spicchi. Tra tanti colori tenui l’occhio va subito sull’unico colore forte, perché è diverso da tutti gli altri.", "tool": "secchiello", "col": "rosso", "g": [["dot", 475, 410, "#d62828", ""], ["dot", 600, 400, "#d62828", "rosso"], ["dot", 725, 410, "#d62828", ""]]}
+    ] },
+  {"id": "d207", "f": "colore", "lv": 2, "ic": "⛵", "n": "Tre colori che stanno bene insieme", "tool": "matita", "col": "nero", "impara": "scegliere una piccola tavolozza e ripeterla", "passi": [
+      {"t": "Per tutto il disegno userai solo tre colori: blu, azzurro e giallo. In alto disegna tre quadratini, uno accanto all’altro: saranno la tua tavolozza.", "g": [["r", 80, 50, 140, 110], ["r", 260, 50, 140, 110], ["r", 440, 50, 140, 110]]},
+      {"t": "Colora i tre quadratini: blu, azzurro e giallo. Blu e azzurro sono vicini tra loro; il giallo è molto diverso e accanto al blu si nota subito.", "tool": "secchiello", "col": "blu", "g": [["dot", 150, 88, "#1f5fbf", "blu"], ["dot", 330, 88, "#7cc4f2", "azzurro"], ["dot", 510, 88, "#f6d000", "giallo"]]},
+      {"t": "Disegna il riquadro del paesaggio e il sole, che è un cerchio. Poi la linea dell’orizzonte, in due pezzi: lascia vuoto lo spazio in mezzo, dove andrà la barca.", "g": [["r", 100, 200, 1000, 640], ["c", 920, 300, 60], ["p", "M100 560 L420 560 M700 560 L1100 560"]]},
+      {"t": "Nello spazio vuoto disegna la barca a vela: lo scafo è un trapezio con il lato lungo in alto, sulla linea dell’orizzonte. Poi l’albero dritto e due vele a triangolo, una grande e una piccola.", "g": [["p", "M420 560 L700 560 L640 650 L480 650 Z"], ["l", 560, 560, 560, 330], ["p", "M572 345 L572 560 L700 560 Z"], ["p", "M548 400 L548 560 L450 560 Z"]]},
+      {"t": "Colora usando solo la tavolozza: cielo azzurro, mare blu, sole e vele gialli, scafo azzurro. Gli stessi colori tornano in punti diversi: pochi colori ripetuti tengono unito il disegno.", "tool": "secchiello", "col": "azzurro", "g": [["dot", 300, 320, "#7cc4f2", "cielo"], ["dot", 230, 740, "#1f5fbf", "mare"], ["dot", 920, 300, "#f6d000", "sole"], ["dot", 615, 495, "#f6d000", "vela"], ["dot", 515, 525, "#f6d000", ""], ["dot", 560, 592, "#7cc4f2", "scafo"]]},
+      {"t": "Per finire, disegna tre onde azzurre sul mare blu. Con tre colori il disegno sembra ordinato, perché tutto usa gli stessi colori.", "tool": "pastello", "col": "azzurro", "w": 8, "g": [["p", "M170 700 Q220 670 270 700 T370 700"], ["p", "M720 720 Q770 690 820 720 T920 720"], ["p", "M330 790 Q380 760 430 790 T530 790"]]}
+    ] },
+  {"id": "d208", "f": "colore", "lv": 3, "ic": "🏡", "n": "Caldi e freddi: la stessa casetta", "tool": "matita", "col": "nero", "impara": "come i colori caldi e freddi cambiano l’atmosfera", "passi": [
+      {"t": "Nel riquadro di sinistra disegna una casetta: muri, tetto a triangolo, la porta e due finestre. Poi la linea del terreno.", "g": [["r", 70, 150, 510, 640], ["r", 175, 378, 300, 262], ["p", "M150 378 L325 203 L500 378 Z"], ["r", 294, 490, 63, 150], ["r", 200, 428, 69, 69], ["r", 381, 428, 69, 69], ["l", 70, 640, 580, 640]]},
+      {"t": "Nel riquadro di destra rifai la stessa casetta, con le stesse forme e le stesse misure. Cambieranno solo i colori.", "g": [["r", 620, 150, 510, 640], ["r", 725, 378, 300, 262], ["p", "M700 378 L875 203 L1050 378 Z"], ["r", 844, 490, 63, 150], ["r", 750, 428, 69, 69], ["r", 931, 428, 69, 69], ["l", 620, 640, 1130, 640]]},
+      {"t": "A sinistra usa colori caldi: giallo, arancione, rosso, marrone. Molti li trovano accoglienti, come un pomeriggio di sole.", "tool": "secchiello", "col": "arancione", "g": [["dot", 130, 200, "#f6d000", "cielo"], ["dot", 230, 545, "#f28c1b", "muro"], ["dot", 325, 310, "#d62828", "tetto"], ["dot", 325.5, 545, "#8b5a2b", "porta"], ["dot", 234.5, 462.5, "#f6d000", "finestra"], ["dot", 415.5, 462.5, "#f6d000", ""], ["dot", 325, 720, "#8b5a2b", "terreno"], ["txt", 325, 115, "colori caldi"]]},
+      {"t": "A destra usa colori freddi: celestino, azzurro, blu, viola. A molti sembrano più calmi e freschi, come una sera d’inverno. La casetta è la stessa, ma l’atmosfera cambia.", "tool": "secchiello", "col": "azzurro", "g": [["dot", 680, 200, "#cfe8fb", "cielo"], ["dot", 780, 545, "#7cc4f2", "muro"], ["dot", 875, 310, "#2a5cb8", "tetto"], ["dot", 875.5, 545, "#7b3fa0", "porta"], ["dot", 784.5, 462.5, "#dbe7fb", "finestra"], ["dot", 965.5, 462.5, "#dbe7fb", ""], ["dot", 875, 720, "#5f8fe0", "terreno"], ["txt", 875, 115, "colori freddi"]]}
     ] },
   /* ---------- 🌗 FASE 3: luce, ombra e volume ---------- */
   { id: 'd301', f: 'ombra', lv: 1, ic: '⬛', n: 'La scala dei grigi', tool: 'matita', col: 'nero', impara: 'chiaro e scuro con la pressione della matita',
@@ -11163,6 +11234,87 @@ const DIS_PROG = [
       { t: 'Una gamba spinge indietro, l’altra si piega in avanti.', g: [['l', 600, 440, 470, 600], ['l', 470, 600, 380, 720], ['l', 620, 440, 740, 590], ['l', 740, 590, 700, 760]] },
       { t: 'Le braccia si muovono al contrario delle gambe: un braccio avanti, l’altro indietro.', g: [['l', 700, 240, 800, 360], ['l', 800, 360, 880, 320], ['l', 660, 240, 560, 330], ['l', 560, 330, 540, 420]] },
       { t: 'Ora vesti il manichino: maglietta, pantaloncini, scarpe e capelli che volano all’indietro.', g: [] }
+    ] },
+  /* ---------- ✋ FORME A MANO LIBERA (14/11/2026): 4 esercizi per scaldare la mano e 8 soggetti fatti di forme semplici; palestra sempre aperta ---------- */
+  {"id": "d601", "f": "mano", "lv": 1, "ic": "⭕", "n": "Il cerchio in un colpo solo", "tool": "pennarello", "col": "blu", "w": 9, "impara": "fare un cerchio con un solo gesto del braccio", "passi": [
+      {"t": "Prima fai girare la mano in aria sopra il foglio, senza toccarlo, tre o quattro volte. Poi scendi e ricalca il cerchio con un giro solo, muovendo tutto il braccio: così il gesto è morbido e il cerchio viene più tondo.", "g": [["c", 600, 200, 150]]},
+      {"t": "Altri due cerchi grandi accanto al primo, ognuno con un giro solo, senza fermarti a metà. Non è un problema se non si chiude perfetto: la mano impara ripetendo il gesto.", "g": [["c", 250, 200, 150], ["c", 950, 200, 150]]},
+      {"t": "Ora i cerchi medi: stesso gesto, ma più piccolo. Respira piano e fai un giro solo per ogni cerchio. Prima di scendere sul foglio, gira ancora un momento in aria.", "g": [["c", 200, 540, 90], ["c", 450, 540, 90], ["c", 700, 540, 90], ["c", 950, 540, 90]]},
+      {"t": "Per finire, una fila di cerchi piccoli. Qui lavorano di più il polso e le dita. Se un cerchio non si chiude bene, passa al prossimo: ogni cerchio è un nuovo tentativo.", "g": [["c", 150, 780, 45], ["c", 330, 780, 45], ["c", 510, 780, 45], ["c", 690, 780, 45], ["c", 870, 780, 45], ["c", 1050, 780, 45]]}
+    ] },
+  {"id": "d602", "f": "mano", "lv": 1, "ic": "🥚", "n": "L’ovale", "tool": "pennarello", "col": "blu", "w": 9, "impara": "disegnare ovali sdraiati e in piedi", "passi": [
+      {"t": "Gli ovali sdraiati sono larghi. Fanne tre in fila, con un giro solo per ciascuno. L’ovale è la forma del corpo di tanti animali, come il gatto o il pesce.", "g": [["e", 220, 150, 150, 80], ["e", 600, 150, 150, 80], ["e", 980, 150, 150, 80]]},
+      {"t": "Ora gli ovali in piedi, che sono alti e stretti. Il gesto è lo stesso, ma la mano sale e scende. Ricorda che l’ovale è un cerchio un po’ allungato.", "g": [["e", 200, 440, 80, 140], ["e", 450, 440, 80, 140], ["e", 700, 440, 80, 140], ["e", 950, 440, 80, 140]]},
+      {"t": "Una fila di ovali sempre più piccoli, uno vicino all’altro. Prima di cominciare ognuno guarda quanto spazio c’è: così impari a decidere la grandezza di una forma.", "g": [["e", 256, 730, 100, 60], ["e", 486, 730, 85, 52], ["e", 676, 730, 70, 43], ["e", 826, 730, 55, 34], ["e", 936, 730, 40, 25], ["e", 1016, 730, 28, 18]]}
+    ] },
+  {"id": "d603", "f": "mano", "lv": 1, "ic": "📏", "n": "Le linee parallele", "tool": "pennarello", "col": "blu", "w": 8, "impara": "tracciare linee che restano alla stessa distanza", "passi": [
+      {"t": "Linee orizzontali, una sotto l’altra, tutte alla stessa distanza. Lascia spento «Dritto»: qui si allena la mano. Guarda il punto dove vuoi arrivare, non la punta che disegna: la linea viene più dritta.", "g": [["l", 100, 80, 1100, 80], ["l", 100, 130, 1100, 130], ["l", 100, 180, 1100, 180], ["l", 100, 230, 1100, 230], ["l", 100, 280, 1100, 280], ["l", 100, 330, 1100, 330]]},
+      {"t": "Ora le linee verticali, dall’alto in basso. Parti da un punto, guarda subito il punto d’arrivo e tira la linea in un gesto solo. Le linee parallele non si incontrano mai.", "g": [["l", 100, 430, 100, 850], ["l", 150, 430, 150, 850], ["l", 200, 430, 200, 850], ["l", 250, 430, 250, 850], ["l", 300, 430, 300, 850], ["l", 350, 430, 350, 850], ["l", 400, 430, 400, 850]]},
+      {"t": "Per finire le linee oblique, tutte inclinate allo stesso modo. Tieni la stessa distanza tra una linea e l’altra. Se una esce storta, la prossima la rifai con calma.", "g": [["l", 650, 850, 800, 430], ["l", 710, 850, 860, 430], ["l", 770, 850, 920, 430], ["l", 830, 850, 980, 430], ["l", 890, 850, 1040, 430], ["l", 950, 850, 1100, 430]]}
+    ] },
+  {"id": "d604", "f": "mano", "lv": 1, "ic": "🔲", "n": "Il quadrato che diventa cerchio", "tool": "pennarello", "col": "blu", "w": 9, "impara": "passare dal quadrato al cerchio", "passi": [
+      {"t": "Comincia con un quadrato: quattro lati uguali e quattro angoli. Disegnalo con calma. Nei prossimi passi gli angoli diventeranno sempre più rotondi.", "g": [["r", 60, 340, 220, 220]]},
+      {"t": "Secondo quadrato, con gli angoli appena arrotondati. Gli angoli diventano curve piccole e i lati restano quasi dritti.", "g": [["p", "M380 340 L520 340 Q560 340 560 380 L560 520 Q560 560 520 560 L380 560 Q340 560 340 520 L340 380 Q340 340 380 340 Z"]]},
+      {"t": "Terzo: gli angoli sono molto rotondi e i pezzi dritti sono ormai corti. La forma sta diventando un cerchio.", "g": [["p", "M705 340 L755 340 Q840 340 840 425 L840 475 Q840 560 755 560 L705 560 Q620 560 620 475 L620 425 Q620 340 705 340 Z"]]},
+      {"t": "Infine un quadrato leggero con un cerchio dentro, che tocca i quattro lati. Il quadrato ti aiuta: dentro quei confini è più facile fare un cerchio tondo.", "g": [["r", 900, 340, 220, 220], ["c", 1010, 450, 110]]}
+    ] },
+  {"id": "d605", "f": "mano", "lv": 1, "ic": "🐰", "n": "Il coniglio", "tool": "matita", "col": "nero", "w": 6, "impara": "costruire un coniglio con ovali e cerchi", "passi": [
+      {"t": "Il coniglio è fatto di forme semplici: un ovale grande per il corpo, un cerchio per la testa, due ovali lunghi per le orecchie. Prima il corpo e la testa: le forme grandi fissano le proporzioni.", "g": [["e", 600, 640, 185, 190], ["c", 600, 330, 120]]},
+      {"t": "Aggiungi le orecchie: due ovali lunghi sopra la testa, che la toccano. Le orecchie lunghe sono la caratteristica che rende subito riconoscibile il coniglio.", "g": [["e", 545, 133, 42, 90], ["e", 655, 133, 42, 90]]},
+      {"t": "Ora le forme medie: due ovali piatti per i piedi, in basso ai lati, e due ovali stretti per le zampe davanti, dentro il corpo. Così il coniglio sta seduto bene.", "g": [["e", 470, 831, 70, 28], ["e", 730, 831, 70, 28], ["e", 550, 735, 32, 62], ["e", 650, 735, 32, 62]]},
+      {"t": "Per ultimi i dettagli: due occhi, un naso piccolo, la bocca (una lineetta e due curve), i baffi e l’ovale dentro le orecchie. I dettagli vanno alla fine, quando le forme grandi sono a posto.", "g": [["c", 555, 315, 13], ["c", 645, 315, 13], ["e", 600, 360, 16, 10], ["p", "M600 370 L600 385 Q580 402 562 390 M600 385 Q620 402 638 390"], ["l", 470, 360, 540, 370], ["l", 470, 397, 540, 385], ["l", 730, 360, 660, 370], ["l", 730, 397, 660, 385], ["e", 545, 145, 17, 50], ["e", 655, 145, 17, 50]]},
+      {"t": "Ora colora: scegli il secchiello e tocca le zone. Il grigio chiaro va bene per il corpo, la testa e le orecchie. Le forme chiuse si riempiono senza uscire.", "g": [["dot", 600, 560, "#c8c8c8", "corpo"], ["dot", 600, 255, "#c8c8c8", "testa"], ["dot", 545, 70, "#c8c8c8", "orecchie"], ["dot", 655, 70, "#c8c8c8", ""]], "tool": "secchiello", "col": "g2"}
+    ] },
+  {"id": "d606", "f": "mano", "lv": 1, "ic": "🦉", "n": "Il gufo", "tool": "matita", "col": "nero", "w": 6, "impara": "costruire un gufo con un ovale e due cerchi", "passi": [
+      {"t": "Il gufo è un ovale grande con due cerchi per gli occhi. Disegna prima l’ovale del corpo, poi i due cerchi grandi uno accanto all’altro, che si toccano al centro. Le forme grandi vengono per prime.", "g": [["e", 600, 487.5, 218.5, 313.5], ["c", 514.5, 373.5, 85.5], ["c", 685.5, 373.5, 85.5]]},
+      {"t": "Aggiungi le forme medie: due ciuffi a triangolo sopra la testa, il becco (un triangolo piccolo sotto gli occhi) e le ali, due forme a foglia ai lati del corpo.", "g": [["p", "M438.5 278.5 L424.3 155 L524 194.9"], ["p", "M676 194.9 L775.8 155 L761.5 278.5"], ["p", "M580 447 L620 447 L600 505 Z"], ["p", "M424.3 468.5 Q376.8 582.5 467 706 Q486 582.5 424.3 468.5"], ["p", "M775.8 468.5 Q823.3 582.5 733 706 Q714 582.5 775.8 468.5"]]},
+      {"t": "Ora i dettagli: una pupilla in ogni occhio, le piume della pancia con piccole curve, due zampette e un ramo dove si posa. Metti le pupille nello stesso punto dei due occhi: così lo sguardo è deciso.", "g": [["c", 514.5, 378.3, 33.3], ["c", 685.5, 378.3, 33.3], ["p", "M524 582.5 Q552.5 615.8 581 582.5 M619 582.5 Q647.5 615.8 676 582.5 M547.8 658.5 Q576.3 691.8 604.8 658.5 Q633.3 691.8 661.8 658.5"], ["e", 560, 811, 30, 15], ["e", 640, 811, 30, 15], ["r", 280, 826, 640, 26]]},
+      {"t": "Colora il corpo e i ciuffi di marrone con il secchiello. Occhi e ali sono zone chiuse a parte: restano chiari. Se il colore esce, c’è un buco nel contorno da chiudere.", "g": [["dot", 600, 728, "#8b5a2b", "corpo"], ["dot", 465, 205, "#8b5a2b", "ciuffo"], ["dot", 735, 205, "#8b5a2b", "ciuffo"]], "tool": "secchiello", "col": "marrone"}
+    ] },
+  {"id": "d607", "f": "mano", "lv": 2, "ic": "🦋", "n": "La farfalla", "tool": "matita", "col": "nero", "w": 6, "impara": "disegnare una forma simmetrica con l’asse a metà", "passi": [
+      {"t": "La farfalla è un ovale stretto per il corpo, un cerchio per la testa e quattro grandi forme tonde per le ali. Prima il corpo al centro: è l’asse, da cui le ali partono uguali a destra e a sinistra.", "g": [["e", 600, 470, 24, 160], ["c", 600, 280, 30]]},
+      {"t": "Le ali di sopra sono grandi e arrotondate. Puoi accendere «Specchio»: ricalca solo l’ala di sinistra e quella di destra compare da sola, uguale e rovesciata, come piegando il foglio a metà.", "g": [["p", "M624 400 C720 200 920 120 1050 190 C1140 250 1060 400 960 430 C860 460 720 450 624 440"], ["p", "M576 400 C480 200 280 120 150 190 C60 250 140 400 240 430 C340 460 480 450 576 440"]]},
+      {"t": "Ora le ali di sotto, più piccole, attaccate al corpo appena sotto quelle di sopra. Con «Specchio» acceso basta ricalcare di nuovo solo il lato sinistro.", "g": [["p", "M624 450 C760 450 900 480 930 580 C960 700 800 780 720 700 C660 640 630 560 624 530"], ["p", "M576 450 C440 450 300 480 270 580 C240 700 400 780 480 700 C540 640 570 560 576 530"]]},
+      {"t": "Per finire le due antenne, con una pallina in cima, e un cerchio decorato su ogni ala. Con «Specchio» fai un lato solo; se è spento, metti le stesse cose dalle due parti.", "g": [["p", "M592 251 Q575 190 540 150"], ["p", "M608 251 Q625 190 660 150"], ["c", 534.5, 143.5, 8], ["c", 665.5, 143.5, 8], ["c", 900, 300, 55], ["c", 300, 300, 55], ["c", 810, 620, 38], ["c", 390, 620, 38]]},
+      {"t": "Colora le ali di arancione con il secchiello. Il secchiello non usa lo Specchio: tocca tutte e quattro le ali, una alla volta. Lo stesso colore dalle due parti conserva la simmetria.", "g": [["dot", 790, 340, "#f28c1b", "ala"], ["dot", 410, 340, "#f28c1b", "ala"], ["dot", 720, 540, "#f28c1b", "ala"], ["dot", 480, 540, "#f28c1b", "ala"]], "tool": "secchiello", "col": "arancione"}
+    ] },
+  {"id": "d608", "f": "mano", "lv": 1, "ic": "🌸", "n": "Il fiore", "tool": "matita", "col": "nero", "w": 6, "impara": "costruire un fiore con cerchi tutti uguali", "passi": [
+      {"t": "Il fiore è fatto di cerchi: uno al centro e sei cerchi uguali intorno, per i petali. Disegna prima quello centrale, poi i petali uno vicino all’altro. Ogni petalo tocca il centro: così il fiore resta ben ordinato.", "g": [["c", 600, 310, 60], ["c", 722, 310, 62], ["c", 661, 415.7, 62], ["c", 539, 415.7, 62], ["c", 478, 310, 62], ["c", 539, 204.3, 62], ["c", 661, 204.3, 62]]},
+      {"t": "Aggiungi lo stelo, una linea dritta che parte da sotto i petali, e due foglie. Una foglia è una forma a goccia che parte dallo stelo, una da una parte e una dall’altra.", "g": [["l", 600, 425, 600, 850], ["p", "M600 730 Q470 610 380 670 Q480 780 600 730"], ["p", "M600 660 Q730 550 820 610 Q720 720 600 660"]]},
+      {"t": "Ora i dettagli: tre cerchietti nel centro, una linea per il terreno e qualche filo d’erba. I dettagli piccoli vanno per ultimi, così non cambiano le proporzioni.", "g": [["c", 580, 300, 9], ["c", 620, 300, 9], ["c", 600, 335, 9], ["l", 300, 850, 900, 850], ["p", "M360 850 L350 805 M385 850 L395 810 M815 850 L805 805 M840 850 L850 810"]]},
+      {"t": "Colora i petali di rosa con il secchiello. Ogni petalo è una zona chiusa: toccali tutti e sei, uno alla volta.", "g": [["dot", 722, 310, "#f4a6c1", "petalo"], ["dot", 661, 415.7, "#f4a6c1", ""], ["dot", 539, 415.7, "#f4a6c1", ""], ["dot", 478, 310, "#f4a6c1", ""], ["dot", 539, 204.3, "#f4a6c1", ""], ["dot", 661, 204.3, "#f4a6c1", ""]], "tool": "secchiello", "col": "rosa"},
+      {"t": "Ora colora le due foglie di verde con il secchiello. Il centro del fiore puoi lasciarlo chiaro o farlo giallo, come preferisci.", "g": [["dot", 490, 700, "#2e9e44", "foglia"], ["dot", 720, 632, "#2e9e44", "foglia"]], "tool": "secchiello", "col": "verde"}
+    ] },
+  {"id": "d609", "f": "mano", "lv": 2, "ic": "🐢", "n": "La tartaruga", "tool": "matita", "col": "nero", "w": 6, "impara": "costruire una tartaruga con una mezza ellisse e cerchi", "passi": [
+      {"t": "La tartaruga ha un guscio a cupola, come mezza ellisse, con una linea piatta sotto. Fallo grande: è la forma principale e tutto il resto si attacca al guscio. La testa e le zampe arrivano dopo.", "g": [["p", "M238.8 619 A360 312 0 0 1 958.8 619 Z"]]},
+      {"t": "Ora le forme medie: la testa, rotonda, a destra; la coda a triangolo piccolo a sinistra; quattro zampe corte e tonde sotto il guscio. Tutte partono dal bordo del guscio.", "g": [["p", "M914.4 469 C958.8 427 1066.8 439 1076.4 511 C1083.6 577 1006.8 595 950.4 553"], ["p", "M238.8 585.4 Q184.8 595 148.8 633.4 Q200.4 640.6 238.8 619"], ["p", "M292.8 619 C280.8 697 388.8 697 382.8 619"], ["p", "M424.8 619 C415.2 691 514.8 691 508.8 619"], ["p", "M688.8 619 C679.2 691 778.8 691 772.8 619"], ["p", "M808.8 619 C799.2 697 904.8 697 898.8 619"]]},
+      {"t": "Dividi il guscio in placche: un esagono grande al centro e sei linee che vanno dall’esagono fino al bordo del guscio. Così il guscio sembra fatto a pezzi, come quello vero.", "g": [["p", "M532.8 403 L664.8 403 L718.8 475 L664.8 547 L532.8 547 L478.8 475 Z"], ["l", 532.8, 403, 460.7, 330.9], ["l", 664.8, 403, 732.4, 329.3], ["l", 718.8, 475, 918.2, 475], ["l", 478.8, 475, 279.4, 475], ["l", 664.8, 547, 742.8, 619], ["l", 532.8, 547, 454.8, 619]]},
+      {"t": "Aggiungi i dettagli sul viso: un occhio e un sorriso piccolo. Un dettaglio piccolo e preciso rende subito la testa viva.", "g": [["c", 1024.8, 495.4, 9.6], ["p", "M994.8 547 Q1028.4 565 1060.8 535"]]},
+      {"t": "Colora il guscio di verde con il secchiello: tocca ogni placca, sono sette. Testa e zampe le colori nel prossimo passo.", "g": [["dot", 598.8, 475, "#2e9e44", "placca"], ["dot", 598.8, 367, "#2e9e44", "placca"], ["dot", 418.8, 415, "#2e9e44", "placca"], ["dot", 814.8, 415, "#2e9e44", "placca"], ["dot", 814.8, 559, "#2e9e44", "placca"], ["dot", 598.8, 589, "#2e9e44", "placca"], ["dot", 382.8, 559, "#2e9e44", "placca"]], "tool": "secchiello", "col": "verde"},
+      {"t": "Per finire colora la testa e le quattro zampe di verde chiaro. Un colore più chiaro del guscio le distingue bene.", "g": [["dot", 985, 468, "#9bd770", "testa"], ["dot", 338.4, 649, "#9bd770", "zampa"], ["dot", 466.8, 649, "#9bd770", "zampa"], ["dot", 730.8, 649, "#9bd770", "zampa"], ["dot", 853.2, 649, "#9bd770", "zampa"]], "tool": "secchiello", "col": "verdechiaro"}
+    ] },
+  {"id": "d610", "f": "mano", "lv": 1, "ic": "⛵", "n": "La barca", "tool": "matita", "col": "nero", "w": 6, "impara": "costruire una barca a vela con triangoli e un trapezio", "passi": [
+      {"t": "La barca a vela ha uno scafo largo sopra e stretto sotto, con il fondo arrotondato, e una linea dritta per l’albero. Disegna prima lo scafo e l’albero: sono le forme grandi che tengono tutto il resto.", "g": [["p", "M250 620 L950 620 Q880 780 760 780 L440 780 Q320 780 250 620 Z"], ["l", 600, 190, 600, 620]]},
+      {"t": "Ora le vele, due triangoli che hanno un lato lungo sull’albero: uno grande a destra, uno più piccolo a sinistra. Tieni un po’ di spazio tra le vele e lo scafo.", "g": [["p", "M600 260 L600 590 L860 590 Z"], ["p", "M600 300 L600 590 L380 590 Z"]]},
+      {"t": "Aggiungi i dettagli: una bandierina in cima all’albero, un oblò rotondo sullo scafo e le onde sotto la barca. Le onde mostrano che la barca sta sull’acqua.", "g": [["p", "M600 190 L680 215 L600 240 Z"], ["c", 600, 690, 28], ["p", "M120 805 Q160 777 200 805 Q240 833 280 805 Q320 777 360 805 Q400 833 440 805 Q480 777 520 805 Q560 833 600 805 Q640 777 680 805 Q720 833 760 805 Q800 777 840 805 Q880 833 920 805 Q960 777 1000 805 Q1040 833 1080 805"]]},
+      {"t": "Colora lo scafo di marrone con il secchiello. Molte barche di legno sono marroni.", "g": [["dot", 420, 700, "#8b5a2b", "scafo"]], "tool": "secchiello", "col": "marrone"},
+      {"t": "Colora le vele di giallo: puoi fare quella grande e quella piccola dello stesso colore, oppure di due colori diversi.", "g": [["dot", 690, 500, "#f6d000", "vela"], ["dot", 530, 500, "#f6d000", "vela"]], "tool": "secchiello", "col": "giallo"}
+    ] },
+  {"id": "d611", "f": "mano", "lv": 2, "ic": "🚀", "n": "Il razzo", "tool": "matita", "col": "nero", "w": 6, "impara": "costruire un razzo con rettangoli, un arco e triangoli", "passi": [
+      {"t": "Il razzo è un rettangolo alto con una punta ad arco in cima, due alette e un cerchio per il finestrino. Prima il corpo: un rettangolo e l’arco sopra. Il corpo è la forma grande da cui tutto parte.", "g": [["r", 470, 360, 260, 300], ["p", "M470 360 Q470 200 600 100 Q730 200 730 360"]]},
+      {"t": "Aggiungi le alette: due forme a trapezio ai lati, attaccate in basso. Quando sono uguali dalle due parti il razzo sta in equilibrio nel disegno. Sotto, un piccolo rettangolo per l’ugello.", "g": [["p", "M470 500 L360 650 L360 730 L470 660 Z"], ["p", "M730 500 L840 650 L840 730 L730 660 Z"], ["r", 520, 660, 160, 35]]},
+      {"t": "Ora il finestrino, un cerchio in alto nel corpo, e una linea dritta per la fascia. Poi la fiamma sotto: una goccia a punta che parte dall’ugello, dove finisce il razzo.", "g": [["c", 600, 445, 55], ["l", 470, 570, 730, 570], ["p", "M530 695 Q540 790 600 860 Q660 790 670 695"]]},
+      {"t": "Per finire alcune stelle: piccoli cerchi, o una croce di due linee, nel cielo intorno al razzo. Mettile a distanze diverse tra loro: il cielo sembra più vero.", "g": [["c", 200, 200, 8], ["c", 1000, 250, 8], ["c", 250, 500, 6], ["c", 950, 480, 6], ["c", 1050, 700, 8], ["c", 150, 780, 6]]},
+      {"t": "Colora la punta e le alette di rosso con il secchiello. Il resto del razzo rimane chiaro, così si vede il contrasto.", "g": [["dot", 600, 250, "#d62828", "punta"], ["dot", 400, 660, "#d62828", "aletta"], ["dot", 800, 660, "#d62828", "aletta"]], "tool": "secchiello", "col": "rosso"},
+      {"t": "Ora la fiamma, di arancione. Tocca dentro la goccia sotto il razzo.", "g": [["dot", 600, 780, "#f28c1b", "fiamma"]], "tool": "secchiello", "col": "arancione"}
+    ] },
+  {"id": "d612", "f": "mano", "lv": 2, "ic": "☕", "n": "La tazza", "tool": "matita", "col": "nero", "w": 6, "impara": "disegnare un oggetto con l’ovale dell’apertura", "passi": [
+      {"t": "La tazza è un ovale per l’apertura, un corpo che scende ad arco e un manico. Comincia dall’ovale in alto: è il cerchio del bordo visto un po’ dall’alto, perciò appare schiacciato.", "g": [["e", 600, 380, 230, 70]]},
+      {"t": "Aggiungi il corpo: dai due estremi dell’ovale scendono due linee curve che si uniscono con un fondo piatto. Cerca di fare i due lati uguali e guardali bene dopo averli disegnati.", "g": [["p", "M370 380 C375 570 400 750 520 780 L680 780 C800 750 825 570 830 380"]]},
+      {"t": "Il manico è un anello sul lato destro: due curve, una grande fuori e una piccola dentro, che partono dal corpo e tornano al corpo. Così lo spessore resta uguale.", "g": [["p", "M825 440 C990 410 1000 650 788 668"], ["p", "M820 500 C920 490 925 600 806 612"]]},
+      {"t": "Dettagli: un secondo ovale dentro il primo, per il bordo e il caffè, e due righe ondulate di vapore sopra. Il vapore sale più sottile e libero.", "g": [["e", 600, 390, 205, 52], ["p", "M540 290 Q510 250 540 210 Q570 170 540 130"], ["p", "M660 290 Q630 250 660 210 Q690 170 660 130"]]},
+      {"t": "Colora il corpo della tazza e il manico di azzurro con il secchiello.", "g": [["dot", 600, 610, "#7cc4f2", "tazza"], ["dot", 921, 542, "#7cc4f2", "manico"]], "tool": "secchiello", "col": "azzurro"},
+      {"t": "Ora il caffè, di marrone: tocca dentro l’ovale piccolo.", "g": [["dot", 600, 375, "#8b5a2b", "caffè"]], "tool": "secchiello", "col": "marrone"}
     ] }
 ];
 /* idee per la tela libera */
@@ -11191,8 +11343,8 @@ const dsCol = k => DIS_COL[k] || k || '#222222';
 const dsFase = id => DIS_FASI.find(f => f.id === id);
 const dsProj = id => DIS_PROG.find(p => p.id === id);
 /* sblocco progressivo: la prima fase è aperta; ogni fase si apre con 3 progetti finiti della precedente; dentro la fase, un progetto alla volta */
-function dsFaseOpen(i, s) { if (i === 0) return true; const prev = DIS_PROG.filter(p => p.f === DIS_FASI[i - 1].id); return prev.filter(p => s.done[p.id]).length >= Math.min(3, prev.length); }
-function dsProjOpen(p, s) { const i = DIS_FASI.findIndex(f => f.id === p.f); if (!dsFaseOpen(i, s)) return false; const L = DIS_PROG.filter(q => q.f === p.f), k = L.indexOf(p); return k === 0 || !!s.done[L[k - 1].id] || !!s.done[p.id]; }
+function dsFaseOpen(i, s) { if (i === 0 || DIS_FASI[i].libera) return true; while (i > 0 && DIS_FASI[i - 1].libera) i--; if (i === 0) return true; const prev = DIS_PROG.filter(p => p.f === DIS_FASI[i - 1].id); return prev.filter(p => s.done[p.id]).length >= Math.min(3, prev.length); }
+function dsProjOpen(p, s) { const i = DIS_FASI.findIndex(f => f.id === p.f); if (!dsFaseOpen(i, s)) return false; if (DIS_FASI[i].libera) return true; const L = DIS_PROG.filter(q => q.f === p.f), k = L.indexOf(p); return k === 0 || !!s.done[L[k - 1].id] || !!s.done[p.id]; }
 const dsNext = s => DIS_PROG.find(p => !s.done[p.id] && dsProjOpen(p, s));
 
 /* ================= 🏛️ il museo che cresce ================= */
@@ -11216,7 +11368,7 @@ PAGES.disegno = el => {
     '<button type="button" class="v2-tile" id="ds-libera"><span class="v2-ti">🖌️</span><b>Tela libera</b><small>Matita, pennarelli, pastelli, acquerello, livelli e ricalco</small></button>' +
     '<button type="button" class="v2-tile" id="ds-impara"><span class="v2-ti">📚</span><b>Impara a disegnare</b><small>' + ndone + ' progetti su ' + DIS_PROG.length + (nx ? ' · prossimo: ' + esc(nx.n) : ' · tutti finiti!') + '</small></button>' +
     '<button type="button" class="v2-tile" id="ds-museo"><span class="v2-ti">🏛️</span><b>' + esc(dsLiv(n)) + '</b><small>' + n + (n === 1 ? ' quadro' : ' quadri') + (n ? ' · ' + dsVisit(n) + ' visitatori' : ' · il primo disegno salvato apre il museo') + '</small></button></div>' +
-    '<div class="card ds-idea"><b>💡 Idea di oggi</b><p>Disegna ' + esc(idea) + '.</p><button type="button" class="btn small" id="ds-idea">Comincia</button></div>';
+    '<div class="card ds-idea"><b>💡 Idea di oggi</b><p>Disegna ' + esc(idea) + '.</p><button type="button" class="btn small" id="ds-idea">Comincia</button></div>' + dsComeHtml();
   $('ds-libera').onclick = () => dsFree();
   $('ds-impara').onclick = () => { dsView = 'impara'; PAGES.disegno(el); window.scrollTo(0, 0); };
   $('ds-museo').onclick = () => { dsView = 'museo'; dsSala = null; PAGES.disegno(el); window.scrollTo(0, 0); };
@@ -11225,13 +11377,55 @@ PAGES.disegno = el => {
 function dsBack(el, html) { return '<button type="button" class="btn small ghost ds-back" id="ds-back">← Disegno</button>' + html; }
 function dsWireBack(el) { const b = $('ds-back'); if (b) b.onclick = () => { if (dsView === 'museo' && dsSala) { dsSala = null; } else dsView = 'home'; PAGES.disegno(el); window.scrollTo(0, 0); }; }
 
+/* ---------- 💡 Come si disegna, e perché (14/11/2026): quattro abitudini, ognuna con «così no / così sì», il come e il perché ---------- */
+const dsMini = (inner, ok) => '<span class="ds-cm ' + (ok ? 'si' : 'no') + '"><svg viewBox="0 0 120 90" aria-hidden="true"><rect x="2" y="2" width="116" height="86" rx="8" fill="#fffdf7" stroke="#cfd6e4" stroke-width="2"/>' + inner + '</svg><small>' + (ok ? '✅ così sì' : '🙈 così no') + '</small></span>';
+const DS_COME = [
+  { ic: '🔵', t: 'Prima le forme grandi, poi i dettagli',
+    come: 'Guarda il soggetto e cerca le forme semplici: cerchi, ovali, rettangoli, triangoli. Disegna prima quelle, grandi e leggere. Solo dopo aggiungi occhi, baffi e tutto il resto.',
+    perche: 'Se le forme grandi sono al posto giusto, è più facile mettere i dettagli dove vanno. Se parti da un dettaglio, può succedere che il resto non entri più nel foglio.',
+    no: '<circle cx="86" cy="30" r="13" fill="none" stroke="#222" stroke-width="2"/><circle cx="86" cy="30" r="5" fill="#222"/><path d="M70 22 Q86 6 104 22" fill="none" stroke="#222" stroke-width="2"/><path d="M118 8 Q60 6 62 60 Q64 88 118 86" fill="none" stroke="#222" stroke-width="2"/>',
+    si: '<circle cx="60" cy="30" r="18" fill="none" stroke="#8a8a8a" stroke-width="1.6"/><ellipse cx="60" cy="64" rx="24" ry="18" fill="none" stroke="#8a8a8a" stroke-width="1.6"/><path d="M47 18 L44 5 L56 13 M64 13 L76 5 L73 18" fill="none" stroke="#8a8a8a" stroke-width="1.6"/><circle cx="54" cy="29" r="2.2" fill="#222"/><circle cx="66" cy="29" r="2.2" fill="#222"/>' },
+  { ic: '🪶', t: 'Schizzo leggero, poi ripasso deciso',
+    come: 'All’inizio disegna con linee sottili e leggere, anche due o tre una vicina all’altra, per cercare la forma. Quando la forma ti piace, ripassa solo le linee che vuoi tenere.',
+    perche: 'Una linea leggera si corregge e si copre facilmente. Una linea scura fatta subito resta lì, anche se non è quella che volevi.',
+    no: '<path d="M30 60 Q34 14 62 16 Q94 18 90 62 Q60 84 30 60Z" fill="none" stroke="#222" stroke-width="5"/><path d="M34 58 Q44 22 66 24" fill="none" stroke="#222" stroke-width="5"/>',
+    si: '<path d="M30 58 Q32 16 60 16 Q90 16 90 58 Q60 82 30 58Z M33 60 Q36 20 61 19 Q87 20 87 60 Q60 78 33 60Z" fill="none" stroke="#b9c0cc" stroke-width="1.4"/><path d="M31 59 Q34 18 60 17 Q88 18 88 59 Q60 80 31 59Z" fill="none" stroke="#222" stroke-width="3.4"/>' },
+  { ic: '〰️', t: 'Spessori diversi',
+    come: 'Usa una linea più spessa per il contorno e per le cose vicine. Usa una linea sottile per i dettagli e per le cose lontane.',
+    perche: 'Di solito le linee spesse si notano per prime. Così chi guarda capisce subito qual è la figura, che cosa è vicino e che cosa è lontano.',
+    no: '<path d="M22 70 Q40 20 62 70 Z" fill="none" stroke="#222" stroke-width="2.4"/><path d="M68 70 Q80 38 94 70 Z" fill="none" stroke="#222" stroke-width="2.4"/><path d="M10 70 H110" stroke="#222" stroke-width="2.4"/>',
+    si: '<path d="M14 74 Q40 10 68 74 Z" fill="none" stroke="#222" stroke-width="5"/><path d="M76 60 Q86 36 98 60 Z" fill="none" stroke="#222" stroke-width="1.4"/><path d="M70 60 H112" stroke="#222" stroke-width="1.4"/><path d="M36 50 l5 6 M44 40 l5 7" stroke="#222" stroke-width="1.4"/>' },
+  { ic: '🎨', t: 'Colori scelti con uno scopo',
+    come: 'Prima di colorare scegli pochi colori: spesso tre bastano. Tieni il colore più acceso per la cosa più importante. Puoi anche decidere se vuoi un disegno dai colori caldi o dai colori freddi.',
+    perche: 'Un colore acceso in mezzo a colori tenui attira lo sguardo. Pochi colori ripetuti tengono unito il disegno; tanti colori accesi tutti insieme si fanno concorrenza.',
+    no: '<rect x="10" y="12" width="32" height="30" fill="#d62828"/><rect x="44" y="12" width="32" height="30" fill="#2e9e44"/><rect x="78" y="12" width="32" height="30" fill="#f6d000"/><rect x="10" y="46" width="32" height="30" fill="#7b3fa0"/><rect x="44" y="46" width="32" height="30" fill="#f28c1b"/><rect x="78" y="46" width="32" height="30" fill="#1f5fbf"/>',
+    si: '<rect x="8" y="8" width="104" height="74" rx="6" fill="#cfe8fb"/><path d="M8 62 Q60 48 112 62 V82 H8Z" fill="#c8c8c8"/><path d="M60 62 V40" stroke="#5e5e5e" stroke-width="2"/><path d="M42 40 Q60 14 78 40 Z" fill="#d62828"/>' }
+];
+function dsComeHtml() {
+  return '<details class="card ds-come"><summary><span>💡</span><b>Come si disegna, e perché</b><small>Quattro abitudini di chi disegna bene</small><i aria-hidden="true">▾</i></summary><div class="ds-cgrid">' +
+    DS_COME.map((c, i) => '<div class="ds-cc"><b class="ds-ct">' + c.ic + ' ' + (i + 1) + '. ' + esc(c.t) + '</b><div class="ds-cdue">' + dsMini(c.no, false) + dsMini(c.si, true) + '</div>' +
+      '<p><span class="ds-ce a">👣 Come</span> ' + esc(c.come) + '</p><p><span class="ds-ce b">💡 Perché</span> ' + esc(c.perche) + '</p>' + sayBtn(c.t + '. ' + c.come + ' ' + c.perche) + '</div>').join('') + '</div></details>';
+}
+/* a che cosa serve ogni strumento (riga di aiuto nella tela, sotto «Spessore») */
+const DS_AIUTO = {
+  matita: 'Matita: per lo schizzo e i dettagli. Leggera all’inizio, più decisa nel ripasso.',
+  pennarello: 'Pennarello: linea piena e decisa, per i contorni e le scritte.',
+  pastello: 'Pastello: tratto un po’ ruvido, per colorare le zone.',
+  acquerello: 'Acquerello: colore trasparente, per i fondi e il cielo. Usalo con lo Spessore alto.',
+  sfumino: 'Sfumino: sfuma il colore già steso, per ombre morbide.',
+  gomma: 'Gomma: cancella. Sottile per ritoccare, spessa per le zone grandi.',
+  secchiello: 'Secchiello: riempie di colore una zona chiusa. Se il colore esce, c’è un buco nel contorno.',
+  linea: 'Linea: una linea dritta da un punto all’altro.', rett: 'Rettangolo: trascina da un angolo all’altro.', ovale: 'Ovale: trascina per fare ovali e cerchi.'
+};
+const dsAiutoW = w => w <= 5 ? 'sottile: dettagli e linee lontane' : w <= 14 ? 'medio: le linee di tutti i giorni' : 'spesso: contorni, cose vicine, zone grandi';
+
 /* ---------- 📚 impara ---------- */
 function dsImpara(el, s) {
   const nx = dsNext(s);
-  el.innerHTML = dsBack(el, '<h1 class="v2-h1">📚 Impara a disegnare</h1><p class="v2-sub">Cinque tappe, dal più semplice al più difficile. In ogni progetto ricalchi la guida passo passo, poi lo rifai da sola.</p>' +
+  el.innerHTML = dsBack(el, '<h1 class="v2-h1">📚 Impara a disegnare</h1><p class="v2-sub">Cinque tappe, dal più semplice al più difficile. In ogni progetto ricalchi la guida passo passo, poi lo rifai da sola.</p>' + dsComeHtml() +
     DIS_FASI.map((f, i) => {
       const L = DIS_PROG.filter(p => p.f === f.id), dn = L.filter(p => s.done[p.id]).length, open = dsFaseOpen(i, s);
-      return '<div class="card ds-fase' + (open ? '' : ' chiusa') + '"><div class="ds-fh"><span class="ds-fi">' + f.ic + '</span><div><b>' + (i + 1) + '. ' + esc(f.n) + '</b><small>' + (open ? dn + ' su ' + L.length + ' fatti' : '🔒 si apre con 3 progetti della tappa prima') + '</small></div></div>' +
+      return '<div class="card ds-fase' + (open ? '' : ' chiusa') + '"><div class="ds-fh"><span class="ds-fi">' + f.ic + '</span><div><b>' + (f.libera ? '' : (i + 1) + '. ') + esc(f.n) + '</b><small>' + (f.libera ? dn + ' su ' + L.length + ' fatti · sempre aperta, nell’ordine che vuoi' : open ? dn + ' su ' + L.length + ' fatti' : '🔒 si apre con 3 progetti della tappa prima') + '</small></div></div>' +
         '<p class="ds-ft">' + esc(f.t) + '</p>' + (open ? '<div class="ds-plist">' + L.map(p => {
           const ok = !!s.done[p.id], av = dsProjOpen(p, s), me = nx && nx.id === p.id;
           return '<button type="button" class="ds-proj' + (ok ? ' ok' : '') + (me ? ' me' : '') + '" data-dp="' + p.id + '"' + (av ? '' : ' disabled') + '><span class="ds-pi">' + (av ? p.ic : '🔒') + '</span><span class="ds-pt"><b>' + esc(p.n) + '</b><small>' + '★'.repeat(p.lv) + '☆'.repeat(3 - p.lv) + ' · impari ' + esc(p.impara) + '</small></span><span class="ds-ps">' + (ok ? '✓' : me ? '▶' : '') + '</span></button>';
@@ -11357,7 +11551,8 @@ function dsTools() {
 function dsSide() {
   const box = $('de-side'), shape = ['linea', 'rett', 'ovale'].includes(DS.tool);
   box.innerHTML = '<div class="ds-pal">' + DS_PAL.map(k => '<button type="button" class="ds-sw' + (DS.col === dsCol(k) ? ' on' : '') + '" style="background:' + dsCol(k) + '" data-dc="' + k + '" aria-label="' + k + '"></button>').join('') + '<label class="ds-sw ds-pick" title="Altro colore"><input type="color" id="de-pick" value="' + DS.col + '"></label></div>' +
-    (DS.tool !== 'secchiello' ? '<label class="ds-rng">Spessore<input type="range" id="de-w" min="1" max="60" value="' + DS.w + '"></label>' : '') +
+    (DS.tool !== 'secchiello' ? '<label class="ds-rng">Spessore<input type="range" id="de-w" min="1" max="60" value="' + DS.w + '"></label><small class="ds-aiuto" id="de-wa">' + dsAiutoW(DS.w) + '</small>' : '') +
+    (DS_AIUTO[DS.tool] ? '<small class="ds-aiuto">' + DS_AIUTO[DS.tool] + '</small>' : '') +
     (shape ? '<label class="ds-chk"><input type="checkbox" id="de-fill"' + (DS.fill ? ' checked' : '') + '> forma piena</label>' : '') +
     '<div class="ds-lay"><b>Livelli</b>' + DS.layers.map((L, i) => '<div class="ds-li' + (i === DS.act ? ' on' : '') + '"><button type="button" class="ds-ln" data-la="' + i + '">' + esc(L.n) + '</button><button type="button" class="ds-lv" data-lv="' + i + '" aria-label="Mostra o nascondi">' + (L.vis ? '👁️' : '🚫') + '</button>' + (i ? '<button type="button" class="ds-lv" data-ld="' + i + '" aria-label="Giù">⬇️</button>' : '') + '</div>').reverse().join('') +
     '<div class="ds-lrow"><button type="button" class="btn small ghost" id="de-ladd">➕</button><button type="button" class="btn small ghost" id="de-ldel">🗑️</button><label class="ds-op">trasparenza<input type="range" id="de-lop" min="10" max="100" value="' + Math.round((DS.layers[DS.act] || { op: 1 }).op * 100) + '"></label></div></div>' +
@@ -11366,7 +11561,7 @@ function dsSide() {
     '<button type="button" class="btn small ghost" id="de-clr">🧹 Pulisci il livello</button>';
   box.querySelectorAll('[data-dc]').forEach(b => b.onclick = () => { DS.col = dsCol(b.dataset.dc); dsSide(); });
   const pk = $('de-pick'); if (pk) pk.oninput = () => { DS.col = pk.value; };
-  const w = $('de-w'); if (w) w.oninput = () => { DS.w = +w.value; };
+  const w = $('de-w'); if (w) w.oninput = () => { DS.w = +w.value; const a = $('de-wa'); if (a) a.textContent = dsAiutoW(DS.w); };
   const fi = $('de-fill'); if (fi) fi.onchange = () => { DS.fill = fi.checked; };
   box.querySelectorAll('[data-la]').forEach(b => b.onclick = () => { DS.act = +b.dataset.la; dsRestack(); dsSide(); });
   box.querySelectorAll('[data-lv]').forEach(b => b.onclick = () => { const L = DS.layers[+b.dataset.lv]; L.vis = !L.vis; dsRestack(); dsSide(); });
@@ -11523,9 +11718,9 @@ function dsLesson() {
     $('dl-fin').onclick = () => dsSaveAsk();
     dsGuide(); return;
   }
-  const tool = st.tool || P.tool, col = st.col || P.col;
-  DS.tool = tool; DS.col = dsCol(col); dsTools(); dsSide();
-  box.innerHTML = '<div class="ds-lt"><b>' + P.ic + ' Passo ' + (DS.step + 1) + ' di ' + P.passi.length + '</b><p>' + esc(st.t) + '</p><small>Strumento: ' + esc((DS_TOOLS.find(x => x[0] === tool) || ['', '', tool])[2]) + ' · colore ' + esc(col.replace('verdechiaro', 'verde chiaro').replace(/^(blu|g)(\d)$/, (m, a, n) => (a === 'g' ? 'grigio ' : 'blu ') + n)) + '</small></div>' +
+  const tool = st.tool || P.tool, col = st.col || P.col, sp = st.w || P.w || 0;
+  DS.tool = tool; DS.col = dsCol(col); if (sp) DS.w = sp; dsTools(); dsSide();
+  box.innerHTML = '<div class="ds-lt"><b>' + P.ic + ' Passo ' + (DS.step + 1) + ' di ' + P.passi.length + '</b><p>' + esc(st.t) + '</p><small>Strumento: ' + esc((DS_TOOLS.find(x => x[0] === tool) || ['', '', tool])[2]) + ' · colore ' + esc(col.replace('verdechiaro', 'verde chiaro').replace(/^(blu|g)(\d)$/, (m, a, n) => (a === 'g' ? 'grigio ' : 'blu ') + n)) + (sp && tool !== 'secchiello' ? ' · spessore ' + (sp <= 5 ? 'sottile' : sp <= 14 ? 'medio' : 'spesso') : '') + '</small></div>' +
     '<div class="ds-lb"><button type="button" class="btn small ghost" id="dl-pr"' + (DS.step ? '' : ' disabled') + '>←</button>' + (st.g && st.g.some(g => !['dot', 'txt', 'sun'].includes(g[0])) ? '<button type="button" class="btn small ghost" id="dl-see">▶ Guarda</button>' : '') +
     '<button type="button" class="btn small ghost" id="dl-gd">' + (DS.guide ? '🙈 Guida' : '👁️ Guida') + '</button><button type="button" class="btn small" id="dl-nx">' + (DS.step < P.passi.length - 1 ? 'Fatto →' : 'Ora da sola →') + '</button></div>';
   $('dl-pr').onclick = () => { if (DS.step) { DS.step--; dsTitle(); dsLesson(); } };
@@ -11534,8 +11729,9 @@ function dsLesson() {
   $('dl-nx').onclick = () => { if (DS.step < P.passi.length - 1) { DS.step++; dsTitle(); dsLesson(); dsDirty(); } else dsToSolo(); };
   dsGuide();
 }
-function dsGuideHtml(prims, cls, color) {
-  const sw = 'stroke="' + color + '"';
+function dsGuideHtml(prims, cls, color, w) {
+  /* w = spessore consigliato del passo: la guida lo mostra (linea più grossa o più fine) */
+  const sw = 'stroke="' + color + '"' + (w ? ' style="stroke-width:' + (cls === 'ds-g' ? Math.max(3, Math.min(30, w * 0.9)) : Math.max(2, Math.min(18, w * 0.55))) + (cls === 'ds-g' && w > 14 ? ';stroke-dasharray:26 18' : '') + '"' : '');
   return prims.map(g => {
     const k = g[0];
     if (k === 'l') return '<line class="' + cls + '" ' + sw + ' x1="' + g[1] + '" y1="' + g[2] + '" x2="' + g[3] + '" y2="' + g[4] + '"/>';
@@ -11554,8 +11750,8 @@ function dsGuide(anim) {
   const G = DS.guideEl; let h = '';
   if (DS.sym) h += '<line x1="600" y1="0" x2="600" y2="900" class="ds-axis"/>';
   if (DS.proj && !DS.solo && DS.guide) {
-    const P = DS.proj, prev = P.passi.slice(0, DS.step).flatMap(s => s.g || []);
-    h += dsGuideHtml(prev, 'ds-gp', '#9aa7b8') + dsGuideHtml(P.passi[DS.step].g || [], 'ds-g', '#2563eb');
+    const P = DS.proj;
+    h += P.passi.slice(0, DS.step).map(s => dsGuideHtml(s.g || [], 'ds-gp', '#9aa7b8', s.w || P.w)).join('') + dsGuideHtml(P.passi[DS.step].g || [], 'ds-g', '#2563eb', P.passi[DS.step].w || P.w);
   }
   G.innerHTML = h;
   if (anim) G.querySelectorAll('.ds-g').forEach((e, i) => { try { const len = e.getTotalLength(); e.style.strokeDasharray = len; e.style.strokeDashoffset = len; e.getBoundingClientRect(); e.style.transition = 'stroke-dashoffset 1.1s ease ' + (i * 0.9) + 's'; e.style.strokeDashoffset = 0; setTimeout(() => { e.style.transition = ''; e.style.strokeDasharray = ''; e.style.strokeDashoffset = ''; }, 1200 + i * 900); } catch (x) {} });

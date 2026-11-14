@@ -21,8 +21,8 @@ const dsCol = k => DIS_COL[k] || k || '#222222';
 const dsFase = id => DIS_FASI.find(f => f.id === id);
 const dsProj = id => DIS_PROG.find(p => p.id === id);
 /* sblocco progressivo: la prima fase è aperta; ogni fase si apre con 3 progetti finiti della precedente; dentro la fase, un progetto alla volta */
-function dsFaseOpen(i, s) { if (i === 0) return true; const prev = DIS_PROG.filter(p => p.f === DIS_FASI[i - 1].id); return prev.filter(p => s.done[p.id]).length >= Math.min(3, prev.length); }
-function dsProjOpen(p, s) { const i = DIS_FASI.findIndex(f => f.id === p.f); if (!dsFaseOpen(i, s)) return false; const L = DIS_PROG.filter(q => q.f === p.f), k = L.indexOf(p); return k === 0 || !!s.done[L[k - 1].id] || !!s.done[p.id]; }
+function dsFaseOpen(i, s) { if (i === 0 || DIS_FASI[i].libera) return true; while (i > 0 && DIS_FASI[i - 1].libera) i--; if (i === 0) return true; const prev = DIS_PROG.filter(p => p.f === DIS_FASI[i - 1].id); return prev.filter(p => s.done[p.id]).length >= Math.min(3, prev.length); }
+function dsProjOpen(p, s) { const i = DIS_FASI.findIndex(f => f.id === p.f); if (!dsFaseOpen(i, s)) return false; if (DIS_FASI[i].libera) return true; const L = DIS_PROG.filter(q => q.f === p.f), k = L.indexOf(p); return k === 0 || !!s.done[L[k - 1].id] || !!s.done[p.id]; }
 const dsNext = s => DIS_PROG.find(p => !s.done[p.id] && dsProjOpen(p, s));
 
 /* ================= 🏛️ il museo che cresce ================= */
@@ -46,7 +46,7 @@ PAGES.disegno = el => {
     '<button type="button" class="v2-tile" id="ds-libera"><span class="v2-ti">🖌️</span><b>Tela libera</b><small>Matita, pennarelli, pastelli, acquerello, livelli e ricalco</small></button>' +
     '<button type="button" class="v2-tile" id="ds-impara"><span class="v2-ti">📚</span><b>Impara a disegnare</b><small>' + ndone + ' progetti su ' + DIS_PROG.length + (nx ? ' · prossimo: ' + esc(nx.n) : ' · tutti finiti!') + '</small></button>' +
     '<button type="button" class="v2-tile" id="ds-museo"><span class="v2-ti">🏛️</span><b>' + esc(dsLiv(n)) + '</b><small>' + n + (n === 1 ? ' quadro' : ' quadri') + (n ? ' · ' + dsVisit(n) + ' visitatori' : ' · il primo disegno salvato apre il museo') + '</small></button></div>' +
-    '<div class="card ds-idea"><b>💡 Idea di oggi</b><p>Disegna ' + esc(idea) + '.</p><button type="button" class="btn small" id="ds-idea">Comincia</button></div>';
+    '<div class="card ds-idea"><b>💡 Idea di oggi</b><p>Disegna ' + esc(idea) + '.</p><button type="button" class="btn small" id="ds-idea">Comincia</button></div>' + dsComeHtml();
   $('ds-libera').onclick = () => dsFree();
   $('ds-impara').onclick = () => { dsView = 'impara'; PAGES.disegno(el); window.scrollTo(0, 0); };
   $('ds-museo').onclick = () => { dsView = 'museo'; dsSala = null; PAGES.disegno(el); window.scrollTo(0, 0); };
@@ -55,13 +55,55 @@ PAGES.disegno = el => {
 function dsBack(el, html) { return '<button type="button" class="btn small ghost ds-back" id="ds-back">← Disegno</button>' + html; }
 function dsWireBack(el) { const b = $('ds-back'); if (b) b.onclick = () => { if (dsView === 'museo' && dsSala) { dsSala = null; } else dsView = 'home'; PAGES.disegno(el); window.scrollTo(0, 0); }; }
 
+/* ---------- 💡 Come si disegna, e perché (14/11/2026): quattro abitudini, ognuna con «così no / così sì», il come e il perché ---------- */
+const dsMini = (inner, ok) => '<span class="ds-cm ' + (ok ? 'si' : 'no') + '"><svg viewBox="0 0 120 90" aria-hidden="true"><rect x="2" y="2" width="116" height="86" rx="8" fill="#fffdf7" stroke="#cfd6e4" stroke-width="2"/>' + inner + '</svg><small>' + (ok ? '✅ così sì' : '🙈 così no') + '</small></span>';
+const DS_COME = [
+  { ic: '🔵', t: 'Prima le forme grandi, poi i dettagli',
+    come: 'Guarda il soggetto e cerca le forme semplici: cerchi, ovali, rettangoli, triangoli. Disegna prima quelle, grandi e leggere. Solo dopo aggiungi occhi, baffi e tutto il resto.',
+    perche: 'Se le forme grandi sono al posto giusto, è più facile mettere i dettagli dove vanno. Se parti da un dettaglio, può succedere che il resto non entri più nel foglio.',
+    no: '<circle cx="86" cy="30" r="13" fill="none" stroke="#222" stroke-width="2"/><circle cx="86" cy="30" r="5" fill="#222"/><path d="M70 22 Q86 6 104 22" fill="none" stroke="#222" stroke-width="2"/><path d="M118 8 Q60 6 62 60 Q64 88 118 86" fill="none" stroke="#222" stroke-width="2"/>',
+    si: '<circle cx="60" cy="30" r="18" fill="none" stroke="#8a8a8a" stroke-width="1.6"/><ellipse cx="60" cy="64" rx="24" ry="18" fill="none" stroke="#8a8a8a" stroke-width="1.6"/><path d="M47 18 L44 5 L56 13 M64 13 L76 5 L73 18" fill="none" stroke="#8a8a8a" stroke-width="1.6"/><circle cx="54" cy="29" r="2.2" fill="#222"/><circle cx="66" cy="29" r="2.2" fill="#222"/>' },
+  { ic: '🪶', t: 'Schizzo leggero, poi ripasso deciso',
+    come: 'All’inizio disegna con linee sottili e leggere, anche due o tre una vicina all’altra, per cercare la forma. Quando la forma ti piace, ripassa solo le linee che vuoi tenere.',
+    perche: 'Una linea leggera si corregge e si copre facilmente. Una linea scura fatta subito resta lì, anche se non è quella che volevi.',
+    no: '<path d="M30 60 Q34 14 62 16 Q94 18 90 62 Q60 84 30 60Z" fill="none" stroke="#222" stroke-width="5"/><path d="M34 58 Q44 22 66 24" fill="none" stroke="#222" stroke-width="5"/>',
+    si: '<path d="M30 58 Q32 16 60 16 Q90 16 90 58 Q60 82 30 58Z M33 60 Q36 20 61 19 Q87 20 87 60 Q60 78 33 60Z" fill="none" stroke="#b9c0cc" stroke-width="1.4"/><path d="M31 59 Q34 18 60 17 Q88 18 88 59 Q60 80 31 59Z" fill="none" stroke="#222" stroke-width="3.4"/>' },
+  { ic: '〰️', t: 'Spessori diversi',
+    come: 'Usa una linea più spessa per il contorno e per le cose vicine. Usa una linea sottile per i dettagli e per le cose lontane.',
+    perche: 'Di solito le linee spesse si notano per prime. Così chi guarda capisce subito qual è la figura, che cosa è vicino e che cosa è lontano.',
+    no: '<path d="M22 70 Q40 20 62 70 Z" fill="none" stroke="#222" stroke-width="2.4"/><path d="M68 70 Q80 38 94 70 Z" fill="none" stroke="#222" stroke-width="2.4"/><path d="M10 70 H110" stroke="#222" stroke-width="2.4"/>',
+    si: '<path d="M14 74 Q40 10 68 74 Z" fill="none" stroke="#222" stroke-width="5"/><path d="M76 60 Q86 36 98 60 Z" fill="none" stroke="#222" stroke-width="1.4"/><path d="M70 60 H112" stroke="#222" stroke-width="1.4"/><path d="M36 50 l5 6 M44 40 l5 7" stroke="#222" stroke-width="1.4"/>' },
+  { ic: '🎨', t: 'Colori scelti con uno scopo',
+    come: 'Prima di colorare scegli pochi colori: spesso tre bastano. Tieni il colore più acceso per la cosa più importante. Puoi anche decidere se vuoi un disegno dai colori caldi o dai colori freddi.',
+    perche: 'Un colore acceso in mezzo a colori tenui attira lo sguardo. Pochi colori ripetuti tengono unito il disegno; tanti colori accesi tutti insieme si fanno concorrenza.',
+    no: '<rect x="10" y="12" width="32" height="30" fill="#d62828"/><rect x="44" y="12" width="32" height="30" fill="#2e9e44"/><rect x="78" y="12" width="32" height="30" fill="#f6d000"/><rect x="10" y="46" width="32" height="30" fill="#7b3fa0"/><rect x="44" y="46" width="32" height="30" fill="#f28c1b"/><rect x="78" y="46" width="32" height="30" fill="#1f5fbf"/>',
+    si: '<rect x="8" y="8" width="104" height="74" rx="6" fill="#cfe8fb"/><path d="M8 62 Q60 48 112 62 V82 H8Z" fill="#c8c8c8"/><path d="M60 62 V40" stroke="#5e5e5e" stroke-width="2"/><path d="M42 40 Q60 14 78 40 Z" fill="#d62828"/>' }
+];
+function dsComeHtml() {
+  return '<details class="card ds-come"><summary><span>💡</span><b>Come si disegna, e perché</b><small>Quattro abitudini di chi disegna bene</small><i aria-hidden="true">▾</i></summary><div class="ds-cgrid">' +
+    DS_COME.map((c, i) => '<div class="ds-cc"><b class="ds-ct">' + c.ic + ' ' + (i + 1) + '. ' + esc(c.t) + '</b><div class="ds-cdue">' + dsMini(c.no, false) + dsMini(c.si, true) + '</div>' +
+      '<p><span class="ds-ce a">👣 Come</span> ' + esc(c.come) + '</p><p><span class="ds-ce b">💡 Perché</span> ' + esc(c.perche) + '</p>' + sayBtn(c.t + '. ' + c.come + ' ' + c.perche) + '</div>').join('') + '</div></details>';
+}
+/* a che cosa serve ogni strumento (riga di aiuto nella tela, sotto «Spessore») */
+const DS_AIUTO = {
+  matita: 'Matita: per lo schizzo e i dettagli. Leggera all’inizio, più decisa nel ripasso.',
+  pennarello: 'Pennarello: linea piena e decisa, per i contorni e le scritte.',
+  pastello: 'Pastello: tratto un po’ ruvido, per colorare le zone.',
+  acquerello: 'Acquerello: colore trasparente, per i fondi e il cielo. Usalo con lo Spessore alto.',
+  sfumino: 'Sfumino: sfuma il colore già steso, per ombre morbide.',
+  gomma: 'Gomma: cancella. Sottile per ritoccare, spessa per le zone grandi.',
+  secchiello: 'Secchiello: riempie di colore una zona chiusa. Se il colore esce, c’è un buco nel contorno.',
+  linea: 'Linea: una linea dritta da un punto all’altro.', rett: 'Rettangolo: trascina da un angolo all’altro.', ovale: 'Ovale: trascina per fare ovali e cerchi.'
+};
+const dsAiutoW = w => w <= 5 ? 'sottile: dettagli e linee lontane' : w <= 14 ? 'medio: le linee di tutti i giorni' : 'spesso: contorni, cose vicine, zone grandi';
+
 /* ---------- 📚 impara ---------- */
 function dsImpara(el, s) {
   const nx = dsNext(s);
-  el.innerHTML = dsBack(el, '<h1 class="v2-h1">📚 Impara a disegnare</h1><p class="v2-sub">Cinque tappe, dal più semplice al più difficile. In ogni progetto ricalchi la guida passo passo, poi lo rifai da sola.</p>' +
+  el.innerHTML = dsBack(el, '<h1 class="v2-h1">📚 Impara a disegnare</h1><p class="v2-sub">Cinque tappe, dal più semplice al più difficile. In ogni progetto ricalchi la guida passo passo, poi lo rifai da sola.</p>' + dsComeHtml() +
     DIS_FASI.map((f, i) => {
       const L = DIS_PROG.filter(p => p.f === f.id), dn = L.filter(p => s.done[p.id]).length, open = dsFaseOpen(i, s);
-      return '<div class="card ds-fase' + (open ? '' : ' chiusa') + '"><div class="ds-fh"><span class="ds-fi">' + f.ic + '</span><div><b>' + (i + 1) + '. ' + esc(f.n) + '</b><small>' + (open ? dn + ' su ' + L.length + ' fatti' : '🔒 si apre con 3 progetti della tappa prima') + '</small></div></div>' +
+      return '<div class="card ds-fase' + (open ? '' : ' chiusa') + '"><div class="ds-fh"><span class="ds-fi">' + f.ic + '</span><div><b>' + (f.libera ? '' : (i + 1) + '. ') + esc(f.n) + '</b><small>' + (f.libera ? dn + ' su ' + L.length + ' fatti · sempre aperta, nell’ordine che vuoi' : open ? dn + ' su ' + L.length + ' fatti' : '🔒 si apre con 3 progetti della tappa prima') + '</small></div></div>' +
         '<p class="ds-ft">' + esc(f.t) + '</p>' + (open ? '<div class="ds-plist">' + L.map(p => {
           const ok = !!s.done[p.id], av = dsProjOpen(p, s), me = nx && nx.id === p.id;
           return '<button type="button" class="ds-proj' + (ok ? ' ok' : '') + (me ? ' me' : '') + '" data-dp="' + p.id + '"' + (av ? '' : ' disabled') + '><span class="ds-pi">' + (av ? p.ic : '🔒') + '</span><span class="ds-pt"><b>' + esc(p.n) + '</b><small>' + '★'.repeat(p.lv) + '☆'.repeat(3 - p.lv) + ' · impari ' + esc(p.impara) + '</small></span><span class="ds-ps">' + (ok ? '✓' : me ? '▶' : '') + '</span></button>';
@@ -187,7 +229,8 @@ function dsTools() {
 function dsSide() {
   const box = $('de-side'), shape = ['linea', 'rett', 'ovale'].includes(DS.tool);
   box.innerHTML = '<div class="ds-pal">' + DS_PAL.map(k => '<button type="button" class="ds-sw' + (DS.col === dsCol(k) ? ' on' : '') + '" style="background:' + dsCol(k) + '" data-dc="' + k + '" aria-label="' + k + '"></button>').join('') + '<label class="ds-sw ds-pick" title="Altro colore"><input type="color" id="de-pick" value="' + DS.col + '"></label></div>' +
-    (DS.tool !== 'secchiello' ? '<label class="ds-rng">Spessore<input type="range" id="de-w" min="1" max="60" value="' + DS.w + '"></label>' : '') +
+    (DS.tool !== 'secchiello' ? '<label class="ds-rng">Spessore<input type="range" id="de-w" min="1" max="60" value="' + DS.w + '"></label><small class="ds-aiuto" id="de-wa">' + dsAiutoW(DS.w) + '</small>' : '') +
+    (DS_AIUTO[DS.tool] ? '<small class="ds-aiuto">' + DS_AIUTO[DS.tool] + '</small>' : '') +
     (shape ? '<label class="ds-chk"><input type="checkbox" id="de-fill"' + (DS.fill ? ' checked' : '') + '> forma piena</label>' : '') +
     '<div class="ds-lay"><b>Livelli</b>' + DS.layers.map((L, i) => '<div class="ds-li' + (i === DS.act ? ' on' : '') + '"><button type="button" class="ds-ln" data-la="' + i + '">' + esc(L.n) + '</button><button type="button" class="ds-lv" data-lv="' + i + '" aria-label="Mostra o nascondi">' + (L.vis ? '👁️' : '🚫') + '</button>' + (i ? '<button type="button" class="ds-lv" data-ld="' + i + '" aria-label="Giù">⬇️</button>' : '') + '</div>').reverse().join('') +
     '<div class="ds-lrow"><button type="button" class="btn small ghost" id="de-ladd">➕</button><button type="button" class="btn small ghost" id="de-ldel">🗑️</button><label class="ds-op">trasparenza<input type="range" id="de-lop" min="10" max="100" value="' + Math.round((DS.layers[DS.act] || { op: 1 }).op * 100) + '"></label></div></div>' +
@@ -196,7 +239,7 @@ function dsSide() {
     '<button type="button" class="btn small ghost" id="de-clr">🧹 Pulisci il livello</button>';
   box.querySelectorAll('[data-dc]').forEach(b => b.onclick = () => { DS.col = dsCol(b.dataset.dc); dsSide(); });
   const pk = $('de-pick'); if (pk) pk.oninput = () => { DS.col = pk.value; };
-  const w = $('de-w'); if (w) w.oninput = () => { DS.w = +w.value; };
+  const w = $('de-w'); if (w) w.oninput = () => { DS.w = +w.value; const a = $('de-wa'); if (a) a.textContent = dsAiutoW(DS.w); };
   const fi = $('de-fill'); if (fi) fi.onchange = () => { DS.fill = fi.checked; };
   box.querySelectorAll('[data-la]').forEach(b => b.onclick = () => { DS.act = +b.dataset.la; dsRestack(); dsSide(); });
   box.querySelectorAll('[data-lv]').forEach(b => b.onclick = () => { const L = DS.layers[+b.dataset.lv]; L.vis = !L.vis; dsRestack(); dsSide(); });
@@ -353,9 +396,9 @@ function dsLesson() {
     $('dl-fin').onclick = () => dsSaveAsk();
     dsGuide(); return;
   }
-  const tool = st.tool || P.tool, col = st.col || P.col;
-  DS.tool = tool; DS.col = dsCol(col); dsTools(); dsSide();
-  box.innerHTML = '<div class="ds-lt"><b>' + P.ic + ' Passo ' + (DS.step + 1) + ' di ' + P.passi.length + '</b><p>' + esc(st.t) + '</p><small>Strumento: ' + esc((DS_TOOLS.find(x => x[0] === tool) || ['', '', tool])[2]) + ' · colore ' + esc(col.replace('verdechiaro', 'verde chiaro').replace(/^(blu|g)(\d)$/, (m, a, n) => (a === 'g' ? 'grigio ' : 'blu ') + n)) + '</small></div>' +
+  const tool = st.tool || P.tool, col = st.col || P.col, sp = st.w || P.w || 0;
+  DS.tool = tool; DS.col = dsCol(col); if (sp) DS.w = sp; dsTools(); dsSide();
+  box.innerHTML = '<div class="ds-lt"><b>' + P.ic + ' Passo ' + (DS.step + 1) + ' di ' + P.passi.length + '</b><p>' + esc(st.t) + '</p><small>Strumento: ' + esc((DS_TOOLS.find(x => x[0] === tool) || ['', '', tool])[2]) + ' · colore ' + esc(col.replace('verdechiaro', 'verde chiaro').replace(/^(blu|g)(\d)$/, (m, a, n) => (a === 'g' ? 'grigio ' : 'blu ') + n)) + (sp && tool !== 'secchiello' ? ' · spessore ' + (sp <= 5 ? 'sottile' : sp <= 14 ? 'medio' : 'spesso') : '') + '</small></div>' +
     '<div class="ds-lb"><button type="button" class="btn small ghost" id="dl-pr"' + (DS.step ? '' : ' disabled') + '>←</button>' + (st.g && st.g.some(g => !['dot', 'txt', 'sun'].includes(g[0])) ? '<button type="button" class="btn small ghost" id="dl-see">▶ Guarda</button>' : '') +
     '<button type="button" class="btn small ghost" id="dl-gd">' + (DS.guide ? '🙈 Guida' : '👁️ Guida') + '</button><button type="button" class="btn small" id="dl-nx">' + (DS.step < P.passi.length - 1 ? 'Fatto →' : 'Ora da sola →') + '</button></div>';
   $('dl-pr').onclick = () => { if (DS.step) { DS.step--; dsTitle(); dsLesson(); } };
@@ -364,8 +407,9 @@ function dsLesson() {
   $('dl-nx').onclick = () => { if (DS.step < P.passi.length - 1) { DS.step++; dsTitle(); dsLesson(); dsDirty(); } else dsToSolo(); };
   dsGuide();
 }
-function dsGuideHtml(prims, cls, color) {
-  const sw = 'stroke="' + color + '"';
+function dsGuideHtml(prims, cls, color, w) {
+  /* w = spessore consigliato del passo: la guida lo mostra (linea più grossa o più fine) */
+  const sw = 'stroke="' + color + '"' + (w ? ' style="stroke-width:' + (cls === 'ds-g' ? Math.max(3, Math.min(30, w * 0.9)) : Math.max(2, Math.min(18, w * 0.55))) + (cls === 'ds-g' && w > 14 ? ';stroke-dasharray:26 18' : '') + '"' : '');
   return prims.map(g => {
     const k = g[0];
     if (k === 'l') return '<line class="' + cls + '" ' + sw + ' x1="' + g[1] + '" y1="' + g[2] + '" x2="' + g[3] + '" y2="' + g[4] + '"/>';
@@ -384,8 +428,8 @@ function dsGuide(anim) {
   const G = DS.guideEl; let h = '';
   if (DS.sym) h += '<line x1="600" y1="0" x2="600" y2="900" class="ds-axis"/>';
   if (DS.proj && !DS.solo && DS.guide) {
-    const P = DS.proj, prev = P.passi.slice(0, DS.step).flatMap(s => s.g || []);
-    h += dsGuideHtml(prev, 'ds-gp', '#9aa7b8') + dsGuideHtml(P.passi[DS.step].g || [], 'ds-g', '#2563eb');
+    const P = DS.proj;
+    h += P.passi.slice(0, DS.step).map(s => dsGuideHtml(s.g || [], 'ds-gp', '#9aa7b8', s.w || P.w)).join('') + dsGuideHtml(P.passi[DS.step].g || [], 'ds-g', '#2563eb', P.passi[DS.step].w || P.w);
   }
   G.innerHTML = h;
   if (anim) G.querySelectorAll('.ds-g').forEach((e, i) => { try { const len = e.getTotalLength(); e.style.strokeDasharray = len; e.style.strokeDashoffset = len; e.getBoundingClientRect(); e.style.transition = 'stroke-dashoffset 1.1s ease ' + (i * 0.9) + 's'; e.style.strokeDashoffset = 0; setTimeout(() => { e.style.transition = ''; e.style.strokeDasharray = ''; e.style.strokeDashoffset = ''; }, 1200 + i * 900); } catch (x) {} });
