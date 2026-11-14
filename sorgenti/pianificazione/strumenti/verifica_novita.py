@@ -59,6 +59,16 @@ TIPI = {'ufficiale', 'sindacato GdF', 'sindacato polizia', 'sindacato militari',
 for x in o.get('fonti', []):
     if not x.get('n') or not str(x.get('url', '')).startswith('https://') or x.get('tipo') not in TIPI: err('fonte non valida: ' + str(x.get('n')))
     if x.get('ultimo') and x['ultimo'][:10] > today: err('fonte con data futura: ' + x['n'])
+# 14/11/2026: nessuna ora nel futuro (il giro aveva scritto 13:30 invece di 01:08). Si confronta con l'ora vera, tolleranza 10 minuti.
+_ora = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(minutes=10)
+def _futura(t):
+    try: return datetime.datetime.fromisoformat(t).astimezone(datetime.timezone.utc) > _ora
+    except Exception: return True
+if _futura(str(o.get('updated', ''))): err('updated nel futuro o non valido: ' + str(o.get('updated')) + ' (prendi l\'ora con: TZ=Europe/Rome date +%Y-%m-%dT%H:%M:00%:z)')
+for x in o.get('fonti', []):
+    if x.get('ultimo') and len(x['ultimo']) > 10 and _futura(x['ultimo']): err('fonte con ora futura: ' + x['n'])
+for c in o.get('controlli', [])[-1:]:
+    if _futura(str(c.get('at', ''))): err('controlli: ora futura ' + str(c.get('at')))
 if len(o.get('controlli', [])) > 60: err('controlli: tieni solo gli ultimi 60')
 if len(sys.argv) > 2 and open(sys.argv[2], encoding='utf-8').read() != raw: err('le due copie sono diverse')
 print('✅ novità ok:', len(V), 'notizie,', len(o.get('attesa', [])), 'parametri in attesa,', len(o.get('mercati', [])), 'tassi di mercato,', len(P), 'prodotti')
