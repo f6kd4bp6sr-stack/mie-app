@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-12T13:30:00+01:00",
+ "updated": "2026-11-14T13:30:00+01:00",
  "voci": [
   {
    "id": "n20261031-ddlcomparto",
@@ -359,8 +359,8 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-08T01:01:00+01:00",
-   "esito": "ok"
+   "ultimo": "2026-11-14T13:30:00+01:00",
+   "esito": "non raggiungibile (fascicolo del 13/11 non leggibile in questo giro)"
   },
   {
    "n": "Governo – Consiglio dei ministri",
@@ -736,86 +736,6 @@
  ],
  "controlli": [
   {
-   "at": "2026-10-17T13:10:00+02:00",
-   "notizie": 1,
-   "note": "prima raccolta: 6 notizie, 4 parametri in attesa"
-  },
-  {
-   "at": "2026-10-17T13:17:00+02:00",
-   "notizie": 1,
-   "note": "1 notizia nuova (proposta USIC sul sistema misto); DPR non ancora in Gazzetta (ultima S.G. n. 241 del 16/10); tasso 2026 ISTAT e coefficienti 2027-2028 non ancora usciti; quota F.A.F. 2027 attesa nel 2028. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
-  },
-  {
-   "at": "2026-10-17T13:19:00+02:00",
-   "notizie": 0,
-   "note": "giro manuale: controllate tutte le 37 fonti. Nessuna notizia nuova; aggiunta USAMI come seconda fonte sul tavolo del 13/10. DPR non ancora in Gazzetta, tasso 2026 e coefficienti 2027-2028 non usciti. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, SIAP"
-  },
-  {
-   "at": "2026-10-17T13:21:00+02:00",
-   "notizie": 0,
-   "note": "nuovo tentativo sulle 8 fonti non raggiunte (home e pagine interne): ancora non raggiungibili Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate, SIAP. Aggiunta OpenBDAP (RGS-MEF), raggiungibile: ultima notizia 8/10 sul DPFP 2026, niente di nuovo"
-  },
-  {
-   "at": "2026-10-17T17:03:00+02:00",
-   "notizie": 0,
-   "note": "giro delle 17: nessuna notizia nuova dal giro delle 13 (ultime uscite già presenti: USIC 16/10, DPR 13/10, tavolo 13-14/10, DPB 13/10). Gazzetta ferma alla S.G. n. 241 del 16/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora in Parlamento. Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate, SIAP"
-  },
-  {
-   "at": "2026-10-17T22:57:00+02:00",
-   "notizie": 0,
-   "note": "giro delle 23: nessuna notizia nuova dal giro delle 17 (SIULP Flash 42 del 17/10 richiama solo il tavolo del 13/10, già presente). Gazzetta ferma alla S.G. n. 241 del 16/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora in Parlamento. Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate, SIAP"
-  },
-  {
-   "at": "2026-10-18T12:58:00+02:00",
-   "notizie": 0,
-   "note": "giro delle 13: nessuna notizia nuova dal giro delle 23 (Infodifesa 17/10: USMIA lamenta che nella manovra 2027 non c’è stanziamento per la previdenza dedicata, dichiarazione sindacale già coperta dalle voci sul tavolo; ForzeArmate.org 16/10: 4,5 miliardi alla difesa senza misure per il personale). Gazzetta ferma alla S.G. n. 242 del 17/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora in Parlamento. Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate, SIAP"
-  },
-  {
-   "at": "2026-10-18T16:59:00+02:00",
-   "notizie": 1,
-   "note": "giro delle 17: 1 notizia aggiunta (proposta USAMI del 14/10 sul coefficiente aggiuntivo nella rivalutazione del montante, verificata su USAMI e ForzeArmate.org). Gazzetta ferma alla S.G. n. 242 del 17/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora in Parlamento. SILF 18/10: tavolo sulle relazioni sindacali convocato per il 21/10 (non riguarda contratto o pensione). Tassi di mercato invariati (fine settimana); nota su ContoTe (3,75% nel riquadro, 3,50% nell’elenco). Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate"
-  },
-  {
-   "at": "2026-10-18T22:57:00+02:00",
-   "notizie": 0,
-   "note": "giro delle 23: nessuna notizia nuova dal giro delle 17 (USIF e SINAFI 18/10: solo comunicati sugli scontri nelle manifestazioni; SILF 18/10 sul tavolo relazioni sindacali del 21/10 già annotato; INPS: ultimo messaggio n. 3281 del 15/10 sul cumulo con redditi da lavoro autonomo, non riguarda il comparto). Gazzetta ferma alla S.G. n. 242 del 17/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora in Parlamento. Tassi di mercato e prodotti invariati (fine settimana; BTP Valore in collocamento dal 19/10). Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato (accesso bloccato), Corte dei conti, Agenzia delle Entrate"
-  },
-  {
-   "at": "2026-10-19T16:58:00+02:00",
-   "notizie": 0,
-   "note": "giro delle 17 (il giro delle 13 non risulta nel registro): nessuna notizia nuova dal giro delle 23 (COISP Flash 42 del 19/10 chiede fondi per la previdenza dedicata nella manovra, dichiarazione sindacale già coperta dalle voci sul tavolo; USIF, SILF e SINAFI senza novità su contratto o pensione; INPS: ultimo messaggio n. 3281 del 15/10). Gazzetta ferma alla S.G. n. 242 del 17/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 atteso in Parlamento entro il 20/10, non ancora presentato. Tassi di mercato invariati (BTP: chiusura del 16/10; in apertura del 19/10 il decennale è intorno al 4,5%); conti deposito ricontrollati, tassi invariati. BTP Valore in collocamento dal 19 al 23/10. Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate, SIAP"
-  },
-  {
-   "at": "2026-10-19T22:58:00+02:00",
-   "notizie": 0,
-   "note": "giro delle 23: nessuna notizia nuova dal giro delle 17 (SILF 19/10 sugli alloggi di Foggia, non riguarda contratto o pensione; USIF, SINAFI, SIULP e Infodifesa senza novità; INPS: ultimo messaggio n. 3281 del 15/10). Gazzetta ferma alla S.G. n. 242 del 17/10, DPR non ancora pubblicato; tasso 2026 ISTAT e coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Disegno di legge di bilancio 2027 non ancora approvato dal Consiglio dei ministri. Tassi di mercato: BTP aggiornati al 19/10 (2 anni 3,49%, 5 anni 3,96%, 10 anni 4,52%); BTP Valore: primo giorno 3,4 miliardi più 1,2 miliardi del Valore Insieme, aggiunto ISIN. Conti deposito invariati dal giro delle 17. Scheda invariata. Non raggiungibili: Governo, MEF, NoiPA; non ricontrollati in questo giro Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
-  },
-  {
-   "at": "2026-10-20T12:58:00+02:00",
-   "notizie": 1,
-   "note": "giro delle 13: una notizia nuova, lo slittamento dell’esame della legge di bilancio 2027 in Consiglio dei ministri verso il 28 ottobre (Agimeg e QuiFinanza del 20/10; ipotesi non confermata di un intervento sulle pensioni anticipate delle Forze dell’ordine). USIF, SILF e SINAFI senza novità su contratto o pensione dopo il 18/10; INPS: ultimo messaggio n. 3281 del 15/10. Gazzetta S.G. n. 243 del 19/10: nessun DPR di recepimento (solo un comunicato della Difesa sui ruoli del personale in ausiliaria); tasso 2026 non ancora pubblicato (Ministero del Lavoro fermo al 2025), coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Tassi di mercato invariati (BTP alla chiusura del 19/10; conti deposito ricontrollati il 20/10, invariati); BTP Valore oltre 6 miliardi complessivi alle 11 del 20/10. Scheda invariata. Non raggiungibili: Governo; non ricontrollati in questo giro MEF, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
-  },
-  {
-   "at": "2026-10-20T17:00:00+02:00",
-   "notizie": 0,
-   "note": "giro delle 17: nessuna notizia nuova dal giro delle 13 (USIF, SILF e SINAFI senza novità su contratto o pensione dopo il 18/10; SIULP e ForzeArmate.org fermi agli articoli già annotati; INPS: ultimo messaggio n. 3281 del 15/10). Gazzetta ferma alla S.G. n. 243 del 19/10, DPR non ancora pubblicato (atteso nella prima metà di novembre secondo SIULP e ASPMI); coefficienti 2027-2028 non usciti (Ministero del Lavoro fermo al decreto del 20/11/2024); tasso 2026 non ancora comunicato; quota F.A.F. 2027 attesa nel 2028. Legge di bilancio 2027 non ancora approvata dal Consiglio dei ministri. Tassi di mercato: BTP 10 anni corretto a 4,56% alla chiusura del 19/10 (Borsa Italiana; Trading Economics 4,57%); 2 e 5 anni invariati (nessuna seconda fonte sulla chiusura); BTP Valore: aggiornata la raccolta del secondo giorno. Conti deposito non ricontrollati (verificati alle 13). Scheda invariata. Non raggiungibili: Governo, MEF, Difesa, Corte dei conti"
-  },
-  {
-   "at": "2026-10-20T23:00:00+02:00",
-   "notizie": 0,
-   "note": "giro delle 23: nessuna notizia nuova dal giro delle 17 (USIF, SILF e SINAFI senza novità su contratto o pensione dopo il 18/10; SIULP fermo alla previsione del DPR in Gazzetta entro la prima metà di novembre; Infodifesa senza articoli nuovi; INPS: ultimo messaggio n. 3281 del 15/10). Gazzetta ferma alla S.G. n. 243 del 19/10, DPR non ancora pubblicato; tasso 2026 non ancora comunicato (Ministero del Lavoro fermo al 2025), coefficienti 2027-2028 non usciti; quota F.A.F. 2027 attesa nel 2028. Legge di bilancio 2027: nessuna approvazione in Consiglio dei ministri il 20/10, confermato lo slittamento verso il 28 ottobre. Tassi di mercato invariati: chiusura dei BTP del 20/10 non verificata (Milano Finanza 4,53% senza orario, Trading Economics 4,60%: non coincidono), restano i valori del 19/10; conti deposito non ricontrollati (verificati alle 13); prodotti invariati. Scheda invariata. Non raggiungibili: Governo; non ricontrollati in questo giro Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
-  },
-  {
-   "at": "2026-10-24T13:08:00+02:00",
-   "notizie": 2,
-   "note": "giro delle 13 (nessun giro registrato dal 20/10 alle 23): due notizie nuove, i coefficienti di trasformazione 2027-2028 (decreto direttoriale del 16/10, pubblicato dal Ministero del Lavoro il 20/10: a 60 anni 4,475%) e il tasso di capitalizzazione 2026 ufficiale (21/10: 1,063359), entrambi passati a «uscito» in attesa; aggiornate la voce sulla manovra (AGI 23/10: Consiglio dei ministri atteso il 27-28/10) e la voce sulla stima del tasso. Gazzetta fino alla S.G. n. 247 del 23/10: DPR di recepimento non ancora pubblicato; quota F.A.F. 2027 attesa nel 2028. USIF (22/10 tavolo in Funzione Pubblica sulle norme sindacali; 24/10 vittime del dovere), SILF e SINAFI senza novità su contratto o pensione; SIULP Flash 43 del 24/10 senza novità; INPS: messaggi fino al n. 3422 del 23/10 e circolare n. 108 del 22/10, nessuno sul comparto. Tassi di mercato: BTP 5 anni 4,05% e 10 anni 4,56% alla chiusura del 23/10, 2 anni invariato (nessuna seconda fonte); BTP Valore chiuso con 16,6 miliardi e cedole definitive 3,75/4,20/4,75%; miglior deposito libero 3,25% (Banca AideXa, aggiunto ai prodotti); vincolati invariati; BCE e inflazione invariate; BBVA non ricontrollato (cambia a inizio trimestre). Scheda rev. 8: coefficiente 2027 ufficiale e tasso 2026 annotati. Non raggiungibili: Governo, MEF (comunicato BTP Valore); non ricontrollati in questo giro Camera, Senato, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
-  },
-  {
-   "at": "2026-10-24T17:00:00+02:00",
-   "notizie": 1,
-   "note": "giro delle 17: una notizia nuova, l'art. 8 del D.L. 23/10/2026 n. 193 (G.U. S.G. n. 247 del 23/10): 50 milioni per il 2026 per gli straordinari già svolti dalle Forze di polizia, 9 alla Guardia di Finanza (testo riportato da Al.Si.P.Pe., confermato da IlFaroOnline e Corriere Nazionale). Gazzetta ferma alla S.G. n. 247 del 23/10: DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Legge di bilancio 2027: Consiglio dei ministri ancora atteso tra il 27 e il 28/10 (BusinessOnline 24/10), nessuna misura nuova per il comparto. USIF (ultime 22/10 e 24/10), SILF (22/10) e SINAFI senza novità su contratto o pensione; INPS: ultimo messaggio n. 3422 del 23/10. Tassi di mercato invariati (sabato, mercati chiusi; BTP 2 anni senza seconda fonte); prodotti invariati. Scheda invariata. Non raggiungibili: Governo; non ricontrollati in questo giro MEF, ISTAT, Ministero del Lavoro, Camera, Senato, Difesa, Polizia di Stato, Corte dei conti, Agenzia delle Entrate"
-  },
-  {
    "at": "2026-10-24T22:55:00+02:00",
    "notizie": 0,
    "note": "giro delle 23: nessuna notizia nuova dal giro delle 17. Gazzetta ferma alla S.G. n. 247 del 23/10: DPR di recepimento non ancora pubblicato; tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Legge di bilancio 2027 non ancora approvata dal Consiglio dei ministri. USIF (ultime 22/10 e 24/10), SILF (ultima 23/10) e SINAFI (ultima 22/10) senza novità su contratto o pensione; SIULP Flash 43 del 24/10 senza novità; INPS: ultimo messaggio n. 3422 del 23/10; Ministero del Lavoro: nessuna notizia previdenziale dopo il 21/10. Tassi di mercato invariati (sabato, mercati chiusi); prodotti invariati. Scheda invariata. Non raggiungibili: Governo; non ricontrollati in questo giro MEF, Difesa, Polizia di Stato, Agenzia delle Entrate"
@@ -929,6 +849,11 @@
    "at": "2026-11-12T13:30:00+01:00",
    "notizie": 0,
    "note": "giro di giovedì 12/11 (13:00): nessuna notizia nuova. Ricerche su DPR di recepimento 2025-2027 e previdenza dedicata/legge di bilancio 2027: nessun fatto nuovo verificabile con due letture; pagina ipsoa della Gazzetta non raggiungibile (ultimo fascicolo S.G. visto: n. 246 del 22/10). Tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Mercati: BTP 10 anni resta 4,32% (chiusura 6/11), nessun dato più recente con due fonti coincidenti; altri valori invariati. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-14T13:30:00+01:00",
+   "notizie": 0,
+   "note": "giro di sabato 14/11 (13:00): nessuna notizia nuova. Ricerche su DPR di recepimento 2025-2027 e previdenza dedicata/legge di bilancio 2027: nessun fatto nuovo verificabile con due letture; Gazzetta Ufficiale non leggibile in questo giro (ultimo fascicolo S.G. visto: n. 246 del 22/10). Tasso 2026 e coefficienti 2027-2028 già usciti; quota F.A.F. 2027 attesa nel 2028. Mercati: BTP 10 anni 4,38% (chiusura 12/11, due letture ANSA); altri valori invariati. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
@@ -975,12 +900,12 @@
   {
    "id": "btp10",
    "t": "BTP a 10 anni (rendimento lordo)",
-   "valore": 4.32,
-   "d": "2026-11-06",
-   "fonte": "ANSA, chiusura del 6/11",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/11/06/lo-spread-btp-bund-chiude-in-flessione-a-1074-punti_80ee8dd9-4c1e-4af0-878d-418ce38a3652.html",
+   "valore": 4.38,
+   "d": "2026-11-12",
+   "fonte": "ANSA, chiusura del 12/11",
+   "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/13/lo-spread-tra-btp-e-bund-apre-in-lieve-rialzo-a-105-punti_57a4ee65-0a96-481c-affc-98f0060bbafc.html",
    "unita": "%",
-   "nota": "chiusura 6/11: 4,32% (spread 107,4 punti, due letture ANSA); QuiFinanza 4,33% in mattinata (coincide entro 0,05)."
+   "nota": "chiusura 12/11: 4,38% (ANSA 13/11: «4,38% alla chiusura precedente»); ANSA 12/11 ore 18:11: «sfiora il 4,39», spread 104,4 punti (coincide entro 0,01). Apertura 13/11: 4,41%, spread 105."
   },
   {
    "id": "btpv",
