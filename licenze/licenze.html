@@ -427,11 +427,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 
   <div class="tiles" id="tiles"></div>
 
-  <div class="card" style="margin-top:12px">
-    <div class="row"><label>Ultimo giorno in ufficio prima del congedo (piano)</label><span class="v" id="lastP">–</span></div>
-    <div class="row"><label>Se collochi tutto il residuo in coda</label><span class="v" id="lastEst">–</span></div>
-    <div class="row"><label>Giorni ancora da collocare</label><span class="v" id="unplanned">–</span></div>
-  </div>
+  <!-- 14/11/2026: tolto il riquadro «Ultimo giorno in ufficio prima del congedo» (il proprietario: inutile; l’ultimo giorno in servizio è quello scritto in Situazione) -->
   </div><div>
   <h2>Giorno per giorno</h2>
   <div class="card">
@@ -1020,9 +1016,9 @@ function renderP1(){
     tile("rl","RL 2027",S.bal.rl27,now.rl27,fin.rl27)+
     `<div class="tile"><div class="t pp">Assenze pianificate</div><div class="n">${st.LP+st.LO+st.RL+st.AL}</div><div class="s">LP ${st.LP} · LO ${st.LO} · RL ${st.RL} · AL ${st.AL}</div></div>`;
 
-  $("lastP").textContent=st.lastP?fmt(st.lastP,{weekday:"short",day:"numeric",month:"short",year:"numeric"}):"nessuna";
-  $("lastEst").textContent=st.lastEstNone?"nessuna presenza":(st.lastEst?fmt(st.lastEst,{weekday:"short",day:"numeric",month:"short",year:"numeric"}):"–");
-  $("unplanned").textContent=st.unplTot;
+  if($("lastP"))$("lastP").textContent=st.lastP?fmt(st.lastP,{weekday:"short",day:"numeric",month:"short",year:"numeric"}):"nessuna";
+  if($("lastEst"))$("lastEst").textContent=st.lastEstNone?"nessuna presenza":(st.lastEst?fmt(st.lastEst,{weekday:"short",day:"numeric",month:"short",year:"numeric"}):"–");
+  if($("unplanned"))$("unplanned").textContent=st.unplTot;
 
   // iniziale
   $("iLav").textContent=st.lav;
@@ -1524,7 +1520,7 @@ setSaveStat("init");
 window.__flush=()=>{ try{ flushAll(); }catch(e){} };
 })();
 </script>
-<script>window.APP_VERSION="b8ff568787";window.APP_BUILD="2026-11-14T13:58+02:00";</script>
+<script>window.APP_VERSION="8bce56f0b7";window.APP_BUILD="2026-11-14T16:44+02:00";</script>
 <script>
 /* 🔠 Testo più grande (10/11/2026): tre misure, valide in tutte le pagine; scelta in ⚙️ Impostazioni, salvata in «pn-aa» */
 (function(){var Z=[1,1.1,1.2];function ap(){var v=0;try{v=+localStorage.getItem("pn-aa")||0;}catch(e){}document.documentElement.style.zoom=Z[v]||1;return v;}
