@@ -3,7 +3,7 @@ Uso: python3 strumenti/verifica_novita.py <file.json> [<seconda copia>]
 Esce con errore se: formato sbagliato, date non valide o nel futuro, URL mancanti o non https, doppioni,
 più di 80 notizie, testi troppo lunghi, termini personali, o se le due copie non sono identiche."""
 import json, re, sys, datetime, base64
-TEMI = {'contratto', 'previdenza', 'inps', 'fondi'}
+TEMI = {'contratto', 'previdenza', 'inps'}
 TAG = {'dpr', 'aumenti', 'arretrati', 'fesi', 'moltiplicatore', 'ausiliaria', 'coefficienti', 'tasso', 'tfs', 'scatti', 'faf', 'premio', 'fiscale', 'requisiti', 'quotaA'}
 # niente dati personali in un file pubblico: solo impronte, le parole non sono nel codice
 import os as _os, sys as _sys

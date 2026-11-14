@@ -368,7 +368,7 @@ function pensCassaCard(){let N;try{N=cassaNag();}catch(e){N=null;}if(!N)return "
 function pensIcs(t){return P.pens?cassaIcs(t).concat(pensOpen().filter(a=>a.d>=t).map(a=>({uid:"pens-"+a.id,lines:["DTSTART;VALUE=DATE:"+dval(a.d),"DTEND;VALUE=DATE:"+dval(add(a.d,1)),"SUMMARY:"+icsEsc("🎖️ "+a.t),...alarm(7)]}))):[];}
 
 /* ---------- 📰 Novità: file pubblico news-pensione.json (copia sull'iPad per quando manca internet) ---------- */
-const NEWS_KEY="pn-news", TEMI={contratto:["📄","Contratto"],previdenza:["🛡️","Previdenza dedicata"],inps:["🏛️","INPS e bilancio"],fondi:["🎖️","Fondi del Corpo"]};
+const NEWS_KEY="pn-news", TEMI={contratto:["📄","Contratto"],previdenza:["🛡️","Previdenza dedicata"],inps:["🏛️","INPS e bilancio"]}; /* 14/11/2026: tolto il tema «Fondi del Corpo» (il proprietario: non utile, è materia di circolari interne) */
 let newsBusy=false, newsTema="";
 const newsData=()=>lsJ(NEWS_KEY)||{voci:[],attesa:[]};
 const newsList=()=>(newsData().voci||[]).slice().sort((a,b)=>a.d<b.d?1:a.d>b.d?-1:0);
@@ -392,7 +392,7 @@ function pensNews(){
       <small>${(n.temi||[]).map(t=>TEMI[t]?TEMI[t][0]+" "+TEMI[t][1]:"").filter(Boolean).join(" · ")}${n.url?` · <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.fonte||"fonte")} ›</a>`:""}</small>
       ${n.effetto||tc.length?`<div class="warnbox" style="margin-top:6px;background:var(--pens-bg);border-color:var(--pens)"><b>Cosa cambia per te.</b> ${esc(n.effetto||"")}${tc.length?`<br>${tc.slice(0,3).map(x=>"• "+esc(x.t)).join("<br>")}${tc.length>3?`<br><span class="lbl">e altre ${tc.length-3} voci della tua scheda</span>`:""}`:""}</div>`:""}</div></div></div>`;};
   const colT=Object.keys(TEMI),byT={};colT.forEach(k=>byT[k]=[]);const alt=[];newsList().forEach(n=>{const k=(n.temi||[]).find(x=>byT[x]);if(k)byT[k].push(n);else alt.push(n);});
-  o+=`<div class="cols4">${colT.map(k=>`<div class="card k-pens"><h3>${TEMI[k][0]} ${TEMI[k][1]} <span class="lbl" style="margin-left:auto">${byT[k].length}</span></h3>${byT[k].map(nItem).join("")||'<p class="empty">Nessuna notizia.</p>'}</div>`).join("")}${alt.length?`<div class="card k-pens"><h3>📌 Altro</h3>${alt.map(nItem).join("")}</div>`:""}</div>
+  o+=`<div class="cols4" style="grid-template-columns:repeat(3,minmax(0,1fr))">${colT.map(k=>`<div class="card k-pens"><h3>${TEMI[k][0]} ${TEMI[k][1]} <span class="lbl" style="margin-left:auto">${byT[k].length}</span></h3>${byT[k].map(nItem).join("")||'<p class="empty">Nessuna notizia.</p>'}</div>`).join("")}${alt.length?`<div class="card k-pens"><h3>📌 Altro</h3>${alt.map(nItem).join("")}</div>`:""}</div>
     <p class="lbl">Dati e fonti si aggiornano da soli ogni notte${N.updated?" · ultimo controllo "+whenIt(N.updated):""}. Sono informazioni con data e fonte, non consigli: per decidere vale il testo ufficiale.</p>`;
   const F=N.fonti||[],G={};F.forEach(f=>(G[f.tipo]=G[f.tipo]||[]).push(f));
   if(F.length)o+=`<details class="more"><summary>🔎 Fonti controllate (${F.length})</summary><div class="card k-pens">${Object.entries(G).map(([tp,L])=>`<h3 style="color:var(--ink);font-size:14.5px;margin:6px 0 4px">${esc(tp.charAt(0).toUpperCase()+tp.slice(1))}</h3>${L.map(f=>`<div class="row" style="padding:5px 0"><div class="grow"><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.n)}</a></div><small class="lbl" style="${f.esito&&f.esito!=="ok"?"color:var(--scad)":""}">${f.ultimo?(f.esito&&f.esito!=="ok"?esc(f.esito)+" · ":"")+whenIt(f.ultimo):"da controllare"}</small></div>`).join("")}`).join("")}</div></details>`;

@@ -7,7 +7,7 @@ Un'attività programmata lo aggiorna **una volta al giorno, di notte, alle 1:01*
 - **contratto**: accordi 2025-2027 (e successivi), DPR di recepimento, Gazzetta Ufficiale, aumenti, arretrati, F.E.S.I., circolari NoiPA o del Comando Generale.
 - **previdenza**: previdenza dedicata (tavolo del Governo con la Funzione Pubblica), moltiplicatore art. 3 c. 7 D.Lgs. 165/1997, ausiliaria, coefficienti per chi esce per limiti di età, TFS/TFR.
 - **inps**: circolari e messaggi INPS (TFS, termini di pagamento, coefficienti di trasformazione 2027-2028, tasso di capitalizzazione 2026, requisiti), legge di bilancio 2027.
-- **fondi**: Fondo di previdenza per ispettori, sovrintendenti, appuntati e finanzieri; F.A.F. (quota annuale, regolamento); C.I.A.N.
+- ~~fondi~~: **TEMA TOLTO il 14/11/2026 su richiesta del proprietario** (Fondo di previdenza del Corpo, F.A.F., C.I.A.N.: materia di circolari interne, non utile qui). Non cercare e non inserire notizie su questi fondi; il tema `fondi` non è più valido.
 
 ## Fonti da controllare ogni mattina
 Prima le fonti ufficiali (sono quelle che contano), poi i sindacati (spesso arrivano prima e spiegano le date), poi le testate di settore. Una notizia presa solo da un sindacato o da una testata va scritta come «secondo …».
@@ -39,7 +39,7 @@ Prima le fonti ufficiali (sono quelle che contano), poi i sindacati (spesso arri
 
 ## Regole
 1. **Doppia verifica**: due letture della pagina (WebFetch con domande diverse) che coincidono, più una seconda fonte quando esiste (`fonti2`). Se non coincidono, la notizia non entra.
-2. Ogni notizia: `id` (`nAAAAMMGG-parola`), `d` (data di pubblicazione, mai futura), `titolo` (≤ 120 caratteri), `sintesi` (≤ 700, fatti con date e numeri, niente opinioni), `fonte`, `url` esatto (https, mai inventato), `fonti2`, `temi` (contratto, previdenza, inps, fondi), `tocca` (argomenti: dpr, aumenti, arretrati, fesi, moltiplicatore, ausiliaria, coefficienti, tasso, tfs, scatti, faf, premio, fiscale, requisiti, quotaA), `effetto` (≤ 300: che cosa cambia in generale per chi va in pensione; «per ora non cambia nulla» quando è così).
+2. Ogni notizia: `id` (`nAAAAMMGG-parola`), `d` (data di pubblicazione, mai futura), `titolo` (≤ 120 caratteri), `sintesi` (≤ 700, fatti con date e numeri, niente opinioni), `fonte`, `url` esatto (https, mai inventato), `fonti2`, `temi` (contratto, previdenza, inps), `tocca` (argomenti: dpr, aumenti, arretrati, fesi, moltiplicatore, ausiliaria, coefficienti, tasso, tfs, scatti, faf, premio, fiscale, requisiti, quotaA), `effetto` (≤ 300: che cosa cambia in generale per chi va in pensione; «per ora non cambia nulla» quando è così).
 3. Massimo 80 notizie, dalla più recente; niente doppioni (stessa notizia da più fonti = una voce con `fonti2`).
 4. `attesa`: i parametri che servono al ricalcolo. Quando escono ufficialmente: `stato` "uscito", `valore` (coefficiente a 60 anni in percentuale, per esempio 4.512; tasso 2026 come fattore, per esempio 1.0634), `fonte`, `url`. Le stime restano in `stima`, mai in `valore`.
 5. Niente consigli, niente dati personali, niente nomi di persone private. Solo informazioni con data e fonte.
