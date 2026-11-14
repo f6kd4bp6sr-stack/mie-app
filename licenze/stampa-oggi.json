@@ -1,8 +1,8 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-14T05:09+01:00",
-  "nota": "Edizione del mattino del 14 novembre 2026.",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-14T13:03+01:00",
+  "nota": "Edizione del pomeriggio del 14 novembre 2026.",
   "sezioni": {
     "italia": [
       {
@@ -22,18 +22,26 @@
         ]
       },
       {
-        "id": "it-allarmi-scuole-protocollo",
-        "t": "Mail minatorie alle scuole: il Governo fissa le regole su quando evacuare",
-        "s": "Dopo le mail anonime arrivate a migliaia di istituti, l'esecutivo ha indicato una procedura: lezioni che proseguono salvo fondati motivi di allarme. Meloni ha riunito le opposizioni, escludendo pericoli concreti e cambi al calendario scolastico.",
-        "d": "2026-11-12",
+        "id": "it-larussa-fascismo",
+        "t": "La Russa: «il popolo ha voluto il fascismo»; precisa il senso, ma Pd e M5S protestano",
+        "s": "Parlando con studenti a Milano il presidente del Senato ha detto che il fascismo fu voluto dal popolo; poi ha spiegato di riferirsi al voto, «sbagliando». Pd e M5S ricordano violenza squadrista, brogli del 1924 e delitto Matteotti.",
+        "d": "2026-11-14",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/allarmi-bomba-mail-protocollo-regole-governo_3eoC4ioeCWJBGJ552wjL1I"
-          },
+            "n": "AGI",
+            "url": "https://www.agi.it/politica/news/2026-11-14/fascismo-la-russa-polemiche-40027595/"
+          }
+        ]
+      },
+      {
+        "id": "it-meloni-violenza-donne",
+        "t": "Meloni sulla violenza contro le donne: «la sfida non è vinta». Domenica a Roma «Corri Libera»",
+        "s": "La premier rivendica pene più severe e l'ergastolo per il femminicidio, ma ammette che serve più sensibilizzazione. Annuncia la corsa di 5 chilometri «Corri Libera», domenica 15 novembre alle 10, dal Colosseo ai Fori Imperiali.",
+        "d": "2026-11-14",
+        "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/11/non-cambieranno-il-calendario-delle-scuole-e-meloni-chiama-le-opposizioni_777ad9b7-5940-4f12-a318-bab5b8c213c7.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/14/meloni-combattiamo-violenza-sulle-donne-con-ogni-mezzo-ma-sfida-non_7a680866-715e-411f-9a36-a9d7ad27d086.html"
           }
         ]
       },
@@ -53,8 +61,8 @@
     "mondo": [
       {
         "id": "mo-voli-usa",
-        "t": "Stati Uniti, bloccati per ore tutti i voli: oltre 3.000 cancellati, esclusa la pista cyber",
-        "s": "Nella notte tra 13 e 14 novembre la FAA ha fermato il traffico aereo nazionale per un guasto alle telecomunicazioni; sospesi anche i voli europei diretti negli Usa. Secondo le autorità non ci sono segni di attacco informatico. Il blocco è stato revocato verso le 2:40 italiane.",
+        "t": "Stati Uniti, guasto alle telecomunicazioni FAA: voli fermi per ore, migliaia di cancellazioni",
+        "s": "Nella notte tra 13 e 14 novembre il traffico aereo nazionale è stato bloccato per un guasto ai sistemi della FAA, poi revocato. Il ministro Duffy parla di infrastrutture obsolete e di decine di migliaia di passeggeri a terra; FBI e Sicurezza interna escludono attacchi informatici.",
         "d": "2026-11-14",
         "fonti": [
           {
@@ -62,72 +70,81 @@
             "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/revocato-il-blocco-dei-voli-negli-stati-uniti-decine-di-migliaia-di-passeggeri_d2a6ded1-a075-4399-8855-8bc69e436c24.html"
           },
           {
-            "n": "AGI",
-            "url": "https://www.agi.it/estero/news/2026-11-13/aerei-bloccati-usa-guasto-40021088/"
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/14/faa-ground-stop-disrupts-nba-nhl-and-college-football-weekend-travel",
+            "l": "en"
           }
         ]
       },
       {
         "id": "mo-shenzhen",
-        "t": "Casa Bianca: Trump, Xi e Putin a Shenzhen, si parlerà di Iran e non di Ucraina",
-        "s": "Il colloquio trilaterale è previsto giovedì prossimo a margine del vertice Apec in Cina. Secondo la Casa Bianca al centro ci sarà l'Iran, non la guerra in Ucraina.",
+        "t": "Trump, Xi e Putin si vedranno a Shenzhen: in agenda armi nucleari e Iran, non l'Ucraina",
+        "s": "Primo vertice a tre a margine dell'Apec, la prossima settimana. Secondo la Casa Bianca si parlerà di arsenali nucleari dopo la scadenza del New START e di Iran. Il Cremlino respinge il paragone con Yalta; Zelensky teme un accordo senza Kiev.",
         "d": "2026-11-14",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/14/casa-bianca-trump-discutera-di-iran-con-xi-e-putin-non-di-ucraina_4070f4cc-6dc8-4cf7-b146-40449b162ac5.html"
+            "n": "AGI",
+            "url": "https://www.agi.it/estero/news/2026-11-14/trump-xi-putin-colloqui-40022901/"
           }
         ]
       },
       {
-        "id": "mo-ucraina-negoziati",
-        "t": "Ucraina, dopo Abu Dhabi nessuna intesa sui territori ma nuovo scambio di prigionieri",
-        "s": "Al primo negoziato dopo febbraio con Usa, Russia e Ucraina, Mosca chiede cessioni territoriali e il ritiro Nato da parte dell'Est Europa; Kiev cerca garanzie di sicurezza. Prevista la liberazione di almeno mille prigionieri per parte. Continuano gli attacchi con droni e missili.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/13/russias-demands-come-from-different-reality-as-war-efforts-stagnates",
-            "l": "en"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/12/russia-plays-down-peace-talks-with-europe-after-witkoff-raises-hopes-of-breakthrough",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-microsoft",
-        "t": "Microsoft, disservizio mondiale a Outlook, Teams e Copilot in 74 Paesi",
-        "s": "Il problema, partito dalle Americhe, è stato attribuito a un carico elevato su parte dell'infrastruttura. Microsoft esclude attacchi informatici; alcuni sistemi restano in errore e il ripristino è in corso.",
-        "d": "2026-11-13",
+        "id": "mo-ucraina-nato",
+        "t": "Ucraina, Zelensky: gli Usa chiedono se Kiev lascerebbe il Donbass in cambio dell'ingresso nella Nato",
+        "s": "Il presidente ucraino dice che è la prima volta che la domanda viene posta e che non può decidere da solo: consulterebbe gli ucraini. Mosca, per Zakharova, non ne ha parlato; Ushakov dice che l'Europa deve scegliere tra pace e guerra.",
+        "d": "2026-11-14",
         "fonti": [
           {
             "n": "AGI",
-            "url": "https://www.agi.it/estero/news/2026-11-13/microsoft-down-74-paesi-outlook-40007551/"
+            "url": "https://www.agi.it/estero/news/2026-11-14/ucraina-nato-zelensky-putin-40026343/"
           },
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/12/microsoft-outage-hits-outlook-teams-and-copilot-disrupting-thousands",
+            "url": "https://www.euronews.com/2026/11/14/us-floats-ukraine-ceding-land-to-russia-in-exchange-for-nato-membership-zelenskyy",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-meloni-macron-droghe",
-        "t": "Meloni e Macron a Dublino guidano la riunione della Coalizione europea contro la droga",
-        "s": "I due leader hanno presieduto l'incontro dei capi di governo della coalizione europea per il contrasto al traffico di stupefacenti.",
-        "d": "2026-11-13",
+        "id": "mo-houthi-arabia",
+        "t": "Yemen, gli Houthi dichiarano 24 attacchi in tre giorni contro l'Arabia Saudita",
+        "s": "Il gruppo sostiene di aver colpito con missili e droni l'aeroporto di Riad e un impianto petrolifero; parla anche di 85 raid nelle ultime 24 ore sullo Yemen. I dati arrivano solo dalle dichiarazioni degli Houthi, senza conferme indipendenti.",
+        "d": "2026-11-14",
         "fonti": [
           {
             "n": "AGI",
-            "url": "https://www.agi.it/vista-tv/video/2026-11-13/meloni-e-macron-presiedono-a-dublino-riunione-dei-leader-della-coalizione-europea-contro-le-droghe-40010286/"
+            "url": "https://www.agi.it/estero/news/2026-11-14/houthi-yemen-arabia-saudita-40025503/"
           }
         ]
       }
     ],
     "estero": [
+      {
+        "id": "es-ucraina-nato-stampa",
+        "t": "Al Jazeera: Kiev riferisce l'ipotesi Nato in cambio di territori; tre morti in Russia",
+        "s": "L'emittente riporta la versione di Zelensky: Washington avrebbe sondato un ritiro dal Donbass in cambio dell'adesione alla Nato. Russia e Stati Uniti non confermano. Segnala anche tre morti in Russia per attacchi ucraini.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/14/three-killed-in-russia-as-ukraine-claims-us-floated-nato-membership-option",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-aj-shenzhen",
+        "t": "Al Jazeera: Shenzhen, il primo vertice a tre tra Trump, Xi e Putin",
+        "s": "L'emittente del Qatar riferisce che l'incontro è presentato come inizio di un dialogo, senza accordi attesi. Tra gli osservatori c'è chi lo accosta a Yalta; Mosca lo definisce molto importante ma nega logiche di spartizione.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china",
+            "l": "en"
+          }
+        ]
+      },
       {
         "id": "es-turchia-qatar",
         "t": "Turchia e Qatar firmano un patto di difesa reciproca",
@@ -140,22 +157,21 @@
             "l": "en"
           }
         ]
-      },
-      {
-        "id": "es-iran-trump",
-        "t": "Al Jazeera: perché Trump dice che con l'Iran «non serve un accordo»",
-        "s": "L'analisi dell'emittente del Qatar guarda al cambio di toni di Trump sull'Iran e al ruolo del vicepresidente Vance, messo ai margini del dossier.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/features/2026/11/13/why-is-trump-saying-no-deal-necessary-with-iran-as-he-sidelines-jd-vance",
-            "l": "en"
-          }
-        ]
       }
     ],
     "economia": [
+      {
+        "id": "ec-black-friday",
+        "t": "Black Friday, il Codacons stima in Italia 4,3 miliardi di acquisti, il 7% in più",
+        "s": "Secondo le previsioni oltre il 60% degli acquisti avverrà online e tre su quattro includeranno regali di Natale. Abbigliamento in testa, poi elettronica. Il Codacons avverte su siti falsi, phishing e recensioni false.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/14/conto-alla-rovescia-per-black-friday-giro-daffari-sale-a-43-miliardi_f30271ef-561c-4cf9-a62e-cb88332b3758.html"
+          }
+        ]
+      },
       {
         "id": "ec-spread-rating",
         "t": "Spread Btp-Bund a 104 punti base, Borsa di Milano in lieve rialzo",
@@ -184,6 +200,42 @@
     ],
     "torino": [
       {
+        "id": "to-mole-banco",
+        "t": "La Mole Antonelliana illuminata per la Colletta Alimentare",
+        "s": "Il monumento ha i colori del Banco Alimentare per sostenere la raccolta di sabato 14 novembre nei supermercati del Piemonte.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/14/leggi-notizia/argomenti/attualita-31/articolo/la-mole-antonelliana-illuminata-con-i-colori-del-banco-alimentare.html"
+          }
+        ]
+      },
+      {
+        "id": "to-carabinieri-controlli",
+        "t": "Controlli dei Carabinieri a Torino: due arresti, cinque denunce e due locali chiusi",
+        "s": "Verifiche in Barriera di Milano, piazza Bengasi, Madonna di Campagna e centro: tra i risultati un furto in cantina, auto svaligiate, hashish e un coltello. Chiusi un minimarket e un bar, con sanzioni per oltre 12.300 euro.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/14/leggi-notizia/argomenti/cronaca-11/articolo/controlli-a-tappeto-dei-carabinieri-in-citta-due-arresti-cinque-denunce-e-due-locali-chiusi.html"
+          }
+        ]
+      },
+      {
+        "id": "to-sport-illumina",
+        "t": "A Torino un nuovo spazio «Sport Illumina» in corso Cadore, con tennis gratuito",
+        "s": "Inaugurato alla vigilia delle ATP Finals con Bolelli e Vavassori: cinque discipline e un campo da tennis con le stesse resine usate dal torneo. Il progetto è di Sport e Salute.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/sport/altrisport/2026/11/14/a-torino-nuovo-spazio-sport-illumina-i-sogni-non-devono-avere-indirizzi_f7c89a96-82ef-416a-b1dc-14d078b7a171.html"
+          }
+        ]
+      },
+      {
         "id": "to-corteo-14nov",
         "t": "Torino, corteo in piazza Castello sabato 14 novembre: possibili deviazioni dei bus GTT",
         "s": "Nuova manifestazione cittadina nel pomeriggio di sabato; il percorso può causare deviazioni delle linee GTT. Orari e percorso aggiornati sulla pagina di TorinoToday.",
@@ -206,30 +258,24 @@
             "url": "https://www.torinoggi.it/2026/11/13/leggi-notizia/argomenti/gusto-e-gusti-3/articolo/torino-a-prova-di-golosi-parte-il-weekend-di-dolcissimarte-4.html"
           }
         ]
-      },
-      {
-        "id": "to-paranoia",
-        "t": "Paranoia Festival a Torino: due giorni sul benessere mentale dei giovani",
-        "s": "Secondo ANSA Piemonte la rassegna dedica due giornate al tema della salute mentale tra i più giovani.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/piemonte/2026/11/10/paranoia-festival-a-torino-due-giorni-dedicati-al-benessere-mentale-dei-giovani_14ae4647-3e54-4f9f-bd0e-2fcb5b46eea9.html"
-          }
-        ]
       }
     ],
     "piemonte": [
       {
         "id": "pi-colletta",
-        "t": "Colletta Alimentare, sabato 14 novembre in Piemonte: 1.300 supermercati e oltre 12.000 volontari",
-        "s": "Trentesima edizione: si lasciano alimenti a lunga conservazione ai volontari. Per le Valli di Lanzo la raccolta è nei tre supermercati di Lanzo e in alcuni punti vendita della zona.",
-        "d": "2026-11-10",
+        "t": "Colletta Alimentare in Piemonte: 1.300 supermercati, obiettivo superare le 691 tonnellate del 2025",
+        "s": "Raccolta oggi, sabato 14 novembre, nei supermercati della regione. Lo scorso anno furono raccolte 691 tonnellate di alimenti, distribuite a oltre 111.000 persone tramite 560 organizzazioni partner.",
+        "d": "2026-11-14",
         "fonti": [
           {
             "n": "Torino Oggi",
             "url": "https://www.torinoggi.it/2026/11/10/leggi-notizia/argomenti/attualita-31/articolo/colletta-alimentare-sabato-14-novembre-torna-lappuntamento-con-la-solidarieta.html"
+          }
+        ],
+        "link": [
+          {
+            "n": "Torino Oggi: la Mole con i colori del Banco Alimentare, dati 2025",
+            "url": "https://www.torinoggi.it/2026/11/14/leggi-notizia/argomenti/attualita-31/articolo/la-mole-antonelliana-illuminata-con-i-colori-del-banco-alimentare.html"
           }
         ]
       },
@@ -994,12 +1040,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-04T05:40+01:00",
-      "edizione": "mattina",
-      "notizie": 52,
-      "note": "Fonti lette: ANSA, Al Jazeera, Euronews, TorinoToday (solo ricerca), Comingsoon, MYmovies, Turismo Torino, Teatro Stabile. Non raggiungibili: reuters.com (ricerca rifiutata), torinotoday.it (pagine non leggibili), thespacecinema.it. Concerti copiati dall'edizione del 3/11 (non è lunedì)."
-    },
-    {
       "at": "2026-11-05T05:40+01:00",
       "edizione": "mattina",
       "notizie": 50,
@@ -1112,6 +1152,12 @@
       "edizione": "mattina",
       "notizie": 66,
       "note": "Fonti lette: ANSA, AGI, Adnkronos (solo ricerca), Al Jazeera (en), Euronews (en), Torino Oggi. Non leggibili: TorinoToday (pagina corteo); ricerca Reuters rifiutata dal proxy. Alcune pagine ANSA Piemonte, Euronews (Spagna) non aperte per mancata approvazione: sintesi dall'elenco. Cinema, teatro, eventi e concerti dall'edizione precedente (sabato, non lunedì) con tolti gli spettacoli passati e aggiunto DolcissimArte. Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-14T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 70,
+      "note": "Fonti lette: ANSA, AGI, Al Jazeera (en), Euronews (en), Torino Oggi. Non leggibili: TorinoToday (pagina corteo); Reuters/BBC/Guardian non cercate (rifiutate dal proxy nei giri precedenti). Ricerca Piemonte senza novità nuove: tenute le notizie del mattino. Cinema, teatro, eventi e concerti dall'edizione del mattino (sabato, non lunedì; nessun concerto già passato). Copia locale riallineata a origin/main (era staccata)."
     }
   ]
 }
