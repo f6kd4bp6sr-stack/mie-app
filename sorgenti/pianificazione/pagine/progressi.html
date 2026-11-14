@@ -431,9 +431,11 @@ function videoCard(A){
 
 /* ---------- 👗 «Come mi vesto»: misure (mai il peso), look e colori preferiti (dal 3/11/2026) ---------- */
 const VV_RUOTA=["giallo","giallo arancio","arancione","rosso arancio","rosso","rosso viola","viola","blu viola","blu","blu verde","verde","giallo verde"];
+/* 🎯 «Che cosa voglio ottenere?» (dal 14/11/2026): quanti esempi ha aperto, v = vestiti, t = trucco */
+function scopiVisti(D,p){const S=D["scopi-visti"];return S&&typeof S==="object"?Object.keys(S).filter(k=>k[0]===p).length:0;}
 function vestoCard(A){
-  const D=A.D||{},M=Array.isArray(D.misure)?D.misure:[],L=Array.isArray(D.looks)?D.looks:[],F=Array.isArray(D["col-fav"])?D["col-fav"]:[];
-  if(!M.length&&!L.length&&!F.length)return "";
+  const D=A.D||{},M=Array.isArray(D.misure)?D.misure:[],L=Array.isArray(D.looks)?D.looks:[],F=Array.isArray(D["col-fav"])?D["col-fav"]:[],SC=scopiVisti(D,"v");
+  if(!M.length&&!L.length&&!F.length&&!SC)return "";
   let h=`<h2>👗 Come mi vesto</h2>`;
   if(M.length){const m=M[M.length-1],age=Math.floor((Date.now()-new Date(m.d).getTime())/864e5);
     h+=`<div class="kpi">${m.h?`<div><b>${esc(String(m.h))} cm</b><span>altezza</span></div>`:""}${m.p?`<div><b>${esc(String(m.p))} cm</b><span>piede</span></div>`:""}${m.pe?`<div><b>${esc(String(m.pe))} cm</b><span>petto</span></div>`:""}${m.vi?`<div><b>${esc(String(m.vi))} cm</b><span>vita</span></div>`:""}</div>`;
@@ -442,6 +444,7 @@ function vestoCard(A){
       `<p class="lbl">Taglia dei vestiti e numero di scarpe li calcola l’app sull’iPad della bimba (📏 La mia taglia).</p></div>`;}
   if(F.length)h+=`<p class="lbl" style="margin-top:8px">❤️ Colori preferiti: ${F.map(i=>esc(VV_RUOTA[i]||"?")).join(", ")}</p>`;
   if(L.length)h+=`<p class="lbl">👚 Look composti e salvati: ${L.length}</p>`;
+  if(SC)h+=`<p class="lbl">🎯 «Che cosa voglio ottenere?»: ${SC} esempi aperti su 10</p>`;
   return h;
 }
 
@@ -449,11 +452,13 @@ function vestoCard(A){
 function truccoCard(A){
   const D=A.D||{},T=Array.isArray(D.trucchi)?D.trucchi:[],C=D["trucco-check"]&&typeof D["trucco-check"]==="object"?D["trucco-check"]:{};
   const days=Object.keys(C).sort(),full=days.filter(d=>C[d]&&C[d].ok).length;
-  if(!T.length&&!days.length)return "";
+  const SC=scopiVisti(D,"t");
+  if(!T.length&&!days.length&&!SC)return "";
   const N={farfalla:"🦋 farfalla",stella:"⭐ stelline",arcobaleno:"🌈 arcobaleno",gatto:"🐱 gattino",cuore:"💛 cuori",fiori:"🌸 fiori"};
   let h=`<h2>💄 Come mi trucco</h2><div class="kpi"><div><b>${T.length}</b><span>truccabimbi salvati</span></div><div><b>${full}</b><span>volte «prima e dopo» completo</span></div><div><b>${days.length}</b><span>giorni con la checklist</span></div></div>`;
   if(T.length)h+=`<p class="lbl" style="margin-top:8px">Ultimi disegni: ${T.slice(-5).reverse().map(t=>esc(N[t.dis]||t.dis||"?")+" ("+new Date(t.d+"T12:00").toLocaleDateString("it-IT",{day:"numeric",month:"short"})+")").join(", ")}</p>`;
   if(days.length)h+=`<p class="lbl">Ultima checklist: ${new Date(days[days.length-1]+"T12:00").toLocaleDateString("it-IT",{weekday:"short",day:"numeric",month:"short"})}${C[days[days.length-1]].ok?" ✅ completa":" (in parte)"}</p>`;
+  if(SC)h+=`<p class="lbl">🎯 «Che cosa voglio ottenere?»: ${SC} esempi aperti su 10</p>`;
   return h;
 }
 
