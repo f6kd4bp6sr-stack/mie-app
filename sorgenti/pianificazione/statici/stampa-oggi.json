@@ -1,8 +1,8 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-14T13:03+01:00",
-  "nota": "Edizione del pomeriggio del 14 novembre 2026.",
+  "edizione": "mattina",
+  "updated": "2026-11-15T05:03+01:00",
+  "nota": "Edizione del mattino del 15 novembre 2026.",
   "sezioni": {
     "italia": [
       {
@@ -54,6 +54,34 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/ansa2030/notizie/energia_energie/2026/11/13/guterres-alla-cop31-inevitabile-il-superamento-della-soglia-di-15-gradi_91375da0-e1c4-4657-8e05-9ae28baaecf7.html"
+          }
+        ]
+      },
+      {
+        "id": "it-reddito-campo-largo",
+        "t": "Campo largo: Patuanelli annuncia l'accordo sul reddito di cittadinanza nel programma",
+        "s": "Il capogruppo M5s al Senato dice che il reddito di cittadinanza sarà nel programma della coalizione di centrosinistra. M5s e Avs, intanto, chiedono agli alleati posizioni più nette anche sull'Ucraina, con tensioni con la componente riformista.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/patuanelli-reddito-cittadinanza-sara-nel-programma-del-campo-largo-accordo_0f93351f-6237-4b1a-bb94-7a8df2048793.html"
+          },
+          {
+            "n": "ANSA (M5s e Avs sugli alleati)",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/reddito-di-cittadinanza-e-ucraina-pressing-del-m5s-e-di-avs-sugli-alleati_9a4159c6-1d46-4b45-b73e-9dc2b9240ac4.html"
+          }
+        ]
+      },
+      {
+        "id": "it-consulta-carceri",
+        "t": "La Consulta: servono interventi urgenti del legislatore contro il sovraffollamento carcerario",
+        "s": "La Corte costituzionale sollecita il Parlamento a intervenire con urgenza sul sovraffollamento delle carceri. Nella stessa giornata Giorgetti ha detto alle parti sociali che il Governo lavora a modificare l'exit tax.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/13/la-consulta-urgenti-interventi-del-legislatore-contro-il-sovraffollamento-delle-carceri_b523cc07-c605-464c-a651-ef54ce879957.html"
           }
         ]
       }
@@ -116,6 +144,32 @@
             "url": "https://www.agi.it/estero/news/2026-11-14/houthi-yemen-arabia-saudita-40025503/"
           }
         ]
+      },
+      {
+        "id": "mo-new-orleans",
+        "t": "New Orleans, una petroliera urta una crociera fluviale con circa 129 passeggeri",
+        "s": "Una petroliera ha colpito e in parte fatto affondare una nave da crociera sul fiume a New Orleans. Alcune persone sono state soccorse e le ricerche proseguono, secondo Euronews.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/13/tanker-collides-with-new-orleans-river-cruise-carrying-129-passengers-rescue-operation-und",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-ue-negoziati-ucraina",
+        "t": "Ucraina, i leader Ue formano una squadra per i negoziati con Italia e Polonia",
+        "s": "I leader europei hanno composto un gruppo comune per le trattative di pace sull'Ucraina, senza nominare un inviato unico. Kaja Kallas chiede il ruolo di inviata speciale, ma dice che i russi non la vogliono.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/13/eu-leaders-bring-italy-and-poland-into-ukraine-peace-talks-team-as-kallas-fights-for-spot",
+            "l": "en"
+          }
+        ]
       }
     ],
     "estero": [
@@ -154,6 +208,32 @@
           {
             "n": "Al Jazeera",
             "url": "https://www.aljazeera.com/news/2026/11/13/turkiye-and-qatar-sign-mutual-defence-agreement",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-euronews-bce",
+        "t": "Euronews: Francia e Germania vicine a un'intesa su Pablo Hernández de Cos alla guida della Bce",
+        "s": "Secondo Euronews, dopo la conferma di due candidati per succedere a Christine Lagarde, lo spagnolo Pablo Hernández de Cos sarebbe il favorito e Parigi e Berlino si avvicinano a un accordo.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/13/france-and-germany-near-deal-on-de-cos-for-ecb-top-job-as-eu-confirms-two-candidates",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-euronews-iran-tnp",
+        "t": "Euronews: in Iran si discute di dottrina nucleare e di un'eventuale uscita dal Tnp",
+        "s": "Dopo le elezioni di metà mandato negli Stati Uniti il rischio di un nuovo attacco su vasta scala sembra ridotto, ma in Parlamento a Teheran cresce il dibattito sulla possibile uscita dal Trattato di non proliferazione.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/13/iran-mps-debate-possible-shift-in-nuclear-doctrine-and-exit-from-npt",
             "l": "en"
           }
         ]
@@ -237,13 +317,13 @@
       },
       {
         "id": "to-corteo-14nov",
-        "t": "Torino, corteo in piazza Castello sabato 14 novembre: possibili deviazioni dei bus GTT",
-        "s": "Nuova manifestazione cittadina nel pomeriggio di sabato; il percorso può causare deviazioni delle linee GTT. Orari e percorso aggiornati sulla pagina di TorinoToday.",
+        "t": "Torino, corteo contro il carovita da piazza Castello: alcune centinaia di persone",
+        "s": "Il movimento Torino in Piazza ha sfilato contro caro vita e bollette, annunciando manifestazioni ogni sabato. Gli studenti proseguono l'occupazione di Palazzo Nuovo nel fine settimana; per il 20 novembre è previsto lo sciopero generale, con partenza da piazza XVIII Dicembre alle 9:30.",
         "d": "2026-11-14",
         "fonti": [
           {
-            "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/cronaca/manifestazione-sabato-14-novembre-2026-piazza-castello-corteo-percorso-traffico-linee-gtt-deviate.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/a-torino-parte-il-corteo-contro-carovita-e-aumento-delle-bollette_8fb4f8fe-a914-4c63-96de-e9a02319da81.html"
           }
         ]
       },
@@ -256,6 +336,18 @@
           {
             "n": "Torino Oggi",
             "url": "https://www.torinoggi.it/2026/11/13/leggi-notizia/argomenti/gusto-e-gusti-3/articolo/torino-a-prova-di-golosi-parte-il-weekend-di-dolcissimarte-4.html"
+          }
+        ]
+      },
+      {
+        "id": "to-restructura",
+        "t": "Restructura chiude all'Oval Lingotto con oltre 15mila visitatori",
+        "s": "La 38ª edizione della fiera dell'edilizia e del progetto, organizzata da GL events Italia, ha avuto più di 150 espositori in tre giorni. Premiati i progetti di riuso di edifici esistenti.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/restructura-a-torino-chiude-con-15mila-visitatori_8c9d17f7-ccd4-4a04-9205-b66bc836c89f.html"
           }
         ]
       }
@@ -300,6 +392,18 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/piemonte/2026/11/12/dal-mur-606-milioni-per-borse-di-studio-universitari-piemonte-188_afeb7a78-f71e-4aa8-ba50-8f50c04e724e.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-balme-soccorso",
+        "t": "Balme, escursionista disperso recuperato di notte dal Soccorso alpino",
+        "s": "Dopo la chiamata al 112 intorno alle 18 di venerdì, l'uomo, perso nella discesa dal lago di Afframont, è stato localizzato con l'SMS locator e raggiunto da una squadra a piedi. Era esausto, con un principio di ipotermia; recuperato in elicottero.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/salvato-dal-soccorso-alpino-un-escursionista-disperso-nel-torinese_c722c44b-c186-401c-8b88-709ae51e704a.html"
           }
         ]
       }
@@ -624,21 +728,6 @@
             "url": "https://www.teatrostabiletorino.it/en/cartellone/escaped-alone-10-15-nov-2026/"
           }
         ]
-      },
-      {
-        "id": "spe-tea-non-ho-chiesto",
-        "t": "«Non ho chiesto (io) di venire al mondo» di Alessandra e Roberta Indolfi",
-        "s": "Coreografia e performance di Alessandra e Roberta Indolfi, con Alessia Lombradi, nella rassegna Energie Nove.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/cartellone/non-ho-chiesto-io-14-nov-2026/"
-          }
-        ],
-        "quando": "sab 14 nov, 19:30",
-        "dove": "Fonderie Limone, Sala piccola, Moncalieri",
-        "costo": "10 € (biglietto unico)"
       }
     ],
     "concerti": [
@@ -1040,12 +1129,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-05T05:40+01:00",
-      "edizione": "mattina",
-      "notizie": 50,
-      "note": "Fonti lette: ANSA, Adnkronos, il Giornale, Il Fatto Quotidiano, Al Jazeera, Euronews, CBS News, Comingsoon, Turismo Torino. Non raggiungibili: reuters.com (ricerca rifiutata), eventi.comune.torino.it (robots), thespacecinema.it non consultato. Concerti ed eventi copiati dall'edizione precedente (non è lunedì)."
-    },
-    {
       "at": "2026-11-06T05:40+01:00",
       "edizione": "mattina",
       "notizie": 56,
@@ -1158,6 +1241,12 @@
       "edizione": "pomeriggio",
       "notizie": 70,
       "note": "Fonti lette: ANSA, AGI, Al Jazeera (en), Euronews (en), Torino Oggi. Non leggibili: TorinoToday (pagina corteo); Reuters/BBC/Guardian non cercate (rifiutate dal proxy nei giri precedenti). Ricerca Piemonte senza novità nuove: tenute le notizie del mattino. Cinema, teatro, eventi e concerti dall'edizione del mattino (sabato, non lunedì; nessun concerto già passato). Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-15T05:03+01:00",
+      "edizione": "mattina",
+      "notizie": 77,
+      "note": "Fonti lette: ANSA, Euronews (it/en), Al Jazeera (en). TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti); AGI senza risultati recenti. Notizie del 13-14 nov aggiunte a quelle ancora valide. Cinema, eventi e concerti dall'edizione del 14/11 (domenica, non lunedì), tolti gli spettacoli passati; teatro ridotto a 1 spettacolo per mancata verifica. Copia locale non divergente."
     }
   ]
 }
