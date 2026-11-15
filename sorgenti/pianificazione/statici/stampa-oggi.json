@@ -1,10 +1,36 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-15T05:03+01:00",
-  "nota": "Edizione del mattino del 15 novembre 2026.",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-15T13:03+01:00",
+  "nota": "Edizione del pomeriggio del 15 novembre 2026.",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-vittime-strada",
+        "t": "Giornata delle vittime della strada: Meloni promette più educazione, infrastrutture e regole efficaci",
+        "s": "Nella Giornata mondiale e nazionale in ricordo delle vittime della strada la presidente del Consiglio ha rinnovato l'impegno a evitare nuovi lutti, con educazione stradale, infrastrutture migliori e norme più efficaci, in lavoro con il ministro Salvini.",
+        "d": "2026-11-15",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/15/meloni-rinnovare-limpegno-per-impedire-altre-vittime-della-strada_f72fd165-bc7f-46a8-9506-c22983183f68.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-bonelli-reddito",
+        "t": "Centrosinistra, Bonelli: sul reddito di cittadinanza si lavora, per le risorse patrimoniale sopra 5,4 milioni",
+        "s": "Intervenendo a Roma ai 40 anni dei Verdi, Bonelli (Avs) ha detto che il confronto nel campo largo sul reddito di cittadinanza procede, pur con nodi aperti. Propone una patrimoniale sulle fortune oltre 5,4 milioni di euro e invita Conte a non eluderla.",
+        "d": "2026-11-15",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/bonelli-nessuna-preclusione-sul-rdc-ma-prendiamo-risorse-da-patrimoniale_cc3e08f7-a6ab-43fc-b1d5-3612eae0a2d5.html"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "it-manovra-scuola",
         "t": "Manovra, il Governo ritira i tagli al personale scolastico dopo il vertice con le parti sociali",
@@ -46,34 +72,6 @@
         ]
       },
       {
-        "id": "it-cop31-guterres",
-        "t": "Cop31, Guterres: superare la soglia di 1,5 gradi è ormai inevitabile",
-        "s": "Alla conferenza sul clima il segretario generale dell'Onu ha detto che il limite fissato dall'Accordo di Parigi sarà superato; resta il tema di come limitare l'entità e la durata dello sforamento.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/ansa2030/notizie/energia_energie/2026/11/13/guterres-alla-cop31-inevitabile-il-superamento-della-soglia-di-15-gradi_91375da0-e1c4-4657-8e05-9ae28baaecf7.html"
-          }
-        ]
-      },
-      {
-        "id": "it-reddito-campo-largo",
-        "t": "Campo largo: Patuanelli annuncia l'accordo sul reddito di cittadinanza nel programma",
-        "s": "Il capogruppo M5s al Senato dice che il reddito di cittadinanza sarà nel programma della coalizione di centrosinistra. M5s e Avs, intanto, chiedono agli alleati posizioni più nette anche sull'Ucraina, con tensioni con la componente riformista.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/patuanelli-reddito-cittadinanza-sara-nel-programma-del-campo-largo-accordo_0f93351f-6237-4b1a-bb94-7a8df2048793.html"
-          },
-          {
-            "n": "ANSA (M5s e Avs sugli alleati)",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/reddito-di-cittadinanza-e-ucraina-pressing-del-m5s-e-di-avs-sugli-alleati_9a4159c6-1d46-4b45-b73e-9dc2b9240ac4.html"
-          }
-        ]
-      },
-      {
         "id": "it-consulta-carceri",
         "t": "La Consulta: servono interventi urgenti del legislatore contro il sovraffollamento carcerario",
         "s": "La Corte costituzionale sollecita il Parlamento a intervenire con urgenza sul sovraffollamento delle carceri. Nella stessa giornata Giorgetti ha detto alle parti sociali che il Governo lavora a modificare l'exit tax.",
@@ -89,20 +87,21 @@
     "mondo": [
       {
         "id": "mo-voli-usa",
-        "t": "Stati Uniti, guasto alle telecomunicazioni FAA: voli fermi per ore, migliaia di cancellazioni",
-        "s": "Nella notte tra 13 e 14 novembre il traffico aereo nazionale è stato bloccato per un guasto ai sistemi della FAA, poi revocato. Il ministro Duffy parla di infrastrutture obsolete e di decine di migliaia di passeggeri a terra; FBI e Sicurezza interna escludono attacchi informatici.",
-        "d": "2026-11-14",
+        "t": "Stati Uniti, caos aerei: causa un router dopo un aggiornamento dei sistemi; ancora cancellazioni oggi",
+        "s": "Venerdì lo stop nazionale FAA ha bloccato i voli per ore, con oltre 9mila cancellazioni; sabato altre 6.467 secondo FlightAware, almeno 760 oggi. Al Jazeera riferisce un router sovraccarico dopo un aggiornamento L3Harris ai cavi in fibra; escluso un attacco informatico.",
+        "d": "2026-11-15",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/14/revocato-il-blocco-dei-voli-negli-stati-uniti-decine-di-migliaia-di-passeggeri_d2a6ded1-a075-4399-8855-8bc69e436c24.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/cancellati-sabato-negli-usa-6.500-voli-oggi-almeno-altri-760_cbe40d91-464e-4ab8-99c1-80fe5bc20559.html"
           },
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/14/faa-ground-stop-disrupts-nba-nhl-and-college-football-weekend-travel",
+            "url": "https://www.aljazeera.com/news/2026/11/15/what-forced-the-us-to-ground-all-planes-a-router-switch-we-now-know",
             "l": "en"
           }
-        ]
+        ],
+        "link": []
       },
       {
         "id": "mo-shenzhen",
@@ -146,19 +145,6 @@
         ]
       },
       {
-        "id": "mo-new-orleans",
-        "t": "New Orleans, una petroliera urta una crociera fluviale con circa 129 passeggeri",
-        "s": "Una petroliera ha colpito e in parte fatto affondare una nave da crociera sul fiume a New Orleans. Alcune persone sono state soccorse e le ricerche proseguono, secondo Euronews.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/13/tanker-collides-with-new-orleans-river-cruise-carrying-129-passengers-rescue-operation-und",
-            "l": "en"
-          }
-        ]
-      },
-      {
         "id": "mo-ue-negoziati-ucraina",
         "t": "Ucraina, i leader Ue formano una squadra per i negoziati con Italia e Polonia",
         "s": "I leader europei hanno composto un gruppo comune per le trattative di pace sull'Ucraina, senza nominare un inviato unico. Kaja Kallas chiede il ruolo di inviata speciale, ma dice che i russi non la vogliono.",
@@ -174,17 +160,32 @@
     ],
     "estero": [
       {
-        "id": "es-ucraina-nato-stampa",
-        "t": "Al Jazeera: Kiev riferisce l'ipotesi Nato in cambio di territori; tre morti in Russia",
-        "s": "L'emittente riporta la versione di Zelensky: Washington avrebbe sondato un ritiro dal Donbass in cambio dell'adesione alla Nato. Russia e Stati Uniti non confermano. Segnala anche tre morti in Russia per attacchi ucraini.",
-        "d": "2026-11-14",
+        "id": "es-euronews-flotta-ombra",
+        "t": "Euronews: forze Ue abbordano nel Mediterraneo una petroliera sospettata di far parte della flotta ombra russa",
+        "s": "Secondo l'Alta rappresentante Kallas, l'operazione Irini ha abbordato venerdì la Midag, che navigava con bandiera falsa. Lunedì i ministri degli Esteri Ue dovrebbero approvare nuove sanzioni contro banche, acquirenti e imprese.",
+        "d": "2026-11-15",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/15/eu-forces-board-suspected-russian-shadow-fleet-tanker-in-mediterranean-kallas-says",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-aj-asean",
+        "t": "Al Jazeera: a Manila il vertice Asean, tra crisi energetica, dazi e Mar Cinese",
+        "s": "Il vertice si tiene a Manila dal 15 al 17 novembre. Tra i temi la carenza di energia legata alla guerra contro l'Iran, i dazi Usa, le dispute nel Mar Cinese Meridionale e la guerra civile in Birmania. Attesi tra gli altri Trump, Modi, Carney e Lula.",
+        "d": "2026-11-15",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/14/three-killed-in-russia-as-ukraine-claims-us-floated-nato-membership-option",
+            "url": "https://www.aljazeera.com/news/2026/11/15/asean-summit-whos-attending-and-whats-at-stake",
             "l": "en"
           }
-        ]
+        ],
+        "link": []
       },
       {
         "id": "es-aj-shenzhen",
@@ -195,19 +196,6 @@
           {
             "n": "Al Jazeera",
             "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-turchia-qatar",
-        "t": "Turchia e Qatar firmano un patto di difesa reciproca",
-        "s": "A Istanbul Erdogan e l'emiro Tamim hanno siglato l'accordo, presentato come mezzo per evitare un nuovo conflitto nel Golfo. Secondo un analista, i Paesi del Golfo dubitano delle garanzie di sicurezza americane. È il terzo accordo simile della regione dall'estate.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/13/turkiye-and-qatar-sign-mutual-defence-agreement",
             "l": "en"
           }
         ]
@@ -226,14 +214,14 @@
         ]
       },
       {
-        "id": "es-euronews-iran-tnp",
-        "t": "Euronews: in Iran si discute di dottrina nucleare e di un'eventuale uscita dal Tnp",
-        "s": "Dopo le elezioni di metà mandato negli Stati Uniti il rischio di un nuovo attacco su vasta scala sembra ridotto, ma in Parlamento a Teheran cresce il dibattito sulla possibile uscita dal Trattato di non proliferazione.",
-        "d": "2026-11-13",
+        "id": "es-ucraina-nato-stampa",
+        "t": "Al Jazeera: Kiev riferisce l'ipotesi Nato in cambio di territori; tre morti in Russia",
+        "s": "L'emittente riporta la versione di Zelensky: Washington avrebbe sondato un ritiro dal Donbass in cambio dell'adesione alla Nato. Russia e Stati Uniti non confermano. Segnala anche tre morti in Russia per attacchi ucraini.",
+        "d": "2026-11-14",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/13/iran-mps-debate-possible-shift-in-nuclear-doctrine-and-exit-from-npt",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/14/three-killed-in-russia-as-ukraine-claims-us-floated-nato-membership-option",
             "l": "en"
           }
         ]
@@ -279,6 +267,19 @@
       }
     ],
     "torino": [
+      {
+        "id": "to-qualita-vita",
+        "t": "Qualità della vita: la provincia di Torino resta 26ª, sale all'11º posto per redditi",
+        "s": "Nell'indagine ItaliaOggi-Sapienza su 107 province Torino è 26ª come nel 2025, 8ª per ambiente e 11ª per redditi (era 25ª). Cala il lavoro (61º), la sicurezza sociale è 82ª, criminalità e sicurezza 100ª. Prima è Bolzano; Cuneo 43ª in Piemonte.",
+        "d": "2026-11-15",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/15/leggi-notizia/argomenti/attualita-31/articolo/indagine-sulla-qualita-della-vita-torino-stabile-al-26-posto-e-undicesima-per-redditi.html"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "to-mole-banco",
         "t": "La Mole Antonelliana illuminata per la Colletta Alimentare",
@@ -328,18 +329,6 @@
         ]
       },
       {
-        "id": "to-dolcissimarte",
-        "t": "DolcissimArte: weekend di pasticceria piemontese nel centro di Torino",
-        "s": "Fino a domenica 15 novembre, al Museo del Risorgimento oltre cento creazioni di pasticcieri; dimostrazioni in tredici esercizi del centro e mercatino dei biscotti sabato 14.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/13/leggi-notizia/argomenti/gusto-e-gusti-3/articolo/torino-a-prova-di-golosi-parte-il-weekend-di-dolcissimarte-4.html"
-          }
-        ]
-      },
-      {
         "id": "to-restructura",
         "t": "Restructura chiude all'Oval Lingotto con oltre 15mila visitatori",
         "s": "La 38ª edizione della fiera dell'edilizia e del progetto, organizzata da GL events Italia, ha avuto più di 150 espositori in tre giorni. Premiati i progetti di riuso di edifici esistenti.",
@@ -353,6 +342,19 @@
       }
     ],
     "piemonte": [
+      {
+        "id": "pi-vialattea",
+        "t": "Vialattea/Bardonecchia: la stagione sciistica 2026/27 parte il 5 dicembre",
+        "s": "Il comprensorio olimpico piemontese apre sabato 5 dicembre e resta aperto fino all'11 aprile 2027, con fino a 95 impianti di risalita e oltre 370 piste, per circa 500 km di tracciati.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/si-torna-sulle-piste-da-sci-di-vialatteabardo-tutto-pronto-per-la-stagione_1cb89bcc-07a6-44db-854e-e4e97bcd9457.html"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "pi-colletta",
         "t": "Colletta Alimentare in Piemonte: 1.300 supermercati, obiettivo superare le 691 tonnellate del 2025",
@@ -368,18 +370,6 @@
           {
             "n": "Torino Oggi: la Mole con i colori del Banco Alimentare, dati 2025",
             "url": "https://www.torinoggi.it/2026/11/14/leggi-notizia/argomenti/attualita-31/articolo/la-mole-antonelliana-illuminata-con-i-colori-del-banco-alimentare.html"
-          }
-        ]
-      },
-      {
-        "id": "pi-acqua-mit",
-        "t": "Dal ministero delle Infrastrutture 37,8 milioni per interventi sull'acqua in Piemonte",
-        "s": "Il finanziamento riguarda interventi sulle risorse idriche della Regione, secondo ANSA Piemonte.",
-        "d": "2026-11-12",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/piemonte/2026/11/12/dal-mit-378-milioni-di-euro-per-interventi-per-lacqua-in-piemonte_c76626e7-9231-485c-a1d1-4c404b43f3ef.html"
           }
         ]
       },
@@ -440,65 +430,6 @@
         "quando": "dal 15 al 22 nov",
         "dove": "Inalpi Arena, Torino",
         "costo": "biglietti sul sito ufficiale"
-      },
-      {
-        "id": "ev-abilmente",
-        "t": "Abilmente Autunno: la fiera di hobbistica e creatività al Lingotto",
-        "s": "Salone dedicato ad hobby creativi, fai da te e arti manuali.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/abilmente-autunno-torino-2026-"
-          }
-        ],
-        "quando": "12-14 nov 9:30-18; dom 15 nov 9:30-17",
-        "dove": "Lingotto Fiere, via Nizza 294, Torino",
-        "costo": "13 € alla cassa (ridotto 11 €); online 11 €"
-      },
-      {
-        "id": "ev-radici",
-        "t": "Radici: festival di incontri su identità e memoria al Circolo dei lettori",
-        "s": "Quarta edizione, da giovedì 12 a domenica 15 novembre: incontri su miti e supereroi, intelligenza artificiale, populismo, emigrazione piemontese, con proiezioni al Cinema Romano e una tappa a Frossasco.",
-        "d": "2026-11-11",
-        "quando": "12-15 nov",
-        "dove": "Circolo dei lettori, Cinema Romano e altre sedi, Torino; Frossasco",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/11/al-via-radici-a-torino-quattro-giorni-tra-memoria-identita-e-cultura_4cac7164-8718-4e7b-aff8-54354aff294b.html"
-          }
-        ]
-      },
-      {
-        "id": "ev-tmm",
-        "t": "Torino Music Meeting: quattro giorni di musica diffusa nei luoghi culturali della città",
-        "s": "Evento in formula diffusa tra diverse sedi culturali torinesi; programma e orari sul sito degli organizzatori.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/it/visita/eventi/torino-music-meeting-tmm-2026"
-          }
-        ],
-        "quando": "dal 12 al 15 nov",
-        "dove": "Sedi varie, Torino"
-      },
-      {
-        "id": "ev-quattrozampe",
-        "t": "Quattrozampeinfiera: la fiera dedicata agli animali domestici a Scalo Eventi Torino",
-        "s": "Due giorni di espositori, incontri e attività per chi vive con cani, gatti e altri animali.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/quattrozampeinfiera-2026",
-            "l": "en"
-          }
-        ],
-        "quando": "sab 14 e dom 15 nov, 10-19",
-        "dove": "SET Scalo Eventi Torino, Strada della Continassa 28, Torino",
-        "costo": "15 € (gratis sotto i 6 anni)"
       },
       {
         "id": "ev-asti-natale",
@@ -574,20 +505,6 @@
         "quando": "fino all'11 gen 2027, apertura settimanale",
         "dove": "Museo Egizio, Torino",
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-      },
-      {
-        "id": "ev-ciurma",
-        "t": "CIURMA! Quattro domeniche a teatro in famiglia",
-        "s": "Rassegna di teatro per famiglie a Pinerolo, con appuntamenti la domenica fino al 29 novembre (prossimo: 15 nov).",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/ciurma-quattro-domeniche-a-teatro-in-famiglia-a-novembre"
-          }
-        ],
-        "quando": "dom 15 nov (rassegna 8-29 nov)",
-        "dove": "Pinerolo (Torino)"
       }
     ],
     "spettacoli": [
@@ -716,18 +633,36 @@
         "costo": "Space 9,10 €; Ideal 9 €"
       },
       {
-        "id": "spe-tea-escaped-alone",
-        "t": "Escaped Alone di Caryl Churchill, prima italiana di lacasadargilla al Carignano",
-        "s": "Prima italiana del testo di Caryl Churchill, proposto dalla compagnia lacasadargilla.",
-        "d": "2026-11-09",
-        "quando": "dal 10 al 15 nov; orari e prezzi sulla pagina del teatro",
-        "dove": "Teatro Carignano, Torino",
+        "id": "spe-tea-energie-nove",
+        "t": "Energie Nove: rassegna di 18 spettacoli di nuova drammaturgia, a cura di Diego Pleuteri",
+        "s": "Ogni sera due spettacoli brevi, alle 19:30 e alle 21:30; in programma tra gli altri «Mai più Majorana» (dom 15), «L'apocalisse o quel che rimane» (mer 18, Premio Hystrio scritture di scena) e «Parlare tra maschi?» (gio 19).",
+        "d": "2026-11-15",
+        "quando": "fino al 20 nov, ogni sera ore 19:30 e 21:30 (non il 16)",
+        "dove": "Fonderie Limone, Moncalieri",
+        "costo": "biglietto unico 10 €; carnet da 5 a 15 spettacoli",
         "fonti": [
           {
             "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/en/cartellone/escaped-alone-10-15-nov-2026/"
+            "url": "https://www.teatrostabiletorino.it/cartellone/energie-nove-11-20-nov-2026/"
           }
-        ]
+        ],
+        "link": []
+      },
+      {
+        "id": "spe-tea-safari",
+        "t": "Safari di Carlo Galiero, regia di Chiarastella Sorrentino, con Giulia Chiaramonte e Loris De Luna",
+        "s": "Spettacolo di un'ora della rassegna Energie Nove, con interpreti Giulia Chiaramonte e Loris De Luna.",
+        "d": "2026-11-15",
+        "quando": "gio 19 nov, 19:30",
+        "dove": "Fonderie Limone, Moncalieri (sala piccola)",
+        "costo": "10 €",
+        "fonti": [
+          {
+            "n": "Teatro Stabile Torino",
+            "url": "https://www.teatrostabiletorino.it/en/cartellone/safari-19-nov-2026/"
+          }
+        ],
+        "link": []
       }
     ],
     "concerti": [
@@ -1135,12 +1070,6 @@
       "note": "Fonti lette: ANSA, Al Jazeera, Euronews (it/en), ComingSoon (Cinema Ideal), MYmovies, Turismo Torino, Teatro Stabile, TorinoToday (solo ricerca). Non raggiungibili: thespacecinema.it (pagina non letta, film indicati solo per il Cinema Ideal), torinotoday.it (pagine non leggibili), reuters.com non cercato; Euronews Francia non letto. Concerti copiati dall'edizione precedente (non è lunedì)."
     },
     {
-      "at": "2026-11-06T05:40+01:00",
-      "edizione": "mattina",
-      "notizie": 56,
-      "note": "Fonti lette: ANSA, Al Jazeera, Euronews (it/en), ComingSoon (Cinema Ideal), MYmovies, Turismo Torino, Teatro Stabile, TorinoToday (solo ricerca). Non raggiungibili: thespacecinema.it (pagina non letta, film indicati solo per il Cinema Ideal), torinotoday.it (pagine non leggibili), reuters.com non cercato; Euronews Francia non letto. Concerti copiati dall'edizione precedente (non è lunedì)."
-    },
-    {
       "at": "2026-11-07T05:40+01:00",
       "edizione": "mattina",
       "notizie": 53,
@@ -1247,6 +1176,12 @@
       "edizione": "mattina",
       "notizie": 77,
       "note": "Fonti lette: ANSA, Euronews (it/en), Al Jazeera (en). TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti); AGI senza risultati recenti. Notizie del 13-14 nov aggiunte a quelle ancora valide. Cinema, eventi e concerti dall'edizione del 14/11 (domenica, non lunedì), tolti gli spettacoli passati; teatro ridotto a 1 spettacolo per mancata verifica. Copia locale non divergente."
+    },
+    {
+      "at": "2026-11-15T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 72,
+      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi. TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti). Cinema, eventi e concerti dall'edizione del mattino (domenica, non lunedì), tolti eventi e teatro conclusi il 15; aggiunti 2 spettacoli Fonderie Limone. Copia locale era staccata: ripartita da origin/main."
     }
   ]
 }
