@@ -1,32 +1,45 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-15T13:03+01:00",
+  "edizione": "mattina",
+  "updated": "2026-11-16T05:05+01:00",
   "nota": "Edizione del pomeriggio del 15 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-vittime-strada",
-        "t": "Giornata delle vittime della strada: Meloni promette più educazione, infrastrutture e regole efficaci",
-        "s": "Nella Giornata mondiale e nazionale in ricordo delle vittime della strada la presidente del Consiglio ha rinnovato l'impegno a evitare nuovi lutti, con educazione stradale, infrastrutture migliori e norme più efficaci, in lavoro con il ministro Salvini.",
+        "id": "it-regioni-sanita",
+        "t": "Le Regioni: 500 milioni per la sanità non bastano e non vanno presi dai bilanci regionali",
+        "s": "Le Regioni giudicano insufficienti i 500 milioni destinati alla sanità e chiedono che non siano ricavati dai loro bilanci. Nel confronto compare anche l'ipotesi di un voucher per gli over 75.",
         "d": "2026-11-15",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/15/meloni-rinnovare-limpegno-per-impedire-altre-vittime-della-strada_f72fd165-bc7f-46a8-9506-c22983183f68.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/regioni-pochi-500-milioni-alla-sanita-non-si-prendano-da-noi_f6a4e71b-fac4-40d3-98fa-4931baf30c7c.html"
           }
         ],
         "link": []
       },
       {
-        "id": "it-bonelli-reddito",
-        "t": "Centrosinistra, Bonelli: sul reddito di cittadinanza si lavora, per le risorse patrimoniale sopra 5,4 milioni",
-        "s": "Intervenendo a Roma ai 40 anni dei Verdi, Bonelli (Avs) ha detto che il confronto nel campo largo sul reddito di cittadinanza procede, pur con nodi aperti. Propone una patrimoniale sulle fortune oltre 5,4 milioni di euro e invita Conte a non eluderla.",
+        "id": "it-schlein-tassa",
+        "t": "Schlein: sì a una tassa sui super ricchi, il ceto medio lo tassa il Governo",
+        "s": "La segretaria del Pd si dichiara favorevole a una tassa sui super ricchi e accusa il Governo Meloni di gravare sul ceto medio.",
         "d": "2026-11-15",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/bonelli-nessuna-preclusione-sul-rdc-ma-prendiamo-risorse-da-patrimoniale_cc3e08f7-a6ab-43fc-b1d5-3612eae0a2d5.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/schlein-io-per-tassa-sui-super-ricchi-il-ceto-medio-lo-tassa-meloni_4e959b24-c086-4997-b982-5c106cbb64b1.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-oxfam-bocciature",
+        "t": "Oxfam: chi viene da famiglie meno istruite rischia di più la bocciatura",
+        "s": "Secondo un rapporto di Oxfam, il rischio di essere bocciati a scuola è più alto per gli studenti con genitori meno istruiti.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/oxfam-rischio-bocciatura-piu-alto-per-chi-viene-da-famiglie-meno_b02485fc-ea92-4d1c-8854-0a646a62dbf4.html"
           }
         ],
         "link": []
@@ -60,18 +73,6 @@
         ]
       },
       {
-        "id": "it-meloni-violenza-donne",
-        "t": "Meloni sulla violenza contro le donne: «la sfida non è vinta». Domenica a Roma «Corri Libera»",
-        "s": "La premier rivendica pene più severe e l'ergastolo per il femminicidio, ma ammette che serve più sensibilizzazione. Annuncia la corsa di 5 chilometri «Corri Libera», domenica 15 novembre alle 10, dal Colosseo ai Fori Imperiali.",
-        "d": "2026-11-14",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/14/meloni-combattiamo-violenza-sulle-donne-con-ogni-mezzo-ma-sfida-non_7a680866-715e-411f-9a36-a9d7ad27d086.html"
-          }
-        ]
-      },
-      {
         "id": "it-consulta-carceri",
         "t": "La Consulta: servono interventi urgenti del legislatore contro il sovraffollamento carcerario",
         "s": "La Corte costituzionale sollecita il Parlamento a intervenire con urgenza sul sovraffollamento delle carceri. Nella stessa giornata Giorgetti ha detto alle parti sociali che il Governo lavora a modificare l'exit tax.",
@@ -86,79 +87,105 @@
     ],
     "mondo": [
       {
-        "id": "mo-voli-usa",
-        "t": "Stati Uniti, caos aerei: causa un router dopo un aggiornamento dei sistemi; ancora cancellazioni oggi",
-        "s": "Venerdì lo stop nazionale FAA ha bloccato i voli per ore, con oltre 9mila cancellazioni; sabato altre 6.467 secondo FlightAware, almeno 760 oggi. Al Jazeera riferisce un router sovraccarico dopo un aggiornamento L3Harris ai cavi in fibra; escluso un attacco informatico.",
-        "d": "2026-11-15",
+        "id": "mo-shenzhen-conferma",
+        "t": "Pechino conferma: giovedì 19 a Shenzhen il vertice tra Xi, Trump e Putin",
+        "s": "La Cina conferma l'incontro a tre di giovedì 19 novembre a Shenzhen, a margine del vertice Apec; Trump vedrà anche Xi. Gli Usa e alcuni alleati preparano un elenco comune di tecnologie di intelligenza artificiale da proteggere.",
+        "d": "2026-11-16",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/15/cancellati-sabato-negli-usa-6.500-voli-oggi-almeno-altri-760_cbe40d91-464e-4ab8-99c1-80fe5bc20559.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/pechino-conferma-il-trilaterale-tra-xi-trump-e-putin-e-gli-usa-si-blindano-sullia_719b0e4a-833e-4411-9f49-e3bdeca194d9.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-iran-portaerei",
+        "t": "Medio Oriente, arriva la terza portaerei americana nell'area",
+        "s": "Secondo il New York Times e un funzionario Usa citato da Al Jazeera, la Theodore Roosevelt ha raggiunto il Medio Oriente e si aggiunge ad altre due portaerei del Comando centrale.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/nyt-entro-24-ore-la-portaerei-roosevelt-in-medio-oriente-e-la-terza-nellarea_c75d5e94-a20d-4fb2-8e37-84b736142d51.html"
           },
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/15/what-forced-the-us-to-ground-all-planes-a-router-switch-we-now-know",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/16/iran-war-live-tehran-warns-it-may-strike-first-before-another-us-attack",
             "l": "en"
           }
         ],
         "link": []
       },
       {
-        "id": "mo-shenzhen",
-        "t": "Trump, Xi e Putin si vedranno a Shenzhen: in agenda armi nucleari e Iran, non l'Ucraina",
-        "s": "Primo vertice a tre a margine dell'Apec, la prossima settimana. Secondo la Casa Bianca si parlerà di arsenali nucleari dopo la scadenza del New START e di Iran. Il Cremlino respinge il paragone con Yalta; Zelensky teme un accordo senza Kiev.",
-        "d": "2026-11-14",
+        "id": "mo-praga-media",
+        "t": "Praga, oltre 400 mila in piazza per i media pubblici",
+        "s": "Secondo l'ANSA, più di 400 mila persone sono scese in piazza a sostegno dei media pubblici; il premier Babis ha detto che i canoni saranno aboliti.",
+        "d": "2026-11-15",
         "fonti": [
           {
-            "n": "AGI",
-            "url": "https://www.agi.it/estero/news/2026-11-14/trump-xi-putin-colloqui-40022901/"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/oltre-400-mila-in-piazza-a-praga-a-sostegno-dei-media-pubblici_28fcb369-fa4d-4391-ae6d-eef76a71c969.html"
           }
-        ]
+        ],
+        "link": []
       },
       {
-        "id": "mo-ucraina-nato",
-        "t": "Ucraina, Zelensky: gli Usa chiedono se Kiev lascerebbe il Donbass in cambio dell'ingresso nella Nato",
-        "s": "Il presidente ucraino dice che è la prima volta che la domanda viene posta e che non può decidere da solo: consulterebbe gli ucraini. Mosca, per Zakharova, non ne ha parlato; Ushakov dice che l'Europa deve scegliere tra pace e guerra.",
-        "d": "2026-11-14",
+        "id": "mo-estonia-confine",
+        "t": "L'Estonia chiuderà del tutto il confine con la Russia da dicembre",
+        "s": "Lo ha annunciato su X il ministro degli Esteri estone Margus Tsahkna: dal prossimo mese il confine con la Russia sarà completamente chiuso.",
+        "d": "2026-11-15",
         "fonti": [
           {
-            "n": "AGI",
-            "url": "https://www.agi.it/estero/news/2026-11-14/ucraina-nato-zelensky-putin-40026343/"
-          },
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/lestonia-annuncia-da-dicembre-chiuso-completamente-il-confine-con-la-russia_aa260df1-1b14-4999-89af-074420ab7f7c.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-gaza-dichiarazione",
+        "t": "Gaza, Italia, Regno Unito, Australia e Canada chiedono a Israele accesso umanitario immediato",
+        "s": "I ministri degli Esteri dei quattro Paesi firmano una dichiarazione congiunta che invita Israele a consentire subito l'ingresso degli aiuti umanitari nella Striscia.",
+        "d": "2026-11-15",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/italia-gb-australia-e-canada-israele-dia-accesso-umanitario-immediato-a-gaza_8180cd51-1757-4f61-b0d3-78ad6248ddeb.html"
+          }
+        ],
+        "link": []
+      }
+    ],
+    "estero": [
+      {
+        "id": "es-aj-israele",
+        "t": "Al Jazeera: in Israele Eisenkot attacca Netanyahu dopo le accuse di ingerenze nel voto",
+        "s": "Eisenkot, incaricato di formare il governo, dice che Netanyahu non può restare premier. Il canale 12 riferisce di perquisizioni senza mandato a tre eletti arabi, poi rilasciati. Nessun blocco ha ancora i 61 seggi.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/16/eisenkot-says-netanyahu-cant-remain-israel-pm-amid-alleged-vote-meddling",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-euronews-ucraina",
+        "t": "Euronews: Zelensky racconta la proposta Usa, territori in cambio dell'ingresso nella Nato",
+        "s": "Secondo Zelensky, gli Usa hanno chiesto se Kiev lascerebbe il Donbass per entrare nella Nato. Putin, dopo l'incontro con Witkoff e Kushner, non rinuncia alle richieste territoriali; Mosca dice che il tema non fu discusso.",
+        "d": "2026-11-14",
+        "fonti": [
           {
             "n": "Euronews",
             "url": "https://www.euronews.com/2026/11/14/us-floats-ukraine-ceding-land-to-russia-in-exchange-for-nato-membership-zelenskyy",
             "l": "en"
           }
-        ]
+        ],
+        "link": []
       },
-      {
-        "id": "mo-houthi-arabia",
-        "t": "Yemen, gli Houthi dichiarano 24 attacchi in tre giorni contro l'Arabia Saudita",
-        "s": "Il gruppo sostiene di aver colpito con missili e droni l'aeroporto di Riad e un impianto petrolifero; parla anche di 85 raid nelle ultime 24 ore sullo Yemen. I dati arrivano solo dalle dichiarazioni degli Houthi, senza conferme indipendenti.",
-        "d": "2026-11-14",
-        "fonti": [
-          {
-            "n": "AGI",
-            "url": "https://www.agi.it/estero/news/2026-11-14/houthi-yemen-arabia-saudita-40025503/"
-          }
-        ]
-      },
-      {
-        "id": "mo-ue-negoziati-ucraina",
-        "t": "Ucraina, i leader Ue formano una squadra per i negoziati con Italia e Polonia",
-        "s": "I leader europei hanno composto un gruppo comune per le trattative di pace sull'Ucraina, senza nominare un inviato unico. Kaja Kallas chiede il ruolo di inviata speciale, ma dice che i russi non la vogliono.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/13/eu-leaders-bring-italy-and-poland-into-ukraine-peace-talks-team-as-kallas-fights-for-spot",
-            "l": "en"
-          }
-        ]
-      }
-    ],
-    "estero": [
       {
         "id": "es-euronews-flotta-ombra",
         "t": "Euronews: forze Ue abbordano nel Mediterraneo una petroliera sospettata di far parte della flotta ombra russa",
@@ -172,62 +199,35 @@
           }
         ],
         "link": []
-      },
+      }
+    ],
+    "economia": [
       {
-        "id": "es-aj-asean",
-        "t": "Al Jazeera: a Manila il vertice Asean, tra crisi energetica, dazi e Mar Cinese",
-        "s": "Il vertice si tiene a Manila dal 15 al 17 novembre. Tra i temi la carenza di energia legata alla guerra contro l'Iran, i dazi Usa, le dispute nel Mar Cinese Meridionale e la guerra civile in Birmania. Attesi tra gli altri Trump, Modi, Carney e Lula.",
+        "id": "ec-nvidia-huang",
+        "t": "Ft: Jensen Huang valuterebbe un ritorno alla guida di Nvidia",
+        "s": "Secondo il Financial Times, Huang starebbe considerando di tornare al vertice dell'azienda e cercherebbe il sostegno della Casa Bianca. La notizia non è confermata.",
         "d": "2026-11-15",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/15/asean-summit-whos-attending-and-whats-at-stake",
-            "l": "en"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/ft-jensen-huang-pensa-a-un-clamoroso-ritorno-alla-guida-di-nvidia_267caa16-dd06-4dd4-bc66-610ce6540aa6.html"
           }
         ],
         "link": []
       },
       {
-        "id": "es-aj-shenzhen",
-        "t": "Al Jazeera: Shenzhen, il primo vertice a tre tra Trump, Xi e Putin",
-        "s": "L'emittente del Qatar riferisce che l'incontro è presentato come inizio di un dialogo, senza accordi attesi. Tra gli osservatori c'è chi lo accosta a Yalta; Mosca lo definisce molto importante ma nega logiche di spartizione.",
-        "d": "2026-11-14",
+        "id": "ec-lutnick-chip",
+        "t": "Nyt: Lutnick avrebbe allentato le norme sui chip, in contrasto con attività di famiglia",
+        "s": "Secondo il New York Times, Lutnick avrebbe ammorbidito le regole sui chip in contrasto con attività della sua famiglia. È atteso in Cina questa settimana con Trump.",
+        "d": "2026-11-15",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china",
-            "l": "en"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/nyt-lutnick-ha-allentato-le-norme-sui-chip-in-contrasto-con-attivita-di-famiglia_12557283-2631-4ea0-962b-3f70ea4845b9.html"
           }
-        ]
+        ],
+        "link": []
       },
-      {
-        "id": "es-euronews-bce",
-        "t": "Euronews: Francia e Germania vicine a un'intesa su Pablo Hernández de Cos alla guida della Bce",
-        "s": "Secondo Euronews, dopo la conferma di due candidati per succedere a Christine Lagarde, lo spagnolo Pablo Hernández de Cos sarebbe il favorito e Parigi e Berlino si avvicinano a un accordo.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/13/france-and-germany-near-deal-on-de-cos-for-ecb-top-job-as-eu-confirms-two-candidates",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-ucraina-nato-stampa",
-        "t": "Al Jazeera: Kiev riferisce l'ipotesi Nato in cambio di territori; tre morti in Russia",
-        "s": "L'emittente riporta la versione di Zelensky: Washington avrebbe sondato un ritiro dal Donbass in cambio dell'adesione alla Nato. Russia e Stati Uniti non confermano. Segnala anche tre morti in Russia per attacchi ucraini.",
-        "d": "2026-11-14",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/14/three-killed-in-russia-as-ukraine-claims-us-floated-nato-membership-option",
-            "l": "en"
-          }
-        ]
-      }
-    ],
-    "economia": [
       {
         "id": "ec-black-friday",
         "t": "Black Friday, il Codacons stima in Italia 4,3 miliardi di acquisti, il 7% in più",
@@ -239,34 +239,74 @@
             "url": "https://www.ansa.it/sito/notizie/economia/2026/11/14/conto-alla-rovescia-per-black-friday-giro-daffari-sale-a-43-miliardi_f30271ef-561c-4cf9-a62e-cb88332b3758.html"
           }
         ]
+      }
+    ],
+    "torino": [
+      {
+        "id": "to-palazzo-nuovo",
+        "t": "Palazzo Nuovo occupato: da oggi le prime lezioni in presenza nelle sale della Regione",
+        "s": "Da lunedì 16 novembre alcune lezioni di Dams e Scienze della comunicazione, finora online per l'occupazione, si tengono nelle sale congressi del Palazzo della Regione Piemonte.",
+        "d": "2026-11-13",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/13/leggi-notizia/argomenti/scuola-e-lavoro/articolo/palazzo-nuovo-occupato-da-lunedi-prime-lezioni-in-presenza-negli-spazi-concessi-dalla-regione.html"
+          }
+        ],
+        "link": []
       },
       {
-        "id": "ec-spread-rating",
-        "t": "Spread Btp-Bund a 104 punti base, Borsa di Milano in lieve rialzo",
-        "s": "Lo spread ha chiuso a 104 punti base con il rendimento del decennale al 4,41%; la Borsa di Milano ha chiuso in lieve rialzo.",
+        "id": "to-atp-zverev",
+        "t": "Atp Finals a Torino: Zverev, numero 1 del mondo, apre il torneo contro Jodar",
+        "s": "Il tedesco, vincitore a Torino nel 2021, esordisce contro il giovane spagnolo Jodar ed è indicato tra i favoriti per la finale.",
+        "d": "2026-11-15",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/15/leggi-notizia/argomenti/attualita-31/articolo/a-torino-tutti-contro-zverev-il-numero-1-del-mondo-lancia-le-atp-finals.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-atp-2030",
+        "t": "Lo Russo: Atp Finals a Torino fino al 2030; Binaghi guarda oltre il 2027",
+        "s": "Il sindaco vuole il torneo in città fino al 2030, mentre il presidente della Federtennis apre a un'estensione dopo il 2027, ultima edizione assegnata con certezza.",
+        "d": "2026-11-14",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/lo-russo-vogliamo-atp-fino-a-2030.-binaghi-perche-non-sognare-oltre_c90470f8-f16b-4dd0-bcbc-81337da7c0e8.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-app-vicini-bruxelles",
+        "t": "Un'app per aiutare i vicini: 18enne torinese premiato a Bruxelles",
+        "s": "Tommaso R. è tra i sei vincitori del concorso europeo Youth Hacking 4 Freedom, promosso dalla Free Software Foundation Europe.",
+        "d": "2026-11-15",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/15/leggi-notizia/argomenti/attualita-31/articolo/unapp-per-aiutare-i-vicini-18enne-torinese-premiato-a-bruxelles.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-stellare-mattarella",
+        "t": "Il premio StellaRe 2026 della Fondazione Sandretto a Laura Mattarella",
+        "s": "Il riconoscimento della Fondazione Sandretto Re Rebaudengo è stato assegnato a Laura Mattarella.",
         "d": "2026-11-13",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/13/lo-spread-tra-btp-e-bund-chiude-poco-mosso-a-104-punti-base_afb5e3a1-e8bb-4da9-b684-bbb34a0424ba.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/13/a-laura-mattarella-il-premio-stellare-2026-della-fondazione-sandretto_b1fcb5b1-0fde-4491-952e-4f0a252caf7d.html"
           }
-        ]
+        ],
+        "link": []
       },
-      {
-        "id": "ec-mercedes",
-        "t": "Mercedes-Benz ferma i nuovi investimenti negli stabilimenti tedeschi e valuta chiusure",
-        "s": "Secondo Euronews il gruppo sospende nuovi investimenti nelle fabbriche in Germania e prende in considerazione la chiusura di alcuni impianti.",
-        "d": "2026-11-12",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/12/mercedes-benz-halts-new-investment-in-german-plants-considers-closures",
-            "l": "en"
-          }
-        ]
-      }
-    ],
-    "torino": [
       {
         "id": "to-qualita-vita",
         "t": "Qualità della vita: la provincia di Torino resta 26ª, sale all'11º posto per redditi",
@@ -279,66 +319,6 @@
           }
         ],
         "link": []
-      },
-      {
-        "id": "to-mole-banco",
-        "t": "La Mole Antonelliana illuminata per la Colletta Alimentare",
-        "s": "Il monumento ha i colori del Banco Alimentare per sostenere la raccolta di sabato 14 novembre nei supermercati del Piemonte.",
-        "d": "2026-11-14",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/14/leggi-notizia/argomenti/attualita-31/articolo/la-mole-antonelliana-illuminata-con-i-colori-del-banco-alimentare.html"
-          }
-        ]
-      },
-      {
-        "id": "to-carabinieri-controlli",
-        "t": "Controlli dei Carabinieri a Torino: due arresti, cinque denunce e due locali chiusi",
-        "s": "Verifiche in Barriera di Milano, piazza Bengasi, Madonna di Campagna e centro: tra i risultati un furto in cantina, auto svaligiate, hashish e un coltello. Chiusi un minimarket e un bar, con sanzioni per oltre 12.300 euro.",
-        "d": "2026-11-14",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/14/leggi-notizia/argomenti/cronaca-11/articolo/controlli-a-tappeto-dei-carabinieri-in-citta-due-arresti-cinque-denunce-e-due-locali-chiusi.html"
-          }
-        ]
-      },
-      {
-        "id": "to-sport-illumina",
-        "t": "A Torino un nuovo spazio «Sport Illumina» in corso Cadore, con tennis gratuito",
-        "s": "Inaugurato alla vigilia delle ATP Finals con Bolelli e Vavassori: cinque discipline e un campo da tennis con le stesse resine usate dal torneo. Il progetto è di Sport e Salute.",
-        "d": "2026-11-14",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/sport/altrisport/2026/11/14/a-torino-nuovo-spazio-sport-illumina-i-sogni-non-devono-avere-indirizzi_f7c89a96-82ef-416a-b1dc-14d078b7a171.html"
-          }
-        ]
-      },
-      {
-        "id": "to-corteo-14nov",
-        "t": "Torino, corteo contro il carovita da piazza Castello: alcune centinaia di persone",
-        "s": "Il movimento Torino in Piazza ha sfilato contro caro vita e bollette, annunciando manifestazioni ogni sabato. Gli studenti proseguono l'occupazione di Palazzo Nuovo nel fine settimana; per il 20 novembre è previsto lo sciopero generale, con partenza da piazza XVIII Dicembre alle 9:30.",
-        "d": "2026-11-14",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/a-torino-parte-il-corteo-contro-carovita-e-aumento-delle-bollette_8fb4f8fe-a914-4c63-96de-e9a02319da81.html"
-          }
-        ]
-      },
-      {
-        "id": "to-restructura",
-        "t": "Restructura chiude all'Oval Lingotto con oltre 15mila visitatori",
-        "s": "La 38ª edizione della fiera dell'edilizia e del progetto, organizzata da GL events Italia, ha avuto più di 150 espositori in tre giorni. Premiati i progetti di riuso di edifici esistenti.",
-        "d": "2026-11-14",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/restructura-a-torino-chiude-con-15mila-visitatori_8c9d17f7-ccd4-4a04-9205-b66bc836c89f.html"
-          }
-        ]
       }
     ],
     "piemonte": [
@@ -356,22 +336,30 @@
         "link": []
       },
       {
-        "id": "pi-colletta",
-        "t": "Colletta Alimentare in Piemonte: 1.300 supermercati, obiettivo superare le 691 tonnellate del 2025",
-        "s": "Raccolta oggi, sabato 14 novembre, nei supermercati della regione. Lo scorso anno furono raccolte 691 tonnellate di alimenti, distribuite a oltre 111.000 persone tramite 560 organizzazioni partner.",
+        "id": "pi-genitori-separati",
+        "t": "Piemonte: 628 genitori separati ammessi al contributo affitto",
+        "s": "La Regione ha ammesso 628 genitori separati al contributo per l'affitto.",
         "d": "2026-11-14",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/10/leggi-notizia/argomenti/attualita-31/articolo/colletta-alimentare-sabato-14-novembre-torna-lappuntamento-con-la-solidarieta.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/in-piemonte-628-genitori-separati-ammessi-al-contributo-affitto_701d56cd-e077-4474-8f97-5c9f3ef47295.html"
           }
         ],
-        "link": [
+        "link": []
+      },
+      {
+        "id": "pi-film-biellezza",
+        "t": "Film Commission Piemonte: nuova produzione internazionale con la Fondazione Biellezza",
+        "s": "Una nuova produzione audiovisiva internazionale coinvolgerà il Biellese, grazie all'accordo tra Film Commission Piemonte e Fondazione Biellezza.",
+        "d": "2026-11-14",
+        "fonti": [
           {
-            "n": "Torino Oggi: la Mole con i colori del Banco Alimentare, dati 2025",
-            "url": "https://www.torinoggi.it/2026/11/14/leggi-notizia/argomenti/attualita-31/articolo/la-mole-antonelliana-illuminata-con-i-colori-del-banco-alimentare.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/film-commission-piemonte-nuova-produzione-con-la-fondazione-biellezza_d3c359a2-ce7b-4966-8908-8578b17ff10d.html"
           }
-        ]
+        ],
+        "link": []
       },
       {
         "id": "pi-borse-studio",
@@ -384,22 +372,8 @@
             "url": "https://www.ansa.it/sito/notizie/piemonte/2026/11/12/dal-mur-606-milioni-per-borse-di-studio-universitari-piemonte-188_afeb7a78-f71e-4aa8-ba50-8f50c04e724e.html"
           }
         ]
-      },
-      {
-        "id": "pi-balme-soccorso",
-        "t": "Balme, escursionista disperso recuperato di notte dal Soccorso alpino",
-        "s": "Dopo la chiamata al 112 intorno alle 18 di venerdì, l'uomo, perso nella discesa dal lago di Afframont, è stato localizzato con l'SMS locator e raggiunto da una squadra a piedi. Era esausto, con un principio di ipotermia; recuperato in elicottero.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/salvato-dal-soccorso-alpino-un-escursionista-disperso-nel-torinese_c722c44b-c186-401c-8b88-709ae51e704a.html"
-          }
-        ]
       }
     ],
-    "cultura": [],
-    "sport": [],
     "eventi": [
       {
         "id": "ev-luci-artista",
@@ -505,6 +479,67 @@
         "quando": "fino all'11 gen 2027, apertura settimanale",
         "dove": "Museo Egizio, Torino",
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-set-perfetto",
+        "t": "Il Set Perfetto: eventi diffusi delle Nitto ATP Finals",
+        "s": "Iniziative in vari luoghi della città collegate al torneo di tennis.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/set-perfetto-eventi-diffusi-nitto-atp-finals/"
+          }
+        ],
+        "link": [],
+        "quando": "fino al 22 nov",
+        "dove": "Vari luoghi, Torino"
+      },
+      {
+        "id": "ev-soldi-assedio",
+        "t": "I Soldi dell'Assedio. La moneta a Torino nel 1706",
+        "s": "Mostra sulla moneta in circolazione a Torino durante l'assedio del 1706.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/i-soldi-dellassedio-la-moneta-a-torino-nel-1706/"
+          }
+        ],
+        "link": [],
+        "quando": "fino al 22 nov",
+        "dove": "Archivio Storico della Città, via Barbaroux 32, Torino"
+      },
+      {
+        "id": "ev-solo-per-tutti",
+        "t": "Solo per tutti: appuntamento sotto i portici di via Sacchi",
+        "s": "Evento ad accesso libero, senza prenotazione.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/solo-per-tutti/"
+          }
+        ],
+        "link": [],
+        "quando": "sab 21 nov, 16:30-17:30",
+        "dove": "Portici di via Sacchi, Torino",
+        "costo": "gratis"
+      },
+      {
+        "id": "ev-scienze-naturali",
+        "t": "Visita guidata al Museo Regionale di Scienze Naturali",
+        "s": "Visita guidata alle collezioni del museo.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/visita-guidata-al-museo-regionale-di-scienze-naturali-di-torino-20/"
+          }
+        ],
+        "link": [],
+        "quando": "sab 21 nov, 14:00-17:30",
+        "dove": "Museo Regionale di Scienze Naturali, Torino"
       }
     ],
     "spettacoli": [
@@ -512,125 +547,109 @@
         "id": "spe-cin-dio-ride",
         "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
         "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-        "d": "2026-11-10",
+        "d": "2026-11-16",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/dio-ride/"
           }
         ],
-        "quando": "Space: 17:20; Ideal: 15:00, 17:10, 21:30 (orari indicativi)",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
-        "costo": "Space 9,10 €; Ideal 9 €"
+        "quando": "Ideal: lun 16-mer 18, 17:30, 21:40 (orari indicativi; Space Cinema: orari sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
       },
       {
         "id": "spe-cin-wild-horse-nine",
         "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
         "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
-        "d": "2026-11-10",
+        "d": "2026-11-16",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
           }
         ],
-        "quando": "Space: 14:55, 17:00, 18:50, 20:50; Ideal: 17:30, 19:20, 21:35 (orari indicativi)",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
-        "costo": "Space 9,10 €; Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-tranquillo-funerale",
-        "t": "Un tranquillo funerale di famiglia, la commedia corale di Massimiliano Bruno",
-        "s": "Alla morte del patriarca Mancuso i parenti si ritrovano per il funerale, che degenera in una guerra familiare. Regia di Massimiliano Bruno.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/film/2026/un-tranquillo-funerale-di-famiglia/"
-          },
-          {
-            "n": "ComingSoon Cinema Ideal",
-            "url": "https://www.comingsoon.it/cinema/torino/ideal/1072/"
-          }
-        ],
-        "quando": "Space: 14:50; Ideal: 15:45, 17:40, 19:35 (orari indicativi)",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
-        "costo": "Space 9,10 €; Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-gatto-cappello",
-        "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
-        "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
-          }
-        ],
-        "quando": "Space: 15:30, 18:10; Ideal: 15:20, 19:20 (orari indicativi); per tutti",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
-        "costo": "Space 9,10 €; Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-george-michael",
-        "t": "George Michael: The Faith Tour, il film-concerto in lingua originale",
-        "s": "Documentario musicale sul tour di George Michael, proiettato in versione originale.",
-        "d": "2026-11-10",
-        "fonti": [
-          {
-            "n": "MYmovies Cinema Ideal",
-            "url": "https://www.mymovies.it/cinema/torino/5071/"
-          }
-        ],
-        "quando": "Space: 15:15, 18:00, 19:50 (v.o. sottotitolata); Ideal: 21:30 (v.o.) (orari indicativi)",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
-        "costo": "Space 9,10 €; Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-shaun",
-        "t": "Shaun, Vita da Pecora: Operazione Z.U.C.C.A., film d'animazione per tutti",
-        "s": "Nuova avventura animata della pecora Shaun, per famiglie; durata 91 minuti.",
-        "d": "2026-11-09",
-        "fonti": [
-          {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/cinema/torino/5884/"
-          }
-        ],
-        "quando": "Space: 17:45; Ideal: 15:40 (orari indicativi); per tutti",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
-        "costo": "Space 9,10 €; Ideal 9 €"
+        "quando": "Ideal: lun 16-mer 18, 19:20, 21:35 (orari indicativi; Space Cinema: orari sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
       },
       {
         "id": "spe-cin-se-domani",
         "t": "Se domani non torno, il dramma di Paola Randi",
         "s": "Film drammatico diretto da Paola Randi, in programmazione in entrambe le sale.",
-        "d": "2026-11-10",
+        "d": "2026-11-16",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.idealcityplex.it/scheda/se-domani-non-torno/48959/"
           }
         ],
-        "quando": "Space: 14:20, 16:25, 19:05, 21:00, 22:30; Ideal: 15:25, 17:30, 19:35 (orari indicativi)",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
-        "costo": "Space 9,10 €; Ideal 9 €"
+        "quando": "Ideal: lun 16-mar 17, 17:30, 19:30; mer 18, 15:25, 17:30, 19:30 (orari indicativi; Space Cinema: orari sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
       },
       {
-        "id": "spe-cin-clayface",
-        "t": "Clayface, l'horror di James Watkins",
-        "s": "Film horror-azione diretto da James Watkins, vietato ai minori di 14 anni.",
-        "d": "2026-11-10",
+        "id": "spe-cin-gatto-cappello",
+        "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
+        "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
+        "d": "2026-11-16",
         "fonti": [
           {
             "n": "MYmovies",
-            "url": "https://www.idealcityplex.it/"
+            "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
           }
         ],
-        "quando": "Space: 21:55; Ideal: 21:40 (orari indicativi)",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
-        "costo": "Space 9,10 €; Ideal 9 €"
+        "quando": "Ideal: lun 16-mer 18, 15:00, 17:10; per tutti (orari indicativi; Space Cinema: orari sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-hunger-games",
+        "t": "Hunger Games: L'alba sulla mietitura, il nuovo capitolo della saga distopica",
+        "s": "Film tratto dal romanzo di Suzanne Collins, ambientato prima delle storie di Katniss. Regia di Francis Lawrence.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Ideal Cityplex",
+            "url": "https://www.idealcityplex.it/ideal-cityplex"
+          }
+        ],
+        "link": [],
+        "quando": "Ideal: da gio 19 nov, 15:15, 18:15, 21:15 (orari indicativi)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-godzilla-minus-zero",
+        "t": "Godzilla Minus Zero, il seguito del film giapponese premiato con l'Oscar",
+        "s": "Seguito di «Godzilla Minus One» ambientato nel Giappone del dopoguerra. Regia di Takashi Yamazaki.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "ComingSoon Cinema Ideal",
+            "url": "https://www.comingsoon.it/cinema/torino/ideal/1072/"
+          }
+        ],
+        "link": [],
+        "quando": "Ideal: lun 16-mer 18, 21:30 (orari indicativi)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-wildwood",
+        "t": "Wildwood: I segreti del bosco proibito, film d'animazione fantasy",
+        "s": "Film d'animazione tratto dal romanzo di Colin Meloy, ambientato in un bosco magico vicino a Portland. Regia di Travis Knight.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "MYmovies Torino",
+            "url": "https://www.mymovies.it/cinema/torino/"
+          }
+        ],
+        "link": [],
+        "quando": "Ideal: lun 16-mer 18, 21:30 (orari indicativi)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
       },
       {
         "id": "spe-tea-energie-nove",
@@ -663,6 +682,21 @@
           }
         ],
         "link": []
+      },
+      {
+        "id": "spe-tea-frettolosa",
+        "t": "I figli della frettolosa, di Gabriella Casolari e Gianfranco Berardi",
+        "s": "Testo e regia di Casolari e Berardi, con Berardi, Casolari, Di Corato, Faella e Zaru e un coro del laboratorio. Produzione Compagnia Berardi Casolari.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Teatro Stabile Torino",
+            "url": "https://www.teatrostabiletorino.it/cartellone/i-figli-della-frettolosa-20-22-nov-2026/"
+          }
+        ],
+        "link": [],
+        "quando": "ven 20 nov, 20:45; sab 21, 19:30; dom 22, 16:00",
+        "dove": "Teatro Gobetti, Torino"
       }
     ],
     "concerti": [
@@ -731,6 +765,38 @@
         ]
       },
       {
+        "id": "co-jussen",
+        "t": "Lucas e Arthur Jussen in concerto a quattro mani",
+        "s": "Recital dei due pianisti olandesi per la stagione dell'Unione Musicale.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Unione Musicale",
+            "url": "https://unionemusicale.it/concerto/lucas-e-arthur-jussen/"
+          }
+        ],
+        "link": [],
+        "quando": "mer 25 nov 2026 (orario sul sito)",
+        "dove": "Torino (luogo sul sito)",
+        "costo": "prezzi sul sito"
+      },
+      {
+        "id": "co-madaski",
+        "t": "Madaski",
+        "s": "Concerto del musicista e produttore torinese.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/madaski/"
+          }
+        ],
+        "link": [],
+        "quando": "gio 26 nov 2026, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "25 €"
+      },
+      {
         "id": "co-lotr-mystery",
         "t": "Musiche da The Lord of the Rings: tribute a Howard Shore",
         "s": "Mystery Ensemble esegue le colonne sonore della trilogia di Howard Shore.",
@@ -744,6 +810,22 @@
             "url": "https://www.ticketone.it/event/musiche-da-the-lord-of-the-rings-tribute-to-howard-shore-conservatorio-giuseppe-verdi-22366959/"
           }
         ]
+      },
+      {
+        "id": "co-danish",
+        "t": "Danish String Quartet",
+        "s": "Concerto del quartetto d'archi danese per l'Unione Musicale.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Unione Musicale",
+            "url": "https://unionemusicale.it/concerto/quartetto-danish/"
+          }
+        ],
+        "link": [],
+        "quando": "mer 2 dic 2026 (orario sul sito)",
+        "dove": "Torino (luogo sul sito)",
+        "costo": "prezzi sul sito"
       },
       {
         "id": "co-cmon-tigre",
@@ -789,6 +871,22 @@
             "url": "https://lingottomusica.it/en/evento/ensemble-matheus/"
           }
         ]
+      },
+      {
+        "id": "co-dagood",
+        "t": "Dagood",
+        "s": "Concerto rap dal vivo.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/dagood/"
+          }
+        ],
+        "link": [],
+        "quando": "gio 10 dic 2026, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "20 €"
       },
       {
         "id": "co-mcr",
@@ -1016,6 +1114,38 @@
         ]
       },
       {
+        "id": "co-seun-kuti",
+        "t": "Seun Kuti & Egypt 80",
+        "s": "Afrobeat dal vivo con il figlio di Fela Kuti.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/seun-kuti/"
+          }
+        ],
+        "link": [],
+        "quando": "mer 10 mar 2027, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "25 €"
+      },
+      {
+        "id": "co-glory",
+        "t": "«Glory»: Battistoni dirige Orchestra e Coro del Teatro Regio",
+        "s": "Concerto sinfonico-corale della stagione 2026-2027 del Regio.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/glory"
+          }
+        ],
+        "link": [],
+        "quando": "ven 12 mar 2027 (orario sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "prezzi sul sito"
+      },
+      {
         "id": "co-de-gregori",
         "t": "Francesco De Gregori, tour nei teatri 2027",
         "s": "Concerto del cantautore romano nella tournée teatrale «Nevergreen».",
@@ -1060,15 +1190,11 @@
           }
         ]
       }
-    ]
+    ],
+    "cultura": [],
+    "sport": []
   },
   "controlli": [
-    {
-      "at": "2026-11-06T05:40+01:00",
-      "edizione": "mattina",
-      "notizie": 56,
-      "note": "Fonti lette: ANSA, Al Jazeera, Euronews (it/en), ComingSoon (Cinema Ideal), MYmovies, Turismo Torino, Teatro Stabile, TorinoToday (solo ricerca). Non raggiungibili: thespacecinema.it (pagina non letta, film indicati solo per il Cinema Ideal), torinotoday.it (pagine non leggibili), reuters.com non cercato; Euronews Francia non letto. Concerti copiati dall'edizione precedente (non è lunedì)."
-    },
     {
       "at": "2026-11-07T05:40+01:00",
       "edizione": "mattina",
@@ -1182,6 +1308,12 @@
       "edizione": "pomeriggio",
       "notizie": 72,
       "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi. TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti). Cinema, eventi e concerti dall'edizione del mattino (domenica, non lunedì), tolti eventi e teatro conclusi il 15; aggiunti 2 spettacoli Fonderie Limone. Copia locale era staccata: ripartita da origin/main."
+    },
+    {
+      "at": "2026-11-16T05:05+01:00",
+      "edizione": "mattina",
+      "notizie": 80,
+      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi, Comune di Torino (eventi), Ideal Cityplex, Hiroshima Mon Amour, Teatro Regio, Unione Musicale, Teatro Stabile. Reuters (ricerca rifiutata dal proxy); BBC/Guardian non cercate. TorinoToday non cercato. The Space Cinema Torino: pagina senza programmazione leggibile (orari solo Ideal). Lunedì: concerti aggiornati con i siti di Hiroshima, Regio e Unione Musicale; Inalpi Arena e Lingotto Musica copiati dalla lista precedente. Copia locale divergente: riallineata a origin/main."
     }
   ]
 }
