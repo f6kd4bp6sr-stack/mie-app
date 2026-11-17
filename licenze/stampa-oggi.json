@@ -1,10 +1,40 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-17T05:09+01:00",
-  "nota": "Edizione del mattino del 17 novembre 2026.",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-17T13:04+01:00",
+  "nota": "Edizione del pomeriggio del 17 novembre 2026.",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-manovra-emendamenti-17",
+        "t": "Manovra, alle 18 scade il termine per gli emendamenti: attese oltre 5mila proposte",
+        "s": "In commissione Bilancio alla Camera il termine è alle 18; dopo il vaglio di ammissibilità il numero calerà. Nella maggioranza c'è intesa sui 7mila posti della scuola, mentre restano aperti i nodi su pensioni, soglia del bonus sanitario e contributo di banche e assicurazioni.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/economia/manovra-2027-pensioni-scuola-emendamenti_6qt5PiVc25gN55DpDrxh6E"
+          },
+          {
+            "n": "il Giornale",
+            "url": "https://www.ilgiornale.it/news/governo/manovra-giorgetti-frena-sulle-modifiche/"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-sciopero-20-nov",
+        "t": "Venerdì 20 novembre sciopero generale Cgil e Cobas: coinvolti scuola, sanità e trasporto locale",
+        "s": "La Cgil protesta contro la manovra; stop anche per bus, tram e metro con le fasce di garanzia, taxi, porti e autostrade. Aerei e treni sono esclusi dallo sciopero Cgil, ma i ferrovieri di Sgb e Cub si fermano dalle 21 del 20 alle 20 del 21.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/17/sciopero-generale-dalla-scuola-ai-bus-niente-stop-per-aerei-e-treni_01d5c5ed-72b4-4546-acc1-472847a25848.html"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "it-scuole-email",
         "t": "Email minatorie alle scuole, falso allarme sulle mense: i presidi seguono i protocolli",
@@ -14,36 +44,6 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/presidi-email-farneticanti-nessuna-evacuazione-protocolli-funzionano_a668bf83-a4c9-4018-ae72-61a612ebd709.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-manovra-emendamenti",
-        "t": "Manovra, oggi scade il termine per gli emendamenti: Giorgetti frena sulle modifiche",
-        "s": "Il ministro dell'Economia avverte che gli interessi sul debito non si toccano. Dopo il vertice a Palazzo Chigi il Governo valuta correzioni mirate su sanità, pensioni e scuola senza cambiare i saldi, tra cui il rinvio del taglio di 7mila posti nella scuola.",
-        "d": "2026-11-12",
-        "fonti": [
-          {
-            "n": "il Giornale",
-            "url": "https://www.ilgiornale.it/news/governo/manovra-giorgetti-frena-sulle-modifiche/"
-          },
-          {
-            "n": "Avvenire",
-            "url": "https://www.avvenire.it/politica/scuola-retromarcia-del-governo-sui-tagli-scontro-tra-meloni-e-schlein-sulle-tasse_115761"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-fondo-asilo",
-        "t": "Associazioni: tagliati 185 milioni al fondo per l'asilo",
-        "s": "Le organizzazioni che si occupano di accoglienza denunciano una riduzione di 185 milioni di euro al fondo dedicato all'asilo.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/laccusa-delle-associazioni-taglio-di-185-milioni-al-fondo-per-lasilo_9a3a874e-02b6-419b-bcfb-fead4911c4f5.html"
           }
         ],
         "link": []
@@ -62,14 +62,14 @@
         "link": []
       },
       {
-        "id": "it-livornese-tetto",
-        "t": "Livornese, operaio muore dopo il cedimento del tetto di un capannone",
-        "s": "Un lavoratore è morto mentre operava sul tetto di un capannone, che ha ceduto.",
+        "id": "it-fondo-asilo",
+        "t": "Associazioni: tagliati 185 milioni al fondo per l'asilo",
+        "s": "Le organizzazioni che si occupano di accoglienza denunciano una riduzione di 185 milioni di euro al fondo dedicato all'asilo.",
         "d": "2026-11-16",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/cede-il-tetto-di-un-capannone-mentre-lavora-muore-nel-livornese_7ba9c427-e754-4328-a50e-55bf49dd16b0.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/laccusa-delle-associazioni-taglio-di-185-milioni-al-fondo-per-lasilo_9a3a874e-02b6-419b-bcfb-fead4911c4f5.html"
           }
         ],
         "link": []
@@ -99,18 +99,49 @@
         "link": []
       },
       {
-        "id": "mo-ucraina-ponti",
-        "t": "Ucraina: ponti di Kiev colpiti dai russi, Mosca denuncia un nuovo attacco al ponte di Crimea",
-        "s": "Il sindaco di Kiev riferisce di due ponti importanti danneggiati, con acqua e riscaldamento mancanti in alcuni quartieri. Mosca dice che le forze ucraine hanno attaccato per la seconda volta in 24 ore il ponte di Crimea, con traffico interrotto.",
-        "d": "2026-11-16",
+        "id": "mo-ucraina-ponti-17",
+        "t": "Ucraina e Russia si colpiscono i ponti: Kiev e ponte di Crimea, due notti di attacchi",
+        "s": "Missili russi hanno colpito due ponti sul Dnipro a Kiev; Mosca denuncia un secondo attacco in 24 ore al ponte di Crimea, con traffico fermo. Gli scambi di attacchi arrivano a due giorni dal vertice in Cina tra Trump, Xi e Putin.",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/sindaco-kiev-due-importanti-ponti-della-capitale-colpiti-da-attacchi-russi_0ba1bfc5-4cd6-4dfb-a7ff-a990a42867c8.html"
           },
           {
+            "n": "CBS News",
+            "url": "https://www.cbsnews.com/news/ukraine-war-russia-crimea-kerch-bridge-kyiv/",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-cina-chip",
+        "t": "La Cina condanna le nuove restrizioni Usa sui chip e promette «misure necessarie»",
+        "s": "Il portavoce degli Esteri di Pechino accusa Washington di abusare dei controlli sull'export. Le regole americane puntano a chiudere una falla emersa dopo uno scandalo di spionaggio legato a Nvidia; Trump, a Manila, dice che gli Usa raggiungeranno la Cina sulle terre rare in dieci mesi.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/mosca-le-forze-ucraine-hanno-attaccato-di-nuovo-il-ponte-di-crimea_3339a077-9c51-48e4-be7f-852bc80c3427.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/cina-condanna-restrizioni-usa-su-chip-e-promette-in-risposta-misure-necessarie_743424a0-fc01-4ab8-b686-88cb5aa382ac.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/trump-raggiungeremo-la-cina-in-10-mesi-sulle-terre-rare_deee8a0e-00b0-4aaf-a185-629188a49656.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-gb-sanzioni",
+        "t": "Il Regno Unito sanziona otto imprese israeliane che costruiscono colonie in Cisgiordania",
+        "s": "Londra colpisce anche il gruppo di destra Tzav 9, accusato di bloccare i convogli umanitari per Gaza. Il ministro degli Esteri Ed Miliband avverte di nuovo sul progetto E1 e invita a non partecipare alle gare.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/gb-sanziona-8-imprese-israeliane-che-costruiscono-colonie-in-cisgiordania_3d6a220e-cca0-4ab7-b953-a913bc792f28.html"
           }
         ],
         "link": []
@@ -127,27 +158,37 @@
           }
         ],
         "link": []
-      },
+      }
+    ],
+    "estero": [
       {
-        "id": "mo-papa-peru",
-        "t": "Papa Leone XIV in Perù: all'ultima messa circa un milione e mezzo di fedeli",
-        "s": "Si chiude la tappa peruviana del viaggio in Sud America con una messa seguita da circa un milione e mezzo di persone. In Amazzonia il Papa ha parlato delle ferite della deforestazione indiscriminata.",
-        "d": "2026-11-16",
+        "id": "es-euronews-malesia",
+        "t": "Euronews: Francia e Malesia, intesa sulle terre rare e partenariato strategico",
+        "s": "Durante la visita di Macron a Kuala Lumpur è stata annunciata per inizio 2027 una joint venture franco-malese per separare terre rare, con un impianto da 13mila tonnellate. Firmati anche accordi su difesa, semiconduttori ed energia.",
+        "d": "2026-11-17",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/lultima-messa-del-papa-in-peru-davanti-a-un-milione-e-mezzo-di-persone_12e2b97e-eba6-4065-9c2d-1a7b87b07d48.html"
-          },
-          {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/16/pope-leo-xiv-struck-in-eye-by-rosary-during-tour-of-south-america",
+            "url": "https://www.euronews.com/2026/11/17/france-and-malaysia-agree-rare-earths-deal-as-macron-looks-beyond-china-for-supplies",
             "l": "en"
           }
         ],
         "link": []
-      }
-    ],
-    "estero": [
+      },
+      {
+        "id": "es-aj-bangladesh",
+        "t": "Al Jazeera: Bangladesh, scontri tra polizia e operai tessili per i salari",
+        "s": "Gli operai chiedono un minimo di 30mila taka al mese, contro gli attuali 12.500. La polizia usa lacrimogeni; circa 500 fabbriche su 4.500 sono chiuse. Il comitato salari si riunirà il 23 novembre.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/17/bangladesh-garment-workers-clash-with-police-in-fresh-protests-over-wages",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "es-aj-brexit",
         "t": "Al Jazeera: Burnham, il Brexit ha fallito, venerdì il vertice Regno Unito-Ue a Bruxelles",
@@ -179,36 +220,22 @@
           }
         ],
         "link": []
-      },
-      {
-        "id": "es-euronews-estonia",
-        "t": "Euronews: l'Estonia verso la chiusura del confine con la Russia dopo un presunto sabotaggio",
-        "s": "Il premier Kristen Michal accusa i servizi militari russi di aver ordinato un sabotaggio contro un'azienda di droni, la Threod Systems, e il Governo prepara la chiusura della frontiera.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/16/estonia-to-close-russia-border-after-sabotage-bid-on-drone-maker-foreign-minister-says",
-            "l": "en"
-          }
-        ],
-        "link": []
       }
     ],
     "economia": [
       {
-        "id": "ec-borse-16",
-        "t": "Borse deboli: Milano -0,65%, spread a 106 punti, Stellantis vicina ai minimi da dodici anni",
-        "s": "Piazza Affari chiude in calo dello 0,65%. Il rendimento del Btp decennale è al 4,44%. Il petrolio a New York scende sotto 87 dollari e il gas ad Amsterdam perde circa il 7%, sotto 84 euro al megawattora.",
-        "d": "2026-11-16",
+        "id": "ec-borse-17",
+        "t": "Borse europee deboli in apertura: Milano -0,64%, spread a 105 punti",
+        "s": "Francoforte cede lo 0,8%. Il petrolio Wti scende a 85 dollari al barile, il gas ad Amsterdam sale a 85,5 euro al megawattora e l'oro è a 3.875 dollari l'oncia.",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/16/borsa-milano-debole-con-leuropa-giu-technoprobe-e-stellantis_bad2ac30-2e2c-4ed2-bbc8-f86b54822f0c.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/borsa-milano-apre-in-calo-ftse-mib-064_bb28140c-2d31-42a1-8c9b-88a5ec58b8c7.html"
           },
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/lo-spread-tra-btp-e-bund-chiude-in-rialzo-a-106-punti-base_c36c80c7-844f-4e45-aae7-01287c0faa98.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/petrolio-in-calo-wti-a-85-dollari-al-barile_ea3a0d52-ff4c-4228-a6fc-003ef49ba2e7.html"
           }
         ],
         "link": []
@@ -246,6 +273,32 @@
     ],
     "torino": [
       {
+        "id": "to-dora-vanchiglia",
+        "t": "Dora Vanchiglia, controlli interforze: 300 identificati, 15mila euro di sanzioni ai locali",
+        "s": "In un'operazione nel quartiere sono state controllate 109 auto e 16 esercizi pubblici. Un arresto, otto denunce, circa 150 grammi di hashish sequestrati nei giardini Madre Teresa di Calcutta.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/cronaca-11/articolo/lavoratori-in-nero-scarsa-igiene-e-abusivismo-stangata-da-15mila-euro-sui-locali-di-dora-vanchigli.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-bus-coltello",
+        "t": "Coltello sul bus 46 in strada del Fortino: arrestato un 17enne per tentata rapina",
+        "s": "Lunedì sera ha minacciato i passeggeri e puntato la lama, lunga 16 centimetri, contro un coetaneo per prendergli denaro e sigarette. I carabinieri lo hanno fermato vicino al bus; è in una comunità di prima accoglienza.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/minaccia-passeggeri-con-un-coltello-sul-bus-arrestato-17enne-a-torino_e92b279c-9244-401f-821c-15ca67f67487.html"
+          }
+        ],
+        "link": []
+      },
+      {
         "id": "to-palazzo-nuovo-danni",
         "t": "Palazzo Nuovo, finita l'occupazione: l'Università verifica i danni e condanna il post di una docente",
         "s": "Dopo otto giorni gli occupanti hanno lasciato l'edificio e l'Ateneo controlla i danni. L'Università definisce «gravi e inaccettabili» le parole di una docente sui due writer caduti da una scala il 13 novembre.",
@@ -258,23 +311,6 @@
           {
             "n": "TorinoToday",
             "url": "https://www.torinotoday.it/attualita/professoressa-mano-dios-precipitati-tetto-palazzo-nuovo-2026.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-santorre-occupazione",
-        "t": "Torino, occupato l'istituto Santorre di Santarosa: ferita la vicepreside",
-        "s": "Una ventina di studenti ha occupato la sede di corso Peschiera e poi la succursale di via Vigone; la vicepreside si è ferita a una mano durante l'apertura dei cancelli. Chiedono più fondi per la scuola e critiche alle spese militari.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/16/leggi-notizia/argomenti/scuola-e-lavoro/articolo/scuole-occupato-il-santorre-di-borgo-san-paolo-ferita-a-una-mano-la-vicepreside-durante-lapertura.html"
-          },
-          {
-            "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/cronaca/occupazione-istituto-peschiera-feriti-vicepreside-funzionario-bidella-16-novembre-2026.html"
           }
         ],
         "link": []
@@ -305,19 +341,6 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/innovazione-tecnologica-e-sport-a-torino-nasce-sportechpolito_cec1d338-2a8f-4f35-9b5c-44b096158616.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-unito-cani-geni",
-        "t": "Università di Torino su Science: individuati 39 geni chiave nei tumori dei cani",
-        "s": "Uno studio dell'Ateneo torinese, pubblicato su Science, costruisce un atlante genomico dei tumori canini e indica 39 geni chiave.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/tumori-dei-cani-latlante-genomico-individua-39-geni-chiave_8c2c201a-f338-4a53-abc0-1a51240fe893.html"
           }
         ],
         "link": []
@@ -1138,12 +1161,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-07T13:30+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 57,
-      "note": "Fonti lette: ANSA, il Giornale, Euronews (en), Al Jazeera (ricerca). Ricerca rifiutata: reuters, bbc, guardian. Lettura non riuscita: torinotoday.it, ilsole24ore.com (Borsa), una pagina ANSA (permesso non concesso). Spettacoli, eventi e concerti copiati dal mattino (non è lunedì)."
-    },
-    {
       "at": "2026-11-08T05:09+01:00",
       "edizione": "mattina",
       "notizie": 56,
@@ -1256,6 +1273,12 @@
       "edizione": "mattina",
       "notizie": 73,
       "note": "Fonti lette: ANSA, il Giornale, Euronews (en), Al Jazeera (en), ComingSoon (Cinema Ideal), Teatro Stabile Torino. Bloccati: TorinoToday (lettura), thespacecinema.it (lettura; ricerca ok), Reuters/BBC/Guardian non cercate. Alcune pagine Euronews/ANSA non uscite da ricerca non sono state aperte: sintesi da elenchi già letti. Cinema: orari dalla pagina Ideal senza date; Space Cinema non leggibile. Eventi: confermati dall'edizione precedente. Concerti dall'edizione di lunedì, senza i passati (martedì). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-17T13:04+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 75,
+      "note": "Fonti lette: ANSA, Adnkronos, il Giornale (elenco), Euronews (en), Al Jazeera (en), CBS News (en), Torino Oggi. TorinoToday e thespacecinema.it non letti; Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Cinema, teatro, eventi e concerti dall'edizione del mattino (martedì, nessun concerto passato). Nessun riallineamento: copia già pari a origin/main."
     }
   ]
 }
