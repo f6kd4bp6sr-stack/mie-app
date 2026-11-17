@@ -465,10 +465,10 @@ function truccoCard(A){
 /* 🌸 Il mio corpo che cresce (dal 17/11/2026): solo schede lette, kit e storia a scelte. Il calendario del ciclo resta sull'iPad della bambina e qui non arriva (scelta del genitore). */
 function corpoCard(A){
   const D=A.D||{},L=D["corpo-letto"]&&typeof D["corpo-letto"]==="object"?D["corpo-letto"]:{},K=D["corpo-kit"]&&typeof D["corpo-kit"]==="object"?D["corpo-kit"]:{},S=D["corpo-scena"]||{};
-  const ids=Object.keys(L),m=ids.filter(k=>k[0]==="m").length,c=ids.filter(k=>k.startsWith("cr")).length,u=ids.filter(k=>k.startsWith("cu")).length,kit=Object.values(K).filter(Boolean).length;
+  const ids=Object.keys(L),m=ids.filter(k=>/^c\d$/.test(k)).length,u=ids.filter(k=>k.startsWith("cu")).length,kit=Object.values(K).filter(Boolean).length;
   if(!ids.length&&!kit&&!S.fatta)return "";
-  let h=`<h2>🌸 Il mio corpo che cresce</h2><div class="kpi"><div><b>${m}/8</b><span>schede sulle mestruazioni</span></div><div><b>${c}</b><span>schede «Cresco»</span></div><div><b>${u}</b><span>schede «Mi lavo e mi prendo cura»</span></div></div>`;
-  h+=`<p class="lbl" style="margin-top:8px">Kit nello zaino: ${kit} oggetti spuntati · storia «E se arriva a scuola?»: ${S.fatta?S.fatta+(S.fatta===1?" volta":" volte"):"non ancora"}</p><p class="lbl">Il calendario del ciclo resta solo sul suo iPad.</p>`;
+  let h=`<h2>🌸 Il mio corpo che cresce</h2><div class="kpi"><div><b>${m}/6</b><span>chiacchierate «Ne parliamo insieme»</span></div><div><b>${u}</b><span>schede «Mi lavo e mi prendo cura»</span></div></div>`;
+  h+=`<p class="lbl" style="margin-top:8px">Kit nello zaino: ${kit} oggetti spuntati · storia «E se arriva a scuola?»: ${S.fatta?S.fatta+(S.fatta===1?" volta":" volte"):"non ancora"}</p><p class="lbl">Il calendario del ciclo, le sue domande e i messaggi registrati dalla mamma restano solo sul suo iPad.</p>`;
   return h;
 }
 
