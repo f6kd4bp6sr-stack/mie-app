@@ -10,19 +10,19 @@ SCOPRI.push({
  "facts": [
   [
    "Microbi amici",
-   "Sul tuo corpo vivono tantissimi microbi e quasi tutti sono innocui o utili: aiutano a digerire il cibo e a difenderti dai germi che fanno ammalare."
+   "Sulle mani e sulla pelle vivono tantissimi microbi e solo una piccola parte può far ammalare. Alcuni, anzi, difendono la pelle dai germi cattivi."
   ],
   [
    "Guardie della pelle",
-   "Alcuni batteri buoni della pelle, come lo Staphylococcus epidermidis, la aiutano a trattenere l'acqua e a restare protetta. Lavarsi serve a togliere lo sporco, non a far sparire ogni microbo."
+   "Alcuni batteri buoni della pelle, come lo Staphylococcus epidermidis, aiutano la pelle a difendersi dai germi dannosi. Lavarsi serve a togliere sporco e sudore, non a far sparire ogni microbo."
   ],
   [
    "Il sapone acchiappasporco",
    "Quando strofini le mani con il sapone, la schiuma stacca dalla pelle sporco, grasso e germi. Poi l'acqua del risciacquo li porta via nello scarico."
   ],
   [
-   "Testa e coda",
-   "Una molecola di sapone ha una testa che ama l'acqua e una coda che ama il grasso. Tante code circondano il grasso in palline, le micelle, che l'acqua porta via."
+   "Palline acchiappagrasso",
+   "Il sapone si lega sia all'acqua sia al grasso. Circonda sporco e grasso in palline minuscole, le micelle, e l'acqua le porta via."
   ],
   [
    "Calda o fredda?",
@@ -34,7 +34,7 @@ SCOPRI.push({
   ],
   [
    "Il medico delle mani",
-   "Nel 1847 il medico ungherese Ignác Semmelweis fece lavare le mani ai dottori del suo ospedale: le infezioni calarono moltissimo. Un gesto semplice che salva vite."
+   "Nel 1847 un medico ungherese fece lavare le mani ai dottori del suo ospedale: le infezioni calarono moltissimo. Un gesto semplice che salva vite."
   ],
   [
    "Unghie corte e pulite",
@@ -46,7 +46,7 @@ SCOPRI.push({
   ],
   [
    "Spazzolino nuovo",
-   "Lo spazzolino si cambia circa ogni 3 mesi, o prima se le setole sono aperte e piegate. È personale: non si presta, si sciacqua e si lascia asciugare in piedi."
+   "Lo spazzolino si cambia circa ogni 3-4 mesi, o prima se le setole sono aperte e piegate. È personale: non si presta, si sciacqua e si lascia asciugare in piedi all'aria."
   ],
   [
    "Ultima cosa la sera",
@@ -54,7 +54,7 @@ SCOPRI.push({
   ],
   [
    "Il sudore rinfresca",
-   "Il sudore è fatto soprattutto di acqua. Quando evapora raffredda la pelle e aiuta il corpo a restare intorno ai 37 gradi. Da solo non ha odore: lo creano i batteri della pelle."
+   "Il sudore è fatto soprattutto di acqua. Quando evapora raffredda la pelle e aiuta il corpo a non surriscaldarsi. L'odore nasce quando i batteri della pelle lo trasformano."
   ],
   [
    "Il naso della piscina",
@@ -90,7 +90,7 @@ SCOPRI.push({
   ],
   [
    "Ognuno ha i suoi tempi",
-   "La pubertà è il periodo in cui il corpo cresce e cambia per diventare adulto. Nelle ragazze inizia generalmente tra i 10 e i 14 anni, ma ogni corpo ha il suo ritmo."
+   "La pubertà è il periodo in cui il corpo cresce e cambia per diventare adulto. Nelle ragazze di solito comincia tra gli 8 e i 13 anni: ognuna ha i suoi tempi, ed è normale."
   ],
   [
    "Sudore che cambia",
@@ -98,7 +98,7 @@ SCOPRI.push({
   ],
   [
    "Deodorante o antitraspirante?",
-   "Il deodorante agisce sull'odore, l'antitraspirante riduce anche la quantità di sudore. Nessuno dei due sostituisce acqua e sapone: si usano sulla pelle pulita, scegliendo con un adulto."
+   "Il deodorante copre l'odore, l'antitraspirante riduce anche la quantità di sudore. Nessuno dei due sostituisce acqua e sapone: si scelgono con un adulto, leggendo l'etichetta."
   ],
   [
    "Il primo ciclo",
@@ -106,11 +106,11 @@ SCOPRI.push({
   ],
   [
    "Acqua amica anche col ciclo",
-   "Durante il ciclo si possono fare la doccia, il bagno e anche nuotare: l'idea che l'acqua faccia male è una falsa credenza."
+   "Durante il ciclo puoi fare la doccia e il bagno: l'idea che l'acqua faccia male è una falsa credenza. Per nuotare, però, l'assorbente non va bene perché non funziona in acqua: scegli con un adulto."
   ],
   [
    "Igiene intima gentile",
-   "Le parti intime si lavano solo all'esterno, con acqua e, se serve, un detergente delicato non profumato. In bagno pulisciti da davanti verso dietro e scegli biancheria di cotone."
+   "Le parti intime si lavano solo all'esterno, con acqua tiepida, senza saponi profumati né bagnoschiuma, e mai dentro la vagina. Se la pelle prude o si secca, chiedi a un adulto un prodotto senza profumo. In bagno pulisciti da davanti verso dietro."
   ]
  ],
  "missions": [
@@ -120,7 +120,7 @@ SCOPRI.push({
   ],
   [
    "Cronometro dei denti",
-   "Per una settimana, ogni sera, lava i denti con un timer di 2 minuti e segna una crocetta sul calendario. Con un adulto scrivi anche la data in cui hai iniziato lo spazzolino, per ricordarti di cambiarlo dopo circa 3 mesi."
+   "Per una settimana, ogni sera, lava i denti con un timer di 2 minuti e segna una crocetta sul calendario. Con un adulto scrivi anche la data in cui hai iniziato lo spazzolino, per ricordarti di cambiarlo dopo 3–4 mesi."
   ],
   [
    "La borsa perfetta",

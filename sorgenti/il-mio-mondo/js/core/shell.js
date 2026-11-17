@@ -123,7 +123,8 @@ renderTabs = function () {
 /* ---------- 🏠 CASA: tutte le sezioni, subito ---------- */
 const HOME_DO = [['disegno', '🎨', 'Disegno'], ['mappe', '🗺️', 'Le mie mappe'], ['giochi', '🎮', 'Giochi'], ['diario', '📅', 'Diario'], ['mate', '🔢', 'Officina dei numeri'], ['scienze', '🔬', 'Laboratorio'], ['scopri', '🌍', 'Scopri il mondo'], ['teatro', '🎭', 'Teatro'], ['sport', '🤸‍♀️', 'Pausa movimento'], ['vita', '🧼', 'Io e il mio corpo'], ['routine', '☀️', 'Le mie routine'], ['metodo', '🧠', 'Il mio metodo'], ['io', '🙂', 'Il mio avatar']];
 /* 🌟 Fuori scuola: le passioni e le cose della vita (le materie di scuola stanno in 🏫 La mia scuola) */
-const HOME_VITA = ['sp-aerea', 'sp-patt', 'sp-nuoto', 'sp-corpo', 'roblox', 'soldi', 'lavo', 'vesto'];
+/* 17/11/2026: «Perché mi lavo» entra in «🌸 Il mio corpo che cresce» (la sezione apre anche le lezioni di «lavo») */
+const HOME_VITA = ['sp-aerea', 'sp-patt', 'sp-nuoto', 'sp-corpo', 'roblox', 'soldi', 'corpo', 'vesto'];
 /* 🏫 La mia scuola: dopo le materie, la classe (solo su questo iPad) e il passaggio alla scuola media */
 const HOME_SCUOLA_EXTRA = ['media'];
 PAGES.home = el => {
@@ -137,9 +138,9 @@ PAGES.home = el => {
     (typeof openTrucco === 'function' ? '<button type="button" class="v2-hl tr-hl" id="h-trucco"><span>💄✨</span><b>Come mi trucco</b><small>Pelle, sicurezza e truccabimbi</small><i>Nuovo</i></button>' : '') + '</div>' +
     (last || due ? '<div class="h-quick">' + (last ? '<button type="button" class="v2-btn" id="h-cont" style="--uc:' + last.c + '">▶ Continua: ' + esc(last.ic + ' ' + last.name) + '</button>' : '') + (due ? '<button type="button" class="v2-btn blue" id="h-rip">💪 Ripasso (' + due + ')</button>' : '') + '</div>' : '') +
     '<input type="search" class="h-find" id="h-find" placeholder="🔎 Cerca un argomento in tutte le materie (es. acqua, Romani, frazioni)" autocomplete="off" enterkeyhint="search"><div id="h-res" hidden></div><div id="h-rest">' +
-    '<section class="h-part h-scuola"><h2 class="h-h2">🏫 La mia scuola</h2><p class="h-note">Le materie del programma di 5ª, come in classe.</p><div class="v2-grid h-grid">' + pathUnits().filter(u => !HOME_VITA.includes(u.id) && !HOME_SCUOLA_EXTRA.includes(u.id)).map(ut).join('') + '</div>' +
+    '<section class="h-part h-scuola"><h2 class="h-h2">🏫 La mia scuola</h2><p class="h-note">Le materie del programma di 5ª, come in classe.</p><div class="v2-grid h-grid">' + pathUnits().filter(u => !HOME_VITA.includes(u.id) && u.id !== 'lavo' && !HOME_SCUOLA_EXTRA.includes(u.id)).map(ut).join('') + '</div>' +
     '<div class="v2-grid h-grid h-grid2">' + tile('classe', '🗓️', 'La mia classe', 'progetti, uscite e date') + tile('serie', '🎬', 'La serie di Storia', 'Storia a episodi') + HOME_SCUOLA_EXTRA.map(unitById).filter(Boolean).map(ut).join('') + '</div></section>' +
-    '<section class="h-part h-fuori"><h2 class="h-h2">🌟 Fuori scuola</h2><p class="h-note">Sport, passioni e cose della vita.</p><div class="v2-grid h-grid">' + HOME_VITA.map(unitById).filter(Boolean).map(ut).join('') + '</div>' +
+    '<section class="h-part h-fuori"><h2 class="h-h2">🌟 Fuori scuola</h2><p class="h-note">Sport, passioni e cose della vita.</p><div class="v2-grid h-grid">' + HOME_VITA.map(id => id === 'corpo' ? (typeof CORPO !== 'undefined' ? tile('corpo', '🌸', 'Il mio corpo che cresce', 'pubertà, ciclo e igiene', 'var(--c5)') : (unitById('lavo') ? ut(unitById('lavo')) : '')) : (unitById(id) ? ut(unitById(id)) : '')).join('') + '</div>' +
     '<h3 class="h-h3">🎨 Fare e scoprire</h3><div class="v2-grid h-grid">' + HOME_DO.map(x => tile(x[0], x[0] === 'io' ? AV() : x[1], x[2])).join('') + '</div></section></div>';
   el.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => { const g = b.dataset.go; if (g.startsWith('u:')) openMateria(g.slice(2)); else if (g === 'vita') openVita(); else go(g); }));
   if ($('h-vesto')) $('h-vesto').addEventListener('click', () => openVesto2());

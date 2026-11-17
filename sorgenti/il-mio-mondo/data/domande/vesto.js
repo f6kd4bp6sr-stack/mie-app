@@ -106,7 +106,7 @@ SCOPRI.push({
   ],
   [
    "Il seno cresce piano piano",
-   "Il primo segno della pubertà nelle ragazze è l'inizio della crescita del seno, con ritmi diversi per ognuna. Un top comodo si può scegliere con un adulto, quando ti senti pronta."
+   "Di solito il primo segno della pubertà nelle ragazze è l'inizio della crescita del seno, con ritmi diversi per ognuna. Un top comodo si può scegliere con un adulto, quando ti senti pronta."
   ],
   [
    "Foto ritoccate",

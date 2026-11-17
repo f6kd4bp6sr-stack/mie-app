@@ -56,3 +56,8 @@ Si salva solo `scopi-visti` (quali esempi sono stati aperti); va anche in Progre
 - 19 progetti nuovi in `data/domande/disegno.js`: d108–d111 (lo spessore della linea), d206–d208 (perché questo colore), d601–d612 (tappa «✋ Forme a mano libera», `libera: true`: sempre aperta, non blocca le altre).
 - Campo nuovo `w` (spessore consigliato) su progetto o passo: l'app imposta il cursore e disegna la guida più grossa o più fine.
 - `js/sezioni/disegno.js`: riquadro «💡 Come si disegna, e perché» (`DS_COME`, `dsComeHtml`) in Disegno e in Impara; riga di aiuto sotto «Spessore» (`DS_AIUTO`, `dsAiutoW`).
+
+## 🌸 Il mio corpo che cresce (17/11/2026)
+Sezione in «Fuori scuola» (al posto della tessera «Perché mi lavo», che ora sta dentro): 🌱 Cresco (5 schede), 🩸 Le mestruazioni (8 schede con disegni), 🎒 Kit e storia a scelte «E se arriva a scuola?», 📅 calendario del ciclo, 🧼 Mi lavo e mi prendo cura (i fatti e le missioni di «Perché mi lavo» riorganizzati in 8 gruppi con uno scopo; timer e lezioni di «lavo» restano).
+Testi in `data/domande/corpo.js` (autore + revisore, fonti in `CORPO.fonti`), pagina in `js/sezioni/corpo.js`, stile in `css/corpo.css`.
+Privacy: il calendario (`corpo-cal`) resta solo sull'iPad; in Progressi arrivano solo `corpo-letto`, `corpo-kit`, `corpo-scena`.

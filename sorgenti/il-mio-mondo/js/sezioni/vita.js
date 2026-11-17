@@ -40,6 +40,7 @@ function vitaGems(n, why) { const v = VITA_DAY(); const can = Math.max(0, Math.m
 function openVita() {
   openModal('<div class="big" style="font-size:28px">🧼👗 Io e il mio corpo</div><p class="vd-sub">Scopri il perché delle buone abitudini.</p>' +
     '<div class="v2-grid">' +
+    (typeof CORPO !== 'undefined' ? '<button type="button" class="v2-tile" id="vi-corpo"><span class="v2-ti">🌸</span><b>Il mio corpo che cresce</b><small>Pubertà, ciclo, igiene</small></button>' : '') +
     '<button type="button" class="v2-tile" id="vi-arm"><span class="v2-ti">👗</span><b>L’armadio del meteo</b><small>Che cosa metto oggi?</small></button>' +
     '<button type="button" class="v2-tile" id="vi-v2"><span class="v2-ti">🎨</span><b>Colori e taglia</b><small>Componi il look · La mia taglia</small></button>' +
     '<button type="button" class="v2-tile" id="vi-mani"><span class="v2-ti">🧼</span><b>Timer delle mani</b><small>40 secondi, passo per passo</small></button>' +
@@ -48,6 +49,7 @@ function openVita() {
     '</div><div class="row center" style="margin-top:12px"><button type="button" class="btn ghost" id="vi-x" data-focus>Chiudi</button></div>');
   $('modal-box').classList.add('wide');
   $('vi-x').addEventListener('click', closeModal);
+  if ($('vi-corpo')) $('vi-corpo').addEventListener('click', () => { closeModal(); go('corpo'); });
   $('vi-arm').addEventListener('click', () => openWardrobe());
   if ($('vi-v2')) $('vi-v2').addEventListener('click', () => openVesto2());
   $('vi-mani').addEventListener('click', () => openTimer('mani'));

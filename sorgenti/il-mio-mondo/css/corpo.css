@@ -1,0 +1,35 @@
+/* 🌸 Il mio corpo che cresce */
+.cr-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+@media (max-width: 700px) { .cr-grid { grid-template-columns: minmax(0, 1fr); } }
+.cr-c { padding: 10px 14px; text-align: left; }
+.cr-c summary { display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; min-height: 44px; font-size: 17px; }
+.cr-c summary::-webkit-details-marker { display: none; }
+.cr-c summary b { flex: 1; font-family: var(--font-display); }
+.cr-ic { font-size: 24px; }
+.cr-ok { font-style: normal; font-weight: 900; color: #2e9e6b; }
+.cr-fz { transition: transform .15s; color: var(--ink-soft); } .cr-c[open] .cr-fz { transform: rotate(180deg); }
+.cr-h { font-family: var(--font-display); font-size: 18px; margin: 4px 0 6px; }
+.cr-p { font-weight: 700; font-size: 15px; line-height: 1.45; margin: 8px 0; }
+.cr-p ul, .cr-f { margin: 4px 0; padding-left: 22px; } .cr-p li, .cr-f li { margin: 3px 0; }
+.cr-f { font-weight: 600; font-size: 15px; line-height: 1.45; }
+.cr-e { display: inline-block; font-size: 13px; font-weight: 900; border-radius: 9px; padding: 1px 8px; margin-right: 4px; color: #1d2433; }
+.cr-e.a { background: #bfe3ff; } .cr-e.b { background: #d6f2c4; } .cr-e.c { background: #ffd6e4; }
+.cr-nota { font-weight: 700; font-size: 14px; line-height: 1.4; color: var(--ink-soft); border-left: 4px solid var(--line); padding-left: 8px; margin: 8px 0; }
+.cr-dis { margin: 6px 0; text-align: center; }
+.cr-svg { width: 100%; max-width: 360px; height: auto; }
+.cr-chk { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.cr-chk input { width: 26px; height: 26px; flex: 0 0 auto; margin-top: 2px; }
+.cr-chk small { display: block; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+.cr-q { font-weight: 800; font-size: 16px; line-height: 1.4; }
+.cr-sc { display: grid; gap: 8px; }
+.cr-sb { text-align: left; white-space: normal; font-size: 15px; min-height: 44px; }
+.cr-sb:disabled { opacity: .55; } .cr-sb.sel:disabled { opacity: 1; }
+.cr-sb.sel { border-color: #e05a7e; background: #ffe3ec; color: #1d2433; }
+.cr-fbx { font-weight: 700; font-size: 15px; background: var(--bg); border-radius: 12px; padding: 8px 10px; }
+.cr-cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-top: 8px; }
+.cr-cal i { font-style: normal; text-align: center; font-weight: 800; font-size: 13px; color: var(--ink-soft); }
+.cr-d { min-height: 40px; border-radius: 10px; border: 2px solid var(--line); background: var(--surface); color: var(--ink); font-weight: 800; font-size: 15px; }
+.cr-d.on { background: #e05a7e; border-color: #b23a62; color: #fff; }
+.cr-d.oggi { outline: 3px solid #4a7fd4; outline-offset: -3px; }
+.cr-d:disabled { opacity: .35; }
+.cr-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
