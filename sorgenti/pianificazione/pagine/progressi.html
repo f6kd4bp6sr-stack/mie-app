@@ -462,6 +462,16 @@ function truccoCard(A){
   return h;
 }
 
+/* 🌸 Il mio corpo che cresce (dal 17/11/2026): solo schede lette, kit e storia a scelte. Il calendario del ciclo resta sull'iPad della bambina e qui non arriva (scelta del genitore). */
+function corpoCard(A){
+  const D=A.D||{},L=D["corpo-letto"]&&typeof D["corpo-letto"]==="object"?D["corpo-letto"]:{},K=D["corpo-kit"]&&typeof D["corpo-kit"]==="object"?D["corpo-kit"]:{},S=D["corpo-scena"]||{};
+  const ids=Object.keys(L),m=ids.filter(k=>k[0]==="m").length,c=ids.filter(k=>k.startsWith("cr")).length,u=ids.filter(k=>k.startsWith("cu")).length,kit=Object.values(K).filter(Boolean).length;
+  if(!ids.length&&!kit&&!S.fatta)return "";
+  let h=`<h2>🌸 Il mio corpo che cresce</h2><div class="kpi"><div><b>${m}/8</b><span>schede sulle mestruazioni</span></div><div><b>${c}</b><span>schede «Cresco»</span></div><div><b>${u}</b><span>schede «Mi lavo e mi prendo cura»</span></div></div>`;
+  h+=`<p class="lbl" style="margin-top:8px">Kit nello zaino: ${kit} oggetti spuntati · storia «E se arriva a scuola?»: ${S.fatta?S.fatta+(S.fatta===1?" volta":" volte"):"non ancora"}</p><p class="lbl">Il calendario del ciclo resta solo sul suo iPad.</p>`;
+  return h;
+}
+
 /* ---------- 📈 andamento mese per mese (giorni di studio e risposte giuste) ---------- */
 const MESI_B=["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"];
 function monthCard(A){
@@ -590,6 +600,7 @@ function render(pack,hist){
   ${videoCard(A)}
   ${vestoCard(A)}
   ${truccoCard(A)}
+  ${corpoCard(A)}
   ${prev?`<p class="lbl" style="margin:8px 4px">Confronto con la copia del ${fmt(prev.d)}: matematica ${now.math-prev.math>=0?"+":""}${now.math-prev.math} esercizi, scienze ${now.sci-prev.sci>=0?"+":""}${now.sci-prev.sci} argomenti, diario ${now.diary-prev.diary>=0?"+":""}${now.diary-prev.diary} pagine.</p>`:""}
   <details class="more"><summary>ℹ️ Come leggere questi dati</summary><div class="note">${A.prog?"Le percentuali di risposte giuste vengono dal registro delle risposte di «Il mio mondo».":"Le carenze si basano sulle tabelline, sui livelli e sulla costanza: le risposte dei quiz arriveranno quando l’app le invia."} Qui compare solo quello che ha già usato: materie e giochi mai aperti non sono elencati. I numeri «x/y» delle sfide indicano quante domande diverse sono già uscite rispetto al totale disponibile.</div></details>`;
   tidySubjects(out);
