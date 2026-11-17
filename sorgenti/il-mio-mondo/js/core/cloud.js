@@ -423,7 +423,10 @@ function idbPut(k) {
    Ogni giorno in cui l'app si usa viene tenuta una fotografia completa dei progressi:
    ultimi 30 giorni sull'iPad (IndexedDB) e ultimi 14 nell'account Claude, se disponibile. */
 
-const snapData = () => { const st = store.all(); Object.keys(st.data).forEach(k => { if (k.startsWith('__')) { delete st.data[k]; delete st.t[k]; } }); return st; };
+/* 17/11/2026: dati privati della bambina («Il mio corpo che cresce»): calendario del ciclo e domande.
+   Non escono mai dall'iPad: fuori dalla copia cifrata per i genitori, dalla copia su file e dal QR. */
+const PRIVATI = ['corpo-cal', 'corpo-domande'];
+const snapData = () => { const st = store.all(); Object.keys(st.data).forEach(k => { if (k.startsWith('__') || PRIVATI.includes(k)) { delete st.data[k]; delete st.t[k]; } }); return st; };
 function dailySnapshot() {
   if (!LOCAL2.idb) return Promise.resolve(false);
   const day = todayIso(); LOCAL2.snapDay = day;

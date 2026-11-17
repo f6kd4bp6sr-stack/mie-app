@@ -1,12 +1,14 @@
 /* ================= 🌸 IL MIO CORPO CHE CRESCE (17/11/2026, richiesta del genitore) =================
    Prepara alle mestruazioni prima che arrivino e riorganizza «Perché mi lavo» con uno scopo: prendersi cura del corpo che cresce.
-   Schede: 🌱 Cresco · 🩸 Le mestruazioni (8) · 🎒 Il mio kit e «E se arriva a scuola?» · 📅 Il mio calendario · 🧼 Mi lavo e mi prendo cura.
+   17/11/2026 pomeriggio (commento della mamma: «più umana… meglio parlare»): la sezione è uno SPUNTO per parlarne con la mamma.
+   Linguette: 💬 Ne parliamo insieme (6 chiacchierate con «Chiedi alla mamma» e 🎙️ la voce della mamma) · ❓ Le mie domande · 🎒 Kit e scuola · 📅 Il mio calendario · 🧼 Mi lavo e mi prendo cura.
+   Disegni simbolici (niente organi). Niente lettura ad alta voce: la legge lei.
    Testi in data/domande/corpo.js (CORPO: autore + revisore indipendente, fonti in CORPO.fonti).
-   PRIVACY (scelta del genitore): il calendario del ciclo («corpo-cal») resta SOLO su questo iPad: non è nella lista dei dati inviati a
+   PRIVACY (scelta del genitore): il calendario del ciclo («corpo-cal»), le domande («corpo-domande») e i messaggi registrati della mamma (IndexedDB «mondo-voce-mamma») restano SOLO su questo iPad: non è nella lista dei dati inviati a
    Progressi (statici/mondo-sync.js) né nel QR. In Progressi arrivano solo le schede lette, il kit e la storia a scelte. */
 if (!$('p-corpo')) { const s = document.createElement('section'); s.id = 'p-corpo'; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); }
 const CR_OK = () => typeof CORPO !== 'undefined';
-let crTab = 'cresco';
+let crTab = 'insieme';
 /* 17/11/2026: niente lettura ad alta voce in questa sezione, la legge lei (scelta del genitore) */
 const crSay = () => '';
 const crLetto = id => { const v = store.get('corpo-letto', {}); if (!v[id]) { v[id] = todayIso(); store.set('corpo-letto', v); } };
@@ -17,72 +19,105 @@ const CR_INK = '#1d2433';
 const crSvg = (w, h, inner, l) => '<svg class="cr-svg" viewBox="0 0 ' + w + ' ' + h + '" role="img" aria-label="' + esc(l) + '"><rect width="' + w + '" height="' + h + '" rx="14" fill="#fff8fb"/>' + inner + '</svg>';
 const crT = (x, y, t, o) => '<text x="' + x + '" y="' + y + '" text-anchor="' + ((o && o.a) || 'middle') + '" font-size="' + ((o && o.s) || 14) + '" font-weight="800" fill="' + ((o && o.c) || CR_INK) + '">' + esc(t) + '</text>';
 const crE = (x, y, e, s) => '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-size="' + (s || 34) + '">' + e + '</text>';
+/* ---------- disegni SIMBOLICI (17/11/2026: niente organi né corpi, scelta dei genitori) ---------- */
+const CR_P = '#e58aa6', CR_L = '#c9a8e6';
 const CR_DIS = {
-  /* schema semplice di utero, tube, ovaie e vagina, con il «nido» (endometrio) in rosa */
-  m1: () => crSvg(340, 230,
-    '<path d="M170 196 L170 150" stroke="#e58aa6" stroke-width="16" stroke-linecap="round"/>' +
-    '<path d="M126 60 Q170 46 214 60 Q232 108 196 150 Q170 168 144 150 Q108 108 126 60Z" fill="#f7b6c8" stroke="' + CR_INK + '" stroke-width="2.5"/>' +
-    '<path d="M138 70 Q170 60 202 70 Q214 106 190 136 Q170 150 150 136 Q126 106 138 70Z" fill="#e05a7e"/>' +
-    '<path d="M150 78 Q170 72 190 78 Q198 104 182 126 Q170 134 158 126 Q142 104 150 78Z" fill="#fff8fb"/>' +
-    '<path d="M126 62 Q96 40 70 58" fill="none" stroke="#e58aa6" stroke-width="7" stroke-linecap="round"/><path d="M214 62 Q244 40 270 58" fill="none" stroke="#e58aa6" stroke-width="7" stroke-linecap="round"/>' +
-    '<path d="M70 58 q-14 4 -16 14 M70 58 q-12 -6 -22 -2" stroke="#e58aa6" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M270 58 q14 4 16 14 M270 58 q12 -6 22 -2" stroke="#e58aa6" stroke-width="4" fill="none" stroke-linecap="round"/>' +
-    '<ellipse cx="66" cy="88" rx="17" ry="12" fill="#ffd7a8" stroke="' + CR_INK + '" stroke-width="2"/><ellipse cx="274" cy="88" rx="17" ry="12" fill="#ffd7a8" stroke="' + CR_INK + '" stroke-width="2"/>' +
-    crT(66, 120, 'ovaia', { s: 13 }) + crT(274, 120, 'ovaia', { s: 13 }) + crT(96, 34, 'tuba', { s: 13 }) + crT(244, 34, 'tuba', { s: 13 }) +
-    '<path d="M222 104 L262 150" stroke="' + CR_INK + '" stroke-width="1.5"/>' + crT(282, 166, 'utero', { s: 13 }) +
-    '<path d="M186 96 L244 196" stroke="' + CR_INK + '" stroke-width="1.5"/>' + crT(262, 212, 'lo strato «nido»', { s: 13 }) +
-    '<path d="M164 186 L96 196" stroke="' + CR_INK + '" stroke-width="1.5"/>' + crT(70, 212, 'vagina', { s: 13 }), 'Schema semplice: utero con lo strato morbido, tube, ovaie e vagina'),
-  /* linea del tempo delle età */
-  m2: () => crSvg(340, 150,
-    '<path d="M30 80 H310" stroke="' + CR_INK + '" stroke-width="3" stroke-linecap="round"/>' +
-    '<rect x="96" y="66" width="200" height="28" rx="14" fill="#f7b6c8"/>' +
-    [8, 10, 12, 14, 16].map((a, i) => '<path d="M' + (40 + i * 66) + ' 74 V86" stroke="' + CR_INK + '" stroke-width="2"/>' + crT(40 + i * 66, 112, a + ' anni', { s: 12 })).join('') +
-    crT(196, 58, 'di solito arrivano qui', { s: 13 }) + crE(64, 52, '🌱', 26) + crT(64, 136, 'inizia il seno', { s: 12 }) +
-    crT(196, 136, 'ognuna ha i suoi tempi', { s: 12, c: '#b23a62' }), 'Linea del tempo: di solito il ciclo arriva tra i 10 e i 15 anni'),
-  m3: () => crSvg(340, 140, crE(60, 72, '🩲', 50) + crE(170, 72, '💭', 44) + crE(280, 72, '🌙', 44) +
-    crT(60, 108, 'perdite', { s: 13 }) + crT(60, 124, 'bianche', { s: 13 }) + crT(170, 108, 'umore', { s: 13 }) + crT(170, 124, 'che cambia', { s: 13 }) + crT(280, 108, 'pancia', { s: 13 }) + crT(280, 124, 'un po’ tesa', { s: 13 }), 'I segnali che possono arrivare prima'),
-  m4: () => crSvg(400, 140, crE(50, 86, '🎒', 56) + '<path d="M90 70 H104" stroke="' + CR_INK + '" stroke-width="3"/>' + crE(140, 70, '🧻', 28) + crE(210, 70, '🩲', 28) + crE(280, 70, '🧴', 28) + crE(350, 70, '🛍️', 28) +
-    crT(140, 104, 'assorbenti', { s: 12 }) + crT(210, 104, 'mutandine', { s: 12 }) + crT(280, 104, 'salviette', { s: 12 }) + crT(350, 104, 'sacchetto', { s: 12 }) + crT(245, 130, 'una pochette sempre nello zaino', { s: 13, c: '#b23a62' }), 'Il kit nello zaino'),
-  m5: () => crSvg(340, 140,
-    '<rect x="26" y="40" width="80" height="44" rx="22" fill="#fff" stroke="' + CR_INK + '" stroke-width="2.5"/><rect x="46" y="52" width="40" height="20" rx="10" fill="#fde2ea"/>' +
-    '<rect x="132" y="48" width="76" height="28" rx="14" fill="#fff" stroke="' + CR_INK + '" stroke-width="2.5"/>' +
-    '<path d="M238 40 H314 L302 84 Q276 94 250 84 Z" fill="#c9a8e6" stroke="' + CR_INK + '" stroke-width="2.5"/>' +
-    crT(66, 108, 'assorbente', { s: 13 }) + crT(170, 108, 'salvaslip', { s: 13 }) + crT(276, 108, 'mutandine assorbenti', { s: 12 }) + crT(170, 130, 'cambiali spesso durante il giorno', { s: 13, c: '#b23a62' }), 'Assorbente, salvaslip e mutandine assorbenti'),
-  m6: () => crSvg(340, 130, crE(60, 80, '🏫', 48) + crE(150, 80, '🙋‍♀️', 46) + crE(240, 80, '🧑‍🏫', 46) + '<path d="M180 70 H206" stroke="' + CR_INK + '" stroke-width="3" marker-end="url(#crf)"/><defs><marker id="crf" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="' + CR_INK + '"/></marker></defs>' + crE(300, 80, '👍', 40) +
-    crT(170, 120, 'c’è sempre un adulto a cui chiedere', { s: 13, c: '#b23a62' }), 'A scuola si chiede aiuto a un adulto'),
-  m7: () => crSvg(340, 130, crE(64, 80, '♨️', 46) + crE(150, 80, '🚶‍♀️', 46) + crE(236, 80, '🛌', 46) + crE(300, 80, '💧', 40) +
-    crT(64, 118, 'caldo', { s: 13 }) + crT(150, 118, 'movimento', { s: 13 }) + crT(236, 118, 'riposo', { s: 13 }) + crT(300, 118, 'acqua', { s: 13 }), 'Caldo sulla pancia, movimento, riposo e acqua'),
-  m8: () => crSvg(340, 130, crE(84, 80, '🩺', 50) + crE(170, 80, '💬', 46) + crE(256, 80, '👩‍⚕️', 50) + crT(170, 120, 'chiedere al pediatra è normale', { s: 13, c: '#b23a62' }), 'Parlarne con il pediatra')
+  /* c1 il corpo che cambia: un bocciolo che si apre */
+  c1: () => crSvg(340, 150, '<path d="M60 130 Q60 100 64 80" stroke="#6aa86a" stroke-width="4" fill="none"/><ellipse cx="64" cy="72" rx="10" ry="16" fill="' + CR_P + '"/>' +
+    '<path d="M170 130 Q170 96 170 76" stroke="#6aa86a" stroke-width="4" fill="none"/><path d="M152 106 q-14 -6 -18 4 q12 6 18 -4Z" fill="#8cc68c"/><path d="M170 76 q-16 -18 -6 -34 q6 8 6 18 q0 -10 6 -18 q10 16 -6 34Z" fill="' + CR_P + '"/>' +
+    '<path d="M276 130 Q276 96 276 78" stroke="#6aa86a" stroke-width="4" fill="none"/><path d="M258 108 q-14 -6 -18 4 q12 6 18 -4Z M294 104 q14 -6 18 4 q-12 6 -18 -4Z" fill="#8cc68c"/>' +
+    [0, 72, 144, 216, 288].map(a => '<ellipse cx="276" cy="56" rx="11" ry="20" fill="' + CR_P + '" transform="rotate(' + a + ' 276 72)"/>').join('') + '<circle cx="276" cy="72" r="9" fill="#ffd36e"/>' +
+    '<path d="M96 96 H126 M214 96 H242" stroke="' + CR_L + '" stroke-width="3" stroke-dasharray="4 5" stroke-linecap="round"/>', 'Un bocciolo che si apre piano piano'),
+  /* c2 che cosa sono: la luna che cresce e cala, come un ciclo */
+  c2: () => crSvg(340, 150, [[50, 0], [110, .35], [170, 1], [230, .35], [290, 0]].map(([x, f], i) => {
+    const r = 22; return '<circle cx="' + x + '" cy="70" r="' + r + '" fill="#efe3f8" stroke="' + CR_L + '" stroke-width="2"/>' +
+      (f ? '<path d="M' + x + ' ' + (70 - r) + ' A' + r + ' ' + r + ' 0 0 ' + (i < 2 ? 1 : 0) + ' ' + x + ' ' + (70 + r) + ' A' + (r * (1 - f)) + ' ' + r + ' 0 0 ' + (i < 2 ? 0 : 1) + ' ' + x + ' ' + (70 - r) + 'Z" fill="#f7c6d4"/>' : '') +
+      (f === 1 ? '<circle cx="' + x + '" cy="70" r="' + r + '" fill="#f7c6d4"/>' : ''); }).join('') +
+    '<path d="M50 112 Q170 140 290 112" stroke="' + CR_P + '" stroke-width="3" fill="none" stroke-dasharray="5 6" stroke-linecap="round"/>' + crT(170, 138, 'un ciclo che si ripete', { s: 13, c: '#b23a62' }), 'La luna che cresce e cala, come un ciclo'),
+  /* c3 quando arrivano: un piccolo calendario con un cuore */
+  c3: () => crSvg(340, 150, '<rect x="110" y="26" width="120" height="104" rx="12" fill="#fff" stroke="' + CR_L + '" stroke-width="3"/><rect x="110" y="26" width="120" height="24" rx="12" fill="' + CR_L + '"/>' +
+    Array.from({ length: 12 }, (_, i) => '<circle cx="' + (128 + (i % 4) * 28) + '" cy="' + (66 + Math.floor(i / 4) * 22) + '" r="6" fill="' + (i === 6 ? CR_P : '#efe3f8') + '"/>').join('') +
+    '<path d="M266 70 c0 -12 18 -12 18 0 c0 -12 18 -12 18 0 c0 14 -18 24 -18 30 c0 -6 -18 -16 -18 -30Z" fill="' + CR_P + '"/><path d="M52 64 a26 26 0 1 0 22 40 a20 20 0 1 1 -22 -40Z" fill="#efe3f8"/>', 'Un calendario e un cuore'),
+  /* c4 che cosa si usa: la pochette */
+  c4: () => crSvg(340, 150, '<path d="M110 60 H230 Q240 60 240 72 V118 Q240 130 228 130 H112 Q100 130 100 118 V72 Q100 60 110 60Z" fill="#f7c6d4" stroke="' + CR_P + '" stroke-width="3"/>' +
+    '<path d="M100 74 Q170 104 240 74" fill="none" stroke="' + CR_P + '" stroke-width="3"/><circle cx="170" cy="92" r="7" fill="#ffd36e"/><path d="M150 60 Q170 36 190 60" fill="none" stroke="' + CR_L + '" stroke-width="5" stroke-linecap="round"/>' +
+    [[60, 52], [280, 48], [70, 112], [276, 112]].map(([x, y]) => '<path transform="translate(' + x + ' ' + y + ')" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2Z" fill="' + CR_L + '"/>').join(''), 'Una pochette preparata con cura'),
+  /* c5 fuori casa: una casa, un cuore e una mano tesa */
+  c5: () => crSvg(340, 150, '<path d="M60 76 L100 44 L140 76 V122 H60Z" fill="#efe3f8" stroke="' + CR_L + '" stroke-width="3"/><rect x="90" y="96" width="20" height="26" fill="' + CR_P + '"/>' +
+    '<path d="M150 84 H190" stroke="' + CR_P + '" stroke-width="3" stroke-dasharray="4 5" stroke-linecap="round"/>' +
+    '<path d="M202 80 c0 -14 20 -14 20 0 c0 -14 20 -14 20 0 c0 16 -20 28 -20 34 c0 -6 -20 -18 -20 -34Z" fill="' + CR_P + '"/>' +
+    '<path d="M262 96 q14 -18 30 -6 q10 8 2 18 l-18 14 q-8 4 -12 -4Z" fill="#ffd8b8" stroke="' + CR_P + '" stroke-width="2"/>' + crT(170, 140, 'c’è sempre qualcuno che ti aiuta', { s: 13, c: '#b23a62' }), 'Una casa, un cuore e una mano tesa'),
+  /* c6 come mi sento: una tazza calda e un cuscino */
+  c6: () => crSvg(340, 150, '<path d="M80 70 H140 V112 Q140 128 124 128 H96 Q80 128 80 112Z" fill="#f7c6d4" stroke="' + CR_P + '" stroke-width="3"/><path d="M140 82 q18 0 18 14 q0 14 -18 14" fill="none" stroke="' + CR_P + '" stroke-width="3"/>' +
+    '<path d="M96 58 q-6 -10 2 -18 M112 58 q-6 -10 2 -18 M128 58 q-6 -10 2 -18" stroke="' + CR_L + '" stroke-width="3" fill="none" stroke-linecap="round"/>' +
+    '<rect x="196" y="78" width="104" height="48" rx="22" fill="#efe3f8" stroke="' + CR_L + '" stroke-width="3"/><path d="M228 66 a14 14 0 1 0 12 22 a11 11 0 1 1 -12 -22Z" fill="#ffd36e"/>', 'Una tazza calda e un cuscino')
 };
+
+/* ---------- 🎙️ la voce della mamma: registrazioni solo su questo iPad (IndexedDB «mondo-voce-mamma»), mai inviate ---------- */
+const CrVoce = {
+  db() { return new Promise((res, rej) => { try { const r = indexedDB.open('mondo-voce-mamma', 1); r.onupgradeneeded = () => r.result.createObjectStore('msg'); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); } }); },
+  async get(id) { try { const d = await this.db(); return await new Promise(r => { const q = d.transaction('msg').objectStore('msg').get(id); q.onsuccess = () => r(q.result || null); q.onerror = () => r(null); }); } catch (e) { return null; } },
+  async put(id, blob) { const d = await this.db(); return new Promise((r, j) => { const t = d.transaction('msg', 'readwrite'); t.objectStore('msg').put(blob, id); t.oncomplete = r; t.onerror = () => j(t.error); }); },
+  async del(id) { const d = await this.db(); return new Promise(r => { const t = d.transaction('msg', 'readwrite'); t.objectStore('msg').delete(id); t.oncomplete = r; t.onerror = r; }); },
+  can() { return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder); }
+};
+let crRec = null;
+async function crVoceBox(box, id) {
+  const V = CORPO.voce_mamma || {}, blob = await CrVoce.get(id);
+  if (!box.isConnected) return;
+  const url = blob ? URL.createObjectURL(blob) : '';
+  box.innerHTML = '<p class="cr-vt">🎙️ <b>La voce della mamma</b></p>' + (blob ? '<audio controls preload="none" src="' + url + '"></audio>' : '<p class="cr-nota">' + esc(V.vuoto || '') + '</p>') +
+    (CrVoce.can() ? '<div class="cr-strip"><button type="button" class="btn small ghost" data-rec>' + (blob ? '🎙️ Registra di nuovo (per la mamma)' : '🎙️ Registra (per la mamma)') + '</button>' + (blob ? '<button type="button" class="btn small ghost" data-del>🗑️ Cancella</button>' : '') + '</div><p class="cr-nota">' + esc(V.invito || '') + ' Resta solo su questo iPad.</p>' : '');
+  const rb = box.querySelector('[data-rec]'), db = box.querySelector('[data-del]');
+  if (db) db.addEventListener('click', async () => { if (confirm('Cancellare il messaggio della mamma?')) { await CrVoce.del(id); crVoceBox(box, id); } });
+  if (rb) rb.addEventListener('click', async () => {
+    if (crRec) { crRec.stop(); return; }
+    let st; try { st = await navigator.mediaDevices.getUserMedia({ audio: true }); } catch (e) { toast('Il microfono non è disponibile'); return; }
+    const ch = [], r = new MediaRecorder(st); crRec = r;
+    r.ondataavailable = e => { if (e.data && e.data.size) ch.push(e.data); };
+    r.onstop = async () => { clearTimeout(r._t); st.getTracks().forEach(t => t.stop()); crRec = null; if (ch.length) { await CrVoce.put(id, new Blob(ch, { type: r.mimeType || 'audio/mp4' })); } crVoceBox(box, id); };
+    r.start(); r._t = setTimeout(() => { try { r.stop(); } catch (e) {} }, 120000);
+    rb.textContent = '⏹️ Ferma (massimo 2 minuti)'; rb.classList.add('cr-recon');
+  });
+}
 
 /* ---------- pagina ---------- */
 PAGES.corpo = el => {
   if (!CR_OK()) { el.innerHTML = '<p>Sezione in arrivo.</p>'; return; }
-  const tabs = [['cresco', '🌱 Cresco'], ['mestr', '🩸 Le mestruazioni'], ['kit', '🎒 Kit e scuola'], ['cal', '📅 Il mio calendario'], ['cura', '🧼 Mi lavo e mi prendo cura']];
-  el.innerHTML = '<div class="oro-top"><div><h1 class="v2-h1">🌸 Il mio corpo che cresce</h1><p class="v2-sub">Che cosa cambia, le mestruazioni e come prendersi cura di sé. Se hai domande, parlane con la mamma, con il papà o con il pediatra.</p></div></div>' +
+  if (!['insieme', 'dom', 'kit', 'cal', 'cura'].includes(crTab)) crTab = 'insieme';
+  const tabs = [['insieme', '💬 Ne parliamo insieme'], ['dom', '❓ Le mie domande'], ['kit', '🎒 Kit e scuola'], ['cal', '📅 Il mio calendario'], ['cura', '🧼 Mi lavo e mi prendo cura']];
+  el.innerHTML = '<div class="oro-top"><div><h1 class="v2-h1">🌸 Il mio corpo che cresce</h1><p class="v2-sub">' + esc(CORPO.invito) + '</p></div></div>' +
     '<div class="oro-tabs">' + tabs.map(t => '<button type="button" class="cu-chip" data-ct="' + t[0] + '" aria-pressed="' + (t[0] === crTab) + '">' + t[1] + '</button>').join('') + '</div><div id="cr-body"></div>';
-  el.querySelectorAll('[data-ct]').forEach(b => b.addEventListener('click', () => { crTab = b.dataset.ct; try { speechSynthesis.cancel(); } catch (x) {} PAGES.corpo(el); }));
-  ({ cresco: crCresco, mestr: crMestr, kit: crKit, cal: crCal, cura: crCura })[crTab]($('cr-body'));
+  el.querySelectorAll('[data-ct]').forEach(b => b.addEventListener('click', () => { if (crRec) { try { crRec.stop(); } catch (e) {} } crTab = b.dataset.ct; PAGES.corpo(el); }));
+  ({ insieme: crInsieme, dom: crDomande, kit: crKit, cal: crCal, cura: crCura })[crTab]($('cr-body'));
 };
 function crFold(box) { box.querySelectorAll('details[data-cr]').forEach(d => d.addEventListener('toggle', () => { if (d.open) crLetto(d.dataset.cr); })); }
-const crCard = (x, inner, open) => '<details class="card cr-c" data-cr="' + x.id + '"' + (open ? ' open' : '') + '><summary><span class="cr-ic">' + x.ic + '</span><b>' + esc(x.t) + '</b>' + (store.get('corpo-letto', {})[x.id] ? '<i class="cr-ok" aria-label="già letta">✓</i>' : '') + '<span class="cr-fz" aria-hidden="true">▾</span></summary>' + inner + '</details>';
-function crCresco(box) {
-  box.innerHTML = '<div class="cr-grid">' + CORPO.cresco.map(x => crCard(x, '<p class="cr-p">' + esc(x.testo) + '</p><p class="cr-p"><span class="cr-e b">💡 Perché saperlo</span> ' + esc(x.perche) + '</p>' + crSay(x.t + '. ' + x.testo + ' ' + x.perche))).join('') + '</div>';
-  crFold(box);
-}
-function crMestr(box) {
-  box.innerHTML = '<div class="cr-grid">' + CORPO.mestr.map((x, i) => crCard(x,
+const crCard = (x, inner, open) => '<details class="card cr-c" data-cr="' + x.id + '"' + (open ? ' open' : '') + '><summary><span class="cr-ic">' + x.ic + '</span><b>' + esc(x.t) + '</b>' + (store.get('corpo-letto', {})[x.id] ? '<i class="cr-ok" aria-label="già vista">✓</i>' : '') + '<span class="cr-fz" aria-hidden="true">▾</span></summary>' + inner + '</details>';
+function crInsieme(box) {
+  box.innerHTML = '<div class="cr-grid">' + CORPO.chiacchierate.map((x, i) => crCard(x,
     (CR_DIS[x.id] ? '<div class="cr-dis">' + CR_DIS[x.id]() + '</div>' : '') +
-    '<p class="cr-p">' + esc(x.testo) + '</p>' +
-    (x.come && x.come.length ? '<div class="cr-p"><span class="cr-e a">👣 Come</span><ul>' + x.come.map(c => '<li>' + esc(c) + '</li>').join('') + '</ul></div>' : '') +
-    '<p class="cr-p"><span class="cr-e b">💡 Perché</span> ' + esc(x.perche) + '</p>' + (x.nota ? '<p class="cr-nota">' + esc(x.nota) + '</p>' : '') +
-    '<div class="row" style="gap:8px">' + crSay(x.t + '. ' + x.testo + ' ' + (x.come || []).join('. ') + '. ' + x.perche) +
-    (x.id === 'm4' ? '<button type="button" class="btn small" data-vai="kit">🎒 Prepara il kit</button>' : x.id === 'm6' ? '<button type="button" class="btn small" data-vai="kit">▶️ Prova la storia</button>' : x.id === 'm2' ? '<button type="button" class="btn small" data-vai="cal">📅 Il mio calendario</button>' : '') + '</div>', i === 0)).join('') + '</div>';
+    '<p class="cr-p cr-ap">' + esc(x.apertura) + '</p>' +
+    '<p class="cr-p"><span class="cr-e c">💭 Per cominciare</span> ' + esc(x.domanda) + '</p>' +
+    '<div class="cr-p"><span class="cr-e a">🙋‍♀️ Chiedi alla mamma</span><ul>' + x.chiedi.map(c => '<li>' + esc(c) + '</li>').join('') + '</ul></div>' +
+    '<div class="cr-p"><span class="cr-e b">📌 Da sapere</span><ul>' + x.sapere.map(c => '<li>' + esc(c) + '</li>').join('') + '</ul></div>' +
+    (x.nota ? '<p class="cr-nota">' + esc(x.nota) + '</p>' : '') +
+    '<div class="cr-voce" data-v="' + x.id + '"></div>', i === 0)).join('') + '</div>';
   crFold(box);
-  box.querySelectorAll('[data-vai]').forEach(b => b.addEventListener('click', () => { crTab = b.dataset.vai; PAGES.corpo($('p-corpo')); }));
+  box.querySelectorAll('[data-v]').forEach(v => crVoceBox(v, v.dataset.v));
+}
+/* ---------- ❓ le mie domande: solo su questo iPad, mai inviate ---------- */
+function crDomande(box) {
+  const L = store.get('corpo-domande', []);
+  box.innerHTML = '<div class="cr-grid"><div class="card cr-c"><h3 class="cr-h">❓ Le mie domande</h3><p class="cr-p">' + esc(CORPO.domande_intro) + '</p>' +
+    '<textarea id="cr-dq" rows="3" class="cr-ta" placeholder="Scrivi qui la tua domanda…"></textarea><button type="button" class="btn small" id="cr-dadd">➕ Aggiungi</button><p class="cr-nota">🔒 Restano solo su questo iPad.</p></div>' +
+    '<div class="card cr-c"><h3 class="cr-h">📝 Da chiedere</h3>' + (L.length ? L.map((d, i) => '<label class="cr-chk"><input type="checkbox" data-dq="' + i + '"' + (d.ok ? ' checked' : '') + '><span' + (d.ok ? ' class="cr-fatta"' : '') + '>' + esc(d.t) + '<small>' + (d.ok ? 'già chiesta' : 'scritta il ' + new Date(d.d + 'T12:00').toLocaleDateString('it-IT', { day: 'numeric', month: 'long' })) + '</small></span><button type="button" class="btn small ghost" data-dx="' + i + '" aria-label="Cancella">🗑️</button></label>').join('') : '<p class="cr-p">Ancora nessuna domanda.</p>') + '</div></div>';
+  $('cr-dadd').addEventListener('click', () => { const t = $('cr-dq').value.trim(); if (!t) return; const v = store.get('corpo-domande', []); v.push({ t: t.slice(0, 400), d: todayIso(), ok: false }); store.set('corpo-domande', v); crDomande(box); });
+  box.querySelectorAll('[data-dq]').forEach(c => c.addEventListener('change', () => { const v = store.get('corpo-domande', []); v[+c.dataset.dq].ok = c.checked; store.set('corpo-domande', v); crDomande(box); }));
+  box.querySelectorAll('[data-dx]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); const v = store.get('corpo-domande', []); v.splice(+b.dataset.dx, 1); store.set('corpo-domande', v); crDomande(box); }));
 }
 function crKit(box) {
   const K = store.get('corpo-kit', {}), S = store.get('corpo-scena', { fatta: 0 });
-  box.innerHTML = '<div class="cr-grid"><div class="card cr-c"><h3 class="cr-h">🎒 Il mio kit nello zaino</h3><p class="cr-p">Prepara una pochette con un adulto e tienila sempre nello zaino: così, se arriva quando sei fuori casa, hai già tutto.</p>' +
+  box.innerHTML = '<div class="cr-grid"><div class="card cr-c"><h3 class="cr-h">🎒 Il mio kit nello zaino</h3><p class="cr-p">' + esc(CORPO.kit_intro) + '</p>' +
     CORPO.kit.map((k, i) => '<label class="cr-chk"><input type="checkbox" data-k="' + i + '"' + (K[i] ? ' checked' : '') + '><span>' + k.ic + ' <b>' + esc(k.t) + '</b><small>' + esc(k.perche) + '</small></span></label>').join('') +
     '<p class="cr-nota" id="cr-kitok">' + (CORPO.kit.every((k, i) => K[i]) ? '✅ Il tuo kit è pronto!' : '') + '</p></div>' +
     '<div class="card cr-c"><h3 class="cr-h">🏫 E se arriva a scuola?</h3><p class="cr-p">Una piccola storia: scegli che cosa faresti. Non ci sono risposte sbagliate, solo modi per stare più tranquilla.</p><div id="cr-scena"></div>' +

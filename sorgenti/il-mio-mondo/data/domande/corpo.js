@@ -1,159 +1,125 @@
-/* 🌸 Il mio corpo che cresce: testi (17/11/2026). Autore + revisore indipendente; fonti sanitarie in CORPO.fonti.
+/* 🌸 Il mio corpo che cresce: testi (17/11/2026, versione «ne parliamo insieme» dopo il commento della mamma).
+   Fatti dalla versione verificata (autore + revisore indipendente, fonti in CORPO.fonti); chiacchierate riscritte e riviste.
    Il gruppo «cura» riusa per indice i fatti e le missioni di «Perché mi lavo» (data/domande/lavo.js). */
 const CORPO = {
- "cresco": [
+ "invito": "Crescere è una cosa naturale: succede a tutte le donne, anche alla mamma. Non devi capire tutto da sola. Queste pagine sono fatte per guardarle insieme a lei e per parlarne con calma, quando ti va.",
+ "chiacchierate": [
   {
-   "id": "cr1",
+   "id": "c1",
    "ic": "🌱",
-   "t": "Che cos'è la pubertà",
-   "testo": "La pubertà è il periodo in cui il corpo cresce e cambia per diventare adulto. Nelle ragazze di solito comincia tra gli 8 e i 13 anni. Ognuna ha i suoi tempi: c'è chi inizia prima e chi dopo, ed è normale.",
-   "perche": "Sapere che i tempi sono diversi per ognuna ti aiuta a non confrontarti con le amiche."
+   "t": "Il corpo che cambia",
+   "apertura": "Di solito tra gli 8 e i 13 anni il corpo comincia a cambiare. Ognuna ha i suoi tempi: c'è chi inizia prima e chi dopo, ed è normale. È come un bocciolo: si apre quando è pronto.",
+   "domanda": "Che cosa hai notato di nuovo nel tuo corpo, o nelle tue amiche?",
+   "chiedi": [
+    "Quando hai notato i primi cambiamenti tu?",
+    "Come ti sentivi alla mia età?"
+   ],
+   "sapere": [
+    "La pubertà di solito comincia nelle ragazze tra gli 8 e i 13 anni.",
+    "Di solito il primo segno è il seno: un piccolo bottone, a volte sensibile. Un lato può crescere prima.",
+    "Crescono i peli e il sudore cambia odore. Togliere i peli o no è una scelta tua.",
+    "Le emozioni possono cambiare in fretta: è normale."
+   ],
+   "nota": "Tutti i corpi sono diversi e tutti vanno bene."
   },
   {
-   "id": "cr2",
-   "ic": "🌸",
-   "t": "Il seno",
-   "testo": "Di solito il primo segno è il seno: sotto il capezzolo compare un piccolo bottone, un po' duro e a volte sensibile. Spesso un lato cresce prima dell'altro, e di solito poi si pareggiano. Il seno continua a crescere per alcuni anni.",
-   "perche": "Così, se senti un po' di fastidio o vedi differenze tra un lato e l'altro, sai che va bene."
-  },
-  {
-   "id": "cr3",
-   "ic": "🌿",
-   "t": "Peli e sudore",
-   "testo": "Crescendo compaiono peli sotto le ascelle e nelle parti intime, e quelli delle gambe possono diventare più scuri. Anche il sudore cambia e può avere un odore più forte. Togliere i peli o no è una scelta tua, non un obbligo: puoi parlarne con un adulto.",
-   "perche": "Capire perché succede ti fa scegliere con calma doccia, deodorante e vestiti puliti, senza vergogna."
-  },
-  {
-   "id": "cr4",
-   "ic": "📏",
-   "t": "Altezza e forma del corpo",
-   "testo": "In questi anni cresci in altezza più in fretta del solito. I fianchi si allargano e il corpo diventa più morbido e rotondo. Tutti i corpi sono diversi e tutti vanno bene.",
-   "perche": "Il tuo corpo si sta preparando da solo: non c'è una forma giusta da raggiungere."
-  },
-  {
-   "id": "cr5",
-   "ic": "💛",
-   "t": "Umore ed emozioni",
-   "testo": "Con la pubertà le emozioni possono cambiare in fretta: un giorno sei allegra, il giorno dopo più sensibile o nervosa. Può venirti voglia di più privacy. Muoverti, parlare con qualcuno di fiducia e rilassarti aiutano.",
-   "perche": "Gli ormoni, sostanze che il corpo produce per crescere, c'entrano con l'umore: saperlo ti ricorda che non c'è niente di sbagliato in te."
-  }
- ],
- "mestr": [
-  {
-   "id": "m1",
+   "id": "c2",
    "ic": "🌙",
-   "t": "Che cosa sono",
-   "testo": "Il ciclo, o mestruazioni, è il segno che il tuo corpo sta diventando adulto. Dentro la pancia c'è l'utero. Ogni mese prepara uno strato morbido, come un nido. Se non serve, il nido si stacca ed esce dal corpo con un po' di sangue.",
-   "come": [
-    "Guarda lo schema: trova utero, tube e ovaie.",
-    "Ricorda: non è una ferita e non fa male per forza.",
-    "Fai le tue domande a un adulto di fiducia."
+   "t": "Che cosa sono le mestruazioni",
+   "apertura": "Il ciclo, o mestruazioni, è il segno che il corpo sta diventando adulto. Ogni mese nella pancia si prepara un nido morbido. Se non serve, si stacca ed esce con un po' di sangue. È una cosa naturale.",
+   "domanda": "Che cosa hai sentito dire sul ciclo? Che cosa ti piacerebbe capire?",
+   "chiedi": [
+    "Che cosa pensavi del ciclo quando eri bambina?",
+    "C'è qualcosa che all'inizio ti ha sorpresa?"
    ],
-   "perche": "Se sai che cosa succede, quando arriva sai già che è una cosa normale e non una paura.",
-   "nota": "Il sangue del ciclo non viene da una ferita: è il nido che si stacca, insieme a un po' di sangue.",
-   "disegno": "Schema semplice del bacino: utero al centro, due tube e due ovaie ai lati, con etichette e una freccia che mostra dove esce il nido."
+   "sapere": [
+    "Ogni mese l'utero prepara uno strato morbido, come un nido.",
+    "Se non serve, il nido si stacca ed esce con un po' di sangue.",
+    "Non è una ferita e non fa male per forza.",
+    "Il sangue di tutto il ciclo è poco: da 1 a 5 cucchiai circa."
+   ],
+   "nota": "Puoi fare tutte le domande che vuoi, anche quelle che ti sembrano strane."
   },
   {
-   "id": "m2",
+   "id": "c3",
    "ic": "📅",
-   "t": "Quando arrivano",
-   "testo": "Il primo ciclo arriva di solito tra i 10 e i 15 anni, circa 2 o 3 anni dopo l'inizio del seno. Dura da 2 a 7 giorni, spesso circa 5. Nei primi anni può essere irregolare: di solito tra un ciclo e l'altro passano da 21 a 45 giorni.",
-   "come": [
-    "Conta i giorni dal primo giorno di un ciclo al primo del successivo.",
-    "Segna le date sul calendario dell'app.",
-    "Non preoccuparti se non è puntuale."
+   "t": "Quando arrivano e come capirlo",
+   "apertura": "Non c'è una data uguale per tutte. Di solito il primo ciclo arriva tra i 10 e i 15 anni, circa 2 o 3 anni dopo che è comparso il seno. All'inizio può essere un po' birichino e non sempre puntuale.",
+   "domanda": "Che cosa ti aspetti, o ti preoccupa, di quel giorno?",
+   "chiedi": [
+    "Quanti anni avevi quando è arrivato a te?",
+    "Come hai capito che stava arrivando?"
    ],
-   "perche": "Sapere che all'inizio è irregolare ti evita ansia quando il ciclo salta o arriva in anticipo.",
-   "nota": "Il sangue di tutto il ciclo è poco: circa da 1 a 5 cucchiai.",
-   "disegno": "Calendario del mese con alcuni giorni colorati e una freccia da un primo giorno al successivo, con scritto «da 21 a 45 giorni»."
+   "sapere": [
+    "Il primo ciclo arriva di solito tra i 10 e i 15 anni.",
+    "Prima possono comparire perdite chiare o bianche, seno dolente, pancia gonfia o umore sensibile.",
+    "La prima volta a volte sono solo poche gocce rosse o marroni: va bene così.",
+    "All'inizio può essere irregolare: di solito tra un ciclo e l'altro passano da 21 a 45 giorni. Il calendario aiuta."
+   ],
+   "nota": "Non tutte sentono dei segnali prima, ed è normale."
   },
   {
-   "id": "m3",
-   "ic": "🔔",
-   "t": "I segnali prima",
-   "testo": "Da 6 mesi a un anno prima del primo ciclo possono comparire perdite chiare o bianche nelle mutandine: sono normali e tengono pulita la zona intima. Poco prima del ciclo puoi sentire seno dolente, pancia gonfia, mal di testa o umore più sensibile.",
-   "come": [
-    "Guarda le mutandine: le perdite chiare o bianche sono normali.",
-    "Indossa mutandine di cotone e cambiale ogni giorno.",
-    "Se senti prurito o cattivo odore, o vedi colori strani, dillo a un adulto."
-   ],
-   "perche": "Riconoscere i segnali ti fa dire: «Ah, sta arrivando!» invece di spaventarti.",
-   "nota": "Non tutte sentono dei segnali. E il primo ciclo a volte è solo qualche goccia rossa o marrone: va bene così.",
-   "disegno": "Mutandine stilizzate con una piccola macchia chiara, e accanto una scala di piccoli segni: seno sensibile, pancia, umore."
-  },
-  {
-   "id": "m4",
-   "ic": "🎒",
-   "t": "Il mio kit nello zaino",
-   "testo": "Prepararsi prima toglie l'ansia. Un astuccio piccolo nello zaino con quello che serve ti fa sentire tranquilla, a scuola e fuori casa. Lo prepari insieme a un adulto di fiducia e lo controlli ogni tanto.",
-   "come": [
-    "Scegli un astuccio che ti piace.",
-    "Mettici assorbenti, mutandine di ricambio, carta igienica e una bustina.",
-    "Controlla che ci sia tutto ogni mese."
-   ],
-   "perche": "Se il ciclo arriva all'improvviso, hai già tutto con te e puoi restare tranquilla.",
-   "nota": "Il kit va bene anche se il ciclo non è ancora arrivato.",
-   "disegno": "Astuccio aperto con dentro assorbenti, mutandine, bustina, carta igienica, felpa piegata e un biglietto con una frase pronta."
-  },
-  {
-   "id": "m5",
+   "id": "c4",
    "ic": "🧷",
-   "t": "Che cosa usare",
-   "testo": "Gli assorbenti esterni si attaccano alle mutandine; i salvaslip sono assorbenti molto sottili. Di giorno cambia l'assorbente ogni 3-4 ore circa, o prima se è pieno; per la notte ce ne sono di più lunghi. Esistono anche mutandine assorbenti lavabili. Tamponi e coppetta sono per più avanti, con un adulto.",
-   "come": [
-    "Di giorno cambia l'assorbente ogni 3-4 ore circa, o prima se serve.",
-    "Avvolgilo nella carta igienica e buttalo nel cestino, mai nel water.",
-    "Lava le mani prima e dopo.",
-    "Più avanti, col tampone: cambialo ogni 4-6 ore, mai oltre 8, mai di notte."
+   "t": "Che cosa si usa",
+   "apertura": "Ci sono tanti modi per stare tranquille: assorbenti, salvaslip, mutandine assorbenti. Non devi scegliere da sola: potete guardarli insieme e provarli a casa. E il kit per lo zaino si prepara in due.",
+   "domanda": "Quali di queste cose hai già visto, e quali ti incuriosiscono?",
+   "chiedi": [
+    "Che cosa usavi tu all'inizio?",
+    "Mi fai vedere come si usa un assorbente?"
    ],
-   "perche": "Cambiare spesso ti fa stare asciutta e fresca e riduce l'odore. Con il tampone, rispettare le ore protegge da un'infezione rara.",
-   "nota": "Il tampone non si tiene mai più di 8 ore: così si evita la sindrome da shock tossico, un'infezione rara. Se un giorno, con un tampone, ti viene febbre alta all'improvviso, toglilo e dillo subito a un adulto.",
-   "disegno": "Quattro piccoli disegni etichettati: assorbente esterno, salvaslip sottile, mutandina assorbente, orologio con «3-4 ore»."
+   "sapere": [
+    "Gli assorbenti si attaccano alle mutandine; i salvaslip sono più sottili; esistono mutandine assorbenti lavabili.",
+    "Di giorno si cambia l'assorbente ogni 3-4 ore circa, o prima se è pieno.",
+    "Si avvolge nella carta igienica e si butta nel cestino, mai nel water.",
+    "Tamponi e coppetta sono per più avanti, con un adulto. Il tampone mai oltre 8 ore."
+   ],
+   "nota": "Il kit va bene anche se il ciclo non è ancora arrivato."
   },
   {
-   "id": "m6",
+   "id": "c5",
    "ic": "🏫",
-   "t": "E se arriva a scuola?",
-   "testo": "Se il ciclo arriva a scuola non è un guaio. Puoi usare carta igienica come assorbente provvisorio. A scuola c'è sempre un adulto a cui chiedere aiuto: un insegnante o un collaboratore scolastico. Basta dire: «Mi è arrivato il ciclo e non ho il necessario».",
-   "come": [
-    "Mettiti della carta igienica nelle mutandine.",
-    "Cerca un adulto e di' la frase pronta.",
-    "Se i vestiti sono macchiati, lega una felpa in vita."
+   "t": "Se arriva quando non sono a casa",
+   "apertura": "Se il ciclo arriva fuori casa non è un guaio. C'è sempre un adulto che può aiutarti. Puoi tenere pronta una frase, così non devi cercare le parole proprio in quel momento.",
+   "domanda": "Che cosa faresti se succedesse a scuola? Ci hai già pensato?",
+   "chiedi": [
+    "Ti è mai capitato di essere fuori casa quando è arrivato?",
+    "Che frase posso dire a un adulto?"
    ],
-   "perche": "Sapere in anticipo che cosa dire e a chi dirlo toglie l'imbarazzo e ti fa sentire sicura.",
-   "nota": "Rientrando in classe non devi spiegare niente a nessuno.",
-   "disegno": "Fumetto con una bambina che parla a un'insegnante, e sotto tre passi: carta igienica, chiedere aiuto, felpa in vita."
+   "sapere": [
+    "A scuola c'è sempre un adulto: un insegnante o un collaboratore scolastico.",
+    "Frase pronta: «Mi è arrivato il ciclo e non ho il necessario».",
+    "Intanto puoi usare carta igienica come assorbente provvisorio e, se serve, legare una felpa in vita.",
+    "Rientrando in classe non devi spiegare niente a nessuno."
+   ],
+   "nota": "Nel kit puoi tenere un biglietto con la frase pronta."
   },
   {
-   "id": "m7",
+   "id": "c6",
    "ic": "🤗",
-   "t": "Dolori e umore",
-   "testo": "Prima o durante il ciclo può venire mal di pancia o umore più sensibile. Aiutano il caldo sulla pancia, una doccia calda, un po' di movimento leggero e il riposo. Lo sport si può fare, se ti senti bene. In piscina l'assorbente non funziona: decidi con un adulto.",
-   "come": [
-    "Metti sulla pancia una borsa calda avvolta in un asciugamano.",
-    "Muoviti con calma: camminata, stretching, bicicletta.",
-    "Riposa, massaggia piano la pancia e parlane con qualcuno."
+   "t": "Come mi sento",
+   "apertura": "Prima o durante il ciclo puoi sentirti un po' strana: mal di pancia o umore più sensibile. Succede a molte. Ci sono piccole cose che aiutano, e la mamma ne conosce di sue.",
+   "domanda": "Come ti piacerebbe essere coccolata nei giorni in cui non stai bene?",
+   "chiedi": [
+    "Che cosa ti aiutava quando avevi mal di pancia?",
+    "Come ti senti tu prima del ciclo?"
    ],
-   "perche": "Sapere che cosa aiuta ti fa sentire di avere un po' di controllo sul fastidio.",
-   "nota": "Se il dolore è forte, parlane con un adulto e con il pediatra: per le medicine decide il medico.",
-   "disegno": "Pancia con una borsa dell'acqua calda, accanto a una ragazza che fa stretching e a una tazza calda."
-  },
-  {
-   "id": "m8",
-   "ic": "🩺",
-   "t": "Quando parlarne con il pediatra",
-   "testo": "Quasi sempre è tutto normale, ma parlane con un adulto e con il pediatra se: nessun ciclo a 15 anni; il ciclo dura più di 7 giorni; devi cambiare l'assorbente ogni 1-2 ore; hai più di 3 mesi senza ciclo; il dolore ti blocca scuola o giochi.",
-   "come": [
-    "Segna sul calendario date, durata e dolore.",
-    "Dillo a un adulto di fiducia.",
-    "Porta le note alla visita.",
-    "Se ti gira la testa o ti senti molto debole, chiedi aiuto subito."
+   "sapere": [
+    "Aiutano il caldo sulla pancia (borsa calda avvolta in un asciugamano), la doccia calda, il movimento leggero e il riposo.",
+    "Lo sport si può fare, se ti senti bene. In piscina l'assorbente non funziona: si decide con un adulto.",
+    "Se il dolore è forte o ti blocca scuola o giochi, parlane con un adulto e con il pediatra.",
+    "Parlane col pediatra anche se il ciclo dura più di 7 giorni o cambi l'assorbente ogni 1-2 ore.",
+    "Vale lo stesso se a 15 anni il ciclo non è arrivato o se manca da più di 3 mesi."
    ],
-   "perche": "Il pediatra è lì per aiutarti: chiedere presto è un modo di prendersi cura di te.",
-   "nota": "Anche prurito, cattivo odore o perdite verdi o grigie vanno detti a un adulto.",
-   "disegno": "Calendario con alcuni giorni segnati e una piccola lista di domande da portare dal pediatra."
+   "nota": "Quasi sempre è tutto normale. Prurito, cattivo odore o perdite verdi o grigie: dillo a un adulto. Se ti gira la testa o ti senti molto debole, chiedi subito aiuto. Più avanti, con il tampone: se ti viene febbre alta all'improvviso, toglilo e avvisa subito un adulto. Per le medicine decide sempre il medico."
   }
  ],
+ "domande_intro": "Qui puoi scrivere quello che vuoi chiedere, anche le domande che a voce ti imbarazzano. Restano solo su questo iPad e decidi tu quando mostrarle alla mamma.",
+ "kit_intro": "Il kit si prepara insieme alla mamma: scegliete insieme la pochette che ti piace e riempitela con calma, chiacchierando.",
+ "voce_mamma": {
+  "invito": "Registra qui un tuo breve messaggio per lei su questo argomento.",
+  "vuoto": "La mamma non ha ancora registrato il suo messaggio: chiedile di raccontartelo a voce."
+ },
  "kit": [
   {
    "ic": "🧷",
