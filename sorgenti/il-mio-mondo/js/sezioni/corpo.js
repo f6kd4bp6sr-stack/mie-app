@@ -7,6 +7,8 @@
 if (!$('p-corpo')) { const s = document.createElement('section'); s.id = 'p-corpo'; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); }
 const CR_OK = () => typeof CORPO !== 'undefined';
 let crTab = 'cresco';
+/* 17/11/2026: niente lettura ad alta voce in questa sezione, la legge lei (scelta del genitore) */
+const crSay = () => '';
 const crLetto = id => { const v = store.get('corpo-letto', {}); if (!v[id]) { v[id] = todayIso(); store.set('corpo-letto', v); } };
 const crLAVO = () => { const s = typeof SCOPRI !== 'undefined' && SCOPRI.find(x => x.id === 'lavo'); return s || { facts: [], missions: [] }; };
 
@@ -64,7 +66,7 @@ PAGES.corpo = el => {
 function crFold(box) { box.querySelectorAll('details[data-cr]').forEach(d => d.addEventListener('toggle', () => { if (d.open) crLetto(d.dataset.cr); })); }
 const crCard = (x, inner, open) => '<details class="card cr-c" data-cr="' + x.id + '"' + (open ? ' open' : '') + '><summary><span class="cr-ic">' + x.ic + '</span><b>' + esc(x.t) + '</b>' + (store.get('corpo-letto', {})[x.id] ? '<i class="cr-ok" aria-label="già letta">✓</i>' : '') + '<span class="cr-fz" aria-hidden="true">▾</span></summary>' + inner + '</details>';
 function crCresco(box) {
-  box.innerHTML = '<div class="cr-grid">' + CORPO.cresco.map(x => crCard(x, '<p class="cr-p">' + esc(x.testo) + '</p><p class="cr-p"><span class="cr-e b">💡 Perché saperlo</span> ' + esc(x.perche) + '</p>' + sayBtn(x.t + '. ' + x.testo + ' ' + x.perche))).join('') + '</div>';
+  box.innerHTML = '<div class="cr-grid">' + CORPO.cresco.map(x => crCard(x, '<p class="cr-p">' + esc(x.testo) + '</p><p class="cr-p"><span class="cr-e b">💡 Perché saperlo</span> ' + esc(x.perche) + '</p>' + crSay(x.t + '. ' + x.testo + ' ' + x.perche))).join('') + '</div>';
   crFold(box);
 }
 function crMestr(box) {
@@ -73,7 +75,7 @@ function crMestr(box) {
     '<p class="cr-p">' + esc(x.testo) + '</p>' +
     (x.come && x.come.length ? '<div class="cr-p"><span class="cr-e a">👣 Come</span><ul>' + x.come.map(c => '<li>' + esc(c) + '</li>').join('') + '</ul></div>' : '') +
     '<p class="cr-p"><span class="cr-e b">💡 Perché</span> ' + esc(x.perche) + '</p>' + (x.nota ? '<p class="cr-nota">' + esc(x.nota) + '</p>' : '') +
-    '<div class="row" style="gap:8px">' + sayBtn(x.t + '. ' + x.testo + ' ' + (x.come || []).join('. ') + '. ' + x.perche) +
+    '<div class="row" style="gap:8px">' + crSay(x.t + '. ' + x.testo + ' ' + (x.come || []).join('. ') + '. ' + x.perche) +
     (x.id === 'm4' ? '<button type="button" class="btn small" data-vai="kit">🎒 Prepara il kit</button>' : x.id === 'm6' ? '<button type="button" class="btn small" data-vai="kit">▶️ Prova la storia</button>' : x.id === 'm2' ? '<button type="button" class="btn small" data-vai="cal">📅 Il mio calendario</button>' : '') + '</div>', i === 0)).join('') + '</div>';
   crFold(box);
   box.querySelectorAll('[data-vai]').forEach(b => b.addEventListener('click', () => { crTab = b.dataset.vai; PAGES.corpo($('p-corpo')); }));
@@ -96,7 +98,7 @@ function crScena(box, i) {
     $('cr-ri').addEventListener('click', () => crScena(box, 0)); return;
   }
   const p = P[i];
-  box.innerHTML = '<p class="cr-q"><b>' + (i + 1) + '/' + P.length + '</b> ' + esc(p.domanda) + ' ' + sayBtn(p.domanda) + '</p><div class="cr-sc">' + p.scelte.map((s, j) => '<button type="button" class="btn ghost cr-sb" data-s="' + j + '">' + esc(s.t) + '</button>').join('') + '</div><div id="cr-fb"></div>';
+  box.innerHTML = '<p class="cr-q"><b>' + (i + 1) + '/' + P.length + '</b> ' + esc(p.domanda) + ' ' + crSay(p.domanda) + '</p><div class="cr-sc">' + p.scelte.map((s, j) => '<button type="button" class="btn ghost cr-sb" data-s="' + j + '">' + esc(s.t) + '</button>').join('') + '</div><div id="cr-fb"></div>';
   box.querySelectorAll('[data-s]').forEach(b => b.addEventListener('click', () => {
     const s = p.scelte[+b.dataset.s];
     box.querySelectorAll('[data-s]').forEach(x => { x.disabled = true; x.classList.toggle('sel', x === b); });
@@ -140,7 +142,7 @@ function crCura(box) {
       return crCard(x, '<p class="cr-p"><span class="cr-e c">🎯 Perché ora che cresci</span> ' + esc(x.scopo) + '</p>' +
         '<ul class="cr-f">' + F.map(f => '<li><b>' + esc(f[0]) + (/[.?!]$/.test(f[0]) ? '' : '.') + '</b> ' + esc(f[1]) + '</li>').join('') + '</ul>' +
         (x.routine ? '<p class="cr-p"><span class="cr-e a">🔁 Ogni giorno</span> ' + esc(x.routine) + '</p>' : '') +
-        (mi ? '<p class="cr-nota">🧭 Missione: <b>' + esc(mi[0]) + '</b> — ' + esc(mi[1]) + '</p>' : '') + sayBtn(x.t + '. ' + x.scopo + ' ' + F.map(f => f[1]).join(' ')));
+        (mi ? '<p class="cr-nota">🧭 Missione: <b>' + esc(mi[0]) + '</b> — ' + esc(mi[1]) + '</p>' : '') + crSay(x.t + '. ' + x.scopo + ' ' + F.map(f => f[1]).join(' ')));
     }).join('') + '</div>';
   crFold(box);
   $('cr-mani').addEventListener('click', () => openTimer('mani'));
