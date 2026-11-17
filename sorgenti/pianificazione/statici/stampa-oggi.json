@@ -1,10 +1,53 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-16T13:04+01:00",
-  "nota": "Edizione del pomeriggio del 16 novembre 2026.",
+  "edizione": "mattina",
+  "updated": "2026-11-17T05:09+01:00",
+  "nota": "Edizione del mattino del 17 novembre 2026.",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-scuole-email",
+        "t": "Email minatorie alle scuole, falso allarme sulle mense: i presidi seguono i protocolli",
+        "s": "Nuova ondata di email farneticanti inviate a molte scuole, con la falsa notizia di una sostanza tossica nel cibo. Qualche mensa si è fermata per precauzione ed è ripartita dopo i controlli; i presidi invitano a segnalare tutto alla polizia postale.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/presidi-email-farneticanti-nessuna-evacuazione-protocolli-funzionano_a668bf83-a4c9-4018-ae72-61a612ebd709.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-manovra-emendamenti",
+        "t": "Manovra, oggi scade il termine per gli emendamenti: Giorgetti frena sulle modifiche",
+        "s": "Il ministro dell'Economia avverte che gli interessi sul debito non si toccano. Dopo il vertice a Palazzo Chigi il Governo valuta correzioni mirate su sanità, pensioni e scuola senza cambiare i saldi, tra cui il rinvio del taglio di 7mila posti nella scuola.",
+        "d": "2026-11-12",
+        "fonti": [
+          {
+            "n": "il Giornale",
+            "url": "https://www.ilgiornale.it/news/governo/manovra-giorgetti-frena-sulle-modifiche/"
+          },
+          {
+            "n": "Avvenire",
+            "url": "https://www.avvenire.it/politica/scuola-retromarcia-del-governo-sui-tagli-scontro-tra-meloni-e-schlein-sulle-tasse_115761"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-fondo-asilo",
+        "t": "Associazioni: tagliati 185 milioni al fondo per l'asilo",
+        "s": "Le organizzazioni che si occupano di accoglienza denunciano una riduzione di 185 milioni di euro al fondo dedicato all'asilo.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/laccusa-delle-associazioni-taglio-di-185-milioni-al-fondo-per-lasilo_9a3a874e-02b6-419b-bcfb-fead4911c4f5.html"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "it-revolut-commissariata",
         "t": "Milano, la filiale italiana di Revolut va in amministrazione giudiziaria per un anno",
@@ -19,70 +62,14 @@
         "link": []
       },
       {
-        "id": "it-manovra-scuola",
-        "t": "Manovra, il Governo ritira i tagli al personale scolastico dopo il vertice con le parti sociali",
-        "s": "Dopo quasi otto ore di incontro a Palazzo Chigi, l'esecutivo rinuncia alle misure che avrebbero toccato circa 7.000 posti tra docenti e personale ATA, con risparmi attesi di 85 milioni nel 2027. Meloni dice che non erano tagli. Cgil conferma lo sciopero generale del 20 novembre; restano aperti pensioni, Superbonus ed exit tax.",
-        "d": "2026-11-13",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/13/manovra-il-governo-apre-alle-modifiche-saltano-i-tagli-alla-scuola-piu_a9e7d8e3-ebe1-4229-a908-26b2f2a973d6.html"
-          },
-          {
-            "n": "AGI",
-            "url": "https://www.agi.it/vista-tv/video/2026-11-13/manovra-bocognani-ance-dopo-tavolo-con-governo-imprese-aspettano-1-8-miliardi-per-caro-materiali-40013008/"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-regioni-sanita",
-        "t": "Le Regioni: 500 milioni per la sanità non bastano e non vanno presi dai bilanci regionali",
-        "s": "Le Regioni giudicano insufficienti i 500 milioni destinati alla sanità e chiedono che non siano ricavati dai loro bilanci. Nel confronto compare anche l'ipotesi di un voucher per gli over 75.",
-        "d": "2026-11-15",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/regioni-pochi-500-milioni-alla-sanita-non-si-prendano-da-noi_f6a4e71b-fac4-40d3-98fa-4931baf30c7c.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-nunzio-franco",
-        "t": "Chiesa, è morto il nunzio apostolico Antonio Franco",
-        "s": "L'agenzia ANSA dà notizia della scomparsa del nunzio apostolico Antonio Franco.",
+        "id": "it-livornese-tetto",
+        "t": "Livornese, operaio muore dopo il cedimento del tetto di un capannone",
+        "s": "Un lavoratore è morto mentre operava sul tetto di un capannone, che ha ceduto.",
         "d": "2026-11-16",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/lazio/notizie/2026/11/16/chiesa-e-morto-il-nunzio-apostolico-antonio-franco_1725a767-a463-4df0-bdda-956b370a602b.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-oxfam-bocciature",
-        "t": "Oxfam: chi viene da famiglie meno istruite rischia di più la bocciatura",
-        "s": "Secondo un rapporto di Oxfam, il rischio di essere bocciati a scuola è più alto per gli studenti con genitori meno istruiti.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/oxfam-rischio-bocciatura-piu-alto-per-chi-viene-da-famiglie-meno_b02485fc-ea92-4d1c-8854-0a646a62dbf4.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-schlein-tassa",
-        "t": "Schlein: sì a una tassa sui super ricchi, il ceto medio lo tassa il Governo",
-        "s": "La segretaria del Pd si dichiara favorevole a una tassa sui super ricchi e accusa il Governo Meloni di gravare sul ceto medio.",
-        "d": "2026-11-15",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/schlein-io-per-tassa-sui-super-ricchi-il-ceto-medio-lo-tassa-meloni_4e959b24-c086-4997-b982-5c106cbb64b1.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/cede-il-tetto-di-un-capannone-mentre-lavora-muore-nel-livornese_7ba9c427-e754-4328-a50e-55bf49dd16b0.html"
           }
         ],
         "link": []
@@ -90,14 +77,40 @@
     ],
     "mondo": [
       {
-        "id": "mo-hormuz-piano",
-        "t": "Iran: dieci Paesi sostengono il piano per riaprire Hormuz in due giorni",
-        "s": "Teheran afferma di poter riaprire lo Stretto entro due giorni se Washington accetta le sue condizioni: sblocco dei beni, revoca delle sanzioni e fine del blocco navale. I Pasdaran riferiscono di due petroliere esplose dopo aver urtato mine.",
+        "id": "mo-iran-bomba-sporca",
+        "t": "Usa-Iran: la Cnn parla di piani per una bomba sporca, la Casa Bianca smentisce minacce credibili",
+        "s": "Secondo fonti dell'intelligence citate dalla Cnn, Teheran starebbe pianificando un attacco con ordigno radiologico a Washington, senza segnali di imminenza. La Casa Bianca dice che non ci sono minacce credibili. Intanto è arrivata la terza portaerei Usa nell'area.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_e704a810-d218-4a39-9294-723921d70f27.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/casa-bianca-non-ci-sono-minacce-credibili-dalliran_8aa39af2-d196-4e6a-88f8-d2ce3c6d3761.html"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/16/us-and-iran-slide-closer-to-fresh-all-out-war-as-new-exchange-of-fire-increases",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-ucraina-ponti",
+        "t": "Ucraina: ponti di Kiev colpiti dai russi, Mosca denuncia un nuovo attacco al ponte di Crimea",
+        "s": "Il sindaco di Kiev riferisce di due ponti importanti danneggiati, con acqua e riscaldamento mancanti in alcuni quartieri. Mosca dice che le forze ucraine hanno attaccato per la seconda volta in 24 ore il ponte di Crimea, con traffico interrotto.",
         "d": "2026-11-16",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/mondo/mediooriente/2026/11/16/iran-dieci-nazioni-sostengono-il-piano-di-due-giorni-per-lo-stretto-di-hormuz_ffa45e18-6e1d-4bfa-97b9-c88f407ac0f5.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/sindaco-kiev-due-importanti-ponti-della-capitale-colpiti-da-attacchi-russi_0ba1bfc5-4cd6-4dfb-a7ff-a990a42867c8.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/mosca-le-forze-ucraine-hanno-attaccato-di-nuovo-il-ponte-di-crimea_3339a077-9c51-48e4-be7f-852bc80c3427.html"
           }
         ],
         "link": []
@@ -116,45 +129,18 @@
         "link": []
       },
       {
-        "id": "mo-iran-portaerei",
-        "t": "Medio Oriente, arriva la terza portaerei americana nell'area",
-        "s": "Secondo il New York Times e un funzionario Usa citato da Al Jazeera, la Theodore Roosevelt ha raggiunto il Medio Oriente e si aggiunge ad altre due portaerei del Comando centrale.",
+        "id": "mo-papa-peru",
+        "t": "Papa Leone XIV in Perù: all'ultima messa circa un milione e mezzo di fedeli",
+        "s": "Si chiude la tappa peruviana del viaggio in Sud America con una messa seguita da circa un milione e mezzo di persone. In Amazzonia il Papa ha parlato delle ferite della deforestazione indiscriminata.",
         "d": "2026-11-16",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/15/nyt-entro-24-ore-la-portaerei-roosevelt-in-medio-oriente-e-la-terza-nellarea_c75d5e94-a20d-4fb2-8e37-84b736142d51.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/lultima-messa-del-papa-in-peru-davanti-a-un-milione-e-mezzo-di-persone_12e2b97e-eba6-4065-9c2d-1a7b87b07d48.html"
           },
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/16/iran-war-live-tehran-warns-it-may-strike-first-before-another-us-attack",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-canarie-sbarchi",
-        "t": "Canarie, record di sbarchi: quasi 3.700 persone nel fine settimana",
-        "s": "Sabato sono state soccorse 1.580 persone, il dato giornaliero più alto da quando si registra la rotta atlantica. A El Hierro, isola di circa 12.000 abitanti, sono arrivate circa 10.000 persone in 15 giorni; il governo annuncia una terza nave di soccorso.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/ansamed/it/notizie/rubriche/cronaca/2026/11/16/record-di-sbarchi-alle-canarie-3.700-nel-fine-settimana-10mila-in-15-giorni_fda1b755-3ff7-4aff-93f9-96ed1b41338a.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-phuket-incendio",
-        "t": "Thailandia, incendio a Phuket: almeno 11 morti e 16 feriti",
-        "s": "Il rogo è scoppiato di notte a Patong in un edificio con ristorante, alloggi e noleggio di moto. La polizia indaga: forse è esploso un trasformatore vicino; escluso il dolo. Tra vittime e feriti non ci sono turisti.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/16/shophouse-fire-on-thai-resort-island-kills-11",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/16/pope-leo-xiv-struck-in-eye-by-rosary-during-tour-of-south-america",
             "l": "en"
           }
         ],
@@ -163,42 +149,46 @@
     ],
     "estero": [
       {
-        "id": "es-euronews-hormuz",
-        "t": "Euronews: Usa e Iran verso un nuovo conflitto aperto, sei petroliere in fiamme a Hormuz",
-        "s": "Secondo i Pasdaran, dalla domenica sei petroliere hanno preso fuoco nello Stretto (dato non verificato). Gli Usa hanno colpito lanciamissili iraniani dopo gli attacchi in Bahrein; nell'area ci sono ora tre portaerei americane.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/16/us-and-iran-slide-closer-to-fresh-all-out-war-as-new-exchange-of-fire-increases",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-euronews-ue-russia",
-        "t": "Euronews: ministri Ue chiedono una risposta unita agli attacchi russi oltre l'Ucraina",
-        "s": "Romania, Estonia e Svezia chiedono unità europea: in Romania tre navi colpite da droni vicino al canale di Sulina; l'Estonia attribuisce alla Russia un sabotaggio contro un produttore di droni. Europa verso i negoziati con Regno Unito, Francia, Germania, Italia e Polonia.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/16/eu-ministers-demand-united-response-as-russian-attacks-spill-beyond-ukraine",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-aj-roosevelt",
-        "t": "Al Jazeera: la Theodore Roosevelt in Medio Oriente, la guerra con l'Iran può riprendere?",
-        "s": "Con la terza portaerei e oltre 2.000 marines in arrivo, Trump parla di fase militare «effettivamente finita» ma di forze pronte; Teheran dice di non voler aspettare un attacco. Il negoziato per Hormuz, mediato da Pakistan e Qatar, è in stallo.",
-        "d": "2026-11-16",
+        "id": "es-aj-brexit",
+        "t": "Al Jazeera: Burnham, il Brexit ha fallito, venerdì il vertice Regno Unito-Ue a Bruxelles",
+        "s": "Il premier britannico Andy Burnham ha detto a Londra che negli ultimi dieci anni il Paese ha perso più di quanto ha guadagnato. Venerdì 20 novembre a Bruxelles si punta a intese su prodotti agroalimentari, energia e un programma di mobilità giovanile; niente ritorno nel mercato unico.",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/16/uss-roosevelt-arrives-in-middle-east-is-the-us-iran-war-about-to-resume",
+            "url": "https://www.aljazeera.com/news/2026/11/17/uk-seeks-closer-ties-with-eu-after-brexit-fail",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-euronews-ruanda",
+        "t": "Euronews: cinque Paesi Ue preparano un centro di rimpatrio in Ruanda",
+        "s": "Danimarca, Austria, Germania, Paesi Bassi e Grecia definiscono un centro per i rimpatri dei migranti in Ruanda, con avvio sperimentale previsto a metà 2027. Il progetto è criticato per i diritti fondamentali; il premier spagnolo Sánchez lo giudica privo di umanità.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/16/five-eu-countries-unveil-rwanda-deportation-plan-in-migration-crackdown",
+            "l": "en"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/vienna-ufficializza-primo-centro-di-rimpatrio-di-5-paesi-ue-in-ruanda-nel-2027_5e2a8744-f70d-4154-a04b-240115125289.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-euronews-estonia",
+        "t": "Euronews: l'Estonia verso la chiusura del confine con la Russia dopo un presunto sabotaggio",
+        "s": "Il premier Kristen Michal accusa i servizi militari russi di aver ordinato un sabotaggio contro un'azienda di droni, la Threod Systems, e il Governo prepara la chiusura della frontiera.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/16/estonia-to-close-russia-border-after-sabotage-bid-on-drone-maker-foreign-minister-says",
             "l": "en"
           }
         ],
@@ -208,44 +198,47 @@
     "economia": [
       {
         "id": "ec-borse-16",
-        "t": "Borse europee deboli, Milano -0,1%; spread a 104 punti, Brent a 96,5 dollari",
-        "s": "Avvio cauto per i timori sugli investimenti in intelligenza artificiale. Lo spread Btp-Bund è stabile a 104 punti, il gas cala a 90,15 euro al megawattora, il petrolio sale e l'euro vale 1,1013 dollari.",
+        "t": "Borse deboli: Milano -0,65%, spread a 106 punti, Stellantis vicina ai minimi da dodici anni",
+        "s": "Piazza Affari chiude in calo dello 0,65%. Il rendimento del Btp decennale è al 4,44%. Il petrolio a New York scende sotto 87 dollari e il gas ad Amsterdam perde circa il 7%, sotto 84 euro al megawattora.",
         "d": "2026-11-16",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/borsa-leuropa-apre-debole-si-guarda-agli-investimenti-per-lia_2f705e4e-30cb-413b-b355-41a2a15b0364.html"
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/16/borsa-milano-debole-con-leuropa-giu-technoprobe-e-stellantis_bad2ac30-2e2c-4ed2-bbc8-f86b54822f0c.html"
           },
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/il-petrolio-e-in-rialzo-brent-a-9654-dollari-al-barile_69292170-5d18-401b-9767-14ed38928cca.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/lo-spread-tra-btp-e-bund-chiude-in-rialzo-a-106-punti-base_c36c80c7-844f-4e45-aae7-01287c0faa98.html"
           }
         ],
         "link": []
       },
       {
-        "id": "ec-giappone-pil",
-        "t": "Il Giappone rallenta: l'economia si ferma, l'inflazione pesa sulla crescita",
-        "s": "Euronews riferisce che l'economia giapponese è in stallo mentre l'aumento dei prezzi frena la crescita.",
+        "id": "ec-usa-disservizi",
+        "t": "Stati Uniti: disservizi informatici per grandi banche e per United Airlines",
+        "s": "Migliaia di segnalazioni di problemi di accesso per Chase, Wells Fargo e altri istituti; United Airlines si scusa per l'interruzione dei suoi sistemi e dice di lavorare per risolverla.",
         "d": "2026-11-16",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/16/japans-economy-stalls-as-inflation-weighs-on-growth",
-            "l": "en"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/problemi-daccesso-e-disservizi-per-le-principali-banche-usa_da63146e-df26-4601-aa07-4a9cc3e6f6cd.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/problemi-per-united-airlines-interruzione-nei-suoi-sistemi_76d0d15d-d956-4a10-8264-b531680b7ac3.html"
           }
         ],
         "link": []
       },
       {
-        "id": "ec-black-friday",
-        "t": "Black Friday, il Codacons stima in Italia 4,3 miliardi di acquisti, il 7% in più",
-        "s": "Secondo le previsioni oltre il 60% degli acquisti avverrà online e tre su quattro includeranno regali di Natale. Abbigliamento in testa, poi elettronica. Il Codacons avverte su siti falsi, phishing e recensioni false.",
-        "d": "2026-11-14",
+        "id": "ec-tassa-soggiorno",
+        "t": "Tassa di soggiorno verso il record: 1,3 miliardi di gettito nel 2026",
+        "s": "Il gettito dell'imposta di soggiorno in Italia si avvia a toccare il massimo storico di 1,3 miliardi di euro.",
+        "d": "2026-11-16",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/14/conto-alla-rovescia-per-black-friday-giro-daffari-sale-a-43-miliardi_f30271ef-561c-4cf9-a62e-cb88332b3758.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/tassa-di-soggiorno-verso-il-record-di-13-miliardi-nel-2026_615aa544-9203-4017-927b-83632838d1e3.html"
           }
         ],
         "link": []
@@ -253,14 +246,18 @@
     ],
     "torino": [
       {
-        "id": "to-palazzo-nuovo-fine",
-        "t": "Palazzo Nuovo, finisce l'occupazione dopo otto giorni; l'Ateneo valuta danni e riapertura",
-        "s": "L'occupazione, iniziata il 9 novembre, termina il 16; sul muro resta «La mobilitazione continua». Iniziate le pulizie, l'incontro con Barbero è spostato al Campus Einaudi. L'Università promette trasparenza su costi e tempi.",
+        "id": "to-palazzo-nuovo-danni",
+        "t": "Palazzo Nuovo, finita l'occupazione: l'Università verifica i danni e condanna il post di una docente",
+        "s": "Dopo otto giorni gli occupanti hanno lasciato l'edificio e l'Ateneo controlla i danni. L'Università definisce «gravi e inaccettabili» le parole di una docente sui due writer caduti da una scala il 13 novembre.",
         "d": "2026-11-16",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/16/leggi-notizia/argomenti/cronaca-11/articolo/palazzo-nuovo-terminata-loccupazione-ma-la-mobilitazione-continua.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/terminata-loccupazione-di-palazzo-nuovo-alluniversita-di-torino_9a2e8ddd-b5f1-4c86-9781-ac76de0df132.html"
+          },
+          {
+            "n": "TorinoToday",
+            "url": "https://www.torinotoday.it/attualita/professoressa-mano-dios-precipitati-tetto-palazzo-nuovo-2026.html"
           }
         ],
         "link": []
@@ -283,40 +280,44 @@
         "link": []
       },
       {
-        "id": "to-atp-zverev",
-        "t": "Atp Finals a Torino: Zverev, numero 1 del mondo, apre il torneo contro Jodar",
-        "s": "Il tedesco, vincitore a Torino nel 2021, esordisce contro il giovane spagnolo Jodar ed è indicato tra i favoriti per la finale.",
-        "d": "2026-11-15",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/15/leggi-notizia/argomenti/attualita-31/articolo/a-torino-tutti-contro-zverev-il-numero-1-del-mondo-lancia-le-atp-finals.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-atp-2030",
-        "t": "Lo Russo: Atp Finals a Torino fino al 2030; Binaghi guarda oltre il 2027",
-        "s": "Il sindaco vuole il torneo in città fino al 2030, mentre il presidente della Federtennis apre a un'estensione dopo il 2027, ultima edizione assegnata con certezza.",
-        "d": "2026-11-14",
+        "id": "to-atp-alcaraz",
+        "t": "Atp Finals: Alcaraz vince all'esordio con Tiafoe, subito fuori Bolelli-Vavassori",
+        "s": "Nel primo giorno del torneo di Torino Carlos Alcaraz batte Frances Tiafoe; la coppia italiana Bolelli-Vavassori perde il match d'esordio nel doppio.",
+        "d": "2026-11-16",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/lo-russo-vogliamo-atp-fino-a-2030.-binaghi-perche-non-sognare-oltre_c90470f8-f16b-4dd0-bcbc-81337da7c0e8.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/atp-finals-partenza-sprint-per-alcaraz-con-tiafoe-vince-e-da-spettacolo_13336781-f69d-478f-96b4-c5685bf7356c.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/atp-finals-esordio-amaro-per-bolelli-vavassori-azzurri-subito-ko_98f3bcb8-48c1-4fd8-ab3c-fc9c1a8be337.html"
           }
         ],
         "link": []
       },
       {
-        "id": "to-app-vicini-bruxelles",
-        "t": "Un'app per aiutare i vicini: 18enne torinese premiato a Bruxelles",
-        "s": "Tommaso R. è tra i sei vincitori del concorso europeo Youth Hacking 4 Freedom, promosso dalla Free Software Foundation Europe.",
-        "d": "2026-11-15",
+        "id": "to-sportech-polito",
+        "t": "Al Politecnico nasce SporTech@PoliTo, centro su tecnologia e sport",
+        "s": "Il Politecnico di Torino crea un centro interdipartimentale dedicato all'innovazione tecnologica applicata allo sport.",
+        "d": "2026-11-16",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/15/leggi-notizia/argomenti/attualita-31/articolo/unapp-per-aiutare-i-vicini-18enne-torinese-premiato-a-bruxelles.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/innovazione-tecnologica-e-sport-a-torino-nasce-sportechpolito_cec1d338-2a8f-4f35-9b5c-44b096158616.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-unito-cani-geni",
+        "t": "Università di Torino su Science: individuati 39 geni chiave nei tumori dei cani",
+        "s": "Uno studio dell'Ateneo torinese, pubblicato su Science, costruisce un atlante genomico dei tumori canini e indica 39 geni chiave.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/tumori-dei-cani-latlante-genomico-individua-39-geni-chiave_8c2c201a-f338-4a53-abc0-1a51240fe893.html"
           }
         ],
         "link": []
@@ -324,40 +325,40 @@
     ],
     "piemonte": [
       {
-        "id": "pi-colletta-record",
-        "t": "Colletta alimentare: in Piemonte record di 730 tonnellate raccolte",
-        "s": "Oltre 12.000 volontari in 1.300 punti vendita hanno raccolto 730 tonnellate, il 6% in più del 2025. In Italia le tonnellate sono 8.700, con oltre 160.000 volontari.",
-        "d": "2026-11-15",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/15/leggi-notizia/argomenti/attualita-31/articolo/colletta-alimentare-da-record-in-piemonte-con-730-tonnellate-di-cibo-raccolte-1.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "pi-qualita-vita-province",
-        "t": "Qualità della vita: Cuneo 43ª, Novara 45ª, Alessandria ultima in Piemonte",
-        "s": "Nella classifica di ItaliaOggi e Sapienza su 107 province, Cuneo è 43ª, Novara 45ª (+9), Verbano-Cusio-Ossola 47ª, Biella 64ª, Asti 69ª, Vercelli 70ª e Alessandria 72ª (+8).",
-        "d": "2026-11-15",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/15/leggi-notizia/argomenti/attualita-31/articolo/indagine-sulla-qualita-della-vita-torino-stabile-al-26-posto-e-undicesima-per-redditi.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "pi-vialattea",
-        "t": "Vialattea/Bardonecchia: la stagione sciistica 2026/27 parte il 5 dicembre",
-        "s": "Il comprensorio olimpico piemontese apre sabato 5 dicembre e resta aperto fino all'11 aprile 2027, con fino a 95 impianti di risalita e oltre 370 piste, per circa 500 km di tracciati.",
-        "d": "2026-11-14",
+        "id": "pi-connessione-montagna",
+        "t": "La Regione investe per portare la connessione nelle aree montane scoperte",
+        "s": "Il Piemonte avvia un intervento per dotare di connessione i territori di montagna non coperti, presentato da Cirio e dall'assessore Gallo come iniziativa inedita.",
+        "d": "2026-11-16",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/14/si-torna-sulle-piste-da-sci-di-vialatteabardo-tutto-pronto-per-la-stagione_1cb89bcc-07a6-44db-854e-e4e97bcd9457.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/il-piemonte-investe-per-portare-la-connessione-nelle-aree-montane-scoperte_4fa7bece-be86-4e1b-b4ba-a77687161390.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "pi-badanti-vco",
+        "t": "Verbano-Cusio-Ossola: la Finanza scopre 44 badanti non dichiarate, 3,2 milioni al fisco",
+        "s": "Le verifiche della Guardia di finanza individuano 44 lavoratrici domestiche non dichiarate al fisco per 3,2 milioni di euro; i contratti erano regolari e i contributi versati.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/scoperti-44-badanti-invisibili-al-fisco-non-dichiarati-32-milioni-di-euro_a493727c-ca21-4a69-98c2-3d24476e0307.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "pi-trifola-farinetti",
+        "t": "Murisengo Monferrato: il Trifola d'Or Award 2026 va a Oscar Farinetti",
+        "s": "Il riconoscimento legato al tartufo viene assegnato quest'anno all'imprenditore Oscar Farinetti.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/murisengo-monferrato-a-oscar-farinetti-il-trifola-dor-award-2026_edb9e9b8-816e-4b40-b11c-01159dc6a8d0.html"
           }
         ],
         "link": []
@@ -368,7 +369,7 @@
         "id": "ev-luci-artista",
         "t": "Luci d'Artista: installazioni luminose in tutta la città",
         "s": "Le opere luminose d'artista illuminano le vie e le piazze di Torino per l'inverno.",
-        "d": "2026-11-09",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -383,7 +384,7 @@
         "id": "ev-atp-finals",
         "t": "Nitto ATP Finals: da domenica 15 novembre i migliori otto del tennis a Torino",
         "s": "Il torneo di fine stagione riunisce gli otto migliori singolaristi e le otto migliori coppie di doppio.",
-        "d": "2026-11-09",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Visit Piemonte",
@@ -398,7 +399,7 @@
         "id": "ev-asti-natale",
         "t": "Magico Paese di Natale ad Asti: inaugurazione venerdì 13 novembre",
         "s": "Mercatini e iniziative natalizie nel centro storico.",
-        "d": "2026-11-09",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "ANSA",
@@ -413,7 +414,7 @@
         "id": "ev-kusama",
         "t": "Yayoi Kusama. Infinity Mirrored Room alle OGR di Torino",
         "s": "Mostra con la Infinity Mirrored Room dell'artista giapponese; dettagli e orari sulla pagina di Turismo Torino.",
-        "d": "2026-11-09",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -428,7 +429,7 @@
         "id": "ev-banksy",
         "t": "Banksy. Street is the Museum",
         "s": "Mostra dedicata all'artista di strada Banksy.",
-        "d": "2026-11-09",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -443,7 +444,7 @@
         "id": "ev-wpp",
         "t": "World Press Photo Exhibition 2026 a Torino",
         "s": "Mostra dei premi di fotogiornalismo, aperta ogni settimana; altre mostre in corso (Kusama alle OGR, Jessica Lange, Tiepolo) nell'agenda di Turismo Torino.",
-        "d": "2026-11-09",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -458,7 +459,7 @@
         "id": "ev-egizio-sguardi",
         "t": "Sguardi contemporanei sull'antico al Museo Egizio",
         "s": "Percorso espositivo che mette in dialogo la collezione del museo con lo sguardo contemporaneo.",
-        "d": "2026-11-09",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Turismo Torino",
@@ -473,7 +474,7 @@
         "id": "ev-set-perfetto",
         "t": "Il Set Perfetto: eventi diffusi delle Nitto ATP Finals",
         "s": "Iniziative in vari luoghi della città collegate al torneo di tennis.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Comune di Torino",
@@ -488,7 +489,7 @@
         "id": "ev-soldi-assedio",
         "t": "I Soldi dell'Assedio. La moneta a Torino nel 1706",
         "s": "Mostra sulla moneta in circolazione a Torino durante l'assedio del 1706.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Comune di Torino",
@@ -503,7 +504,7 @@
         "id": "ev-solo-per-tutti",
         "t": "Solo per tutti: appuntamento sotto i portici di via Sacchi",
         "s": "Evento ad accesso libero, senza prenotazione.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Comune di Torino",
@@ -519,7 +520,7 @@
         "id": "ev-scienze-naturali",
         "t": "Visita guidata al Museo Regionale di Scienze Naturali",
         "s": "Visita guidata alle collezioni del museo.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Comune di Torino",
@@ -536,14 +537,14 @@
         "id": "spe-cin-dio-ride",
         "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
         "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/dio-ride/"
           }
         ],
-        "quando": "Ideal: lun 16-mer 18, 17:30, 21:40 (orari indicativi; Space Cinema: orari sul sito della sala)",
+        "quando": "Ideal: orari indicativi degli ultimi giorni, 17:30, 21:40; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -551,14 +552,14 @@
         "id": "spe-cin-wild-horse-nine",
         "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
         "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
           }
         ],
-        "quando": "Ideal: lun 16-mer 18, 19:20, 21:35 (orari indicativi; Space Cinema: orari sul sito della sala)",
+        "quando": "Ideal: orari indicativi degli ultimi giorni, 19:20, 21:35; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -566,14 +567,14 @@
         "id": "spe-cin-se-domani",
         "t": "Se domani non torno, il dramma di Paola Randi",
         "s": "Film drammatico diretto da Paola Randi, in programmazione in entrambe le sale.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.idealcityplex.it/scheda/se-domani-non-torno/48959/"
           }
         ],
-        "quando": "Ideal: lun 16-mar 17, 17:30, 19:30; mer 18, 15:25, 17:30, 19:30 (orari indicativi; Space Cinema: orari sul sito della sala)",
+        "quando": "Ideal: orari indicativi degli ultimi giorni, 17:30, 19:30; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -581,30 +582,14 @@
         "id": "spe-cin-gatto-cappello",
         "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
         "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
           }
         ],
-        "quando": "Ideal: lun 16-mer 18, 15:00, 17:10; per tutti (orari indicativi; Space Cinema: orari sul sito della sala)",
-        "dove": "Cinema Ideal",
-        "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-hunger-games",
-        "t": "Hunger Games: L'alba sulla mietitura, il nuovo capitolo della saga distopica",
-        "s": "Film tratto dal romanzo di Suzanne Collins, ambientato prima delle storie di Katniss. Regia di Francis Lawrence.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "Ideal Cityplex",
-            "url": "https://www.idealcityplex.it/ideal-cityplex"
-          }
-        ],
-        "link": [],
-        "quando": "Ideal: da gio 19 nov, 15:15, 18:15, 21:15 (orari indicativi)",
+        "quando": "Ideal: orari indicativi degli ultimi giorni, 15:00, 17:10 (per tutti); conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -612,7 +597,7 @@
         "id": "spe-cin-godzilla-minus-zero",
         "t": "Godzilla Minus Zero, il seguito del film giapponese premiato con l'Oscar",
         "s": "Seguito di «Godzilla Minus One» ambientato nel Giappone del dopoguerra. Regia di Takashi Yamazaki.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "ComingSoon Cinema Ideal",
@@ -620,7 +605,7 @@
           }
         ],
         "link": [],
-        "quando": "Ideal: lun 16-mer 18, 21:30 (orari indicativi)",
+        "quando": "Ideal: orari indicativi degli ultimi giorni, 21:30; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -628,7 +613,7 @@
         "id": "spe-cin-wildwood",
         "t": "Wildwood: I segreti del bosco proibito, film d'animazione fantasy",
         "s": "Film d'animazione tratto dal romanzo di Colin Meloy, ambientato in un bosco magico vicino a Portland. Regia di Travis Knight.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "MYmovies Torino",
@@ -636,7 +621,7 @@
           }
         ],
         "link": [],
-        "quando": "Ideal: lun 16-mer 18, 21:30 (orari indicativi)",
+        "quando": "Ideal: orari indicativi degli ultimi giorni, 21:30; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -644,8 +629,8 @@
         "id": "spe-tea-energie-nove",
         "t": "Energie Nove: rassegna di 18 spettacoli di nuova drammaturgia, a cura di Diego Pleuteri",
         "s": "Ogni sera due spettacoli brevi, alle 19:30 e alle 21:30; in programma tra gli altri «Mai più Majorana» (dom 15), «L'apocalisse o quel che rimane» (mer 18, Premio Hystrio scritture di scena) e «Parlare tra maschi?» (gio 19).",
-        "d": "2026-11-15",
-        "quando": "fino al 20 nov, ogni sera ore 19:30 e 21:30 (non il 16)",
+        "d": "2026-11-17",
+        "quando": "fino al 20 nov, ogni sera ore 19:30 e 21:30",
         "dove": "Fonderie Limone, Moncalieri",
         "costo": "biglietto unico 10 €; carnet da 5 a 15 spettacoli",
         "fonti": [
@@ -660,7 +645,7 @@
         "id": "spe-tea-safari",
         "t": "Safari di Carlo Galiero, regia di Chiarastella Sorrentino, con Giulia Chiaramonte e Loris De Luna",
         "s": "Spettacolo di un'ora della rassegna Energie Nove, con interpreti Giulia Chiaramonte e Loris De Luna.",
-        "d": "2026-11-15",
+        "d": "2026-11-17",
         "quando": "gio 19 nov, 19:30",
         "dove": "Fonderie Limone, Moncalieri (sala piccola)",
         "costo": "10 €",
@@ -676,7 +661,7 @@
         "id": "spe-tea-frettolosa",
         "t": "I figli della frettolosa, di Gabriella Casolari e Gianfranco Berardi",
         "s": "Testo e regia di Casolari e Berardi, con Berardi, Casolari, Di Corato, Faella e Zaru e un coro del laboratorio. Produzione Compagnia Berardi Casolari.",
-        "d": "2026-11-16",
+        "d": "2026-11-17",
         "fonti": [
           {
             "n": "Teatro Stabile Torino",
@@ -770,22 +755,6 @@
         "costo": "prezzi sul sito"
       },
       {
-        "id": "co-madaski",
-        "t": "Madaski",
-        "s": "Concerto del musicista e produttore torinese.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "Hiroshima Mon Amour",
-            "url": "https://hiroshimamonamour.org/eventi/madaski/"
-          }
-        ],
-        "link": [],
-        "quando": "gio 26 nov 2026, 21:00",
-        "dove": "Hiroshima Mon Amour, Torino",
-        "costo": "25 €"
-      },
-      {
         "id": "co-lotr-mystery",
         "t": "Musiche da The Lord of the Rings: tribute a Howard Shore",
         "s": "Mystery Ensemble esegue le colonne sonore della trilogia di Howard Shore.",
@@ -860,22 +829,6 @@
             "url": "https://lingottomusica.it/en/evento/ensemble-matheus/"
           }
         ]
-      },
-      {
-        "id": "co-dagood",
-        "t": "Dagood",
-        "s": "Concerto rap dal vivo.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "Hiroshima Mon Amour",
-            "url": "https://hiroshimamonamour.org/eventi/dagood/"
-          }
-        ],
-        "link": [],
-        "quando": "gio 10 dic 2026, 21:00",
-        "dove": "Hiroshima Mon Amour, Torino",
-        "costo": "20 €"
       },
       {
         "id": "co-mcr",
@@ -1185,12 +1138,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-07T05:40+01:00",
-      "edizione": "mattina",
-      "notizie": 53,
-      "note": "Fonti lette: ANSA, Adnkronos (solo ricerca), il Fatto Quotidiano, il Giornale (ricerca), Al Jazeera, Euronews, Torino Oggi, TorinoToday (ricerca), ComingSoon (Cinema Ideal), MYmovies, Turismo Torino, Teatro Stabile. Non raggiungibili: reuters.com (ricerca rifiutata), thespacecinema.it (pagine non lette, film indicati solo per il Cinema Ideal), torinotoday.it (pagine non leggibili). Concerti copiati dall'edizione precedente (non è lunedì)."
-    },
-    {
       "at": "2026-11-07T13:30+01:00",
       "edizione": "pomeriggio",
       "notizie": 57,
@@ -1303,6 +1250,12 @@
       "edizione": "pomeriggio",
       "notizie": 78,
       "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi. TorinoToday: ricerca ok ma lettura bloccata (client_error). Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti). Cinema, eventi, teatro e concerti dall'edizione del mattino (lunedì, già aggiornata). Copia locale staccata: ripartita da origin/main."
+    },
+    {
+      "at": "2026-11-17T05:09+01:00",
+      "edizione": "mattina",
+      "notizie": 73,
+      "note": "Fonti lette: ANSA, il Giornale, Euronews (en), Al Jazeera (en), ComingSoon (Cinema Ideal), Teatro Stabile Torino. Bloccati: TorinoToday (lettura), thespacecinema.it (lettura; ricerca ok), Reuters/BBC/Guardian non cercate. Alcune pagine Euronews/ANSA non uscite da ricerca non sono state aperte: sintesi da elenchi già letti. Cinema: orari dalla pagina Ideal senza date; Space Cinema non leggibile. Eventi: confermati dall'edizione precedente. Concerti dall'edizione di lunedì, senza i passati (martedì). Nessun riallineamento a origin/main."
     }
   ]
 }
