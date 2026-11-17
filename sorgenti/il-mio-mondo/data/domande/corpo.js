@@ -116,10 +116,6 @@ const CORPO = {
  ],
  "domande_intro": "Qui puoi scrivere quello che vuoi chiedere, anche le domande che a voce ti imbarazzano. Restano solo su questo iPad e decidi tu quando mostrarle alla mamma.",
  "kit_intro": "Il kit si prepara insieme alla mamma: scegliete insieme la pochette che ti piace e riempitela con calma, chiacchierando.",
- "voce_mamma": {
-  "invito": "Registra qui un tuo breve messaggio per lei su questo argomento.",
-  "vuoto": "La mamma non ha ancora registrato il suo messaggio: chiedile di raccontartelo a voce."
- },
  "kit": [
   {
    "ic": "🧷",

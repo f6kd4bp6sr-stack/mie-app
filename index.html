@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<script>window.APP_VERSION="f089d9372a";</script>
+<script>window.APP_VERSION="62ddb5dd6e";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://f6kd4bp6sr-stack.github.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src https://www.youtube-nocookie.com">
 <meta name="robots" content="noindex, nofollow, noarchive">
@@ -9141,10 +9141,6 @@ const CORPO = {
  ],
  "domande_intro": "Qui puoi scrivere quello che vuoi chiedere, anche le domande che a voce ti imbarazzano. Restano solo su questo iPad e decidi tu quando mostrarle alla mamma.",
  "kit_intro": "Il kit si prepara insieme alla mamma: scegliete insieme la pochette che ti piace e riempitela con calma, chiacchierando.",
- "voce_mamma": {
-  "invito": "Registra qui un tuo breve messaggio per lei su questo argomento.",
-  "vuoto": "La mamma non ha ancora registrato il suo messaggio: chiedile di raccontartelo a voce."
- },
  "kit": [
   {
    "ic": "🧷",
@@ -15180,10 +15176,10 @@ function oroGiro(o) {
 /* ================= 🌸 IL MIO CORPO CHE CRESCE (17/11/2026, richiesta del genitore) =================
    Prepara alle mestruazioni prima che arrivino e riorganizza «Perché mi lavo» con uno scopo: prendersi cura del corpo che cresce.
    17/11/2026 pomeriggio (commento della mamma: «più umana… meglio parlare»): la sezione è uno SPUNTO per parlarne con la mamma.
-   Linguette: 💬 Ne parliamo insieme (6 chiacchierate con «Chiedi alla mamma» e 🎙️ la voce della mamma) · ❓ Le mie domande · 🎒 Kit e scuola · 📅 Il mio calendario · 🧼 Mi lavo e mi prendo cura.
+   Linguette: 💬 Ne parliamo insieme (6 chiacchierate con «Chiedi alla mamma»; la registrazione della mamma è stata tolta il 17/11: «rimaniamo sul discorsivo») · ❓ Le mie domande · 🎒 Kit e scuola · 📅 Il mio calendario · 🧼 Mi lavo e mi prendo cura.
    Disegni simbolici (niente organi). Niente lettura ad alta voce: la legge lei.
    Testi in data/domande/corpo.js (CORPO: autore + revisore indipendente, fonti in CORPO.fonti).
-   PRIVACY (scelta del genitore): il calendario del ciclo («corpo-cal»), le domande («corpo-domande») e i messaggi registrati della mamma (IndexedDB «mondo-voce-mamma») restano SOLO su questo iPad: non è nella lista dei dati inviati a
+   PRIVACY (scelta del genitore): il calendario del ciclo («corpo-cal») e le domande («corpo-domande») restano SOLO su questo iPad: non è nella lista dei dati inviati a
    Progressi (statici/mondo-sync.js) né nel QR. In Progressi arrivano solo le schede lette, il kit e la storia a scelte. */
 if (!$('p-corpo')) { const s = document.createElement('section'); s.id = 'p-corpo'; s.dataset.page = ''; s.hidden = true; $('main').appendChild(s); }
 const CR_OK = () => typeof CORPO !== 'undefined';
@@ -15232,34 +15228,6 @@ const CR_DIS = {
     '<rect x="196" y="78" width="104" height="48" rx="22" fill="#efe3f8" stroke="' + CR_L + '" stroke-width="3"/><path d="M228 66 a14 14 0 1 0 12 22 a11 11 0 1 1 -12 -22Z" fill="#ffd36e"/>', 'Una tazza calda e un cuscino')
 };
 
-/* ---------- 🎙️ la voce della mamma: registrazioni solo su questo iPad (IndexedDB «mondo-voce-mamma»), mai inviate ---------- */
-const CrVoce = {
-  db() { return new Promise((res, rej) => { try { const r = indexedDB.open('mondo-voce-mamma', 1); r.onupgradeneeded = () => r.result.createObjectStore('msg'); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); } }); },
-  async get(id) { try { const d = await this.db(); return await new Promise(r => { const q = d.transaction('msg').objectStore('msg').get(id); q.onsuccess = () => r(q.result || null); q.onerror = () => r(null); }); } catch (e) { return null; } },
-  async put(id, blob) { const d = await this.db(); return new Promise((r, j) => { const t = d.transaction('msg', 'readwrite'); t.objectStore('msg').put(blob, id); t.oncomplete = r; t.onerror = () => j(t.error); }); },
-  async del(id) { const d = await this.db(); return new Promise(r => { const t = d.transaction('msg', 'readwrite'); t.objectStore('msg').delete(id); t.oncomplete = r; t.onerror = r; }); },
-  can() { return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder); }
-};
-let crRec = null;
-async function crVoceBox(box, id) {
-  const V = CORPO.voce_mamma || {}, blob = await CrVoce.get(id);
-  if (!box.isConnected) return;
-  const url = blob ? URL.createObjectURL(blob) : '';
-  box.innerHTML = '<p class="cr-vt">🎙️ <b>La voce della mamma</b></p>' + (blob ? '<audio controls preload="none" src="' + url + '"></audio>' : '<p class="cr-nota">' + esc(V.vuoto || '') + '</p>') +
-    (CrVoce.can() ? '<div class="cr-strip"><button type="button" class="btn small ghost" data-rec>' + (blob ? '🎙️ Registra di nuovo (per la mamma)' : '🎙️ Registra (per la mamma)') + '</button>' + (blob ? '<button type="button" class="btn small ghost" data-del>🗑️ Cancella</button>' : '') + '</div><p class="cr-nota">' + esc(V.invito || '') + ' Resta solo su questo iPad.</p>' : '');
-  const rb = box.querySelector('[data-rec]'), db = box.querySelector('[data-del]');
-  if (db) db.addEventListener('click', async () => { if (confirm('Cancellare il messaggio della mamma?')) { await CrVoce.del(id); crVoceBox(box, id); } });
-  if (rb) rb.addEventListener('click', async () => {
-    if (crRec) { crRec.stop(); return; }
-    let st; try { st = await navigator.mediaDevices.getUserMedia({ audio: true }); } catch (e) { toast('Il microfono non è disponibile'); return; }
-    const ch = [], r = new MediaRecorder(st); crRec = r;
-    r.ondataavailable = e => { if (e.data && e.data.size) ch.push(e.data); };
-    r.onstop = async () => { clearTimeout(r._t); st.getTracks().forEach(t => t.stop()); crRec = null; if (ch.length) { await CrVoce.put(id, new Blob(ch, { type: r.mimeType || 'audio/mp4' })); } crVoceBox(box, id); };
-    r.start(); r._t = setTimeout(() => { try { r.stop(); } catch (e) {} }, 120000);
-    rb.textContent = '⏹️ Ferma (massimo 2 minuti)'; rb.classList.add('cr-recon');
-  });
-}
-
 /* ---------- pagina ---------- */
 PAGES.corpo = el => {
   if (!CR_OK()) { el.innerHTML = '<p>Sezione in arrivo.</p>'; return; }
@@ -15267,7 +15235,7 @@ PAGES.corpo = el => {
   const tabs = [['insieme', '💬 Ne parliamo insieme'], ['dom', '❓ Le mie domande'], ['kit', '🎒 Kit e scuola'], ['cal', '📅 Il mio calendario'], ['cura', '🧼 Mi lavo e mi prendo cura']];
   el.innerHTML = '<div class="oro-top"><div><h1 class="v2-h1">🌸 Il mio corpo che cresce</h1><p class="v2-sub">' + esc(CORPO.invito) + '</p></div></div>' +
     '<div class="oro-tabs">' + tabs.map(t => '<button type="button" class="cu-chip" data-ct="' + t[0] + '" aria-pressed="' + (t[0] === crTab) + '">' + t[1] + '</button>').join('') + '</div><div id="cr-body"></div>';
-  el.querySelectorAll('[data-ct]').forEach(b => b.addEventListener('click', () => { if (crRec) { try { crRec.stop(); } catch (e) {} } crTab = b.dataset.ct; PAGES.corpo(el); }));
+  el.querySelectorAll('[data-ct]').forEach(b => b.addEventListener('click', () => { crTab = b.dataset.ct; PAGES.corpo(el); }));
   ({ insieme: crInsieme, dom: crDomande, kit: crKit, cal: crCal, cura: crCura })[crTab]($('cr-body'));
 };
 function crFold(box) { box.querySelectorAll('details[data-cr]').forEach(d => d.addEventListener('toggle', () => { if (d.open) crLetto(d.dataset.cr); })); }
@@ -15280,9 +15248,8 @@ function crInsieme(box) {
     '<div class="cr-p"><span class="cr-e a">🙋‍♀️ Chiedi alla mamma</span><ul>' + x.chiedi.map(c => '<li>' + esc(c) + '</li>').join('') + '</ul></div>' +
     '<div class="cr-p"><span class="cr-e b">📌 Da sapere</span><ul>' + x.sapere.map(c => '<li>' + esc(c) + '</li>').join('') + '</ul></div>' +
     (x.nota ? '<p class="cr-nota">' + esc(x.nota) + '</p>' : '') +
-    '<div class="cr-voce" data-v="' + x.id + '"></div>', i === 0)).join('') + '</div>';
+    '', i === 0)).join('') + '</div>';
   crFold(box);
-  box.querySelectorAll('[data-v]').forEach(v => crVoceBox(v, v.dataset.v));
 }
 /* ---------- ❓ le mie domande: solo su questo iPad, mai inviate ---------- */
 function crDomande(box) {
