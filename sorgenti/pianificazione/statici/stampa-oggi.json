@@ -1,8 +1,8 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-18T05:03+01:00",
-  "nota": "Edizione del pomeriggio del 17 novembre 2026.",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-18T13:03+01:00",
+  "nota": "Edizione del pomeriggio del 18 novembre 2026.",
   "sezioni": {
     "italia": [
       {
@@ -30,14 +30,26 @@
         ]
       },
       {
-        "id": "it-ddl-antisemitismo",
-        "t": "Camera verso il voto finale sul ddl antisemitismo, il Pd si presenta diviso",
-        "s": "Il testo, già approvato dal Senato, adotta la definizione di antisemitismo dell'Ihra. La maggioranza non vuole modifiche; M5s e Avs votano contro, nel Pd la maggior parte è per il no ma alcuni riformisti potrebbero astenersi o votare sì.",
+        "id": "it-meloni-patrimoniale",
+        "t": "Meloni: «lavoriamo per abbassare le tasse», la sinistra divisa sulla patrimoniale",
+        "s": "La premier contrappone le misure del Governo sul taglio delle tasse al dibattito delle opposizioni sulla patrimoniale, accusandole di pensare solo a tassare la ricchezza esistente. Le opposizioni restano divise sulla soglia e sull'importo di un'eventuale imposta.",
         "d": "2026-11-18",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/la-camera-verso-il-via-libera-al-ddl-antisemitismo-il-pd-ancora-diviso_6ba9a53b-10bb-4d02-9ea8-287a1737fe50.html"
+            "url": "https://ansa.it/sito/notizie/topnews/2026/11/18/meloni-noi-lavoriamo-per-abbassare-le-tasse-la-sinistra-litiga-sulla-patrimoniale_4fa5dcb6-56e1-4ff7-9ccf-1813ee26d724.html"
+          }
+        ]
+      },
+      {
+        "id": "it-ddl-antisemitismo",
+        "t": "Ddl antisemitismo approvato: Emanuele Fiano lascia il Pd in dissenso dal voto del partito",
+        "s": "Il testo, che adotta la definizione dell'Ihra, è stato approvato il 17 novembre. Fiano, storico esponente dem, annuncia l'uscita dal partito parlando di «limite invalicabile»; secondo l'ANSA Schlein lo aveva chiamato la sera prima del voto senza fargli cambiare idea.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/topnews/2026/11/18/fiano-lascia-il-pd-per-il-no-alla-legge-sullantisemitismo_f7ccc2c7-22f1-4d02-b7fc-c6842ecf9dfa.html"
           }
         ]
       },
@@ -52,9 +64,39 @@
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/17/venerdi-20-sciopero-generale-cgil-il-futuro-e-adesso_cd3b09c8-d1e8-4897-b37b-56c132bda7b5.html"
           }
         ]
+      },
+      {
+        "id": "it-crosetto-guerra-ibrida",
+        "t": "Crosetto alla Camera: la distinzione tra difesa ibrida e convenzionale «non regge»",
+        "s": "Il ministro della Difesa, citando l'Ucraina, sostiene che trincee, droni, satelliti e attacchi informatici fanno parte della stessa guerra e che l'Italia deve prepararsi a tutta. Tra i dati citati, 6 miliardi di euro nei prossimi anni contro la guerra ibrida.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/topnews/2026/11/18/crosetto-la-guerra-e-una-sola-bisogna-attrezzarci-a-combatterla-tutta_51ad3b83-b0d5-4e3f-b086-28f09ccc012e.html"
+          }
+        ]
       }
     ],
     "mondo": [
+      {
+        "id": "mo-iran-golfo-droni",
+        "t": "Golfo: droni iraniani su Bahrein e allarme in Kuwait, mine nello stretto di Hormuz",
+        "s": "Le Guardie della rivoluzione dicono di aver colpito un radar Usa nella base di Sheikh Isa; Manama intercetta l'attacco, il terzo in cinque giorni. Il Kuwait segnala droni «ostili». Teheran riferisce di tre petroliere colpite da mine a Hormuz; gli Usa hanno attaccato l'isola di Qeshm.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/17/kuwait-reports-drone-attacks-as-iran-us-trade-attacks-on-qeshm-and-bahrain",
+            "l": "en"
+          },
+          {
+            "n": "Al Jazeera (live)",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/18/iran-war-live-kuwait-says-intercepting-hostile-drone-attacks",
+            "l": "en"
+          }
+        ]
+      },
       {
         "id": "mo-putin-shenzhen-jet",
         "t": "Putin a Shenzhen per l'Apec: jet russi intercettati vicino a Giappone, Corea e Taiwan",
@@ -107,6 +149,19 @@
       }
     ],
     "estero": [
+      {
+        "id": "es-euronews-ponte-crimea",
+        "t": "Ponte di Crimea: Kiev lo colpisce con droni e missili, Mosca convoca riunioni d'urgenza",
+        "s": "Secondo Euronews, le forze ucraine hanno colpito sia la sezione stradale sia quella ferroviaria del ponte, danneggiandolo in parte; dopo il crollo di un tratto la Russia avrebbe indetto colloqui d'emergenza. L'attacco è presentato come uno dei più rilevanti sull'infrastruttura.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://euronews.com/2026/11/18/europe-today-crimean-bridge-french-presidential-elections-and-serbian-students-list",
+            "l": "en"
+          }
+        ]
+      },
       {
         "id": "es-aj-alaska",
         "t": "Usa, Mary Peltola conquista il seggio in Senato in Alaska: ultimo seggio assegnato",
@@ -162,6 +217,22 @@
     ],
     "economia": [
       {
+        "id": "ec-borse-petrolio-18",
+        "t": "Borse europee caute, Milano in lieve calo; petrolio in discesa dopo le scorte Usa",
+        "s": "Il Ftse Mib apre a -0,05% mentre i titoli tecnologici salgono ma pesano poco. Il Brent scende a circa 91,5 dollari (-1,7%), il Wti a 84; l'euro cala a 1,097 sul dollaro. L'ANSA segnala lo spread Btp-Bund in avvio a 102 punti base.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Il Sole 24 Ore",
+            "url": "https://en.ilsole24ore.com/radiocor/nRC_18.11.2026_09.24_19810198"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/lo-spread-btp-bund-apre-in-calo-a-102-punti-base_94b34a6d-3b88-45ba-8954-3cfca2eb005f.html"
+          }
+        ]
+      },
+      {
         "id": "ec-previsioni-ue-italia",
         "t": "Previsioni Ue: Italia verso l'uscita dalla procedura per deficit in primavera, debito al 137,9%",
         "s": "Bruxelles stima deficit al 2,9% nel 2026 e Pil a +1%; il debito supera quello greco, il più alto dell'area euro. L'uscita dalla procedura dipende dalla clausola di salvaguardia per difesa ed energia.",
@@ -202,6 +273,18 @@
     ],
     "torino": [
       {
+        "id": "to-barriera-controlli",
+        "t": "Barriera di Milano: due controlli «Alto Impatto» tra via Aosta e corso Novara",
+        "s": "Nei controlli di polizia, con nove verifiche nei locali, sono state accertate sanzioni per abusivismo commerciale, irregolarità fiscali e altre violazioni in diversi negozi della zona.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/cronaca-11/articolo/sicurezza-e-controlli-tra-via-aosta-e-corso-novara-due-blitz-alto-impatto-e-nove-verifiche-nei-loca.html"
+          }
+        ]
+      },
+      {
         "id": "to-manifesto-ia",
         "t": "Torino approva il Manifesto sull'intelligenza artificiale: decisioni sempre umane",
         "s": "La Giunta adotta nove principi, tra cui trasparenza, diritto di sapere quando si interagisce con un'IA e responsabilità umana. Seguiranno linee guida e formazione per il personale comunale.",
@@ -236,6 +319,30 @@
             "url": "https://torinoggi.it/2026/11/17/leggi-notizia/argomenti/viabilita-1/articolo/passaggio-a-livello-trofarello.html"
           }
         ]
+      },
+      {
+        "id": "to-api-pmi-investimenti",
+        "t": "Indagine Api Torino: tra le piccole e medie imprese cala il pessimismo, cresce la fiducia nell'export",
+        "s": "I pessimisti diminuiscono pur restando in maggioranza e le aspettative migliorano, nonostante la crisi dell'auto.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/le-piccole-e-medie-ci-credono-a-torino-torna-la-voglia-di-investire-e-si-crede-nellexport-nonos.html"
+          }
+        ]
+      },
+      {
+        "id": "to-chieri-verde",
+        "t": "Chieri: bilancio del verde urbano, 13mila alberi piantati tra 2019 e 2023",
+        "s": "Circa 250 aree verdi gestite; per la manutenzione stanziati 3,07 milioni in cinque anni. Nel 2026 esaminati 1.180 alberi, con 51 abbattimenti.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/attualita-31/articolo/chieri-mette-radici-il-bilancio-del-verde-urbano-tra-13mila-nuovi-alberi-e-sicurezza-dei-cittadini.html"
+          }
+        ]
       }
     ],
     "piemonte": [
@@ -254,7 +361,7 @@
       {
         "id": "pi-rapporto-monferrato",
         "t": "Alessandria presenta il Rapporto Monferrato 2026, con il presidente Cirio",
-        "s": "Oggi alle 10, nella sala del Broletto della Fondazione Cr, è previsto l'evento con 13 relatori e in diretta streaming. Il rapporto punta a unire istituzioni, ricerca, imprese e cultura del territorio.",
+        "s": "Il Rapporto Monferrato 2026 è stato presentato a Alessandria nella sala del Broletto della Fondazione Cr, con il presidente Cirio e 13 relatori. Il progetto «Sette territori, una voce» punta a presentare il Monferrato in modo unitario.",
         "d": "2026-11-18",
         "fonti": [
           {
@@ -1034,15 +1141,22 @@
       }
     ],
     "cultura": [],
-    "sport": []
+    "sport": [
+      {
+        "id": "sp-atp-cobolli",
+        "t": "Atp Finals a Torino: per Cobolli ultima chiamata contro Tiafoe",
+        "s": "Dopo la sconfitta all'esordio, Cobolli deve vincere per restare in corsa; stessa situazione per Bolelli e Vavassori in doppio.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/18/sommario/sport/leggi-notizia/argomenti/sport-12/articolo/atp-finals-per-cobolli-ultima-chiamata-contro-tiafoe.html"
+          }
+        ]
+      }
+    ]
   },
   "controlli": [
-    {
-      "at": "2026-11-08T13:30+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 60,
-      "note": "Fonti lette: ANSA, Il Fatto Quotidiano, Torino Oggi, Euronews (en), Al Jazeera (en), Turismo Torino. Ricerca di reuters, bbc e altre grandi testate estere non tentata (bloccate nei giri precedenti). Lettura non riuscita: thespacecinema.it e teatrostabiletorino.it (errore del sito). Cinema e teatro dall'edizione del mattino, tolto lo spettacolo finito; eventi aggiornati; concerti copiati (non è lunedì)."
-    },
     {
       "at": "2026-11-09T05:55+01:00",
       "edizione": "mattina",
@@ -1156,6 +1270,12 @@
       "edizione": "mattina",
       "notizie": 70,
       "note": "Fonti lette: ANSA, Adnkronos, Euronews (en), Al Jazeera (en), Torino Oggi. Non cercate/bloccate: Reuters, BBC, Guardian; TorinoToday, thespacecinema.it non letti; liveblog Al Jazeera non leggibile. Cinema, teatro, eventi e concerti copiati dall'edizione precedente (mercoledì, nessun concerto passato). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-18T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 79,
+      "note": "Fonti lette: ANSA, Adnkronos (via ANSA), Il Sole 24 Ore, Euronews (en), Al Jazeera (en), Torino Oggi. ansa.it/piemonte non leggibile (robots); Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti); TorinoToday, thespacecinema.it non letti. Cinema, teatro, eventi e concerti copiati dall'edizione del mattino (nessun concerto passato). Nessun riallineamento a origin/main."
     }
   ]
 }
