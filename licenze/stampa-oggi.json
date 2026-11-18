@@ -1,390 +1,267 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-17T13:04+01:00",
+  "edizione": "mattina",
+  "updated": "2026-11-18T05:03+01:00",
   "nota": "Edizione del pomeriggio del 17 novembre 2026.",
   "sezioni": {
     "italia": [
       {
-        "id": "it-manovra-emendamenti-17",
-        "t": "Manovra, alle 18 scade il termine per gli emendamenti: attese oltre 5mila proposte",
-        "s": "In commissione Bilancio alla Camera il termine è alle 18; dopo il vaglio di ammissibilità il numero calerà. Nella maggioranza c'è intesa sui 7mila posti della scuola, mentre restano aperti i nodi su pensioni, soglia del bonus sanitario e contributo di banche e assicurazioni.",
-        "d": "2026-11-17",
+        "id": "it-manovra-emendamenti-18",
+        "t": "Manovra 2027: circa 6.600 emendamenti alla Camera, il condono resta nel pacchetto",
+        "s": "Record di emendamenti alla legge di bilancio, un terzo dalla maggioranza. Ammissibilità entro il 23 novembre, aula probabilmente da inizio dicembre. Dopo il vertice di Meloni restano aperti i fondi per pensioni e sanità; la Lega parla di «Quota 64» dal 2027.",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/economia/manovra-2027-pensioni-scuola-emendamenti_6qt5PiVc25gN55DpDrxh6E"
-          },
-          {
-            "n": "il Giornale",
-            "url": "https://www.ilgiornale.it/news/governo/manovra-giorgetti-frena-sulle-modifiche/"
+            "url": "https://www.adnkronos.com/politica/manovra-2027-governo-condono-pensioni-sanita_4Pazsr00eqQxip4iE0r372"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "it-sciopero-20-nov",
-        "t": "Venerdì 20 novembre sciopero generale Cgil e Cobas: coinvolti scuola, sanità e trasporto locale",
-        "s": "La Cgil protesta contro la manovra; stop anche per bus, tram e metro con le fasce di garanzia, taxi, porti e autostrade. Aerei e treni sono esclusi dallo sciopero Cgil, ma i ferrovieri di Sgb e Cub si fermano dalle 21 del 20 alle 20 del 21.",
-        "d": "2026-11-17",
+        "id": "it-campo-largo-patrimoniale",
+        "t": "Campo largo: 18 emendamenti comuni alla manovra, ma resta lo scontro sulla patrimoniale",
+        "s": "Il tavolo delle opposizioni firma proposte su salario minimo, sanità e Opzione donna, dopo una sospensione del M5s. Avs chiede la patrimoniale con soglia a 5,4 milioni, il Pd ipotizza 100 milioni. Conte afferma che i tavoli «non si rompono».",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/17/sciopero-generale-dalla-scuola-ai-bus-niente-stop-per-aerei-e-treni_01d5c5ed-72b4-4546-acc1-472847a25848.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/dal-campo-largo-18-emendamenti-comuni-ma-e-alta-tensione-sulla-patrimoniale_683d5574-d857-447f-9100-12057733f292.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "it-scuole-email",
-        "t": "Email minatorie alle scuole, falso allarme sulle mense: i presidi seguono i protocolli",
-        "s": "Nuova ondata di email farneticanti inviate a molte scuole, con la falsa notizia di una sostanza tossica nel cibo. Qualche mensa si è fermata per precauzione ed è ripartita dopo i controlli; i presidi invitano a segnalare tutto alla polizia postale.",
-        "d": "2026-11-17",
+        "id": "it-ddl-antisemitismo",
+        "t": "Camera verso il voto finale sul ddl antisemitismo, il Pd si presenta diviso",
+        "s": "Il testo, già approvato dal Senato, adotta la definizione di antisemitismo dell'Ihra. La maggioranza non vuole modifiche; M5s e Avs votano contro, nel Pd la maggior parte è per il no ma alcuni riformisti potrebbero astenersi o votare sì.",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/17/presidi-email-farneticanti-nessuna-evacuazione-protocolli-funzionano_a668bf83-a4c9-4018-ae72-61a612ebd709.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/la-camera-verso-il-via-libera-al-ddl-antisemitismo-il-pd-ancora-diviso_6ba9a53b-10bb-4d02-9ea8-287a1737fe50.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "it-revolut-commissariata",
-        "t": "Milano, la filiale italiana di Revolut va in amministrazione giudiziaria per un anno",
-        "s": "Su richiesta del pm Storari, il Tribunale di Milano dispone la misura per presunte carenze antiriciclaggio: operazioni per 76,5 milioni che potevano essere intercettate e beni cautelati per oltre 4,6 milioni. Revolut dichiara piena collaborazione e servizi regolari.",
-        "d": "2026-11-16",
+        "id": "it-sciopero-cgil-20-nov",
+        "t": "Venerdì 20 novembre sciopero generale della Cgil contro la legge di bilancio",
+        "s": "Fermo per l'intera giornata nei settori pubblici e privati, in coincidenza con lo sciopero europeo degli studenti. Cortei in tutte le province piemontesi; a Torino il servizio Gtt è garantito dalle 6 alle 9 e dalle 12 alle 15.",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/16/riciclaggio-con-aggravante-mafiosa-amministrazione-giudiziaria-per-revolut_826ace80-1187-47af-9cab-866fe3539d56.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/17/venerdi-20-sciopero-generale-cgil-il-futuro-e-adesso_cd3b09c8-d1e8-4897-b37b-56c132bda7b5.html"
           }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-fondo-asilo",
-        "t": "Associazioni: tagliati 185 milioni al fondo per l'asilo",
-        "s": "Le organizzazioni che si occupano di accoglienza denunciano una riduzione di 185 milioni di euro al fondo dedicato all'asilo.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/laccusa-delle-associazioni-taglio-di-185-milioni-al-fondo-per-lasilo_9a3a874e-02b6-419b-bcfb-fead4911c4f5.html"
-          }
-        ],
-        "link": []
+        ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-iran-bomba-sporca",
-        "t": "Usa-Iran: la Cnn parla di piani per una bomba sporca, la Casa Bianca smentisce minacce credibili",
-        "s": "Secondo fonti dell'intelligence citate dalla Cnn, Teheran starebbe pianificando un attacco con ordigno radiologico a Washington, senza segnali di imminenza. La Casa Bianca dice che non ci sono minacce credibili. Intanto è arrivata la terza portaerei Usa nell'area.",
-        "d": "2026-11-17",
+        "id": "mo-putin-shenzhen-jet",
+        "t": "Putin a Shenzhen per l'Apec: jet russi intercettati vicino a Giappone, Corea e Taiwan",
+        "s": "Mentre il presidente russo arriva in Cina, Tokyo denuncia una violazione dello spazio aereo al largo di Fukuoka; Seul e Taipei segnalano velivoli russi nelle proprie zone di difesa. Giovedì è atteso un trilaterale con Xi e Trump.",
+        "d": "2026-11-18",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_e704a810-d218-4a39-9294-723921d70f27.html"
-          },
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/internazionale/esteri/vertice-shenzhen-putin-cina-incursione-jet-russi_RPboNNwfl1JU9w3TbO5O"
+          }
+        ]
+      },
+      {
+        "id": "mo-gaza-board-of-peace",
+        "t": "Gaza: il Board of Peace avverte l'Onu, la tregua rischia di crollare senza passi concreti",
+        "s": "In un rapporto al Consiglio di sicurezza, l'organismo sostenuto dagli Usa cita raid israeliani, aiuti bloccati prima dell'inverno e l'amministrazione civile ferma. Chiede a Israele decisioni rapide e alle parti di rispettare gli impegni.",
+        "d": "2026-11-18",
+        "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/casa-bianca-non-ci-sono-minacce-credibili-dalliran_8aa39af2-d196-4e6a-88f8-d2ce3c6d3761.html"
-          },
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/18/board-of-peace-warns-gaza-ceasefire-faces-imminent-collapse-without-action",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-kyiv-ponti",
+        "t": "Attacchi russi su due ponti di Kiev, secondo il sindaco",
+        "s": "Il sindaco della capitale ucraina riferisce che due dei principali ponti sono stati colpiti dai bombardamenti russi del 17 novembre.",
+        "d": "2026-11-18",
+        "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/16/us-and-iran-slide-closer-to-fresh-all-out-war-as-new-exchange-of-fire-increases",
+            "url": "https://www.euronews.com/2026/11/17/russian-strikes-hit-two-major-bridges-in-ukraines-capital-citys-mayor-says",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "mo-ucraina-ponti-17",
-        "t": "Ucraina e Russia si colpiscono i ponti: Kiev e ponte di Crimea, due notti di attacchi",
-        "s": "Missili russi hanno colpito due ponti sul Dnipro a Kiev; Mosca denuncia un secondo attacco in 24 ore al ponte di Crimea, con traffico fermo. Gli scambi di attacchi arrivano a due giorni dal vertice in Cina tra Trump, Xi e Putin.",
-        "d": "2026-11-17",
+        "id": "mo-usa-fda-ritiro",
+        "t": "Trump ritira la candidata alla guida della Fda, manca l'appoggio del Senato",
+        "s": "La Casa Bianca rinuncia a Heidi Overton, un giorno prima del voto in commissione. Pesavano la poca esperienza gestionale e le posizioni sui vaccini ai bambini, criticate da senatori di entrambi i partiti.",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/sindaco-kiev-due-importanti-ponti-della-capitale-colpiti-da-attacchi-russi_0ba1bfc5-4cd6-4dfb-a7ff-a990a42867c8.html"
-          },
-          {
-            "n": "CBS News",
-            "url": "https://www.cbsnews.com/news/ukraine-war-russia-crimea-kerch-bridge-kyiv/",
-            "l": "en"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/trump-ritira-la-controversa-nomina-per-la-guida-della-food-and-drug_361957f5-d948-41c8-a214-6ffc76e3d8be.html"
           }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-cina-chip",
-        "t": "La Cina condanna le nuove restrizioni Usa sui chip e promette «misure necessarie»",
-        "s": "Il portavoce degli Esteri di Pechino accusa Washington di abusare dei controlli sull'export. Le regole americane puntano a chiudere una falla emersa dopo uno scandalo di spionaggio legato a Nvidia; Trump, a Manila, dice che gli Usa raggiungeranno la Cina sulle terre rare in dieci mesi.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/cina-condanna-restrizioni-usa-su-chip-e-promette-in-risposta-misure-necessarie_743424a0-fc01-4ab8-b686-88cb5aa382ac.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/trump-raggiungeremo-la-cina-in-10-mesi-sulle-terre-rare_deee8a0e-00b0-4aaf-a185-629188a49656.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-gb-sanzioni",
-        "t": "Il Regno Unito sanziona otto imprese israeliane che costruiscono colonie in Cisgiordania",
-        "s": "Londra colpisce anche il gruppo di destra Tzav 9, accusato di bloccare i convogli umanitari per Gaza. Il ministro degli Esteri Ed Miliband avverte di nuovo sul progetto E1 e invita a non partecipare alle gare.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/gb-sanziona-8-imprese-israeliane-che-costruiscono-colonie-in-cisgiordania_3d6a220e-cca0-4ab7-b953-a913bc792f28.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-shenzhen-conferma",
-        "t": "Pechino conferma: giovedì 19 a Shenzhen il vertice tra Xi, Trump e Putin",
-        "s": "La Cina conferma l'incontro a tre di giovedì 19 novembre a Shenzhen, a margine del vertice Apec; Trump vedrà anche Xi. Gli Usa e alcuni alleati preparano un elenco comune di tecnologie di intelligenza artificiale da proteggere.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/16/pechino-conferma-il-trilaterale-tra-xi-trump-e-putin-e-gli-usa-si-blindano-sullia_719b0e4a-833e-4411-9f49-e3bdeca194d9.html"
-          }
-        ],
-        "link": []
+        ]
       }
     ],
     "estero": [
       {
-        "id": "es-euronews-malesia",
-        "t": "Euronews: Francia e Malesia, intesa sulle terre rare e partenariato strategico",
-        "s": "Durante la visita di Macron a Kuala Lumpur è stata annunciata per inizio 2027 una joint venture franco-malese per separare terre rare, con un impianto da 13mila tonnellate. Firmati anche accordi su difesa, semiconduttori ed energia.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/17/france-and-malaysia-agree-rare-earths-deal-as-macron-looks-beyond-china-for-supplies",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-aj-bangladesh",
-        "t": "Al Jazeera: Bangladesh, scontri tra polizia e operai tessili per i salari",
-        "s": "Gli operai chiedono un minimo di 30mila taka al mese, contro gli attuali 12.500. La polizia usa lacrimogeni; circa 500 fabbriche su 4.500 sono chiuse. Il comitato salari si riunirà il 23 novembre.",
-        "d": "2026-11-17",
+        "id": "es-aj-alaska",
+        "t": "Usa, Mary Peltola conquista il seggio in Senato in Alaska: ultimo seggio assegnato",
+        "s": "Secondo Al Jazeera e Ap, la democratica batte il senatore repubblicano Dan Sullivan, chiudendo una tornata di midterm negativa per i repubblicani. Si attendono ricorsi, tra le accuse di un candidato «civetta» con lo stesso nome.",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/17/bangladesh-garment-workers-clash-with-police-in-fresh-protests-over-wages",
+            "url": "https://www.aljazeera.com/news/2026/11/18/mary-peltola-wins-alaska-senate-seat-in-another-democratic-win",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "es-aj-brexit",
-        "t": "Al Jazeera: Burnham, il Brexit ha fallito, venerdì il vertice Regno Unito-Ue a Bruxelles",
-        "s": "Il premier britannico Andy Burnham ha detto a Londra che negli ultimi dieci anni il Paese ha perso più di quanto ha guadagnato. Venerdì 20 novembre a Bruxelles si punta a intese su prodotti agroalimentari, energia e un programma di mobilità giovanile; niente ritorno nel mercato unico.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/17/uk-seeks-closer-ties-with-eu-after-brexit-fail",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-euronews-ruanda",
-        "t": "Euronews: cinque Paesi Ue preparano un centro di rimpatrio in Ruanda",
-        "s": "Danimarca, Austria, Germania, Paesi Bassi e Grecia definiscono un centro per i rimpatri dei migranti in Ruanda, con avvio sperimentale previsto a metà 2027. Il progetto è criticato per i diritti fondamentali; il premier spagnolo Sánchez lo giudica privo di umanità.",
-        "d": "2026-11-16",
+        "id": "es-euronews-burnham-brexit",
+        "t": "Burnham: «la Brexit non ha funzionato», alla vigilia del vertice Regno Unito-Ue",
+        "s": "Alla vigilia del summit di «reset» con Bruxelles, il primo ministro britannico Andy Burnham giudica negativamente l'uscita dall'Unione.",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/16/five-eu-countries-unveil-rwanda-deportation-plan-in-migration-crackdown",
+            "url": "https://www.euronews.com/2026/11/17/uk-leader-andy-burnham-says-brexit-hasnt-worked-ahead-of-reset-summit-with-eu",
             "l": "en"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/vienna-ufficializza-primo-centro-di-rimpatrio-di-5-paesi-ue-in-ruanda-nel-2027_5e2a8744-f70d-4154-a04b-240115125289.html"
           }
-        ],
-        "link": []
+        ]
+      },
+      {
+        "id": "es-euronews-estonia",
+        "t": "Estonia pronta a chiudere il confine con la Russia dopo un tentato sabotaggio",
+        "s": "Il premier Kristen Michal attribuisce al Gru l'ordine di un sabotaggio contro un'azienda estone di droni, Threod Systems; Tallinn si prepara alla chiusura.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/16/estonia-to-close-russia-border-after-sabotage-bid-on-drone-maker-foreign-minister-says",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-euronews-praga",
+        "t": "Praga: centinaia di migliaia in piazza contro i piani del governo Babiš sui media pubblici",
+        "s": "La più grande protesta contro l'esecutivo contesta il piano di finanziamento di tv e radio pubbliche ceche.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/15/hundreds-of-thousands-in-prague-protest-czech-governments-public-media-funding-plans",
+            "l": "en"
+          }
+        ]
       }
     ],
     "economia": [
       {
-        "id": "ec-borse-17",
-        "t": "Borse europee deboli in apertura: Milano -0,64%, spread a 105 punti",
-        "s": "Francoforte cede lo 0,8%. Il petrolio Wti scende a 85 dollari al barile, il gas ad Amsterdam sale a 85,5 euro al megawattora e l'oro è a 3.875 dollari l'oncia.",
-        "d": "2026-11-17",
+        "id": "ec-previsioni-ue-italia",
+        "t": "Previsioni Ue: Italia verso l'uscita dalla procedura per deficit in primavera, debito al 137,9%",
+        "s": "Bruxelles stima deficit al 2,9% nel 2026 e Pil a +1%; il debito supera quello greco, il più alto dell'area euro. L'uscita dalla procedura dipende dalla clausola di salvaguardia per difesa ed energia.",
+        "d": "2026-11-18",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/borsa-milano-apre-in-calo-ftse-mib-064_bb28140c-2d31-42a1-8c9b-88a5ec58b8c7.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/petrolio-in-calo-wti-a-85-dollari-al-barile_ea3a0d52-ff4c-4228-a6fc-003ef49ba2e7.html"
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/economia/previsioni-ue-conti-pubblici-italia-fuori-primavera_1XTYuIoDQpE82VKSg6QVfU"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "ec-usa-disservizi",
-        "t": "Stati Uniti: disservizi informatici per grandi banche e per United Airlines",
-        "s": "Migliaia di segnalazioni di problemi di accesso per Chase, Wells Fargo e altri istituti; United Airlines si scusa per l'interruzione dei suoi sistemi e dice di lavorare per risolverla.",
-        "d": "2026-11-16",
+        "id": "ec-nvidia-conti",
+        "t": "Nvidia: ricavi a 115,8 miliardi, il consiglio esclude il ritorno di Huang come amministratore delegato",
+        "s": "Nel trimestre ricavi +103% e utile 64,9 miliardi di dollari; stime a 130 miliardi per il prossimo. Interim alla guida è Colette Kress; il titolo sale dopo la chiusura di Borsa.",
+        "d": "2026-11-18",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/problemi-daccesso-e-disservizi-per-le-principali-banche-usa_da63146e-df26-4601-aa07-4a9cc3e6f6cd.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/problemi-per-united-airlines-interruzione-nei-suoi-sistemi_76d0d15d-d956-4a10-8264-b531680b7ac3.html"
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/economy/2026/11/18/nvidia-shoots-down-calls-for-jensen-huangs-return-amid-strong-earnings",
+            "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "ec-tassa-soggiorno",
-        "t": "Tassa di soggiorno verso il record: 1,3 miliardi di gettito nel 2026",
-        "s": "Il gettito dell'imposta di soggiorno in Italia si avvia a toccare il massimo storico di 1,3 miliardi di euro.",
-        "d": "2026-11-16",
+        "id": "ec-renault-lavoro",
+        "t": "Renault: 2.000 nuovi posti in Francia entro il 2028, ma 1.000 tagli",
+        "s": "Il gruppo punta soprattutto sulla produzione e riduce posizioni amministrative per far fronte alla concorrenza cinese.",
+        "d": "2026-11-18",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/16/tassa-di-soggiorno-verso-il-record-di-13-miliardi-nel-2026_615aa544-9203-4017-927b-83632838d1e3.html"
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/17/renault-to-create-2000-jobs-in-france-while-cutting-1000-others-by-2028",
+            "l": "en"
           }
-        ],
-        "link": []
+        ]
       }
     ],
     "torino": [
       {
-        "id": "to-dora-vanchiglia",
-        "t": "Dora Vanchiglia, controlli interforze: 300 identificati, 15mila euro di sanzioni ai locali",
-        "s": "In un'operazione nel quartiere sono state controllate 109 auto e 16 esercizi pubblici. Un arresto, otto denunce, circa 150 grammi di hashish sequestrati nei giardini Madre Teresa di Calcutta.",
-        "d": "2026-11-17",
+        "id": "to-manifesto-ia",
+        "t": "Torino approva il Manifesto sull'intelligenza artificiale: decisioni sempre umane",
+        "s": "La Giunta adotta nove principi, tra cui trasparenza, diritto di sapere quando si interagisce con un'IA e responsabilità umana. Seguiranno linee guida e formazione per il personale comunale.",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/cronaca-11/articolo/lavoratori-in-nero-scarsa-igiene-e-abusivismo-stangata-da-15mila-euro-sui-locali-di-dora-vanchigli.html"
+            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/attualita-31/articolo/nasce-il-manifesto-sullintelligenza-artificiale-di-torino-trasparenza-totale-e-decisioni-sempre-u.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "to-bus-coltello",
-        "t": "Coltello sul bus 46 in strada del Fortino: arrestato un 17enne per tentata rapina",
-        "s": "Lunedì sera ha minacciato i passeggeri e puntato la lama, lunga 16 centimetri, contro un coetaneo per prendergli denaro e sigarette. I carabinieri lo hanno fermato vicino al bus; è in una comunità di prima accoglienza.",
-        "d": "2026-11-16",
+        "id": "to-pensionati-lascaris",
+        "t": "Flash mob dei pensionati Spi Cgil davanti a Palazzo Lascaris",
+        "s": "Chiedono più fondi alla sanità, liste d'attesa più brevi, assistenza ai non autosufficienti e rivalutazione piena delle pensioni, in vista dello sciopero del 20 novembre.",
+        "d": "2026-11-18",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/minaccia-passeggeri-con-un-coltello-sul-bus-arrestato-17enne-a-torino_e92b279c-9244-401f-821c-15ca67f67487.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/politica-11/articolo/pensionati-in-piazza-contro-il-caro-vita-flash-mob-davanti-a-palazzo-lascaris.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "to-palazzo-nuovo-danni",
-        "t": "Palazzo Nuovo, finita l'occupazione: l'Università verifica i danni e condanna il post di una docente",
-        "s": "Dopo otto giorni gli occupanti hanno lasciato l'edificio e l'Ateneo controlla i danni. L'Università definisce «gravi e inaccettabili» le parole di una docente sui due writer caduti da una scala il 13 novembre.",
-        "d": "2026-11-16",
+        "id": "to-trofarello-passaggio-livello",
+        "t": "Trofarello: il passaggio a livello vicino al futuro ospedale di Cambiano sarà soppresso",
+        "s": "L'assessore regionale Gabusi annuncia la progettazione a breve; mancano però i fondi per la demolizione. Dopo un investimento mortale ad agosto, il passaggio è tra i primi 100 del piano Rfi.",
+        "d": "2026-11-18",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/terminata-loccupazione-di-palazzo-nuovo-alluniversita-di-torino_9a2e8ddd-b5f1-4c86-9781-ac76de0df132.html"
-          },
-          {
-            "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/attualita/professoressa-mano-dios-precipitati-tetto-palazzo-nuovo-2026.html"
+            "n": "Torino Oggi",
+            "url": "https://torinoggi.it/2026/11/17/leggi-notizia/argomenti/viabilita-1/articolo/passaggio-a-livello-trofarello.html"
           }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-atp-alcaraz",
-        "t": "Atp Finals: Alcaraz vince all'esordio con Tiafoe, subito fuori Bolelli-Vavassori",
-        "s": "Nel primo giorno del torneo di Torino Carlos Alcaraz batte Frances Tiafoe; la coppia italiana Bolelli-Vavassori perde il match d'esordio nel doppio.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/atp-finals-partenza-sprint-per-alcaraz-con-tiafoe-vince-e-da-spettacolo_13336781-f69d-478f-96b4-c5685bf7356c.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/atp-finals-esordio-amaro-per-bolelli-vavassori-azzurri-subito-ko_98f3bcb8-48c1-4fd8-ab3c-fc9c1a8be337.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-sportech-polito",
-        "t": "Al Politecnico nasce SporTech@PoliTo, centro su tecnologia e sport",
-        "s": "Il Politecnico di Torino crea un centro interdipartimentale dedicato all'innovazione tecnologica applicata allo sport.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/innovazione-tecnologica-e-sport-a-torino-nasce-sportechpolito_cec1d338-2a8f-4f35-9b5c-44b096158616.html"
-          }
-        ],
-        "link": []
+        ]
       }
     ],
     "piemonte": [
       {
-        "id": "pi-connessione-montagna",
-        "t": "La Regione investe per portare la connessione nelle aree montane scoperte",
-        "s": "Il Piemonte avvia un intervento per dotare di connessione i territori di montagna non coperti, presentato da Cirio e dall'assessore Gallo come iniziativa inedita.",
-        "d": "2026-11-16",
+        "id": "pi-alessandria-san-francesco",
+        "t": "Alessandria: accordo Comune-Fondazione Cr per l'ex complesso di San Francesco",
+        "s": "Il progetto «Orizzonti condivisi» stanzia 910mila euro più 40mila per la promozione, per un museo cittadino nell'ex chiesa.",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/il-piemonte-investe-per-portare-la-connessione-nelle-aree-montane-scoperte_4fa7bece-be86-4e1b-b4ba-a77687161390.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/17/alessandria-convenzione-comune-e-fondazione-cr-per-lex-complesso-di-san-francesco_cfe8c82f-aff1-4785-8547-62c7d9c80cbf.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "pi-badanti-vco",
-        "t": "Verbano-Cusio-Ossola: la Finanza scopre 44 badanti non dichiarate, 3,2 milioni al fisco",
-        "s": "Le verifiche della Guardia di finanza individuano 44 lavoratrici domestiche non dichiarate al fisco per 3,2 milioni di euro; i contratti erano regolari e i contributi versati.",
-        "d": "2026-11-16",
+        "id": "pi-rapporto-monferrato",
+        "t": "Alessandria presenta il Rapporto Monferrato 2026, con il presidente Cirio",
+        "s": "Oggi alle 10, nella sala del Broletto della Fondazione Cr, è previsto l'evento con 13 relatori e in diretta streaming. Il rapporto punta a unire istituzioni, ricerca, imprese e cultura del territorio.",
+        "d": "2026-11-18",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/scoperti-44-badanti-invisibili-al-fisco-non-dichiarati-32-milioni-di-euro_a493727c-ca21-4a69-98c2-3d24476e0307.html"
+            "url": "https://www.ansa.it/sito/notizie/speciali/monferrato-sette-territori-una-voce/2026/11/17/rapporto-monferrato-2026-il-futuro-non-si-costruisce-da-soli_52d9825c-de22-44fd-a3dd-69253f57aec9.html"
           }
-        ],
-        "link": []
-      },
-      {
-        "id": "pi-trifola-farinetti",
-        "t": "Murisengo Monferrato: il Trifola d'Or Award 2026 va a Oscar Farinetti",
-        "s": "Il riconoscimento legato al tartufo viene assegnato quest'anno all'imprenditore Oscar Farinetti.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/murisengo-monferrato-a-oscar-farinetti-il-trifola-dor-award-2026_edb9e9b8-816e-4b40-b11c-01159dc6a8d0.html"
-          }
-        ],
-        "link": []
+        ]
       }
     ],
     "eventi": [
@@ -1161,12 +1038,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-08T05:09+01:00",
-      "edizione": "mattina",
-      "notizie": 56,
-      "note": "Fonti lette: Il Fatto Quotidiano, ANSA, Adnkronos (solo ricerca), Al Jazeera (en), Euronews (it), ComingSoon, MYmovies, Turismo Torino. Ricerca rifiutata: reuters.com. Lettura non riuscita: torinotoday.it (eventi e concerti), teatrostabiletorino.it (pagina), eventi.comune.torino.it (robots), mymovies.it Cinema Ideal (vuota), alcune pagine ANSA. thespacecinema.it non consultato. Concerti copiati dall'edizione precedente (non è lunedì)."
-    },
-    {
       "at": "2026-11-08T13:30+01:00",
       "edizione": "pomeriggio",
       "notizie": 60,
@@ -1279,6 +1150,12 @@
       "edizione": "pomeriggio",
       "notizie": 75,
       "note": "Fonti lette: ANSA, Adnkronos, il Giornale (elenco), Euronews (en), Al Jazeera (en), CBS News (en), Torino Oggi. TorinoToday e thespacecinema.it non letti; Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Cinema, teatro, eventi e concerti dall'edizione del mattino (martedì, nessun concerto passato). Nessun riallineamento: copia già pari a origin/main."
+    },
+    {
+      "at": "2026-11-18T05:03+01:00",
+      "edizione": "mattina",
+      "notizie": 70,
+      "note": "Fonti lette: ANSA, Adnkronos, Euronews (en), Al Jazeera (en), Torino Oggi. Non cercate/bloccate: Reuters, BBC, Guardian; TorinoToday, thespacecinema.it non letti; liveblog Al Jazeera non leggibile. Cinema, teatro, eventi e concerti copiati dall'edizione precedente (mercoledì, nessun concerto passato). Nessun riallineamento a origin/main."
     }
   ]
 }
