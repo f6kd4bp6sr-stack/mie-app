@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-17T01:02:00+01:00",
+ "updated": "2026-11-18T01:01:00+01:00",
  "voci": [
   {
    "id": "n20261113-maggioranza",
@@ -371,7 +371,7 @@
    "id": "dpr2527",
    "t": "DPR di recepimento del contratto 2025-2027 in Gazzetta Ufficiale",
    "stato": "atteso",
-   "quando": "non ancora in Gazzetta al 17/11/2026: ricerche sul sito della Gazzetta (fascicoli S.G. fino alla n. 266 del 14/11; ricerca del 17/11 senza esito) senza alcun DPR di recepimento; attesa «indicativamente entro la prima metà di novembre» (SIULP, 28/9), con arretrati entro gennaio 2027",
+   "quando": "non ancora in Gazzetta al 18/11/2026: ricerche sul sito della Gazzetta (fascicoli S.G. fino alla n. 266 del 14/11; ricerca del 18/11 senza esito) senza alcun DPR di recepimento; attesa «indicativamente entro la prima metà di novembre» (SIULP, 28/9), con arretrati entro gennaio 2027",
    "fonte": "SIULP",
    "url": "https://siulp.it/articolo/pubblicazione-del-dpr-di-recepimento-del-contratto-di-lavoro-per-gli-anni-2025-2027/",
    "valore": null
@@ -410,7 +410,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-17T01:02:00+01:00",
+   "ultimo": "2026-11-18T01:01:00+01:00",
    "esito": "ok"
   },
   {
@@ -466,7 +466,7 @@
    "n": "ISTAT",
    "url": "https://www.istat.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-17T01:02:00+01:00",
+   "ultimo": "2026-11-18T01:01:00+01:00",
    "esito": "ok"
   },
   {
@@ -522,7 +522,7 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-08T01:01:00+01:00",
+   "ultimo": "2026-11-18T01:01:00+01:00",
    "esito": "ok"
   },
   {
@@ -543,7 +543,7 @@
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-11-17T01:02:00+01:00",
+   "ultimo": "2026-11-18T01:01:00+01:00",
    "esito": "ok"
   },
   {
@@ -627,7 +627,7 @@
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-11-17T01:02:00+01:00",
+   "ultimo": "2026-11-18T01:01:00+01:00",
    "esito": "ok"
   },
   {
@@ -920,18 +920,23 @@
    "at": "2026-11-17T01:02:00+01:00",
    "notizie": 1,
    "note": "giro di martedì 17/11: 1 notizia nuova (SIULP 13/11 con Infodifesa 11/11, riletta due volte). DPR di recepimento ancora non in Gazzetta. Mercati: ISTAT mostra 5,4% provvisorio, prossima diffusione il 17/11 (definitivo non ancora disponibile): invariato. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì (fatto il 16/11). Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-18T01:01:00+01:00",
+   "notizie": 0,
+   "note": "giro di mercoledì 18/11: nessuna notizia nuova verificata (ricerche su Infodifesa, SIULP, USIF: solo articoli già presenti). Gazzetta: nessun DPR di recepimento trovato. Mercati: inflazione ISTAT definitiva ottobre 5,5% (17/11, riletta due volte; provvisoria 5,4%); BTP 10 anni invariato (nessuna chiusura più recente verificata); depositi vincolati invariati (4,0/4,0/3,75, riletti due volte); libero invariato (Revolut 3,5% promozionale visto in una sola lettura). Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
   {
    "id": "infl",
    "t": "Inflazione in Italia (NIC, su un anno)",
-   "valore": 5.4,
-   "d": "2026-10-30",
-   "fonte": "ISTAT, ottobre 2026 (stima preliminare)",
-   "url": "https://www.istat.it/comunicato-stampa/prezzi-al-consumo-dati-provvisori-ottobre-2026/",
+   "valore": 5.5,
+   "d": "2026-11-17",
+   "fonte": "ISTAT, ottobre 2026 (dati definitivi)",
+   "url": "https://www.istat.it/wp-content/uploads/2026/11/CS_Prezzi-al-consumo_Def_Ottobre2026.pdf",
    "unita": "%",
-   "nota": "settembre 4,2% (definitivo); +0,9% sul mese; dato riportato da Milano Finanza e imgpress (30/10)"
+   "nota": "definitivo del 17/11 (stima provvisoria 5,4%; settembre 4,2%); prossima diffusione 30/11"
   },
   {
    "id": "bce",
