@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-18T01:01:00+01:00",
+ "updated": "2026-11-19T01:02:00+01:00",
  "voci": [
   {
    "id": "n20261113-maggioranza",
@@ -410,14 +410,14 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-18T01:01:00+01:00",
+   "ultimo": "2026-11-19T01:02:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-07T01:03:00+01:00",
+   "ultimo": "2026-11-19T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -522,7 +522,7 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-18T01:01:00+01:00",
+   "ultimo": "2026-11-19T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -543,7 +543,7 @@
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-11-18T01:01:00+01:00",
+   "ultimo": "2026-11-19T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -627,7 +627,7 @@
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-11-18T01:01:00+01:00",
+   "ultimo": "2026-11-19T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -683,14 +683,14 @@
    "n": "QuiFinanza",
    "url": "https://quifinanza.it/",
    "tipo": "testata",
-   "ultimo": "2026-11-16T01:03:00+01:00",
+   "ultimo": "2026-11-19T01:02:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Teleborsa",
    "url": "https://www.teleborsa.it/",
    "tipo": "testata",
-   "ultimo": "2026-10-24T13:08:00+02:00",
+   "ultimo": "2026-11-19T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -925,6 +925,11 @@
    "at": "2026-11-18T01:01:00+01:00",
    "notizie": 0,
    "note": "giro di mercoledì 18/11: nessuna notizia nuova verificata (ricerche su Infodifesa, SIULP, USIF: solo articoli già presenti). Gazzetta: nessun DPR di recepimento trovato. Mercati: inflazione ISTAT definitiva ottobre 5,5% (17/11, riletta due volte; provvisoria 5,4%); BTP 10 anni invariato (nessuna chiusura più recente verificata); depositi vincolati invariati (4,0/4,0/3,75, riletti due volte); libero invariato (Revolut 3,5% promozionale visto in una sola lettura). Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-19T01:02:00+01:00",
+   "notizie": 0,
+   "note": "giro di giovedì 19/11: nessuna notizia nuova verificata (ricerche su Gazzetta, governo.it, USIF, SIULP, Infodifesa, funzionepubblica: solo articoli già presenti; pmi.it non raggiungibile). DPR di recepimento ancora non trovato in Gazzetta. Mercati: BTP 10 anni 4,40% al 18/11 (QuiFinanza letta due volte, Teleborsa 4,43%); altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
@@ -971,12 +976,12 @@
   {
    "id": "btp10",
    "t": "BTP a 10 anni (rendimento lordo)",
-   "valore": 4.38,
-   "d": "2026-11-12",
-   "fonte": "ANSA, chiusura del 12/11",
-   "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/13/lo-spread-tra-btp-e-bund-apre-in-lieve-rialzo-a-105-punti_57a4ee65-0a96-481c-affc-98f0060bbafc.html",
+   "valore": 4.4,
+   "d": "2026-11-18",
+   "fonte": "QuiFinanza, 18/11 ore 9:09",
+   "url": "https://quifinanza.it/economia/finanza/spread-btp-bund-18-novembre-2026/1024746/",
    "unita": "%",
-   "nota": "chiusura 12/11: 4,38% (ANSA 13/11: «4,38% alla chiusura precedente»); ANSA 12/11 ore 18:11: «sfiora il 4,39», spread 104,4 punti (coincide entro 0,01). Apertura 13/11: 4,41%, spread 105."
+   "nota": "18/11 mattina: 4,40% con spread 104 (QuiFinanza, riletto due volte); Teleborsa 18/11: 4,43%, spread 105 (coincide entro 0,05). Dato in corso di seduta, non di chiusura. Precedente: 4,38% alla chiusura del 12/11."
   },
   {
    "id": "btpv",
