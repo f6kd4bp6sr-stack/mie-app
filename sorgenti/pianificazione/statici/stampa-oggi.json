@@ -1,10 +1,50 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-19T05:03+01:00",
-  "nota": "Edizione del mattino del 19 novembre 2026.",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-19T13:03+01:00",
+  "nota": "Edizione del pomeriggio del 19 novembre 2026.",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-sciopero-cgil-20-nov",
+        "t": "Venerdì 20 novembre sciopero generale della Cgil contro la legge di bilancio",
+        "s": "La Cgil sciopera venerdì 20 novembre contro la legge di bilancio. Landini chiede salari più alti, fondi per sanità e scuola, riforma fiscale e no al riarmo, e respinge come «propaganda» il «weekend lungo» evocato da Meloni. Cisl e Uil scelgono altre forme di protesta.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/17/venerdi-20-sciopero-generale-cgil-il-futuro-e-adesso_cd3b09c8-d1e8-4897-b37b-56c132bda7b5.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/landini-sciopero-di-venerdi-basta-propaganda-la-manovra-va-cambiata_38c7d09d-a5dd-451d-a2be-7aa4b6c594b3.html"
+          }
+        ]
+      },
+      {
+        "id": "it-senato-ebook",
+        "t": "Senato: passa l'emendamento FdI sugli e-book, Forza Italia vota con le opposizioni",
+        "s": "L'emendamento di Fratelli d'Italia al decreto scuola è approvato 84 a 76, con il sì di Azione. Forza Italia si è schierata con l'opposizione, mentre la commissione Bilancio aveva dato parere negativo 12 a 11: per La Russa il parere è solo consultivo.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/19/maggioranza-sotto-in-senato-su-emendamento-e-book-fi-vota-con-opposizioni_f14af22e-5fa1-4851-b2a1-60f52ce6bb6e.html"
+          }
+        ]
+      },
+      {
+        "id": "it-manovra-emendamenti-18",
+        "t": "Manovra 2027: circa 6.600 emendamenti alla Camera, il condono resta nel pacchetto",
+        "s": "Record di emendamenti alla legge di bilancio, un terzo dalla maggioranza. Ammissibilità entro il 23 novembre, aula probabilmente da inizio dicembre. Dopo il vertice di Meloni restano aperti i fondi per pensioni e sanità; la Lega parla di «Quota 64» dal 2027.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/politica/manovra-2027-governo-condono-pensioni-sanita_4Pazsr00eqQxip4iE0r372"
+          }
+        ]
+      },
       {
         "id": "it-anac-morzenti",
         "t": "Anac: il Governo sceglie Remo Morzenti Pellegrini come nuovo presidente",
@@ -40,45 +80,26 @@
             "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/bayesian-ente-governativo-inglese-scagiona-lequipaggio_5fe123a0-864b-4510-9b0c-135c6f96c1e4.html"
           }
         ]
-      },
-      {
-        "id": "it-manovra-emendamenti-18",
-        "t": "Manovra 2027: circa 6.600 emendamenti alla Camera, il condono resta nel pacchetto",
-        "s": "Record di emendamenti alla legge di bilancio, un terzo dalla maggioranza. Ammissibilità entro il 23 novembre, aula probabilmente da inizio dicembre. Dopo il vertice di Meloni restano aperti i fondi per pensioni e sanità; la Lega parla di «Quota 64» dal 2027.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/manovra-2027-governo-condono-pensioni-sanita_4Pazsr00eqQxip4iE0r372"
-          }
-        ]
-      },
-      {
-        "id": "it-ddl-antisemitismo",
-        "t": "Ddl antisemitismo approvato: Emanuele Fiano lascia il Pd in dissenso dal voto del partito",
-        "s": "Il testo, che adotta la definizione dell'Ihra, è stato approvato il 17 novembre. Fiano, storico esponente dem, annuncia l'uscita dal partito parlando di «limite invalicabile»; secondo l'ANSA Schlein lo aveva chiamato la sera prima del voto senza fargli cambiare idea.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/topnews/2026/11/18/fiano-lascia-il-pd-per-il-no-alla-legge-sullantisemitismo_f7ccc2c7-22f1-4d02-b7fc-c6842ecf9dfa.html"
-          }
-        ]
-      },
-      {
-        "id": "it-sciopero-cgil-20-nov",
-        "t": "Venerdì 20 novembre sciopero generale della Cgil contro la legge di bilancio",
-        "s": "Fermo per l'intera giornata nei settori pubblici e privati, in coincidenza con lo sciopero europeo degli studenti. Cortei in tutte le province piemontesi; a Torino il servizio Gtt è garantito dalle 6 alle 9 e dalle 12 alle 15.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/17/venerdi-20-sciopero-generale-cgil-il-futuro-e-adesso_cd3b09c8-d1e8-4897-b37b-56c132bda7b5.html"
-          }
-        ]
       }
     ],
     "mondo": [
+      {
+        "id": "mo-trilaterale-shenzhen",
+        "t": "Shenzhen: si chiude il vertice a tre Trump-Xi-Putin, senza decisioni concrete annunciate",
+        "s": "Il trilaterale tra Stati Uniti, Cina e Russia a margine dell'Apec è terminato. Xi ha invocato la messa al bando delle armi nucleari, Trump ha detto che Washington e Pechino vogliono aiutare a chiudere la guerra in Ucraina. Per gli analisti prevale il valore simbolico.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/concluso-il-trilaterale-tra-xi-putin-e-trump_58d1acb8-ce50-4a6f-9be4-144b7df1d98d.html"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/19/us-and-china-want-to-help-end-ukraine-war-trump-says-ahead-of-trilateral-with-russia",
+            "l": "en"
+          }
+        ]
+      },
       {
         "id": "mo-gaza-operazione-ovest-linea-gialla",
         "t": "Gaza: Israele avvia un'operazione a ovest della «linea gialla», Hamas parla di violazione della tregua",
@@ -89,19 +110,6 @@
             "n": "Euronews",
             "url": "https://it.euronews.com/2026/11/18/israele-avvia-operazione-militare-a-ovest-della-linea-gialla-di-gaza-avviso-di-sfollare",
             "l": "it"
-          }
-        ]
-      },
-      {
-        "id": "mo-ucraina-evacuazioni",
-        "t": "Ucraina: Zelensky propone altre 10 evacuazioni umanitarie nelle zone occupate, sul modello di Oleshky",
-        "s": "La tregua di Oleshky (27 ottobre-1 novembre) ha permesso di far uscire quasi 800 persone. Kiev porterà il piano ai mediatori americani; Putin aveva suggerito un'operazione analoga a Kostiantynivka, che l'Ucraina dice di non aver perso.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/18/zelenskyy-proposes-10-more-humanitarian-evacuations-after-oleshky",
-            "l": "en"
           }
         ]
       },
@@ -119,26 +127,46 @@
         ]
       },
       {
-        "id": "mo-harry-russia",
-        "t": "Il principe Harry: la Russia è una minaccia, pronto a tornare nelle Forze armate",
-        "s": "In un podcast del Telegraph registrato durante una visita a Leopoli, il duca di Sussex dice che il Regno Unito è in conflitto «invisibile» con Mosca da circa dieci anni.",
+        "id": "mo-groenlandia-patto",
+        "t": "La Danimarca ratifica il patto di sicurezza tra Stati Uniti e Groenlandia",
+        "s": "Il Parlamento danese approva l'intesa firmata il 22 settembre: 109 voti favorevoli su 179, nessun contrario. Prevede due basi americane, resta valida in caso di indipendenza dell'isola ed esclude Paesi non Ue e non Nato dai settori strategici.",
         "d": "2026-11-19",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/principe-harry-russia-minaccia-preoccupante-pronto-a-tornare-nelle-forze-armate_b0df02ee-d6f5-4a95-b60f-fa6d8604bc9d.html"
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/19/danish-lawmakers-ratify-us-greenland-security-pact",
+            "l": "en"
+          },
+          {
+            "n": "Al Jazeera",
+            "url": "https://aljazeera.com/news/2026/11/19/denmark-parliament-approves-security-deal-with-greenland-and-us",
+            "l": "en"
           }
         ]
       },
       {
-        "id": "mo-fed-rialzo",
-        "t": "Verbali Fed: quasi tutti i membri favorevoli a un rialzo dei tassi nei prossimi mesi",
-        "s": "Dalla riunione del 27-28 ottobre emerge l'obiettivo di riportare l'inflazione al 2%; due membri hanno ipotizzato a dicembre un aumento superiore a un quarto di punto.",
+        "id": "mo-venezuela-hegseth",
+        "t": "Il capo del Pentagono Hegseth a Caracas: accordo militare con il governo ad interim venezuelano",
+        "s": "Visita a sorpresa del segretario alla Difesa americano il 18 novembre: l'intesa riguarda addestramento, intelligence, equipaggiamenti e sicurezza ai confini contro narcotraffico e gruppi armati. I termini completi non sono noti.",
         "d": "2026-11-19",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/quasi-tutti-allinterno-della-fed-favorevoli-a-un-rialzo-dei-tassi_345a5e9c-7b93-45f3-b946-62f6982e4ff7.html"
+            "n": "Al Jazeera",
+            "url": "https://aljazeera.com/news/2026/11/19/why-is-pete-hegseth-strengthening-us-military-ties-with-venezuela",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-ucraina-evacuazioni",
+        "t": "Ucraina: Zelensky propone altre 10 evacuazioni umanitarie nelle zone occupate, sul modello di Oleshky",
+        "s": "La tregua di Oleshky (27 ottobre-1 novembre) ha permesso di far uscire quasi 800 persone. Kiev porterà il piano ai mediatori americani; Putin aveva suggerito un'operazione analoga a Kostiantynivka, che l'Ucraina dice di non aver perso.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/18/zelenskyy-proposes-10-more-humanitarian-evacuations-after-oleshky",
+            "l": "en"
           }
         ]
       }
@@ -169,6 +197,19 @@
             "l": "en"
           }
         ]
+      },
+      {
+        "id": "es-euronews-spagna-mir",
+        "t": "Euronews: la Spagna blocca le nuove domande di riconoscimento dei titoli esteri di medicina",
+        "s": "Il ministero dell'Università ferma le richieste necessarie per l'esame di specializzazione Mir: i candidati stranieri hanno superato per la prima volta quelli spagnoli. Le domande sono salite da 10.224 nel 2017 a 85.564 nel 2025; ai candidati esteri è riservato il 10% dei posti (968).",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/19/spain-freezes-new-foreign-degree-applications-as-foreign-doctors-flood-residency-exam",
+            "l": "en"
+          }
+        ]
       }
     ],
     "economia": [
@@ -195,18 +236,70 @@
             "url": "https://www.regione.piemonte.it/web/pinforma/notizie/microchip-presentato-novara-vulcan-project-silicon-box-primo-sito-nel-suo-genere-ue"
           }
         ]
+      },
+      {
+        "id": "ec-fed-rialzo",
+        "t": "Verbali Fed: quasi tutti i membri favorevoli a un rialzo dei tassi nei prossimi mesi",
+        "s": "Dalla riunione del 27-28 ottobre emerge l'obiettivo di riportare l'inflazione al 2%; due membri hanno ipotizzato a dicembre un aumento superiore a un quarto di punto.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/quasi-tutti-allinterno-della-fed-favorevoli-a-un-rialzo-dei-tassi_345a5e9c-7b93-45f3-b946-62f6982e4ff7.html"
+          }
+        ]
       }
     ],
     "torino": [
       {
-        "id": "to-alleanza-garibaldi",
-        "t": "Alleanza per Torino: Garibaldi lascia la guida, Lo Russo propone un'agenzia per l'innovazione",
-        "s": "Il sindaco rilancia con un'agenzia di sviluppo dedicata all'innovazione dopo l'annuncio dell'uscita del presidente.",
+        "id": "to-metro2-trincerone",
+        "t": "Metro 2: partono i lavori dal Trincerone, Lo Russo parla di «giorno storico»",
+        "s": "Con l'avvio dei cantieri dal Trincerone prende forma la seconda linea della metropolitana di Torino; il sindaco Stefano Lo Russo ha definito la giornata storica per la città. Dettagli su tracciato e tempi sono nell'articolo.",
         "d": "2026-11-19",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/politica-11/articolo/alleanza-per-torino.html"
+            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/viabilita-1/articolo/metro-3.html"
+          }
+        ]
+      },
+      {
+        "id": "to-superbonus-ance",
+        "t": "Superbonus in dieci anni: i costruttori torinesi di Ance protestano contro la norma in manovra",
+        "s": "Ance Torino, con la presidente Paola Orsini, definisce «iniqua» la regola che diluisce in dieci anni il credito Superbonus compensabile nel 2027, anche per lavori 2023 già pagati. Penalizzerebbe soprattutto le imprese che hanno praticato lo sconto in fattura.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/superbonus-spalmato-in-10-anni-i-costruttori-torinesi-alzano-la-voce-norma-iniqua-che-strozza-le.html"
+          }
+        ]
+      },
+      {
+        "id": "to-parco-sempione",
+        "t": "Barriera di Milano: controlli della Polizia al parco Sempione, due arresti e 14 allontanamenti",
+        "s": "Controlli straordinari hanno coinvolto 47 persone e due esercizi commerciali: arrestati un 19enne con ordine di carcerazione e un 21enne con 27 dosi di droga, tre denunce. Amiat ha ripulito il parco dai rifiuti.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/cronaca-11/articolo/maxi-blitz-a-parco-sempione-due-arresti-tre-denunce-e-14-allontanamenti.html"
+          }
+        ]
+      },
+      {
+        "id": "to-carcere-smartphone",
+        "t": "Carcere di Torino: 135 grammi di cocaina nascosti in una cella e un altro cellulare trovato",
+        "s": "La polizia penitenziaria ha scoperto la cocaina dietro un lavandino il 18 novembre e un telefono in un'altra cella. Il sindacato Osapp segnala che gli episodi si ripetono a distanza di tre giorni e chiede più prevenzione.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/cronaca-11/articolo/droga-nelle-celle-del-carcere-di-torino-sequestrati-135-grammi-di-cocaina-e-pure-un-cellulare.html"
+          },
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/cronaca-11/articolo/carcere-di-torino-scoperti-quattro-smartphone-nascosti-nelle-celle-e-hashish-durante-un-blitz.html"
           }
         ]
       },
@@ -219,30 +312,6 @@
           {
             "n": "Torino Oggi",
             "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/attualita-31/articolo/pendolari-torino-milano-in-crisi-il-pd-attacca-carnet-aumentati-del-76-e-pochi-posti.html"
-          }
-        ]
-      },
-      {
-        "id": "to-tav-cortei",
-        "t": "Tav e cortei: per il pm scontri gravi, chiesta la sorveglianza per un leader di Askatasuna",
-        "s": "La richiesta della Procura riguarda un esponente del centro sociale per le manifestazioni contro la Tav.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/cronaca-11/articolo/tav-e-cortei-il-pm-gli-scontri-sono-fatti-gravi-chiesta-sorveglianza-per-un-leader-di-askatasun.html"
-          }
-        ]
-      },
-      {
-        "id": "to-carcere-smartphone",
-        "t": "Carcere di Torino: quattro smartphone e hashish trovati nelle celle durante un blitz",
-        "s": "Il controllo ha scoperto telefoni nascosti e sostanza stupefacente.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/cronaca-11/articolo/carcere-di-torino-scoperti-quattro-smartphone-nascosti-nelle-celle-e-hashish-durante-un-blitz.html"
           }
         ]
       },
@@ -261,14 +330,26 @@
     ],
     "piemonte": [
       {
-        "id": "pi-allarme-bomba-463",
-        "t": "Allarme bomba nelle scuole piemontesi: 463 segnalazioni, 190 a Torino",
-        "s": "L'11 novembre la mail ha raggiunto quasi tutti gli istituti; circa il 20% di quelli interessati è stato evacuato e le scuole sono rimaste aperte il giorno dopo.",
+        "id": "pi-caporalato-cabina",
+        "t": "Piemonte: insediata la prima cabina di regia regionale contro il caporalato",
+        "s": "Convocata dalla Regione a Torino il 18 novembre, riunisce sindacati, associazioni datoriali e di categoria. L'assessore Enrico Bussalino: servirà a coordinare gli interventi sul territorio. Il Piemonte guida per il Nord il progetto Common Ground 2.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/18/piemonte-insediata-in-regione-prima-cabina-di-regia-contro-il-caporalato_3a7ae585-3dfb-4c66-b615-baa8dced9439.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-politiche-attive-post-gol",
+        "t": "Lavoro e formazione: il Piemonte supera il programma Gol con un nuovo atto 2027-2029",
+        "s": "Operatori accreditati per tre anni senza graduatoria, scelti dai cittadini dopo la profilazione nei Centri per l'impiego; dal 2028 contano anche gli esiti occupazionali. Stanziati 151 milioni dal Fondo sociale europeo Plus.",
         "d": "2026-11-19",
         "fonti": [
           {
             "n": "Regione Piemonte",
-            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/allarme-bomba-nelle-scuole-463-segnalazioni-piemonte"
+            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/lavoro-formazione-piemonte-rivoluziona-politiche-attive-post-gol"
           }
         ]
       },
@@ -281,6 +362,18 @@
           {
             "n": "Regione Piemonte",
             "url": "https://www.regione.piemonte.it/web/pinforma/notizie/montagna-piemonte-investe-per-portare-segnale-dove-mercato-non-arriva"
+          }
+        ]
+      },
+      {
+        "id": "pi-allarme-bomba-463",
+        "t": "Allarme bomba nelle scuole piemontesi: 463 segnalazioni, 190 a Torino",
+        "s": "L'11 novembre la mail ha raggiunto quasi tutti gli istituti; circa il 20% di quelli interessati è stato evacuato e le scuole sono rimaste aperte il giorno dopo.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Regione Piemonte",
+            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/allarme-bomba-nelle-scuole-463-segnalazioni-piemonte"
           }
         ]
       }
@@ -1053,12 +1146,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-09T13:20+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 68,
-      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Il Fatto Quotidiano, Adnkronos; TorinoToday e pagine ANSA/Adnkronos non tutte leggibili (solo ricerca). Reuters, BBC e altre grandi testate estere non tentate (bloccate nei giri precedenti). Cinema, teatro, eventi e concerti dall'edizione del mattino (non è lunedì mattina); nessun concerto passato. Copia locale riallineata a origin/main (storia riscritta)."
-    },
-    {
       "at": "2026-11-10T05:05+01:00",
       "edizione": "mattina",
       "notizie": 71,
@@ -1171,6 +1258,12 @@
       "edizione": "mattina",
       "notizie": 72,
       "note": "Fonti lette: ANSA, Euronews (en/it), Al Jazeera (en), Regione Piemonte. Torino Oggi: ricerca ok ma pagine non leggibili (titoli da risultati); TorinoToday non leggibile; thespacecinema.it e teatri non letti, Ideal da comingsoon.it. Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Eventi e teatro dall'edizione precedente, concerti copiati (tolto 1 concerto passato). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-19T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 78,
+      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi, Regione Piemonte. Il Sole 24 Ore (ricerca ok, pagine non leggibili), Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti); TorinoToday e metro 2 di Torino Oggi non leggibili (titolo da risultato di ricerca). Cinema, teatro, eventi e concerti copiati dall'edizione del mattino (nessun concerto passato). Nessun riallineamento a origin/main."
     }
   ]
 }
