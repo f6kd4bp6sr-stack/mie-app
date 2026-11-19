@@ -1,10 +1,46 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-18T13:03+01:00",
-  "nota": "Edizione del pomeriggio del 18 novembre 2026.",
+  "edizione": "mattina",
+  "updated": "2026-11-19T05:03+01:00",
+  "nota": "Edizione del mattino del 19 novembre 2026.",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-anac-morzenti",
+        "t": "Anac: il Governo sceglie Remo Morzenti Pellegrini come nuovo presidente",
+        "s": "Professore di diritto amministrativo di 57 anni ed ex rettore a Bergamo, prende il posto di Giuseppe Busia, scaduto l'11 settembre. Dopo il ritiro del primo candidato, Altieri, il nome passa ora al parere delle commissioni parlamentari.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/politica/2026/11/18/remo-morzenti-pellegrini-verso-la-presidenza-di-anac-lindicazione-attesa-in-cdm_44b8a7fa-254f-49be-857c-f7ba88dd81c5.html"
+          }
+        ]
+      },
+      {
+        "id": "it-allarme-bomba-scuole",
+        "t": "Allarmi bomba nelle scuole: l'11 novembre oltre 6.000 istituti coinvolti, indaga la Polizia postale",
+        "s": "La mail firmata «Andropov» ha causato evacuazioni e un vertice a Palazzo Chigi; il 16 novembre è arrivata una nuova ondata di minacce. Euronews riferisce che le scuole non vengono più evacuate in automatico per messaggi generici: decidono le forze dell'ordine.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/speciali/ansa-newsroom/2026/11/18/ansa-newsroom-fuori-tutti-allarme-bomba-nelle-scuole-caos-e-evacuazioni_732f890a-dda9-4cbc-9dca-a464e6d7c70b.html"
+          }
+        ]
+      },
+      {
+        "id": "it-bayesian-maib",
+        "t": "Naufragio del Bayesian: l'ente britannico Maib scagiona l'equipaggio, indica una fragilità strutturale",
+        "s": "Il rapporto finale sull'affondamento del 2024 davanti a Porticello, in cui morirono 7 persone, cita stabilità non rilevata, maltempo e istruzioni carenti. Le conclusioni differiscono da quelle della Procura di Termini Imerese, che indaga comandante e due membri dell'equipaggio.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/bayesian-ente-governativo-inglese-scagiona-lequipaggio_5fe123a0-864b-4510-9b0c-135c6f96c1e4.html"
+          }
+        ]
+      },
       {
         "id": "it-manovra-emendamenti-18",
         "t": "Manovra 2027: circa 6.600 emendamenti alla Camera, il condono resta nel pacchetto",
@@ -14,30 +50,6 @@
           {
             "n": "Adnkronos",
             "url": "https://www.adnkronos.com/politica/manovra-2027-governo-condono-pensioni-sanita_4Pazsr00eqQxip4iE0r372"
-          }
-        ]
-      },
-      {
-        "id": "it-campo-largo-patrimoniale",
-        "t": "Campo largo: 18 emendamenti comuni alla manovra, ma resta lo scontro sulla patrimoniale",
-        "s": "Il tavolo delle opposizioni firma proposte su salario minimo, sanità e Opzione donna, dopo una sospensione del M5s. Avs chiede la patrimoniale con soglia a 5,4 milioni, il Pd ipotizza 100 milioni. Conte afferma che i tavoli «non si rompono».",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/17/dal-campo-largo-18-emendamenti-comuni-ma-e-alta-tensione-sulla-patrimoniale_683d5574-d857-447f-9100-12057733f292.html"
-          }
-        ]
-      },
-      {
-        "id": "it-meloni-patrimoniale",
-        "t": "Meloni: «lavoriamo per abbassare le tasse», la sinistra divisa sulla patrimoniale",
-        "s": "La premier contrappone le misure del Governo sul taglio delle tasse al dibattito delle opposizioni sulla patrimoniale, accusandole di pensare solo a tassare la ricchezza esistente. Le opposizioni restano divise sulla soglia e sull'importo di un'eventuale imposta.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/topnews/2026/11/18/meloni-noi-lavoriamo-per-abbassare-le-tasse-la-sinistra-litiga-sulla-patrimoniale_4fa5dcb6-56e1-4ff7-9ccf-1813ee26d724.html"
           }
         ]
       },
@@ -64,152 +76,96 @@
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/17/venerdi-20-sciopero-generale-cgil-il-futuro-e-adesso_cd3b09c8-d1e8-4897-b37b-56c132bda7b5.html"
           }
         ]
-      },
-      {
-        "id": "it-crosetto-guerra-ibrida",
-        "t": "Crosetto alla Camera: la distinzione tra difesa ibrida e convenzionale «non regge»",
-        "s": "Il ministro della Difesa, citando l'Ucraina, sostiene che trincee, droni, satelliti e attacchi informatici fanno parte della stessa guerra e che l'Italia deve prepararsi a tutta. Tra i dati citati, 6 miliardi di euro nei prossimi anni contro la guerra ibrida.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://ansa.it/sito/notizie/topnews/2026/11/18/crosetto-la-guerra-e-una-sola-bisogna-attrezzarci-a-combatterla-tutta_51ad3b83-b0d5-4e3f-b086-28f09ccc012e.html"
-          }
-        ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-iran-golfo-droni",
-        "t": "Golfo: droni iraniani su Bahrein e allarme in Kuwait, mine nello stretto di Hormuz",
-        "s": "Le Guardie della rivoluzione dicono di aver colpito un radar Usa nella base di Sheikh Isa; Manama intercetta l'attacco, il terzo in cinque giorni. Il Kuwait segnala droni «ostili». Teheran riferisce di tre petroliere colpite da mine a Hormuz; gli Usa hanno attaccato l'isola di Qeshm.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/17/kuwait-reports-drone-attacks-as-iran-us-trade-attacks-on-qeshm-and-bahrain",
-            "l": "en"
-          },
-          {
-            "n": "Al Jazeera (live)",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/18/iran-war-live-kuwait-says-intercepting-hostile-drone-attacks",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-putin-shenzhen-jet",
-        "t": "Putin a Shenzhen per l'Apec: jet russi intercettati vicino a Giappone, Corea e Taiwan",
-        "s": "Mentre il presidente russo arriva in Cina, Tokyo denuncia una violazione dello spazio aereo al largo di Fukuoka; Seul e Taipei segnalano velivoli russi nelle proprie zone di difesa. Giovedì è atteso un trilaterale con Xi e Trump.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/vertice-shenzhen-putin-cina-incursione-jet-russi_RPboNNwfl1JU9w3TbO5O"
-          }
-        ]
-      },
-      {
-        "id": "mo-gaza-board-of-peace",
-        "t": "Gaza: il Board of Peace avverte l'Onu, la tregua rischia di crollare senza passi concreti",
-        "s": "In un rapporto al Consiglio di sicurezza, l'organismo sostenuto dagli Usa cita raid israeliani, aiuti bloccati prima dell'inverno e l'amministrazione civile ferma. Chiede a Israele decisioni rapide e alle parti di rispettare gli impegni.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/18/board-of-peace-warns-gaza-ceasefire-faces-imminent-collapse-without-action",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-kyiv-ponti",
-        "t": "Attacchi russi su due ponti di Kiev, secondo il sindaco",
-        "s": "Il sindaco della capitale ucraina riferisce che due dei principali ponti sono stati colpiti dai bombardamenti russi del 17 novembre.",
-        "d": "2026-11-18",
+        "id": "mo-gaza-operazione-ovest-linea-gialla",
+        "t": "Gaza: Israele avvia un'operazione a ovest della «linea gialla», Hamas parla di violazione della tregua",
+        "s": "L'esercito è entrato nel centro della Striscia tra al-Bureij e al-Nuseirat e ha chiuso via Salah al-Din. Il ministro Katz ribadisce che le zone di sicurezza resteranno finché Hamas e Hezbollah non saranno disarmati.",
+        "d": "2026-11-19",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/17/russian-strikes-hit-two-major-bridges-in-ukraines-capital-citys-mayor-says",
+            "url": "https://it.euronews.com/2026/11/18/israele-avvia-operazione-militare-a-ovest-della-linea-gialla-di-gaza-avviso-di-sfollare",
+            "l": "it"
+          }
+        ]
+      },
+      {
+        "id": "mo-ucraina-evacuazioni",
+        "t": "Ucraina: Zelensky propone altre 10 evacuazioni umanitarie nelle zone occupate, sul modello di Oleshky",
+        "s": "La tregua di Oleshky (27 ottobre-1 novembre) ha permesso di far uscire quasi 800 persone. Kiev porterà il piano ai mediatori americani; Putin aveva suggerito un'operazione analoga a Kostiantynivka, che l'Ucraina dice di non aver perso.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/18/zelenskyy-proposes-10-more-humanitarian-evacuations-after-oleshky",
             "l": "en"
           }
         ]
       },
       {
-        "id": "mo-usa-fda-ritiro",
-        "t": "Trump ritira la candidata alla guida della Fda, manca l'appoggio del Senato",
-        "s": "La Casa Bianca rinuncia a Heidi Overton, un giorno prima del voto in commissione. Pesavano la poca esperienza gestionale e le posizioni sui vaccini ai bambini, criticate da senatori di entrambi i partiti.",
-        "d": "2026-11-18",
+        "id": "mo-ponte-crimea",
+        "t": "Ponte di Crimea colpito da droni e missili ucraini, Mosca convoca riunioni d'urgenza",
+        "s": "Secondo Euronews un tratto del ponte è crollato dopo l'attacco alle sezioni stradale e ferroviaria; non sono stati forniti dati su danni o vittime.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/18/europe-today-crimean-bridge-french-presidential-elections-and-serbian-students-list",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-harry-russia",
+        "t": "Il principe Harry: la Russia è una minaccia, pronto a tornare nelle Forze armate",
+        "s": "In un podcast del Telegraph registrato durante una visita a Leopoli, il duca di Sussex dice che il Regno Unito è in conflitto «invisibile» con Mosca da circa dieci anni.",
+        "d": "2026-11-19",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/trump-ritira-la-controversa-nomina-per-la-guida-della-food-and-drug_361957f5-d948-41c8-a214-6ffc76e3d8be.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/principe-harry-russia-minaccia-preoccupante-pronto-a-tornare-nelle-forze-armate_b0df02ee-d6f5-4a95-b60f-fa6d8604bc9d.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-fed-rialzo",
+        "t": "Verbali Fed: quasi tutti i membri favorevoli a un rialzo dei tassi nei prossimi mesi",
+        "s": "Dalla riunione del 27-28 ottobre emerge l'obiettivo di riportare l'inflazione al 2%; due membri hanno ipotizzato a dicembre un aumento superiore a un quarto di punto.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/quasi-tutti-allinterno-della-fed-favorevoli-a-un-rialzo-dei-tassi_345a5e9c-7b93-45f3-b946-62f6982e4ff7.html"
           }
         ]
       }
     ],
     "estero": [
       {
-        "id": "es-euronews-ponte-crimea",
-        "t": "Ponte di Crimea: Kiev lo colpisce con droni e missili, Mosca convoca riunioni d'urgenza",
-        "s": "Secondo Euronews, le forze ucraine hanno colpito sia la sezione stradale sia quella ferroviaria del ponte, danneggiandolo in parte; dopo il crollo di un tratto la Russia avrebbe indetto colloqui d'emergenza. L'attacco è presentato come uno dei più rilevanti sull'infrastruttura.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://euronews.com/2026/11/18/europe-today-crimean-bridge-french-presidential-elections-and-serbian-students-list",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-aj-alaska",
-        "t": "Usa, Mary Peltola conquista il seggio in Senato in Alaska: ultimo seggio assegnato",
-        "s": "Secondo Al Jazeera e Ap, la democratica batte il senatore repubblicano Dan Sullivan, chiudendo una tornata di midterm negativa per i repubblicani. Si attendono ricorsi, tra le accuse di un candidato «civetta» con lo stesso nome.",
-        "d": "2026-11-18",
+        "id": "es-aj-anthropic-ipo",
+        "t": "Al Jazeera: Anthropic raccoglie 81,3 miliardi di dollari, la più grande quotazione di sempre",
+        "s": "Azioni a 83 dollari, sopra la forchetta prevista di 70-78; il debutto al Nasdaq è giovedì con il simbolo «ANT». Valutazione di circa 1.500 miliardi; il record precedente era quello di SpaceX a giugno.",
+        "d": "2026-11-19",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/18/mary-peltola-wins-alaska-senate-seat-in-another-democratic-win",
+            "url": "https://www.aljazeera.com/economy/2026/11/19/anthropic-raises-81-3bn-in-biggest-ipo-of-all-time",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-euronews-burnham-brexit",
-        "t": "Burnham: «la Brexit non ha funzionato», alla vigilia del vertice Regno Unito-Ue",
-        "s": "Alla vigilia del summit di «reset» con Bruxelles, il primo ministro britannico Andy Burnham giudica negativamente l'uscita dall'Unione.",
-        "d": "2026-11-18",
+        "id": "es-euronews-scuole-italia",
+        "t": "Euronews: scuole italiane colpite da una nuova ondata di minacce di bomba e veleno",
+        "s": "Almeno 100 istituti hanno ricevuto lunedì mail con minacce; le email sembrano partite da un account violato legato a un centro di ricerca vietnamita. Scatta un nuovo protocollo di sicurezza.",
+        "d": "2026-11-19",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/17/uk-leader-andy-burnham-says-brexit-hasnt-worked-ahead-of-reset-summit-with-eu",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-euronews-estonia",
-        "t": "Estonia pronta a chiudere il confine con la Russia dopo un tentato sabotaggio",
-        "s": "Il premier Kristen Michal attribuisce al Gru l'ordine di un sabotaggio contro un'azienda estone di droni, Threod Systems; Tallinn si prepara alla chiusura.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/16/estonia-to-close-russia-border-after-sabotage-bid-on-drone-maker-foreign-minister-says",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-euronews-praga",
-        "t": "Praga: centinaia di migliaia in piazza contro i piani del governo Babiš sui media pubblici",
-        "s": "La più grande protesta contro l'esecutivo contesta il piano di finanziamento di tv e radio pubbliche ceche.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/15/hundreds-of-thousands-in-prague-protest-czech-governments-public-media-funding-plans",
+            "url": "https://www.euronews.com/2026/11/16/italian-schools-hit-by-new-wave-of-bomb-and-poison-threats",
             "l": "en"
           }
         ]
@@ -217,156 +173,114 @@
     ],
     "economia": [
       {
-        "id": "ec-borse-petrolio-18",
-        "t": "Borse europee caute, Milano in lieve calo; petrolio in discesa dopo le scorte Usa",
-        "s": "Il Ftse Mib apre a -0,05% mentre i titoli tecnologici salgono ma pesano poco. Il Brent scende a circa 91,5 dollari (-1,7%), il Wti a 84; l'euro cala a 1,097 sul dollaro. L'ANSA segnala lo spread Btp-Bund in avvio a 102 punti base.",
-        "d": "2026-11-18",
+        "id": "ec-anthropic-ipo",
+        "t": "Anthropic debutta al Nasdaq: IPO da 81,3 miliardi, più altri 26 da investitori privati",
+        "s": "Prezzo a 83 dollari e circa 980 milioni di azioni vendute; tra gli investitori privati anche Nvidia e Google. ANSA e Al Jazeera riportano le stesse cifre.",
+        "d": "2026-11-19",
         "fonti": [
-          {
-            "n": "Il Sole 24 Ore",
-            "url": "https://en.ilsole24ore.com/radiocor/nRC_18.11.2026_09.24_19810198"
-          },
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/lo-spread-btp-bund-apre-in-calo-a-102-punti-base_94b34a6d-3b88-45ba-8954-3cfca2eb005f.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/anthropic-amplia-la-sua-ipo-a-81-miliardi-batte-quella-di-spacex-di-musk_b426c2fd-bd23-4965-a19e-0d17b6b400ad.html"
           }
         ]
       },
       {
-        "id": "ec-previsioni-ue-italia",
-        "t": "Previsioni Ue: Italia verso l'uscita dalla procedura per deficit in primavera, debito al 137,9%",
-        "s": "Bruxelles stima deficit al 2,9% nel 2026 e Pil a +1%; il debito supera quello greco, il più alto dell'area euro. L'uscita dalla procedura dipende dalla clausola di salvaguardia per difesa ed energia.",
-        "d": "2026-11-18",
+        "id": "ec-silicon-box-novara",
+        "t": "Novara: Silicon Box presenta il Vulcan Project, 3,2 miliardi e 1.600 posti di lavoro",
+        "s": "Primo sito europeo di packaging avanzato di semiconduttori, ad Agognate; 1,3 miliardi di intervento pubblico tramite Invitalia. Lavori previsti dai primi mesi del 2027.",
+        "d": "2026-11-19",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/economia/previsioni-ue-conti-pubblici-italia-fuori-primavera_1XTYuIoDQpE82VKSg6QVfU"
-          }
-        ]
-      },
-      {
-        "id": "ec-nvidia-conti",
-        "t": "Nvidia: ricavi a 115,8 miliardi, il consiglio esclude il ritorno di Huang come amministratore delegato",
-        "s": "Nel trimestre ricavi +103% e utile 64,9 miliardi di dollari; stime a 130 miliardi per il prossimo. Interim alla guida è Colette Kress; il titolo sale dopo la chiusura di Borsa.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/economy/2026/11/18/nvidia-shoots-down-calls-for-jensen-huangs-return-amid-strong-earnings",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "ec-renault-lavoro",
-        "t": "Renault: 2.000 nuovi posti in Francia entro il 2028, ma 1.000 tagli",
-        "s": "Il gruppo punta soprattutto sulla produzione e riduce posizioni amministrative per far fronte alla concorrenza cinese.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/17/renault-to-create-2000-jobs-in-france-while-cutting-1000-others-by-2028",
-            "l": "en"
+            "n": "Regione Piemonte",
+            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/microchip-presentato-novara-vulcan-project-silicon-box-primo-sito-nel-suo-genere-ue"
           }
         ]
       }
     ],
     "torino": [
       {
-        "id": "to-barriera-controlli",
-        "t": "Barriera di Milano: due controlli «Alto Impatto» tra via Aosta e corso Novara",
-        "s": "Nei controlli di polizia, con nove verifiche nei locali, sono state accertate sanzioni per abusivismo commerciale, irregolarità fiscali e altre violazioni in diversi negozi della zona.",
-        "d": "2026-11-18",
+        "id": "to-alleanza-garibaldi",
+        "t": "Alleanza per Torino: Garibaldi lascia la guida, Lo Russo propone un'agenzia per l'innovazione",
+        "s": "Il sindaco rilancia con un'agenzia di sviluppo dedicata all'innovazione dopo l'annuncio dell'uscita del presidente.",
+        "d": "2026-11-19",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/cronaca-11/articolo/sicurezza-e-controlli-tra-via-aosta-e-corso-novara-due-blitz-alto-impatto-e-nove-verifiche-nei-loca.html"
+            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/politica-11/articolo/alleanza-per-torino.html"
           }
         ]
       },
       {
-        "id": "to-manifesto-ia",
-        "t": "Torino approva il Manifesto sull'intelligenza artificiale: decisioni sempre umane",
-        "s": "La Giunta adotta nove principi, tra cui trasparenza, diritto di sapere quando si interagisce con un'IA e responsabilità umana. Seguiranno linee guida e formazione per il personale comunale.",
-        "d": "2026-11-18",
+        "id": "to-pendolari-milano",
+        "t": "Pendolari Torino-Milano: il Pd denuncia carnet aumentati del 76% e pochi posti",
+        "s": "L'attacco politico riguarda i costi degli abbonamenti e l'offerta di posti sui collegamenti verso Milano.",
+        "d": "2026-11-19",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/attualita-31/articolo/nasce-il-manifesto-sullintelligenza-artificiale-di-torino-trasparenza-totale-e-decisioni-sempre-u.html"
+            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/attualita-31/articolo/pendolari-torino-milano-in-crisi-il-pd-attacca-carnet-aumentati-del-76-e-pochi-posti.html"
           }
         ]
       },
       {
-        "id": "to-pensionati-lascaris",
-        "t": "Flash mob dei pensionati Spi Cgil davanti a Palazzo Lascaris",
-        "s": "Chiedono più fondi alla sanità, liste d'attesa più brevi, assistenza ai non autosufficienti e rivalutazione piena delle pensioni, in vista dello sciopero del 20 novembre.",
-        "d": "2026-11-18",
+        "id": "to-tav-cortei",
+        "t": "Tav e cortei: per il pm scontri gravi, chiesta la sorveglianza per un leader di Askatasuna",
+        "s": "La richiesta della Procura riguarda un esponente del centro sociale per le manifestazioni contro la Tav.",
+        "d": "2026-11-19",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/politica-11/articolo/pensionati-in-piazza-contro-il-caro-vita-flash-mob-davanti-a-palazzo-lascaris.html"
+            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/cronaca-11/articolo/tav-e-cortei-il-pm-gli-scontri-sono-fatti-gravi-chiesta-sorveglianza-per-un-leader-di-askatasun.html"
           }
         ]
       },
       {
-        "id": "to-trofarello-passaggio-livello",
-        "t": "Trofarello: il passaggio a livello vicino al futuro ospedale di Cambiano sarà soppresso",
-        "s": "L'assessore regionale Gabusi annuncia la progettazione a breve; mancano però i fondi per la demolizione. Dopo un investimento mortale ad agosto, il passaggio è tra i primi 100 del piano Rfi.",
-        "d": "2026-11-18",
+        "id": "to-carcere-smartphone",
+        "t": "Carcere di Torino: quattro smartphone e hashish trovati nelle celle durante un blitz",
+        "s": "Il controllo ha scoperto telefoni nascosti e sostanza stupefacente.",
+        "d": "2026-11-19",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://torinoggi.it/2026/11/17/leggi-notizia/argomenti/viabilita-1/articolo/passaggio-a-livello-trofarello.html"
+            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/cronaca-11/articolo/carcere-di-torino-scoperti-quattro-smartphone-nascosti-nelle-celle-e-hashish-durante-un-blitz.html"
           }
         ]
       },
       {
-        "id": "to-api-pmi-investimenti",
-        "t": "Indagine Api Torino: tra le piccole e medie imprese cala il pessimismo, cresce la fiducia nell'export",
-        "s": "I pessimisti diminuiscono pur restando in maggioranza e le aspettative migliorano, nonostante la crisi dell'auto.",
-        "d": "2026-11-18",
+        "id": "to-treni-ritardi",
+        "t": "Servizio ferroviario metropolitano: pesanti ritardi e cancellazioni sui treni per Torino",
+        "s": "Segnalati disagi il 17 novembre sulle linee del servizio metropolitano.",
+        "d": "2026-11-19",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/le-piccole-e-medie-ci-credono-a-torino-torna-la-voglia-di-investire-e-si-crede-nellexport-nonos.html"
-          }
-        ]
-      },
-      {
-        "id": "to-chieri-verde",
-        "t": "Chieri: bilancio del verde urbano, 13mila alberi piantati tra 2019 e 2023",
-        "s": "Circa 250 aree verdi gestite; per la manutenzione stanziati 3,07 milioni in cinque anni. Nel 2026 esaminati 1.180 alberi, con 51 abbattimenti.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/attualita-31/articolo/chieri-mette-radici-il-bilancio-del-verde-urbano-tra-13mila-nuovi-alberi-e-sicurezza-dei-cittadini.html"
+            "n": "TorinoToday",
+            "url": "https://torinotoday.it/cronaca/ritardi-cancellazioni-treni-17-novembre-2026.html"
           }
         ]
       }
     ],
     "piemonte": [
       {
-        "id": "pi-alessandria-san-francesco",
-        "t": "Alessandria: accordo Comune-Fondazione Cr per l'ex complesso di San Francesco",
-        "s": "Il progetto «Orizzonti condivisi» stanzia 910mila euro più 40mila per la promozione, per un museo cittadino nell'ex chiesa.",
-        "d": "2026-11-18",
+        "id": "pi-allarme-bomba-463",
+        "t": "Allarme bomba nelle scuole piemontesi: 463 segnalazioni, 190 a Torino",
+        "s": "L'11 novembre la mail ha raggiunto quasi tutti gli istituti; circa il 20% di quelli interessati è stato evacuato e le scuole sono rimaste aperte il giorno dopo.",
+        "d": "2026-11-19",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/17/alessandria-convenzione-comune-e-fondazione-cr-per-lex-complesso-di-san-francesco_cfe8c82f-aff1-4785-8547-62c7d9c80cbf.html"
+            "n": "Regione Piemonte",
+            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/allarme-bomba-nelle-scuole-463-segnalazioni-piemonte"
           }
         ]
       },
       {
-        "id": "pi-rapporto-monferrato",
-        "t": "Alessandria presenta il Rapporto Monferrato 2026, con il presidente Cirio",
-        "s": "Il Rapporto Monferrato 2026 è stato presentato a Alessandria nella sala del Broletto della Fondazione Cr, con il presidente Cirio e 13 relatori. Il progetto «Sette territori, una voce» punta a presentare il Monferrato in modo unitario.",
-        "d": "2026-11-18",
+        "id": "pi-montagna-segnale",
+        "t": "Montagna: la Regione investe per portare il segnale dove il mercato non arriva",
+        "s": "Intervento regionale sulle aree di montagna prive di copertura.",
+        "d": "2026-11-19",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/speciali/monferrato-sette-territori-una-voce/2026/11/17/rapporto-monferrato-2026-il-futuro-non-si-costruisce-da-soli_52d9825c-de22-44fd-a3dd-69253f57aec9.html"
+            "n": "Regione Piemonte",
+            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/montagna-piemonte-investe-per-portare-segnale-dove-mercato-non-arriva"
           }
         ]
       }
@@ -551,7 +465,7 @@
             "url": "https://www.mymovies.it/film/2026/dio-ride/"
           }
         ],
-        "quando": "Ideal: orari indicativi degli ultimi giorni, 17:30, 21:40; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -566,7 +480,7 @@
             "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
           }
         ],
-        "quando": "Ideal: orari indicativi degli ultimi giorni, 19:20, 21:35; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -581,7 +495,7 @@
             "url": "https://www.idealcityplex.it/scheda/se-domani-non-torno/48959/"
           }
         ],
-        "quando": "Ideal: orari indicativi degli ultimi giorni, 17:30, 19:30; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -596,7 +510,7 @@
             "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
           }
         ],
-        "quando": "Ideal: orari indicativi degli ultimi giorni, 15:00, 17:10 (per tutti); conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -612,7 +526,7 @@
           }
         ],
         "link": [],
-        "quando": "Ideal: orari indicativi degli ultimi giorni, 21:30; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -628,7 +542,7 @@
           }
         ],
         "link": [],
-        "quando": "Ideal: orari indicativi degli ultimi giorni, 21:30; conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -639,7 +553,7 @@
         "d": "2026-11-17",
         "quando": "fino al 20 nov, ogni sera ore 19:30 e 21:30",
         "dove": "Fonderie Limone, Moncalieri",
-        "costo": "biglietto unico 10 €; carnet da 5 a 15 spettacoli",
+        "costo": "10 €",
         "fonti": [
           {
             "n": "Teatro Stabile Torino",
@@ -681,25 +595,6 @@
       }
     ],
     "concerti": [
-      {
-        "id": "co-mara-sattei",
-        "t": "Mara Sattei in concerto con «Live 2026»",
-        "s": "Data torinese del tour della cantautrice pop.",
-        "d": "2026-11-09",
-        "quando": "mer 18 nov 2026, 22:00",
-        "dove": "Hiroshima Mon Amour, Torino",
-        "costo": "32 €",
-        "fonti": [
-          {
-            "n": "TicketOne",
-            "url": "https://www.ticketone.it/event/mara-sattei-live-2026-hiroshima-mon-amour-21454913/"
-          },
-          {
-            "n": "Hiroshima Mon Amour",
-            "url": "https://hiroshimamonamour.org/eventi/mara-sattei/"
-          }
-        ]
-      },
       {
         "id": "co-sio",
         "t": "Sio e Auroro Borealo dal vivo",
@@ -1158,12 +1053,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-09T05:55+01:00",
-      "edizione": "mattina",
-      "notizie": 69,
-      "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), Il Fatto Quotidiano e Adnkronos (solo ricerca), ComingSoon (The Space Cinema, Ideal), Turismo Torino, TicketOne, Hiroshima Mon Amour. Non raggiungibili: reuters.com (ricerca rifiutata), torinotoday.it (lettura), pagine singole del Teatro Stabile (lettura negata). Concerti rifatti per intero (lunedì). Teatro dall'edizione precedente."
-    },
-    {
       "at": "2026-11-09T13:20+01:00",
       "edizione": "pomeriggio",
       "notizie": 68,
@@ -1276,6 +1165,12 @@
       "edizione": "pomeriggio",
       "notizie": 79,
       "note": "Fonti lette: ANSA, Adnkronos (via ANSA), Il Sole 24 Ore, Euronews (en), Al Jazeera (en), Torino Oggi. ansa.it/piemonte non leggibile (robots); Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti); TorinoToday, thespacecinema.it non letti. Cinema, teatro, eventi e concerti copiati dall'edizione del mattino (nessun concerto passato). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-19T05:03+01:00",
+      "edizione": "mattina",
+      "notizie": 72,
+      "note": "Fonti lette: ANSA, Euronews (en/it), Al Jazeera (en), Regione Piemonte. Torino Oggi: ricerca ok ma pagine non leggibili (titoli da risultati); TorinoToday non leggibile; thespacecinema.it e teatri non letti, Ideal da comingsoon.it. Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Eventi e teatro dall'edizione precedente, concerti copiati (tolto 1 concerto passato). Nessun riallineamento a origin/main."
     }
   ]
 }
