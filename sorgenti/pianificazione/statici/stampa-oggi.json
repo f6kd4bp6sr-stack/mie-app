@@ -1,23 +1,23 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-20T05:08+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-20T13:02+01:00",
   "nota": "Edizione del mattino del 20 novembre 2026.",
   "sezioni": {
     "italia": [
       {
         "id": "it-sciopero-cgil-20-nov",
-        "t": "Venerdì 20 novembre sciopero generale della Cgil contro la legge di bilancio",
-        "s": "La Cgil sciopera venerdì 20 novembre contro la legge di bilancio. Landini chiede salari più alti, fondi per sanità e scuola, riforma fiscale e no al riarmo, e respinge come «propaganda» il «weekend lungo» evocato da Meloni. Cisl e Uil scelgono altre forme di protesta.",
-        "d": "2026-11-18",
+        "t": "Sciopero generale Cgil: Landini parla di oltre un milione di persone in cento piazze",
+        "s": "La Cgil ha scioperato per 24 ore contro la manovra, il quinto sciopero generale di fila; in piazza anche studenti e Cobas. Cisl e Uil non aderiscono. Il ministro Calderone replica che il Governo ha già dato risposte sui salari. Le cifre sono stime degli organizzatori. Treni e voli sono esclusi dallo stop.",
+        "d": "2026-11-20",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/17/venerdi-20-sciopero-generale-cgil-il-futuro-e-adesso_cd3b09c8-d1e8-4897-b37b-56c132bda7b5.html"
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/oggi-lo-sciopero-generale.-in-piazza-lavoratori-e-studenti.-landini-ascoltare-le-piazze-non_599c502c-b0d3-44aa-8e7b-cdf04b274aeb.html"
           },
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/landini-sciopero-di-venerdi-basta-propaganda-la-manovra-va-cambiata_38c7d09d-a5dd-451d-a2be-7aa4b6c594b3.html"
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/oggi-lo-sciopero-in-piazza-lavoratori-e-studenti.-cgil-la-manovra-va-cambiata_01d5c5ed-72b4-4546-acc1-472847a25848.html"
           }
         ]
       },
@@ -84,6 +84,19 @@
     ],
     "mondo": [
       {
+        "id": "mo-zelensky-art5",
+        "t": "Ucraina: Zelensky chiede a Usa ed Europa di chiarire la garanzia «tipo articolo 5»",
+        "s": "Dopo la riunione dei volenterosi a Berlino, Zelensky chiede che cosa significherebbe una garanzia simile all'articolo 5 della Nato. Kushner dice che Trump è aperto; Germania, Francia e Regno Unito parlano di impegno giuridicamente vincolante, senza citare l'articolo 5.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/20/what-does-it-mean-zelenskyy-asks-us-to-clarify-article-5-like-guarantee",
+            "l": "en"
+          }
+        ]
+      },
+      {
         "id": "mo-trump-amico",
         "t": "Trump chiama Putin «un amico» a Shenzhen e scoppiano le polemiche",
         "s": "Entrando al trilaterale con Putin e Xi, Trump ha definito il leader russo «un amico». Critiche da Tusk e da esponenti democratici; per molti osservatori il vertice è stato soprattutto un'occasione di immagine, senza risultati concreti.",
@@ -139,19 +152,6 @@
         ]
       },
       {
-        "id": "mo-ponte-crimea",
-        "t": "Ponte di Crimea colpito da droni e missili ucraini, Mosca convoca riunioni d'urgenza",
-        "s": "Secondo Euronews un tratto del ponte è crollato dopo l'attacco alle sezioni stradale e ferroviaria; non sono stati forniti dati su danni o vittime.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/18/europe-today-crimean-bridge-french-presidential-elections-and-serbian-students-list",
-            "l": "en"
-          }
-        ]
-      },
-      {
         "id": "mo-groenlandia-patto",
         "t": "La Danimarca ratifica il patto di sicurezza tra Stati Uniti e Groenlandia",
         "s": "Il Parlamento danese approva l'intesa firmata il 22 settembre: 109 voti favorevoli su 179, nessun contrario. Prevede due basi americane, resta valida in caso di indipendenza dell'isola ed esclude Paesi non Ue e non Nato dai settori strategici.",
@@ -171,6 +171,32 @@
       }
     ],
     "estero": [
+      {
+        "id": "es-iran-premi",
+        "t": "Al Jazeera: memo Usa, il blocco all'Iran fa salire i premi assicurativi nel Golfo",
+        "s": "Un documento interno dell'agenzia marittima americana Marad, ottenuto con richiesta FOIA, indica che il rischio supera Hormuz. Secondo l'Imo, circa 130 navi colpite dal 28 febbraio, con almeno 25 marittimi morti; per l'Opec l'assicurazione di una petroliera è salita di circa 200 volte.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://aljazeera.com/economy/2026/11/20/us-maritime-agency-warned-iran-blockade-was-adding-to-rising-gulf-premiums",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-losapio",
+        "t": "Al Jazeera: il candidato di Trump per la sicurezza elettorale non definisce «attacco» il 6 gennaio",
+        "s": "Michael LoSapio, scelto da Trump per guidare l'agenzia federale sulla sicurezza elettorale, in audizione al Senato non ha definito attacco l'assalto al Campidoglio e non ha indicato chi vinse il voto popolare del 2020.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/11/20/trump-nominee-refuses-to-call-jan-6-an-attack-at-senate-hearing",
+            "l": "en"
+          }
+        ]
+      },
       {
         "id": "es-yalta",
         "t": "Euronews: l'Europa respinge una pace decisa sopra la sua testa",
@@ -251,6 +277,42 @@
     ],
     "torino": [
       {
+        "id": "to-sciopero-corteo",
+        "t": "Sciopero generale a Torino: corteo Cgil da piazza XVIII Dicembre a piazza Solferino",
+        "s": "Il corteo parte alle 9.30; in parallelo sfilano gli studenti da piazza Arbarello e lo spezzone Usb. In piazza Castello è convocato un presidio serale alle 18. Il segretario Cgil Torino Bellono parla di crisi più marcata in città.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/cronaca-11/articolo/caro-vita.html"
+          }
+        ]
+      },
+      {
+        "id": "to-elkann-gup",
+        "t": "Eredità Agnelli: il gup respinge le eccezioni della difesa di Elkann, udienza il 4 dicembre",
+        "s": "Il giudice ha respinto tutte le questioni preliminari su materiale informatico, genericità delle accuse e data di iscrizione nel registro degli indagati. Si entra nel merito il 4 dicembre; i legali dicono che potranno riproporle.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/cronaca-11/articolo/eredita-agnelli-il-gup-respinge-tutte-le-eccezioni-sollevate-dai-legali-di-john-elkann.html"
+          }
+        ]
+      },
+      {
+        "id": "to-sansalvario-taxi",
+        "t": "San Salvario: partiti i lavori sulla banchina taxi di corso Marconi",
+        "s": "Il cantiere riqualifica l'area all'incrocio con via Principe Tommaso: la banchina si riduce ma resta attiva, il marciapiede sarà rifatto. Chiusa la carreggiata centrale tra via Madama e via Principe Tommaso, controviali aperti.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/viabilita-1/articolo/san-salvario-partiti-i-cantieri-sulla-banchina-taxi-in-corso-marconi.html"
+          }
+        ]
+      },
+      {
         "id": "to-palazzo-nuovo",
         "t": "Palazzo Nuovo resta chiuso fino al 25 novembre dopo l'occupazione",
         "s": "L'Università di Torino prolunga la chiusura per problemi di sicurezza, soprattutto al sistema antincendio. Il 20 novembre l'ateneo darà indicazioni su didattica e riapertura.",
@@ -259,30 +321,6 @@
           {
             "n": "Torino Oggi",
             "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/scuola-e-lavoro/articolo/lavori-in-corso-a-palazzo-nuovo-dopo-i-giorni-delloccupazione-chiusura-fino-al-25-novembre.html"
-          }
-        ]
-      },
-      {
-        "id": "to-amiat-sciopero",
-        "t": "Sciopero generale: possibili disagi ai servizi Amiat venerdì 20 novembre",
-        "s": "Per l'intera giornata i servizi dell'azienda dei rifiuti possono subire sospensioni o riduzioni; garantite le prestazioni essenziali.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/attualita-31/articolo/sciopero-nazionale-venerdi-20-novembre-possibili-ripercussioni-sui-servizi-amiat.html"
-          }
-        ]
-      },
-      {
-        "id": "to-manifesto-ia",
-        "t": "Torino approva il Manifesto sull'Intelligenza artificiale",
-        "s": "La Giunta ha adottato nove principi, tra cui trasparenza, accessibilità e decisioni che restano in capo alle persone; seguiranno linee guida per il personale comunale.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/attualita-31/articolo/nasce-il-manifesto-sullintelligenza-artificiale-di-torino-trasparenza-totale-e-decisioni-sempre-u.html"
           }
         ]
       },
@@ -307,18 +345,6 @@
           {
             "n": "Torino Oggi",
             "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/superbonus-spalmato-in-10-anni-i-costruttori-torinesi-alzano-la-voce-norma-iniqua-che-strozza-le.html"
-          }
-        ]
-      },
-      {
-        "id": "to-parco-sempione",
-        "t": "Barriera di Milano: controlli della Polizia al parco Sempione, due arresti e 14 allontanamenti",
-        "s": "Controlli straordinari hanno coinvolto 47 persone e due esercizi commerciali: arrestati un 19enne con ordine di carcerazione e un 21enne con 27 dosi di droga, tre denunce. Amiat ha ripulito il parco dai rifiuti.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/cronaca-11/articolo/maxi-blitz-a-parco-sempione-due-arresti-tre-denunce-e-14-allontanamenti.html"
           }
         ]
       }
@@ -539,6 +565,21 @@
         "link": [],
         "quando": "sab 21 nov, 14:00-17:30",
         "dove": "Museo Regionale di Scienze Naturali, Torino"
+      },
+      {
+        "id": "ev-atp-chiusura",
+        "t": "Tennis Takes Over: la festa di chiusura delle Atp Finals tra musei aperti, corsa e OGR",
+        "s": "Sabato 21 musei aperti fino a mezzanotte (Camera 15 €, Scienze Naturali 5 €, Museo Rai gratis), Social Run di 5 km al Valentino; domenica 22 attività per bambini in via Roma e, dalle 18, «The Final Set» alle OGR.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/eventi-11/articolo/tennis-takes-over-torino-fa-festa-per-la-chiusura-delle-atp-finals.html"
+          }
+        ],
+        "quando": "sab 21 e dom 22 nov",
+        "dove": "Torino: musei, Valentino, via Roma, OGR",
+        "costo": "da gratis; musei 5-15 €"
       }
     ],
     "spettacoli": [
@@ -633,38 +674,6 @@
         "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-tea-energie-nove",
-        "t": "Energie Nove: rassegna di 18 spettacoli di nuova drammaturgia, a cura di Diego Pleuteri",
-        "s": "Ogni sera due spettacoli brevi, alle 19:30 e alle 21:30; in programma tra gli altri «Mai più Majorana» (dom 15), «L'apocalisse o quel che rimane» (mer 18, Premio Hystrio scritture di scena) e «Parlare tra maschi?» (gio 19).",
-        "d": "2026-11-17",
-        "quando": "fino al 20 nov, ogni sera ore 19:30 e 21:30",
-        "dove": "Fonderie Limone, Moncalieri",
-        "costo": "10 €",
-        "fonti": [
-          {
-            "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/cartellone/energie-nove-11-20-nov-2026/"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "spe-tea-safari",
-        "t": "Safari di Carlo Galiero, regia di Chiarastella Sorrentino, con Giulia Chiaramonte e Loris De Luna",
-        "s": "Spettacolo di un'ora della rassegna Energie Nove, con interpreti Giulia Chiaramonte e Loris De Luna.",
-        "d": "2026-11-17",
-        "quando": "gio 19 nov, 19:30",
-        "dove": "Fonderie Limone, Moncalieri (sala piccola)",
-        "costo": "10 €",
-        "fonti": [
-          {
-            "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/en/cartellone/safari-19-nov-2026/"
-          }
-        ],
-        "link": []
       },
       {
         "id": "spe-tea-frettolosa",
@@ -1111,6 +1120,18 @@
     "cultura": [],
     "sport": [
       {
+        "id": "sp-open-italia-golf",
+        "t": "Golf: l'Open d'Italia 2027 si giocherà al Circolo Golf Torino dal 24 al 27 giugno",
+        "s": "Lo annunciano Federazione Golf e Regione Piemonte: seconda edizione consecutiva a Torino, montepremi di 3 milioni di dollari e punti per la Ryder Cup 2027.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/eventi-11/articolo/golf-il-ds-automobiles-84open-ditalia-si-giochera-a-torino.html"
+          }
+        ]
+      },
+      {
         "id": "sp-atp-cobolli",
         "t": "Atp Finals a Torino: per Cobolli ultima chiamata contro Tiafoe",
         "s": "Dopo la sconfitta all'esordio, Cobolli deve vincere per restare in corsa; stessa situazione per Bolelli e Vavassori in doppio.",
@@ -1125,12 +1146,6 @@
     ]
   },
   "controlli": [
-    {
-      "at": "2026-11-10T13:25+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 69,
-      "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), Torino Oggi; Il Fatto, Adnkronos, Avvenire, Il Giornale, Il Sole 24 Ore solo ricerca. Non leggibili: TorinoToday (pagine di cronaca e università), Il Sole 24 Ore (lettura); ricerca Reuters/BBC/Guardian rifiutata dal proxy. Eventi, cinema, teatro e concerti dall'edizione del mattino (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (storia riscritta, ramo staccato)."
-    },
     {
       "at": "2026-11-11T05:14+01:00",
       "edizione": "mattina",
@@ -1244,6 +1259,12 @@
       "edizione": "mattina",
       "notizie": 77,
       "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi (tramite agente di lettura). ANSA Piemonte, Borsa e The Space solo da risultati di ricerca; Reuters rifiutato dalla ricerca; Regione Piemonte non utile. Italia, economia, eventi, cinema, teatro dall'edizione precedente, concerti copiati (tolti i passati). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-20T13:02+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 79,
+      "note": "Fonti lette: ANSA (2 articoli), Euronews (en), Al Jazeera (en), Torino Oggi (tramite agente di lettura). Regione Piemonte/ANSA Piemonte: ricerca senza novità utili, sezione piemonte e economia dal mattino. Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Cinema, teatro, eventi e concerti copiati dal mattino (tolti spettacoli già finiti). Nessun riallineamento a origin/main."
     }
   ]
 }
