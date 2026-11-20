@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-19T01:02:00+01:00",
+ "updated": "2026-11-20T01:02:00+01:00",
  "voci": [
   {
    "id": "n20261113-maggioranza",
@@ -410,7 +410,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-19T01:02:00+01:00",
+   "ultimo": "2026-11-20T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -930,6 +930,11 @@
    "at": "2026-11-19T01:02:00+01:00",
    "notizie": 0,
    "note": "giro di giovedì 19/11: nessuna notizia nuova verificata (ricerche su Gazzetta, governo.it, USIF, SIULP, Infodifesa, funzionepubblica: solo articoli già presenti; pmi.it non raggiungibile). DPR di recepimento ancora non trovato in Gazzetta. Mercati: BTP 10 anni 4,40% al 18/11 (QuiFinanza letta due volte, Teleborsa 4,43%); altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-20T01:02:00+01:00",
+   "notizie": 0,
+   "note": "giro di venerdì 20/11: nessuna notizia nuova verificata (ricerche su contratto, previdenza dedicata, sindacati GdF: solo articoli già presenti; sciopero del 20/11 già in n20261108-protesta). Gazzetta: S.G. n. 246 del 22/10 riletta, nessun DPR di recepimento; non trovato in ricerca. Mercati: BTP 10 anni 4,42% al 17/11 (SoldiOnline), meno recente del 4,40% del 18/11 già presente: invariato; altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
