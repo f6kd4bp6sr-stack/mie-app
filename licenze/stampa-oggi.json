@@ -1,8 +1,8 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-19T13:03+01:00",
-  "nota": "Edizione del pomeriggio del 19 novembre 2026.",
+  "edizione": "mattina",
+  "updated": "2026-11-20T05:08+01:00",
+  "nota": "Edizione del mattino del 20 novembre 2026.",
   "sezioni": {
     "italia": [
       {
@@ -84,18 +84,30 @@
     ],
     "mondo": [
       {
-        "id": "mo-trilaterale-shenzhen",
-        "t": "Shenzhen: si chiude il vertice a tre Trump-Xi-Putin, senza decisioni concrete annunciate",
-        "s": "Il trilaterale tra Stati Uniti, Cina e Russia a margine dell'Apec è terminato. Xi ha invocato la messa al bando delle armi nucleari, Trump ha detto che Washington e Pechino vogliono aiutare a chiudere la guerra in Ucraina. Per gli analisti prevale il valore simbolico.",
+        "id": "mo-trump-amico",
+        "t": "Trump chiama Putin «un amico» a Shenzhen e scoppiano le polemiche",
+        "s": "Entrando al trilaterale con Putin e Xi, Trump ha definito il leader russo «un amico». Critiche da Tusk e da esponenti democratici; per molti osservatori il vertice è stato soprattutto un'occasione di immagine, senza risultati concreti.",
         "d": "2026-11-19",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/concluso-il-trilaterale-tra-xi-putin-e-trump_58d1acb8-ce50-4a6f-9be4-144b7df1d98d.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/vladimir-e-un-amico-scoppia-la-bufera-sulle-parole-di-trump_6f980265-cfac-49a4-94aa-a813563c4560.html"
           },
           {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/trump-usa-e-cina-vogliono-contribuire-a-porre-fine-alla-guerra-in-ucraina_2eb04d49-61ac-42e9-919d-6c38e66da807.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-kiev-ambasciate",
+        "t": "Kiev: attacchi russi danneggiano le ambasciate di Austria e Paesi Bassi",
+        "s": "Nella notte tra il 19 e il 20 novembre la Russia ha lanciato missili e 98 droni su 18 località ucraine. Nelle due sedi diplomatiche vetri rotti e auto danneggiate, ma nessun ferito tra il personale.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/19/us-and-china-want-to-help-end-ukraine-war-trump-says-ahead-of-trilateral-with-russia",
+            "url": "https://www.euronews.com/video/2026/11/20/ukraine-russian-strikes-damage-austrian-and-dutch-embassies-in-kyiv",
             "l": "en"
           }
         ]
@@ -110,6 +122,19 @@
             "n": "Euronews",
             "url": "https://it.euronews.com/2026/11/18/israele-avvia-operazione-militare-a-ovest-della-linea-gialla-di-gaza-avviso-di-sfollare",
             "l": "it"
+          }
+        ]
+      },
+      {
+        "id": "mo-venezuela-hegseth",
+        "t": "Il capo del Pentagono Hegseth a Caracas: accordo militare con il governo ad interim venezuelano",
+        "s": "Visita a sorpresa del segretario alla Difesa americano il 18 novembre: l'intesa riguarda addestramento, intelligence, equipaggiamenti e sicurezza ai confini contro narcotraffico e gruppi armati. I termini completi non sono noti.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://aljazeera.com/news/2026/11/19/why-is-pete-hegseth-strengthening-us-military-ties-with-venezuela",
+            "l": "en"
           }
         ]
       },
@@ -143,70 +168,44 @@
             "l": "en"
           }
         ]
-      },
-      {
-        "id": "mo-venezuela-hegseth",
-        "t": "Il capo del Pentagono Hegseth a Caracas: accordo militare con il governo ad interim venezuelano",
-        "s": "Visita a sorpresa del segretario alla Difesa americano il 18 novembre: l'intesa riguarda addestramento, intelligence, equipaggiamenti e sicurezza ai confini contro narcotraffico e gruppi armati. I termini completi non sono noti.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/19/why-is-pete-hegseth-strengthening-us-military-ties-with-venezuela",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-ucraina-evacuazioni",
-        "t": "Ucraina: Zelensky propone altre 10 evacuazioni umanitarie nelle zone occupate, sul modello di Oleshky",
-        "s": "La tregua di Oleshky (27 ottobre-1 novembre) ha permesso di far uscire quasi 800 persone. Kiev porterà il piano ai mediatori americani; Putin aveva suggerito un'operazione analoga a Kostiantynivka, che l'Ucraina dice di non aver perso.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/18/zelenskyy-proposes-10-more-humanitarian-evacuations-after-oleshky",
-            "l": "en"
-          }
-        ]
       }
     ],
     "estero": [
       {
-        "id": "es-aj-anthropic-ipo",
-        "t": "Al Jazeera: Anthropic raccoglie 81,3 miliardi di dollari, la più grande quotazione di sempre",
-        "s": "Azioni a 83 dollari, sopra la forchetta prevista di 70-78; il debutto al Nasdaq è giovedì con il simbolo «ANT». Valutazione di circa 1.500 miliardi; il record precedente era quello di SpaceX a giugno.",
+        "id": "es-yalta",
+        "t": "Euronews: l'Europa respinge una pace decisa sopra la sua testa",
+        "s": "Il sito paneuropeo racconta il rifiuto europeo di un accordo sull'Ucraina negoziato da Usa, Russia e Cina, e la squadra di sette rappresentanti scelta a Berlino per trattare.",
         "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/19/european-leaders-reject-yalta-20-deal-for-ukraine-after-trump-meets-putin-and-xi",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-cyber-ue",
+        "t": "Euronews: attacco informatico ai sistemi del personale della Commissione Ue",
+        "s": "I sistemi interni delle risorse umane sono stati colpiti; il Cert-Ue verifica se siano stati sottratti dati personali dei funzionari. Autore ancora ignoto.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/19/eu-commission-hit-by-large-scale-cyberattack-with-data-leakage-unknown",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-colombia",
+        "t": "Al Jazeera: Bogotá in piazza, tra tasse e rapporti con gli Stati Uniti",
+        "s": "L'emittente del Qatar segue le proteste contro il piano fiscale colombiano e la smentita del governo e di Hegseth su presunti rifiuti di operazioni congiunte antidroga.",
+        "d": "2026-11-20",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/economy/2026/11/19/anthropic-raises-81-3bn-in-biggest-ipo-of-all-time",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-euronews-scuole-italia",
-        "t": "Euronews: scuole italiane colpite da una nuova ondata di minacce di bomba e veleno",
-        "s": "Almeno 100 istituti hanno ricevuto lunedì mail con minacce; le email sembrano partite da un account violato legato a un centro di ricerca vietnamita. Scatta un nuovo protocollo di sicurezza.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/16/italian-schools-hit-by-new-wave-of-bomb-and-poison-threats",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-euronews-spagna-mir",
-        "t": "Euronews: la Spagna blocca le nuove domande di riconoscimento dei titoli esteri di medicina",
-        "s": "Il ministero dell'Università ferma le richieste necessarie per l'esame di specializzazione Mir: i candidati stranieri hanno superato per la prima volta quelli spagnoli. Le domande sono salite da 10.224 nel 2017 a 85.564 nel 2025; ai candidati esteri è riservato il 10% dei posti (968).",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/19/spain-freezes-new-foreign-degree-applications-as-foreign-doctors-flood-residency-exam",
+            "url": "https://www.aljazeera.com/news/2026/11/20/thousands-protest-colombias-tax-plans-amid-row-over-us-military-role",
             "l": "en"
           }
         ]
@@ -252,6 +251,42 @@
     ],
     "torino": [
       {
+        "id": "to-palazzo-nuovo",
+        "t": "Palazzo Nuovo resta chiuso fino al 25 novembre dopo l'occupazione",
+        "s": "L'Università di Torino prolunga la chiusura per problemi di sicurezza, soprattutto al sistema antincendio. Il 20 novembre l'ateneo darà indicazioni su didattica e riapertura.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/scuola-e-lavoro/articolo/lavori-in-corso-a-palazzo-nuovo-dopo-i-giorni-delloccupazione-chiusura-fino-al-25-novembre.html"
+          }
+        ]
+      },
+      {
+        "id": "to-amiat-sciopero",
+        "t": "Sciopero generale: possibili disagi ai servizi Amiat venerdì 20 novembre",
+        "s": "Per l'intera giornata i servizi dell'azienda dei rifiuti possono subire sospensioni o riduzioni; garantite le prestazioni essenziali.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/attualita-31/articolo/sciopero-nazionale-venerdi-20-novembre-possibili-ripercussioni-sui-servizi-amiat.html"
+          }
+        ]
+      },
+      {
+        "id": "to-manifesto-ia",
+        "t": "Torino approva il Manifesto sull'Intelligenza artificiale",
+        "s": "La Giunta ha adottato nove principi, tra cui trasparenza, accessibilità e decisioni che restano in capo alle persone; seguiranno linee guida per il personale comunale.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/attualita-31/articolo/nasce-il-manifesto-sullintelligenza-artificiale-di-torino-trasparenza-totale-e-decisioni-sempre-u.html"
+          }
+        ]
+      },
+      {
         "id": "to-metro2-trincerone",
         "t": "Metro 2: partono i lavori dal Trincerone, Lo Russo parla di «giorno storico»",
         "s": "Con l'avvio dei cantieri dal Trincerone prende forma la seconda linea della metropolitana di Torino; il sindaco Stefano Lo Russo ha definito la giornata storica per la città. Dettagli su tracciato e tempi sono nell'articolo.",
@@ -286,49 +321,21 @@
             "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/cronaca-11/articolo/maxi-blitz-a-parco-sempione-due-arresti-tre-denunce-e-14-allontanamenti.html"
           }
         ]
-      },
-      {
-        "id": "to-carcere-smartphone",
-        "t": "Carcere di Torino: 135 grammi di cocaina nascosti in una cella e un altro cellulare trovato",
-        "s": "La polizia penitenziaria ha scoperto la cocaina dietro un lavandino il 18 novembre e un telefono in un'altra cella. Il sindacato Osapp segnala che gli episodi si ripetono a distanza di tre giorni e chiede più prevenzione.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/cronaca-11/articolo/droga-nelle-celle-del-carcere-di-torino-sequestrati-135-grammi-di-cocaina-e-pure-un-cellulare.html"
-          },
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/cronaca-11/articolo/carcere-di-torino-scoperti-quattro-smartphone-nascosti-nelle-celle-e-hashish-durante-un-blitz.html"
-          }
-        ]
-      },
-      {
-        "id": "to-pendolari-milano",
-        "t": "Pendolari Torino-Milano: il Pd denuncia carnet aumentati del 76% e pochi posti",
-        "s": "L'attacco politico riguarda i costi degli abbonamenti e l'offerta di posti sui collegamenti verso Milano.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/18/leggi-notizia/argomenti/attualita-31/articolo/pendolari-torino-milano-in-crisi-il-pd-attacca-carnet-aumentati-del-76-e-pochi-posti.html"
-          }
-        ]
-      },
-      {
-        "id": "to-treni-ritardi",
-        "t": "Servizio ferroviario metropolitano: pesanti ritardi e cancellazioni sui treni per Torino",
-        "s": "Segnalati disagi il 17 novembre sulle linee del servizio metropolitano.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/ritardi-cancellazioni-treni-17-novembre-2026.html"
-          }
-        ]
       }
     ],
     "piemonte": [
+      {
+        "id": "pi-fsc",
+        "t": "Piemonte: in arrivo 242 milioni di fondi Fsc",
+        "s": "Notizia ANSA del 19 novembre sull'arrivo in regione di 242 milioni dal Fondo sviluppo e coesione (dettagli sulla pagina della fonte).",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/19/piemonte-in-arrivo-242-milioni-di-fondi-fsc_29f256b9-9234-4552-b12a-b0ecad2ff41c.html"
+          }
+        ]
+      },
       {
         "id": "pi-caporalato-cabina",
         "t": "Piemonte: insediata la prima cabina di regia regionale contro il caporalato",
@@ -362,18 +369,6 @@
           {
             "n": "Regione Piemonte",
             "url": "https://www.regione.piemonte.it/web/pinforma/notizie/montagna-piemonte-investe-per-portare-segnale-dove-mercato-non-arriva"
-          }
-        ]
-      },
-      {
-        "id": "pi-allarme-bomba-463",
-        "t": "Allarme bomba nelle scuole piemontesi: 463 segnalazioni, 190 a Torino",
-        "s": "L'11 novembre la mail ha raggiunto quasi tutti gli istituti; circa il 20% di quelli interessati è stato evacuato e le scuole sono rimaste aperte il giorno dopo.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Regione Piemonte",
-            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/allarme-bomba-nelle-scuole-463-segnalazioni-piemonte"
           }
         ]
       }
@@ -688,21 +683,6 @@
       }
     ],
     "concerti": [
-      {
-        "id": "co-sio",
-        "t": "Sio e Auroro Borealo dal vivo",
-        "s": "Rap e cantautorato con il fumettista-musicista Sio e Auroro Borealo.",
-        "d": "2026-11-09",
-        "quando": "gio 19 nov 2026, 21:00",
-        "dove": "Hiroshima Mon Amour, Torino",
-        "costo": "20 €",
-        "fonti": [
-          {
-            "n": "Hiroshima Mon Amour",
-            "url": "https://hiroshimamonamour.org/eventi/sio-e-auroro-borealo/"
-          }
-        ]
-      },
       {
         "id": "co-canali",
         "t": "Giorgio Canali & Rossofuoco",
@@ -1146,12 +1126,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-10T05:05+01:00",
-      "edizione": "mattina",
-      "notizie": 71,
-      "note": "Fonti lette: ANSA, Torino Oggi, Al Jazeera (en), Euronews (en), CBS News (solo ricerca), MYmovies, ComingSoon, Ideal Cityplex, Turismo Torino. Non raggiungibili: thespacecinema.it (lettura), eventi.comune.torino.it (robots), idealcityplex.it scheda film. Reuters, BBC e altre grandi testate estere non tentate. Concerti dall'edizione precedente (non è lunedì), nessuno già passato; teatro dall'edizione precedente. Copia locale riallineata a origin/main (era staccata)."
-    },
-    {
       "at": "2026-11-10T13:25+01:00",
       "edizione": "pomeriggio",
       "notizie": 69,
@@ -1264,6 +1238,12 @@
       "edizione": "pomeriggio",
       "notizie": 78,
       "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi, Regione Piemonte. Il Sole 24 Ore (ricerca ok, pagine non leggibili), Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti); TorinoToday e metro 2 di Torino Oggi non leggibili (titolo da risultato di ricerca). Cinema, teatro, eventi e concerti copiati dall'edizione del mattino (nessun concerto passato). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-20T05:08+01:00",
+      "edizione": "mattina",
+      "notizie": 77,
+      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi (tramite agente di lettura). ANSA Piemonte, Borsa e The Space solo da risultati di ricerca; Reuters rifiutato dalla ricerca; Regione Piemonte non utile. Italia, economia, eventi, cinema, teatro dall'edizione precedente, concerti copiati (tolti i passati). Nessun riallineamento a origin/main."
     }
   ]
 }
