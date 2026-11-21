@@ -296,6 +296,14 @@ main{padding-inline:max(16px,env(safe-area-inset-left)) max(16px,env(safe-area-i
 @media (min-width:900px){ main{max-width:860px} nav.tabs .in{max-width:860px} }
 #bkRow{display:flex;gap:10px;flex-wrap:wrap}
 @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+/* 21/11/2026 revisione: testo ≥13 px, più spazio su iPad orizzontale, capitoli Ikigai leggibili interi */
+nav.tabs button{font-size:13px}.fig small{font-size:13px}.eyebrow{font-size:13px}
+@media (min-width:1100px){main{max-width:1100px}nav.tabs .in{max-width:1100px}}
+#ikiBox .iki-g>details>.wb{max-height:none;overflow:visible}
+#ikiBox .btn.pri{background:var(--accent);color:var(--accent-ink)!important}
+main p{max-width:75ch}
+@media (min-width:1000px){#exList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}#exList>*{margin:0;min-width:0}}
+
 </style>
 
 <!--@NAV-->

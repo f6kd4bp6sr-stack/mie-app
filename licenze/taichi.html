@@ -296,6 +296,14 @@ main{padding-inline:max(16px,env(safe-area-inset-left)) max(16px,env(safe-area-i
 @media (min-width:900px){ main{max-width:860px} nav.tabs .in{max-width:860px} }
 #bkRow{display:flex;gap:10px;flex-wrap:wrap}
 @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+/* 21/11/2026 revisione: testo ≥13 px, più spazio su iPad orizzontale, capitoli Ikigai leggibili interi */
+nav.tabs button{font-size:13px}.fig small{font-size:13px}.eyebrow{font-size:13px}
+@media (min-width:1100px){main{max-width:1100px}nav.tabs .in{max-width:1100px}}
+#ikiBox .iki-g>details>.wb{max-height:none;overflow:visible}
+#ikiBox .btn.pri{background:var(--accent);color:var(--accent-ink)!important}
+main p{max-width:75ch}
+@media (min-width:1000px){#exList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}#exList>*{margin:0;min-width:0}}
+
 </style>
 
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -416,6 +424,14 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 /* 21/11/2026: riga delle sezioni di Pianificazione anche nelle altre pagine */
 .secsw{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:8px auto 0;max-width:calc(100% - 32px)}
 .secsw a{display:flex;align-items:center;gap:5px;padding:7px 10px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;color:var(--ink,#1d2433);background:var(--card,var(--surface,#fff));box-shadow:0 1px 3px rgba(0,0,0,.1);white-space:nowrap}
+
+/* 21/11/2026, revisione: tema scuro leggibile (link chiari, testo scuro sui colori accesi) */
+@media (prefers-color-scheme:dark){
+a:not([class]),.row>a,.grow>a,p.lbl>a,small>a,li>a{color:#8ab4ff}
+.pill.ok{color:#7ee2a8!important}a.st-tr{color:#6fd3a0!important}button.u-line>b{color:#fb923c!important}
+.btn.pri,label.btn.pri,.primary,.st-c,.tagrec,.sect button.on,.seg button.on,.ymg button.today,.appsw a.on,.chip.free,.chip.fest,.pstats .hi,.pstats .hi span,.ksum .hi,.ksum .hi span{color:#0f1115!important}
+}
+.appsw{flex-wrap:wrap}
 </style><script>document.body.setAttribute("data-app","tc")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" class="on" href="taichi.html" aria-current="page">🧘 Tai Chi e Ikigai</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav><nav class="secsw" aria-label="Sezioni di Pianificazione"><a href="./#oggi">☀️ <span>Oggi</span></a><a href="./#cal">📆 <span>Calendario</span></a><a href="./#pens">🎖️ <span>Pensione</span></a><a href="./#inv">🌱 <span>Investimenti</span></a><a href="./#dia">📓 <span>Diario</span></a><a href="./#cd">🤖 <span>Cultura digitale</span></a><a href="./#auto">🚗 <span>Auto</span></a><a href="./#condo">🏢 <span>Condominio</span></a><a href="./#tl">🎟️ <span>Tempo libero</span></a></nav>
 <main>
   <!-- OGGI -->
@@ -1795,7 +1811,7 @@ else document.getElementById('heroFig').innerHTML=still(EXM.apertura,1,false);
 })();
 window.__flush=()=>{ try{ TCM.flush(); }catch(e){} };
 </script>
-<script>window.APP_VERSION="fc688b4de2";window.APP_BUILD="2026-11-21T11:20+02:00";</script>
+<script>window.APP_VERSION="f7a2545040";window.APP_BUILD="2026-11-21T11:50+02:00";</script>
 <script>
 /* 🔠 Testo più grande (10/11/2026): tre misure, valide in tutte le pagine; scelta in ⚙️ Impostazioni, salvata in «pn-aa» */
 (function(){var Z=[1,1.1,1.2];function ap(){var v=0;try{v=+localStorage.getItem("pn-aa")||0;}catch(e){}document.documentElement.style.zoom=Z[v]||1;return v;}

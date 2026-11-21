@@ -283,6 +283,29 @@ main>.pn-top,main>.card.pn-top,main>.pn-nov{grid-column:1/-1!important;max-heigh
 
 /* 9 sezioni nel menu (7/11/2026, 🎟️ Tempo libero): un po' più compatte per stare su una riga con l'iPad in orizzontale */
 @media(min-width:900px){.sect{gap:4px}.sect button{padding:8px 8px;gap:4px;font-size:14.5px}.sect .gear{padding:8px 10px}}
+/* ===== Revisione impaginazione 21/11/2026 (verifica esterna, «tutti»): 2 colonne, niente schede tagliate, testo ≥13 px ===== */
+main[data-sec=pens],main[data-sec=inv],main[data-sec=dia],main[data-sec=cd],main[data-sec=st]{grid-template-columns:repeat(2,minmax(0,1fr))}
+main[data-sec=pens]>.card,main[data-sec=inv]>.card,main[data-sec=dia]>.card,main[data-sec=cd]>.card,main[data-sec=st]>.card{max-height:none;overflow:visible}
+main .card.pn-full,main .cols2>.card.pn-full{grid-column:1/-1!important}
+@media (max-width:760px){main[data-sec=pens],main[data-sec=inv],main[data-sec=dia],main[data-sec=cd],main[data-sec=st]{grid-template-columns:minmax(0,1fr)}}
+main[data-sec=oggi] .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:1500px){main[data-sec=oggi] .grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+main[data-sec=oggi] .grid>.card{max-height:none;overflow:visible}
+main[data-sec=oggi] .grid>.card small,main[data-sec=oggi] .grid>.card .lbl{font-size:13px}
+.tl-cols3{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:1000px){.tl-cols3{grid-template-columns:minmax(0,1fr)}}
+.au-form{grid-template-columns:repeat(4,minmax(0,1fr))}.au-form>*{min-width:0}.au-form input,.au-form select{max-width:100%;min-width:0}
+@media (max-width:900px){.au-form{grid-template-columns:repeat(2,minmax(0,1fr))}}
+main input[type=checkbox]{flex:none;width:20px;height:20px}
+.cd-wb{max-height:none;overflow:visible}
+.mc .holn{font-size:13px}.ymg button{font-size:13px}
+.pill,.saved,main small,.grow>small{font-size:max(13px,1em)}
+.pill,.saved,main small,.mgrid .mh,.ib small,button>small,.co-e{font-size:13px!important}
+main p.lbl,main div.lbl,main li>label{max-width:75ch}
+select{max-width:100%}
+/* colonne bilanciate (21/11/2026): le schede scendono nella colonna più corta invece di restare in righe con grandi buchi */
+@media (min-width:761px){.cols2.st-cols,.cols2.tl-cols3,.cd-g{display:block;columns:2;column-gap:10px}.cols2.st-cols>*,.cols2.tl-cols3>*,.cd-g>*{break-inside:avoid;margin:0 0 10px!important;width:100%;display:block}}
+
 </style>
 <script>window.APP_VERSION="dev";window.APP_BUILD="dev";</script>
 </head>
@@ -583,7 +606,10 @@ function side(){const late=lateN();
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(typeof diaFlush==="function")diaFlush();if(k==="dia"&&cur!=="dia"&&typeof diaOpen==="function")diaOpen();cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="corsi"||cur==="st"?cur:"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,dia:vDia,cd:vCd,st:vSt,auto:vAuto,condo:vCondo,corsi:vCorsi,tl:vTl,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';{const h1=m.querySelector("h1");if(h1&&SEC_IMG[cur]){const t=h1.parentElement===m?h1:h1.closest("main > *");t.insertAdjacentHTML("afterend",'<div class="sec-img">'+SEC_IMG[cur]+'</div>');}}foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();}
+function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="corsi"||cur==="st"?cur:"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,dia:vDia,cd:vCd,st:vSt,auto:vAuto,condo:vCondo,corsi:vCorsi,tl:vTl,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';{const h1=m.querySelector("h1");if(h1&&SEC_IMG[cur]){const t=h1.parentElement===m?h1:h1.closest("main > *");t.insertAdjacentHTML("afterend",'<div class="sec-img">'+SEC_IMG[cur]+'</div>');}}foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();pnBal(m);}
+/* 21/11/2026: una scheda da sola, o molto più lunga delle altre, va a tutta larghezza (niente colonne con grandi buchi) */
+function pnBal(m){const gs=[m].concat([...m.querySelectorAll('.cols2,.grid')]);gs.forEach(g=>{if(getComputedStyle(g).display!=='grid')return;const cs=[...g.children].filter(c=>c.classList.contains('card')&&getComputedStyle(c).gridColumnStart==='auto'||c.classList.contains('pn-full'));cs.forEach(c=>c.classList.remove('pn-full'));const n=getComputedStyle(g).gridTemplateColumns.split(' ').length;if(n<2||!cs.length)return;if(cs.length===1){cs[0].classList.add('pn-full');return;}const h=cs.map(c=>c.offsetHeight),tot=h.reduce((a,b)=>a+b,0);h.forEach((x,i)=>{if(x>900&&x>1.6*(tot-x))cs[i].classList.add('pn-full');});});}
+document.addEventListener('toggle',e=>{const m=document.getElementById('main');if(m&&m.contains(e.target)){clearTimeout(pnBal.t);pnBal.t=setTimeout(()=>pnBal(m),60);}},true);
 /* ---------- 🪟 finestre: ogni riquadro con un titolo si apre e si chiude; lo stato resta su questo iPad (pn-fold) ---------- */
 const FOLD_KEY="pn-fold";let foldSt=lsJ(FOLD_KEY)||{};
 function foldCards(m){m.querySelectorAll(":scope > h2").forEach(h=>{const c=h.nextElementSibling;if(!c||c.tagName!=="DIV"||!c.classList.contains("card")||(c.firstElementChild&&c.firstElementChild.tagName==="H3"))return;const t=document.createElement("h3");t.innerHTML=h.innerHTML;c.prepend(t);h.remove();});

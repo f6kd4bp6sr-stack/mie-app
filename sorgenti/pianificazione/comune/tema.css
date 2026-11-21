@@ -18,3 +18,11 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 /* 21/11/2026: riga delle sezioni di Pianificazione anche nelle altre pagine */
 .secsw{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:8px auto 0;max-width:calc(100% - 32px)}
 .secsw a{display:flex;align-items:center;gap:5px;padding:7px 10px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;color:var(--ink,#1d2433);background:var(--card,var(--surface,#fff));box-shadow:0 1px 3px rgba(0,0,0,.1);white-space:nowrap}
+
+/* 21/11/2026, revisione: tema scuro leggibile (link chiari, testo scuro sui colori accesi) */
+@media (prefers-color-scheme:dark){
+a:not([class]),.row>a,.grow>a,p.lbl>a,small>a,li>a{color:#8ab4ff}
+.pill.ok{color:#7ee2a8!important}a.st-tr{color:#6fd3a0!important}button.u-line>b{color:#fb923c!important}
+.btn.pri,label.btn.pri,.primary,.st-c,.tagrec,.sect button.on,.seg button.on,.ymg button.today,.appsw a.on,.chip.free,.chip.fest,.pstats .hi,.pstats .hi span,.ksum .hi,.ksum .hi span{color:#0f1115!important}
+}
+.appsw{flex-wrap:wrap}

@@ -122,6 +122,14 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 /* 21/11/2026: riga delle sezioni di Pianificazione anche nelle altre pagine */
 .secsw{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:8px auto 0;max-width:calc(100% - 32px)}
 .secsw a{display:flex;align-items:center;gap:5px;padding:7px 10px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;color:var(--ink,#1d2433);background:var(--card,var(--surface,#fff));box-shadow:0 1px 3px rgba(0,0,0,.1);white-space:nowrap}
+
+/* 21/11/2026, revisione: tema scuro leggibile (link chiari, testo scuro sui colori accesi) */
+@media (prefers-color-scheme:dark){
+a:not([class]),.row>a,.grow>a,p.lbl>a,small>a,li>a{color:#8ab4ff}
+.pill.ok{color:#7ee2a8!important}a.st-tr{color:#6fd3a0!important}button.u-line>b{color:#fb923c!important}
+.btn.pri,label.btn.pri,.primary,.st-c,.tagrec,.sect button.on,.seg button.on,.ymg button.today,.appsw a.on,.chip.free,.chip.fest,.pstats .hi,.pstats .hi span,.ksum .hi,.ksum .hi span{color:#0f1115!important}
+}
+.appsw{flex-wrap:wrap}
 </style><script>document.body.setAttribute("data-app","met")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi e Ikigai</a><a data-a="met" class="on" href="metodo.html" aria-current="page">🤝 Metodo</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav><nav class="secsw" aria-label="Sezioni di Pianificazione"><a href="./#oggi">☀️ <span>Oggi</span></a><a href="./#cal">📆 <span>Calendario</span></a><a href="./#pens">🎖️ <span>Pensione</span></a><a href="./#inv">🌱 <span>Investimenti</span></a><a href="./#dia">📓 <span>Diario</span></a><a href="./#cd">🤖 <span>Cultura digitale</span></a><a href="./#auto">🚗 <span>Auto</span></a><a href="./#condo">🏢 <span>Condominio</span></a><a href="./#tl">🎟️ <span>Tempo libero</span></a></nav>
 <!-- 21/11/2026: la pagina Metodo è stata tolta (missioni, «Lo sapevi?», frasi di scorta); Ikigai e Volontariato ora stanno nel Tai Chi -->
 <p style="font:16px system-ui;padding:20px"><a href="taichi.html#ikigai">🧘 Tai Chi e Ikigai</a></p>

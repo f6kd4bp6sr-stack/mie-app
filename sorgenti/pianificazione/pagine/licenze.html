@@ -287,6 +287,11 @@ details summary::-webkit-details-marker{display:none}
 details summary::after{content:"›";float:right;color:var(--muted);transition:transform .2s}
 details[open] summary::after{transform:rotate(90deg)}
 .pg-img{margin:2px 0 12px}.pg-img svg{width:100%;height:auto;max-height:150px;display:block}
+/* 21/11/2026 revisione: testo ≥13 px, menu dentro la scheda */
+select{max-width:100%;min-width:0}.row>select,#rCode{flex:1 1 0;min-width:0;width:0}input[type=time]{min-width:7.5em}
+.cell small,.chip small,.fd small,.t>small,.t small{font-size:13px}
+.fd small{white-space:normal;text-overflow:clip}
+
 </style>
 </head>
 <body>

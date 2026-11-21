@@ -287,6 +287,11 @@ details summary::-webkit-details-marker{display:none}
 details summary::after{content:"›";float:right;color:var(--muted);transition:transform .2s}
 details[open] summary::after{transform:rotate(90deg)}
 .pg-img{margin:2px 0 12px}.pg-img svg{width:100%;height:auto;max-height:150px;display:block}
+/* 21/11/2026 revisione: testo ≥13 px, menu dentro la scheda */
+select{max-width:100%;min-width:0}.row>select,#rCode{flex:1 1 0;min-width:0;width:0}input[type=time]{min-width:7.5em}
+.cell small,.chip small,.fd small,.t>small,.t small{font-size:13px}
+.fd small{white-space:normal;text-overflow:clip}
+
 </style>
 </head>
 <body>
@@ -408,6 +413,14 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 /* 21/11/2026: riga delle sezioni di Pianificazione anche nelle altre pagine */
 .secsw{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:8px auto 0;max-width:calc(100% - 32px)}
 .secsw a{display:flex;align-items:center;gap:5px;padding:7px 10px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;color:var(--ink,#1d2433);background:var(--card,var(--surface,#fff));box-shadow:0 1px 3px rgba(0,0,0,.1);white-space:nowrap}
+
+/* 21/11/2026, revisione: tema scuro leggibile (link chiari, testo scuro sui colori accesi) */
+@media (prefers-color-scheme:dark){
+a:not([class]),.row>a,.grow>a,p.lbl>a,small>a,li>a{color:#8ab4ff}
+.pill.ok{color:#7ee2a8!important}a.st-tr{color:#6fd3a0!important}button.u-line>b{color:#fb923c!important}
+.btn.pri,label.btn.pri,.primary,.st-c,.tagrec,.sect button.on,.seg button.on,.ymg button.today,.appsw a.on,.chip.free,.chip.fest,.pstats .hi,.pstats .hi span,.ksum .hi,.ksum .hi span{color:#0f1115!important}
+}
+.appsw{flex-wrap:wrap}
 </style><script>document.body.setAttribute("data-app","lic")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" class="on" href="licenze.html" aria-current="page">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi e Ikigai</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav><nav class="secsw" aria-label="Sezioni di Pianificazione"><a href="./#oggi">☀️ <span>Oggi</span></a><a href="./#cal">📆 <span>Calendario</span></a><a href="./#pens">🎖️ <span>Pensione</span></a><a href="./#inv">🌱 <span>Investimenti</span></a><a href="./#dia">📓 <span>Diario</span></a><a href="./#cd">🤖 <span>Cultura digitale</span></a><a href="./#auto">🚗 <span>Auto</span></a><a href="./#condo">🏢 <span>Condominio</span></a><a href="./#tl">🎟️ <span>Tempo libero</span></a></nav>
 
 <!-- ================= PAGINA 1: SITUAZIONE ================= -->
@@ -1524,7 +1537,7 @@ setSaveStat("init");
 window.__flush=()=>{ try{ flushAll(); }catch(e){} };
 })();
 </script>
-<script>window.APP_VERSION="fc688b4de2";window.APP_BUILD="2026-11-21T11:20+02:00";</script>
+<script>window.APP_VERSION="f7a2545040";window.APP_BUILD="2026-11-21T11:50+02:00";</script>
 <script>
 /* 🔠 Testo più grande (10/11/2026): tre misure, valide in tutte le pagine; scelta in ⚙️ Impostazioni, salvata in «pn-aa» */
 (function(){var Z=[1,1.1,1.2];function ap(){var v=0;try{v=+localStorage.getItem("pn-aa")||0;}catch(e){}document.documentElement.style.zoom=Z[v]||1;return v;}
