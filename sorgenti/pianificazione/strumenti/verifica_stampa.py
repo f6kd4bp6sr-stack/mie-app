@@ -7,7 +7,8 @@ import json, os, re, sys, datetime
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'tools'))
 from guardia import guarda  # impronte dei dati da non pubblicare, con chiave segreta (tools/guardia.py)
 
-SEZ = {'italia': (3, 8), 'mondo': (3, 8), 'estero': (0, 6), 'economia': (1, 5), 'torino': (3, 8), 'piemonte': (0, 6), 'eventi': (0, 14), 'spettacoli': (0, 14), 'concerti': (0, 32), 'cultura': (0, 4), 'sport': (0, 4)}
+# 21/11/2026: più notizie, sezioni nuove «scienza» e «tecnologia»; sport tolto (ammesso solo vuoto, per le edizioni vecchie)
+SEZ = {'italia': (3, 8), 'mondo': (3, 8), 'estero': (0, 6), 'economia': (1, 6), 'torino': (3, 8), 'piemonte': (0, 6), 'eventi': (0, 14), 'spettacoli': (0, 14), 'concerti': (0, 32), 'cultura': (0, 4), 'scienza': (0, 4), 'tecnologia': (0, 4), 'sport': (0, 0)}
 # lingua dell'articolo originale (per le testate estere): l'app offre «leggi tradotto»
 LINGUE = {'it', 'en', 'fr', 'es', 'de', 'pt', 'nl', 'ar', 'zh', 'ja', 'ru', 'uk', 'pl'}
 # stesse impronte usate per le novità della Pensione

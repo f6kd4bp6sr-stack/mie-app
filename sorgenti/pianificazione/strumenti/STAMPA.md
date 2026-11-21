@@ -43,12 +43,12 @@ Usa la regola «prima cerca, poi leggi»: fai una WebSearch limitata al sito (al
 - **Cose da fare a Torino e in Piemonte** (dal 3/11/2026): fonti ufficiali e affidabili degli eventi: turismotorino.org, comune.torino.it (eventi), torinomusei.it, museitorino/musei civici, visitpiemonte.com, cittametropolitana.torino.it, regione.piemonte.it, siti ufficiali di teatri, musei e festival, torinotoday.it (eventi). Prima WebSearch sul sito, poi WebFetch per verificare date, orari, luogo e prezzo.
 
 ## Che cosa scegliere
-- **italia**: da 3 a 6 notizie. Politica, cronaca di rilievo nazionale, scuola, sanità, giustizia, lavoro.
-- **mondo**: da 3 a 6 notizie.
-- **estero**, cioè «🌐 Stampa estera»: da 2 a 5 notizie. Contiene i temi su cui aprono i giornali stranieri e, quando c'è, come la stampa estera racconta l'Italia. Ogni notizia ha almeno una fonte estera. Scegli testate di Paesi e orientamenti diversi.
-- **economia**: da 1 a 4 notizie. Prezzi, mercati, pensioni e fisco solo quando la notizia riguarda tutti.
-- **torino**: da 3 a 6 notizie. Città e area metropolitana: trasporti, lavori, servizi, eventi, cronaca di rilievo.
-- **piemonte**: da 2 a 4 notizie dal resto del Piemonte (fuori dall'area di Torino): Regione, province, trasporti, sanità, lavoro, ambiente, montagna, cronaca di rilievo. Non ripetere le notizie di «torino».
+- **italia**: da 5 a 8 notizie (dal 21/11/2026). Politica, cronaca di rilievo nazionale, scuola, sanità, giustizia, lavoro.
+- **mondo**: da 5 a 8 notizie (dal 21/11/2026).
+- **estero**, cioè «🌐 Stampa estera»: da 4 a 6 notizie (dal 21/11/2026). Contiene i temi su cui aprono i giornali stranieri e, quando c'è, come la stampa estera racconta l'Italia. Ogni notizia ha almeno una fonte estera. Scegli testate di Paesi e orientamenti diversi.
+- **economia**: da 3 a 6 notizie (dal 21/11/2026). Prezzi, mercati, pensioni e fisco solo quando la notizia riguarda tutti.
+- **torino**: da 5 a 8 notizie (dal 21/11/2026). Le prime 4 finiscono in «Prima pagina» e nella striscia «Oggi a Torino»: metti per prime quelle che servono oggi (trasporti, scioperi, eventi del giorno). Città e area metropolitana: trasporti, lavori, servizi, eventi, cronaca di rilievo.
+- **piemonte**: da 3 a 5 notizie dal resto del Piemonte (fuori dall'area di Torino): Regione, province, trasporti, sanità, lavoro, ambiente, montagna, cronaca di rilievo. Non ripetere le notizie di «torino».
 - **eventi**, cioè «🎟️ Cose da fare a Torino e in Piemonte»: da 6 a 12 proposte per i prossimi 7 giorni (ricerca allargata dal 7/11/2026; mostre, musei, concerti, teatro, feste, mercatini, sagre, camminate, iniziative gratuite), varie per genere e prezzo, con almeno 2 gratuite o a basso costo quando ci sono. Solo eventi confermati dalla pagina ufficiale. Per ogni proposta servono anche `quando` (es. «sab 8 nov, 10-18» oppure «fino al 30 nov») e `dove` (luogo e comune); `costo` è facoltativo (es. «gratis», «12 €»). Niente pubblicità né consigli di acquisto.
 - **spettacoli**, cioè «🎬 Cinema e teatro a Torino» (dal 3/11/2026): da 6 a 12 proposte in programmazione nei prossimi 7 giorni (allargato dal 7/11/2026), **più cinema che teatro**: da 4 a 8 film e da 2 a 4 spettacoli di teatro (prosa, musica, danza, opera).
   - **Cinema** (dal 3/11/2026, scelta del proprietario): SOLO i film in programmazione in due sale di Torino, **The Space Cinema** e **Cinema Ideal** (Ideal Cityplex); nessun'altra sala, né in `dove` né nel testo. Cerca direttamente la programmazione delle due sale (WebSearch con allowed_domains ["thespacecinema.it"] e sul sito ufficiale dell'Ideal, poi mymovies.it o comingsoon.it filtrando su queste due sale) e prendi da 4 a 8 film, vari per genere (novità, commedia, animazione per famiglie, d'autore). Per ogni film: id `spe-cin-…`, titolo nella forma italiana, in `s` di che cosa parla in 1-2 frasi tue e il regista, in `dove` solo «The Space Cinema Torino», «Cinema Ideal» o tutte e due, in `quando` i giorni e gli orari indicativi letti sulla pagina della sala. Segnala con «per tutti» i film adatti anche ai ragazzi. Gli spettacoli di teatro hanno id `spe-tea-…`.
@@ -56,7 +56,11 @@ Usa la regola «prima cerca, poi leggi»: fai una WebSearch limitata al sito (al
   - Solo programmazione confermata sulla pagina ufficiale o sulla programmazione delle sale; niente recensioni né giudizi, niente pubblicità.
 - **concerti**, cioè «🎵 Concerti nei prossimi mesi» (dal 3/11/2026): da 12 a 30 concerti a Torino e in Piemonte **dai prossimi giorni fino a 6 mesi** (allargato dal 7/11/2026), per pianificare i biglietti: musica leggera e rock (Inalpi Arena/Pala Alpitour, Teatro Colosseo, Hiroshima Mon Amour, Officine Grandi Riparazioni, Teatro Concordia di Venaria…), classica e opera (Teatro Regio, Auditorium RAI-OSN, Lingotto Musica, Unione Musicale, Conservatorio), jazz e altro. In ordine di data. Per ognuno: `t` artista o titolo, `s` 1-2 frasi (genere, tour, programma), `quando` data e ora (es. «sab 14 feb 2027, 21:00»), `dove` luogo e comune, `costo` (es. «da 45 €» oppure «esaurito») e tra le `fonti` la pagina ufficiale del concerto o della vendita dei biglietti (sito del teatro, dell'organizzatore o del venditore ufficiale). Solo concerti confermati, niente rivendite non ufficiali.
   - **Per risparmiare**: aggiorna la lista per intero solo all'edizione del **lunedì mattina** (o se la lista è vuota); nelle altre edizioni copia la lista dell'edizione precedente togliendo i concerti già passati.
-- **cultura** e **sport** (facoltative): da 0 a 3 notizie ciascuna.
+- **cultura**: da 1 a 3 notizie (libri, mostre, anniversari, premi).
+- **scienza**, cioè «🔬 Scienza e salute» (dal 21/11/2026): da 2 a 4 notizie da fonti affidabili (istituti di ricerca, riviste scientifiche, agenzie sanitarie, sezioni scienza di ANSA e quotidiani); niente annunci di cure miracolose, sempre la fonte primaria quando c'è.
+- **tecnologia**, cioè «💻 Tecnologia» (dal 21/11/2026): da 2 a 4 notizie (IA, app, sicurezza informatica, regole europee sul digitale), tono neutro, niente pubblicità di prodotti.
+- **sport**: TOLTO il 21/11/2026 su richiesta del proprietario. Non cercare notizie sportive; scrivi `"sport": []` oppure ometti la chiave.
+- **Prima pagina** (dal 21/11/2026): l'app mette in grande la prima notizia di «italia» e in medio la prima di «mondo», «estero», «economia» e «torino»: l'ordine di ogni sezione conta, la più importante va prima.
 
 Per decidere l'ordine, conta quanto spazio danno alla notizia più testate. Le notizie più importanti vanno per prime.
 
@@ -95,7 +99,7 @@ Lascia fuori:
 ## Il file
 ```json
 {"app": "stampa-oggi", "edizione": "mattina", "updated": "AAAA-MM-GGTHH:MM+01:00", "nota": "facoltativa",
- "sezioni": {"italia": […], "mondo": […], "estero": […], "economia": […], "torino": […], "piemonte": […], "eventi": […], "spettacoli": […], "concerti": […], "cultura": […], "sport": […]},
+ "sezioni": {"italia": […], "mondo": […], "estero": […], "economia": […], "torino": […], "piemonte": […], "eventi": […], "spettacoli": […], "concerti": […], "cultura": […], "scienza": […], "tecnologia": […]},
  "controlli": [{"at": "…", "edizione": "mattina", "notizie": 18, "note": "fonti lette, siti non raggiungibili"}]}
 ```
 In `controlli` tieni le ultime 20 righe. Gli `id` sono brevi, unici e preceduti dalla sezione (`it-…`, `mo-…`, `es-…`, `ec-…`, `to-…`, `pi-…`, `ev-…`, `spe-…`, `co-…`, `cu-…`, `sp-…`). Le proposte di «eventi», «spettacoli» e «concerti» hanno in più `quando`, `dove` e, se vuoi, `costo`; `d` è la data di pubblicazione della pagina (o di oggi)..

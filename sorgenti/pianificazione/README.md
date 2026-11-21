@@ -46,3 +46,5 @@ Dettagli dei file e dei segnaposto: `STRUTTURA.md`.
 - Nessun dato personale nel codice: il sito è pubblico. La scheda pensione entra nel repository solo cifrata; la chiave e la scheda in chiaro mai.
 - Prima di variazioni all'app si propongono sezioni nuove o varianti strutturali.
 - I contenuti sui soldi sono fatti e strategie, non consigli.
+
+- **🗞️ Stampa come un giornale (21/11/2026):** 📰 Prima pagina (notizia principale grande, 4 medie, «Oggi a Torino») e linguette 🗞️ Notizie (con le nuove sezioni 🔬 Scienza e salute e 💻 Tecnologia), 🏙️ Torino e Piemonte, ⭐ Per me (contratto e pensione, mercati, IA e app: le novità già presenti in Pensione e Cultura digitale, con il rimando), 🎟️ Tempo libero. Sport tolto. Due colonne larghe, filtro «Solo da leggere». Più notizie per sezione (STAMPA.md, verifica_stampa.py).
