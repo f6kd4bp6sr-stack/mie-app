@@ -304,6 +304,8 @@ main>.pn-top,main>.card.pn-top,main>.pn-nov{grid-column:1/-1!important;max-heigh
 .k-piano .subw{border-top:1px solid var(--line);padding:6px 0}.k-piano .subw>summary{cursor:pointer;font-weight:700}
 /* 21/11/2026: riordino del menu (sezioni/riordino.js) */
 #side .n,main .n,.dia-wh,.cc{font-size:13px!important}
+/* 21/11/2026: menu delle sezioni centrato come la barra delle app (se non ci sta, scorre senza tagliare a sinistra) */
+#side>:first-child{margin-left:auto}#side>:last-child{margin-right:auto}
 .grp{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px}.grp-t{font-weight:800;font-size:15px;color:var(--muted)}
 .grp-tabs{width:max-content;max-width:100%;align-items:center}.grp-tabs .grp-l{font-weight:700;font-size:14px;color:var(--ben);padding:7px 12px;border-radius:9px;text-decoration:none;white-space:nowrap}
 .imp-next{margin:0 0 14px}
@@ -338,7 +340,7 @@ select{max-width:100%}
 @media (min-width:761px){.cols2.st-cols,.cols2.tl-cols3,.cd-g{display:block;columns:2;column-gap:10px}.cols2.st-cols>*,.cols2.tl-cols3>*,.cd-g>*{break-inside:avoid;margin:0 0 10px!important;width:100%;display:block}}
 
 </style>
-<script>window.APP_VERSION="5494aade2c";window.APP_BUILD="2026-11-21T15:16+02:00";</script>
+<script>window.APP_VERSION="63c4cc0d27";window.APP_BUILD="2026-11-21T15:23+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -2699,6 +2701,8 @@ const piRevDue=()=>{const dw=(parse(today()).getDay()+6)%7,w=piRevW();return (dw
 function piItems(){const t=today(),L=[];
   (P.scad||[]).filter(s=>!s.done&&s.d).forEach(s=>L.push({k:"s:"+s.id,t:s.t,d:s.d,src:"📆 Scadenze",go:"cal",ok:1}));
   try{if(typeof pensHas==="function"&&pensHas())pensOpen().forEach(a=>L.push({k:(a.leva?"l:":"a:")+a.id,t:a.t,d:a.d,src:"🎖️ Pensione",go:"pens",ok:!a.leva}));}catch(e){}
+  /* 21/11/2026: la riconsegna dell'auto sta nella sezione Auto (P.auto.scad) anche se non è stata messa nel Calendario */
+  {const A=P.auto||{};if(A.scad&&A.scad>=t&&!(P.scad||[]).some(x=>x.id==="auto-riconsegna"))L.push({k:"u:auto",t:"Riconsegna dell'auto a noleggio",d:A.scad,src:"🚗 Auto",go:"auto",ok:0});}
   PI().todo.filter(x=>!x.done).forEach(x=>L.push({k:"t:"+x.id,t:x.t,d:x.d||"",src:"🧭 Piano",ok:1,mio:1}));
   return L.sort((a,b)=>((a.d||"9")<(b.d||"9")?-1:(a.d||"9")>(b.d||"9")?1:0));}
 function piBucket(d){const t=today();if(!d)return "nd";if(d<t)return "rit";if(d===t)return "oggi";if(d<=add(piW(),6))return "sett";if(d<=add(t,31))return "mese";return "poi";}
@@ -2863,7 +2867,7 @@ function grpKeep(k){const g=grpOf(k);if(GRP[g]&&g!=="altro")try{sessionStorage.s
 /* ---------- 🗄️ Archivio a scadenza ---------- */
 function arAuto(){const s=(P.scad||[]).find(x=>x.id==="auto-riconsegna"),t=today();
   if(s)return s.done?(s.d||t):(s.d&&s.d<t?s.d:"");
-  return "";}
+  const d=(P.auto||{}).scad;return d&&d<t?d:"";}
 function arLic(){const s=lsJ("licenze-marco-v1");return s&&s.end&&s.end<today()?s.end:"";}
 
 /* linguette in cima alle sezioni di un gruppo */

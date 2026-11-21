@@ -27,6 +27,8 @@ const piRevDue=()=>{const dw=(parse(today()).getDay()+6)%7,w=piRevW();return (dw
 function piItems(){const t=today(),L=[];
   (P.scad||[]).filter(s=>!s.done&&s.d).forEach(s=>L.push({k:"s:"+s.id,t:s.t,d:s.d,src:"📆 Scadenze",go:"cal",ok:1}));
   try{if(typeof pensHas==="function"&&pensHas())pensOpen().forEach(a=>L.push({k:(a.leva?"l:":"a:")+a.id,t:a.t,d:a.d,src:"🎖️ Pensione",go:"pens",ok:!a.leva}));}catch(e){}
+  /* 21/11/2026: la riconsegna dell'auto sta nella sezione Auto (P.auto.scad) anche se non è stata messa nel Calendario */
+  {const A=P.auto||{};if(A.scad&&A.scad>=t&&!(P.scad||[]).some(x=>x.id==="auto-riconsegna"))L.push({k:"u:auto",t:"Riconsegna dell'auto a noleggio",d:A.scad,src:"🚗 Auto",go:"auto",ok:0});}
   PI().todo.filter(x=>!x.done).forEach(x=>L.push({k:"t:"+x.id,t:x.t,d:x.d||"",src:"🧭 Piano",ok:1,mio:1}));
   return L.sort((a,b)=>((a.d||"9")<(b.d||"9")?-1:(a.d||"9")>(b.d||"9")?1:0));}
 function piBucket(d){const t=today();if(!d)return "nd";if(d<t)return "rit";if(d===t)return "oggi";if(d<=add(piW(),6))return "sett";if(d<=add(t,31))return "mese";return "poi";}

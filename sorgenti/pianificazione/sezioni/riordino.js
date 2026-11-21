@@ -21,7 +21,7 @@ function grpKeep(k){const g=grpOf(k);if(GRP[g]&&g!=="altro")try{sessionStorage.s
 /* ---------- 🗄️ Archivio a scadenza ---------- */
 function arAuto(){const s=(P.scad||[]).find(x=>x.id==="auto-riconsegna"),t=today();
   if(s)return s.done?(s.d||t):(s.d&&s.d<t?s.d:"");
-  return "";}
+  const d=(P.auto||{}).scad;return d&&d<t?d:"";}
 function arLic(){const s=lsJ("licenze-marco-v1");return s&&s.end&&s.end<today()?s.end:"";}
 
 /* linguette in cima alle sezioni di un gruppo */
