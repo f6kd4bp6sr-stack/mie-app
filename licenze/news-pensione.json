@@ -1,8 +1,30 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-20T01:02:00+01:00",
+ "updated": "2026-11-21T01:03:00+01:00",
  "voci": [
+  {
+   "id": "n20261118-bozza4anni",
+   "d": "2026-11-18",
+   "titolo": "Previdenza dedicata: bozza di emendamento alla manovra, coefficiente con età maggiorata di 2, 3 o 4 anni dal 2027",
+   "sintesi": "Secondo Infodifesa e QuiFinanza (18/11), una bozza di emendamento del Governo alla manovra 2027, circolata in ambito ministeriale, darebbe alla quota contributiva un coefficiente calcolato su un'età maggiorata: +2 anni per uscite 2027-2028, +3 nel 2029-2031, +4 dal 2032, per chi cessa dal 1/1/2027; la data di uscita non cambia. SILF (19/11) riporta lo stesso schema e un costo oltre 480 milioni a regime dal 2036; il SIULP (19/11) teme l'esclusione dei cessati 2022-2026. Non ancora depositata né approvata; le fonti descrivono la platea in modo non uniforme.",
+   "fonte": "Infodifesa",
+   "url": "https://infodifesa.it/pensioni-in-divisa-spunta-la-dedicata-fino-a-4-anni-in-piu-sul-coefficiente-dal-2027-cosa-cambia-per-militari-e-poliziotti/",
+   "fonti2": [
+    "https://quifinanza.it/pensioni/pensione-forze-ordine-calcolo-coefficienti-maggiorati-2027/1024889/",
+    "https://www.silfnazionale.it/2026/11/19/grazie-alla-firma-del-contratto-dopo-le-risorse-per-il-fesi-arriva-anche-la-previdenza-dedicata/",
+    "https://siulp.it/articolo/previdenza-dedicata-risultato-storico-del-siulp/",
+    "https://www.open.online/2026/11/18/manovra-2027-cosa-puo-cambiare-pensioni-condoni-superbonus/"
+   ],
+   "temi": [
+    "previdenza"
+   ],
+   "tocca": [
+    "coefficienti",
+    "ausiliaria"
+   ],
+   "effetto": "Per ora non cambia nulla: è solo una bozza. Se approvata, aumenterebbe l'importo della quota contributiva della pensione per chi cessa dal 2027, non per chi è già in pensione."
+  },
   {
    "id": "n20261113-maggioranza",
    "d": "2026-11-13",
@@ -410,140 +432,140 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-20T01:02:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Governo – Consiglio dei ministri",
    "url": "https://www.governo.it/it/tipologie-contenuto/consiglio-dei-ministri",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-19T01:02:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-07T01:03:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "MEF",
    "url": "https://www.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-01T13:05:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "NoiPA",
    "url": "https://noipa.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-01T13:05:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "OpenBDAP – Ragioneria Generale dello Stato",
    "url": "https://openbdap.rgs.mef.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-17T13:21:00+02:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-05T13:05:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Ministero del Lavoro",
    "url": "https://www.lavoro.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "ISTAT",
    "url": "https://www.istat.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-18T01:01:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Guardia di Finanza",
    "url": "https://www.gdf.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-01T13:05:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Difesa – Previmil",
    "url": "https://www.difesa.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-20T17:00:00+02:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Polizia di Stato",
    "url": "https://www.poliziadistato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "Corte dei conti",
    "url": "https://www.corteconti.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-27T17:08:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Camera dei deputati",
    "url": "https://www.camera.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-17T01:02:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Senato",
    "url": "https://www.senato.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-17T01:02:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "Agenzia delle Entrate",
    "url": "https://www.agenziaentrate.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-19T16:58:00+02:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "non raggiungibile"
   },
   {
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-19T01:02:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-07T01:03:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-08T01:01:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SIULP",
    "url": "https://siulp.it/",
    "tipo": "sindacato polizia",
-   "ultimo": "2026-11-19T01:02:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -627,7 +649,7 @@
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-11-19T01:02:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -781,7 +803,7 @@
    "n": "BCE",
    "url": "https://www.ecb.europa.eu/",
    "tipo": "ufficiale",
-   "ultimo": "2026-10-31T09:15:00+01:00",
+   "ultimo": "2026-11-21T01:03:00+01:00",
    "esito": "ok"
   }
  ],
@@ -935,6 +957,11 @@
    "at": "2026-11-20T01:02:00+01:00",
    "notizie": 0,
    "note": "giro di venerdì 20/11: nessuna notizia nuova verificata (ricerche su contratto, previdenza dedicata, sindacati GdF: solo articoli già presenti; sciopero del 20/11 già in n20261108-protesta). Gazzetta: S.G. n. 246 del 22/10 riletta, nessun DPR di recepimento; non trovato in ricerca. Mercati: BTP 10 anni 4,42% al 17/11 (SoldiOnline), meno recente del 4,40% del 18/11 già presente: invariato; altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-21T01:03:00+01:00",
+   "notizie": 1,
+   "note": "giro di sabato 21/11: 1 notizia nuova (bozza di emendamento sulla previdenza dedicata, +2/3/4 anni sul coefficiente: Infodifesa, QuiFinanza, SILF, SIULP, Open; non ancora depositata). Orizzontescuola non raggiungibile (TFS già presente in n20261030-tfs). DPR di recepimento: nessun nuovo riscontro in Gazzetta. Mercati: nessun dato più recente verificabile (BTP 10 anni invariato 4,40% al 18/11; quotidiano.net e money.it senza data utile), altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda: valutata, invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
