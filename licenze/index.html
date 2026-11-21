@@ -16,7 +16,7 @@
 /* Colori per sezione: ogni sezione ha il suo (riquadri, schede, chip del calendario) */
 :root{--chp:#a8740a;--bg:#f4f5f9;--card:#ffffff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);
   --cal:#2563eb;--cal-bg:#e8f0fe;--scad:#d6342c;--scad-bg:#fdeceb;--prat:#e8770e;--prat-bg:#fff0e0;--fam:#7c3aed;--fam-bg:#f1eafe;--ben:#0d9488;--ben-bg:#ddf4f1;
-  --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;--inv:#15803d;--inv-bg:#dcf2e3;--met:#b86e00;--met-bg:#fff1dc;--dia:#8e4f9e;--dia-bg:#f6eaf8;--cd:#0e7490;--cd-bg:#e0f2f7;--st:#334155;--st-bg:#e9edf3;--auto:#0e7490;--auto-bg:#e0f2f7;--condo:#92400e;--condo-bg:#fdf1d8;--corsi:#4338ca;--corsi-bg:#e8e9fb;--tl:#be185d;--tl-bg:#fce7f3;
+  --piano:#0e7490;--piano-bg:#dff3f7;--lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;--inv:#15803d;--inv-bg:#dcf2e3;--met:#b86e00;--met-bg:#fff1dc;--dia:#8e4f9e;--dia-bg:#f6eaf8;--cd:#0e7490;--cd-bg:#e0f2f7;--st:#334155;--st-bg:#e9edf3;--auto:#0e7490;--auto-bg:#e0f2f7;--condo:#92400e;--condo-bg:#fdf1d8;--corsi:#4338ca;--corsi-bg:#e8e9fb;--tl:#be185d;--tl-bg:#fce7f3;
   --accent:var(--cal);--ok:#2e7d5b;--ok-bg:#e1f3e9;--warn:var(--scad);--warn-bg:var(--scad-bg);--soon:#b7791f;--soon-bg:#fdf1dc;--lp:var(--lic);--lp-bg:var(--lic-bg);--euro:#1f5fae;--euro-bg:#e3edf9}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -217,7 +217,7 @@ a.btn{text-decoration:none;display:inline-block}
 .setl .row{cursor:default}
 @media (prefers-color-scheme:dark){:root{--chp:#b58424;--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--shadow:0 1px 2px rgba(0,0,0,.4);
   --cal:#5b8cff;--cal-bg:#18264a;--scad:#ff6b5f;--scad-bg:#3b1a18;--prat:#ff9a3d;--prat-bg:#3a2612;--fam:#a98bff;--fam-bg:#271f3d;--ben:#2cc5b6;--ben-bg:#12302d;
-  --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--met:#f0a43a;--met-bg:#3a2a12;--dia:#d39be0;--dia-bg:#33203a;--cd:#4cc3dc;--cd-bg:#11303a;--st:#cbd5e1;--st-bg:#232a35;--auto:#67e8f9;--auto-bg:#16303a;--condo:#fbbf24;--condo-bg:#3a2a10;--corsi:#a5b4fc;--corsi-bg:#23254a;--tl:#f472b6;--tl-bg:#3a1a2a;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
+  --piano:#5fd0e6;--piano-bg:#123139;--lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--met:#f0a43a;--met-bg:#3a2a12;--dia:#d39be0;--dia-bg:#33203a;--cd:#4cc3dc;--cd-bg:#11303a;--st:#cbd5e1;--st-bg:#232a35;--auto:#67e8f9;--auto-bg:#16303a;--condo:#fbbf24;--condo-bg:#3a2a10;--corsi:#a5b4fc;--corsi-bg:#23254a;--tl:#f472b6;--tl-bg:#3a1a2a;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
   .warnbox{background:#3a2a1c;border-color:#b8743c}}
 /* 📓 Diario del passaggio */
 .dia-fasi{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.dia-fasi .pill{opacity:.55}.dia-fasi .pill.dia-on,.pill.dia-on{opacity:1;background:var(--dia-bg);color:var(--dia)}.dia-fasi .lbl{flex-basis:100%;margin-top:4px}
@@ -283,6 +283,25 @@ main>.pn-top,main>.card.pn-top,main>.pn-nov{grid-column:1/-1!important;max-heigh
 
 /* 9 sezioni nel menu (7/11/2026, 🎟️ Tempo libero): un po' più compatte per stare su una riga con l'iPad in orizzontale */
 @media(min-width:900px){.sect{gap:4px}.sect button{padding:8px 8px;gap:4px;font-size:14.5px}.sect .gear{padding:8px 10px}}
+/* 🧭 Piano (21/11/2026) */
+.k-piano{--c:var(--piano)}main[data-sec=piano]{--c:var(--piano)}
+.k-piano h4{margin:12px 0 4px;font-size:15px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.chips .chip{font:inherit;font-size:14px;font-weight:700;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}.chips .chip.on{background:var(--piano);color:#fff;border-color:var(--piano)}
+.pi-add{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}.pi-add input{flex:1 1 180px;min-width:0;font:inherit;font-size:16px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}.pi-add input[type=date]{flex:0 1 160px}
+.pi-in,.k-piano textarea{display:block;width:100%;font:inherit;font-size:16px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);margin:4px 0}
+.pi-rit{color:var(--scad);font-weight:700}.pi-pr{margin:4px 0 8px;padding-left:22px}.pi-ul{margin:4px 0;padding-left:4px;list-style:none}
+.pill.okp{background:var(--inv-bg);color:var(--inv)}
+.pi-tl{position:relative;margin:6px 0 0 6px;border-left:3px solid var(--line);padding-left:14px}
+.pi-y{font-weight:900;font-size:15px;color:var(--piano);margin:12px 0 4px -6px}
+.pi-tp{display:flex;gap:10px;align-items:flex-start;padding:8px 0;position:relative}.pi-tp .pi-dot{position:absolute;left:-30px;top:6px;width:30px;text-align:center;background:var(--bg);font-size:18px}
+.pi-tp small{display:block;color:var(--muted);font-size:13px}.pi-tp.done{opacity:.6}.pi-tp.nx b{color:var(--piano)}
+.pi-prep{margin:4px 0 0;padding:6px 10px;border-radius:10px;background:var(--seg);font-size:14px}
+.pi-tab,.pi-st{width:100%;border-collapse:collapse;font-size:14px}.pi-tab th,.pi-tab td,.pi-st th,.pi-st td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}.pi-tab td:nth-child(2),.pi-tab td:nth-child(3),.pi-tab td:nth-child(4){text-align:right;white-space:nowrap}.pi-tab tr.neg td{background:var(--warn-bg,#fff4e5)}
+.pi-st input{width:100%;min-width:0;font:inherit;font-size:15px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.tw{overflow-x:auto}
+.pi-ob{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 0;border-top:1px solid var(--line)}.pi-ob select{font:inherit;font-size:15px;padding:6px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.pi-mesi{display:flex;gap:4px;margin-top:2px;font-size:15px}.pi-ob .grow,.pi-tp .grow{flex:1;min-width:0}.pi-ob small{display:block;color:var(--muted);font-size:13px}
+.k-piano .subw{border-top:1px solid var(--line);padding:6px 0}.k-piano .subw>summary{cursor:pointer;font-weight:700}
 /* ===== Revisione impaginazione 21/11/2026 (verifica esterna, «tutti»): 2 colonne, niente schede tagliate, testo ≥13 px ===== */
 main[data-sec=pens],main[data-sec=inv],main[data-sec=dia],main[data-sec=cd],main[data-sec=st]{grid-template-columns:repeat(2,minmax(0,1fr))}
 main[data-sec=pens]>.card,main[data-sec=inv]>.card,main[data-sec=dia]>.card,main[data-sec=cd]>.card,main[data-sec=st]>.card{max-height:none;overflow:visible}
@@ -307,7 +326,7 @@ select{max-width:100%}
 @media (min-width:761px){.cols2.st-cols,.cols2.tl-cols3,.cd-g{display:block;columns:2;column-gap:10px}.cols2.st-cols>*,.cols2.tl-cols3>*,.cd-g>*{break-inside:avoid;margin:0 0 10px!important;width:100%;display:block}}
 
 </style>
-<script>window.APP_VERSION="d0d6a41c79";window.APP_BUILD="2026-11-21T12:18+02:00";</script>
+<script>window.APP_VERSION="689f4e7034";window.APP_BUILD="2026-11-21T13:18+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -433,7 +452,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 @media (prefers-color-scheme:dark){
 a:not([class]),.row>a,.grow>a,p.lbl>a,small>a,li>a{color:#8ab4ff}
 .pill.ok{color:#7ee2a8!important}a.st-tr{color:#6fd3a0!important}button.u-line>b{color:#fb923c!important}
-.btn.pri,label.btn.pri,.primary,.st-c,.tagrec,.sect button.on,.seg button.on,.ymg button.today,.appsw a.on,.chip.free,.chip.fest,.pstats .hi,.pstats .hi span,.ksum .hi,.ksum .hi span{color:#0f1115!important}
+.btn.pri,label.btn.pri,.primary,.st-c,.tagrec,.sect button.on,.seg button.on,.ymg button.today,.appsw a.on,.chip.free,.chip.fest,.chips .chip.on,.pstats .hi,.pstats .hi span,.ksum .hi,.ksum .hi span{color:#0f1115!important}
 }
 .appsw{flex-wrap:wrap}
 </style><script>document.body.setAttribute("data-app","pian")</script><nav class="appsw" aria-label="App"><a data-a="pian" class="on" href="./" aria-current="page">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi e Ikigai</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav>
@@ -2637,6 +2656,176 @@ function bindTl(){const qa=s=>document.querySelectorAll(s),R=()=>render();
     if(a==="bib"){save();let ok=false;try{await navigator.clipboard.writeText(v.t);ok=true;}catch(e){}window.open(TL_BIBLIO,"_blank","noopener");toast(ok?"📋 Titolo copiato: incollalo nella ricerca del catalogo":"Cerca il titolo nel catalogo");}
   });}
 
+/* ---------- 🧭 PIANO (21/11/2026, analisi da pianificatore: proposte 5, 1, 6, 7, 8, 9) ----------
+   Una sezione sola per tenere le fila:
+   🗓️ Settimana  – la revisione della domenica (10 minuti): che cosa ho fatto, che cosa slitta, 3 priorità, come sto.
+   ✅ Da fare    – un'unica lista che raccoglie le Scadenze del Calendario, gli adempimenti e le leve della Pensione
+                   e le cose aggiunte qui; filtri per oggi, settimana, mese.
+   🛣️ La strada  – le tappe vere fino al 2029 (congedo, pensione, incassi della scheda, conguaglio) con le cose da preparare.
+   💶 Soldi      – mese per mese dal congedo, preso dalla Cassa della Pensione (nessun conto nuovo, nessun consiglio).
+   🌱 Primo anno – 3–5 obiettivi personali e la settimana tipo da provare dopo il congedo.
+   Dati in P.piano, solo sull'iPad e nelle copie: nel codice non c'è nessun dato personale. */
+const PI_V=[["sett","🗓️ Settimana"],["fare","✅ Da fare"],["strada","🛣️ La strada"],["soldi","💶 Soldi"],["anno","🌱 Primo anno"]];
+const PI_AREE=[["salute","🧘","Salute e movimento","taichi.html"],["vol","🤲","Volontariato","taichi.html#ikigai"],["fam","👨‍👩‍👧","Famiglia e amici",""],["imp","📚","Imparare","#cd"],["casa","🏠","Casa e cose pratiche",""],["altro","✨","Altro",""]];
+const PI_LIV=[["","—"],["1","🌱 iniziato"],["2","🌿 in cammino"],["3","🌳 fatto mio"]];
+const PI_GG=["Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato","Domenica"],PI_FAS=[["m","mattina"],["p","pomeriggio"],["s","sera"]];
+let piV=(()=>{try{const v=sessionStorage.getItem("pn-piano-v");return PI_V.some(x=>x[0]===v)?v:"sett";}catch(e){return "sett";}})(),piF="sett";
+function PI(){if(!P.piano||typeof P.piano!=="object")P.piano={};const p=P.piano;
+  p.todo=Array.isArray(p.todo)?p.todo:[];p.rev=p.rev&&typeof p.rev==="object"?p.rev:{};p.tappe=Array.isArray(p.tappe)?p.tappe:[];
+  p.obi=Array.isArray(p.obi)?p.obi:[];p.sett=p.sett&&typeof p.sett==="object"?p.sett:{};return p;}
+const piFd=(d,o)=>d?fmt(d,o||{weekday:"short",day:"numeric",month:"short"}):"";
+/* settimana: la revisione di W (lunedì) fissa le priorità della settimana dopo */
+const piW=()=>monday(today());
+function piRevW(){const t=today(),w=piW(),dw=(parse(t).getDay()+6)%7;   /* sab-dom: la settimana in corso; lunedì: quella appena finita, se non fatta */
+  if(dw===0&&!(PI().rev[add(w,-7)]||{}).at)return add(w,-7);return w;}
+const piPrio=()=>((PI().rev[add(piW(),-7)]||{}).prio||[]).filter(x=>x&&x.trim());
+const piRevDue=()=>{const dw=(parse(today()).getDay()+6)%7,w=piRevW();return (dw>=5||w!==piW())&&!(PI().rev[w]||{}).at;};
+
+/* ---------- ✅ raccolta delle cose da fare ---------- */
+function piItems(){const t=today(),L=[];
+  (P.scad||[]).filter(s=>!s.done&&s.d).forEach(s=>L.push({k:"s:"+s.id,t:s.t,d:s.d,src:"📆 Scadenze",go:"cal",ok:1}));
+  try{if(typeof pensHas==="function"&&pensHas())pensOpen().forEach(a=>L.push({k:(a.leva?"l:":"a:")+a.id,t:a.t,d:a.d,src:"🎖️ Pensione",go:"pens",ok:!a.leva}));}catch(e){}
+  PI().todo.filter(x=>!x.done).forEach(x=>L.push({k:"t:"+x.id,t:x.t,d:x.d||"",src:"🧭 Piano",ok:1,mio:1}));
+  return L.sort((a,b)=>((a.d||"9")<(b.d||"9")?-1:(a.d||"9")>(b.d||"9")?1:0));}
+function piBucket(d){const t=today();if(!d)return "nd";if(d<t)return "rit";if(d===t)return "oggi";if(d<=add(piW(),6))return "sett";if(d<=add(t,31))return "mese";return "poi";}
+function piDone(k){const[s,id]=[k.slice(0,1),k.slice(2)];
+  if(s==="s"){const x=(P.scad||[]).find(z=>z.id===id);if(x)x.done=true;}
+  else if(s==="a"){const x=PENS().adem.find(z=>z.id===id);if(x)x.fatto=today();}
+  else if(s==="t"){const x=PI().todo.find(z=>z.id===id);if(x){x.done=today();}}
+  save();}
+function piRow(x,btn){const b=piBucket(x.d);
+  return `<div class="row pi-it"><div class="grow"><b>${esc(x.t)}</b><small>${x.d?`<span class="${b==="rit"?"pi-rit":""}">${b==="rit"?"⚠️ ":""}${piFd(x.d)}</span> · `:""}${x.src}</small></div>${btn!==false&&x.ok?`<button class="btn sm" data-pidone="${esc(x.k)}">✓</button>`:""}${x.go?`<button class="lnk" data-pigo="${x.go}">Apri ›</button>`:""}</div>`;}
+function piFare(){const I=piItems(),F=[["oggi","Fino a oggi"],["sett","Questa settimana"],["mese","Prossimi 30 giorni"],["tutto","Tutto"]];
+  const lim={oggi:["rit","oggi"],sett:["rit","oggi","sett"],mese:["rit","oggi","sett","mese"],tutto:["rit","oggi","sett","mese","poi","nd"]}[piF];
+  const V=I.filter(x=>lim.includes(piBucket(x.d))),pr=piPrio();
+  let o=`<div class="cols2">`;
+  o+=`<div class="card k-piano"><h3>✅ Da fare <span class="pill">${V.length}</span></h3>
+    <div class="chips" style="margin:0 0 8px">${F.map(([k,n])=>`<button class="chip${piF===k?" on":""}" data-pif="${k}">${n}</button>`).join("")}</div>
+    ${V.length?V.map(x=>piRow(x)).join(""):`<p class="lbl">Niente in questo periodo. 👍</p>`}
+    <div class="pi-add"><input id="piNew" placeholder="aggiungi una cosa da fare…" enterkeyhint="done"><input id="piNewD" type="date" aria-label="Entro il"><button class="btn sm pri" data-pi="add">➕</button></div>
+    <p class="lbl" style="margin:8px 0 0">Qui arrivano da sole le Scadenze del Calendario e gli adempimenti della Pensione: con ✓ le segni fatte anche là.</p></div>`;
+  o+=`<div class="card k-piano"><h3>🎯 Le 3 priorità della settimana</h3>${pr.length?`<ol class="pi-pr">${pr.map(p=>`<li>${esc(p)}</li>`).join("")}</ol>`:`<p class="lbl">Le scegli nella revisione della domenica (🗓️ Settimana).</p>`}
+    <button class="btn sm" data-piv="sett">🗓️ Vai alla revisione</button></div>`;
+  const fatti=PI().todo.filter(x=>x.done).slice(-8).reverse();
+  if(fatti.length)o+=`<div class="card k-piano"><h3>✓ Fatte di recente</h3>${fatti.map(x=>`<div class="row"><div class="grow">${esc(x.t)}<small>fatto il ${piFd(x.done)}</small></div><button class="lnk" data-piundo="${esc(x.id)}">riapri</button></div>`).join("")}</div>`;
+  return o+`</div>`;}
+
+/* ---------- 🗓️ revisione della settimana ---------- */
+function piSett(){const w=piRevW(),R=PI().rev[w]||{},pr=R.prio||["","",""],we=add(w,6),I=piItems();
+  const fatte=PI().todo.filter(x=>x.done&&x.done>=w&&x.done<=we).map(x=>x.t)
+    .concat((typeof pensHas==="function"&&pensHas()?PENS().adem:[]).filter(a=>a.fatto&&a.fatto>=w&&a.fatto<=we).map(a=>a.t));
+  const slitta=I.filter(x=>x.d&&x.d<=we&&x.d>=add(w,-14)),prossime=I.filter(x=>x.d>we&&x.d<=add(we,7));
+  const old=Object.keys(PI().rev).filter(k=>k<w&&PI().rev[k].at).sort().reverse().slice(0,8);
+  let o=`<div class="cols2">`;
+  o+=`<div class="card k-piano"><h3>🗓️ Revisione della settimana <span class="pill">${piFd(w,{day:"numeric",month:"short"})} – ${piFd(we,{day:"numeric",month:"short"})}</span>${R.at?` <span class="pill okp">fatta ✓</span>`:""}</h3>
+    <p class="lbl" style="margin-top:0">Dieci minuti, di solito la domenica: guardi indietro, scegli 3 priorità per la settimana dopo, e via.</p>
+    <h4>1. Che cosa ho fatto</h4>${fatte.length?`<ul class="pi-ul">${fatte.map(t=>`<li>✓ ${esc(t)}</li>`).join("")}</ul>`:`<p class="lbl">Nessuna cosa segnata fatta qui o nella Pensione: scrivila sotto, se vuoi.</p>`}
+    <textarea id="piRf" rows="2" placeholder="altro che ho fatto o che è andato bene…">${esc(R.fatto||"")}</textarea>
+    <h4>2. Che cosa slitta</h4>${slitta.length?slitta.map(x=>piRow(x)).join(""):`<p class="lbl">Niente in ritardo. 👍</p>`}
+    <textarea id="piRs" rows="2" placeholder="che cosa sposto, e a quando…">${esc(R.slitta||"")}</textarea>
+    <h4>3. Le 3 priorità della settimana dopo</h4>${prossime.length?`<p class="lbl" style="margin:0 0 4px">In arrivo: ${prossime.slice(0,5).map(x=>esc(x.t)).join(" · ")}</p>`:""}
+    ${[0,1,2].map(i=>`<input class="pi-in" data-pip="${i}" value="${esc(pr[i]||"")}" placeholder="priorità ${i+1}">`).join("")}
+    <h4>4. Come sto</h4><div class="chips">${["😣","😕","😐","🙂","😄"].map((e,i)=>`<button class="chip${R.um===i+1?" on":""}" data-pium="${i+1}">${e}</button>`).join("")}</div>
+    <textarea id="piRn" rows="2" placeholder="una riga su come è andata (corpo, umore, persone)…">${esc(R.nota||"")}</textarea>
+    <div class="btns"><button class="btn pri" data-pi="rev">✓ Revisione fatta</button></div></div>`;
+  o+=`<div class="card k-piano"><h3>📜 Le settimane passate</h3>${old.length?old.map(k=>{const r=PI().rev[k];return piSub("pi-r-"+k,`${piFd(k,{day:"numeric",month:"short"})} ${r.um?["😣","😕","😐","🙂","😄"][r.um-1]:""}`,`${(r.prio||[]).filter(Boolean).length?`<b>Priorità scelte</b><ol class="pi-pr">${r.prio.filter(Boolean).map(p=>`<li>${esc(p)}</li>`).join("")}</ol>`:""}${r.fatto?`<p><b>Fatto:</b> ${esc(r.fatto)}</p>`:""}${r.slitta?`<p><b>Slitta:</b> ${esc(r.slitta)}</p>`:""}${r.nota?`<p><b>Come sto:</b> ${esc(r.nota)}</p>`:""}`);}).join(""):`<p class="lbl">Qui restano le revisioni fatte, una per settimana.</p>`}</div>`;
+  return o+`</div>`;}
+function piSub(k,t,b){return `<details class="subw"><summary>${t}</summary><div>${b}</div></details>`;}
+
+/* ---------- 🛣️ la strada fino al 2029 ---------- */
+function piTappe(){const T=[],t=today();
+  try{const S=licS();if(S){const L=licCalc(S);T.push({d:L.end,t:"Ultimo giorno in servizio",ic:"🎖️",src:"Licenze",go:"licenze.html"});}}catch(e){}
+  try{const dec=((PENS().dati||{}).decor||"").slice(0,7);if(dec)T.push({d:dec+"-01",t:"Decorrenza della pensione",ic:"🌅",src:"Pensione"});}catch(e){}
+  try{const K=cassaCalc();const seen={};(K.items||[]).forEach(x=>{
+      if(x.k.startsWith("inc:"))T.push({d:x.d,t:x.t,ic:"💶",src:"Pensione · scheda",imp:x.imp});
+      else if(x.k.startsWith("pen:")&&!seen.pen){seen.pen=1;T.push({d:x.d,t:"Primo accredito della pensione",ic:"💶",src:"Pensione · cassa",imp:x.imp});}
+      else if(x.k==="tax:dich")T.push({d:x.d,t:x.t,ic:"🧾",src:"Pensione · tasse",imp:x.imp,u:1});});}catch(e){}
+  PI().tappe.forEach(x=>T.push({d:x.d,t:x.t,ic:"📍",src:"mia",id:x.id}));
+  return T.filter(x=>x.d).sort((a,b)=>a.d<b.d?-1:a.d>b.d?1:0);}
+function piStrada(){const T=piTappe(),t=today(),A=(typeof pensHas==="function"&&pensHas())?PENS().adem.filter(a=>a.d):[];
+  const nx=T.find(x=>x.d>=t);let prev="0000-00-00",o="";
+  o+=`<div class="card k-piano"><h3>🛣️ La strada <span class="lbl" style="margin-left:auto">${nx?`prossima tappa: ${esc(nx.t)} · tra ${diff(t,nx.d)} giorni`:""}</span></h3>
+    <p class="lbl" style="margin-top:0">Le tappe arrivano da Licenze e Pensione (scheda e cassa); sotto ogni tappa gli adempimenti da preparare prima. Puoi aggiungere le tue.</p>
+    <div class="pi-tl">`;
+  let y="";
+  T.forEach(x=>{const prep=A.filter(a=>a.d>prev&&a.d<=x.d),done=x.d<t;
+    if(x.d.slice(0,4)!==y){y=x.d.slice(0,4);o+=`<div class="pi-y">${y}</div>`;}
+    o+=`<div class="pi-tp${done?" done":""}${x===nx?" nx":""}"><div class="pi-dot">${x.ic}</div><div class="grow"><b>${esc(x.t)}</b><small>${piFd(x.d,{weekday:"short",day:"numeric",month:"long",year:"numeric"})} · ${x.src}${x.imp?` · ${x.u?"−":""}${eur0(x.imp)}`:""}${!done?` · tra ${diff(t,x.d)} giorni`:""}</small>
+      ${prep.length?`<div class="pi-prep">${prep.map(a=>`<div>${a.fatto?"✓":"○"} ${esc(a.t)} <span class="lbl">${piFd(a.d)}</span></div>`).join("")}</div>`:""}</div>${x.id?`<button class="lnk" data-pitdel="${esc(x.id)}">togli</button>`:""}</div>`;
+    prev=x.d;});
+  if(!T.length)o+=`<p class="lbl">Nessuna tappa: imposta l'ultimo giorno in Licenze e carica la scheda in Pensione.</p>`;
+  o+=`</div><div class="pi-add"><input id="piTt" placeholder="aggiungi una tappa…"><input id="piTd" type="date" aria-label="Data"><button class="btn sm pri" data-pi="tappa">➕</button></div></div>`;
+  return o;}
+
+/* ---------- 💶 soldi mese per mese (dalla Cassa della Pensione) ---------- */
+function piSoldi(){let K=null;try{K=cassaCalc();}catch(e){}
+  if(!K||!K.ini)return `<div class="card k-piano"><h3>💶 Soldi mese per mese</h3><p>I conti si fanno nella <b>Cassa</b> della sezione Pensione: scrivi da quanto parti e la cassa mette in fila stipendi, pensione, rate del TFS e uscite fino al 2029. Qui ne vedi il riassunto dal congedo in poi.</p><button class="btn sm pri" data-pigocassa="1">Apri la Cassa ›</button></div>`;
+  let dec="";try{dec=((PENS().dati||{}).decor||"").slice(0,7);}catch(e){}
+  const R=K.rows.filter(r=>!dec||r.ym>=dec),c=v=>`<span class="amt ${v<0?"u":""}">${eur0(Math.round(v))}</span>`;
+  const reg=R.filter(r=>!r.L.some(x=>x.k&&x.k.startsWith("inc:"))),me=reg.length?reg.reduce((a,r)=>a+r.e,0)/reg.length:0,mu=reg.length?reg.reduce((a,r)=>a+r.u,0)/reg.length:0;
+  let o=`<div class="card k-piano"><h3>💶 Soldi dal congedo in poi <button class="lnk" data-pigocassa="1" style="margin-left:auto">Cassa ›</button></h3>
+    <p class="lbl" style="margin-top:0">Presi dalla Cassa della Pensione (stesse cifre, solo riassunte). Nessun consiglio: sono le entrate e le uscite che hai inserito o che arrivano dalla scheda.</p>
+    <div class="kpi"><div><b>${c(me)}</b><span>entrate di un mese normale</span></div><div><b>${c(mu)}</b><span>uscite di un mese normale</span></div><div><b>${c(me-mu)}</b><span>differenza al mese</span></div><div><b>${c(K.min)}</b><span>punto più basso (${ymLab(K.minM)})</span></div></div>
+    <div class="tw"><table class="pi-tab"><thead><tr><th>Mese</th><th>Entrate</th><th>Uscite</th><th>Saldo a fine mese</th><th>Voci grandi</th></tr></thead><tbody>
+    ${R.map(r=>{const big=r.L.filter(x=>Math.abs(x.imp)>=2000).map(x=>esc(x.t)).join(" · ");return `<tr${r.fin<0?' class="neg"':""}><td>${ymLab(r.ym,1)}</td><td>${c(r.e)}</td><td>${c(-r.u)}</td><td>${c(r.fin)}</td><td class="lbl">${big}</td></tr>`;}).join("")}</tbody></table></div></div>`;
+  return o;}
+
+/* ---------- 🌱 primo anno: obiettivi e settimana tipo ---------- */
+function piAnno(){const O=PI().obi,ym=today().slice(0,7);
+  let o=`<div class="cols2"><div class="card k-piano"><h3>🌱 I miei obiettivi del primo anno <span class="pill">${O.length}/5</span></h3>
+    <p class="lbl" style="margin-top:0">Da 3 a 5, uno per area che conta. Ogni mese segni a che punto sei: 🌱 iniziato, 🌿 in cammino, 🌳 fatto mio.</p>`;
+  O.forEach(x=>{const a=PI_AREE.find(z=>z[0]===x.area)||PI_AREE[5],m=x.mesi||{},cur=m[ym]||"";
+    o+=`<div class="pi-ob"><div class="grow"><b>${a[1]} ${esc(x.t)}</b><small>${a[2]}${x.come?" · come lo misuro: "+esc(x.come):""}</small>
+      <div class="pi-mesi">${Object.keys(m).sort().slice(-6).map(k=>`<span title="${ymLab(k,1)}">${["","🌱","🌿","🌳"][+m[k]]||"·"}</span>`).join("")}</div></div>
+      <select data-pilv="${esc(x.id)}" aria-label="A che punto sono questo mese">${PI_LIV.map(([v,n])=>`<option value="${v}"${cur===v?" selected":""}>${n}</option>`).join("")}</select>
+      ${a[3]?`<a class="lnk" href="${a[3].startsWith("#")?"./"+a[3]:a[3]}">Apri ›</a>`:""}<button class="lnk" data-piodel="${esc(x.id)}">togli</button></div>`;});
+  if(O.length<5)o+=`<div class="form"><label>Area<select id="piOa">${PI_AREE.map(([k,ic,n])=>`<option value="${k}">${ic} ${n}</option>`).join("")}</select></label><label>Obiettivo<input id="piOt" placeholder="es. Tai Chi 4 volte a settimana"></label><label>Come lo misuro<input id="piOc" placeholder="es. sessioni segnate nel Tai Chi"></label></div><div class="btns"><button class="btn sm pri" data-pi="obi">➕ Aggiungi obiettivo</button></div>`;
+  o+=`</div>`;
+  const S=PI().sett;
+  o+=`<div class="card k-piano"><h3>🗓️ La mia settimana tipo dopo il congedo</h3>
+    <p class="lbl" style="margin-top:0">Uno schema leggero da provare da giugno 2027 e aggiustare: così le giornate hanno un ritmo. Scrivi poche parole per casella.</p>
+    <div class="tw"><table class="pi-st"><thead><tr><th></th>${PI_FAS.map(([k,n])=>`<th>${n}</th>`).join("")}</tr></thead><tbody>
+    ${PI_GG.map((g,i)=>`<tr><th>${g}</th>${PI_FAS.map(([k])=>`<td><input data-pis="${i}-${k}" value="${esc((S[i]||{})[k]||"")}" placeholder="…"></td>`).join("")}</tr>`).join("")}</tbody></table></div>
+    <p class="lbl">Idee: 🧘 Tai Chi · 🤲 volontariato · 📚 studio · 🚶 camminata · 👨‍👩‍👧 famiglia · 🎟️ tempo libero · 🏠 casa.</p></div></div>`;
+  return o;}
+
+/* ---------- sezione ---------- */
+function vPiano(){const I=piItems(),wk=I.filter(x=>["rit","oggi","sett"].includes(piBucket(x.d))).length,T=piTappe().find(x=>x.d>=today());
+  let o=`<h1>🧭 Piano</h1><p class="sub">Tenere le fila: la revisione della settimana, tutte le cose da fare in una lista, la strada fino al 2029, i soldi dal congedo e il primo anno di pensione.</p>`;
+  o+=`<div class="kpi" style="margin-bottom:12px"><div><b>${wk}</b><span>da fare questa settimana</span></div><div><b>${piRevDue()?"da fare":(PI().rev[piRevW()]||{}).at?"fatta ✓":"domenica"}</b><span>revisione</span></div><div><b>${T?diff(today(),T.d):"—"}</b><span>${T?"giorni a: "+esc(T.t):"prossima tappa"}</span></div></div>`;
+  o+=`<div class="seg" role="tablist" style="margin:0 0 14px;width:max-content;max-width:100%">${PI_V.map(([k,n])=>`<button role="tab" data-piv="${k}" class="${piV===k?"on":""}" aria-selected="${piV===k}">${n}</button>`).join("")}</div>`;
+  return o+({sett:piSett,fare:piFare,strada:piStrada,soldi:piSoldi,anno:piAnno}[piV]||piSett)();}
+/* riquadro in Oggi */
+function piOggiCard(){const pr=piPrio(),I=piItems().filter(x=>["rit","oggi"].includes(piBucket(x.d))),T=piTappe().find(x=>x.d>=today());
+  return `<div class="card k-piano"><h3>🧭 Piano <a href="#piano">Apri ›</a></h3>
+    ${piRevDue()?`<div class="row"><div class="grow"><b>🗓️ Revisione della settimana</b><small>10 minuti: fatto, slitta, 3 priorità</small></div><button class="btn sm" data-pigo2="sett">Fai</button></div>`:""}
+    ${pr.length?`<div class="lbl" style="margin:4px 0 2px">🎯 Priorità della settimana</div><ol class="pi-pr">${pr.map(p=>`<li>${esc(p)}</li>`).join("")}</ol>`:""}
+    ${I.length?`<div class="row"><div class="grow"><b>✅ ${I.length} ${I.length===1?"cosa":"cose"} per oggi</b><small>${I.slice(0,2).map(x=>esc(x.t)).join(" · ")}</small></div><button class="btn sm" data-pigo2="fare">Vedi</button></div>`:""}
+    ${T?`<div class="row"><div class="grow"><b>🛣️ ${esc(T.t)}</b><small>${piFd(T.d,{day:"numeric",month:"long",year:"numeric"})}</small></div><b>${diff(today(),T.d)} g</b></div>`:""}</div>`;}
+function bindPiano(){const qa=s=>document.querySelectorAll(s),R=()=>render(),gv=id=>{const e=$(id);return e?e.value.trim():"";};
+  qa("[data-piv]").forEach(b=>b.onclick=()=>{piV=b.dataset.piv;try{sessionStorage.setItem("pn-piano-v",piV);}catch(e){}R();scrollTo({top:0});});
+  qa("[data-pif]").forEach(b=>b.onclick=()=>{piF=b.dataset.pif;R();});
+  qa("[data-pidone]").forEach(b=>b.onclick=()=>{piDone(b.dataset.pidone);toast("Fatto ✓");R();});
+  qa("[data-piundo]").forEach(b=>b.onclick=()=>{const x=PI().todo.find(z=>z.id===b.dataset.piundo);if(x){x.done=false;save();R();}});
+  qa("[data-pigo]").forEach(b=>b.onclick=()=>go(b.dataset.pigo));
+  qa("[data-pigocassa]").forEach(b=>b.onclick=()=>{try{pensV="cassa";}catch(e){}go("pens");});
+  qa("[data-pitdel]").forEach(b=>b.onclick=()=>{const p=PI();p.tappe=p.tappe.filter(x=>x.id!==b.dataset.pitdel);save();R();});
+  qa("[data-piodel]").forEach(b=>b.onclick=()=>{if(!confirm("Tolgo questo obiettivo?"))return;const p=PI();p.obi=p.obi.filter(x=>x.id!==b.dataset.piodel);save();R();});
+  qa("[data-pilv]").forEach(s=>s.onchange=()=>{const x=PI().obi.find(z=>z.id===s.dataset.pilv);if(!x)return;x.mesi=x.mesi||{};const ym=today().slice(0,7);if(s.value)x.mesi[ym]=s.value;else delete x.mesi[ym];save();toast("Salvato");R();});
+  qa("[data-pis]").forEach(i=>i.onchange=()=>{const[g,k]=i.dataset.pis.split("-"),S=PI().sett;S[g]=S[g]||{};S[g][k]=i.value.trim();save();toast("Salvato");});
+  qa("[data-pium]").forEach(b=>b.onclick=()=>{const w=piRevW(),r=PI().rev[w]||(PI().rev[w]={});r.um=+b.dataset.pium;piRevKeep();save();R();});
+  qa("[data-pi]").forEach(b=>b.onclick=()=>{const a=b.dataset.pi,p=PI();
+    if(a==="add"){const t=gv("piNew");if(!t){toast("Scrivi che cosa");return;}p.todo.push({id:uid(),t,d:gv("piNewD"),done:false});save();R();}
+    else if(a==="tappa"){const t=gv("piTt"),d=gv("piTd");if(!t||!d){toast("Serve un nome e una data");return;}p.tappe.push({id:uid(),t,d});save();R();}
+    else if(a==="obi"){const t=gv("piOt");if(!t){toast("Scrivi l'obiettivo");return;}p.obi.push({id:uid(),area:$("piOa").value,t,come:gv("piOc"),mesi:{}});save();R();}
+    else if(a==="rev"){piRevKeep();const r=p.rev[piRevW()];r.at=new Date().toISOString();save();toast("✓ Revisione fatta: buona settimana");R();}});
+  ["piRf","piRs","piRn"].forEach(id=>{const e=$(id);if(e)e.onchange=()=>{piRevKeep();save();};});
+  qa("[data-pip]").forEach(i=>i.onchange=()=>{piRevKeep();save();});
+  const n=$("piNew");if(n)n.onkeydown=e=>{if(e.key==="Enter"){e.preventDefault();document.querySelector('[data-pi="add"]').click();}};}
+function piRevKeep(){const w=piRevW(),r=PI().rev[w]||(PI().rev[w]={}),v=id=>{const e=$(id);return e?e.value.trim():undefined;};
+  const f=v("piRf"),s=v("piRs"),n=v("piRn");if(f!==undefined)r.fatto=f;if(s!==undefined)r.slitta=s;if(n!==undefined)r.nota=n;
+  const P3=[...document.querySelectorAll("[data-pip]")];if(P3.length)r.prio=P3.map(i=>i.value.trim());}
+
 /* ---------- famiglia ---------- */
 const chiList=()=>[...new Set(P.fam.att.map(a=>a.chi).filter(Boolean))];
 /* attività fisse: ogni settimana o ogni 2 settimane (da «dal»), fino a «fino», con periodi di pausa; impegni di un giorno */
@@ -2742,7 +2931,7 @@ Object.assign(SEC_IMG,{
   set:`<svg viewBox="0 0 1100 150" role="img" aria-label="Un ingranaggio e tre schede da sistemare una volta: il blocco con Face ID, il collegamento con il Calendario dell'iPad e le copie di sicurezza"><text x="550" y="20" font-size="15" text-anchor="middle" font-weight="800" fill="currentColor">le cose da sistemare una volta: poi lavorano da sole</text><text x="84" y="108" font-size="64" text-anchor="middle">⚙️</text><text x="84" y="140" font-size="13" text-anchor="middle" font-weight="800" fill="currentColor">una volta sola</text><line x1="140" y1="88" x2="192" y2="88" stroke="currentColor" stroke-width="2.5" opacity=".6"/><polygon points="190,82 200,88 190,94" fill="currentColor" opacity=".6"/><rect x="214" y="38" width="272" height="96" rx="14" fill="#2563eb" fill-opacity=".12" stroke="#2563eb" stroke-opacity=".7" stroke-width="2"/><text x="258" y="98" font-size="34" text-anchor="middle">🔒</text><text x="298" y="80" font-size="15" text-anchor="start" font-weight="800" fill="currentColor">blocco con Face ID</text><text x="298" y="104" font-size="13" text-anchor="start" fill="currentColor">all’apertura chiede il volto</text><rect x="506" y="38" width="272" height="96" rx="14" fill="#d6342c" fill-opacity=".12" stroke="#d6342c" stroke-opacity=".7" stroke-width="2"/><text x="550" y="98" font-size="34" text-anchor="middle">📆</text><text x="590" y="80" font-size="15" text-anchor="start" font-weight="800" fill="currentColor">Calendario dell’iPad</text><text x="590" y="104" font-size="13" text-anchor="start" fill="currentColor">le scadenze compaiono lì</text><rect x="798" y="38" width="272" height="96" rx="14" fill="#16a34a" fill-opacity=".12" stroke="#16a34a" stroke-opacity=".7" stroke-width="2"/><text x="842" y="98" font-size="34" text-anchor="middle">💾</text><text x="882" y="80" font-size="15" text-anchor="start" font-weight="800" fill="currentColor">copie di sicurezza</text><text x="882" y="104" font-size="13" text-anchor="start" fill="currentColor">per ritrovare tutto</text></svg>`,
 });
 /*@/IMG-NUOVE*/
-const SECT=[["oggi","☀️","Oggi","--cal"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["auto","🚗","Auto","--auto"],["condo","🏢","Condominio","--condo"],["tl","🎟️","Tempo libero","--tl"]];
+const SECT=[["oggi","☀️","Oggi","--cal"],["piano","🧭","Piano","--piano"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["auto","🚗","Auto","--auto"],["condo","🏢","Condominio","--condo"],["tl","🎟️","Tempo libero","--tl"]];
 /* 21/11/2026: 🗞️ Stampa di oggi passa nella barra in alto, accanto a Corsi online, per liberare spazio nel menu */
 const ALL_SECT=SECT.map(x=>x[0]).concat(["set","corsi","st"]);
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
@@ -2763,7 +2952,7 @@ function side(){const late=lateN();
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(typeof diaFlush==="function")diaFlush();if(k==="dia"&&cur!=="dia"&&typeof diaOpen==="function")diaOpen();cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="corsi"||cur==="st"?cur:"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,dia:vDia,cd:vCd,st:vSt,auto:vAuto,condo:vCondo,corsi:vCorsi,tl:vTl,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';{const h1=m.querySelector("h1");if(h1&&SEC_IMG[cur]){const t=h1.parentElement===m?h1:h1.closest("main > *");t.insertAdjacentHTML("afterend",'<div class="sec-img">'+SEC_IMG[cur]+'</div>');}}foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();pnBal(m);}
+function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="corsi"||cur==="st"?cur:"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,piano:vPiano,cal:vCal,pens:vPens,inv:vInv,dia:vDia,cd:vCd,st:vSt,auto:vAuto,condo:vCondo,corsi:vCorsi,tl:vTl,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';{const h1=m.querySelector("h1");if(h1&&SEC_IMG[cur]){const t=h1.parentElement===m?h1:h1.closest("main > *");t.insertAdjacentHTML("afterend",'<div class="sec-img">'+SEC_IMG[cur]+'</div>');}}foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();pnBal(m);}
 /* 21/11/2026: una scheda da sola, o molto più lunga delle altre, va a tutta larghezza (niente colonne con grandi buchi) */
 function pnBal(m){const gs=[m].concat([...m.querySelectorAll('.cols2,.grid')]);gs.forEach(g=>{if(getComputedStyle(g).display!=='grid')return;const cs=[...g.children].filter(c=>c.classList.contains('card')&&getComputedStyle(c).gridColumnStart==='auto'||c.classList.contains('pn-full'));cs.forEach(c=>c.classList.remove('pn-full'));const n=getComputedStyle(g).gridTemplateColumns.split(' ').length;if(n<2||!cs.length)return;if(cs.length===1){cs[0].classList.add('pn-full');return;}const h=cs.map(c=>c.offsetHeight),tot=h.reduce((a,b)=>a+b,0);h.forEach((x,i)=>{if(x>900&&x>1.6*(tot-x))cs[i].classList.add('pn-full');});});}
 document.addEventListener('toggle',e=>{const m=document.getElementById('main');if(m&&m.contains(e.target)){clearTimeout(pnBal.t);pnBal.t=setTimeout(()=>pnBal(m),60);}},true);
@@ -2836,6 +3025,7 @@ function contCard(){const rows=[],C=(P.corsi&&P.corsi.st)||{};
   return `<div class="card k-cd"><h3>📚 Da continuare</h3>${rows.join("")}</div>`;}
 function vOggi(){
   const t=today(),S=licS();let o=`<div class="grid">`;
+  try{o+=piOggiCard();}catch(e){}
   // licenze
   if(S){const L=licCalc(S),B=absBlocks(S).filter(b=>b.to>=t)[0];
     o+=`<div class="card k-lic"><h3>📅 Licenze <a href="licenze.html">Apri ›</a></h3><div class="big">${Math.max(0,L.toEnd)}</div><div class="lbl">giorni al congedo (${fmt(L.end,{day:"numeric",month:"long",year:"numeric"})})</div>
@@ -2940,6 +3130,8 @@ function vSet(){
 }
 /* ---------- eventi ---------- */
 function bind(){
+  if(cur==="piano")bindPiano();
+  document.querySelectorAll("[data-pigo2]").forEach(b=>b.onclick=()=>{piV=b.dataset.pigo2;go("piano");});
   if(cur==="pens")bindPens();
   if(cur==="inv")bindInv();
   if(cur==="dia")bindDia();

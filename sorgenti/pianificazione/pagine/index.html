@@ -16,7 +16,7 @@
 /* Colori per sezione: ogni sezione ha il suo (riquadri, schede, chip del calendario) */
 :root{--chp:#a8740a;--bg:#f4f5f9;--card:#ffffff;--ink:#16191f;--muted:#687180;--line:#e6e8ee;--seg:#eceef3;--shadow:0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05);
   --cal:#2563eb;--cal-bg:#e8f0fe;--scad:#d6342c;--scad-bg:#fdeceb;--prat:#e8770e;--prat-bg:#fff0e0;--fam:#7c3aed;--fam-bg:#f1eafe;--ben:#0d9488;--ben-bg:#ddf4f1;
-  --lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;--inv:#15803d;--inv-bg:#dcf2e3;--met:#b86e00;--met-bg:#fff1dc;--dia:#8e4f9e;--dia-bg:#f6eaf8;--cd:#0e7490;--cd-bg:#e0f2f7;--st:#334155;--st-bg:#e9edf3;--auto:#0e7490;--auto-bg:#e0f2f7;--condo:#92400e;--condo-bg:#fdf1d8;--corsi:#4338ca;--corsi-bg:#e8e9fb;--tl:#be185d;--tl-bg:#fce7f3;
+  --piano:#0e7490;--piano-bg:#dff3f7;--lic:#c0532b;--lic-bg:#fbe8df;--mondo:#d63384;--mondo-bg:#fde7f1;--ipad:#4b5b73;--ipad-bg:#ebeff5;--set:#64748b;--set-bg:#eef1f5;--pens:#a8740a;--pens-bg:#fbf1d9;--inv:#15803d;--inv-bg:#dcf2e3;--met:#b86e00;--met-bg:#fff1dc;--dia:#8e4f9e;--dia-bg:#f6eaf8;--cd:#0e7490;--cd-bg:#e0f2f7;--st:#334155;--st-bg:#e9edf3;--auto:#0e7490;--auto-bg:#e0f2f7;--condo:#92400e;--condo-bg:#fdf1d8;--corsi:#4338ca;--corsi-bg:#e8e9fb;--tl:#be185d;--tl-bg:#fce7f3;
   --accent:var(--cal);--ok:#2e7d5b;--ok-bg:#e1f3e9;--warn:var(--scad);--warn-bg:var(--scad-bg);--soon:#b7791f;--soon-bg:#fdf1dc;--lp:var(--lic);--lp-bg:var(--lic-bg);--euro:#1f5fae;--euro-bg:#e3edf9}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -217,7 +217,7 @@ a.btn{text-decoration:none;display:inline-block}
 .setl .row{cursor:default}
 @media (prefers-color-scheme:dark){:root{--chp:#b58424;--bg:#0f1115;--card:#1a1d23;--ink:#eef0f4;--muted:#9aa3af;--line:#2b3039;--seg:#242830;--shadow:0 1px 2px rgba(0,0,0,.4);
   --cal:#5b8cff;--cal-bg:#18264a;--scad:#ff6b5f;--scad-bg:#3b1a18;--prat:#ff9a3d;--prat-bg:#3a2612;--fam:#a98bff;--fam-bg:#271f3d;--ben:#2cc5b6;--ben-bg:#12302d;
-  --lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--met:#f0a43a;--met-bg:#3a2a12;--dia:#d39be0;--dia-bg:#33203a;--cd:#4cc3dc;--cd-bg:#11303a;--st:#cbd5e1;--st-bg:#232a35;--auto:#67e8f9;--auto-bg:#16303a;--condo:#fbbf24;--condo-bg:#3a2a10;--corsi:#a5b4fc;--corsi-bg:#23254a;--tl:#f472b6;--tl-bg:#3a1a2a;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
+  --piano:#5fd0e6;--piano-bg:#123139;--lic:#f08a5d;--lic-bg:#3a2218;--mondo:#ff6fae;--mondo-bg:#3a1a2a;--ipad:#9fb0c8;--ipad-bg:#232a35;--set:#9aa7b8;--set-bg:#232831;--pens:#e3b54a;--pens-bg:#3a2f12;--inv:#4ade80;--inv-bg:#143322;--met:#f0a43a;--met-bg:#3a2a12;--dia:#d39be0;--dia-bg:#33203a;--cd:#4cc3dc;--cd-bg:#11303a;--st:#cbd5e1;--st-bg:#232a35;--auto:#67e8f9;--auto-bg:#16303a;--condo:#fbbf24;--condo-bg:#3a2a10;--corsi:#a5b4fc;--corsi-bg:#23254a;--tl:#f472b6;--tl-bg:#3a1a2a;--ok-bg:#16301f;--soon-bg:#33270f;--euro-bg:#172739}
   .warnbox{background:#3a2a1c;border-color:#b8743c}}
 /* 📓 Diario del passaggio */
 .dia-fasi{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.dia-fasi .pill{opacity:.55}.dia-fasi .pill.dia-on,.pill.dia-on{opacity:1;background:var(--dia-bg);color:var(--dia)}.dia-fasi .lbl{flex-basis:100%;margin-top:4px}
@@ -283,6 +283,25 @@ main>.pn-top,main>.card.pn-top,main>.pn-nov{grid-column:1/-1!important;max-heigh
 
 /* 9 sezioni nel menu (7/11/2026, 🎟️ Tempo libero): un po' più compatte per stare su una riga con l'iPad in orizzontale */
 @media(min-width:900px){.sect{gap:4px}.sect button{padding:8px 8px;gap:4px;font-size:14.5px}.sect .gear{padding:8px 10px}}
+/* 🧭 Piano (21/11/2026) */
+.k-piano{--c:var(--piano)}main[data-sec=piano]{--c:var(--piano)}
+.k-piano h4{margin:12px 0 4px;font-size:15px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.chips .chip{font:inherit;font-size:14px;font-weight:700;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}.chips .chip.on{background:var(--piano);color:#fff;border-color:var(--piano)}
+.pi-add{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}.pi-add input{flex:1 1 180px;min-width:0;font:inherit;font-size:16px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}.pi-add input[type=date]{flex:0 1 160px}
+.pi-in,.k-piano textarea{display:block;width:100%;font:inherit;font-size:16px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);margin:4px 0}
+.pi-rit{color:var(--scad);font-weight:700}.pi-pr{margin:4px 0 8px;padding-left:22px}.pi-ul{margin:4px 0;padding-left:4px;list-style:none}
+.pill.okp{background:var(--inv-bg);color:var(--inv)}
+.pi-tl{position:relative;margin:6px 0 0 6px;border-left:3px solid var(--line);padding-left:14px}
+.pi-y{font-weight:900;font-size:15px;color:var(--piano);margin:12px 0 4px -6px}
+.pi-tp{display:flex;gap:10px;align-items:flex-start;padding:8px 0;position:relative}.pi-tp .pi-dot{position:absolute;left:-30px;top:6px;width:30px;text-align:center;background:var(--bg);font-size:18px}
+.pi-tp small{display:block;color:var(--muted);font-size:13px}.pi-tp.done{opacity:.6}.pi-tp.nx b{color:var(--piano)}
+.pi-prep{margin:4px 0 0;padding:6px 10px;border-radius:10px;background:var(--seg);font-size:14px}
+.pi-tab,.pi-st{width:100%;border-collapse:collapse;font-size:14px}.pi-tab th,.pi-tab td,.pi-st th,.pi-st td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}.pi-tab td:nth-child(2),.pi-tab td:nth-child(3),.pi-tab td:nth-child(4){text-align:right;white-space:nowrap}.pi-tab tr.neg td{background:var(--warn-bg,#fff4e5)}
+.pi-st input{width:100%;min-width:0;font:inherit;font-size:15px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.tw{overflow-x:auto}
+.pi-ob{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 0;border-top:1px solid var(--line)}.pi-ob select{font:inherit;font-size:15px;padding:6px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.pi-mesi{display:flex;gap:4px;margin-top:2px;font-size:15px}.pi-ob .grow,.pi-tp .grow{flex:1;min-width:0}.pi-ob small{display:block;color:var(--muted);font-size:13px}
+.k-piano .subw{border-top:1px solid var(--line);padding:6px 0}.k-piano .subw>summary{cursor:pointer;font-weight:700}
 /* ===== Revisione impaginazione 21/11/2026 (verifica esterna, «tutti»): 2 colonne, niente schede tagliate, testo ≥13 px ===== */
 main[data-sec=pens],main[data-sec=inv],main[data-sec=dia],main[data-sec=cd],main[data-sec=st]{grid-template-columns:repeat(2,minmax(0,1fr))}
 main[data-sec=pens]>.card,main[data-sec=inv]>.card,main[data-sec=dia]>.card,main[data-sec=cd]>.card,main[data-sec=st]>.card{max-height:none;overflow:visible}
@@ -585,7 +604,7 @@ Object.assign(SEC_IMG,{
   set:`<svg viewBox="0 0 1100 150" role="img" aria-label="Un ingranaggio e tre schede da sistemare una volta: il blocco con Face ID, il collegamento con il Calendario dell'iPad e le copie di sicurezza"><text x="550" y="20" font-size="15" text-anchor="middle" font-weight="800" fill="currentColor">le cose da sistemare una volta: poi lavorano da sole</text><text x="84" y="108" font-size="64" text-anchor="middle">⚙️</text><text x="84" y="140" font-size="13" text-anchor="middle" font-weight="800" fill="currentColor">una volta sola</text><line x1="140" y1="88" x2="192" y2="88" stroke="currentColor" stroke-width="2.5" opacity=".6"/><polygon points="190,82 200,88 190,94" fill="currentColor" opacity=".6"/><rect x="214" y="38" width="272" height="96" rx="14" fill="#2563eb" fill-opacity=".12" stroke="#2563eb" stroke-opacity=".7" stroke-width="2"/><text x="258" y="98" font-size="34" text-anchor="middle">🔒</text><text x="298" y="80" font-size="15" text-anchor="start" font-weight="800" fill="currentColor">blocco con Face ID</text><text x="298" y="104" font-size="13" text-anchor="start" fill="currentColor">all’apertura chiede il volto</text><rect x="506" y="38" width="272" height="96" rx="14" fill="#d6342c" fill-opacity=".12" stroke="#d6342c" stroke-opacity=".7" stroke-width="2"/><text x="550" y="98" font-size="34" text-anchor="middle">📆</text><text x="590" y="80" font-size="15" text-anchor="start" font-weight="800" fill="currentColor">Calendario dell’iPad</text><text x="590" y="104" font-size="13" text-anchor="start" fill="currentColor">le scadenze compaiono lì</text><rect x="798" y="38" width="272" height="96" rx="14" fill="#16a34a" fill-opacity=".12" stroke="#16a34a" stroke-opacity=".7" stroke-width="2"/><text x="842" y="98" font-size="34" text-anchor="middle">💾</text><text x="882" y="80" font-size="15" text-anchor="start" font-weight="800" fill="currentColor">copie di sicurezza</text><text x="882" y="104" font-size="13" text-anchor="start" fill="currentColor">per ritrovare tutto</text></svg>`,
 });
 /*@/IMG-NUOVE*/
-const SECT=[["oggi","☀️","Oggi","--cal"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["auto","🚗","Auto","--auto"],["condo","🏢","Condominio","--condo"],["tl","🎟️","Tempo libero","--tl"]];
+const SECT=[["oggi","☀️","Oggi","--cal"],["piano","🧭","Piano","--piano"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["auto","🚗","Auto","--auto"],["condo","🏢","Condominio","--condo"],["tl","🎟️","Tempo libero","--tl"]];
 /* 21/11/2026: 🗞️ Stampa di oggi passa nella barra in alto, accanto a Corsi online, per liberare spazio nel menu */
 const ALL_SECT=SECT.map(x=>x[0]).concat(["set","corsi","st"]);
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
@@ -606,7 +625,7 @@ function side(){const late=lateN();
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(typeof diaFlush==="function")diaFlush();if(k==="dia"&&cur!=="dia"&&typeof diaOpen==="function")diaOpen();cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="corsi"||cur==="st"?cur:"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,cal:vCal,pens:vPens,inv:vInv,dia:vDia,cd:vCd,st:vSt,auto:vAuto,condo:vCondo,corsi:vCorsi,tl:vTl,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';{const h1=m.querySelector("h1");if(h1&&SEC_IMG[cur]){const t=h1.parentElement===m?h1:h1.closest("main > *");t.insertAdjacentHTML("afterend",'<div class="sec-img">'+SEC_IMG[cur]+'</div>');}}foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();pnBal(m);}
+function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="corsi"||cur==="st"?cur:"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,piano:vPiano,cal:vCal,pens:vPens,inv:vInv,dia:vDia,cd:vCd,st:vSt,auto:vAuto,condo:vCondo,corsi:vCorsi,tl:vTl,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';{const h1=m.querySelector("h1");if(h1&&SEC_IMG[cur]){const t=h1.parentElement===m?h1:h1.closest("main > *");t.insertAdjacentHTML("afterend",'<div class="sec-img">'+SEC_IMG[cur]+'</div>');}}foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();pnBal(m);}
 /* 21/11/2026: una scheda da sola, o molto più lunga delle altre, va a tutta larghezza (niente colonne con grandi buchi) */
 function pnBal(m){const gs=[m].concat([...m.querySelectorAll('.cols2,.grid')]);gs.forEach(g=>{if(getComputedStyle(g).display!=='grid')return;const cs=[...g.children].filter(c=>c.classList.contains('card')&&getComputedStyle(c).gridColumnStart==='auto'||c.classList.contains('pn-full'));cs.forEach(c=>c.classList.remove('pn-full'));const n=getComputedStyle(g).gridTemplateColumns.split(' ').length;if(n<2||!cs.length)return;if(cs.length===1){cs[0].classList.add('pn-full');return;}const h=cs.map(c=>c.offsetHeight),tot=h.reduce((a,b)=>a+b,0);h.forEach((x,i)=>{if(x>900&&x>1.6*(tot-x))cs[i].classList.add('pn-full');});});}
 document.addEventListener('toggle',e=>{const m=document.getElementById('main');if(m&&m.contains(e.target)){clearTimeout(pnBal.t);pnBal.t=setTimeout(()=>pnBal(m),60);}},true);
@@ -679,6 +698,7 @@ function contCard(){const rows=[],C=(P.corsi&&P.corsi.st)||{};
   return `<div class="card k-cd"><h3>📚 Da continuare</h3>${rows.join("")}</div>`;}
 function vOggi(){
   const t=today(),S=licS();let o=`<div class="grid">`;
+  try{o+=piOggiCard();}catch(e){}
   // licenze
   if(S){const L=licCalc(S),B=absBlocks(S).filter(b=>b.to>=t)[0];
     o+=`<div class="card k-lic"><h3>📅 Licenze <a href="licenze.html">Apri ›</a></h3><div class="big">${Math.max(0,L.toEnd)}</div><div class="lbl">giorni al congedo (${fmt(L.end,{day:"numeric",month:"long",year:"numeric"})})</div>
@@ -783,6 +803,8 @@ function vSet(){
 }
 /* ---------- eventi ---------- */
 function bind(){
+  if(cur==="piano")bindPiano();
+  document.querySelectorAll("[data-pigo2]").forEach(b=>b.onclick=()=>{piV=b.dataset.pigo2;go("piano");});
   if(cur==="pens")bindPens();
   if(cur==="inv")bindInv();
   if(cur==="dia")bindDia();
