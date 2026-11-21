@@ -148,7 +148,7 @@ function dayEditor(s,compact){
         <label>Energia (1–5)<select data-bf="energia"><option value="">—</option>${[1,2,3,4,5].map(n=>`<option${+D.ben.energia===n?" selected":""}>${n}</option>`).join("")}</select></label>
         <label class="wide">Nota su come stai<input data-bf="note" maxlength="200" value="${esc(D.ben.note||"")}" placeholder="facoltativa"></label></div></details></div></div>`;}
   // 🤝 Metodo: la sfida del giorno (si sceglie e si segna nella pagina Metodo)
-  if(s<=t){const g=D.met;
+  if(false&&s<=t){const g=D.met; /* 21/11/2026: Metodo tolto per il momento */
     if(g)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>${g.ok?"✓ ":""}Missione: ${esc(g.txt||"")}</b><small>${g.ok?"compiuta":"da fare"}</small></div><a class="lnk" href="metodo.html#oggi">Metodo ›</a></div>`;
     else if(s===t)o+=`<div class="row"><span class="pill cc met">🤝</span><div class="grow"><b>Missione del giorno</b><small>Tre carte coperte ti aspettano nel Metodo</small></div><a class="lnk" href="metodo.html#oggi">Pesca ›</a></div>`;}
   // il mio mondo

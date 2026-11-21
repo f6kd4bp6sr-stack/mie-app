@@ -625,7 +625,7 @@ function pnCerca(q){const W=pnNorm(q).split(/\s+/).filter(x=>x.length>1);if(!W.l
   if(typeof CO_D!=="undefined")CO_D.corsi.forEach(c=>{if(ok([c.titolo,c.ente,c.tema,c.sintesi,(c.programma||[]).join(" ")].join(" ")))R.push({ic:"🎓",g:"Corsi"+((P.corsi&&P.corsi.st||{})[c.id]==="ok"?" · finito":""),t:c.titolo,x:c.ente+" · "+c.livello,a:"corsi"});});
   if(typeof cdPronto==="function"&&cdPronto()){CD_D.schede.filter(cdVis).forEach(s=>{if(ok([s.t,(s.testo||[]).join(" "),(s.punti||[]).join(" ")].join(" ")))R.push({ic:"🤖",g:"Cultura digitale · livello "+s.liv,t:s.t,x:cut((s.testo||[]).join(" ")),a:"cd",fk:"cd|s:"+s.id});});
     (CD_D.letture||[]).filter(cdVis).forEach(l=>{if(ok([l.t,l.autore,l.riassunto,(l.idee||[]).join(" ")].join(" ")))R.push({ic:"📚",g:"Cultura digitale · letture",t:l.t,x:l.autore||"",a:"cd"});});}
-  (typeof IKI_IDX!=="undefined"?IKI_IDX:[]).forEach(c=>{if(ok(c.t+" "+c.x))R.push({ic:"🌸",g:"Ikigai",t:c.t,x:cut(c.x),href:"metodo.html#iki"});});
+  (false&&typeof IKI_IDX!=="undefined"?IKI_IDX:[]).forEach(c=>{if(ok(c.t+" "+c.x))R.push({ic:"🌸",g:"Ikigai",t:c.t,x:cut(c.x),href:"metodo.html#iki"});});
   return R;}
 function pnCercaHtml(q){const R=pnCerca(q);if(pnNorm(q).trim().length<2)return "";
   if(!R.length)return `<p class="empty">Nessun risultato per «${esc(q)}».</p>`;
@@ -649,7 +649,7 @@ function contCard(){const rows=[],C=(P.corsi&&P.corsi.st)||{};
     if(nx)rows.push(`<div class="row"><div class="grow"><b>🤖 ${esc(nx.t)}</b><small>prossima scheda · livello ${nx.liv} · ${esc((CD_D.temi[nx.tema]||["",""])[1])}</small></div><button class="btn sm" data-cont="cd">Apri</button></div>`);
     if(due)rows.push(`<div class="row"><div class="grow"><b>🔁 Ripasso di oggi</b><small>${due} ${due===1?"domanda":"domande"}</small></div><button class="btn sm" data-cont="rip">Ripassa</button></div>`);}
   const ik=((lsJ(KEY)||{}).met||{}).iki||{},wk=monday(today());
-  rows.push(ik.nk&&ik.nk[wk]?`<div class="row"><div class="grow"><b>🌸 Naikan della settimana</b><small>fatto ✓</small></div><a class="btn sm" href="metodo.html#iki">Rileggi</a></div>`:`<div class="row"><div class="grow"><b>🌸 Naikan della settimana</b><small>tre domande, 10 minuti</small></div><a class="btn sm" href="metodo.html#iki">Fai ›</a></div>`);
+  if(false)rows.push(ik.nk&&ik.nk[wk]?`<div class="row"><div class="grow"><b>🌸 Naikan della settimana</b><small>fatto ✓</small></div><a class="btn sm" href="metodo.html#iki">Rileggi</a></div>`:`<div class="row"><div class="grow"><b>🌸 Naikan della settimana</b><small>tre domande, 10 minuti</small></div><a class="btn sm" href="metodo.html#iki">Fai ›</a></div>`);
   return `<div class="card k-cd"><h3>📚 Da continuare</h3>${rows.join("")}</div>`;}
 function vOggi(){
   const t=today(),S=licS();let o=`<div class="grid">`;

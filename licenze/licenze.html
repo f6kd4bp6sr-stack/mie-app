@@ -404,7 +404,11 @@ body[data-app=lic],body[data-app=prog]{background:#f4f5f9}
 body[data-app=lic] .card,body[data-app=prog] .card{border:0;border-radius:18px;box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05)}
 body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog)}
 @media (prefers-color-scheme:dark){body[data-app=lic],body[data-app=prog]{background:#0f1115}body[data-app=lic] .card,body[data-app=prog] .card{box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(0,0,0,.4)}}
-</style><script>document.body.setAttribute("data-app","lic")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" class="on" href="licenze.html" aria-current="page">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="met" href="metodo.html">🤝 Metodo</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav>
+
+/* 21/11/2026: riga delle sezioni di Pianificazione anche nelle altre pagine */
+.secsw{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:8px auto 0;max-width:calc(100% - 32px)}
+.secsw a{display:flex;align-items:center;gap:5px;padding:7px 10px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;color:var(--ink,#1d2433);background:var(--card,var(--surface,#fff));box-shadow:0 1px 3px rgba(0,0,0,.1);white-space:nowrap}
+</style><script>document.body.setAttribute("data-app","lic")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" class="on" href="licenze.html" aria-current="page">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav><nav class="secsw" aria-label="Sezioni di Pianificazione"><a href="./#oggi">☀️ <span>Oggi</span></a><a href="./#cal">📆 <span>Calendario</span></a><a href="./#pens">🎖️ <span>Pensione</span></a><a href="./#inv">🌱 <span>Investimenti</span></a><a href="./#dia">📓 <span>Diario</span></a><a href="./#cd">🤖 <span>Cultura digitale</span></a><a href="./#auto">🚗 <span>Auto</span></a><a href="./#condo">🏢 <span>Condominio</span></a><a href="./#tl">🎟️ <span>Tempo libero</span></a></nav>
 
 <!-- ================= PAGINA 1: SITUAZIONE ================= -->
 <main id="pg1">
@@ -1520,7 +1524,7 @@ setSaveStat("init");
 window.__flush=()=>{ try{ flushAll(); }catch(e){} };
 })();
 </script>
-<script>window.APP_VERSION="d0597808ce";window.APP_BUILD="2026-11-21T10:58+02:00";</script>
+<script>window.APP_VERSION="77e5b0a032";window.APP_BUILD="2026-11-21T11:06+02:00";</script>
 <script>
 /* 🔠 Testo più grande (10/11/2026): tre misure, valide in tutte le pagine; scelta in ⚙️ Impostazioni, salvata in «pn-aa» */
 (function(){var Z=[1,1.1,1.2];function ap(){var v=0;try{v=+localStorage.getItem("pn-aa")||0;}catch(e){}document.documentElement.style.zoom=Z[v]||1;return v;}
