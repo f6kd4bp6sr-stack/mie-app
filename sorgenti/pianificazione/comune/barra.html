@@ -317,6 +317,8 @@
   var KEY="prog-link-v1";
   function link(){try{return JSON.parse(localStorage.getItem(KEY)||"null");}catch(e){return null;}}
   function pill(txt,warn){
+    /* 21/11/2026: avviso in basso tolto (basta il «🩺 cose da controllare» in alto in Oggi) */
+    var o=document.getElementById("prog-pill");if(o)o.remove();if(!window.__progPillOn)return;
     var b=document.getElementById("prog-pill");
     if(!b){b=document.createElement("a");b.id="prog-pill";b.href="progressi.html";
       b.style.cssText="position:fixed;right:16px;bottom:72px;z-index:9000;padding:12px 16px;border-radius:16px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.18);max-width:360px";
@@ -381,6 +383,8 @@
     document.body.appendChild(ov);ov.onclick=function(e){if(e.target===ov||e.target.id==="pn-h-x")ov.remove();if(e.target.id==="pn-h-rt"&&window.__restoreTest){e.target.textContent="⏳ Controllo…";window.__restoreTest(true).then(function(){ov.remove();panel();pill();});}};
   }
   function pill(){
+    /* 21/11/2026: avviso in basso tolto, resta il pulsante «🩺 cose da controllare» in alto in Oggi */
+    var o0=document.getElementById("pn-health-pill");if(o0)o0.remove();if(!window.__healthPillOn)return;
     var w=checks().filter(function(r){return r.k==="w";}),b=document.getElementById("pn-health-pill");
     try{if(S("pn-health-off")===new Date().toDateString()){if(b)b.remove();return;}}catch(e){}
     if(!w.length){if(b)b.remove();return;}

@@ -408,7 +408,7 @@ body[data-app=lic]{--app:var(--app-lic)}body[data-app=prog]{--app:var(--app-prog
 /* 21/11/2026: riga delle sezioni di Pianificazione anche nelle altre pagine */
 .secsw{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:8px auto 0;max-width:calc(100% - 32px)}
 .secsw a{display:flex;align-items:center;gap:5px;padding:7px 10px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;color:var(--ink,#1d2433);background:var(--card,var(--surface,#fff));box-shadow:0 1px 3px rgba(0,0,0,.1);white-space:nowrap}
-</style><script>document.body.setAttribute("data-app","lic")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" class="on" href="licenze.html" aria-current="page">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav><nav class="secsw" aria-label="Sezioni di Pianificazione"><a href="./#oggi">☀️ <span>Oggi</span></a><a href="./#cal">📆 <span>Calendario</span></a><a href="./#pens">🎖️ <span>Pensione</span></a><a href="./#inv">🌱 <span>Investimenti</span></a><a href="./#dia">📓 <span>Diario</span></a><a href="./#cd">🤖 <span>Cultura digitale</span></a><a href="./#auto">🚗 <span>Auto</span></a><a href="./#condo">🏢 <span>Condominio</span></a><a href="./#tl">🎟️ <span>Tempo libero</span></a></nav>
+</style><script>document.body.setAttribute("data-app","lic")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" class="on" href="licenze.html" aria-current="page">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi e Ikigai</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav><nav class="secsw" aria-label="Sezioni di Pianificazione"><a href="./#oggi">☀️ <span>Oggi</span></a><a href="./#cal">📆 <span>Calendario</span></a><a href="./#pens">🎖️ <span>Pensione</span></a><a href="./#inv">🌱 <span>Investimenti</span></a><a href="./#dia">📓 <span>Diario</span></a><a href="./#cd">🤖 <span>Cultura digitale</span></a><a href="./#auto">🚗 <span>Auto</span></a><a href="./#condo">🏢 <span>Condominio</span></a><a href="./#tl">🎟️ <span>Tempo libero</span></a></nav>
 
 <!-- ================= PAGINA 1: SITUAZIONE ================= -->
 <main id="pg1">
@@ -1524,7 +1524,7 @@ setSaveStat("init");
 window.__flush=()=>{ try{ flushAll(); }catch(e){} };
 })();
 </script>
-<script>window.APP_VERSION="77e5b0a032";window.APP_BUILD="2026-11-21T11:06+02:00";</script>
+<script>window.APP_VERSION="fc688b4de2";window.APP_BUILD="2026-11-21T11:20+02:00";</script>
 <script>
 /* 🔠 Testo più grande (10/11/2026): tre misure, valide in tutte le pagine; scelta in ⚙️ Impostazioni, salvata in «pn-aa» */
 (function(){var Z=[1,1.1,1.2];function ap(){var v=0;try{v=+localStorage.getItem("pn-aa")||0;}catch(e){}document.documentElement.style.zoom=Z[v]||1;return v;}
@@ -1844,6 +1844,8 @@ window.__flush=()=>{ try{ flushAll(); }catch(e){} };
   var KEY="prog-link-v1";
   function link(){try{return JSON.parse(localStorage.getItem(KEY)||"null");}catch(e){return null;}}
   function pill(txt,warn){
+    /* 21/11/2026: avviso in basso tolto (basta il «🩺 cose da controllare» in alto in Oggi) */
+    var o=document.getElementById("prog-pill");if(o)o.remove();if(!window.__progPillOn)return;
     var b=document.getElementById("prog-pill");
     if(!b){b=document.createElement("a");b.id="prog-pill";b.href="progressi.html";
       b.style.cssText="position:fixed;right:16px;bottom:72px;z-index:9000;padding:12px 16px;border-radius:16px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.18);max-width:360px";
@@ -1908,6 +1910,8 @@ window.__flush=()=>{ try{ flushAll(); }catch(e){} };
     document.body.appendChild(ov);ov.onclick=function(e){if(e.target===ov||e.target.id==="pn-h-x")ov.remove();if(e.target.id==="pn-h-rt"&&window.__restoreTest){e.target.textContent="⏳ Controllo…";window.__restoreTest(true).then(function(){ov.remove();panel();pill();});}};
   }
   function pill(){
+    /* 21/11/2026: avviso in basso tolto, resta il pulsante «🩺 cose da controllare» in alto in Oggi */
+    var o0=document.getElementById("pn-health-pill");if(o0)o0.remove();if(!window.__healthPillOn)return;
     var w=checks().filter(function(r){return r.k==="w";}),b=document.getElementById("pn-health-pill");
     try{if(S("pn-health-off")===new Date().toDateString()){if(b)b.remove();return;}}catch(e){}
     if(!w.length){if(b)b.remove();return;}

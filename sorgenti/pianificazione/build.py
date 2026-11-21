@@ -11,7 +11,7 @@ for _f in os.listdir(OUT): os.remove(OUT + _f)
 barra = open(D + 'comune/barra.html', encoding='utf-8').read()
 blocco = open(D + 'comune/blocco.html', encoding='utf-8').read()
 tema = open(D + 'comune/tema.css', encoding='utf-8').read()
-NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('index.html#corsi', '🎓 Corsi online', 'corsi'), ('index.html#st', '🗞️ Stampa di oggi', 'st'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi', 'tc'), ('metodo.html', '🤝 Metodo', 'met'), ('progressi.html', '📊 Progressi', 'prog')]
+NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('index.html#corsi', '🎓 Corsi online', 'corsi'), ('index.html#st', '🗞️ Stampa di oggi', 'st'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi e Ikigai', 'tc'), ('metodo.html', '🤝 Metodo', 'met'), ('progressi.html', '📊 Progressi', 'prog')]
 # 21/11/2026: «la sezione Metodo per il momento togliamola» → la pagina resta, ma non compare nella barra né nei rimandi
 NAV_NASCOSTE = {'met'}
 # 21/11/2026: nelle pagine Licenze, Tai Chi e Progressi compare anche la riga delle sezioni di Pianificazione (link a index.html#sezione)
@@ -45,22 +45,20 @@ pages['progressi.html'] = pages['progressi.html'].replace('/*@VCENA*/', _cena)
 _infl = re.search(r'const tinyInflate=\(function\(\)\{.*?\n\}\)\(\);', pages['progressi.html'], re.S).group(0)
 assert pages['index.html'].count('/*@INFLATE*/') == 1
 pages['index.html'] = pages['index.html'].replace('/*@INFLATE*/', _infl)
-# 🤝 Metodo: schede e sfide da sezioni/metodo_dati.json, controllate prima di pubblicare
-sys.path.insert(0, D + 'strumenti'); import verifica_metodo
+sys.path.insert(0, D + 'strumenti')
 import verifica_cultura
 _ec = verifica_cultura.controlla(D + 'sezioni/cultura_dati.json') + (verifica_cultura.controlla_novita(D + 'statici/cultura-novita.json') if os.path.exists(D + 'statici/cultura-novita.json') else ['manca statici/cultura-novita.json'])
 if _ec: sys.exit('Cultura digitale, contenuti da sistemare:\n- ' + '\n- '.join(_ec))
 import verifica_corsi
 _eco = verifica_corsi.controlla(D + 'sezioni/corsi_dati.json')
 if _eco: sys.exit('Corsi online, contenuti da sistemare:\n- ' + '\n- '.join(_eco))
-_err = verifica_metodo.controlla(D + 'sezioni/metodo_dati.json')
-if _err: sys.exit('Metodo, contenuti da sistemare:\n- ' + '\n- '.join(_err))
 import verifica_ikigai
-_ei = verifica_ikigai.controlla(D + 'sezioni/metodo_dati.json', D + 'pagine/metodo.html')
+_ei = verifica_ikigai.controlla(D + 'sezioni/metodo_dati.json', D + 'sezioni/ikigai_tc.js')
 if _ei: sys.exit('Ikigai, contenuti da sistemare:\n- ' + '\n- '.join(_ei))
-_md = json.dumps(json.load(open(D + 'sezioni/metodo_dati.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-assert pages['metodo.html'].count('/*@METODO_DATI*/null') == 1
-pages['metodo.html'] = pages['metodo.html'].replace('/*@METODO_DATI*/null', _md)
+# 21/11/2026: la pagina Metodo è tolta (solo rimando al Tai Chi); dei suoi dati si usa solo «ikigai»
+# 🌸 Ikigai nel Tai Chi (21/11/2026): capitoli da metodo_dati.json e codice da sezioni/ikigai_tc.js
+assert pages['taichi.html'].count('/*@IKIGAI*/') == 1
+pages['taichi.html'] = pages['taichi.html'].replace('/*@IKIGAI*/', 'const IKI_MD=' + json.dumps(json.load(open(D + 'sezioni/metodo_dati.json', encoding='utf-8')).get('ikigai', {}), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + ';\n' + open(D + 'sezioni/ikigai_tc.js', encoding='utf-8').read())
 # ⚡ apertura più veloce (4/11/2026): i dati di Cultura digitale e il codice di Investimenti stanno in file a parte, caricati solo quando servono
 LAZY_JS = ('/* ⚡ caricati solo quando servono: cultura-dati.js (schede di Cultura digitale) e investimenti.js */\n'
     'let CD_D=null;const LAZY={};\n'
