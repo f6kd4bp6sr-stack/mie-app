@@ -1472,7 +1472,7 @@ setSaveStat("init");
 window.__flush=()=>{ try{ flushAll(); }catch(e){} };
 })();
 </script>
-<script>window.APP_VERSION="08b57ab3dd";window.APP_BUILD="2026-11-21T15:05+02:00";</script>
+<script>window.APP_VERSION="5494aade2c";window.APP_BUILD="2026-11-21T15:16+02:00";</script>
 <script>
 /* 🔠 Testo più grande (10/11/2026): tre misure, valide in tutte le pagine; scelta in ⚙️ Impostazioni, salvata in «pn-aa» */
 (function(){var Z=[1,1.1,1.2];function ap(){var v=0;try{v=+localStorage.getItem("pn-aa")||0;}catch(e){}document.documentElement.style.zoom=Z[v]||1;return v;}
@@ -1835,6 +1835,9 @@ window.__flush=()=>{ try{ flushAll(); }catch(e){} };
     else{var hc=ore(cb.last);R.push({k:cb.err||hc==null||hc>48?"w":"ok",ic:"☁️",t:"Copia automatica",x:(cb.err?String(cb.err):"ultima "+quando(cb.last))+(cb.pw?" · parola per ripristinare su un altro iPad: "+cb.pw+" (scrivila in un posto sicuro)":"")});}
     if(st&&st.updated){var a=ore(st.updated),c=ore(st.checked);R.push({k:a>30&&c!=null&&c<3?"w":"ok",ic:"🗞️",t:"Stampa di oggi",x:"edizione di "+quando(st.updated)+(a>30&&c!=null&&c<3?" · la nuova edizione non è arrivata":"")});}
     if(nw&&nw.updated){var a2=ore(nw.updated),c2=ore(nw.checked);R.push({k:a2>36&&c2!=null&&c2<3?"w":"ok",ic:"🎖️",t:"Novità su contratto e pensione",x:"aggiornate "+quando(nw.updated)+(a2>36&&c2!=null&&c2<3?" · il giro di oggi non è arrivato":"")});}
+    /* 21/11/2026: l'ultimo giorno di servizio può essere scritto in tre posti (Licenze, Pensione, Diario): se non coincidono, avvisa */
+    try{var _L=(J("licenze-marco-v1")||{}).end||"",_P=(((J("pn-v1")||{}).pens||{}).dati||{}).cess||"",_D=(J("pn-diario-v1")||{}).cess||"",_v=[["Licenze",_L],["Pensione",_P],["Diario",_D]].filter(function(x){return x[1];});
+      if(_v.length>1&&_v.some(function(x){return x[1]!==_v[0][1];}))R.push({k:"w",ic:"📅",t:"Ultimo giorno di servizio diverso",x:_v.map(function(x){return x[0]+" "+x[1].split("-").reverse().join("/");}).join(" · ")+" · mettili uguali (nel Diario puoi anche svuotare la data: prende quella di Pensione o Licenze)"});}catch(e){}
     /* 10/11/2026: ora nel futuro o file fermo da troppo, e ultima tappa dei corsi */
     [[st,"🗞️","Stampa di oggi",48],[nw,"🎖️","Novità su contratto e pensione",72]].forEach(function(q){var f=q[0];if(!f||!f.updated)return;var h=ore(f.updated);
       if(h!=null&&h<-0.25)R.push({k:"w",ic:q[1],t:q[2]+": ora nel futuro",x:"il file dice "+new Date(f.updated).toLocaleString("it-IT",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+" · il giro automatico ha scritto un’ora sbagliata"});

@@ -37,7 +37,9 @@ function diaWeekQ(wk){const w=DIA.sett[wk];if(w&&w.q&&diaQ(w.q))return diaQ(w.q)
   if(q&&wk<=diaWk()){DIA.sett[wk]=Object.assign({},w||{},{q:q.id});diaSave();}return q;}
 const diaDone=wk=>{const w=DIA.sett[wk];return !!(w&&typeof w.t==="string"&&w.t.trim());};
 const diaWords=s=>(String(s||"").trim().match(/\S+/g)||[]).length;
-function diaTappe(){const c=diaCess();return c?DIA_D.tappe.map(x=>Object.assign({},x,{dt:add(c,x.giorni)})):[];}
+/* 21/11/2026: «sei mesi» e «un anno» si contano a mesi di calendario (prima −182 e +365 giorni: con il 29 febbraio 2028 l'anno cadeva un giorno prima) */
+function diaAddM(s,m){const[y,mo,d]=s.split("-").map(Number),t=new Date(y,mo-1+m,1),last=new Date(t.getFullYear(),t.getMonth()+1,0).getDate();t.setDate(Math.min(d,last));return t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0");}
+function diaTappe(){const c=diaCess();return c?DIA_D.tappe.map(x=>Object.assign({},x,{dt:x.mesi!=null?diaAddM(c,x.mesi):add(c,x.giorni)})):[];}
 const diaFmtL=s=>fmt(s,{weekday:"long",day:"numeric",month:"long",year:"numeric"});
 /* ---- note dei giorni ---- */
 const diaNota=d=>{const v=DIA.giorni[d];return typeof v==="string"?v:"";};
