@@ -1,1253 +1,1310 @@
 {
- "app": "stampa-oggi",
- "edizione": "mattina",
- "updated": "2026-11-21T05:04+01:00",
- "nota": "Edizione del mattino del 20 novembre 2026.",
- "sezioni": {
-  "italia": [
-   {
-    "id": "it-manovra-correzioni",
-    "t": "Manovra: Giorgetti prepara le correzioni, in cima sanità, Superbonus per le Pmi ed exit tax",
-    "s": "Il ministro dell'Economia lavora a un elenco di modifiche senza toccare i saldi concordati con l'Ue. Tra le ipotesi: più fondi alla sanità, una platea ridotta per la card da 300 euro agli over 75, Pmi escluse dalla stretta sul Superbonus e soglia dell'exit tax portata a 2-3 milioni.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/politica/2026/11/20/manovra-correzioni-col-contagocce.-sanita-e-superbonus-in-cima_0dcb8aae-a8b7-4f30-a80a-52210de85ee8.html"
-     }
-    ]
-   },
-   {
-    "id": "it-sciopero-cgil-20-nov",
-    "t": "Sciopero generale Cgil: Landini parla di oltre un milione di persone in cento piazze",
-    "s": "La Cgil ha scioperato per 24 ore contro la manovra, il quinto sciopero generale di fila; in piazza anche studenti e Cobas. Cisl e Uil non aderiscono. Il ministro Calderone replica che il Governo ha già dato risposte sui salari. Le cifre sono stime degli organizzatori. Treni e voli sono esclusi dallo stop.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/oggi-lo-sciopero-generale.-in-piazza-lavoratori-e-studenti.-landini-ascoltare-le-piazze-non_599c502c-b0d3-44aa-8e7b-cdf04b274aeb.html"
-     },
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/oggi-lo-sciopero-in-piazza-lavoratori-e-studenti.-cgil-la-manovra-va-cambiata_01d5c5ed-72b4-4546-acc1-472847a25848.html"
-     }
-    ]
-   },
-   {
-    "id": "it-sciopero-fs",
-    "t": "Treni: sciopero nazionale del personale Fs fino alle 20 di sabato 21 novembre",
-    "s": "Alcune sigle autonome hanno proclamato lo stop dalle 21 di venerdì alle 20 di oggi. Possibili cancellazioni e ritardi anche prima e dopo. Nel regionale sono garantite le fasce 6-9 e 18-21. Trenitalia consiglia di controllare app, sito e numero verde.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/11/20/fs-sciopero-del-personale-dalle-21-di-oggi-alle-20-di-domani_85904c6c-8952-4411-967d-a1fa1847512c.html"
-     }
-    ]
-   },
-   {
-    "id": "it-sigonella-droni",
-    "t": "Sigonella: media riferiscono di droni avvistati sulla base Usa, ricostruzione non chiara",
-    "s": "Secondo la notizia nata su un account social britannico e ripresa dai media, la sera del 20 novembre sarebbero stati visti droni sopra la base americana in Sicilia; a un aereo cisterna sarebbe stato indicato di non atterrare. Non è confermato se fosse un falso allarme.",
-    "d": "2026-11-21",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/media-droni-avvistati-su-sigonella-a-voli-militari-indicato-cambio-rotta_f2d335b7-be89-4930-bb82-a4ab490d0a88.html"
-     }
-    ]
-   },
-   {
-    "id": "it-anac-morzenti",
-    "t": "Anac: il Governo sceglie Remo Morzenti Pellegrini come nuovo presidente",
-    "s": "Professore di diritto amministrativo di 57 anni ed ex rettore a Bergamo, prende il posto di Giuseppe Busia, scaduto l'11 settembre. Dopo il ritiro del primo candidato, Altieri, il nome passa ora al parere delle commissioni parlamentari.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://ansa.it/sito/notizie/politica/2026/11/18/remo-morzenti-pellegrini-verso-la-presidenza-di-anac-lindicazione-attesa-in-cdm_44b8a7fa-254f-49be-857c-f7ba88dd81c5.html"
-     }
-    ]
-   },
-   {
-    "id": "it-bayesian-maib",
-    "t": "Naufragio del Bayesian: l'ente britannico Maib scagiona l'equipaggio, indica una fragilità strutturale",
-    "s": "Il rapporto finale sull'affondamento del 2024 davanti a Porticello, in cui morirono 7 persone, cita stabilità non rilevata, maltempo e istruzioni carenti. Le conclusioni differiscono da quelle della Procura di Termini Imerese, che indaga comandante e due membri dell'equipaggio.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/bayesian-ente-governativo-inglese-scagiona-lequipaggio_5fe123a0-864b-4510-9b0c-135c6f96c1e4.html"
-     }
-    ]
-   }
-  ],
-  "mondo": [
-   {
-    "id": "mo-peru-terremoto",
-    "t": "Perù: terremoto di magnitudo 6,7 nel centro del Paese, a Lima gente in strada",
-    "s": "La scossa è avvenuta alle 19:09 locali a circa 30 km a nord-ovest di Junín, a 129 km di profondità. Al momento non risultano vittime né danni. L'istituto geofisico peruviano spiega che la profondità ha attenuato gli effetti.",
-    "d": "2026-11-21",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/terremoto-di-magnitudo-6.7-colpisce-il-centro-del-peru-gente-in-strada-a-lima_8d76c1b6-b034-4a65-b70c-ccc6f252af0c.html"
-     }
-    ]
-   },
-   {
-    "id": "mo-usa-allerta-aerei",
-    "t": "Usa: i servizi allertano le compagnie aeree sui messaggi di gruppi legati ad Al Qaeda",
-    "s": "Intelligence americana ha avvisato compagnie, vettori cargo e aeroporti dopo propaganda che elogia il tentato dirottamento di settembre. Una fonte citata dalla Cnn esclude minacce specifiche e credibili. L'allerta arriva prima del Thanksgiving, con circa 6 milioni di passeggeri attesi.",
-    "d": "2026-11-21",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/007-usa-hanno-allertato-le-compagnie-aeree-al-qaeda-pronta-a-compiere-attacchi_ef44c206-b623-4395-af92-e81c190d1e63.html"
-     }
-    ]
-   },
-   {
-    "id": "mo-fbi-hacker",
-    "t": "Fbi: indagine su una presunta intrusione nel database nazionale dei dati criminali",
-    "s": "Secondo la Cnn, che cita due persone informate, sarebbe stato violato l'archivio che collega le forze dell'ordine americane. È il secondo episodio in pochi mesi dopo il furto di dati di dipendenti a settembre. L'Fbi non ha ancora commentato.",
-    "d": "2026-11-21",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/cnn-nuovo-attacco-hacker-allfbi-violato-larchivio-criminale_9eb51b6b-4217-46c4-bed4-11e35d613963.html"
-     }
-    ]
-   },
-   {
-    "id": "mo-iran-houthi-riad",
-    "t": "Guerra in Iran: la coalizione saudita dice di aver intercettato tre missili Houthi su Riad",
-    "s": "Per la terza notte consecutiva a Riad sono scattati e poi stati revocati gli allarmi. Due giorni prima i missili Houthi avevano colpito il grattacielo del fondo sovrano Pif. Gli Houthi minacciano una centrale elettrica, i porti del Mar Rosso e il centro finanziario.",
-    "d": "2026-11-21",
-    "fonti": [
-     {
-      "n": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/liveblog/2026/11/21/iran-war-live-saudi-led-coalition-repels-houthi-missiles",
-      "l": "en"
-     }
-    ]
-   },
-   {
-    "id": "mo-gaza-operazione-ovest-linea-gialla",
-    "t": "Gaza: Israele avvia un'operazione a ovest della «linea gialla», Hamas parla di violazione della tregua",
-    "s": "L'esercito è entrato nel centro della Striscia tra al-Bureij e al-Nuseirat e ha chiuso via Salah al-Din. Il ministro Katz ribadisce che le zone di sicurezza resteranno finché Hamas e Hezbollah non saranno disarmati.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "Euronews",
-      "url": "https://it.euronews.com/2026/11/18/israele-avvia-operazione-militare-a-ovest-della-linea-gialla-di-gaza-avviso-di-sfollare",
-      "l": "it"
-     }
-    ]
-   },
-   {
-    "id": "mo-kiev-ambasciate",
-    "t": "Kiev: attacchi russi danneggiano le ambasciate di Austria e Paesi Bassi",
-    "s": "Nella notte tra il 19 e il 20 novembre la Russia ha lanciato missili e 98 droni su 18 località ucraine. Nelle due sedi diplomatiche vetri rotti e auto danneggiate, ma nessun ferito tra il personale.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "Euronews",
-      "url": "https://www.euronews.com/video/2026/11/20/ukraine-russian-strikes-damage-austrian-and-dutch-embassies-in-kyiv",
-      "l": "en"
-     }
-    ]
-   }
-  ],
-  "estero": [
-   {
-    "id": "es-ue-uk-reset",
-    "t": "Al Jazeera: Ue e Regno Unito chiudono il «reset» dei rapporti a dieci anni dalla Brexit",
-    "s": "Dopo il vertice di Bruxelles del 20 novembre c'è l'intesa su mobilità giovanile (100.000 giovani per parte, fino a tre anni), accordo sanitario e fitosanitario e collegamento dei mercati delle emissioni. Il governo britannico stima +0,5% di Pil; Farage critica.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "Al Jazeera",
-      "url": "https://www.aljazeera.com/news/2026/11/20/eu-and-uk-seal-reset-deal",
-      "l": "en"
-     }
-    ]
-   },
-   {
-    "id": "es-polonia",
-    "t": "Euronews e Cbs: Varsavia parla di «provocazione» dopo la caduta di armi russe sul suolo polacco",
-    "s": "Durante il grande attacco russo all'Ucraina (oltre 400 droni e 110 missili) tre ordigni sono caduti in Polonia, senza feriti. Il premier Tusk convoca vertici militari e servizi; la Nato esprime solidarietà. In Ucraina almeno otto morti.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "Euronews",
-      "url": "https://www.euronews.com/2026/11/20/unidentified-object-falls-in-eastern-poland-amid-major-russian-attack-on-ukraine",
-      "l": "en"
-     },
-     {
-      "n": "CBS News",
-      "url": "https://www.cbsnews.com/news/ukraine-war-russia-intentional-provocation-poland-missiles-nato/",
-      "l": "en"
-     }
-    ]
-   },
-   {
-    "id": "es-danimarca-russia",
-    "t": "Al Jazeera: la Danimarca espelle un diplomatico russo per un presunto complotto contro un rapper ucraino",
-    "s": "L'addetto alla difesa dovrà lasciare il Paese entro sette giorni. I servizi danesi sospettano un piano per uccidere l'artista a un concerto vicino Copenaghen; tre persone armate sono state fermate. Mosca nega e parla di misura «vendicativa».",
-    "d": "2026-11-21",
-    "fonti": [
-     {
-      "n": "Al Jazeera",
-      "url": "https://aljazeera.com/news/2026/11/21/denmark-expels-russian-diplomat-over-alleged-plot-to-kill-ukrainian-rapper",
-      "l": "en"
-     }
-    ]
-   },
-   {
-    "id": "es-yalta",
-    "t": "Euronews: l'Europa respinge una pace decisa sopra la sua testa",
-    "s": "Il sito paneuropeo racconta il rifiuto europeo di un accordo sull'Ucraina negoziato da Usa, Russia e Cina, e la squadra di sette rappresentanti scelta a Berlino per trattare.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "Euronews",
-      "url": "https://www.euronews.com/2026/11/19/european-leaders-reject-yalta-20-deal-for-ukraine-after-trump-meets-putin-and-xi",
-      "l": "en"
-     }
-    ]
-   },
-   {
-    "id": "es-cyber-ue",
-    "t": "Euronews: attacco informatico ai sistemi del personale della Commissione Ue",
-    "s": "I sistemi interni delle risorse umane sono stati colpiti; il Cert-Ue verifica se siano stati sottratti dati personali dei funzionari. Autore ancora ignoto.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "Euronews",
-      "url": "https://www.euronews.com/2026/11/19/eu-commission-hit-by-large-scale-cyberattack-with-data-leakage-unknown",
-      "l": "en"
-     }
-    ]
-   }
-  ],
-  "economia": [
-   {
-    "id": "ec-borse-ia",
-    "t": "Borse europee in calo per i timori sull'intelligenza artificiale: Milano -2,3%, Tokyo -5%",
-    "s": "Francoforte perde il 2,4%, Parigi l'1,6%, Londra lo 0,85%. Pesano chip e banche (Asml -9,6%). A Tokyo il Nikkei cede il 5,06%. Lo spread Btp-Bund è a 109,5 punti, l'oro cala di circa il 4%.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/borsa-europa-debole-nel-finale-new-york-contrastata-milano-23_cca43f2b-faa8-4026-aa52-1c3092a5f135.html"
-     },
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/crollo-di-oltre-il-5-alla-borsa-di-tokyo-per-i-timori-sullintelligenza-artificiale_4d6646d7-d589-4024-926a-7e80db3e09c1.html"
-     }
-    ]
-   },
-   {
-    "id": "ec-anthropic-ipo",
-    "t": "Anthropic debutta al Nasdaq: IPO da 81,3 miliardi, più altri 26 da investitori privati",
-    "s": "Prezzo a 83 dollari e circa 980 milioni di azioni vendute; tra gli investitori privati anche Nvidia e Google. ANSA e Al Jazeera riportano le stesse cifre.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/19/anthropic-amplia-la-sua-ipo-a-81-miliardi-batte-quella-di-spacex-di-musk_b426c2fd-bd23-4965-a19e-0d17b6b400ad.html"
-     }
-    ]
-   },
-   {
-    "id": "ec-silicon-box-novara",
-    "t": "Novara: Silicon Box presenta il Vulcan Project, 3,2 miliardi e 1.600 posti di lavoro",
-    "s": "Primo sito europeo di packaging avanzato di semiconduttori, ad Agognate; 1,3 miliardi di intervento pubblico tramite Invitalia. Lavori previsti dai primi mesi del 2027.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "Regione Piemonte",
-      "url": "https://www.regione.piemonte.it/web/pinforma/notizie/microchip-presentato-novara-vulcan-project-silicon-box-primo-sito-nel-suo-genere-ue"
-     }
-    ]
-   },
-   {
-    "id": "ec-fed-rialzo",
-    "t": "Verbali Fed: quasi tutti i membri favorevoli a un rialzo dei tassi nei prossimi mesi",
-    "s": "Dalla riunione del 27-28 ottobre emerge l'obiettivo di riportare l'inflazione al 2%; due membri hanno ipotizzato a dicembre un aumento superiore a un quarto di punto.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/quasi-tutti-allinterno-della-fed-favorevoli-a-un-rialzo-dei-tassi_345a5e9c-7b93-45f3-b946-62f6982e4ff7.html"
-     }
-    ]
-   }
-  ],
-  "torino": [
-   {
-    "id": "to-sciopero-corteo",
-    "t": "Sciopero generale a Torino: corteo Cgil da piazza XVIII Dicembre a piazza Solferino",
-    "s": "Il corteo parte alle 9.30; in parallelo sfilano gli studenti da piazza Arbarello e lo spezzone Usb. In piazza Castello è convocato un presidio serale alle 18. Il segretario Cgil Torino Bellono parla di crisi più marcata in città.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "Torino Oggi",
-      "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/cronaca-11/articolo/caro-vita.html"
-     }
-    ]
-   },
-   {
-    "id": "to-elkann-gup",
-    "t": "Eredità Agnelli: il gup respinge le eccezioni della difesa di Elkann, udienza il 4 dicembre",
-    "s": "Il giudice ha respinto tutte le questioni preliminari su materiale informatico, genericità delle accuse e data di iscrizione nel registro degli indagati. Si entra nel merito il 4 dicembre; i legali dicono che potranno riproporle.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "Torino Oggi",
-      "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/cronaca-11/articolo/eredita-agnelli-il-gup-respinge-tutte-le-eccezioni-sollevate-dai-legali-di-john-elkann.html"
-     }
-    ]
-   },
-   {
-    "id": "to-palazzo-nuovo",
-    "t": "Palazzo Nuovo resta chiuso fino al 25 novembre dopo l'occupazione",
-    "s": "L'Università di Torino prolunga la chiusura per problemi di sicurezza, soprattutto al sistema antincendio. Il 20 novembre l'ateneo darà indicazioni su didattica e riapertura.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "Torino Oggi",
-      "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/scuola-e-lavoro/articolo/lavori-in-corso-a-palazzo-nuovo-dopo-i-giorni-delloccupazione-chiusura-fino-al-25-novembre.html"
-     }
-    ]
-   },
-   {
-    "id": "to-metro2-trincerone",
-    "t": "Metro 2: partono i lavori dal Trincerone, Lo Russo parla di «giorno storico»",
-    "s": "Con l'avvio dei cantieri dal Trincerone prende forma la seconda linea della metropolitana di Torino; il sindaco Stefano Lo Russo ha definito la giornata storica per la città. Dettagli su tracciato e tempi sono nell'articolo.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "Torino Oggi",
-      "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/viabilita-1/articolo/metro-3.html"
-     }
-    ]
-   },
-   {
-    "id": "to-sansalvario-taxi",
-    "t": "San Salvario: partiti i lavori sulla banchina taxi di corso Marconi",
-    "s": "Il cantiere riqualifica l'area all'incrocio con via Principe Tommaso: la banchina si riduce ma resta attiva, il marciapiede sarà rifatto. Chiusa la carreggiata centrale tra via Madama e via Principe Tommaso, controviali aperti.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "Torino Oggi",
-      "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/viabilita-1/articolo/san-salvario-partiti-i-cantieri-sulla-banchina-taxi-in-corso-marconi.html"
-     }
-    ]
-   },
-   {
-    "id": "to-luci-tour",
-    "t": "Luci d'Artista: visite guidate gratuite per i residenti nelle Circoscrizioni",
-    "s": "Città e Fondazione Torino Musei organizzano tour alle 31 installazioni, a piedi nella Circoscrizione 1 e in bus panoramico nelle altre, tra fine novembre e metà dicembre. Posti limitati, alcune date già esaurite.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "ANSA Piemonte",
-      "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/luci-dartista-tour-guidati-nelle-circoscrizioni-a-torino_71a84f44-22c0-434d-8c67-0f75cec769eb.html"
-     }
-    ]
-   }
-  ],
-  "piemonte": [
-   {
-    "id": "pi-voucher",
-    "t": "Piemonte: finanziate tutte le 83.557 domande di voucher scuola 2026-2027",
-    "s": "La Regione stanzia altri 1,49 milioni per il Voucher A e copre ogni richiesta (5.216 di tipo A e 78.341 di tipo B). I voucher assegnati con lo scorrimento saranno disponibili da dicembre e utilizzabili fino al 31 marzo 2027.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "ANSA Piemonte",
-      "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/la-regione-piemonte-finanza-tutte-le-83.557-domande-per-i-voucher-scuola_cac91c87-4458-43a5-9daf-532aca8ca304.html"
-     }
-    ]
-   },
-   {
-    "id": "pi-tour-de-france",
-    "t": "Cirio: il Piemonte si candida a una tappa del Tour de France da Barbaresco a Barolo",
-    "s": "Il presidente della Regione lo ha annunciato alla conferenza delle Next Gen Atp Finals, dopo aver incontrato a Torino il direttore del Tour e della Vuelta. La Regione investe nella candidatura già dalle prossime edizioni.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "ANSA Piemonte",
-      "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/tour-cirio-ci-candidiamo-per-la-tappa-barbaresco-barolo_00ae4503-c041-4f0d-ad40-d799078e947a.html"
-     }
-    ]
-   },
-   {
-    "id": "pi-fsc",
-    "t": "Piemonte: in arrivo 242 milioni di fondi Fsc",
-    "s": "Notizia ANSA del 19 novembre sull'arrivo in regione di 242 milioni dal Fondo sviluppo e coesione (dettagli sulla pagina della fonte).",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/piemonte/notizie/2026/11/19/piemonte-in-arrivo-242-milioni-di-fondi-fsc_29f256b9-9234-4552-b12a-b0ecad2ff41c.html"
-     }
-    ]
-   },
-   {
-    "id": "pi-caporalato-cabina",
-    "t": "Piemonte: insediata la prima cabina di regia regionale contro il caporalato",
-    "s": "Convocata dalla Regione a Torino il 18 novembre, riunisce sindacati, associazioni datoriali e di categoria. L'assessore Enrico Bussalino: servirà a coordinare gli interventi sul territorio. Il Piemonte guida per il Nord il progetto Common Ground 2.",
-    "d": "2026-11-19",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/piemonte/notizie/2026/11/18/piemonte-insediata-in-regione-prima-cabina-di-regia-contro-il-caporalato_3a7ae585-3dfb-4c66-b615-baa8dced9439.html"
-     }
-    ]
-   }
-  ],
-  "eventi": [
-   {
-    "id": "ev-luci-artista",
-    "t": "Luci d'Artista: installazioni luminose in tutta la città",
-    "s": "Le opere luminose d'artista illuminano le vie e le piazze di Torino per l'inverno.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Turismo Torino",
-      "url": "https://turismotorino.org/en/visit/events/luci-dartista"
-     }
+  "app": "stampa-oggi",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-21T13:09+01:00",
+  "nota": "Edizione del mattino del 20 novembre 2026.",
+  "sezioni": {
+    "italia": [
+      {
+        "id": "it-de-gennaro",
+        "t": "Morto Gianni De Gennaro, ex capo della Polizia: cordoglio di Governo e politica",
+        "s": "Si è spenta la vita di Gianni De Gennaro, già capo della Polizia. Meloni si dice scioccata, Piantedosi sgomento, Tajani parla di un processo fuori dal tribunale. Il suo legale lo collega alle accuse ricevute nell'indagine su via D'Amelio, di cui l'ANSA ricostruisce lo stato.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/piantedosi-sgomenti-per-la-morte-di-de-gennaro.-salvini-vittima-di-un-massacro-che-non_42ef82fc-43b8-4902-a35d-dd280c6de41c.html"
+          },
+          {
+            "n": "ANSA (Tajani)",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/tajani-sconvolto-da-morte-de-gennaro-vittima-di-un-processo-fuori-dal-tribunale_83df300f-c10d-4731-94e9-f863ea8007b1.html"
+          }
+        ],
+        "link": [
+          {
+            "n": "Via D'Amelio, a che punto è l'indagine",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/via-damelio-a-che-punto-e-lindagine-che-ha-coinvolto-de-gennaro_f194921d-4c33-4bf6-99bc-f4bae25314ce.html"
+          }
+        ]
+      },
+      {
+        "id": "it-manovra-pensioni",
+        "t": "Manovra, FdI propone la rivalutazione piena delle pensioni fino a cinque volte il minimo",
+        "s": "Fratelli d'Italia ha depositato un emendamento alla legge di bilancio, firmato dal deputato Marco Osnato, per rivalutare per intero gli assegni fino a 5 volte il trattamento minimo. Secondo l'ANSA, anche gli altri partiti della maggioranza chiedono rivalutazioni più alte.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/11/21/manovra-emendamento-fdi-rivalutazione-piena-delle-pensioni-fino-a-5-volte-il-minimo_75b7283c-2327-45c0-ba53-aae2f00e7b55.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-sciopero-fs",
+        "t": "Sciopero del personale Fs fino alle 20: garantiti solo i servizi essenziali",
+        "s": "Lo sciopero nazionale, proclamato da alcune sigle autonome, è cominciato alle 21 di ieri e finisce alle 20 di oggi. Nel trasporto regionale i servizi minimi sono garantiti dalle 6 alle 9 e dalle 18 alle 21; ritardi e cancellazioni possono proseguire anche dopo la fine.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/21/sciopero-del-personale-fs-fino-alle-20-di-oggi_49dc2219-ecfc-4749-b7a9-bd2a14257de5.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-schettino",
+        "t": "Schettino lascia Rebibbia dopo nove anni: affidamento ai servizi sociali",
+        "s": "L'ex comandante della Costa Concordia è uscito dal carcere la sera del 20 novembre, dove era dal 2017. Il Tribunale di Sorveglianza di Roma gli ha concesso l'affidamento in prova. La condanna definitiva resta di 16 anni e un mese per il naufragio del Giglio del 2012, con 32 morti.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/schettino-lascia-il-carcere-dopo-9-anni-va-ai-servizi-sociali_3dc58141-2a75-43e8-8aab-fc1b0adc999f.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-sigonella-droni",
+        "t": "Sigonella, allarme per possibili droni sulla base Usa: accertamenti in corso",
+        "s": "Alle 17:50 del 20 novembre è scattato l'allarme per presunti quadricotteri civili sopra gli alloggi della base americana; è rientrato alle 20:30. Si cerca chi ha fatto volare i droni. L'ipotesi più accreditata è una bravata, ma non è chiaro se fosse un falso allarme.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/21/a-sigonella-accertamenti-in-corso-dopo-il-possibile-sorvolo-di-droni_f2d335b7-be89-4930-bb82-a4ab490d0a88.html"
+          }
+        ],
+        "link": []
+      }
     ],
-    "quando": "fino al 10 gen 2027",
-    "dove": "In tutta la città, Torino",
-    "costo": "gratis (all'aperto)"
-   },
-   {
-    "id": "ev-atp-finals",
-    "t": "Nitto ATP Finals: da domenica 15 novembre i migliori otto del tennis a Torino",
-    "s": "Il torneo di fine stagione riunisce gli otto migliori singolaristi e le otto migliori coppie di doppio.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Visit Piemonte",
-      "url": "https://www.visitpiemonte.com/nitto-atp-finals-2026"
-     }
+    "mondo": [
+      {
+        "id": "mo-ucraina-kryvyi-rih",
+        "t": "Attacco russo nella notte in Ucraina: due morti a Kryvyi Rih, colpi anche su Kiev",
+        "s": "Secondo l'ANSA, missili balistici su Kryvyi Rih hanno ucciso due persone e ferito 42, danneggiando 23 edifici e un ospedale. A Kiev frammenti hanno provocato incendi. L'aeronautica ucraina parla di 3 missili balistici e 148 droni, 117 dei quali abbattuti o neutralizzati.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/21/nuova-notte-di-attacchi-in-ucraina-morti-e-feriti.-missile-russo-anche-su-kiev_6c554c1c-64b6-45fd-915b-a300479d2bbc.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-hormuz-petroliere",
+        "t": "Hormuz: seconda petroliera colpita da un proiettile non identificato, nessun ferito",
+        "s": "L'Ukmto riferisce che una petroliera in uscita dallo Stretto è stata colpita alla sala macchine 17 miglia a est di Khasab, in Oman. Poco prima un'altra nave era stata raggiunta 11 miglia a nord della stessa località. Nessuna vittima.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/11/21/ukmto-seconda-petroliera-colpita-a-hormuz-nessuna-vittima_70acec97-3889-4792-bb03-e6317c7eddb0.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-fbi-hacker",
+        "t": "Fbi, nuova intrusione informatica: indagine sull'archivio nazionale dei dati criminali",
+        "s": "Secondo la Cnn, citata dall'ANSA, l'Fbi indaga su un accesso non autorizzato al National Crime Information Center, la banca dati usata dalle forze di polizia americane. È il secondo caso in pochi mesi: a settembre erano stati sottratti dati di dipendenti.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA (da Cnn)",
+            "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/11/21/la-cnn-nuovo-attacco-hacker-allfbi-violato-larchivio-criminale_38f6033c-fb4e-4c0c-8cb1-c64f4c15b671.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-basra-centrale",
+        "t": "Iraq, incendio alla centrale elettrica di Hartha vicino a Bassora: almeno quattro morti",
+        "s": "Le fiamme hanno coinvolto anche abitazioni vicine; i feriti sono 35 secondo i media statali iracheni. L'impianto da 800 megawatt si è fermato. La causa non è ancora confermata.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/21/at-least-two-people-killed-as-fire-engulfs-power-station-in-southern-iraq",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-israele-opposizione",
+        "t": "Israele, l'opposizione di Eisenkot cerca i seggi per governare: scadenza il 6 dicembre",
+        "s": "Dopo il voto del 27 ottobre l'alleanza guidata da Gadi Eisenkot ha 48 seggi su 120 e ne mancano 13 per la maggioranza. Netanyahu ha incontrato per due ore e mezza Naftali Bennett. Al Jazeera si chiede se il blocco reggerà.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/21/can-israels-opposition-bloc-stay-united-against-netanyahu",
+            "l": "en"
+          }
+        ],
+        "link": []
+      }
     ],
-    "quando": "dal 15 al 22 nov",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "biglietti sul sito ufficiale"
-   },
-   {
-    "id": "ev-asti-natale",
-    "t": "Magico Paese di Natale ad Asti: inaugurazione venerdì 13 novembre",
-    "s": "Mercatini e iniziative natalizie nel centro storico.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "ANSA",
-      "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/al-via-ad-asti-la-ventesima-edizione-del-magico-paese-di-natale_021f61c6-de2e-4d9d-81cc-5786467ddda3.html"
-     }
+    "estero": [
+      {
+        "id": "es-polonia-missili",
+        "t": "Missili russi caduti in Polonia: Varsavia parla di provocazione, la Nato valuta la risposta",
+        "s": "Due missili e un drone sono caduti nel sud-est della Polonia durante l'attacco russo, senza feriti. Tusk parla di provocazione intenzionale, Rutte di grave violazione dello spazio aereo. Al Jazeera spiega che l'articolo 5 è improbabile, mentre è possibile chiedere consultazioni con l'articolo 4.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/21/russian-missiles-hit-poland-what-happened-and-could-nato-respond",
+            "l": "en"
+          },
+          {
+            "n": "CBS News",
+            "url": "https://cbsnews.com/news/ukraine-war-russia-intentional-provocation-poland-missiles-nato",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-iran-riad",
+        "t": "Guerra con l'Iran: la coalizione saudita intercetta tre missili diretti a Riad",
+        "s": "Secondo Al Jazeera, la coalizione a guida saudita ha fermato tre missili balistici lanciati verso la capitale. I Pasdaran iraniani dicono di aver abbattuto un drone americano MQ-9 sopra Hormuz.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/21/iran-war-live-saudi-led-coalition-repels-houthi-missiles",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-nvidia-huang",
+        "t": "Trump chiede di reintegrare Jensen Huang alla guida di Nvidia, il consiglio dice no",
+        "s": "Huang si era dimesso il 12 novembre per una relazione con una presunta spia cinese. Trump vorrebbe il suo ritorno, ma il presidente del consiglio d'amministrazione ricorda che le dimissioni sono state accettate all'unanimità.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/21/trump-calls-for-nvidia-to-reinstate-brilliant-jensen-huang",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-ufo-pentagono",
+        "t": "Il Pentagono diffonde l'ottavo lotto di filmati declassificati sui fenomeni aerei anomali",
+        "s": "Il Dipartimento della Guerra americano ha pubblicato nuovi file del programma PURSUE sugli Uap. Il portavoce Sean Parnell annuncia altre uscite a rotazione. Euronews riferisce la notizia in un video del mattino.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/video/2026/11/21/pentagon-declassifies-new-ufo-footage-filmed-by-us-military",
+            "l": "en"
+          }
+        ],
+        "link": []
+      }
     ],
-    "quando": "dal 13 nov al 20 dic (inaugurazione ven 13 nov, 18:30)",
-    "dove": "Centro storico, Asti",
-    "costo": "mercatini gratuiti"
-   },
-   {
-    "id": "ev-kusama",
-    "t": "Yayoi Kusama. Infinity Mirrored Room alle OGR di Torino",
-    "s": "Mostra con la Infinity Mirrored Room dell'artista giapponese; dettagli e orari sulla pagina di Turismo Torino.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Turismo Torino",
-      "url": "https://turismotorino.org/en/visit/events/yayoi-kusama-infinity-mirrored-room"
-     }
+    "economia": [
+      {
+        "id": "ec-mps-intesa",
+        "t": "Mps: il cda giudica «congruo» il prezzo dell'Opas di Intesa Sanpaolo",
+        "s": "Dopo il rilancio dell'offerta e le garanzie su Siena, il consiglio di Mps ritiene il corrispettivo congruo dal punto di vista finanziario, ma non pienamente rappresentativo del valore del gruppo. Il comunicato non invita ad aderire né a rifiutare. Le sinergie indicate sono 2,9 miliardi.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/21/mps-lopas-di-intesa-congrua-dopo-il-rilancio-e-le-garanzie-su-siena_02968d27-bddb-4349-a9f5-be183321f9c3.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "ec-borsa-ia",
+        "t": "Borse in calo per i timori sull'intelligenza artificiale: Tokyo perde oltre il 5%",
+        "s": "Ieri il Nikkei ha chiuso a -5,06%, a 56.436 punti, il minimo da aprile, con vendite su IA e chip dopo il debutto deludente di Anthropic a Wall Street. A metà seduta l'Europa cedeva l'1,1% (Stoxx 600) e Milano l'1,6%.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/crollo-di-oltre-il-5-alla-borsa-di-tokyo-per-i-timori-sullintelligenza-artificiale_4d6646d7-d589-4024-926a-7e80db3e09c1.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "ec-carburanti",
+        "t": "Carburanti ancora in calo: la benzina self scende a 1,942 euro al litro",
+        "s": "Secondo la rilevazione riportata dall'ANSA, i prezzi dei carburanti diminuiscono ancora. La benzina in modalità self si ferma a 1,942 euro al litro.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/21/il-prezzo-dei-carburanti-cala-ancora-benzina-self-a-1942-euro-al-litro_b951b618-be14-4340-8882-f3ecaffd196c.html"
+          }
+        ],
+        "link": []
+      }
     ],
-    "quando": "fino al 25 feb 2027, apertura settimanale",
-    "dove": "OGR, Torino",
-    "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-   },
-   {
-    "id": "ev-banksy",
-    "t": "Banksy. Street is the Museum",
-    "s": "Mostra dedicata all'artista di strada Banksy.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Turismo Torino",
-      "url": "https://turismotorino.org/en/visit/events/banksy-street-is-the-museum"
-     }
+    "torino": [
+      {
+        "id": "to-atp-semifinali",
+        "t": "ATP Finals a Torino: oggi le semifinali Alcaraz-Shelton e Zverev-Medvedev",
+        "s": "Sul campo dell'Inalpi Arena si giocano oggi le due semifinali del torneo; la finale è in programma domani. TorinoToday indica programma, orari e dove seguirle in tv.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "TorinoToday",
+            "url": "https://torinotoday.it/sport/atp-tennis/atp-finals-torino-2026-quando-oggi-programma-orari-semifinali-finale.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-askatasuna-30",
+        "t": "Askatasuna, festa per i 30 anni a Vanchiglia: la Questura diffida gli artisti",
+        "s": "Dalle 20 è previsto un concerto in piazza Santa Giulia, dopo un dibattito pomeridiano. Secondo l'ANSA mancherebbero le autorizzazioni e la Questura ha diffidato gli artisti, tra cui Willie Peyote e Johnson Righeira. Il centro sociale è stato sgomberato il 18 dicembre 2025.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/21/askatasuna-diffidati-gli-artisti-per-la-festa-dei-30-anni_5eea0656-e4f7-407b-92cf-48f4e0018d3a.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-palazzo-nuovo",
+        "t": "Palazzo Nuovo resta chiuso fino al 25 novembre dopo l'occupazione",
+        "s": "L'Università di Torino prolunga la chiusura per problemi di sicurezza, soprattutto al sistema antincendio. Il 20 novembre l'ateneo darà indicazioni su didattica e riapertura.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/scuola-e-lavoro/articolo/lavori-in-corso-a-palazzo-nuovo-dopo-i-giorni-delloccupazione-chiusura-fino-al-25-novembre.html"
+          }
+        ]
+      },
+      {
+        "id": "to-metro2-trincerone",
+        "t": "Metro 2: partono i lavori dal Trincerone, Lo Russo parla di «giorno storico»",
+        "s": "Con l'avvio dei cantieri dal Trincerone prende forma la seconda linea della metropolitana di Torino; il sindaco Stefano Lo Russo ha definito la giornata storica per la città. Dettagli su tracciato e tempi sono nell'articolo.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/viabilita-1/articolo/metro-3.html"
+          }
+        ]
+      },
+      {
+        "id": "to-luci-tour",
+        "t": "Luci d'Artista: visite guidate gratuite per i residenti nelle Circoscrizioni",
+        "s": "Città e Fondazione Torino Musei organizzano tour alle 31 installazioni, a piedi nella Circoscrizione 1 e in bus panoramico nelle altre, tra fine novembre e metà dicembre. Posti limitati, alcune date già esaurite.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/luci-dartista-tour-guidati-nelle-circoscrizioni-a-torino_71a84f44-22c0-434d-8c67-0f75cec769eb.html"
+          }
+        ]
+      },
+      {
+        "id": "to-cumiana-albero",
+        "t": "Cumiana, albero abbattuto dal vento: donna di 45 anni soccorsa e portata al Cto",
+        "s": "Ieri verso le 17:15 in borgata Ravera una donna è rimasta intrappolata sotto un albero caduto. Soccorso Alpino e 118 l'hanno liberata; per il vento l'elicottero valdostano non è potuto intervenire. È stata trasportata al Cto con codice giallo.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/21/leggi-notizia/argomenti/cronaca-11/articolo/cumiana-il-forte-vento-fa-crollare-un-albero-donna-resta-intrappolata.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-elkann-gup",
+        "t": "Eredità Agnelli: il gup respinge le eccezioni della difesa di Elkann, udienza il 4 dicembre",
+        "s": "Il giudice ha respinto tutte le questioni preliminari su materiale informatico, genericità delle accuse e data di iscrizione nel registro degli indagati. Si entra nel merito il 4 dicembre; i legali dicono che potranno riproporle.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/cronaca-11/articolo/eredita-agnelli-il-gup-respinge-tutte-le-eccezioni-sollevate-dai-legali-di-john-elkann.html"
+          }
+        ]
+      }
     ],
-    "quando": "fino al 31 gen 2027, apertura settimanale",
-    "dove": "Torino",
-    "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-   },
-   {
-    "id": "ev-wpp",
-    "t": "World Press Photo Exhibition 2026 a Torino",
-    "s": "Mostra dei premi di fotogiornalismo, aperta ogni settimana; altre mostre in corso (Kusama alle OGR, Jessica Lange, Tiepolo) nell'agenda di Turismo Torino.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Turismo Torino",
-      "url": "https://turismotorino.org/en/visit/events/agenda"
-     }
+    "piemonte": [
+      {
+        "id": "pi-voucher",
+        "t": "Piemonte: finanziate tutte le 83.557 domande di voucher scuola 2026-2027",
+        "s": "La Regione stanzia altri 1,49 milioni per il Voucher A e copre ogni richiesta (5.216 di tipo A e 78.341 di tipo B). I voucher assegnati con lo scorrimento saranno disponibili da dicembre e utilizzabili fino al 31 marzo 2027.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/la-regione-piemonte-finanza-tutte-le-83.557-domande-per-i-voucher-scuola_cac91c87-4458-43a5-9daf-532aca8ca304.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-tour-de-france",
+        "t": "Cirio: il Piemonte si candida a una tappa del Tour de France da Barbaresco a Barolo",
+        "s": "Il presidente della Regione lo ha annunciato alla conferenza delle Next Gen Atp Finals, dopo aver incontrato a Torino il direttore del Tour e della Vuelta. La Regione investe nella candidatura già dalle prossime edizioni.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/tour-cirio-ci-candidiamo-per-la-tappa-barbaresco-barolo_00ae4503-c041-4f0d-ad40-d799078e947a.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-fsc",
+        "t": "Piemonte: in arrivo 242 milioni di fondi Fsc",
+        "s": "Notizia ANSA del 19 novembre sull'arrivo in regione di 242 milioni dal Fondo sviluppo e coesione (dettagli sulla pagina della fonte).",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/19/piemonte-in-arrivo-242-milioni-di-fondi-fsc_29f256b9-9234-4552-b12a-b0ecad2ff41c.html"
+          }
+        ]
+      }
     ],
-    "quando": "fino al 13 dic",
-    "dove": "Torino",
-    "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-   },
-   {
-    "id": "ev-egizio-sguardi",
-    "t": "Sguardi contemporanei sull'antico al Museo Egizio",
-    "s": "Percorso espositivo che mette in dialogo la collezione del museo con lo sguardo contemporaneo.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Turismo Torino",
-      "url": "https://turismotorino.org/en/visit/events/sguardi-contemporanei-sull-antico"
-     }
+    "eventi": [
+      {
+        "id": "ev-luci-artista",
+        "t": "Luci d'Artista: installazioni luminose in tutta la città",
+        "s": "Le opere luminose d'artista illuminano le vie e le piazze di Torino per l'inverno.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/luci-dartista"
+          }
+        ],
+        "quando": "fino al 10 gen 2027",
+        "dove": "In tutta la città, Torino",
+        "costo": "gratis (all'aperto)"
+      },
+      {
+        "id": "ev-atp-finals",
+        "t": "Nitto ATP Finals: da domenica 15 novembre i migliori otto del tennis a Torino",
+        "s": "Il torneo di fine stagione riunisce gli otto migliori singolaristi e le otto migliori coppie di doppio.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Visit Piemonte",
+            "url": "https://www.visitpiemonte.com/nitto-atp-finals-2026"
+          }
+        ],
+        "quando": "dal 15 al 22 nov",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "biglietti sul sito ufficiale"
+      },
+      {
+        "id": "ev-asti-natale",
+        "t": "Magico Paese di Natale ad Asti: inaugurazione venerdì 13 novembre",
+        "s": "Mercatini e iniziative natalizie nel centro storico.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/al-via-ad-asti-la-ventesima-edizione-del-magico-paese-di-natale_021f61c6-de2e-4d9d-81cc-5786467ddda3.html"
+          }
+        ],
+        "quando": "dal 13 nov al 20 dic (inaugurazione ven 13 nov, 18:30)",
+        "dove": "Centro storico, Asti",
+        "costo": "mercatini gratuiti"
+      },
+      {
+        "id": "ev-kusama",
+        "t": "Yayoi Kusama. Infinity Mirrored Room alle OGR di Torino",
+        "s": "Mostra con la Infinity Mirrored Room dell'artista giapponese; dettagli e orari sulla pagina di Turismo Torino.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/yayoi-kusama-infinity-mirrored-room"
+          }
+        ],
+        "quando": "fino al 25 feb 2027, apertura settimanale",
+        "dove": "OGR, Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-banksy",
+        "t": "Banksy. Street is the Museum",
+        "s": "Mostra dedicata all'artista di strada Banksy.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/banksy-street-is-the-museum"
+          }
+        ],
+        "quando": "fino al 31 gen 2027, apertura settimanale",
+        "dove": "Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-wpp",
+        "t": "World Press Photo Exhibition 2026 a Torino",
+        "s": "Mostra dei premi di fotogiornalismo, aperta ogni settimana; altre mostre in corso (Kusama alle OGR, Jessica Lange, Tiepolo) nell'agenda di Turismo Torino.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/agenda"
+          }
+        ],
+        "quando": "fino al 13 dic",
+        "dove": "Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-egizio-sguardi",
+        "t": "Sguardi contemporanei sull'antico al Museo Egizio",
+        "s": "Percorso espositivo che mette in dialogo la collezione del museo con lo sguardo contemporaneo.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/sguardi-contemporanei-sull-antico"
+          }
+        ],
+        "quando": "fino all'11 gen 2027, apertura settimanale",
+        "dove": "Museo Egizio, Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-set-perfetto",
+        "t": "Il Set Perfetto: eventi diffusi delle Nitto ATP Finals",
+        "s": "Iniziative in vari luoghi della città collegate al torneo di tennis.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/set-perfetto-eventi-diffusi-nitto-atp-finals/"
+          }
+        ],
+        "link": [],
+        "quando": "fino al 22 nov",
+        "dove": "Vari luoghi, Torino"
+      },
+      {
+        "id": "ev-soldi-assedio",
+        "t": "I Soldi dell'Assedio. La moneta a Torino nel 1706",
+        "s": "Mostra sulla moneta in circolazione a Torino durante l'assedio del 1706.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/i-soldi-dellassedio-la-moneta-a-torino-nel-1706/"
+          }
+        ],
+        "link": [],
+        "quando": "fino al 22 nov",
+        "dove": "Archivio Storico della Città, via Barbaroux 32, Torino"
+      },
+      {
+        "id": "ev-solo-per-tutti",
+        "t": "Solo per tutti: appuntamento sotto i portici di via Sacchi",
+        "s": "Evento ad accesso libero, senza prenotazione.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/solo-per-tutti/"
+          }
+        ],
+        "link": [],
+        "quando": "sab 21 nov, 16:30-17:30",
+        "dove": "Portici di via Sacchi, Torino",
+        "costo": "gratis"
+      },
+      {
+        "id": "ev-scienze-naturali",
+        "t": "Visita guidata al Museo Regionale di Scienze Naturali",
+        "s": "Visita guidata alle collezioni del museo.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/visita-guidata-al-museo-regionale-di-scienze-naturali-di-torino-20/"
+          }
+        ],
+        "link": [],
+        "quando": "sab 21 nov, 14:00-17:30",
+        "dove": "Museo Regionale di Scienze Naturali, Torino"
+      },
+      {
+        "id": "ev-atp-chiusura",
+        "t": "Tennis Takes Over: la festa di chiusura delle Atp Finals tra musei aperti, corsa e OGR",
+        "s": "Sabato 21 musei aperti fino a mezzanotte (Camera 15 €, Scienze Naturali 5 €, Museo Rai gratis), Social Run di 5 km al Valentino; domenica 22 attività per bambini in via Roma e, dalle 18, «The Final Set» alle OGR.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/eventi-11/articolo/tennis-takes-over-torino-fa-festa-per-la-chiusura-delle-atp-finals.html"
+          }
+        ],
+        "quando": "sab 21 e dom 22 nov",
+        "dove": "Torino: musei, Valentino, via Roma, OGR",
+        "costo": "da gratis; musei 5-15 €"
+      }
     ],
-    "quando": "fino all'11 gen 2027, apertura settimanale",
-    "dove": "Museo Egizio, Torino",
-    "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-   },
-   {
-    "id": "ev-set-perfetto",
-    "t": "Il Set Perfetto: eventi diffusi delle Nitto ATP Finals",
-    "s": "Iniziative in vari luoghi della città collegate al torneo di tennis.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Comune di Torino",
-      "url": "https://eventi.comune.torino.it/calendario/set-perfetto-eventi-diffusi-nitto-atp-finals/"
-     }
+    "spettacoli": [
+      {
+        "id": "spe-cin-dio-ride",
+        "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
+        "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2026/dio-ride/"
+          }
+        ],
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-wild-horse-nine",
+        "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
+        "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
+          }
+        ],
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-se-domani",
+        "t": "Se domani non torno, il dramma di Paola Randi",
+        "s": "Film drammatico diretto da Paola Randi, in programmazione in entrambe le sale.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.idealcityplex.it/scheda/se-domani-non-torno/48959/"
+          }
+        ],
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-gatto-cappello",
+        "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
+        "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "MYmovies",
+            "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
+          }
+        ],
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-godzilla-minus-zero",
+        "t": "Godzilla Minus Zero, il seguito del film giapponese premiato con l'Oscar",
+        "s": "Seguito di «Godzilla Minus One» ambientato nel Giappone del dopoguerra. Regia di Takashi Yamazaki.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "ComingSoon Cinema Ideal",
+            "url": "https://www.comingsoon.it/cinema/torino/ideal/1072/"
+          }
+        ],
+        "link": [],
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-wildwood",
+        "t": "Wildwood: I segreti del bosco proibito, film d'animazione fantasy",
+        "s": "Film d'animazione tratto dal romanzo di Colin Meloy, ambientato in un bosco magico vicino a Portland. Regia di Travis Knight.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "MYmovies Torino",
+            "url": "https://www.mymovies.it/cinema/torino/"
+          }
+        ],
+        "link": [],
+        "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-tea-frettolosa",
+        "t": "I figli della frettolosa, di Gabriella Casolari e Gianfranco Berardi",
+        "s": "Testo e regia di Casolari e Berardi, con Berardi, Casolari, Di Corato, Faella e Zaru e un coro del laboratorio. Produzione Compagnia Berardi Casolari.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Teatro Stabile Torino",
+            "url": "https://www.teatrostabiletorino.it/cartellone/i-figli-della-frettolosa-20-22-nov-2026/"
+          }
+        ],
+        "link": [],
+        "quando": "sab 21 nov, 19:30; dom 22 nov, 16:00",
+        "dove": "Teatro Gobetti, Torino"
+      },
+      {
+        "id": "spe-tea-custodi",
+        "t": "I Custodi - La città che ha tante voci, performance della compagnia under 30 PoEM",
+        "s": "Nata da un laboratorio con gli ospiti di una Rsa torinese, trasforma le storie degli anziani in un racconto della città. Fa parte del progetto «La città ha tante voci» di Tangram Teatro.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/i-custodi-la-citta-che-ha-tante-voci-il-teatro-da-voce-alla-memoria-degli_e506a448-ba99-413e-b04f-54ee975cef8e.html"
+          }
+        ],
+        "quando": "sab 21 nov, 19:00 (Community Hub); dom 22 nov, 19:00 (Tangram Teatro)",
+        "dove": "Community Hub, via Baltea 3, e Tangram Teatro, Torino"
+      }
     ],
-    "link": [],
-    "quando": "fino al 22 nov",
-    "dove": "Vari luoghi, Torino"
-   },
-   {
-    "id": "ev-soldi-assedio",
-    "t": "I Soldi dell'Assedio. La moneta a Torino nel 1706",
-    "s": "Mostra sulla moneta in circolazione a Torino durante l'assedio del 1706.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Comune di Torino",
-      "url": "https://eventi.comune.torino.it/calendario/i-soldi-dellassedio-la-moneta-a-torino-nel-1706/"
-     }
+    "concerti": [
+      {
+        "id": "co-ariete",
+        "t": "Ariete in concerto",
+        "s": "Concerto della cantautrice pop in un club torinese.",
+        "d": "2026-11-09",
+        "quando": "sab 21 nov 2026, 19:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "25 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/ariete-2/"
+          }
+        ]
+      },
+      {
+        "id": "co-ptn",
+        "t": "Pinguini Tattici Nucleari in un piccolo club",
+        "s": "Tour nei club della band pop-rock bergamasca: set di circa un'ora con almeno un brano per ogni album dal 2020, in attesa del nuovo disco «Replay» in uscita il 4 dicembre.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/21/leggi-notizia/argomenti/cultura-e-spettacoli-7/articolo/pinguini-tattici-nucleari-in-tour-nei-piccoli-club-il-concerto-a-torino-allo-spazio211.html"
+          }
+        ],
+        "link": [],
+        "quando": "mar 24 nov 2026 (orario sul sito)",
+        "dove": "sPAZIO211, Torino",
+        "costo": "prezzi sul sito"
+      },
+      {
+        "id": "co-jussen",
+        "t": "Lucas e Arthur Jussen in concerto a quattro mani",
+        "s": "Recital dei due pianisti olandesi per la stagione dell'Unione Musicale.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Unione Musicale",
+            "url": "https://unionemusicale.it/concerto/lucas-e-arthur-jussen/"
+          }
+        ],
+        "link": [],
+        "quando": "mer 25 nov 2026 (orario sul sito)",
+        "dove": "Torino (luogo sul sito)",
+        "costo": "prezzi sul sito"
+      },
+      {
+        "id": "co-lotr-mystery",
+        "t": "Musiche da The Lord of the Rings: tribute a Howard Shore",
+        "s": "Mystery Ensemble esegue le colonne sonore della trilogia di Howard Shore.",
+        "d": "2026-11-09",
+        "quando": "sab 28 nov 2026, 21:30",
+        "dove": "Conservatorio Giuseppe Verdi, Torino",
+        "costo": "prezzi sul sito TicketOne",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/musiche-da-the-lord-of-the-rings-tribute-to-howard-shore-conservatorio-giuseppe-verdi-22366959/"
+          }
+        ]
+      },
+      {
+        "id": "co-danish",
+        "t": "Danish String Quartet",
+        "s": "Concerto del quartetto d'archi danese per l'Unione Musicale.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Unione Musicale",
+            "url": "https://unionemusicale.it/concerto/quartetto-danish/"
+          }
+        ],
+        "link": [],
+        "quando": "mer 2 dic 2026 (orario sul sito)",
+        "dove": "Torino (luogo sul sito)",
+        "costo": "prezzi sul sito"
+      },
+      {
+        "id": "co-cmon-tigre",
+        "t": "C'Mon Tigre dal vivo",
+        "s": "Concerto della band italiana tra jazz, rock e world music.",
+        "d": "2026-11-09",
+        "quando": "gio 3 dic 2026, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "22 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/cmon-tigre-3/"
+          }
+        ]
+      },
+      {
+        "id": "co-cremonini",
+        "t": "Cesare Cremonini in due serate con l'«Amatour»",
+        "s": "Due date torinesi del tour nei palasport del cantautore bolognese.",
+        "d": "2026-11-09",
+        "quando": "mer 9 e gio 10 dic 2026, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/cesare-cremonini-amatour-inalpi-arena-22089842/"
+          }
+        ]
+      },
+      {
+        "id": "co-matheus-jaroussky",
+        "t": "Ensemble Matheus e Philippe Jaroussky con Spinosi: Corelli, Händel, Vivaldi",
+        "s": "Jean-Christophe Spinosi dirige l'ensemble barocco; solista il controtenore Philippe Jaroussky.",
+        "d": "2026-11-09",
+        "quando": "gio 10 dic 2026 (orario sul sito)",
+        "dove": "Auditorium Giovanni Agnelli, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Lingotto Musica",
+            "url": "https://lingottomusica.it/en/evento/ensemble-matheus/"
+          }
+        ]
+      },
+      {
+        "id": "co-mcr",
+        "t": "Modena City Ramblers in concerto",
+        "s": "Folk-rock italiano della storica band emiliana.",
+        "d": "2026-11-09",
+        "quando": "ven 11 dic 2026, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "20 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/modena-city-ramblers-5/"
+          }
+        ]
+      },
+      {
+        "id": "co-anna",
+        "t": "ANNA, «Million Dollar Babe Tour 2026»",
+        "s": "Tappa torinese del tour della cantante e rapper.",
+        "d": "2026-11-09",
+        "quando": "mar 15 dic 2026, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/anna-million-dollar-babe-tour-2026-inalpi-arena-21871443/"
+          }
+        ]
+      },
+      {
+        "id": "co-irama",
+        "t": "Irama con «A chi ci sarà sempre»",
+        "s": "Concerto nei palasport del cantautore pop.",
+        "d": "2026-11-09",
+        "quando": "lun 21 dic 2026, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/irama-a-chi-ci-sara-sempre-palasport-2026-inalpi-arena-21793168/"
+          }
+        ]
+      },
+      {
+        "id": "co-dalessio",
+        "t": "Gigi D'Alessio al Palasport 2026",
+        "s": "Concerto del cantautore napoletano nel tour dei palasport.",
+        "d": "2026-11-09",
+        "quando": "mer 23 dic 2026, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/gigi-dalessio-palasport-2026-inalpi-arena-21138289/"
+          }
+        ]
+      },
+      {
+        "id": "co-morricone",
+        "t": "Alla scoperta di Morricone con la Ensemble Symphony Orchestra",
+        "s": "Concerto sinfonico dedicato alle colonne sonore di Ennio Morricone.",
+        "d": "2026-11-09",
+        "quando": "dom 27 dic 2026, 18:00",
+        "dove": "Teatro Colosseo, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/alla-scoperta-di-morricone-ensemble-symphony-orchestra-teatro-colosseo-21159924/"
+          }
+        ]
+      },
+      {
+        "id": "co-trifonov",
+        "t": "Daniil Trifonov in recital: da Händel a Schubert, Stravinskij e Villa-Lobos",
+        "s": "Recital del pianista russo con un programma che include anche brani di sua composizione.",
+        "d": "2026-11-09",
+        "quando": "mer 13 gen 2027 (orario sul sito)",
+        "dove": "Auditorium Giovanni Agnelli, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Lingotto Musica",
+            "url": "https://lingottomusica.it/en/evento/daniil-trifonov/"
+          }
+        ]
+      },
+      {
+        "id": "co-boosta-fusions",
+        "t": "«Fusions»: Boosta e la Filarmonica TRT tra sintetizzatori e orchestra",
+        "s": "Il compositore Davide «Boosta» Dileo con la Filarmonica TRT diretta da Valentino Corvino.",
+        "d": "2026-11-09",
+        "quando": "lun 18 gen 2027 (orario sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/fusions"
+          }
+        ]
+      },
+      {
+        "id": "co-tedua",
+        "t": "Tedua al Palasport 2027",
+        "s": "Concerto del rapper genovese.",
+        "d": "2026-11-09",
+        "quando": "mar 26 gen 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/tedua-palasport-2027-inalpi-arena-21719066/"
+          }
+        ]
+      },
+      {
+        "id": "co-kammerphilharmonie",
+        "t": "Kammerphilharmonie Bremen con Peltokoski e Vilde Frang: Mendelssohn, Schumann, Sollima",
+        "s": "Tarmo Peltokoski dirige l'orchestra tedesca; solista la violinista Vilde Frang.",
+        "d": "2026-11-09",
+        "quando": "mer 27 gen 2027 (orario sul sito)",
+        "dove": "Auditorium Giovanni Agnelli, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Lingotto Musica",
+            "url": "https://lingottomusica.it/en/evento/die-deutsche-kammerphilharmonie-bremen-3/"
+          }
+        ]
+      },
+      {
+        "id": "co-sfera",
+        "t": "Sfera Ebbasta al Palasport 2027",
+        "s": "Concerto del rapper nel tour dei palasport.",
+        "d": "2026-11-09",
+        "quando": "sab 30 gen 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/sfera-ebbasta-palasport-2027-inalpi-arena-21931775/"
+          }
+        ]
+      },
+      {
+        "id": "co-quintorigo",
+        "t": "Quintorigo & John De Leo",
+        "s": "Incontro tra il quintetto romagnolo e il cantante John De Leo, tra rock e jazz.",
+        "d": "2026-11-09",
+        "quando": "ven 5 feb 2027, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "30 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/quintorigo-john-de-leo-2/"
+          }
+        ]
+      },
+      {
+        "id": "co-zen-circus",
+        "t": "The Zen Circus, due serate",
+        "s": "Rock indipendente italiano; due date consecutive il 11 e 12 febbraio.",
+        "d": "2026-11-09",
+        "quando": "gio 11 e ven 12 feb 2027, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "28 €",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/the-zen-circus-2/"
+          }
+        ]
+      },
+      {
+        "id": "co-sokolov",
+        "t": "Grigory Sokolov in recital per «Absolute»",
+        "s": "Recital per pianoforte solo di Grigory Sokolov nella stagione dei concerti del Regio.",
+        "d": "2026-11-09",
+        "quando": "lun 15 feb 2027 (orario sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/absolute"
+          }
+        ]
+      },
+      {
+        "id": "co-tjeknavorian",
+        "t": "«Horizons»: Tjeknavorian dirige la Filarmonica TRT",
+        "s": "Concerto sinfonico con Emmanuel Tjeknavorian sul podio della Filarmonica TRT.",
+        "d": "2026-11-09",
+        "quando": "lun 22 feb 2027 (orario sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/horizons"
+          }
+        ]
+      },
+      {
+        "id": "co-pezzali",
+        "t": "Max Pezzali con «Max Forever» in due serate",
+        "s": "Due date torinesi del tour con i brani della storia di Max Pezzali.",
+        "d": "2026-11-09",
+        "quando": "lun 8 e mar 9 mar 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi e disponibilità sul sito del venditore",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/max-forever-stessa-storia-stesso-posto-stesso-bar-inalpi-arena-22293427/"
+          }
+        ]
+      },
+      {
+        "id": "co-seun-kuti",
+        "t": "Seun Kuti & Egypt 80",
+        "s": "Afrobeat dal vivo con il figlio di Fela Kuti.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Hiroshima Mon Amour",
+            "url": "https://hiroshimamonamour.org/eventi/seun-kuti/"
+          }
+        ],
+        "link": [],
+        "quando": "mer 10 mar 2027, 21:00",
+        "dove": "Hiroshima Mon Amour, Torino",
+        "costo": "25 €"
+      },
+      {
+        "id": "co-glory",
+        "t": "«Glory»: Battistoni dirige Orchestra e Coro del Teatro Regio",
+        "s": "Concerto sinfonico-corale della stagione 2026-2027 del Regio.",
+        "d": "2026-11-16",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/glory"
+          }
+        ],
+        "link": [],
+        "quando": "ven 12 mar 2027 (orario sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "prezzi sul sito"
+      },
+      {
+        "id": "co-de-gregori",
+        "t": "Francesco De Gregori, tour nei teatri 2027",
+        "s": "Concerto del cantautore romano nella tournée teatrale «Nevergreen».",
+        "d": "2026-11-09",
+        "quando": "dom 14 mar 2027, 20:30",
+        "dove": "Teatro Colosseo, Torino",
+        "costo": "prezzi sul sito TicketOne",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/francesco-de-gregori-nevergreen-perfette-sconosciute-teatri-2027-teatro-colosseo-22129990/"
+          }
+        ]
+      },
+      {
+        "id": "co-gazzelle",
+        "t": "Gazzelle in concerto",
+        "s": "Concerto del cantautore romano di pop-rock.",
+        "d": "2026-11-09",
+        "quando": "mar 6 apr 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi sul sito TicketOne",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/gazzelle-inalpi-arena-22251667/"
+          }
+        ]
+      },
+      {
+        "id": "co-nannini",
+        "t": "Gianna Nannini al Palasport 2027",
+        "s": "Concerto della rocker senese nel tour nei palasport.",
+        "d": "2026-11-09",
+        "quando": "dom 11 apr 2027, 21:00",
+        "dove": "Inalpi Arena, Torino",
+        "costo": "prezzi sul sito TicketOne",
+        "fonti": [
+          {
+            "n": "TicketOne",
+            "url": "https://www.ticketone.it/event/gianna-nannini-palasport-2027-inalpi-arena-22048574/"
+          }
+        ]
+      }
     ],
-    "link": [],
-    "quando": "fino al 22 nov",
-    "dove": "Archivio Storico della Città, via Barbaroux 32, Torino"
-   },
-   {
-    "id": "ev-solo-per-tutti",
-    "t": "Solo per tutti: appuntamento sotto i portici di via Sacchi",
-    "s": "Evento ad accesso libero, senza prenotazione.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Comune di Torino",
-      "url": "https://eventi.comune.torino.it/calendario/solo-per-tutti/"
-     }
+    "cultura": [],
+    "scienza": [
+      {
+        "id": "sc-fasce-radiazione",
+        "t": "Quattro fasce di radiazione attorno alla Terra dopo la tempesta geomagnetica del 2024",
+        "s": "Uno studio guidato dall'Istituto belga di aeronomia spaziale, su npj Space Exploration, descrive per la prima volta quattro fasce di Van Allen invece di due, osservate dal satellite Proba-V dell'Esa. La situazione normale è tornata dopo circa tre mesi.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/20/da-una-tempesta-geomagnetica-fasce-extra-di-radiazione-intorno-alla-terra_666d8571-f0ff-41ed-94b9-7fb4a7d9d016.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "sc-nobel-ricerca",
+        "t": "77 premi Nobel chiedono all'Ue almeno 200 miliardi per la ricerca 2028-2034",
+        "s": "In una lettera ai leader europei, tra i firmatari Giorgio Parisi e Carlo Rubbia, chiedono più fondi per il programma quadro. La Commissione aveva proposto 175 miliardi, poi ridotti a circa 158.",
+        "d": "2026-11-15",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/canale_scienza/notizie/ricerca_istituzioni/2026/11/15/da-77-nobel-un-appello-alla-ue-200-miliardi-per-la-ricerca_71fe7427-69ab-4501-bf49-43de5c7e1ff9.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "sc-mauriziano-sveglio",
+        "t": "Al Mauriziano di Torino operato da sveglio un paziente con rara malattia neuromuscolare",
+        "s": "Un uomo di 52 anni con malattia di Charcot-Marie-Tooth e paralisi del diaframma è stato sottoposto a colecistectomia laparoscopica in anestesia locoregionale con ventilazione non invasiva, senza anestesia generale. L'intervento è durato circa tre ore.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/21/leggi-notizia/argomenti/sanita-5/articolo/miracolo-al-mauriziano-affetto-da-una-rara-malattia-neuromuscolare-operato-da-sveglio.html"
+          }
+        ],
+        "link": []
+      }
     ],
-    "link": [],
-    "quando": "sab 21 nov, 16:30-17:30",
-    "dove": "Portici di via Sacchi, Torino",
-    "costo": "gratis"
-   },
-   {
-    "id": "ev-scienze-naturali",
-    "t": "Visita guidata al Museo Regionale di Scienze Naturali",
-    "s": "Visita guidata alle collezioni del museo.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Comune di Torino",
-      "url": "https://eventi.comune.torino.it/calendario/visita-guidata-al-museo-regionale-di-scienze-naturali-di-torino-20/"
-     }
+    "tecnologia": [
+      {
+        "id": "te-apply-ai",
+        "t": "A Bruxelles l'AI Apply Summit, un anno dopo la strategia europea sull'intelligenza artificiale",
+        "s": "La Commissione punta a sette gigafactory con 30 miliardi di euro, cita quasi 2 miliardi già mobilitati e 200 centri AI Experience sul territorio. Per il Piemonte è intervenuto il presidente Alberto Cirio.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/11/17/ansa-a-bruxelles-lai-apply-summit-a-un-anno-dalla-strategia-ue_66f6fb92-b8b0-40f7-a453-46b10b8c60d7.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "te-xi-ia",
+        "t": "Xi Jinping chiede più cooperazione internazionale sull'intelligenza artificiale",
+        "s": "Il presidente cinese, secondo l'ANSA, ha sollecitato una maggiore collaborazione tra i Paesi sull'intelligenza artificiale. Il tema arriva mentre l'Europa discute di applicazioni e infrastrutture di IA.",
+        "d": "2026-11-18",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/xi-serve-maggiore-cooperazione-internazionale-sullintelligenza-artificiale_60128e11-b137-421a-aca9-3ecdbab644dd.html"
+          }
+        ],
+        "link": []
+      }
     ],
-    "link": [],
-    "quando": "sab 21 nov, 14:00-17:30",
-    "dove": "Museo Regionale di Scienze Naturali, Torino"
-   },
-   {
-    "id": "ev-atp-chiusura",
-    "t": "Tennis Takes Over: la festa di chiusura delle Atp Finals tra musei aperti, corsa e OGR",
-    "s": "Sabato 21 musei aperti fino a mezzanotte (Camera 15 €, Scienze Naturali 5 €, Museo Rai gratis), Social Run di 5 km al Valentino; domenica 22 attività per bambini in via Roma e, dalle 18, «The Final Set» alle OGR.",
-    "d": "2026-11-20",
-    "fonti": [
-     {
-      "n": "Torino Oggi",
-      "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/eventi-11/articolo/tennis-takes-over-torino-fa-festa-per-la-chiusura-delle-atp-finals.html"
-     }
-    ],
-    "quando": "sab 21 e dom 22 nov",
-    "dove": "Torino: musei, Valentino, via Roma, OGR",
-    "costo": "da gratis; musei 5-15 €"
-   }
-  ],
-  "spettacoli": [
-   {
-    "id": "spe-cin-dio-ride",
-    "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
-    "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "MYmovies",
-      "url": "https://www.mymovies.it/film/2026/dio-ride/"
-     }
-    ],
-    "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
-    "dove": "Cinema Ideal",
-    "costo": "Ideal 9 €"
-   },
-   {
-    "id": "spe-cin-wild-horse-nine",
-    "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
-    "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "MYmovies",
-      "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
-     }
-    ],
-    "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
-    "dove": "Cinema Ideal",
-    "costo": "Ideal 9 €"
-   },
-   {
-    "id": "spe-cin-se-domani",
-    "t": "Se domani non torno, il dramma di Paola Randi",
-    "s": "Film drammatico diretto da Paola Randi, in programmazione in entrambe le sale.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "MYmovies",
-      "url": "https://www.idealcityplex.it/scheda/se-domani-non-torno/48959/"
-     }
-    ],
-    "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
-    "dove": "Cinema Ideal",
-    "costo": "Ideal 9 €"
-   },
-   {
-    "id": "spe-cin-gatto-cappello",
-    "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
-    "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "MYmovies",
-      "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
-     }
-    ],
-    "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
-    "dove": "Cinema Ideal",
-    "costo": "Ideal 9 €"
-   },
-   {
-    "id": "spe-cin-godzilla-minus-zero",
-    "t": "Godzilla Minus Zero, il seguito del film giapponese premiato con l'Oscar",
-    "s": "Seguito di «Godzilla Minus One» ambientato nel Giappone del dopoguerra. Regia di Takashi Yamazaki.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "ComingSoon Cinema Ideal",
-      "url": "https://www.comingsoon.it/cinema/torino/ideal/1072/"
-     }
-    ],
-    "link": [],
-    "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
-    "dove": "Cinema Ideal",
-    "costo": "Ideal 9 €"
-   },
-   {
-    "id": "spe-cin-wildwood",
-    "t": "Wildwood: I segreti del bosco proibito, film d'animazione fantasy",
-    "s": "Film d'animazione tratto dal romanzo di Colin Meloy, ambientato in un bosco magico vicino a Portland. Regia di Travis Knight.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "MYmovies Torino",
-      "url": "https://www.mymovies.it/cinema/torino/"
-     }
-    ],
-    "link": [],
-    "quando": "Ideal: orari indicativi, conferma date sulla pagina della sala. Space Cinema: orari sul sito della sala",
-    "dove": "Cinema Ideal",
-    "costo": "Ideal 9 €"
-   },
-   {
-    "id": "spe-tea-frettolosa",
-    "t": "I figli della frettolosa, di Gabriella Casolari e Gianfranco Berardi",
-    "s": "Testo e regia di Casolari e Berardi, con Berardi, Casolari, Di Corato, Faella e Zaru e un coro del laboratorio. Produzione Compagnia Berardi Casolari.",
-    "d": "2026-11-17",
-    "fonti": [
-     {
-      "n": "Teatro Stabile Torino",
-      "url": "https://www.teatrostabiletorino.it/cartellone/i-figli-della-frettolosa-20-22-nov-2026/"
-     }
-    ],
-    "link": [],
-    "quando": "ven 20 nov, 20:45; sab 21, 19:30; dom 22, 16:00",
-    "dove": "Teatro Gobetti, Torino"
-   },
-   {
-    "id": "spe-tea-custodi",
-    "t": "I Custodi - La città che ha tante voci, performance della compagnia under 30 PoEM",
-    "s": "Nata da un laboratorio con gli ospiti di una Rsa torinese, trasforma le storie degli anziani in un racconto della città. Fa parte del progetto «La città ha tante voci» di Tangram Teatro.",
-    "d": "2026-11-21",
-    "fonti": [
-     {
-      "n": "ANSA Piemonte",
-      "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/i-custodi-la-citta-che-ha-tante-voci-il-teatro-da-voce-alla-memoria-degli_e506a448-ba99-413e-b04f-54ee975cef8e.html"
-     }
-    ],
-    "quando": "sab 21 nov, 19:00 (Community Hub); dom 22 nov, 19:00 (Tangram Teatro)",
-    "dove": "Community Hub, via Baltea 3, e Tangram Teatro, Torino"
-   }
-  ],
-  "concerti": [
-   {
-    "id": "co-ariete",
-    "t": "Ariete in concerto",
-    "s": "Concerto della cantautrice pop in un club torinese.",
-    "d": "2026-11-09",
-    "quando": "sab 21 nov 2026, 19:00",
-    "dove": "Hiroshima Mon Amour, Torino",
-    "costo": "25 €",
-    "fonti": [
-     {
-      "n": "Hiroshima Mon Amour",
-      "url": "https://hiroshimamonamour.org/eventi/ariete-2/"
-     }
-    ]
-   },
-   {
-    "id": "co-jussen",
-    "t": "Lucas e Arthur Jussen in concerto a quattro mani",
-    "s": "Recital dei due pianisti olandesi per la stagione dell'Unione Musicale.",
-    "d": "2026-11-16",
-    "fonti": [
-     {
-      "n": "Unione Musicale",
-      "url": "https://unionemusicale.it/concerto/lucas-e-arthur-jussen/"
-     }
-    ],
-    "link": [],
-    "quando": "mer 25 nov 2026 (orario sul sito)",
-    "dove": "Torino (luogo sul sito)",
-    "costo": "prezzi sul sito"
-   },
-   {
-    "id": "co-lotr-mystery",
-    "t": "Musiche da The Lord of the Rings: tribute a Howard Shore",
-    "s": "Mystery Ensemble esegue le colonne sonore della trilogia di Howard Shore.",
-    "d": "2026-11-09",
-    "quando": "sab 28 nov 2026, 21:30",
-    "dove": "Conservatorio Giuseppe Verdi, Torino",
-    "costo": "prezzi sul sito TicketOne",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/musiche-da-the-lord-of-the-rings-tribute-to-howard-shore-conservatorio-giuseppe-verdi-22366959/"
-     }
-    ]
-   },
-   {
-    "id": "co-danish",
-    "t": "Danish String Quartet",
-    "s": "Concerto del quartetto d'archi danese per l'Unione Musicale.",
-    "d": "2026-11-16",
-    "fonti": [
-     {
-      "n": "Unione Musicale",
-      "url": "https://unionemusicale.it/concerto/quartetto-danish/"
-     }
-    ],
-    "link": [],
-    "quando": "mer 2 dic 2026 (orario sul sito)",
-    "dove": "Torino (luogo sul sito)",
-    "costo": "prezzi sul sito"
-   },
-   {
-    "id": "co-cmon-tigre",
-    "t": "C'Mon Tigre dal vivo",
-    "s": "Concerto della band italiana tra jazz, rock e world music.",
-    "d": "2026-11-09",
-    "quando": "gio 3 dic 2026, 21:00",
-    "dove": "Hiroshima Mon Amour, Torino",
-    "costo": "22 €",
-    "fonti": [
-     {
-      "n": "Hiroshima Mon Amour",
-      "url": "https://hiroshimamonamour.org/eventi/cmon-tigre-3/"
-     }
-    ]
-   },
-   {
-    "id": "co-cremonini",
-    "t": "Cesare Cremonini in due serate con l'«Amatour»",
-    "s": "Due date torinesi del tour nei palasport del cantautore bolognese.",
-    "d": "2026-11-09",
-    "quando": "mer 9 e gio 10 dic 2026, 21:00",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/cesare-cremonini-amatour-inalpi-arena-22089842/"
-     }
-    ]
-   },
-   {
-    "id": "co-matheus-jaroussky",
-    "t": "Ensemble Matheus e Philippe Jaroussky con Spinosi: Corelli, Händel, Vivaldi",
-    "s": "Jean-Christophe Spinosi dirige l'ensemble barocco; solista il controtenore Philippe Jaroussky.",
-    "d": "2026-11-09",
-    "quando": "gio 10 dic 2026 (orario sul sito)",
-    "dove": "Auditorium Giovanni Agnelli, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "Lingotto Musica",
-      "url": "https://lingottomusica.it/en/evento/ensemble-matheus/"
-     }
-    ]
-   },
-   {
-    "id": "co-mcr",
-    "t": "Modena City Ramblers in concerto",
-    "s": "Folk-rock italiano della storica band emiliana.",
-    "d": "2026-11-09",
-    "quando": "ven 11 dic 2026, 21:00",
-    "dove": "Hiroshima Mon Amour, Torino",
-    "costo": "20 €",
-    "fonti": [
-     {
-      "n": "Hiroshima Mon Amour",
-      "url": "https://hiroshimamonamour.org/eventi/modena-city-ramblers-5/"
-     }
-    ]
-   },
-   {
-    "id": "co-anna",
-    "t": "ANNA, «Million Dollar Babe Tour 2026»",
-    "s": "Tappa torinese del tour della cantante e rapper.",
-    "d": "2026-11-09",
-    "quando": "mar 15 dic 2026, 21:00",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/anna-million-dollar-babe-tour-2026-inalpi-arena-21871443/"
-     }
-    ]
-   },
-   {
-    "id": "co-irama",
-    "t": "Irama con «A chi ci sarà sempre»",
-    "s": "Concerto nei palasport del cantautore pop.",
-    "d": "2026-11-09",
-    "quando": "lun 21 dic 2026, 21:00",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/irama-a-chi-ci-sara-sempre-palasport-2026-inalpi-arena-21793168/"
-     }
-    ]
-   },
-   {
-    "id": "co-dalessio",
-    "t": "Gigi D'Alessio al Palasport 2026",
-    "s": "Concerto del cantautore napoletano nel tour dei palasport.",
-    "d": "2026-11-09",
-    "quando": "mer 23 dic 2026, 21:00",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/gigi-dalessio-palasport-2026-inalpi-arena-21138289/"
-     }
-    ]
-   },
-   {
-    "id": "co-morricone",
-    "t": "Alla scoperta di Morricone con la Ensemble Symphony Orchestra",
-    "s": "Concerto sinfonico dedicato alle colonne sonore di Ennio Morricone.",
-    "d": "2026-11-09",
-    "quando": "dom 27 dic 2026, 18:00",
-    "dove": "Teatro Colosseo, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/alla-scoperta-di-morricone-ensemble-symphony-orchestra-teatro-colosseo-21159924/"
-     }
-    ]
-   },
-   {
-    "id": "co-trifonov",
-    "t": "Daniil Trifonov in recital: da Händel a Schubert, Stravinskij e Villa-Lobos",
-    "s": "Recital del pianista russo con un programma che include anche brani di sua composizione.",
-    "d": "2026-11-09",
-    "quando": "mer 13 gen 2027 (orario sul sito)",
-    "dove": "Auditorium Giovanni Agnelli, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "Lingotto Musica",
-      "url": "https://lingottomusica.it/en/evento/daniil-trifonov/"
-     }
-    ]
-   },
-   {
-    "id": "co-boosta-fusions",
-    "t": "«Fusions»: Boosta e la Filarmonica TRT tra sintetizzatori e orchestra",
-    "s": "Il compositore Davide «Boosta» Dileo con la Filarmonica TRT diretta da Valentino Corvino.",
-    "d": "2026-11-09",
-    "quando": "lun 18 gen 2027 (orario sul sito)",
-    "dove": "Teatro Regio, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "Teatro Regio",
-      "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/fusions"
-     }
-    ]
-   },
-   {
-    "id": "co-tedua",
-    "t": "Tedua al Palasport 2027",
-    "s": "Concerto del rapper genovese.",
-    "d": "2026-11-09",
-    "quando": "mar 26 gen 2027, 21:00",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/tedua-palasport-2027-inalpi-arena-21719066/"
-     }
-    ]
-   },
-   {
-    "id": "co-kammerphilharmonie",
-    "t": "Kammerphilharmonie Bremen con Peltokoski e Vilde Frang: Mendelssohn, Schumann, Sollima",
-    "s": "Tarmo Peltokoski dirige l'orchestra tedesca; solista la violinista Vilde Frang.",
-    "d": "2026-11-09",
-    "quando": "mer 27 gen 2027 (orario sul sito)",
-    "dove": "Auditorium Giovanni Agnelli, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "Lingotto Musica",
-      "url": "https://lingottomusica.it/en/evento/die-deutsche-kammerphilharmonie-bremen-3/"
-     }
-    ]
-   },
-   {
-    "id": "co-sfera",
-    "t": "Sfera Ebbasta al Palasport 2027",
-    "s": "Concerto del rapper nel tour dei palasport.",
-    "d": "2026-11-09",
-    "quando": "sab 30 gen 2027, 21:00",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/sfera-ebbasta-palasport-2027-inalpi-arena-21931775/"
-     }
-    ]
-   },
-   {
-    "id": "co-quintorigo",
-    "t": "Quintorigo & John De Leo",
-    "s": "Incontro tra il quintetto romagnolo e il cantante John De Leo, tra rock e jazz.",
-    "d": "2026-11-09",
-    "quando": "ven 5 feb 2027, 21:00",
-    "dove": "Hiroshima Mon Amour, Torino",
-    "costo": "30 €",
-    "fonti": [
-     {
-      "n": "Hiroshima Mon Amour",
-      "url": "https://hiroshimamonamour.org/eventi/quintorigo-john-de-leo-2/"
-     }
-    ]
-   },
-   {
-    "id": "co-zen-circus",
-    "t": "The Zen Circus, due serate",
-    "s": "Rock indipendente italiano; due date consecutive il 11 e 12 febbraio.",
-    "d": "2026-11-09",
-    "quando": "gio 11 e ven 12 feb 2027, 21:00",
-    "dove": "Hiroshima Mon Amour, Torino",
-    "costo": "28 €",
-    "fonti": [
-     {
-      "n": "Hiroshima Mon Amour",
-      "url": "https://hiroshimamonamour.org/eventi/the-zen-circus-2/"
-     }
-    ]
-   },
-   {
-    "id": "co-sokolov",
-    "t": "Grigory Sokolov in recital per «Absolute»",
-    "s": "Recital per pianoforte solo di Grigory Sokolov nella stagione dei concerti del Regio.",
-    "d": "2026-11-09",
-    "quando": "lun 15 feb 2027 (orario sul sito)",
-    "dove": "Teatro Regio, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "Teatro Regio",
-      "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/absolute"
-     }
-    ]
-   },
-   {
-    "id": "co-tjeknavorian",
-    "t": "«Horizons»: Tjeknavorian dirige la Filarmonica TRT",
-    "s": "Concerto sinfonico con Emmanuel Tjeknavorian sul podio della Filarmonica TRT.",
-    "d": "2026-11-09",
-    "quando": "lun 22 feb 2027 (orario sul sito)",
-    "dove": "Teatro Regio, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "Teatro Regio",
-      "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/horizons"
-     }
-    ]
-   },
-   {
-    "id": "co-pezzali",
-    "t": "Max Pezzali con «Max Forever» in due serate",
-    "s": "Due date torinesi del tour con i brani della storia di Max Pezzali.",
-    "d": "2026-11-09",
-    "quando": "lun 8 e mar 9 mar 2027, 21:00",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "prezzi e disponibilità sul sito del venditore",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/max-forever-stessa-storia-stesso-posto-stesso-bar-inalpi-arena-22293427/"
-     }
-    ]
-   },
-   {
-    "id": "co-seun-kuti",
-    "t": "Seun Kuti & Egypt 80",
-    "s": "Afrobeat dal vivo con il figlio di Fela Kuti.",
-    "d": "2026-11-16",
-    "fonti": [
-     {
-      "n": "Hiroshima Mon Amour",
-      "url": "https://hiroshimamonamour.org/eventi/seun-kuti/"
-     }
-    ],
-    "link": [],
-    "quando": "mer 10 mar 2027, 21:00",
-    "dove": "Hiroshima Mon Amour, Torino",
-    "costo": "25 €"
-   },
-   {
-    "id": "co-glory",
-    "t": "«Glory»: Battistoni dirige Orchestra e Coro del Teatro Regio",
-    "s": "Concerto sinfonico-corale della stagione 2026-2027 del Regio.",
-    "d": "2026-11-16",
-    "fonti": [
-     {
-      "n": "Teatro Regio",
-      "url": "https://www.teatroregio.torino.it/en/concerti-2026-2027/glory"
-     }
-    ],
-    "link": [],
-    "quando": "ven 12 mar 2027 (orario sul sito)",
-    "dove": "Teatro Regio, Torino",
-    "costo": "prezzi sul sito"
-   },
-   {
-    "id": "co-de-gregori",
-    "t": "Francesco De Gregori, tour nei teatri 2027",
-    "s": "Concerto del cantautore romano nella tournée teatrale «Nevergreen».",
-    "d": "2026-11-09",
-    "quando": "dom 14 mar 2027, 20:30",
-    "dove": "Teatro Colosseo, Torino",
-    "costo": "prezzi sul sito TicketOne",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/francesco-de-gregori-nevergreen-perfette-sconosciute-teatri-2027-teatro-colosseo-22129990/"
-     }
-    ]
-   },
-   {
-    "id": "co-gazzelle",
-    "t": "Gazzelle in concerto",
-    "s": "Concerto del cantautore romano di pop-rock.",
-    "d": "2026-11-09",
-    "quando": "mar 6 apr 2027, 21:00",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "prezzi sul sito TicketOne",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/gazzelle-inalpi-arena-22251667/"
-     }
-    ]
-   },
-   {
-    "id": "co-nannini",
-    "t": "Gianna Nannini al Palasport 2027",
-    "s": "Concerto della rocker senese nel tour nei palasport.",
-    "d": "2026-11-09",
-    "quando": "dom 11 apr 2027, 21:00",
-    "dove": "Inalpi Arena, Torino",
-    "costo": "prezzi sul sito TicketOne",
-    "fonti": [
-     {
-      "n": "TicketOne",
-      "url": "https://www.ticketone.it/event/gianna-nannini-palasport-2027-inalpi-arena-22048574/"
-     }
-    ]
-   }
-  ],
-  "cultura": []
- },
- "controlli": [
-  {
-   "at": "2026-11-11T13:04+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 76,
-   "note": "Fonti lette: ANSA, Torino Oggi, Al Jazeera (en), Euronews (en, it). Reuters rifiutata dal proxy di ricerca; BBC e altre grandi testate estere non tentate. Non leggibili: TorinoToday e Euronews/Al Jazeera su alcune pagine (errore di lettura). Eventi, cinema, teatro e concerti dall'edizione del mattino (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (era staccata)."
+    "sport": []
   },
-  {
-   "at": "2026-11-12T05:09+01:00",
-   "edizione": "mattina",
-   "notizie": 69,
-   "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), CBS News (en), Torino Oggi. Reuters rifiutata dal proxy di ricerca; BBC e altre grandi testate estere non tentate. Non leggibili: TorinoToday (pagina allarmi) e una pagina Al Jazeera (Gaza). Cinema, teatro, eventi e concerti dall'edizione precedente con qualche aggiunta (non è lunedì; orari dei film non riverificati). Copia riallineata a origin/main (era staccata)."
-  },
-  {
-   "at": "2026-11-12T13:03+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 66,
-   "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), Torino Oggi. Il Sole 24 Ore e un articolo di Torino Oggi non leggibili; Reuters e altre grandi testate estere non tentate; ricerca su Il Sole 24 Ore/Adnkronos/Sky TG24 solo in parte letta. Eventi, cinema, teatro e concerti dall'edizione del mattino (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (era staccata)."
-  },
-  {
-   "at": "2026-11-13T05:04+01:00",
-   "edizione": "mattina",
-   "notizie": 65,
-   "note": "Fonti lette: ANSA, AGI, Adnkronos, Al Jazeera (en), Euronews (en, es), Torino Oggi, Turismo Torino. Non leggibili: TorinoToday (due pagine). Reuters, BBC e altre grandi testate estere non tentate. Cinema, teatro, eventi e concerti dall'edizione precedente con l'aggiunta di un evento (non è lunedì; orari dei film non riverificati); tolti i concerti già passati. Copia locale riallineata a origin/main (era staccata)."
-  },
-  {
-   "at": "2026-11-13T13:08+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 72,
-   "note": "Fonti lette: ANSA, AGI, Al Jazeera (en), Euronews (en). Non leggibili: TorinoToday (pagina Palazzo Nuovo). Ricerca su Reuters/BBC/Guardian rifiutata dal proxy. Due pagine ANSA Piemonte (acqua, Diasorin) non aperte per mancata approvazione: sintesi dall'elenco. Cinema, teatro, eventi e concerti dall'edizione del mattino (non è lunedì, nessun concerto già passato). Copia locale riallineata a origin/main (era staccata)."
-  },
-  {
-   "at": "2026-11-14T05:09+01:00",
-   "edizione": "mattina",
-   "notizie": 66,
-   "note": "Fonti lette: ANSA, AGI, Adnkronos (solo ricerca), Al Jazeera (en), Euronews (en), Torino Oggi. Non leggibili: TorinoToday (pagina corteo); ricerca Reuters rifiutata dal proxy. Alcune pagine ANSA Piemonte, Euronews (Spagna) non aperte per mancata approvazione: sintesi dall'elenco. Cinema, teatro, eventi e concerti dall'edizione precedente (sabato, non lunedì) con tolti gli spettacoli passati e aggiunto DolcissimArte. Copia locale riallineata a origin/main (era staccata)."
-  },
-  {
-   "at": "2026-11-14T13:03+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 70,
-   "note": "Fonti lette: ANSA, AGI, Al Jazeera (en), Euronews (en), Torino Oggi. Non leggibili: TorinoToday (pagina corteo); Reuters/BBC/Guardian non cercate (rifiutate dal proxy nei giri precedenti). Ricerca Piemonte senza novità nuove: tenute le notizie del mattino. Cinema, teatro, eventi e concerti dall'edizione del mattino (sabato, non lunedì; nessun concerto già passato). Copia locale riallineata a origin/main (era staccata)."
-  },
-  {
-   "at": "2026-11-15T05:03+01:00",
-   "edizione": "mattina",
-   "notizie": 77,
-   "note": "Fonti lette: ANSA, Euronews (it/en), Al Jazeera (en). TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti); AGI senza risultati recenti. Notizie del 13-14 nov aggiunte a quelle ancora valide. Cinema, eventi e concerti dall'edizione del 14/11 (domenica, non lunedì), tolti gli spettacoli passati; teatro ridotto a 1 spettacolo per mancata verifica. Copia locale non divergente."
-  },
-  {
-   "at": "2026-11-15T13:03+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 72,
-   "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi. TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti). Cinema, eventi e concerti dall'edizione del mattino (domenica, non lunedì), tolti eventi e teatro conclusi il 15; aggiunti 2 spettacoli Fonderie Limone. Copia locale era staccata: ripartita da origin/main."
-  },
-  {
-   "at": "2026-11-16T05:05+01:00",
-   "edizione": "mattina",
-   "notizie": 80,
-   "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi, Comune di Torino (eventi), Ideal Cityplex, Hiroshima Mon Amour, Teatro Regio, Unione Musicale, Teatro Stabile. Reuters (ricerca rifiutata dal proxy); BBC/Guardian non cercate. TorinoToday non cercato. The Space Cinema Torino: pagina senza programmazione leggibile (orari solo Ideal). Lunedì: concerti aggiornati con i siti di Hiroshima, Regio e Unione Musicale; Inalpi Arena e Lingotto Musica copiati dalla lista precedente. Copia locale divergente: riallineata a origin/main."
-  },
-  {
-   "at": "2026-11-16T13:04+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 78,
-   "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi. TorinoToday: ricerca ok ma lettura bloccata (client_error). Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti). Cinema, eventi, teatro e concerti dall'edizione del mattino (lunedì, già aggiornata). Copia locale staccata: ripartita da origin/main."
-  },
-  {
-   "at": "2026-11-17T05:09+01:00",
-   "edizione": "mattina",
-   "notizie": 73,
-   "note": "Fonti lette: ANSA, il Giornale, Euronews (en), Al Jazeera (en), ComingSoon (Cinema Ideal), Teatro Stabile Torino. Bloccati: TorinoToday (lettura), thespacecinema.it (lettura; ricerca ok), Reuters/BBC/Guardian non cercate. Alcune pagine Euronews/ANSA non uscite da ricerca non sono state aperte: sintesi da elenchi già letti. Cinema: orari dalla pagina Ideal senza date; Space Cinema non leggibile. Eventi: confermati dall'edizione precedente. Concerti dall'edizione di lunedì, senza i passati (martedì). Nessun riallineamento a origin/main."
-  },
-  {
-   "at": "2026-11-17T13:04+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 75,
-   "note": "Fonti lette: ANSA, Adnkronos, il Giornale (elenco), Euronews (en), Al Jazeera (en), CBS News (en), Torino Oggi. TorinoToday e thespacecinema.it non letti; Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Cinema, teatro, eventi e concerti dall'edizione del mattino (martedì, nessun concerto passato). Nessun riallineamento: copia già pari a origin/main."
-  },
-  {
-   "at": "2026-11-18T05:03+01:00",
-   "edizione": "mattina",
-   "notizie": 70,
-   "note": "Fonti lette: ANSA, Adnkronos, Euronews (en), Al Jazeera (en), Torino Oggi. Non cercate/bloccate: Reuters, BBC, Guardian; TorinoToday, thespacecinema.it non letti; liveblog Al Jazeera non leggibile. Cinema, teatro, eventi e concerti copiati dall'edizione precedente (mercoledì, nessun concerto passato). Nessun riallineamento a origin/main."
-  },
-  {
-   "at": "2026-11-18T13:03+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 79,
-   "note": "Fonti lette: ANSA, Adnkronos (via ANSA), Il Sole 24 Ore, Euronews (en), Al Jazeera (en), Torino Oggi. ansa.it/piemonte non leggibile (robots); Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti); TorinoToday, thespacecinema.it non letti. Cinema, teatro, eventi e concerti copiati dall'edizione del mattino (nessun concerto passato). Nessun riallineamento a origin/main."
-  },
-  {
-   "at": "2026-11-19T05:03+01:00",
-   "edizione": "mattina",
-   "notizie": 72,
-   "note": "Fonti lette: ANSA, Euronews (en/it), Al Jazeera (en), Regione Piemonte. Torino Oggi: ricerca ok ma pagine non leggibili (titoli da risultati); TorinoToday non leggibile; thespacecinema.it e teatri non letti, Ideal da comingsoon.it. Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Eventi e teatro dall'edizione precedente, concerti copiati (tolto 1 concerto passato). Nessun riallineamento a origin/main."
-  },
-  {
-   "at": "2026-11-19T13:03+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 78,
-   "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi, Regione Piemonte. Il Sole 24 Ore (ricerca ok, pagine non leggibili), Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti); TorinoToday e metro 2 di Torino Oggi non leggibili (titolo da risultato di ricerca). Cinema, teatro, eventi e concerti copiati dall'edizione del mattino (nessun concerto passato). Nessun riallineamento a origin/main."
-  },
-  {
-   "at": "2026-11-20T05:08+01:00",
-   "edizione": "mattina",
-   "notizie": 77,
-   "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi (tramite agente di lettura). ANSA Piemonte, Borsa e The Space solo da risultati di ricerca; Reuters rifiutato dalla ricerca; Regione Piemonte non utile. Italia, economia, eventi, cinema, teatro dall'edizione precedente, concerti copiati (tolti i passati). Nessun riallineamento a origin/main."
-  },
-  {
-   "at": "2026-11-20T13:02+01:00",
-   "edizione": "pomeriggio",
-   "notizie": 79,
-   "note": "Fonti lette: ANSA (2 articoli), Euronews (en), Al Jazeera (en), Torino Oggi (tramite agente di lettura). Regione Piemonte/ANSA Piemonte: ricerca senza novità utili, sezione piemonte e economia dal mattino. Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Cinema, teatro, eventi e concerti copiati dal mattino (tolti spettacoli già finiti). Nessun riallineamento a origin/main."
-  },
-  {
-   "at": "2026-11-21T05:04+01:00",
-   "edizione": "mattina",
-   "notizie": 80,
-   "note": "Fonti lette: ANSA (nazionale e Piemonte), Euronews (en), Al Jazeera (en), CBS News (en). Reuters, BBC, Guardian non cercati (rifiutati nei giri precedenti); TorinoToday non leggibile (client error), ricerca Torino Oggi senza risultati. Cinema, teatro, eventi e concerti copiati dall'edizione precedente (tolto il concerto già passato, aggiunto uno spettacolo teatrale ANSA). Nessun riallineamento a origin/main oltre al passaggio dalla copia staccata (HEAD detached) a main."
-  }
- ]
+  "controlli": [
+    {
+      "at": "2026-11-12T05:09+01:00",
+      "edizione": "mattina",
+      "notizie": 69,
+      "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), CBS News (en), Torino Oggi. Reuters rifiutata dal proxy di ricerca; BBC e altre grandi testate estere non tentate. Non leggibili: TorinoToday (pagina allarmi) e una pagina Al Jazeera (Gaza). Cinema, teatro, eventi e concerti dall'edizione precedente con qualche aggiunta (non è lunedì; orari dei film non riverificati). Copia riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-12T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 66,
+      "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), Torino Oggi. Il Sole 24 Ore e un articolo di Torino Oggi non leggibili; Reuters e altre grandi testate estere non tentate; ricerca su Il Sole 24 Ore/Adnkronos/Sky TG24 solo in parte letta. Eventi, cinema, teatro e concerti dall'edizione del mattino (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-13T05:04+01:00",
+      "edizione": "mattina",
+      "notizie": 65,
+      "note": "Fonti lette: ANSA, AGI, Adnkronos, Al Jazeera (en), Euronews (en, es), Torino Oggi, Turismo Torino. Non leggibili: TorinoToday (due pagine). Reuters, BBC e altre grandi testate estere non tentate. Cinema, teatro, eventi e concerti dall'edizione precedente con l'aggiunta di un evento (non è lunedì; orari dei film non riverificati); tolti i concerti già passati. Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-13T13:08+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 72,
+      "note": "Fonti lette: ANSA, AGI, Al Jazeera (en), Euronews (en). Non leggibili: TorinoToday (pagina Palazzo Nuovo). Ricerca su Reuters/BBC/Guardian rifiutata dal proxy. Due pagine ANSA Piemonte (acqua, Diasorin) non aperte per mancata approvazione: sintesi dall'elenco. Cinema, teatro, eventi e concerti dall'edizione del mattino (non è lunedì, nessun concerto già passato). Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-14T05:09+01:00",
+      "edizione": "mattina",
+      "notizie": 66,
+      "note": "Fonti lette: ANSA, AGI, Adnkronos (solo ricerca), Al Jazeera (en), Euronews (en), Torino Oggi. Non leggibili: TorinoToday (pagina corteo); ricerca Reuters rifiutata dal proxy. Alcune pagine ANSA Piemonte, Euronews (Spagna) non aperte per mancata approvazione: sintesi dall'elenco. Cinema, teatro, eventi e concerti dall'edizione precedente (sabato, non lunedì) con tolti gli spettacoli passati e aggiunto DolcissimArte. Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-14T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 70,
+      "note": "Fonti lette: ANSA, AGI, Al Jazeera (en), Euronews (en), Torino Oggi. Non leggibili: TorinoToday (pagina corteo); Reuters/BBC/Guardian non cercate (rifiutate dal proxy nei giri precedenti). Ricerca Piemonte senza novità nuove: tenute le notizie del mattino. Cinema, teatro, eventi e concerti dall'edizione del mattino (sabato, non lunedì; nessun concerto già passato). Copia locale riallineata a origin/main (era staccata)."
+    },
+    {
+      "at": "2026-11-15T05:03+01:00",
+      "edizione": "mattina",
+      "notizie": 77,
+      "note": "Fonti lette: ANSA, Euronews (it/en), Al Jazeera (en). TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti); AGI senza risultati recenti. Notizie del 13-14 nov aggiunte a quelle ancora valide. Cinema, eventi e concerti dall'edizione del 14/11 (domenica, non lunedì), tolti gli spettacoli passati; teatro ridotto a 1 spettacolo per mancata verifica. Copia locale non divergente."
+    },
+    {
+      "at": "2026-11-15T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 72,
+      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi. TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti). Cinema, eventi e concerti dall'edizione del mattino (domenica, non lunedì), tolti eventi e teatro conclusi il 15; aggiunti 2 spettacoli Fonderie Limone. Copia locale era staccata: ripartita da origin/main."
+    },
+    {
+      "at": "2026-11-16T05:05+01:00",
+      "edizione": "mattina",
+      "notizie": 80,
+      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi, Comune di Torino (eventi), Ideal Cityplex, Hiroshima Mon Amour, Teatro Regio, Unione Musicale, Teatro Stabile. Reuters (ricerca rifiutata dal proxy); BBC/Guardian non cercate. TorinoToday non cercato. The Space Cinema Torino: pagina senza programmazione leggibile (orari solo Ideal). Lunedì: concerti aggiornati con i siti di Hiroshima, Regio e Unione Musicale; Inalpi Arena e Lingotto Musica copiati dalla lista precedente. Copia locale divergente: riallineata a origin/main."
+    },
+    {
+      "at": "2026-11-16T13:04+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 78,
+      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi. TorinoToday: ricerca ok ma lettura bloccata (client_error). Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti). Cinema, eventi, teatro e concerti dall'edizione del mattino (lunedì, già aggiornata). Copia locale staccata: ripartita da origin/main."
+    },
+    {
+      "at": "2026-11-17T05:09+01:00",
+      "edizione": "mattina",
+      "notizie": 73,
+      "note": "Fonti lette: ANSA, il Giornale, Euronews (en), Al Jazeera (en), ComingSoon (Cinema Ideal), Teatro Stabile Torino. Bloccati: TorinoToday (lettura), thespacecinema.it (lettura; ricerca ok), Reuters/BBC/Guardian non cercate. Alcune pagine Euronews/ANSA non uscite da ricerca non sono state aperte: sintesi da elenchi già letti. Cinema: orari dalla pagina Ideal senza date; Space Cinema non leggibile. Eventi: confermati dall'edizione precedente. Concerti dall'edizione di lunedì, senza i passati (martedì). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-17T13:04+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 75,
+      "note": "Fonti lette: ANSA, Adnkronos, il Giornale (elenco), Euronews (en), Al Jazeera (en), CBS News (en), Torino Oggi. TorinoToday e thespacecinema.it non letti; Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Cinema, teatro, eventi e concerti dall'edizione del mattino (martedì, nessun concerto passato). Nessun riallineamento: copia già pari a origin/main."
+    },
+    {
+      "at": "2026-11-18T05:03+01:00",
+      "edizione": "mattina",
+      "notizie": 70,
+      "note": "Fonti lette: ANSA, Adnkronos, Euronews (en), Al Jazeera (en), Torino Oggi. Non cercate/bloccate: Reuters, BBC, Guardian; TorinoToday, thespacecinema.it non letti; liveblog Al Jazeera non leggibile. Cinema, teatro, eventi e concerti copiati dall'edizione precedente (mercoledì, nessun concerto passato). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-18T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 79,
+      "note": "Fonti lette: ANSA, Adnkronos (via ANSA), Il Sole 24 Ore, Euronews (en), Al Jazeera (en), Torino Oggi. ansa.it/piemonte non leggibile (robots); Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti); TorinoToday, thespacecinema.it non letti. Cinema, teatro, eventi e concerti copiati dall'edizione del mattino (nessun concerto passato). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-19T05:03+01:00",
+      "edizione": "mattina",
+      "notizie": 72,
+      "note": "Fonti lette: ANSA, Euronews (en/it), Al Jazeera (en), Regione Piemonte. Torino Oggi: ricerca ok ma pagine non leggibili (titoli da risultati); TorinoToday non leggibile; thespacecinema.it e teatri non letti, Ideal da comingsoon.it. Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Eventi e teatro dall'edizione precedente, concerti copiati (tolto 1 concerto passato). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-19T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 78,
+      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi, Regione Piemonte. Il Sole 24 Ore (ricerca ok, pagine non leggibili), Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti); TorinoToday e metro 2 di Torino Oggi non leggibili (titolo da risultato di ricerca). Cinema, teatro, eventi e concerti copiati dall'edizione del mattino (nessun concerto passato). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-20T05:08+01:00",
+      "edizione": "mattina",
+      "notizie": 77,
+      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi (tramite agente di lettura). ANSA Piemonte, Borsa e The Space solo da risultati di ricerca; Reuters rifiutato dalla ricerca; Regione Piemonte non utile. Italia, economia, eventi, cinema, teatro dall'edizione precedente, concerti copiati (tolti i passati). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-20T13:02+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 79,
+      "note": "Fonti lette: ANSA (2 articoli), Euronews (en), Al Jazeera (en), Torino Oggi (tramite agente di lettura). Regione Piemonte/ANSA Piemonte: ricerca senza novità utili, sezione piemonte e economia dal mattino. Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Cinema, teatro, eventi e concerti copiati dal mattino (tolti spettacoli già finiti). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-21T05:04+01:00",
+      "edizione": "mattina",
+      "notizie": 80,
+      "note": "Fonti lette: ANSA (nazionale e Piemonte), Euronews (en), Al Jazeera (en), CBS News (en). Reuters, BBC, Guardian non cercati (rifiutati nei giri precedenti); TorinoToday non leggibile (client error), ricerca Torino Oggi senza risultati. Cinema, teatro, eventi e concerti copiati dall'edizione precedente (tolto il concerto già passato, aggiunto uno spettacolo teatrale ANSA). Nessun riallineamento a origin/main oltre al passaggio dalla copia staccata (HEAD detached) a main."
+    },
+    {
+      "at": "2026-11-21T13:09+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 80,
+      "note": "Fonti lette: ANSA (nazionale, mondo, economia, scienza), Torino Oggi, Al Jazeera (en), CBS News (en), Euronews (en). Reuters, BBC, Guardian: ricerca rifiutata dal proxy; TorinoToday e una pagina di Torino Oggi non leggibili; De Gennaro e carburanti ANSA non letti nel testo (solo titolo dalla ricerca). Piemonte: poche novità, tre notizie dal mattino. Eventi, cinema, teatro e concerti copiati dal mattino (aggiornate date teatro, aggiunto un concerto). Copia locale era in HEAD staccato: aggiornata a origin/main con fast-forward, nessun riallineamento forzato."
+    }
+  ]
 }
