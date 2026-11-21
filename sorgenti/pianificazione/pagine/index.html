@@ -302,6 +302,18 @@ main>.pn-top,main>.card.pn-top,main>.pn-nov{grid-column:1/-1!important;max-heigh
 .pi-ob{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 0;border-top:1px solid var(--line)}.pi-ob select{font:inherit;font-size:15px;padding:6px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
 .pi-mesi{display:flex;gap:4px;margin-top:2px;font-size:15px}.pi-ob .grow,.pi-tp .grow{flex:1;min-width:0}.pi-ob small{display:block;color:var(--muted);font-size:13px}
 .k-piano .subw{border-top:1px solid var(--line);padding:6px 0}.k-piano .subw>summary{cursor:pointer;font-weight:700}
+/* 21/11/2026: riordino del menu (sezioni/riordino.js) */
+#side .n,main .n,.dia-wh,.cc{font-size:13px!important}
+.grp{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 12px}.grp-t{font-weight:800;font-size:15px;color:var(--muted)}
+.grp-tabs{width:max-content;max-width:100%;align-items:center}.grp-tabs .grp-l{font-weight:700;font-size:14px;color:var(--ben);padding:7px 12px;border-radius:9px;text-decoration:none;white-space:nowrap}
+.imp-next{margin:0 0 14px}
+.og-top{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 12px}.og-top>.card{margin:0;display:flex;flex-direction:column}.og-top>.card .btns{margin-top:auto;padding-top:8px}.og-top h3{margin:0 0 6px}.og-top .pi-pr{margin:0 0 4px;padding-left:22px}
+.og-big{font-weight:800;font-size:17px;line-height:1.3;margin:2px 0 4px}
+@media(max-width:900px){.og-top{grid-template-columns:repeat(2,minmax(0,1fr))}.og-top>.card:last-child{grid-column:1/-1}}@media(max-width:560px){.og-top{grid-template-columns:1fr}}
+details.og-more{background:var(--card);box-shadow:var(--shadow);border-radius:14px;padding:12px 14px;margin:0 0 12px}details.og-more>summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}details.og-more>summary::-webkit-details-marker{display:none}details.og-more>summary::before{content:"▸";color:var(--muted);font-weight:800}details.og-more[open]>summary::before{content:"▾"}details.og-more>summary small{color:var(--muted);font-size:13px}details.og-more[open]>summary{margin-bottom:10px}
+.alt-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}@media(max-width:900px){.alt-g{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){.alt-g{grid-template-columns:1fr}}
+.alt-t{margin:0;display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;font:inherit;color:var(--ink);border:0;cursor:pointer;text-decoration:none;background:var(--card)}.alt-t b{font-size:17px}.alt-t small{color:var(--muted);font-size:13px}.alt-i{font-size:28px}
+button.alt-row{width:100%;font:inherit;color:inherit;background:none;border:0;border-top:1px solid var(--line);text-align:left;cursor:pointer}a.row{color:inherit;text-decoration:none}
 /* ===== Revisione impaginazione 21/11/2026 (verifica esterna, «tutti»): 2 colonne, niente schede tagliate, testo ≥13 px ===== */
 main[data-sec=pens],main[data-sec=inv],main[data-sec=dia],main[data-sec=cd],main[data-sec=st]{grid-template-columns:repeat(2,minmax(0,1fr))}
 main[data-sec=pens]>.card,main[data-sec=inv]>.card,main[data-sec=dia]>.card,main[data-sec=cd]>.card,main[data-sec=st]>.card{max-height:none;overflow:visible}
@@ -604,9 +616,10 @@ Object.assign(SEC_IMG,{
   set:`<svg viewBox="0 0 1100 150" role="img" aria-label="Un ingranaggio e tre schede da sistemare una volta: il blocco con Face ID, il collegamento con il Calendario dell'iPad e le copie di sicurezza"><text x="550" y="20" font-size="15" text-anchor="middle" font-weight="800" fill="currentColor">le cose da sistemare una volta: poi lavorano da sole</text><text x="84" y="108" font-size="64" text-anchor="middle">⚙️</text><text x="84" y="140" font-size="13" text-anchor="middle" font-weight="800" fill="currentColor">una volta sola</text><line x1="140" y1="88" x2="192" y2="88" stroke="currentColor" stroke-width="2.5" opacity=".6"/><polygon points="190,82 200,88 190,94" fill="currentColor" opacity=".6"/><rect x="214" y="38" width="272" height="96" rx="14" fill="#2563eb" fill-opacity=".12" stroke="#2563eb" stroke-opacity=".7" stroke-width="2"/><text x="258" y="98" font-size="34" text-anchor="middle">🔒</text><text x="298" y="80" font-size="15" text-anchor="start" font-weight="800" fill="currentColor">blocco con Face ID</text><text x="298" y="104" font-size="13" text-anchor="start" fill="currentColor">all’apertura chiede il volto</text><rect x="506" y="38" width="272" height="96" rx="14" fill="#d6342c" fill-opacity=".12" stroke="#d6342c" stroke-opacity=".7" stroke-width="2"/><text x="550" y="98" font-size="34" text-anchor="middle">📆</text><text x="590" y="80" font-size="15" text-anchor="start" font-weight="800" fill="currentColor">Calendario dell’iPad</text><text x="590" y="104" font-size="13" text-anchor="start" fill="currentColor">le scadenze compaiono lì</text><rect x="798" y="38" width="272" height="96" rx="14" fill="#16a34a" fill-opacity=".12" stroke="#16a34a" stroke-opacity=".7" stroke-width="2"/><text x="842" y="98" font-size="34" text-anchor="middle">💾</text><text x="882" y="80" font-size="15" text-anchor="start" font-weight="800" fill="currentColor">copie di sicurezza</text><text x="882" y="104" font-size="13" text-anchor="start" fill="currentColor">per ritrovare tutto</text></svg>`,
 });
 /*@/IMG-NUOVE*/
-const SECT=[["oggi","☀️","Oggi","--cal"],["piano","🧭","Piano","--piano"],["cal","📆","Calendario","--cal"],["pens","🎖️","Pensione","--pens"],["inv","🌱","Investimenti","--inv"],["dia","📓","Diario","--dia"],["cd","🤖","Cultura digitale","--cd"],["auto","🚗","Auto","--auto"],["condo","🏢","Condominio","--condo"],["tl","🎟️","Tempo libero","--tl"]];
+/* 21/11/2026 (proposta 11): menu più snello, 7 voci; le sezioni di prima sono linguette dentro Soldi, Benessere, Imparare e Altro (sezioni/riordino.js) */
+const SECT=[["oggi","☀️","Oggi","--cal"],["piano","🧭","Piano","--piano"],["cal","📆","Calendario","--cal"],["soldi","💶","Soldi","--pens"],["bene","🧘","Benessere","--ben"],["imp","📚","Imparare","--cd"],["altro","🧰","Altro","--set"]];
 /* 21/11/2026: 🗞️ Stampa di oggi passa nella barra in alto, accanto a Corsi online, per liberare spazio nel menu */
-const ALL_SECT=SECT.map(x=>x[0]).concat(["set","corsi","st"]);
+const ALL_SECT=["oggi","piano","cal","pens","inv","bene","dia","cd","corsi","auto","condo","tl","arch","altro","set","st"];
 /* vecchi indirizzi: #oggi #fam #scad #ben #sic #conti (se nascosta) */
 function mapOld(k){
   if(k.indexOf("sk=")===0){skFromHash(k.slice(3));return "pens";}
@@ -614,18 +627,20 @@ function mapOld(k){
   if(k==="fam"){setCalV("sett");calD=today();return "cal";}
   if(k==="scad"){setCalV("scad");return "cal";}
   if(k==="sic")return "set";
+  if(k==="soldi"||k==="imp")return grpLast(k);
+  if(k==="archivio")return "arch";if(k==="benessere")return "bene";if(k==="imparare")return grpLast("imp");
   return ALL_SECT.includes(k)?k:"oggi";}
 let cur=mapOld((location.hash||"").slice(1)||"oggi");
 if(location.hash&&location.hash.slice(1)!==cur)try{history.replaceState(null,"","#"+cur);}catch(e){}
 let editId=null;
 const lateN=()=>scadOpen().filter(x=>scadState(x)==="warn").length;
 function side(){const late=lateN();
-  $("side").innerHTML=SECT.map(([k,i,t,c])=>`<button data-s="${k}" style="--c:var(${c})" class="${k===cur?"on":""}"${k===cur?' aria-current="page"':""}><span class="ic">${i}</span><span class="lb">${t}</span>${k==="cal"&&late?`<span class="n" title="scadenze passate">${late}</span>`:""}${k==="pens"&&(pensLate()+newsNew())?`<span class="n" title="scadenze passate e novità che ti riguardano">${pensLate()+newsNew()}</span>`:""}</button>`).join("")
-    +`<button data-s="set" style="--c:var(--set)" class="gear${cur==="set"?" on":""}" aria-label="Impostazioni"${cur==="set"?' aria-current="page"':""}><span class="ic">⚙️</span></button>`;}
+  const g=grpOf(cur);
+  $("side").innerHTML=SECT.map(([k,i,t,c])=>`<button data-s="${k}" style="--c:var(${c})" class="${k===g?"on":""}"${k===g?' aria-current="page"':""}><span class="ic">${i}</span><span class="lb">${t}</span>${k==="cal"&&late?`<span class="n" title="scadenze passate">${late}</span>`:""}${k==="soldi"&&(pensLate()+newsNew())?`<span class="n" title="scadenze passate e novità che ti riguardano">${pensLate()+newsNew()}</span>`:""}</button>`).join("");}
 function go(k){k=mapOld(k);if(k==="cal")calFixed=false;if(typeof diaFlush==="function")diaFlush();if(k==="dia"&&cur!=="dia"&&typeof diaOpen==="function")diaOpen();cur=k;try{history.replaceState(null,"","#"+k);}catch(e){}render();window.scrollTo(0,0);}
 /* le tendine aperte restano aperte quando la pagina si ridisegna */
 const dKey=d=>d.dataset.k?cur+"|"+d.dataset.k:cur+"|"+((d.querySelector("summary")||{}).textContent||"").replace(/[\d·,()]+/g,"").trim().slice(0,40);
-function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="corsi"||cur==="st"?cur:"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;m.innerHTML=({oggi:vToday,piano:vPiano,cal:vCal,pens:vPens,inv:vInv,dia:vDia,cd:vCd,st:vSt,auto:vAuto,condo:vCondo,corsi:vCorsi,tl:vTl,set:vSet}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';{const h1=m.querySelector("h1");if(h1&&SEC_IMG[cur]){const t=h1.parentElement===m?h1:h1.closest("main > *");t.insertAdjacentHTML("afterend",'<div class="sec-img">'+SEC_IMG[cur]+'</div>');}}foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();pnBal(m);}
+function render(){side();document.querySelectorAll(".appsw a[data-a]").forEach(a=>{const on=a.dataset.a===(cur==="st"?cur:"pian");a.classList.toggle("on",on);if(on)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});const m=$("main"),op={};m.querySelectorAll("details").forEach(d=>op[dKey(d)]=d.open);m.dataset.sec=cur;grpKeep(cur);m.innerHTML=grpHead(cur)+({oggi:vToday,piano:vPiano,cal:vCal,pens:vPens,inv:vInv,dia:vDia,cd:vCd,st:vSt,auto:vAuto,condo:vCondo,corsi:vCorsi,tl:vTl,set:vSet,bene:vBene,altro:vAltro,arch:vArch}[cur]||vCal)()+'<p class="saved" id="pnSaved"></p>';{const h1=m.querySelector("h1");if(h1&&SEC_IMG[cur]){const t=h1.parentElement===m?h1:h1.closest("main > *");t.insertAdjacentHTML("afterend",'<div class="sec-img">'+SEC_IMG[cur]+'</div>');}}foldCards(m);m.querySelectorAll("details").forEach(d=>{const k=dKey(d);if(k in op)d.open=op[k];});paintSaved();bind();pnBal(m);}
 /* 21/11/2026: una scheda da sola, o molto più lunga delle altre, va a tutta larghezza (niente colonne con grandi buchi) */
 function pnBal(m){const gs=[m].concat([...m.querySelectorAll('.cols2,.grid')]);gs.forEach(g=>{if(getComputedStyle(g).display!=='grid')return;const cs=[...g.children].filter(c=>c.classList.contains('card')&&getComputedStyle(c).gridColumnStart==='auto'||c.classList.contains('pn-full'));cs.forEach(c=>c.classList.remove('pn-full'));const n=getComputedStyle(g).gridTemplateColumns.split(' ').length;if(n<2||!cs.length)return;if(cs.length===1){cs[0].classList.add('pn-full');return;}const h=cs.map(c=>c.offsetHeight),tot=h.reduce((a,b)=>a+b,0);h.forEach((x,i)=>{if(x>900&&x>1.6*(tot-x))cs[i].classList.add('pn-full');});});}
 document.addEventListener('toggle',e=>{const m=document.getElementById('main');if(m&&m.contains(e.target)){clearTimeout(pnBal.t);pnBal.t=setTimeout(()=>pnBal(m),60);}},true);
@@ -651,12 +666,15 @@ function vToday(){
   const hw=typeof window.pnHealthWarn==="function"?window.pnHealthWarn():null;
   const h=new Date().getHours(),saluto=h<12?"Buongiorno":h<18?"Buon pomeriggio":"Buonasera";
   let o=`<h1>☀️ ${saluto}!</h1><p class="sub">${fmt(t,{weekday:"long",day:"numeric",month:"long",year:"numeric"})} · tutto il giorno in una pagina</p><div class="og-pills">`;
-  if(L)o+=`<a class="og-p" href="licenze.html">🎖️ <b>${Math.max(0,L.toEnd)}</b> giorni al congedo</a>`;
+  if(L&&!arLic())o+=`<a class="og-p" href="licenze.html">🎖️ <b>${Math.max(0,L.toEnd)}</b> giorni al congedo</a>`;
   {const cx=typeof cnProssima==="function"?cnProssima():null,cg=cx?cnGiorni(cx.d):null;if(cx&&cg<=30)o+=`<button class="og-p${cg<0?" og-w":""}" data-go="condo">🏢 rata condominio ${cg<0?"<b>scaduta</b>":cg===0?"<b>oggi</b>":"tra <b>"+cg+"</b> "+(cg===1?"giorno":"giorni")}</button>`;}
   if(ga!=null&&ga>=0&&ga<=45)o+=`<button class="og-p" data-go="auto">🚗 riconsegna auto ${ga===0?"<b>oggi</b>":"tra <b>"+ga+"</b> "+(ga===1?"giorno":"giorni")}</button>`;
   o+=hw==null?`<button class="og-p" id="ogHealth">🩺 Stato dell’app</button>`:hw?`<button class="og-p og-w" id="ogHealth">🩺 <b>${hw}</b> ${hw===1?"cosa":"cose"} da controllare</button>`:`<button class="og-p" id="ogHealth">🩺 tutto a posto</button>`;
-  o+=`</div><div class="og-q"><input id="ogQ" type="search" placeholder="🔎 Cerca in tutta l’app: scadenze, diario, corsi, Cultura digitale, Ikigai…" autocomplete="off" value="${esc(ogQv)}"><div id="ogR">${ogQv?pnCercaHtml(ogQv):""}</div></div>`;
-  return o+calDayView(t);
+  /* 21/11/2026 (proposta 10): in cima solo tre cose; il giorno e il resto del riepilogo sotto, chiusi, a un tocco */
+  o+=`</div>`+ogTop()+`<div class="og-q"><input id="ogQ" type="search" placeholder="🔎 Cerca in tutta l’app: scadenze, diario, corsi, Cultura digitale, Ikigai…" autocomplete="off" value="${esc(ogQv)}"><div id="ogR">${ogQv?pnCercaHtml(ogQv):""}</div></div>`;
+  o+=`<details class="og-more" data-k="og-giorno"><summary><b>📝 Il giorno di oggi</b><small>impegni, note, umore e sonno</small></summary>${(calDayView.noRiep=1,calDayView(t))}</details>`;calDayView.noRiep=0;
+  o+=`<details class="og-more" data-k="og-riep"><summary><b>📋 Il resto del riepilogo</b><small>licenze, scadenze, corsi, pensione, diario, benessere…</small></summary>${vOggi()}</details>`;
+  return o;
 }
 /* 🔎 Cerca in tutta l'app (10/11/2026): scadenze, note e risposte del diario, corsi, schede e letture di Cultura digitale, capitoli dell'Ikigai */
 let ogQv="";
@@ -700,7 +718,7 @@ function vOggi(){
   const t=today(),S=licS();let o=`<div class="grid">`;
   try{o+=piOggiCard();}catch(e){}
   // licenze
-  if(S){const L=licCalc(S),B=absBlocks(S).filter(b=>b.to>=t)[0];
+  if(S&&!arLic()){const L=licCalc(S),B=absBlocks(S).filter(b=>b.to>=t)[0];
     o+=`<div class="card k-lic"><h3>📅 Licenze <a href="licenze.html">Apri ›</a></h3><div class="big">${Math.max(0,L.toEnd)}</div><div class="lbl">giorni al congedo (${fmt(L.end,{day:"numeric",month:"long",year:"numeric"})})</div>
       <div class="row"><div class="grow">Presenze in ufficio rimaste</div><b>${L.pLeft}</b></div>
       <div class="row"><div class="grow">Licenza ancora da collocare</div><b${L.unpl?' style="color:var(--soon)"':""}>${L.unpl}</b></div>
@@ -709,7 +727,7 @@ function vOggi(){
   // scadenze dei prossimi 7 giorni (quelle di oggi sono già nel giorno)
   const due=scadOpen().filter(x=>x.d!==t&&diff(t,x.d)<=7);
   o+=`<div class="card k-scad"><h3>📌 Scadenze <button class="lnk" data-cv="scad">Tutte ›</button></h3>${due.length?due.slice(0,6).map(x=>scadRow(x,true)).join(""):'<p class="empty">Niente in scadenza nei prossimi 7 giorni. 👍</p>'}</div>`;
-  o+=contCard()+(typeof auCard==="function"?auCard():"")+stCard()+pensCard()+diaCard()+cdCard()+(typeof tlCard==="function"?tlCard():"")+benCard()+mondoCard();
+  o+=contCard()+(typeof auCard==="function"&&!arAuto()?auCard():"")+stCard()+pensCard()+diaCard()+cdCard()+(typeof tlCard==="function"?tlCard():"")+benCard()+mondoCard();
   return o+"</div>";
 }
 /* 🧘 benessere: andamento di 2 settimane e Tai Chi (si compila nel giorno, qui sopra) */
@@ -804,6 +822,7 @@ function vSet(){
 /* ---------- eventi ---------- */
 function bind(){
   if(cur==="piano")bindPiano();
+  bindRiordino();
   document.querySelectorAll("[data-pigo2]").forEach(b=>b.onclick=()=>{piV=b.dataset.pigo2;go("piano");});
   if(cur==="pens")bindPens();
   if(cur==="inv")bindInv();

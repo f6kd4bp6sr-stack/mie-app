@@ -102,7 +102,7 @@ html.locked #lockScr{display:grid}
   };
 })();
 </script>
-<style id="tema">/* ===== Tema comune di Pianificazione (inserito dal build in ogni pagina, dopo lo stile della pagina) =====
+<script>try{var _l=JSON.parse(localStorage.getItem("licenze-marco-v1")||"null"),_d=new Date(),_t=_d.getFullYear()+"-"+String(_d.getMonth()+1).padStart(2,"0")+"-"+String(_d.getDate()).padStart(2,"0");if(_l&&_l.end&&_l.end<_t)document.documentElement.classList.add("lic-arch");}catch(e){}</script><style>.lic-arch .appsw a[data-a=lic]:not(.on){display:none}</style><style id="tema">/* ===== Tema comune di Pianificazione (inserito dal build in ogni pagina, dopo lo stile della pagina) =====
    Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🤝 Metodo ambra · 📊 Progressi rosa.
    Le sezioni dentro Pianificazione hanno i loro colori (pagine/index.html). */
 :root{--app-pian:#2563eb;--app-lic:#c0532b;--app-corsi:#4338ca;--app-tc:#0d9488;--app-met:#b86e00;--app-prog:#d63384}
@@ -130,7 +130,7 @@ a:not([class]),.row>a,.grow>a,p.lbl>a,small>a,li>a{color:#8ab4ff}
 .btn.pri,label.btn.pri,.primary,.st-c,.tagrec,.sect button.on,.seg button.on,.ymg button.today,.appsw a.on,.chip.free,.chip.fest,.chips .chip.on,.pstats .hi,.pstats .hi span,.ksum .hi,.ksum .hi span{color:#0f1115!important}
 }
 .appsw{flex-wrap:wrap}
-</style><script>document.body.setAttribute("data-app","met")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="corsi" href="index.html#corsi">🎓 Corsi online</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi e Ikigai</a><a data-a="met" class="on" href="metodo.html" aria-current="page">🤝 Metodo</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav><nav class="secsw" aria-label="Sezioni di Pianificazione"><a href="./#oggi">☀️ <span>Oggi</span></a><a href="./#piano">🧭 <span>Piano</span></a><a href="./#cal">📆 <span>Calendario</span></a><a href="./#pens">🎖️ <span>Pensione</span></a><a href="./#inv">🌱 <span>Investimenti</span></a><a href="./#dia">📓 <span>Diario</span></a><a href="./#cd">🤖 <span>Cultura digitale</span></a><a href="./#auto">🚗 <span>Auto</span></a><a href="./#condo">🏢 <span>Condominio</span></a><a href="./#tl">🎟️ <span>Tempo libero</span></a></nav>
+</style><script>document.body.setAttribute("data-app","met")</script><nav class="appsw" aria-label="App"><a data-a="pian" href="./">🏠 Pianificazione</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi e Ikigai</a><a data-a="met" class="on" href="metodo.html" aria-current="page">🤝 Metodo</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav><nav class="secsw" aria-label="Sezioni di Pianificazione"><a href="./#oggi">☀️ <span>Oggi</span></a><a href="./#piano">🧭 <span>Piano</span></a><a href="./#cal">📆 <span>Calendario</span></a><a href="./#soldi">💶 <span>Soldi</span></a><a href="./#bene">🧘 <span>Benessere</span></a><a href="./#imp">📚 <span>Imparare</span></a><a href="./#altro">🧰 <span>Altro</span></a></nav>
 <!-- 21/11/2026: la pagina Metodo è stata tolta (missioni, «Lo sapevi?», frasi di scorta); Ikigai e Volontariato ora stanno nel Tai Chi -->
 <p style="font:16px system-ui;padding:20px"><a href="taichi.html#ikigai">🧘 Tai Chi e Ikigai</a></p>
 </body></html>

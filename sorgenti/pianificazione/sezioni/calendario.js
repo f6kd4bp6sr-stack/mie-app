@@ -158,7 +158,7 @@ function dayEditor(s,compact){
 }
 function calDayView(s){
   let o=dayEditor(s,false);
-  if(s===today())o+=`<h2>📋 Il riepilogo di oggi</h2>`+vOggi();
+  if(s===today()&&!calDayView.noRiep)o+=`<h2>📋 Il riepilogo di oggi</h2>`+vOggi();
   return o;
 }
 

@@ -11,20 +11,22 @@ for _f in os.listdir(OUT): os.remove(OUT + _f)
 barra = open(D + 'comune/barra.html', encoding='utf-8').read()
 blocco = open(D + 'comune/blocco.html', encoding='utf-8').read()
 tema = open(D + 'comune/tema.css', encoding='utf-8').read()
-NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('index.html#corsi', '🎓 Corsi online', 'corsi'), ('index.html#st', '🗞️ Stampa di oggi', 'st'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi e Ikigai', 'tc'), ('metodo.html', '🤝 Metodo', 'met'), ('progressi.html', '📊 Progressi', 'prog')]
+NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('index.html#st', '🗞️ Stampa di oggi', 'st'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi e Ikigai', 'tc'), ('metodo.html', '🤝 Metodo', 'met'), ('progressi.html', '📊 Progressi', 'prog')]
 # 21/11/2026: «la sezione Metodo per il momento togliamola» → la pagina resta, ma non compare nella barra né nei rimandi
 NAV_NASCOSTE = {'met'}
 # 21/11/2026: nelle pagine Licenze, Tai Chi e Progressi compare anche la riga delle sezioni di Pianificazione (link a index.html#sezione)
 import re as _re
 _sect = _re.findall(r'\["(\w+)","([^"]+)","([^"]+)","--\w+"\]', _re.search(r'const SECT=\[(.*?)\];', open(D + 'pagine/index.html', encoding='utf-8').read()).group(1))
 SECNAV = '<nav class="secsw" aria-label="Sezioni di Pianificazione">' + ''.join('<a href="./#%s">%s <span>%s</span></a>' % (k, i, t) for k, i, t in _sect) + '</nav>'
+# 21/11/2026 (proposta 4): dopo l'ultimo giorno in servizio (scritto solo nei dati dell'iPad) Licenze esce dalla barra in alto e resta nell'Archivio
+LIC_ARCH = '<script>try{var _l=JSON.parse(localStorage.getItem("licenze-marco-v1")||"null"),_d=new Date(),_t=_d.getFullYear()+"-"+String(_d.getMonth()+1).padStart(2,"0")+"-"+String(_d.getDate()).padStart(2,"0");if(_l&&_l.end&&_l.end<_t)document.documentElement.classList.add("lic-arch");}catch(e){}</script><style>.lic-arch .appsw a[data-a=lic]:not(.on){display:none}</style>'
 pages = {}
 for p in sorted(glob.glob(D + 'pagine/*.html')):
     s = open(p, encoding='utf-8').read()
     assert s.count('<!--@BARRA-->') <= 1
     name = os.path.basename(p)
     app = [a for f, t, a in NAV if f == name][0]
-    nav = ('<style id="tema">' + tema + '</style><script>document.body.setAttribute("data-app","%s")</script>' % app +
+    nav = (LIC_ARCH + '<style id="tema">' + tema + '</style><script>document.body.setAttribute("data-app","%s")</script>' % app +
            '<nav class="appsw" aria-label="App">' + ''.join('<a data-a="%s"%s href="%s"%s>%s</a>' % (a, ' class="on"' if f == name else '', './' if f == 'index.html' else f, ' aria-current="page"' if f == name else '', t) for f, t, a in NAV if a not in NAV_NASCOSTE or f == name) + '</nav>' + ('' if name == 'index.html' else SECNAV))
     assert s.count('<!--@NAV-->') == 1, name
     MIG = '<script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script>'
@@ -73,7 +75,7 @@ LAZY_FILES = {
 _iki = json.load(open(D + 'sezioni/metodo_dati.json', encoding='utf-8')).get('ikigai', {})
 _iki_idx = [{'t': c['tit'], 'x': ' '.join([c.get('sotto', '')] + c.get('princ', []) + c.get('regole', []) + [c.get('spiega', '')])} for c in _iki.get('capitoli', []) if c.get('pronto')]
 _dati = _dati + '\nconst IKI_IDX=' + json.dumps(_iki_idx, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + ';  // 🔎 Cerca: capitoli dell\'Ikigai (10/11/2026)\n'
-pages['index.html'] = pages['index.html'].replace('/*@LICENZE_DATI*/', _dati).replace('/*@CONTI*/', open(D + 'sezioni/calendario.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pratiche.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pensione.js', encoding='utf-8').read() + '\n' + LAZY_JS + '\n/* domande del Diario del passaggio (sezioni/diario_domande.json) */\nconst DIA_D = ' + json.dumps(json.load(open(D + 'sezioni/diario_domande.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + ';\n' + open(D + 'sezioni/diario.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/cultura.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/stampa.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/auto.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/condominio.js', encoding='utf-8').read() + '\n/* corsi online (sezioni/corsi_dati.json) */\nconst CO_D = ' + json.dumps(json.load(open(D + 'sezioni/corsi_dati.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + ';\n' + open(D + 'sezioni/corsi.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/tempo.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/piano.js', encoding='utf-8').read())
+pages['index.html'] = pages['index.html'].replace('/*@LICENZE_DATI*/', _dati).replace('/*@CONTI*/', open(D + 'sezioni/calendario.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pratiche.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/pensione.js', encoding='utf-8').read() + '\n' + LAZY_JS + '\n/* domande del Diario del passaggio (sezioni/diario_domande.json) */\nconst DIA_D = ' + json.dumps(json.load(open(D + 'sezioni/diario_domande.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + ';\n' + open(D + 'sezioni/diario.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/cultura.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/stampa.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/auto.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/condominio.js', encoding='utf-8').read() + '\n/* corsi online (sezioni/corsi_dati.json) */\nconst CO_D = ' + json.dumps(json.load(open(D + 'sezioni/corsi_dati.json', encoding='utf-8')), ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/') + ';\n' + open(D + 'sezioni/corsi.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/tempo.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/piano.js', encoding='utf-8').read() + '\n' + open(D + 'sezioni/riordino.js', encoding='utf-8').read())
 for f in os.listdir(D + 'statici'):
     shutil.copy(D + 'statici/' + f, OUT + f)
 for f, s in LAZY_FILES.items():
