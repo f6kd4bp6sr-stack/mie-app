@@ -1,10 +1,22 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-20T13:02+01:00",
+  "edizione": "mattina",
+  "updated": "2026-11-21T05:04+01:00",
   "nota": "Edizione del mattino del 20 novembre 2026.",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-manovra-correzioni",
+        "t": "Manovra: Giorgetti prepara le correzioni, in cima sanità, Superbonus per le Pmi ed exit tax",
+        "s": "Il ministro dell'Economia lavora a un elenco di modifiche senza toccare i saldi concordati con l'Ue. Tra le ipotesi: più fondi alla sanità, una platea ridotta per la card da 300 euro agli over 75, Pmi escluse dalla stretta sul Superbonus e soglia dell'exit tax portata a 2-3 milioni.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/20/manovra-correzioni-col-contagocce.-sanita-e-superbonus-in-cima_0dcb8aae-a8b7-4f30-a80a-52210de85ee8.html"
+          }
+        ]
+      },
       {
         "id": "it-sciopero-cgil-20-nov",
         "t": "Sciopero generale Cgil: Landini parla di oltre un milione di persone in cento piazze",
@@ -22,26 +34,26 @@
         ]
       },
       {
-        "id": "it-senato-ebook",
-        "t": "Senato: passa l'emendamento FdI sugli e-book, Forza Italia vota con le opposizioni",
-        "s": "L'emendamento di Fratelli d'Italia al decreto scuola è approvato 84 a 76, con il sì di Azione. Forza Italia si è schierata con l'opposizione, mentre la commissione Bilancio aveva dato parere negativo 12 a 11: per La Russa il parere è solo consultivo.",
-        "d": "2026-11-19",
+        "id": "it-sciopero-fs",
+        "t": "Treni: sciopero nazionale del personale Fs fino alle 20 di sabato 21 novembre",
+        "s": "Alcune sigle autonome hanno proclamato lo stop dalle 21 di venerdì alle 20 di oggi. Possibili cancellazioni e ritardi anche prima e dopo. Nel regionale sono garantite le fasce 6-9 e 18-21. Trenitalia consiglia di controllare app, sito e numero verde.",
+        "d": "2026-11-20",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/19/maggioranza-sotto-in-senato-su-emendamento-e-book-fi-vota-con-opposizioni_f14af22e-5fa1-4851-b2a1-60f52ce6bb6e.html"
+            "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/11/20/fs-sciopero-del-personale-dalle-21-di-oggi-alle-20-di-domani_85904c6c-8952-4411-967d-a1fa1847512c.html"
           }
         ]
       },
       {
-        "id": "it-manovra-emendamenti-18",
-        "t": "Manovra 2027: circa 6.600 emendamenti alla Camera, il condono resta nel pacchetto",
-        "s": "Record di emendamenti alla legge di bilancio, un terzo dalla maggioranza. Ammissibilità entro il 23 novembre, aula probabilmente da inizio dicembre. Dopo il vertice di Meloni restano aperti i fondi per pensioni e sanità; la Lega parla di «Quota 64» dal 2027.",
-        "d": "2026-11-18",
+        "id": "it-sigonella-droni",
+        "t": "Sigonella: media riferiscono di droni avvistati sulla base Usa, ricostruzione non chiara",
+        "s": "Secondo la notizia nata su un account social britannico e ripresa dai media, la sera del 20 novembre sarebbero stati visti droni sopra la base americana in Sicilia; a un aereo cisterna sarebbe stato indicato di non atterrare. Non è confermato se fosse un falso allarme.",
+        "d": "2026-11-21",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/manovra-2027-governo-condono-pensioni-sanita_4Pazsr00eqQxip4iE0r372"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/media-droni-avvistati-su-sigonella-a-voli-militari-indicato-cambio-rotta_f2d335b7-be89-4930-bb82-a4ab490d0a88.html"
           }
         ]
       },
@@ -54,18 +66,6 @@
           {
             "n": "ANSA",
             "url": "https://ansa.it/sito/notizie/politica/2026/11/18/remo-morzenti-pellegrini-verso-la-presidenza-di-anac-lindicazione-attesa-in-cdm_44b8a7fa-254f-49be-857c-f7ba88dd81c5.html"
-          }
-        ]
-      },
-      {
-        "id": "it-allarme-bomba-scuole",
-        "t": "Allarmi bomba nelle scuole: l'11 novembre oltre 6.000 istituti coinvolti, indaga la Polizia postale",
-        "s": "La mail firmata «Andropov» ha causato evacuazioni e un vertice a Palazzo Chigi; il 16 novembre è arrivata una nuova ondata di minacce. Euronews riferisce che le scuole non vengono più evacuate in automatico per messaggi generici: decidono le forze dell'ordine.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/speciali/ansa-newsroom/2026/11/18/ansa-newsroom-fuori-tutti-allarme-bomba-nelle-scuole-caos-e-evacuazioni_732f890a-dda9-4cbc-9dca-a464e6d7c70b.html"
           }
         ]
       },
@@ -84,43 +84,50 @@
     ],
     "mondo": [
       {
-        "id": "mo-zelensky-art5",
-        "t": "Ucraina: Zelensky chiede a Usa ed Europa di chiarire la garanzia «tipo articolo 5»",
-        "s": "Dopo la riunione dei volenterosi a Berlino, Zelensky chiede che cosa significherebbe una garanzia simile all'articolo 5 della Nato. Kushner dice che Trump è aperto; Germania, Francia e Regno Unito parlano di impegno giuridicamente vincolante, senza citare l'articolo 5.",
-        "d": "2026-11-20",
+        "id": "mo-peru-terremoto",
+        "t": "Perù: terremoto di magnitudo 6,7 nel centro del Paese, a Lima gente in strada",
+        "s": "La scossa è avvenuta alle 19:09 locali a circa 30 km a nord-ovest di Junín, a 129 km di profondità. Al momento non risultano vittime né danni. L'istituto geofisico peruviano spiega che la profondità ha attenuato gli effetti.",
+        "d": "2026-11-21",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/20/what-does-it-mean-zelenskyy-asks-us-to-clarify-article-5-like-guarantee",
-            "l": "en"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/terremoto-di-magnitudo-6.7-colpisce-il-centro-del-peru-gente-in-strada-a-lima_8d76c1b6-b034-4a65-b70c-ccc6f252af0c.html"
           }
         ]
       },
       {
-        "id": "mo-trump-amico",
-        "t": "Trump chiama Putin «un amico» a Shenzhen e scoppiano le polemiche",
-        "s": "Entrando al trilaterale con Putin e Xi, Trump ha definito il leader russo «un amico». Critiche da Tusk e da esponenti democratici; per molti osservatori il vertice è stato soprattutto un'occasione di immagine, senza risultati concreti.",
-        "d": "2026-11-19",
+        "id": "mo-usa-allerta-aerei",
+        "t": "Usa: i servizi allertano le compagnie aeree sui messaggi di gruppi legati ad Al Qaeda",
+        "s": "Intelligence americana ha avvisato compagnie, vettori cargo e aeroporti dopo propaganda che elogia il tentato dirottamento di settembre. Una fonte citata dalla Cnn esclude minacce specifiche e credibili. L'allerta arriva prima del Thanksgiving, con circa 6 milioni di passeggeri attesi.",
+        "d": "2026-11-21",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/vladimir-e-un-amico-scoppia-la-bufera-sulle-parole-di-trump_6f980265-cfac-49a4-94aa-a813563c4560.html"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/19/trump-usa-e-cina-vogliono-contribuire-a-porre-fine-alla-guerra-in-ucraina_2eb04d49-61ac-42e9-919d-6c38e66da807.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/007-usa-hanno-allertato-le-compagnie-aeree-al-qaeda-pronta-a-compiere-attacchi_ef44c206-b623-4395-af92-e81c190d1e63.html"
           }
         ]
       },
       {
-        "id": "mo-kiev-ambasciate",
-        "t": "Kiev: attacchi russi danneggiano le ambasciate di Austria e Paesi Bassi",
-        "s": "Nella notte tra il 19 e il 20 novembre la Russia ha lanciato missili e 98 droni su 18 località ucraine. Nelle due sedi diplomatiche vetri rotti e auto danneggiate, ma nessun ferito tra il personale.",
-        "d": "2026-11-20",
+        "id": "mo-fbi-hacker",
+        "t": "Fbi: indagine su una presunta intrusione nel database nazionale dei dati criminali",
+        "s": "Secondo la Cnn, che cita due persone informate, sarebbe stato violato l'archivio che collega le forze dell'ordine americane. È il secondo episodio in pochi mesi dopo il furto di dati di dipendenti a settembre. L'Fbi non ha ancora commentato.",
+        "d": "2026-11-21",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/video/2026/11/20/ukraine-russian-strikes-damage-austrian-and-dutch-embassies-in-kyiv",
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/cnn-nuovo-attacco-hacker-allfbi-violato-larchivio-criminale_9eb51b6b-4217-46c4-bed4-11e35d613963.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-iran-houthi-riad",
+        "t": "Guerra in Iran: la coalizione saudita dice di aver intercettato tre missili Houthi su Riad",
+        "s": "Per la terza notte consecutiva a Riad sono scattati e poi stati revocati gli allarmi. Due giorni prima i missili Houthi avevano colpito il grattacielo del fondo sovrano Pif. Gli Houthi minacciano una centrale elettrica, i porti del Mar Rosso e il centro finanziario.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/21/iran-war-live-saudi-led-coalition-repels-houthi-missiles",
             "l": "en"
           }
         ]
@@ -139,32 +146,14 @@
         ]
       },
       {
-        "id": "mo-venezuela-hegseth",
-        "t": "Il capo del Pentagono Hegseth a Caracas: accordo militare con il governo ad interim venezuelano",
-        "s": "Visita a sorpresa del segretario alla Difesa americano il 18 novembre: l'intesa riguarda addestramento, intelligence, equipaggiamenti e sicurezza ai confini contro narcotraffico e gruppi armati. I termini completi non sono noti.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/19/why-is-pete-hegseth-strengthening-us-military-ties-with-venezuela",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-groenlandia-patto",
-        "t": "La Danimarca ratifica il patto di sicurezza tra Stati Uniti e Groenlandia",
-        "s": "Il Parlamento danese approva l'intesa firmata il 22 settembre: 109 voti favorevoli su 179, nessun contrario. Prevede due basi americane, resta valida in caso di indipendenza dell'isola ed esclude Paesi non Ue e non Nato dai settori strategici.",
-        "d": "2026-11-19",
+        "id": "mo-kiev-ambasciate",
+        "t": "Kiev: attacchi russi danneggiano le ambasciate di Austria e Paesi Bassi",
+        "s": "Nella notte tra il 19 e il 20 novembre la Russia ha lanciato missili e 98 droni su 18 località ucraine. Nelle due sedi diplomatiche vetri rotti e auto danneggiate, ma nessun ferito tra il personale.",
+        "d": "2026-11-20",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/19/danish-lawmakers-ratify-us-greenland-security-pact",
-            "l": "en"
-          },
-          {
-            "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/19/denmark-parliament-approves-security-deal-with-greenland-and-us",
+            "url": "https://www.euronews.com/video/2026/11/20/ukraine-russian-strikes-damage-austrian-and-dutch-embassies-in-kyiv",
             "l": "en"
           }
         ]
@@ -172,27 +161,45 @@
     ],
     "estero": [
       {
-        "id": "es-iran-premi",
-        "t": "Al Jazeera: memo Usa, il blocco all'Iran fa salire i premi assicurativi nel Golfo",
-        "s": "Un documento interno dell'agenzia marittima americana Marad, ottenuto con richiesta FOIA, indica che il rischio supera Hormuz. Secondo l'Imo, circa 130 navi colpite dal 28 febbraio, con almeno 25 marittimi morti; per l'Opec l'assicurazione di una petroliera è salita di circa 200 volte.",
+        "id": "es-ue-uk-reset",
+        "t": "Al Jazeera: Ue e Regno Unito chiudono il «reset» dei rapporti a dieci anni dalla Brexit",
+        "s": "Dopo il vertice di Bruxelles del 20 novembre c'è l'intesa su mobilità giovanile (100.000 giovani per parte, fino a tre anni), accordo sanitario e fitosanitario e collegamento dei mercati delle emissioni. Il governo britannico stima +0,5% di Pil; Farage critica.",
         "d": "2026-11-20",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://aljazeera.com/economy/2026/11/20/us-maritime-agency-warned-iran-blockade-was-adding-to-rising-gulf-premiums",
+            "url": "https://www.aljazeera.com/news/2026/11/20/eu-and-uk-seal-reset-deal",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-losapio",
-        "t": "Al Jazeera: il candidato di Trump per la sicurezza elettorale non definisce «attacco» il 6 gennaio",
-        "s": "Michael LoSapio, scelto da Trump per guidare l'agenzia federale sulla sicurezza elettorale, in audizione al Senato non ha definito attacco l'assalto al Campidoglio e non ha indicato chi vinse il voto popolare del 2020.",
+        "id": "es-polonia",
+        "t": "Euronews e Cbs: Varsavia parla di «provocazione» dopo la caduta di armi russe sul suolo polacco",
+        "s": "Durante il grande attacco russo all'Ucraina (oltre 400 droni e 110 missili) tre ordigni sono caduti in Polonia, senza feriti. Il premier Tusk convoca vertici militari e servizi; la Nato esprime solidarietà. In Ucraina almeno otto morti.",
         "d": "2026-11-20",
         "fonti": [
           {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/20/unidentified-object-falls-in-eastern-poland-amid-major-russian-attack-on-ukraine",
+            "l": "en"
+          },
+          {
+            "n": "CBS News",
+            "url": "https://www.cbsnews.com/news/ukraine-war-russia-intentional-provocation-poland-missiles-nato/",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-danimarca-russia",
+        "t": "Al Jazeera: la Danimarca espelle un diplomatico russo per un presunto complotto contro un rapper ucraino",
+        "s": "L'addetto alla difesa dovrà lasciare il Paese entro sette giorni. I servizi danesi sospettano un piano per uccidere l'artista a un concerto vicino Copenaghen; tre persone armate sono state fermate. Mosca nega e parla di misura «vendicativa».",
+        "d": "2026-11-21",
+        "fonti": [
+          {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/video/newsfeed/2026/11/20/trump-nominee-refuses-to-call-jan-6-an-attack-at-senate-hearing",
+            "url": "https://aljazeera.com/news/2026/11/21/denmark-expels-russian-diplomat-over-alleged-plot-to-kill-ukrainian-rapper",
             "l": "en"
           }
         ]
@@ -222,22 +229,25 @@
             "l": "en"
           }
         ]
-      },
-      {
-        "id": "es-colombia",
-        "t": "Al Jazeera: Bogotá in piazza, tra tasse e rapporti con gli Stati Uniti",
-        "s": "L'emittente del Qatar segue le proteste contro il piano fiscale colombiano e la smentita del governo e di Hegseth su presunti rifiuti di operazioni congiunte antidroga.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/20/thousands-protest-colombias-tax-plans-amid-row-over-us-military-role",
-            "l": "en"
-          }
-        ]
       }
     ],
     "economia": [
+      {
+        "id": "ec-borse-ia",
+        "t": "Borse europee in calo per i timori sull'intelligenza artificiale: Milano -2,3%, Tokyo -5%",
+        "s": "Francoforte perde il 2,4%, Parigi l'1,6%, Londra lo 0,85%. Pesano chip e banche (Asml -9,6%). A Tokyo il Nikkei cede il 5,06%. Lo spread Btp-Bund è a 109,5 punti, l'oro cala di circa il 4%.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/borsa-europa-debole-nel-finale-new-york-contrastata-milano-23_cca43f2b-faa8-4026-aa52-1c3092a5f135.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/crollo-di-oltre-il-5-alla-borsa-di-tokyo-per-i-timori-sullintelligenza-artificiale_4d6646d7-d589-4024-926a-7e80db3e09c1.html"
+          }
+        ]
+      },
       {
         "id": "ec-anthropic-ipo",
         "t": "Anthropic debutta al Nasdaq: IPO da 81,3 miliardi, più altri 26 da investitori privati",
@@ -301,18 +311,6 @@
         ]
       },
       {
-        "id": "to-sansalvario-taxi",
-        "t": "San Salvario: partiti i lavori sulla banchina taxi di corso Marconi",
-        "s": "Il cantiere riqualifica l'area all'incrocio con via Principe Tommaso: la banchina si riduce ma resta attiva, il marciapiede sarà rifatto. Chiusa la carreggiata centrale tra via Madama e via Principe Tommaso, controviali aperti.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/viabilita-1/articolo/san-salvario-partiti-i-cantieri-sulla-banchina-taxi-in-corso-marconi.html"
-          }
-        ]
-      },
-      {
         "id": "to-palazzo-nuovo",
         "t": "Palazzo Nuovo resta chiuso fino al 25 novembre dopo l'occupazione",
         "s": "L'Università di Torino prolunga la chiusura per problemi di sicurezza, soprattutto al sistema antincendio. Il 20 novembre l'ateneo darà indicazioni su didattica e riapertura.",
@@ -337,19 +335,55 @@
         ]
       },
       {
-        "id": "to-superbonus-ance",
-        "t": "Superbonus in dieci anni: i costruttori torinesi di Ance protestano contro la norma in manovra",
-        "s": "Ance Torino, con la presidente Paola Orsini, definisce «iniqua» la regola che diluisce in dieci anni il credito Superbonus compensabile nel 2027, anche per lavori 2023 già pagati. Penalizzerebbe soprattutto le imprese che hanno praticato lo sconto in fattura.",
-        "d": "2026-11-19",
+        "id": "to-sansalvario-taxi",
+        "t": "San Salvario: partiti i lavori sulla banchina taxi di corso Marconi",
+        "s": "Il cantiere riqualifica l'area all'incrocio con via Principe Tommaso: la banchina si riduce ma resta attiva, il marciapiede sarà rifatto. Chiusa la carreggiata centrale tra via Madama e via Principe Tommaso, controviali aperti.",
+        "d": "2026-11-20",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/economia-e-lavoro-11/articolo/superbonus-spalmato-in-10-anni-i-costruttori-torinesi-alzano-la-voce-norma-iniqua-che-strozza-le.html"
+            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/viabilita-1/articolo/san-salvario-partiti-i-cantieri-sulla-banchina-taxi-in-corso-marconi.html"
+          }
+        ]
+      },
+      {
+        "id": "to-luci-tour",
+        "t": "Luci d'Artista: visite guidate gratuite per i residenti nelle Circoscrizioni",
+        "s": "Città e Fondazione Torino Musei organizzano tour alle 31 installazioni, a piedi nella Circoscrizione 1 e in bus panoramico nelle altre, tra fine novembre e metà dicembre. Posti limitati, alcune date già esaurite.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/luci-dartista-tour-guidati-nelle-circoscrizioni-a-torino_71a84f44-22c0-434d-8c67-0f75cec769eb.html"
           }
         ]
       }
     ],
     "piemonte": [
+      {
+        "id": "pi-voucher",
+        "t": "Piemonte: finanziate tutte le 83.557 domande di voucher scuola 2026-2027",
+        "s": "La Regione stanzia altri 1,49 milioni per il Voucher A e copre ogni richiesta (5.216 di tipo A e 78.341 di tipo B). I voucher assegnati con lo scorrimento saranno disponibili da dicembre e utilizzabili fino al 31 marzo 2027.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/la-regione-piemonte-finanza-tutte-le-83.557-domande-per-i-voucher-scuola_cac91c87-4458-43a5-9daf-532aca8ca304.html"
+          }
+        ]
+      },
+      {
+        "id": "pi-tour-de-france",
+        "t": "Cirio: il Piemonte si candida a una tappa del Tour de France da Barbaresco a Barolo",
+        "s": "Il presidente della Regione lo ha annunciato alla conferenza delle Next Gen Atp Finals, dopo aver incontrato a Torino il direttore del Tour e della Vuelta. La Regione investe nella candidatura già dalle prossime edizioni.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/tour-cirio-ci-candidiamo-per-la-tappa-barbaresco-barolo_00ae4503-c041-4f0d-ad40-d799078e947a.html"
+          }
+        ]
+      },
       {
         "id": "pi-fsc",
         "t": "Piemonte: in arrivo 242 milioni di fondi Fsc",
@@ -371,30 +405,6 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/18/piemonte-insediata-in-regione-prima-cabina-di-regia-contro-il-caporalato_3a7ae585-3dfb-4c66-b615-baa8dced9439.html"
-          }
-        ]
-      },
-      {
-        "id": "pi-politiche-attive-post-gol",
-        "t": "Lavoro e formazione: il Piemonte supera il programma Gol con un nuovo atto 2027-2029",
-        "s": "Operatori accreditati per tre anni senza graduatoria, scelti dai cittadini dopo la profilazione nei Centri per l'impiego; dal 2028 contano anche gli esiti occupazionali. Stanziati 151 milioni dal Fondo sociale europeo Plus.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Regione Piemonte",
-            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/lavoro-formazione-piemonte-rivoluziona-politiche-attive-post-gol"
-          }
-        ]
-      },
-      {
-        "id": "pi-montagna-segnale",
-        "t": "Montagna: la Regione investe per portare il segnale dove il mercato non arriva",
-        "s": "Intervento regionale sulle aree di montagna prive di copertura.",
-        "d": "2026-11-19",
-        "fonti": [
-          {
-            "n": "Regione Piemonte",
-            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/montagna-piemonte-investe-per-portare-segnale-dove-mercato-non-arriva"
           }
         ]
       }
@@ -689,24 +699,23 @@
         "link": [],
         "quando": "ven 20 nov, 20:45; sab 21, 19:30; dom 22, 16:00",
         "dove": "Teatro Gobetti, Torino"
+      },
+      {
+        "id": "spe-tea-custodi",
+        "t": "I Custodi - La città che ha tante voci, performance della compagnia under 30 PoEM",
+        "s": "Nata da un laboratorio con gli ospiti di una Rsa torinese, trasforma le storie degli anziani in un racconto della città. Fa parte del progetto «La città ha tante voci» di Tangram Teatro.",
+        "d": "2026-11-21",
+        "fonti": [
+          {
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/i-custodi-la-citta-che-ha-tante-voci-il-teatro-da-voce-alla-memoria-degli_e506a448-ba99-413e-b04f-54ee975cef8e.html"
+          }
+        ],
+        "quando": "sab 21 nov, 19:00 (Community Hub); dom 22 nov, 19:00 (Tangram Teatro)",
+        "dove": "Community Hub, via Baltea 3, e Tangram Teatro, Torino"
       }
     ],
     "concerti": [
-      {
-        "id": "co-canali",
-        "t": "Giorgio Canali & Rossofuoco",
-        "s": "Rock d'autore italiano con la band di Giorgio Canali.",
-        "d": "2026-11-09",
-        "quando": "ven 20 nov 2026, 21:00",
-        "dove": "Hiroshima Mon Amour, Torino",
-        "costo": "15 €",
-        "fonti": [
-          {
-            "n": "Hiroshima Mon Amour",
-            "url": "https://hiroshimamonamour.org/eventi/giorgio-canali-rossofuoco-3/"
-          }
-        ]
-      },
       {
         "id": "co-ariete",
         "t": "Ariete in concerto",
@@ -1147,12 +1156,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-11T05:14+01:00",
-      "edizione": "mattina",
-      "notizie": 75,
-      "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en, solo elenco titoli), Torino Oggi; Il Fatto Quotidiano solo come link. Reuters rifiutata dal proxy di ricerca; BBC e altre grandi testate estere non tentate. mymovies: pagina The Space senza programmazione leggibile, thespacecinema.it non tentato. Cinema, teatro, eventi e concerti dall'edizione precedente (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (era staccata)."
-    },
-    {
       "at": "2026-11-11T13:04+01:00",
       "edizione": "pomeriggio",
       "notizie": 76,
@@ -1265,6 +1268,12 @@
       "edizione": "pomeriggio",
       "notizie": 79,
       "note": "Fonti lette: ANSA (2 articoli), Euronews (en), Al Jazeera (en), Torino Oggi (tramite agente di lettura). Regione Piemonte/ANSA Piemonte: ricerca senza novità utili, sezione piemonte e economia dal mattino. Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Cinema, teatro, eventi e concerti copiati dal mattino (tolti spettacoli già finiti). Nessun riallineamento a origin/main."
+    },
+    {
+      "at": "2026-11-21T05:04+01:00",
+      "edizione": "mattina",
+      "notizie": 80,
+      "note": "Fonti lette: ANSA (nazionale e Piemonte), Euronews (en), Al Jazeera (en), CBS News (en). Reuters, BBC, Guardian non cercati (rifiutati nei giri precedenti); TorinoToday non leggibile (client error), ricerca Torino Oggi senza risultati. Cinema, teatro, eventi e concerti copiati dall'edizione precedente (tolto il concerto già passato, aggiunto uno spettacolo teatrale ANSA). Nessun riallineamento a origin/main oltre al passaggio dalla copia staccata (HEAD detached) a main."
     }
   ]
 }
