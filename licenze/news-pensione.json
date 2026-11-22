@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-21T01:03:00+01:00",
+ "updated": "2026-11-22T01:02:00+01:00",
  "voci": [
   {
    "id": "n20261118-bozza4anni",
@@ -432,7 +432,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-21T01:03:00+01:00",
+   "ultimo": "2026-11-22T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -962,6 +962,11 @@
    "at": "2026-11-21T01:03:00+01:00",
    "notizie": 1,
    "note": "giro di sabato 21/11: 1 notizia nuova (bozza di emendamento sulla previdenza dedicata, +2/3/4 anni sul coefficiente: Infodifesa, QuiFinanza, SILF, SIULP, Open; non ancora depositata). Orizzontescuola non raggiungibile (TFS già presente in n20261030-tfs). DPR di recepimento: nessun nuovo riscontro in Gazzetta. Mercati: nessun dato più recente verificabile (BTP 10 anni invariato 4,40% al 18/11; quotidiano.net e money.it senza data utile), altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda: valutata, invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-22T01:02:00+01:00",
+   "notizie": 0,
+   "note": "giro di domenica 22/11: nessuna notizia nuova verificata (ricerche su DPR di recepimento, previdenza dedicata e GdF: solo articoli già presenti; pagina Sky TG24 sulla manovra del 2/11 riletta, previdenza dedicata ancora assente dal testo). DPR di recepimento: nessun riscontro in Gazzetta. Mercati: BTP 10 anni 4,47% al 19/11 solo da SoldiOnline/ANSA, senza seconda fonte: invariato il 4,40% del 18/11; altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
