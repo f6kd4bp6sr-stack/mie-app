@@ -1,10 +1,23 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-22T05:06+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-22T13:03+01:00",
   "nota": "Edizione del mattino del 22 novembre 2026.",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-de-gennaro",
+        "t": "Morto l'ex capo della Polizia De Gennaro: casa sequestrata, aperta un'inchiesta",
+        "s": "Gianni De Gennaro è stato trovato morto nella sua casa di campagna a Montiano, nel Grossetano. L'abitazione è sotto sequestro e le procure di Firenze e Grosseto indagano per istigazione al suicidio. La data dell'autopsia non è ancora fissata.",
+        "d": "2026-11-22",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/la-casa-di-de-gennaro-in-maremma-sotto-sequestro-proseguono-gli-accertamenti_385903ab-9075-4aaf-9711-57a1ec55cf07.html"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "it-sciopero-cgil",
         "t": "Sciopero generale della Cgil contro la manovra: cortei in più di cento piazze, numeri contrastanti",
@@ -68,6 +81,48 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/zelensky-ringrazia-melania-trump-per-il-cessate-il-fuoco-di-oleshky_e30b54f5-8c76-4ce5-9a66-bcc54a1de511.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-sparta-finlandia",
+        "t": "Nave cargo russa in fiamme al largo della Finlandia dopo un attacco di droni",
+        "s": "La Sparta II, sanzionata dagli Usa e diretta a Kaliningrad, è stata colpita sabato da droni nel Golfo di Finlandia ed è alla deriva in acque finlandesi. I 16 membri dell'equipaggio sono stati evacuati. Helsinki ritiene probabile un attacco ucraino.",
+        "d": "2026-11-22",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/22/russian-cargo-ship-still-on-fire-off-finland-after-drone-attack",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-indonesia-incendio",
+        "t": "Indonesia, incendio in una fabbrica di dolciumi vicino a Giacarta: tre morti e 36 dispersi",
+        "s": "Il rogo è scoppiato nello stabilimento nella provincia di Banten, dove erano presenti circa 60 persone. Almeno 15 sono state salvate. Il fuoco era ancora attivo dopo oltre 12 ore e le cause sono in accertamento.",
+        "d": "2026-11-22",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/22/indonesia-factory-fire-kills-three-36-missing",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-nigeria-barca",
+        "t": "Nigeria, si ribalta una barca di persone dirette a un funerale: almeno 24 morti",
+        "s": "L'imbarcazione, sovraccarica, si è rovesciata venerdì nello Stato di Bayelsa dopo un guasto al motore. Recuperati 24 corpi, le ricerche continuano; 24 persone sono state salvate e il responsabile della barca è stato arrestato.",
+        "d": "2026-11-22",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/22/overturned-boat-carrying-mourners-to-funeral-kills-at-least-four-in-nigeria",
+            "l": "en"
           }
         ],
         "link": []
@@ -150,6 +205,20 @@
           {
             "n": "CBS News",
             "url": "https://www.cbsnews.com/live-updates/iran-war-trump-tehran-denies-chemical-weapons/",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-proteste-europa",
+        "t": "Salari e servizi: proteste in oltre 25 Paesi europei, in Italia sciopero generale Cgil",
+        "s": "Secondo Euronews le manifestazioni iniziate venerdì proseguono nel fine settimana. In Italia i cortei hanno toccato più di cento località; in Croazia gli studenti hanno boicottato le lezioni, a Vienna la polizia ha disperso un corteo con spray urticante.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/20/thousands-protest-across-europe-demanding-better-wages-and-services",
             "l": "en"
           }
         ],
@@ -251,6 +320,36 @@
     ],
     "torino": [
       {
+        "id": "to-askatasuna",
+        "t": "Torino, notte di tensioni a Vanchiglia: lacrimogeni al corteo per i 30 anni di Askatasuna",
+        "s": "Alcune centinaia di persone sono arrivate in corteo davanti allo stabile di corso Regina Margherita 47, sgomberato a dicembre 2025. Lanciati fuochi d'artificio e bottiglie contro la polizia, che ha risposto con idranti e lacrimogeni. Dopo circa mezz'ora la calma è tornata.",
+        "d": "2026-11-22",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/askatasuna-tensioni-a-torino-tra-il-corteo-e-le-forze-dellordine_b68ac456-5e3f-4513-b0c8-ae1e91e822e9.html"
+          },
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/22/leggi-notizia/argomenti/cronaca-11/articolo/tensioni-nella-notte-tra-gli-attivisti-di-askatasuna-e-le-forze-dellordine.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-raccordo-caselle",
+        "t": "Raccordo Torino-Caselle: incidente, rampa dello svincolo 1 chiusa e traffico deviato",
+        "s": "Un incidente ha chiuso temporaneamente la rampa verso la tangenziale A55 al km 2,6 del raccordo. Il traffico è stato deviato su percorsi alternativi; sul posto lavorano squadre Anas.",
+        "d": "2026-11-22",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/22/leggi-notizia/argomenti/cronaca-11/articolo/incidente-sul-raccordo-torino-caselle-traffico-in-tilt.html"
+          }
+        ],
+        "link": []
+      },
+      {
         "id": "to-meteo-domenica",
         "t": "Torino, domenica pioggia e vento; mercoledì possibile neve a bassa quota",
         "s": "Un fronte perturbato porta piogge sparse nel Torinese, neve sopra i 1.000 metri e massime fino a 10 gradi. Per mercoledì 25 si prevede una possibile forte perturbazione.",
@@ -277,19 +376,6 @@
         "link": []
       },
       {
-        "id": "to-sala-gonin",
-        "t": "Porta Nuova: oggi visita straordinaria alla Sala Gonin, il salotto d'attesa dei Savoia",
-        "s": "La Fondazione FS riapre la sala ottocentesca affrescata da Francesco Gonin anche il 27 dicembre. Prenotazione obbligatoria su Vivaticket, bambini fino a 3 anni gratis.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/centro/articolo/torino-porta-nuova-riapre-la-sala-gonin-visite-straordinarie-il-22-novembre-e-il-27-dicembre.html"
-          }
-        ],
-        "link": []
-      },
-      {
         "id": "to-frossasco-ricerche",
         "t": "Frossasco: ricerche in corso di una donna scomparsa venerdì mattina",
         "s": "Vigili del fuoco, protezione civile e altre squadre la cercano dopo che si è allontanata da via Principe Amedeo. Indossava piumino nero e pantaloni scuri; chi la vede chiami il 112.",
@@ -301,22 +387,22 @@
           }
         ],
         "link": []
-      },
-      {
-        "id": "to-tracks-chiusura",
-        "t": "Quartieri di Torino: oggi si chiude «Tracks», tre anni di teatro, musica e cultura",
-        "s": "Il progetto di attività culturali diffuse nei quartieri termina con l'ultimo appuntamento di domenica 22 novembre.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/eventi-11/articolo/tre-anni-di-teatro-musica-e-cultura-nei-quartieri-di-torino-domenica-22-novembre-si-chiude-tracks.html"
-          }
-        ],
-        "link": []
       }
     ],
     "piemonte": [
+      {
+        "id": "pi-lenta-incidente",
+        "t": "Vercellese, auto si ribalta a Lenta: muore un minorenne, quattro ragazzi feriti",
+        "s": "L'incidente è avvenuto alle 3:35 sulla provinciale 594. Nell'auto c'erano cinque ragazzi, quattro dei quali minorenni; uno è morto, un altro è in codice rosso a Novara. I carabinieri ricostruiscono la dinamica.",
+        "d": "2026-11-22",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/unauto-si-ribalta-e-prende-fuoco-un-minore-e-morto-nel-vercellese_275c6eff-bbdb-4c3d-a3e6-fbf7c3c1f11b.html"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "pi-fsc-242",
         "t": "Piemonte, in arrivo 242 milioni di fondi Fsc per banda ultralarga, turismo e cultura",
@@ -372,21 +458,6 @@
         "quando": "fino al 10 gen 2027",
         "dove": "In tutta la città, Torino",
         "costo": "gratis (all'aperto)"
-      },
-      {
-        "id": "ev-atp-finals",
-        "t": "Nitto ATP Finals: da domenica 15 novembre i migliori otto del tennis a Torino",
-        "s": "Il torneo di fine stagione riunisce gli otto migliori singolaristi e le otto migliori coppie di doppio.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Visit Piemonte",
-            "url": "https://www.visitpiemonte.com/nitto-atp-finals-2026"
-          }
-        ],
-        "quando": "dal 15 al 22 nov",
-        "dove": "Inalpi Arena, Torino",
-        "costo": "biglietti sul sito ufficiale"
       },
       {
         "id": "ev-asti-natale",
@@ -462,51 +533,6 @@
         "quando": "fino all'11 gen 2027, apertura settimanale",
         "dove": "Museo Egizio, Torino",
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-      },
-      {
-        "id": "ev-set-perfetto",
-        "t": "Il Set Perfetto: eventi diffusi delle Nitto ATP Finals",
-        "s": "Iniziative in vari luoghi della città collegate al torneo di tennis.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Comune di Torino",
-            "url": "https://eventi.comune.torino.it/calendario/set-perfetto-eventi-diffusi-nitto-atp-finals/"
-          }
-        ],
-        "link": [],
-        "quando": "fino al 22 nov",
-        "dove": "Vari luoghi, Torino"
-      },
-      {
-        "id": "ev-soldi-assedio",
-        "t": "I Soldi dell'Assedio. La moneta a Torino nel 1706",
-        "s": "Mostra sulla moneta in circolazione a Torino durante l'assedio del 1706.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Comune di Torino",
-            "url": "https://eventi.comune.torino.it/calendario/i-soldi-dellassedio-la-moneta-a-torino-nel-1706/"
-          }
-        ],
-        "link": [],
-        "quando": "fino al 22 nov",
-        "dove": "Archivio Storico della Città, via Barbaroux 32, Torino"
-      },
-      {
-        "id": "ev-atp-chiusura",
-        "t": "Tennis Takes Over: la festa di chiusura delle Atp Finals tra musei aperti, corsa e OGR",
-        "s": "Sabato 21 musei aperti fino a mezzanotte (Camera 15 €, Scienze Naturali 5 €, Museo Rai gratis), Social Run di 5 km al Valentino; domenica 22 attività per bambini in via Roma e, dalle 18, «The Final Set» alle OGR.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/eventi-11/articolo/tennis-takes-over-torino-fa-festa-per-la-chiusura-delle-atp-finals.html"
-          }
-        ],
-        "quando": "sab 21 e dom 22 nov",
-        "dove": "Torino: musei, Valentino, via Roma, OGR",
-        "costo": "da gratis; musei 5-15 €"
       }
     ],
     "spettacoli": [
@@ -522,7 +548,7 @@
           }
         ],
         "link": [],
-        "quando": "oggi dom 22 nov e giorni seguenti; Ideal 15:15, 18:15, 21:15; Space: molte proiezioni dal mattino alla sera",
+        "quando": "dom 22 nov e giorni seguenti; Ideal 15:15, 18:15, 21:15; Space: molte proiezioni dal mattino alla sera",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -538,7 +564,7 @@
           }
         ],
         "link": [],
-        "quando": "oggi dom 22 nov; Ideal 15:00, 17:15, 19:25; Space 11:10, 14:40, 19:25, 20:35, 22:15",
+        "quando": "dom 22 nov; Ideal 15:00, 17:15, 19:25; Space 11:10, 14:40, 19:25, 20:35, 22:15",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -553,7 +579,7 @@
             "url": "https://www.mymovies.it/film/2026/dio-ride/"
           }
         ],
-        "quando": "oggi dom 22 nov; Ideal 19:30, 21:40",
+        "quando": "dom 22 nov; Ideal 19:30, 21:40",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -568,7 +594,7 @@
             "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
           }
         ],
-        "quando": "oggi dom 22 nov; Ideal 17:30, 21:35",
+        "quando": "dom 22 nov; Ideal 17:30, 21:35",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -583,7 +609,7 @@
             "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
           }
         ],
-        "quando": "oggi dom 22 nov; Ideal 15:10, 17:15",
+        "quando": "dom 22 nov; Ideal 15:10, 17:15",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -599,24 +625,9 @@
           }
         ],
         "link": [],
-        "quando": "oggi dom 22 nov; Ideal 21:35; Space 17:15",
+        "quando": "dom 22 nov; Ideal 21:35; Space 17:15",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-tea-frettolosa",
-        "t": "I figli della frettolosa, di Gabriella Casolari e Gianfranco Berardi",
-        "s": "Testo e regia di Casolari e Berardi, con Berardi, Casolari, Di Corato, Faella e Zaru e un coro del laboratorio. Produzione Compagnia Berardi Casolari.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/cartellone/i-figli-della-frettolosa-20-22-nov-2026/"
-          }
-        ],
-        "link": [],
-        "quando": "dom 22 nov, 16:00",
-        "dove": "Teatro Gobetti, Torino"
       },
       {
         "id": "spe-tea-custodi",
@@ -1048,6 +1059,19 @@
     "cultura": [],
     "scienza": [
       {
+        "id": "sc-bepicolombo",
+        "t": "La sonda BepiColombo è arrivata in orbita attorno a Mercurio",
+        "s": "Lo ha comunicato l'Esa: la missione europea e giapponese, partita nel 2018, è il secondo veicolo a raggiungere l'orbita del pianeta dopo Messenger. A dicembre i due moduli si separeranno; l'orbita definitiva è attesa nella primavera 2027.",
+        "d": "2026-11-22",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/22/la-sonda-bepicolombo-e-arrivata-nellorbita-di-mercurio_f02289a1-3fd9-4cbe-bd6d-fbc3aace865b.html"
+          }
+        ],
+        "link": []
+      },
+      {
         "id": "sc-herpes-pelle",
         "t": "Herpes simplex: ricostruita in un organoide di pelle la diffusione del virus",
         "s": "Uno studio su Science Advances mostra che all'inizio il virus si concentra nei fibroblasti del derma e solo dopo raggiunge follicoli e neuroni sensoriali. Gli autori puntano a bloccarne la propagazione al sistema nervoso.",
@@ -1105,12 +1129,6 @@
     "sport": []
   },
   "controlli": [
-    {
-      "at": "2026-11-12T13:03+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 66,
-      "note": "Fonti lette: ANSA, Al Jazeera (en), Euronews (en), Torino Oggi. Il Sole 24 Ore e un articolo di Torino Oggi non leggibili; Reuters e altre grandi testate estere non tentate; ricerca su Il Sole 24 Ore/Adnkronos/Sky TG24 solo in parte letta. Eventi, cinema, teatro e concerti dall'edizione del mattino (non è lunedì), nessun concerto già passato. Copia locale riallineata a origin/main (era staccata)."
-    },
     {
       "at": "2026-11-13T05:04+01:00",
       "edizione": "mattina",
@@ -1224,6 +1242,12 @@
       "edizione": "mattina",
       "notizie": 73,
       "note": "Fonti lette: ANSA (nazionale, economia, scienza, Piemonte), Al Jazeera (en), CBS News (en), Euronews (en, solo pagina sezione Europa), Torino Oggi, comingsoon e mymovies (cinema). Reuters, BBC, Guardian: ricerca rifiutata dal proxy; TorinoToday non leggibile (pagina ATP citata dal titolo dalla ricerca). Eventi, teatro e concerti copiati dall'edizione precedente (tolti quelli già passati); cinema aggiornato dalle pagine delle due sale. Nessun riallineamento a origin/main oltre al passaggio dalla copia staccata a main."
+    },
+    {
+      "at": "2026-11-22T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 75,
+      "note": "Fonti lette: ANSA (nazionale, scienza, Piemonte), Torino Oggi, Al Jazeera (en), Euronews (en). CBS News: pagina trovata ma vecchia (2025), scartata. Reuters, BBC, Guardian non cercate/rifiutate in passato. TorinoToday non letta. Cinema, eventi e concerti copiati dal mattino (tolti i passati; domenica, non lunedì); teatro: una sola proposta confermata (ricerca Teatro Stabile senza date utili). Copia locale era in HEAD staccato: riallineata a origin/main (checkout -B), nessun push forzato."
     }
   ]
 }
