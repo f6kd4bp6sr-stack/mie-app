@@ -1,446 +1,262 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-22T13:03+01:00",
-  "nota": "Edizione del mattino del 22 novembre 2026.",
+  "edizione": "mattina",
+  "updated": "2026-11-23T05:09+01:00",
   "sezioni": {
     "italia": [
       {
-        "id": "it-de-gennaro",
-        "t": "Morto l'ex capo della Polizia De Gennaro: casa sequestrata, aperta un'inchiesta",
-        "s": "Gianni De Gennaro è stato trovato morto nella sua casa di campagna a Montiano, nel Grossetano. L'abitazione è sotto sequestro e le procure di Firenze e Grosseto indagano per istigazione al suicidio. La data dell'autopsia non è ancora fissata.",
+        "id": "it-manovra",
+        "t": "Manovra, vertice di maggioranza: Meloni chiede di superare le divisioni, nodo pensioni e sanità",
+        "s": "Al vertice del 19 novembre la maggioranza ha discusso le modifiche alla legge di bilancio, con focus su pensioni e sanità. Tra le proposte depositate ci sono circa 6.600 emendamenti; il viceministro Leo ha ricordato che le risorse disponibili sono 26 miliardi. Meloni ha annunciato un emendamento per estendere al Centro-Nord le semplificazioni della Zes unica.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/19/focus-su-pensioni-e-sanita-al-vertice-di-maggioranza-meloni-chiede-basta-divisioni_f14af22e-5fa1-4851-b2a1-60f52ce6bb6e.html"
+          }
+        ]
+      },
+      {
+        "id": "it-lega-condono",
+        "t": "Proposta della Lega: sei mesi di tempo ai Comuni per evadere le vecchie domande di condono",
+        "s": "Secondo il titolo dell'ANSA, la proposta leghista prevede che i Comuni abbiano sei mesi per rispondere alle vecchie domande di sanatoria edilizia, altrimenti scatterebbe il condono. Il testo dell'articolo non è stato letto: i dettagli vanno verificati.",
         "d": "2026-11-22",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/la-casa-di-de-gennaro-in-maremma-sotto-sequestro-proseguono-gli-accertamenti_385903ab-9075-4aaf-9711-57a1ec55cf07.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/proposta-lega-6-mesi-ai-comuni-per-evadere-le-vecchie-domande-o-scatta-il-condono_ef3373d1-a0c4-478b-9073-1a56cc0fee3a.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "it-sciopero-cgil",
-        "t": "Sciopero generale della Cgil contro la manovra: cortei in più di cento piazze, numeri contrastanti",
-        "s": "La Cgil parla di un milione e mezzo di partecipanti e di oltre 50mila persone a Roma, il ministro Zangrillo di meno del 12% di adesioni tra i dipendenti pubblici. Landini annuncia un presidio al Parlamento e una manifestazione il 12 dicembre a Cosenza se la manovra non cambia.",
-        "d": "2026-11-20",
+        "id": "it-fdi-marcatori",
+        "t": "Emendamento di Fratelli d'Italia: alla Polizia marcatori colorati per identificare i violenti nei cortei",
+        "s": "Fratelli d'Italia ha presentato un emendamento per dotare la Polizia di marcatori colorati con cui contrassegnare chi commette violenze durante le manifestazioni. L'articolo completo non è stato letto: la notizia si basa su titolo e sommario dell'ANSA.",
+        "d": "2026-11-22",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/cgil-in-100-piazze-siamo-un-milione-e-mezzo-il-governo-confuso_86e7ce84-b2a8-45ce-9c08-87380ca1759d.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/emendamento-fdi-alla-polizia-marcatori-colorati-per-identificare-violenti-nei_054c7c84-2c8f-4bf8-af84-c770d414a40e.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "it-decreto-sicurezza-borse",
-        "t": "Decreto sicurezza, emendamenti di Fratelli d'Italia su borse di studio e occupazioni scolastiche",
-        "s": "Andrea Delmastro propone di sospendere borse di studio e benefici a chi è indagato per reati commessi in cortei od occupazioni, con revoca in caso di condanna, e di rendere i promotori responsabili dei danni. Pd, M5s e Avs criticano le proposte.",
-        "d": "2026-11-21",
+        "id": "it-grillo",
+        "t": "Grillo: «Se il giudice dice che il Movimento è mio, me lo prendo»",
+        "s": "Beppe Grillo ha dichiarato, secondo l'ANSA del 22 novembre, che se il giudice dovesse riconoscere il Movimento 5 Stelle come suo, lo rivendicherebbe. Il contesto è la disputa legale sul Movimento; il testo completo non è stato letto.",
+        "d": "2026-11-22",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/21/stretta-di-fdi-su-studenti-e-cortei-agli-indagati-via-le-borse-di-studio_f2ff1955-8465-47a7-a924-b8ab597b2323.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/grillo-se-il-giudice-dice-che-il-movimento-e-mio-me-lo-prendo_cf0e2dfa-f003-4804-ab55-fbcdcdc5d77d.html"
           }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-scuole-crolli",
-        "t": "Cittadinanzattiva: 18 crolli nelle scuole da settembre, chiesto un piano da 2,6 miliardi",
-        "s": "Dopo i 68 crolli registrati tra settembre 2025 e agosto 2026, l'associazione ne conta altri 18 nell'anno scolastico in corso e chiede alla legge di bilancio un piano triennale da 2,6 miliardi. Segnala anche che i dati sull'edilizia scolastica sono fermi al 2024/25.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/20/cittadinanzattiva-da-settembre-gia-18-crolli-nelle-scuole_0bc3c97f-2cf5-4968-9074-4a19af16d661.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-pichetto-fossili",
-        "t": "Pichetto: il Governo valuterà una roadmap per uscire dai combustibili fossili",
-        "s": "Il ministro dell'Ambiente Pichetto Fratin ha annunciato che l'esecutivo esaminerà una tabella di marcia per l'uscita dai combustibili fossili, mentre alla Cop31 di Antalya la bozza finale non li cita ancora.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/20/pichetto-governo-valutera-roadmap-di-uscita-dai-combustibili-fossili_ca3c1c68-f617-46a5-afa1-5edb94378b18.html"
-          }
-        ],
-        "link": []
+        ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-oleshky-tregua",
-        "t": "Ucraina, Zelensky ringrazia Melania Trump per la tregua umanitaria a Oleshky",
-        "s": "Il presidente ucraino ha ringraziato la first lady americana per l'aiuto nell'evacuazione di civili da Oleshky. Kiev ha approvato un elenco di nove località nella regione di Kherson e sei in quella di Zaporizhzhia dove replicare le operazioni umanitarie.",
-        "d": "2026-11-22",
+        "id": "mo-dymer",
+        "t": "Kiev, drone russo su un palazzo a Dymer: salgono a nove le vittime",
+        "s": "Dopo l'attacco con drone a un edificio di cinque piani a Dymer, nella regione di Kiev, i soccorritori hanno recuperato altri tre corpi: le vittime sono nove. Una donna di 79 anni è stata estratta viva, come un bambino durante la notte; le ricerche continuano.",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/zelensky-ringrazia-melania-trump-per-il-cessate-il-fuoco-di-oleshky_e30b54f5-8c76-4ce5-9a66-bcc54a1de511.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-sparta-finlandia",
-        "t": "Nave cargo russa in fiamme al largo della Finlandia dopo un attacco di droni",
-        "s": "La Sparta II, sanzionata dagli Usa e diretta a Kaliningrad, è stata colpita sabato da droni nel Golfo di Finlandia ed è alla deriva in acque finlandesi. I 16 membri dell'equipaggio sono stati evacuati. Helsinki ritiene probabile un attacco ucraino.",
-        "d": "2026-11-22",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/22/russian-cargo-ship-still-on-fire-off-finland-after-drone-attack",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-indonesia-incendio",
-        "t": "Indonesia, incendio in una fabbrica di dolciumi vicino a Giacarta: tre morti e 36 dispersi",
-        "s": "Il rogo è scoppiato nello stabilimento nella provincia di Banten, dove erano presenti circa 60 persone. Almeno 15 sono state salvate. Il fuoco era ancora attivo dopo oltre 12 ore e le cause sono in accertamento.",
-        "d": "2026-11-22",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/22/indonesia-factory-fire-kills-three-36-missing",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-nigeria-barca",
-        "t": "Nigeria, si ribalta una barca di persone dirette a un funerale: almeno 24 morti",
-        "s": "L'imbarcazione, sovraccarica, si è rovesciata venerdì nello Stato di Bayelsa dopo un guasto al motore. Recuperati 24 corpi, le ricerche continuano; 24 persone sono state salvate e il responsabile della barca è stato arrestato.",
-        "d": "2026-11-22",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/22/overturned-boat-carrying-mourners-to-funeral-kills-at-least-four-in-nigeria",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-ucraina-attacchi",
-        "t": "Russia contro l'Ucraina: nella notte 3 missili e 148 droni, mentre Putin esclude tregue parziali",
-        "s": "Secondo l'aeronautica ucraina 117 droni sono stati abbattuti, i tre missili balistici no. Giovedì Putin ha detto che Mosca non tratterà una tregua limitata dopo l'attacco ucraino al ponte di Kerch.",
-        "d": "2026-11-21",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/21/kiev-nella-notte-3-missili-e-148-droni-russi-lanciati-sullucraina-117_be7f5169-13c7-4410-b728-2e1c4a8ef911.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/23/kiev-bilancio-vittime-dymer-sale-a-9-si-scava-ancora-tra-le-macerie_9d3d3304-92fa-4410-af2a-867f102e8f41.html"
           },
           {
-            "n": "CBS News",
-            "url": "https://www.cbsnews.com/news/putin-russia-ukraine-bridge-strike/",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/22/14-people-missing-after-russian-drone-strike-on-kyiv-region",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "mo-gaza-raid",
-        "t": "Gaza, nuovi raid israeliani: morti a Gaza City e protesta degli sfollati",
-        "s": "Un attacco ha colpito un veicolo a Tel al-Hawa, con tre morti secondo fonti mediche locali; l'esercito israeliano parla di obiettivi militari. Il ministero della Sanità di Gaza conta 1.661 morti dal cessate il fuoco di ottobre 2025.",
-        "d": "2026-11-22",
+        "id": "mo-cop31",
+        "t": "Cop31 di Antalya: chiusa senza consenso globale, Panama presenta obiezione formale",
+        "s": "Il vertice sul clima di Antalya si è chiuso con un accordo politico senza consenso globale dopo due giorni di proroga. Panama lo giudica insufficiente per l'obiettivo di 1,5 gradi e ha presentato un'obiezione formale; Euronews titola sul rifiuto dell'intesa da parte dell'Ue e di altri.",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/media-palestinesi-3-morti-e-diversi-feriti-in-raid-idf-a-gaza-city_e04a51a6-f42f-448b-b523-07fe850152af.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/americalatina/2026/11/23/cop31-panama-obietta-formalmente-sullaccordo-finale-ad-antalya_acedb005-3492-4a19-a714-cf9d13776311.html"
           },
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/22/displaced-palestinians-protest-as-israeli-air-strikes-continue-in-gaza",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/22/cop31-climate-talks-fail-after-eu-and-others-reject-final-deal-proposal",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "mo-israele-unita",
-        "t": "Israele, il Likud pone le condizioni per un governo di unità nazionale",
-        "s": "In risposta all'appello di Gadi Eisenkot, il partito del premier chiede di fermare gli attacchi personali a Netanyahu e ribadisce il no a uno Stato palestinese e il mantenimento delle zone di sicurezza in Siria, Libano e Gaza.",
-        "d": "2026-11-21",
+        "id": "mo-peskov",
+        "t": "Mosca: nei colloqui in Cina Putin e Trump non hanno parlato del nuovo ambasciatore a Washington",
+        "s": "Il portavoce del Cremlino Peskov dice che la nomina non è stata affrontata nell'incontro, di carattere generale. L'ambasciatore russo negli Usa Darčiev è morto l'11 novembre a 66 anni; Regno Unito e Francia sono senza ambasciatore russo da oltre due mesi.",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/21/i-paletti-del-likud-sul-governo-unita-nessuno-stato-palestinese-niente_1c9914b1-9c90-4534-8d33-d7378637eaaf.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/mosca-putin-e-trump-non-hanno-discusso-della-nomina-di-un-ambasciatore-a-washington_81ae1b4a-b31b-4afe-91eb-6d0db39c2527.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "mo-cop31-bozza",
-        "t": "Cop31 ad Antalya: la nuova bozza finale non cita ancora i combustibili fossili",
-        "s": "Il testo preparato dalle presidenze turca e australiana invita a elettrificare e ad accelerare le tecnologie di cattura e stoccaggio del carbonio, punto contestato da alcuni Paesi.",
+        "id": "mo-bengasi",
+        "t": "Nave russa colpita a Bengasi: secondo Axios dietro c'è un attacco a lungo raggio ucraino",
+        "s": "Secondo il giornalista Barak Ravid di Axios, citato dall'ANSA, la nave da guerra russa colpita nel porto libico di Bengasi sarebbe stata attaccata dal servizio di sicurezza ucraino (SBU). L'informazione arriva da una fonte anonima e non è confermata ufficialmente.",
         "d": "2026-11-22",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/22/cop-31-nella-bozza-nessuna-menzione-dei-combustibili-fossili_d55cbfd6-68e9-4052-9e81-c9f6b18797be.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/11/22/media-nave-russa-colpita-in-libia-da-attacco-a-lungo-raggio-ucraino_0c7df80f-d236-48ee-82b2-672a1d937471.html"
           }
-        ],
-        "link": []
+        ]
       }
     ],
     "estero": [
       {
-        "id": "es-iran-hormuz",
-        "t": "Iran: i Pasdaran dicono di aver abbattuto droni Usa su Hormuz, stallo sui negoziati",
-        "s": "Teheran rivendica l'abbattimento di un MQ-9 sullo Stretto e di un MQ-1 vicino all'isola di Qeshm. Il ministro Araghchi ribadisce sette condizioni per riaprire lo Stretto. Trump dice di poter decidere la prossima mossa solo dopo il nuovo anno.",
-        "d": "2026-11-21",
+        "id": "es-belgio",
+        "t": "Belgio, sciopero contro l'austerità: aeroporti quasi fermi lunedì",
+        "s": "Skeyes, la società del controllo del traffico aereo, non può garantire il servizio dalle 7 alle 21: quasi tutti i voli saltano. È l'undicesimo sciopero in undici mesi; il bilancio del governo punta a risparmiare 10 miliardi di euro.",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/21/irans-irgc-downs-us-drone-over-hormuz-as-efforts-to-end-war-remain-stalled",
-            "l": "en"
-          },
-          {
-            "n": "CBS News",
-            "url": "https://www.cbsnews.com/live-updates/iran-war-trump-tehran-denies-chemical-weapons/",
+            "url": "https://aljazeera.com/news/2026/11/23/belgiums-airports-set-to-shut-down-due-to-anti-austerity-strike",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "es-proteste-europa",
-        "t": "Salari e servizi: proteste in oltre 25 Paesi europei, in Italia sciopero generale Cgil",
-        "s": "Secondo Euronews le manifestazioni iniziate venerdì proseguono nel fine settimana. In Italia i cortei hanno toccato più di cento località; in Croazia gli studenti hanno boicottato le lezioni, a Vienna la polizia ha disperso un corteo con spray urticante.",
-        "d": "2026-11-20",
+        "id": "es-indonesia",
+        "t": "Indonesia, incendio in una fabbrica di dolci a Cikande: decine di dispersi",
+        "s": "Il rogo è scoppiato sabato sera nello stabilimento PT Fonusa Agung Mulia; sul turno c'erano circa 300 persone. Secondo l'azienda 29 persone risultano disperse e 4 in cura; la polizia ha rimosso 24 sacchi con i corpi e l'identificazione con il Dna può richiedere 2-3 settimane.",
+        "d": "2026-11-23",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/20/thousands-protest-across-europe-demanding-better-wages-and-services",
+            "n": "Al Jazeera",
+            "url": "https://aljazeera.com/news/2026/11/23/indonesian-police-remove-24-body-bags-from-factory-fire-site",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "es-messico-chapo-isidro",
-        "t": "Messico, arrestato il boss Meza Flores: 11 morti negli scontri in Sinaloa",
-        "s": "L'uomo, tra i dieci ricercati dell'FBI, è stato catturato a Guasave; il ministero della Difesa parla di sette presunti sicari e quattro militari uccisi. Il governo messicano riferisce di un contributo dell'intelligence statunitense.",
+        "id": "es-mongolia",
+        "t": "Mongolia: il Parlamento accetta le dimissioni del presidente, si va al voto anticipato",
+        "s": "Con 96 voti su 104 il Parlamento ha accolto le dimissioni del presidente Khurelsukh Ukhnaa, le prime nella storia del Paese, dopo accuse di corruzione che lui nega. L'inflazione è al 13,6% e un nuovo presidente è atteso entro quattro mesi.",
         "d": "2026-11-22",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/22/eleven-killed-in-burst-of-violence-during-mexican-cartel-leaders-capture",
-            "l": "en"
-          },
-          {
-            "n": "CBS News",
-            "url": "https://www.cbsnews.com/news/mexico-drug-kingpin-arrest-fausto-isidro-meza-flores-sinaloa/",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-polonia-missili",
-        "t": "Missili russi caduti in Polonia: Varsavia parla di provocazione, la Nato valuta la risposta",
-        "s": "Due missili e un drone sono caduti nel sud-est della Polonia durante l'attacco russo, senza feriti. Tusk parla di provocazione intenzionale, Rutte di grave violazione dello spazio aereo. Al Jazeera spiega che l'articolo 5 è improbabile, mentre è possibile chiedere consultazioni con l'articolo 4.",
-        "d": "2026-11-21",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/21/russian-missiles-hit-poland-what-happened-and-could-nato-respond",
-            "l": "en"
-          },
-          {
-            "n": "CBS News",
-            "url": "https://cbsnews.com/news/ukraine-war-russia-intentional-provocation-poland-missiles-nato",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-estonia-valichi",
-        "t": "L'Estonia chiude cinque valichi di frontiera con la Russia dal primo dicembre",
-        "s": "Secondo Euronews la misura, rivedibile dopo sei mesi, segue un tentato incendio contro un'azienda della difesa vicino a Tallinn attribuito ai servizi russi.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
             "n": "Euronews",
-            "url": "https://www.euronews.com/news/europe",
+            "url": "https://www.euronews.com/2026/11/22/mongolia-faces-snap-presidential-vote-as-outgoing-leader-calls-for-constitutional-reform",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
       }
     ],
     "economia": [
       {
-        "id": "ec-borsa-tokyo-ia",
-        "t": "Borse in calo per i timori sull'intelligenza artificiale: Tokyo perde oltre il 5%",
-        "s": "Il Nikkei chiude a -5,06% ai minimi da aprile dopo il debutto deludente di Anthropic a Wall Street. Nel giorno Milano scende dell'1,6% a metà seduta, lo spread Btp-Bund è a 108 punti.",
-        "d": "2026-11-20",
+        "id": "ec-ai-borse",
+        "t": "Borse asiatiche in calo per i timori su una bolla dell'intelligenza artificiale",
+        "s": "A Seul il Kospi è arrivato a perdere il 5,8% in apertura e l'Hang Seng di Hong Kong l'1,8%. Venerdì lo S&P 500 ha chiuso a -3,7%, entrando in correzione, e il Nasdaq ha perso il 5,3%, azzerando i guadagni del 2026.",
+        "d": "2026-11-23",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/20/crollo-di-oltre-il-5-alla-borsa-di-tokyo-per-i-timori-sullintelligenza-artificiale_4d6646d7-d589-4024-926a-7e80db3e09c1.html"
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/23/south-koreas-stock-market-tumbles-as-ai-bubble-fears-mount",
+            "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "ec-bilancio-ue-digital-tax",
-        "t": "Bilancio Ue 2028-2034: nuova proposta da 1.582 miliardi con tassa del 3% sulle big tech",
-        "s": "Antonio Costa propone un taglio di 180 miliardi rispetto alla Commissione e una digital tax da 5,2 miliardi l'anno. Eurocamera e Paesi frugali restano contrari; è atteso un Consiglio europeo straordinario.",
-        "d": "2026-11-21",
+        "id": "ec-tacchino",
+        "t": "Stati Uniti, Thanksgiving più caro: il tacchino costa il 10% in più",
+        "s": "Secondo il titolo dell'ANSA, il prezzo del tacchino per la cena del Ringraziamento è aumentato del 10%. Il testo dell'articolo non è stato letto.",
+        "d": "2026-11-22",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/21/tagli-al-bilancio-ue-ce-una-digital-tax-da-52-miliardi_0e90b338-3f27-4ac8-83c2-5f3ac96954ff.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/la-cena-del-thanksgiving-costera-cara-il-tacchino-e-aumentato-del-10_6ba2dae7-11bc-4ffe-a93f-d5beb38c2603.html"
           }
-        ],
-        "link": []
-      },
-      {
-        "id": "ec-manovra-pensioni",
-        "t": "Manovra: emendamento di FdI per rivalutare per intero le pensioni fino a cinque volte il minimo",
-        "s": "Il testo, firmato da Marco Osnato, non indica importi né costi. Anche gli altri partiti della maggioranza chiedono rivalutazioni più alte.",
-        "d": "2026-11-21",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/pmi/2026/11/21/manovra-emendamento-fdi-rivalutazione-piena-delle-pensioni-fino-a-5-volte-il-minimo_83ed610d-49da-495f-8100-61420a47bdb8.html"
-          }
-        ],
-        "link": []
+        ]
       }
     ],
     "torino": [
       {
-        "id": "to-askatasuna",
-        "t": "Torino, notte di tensioni a Vanchiglia: lacrimogeni al corteo per i 30 anni di Askatasuna",
-        "s": "Alcune centinaia di persone sono arrivate in corteo davanti allo stabile di corso Regina Margherita 47, sgomberato a dicembre 2025. Lanciati fuochi d'artificio e bottiglie contro la polizia, che ha risposto con idranti e lacrimogeni. Dopo circa mezz'ora la calma è tornata.",
+        "id": "to-atp",
+        "t": "Torino fa festa con «Tennis Takes Over» nel weekend delle Nitto ATP Finals",
+        "s": "Il Comune ha organizzato per sabato 21 e domenica 22 novembre una notte e una mattina tra musica, sport e cultura legate alle Nitto ATP Finals 2026.",
         "d": "2026-11-22",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/askatasuna-tensioni-a-torino-tra-il-corteo-e-le-forze-dellordine_b68ac456-5e3f-4513-b0c8-ae1e91e822e9.html"
-          },
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/22/leggi-notizia/argomenti/cronaca-11/articolo/tensioni-nella-notte-tra-gli-attivisti-di-askatasuna-e-le-forze-dellordine.html"
+            "n": "Città di Torino",
+            "url": "https://www.comune.torino.it/novita/comunicati/tennis-takes-over-torino-fa-festa-sabato-21-domenica-22-novembre-una-notte-una"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "to-raccordo-caselle",
-        "t": "Raccordo Torino-Caselle: incidente, rampa dello svincolo 1 chiusa e traffico deviato",
-        "s": "Un incidente ha chiuso temporaneamente la rampa verso la tangenziale A55 al km 2,6 del raccordo. Il traffico è stato deviato su percorsi alternativi; sul posto lavorano squadre Anas.",
-        "d": "2026-11-22",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/22/leggi-notizia/argomenti/cronaca-11/articolo/incidente-sul-raccordo-torino-caselle-traffico-in-tilt.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-meteo-domenica",
-        "t": "Torino, domenica pioggia e vento; mercoledì possibile neve a bassa quota",
-        "s": "Un fronte perturbato porta piogge sparse nel Torinese, neve sopra i 1.000 metri e massime fino a 10 gradi. Per mercoledì 25 si prevede una possibile forte perturbazione.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/attualita-31/articolo/meteo-ancora-forte-variabilita-al-nord-ovest-con-forti-raffiche-di-vento.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-atp-finale",
-        "t": "Atp Finals di Torino: oggi la finale tra Alcaraz e Zverev",
-        "s": "Il torneo si chiude con la sfida tra lo spagnolo e il tedesco, che arrivano entrambi imbattuti; il vincitore sarà campione senza sconfitte.",
+        "id": "to-unione-sovietica",
+        "t": "Scontro frontale tra due auto in corso Unione Sovietica, all'incrocio con via Madonna delle Rose",
+        "s": "L'incidente è avvenuto il 22 novembre in corso Unione Sovietica, a Torino, e ha coinvolto due auto in uno scontro frontale. Per i dettagli sui feriti si rimanda all'articolo.",
         "d": "2026-11-22",
         "fonti": [
           {
             "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/sport/atp-tennis/atp-finals-torino-2026-quando-oggi-programma-orari-semifinali-finale.html"
+            "url": "https://torinotoday.it/cronaca/incidente-stradale/unione-sovietica-madonna-delle-rose-22-novembre-2026.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "to-frossasco-ricerche",
-        "t": "Frossasco: ricerche in corso di una donna scomparsa venerdì mattina",
-        "s": "Vigili del fuoco, protezione civile e altre squadre la cercano dopo che si è allontanata da via Principe Amedeo. Indossava piumino nero e pantaloni scuri; chi la vede chiami il 112.",
+        "id": "to-collegno",
+        "t": "Collegno, scontro fra tre auto in corso Cervi",
+        "s": "Un incidente tra tre auto è stato segnalato il 22 novembre in corso Cervi, a Collegno, nell'area metropolitana di Torino.",
         "d": "2026-11-22",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/22/leggi-notizia/argomenti/cronaca-11/articolo/frossasco-ricerche-in-corso-di-una-donna-scomparsa.html"
+            "n": "TorinoToday",
+            "url": "https://torinotoday.it/cronaca/incidente-stradale/cervi-collegno-22-novembre-2026.html"
           }
-        ],
-        "link": []
+        ]
       }
     ],
     "piemonte": [
       {
-        "id": "pi-lenta-incidente",
-        "t": "Vercellese, auto si ribalta a Lenta: muore un minorenne, quattro ragazzi feriti",
-        "s": "L'incidente è avvenuto alle 3:35 sulla provinciale 594. Nell'auto c'erano cinque ragazzi, quattro dei quali minorenni; uno è morto, un altro è in codice rosso a Novara. I carabinieri ricostruiscono la dinamica.",
-        "d": "2026-11-22",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/22/unauto-si-ribalta-e-prende-fuoco-un-minore-e-morto-nel-vercellese_275c6eff-bbdb-4c3d-a3e6-fbf7c3c1f11b.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "pi-fsc-242",
-        "t": "Piemonte, in arrivo 242 milioni di fondi Fsc per banda ultralarga, turismo e cultura",
-        "s": "L'atto integrativo tra Governo e Regione, approvato dal Cipess, destina oltre 26 milioni alla banda ultralarga e 9,2 al turismo, oltre a digitalizzazione, energia, ricerca e beni architettonici.",
+        "id": "pi-fsc",
+        "t": "Piemonte, in arrivo 242 milioni di fondi Fsc",
+        "s": "L'ANSA Piemonte segnala l'arrivo in regione di 242 milioni di euro dal Fondo sviluppo e coesione (Fsc).",
         "d": "2026-11-19",
         "fonti": [
           {
-            "n": "ANSA",
+            "n": "ANSA Piemonte",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/19/piemonte-in-arrivo-242-milioni-di-fondi-fsc_29f256b9-9234-4552-b12a-b0ecad2ff41c.html"
           }
-        ],
-        "link": []
-      },
+        ]
+      }
+    ],
+    "scienza": [
       {
-        "id": "pi-antibiotici",
-        "t": "Sanità Piemonte: consumo di antibiotici sotto la media nazionale",
-        "s": "Il rapporto regionale 2023-2024 indica un calo del 10,8% dei consumi ospedalieri e una crescita del 54,6% dell'indicatore sugli antibiotici raccomandati dall'Oms come prima scelta.",
+        "id": "sc-herpes",
+        "t": "Ricostruita l'avanzata del virus Herpes simplex nella pelle",
+        "s": "Secondo l'ANSA Scienza, una ricerca ha ricostruito il modo in cui il virus Herpes simplex si diffonde nella pelle. Dettagli dello studio non letti: consultare l'articolo.",
         "d": "2026-11-21",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/21/sanita-regione-in-piemonte-meno-antibiotici-della-media-nazionale_1f0fdcc4-b43c-4e96-874e-f3f8b6f6bd8c.html"
+            "n": "ANSA Scienza",
+            "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/11/21/ricostruita-lavanzata-del-virus-herpes-simplex-nella-pelle-_bfadee86-6f65-4f83-881d-eaff8572b718.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "pi-fi-rosso",
-        "t": "Forza Italia Piemonte: Roberto Rosso eletto segretario regionale al primo congresso",
-        "s": "Il senatore guida il partito in regione dopo il primo congresso regionale di Forza Italia.",
-        "d": "2026-11-21",
+        "id": "sc-cani",
+        "t": "Tumori dei cani: un atlante genomico individua 39 geni chiave",
+        "s": "Un atlante genomico dei tumori canini ha individuato 39 geni chiave, riferisce l'ANSA Piemonte il 16 novembre.",
+        "d": "2026-11-16",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/21/forza-italia-rosso-nuovo-segretario-regionale-in-piemonte_77675b4e-1fe1-4e2b-9145-4f941e2e62cc.html"
+            "n": "ANSA Piemonte",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/tumori-dei-cani-latlante-genomico-individua-39-geni-chiave_8c2c201a-f338-4a53-abc0-1a51240fe893.html"
           }
-        ],
-        "link": []
+        ]
       }
     ],
     "eventi": [
@@ -540,7 +356,7 @@
         "id": "spe-cin-hunger-games",
         "t": "Hunger Games: L'alba sulla mietitura, il nuovo capitolo della saga",
         "s": "Il sedicenne Haymitch, del Distretto 12, partecipa alla 50ª edizione dei Giochi e i ribelli gli chiedono di far saltare l'arena. Regia di Francis Lawrence.",
-        "d": "2026-11-22",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "MYmovies",
@@ -548,7 +364,7 @@
           }
         ],
         "link": [],
-        "quando": "dom 22 nov e giorni seguenti; Ideal 15:15, 18:15, 21:15; Space: molte proiezioni dal mattino alla sera",
+        "quando": "orari della settimana sul sito della sala",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -556,7 +372,7 @@
         "id": "spe-cin-scrooge",
         "t": "Scrooge e gli Spiriti del Natale, nuova versione del racconto di Dickens",
         "s": "Rilettura cinematografica del classico natalizio con protagonista l'avaro Ebenezer. Regia di Ti West.",
-        "d": "2026-11-22",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "MYmovies",
@@ -564,7 +380,7 @@
           }
         ],
         "link": [],
-        "quando": "dom 22 nov; Ideal 15:00, 17:15, 19:25; Space 11:10, 14:40, 19:25, 20:35, 22:15",
+        "quando": "orari della settimana sul sito della sala",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -572,14 +388,14 @@
         "id": "spe-cin-dio-ride",
         "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
         "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-        "d": "2026-11-22",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/dio-ride/"
           }
         ],
-        "quando": "dom 22 nov; Ideal 19:30, 21:40",
+        "quando": "orari della settimana sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -587,14 +403,14 @@
         "id": "spe-cin-wild-horse-nine",
         "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
         "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
-        "d": "2026-11-22",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
           }
         ],
-        "quando": "dom 22 nov; Ideal 17:30, 21:35",
+        "quando": "orari della settimana sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -602,14 +418,14 @@
         "id": "spe-cin-gatto-cappello",
         "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
         "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
-        "d": "2026-11-22",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "MYmovies",
             "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
           }
         ],
-        "quando": "dom 22 nov; Ideal 15:10, 17:15",
+        "quando": "orari della settimana sul sito della sala",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
@@ -617,7 +433,7 @@
         "id": "spe-cin-godzilla-minus-zero",
         "t": "Godzilla Minus Zero, il seguito del film giapponese premiato con l'Oscar",
         "s": "Seguito di «Godzilla Minus One» ambientato nel Giappone del dopoguerra. Regia di Takashi Yamazaki.",
-        "d": "2026-11-22",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "ComingSoon Cinema Ideal",
@@ -625,23 +441,9 @@
           }
         ],
         "link": [],
-        "quando": "dom 22 nov; Ideal 21:35; Space 17:15",
+        "quando": "orari della settimana sul sito della sala",
         "dove": "The Space Cinema Torino e Cinema Ideal",
         "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-tea-custodi",
-        "t": "I Custodi - La città che ha tante voci, performance della compagnia under 30 PoEM",
-        "s": "Nata da un laboratorio con gli ospiti di una Rsa torinese, trasforma le storie degli anziani in un racconto della città. Fa parte del progetto «La città ha tante voci» di Tangram Teatro.",
-        "d": "2026-11-21",
-        "fonti": [
-          {
-            "n": "ANSA Piemonte",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/i-custodi-la-citta-che-ha-tante-voci-il-teatro-da-voce-alla-memoria-degli_e506a448-ba99-413e-b04f-54ee975cef8e.html"
-          }
-        ],
-        "quando": "dom 22 nov, 19:00 (Tangram Teatro)",
-        "dove": "Tangram Teatro, Torino"
       }
     ],
     "concerti": [
@@ -1057,84 +859,9 @@
       }
     ],
     "cultura": [],
-    "scienza": [
-      {
-        "id": "sc-bepicolombo",
-        "t": "La sonda BepiColombo è arrivata in orbita attorno a Mercurio",
-        "s": "Lo ha comunicato l'Esa: la missione europea e giapponese, partita nel 2018, è il secondo veicolo a raggiungere l'orbita del pianeta dopo Messenger. A dicembre i due moduli si separeranno; l'orbita definitiva è attesa nella primavera 2027.",
-        "d": "2026-11-22",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/11/22/la-sonda-bepicolombo-e-arrivata-nellorbita-di-mercurio_f02289a1-3fd9-4cbe-bd6d-fbc3aace865b.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "sc-herpes-pelle",
-        "t": "Herpes simplex: ricostruita in un organoide di pelle la diffusione del virus",
-        "s": "Uno studio su Science Advances mostra che all'inizio il virus si concentra nei fibroblasti del derma e solo dopo raggiunge follicoli e neuroni sensoriali. Gli autori puntano a bloccarne la propagazione al sistema nervoso.",
-        "d": "2026-11-21",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/11/21/ricostruita-lavanzata-del-virus-herpes-simplex-nella-pelle-_bfadee86-6f65-4f83-881d-eaff8572b718.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "sc-km3net-einstein",
-        "t": "Neutrini dal Mediterraneo: nessuna violazione della relatività, nuovi limiti da KM3NeT",
-        "s": "La collaborazione ha analizzato oltre 5.800 neutrini atmosferici rilevati dal telescopio Orca, al largo di Tolone, senza trovare scostamenti dall'invarianza di Lorentz. Partecipano INFN e università italiane.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/canale_scienza/notizie/fisica_matematica/2026/11/18/dal-fondo-del-mediterraneo-nuovo-test-per-la-relativita-di-einstein_ae6cc14e-8744-4673-a356-db77019df985.html"
-          }
-        ],
-        "link": []
-      }
-    ],
-    "tecnologia": [
-      {
-        "id": "te-fbi-artex",
-        "t": "Fbi: avviso su Artex, piattaforma basata sull'intelligenza artificiale usata per cyberattacchi",
-        "s": "Secondo l'avviso del 13 novembre lo strumento autonomo è usato dall'agosto scorso contro istituzioni finanziarie, enti pubblici e aziende.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/17/fbi-avviso-il-1311-strumenti-ia-per-condurre-cyberattacchi_a6bf08ec-01d8-4467-a6bf-a084f0cacf82.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "te-usa-cyber-zar",
-        "t": "Usa, Trump sostituisce il capo della cybersicurezza dopo una serie di disservizi",
-        "s": "Kirsten Davies, responsabile informatica del Pentagono, prende il posto di Sean Cairncross. Trump esclude che i recenti guasti di servizi digitali siano stati attacchi informatici.",
-        "d": "2026-11-20",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/20/donald-trump-silura-lo-zar-per-la-cybersicurezza-inadeguato_329130cd-5526-4071-ab90-0d87f9cdd6d2.html"
-          }
-        ],
-        "link": []
-      }
-    ],
-    "sport": []
+    "tecnologia": []
   },
   "controlli": [
-    {
-      "at": "2026-11-13T05:04+01:00",
-      "edizione": "mattina",
-      "notizie": 65,
-      "note": "Fonti lette: ANSA, AGI, Adnkronos, Al Jazeera (en), Euronews (en, es), Torino Oggi, Turismo Torino. Non leggibili: TorinoToday (due pagine). Reuters, BBC e altre grandi testate estere non tentate. Cinema, teatro, eventi e concerti dall'edizione precedente con l'aggiunta di un evento (non è lunedì; orari dei film non riverificati); tolti i concerti già passati. Copia locale riallineata a origin/main (era staccata)."
-    },
     {
       "at": "2026-11-13T13:08+01:00",
       "edizione": "pomeriggio",
@@ -1248,6 +975,13 @@
       "edizione": "pomeriggio",
       "notizie": 75,
       "note": "Fonti lette: ANSA (nazionale, scienza, Piemonte), Torino Oggi, Al Jazeera (en), Euronews (en). CBS News: pagina trovata ma vecchia (2025), scartata. Reuters, BBC, Guardian non cercate/rifiutate in passato. TorinoToday non letta. Cinema, eventi e concerti copiati dal mattino (tolti i passati; domenica, non lunedì); teatro: una sola proposta confermata (ricerca Teatro Stabile senza date utili). Copia locale era in HEAD staccato: riallineata a origin/main (checkout -B), nessun push forzato."
+    },
+    {
+      "at": "2026-11-23T05:09+01:00",
+      "edizione": "mattina",
+      "notizie": 58,
+      "note": "Fonti: ANSA (indici e articoli), Al Jazeera e Euronews (en), TorinoToday, Comune di Torino. Lettura degli articoli quasi sempre bloccata (permessi/robots): varie notizie si basano su titolo e sommario, dichiarato nelle sintesi. Reuters, BBC, Guardian non raggiunte. Torino e Piemonte scarse (torinotoday e ansa.it/piemonte non leggibili). Lunedì: concerti NON riaggiornati, copiati dalla lista precedente (nessun concerto passato); eventi copiati; film con orari rimandati al sito delle sale; teatro 'Custodi' tolto (passato). Copia locale in HEAD staccato: riallineata a origin/main, nessun push forzato."
     }
-  ]
+  ],
+  "nota": "Edizione del mattino del 22 novembre 2026."
 }
