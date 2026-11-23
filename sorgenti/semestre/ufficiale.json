@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T21:03+01:00",
+ "updated": "2026-11-23T21:04+01:00",
  "nota": "Materiali ufficiali pubblicati (piattaforma MUR-CRUI-CISIA e avvisi UPO). Ogni voce è inserita solo dopo doppia verifica: due letture indipendenti della fonte e conferma da una seconda fonte quando esiste.",
  "fonti": [
   {
@@ -17,6 +17,26 @@
  ],
  "voci": [
   {
+   "date": "2026-11-19",
+   "tipo": "esami",
+   "titolo": "Iscrizione agli appelli del semestre aperto",
+   "dettaglio": "Dal 18 novembre 2026 l'Ateneo iscrive automaticamente agli appelli chi ha assolto l'obbligo di frequenza (almeno 51% in Biologia, Chimica e Propedeutica biochimica, Fisica; previste esenzioni). Le registrazioni delle lezioni si possono guardare fino al 25 novembre 2026. Disdetta entro il 25 novembre 2026 per l'appello del 10 dicembre 2026 ed entro il 17 dicembre 2026 per quello dell'11 gennaio 2027. Tutti gli appelli al Campus Perrone di Novara; aule e percorsi seguiranno.",
+   "materie": {
+    "fis": [],
+    "chi": [],
+    "bio": []
+   },
+   "stato": "in corso",
+   "fonte": "UPO",
+   "url": "https://www.uniupo.it/it/infostudenti/modalit%C3%A0-di-accesso-medicina-e-chirurgia-aa-20262027",
+   "verifica": {
+    "letture": 2,
+    "seconda_fonte": "nessuna seconda fonte disponibile (lettura della pagina italiana e di quella inglese UPO, coincidenti su date, soglia e sede)",
+    "url2": "https://www.uniupo.it/en/studentinfo/arrangements-access-medicine-and-surgery-ay-20262027",
+    "controllato": "2026-11-23T21:04+01:00"
+   }
+  },
+  {
    "date": "2026-11-16",
    "tipo": "simulazioni",
    "titolo": "Simulazioni d'esame disponibili sulla piattaforma ufficiale",
@@ -33,7 +53,7 @@
     "letture": 2,
     "seconda_fonte": "Università di Bari, notizia dell'11 novembre 2026 (simulazioni disponibili sulla piattaforma, stesse date di riferimento; non indica materie, numero di domande o durata)",
     "url2": "https://www.uniba.it/it/notizieuniba/anno-2026/semestre-aperto-simulazioni-esame-medodovet",
-    "controllato": "2026-11-16T21:03+01:00"
+    "controllato": "2026-11-23T21:04+01:00"
    }
   },
   {
