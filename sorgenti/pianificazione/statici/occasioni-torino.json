@@ -1,6 +1,6 @@
 {
   "app": "pianificazione-occasioni",
-  "updated": "2026-11-16T01:03:00+01:00",
+  "updated": "2026-11-23T01:03:00+01:00",
   "nota": "Volontariato a Torino con molto contatto con le persone. Solo informazioni pubbliche, con fonte e data del controllo; niente consigli. Esclusi i gruppi legati al lavoro e alla categoria.",
   "voci": [
     {
@@ -372,6 +372,10 @@
     {
       "at": "2026-11-16T01:03:00+01:00",
       "note": "giro del lunedì: Senior Civico riletto (65 anni o in pensione, 011 011 23834, seniorcivico@comune.torino.it, via Bazzi 4: invariato); pagina Biblioteche riletta, senza recapiti diretti (rimanda al form «Chiedi alle biblioteche»), voce lasciata invariata; Colletta Alimentare del 14/11 scaduta e tolta dagli annunci (Banco Alimentare: info@bancoalimentare.it, 02 896584.50, iscrizione volontari tutto l'anno dalla pagina «Diventa volontario»); bacheca Vol.To non leggibile (verifica anti-bot), altri annunci e voci non ricontrollati e lasciati invariati; nessuna voce nuova"
+    },
+    {
+      "at": "2026-11-23T01:03:00+01:00",
+      "note": "giro del lunedì: ricerca sul sito Vol.To e Comune (ambiti anziani, doposcuola, sostegno scolastico): nessuna opportunità nuova con scadenza; bacheca non leggibile (verifica anti-bot), voci e annunci non ricontrollati e lasciati invariati; nessuna voce nuova o tolta"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-22T01:02:00+01:00",
+ "updated": "2026-11-23T01:03:00+01:00",
  "voci": [
   {
    "id": "n20261118-bozza4anni",
@@ -432,7 +432,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-22T01:02:00+01:00",
+   "ultimo": "2026-11-23T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -967,6 +967,11 @@
    "at": "2026-11-22T01:02:00+01:00",
    "notizie": 0,
    "note": "giro di domenica 22/11: nessuna notizia nuova verificata (ricerche su DPR di recepimento, previdenza dedicata e GdF: solo articoli già presenti; pagina Sky TG24 sulla manovra del 2/11 riletta, previdenza dedicata ancora assente dal testo). DPR di recepimento: nessun riscontro in Gazzetta. Mercati: BTP 10 anni 4,47% al 19/11 solo da SoldiOnline/ANSA, senza seconda fonte: invariato il 4,40% del 18/11; altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-23T01:03:00+01:00",
+   "notizie": 0,
+   "note": "giro di lunedì 23/11: nessuna notizia nuova verificata (ricerche su DPR di recepimento, previdenza dedicata e sindacati GdF: solo articoli già presenti). DPR di recepimento: nessun riscontro in Gazzetta (ultimo fascicolo trovato in ricerca S.G. n. 246 del 22/10). Mercati: BTP 10 anni 4,47% a fine seduta del 19/11 (SoldiOnline/ANSA, spread 107) senza seconda fonte: invariato il 4,40% del 18/11; altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: giro del lunedì fatto. Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
