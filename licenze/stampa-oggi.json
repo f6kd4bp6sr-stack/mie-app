@@ -1,164 +1,159 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-23T05:09+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-23T13:03+01:00",
   "sezioni": {
     "italia": [
       {
-        "id": "it-manovra",
-        "t": "Manovra, vertice di maggioranza: Meloni chiede di superare le divisioni, nodo pensioni e sanità",
-        "s": "Al vertice del 19 novembre la maggioranza ha discusso le modifiche alla legge di bilancio, con focus su pensioni e sanità. Tra le proposte depositate ci sono circa 6.600 emendamenti; il viceministro Leo ha ricordato che le risorse disponibili sono 26 miliardi. Meloni ha annunciato un emendamento per estendere al Centro-Nord le semplificazioni della Zes unica.",
-        "d": "2026-11-20",
+        "id": "it-vigilanza",
+        "t": "La Russa: mercoledì i nomi dei componenti della commissione di Vigilanza Rai",
+        "s": "Il presidente del Senato Ignazio La Russa dice che mercoledì 25 novembre saranno resi noti i componenti della commissione. Attende i nomi delle opposizioni; se non arrivano, si procederà in ordine dai capigruppo.",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/19/focus-su-pensioni-e-sanita-al-vertice-di-maggioranza-meloni-chiede-basta-divisioni_f14af22e-5fa1-4851-b2a1-60f52ce6bb6e.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/23/la-russa-mercoledi-i-nomi-dei-componenti-della-commissione-di-vigilanza-rai_7d118bb9-01c5-40ff-a5fe-418d7373d50f.html"
           }
-        ]
+        ],
+        "link": []
       },
       {
-        "id": "it-lega-condono",
-        "t": "Proposta della Lega: sei mesi di tempo ai Comuni per evadere le vecchie domande di condono",
-        "s": "Secondo il titolo dell'ANSA, la proposta leghista prevede che i Comuni abbiano sei mesi per rispondere alle vecchie domande di sanatoria edilizia, altrimenti scatterebbe il condono. Il testo dell'articolo non è stato letto: i dettagli vanno verificati.",
-        "d": "2026-11-22",
+        "id": "it-calenda",
+        "t": "Calenda: governerò con chi ci sta, destra o sinistra, puntando su sanità e scuola",
+        "s": "Il leader di Azione, ospite di Mattino 5, dichiara di voler governare con i «volenterosi». Indica sanità, scuola, difesa da attacchi cyber e missilistici e collocazione europea, e annuncia una lista di 20 punti.",
+        "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/proposta-lega-6-mesi-ai-comuni-per-evadere-le-vecchie-domande-o-scatta-il-condono_ef3373d1-a0c4-478b-9073-1a56cc0fee3a.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/23/calenda-destra-o-sinistra-non-mimporta-governero-con-volenterosi_d14dd948-9286-484a-a4d6-88012725487c.html"
           }
-        ]
-      },
-      {
-        "id": "it-fdi-marcatori",
-        "t": "Emendamento di Fratelli d'Italia: alla Polizia marcatori colorati per identificare i violenti nei cortei",
-        "s": "Fratelli d'Italia ha presentato un emendamento per dotare la Polizia di marcatori colorati con cui contrassegnare chi commette violenze durante le manifestazioni. L'articolo completo non è stato letto: la notizia si basa su titolo e sommario dell'ANSA.",
-        "d": "2026-11-22",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/emendamento-fdi-alla-polizia-marcatori-colorati-per-identificare-violenti-nei_054c7c84-2c8f-4bf8-af84-c770d414a40e.html"
-          }
-        ]
+        ],
+        "link": []
       },
       {
         "id": "it-grillo",
-        "t": "Grillo: «Se il giudice dice che il Movimento è mio, me lo prendo»",
-        "s": "Beppe Grillo ha dichiarato, secondo l'ANSA del 22 novembre, che se il giudice dovesse riconoscere il Movimento 5 Stelle come suo, lo rivendicherebbe. Il contesto è la disputa legale sul Movimento; il testo completo non è stato letto.",
+        "t": "Grillo a «Che tempo che fa»: se il giudice lo vuole, riprenderà il simbolo M5S",
+        "s": "Beppe Grillo afferma che, se a gennaio un giudice riconoscerà il simbolo del Movimento come suo, lo riprenderà per darlo agli under 25. Critica Giuseppe Conte e si dice contrario al nucleare.",
         "d": "2026-11-22",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/grillo-se-il-giudice-dice-che-il-movimento-e-mio-me-lo-prendo_cf0e2dfa-f003-4804-ab55-fbcdcdc5d77d.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/22/grillo-show-e-avvisa-se-il-giudice-dice-che-il-movimento-e-mio-me-lo-riprendo_d85903d4-9afa-4b58-b602-96ed3ea730be.html"
           }
-        ]
+        ],
+        "link": []
       }
     ],
     "mondo": [
       {
-        "id": "mo-dymer",
-        "t": "Kiev, drone russo su un palazzo a Dymer: salgono a nove le vittime",
-        "s": "Dopo l'attacco con drone a un edificio di cinque piani a Dymer, nella regione di Kiev, i soccorritori hanno recuperato altri tre corpi: le vittime sono nove. Una donna di 79 anni è stata estratta viva, come un bambino durante la notte; le ricerche continuano.",
+        "id": "mo-bombe-scuole",
+        "t": "Allarmi bomba via e-mail in centinaia di scuole in Germania e Danimarca",
+        "s": "Secondo la Bild circa 450 scuole tedesche hanno ricevuto minacce via mail lunedì mattina; la polizia tedesca e quella danese parlano di pericolo non concreto. Un caso simile aveva coinvolto scuole italiane a inizio novembre.",
         "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/23/kiev-bilancio-vittime-dymer-sale-a-9-si-scava-ancora-tra-le-macerie_9d3d3304-92fa-4410-af2a-867f102e8f41.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/allarmi-bomba-stamattina-in-centinaia-di-scuole-in-germania-e-danimarca_f62f1019-227e-4c45-8954-e1f2d4f46b67.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-libia-navi",
+        "t": "Zelensky rivendica attacchi di droni navali contro navi russe al largo della Libia",
+        "s": "Il presidente ucraino dice di aver affondato la corvetta Merkury e colpito un cargo. Autorità della Libia orientale parlano di un’esplosione nel porto di Bengasi; l’Onu chiede un’indagine indipendente e il Cremlino prende atto delle dichiarazioni.",
+        "d": "2026-11-23",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/23/zelenskyy-says-ukraine-behind-drone-attacks-on-russian-ships-near-libya",
+            "l": "en"
           },
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/22/14-people-missing-after-russian-drone-strike-on-kyiv-region",
-            "l": "en"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/11/23/cremlino-prendiamo-atto-delle-dichiarazioni-di-kiev-sullattacco-in-libia_2335b424-5db6-4098-9a1a-65d295b2c079.html"
           }
-        ]
+        ],
+        "link": []
       },
       {
         "id": "mo-cop31",
-        "t": "Cop31 di Antalya: chiusa senza consenso globale, Panama presenta obiezione formale",
-        "s": "Il vertice sul clima di Antalya si è chiuso con un accordo politico senza consenso globale dopo due giorni di proroga. Panama lo giudica insufficiente per l'obiettivo di 1,5 gradi e ha presentato un'obiezione formale; Euronews titola sul rifiuto dell'intesa da parte dell'Ue e di altri.",
+        "t": "Cop31 di Antalya chiude senza accordo: stallo sui combustibili fossili",
+        "s": "I negoziati Onu sul clima si sono conclusi il 22 novembre senza intesa. Pesano il blocco dei Paesi Opec guidati dall’Arabia Saudita e l’assenza di progressi sui fondi ai Paesi in via di sviluppo.",
         "d": "2026-11-23",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/americalatina/2026/11/23/cop31-panama-obietta-formalmente-sullaccordo-finale-ad-antalya_acedb005-3492-4a19-a714-cf9d13776311.html"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/22/cop31-climate-talks-fail-after-eu-and-others-reject-final-deal-proposal",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/23/cop31-what-next-after-un-climate-talks-collapse",
             "l": "en"
           }
-        ]
+        ],
+        "link": []
       },
       {
-        "id": "mo-peskov",
-        "t": "Mosca: nei colloqui in Cina Putin e Trump non hanno parlato del nuovo ambasciatore a Washington",
-        "s": "Il portavoce del Cremlino Peskov dice che la nomina non è stata affrontata nell'incontro, di carattere generale. L'ambasciatore russo negli Usa Darčiev è morto l'11 novembre a 66 anni; Regno Unito e Francia sono senza ambasciatore russo da oltre due mesi.",
+        "id": "mo-ebola",
+        "t": "Oms: appello alla pace nell’Ituri, dove l’Ebola si somma ai combattimenti",
+        "s": "Il direttore generale Tedros chiede il cessate il fuoco dopo scontri vicino a un ospedale. Secondo l’Oms, al 17 novembre i casi in Congo erano 11.613 e i decessi 5.678.",
         "d": "2026-11-23",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/23/mosca-putin-e-trump-non-hanno-discusso-della-nomina-di-un-ambasciatore-a-washington_81ae1b4a-b31b-4afe-91eb-6d0db39c2527.html"
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/23/who-chief-calls-for-peace-amid-heavy-fighting-in-ebola-hit-dr-congo-region",
+            "l": "en"
           }
-        ]
-      },
-      {
-        "id": "mo-bengasi",
-        "t": "Nave russa colpita a Bengasi: secondo Axios dietro c'è un attacco a lungo raggio ucraino",
-        "s": "Secondo il giornalista Barak Ravid di Axios, citato dall'ANSA, la nave da guerra russa colpita nel porto libico di Bengasi sarebbe stata attaccata dal servizio di sicurezza ucraino (SBU). L'informazione arriva da una fonte anonima e non è confermata ufficialmente.",
-        "d": "2026-11-22",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/11/22/media-nave-russa-colpita-in-libia-da-attacco-a-lungo-raggio-ucraino_0c7df80f-d236-48ee-82b2-672a1d937471.html"
-          }
-        ]
+        ],
+        "link": []
       }
     ],
     "estero": [
       {
+        "id": "es-libia",
+        "t": "Come la stampa araba racconta gli attacchi ucraini alle navi russe vicino alla Libia",
+        "s": "Al Jazeera ricostruisce che cosa si sa dell’episodio: la rivendicazione di Kiev, l’esplosione a Bengasi e la richiesta Onu di indagine indipendente. Le versioni non sono verificate in modo indipendente.",
+        "d": "2026-11-23",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/23/russian-ships-hit-by-drones-off-libya-coast-what-do-we-know",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
         "id": "es-belgio",
-        "t": "Belgio, sciopero contro l'austerità: aeroporti quasi fermi lunedì",
-        "s": "Skeyes, la società del controllo del traffico aereo, non può garantire il servizio dalle 7 alle 21: quasi tutti i voli saltano. È l'undicesimo sciopero in undici mesi; il bilancio del governo punta a risparmiare 10 miliardi di euro.",
+        "t": "Belgio: sciopero contro l’austerità ferma gli aeroporti per l’intera giornata",
+        "s": "Il controllo del traffico aereo è sospeso dalle 7 alle 21 e quasi tutti i voli sono cancellati. Per le compagnie è l’undicesimo sciopero in undici mesi; il governo De Wever cerca tagli per 10 miliardi.",
         "d": "2026-11-23",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/23/belgiums-airports-set-to-shut-down-due-to-anti-austerity-strike",
+            "url": "https://www.aljazeera.com/news/2026/11/23/belgiums-airports-set-to-shut-down-due-to-anti-austerity-strike",
             "l": "en"
           }
-        ]
+        ],
+        "link": []
       },
       {
-        "id": "es-indonesia",
-        "t": "Indonesia, incendio in una fabbrica di dolci a Cikande: decine di dispersi",
-        "s": "Il rogo è scoppiato sabato sera nello stabilimento PT Fonusa Agung Mulia; sul turno c'erano circa 300 persone. Secondo l'azienda 29 persone risultano disperse e 4 in cura; la polizia ha rimosso 24 sacchi con i corpi e l'identificazione con il Dna può richiedere 2-3 settimane.",
+        "id": "es-scuole-de",
+        "t": "Germania: la polizia dice che le mail con minacce alle scuole non indicano pericolo",
+        "s": "Euronews riferisce che oltre 450 scuole del Baden-Württemberg hanno ricevuto le minacce; la polizia le ritiene non autentiche. Ricorda i circa 300 istituti italiani evacuati all’inizio di novembre.",
         "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/23/indonesian-police-remove-24-body-bags-from-factory-fire-site",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-mongolia",
-        "t": "Mongolia: il Parlamento accetta le dimissioni del presidente, si va al voto anticipato",
-        "s": "Con 96 voti su 104 il Parlamento ha accolto le dimissioni del presidente Khurelsukh Ukhnaa, le prime nella storia del Paese, dopo accuse di corruzione che lui nega. L'inflazione è al 13,6% e un nuovo presidente è atteso entro quattro mesi.",
-        "d": "2026-11-22",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/22/mongolia-faces-snap-presidential-vote-as-outgoing-leader-calls-for-constitutional-reform",
+            "url": "https://www.euronews.com/2026/11/23/bomb-threats-emailed-to-german-schools-present-no-concrete-danger-police-say",
             "l": "en"
           }
-        ]
+        ],
+        "link": []
       }
     ],
     "economia": [
       {
-        "id": "ec-ai-borse",
-        "t": "Borse asiatiche in calo per i timori su una bolla dell'intelligenza artificiale",
-        "s": "A Seul il Kospi è arrivato a perdere il 5,8% in apertura e l'Hang Seng di Hong Kong l'1,8%. Venerdì lo S&P 500 ha chiuso a -3,7%, entrando in correzione, e il Nasdaq ha perso il 5,3%, azzerando i guadagni del 2026.",
+        "id": "ec-borse-asia",
+        "t": "Borse asiatiche in calo per i timori su una bolla dell’intelligenza artificiale",
+        "s": "Il Kospi sudcoreano chiude a -3,3%. Venerdì il Nasdaq ha perso il 5,3% e lo S&P 500 il 3,7%; i future indicano un rimbalzo lunedì.",
         "d": "2026-11-23",
         "fonti": [
           {
@@ -166,71 +161,103 @@
             "url": "https://www.aljazeera.com/news/2026/11/23/south-koreas-stock-market-tumbles-as-ai-bubble-fears-mount",
             "l": "en"
           }
-        ]
+        ],
+        "link": []
       },
       {
-        "id": "ec-tacchino",
-        "t": "Stati Uniti, Thanksgiving più caro: il tacchino costa il 10% in più",
-        "s": "Secondo il titolo dell'ANSA, il prezzo del tacchino per la cena del Ringraziamento è aumentato del 10%. Il testo dell'articolo non è stato letto.",
-        "d": "2026-11-22",
+        "id": "ec-bilancio-ue",
+        "t": "Bilancio Ue 2028-2034: Costa propone altri tagli per mediare con i Paesi frugali",
+        "s": "Il presidente del Consiglio europeo riduce ancora la proposta di bilancio pluriennale, per oltre 200 miliardi complessivi. Il vertice è atteso giovedì 26 novembre; l’Italia chiede di non toccare coesione, Pac e pesca.",
+        "d": "2026-11-23",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/22/la-cena-del-thanksgiving-costera-cara-il-tacchino-e-aumentato-del-10_6ba2dae7-11bc-4ffe-a93f-d5beb38c2603.html"
+            "n": "Teleborsa (ANSA)",
+            "url": "https://teleborsa.ansa.it/notiziario/economia/bilancio-ue-proposta-di-costa-taglia-200-miliardi-per-mediare-con-i-frugali/"
           }
-        ]
+        ],
+        "link": []
       }
     ],
     "torino": [
       {
+        "id": "to-mirafiori",
+        "t": "Mirafiori: riprende la produzione della 500 dopo cinque settimane di stop",
+        "s": "Da lunedì 23 novembre le Carrozzerie ripartono sulle linee della 500 elettrica e ibrida, secondo quanto comunicato da Stellantis ai sindacati. Lo stop era attribuito alla mancanza di componenti.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/17/stellantis-lunedi-23-novembre-riprende-lattivita-produttiva-a-mirafiori_d6b33ad3-fc9c-4e31-bf31-034226417820.html"
+          }
+        ],
+        "link": []
+      },
+      {
         "id": "to-atp",
-        "t": "Torino fa festa con «Tennis Takes Over» nel weekend delle Nitto ATP Finals",
-        "s": "Il Comune ha organizzato per sabato 21 e domenica 22 novembre una notte e una mattina tra musica, sport e cultura legate alle Nitto ATP Finals 2026.",
-        "d": "2026-11-22",
+        "t": "Atp Finals: Torino chiede di ospitarle fino al 2030, oltre 26mila presenze negli eventi collaterali",
+        "s": "A chiusura del torneo la città e la Federazione puntano a prolungare l’accordo oltre il 2027. La Federazione cita un impatto economico superiore a 700 milioni di euro.",
+        "d": "2026-11-23",
         "fonti": [
           {
-            "n": "Città di Torino",
-            "url": "https://www.comune.torino.it/novita/comunicati/tennis-takes-over-torino-fa-festa-sabato-21-domenica-22-novembre-una-notte-una"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/23/leggi-notizia/argomenti/eventi-11/articolo/atp-finals-torino-rilancia-vogliamo-tenerle-fino-al-2030-oltre-26-mila-presenze.html"
           }
-        ]
+        ],
+        "link": []
       },
       {
-        "id": "to-unione-sovietica",
-        "t": "Scontro frontale tra due auto in corso Unione Sovietica, all'incrocio con via Madonna delle Rose",
-        "s": "L'incidente è avvenuto il 22 novembre in corso Unione Sovietica, a Torino, e ha coinvolto due auto in uno scontro frontale. Per i dettagli sui feriti si rimanda all'articolo.",
-        "d": "2026-11-22",
+        "id": "to-strade-scolastiche",
+        "t": "Presentate le linee guida per strade e piazze scolastiche a Torino",
+        "s": "Le strade scolastiche limitano il traffico agli orari di ingresso e uscita; le piazze prevedono una riqualificazione più strutturale. Obiettivi dichiarati: sicurezza, socialità e qualità dell’aria.",
+        "d": "2026-11-23",
         "fonti": [
           {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/incidente-stradale/unione-sovietica-madonna-delle-rose-22-novembre-2026.html"
+            "n": "Torino Oggi",
+            "url": "https://torinoggi.it/2026/11/23/leggi-notizia/argomenti/scuola-e-lavoro/articolo/strade-e-piazze-scolastiche-presentate-alla-1-le-linee-guida-per-la-mobilita-intorno-agli-istituti.html"
           }
-        ]
+        ],
+        "link": []
       },
       {
-        "id": "to-collegno",
-        "t": "Collegno, scontro fra tre auto in corso Cervi",
-        "s": "Un incidente tra tre auto è stato segnalato il 22 novembre in corso Cervi, a Collegno, nell'area metropolitana di Torino.",
-        "d": "2026-11-22",
+        "id": "to-etf",
+        "t": "Alle Ogr il Global Skills Summit della Fondazione europea per la formazione",
+        "s": "Dal 23 al 25 novembre sono attesi oltre 250 partecipanti e 80 relatori per discutere di formazione professionale e riconoscimento dei titoli.",
+        "d": "2026-11-23",
         "fonti": [
           {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/incidente-stradale/cervi-collegno-22-novembre-2026.html"
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/23/leggi-notizia/argomenti/eventi-11/articolo/lavoro-e-competenze-del-futuro-alle-ogr-di-torino-il-summit-internazionale-dellagenzia-europea-etf.html"
           }
-        ]
+        ],
+        "link": []
+      },
+      {
+        "id": "to-luci-tour",
+        "t": "Luci d’Artista: tour guidati gratuiti per i residenti nelle circoscrizioni",
+        "s": "Città e Fondazione Torino Musei propongono visite a piedi o in bus alle 31 installazioni, con date tra il 23 novembre e il 17 dicembre; i posti sono limitati.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/20/luci-dartista-tour-guidati-nelle-circoscrizioni-a-torino_71a84f44-22c0-434d-8c67-0f75cec769eb.html"
+          }
+        ],
+        "link": []
       }
     ],
     "piemonte": [
       {
-        "id": "pi-fsc",
-        "t": "Piemonte, in arrivo 242 milioni di fondi Fsc",
-        "s": "L'ANSA Piemonte segnala l'arrivo in regione di 242 milioni di euro dal Fondo sviluppo e coesione (Fsc).",
-        "d": "2026-11-19",
+        "id": "pi-cirio-atp",
+        "t": "Cirio: nel bilancio regionale i fondi per le Atp Finals fino al 2030",
+        "s": "Il presidente della Regione Piemonte dice che la quota regionale è già prevista e che la Regione vuole il torneo a Torino per tutti e cinque gli anni del secondo ciclo.",
+        "d": "2026-11-22",
         "fonti": [
           {
-            "n": "ANSA Piemonte",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/19/piemonte-in-arrivo-242-milioni-di-fondi-fsc_29f256b9-9234-4552-b12a-b0ecad2ff41c.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/22/atp-finals-cirio-la-regione-ha-gia-a-bilancio-risorse-fino-al-2030_b4afcb8d-beec-4af5-ab58-2a8e65117e54.html"
           }
-        ]
+        ],
+        "link": []
       }
     ],
     "scienza": [
@@ -863,12 +890,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-13T13:08+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 72,
-      "note": "Fonti lette: ANSA, AGI, Al Jazeera (en), Euronews (en). Non leggibili: TorinoToday (pagina Palazzo Nuovo). Ricerca su Reuters/BBC/Guardian rifiutata dal proxy. Due pagine ANSA Piemonte (acqua, Diasorin) non aperte per mancata approvazione: sintesi dall'elenco. Cinema, teatro, eventi e concerti dall'edizione del mattino (non è lunedì, nessun concerto già passato). Copia locale riallineata a origin/main (era staccata)."
-    },
-    {
       "at": "2026-11-14T05:09+01:00",
       "edizione": "mattina",
       "notizie": 66,
@@ -981,7 +1002,13 @@
       "edizione": "mattina",
       "notizie": 58,
       "note": "Fonti: ANSA (indici e articoli), Al Jazeera e Euronews (en), TorinoToday, Comune di Torino. Lettura degli articoli quasi sempre bloccata (permessi/robots): varie notizie si basano su titolo e sommario, dichiarato nelle sintesi. Reuters, BBC, Guardian non raggiunte. Torino e Piemonte scarse (torinotoday e ansa.it/piemonte non leggibili). Lunedì: concerti NON riaggiornati, copiati dalla lista precedente (nessun concerto passato); eventi copiati; film con orari rimandati al sito delle sale; teatro 'Custodi' tolto (passato). Copia locale in HEAD staccato: riallineata a origin/main, nessun push forzato."
+    },
+    {
+      "at": "2026-11-23T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 59,
+      "note": "Fonti: ANSA, Teleborsa, Al Jazeera (en), Euronews (en), Torino Oggi. Lettura tramite agente web-fetch. Reuters, BBC, Guardian non cercate/raggiunte; una pagina Torino Oggi (Vallette) non leggibile. Sezioni scarse: poche notizie lette. Cinema, teatro, eventi, concerti e scienza dall'edizione del mattino (non è lunedì mattina; nessun concerto passato). Copia locale riallineata a origin/main (era in HEAD staccato)."
     }
   ],
-  "nota": "Edizione del mattino del 22 novembre 2026."
+  "nota": "Edizione del pomeriggio del 23 novembre 2026."
 }
