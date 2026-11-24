@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com https://gist.githubusercontent.com; worker-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex, nofollow">
-<meta http-equiv="Content-Security-Policy" id="csp-cas" content="default-src 'none'; script-src 'sha256-/wgeRev7+zhocI8GrH67lxpzDpbdhDUC/1KItDyHB6A=' 'sha256-0FX4Xvmh7KvLlZ66d2kFqxknRlCJZOt8EtbqvXTsO7k=' 'sha256-WrgACO/3TY4j/+SF1ZiDt1fTnnZKZipqiJbvu1re6dg=' 'sha256-otIW5QS7Asmi0P8EMYTGwkhNp0IaJSV1leyy1F16iuU=' 'sha256-zuDQ4hJRmoM9Iwd6jV6G9GNjWhVAi0auXB4RVvFKXPU='; style-src 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'none'; form-action 'none'; base-uri 'none'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" id="csp-cas" content="default-src 'none'; script-src 'sha256-0FX4Xvmh7KvLlZ66d2kFqxknRlCJZOt8EtbqvXTsO7k=' 'sha256-WrgACO/3TY4j/+SF1ZiDt1fTnnZKZipqiJbvu1re6dg=' 'sha256-dVxvUsxv3PQNvtAF6x7XSBIpJA0b9cWLSar8uXKAkZM=' 'sha256-otIW5QS7Asmi0P8EMYTGwkhNp0IaJSV1leyy1F16iuU=' 'sha256-zuDQ4hJRmoM9Iwd6jV6G9GNjWhVAi0auXB4RVvFKXPU='; style-src 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'none'; form-action 'none'; base-uri 'none'; manifest-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -50,6 +50,8 @@ details.card>.in{margin-top:12px}
 svg{display:block;width:100%;height:auto}
 /* 24/11/2026: i disegni a passi più piccoli e centrati (a 600 px il testo resta ≥ 13 px) */
 svg[viewBox="0 0 760 150"]{max-width:600px;margin:0 auto}
+.scans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:10px 0}@media(max-width:760px){.scans{grid-template-columns:1fr}}
+.scanbox{display:grid;gap:6px;font-size:15px}.scanbox textarea.scan{font-size:16px;min-height:110px;border:2px dashed var(--ac);border-radius:12px;padding:10px;background:var(--surface,transparent);color:inherit;width:100%;box-sizing:border-box}
 svg text{font-family:-apple-system,system-ui,sans-serif;fill:var(--ink)}
 .grid2{display:grid;grid-template-columns:1fr;gap:14px}
 @media (min-width:900px){.grid2{grid-template-columns:1fr 1fr}}
@@ -1017,11 +1019,21 @@ function passoTesto(d, W) {
     const incolla = l => async () => { try { await usa(l, await navigator.clipboard.readText()); } catch (e) { dettagli.open = true; stato_.hidden = false; stato_.className = 'warn'; stato_.textContent = 'L\'iPad non mi lascia leggere gli appunti: incolla il testo nella casella qui sotto.'; } };
     const OCR = window.CF_OCR && window.CF_OCR.disponibile;
     const anteprima = (b, nome) => b ? E('figure', {style: 'margin:0;text-align:center'}, E('img', {src: urlW(b), alt: 'Anteprima del ' + nome, style: 'max-width:100%;max-height:260px;border-radius:10px;border:1px solid var(--line)'}), E('figcaption', {class: 'pic'}, nome)) : null;
-    d.set(passi(3), E('div', {html: flowSvg([{i: '👆', t: 'Tieni premuto|sulla foto'}, {i: '🔤', t: 'Seleziona|tutto'}, {i: '📄', t: 'Copia'}, {i: '📋', t: 'Premi qui|sotto: incolla'}], 'Come copiare il testo dalla foto: tieni premuto sulla foto qui sotto, seleziona tutto, copia, incolla')}),
-      E('p', null, 'Tieni premuto sul testo dell\'anteprima della foto QUI SOTTO (dentro questa pagina, non nell\'app Foto), scegli «Seleziona tutto» e «Copia». Poi premi il pulsante: il testo si incolla da solo e gli appunti si svuotano. Non devi scrivere niente.'),
+    /* 24/11/2026 («il riconoscimento non è semplice»): via principale = «Scansiona testo» dell'iPad dentro la casella
+       (la fotocamera legge il testo direttamente, sul dispositivo, senza appunti e senza app Foto). La copia dalla foto resta come seconda via. */
+    const scan = (l, nome) => { const t = E('textarea', {class: 'scan', rows: 4, autocapitalize: 'off', autocomplete: 'off', spellcheck: 'false', placeholder: 'Tocca qui, poi «Scansiona testo» e inquadra il ' + nome, 'aria-label': 'Testo del ' + nome});
+      t.addEventListener('focus', () => { S.pausa = Date.now() + 90000; }); t.addEventListener('blur', () => { S.pausa = 0; });  /* la scansione con la fotocamera non conta come tocchi: niente blocco per inattività mentre si scansiona (max 90 s) */
+      let tm = 0; t.addEventListener('input', () => { clearTimeout(tm); tm = setTimeout(() => { if (t.value.trim().length >= 4) usa(l, t.value, true); }, 600); });
+      return E('label', {class: 'scanbox'}, E('b', null, (l === 'f' ? '🪪 FRONTE' : '🔄 RETRO') + ' del documento'), t); };
+    const viaCopia = E('details', null, E('summary', null, 'Altro modo: copiare il testo dalla foto'),
+      E('div', {html: flowSvg([{i: '👆', t: 'Tieni premuto|sulla foto'}, {i: '🔤', t: 'Seleziona|tutto'}, {i: '📄', t: 'Copia'}, {i: '📋', t: 'Premi|incolla'}], 'Come copiare il testo dalla foto')}),
       E('div', {class: 'prev', style: 'margin:8px 0'}, anteprima(W.f, 'fronte'), anteprima(W.r, 'retro')),
-      E('div', {class: 'row c'}, E('button', {class: 'btn pri', type: 'button', onclick: incolla('f')}, '📋 Incolla il testo del FRONTE'), W.r ? E('button', {class: 'btn pri', type: 'button', onclick: incolla('r')}, '📋 Incolla il testo del RETRO') : null),
-      stato_, dettagli, E('p', {class: 'pic'}, 'Se la foto finisse nell\'app Foto o in iCloud, cancellala anche da «Eliminati di recente».'), E('div', {class: 'bt'}, E('button', {class: 'btn', type: 'button', onclick: () => res('annulla')}, 'Annulla'), go));
+      E('div', {class: 'row c'}, E('button', {class: 'btn', type: 'button', onclick: incolla('f')}, '📋 Incolla il testo del FRONTE'), W.r ? E('button', {class: 'btn', type: 'button', onclick: incolla('r')}, '📋 Incolla il testo del RETRO') : null),
+      dettagli);
+    d.set(passi(3), E('div', {html: flowSvg([{i: '👆', t: 'Tocca|la casella'}, {i: '📷', t: '«Scansiona|testo»'}, {i: '🪪', t: 'Inquadra|il documento'}, {i: '✅', t: '«Inserisci»'}], 'Come far leggere il testo all\'iPad: tocca la casella, scegli Scansiona testo, inquadra il documento, premi Inserisci')}),
+      E('p', null, 'Il modo più semplice: tocca la casella qui sotto; se non compare subito, toccala ancora e scegli «Scansiona testo» (l\'icona con la fotocamera e le righe). Inquadra il documento: l\'iPad legge le scritte e premi «Inserisci». Il testo non passa dagli appunti né dall\'app Foto. Non devi scrivere niente: i dati li riconosco io.'),
+      E('div', {class: 'scans'}, scan('f', 'fronte'), W.r ? scan('r', 'retro') : null),
+      stato_, viaCopia, E('p', {class: 'pic'}, 'Se una foto finisse nell\'app Foto o in iCloud, cancellala anche da «Eliminati di recente».'), E('div', {class: 'bt'}, E('button', {class: 'btn', type: 'button', onclick: () => res('annulla')}, 'Annulla'), go));
     if (OCR) (async () => { try { if (W.f) W.tf = await window.CF_OCR.leggi(W.f); if (W.r) W.tr = await window.CF_OCR.leggi(W.r); agg(); res('ok'); } catch (e) {} })();
   });
 }
