@@ -1,0 +1,1393 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" id="csp-cas" content="default-src 'none'; script-src 'sha256-MWcd+E6dL2SnAaUEw1yg8HRaubYWNAz4mpxH/fdZFfo='; style-src 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'none'; form-action 'none'; base-uri 'none'; manifest-src 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Pianificazione">
+<meta name="theme-color" content="#F3F1FA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14121C" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<title>Cassaforte</title>
+<style>
+:root{color-scheme:light dark;--bg:#F3F1FA;--sf:#FFFFFF;--sf2:#ECE8F8;--ink:#1D1A2B;--mut:#555069;--line:#D6D0EA;--ac:#5B3FC4;--acink:#FFFFFF;--acsoft:#E4DDFA;
+--ok:#1E7B46;--oks:#DDF3E5;--wa:#8A5A00;--was:#FFF0CC;--ba:#B3261E;--bas:#FBE0DD;--gr:#5B5870;--grs:#E6E4EE;--r:16px}
+@media (prefers-color-scheme:dark){:root{--bg:#14121C;--sf:#1E1B2B;--sf2:#2A2640;--ink:#ECE9F7;--mut:#B2ADC8;--line:#3A3558;--ac:#A692FF;--acink:#14121C;--acsoft:#312A57;
+--ok:#7CD9A0;--oks:#16301F;--wa:#F2C25C;--was:#3B2E0C;--ba:#FF9A91;--bas:#3F1A18;--gr:#B2ADC8;--grs:#2A2640}}
+*{box-sizing:border-box;min-width:0}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;overflow-x:hidden}
+body[data-app=cas] .card{border:1px solid var(--line);box-shadow:none;border-radius:var(--r)}
+main{max-width:1120px;margin:0 auto;padding:12px 16px 90px}
+h1{font-size:1.7rem;margin:0}h2{font-size:1.2rem;margin:0}h3{font-size:1.05rem;margin:0 0 6px}
+p{margin:0 0 8px;overflow-wrap:anywhere}
+small,.pic{font-size:13.5px;color:var(--mut)}
+.top{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;margin:6px 0 10px}
+.top h1{flex:0 1 auto}
+#lucchetto{font-size:1.5rem;background:var(--acsoft);border:0;border-radius:50%;width:48px;height:48px;cursor:pointer}
+.btn{font:inherit;font-size:16px;font-weight:700;border:0;border-radius:12px;padding:10px 16px;min-height:46px;cursor:pointer;background:var(--sf2);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;gap:6px;text-align:center;text-decoration:none}
+.btn.pri{background:var(--ac);color:var(--acink)}
+.btn.bad{background:var(--ba);color:#fff}
+@media (prefers-color-scheme:dark){.btn.bad{color:#14121C}}
+.btn.big{font-size:20px;min-height:64px;padding:14px 24px}
+.btn[disabled]{opacity:.5;cursor:default}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.row.c{justify-content:center}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 12px;font-size:14px;font-weight:700;background:var(--grs);color:var(--gr)}
+.pill.ok{background:var(--oks);color:var(--ok)}.pill.wa{background:var(--was);color:var(--wa)}.pill.ba{background:var(--bas);color:var(--ba)}
+.card{background:var(--sf);border-radius:var(--r);padding:16px;margin:0 0 14px}
+details.card>summary{cursor:pointer;font-weight:800;font-size:1.12rem;list-style:none;display:flex;align-items:center;gap:10px;min-height:40px}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary::after{content:"▾";margin-left:auto;color:var(--mut)}
+details.card[open]>summary::after{content:"▴"}
+details.card>.in{margin-top:12px}
+[hidden]{display:none!important}
+.hero{max-width:760px;margin:0 auto 12px}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:-apple-system,system-ui,sans-serif;fill:var(--ink)}
+.grid2{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:900px){.grid2{grid-template-columns:1fr 1fr}}
+.tess{background:var(--sf);border:1px solid var(--line);border-radius:var(--r);padding:12px;display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center}
+@media (max-width:520px){.tess{grid-template-columns:1fr}}
+.tess svg{width:150px}
+.tess h3{margin:0 0 4px}
+.kv{display:grid;grid-template-columns:minmax(120px,max-content) 1fr;gap:6px 12px;margin:8px 0}
+.kv>b{color:var(--mut);font-weight:600}
+.mask{letter-spacing:2px;font-family:ui-monospace,Menlo,monospace}
+.vel{font-family:ui-monospace,Menlo,monospace;font-size:1.15rem;overflow-wrap:anywhere;background:var(--sf2);border-radius:10px;padding:6px 10px;display:inline-block}
+.ovl{position:fixed;inset:0;z-index:2000;background:rgba(10,8,20,.62);display:flex;align-items:center;justify-content:center;padding:14px;overflow:auto}
+.dlg{background:var(--sf);color:var(--ink);border-radius:20px;max-width:760px;width:100%;max-height:96vh;overflow:auto;padding:18px;border:1px solid var(--line)}
+.chiudi-ora{float:right;font:inherit;font-size:14px;font-weight:700;border:0;border-radius:10px;padding:6px 10px;min-height:36px;background:var(--sf2);color:var(--ink);cursor:pointer}
+.dlg>h2{margin-bottom:10px;text-align:center}
+.dlg .bt{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.pad{display:grid;grid-template-columns:repeat(3,92px);gap:12px;justify-content:center;margin:12px auto}
+.pad button{font:inherit;font-size:32px;font-weight:700;height:78px;border-radius:20px;border:0;background:var(--sf2);color:var(--ink);cursor:pointer}
+.pad button.ok{background:var(--ac);color:var(--acink);font-size:24px}
+.dots{display:flex;gap:10px;justify-content:center;min-height:30px;font-size:26px}
+.dots i{width:18px;height:18px;border-radius:50%;background:var(--ac);display:block}
+.msg{text-align:center;min-height:1.4em;font-weight:700}
+.msg.ba{color:var(--ba)}
+input[type=text],input[type=password],textarea{font:inherit;font-size:17px;width:100%;padding:10px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+textarea{min-height:90px}
+label.chk{display:flex;gap:10px;align-items:flex-start}
+label.chk input{width:24px;height:24px;flex:none;margin-top:2px}
+.rk{font:700 1.5rem/1.6 ui-monospace,Menlo,monospace;text-align:center;letter-spacing:2px;background:var(--sf2);border-radius:14px;padding:10px;overflow-wrap:anywhere}
+.steps{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:0 0 10px}
+.steps span{font-size:14px;padding:3px 10px;border-radius:99px;background:var(--grs);color:var(--gr);font-weight:700}
+.steps span.on{background:var(--ac);color:var(--acink)}
+.prev{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.prev img{max-width:260px;max-height:180px;border-radius:10px;border:1px solid var(--line)}
+.tipi{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (min-width:900px){.tipi{grid-template-columns:repeat(3,1fr)}}
+.tipi button{font:inherit;display:grid;grid-template-columns:96px 1fr;gap:8px;align-items:center;text-align:left;padding:8px;border-radius:14px;border:1.5px solid var(--line);background:var(--sf);color:var(--ink);cursor:pointer;min-height:70px}
+.tipi button svg{width:96px}
+.tipi button b{font-size:15.5px}
+.tl{overflow:hidden}
+.ovl.alto{z-index:2600}
+.sol{position:fixed;inset:0;z-index:2500;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px;gap:10px}
+.sol img{max-width:100%;max-height:72vh;object-fit:contain;background:#111}
+.sol .btn{background:#2a2a2a;color:#fff}
+#velo{position:fixed;inset:0;z-index:3000;background:var(--bg);color:var(--ink);display:none;align-items:center;justify-content:center;flex-direction:column;font-size:1.6rem;font-weight:800;gap:10px}
+#velo.on{display:flex}
+#areaStampa{display:none}
+.lista{margin:0;padding-left:22px}.lista li{margin:3px 0}
+.lettera{white-space:pre-wrap;background:var(--sf2);border-radius:12px;padding:14px;overflow-wrap:anywhere}
+.ico{font-size:1.3em}
+.warn{background:var(--was);color:var(--wa);border-radius:12px;padding:10px 12px;font-weight:600}
+.okb{background:var(--oks);color:var(--ok);border-radius:12px;padding:10px 12px;font-weight:600}
+.bab{background:var(--bas);color:var(--ba);border-radius:12px;padding:10px 12px;font-weight:600}
+table.t{border-collapse:collapse;width:100%}table.t td,table.t th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left;vertical-align:top}
+@media print{
+ body>*:not(#areaStampa){display:none!important}
+ #areaStampa{display:block!important;color:#000;background:#fff;font:16px/1.5 Georgia,serif;padding:10mm}
+ #areaStampa .rk{background:#fff;border:2px solid #000;color:#000}
+ #areaStampa h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+<!--@NAV-->
+<div id="velo" role="presentation"><div style="font-size:4rem">🔒</div><div>Cassaforte chiusa</div></div>
+<main id="app">
+ <div class="top"><h1>🔐 Cassaforte</h1><button id="lucchetto" type="button" aria-label="Lucchetto: tocca due volte per chiudere subito" title="Tocca due volte per chiudere subito">🔒</button><span id="stato" class="pill">Chiusa</span><button id="chiudiSubito" class="btn" type="button" hidden>🔒 Chiudi subito</button></div>
+ <div id="hero" class="hero"></div>
+ <div id="vista"></div>
+</main>
+<div id="ovl-root"></div>
+<div id="areaStampa" aria-hidden="true"></div>
+<script>
+/* =====================================================================
+   🔐 CASSAFORTE di Pianificazione — un solo file, nessuna libreria, nessuna rete.
+   La segretezza sta SOLO nella cifratura dei dati sull'iPad (il codice è pubblico).
+
+   INTEGRAZIONE (per il resto dell'app, stessa origine)
+   - window.CF_OCR = {disponibile:false, leggi:async(blob)=>testo}: quando un motore OCR sarà disponibile,
+     metterlo qui (disponibile:true): la cassaforte lo userà da sola al posto del «testo dal vivo».
+   - localStorage "cf-avvisi-v1" = {n, prossima:"AAAA-MM", agg:"AAAA-MM-GG"}: UNICO riassunto non sensibile fuori dalla cassaforte
+     (n = elementi in finestra di avviso o scaduti; nessun tipo, nessun numero).
+   - Chiavi delle app: la cassaforte tiene una COPIA cifrata (K2) di: "prog-gh-v1" (.token, .exp), "pn-copia-cloud" (.gist, .key),
+     "prog-link-v1" (.gist, .key), "pn-scheda-chiave" (stringa). Le chiavi di lavoro in localStorage restano dove sono e non cambiano.
+     «Rimetti sull'iPad» riscrive solo quelle mancanti. Mai scritte nel registro.
+   - Lettera sigillata del Diario: il Diario scrive localStorage "cf-in-lettera" = {t, sig, apre:"AAAA-MM-GG"} e apre cassaforte.html#lettera.
+     Dopo l'apertura con Face ID la cassaforte la cifra con K1, la rilegge per verifica, cancella "cf-in-lettera"
+     e scrive "cf-lettera" = {sig, apre, inCassa:true} (senza testo). Se la cassaforte non è configurata, "cf-in-lettera" resta dov'è.
+   - Dati: IndexedDB "cassaforte-v1" (kv, items): solo testo cifrato AES-256-GCM. K1 = livello 1 (Face ID), K2 = livello 2 (PIN).
+   ===================================================================== */
+'use strict';
+if (top !== self) { document.documentElement.replaceChildren(); throw 0; } // mai dentro un altro sito
+window.CF_OCR = window.CF_OCR || {disponibile:false, leggi:async function(blob){ throw new Error('OCR non disponibile'); }};
+const $ = (s, r) => (r || document).querySelector(s);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function E(t, a) {
+  const e = document.createElement(t);
+  if (a) for (const x in a) {
+    const v = a[x];
+    if (x === 'class') e.className = v; else if (x === 'html') e.innerHTML = v;
+    else if (x.slice(0, 2) === 'on') e.addEventListener(x.slice(2), v);
+    else if (v === true) e.setAttribute(x, ''); else if (v !== false && v != null) e.setAttribute(x, v);
+  }
+  for (let i = 2; i < arguments.length; i++) [].concat(arguments[i]).forEach(c => { if (c != null && c !== false) e.append(c.nodeType ? c : document.createTextNode(c)); });
+  return e;
+}
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const oggi = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+const dIt = iso => iso ? iso.slice(8, 10) + '/' + iso.slice(5, 7) + '/' + iso.slice(0, 4) : '';
+const ymd8 = () => oggi().replace(/-/g, '');
+function addMesi(iso, m) { const d = new Date(iso + 'T12:00:00'); const g = d.getDate(); d.setMonth(d.getMonth() + m); if (d.getDate() !== g) d.setDate(0); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+const giorniTra = (a, b) => Math.round((new Date(b + 'T12:00:00') - new Date(a + 'T12:00:00')) / 864e5);
+
+/* ---------- cifratura ---------- */
+const te = new TextEncoder(), td = new TextDecoder(), SC = crypto.subtle;
+const rnd = n => crypto.getRandomValues(new Uint8Array(n));
+const b64 = u => { const a = new Uint8Array(u); let s = ''; for (let i = 0; i < a.length; i += 0x8000) s += String.fromCharCode.apply(null, a.subarray(i, i + 0x8000)); return btoa(s); };
+const ub64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const KU = ['encrypt', 'decrypt', 'wrapKey', 'unwrapKey'];
+const aadB = a => a == null ? null : te.encode(a);
+const P = (iv, a) => { const p = {name: 'AES-GCM', iv}; if (a != null) p.additionalData = aadB(a); return p; }; // a = etichetta autenticata (AAD)
+async function cifra(key, u8, a) { const iv = rnd(12); const c = await SC.encrypt(P(iv, a), key, u8); return {iv: b64(iv), c: b64(c)}; }
+async function decifra(key, o, a) { return new Uint8Array(await SC.decrypt(P(ub64(o.iv), a), key, ub64(o.c))); }
+const cJ = (k, o, a) => cifra(k, te.encode(JSON.stringify(o)), a);
+const dJ = async (k, o, a) => JSON.parse(td.decode(await decifra(k, o, a)));
+const aadI = (id, c) => 'item:' + id + ':' + c;
+const nuovaK = () => SC.generateKey({name: 'AES-GCM', length: 256}, true, KU);
+async function avvolgi(wk, K, nome) { const iv = rnd(12); const c = await SC.wrapKey('raw', K, wk, P(iv, 'wrap:' + nome)); return {iv: b64(iv), c: b64(c)}; }
+// di sessione: NON estraibili. svolgiEstr serve solo per riavvolgere subito dopo il recupero e poi si scarta.
+const svolgi = (wk, o, nome) => SC.unwrapKey('raw', ub64(o.c), wk, P(ub64(o.iv), 'wrap:' + nome), {name: 'AES-GCM', length: 256}, false, ['encrypt', 'decrypt']);
+const svolgiEstr = (wk, o, nome) => SC.unwrapKey('raw', ub64(o.c), wk, P(ub64(o.iv), 'wrap:' + nome), {name: 'AES-GCM', length: 256}, true, ['encrypt', 'decrypt']);
+const cat = (a, b) => { const r = new Uint8Array(a.length + b.length); r.set(a); r.set(b, a.length); return r; };
+async function pinBits(pin, salt, iter) {
+  const m = await SC.importKey('raw', te.encode(pin), 'PBKDF2', false, ['deriveBits']);
+  return new Uint8Array(await SC.deriveBits({name: 'PBKDF2', hash: 'SHA-256', salt, iterations: iter}, m, 256));
+}
+async function hkey(bits, info, salt) {
+  const m = await SC.importKey('raw', bits, 'HKDF', false, ['deriveKey']);
+  return SC.deriveKey({name: 'HKDF', hash: 'SHA-256', salt: salt || new Uint8Array(32), info: te.encode(info)}, m, {name: 'AES-GCM', length: 256}, false, ['wrapKey', 'unwrapKey', 'encrypt', 'decrypt']);
+}
+const sha256hex = async s => Array.from(new Uint8Array(await SC.digest('SHA-256', te.encode(s)))).map(x => x.toString(16).padStart(2, '0')).join('');
+const ALF = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // 32 caratteri, senza I O 0 1
+function nuovaRec() { const b = rnd(24); let s = ''; for (let i = 0; i < 24; i++) s += ALF[b[i] & 31]; return s; }
+const recFmt = s => s.match(/.{4}/g).join('-');
+const recNorm = s => String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+const recKey = (rec, saltRec) => hkey(te.encode(recNorm(rec)), 'cassaforte-recupero', saltRec);
+
+/* ---------- archivio IndexedDB ---------- */
+const S = {cfg: null, K1: null, K2: null, prf: null, items: [], archivio: [], lettere: [], gate: false, ult: Date.now(), limite: 60000, pausa: 0, k2fine: 0, onL2: [], dlgs: [], urlsW: [], nascosta: 0};
+function db() {
+  return S.db || (S.db = new Promise((ok, ko) => {
+    const r = indexedDB.open('cassaforte-v1', 1);
+    r.onupgradeneeded = () => { r.result.createObjectStore('kv'); r.result.createObjectStore('items', {keyPath: 'id'}); };
+    r.onsuccess = () => ok(r.result); r.onerror = () => ko(r.error);
+  }));
+}
+async function tx(store, mode, fn) {
+  const d = await db();
+  return new Promise((ok, ko) => { const t = d.transaction(store, mode); const q = fn(t.objectStore(store)); t.oncomplete = () => ok(q && q.result); t.onerror = () => ko(t.error); t.onabort = () => ko(t.error); });
+}
+const kvGet = k => tx('kv', 'readonly', s => s.get(k));
+const kvSet = (k, v) => tx('kv', 'readwrite', s => s.put(v, k));
+const itAll = () => tx('items', 'readonly', s => s.getAll());
+const itPut = r => tx('items', 'readwrite', s => s.put(r));
+const itDel = id => tx('items', 'readwrite', s => s.delete(id));
+/* ---------- riconoscimento dal testo (parser) ---------- */
+const CFP = (() => {
+  const W = [7, 3, 1];
+  const mv = c => c === '<' ? 0 : /\d/.test(c) ? +c : c.charCodeAt(0) - 55;
+  const mchk = s => { let t = 0; for (let i = 0; i < s.length; i++) t += mv(s[i]) * W[i % 3]; return t % 10; };
+  const mok = (f, c) => /^\d$/.test(c || '') && mchk(f) === +c;
+  const luhn = s => { if (!/^\d{12,19}$/.test(s)) return false; let t = 0, d = false; for (let i = s.length - 1; i >= 0; i--) { let n = +s[i]; if (d) { n *= 2; if (n > 9) n -= 9; } t += n; d = !d; } return t % 10 === 0; };
+  const DISP = [1, 0, 5, 7, 9, 13, 15, 17, 19, 21, 2, 4, 18, 20, 11, 3, 6, 8, 12, 14, 16, 10, 22, 25, 24, 23];
+  function cfOk(cf) {
+    if (!/^[A-Z]{6}[0-9LMNP-V]{2}[A-EHLMPR-T][0-9LMNP-V]{2}[A-Z][0-9LMNP-V]{3}[A-Z]$/.test(cf)) return false;
+    let t = 0;
+    for (let i = 0; i < 15; i++) { const c = cf[i]; const v = /\d/.test(c) ? +c : c.charCodeAt(0) - 65; t += (i % 2 === 0) ? DISP[v] : v; }
+    return String.fromCharCode(65 + t % 26) === cf[15];
+  }
+  const dvalid = (y, m, d) => { if (y < 1900 || y > 2100 || m < 1 || m > 12 || d < 1) return false; return d <= new Date(y, m, 0).getDate(); };
+  const iso = (y, m, d) => y + '-' + String(m).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+  const ultimoGiorno = (y, m) => iso(y, m, new Date(y, m, 0).getDate());
+  const MESI = {GEN: 1, FEB: 2, MAR: 3, APR: 4, MAG: 5, GIU: 6, LUG: 7, AGO: 8, SET: 9, OTT: 10, NOV: 11, DIC: 12, JAN: 1, MAY: 5, JUN: 6, JUL: 7, AUG: 8, SEP: 9, OCT: 10, DEC: 12};
+  function mrzData(s) { // AAMMGG di scadenza -> 20AA
+    if (!/^\d{6}$/.test(s)) return null; const y = 2000 + +s.slice(0, 2), m = +s.slice(2, 4), d = +s.slice(4, 6);
+    return dvalid(y, m, d) ? iso(y, m, d) : null;
+  }
+  function righeMRZ(t) {
+    return t.split(/\r?\n/).map(l => l.replace(/\s+/g, '').toUpperCase().replace(/[«‹]/g, '<')).filter(l => l.length >= 28 && l.length <= 46 && /^[A-Z0-9<]+$/.test(l) && l.includes('<'))
+      .map(l => l.length <= 32 ? l.padEnd(30, '<').slice(0, 30) : l.padEnd(44, '<').slice(0, 44));
+  }
+  function mrz(t) {
+    const R = righeMRZ(t);
+    for (let i = 0; i + 1 < R.length; i++) { // TD3 (passaporto)
+      const a = R[i], b = R[i + 1];
+      if (a.length === 44 && b.length === 44 && a[0] === 'P') {
+        const num = b.slice(0, 9), cn = b[9], ex = b.slice(21, 27), ce = b[27];
+        const compOk = mok(b.slice(0, 10) + b.slice(13, 20) + b.slice(21, 43), b[43]);
+        const nOk = mok(num, cn), eOk = mok(ex, ce);
+        if (nOk || eOk) return {tipo: 'TD3', numero: nOk ? num.replace(/</g, '') : null, scadenza: eOk ? mrzData(ex) : null, tuttoOk: nOk && eOk && compOk};
+      }
+    }
+    for (let i = 0; i + 2 < R.length; i++) { // TD1 (carta d'identità)
+      const a = R[i], b = R[i + 1];
+      if (a.length === 30 && b.length === 30 && R[i + 2].length === 30) {
+        const num = a.slice(5, 14), cn = a[14], ex = b.slice(8, 14), ce = b[14];
+        const compOk = mok(a.slice(5, 30) + b.slice(0, 7) + b.slice(8, 15) + b.slice(18, 29), b[29]);
+        const nOk = mok(num, cn), eOk = mok(ex, ce);
+        if (nOk || eOk) return {tipo: 'TD1', numero: nOk ? num.replace(/</g, '') : null, scadenza: eOk ? mrzData(ex) : null, tuttoOk: nOk && eOk && compOk};
+      }
+    }
+    return null;
+  }
+  function pulisci(t) { // niente CVV/CVC/CID né PIN della carta
+    const k = '(?:cvv2?|cvc2?|cid|csc|cod(?:ice)?\\.?\\s*(?:di\\s*)?sicurezza|security\\s*code|pin)';
+    return t.replace(new RegExp(k + '\\b[^\\d\\n]{0,14}\\d{3,8}\\b', 'gi'), ' ')
+            .replace(new RegExp('\\b\\d{3,4}\\b[^\\d\\n]{0,6}' + k + '\\b', 'gi'), ' ');
+  }
+  const EXP = /scadenz\w*|expir\w*|expiry|valid\s*(?:until|thru|to)|good\s*thru|valida?\s*(?:fino|al)|validit[àa]\s*fino|data\s*di\s*scad/gi;
+  const ISS = /rilasci\w*|emission\w*|emess\w*|date\s*of\s*issue|issued|data\s*di\s*emiss/gi;
+  const NAS = /nascit\w*|\bnato\b|\bnata\b|birth|\bborn\b/gi;
+  function trovaDate(t) {
+    const out = [];
+    let m, re = /(?<!\d)(\d{1,2})\s*[\/.\-\s]\s*(\d{1,2})\s*[\/.\-\s]\s*((?:19|20)\d{2})(?!\d)/g;
+    while ((m = re.exec(t))) { if (dvalid(+m[3], +m[2], +m[1])) out.push({i: m.index, e: m.index + m[0].length, iso: iso(+m[3], +m[2], +m[1])}); }
+    re = /(?<!\d)(\d{1,2})\s*([A-Za-z]{3})[A-Za-z]*(?:\s*\/\s*[A-Za-z]{3,})?\s+((?:19|20)\d{2})(?!\d)/g;
+    while ((m = re.exec(t))) { const mo = MESI[m[2].toUpperCase()]; if (mo && dvalid(+m[3], mo, +m[1])) out.push({i: m.index, e: m.index + m[0].length, iso: iso(+m[3], mo, +m[1])}); }
+    return out.sort((a, b) => a.i - b.i);
+  }
+  function classifica(t, tipo) {
+    const kws = [];
+    [[EXP, 's'], [ISS, 'r'], [NAS, 'n']].forEach(([re, k]) => { re.lastIndex = 0; let m; while ((m = re.exec(t))) kws.push({i: m.index, e: m.index + m[0].length, k}); });
+    const D = trovaDate(t).map(d => Object.assign({k: null}, d));
+    // scadenza carta MM/AA vicino alla parola chiave, oppure da sola per le carte
+    let m, rc = /(?<![\d\/])(0[1-9]|1[0-2])\s*\/\s*((?:20)?\d{2})(?![\d\/])/g;
+    while ((m = rc.exec(t))) {
+      const y = m[2].length === 2 ? 2000 + +m[2] : +m[2];
+      const prima = t.slice(Math.max(0, m.index - 24), m.index);
+      if (tipo === 'carta' || /(scad|valid|exp|thru|until|fino)/i.test(prima)) D.push({i: m.index, e: m.index + m[0].length, iso: ultimoGiorno(y, +m[1]), k: 's', mm: true});
+    }
+    D.sort((a, b) => a.i - b.i);
+    const ev = kws.map(x => Object.assign({t: 'k'}, x)).concat(D.map(x => ({t: 'd', d: x, i: x.i}))).sort((a, b) => a.i - b.i);
+    let coda = [];
+    ev.forEach(x => {
+      if (x.t === 'k') { if (coda.length && coda[coda.length - 1].dopoDate) coda = []; coda.push({k: x.k, e: x.e, dopoDate: false}); }
+      else {
+        const d = x.d;
+        if (d.k) { coda.forEach(c => c.dopoDate = true); return; }
+        const q = coda.find(c => !c.usato && x.i - c.e <= 80);
+        if (q) { q.usato = true; d.k = q.k; }
+        coda.forEach(c => c.dopoDate = true);
+      }
+    });
+    return D;
+  }
+  function pan(t) {
+    const re = /(?<![\d])(?:\d[ \-]?){12,18}\d(?!\d)/g; let m;
+    while ((m = re.exec(t))) { const s = m[0].replace(/[ \-]/g, ''); if (s.length >= 13 && s.length <= 19 && luhn(s)) return s; }
+    return null;
+  }
+  function panRaw(t) { const re = /(?<![\d])(?:\d[ \-]?){12,18}\d(?!\d)/g; let m; while ((m = re.exec(t))) { const s = m[0].replace(/[ \-]/g, ''); if (s.length >= 13 && s.length <= 19 && luhn(s)) return m[0]; } return null; }
+  const circuito = p => !p ? null : /^4/.test(p) ? 'Visa' : (/^5[1-5]/.test(p) || /^(222[1-9]|22[3-9]\d|2[3-6]\d\d|27[01]\d|2720)/.test(p)) ? 'Mastercard' : /^3[47]/.test(p) ? 'American Express' : null;
+  function ente(t) {
+    let m;
+    if ((m = t.match(/Comune\s+di\s+([A-ZÀ-Ý][\wÀ-ÿ']+(?:[ -][A-ZÀ-Ý][\wÀ-ÿ']+){0,2})/))) return 'Comune di ' + m[1];
+    if ((m = t.match(/COMUNE\s+DI\s+([A-ZÀ-Ý']{2,}(?:[ -][A-ZÀ-Ý']{2,}){0,2})/))) return 'Comune di ' + m[1].toLowerCase().replace(/(^|[ -])([a-zà-ý])/g, (x, a, b) => a + b.toUpperCase());
+    if ((m = t.match(/Ministero\s+(?:dell['’]\s?|della\s+|delle\s+|dei\s+|del\s+)?[A-Za-zÀ-ÿ' ]{3,40}/i))) return m[0].replace(/\s+/g, ' ').trim().split(/\s{2,}|\n/)[0];
+    if ((m = t.match(/Motorizzazione(?:\s+Civile)?(?:\s+di\s+[A-ZÀ-Ý][\wÀ-ÿ']+)?/i))) return m[0];
+    if ((m = t.match(/Questura\s+di\s+[A-ZÀ-Ý][\wÀ-ÿ']+/i))) return m[0];
+    if ((m = t.match(/Prefettura\s+di\s+[A-ZÀ-Ý][\wÀ-ÿ']+/i))) return m[0];
+    if (/Agenzia\s+delle\s+Entrate/i.test(t)) return 'Agenzia delle Entrate';
+    if ((m = t.match(/\b(Banca|Bank|BancoPosta|Poste\s+Italiane|UniCredit|Intesa\s+Sanpaolo|Fineco|N26|Revolut|Mediolanum|BPER|BNL|Widiba|Hype|Satispay)\b[^\n]{0,24}/i))) return m[0].replace(/\s+/g, ' ').trim();
+    if ((m = t.match(/\b(Assicurazion\w+|Generali|Allianz|Unipol|Zurich|Axa|Reale\s+Mutua|Cattolica)\b[^\n]{0,20}/i))) return m[0].replace(/\s+/g, ' ').trim();
+    return null;
+  }
+  function telBlocco(t) {
+    const righe = t.split(/\n/);
+    for (let i = 0; i < righe.length; i++) {
+      if (!/(blocc|smarriment|furto|emergenz|lost|stolen|assistenza|numero\s+verde|help)/i.test(righe[i])) continue;
+      for (const r of [righe[i], righe[i + 1] || '']) {
+        const m = r.match(/(\+?\d[\d .\-\/]{6,16}\d)/);
+        if (m) { const dg = m[1].replace(/\D/g, ''); if (dg.length >= 8 && dg.length <= 13 && !luhn(dg)) return m[1].trim(); }
+      }
+    }
+    return null;
+  }
+  function parse(testo, tipo) {
+    const R = {numero: {v: null, da: null}, scadenza: {v: null, da: null}, rilascio: {v: null, da: null}, ente: {v: null, da: null}, ultime4: {v: null, da: null}, circuito: {v: null, da: null}, cf: {v: null, da: null}, tel: {v: null, da: null}, _pan: null};
+    let t = pulisci(String(testo || '').replace(/\r/g, ''));
+    const T = t.toUpperCase();
+    const set = (k, v, da) => { if (v && !R[k].v) R[k] = {v, da}; };
+    // MRZ preferita
+    const M = (tipo === 'cie' || tipo === 'pass' || !tipo) ? mrz(t) : null;
+    if (M) { set('numero', M.numero, 'MRZ'); set('scadenza', M.scadenza, 'MRZ'); }
+    // date
+    const D = classifica(t, tipo);
+    const s = D.filter(d => d.k === 's').sort((a, b) => b.iso.localeCompare(a.iso))[0];
+    const r = D.filter(d => d.k === 'r')[0];
+    set('scadenza', s && s.iso, 'testo');
+    set('rilascio', r && r.iso, 'testo');
+    if (!R.scadenza.v && tipo !== 'cf' && tipo !== 'el') {
+      const lib = D.filter(d => !d.k && (!R.rilascio.v || d.iso > R.rilascio.v) && +d.iso.slice(0, 4) >= new Date().getFullYear() - 1).sort((a, b) => b.iso.localeCompare(a.iso))[0];
+      set('scadenza', lib && lib.iso, 'dedotta');
+    }
+    // codice fiscale
+    const cfs = (T.match(/\b[A-Z]{6}[0-9LMNP-V]{2}[A-EHLMPR-T][0-9LMNP-V]{2}[A-Z][0-9LMNP-V]{3}[A-Z]\b/g) || []).filter(cfOk);
+    if (cfs.length && (tipo === 'ts' || tipo === 'cf' || tipo === 'cie' || tipo === 'el')) set('cf', cfs[0], 'testo');
+    // numero per tipo
+    const num = () => {
+      let m;
+      if (tipo === 'cie' && (m = T.match(/\b[A-Z]{2}\s?\d{5}\s?[A-Z]{2}\b/))) return m[0].replace(/\s/g, '');
+      if (tipo === 'pass' && (m = T.match(/\b[A-Z]{2}\s?\d{7}\b/))) return m[0].replace(/\s/g, '');
+      if (tipo === 'pat' && (m = T.match(/\b[A-Z]{1,2}\s?\d{7,8}\s?[A-Z]\b/))) return m[0].replace(/\s/g, '');
+      if (tipo === 'ts') { const r2 = /(?<!\d)\d(?:[ ]?\d){19}(?!\d)/g; let q; while ((q = r2.exec(T))) { const d = q[0].replace(/ /g, ''); if (d.length === 20) return d; } }
+      if (tipo === 'cf') return cfs[0] || null;
+      if (tipo !== 'carta' && (m = T.match(/(?:NUMERO|N\.|N°|NR\.?|NO\.|MATRICOLA|POLIZZA|CONTRATTO|TESSERA|CARD\s*NO|DOC(?:UMENT)?\s*NO)[^A-Z0-9\n]{0,4}\s*([A-Z0-9][A-Z0-9\/\-]{4,19})/))) { if ((m[1].match(/\d/g) || []).length >= 3) return m[1]; }
+      return null;
+    };
+    if (tipo !== 'carta') {
+      const n0 = num();
+      if (!(tipo === 'ts' && n0)) { const q = panRaw(t); if (q) { R._avvisoCarta = true; t = t.split(q).join(' '); } }
+      const n1 = R._avvisoCarta ? num() : n0;
+      set('numero', n1 && !(/^\d{13,19}$/.test(n1) && luhn(n1)) ? n1 : null, 'testo');
+    }
+    if (R.numero.v) set('ultime4', R.numero.v.slice(-4), R.numero.da);
+    // carte
+    if (tipo === 'carta' || !tipo) {
+      const p = pan(t);
+      if (p) { R._pan = p; set('ultime4', p.slice(-4), 'testo'); set('circuito', circuito(p), 'testo'); }
+      set('tel', telBlocco(t), 'testo');
+    }
+    set('ente', ente(t), 'testo');
+    return R;
+  }
+  return {parse, luhn, cfOk, mrz, mchk, trovaDate, pulisci};
+})();
+/* ---------- tipi, testi, disegni ---------- */
+const TIPI = [
+  {k: 'cie', i: '🪪', n: "Carta d'identità", c: '#2f6fcf', ant: 4, sc: 1,
+    perdo: ["Fai subito la denuncia di smarrimento o furto presso le forze dell'ordine.", "Porta la denuncia e le foto d'identità al Comune (o prenota online) per chiedere il duplicato.", "Se ti serve per viaggiare, controlla anche il passaporto."],
+    rin: ["La carta scaduta o in scadenza (o la denuncia, se persa).", "Una fototessera recente, se richiesta.", "La tessera sanitaria o il codice fiscale.", "Il pagamento previsto, se richiesto."]},
+  {k: 'pass', i: '🛂', n: 'Passaporto', c: '#8b2f4f', ant: 6, sc: 1,
+    perdo: ["Fai subito la denuncia di smarrimento o furto presso le forze dell'ordine.", "Con la denuncia chiedi un nuovo passaporto alla Questura (o al Commissariato).", "Se sei all'estero, rivolgiti all'Ambasciata o al Consolato italiano."],
+    rin: ["Il passaporto scaduto o in scadenza (o la denuncia, se perso).", "Una o due fototessere, se richieste.", "Un documento d'identità valido.", "Le marche o i pagamenti richiesti."]},
+  {k: 'pat', i: '🚗', n: 'Patente', c: '#2e8b57', ant: 4, sc: 1,
+    perdo: ["Fai la denuncia di smarrimento o furto presso le forze dell'ordine.", "Con la denuncia chiedi il duplicato alla Motorizzazione (o dal portale dell'automobilista).", "Finché non hai il duplicato, porta con te la copia della denuncia."],
+    rin: ["La patente in scadenza.", "Il certificato medico, se richiesto.", "Una fototessera recente.", "Un documento d'identità e il codice fiscale.", "I pagamenti richiesti."]},
+  {k: 'ts', i: '🏥', n: 'Tessera sanitaria', c: '#0f8f8f', ant: 2, sc: 1,
+    perdo: ["Se è stata rubata, fai la denuncia.", "Chiedi il duplicato alla tua ASL o all'Agenzia delle Entrate.", "Nel frattempo il codice fiscale resta valido."],
+    rin: ["Di solito la nuova tessera arriva per posta prima della scadenza.", "Se non arriva, chiedi alla tua ASL o all'Agenzia delle Entrate.", "Porta un documento d'identità."]},
+  {k: 'serv', i: '🎖️', n: 'Tessera di servizio', c: '#5b6b2f', ant: 3, sc: 1,
+    perdo: ["Avvisa subito il tuo comando o ufficio.", "Fai la denuncia se richiesto dalle regole del tuo ufficio.", "Chiedi il duplicato seguendo la procedura interna."],
+    rin: ["Chiedi al tuo ufficio che cosa serve.", "La tessera scaduta o in scadenza.", "Una fototessera, se richiesta."]},
+  {k: 'carta', i: '💳', n: 'Carte di pagamento', c: '#6a40c0', ant: 2, sc: 1,
+    perdo: ["BLOCCA SUBITO la carta chiamando il numero della tua banca (qui sotto trovi quello letto dalla foto, se c'era).", "Poi fai la denuncia presso le forze dell'ordine.", "Poi chiedi alla banca la carta nuova.", "Controlla i movimenti e segnala quelli che non riconosci."],
+    rin: ["Di solito la banca invia la carta nuova prima della scadenza.", "Se non arriva, chiama la tua banca.", "Attiva la nuova carta e distruggi la vecchia."]},
+  {k: 'pol', i: '📄', n: 'Polizze', c: '#c0692f', ant: 1, sc: 1,
+    perdo: ["Chiedi una copia al tuo agente o alla compagnia.", "Controlla che i pagamenti siano in regola."],
+    rin: ["Controlla la data di rinnovo e le condizioni.", "Confronta, se vuoi, altre offerte prima della scadenza.", "Tieni il numero di polizza e un documento d'identità."]},
+  {k: 'abb', i: '🎫', n: 'Abbonamenti', c: '#c0397f', ant: 1, sc: 1,
+    perdo: ["Avvisa il gestore e chiedi il blocco o il duplicato.", "Tieni a portata di mano il numero dell'abbonamento."],
+    rin: ["Controlla se si rinnova da solo.", "Se vuoi disdire, guarda i tempi di preavviso."]},
+  {k: 'gar', i: '🧾', n: 'Garanzie', c: '#7a7a2f', ant: 1, sc: 1,
+    perdo: ["Cerca lo scontrino o la mail dell'acquisto.", "Chiedi al negozio o al produttore una copia."],
+    rin: ["Prima della scadenza controlla se il prodotto funziona bene.", "Se serve una riparazione in garanzia, portala con lo scontrino."]},
+  {k: 'el', i: '🗳️', n: 'Tessera elettorale', c: '#3f5fa0', ant: 0, sc: 0,
+    perdo: ["Chiedi il duplicato all'ufficio elettorale del tuo Comune.", "Porta un documento d'identità."],
+    rin: ["Di solito non scade. Se finiscono gli spazi, chiedi il duplicato al Comune."]},
+  {k: 'cf', i: '🔢', n: 'Codice fiscale', c: '#2f8f6f', ant: 0, sc: 0,
+    perdo: ["Il codice resta lo stesso: puoi chiedere un duplicato della tessera all'Agenzia delle Entrate.", "Il numero lo trovi anche sulla tessera sanitaria."],
+    rin: ["Non scade."]},
+  {k: 'chiavi', i: '🔑', n: 'Chiavi delle app', c: '#b8860b', ant: 1, sc: 1, spec: 1,
+    perdo: ["Le chiavi delle app si rimettono sull'iPad dalla sezione «Chiavi delle app»."], rin: ["Se una chiave ha una scadenza, creane una nuova prima di quella data e aggiorna la copia."]},
+  {k: 'altro', i: '🗂️', n: 'Altro', c: '#667085', ant: 1, sc: 1,
+    perdo: ["Chiedi una copia a chi ha emesso il documento."], rin: ["Controlla chi l'ha emesso e che cosa chiede per il rinnovo."]}
+];
+const TK = Object.fromEntries(TIPI.map(t => [t.k, t]));
+const RINNOVO_AVV = 'Verifica sul sito ufficiale prima dell\'appuntamento: le regole cambiano.';
+// Indirizzi ufficiali: SOLO questi. Verifica scritta qui: «da verificare» (indirizzi scritti il 24/11/2026, non ancora controllati a mano).
+const PORTALI = [
+  {t: "Prenotazione carta d'identità", u: 'https://www.prenotazionicie.interno.gov.it/', v: 'da verificare (24/11/2026)'},
+  {t: 'Passaporto', u: 'https://www.passaportonline.poliziadistato.it/', v: 'da verificare (24/11/2026)'},
+  {t: 'Patente (Portale dell\'automobilista)', u: 'https://www.ilportaledellautomobilista.it/', v: 'da verificare (24/11/2026)'},
+  {t: 'Tessera sanitaria', u: 'https://sistemats1.sanita.finanze.it/', v: 'da verificare (24/11/2026)'}
+];
+const COSA_RICHIEDERE = {cie: "carta d'identità nuova", pass: 'passaporto nuovo', pat: 'duplicato della patente', ts: 'duplicato della tessera sanitaria', serv: 'tessera di servizio nuova', el: 'duplicato della tessera elettorale', cf: 'duplicato della tessera'};
+
+/* tessere stilizzate (niente grafiche ufficiali): 160x100 */
+function tesseraSvg(k, grande) {
+  const t = TK[k] || TK.altro, c = t.c;
+  const base = `<rect x="2" y="2" width="156" height="96" rx="10" fill="${c}"/><rect x="2" y="2" width="156" height="22" rx="10" fill="rgba(255,255,255,.22)"/>`;
+  const ln = (x, y, w, o) => `<rect x="${x}" y="${y}" width="${w}" height="5" rx="2.5" fill="rgba(255,255,255,${o || .75})"/>`;
+  const foto = `<rect x="12" y="34" width="38" height="48" rx="5" fill="rgba(255,255,255,.8)"/><circle cx="31" cy="50" r="8" fill="${c}" opacity=".65"/><path d="M17 78q14-18 28 0z" fill="${c}" opacity=".65"/>`;
+  let d;
+  switch (k) {
+    case 'cie': d = foto + ln(60, 36, 80) + ln(60, 48, 60) + ln(60, 60, 70) + `<rect x="12" y="88" width="136" height="5" rx="2" fill="rgba(255,255,255,.5)"/>`; break;
+    case 'pass': d = `<circle cx="80" cy="52" r="20" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="3"/><path d="M60 52h40M80 32v40M66 40q14 8 28 0M66 64q14-8 28 0" stroke="rgba(255,255,255,.85)" stroke-width="2" fill="none"/>` + ln(50, 82, 60); break;
+    case 'pat': d = foto + ln(60, 36, 80) + ln(60, 48, 50) + `<rect x="60" y="62" width="22" height="16" rx="3" fill="rgba(255,255,255,.7)"/><circle cx="120" cy="70" r="9" fill="rgba(255,255,255,.55)"/>`; break;
+    case 'ts': d = `<path d="M70 38h20v16h16v20H90v0H70V74H54V54h16z" fill="rgba(255,255,255,.85)"/>` + ln(14, 84, 60) + ln(100, 84, 44); break;
+    case 'serv': d = foto + `<path d="M105 38l14 6v14q0 14-14 20q-14-6-14-20V44z" fill="rgba(255,255,255,.8)"/>` + ln(60, 84, 80, .6); break;
+    case 'carta': d = `<rect x="14" y="34" width="28" height="22" rx="4" fill="#e9c46a"/><path d="M14 45h28M28 34v22" stroke="#9a7b1f" stroke-width="1.5"/>` + `<rect x="14" y="64" width="132" height="6" rx="3" fill="rgba(255,255,255,.8)"/>` + ln(14, 78, 50) + `<circle cx="126" cy="84" r="8" fill="#f25f5c" opacity=".85"/><circle cx="138" cy="84" r="8" fill="#f2c14e" opacity=".85"/>`; break;
+    case 'pol': d = `<path d="M40 30h56l14 14v48H40z" fill="rgba(255,255,255,.9)"/><path d="M96 30v14h14" fill="rgba(0,0,0,.15)"/>` + `<rect x="50" y="52" width="48" height="4" fill="${c}"/><rect x="50" y="62" width="48" height="4" fill="${c}"/><rect x="50" y="72" width="30" height="4" fill="${c}"/>`; break;
+    case 'abb': d = `<path d="M10 40h140v18a8 8 0 000 16v8H10v-8a8 8 0 000-16z" fill="rgba(255,255,255,.85)"/><path d="M110 40v52" stroke="${c}" stroke-width="2" stroke-dasharray="4 4"/>` + `<rect x="20" y="52" width="70" height="5" rx="2" fill="${c}"/><rect x="20" y="64" width="46" height="5" rx="2" fill="${c}"/>`; break;
+    case 'gar': d = `<path d="M40 30h60v62H40z" fill="rgba(255,255,255,.9)"/>` + `<circle cx="104" cy="70" r="20" fill="rgba(255,255,255,.95)" stroke="${c}" stroke-width="3"/><path d="M94 70l7 8 13-16" stroke="${c}" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>` + `<rect x="50" y="42" width="40" height="4" fill="${c}"/><rect x="50" y="52" width="36" height="4" fill="${c}"/>`; break;
+    case 'el': d = `<rect x="42" y="56" width="76" height="34" rx="4" fill="rgba(255,255,255,.88)"/><rect x="70" y="60" width="20" height="4" rx="2" fill="${c}"/><path d="M62 30h36v26H62z" fill="rgba(255,255,255,.95)" stroke="${c}" stroke-width="2"/><path d="M72 42l6 6 12-12" stroke="${c}" stroke-width="4" fill="none"/>`; break;
+    case 'cf': d = Array.from({length: 26}, (_, i) => `<rect x="${16 + i * 5}" y="38" width="${i % 3 === 0 ? 3.5 : 2}" height="34" fill="rgba(255,255,255,.88)"/>`).join('') + ln(16, 82, 90, .7); break;
+    case 'chiavi': d = `<circle cx="52" cy="58" r="18" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="7"/><path d="M68 58h62M112 58v14M126 58v10" stroke="rgba(255,255,255,.9)" stroke-width="7" stroke-linecap="round"/>`; break;
+    default: d = `<path d="M24 36h34l8 8h70v46H24z" fill="rgba(255,255,255,.88)"/>` + ln(36, 62, 80, .4);
+  }
+  return `<svg viewBox="0 0 160 100" role="img" aria-label="${esc(t.n)}" focusable="false">${base}${d}</svg>`;
+}
+
+/* schema a passi (frecce): w = larghezza del disegno, font sempre >= 16 su 760 */
+function flowSvg(passi, titolo, colore) {
+  const n = passi.length, W = 760, g = 26, bw = (W - g * (n - 1) - 8) / n, H = 150, c = colore || 'var(--ac)';
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(titolo)}" focusable="false"><defs><marker id="fa" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="${c}"/></marker></defs>`;
+  passi.forEach((p, i) => {
+    const x = 4 + i * (bw + g), cx = x + bw / 2;
+    s += `<rect x="${x}" y="8" width="${bw}" height="${H - 16}" rx="14" fill="var(--sf2)" stroke="${c}" stroke-width="2"/>`;
+    s += `<text x="${cx}" y="56" font-size="36" text-anchor="middle" style="fill:initial">${p.i}</text>`;
+    String(p.t).split('|').forEach((l, j) => { s += `<text x="${cx}" y="${88 + j * 22}" font-size="17" font-weight="700" text-anchor="middle">${esc(l)}</text>`; });
+    if (i < n - 1) s += `<path d="M${x + bw + 3} ${H / 2} H${x + bw + g - 4}" stroke="${c}" stroke-width="3" marker-end="url(#fa)"/>`;
+  });
+  return s + '</svg>';
+}
+const SVG_CATTURA = () => flowSvg([{i: '📷', t: 'Foto|del fronte'}, {i: '🔄', t: 'Foto|del retro'}, {i: '📋', t: 'Incolla|il testo'}, {i: '✅', t: 'Conferma|i dati'}, {i: '🔒', t: 'Chiuso|a chiave'}], 'Come si aggiunge un documento: fronte, retro, testo, conferma, lucchetto');
+const SVG_PERSO = () => flowSvg([{i: '📞', t: '1. Blocca|subito'}, {i: '👮', t: '2. Denuncia'}, {i: '📨', t: '3. Richiedi|il nuovo'}], 'Portafoglio perso: blocca, denuncia, richiedi', 'var(--ba)');
+const SVG_BUSTA = () => flowSvg([{i: '🗂️', t: 'Scegli|i dati'}, {i: '✉️', t: 'File cifrato|(busta)'}, {i: '🔤', t: 'Frase di|6 parole'}, {i: '👪', t: 'La famiglia|la apre'}], 'Busta per la famiglia: scegli i dati, file cifrato, frase di sei parole, la famiglia la apre');
+const SVG_PROVA = () => flowSvg([{i: '🗓️', t: 'Ogni|6 mesi'}, {i: '🔑', t: 'Scrivi la chiave|di recupero'}, {i: '✅', t: 'Si apre?|Bene'}, {i: '💾', t: 'Fai una copia|cifrata nuova'}], 'Prova di recupero ogni sei mesi: scrivi la chiave, controlla che apra, fai una copia nuova', 'var(--ok)');
+const SVG_SOLO = () => flowSvg([{i: '🧾', t: 'Scegli|il documento'}, {i: '🖼️', t: 'Fronte e retro|a tutto schermo'}, {i: '🔢', t: 'Esci|con il PIN'}], 'Mostra solo questo: un documento alla volta, si esce con il PIN');
+function svgFiligrana() {
+  let t = ''; for (let i = 0; i < 4; i++) t += `<text x="${-30 + (i % 2) * 120}" y="${40 + i * 38}" font-size="16" font-weight="800" fill="#c62828" opacity=".55" transform="rotate(-20 200 100)" style="fill:#c62828">COPIA per ... del ...  COPIA per ...</text>`;
+  return `<svg viewBox="0 0 400 200" role="img" aria-label="Filigrana diagonale sopra la foto del documento" focusable="false"><rect x="60" y="20" width="280" height="160" rx="14" fill="#6a8bd6"/><rect x="80" y="50" width="70" height="90" rx="8" fill="rgba(255,255,255,.8)"/><rect x="170" y="60" width="140" height="10" rx="5" fill="rgba(255,255,255,.8)"/><rect x="170" y="86" width="110" height="10" rx="5" fill="rgba(255,255,255,.8)"/><rect x="170" y="112" width="120" height="10" rx="5" fill="rgba(255,255,255,.8)"/>${t}</svg>`;
+}
+function svgBusta(aperta) { // busta della lettera con sigillo
+  return `<svg viewBox="0 0 400 240" role="img" aria-label="${aperta ? 'Busta aperta' : 'Busta chiusa con il sigillo'}" focusable="false">
+<rect x="30" y="50" width="340" height="170" rx="12" fill="#f3e6c4" stroke="#b79a52" stroke-width="3"/>
+${aperta ? '<path d="M30 62L200 10L370 62" fill="#e8d6a2" stroke="#b79a52" stroke-width="3"/><rect x="70" y="40" width="260" height="140" rx="6" fill="#fff" stroke="#ccc"/><path d="M95 75h210M95 100h210M95 125h160" stroke="#9aa" stroke-width="5" stroke-linecap="round"/><path d="M30 220L190 130L370 220" fill="none" stroke="#b79a52" stroke-width="3"/>'
+ : '<path d="M30 56L200 160L370 56" fill="#ead9aa" stroke="#b79a52" stroke-width="3"/><path d="M30 220L170 130M370 220L230 130" stroke="#b79a52" stroke-width="3"/><circle cx="200" cy="150" r="34" fill="#b3261e"/><circle cx="200" cy="150" r="25" fill="none" stroke="#e57373" stroke-width="3"/><text x="200" y="161" font-size="30" text-anchor="middle" style="fill:#fff">✦</text>'}
+</svg>`;
+}
+function svgHero() {
+  return `<svg viewBox="0 0 760 330" role="img" aria-label="Disegno della cassaforte con due serrature: Face ID apre l'elenco e le scadenze, il PIN mostra numeri e foto" focusable="false">
+<defs><marker id="fh" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="9" refY="6" orient="auto"><path d="M0 0L12 6L0 12z" fill="var(--ac)"/></marker></defs>
+<rect x="260" y="30" width="240" height="250" rx="22" fill="var(--sf2)" stroke="var(--ac)" stroke-width="4"/>
+<rect x="278" y="48" width="204" height="214" rx="14" fill="none" stroke="var(--line)" stroke-width="3"/>
+<circle cx="380" cy="120" r="34" fill="none" stroke="var(--ac)" stroke-width="5"/><path d="M380 86v-14M380 154v14M346 120h-14M414 120h14" stroke="var(--ac)" stroke-width="5"/>
+<text x="380" y="132" font-size="34" text-anchor="middle" style="fill:initial">🔐</text>
+<text x="380" y="220" font-size="20" font-weight="800" text-anchor="middle">CASSAFORTE</text>
+<text x="380" y="246" font-size="16" text-anchor="middle" style="fill:var(--mut)">due serrature</text>
+<rect x="40" y="40" width="190" height="86" rx="14" fill="var(--sf)" stroke="var(--ac)" stroke-width="3"/>
+<text x="62" y="82" font-size="30" style="fill:initial">🙂</text><text x="104" y="76" font-size="18" font-weight="800">Face ID</text><text x="104" y="102" font-size="17">apre</text>
+<rect x="530" y="40" width="190" height="86" rx="14" fill="var(--sf)" stroke="var(--ac)" stroke-width="3"/>
+<text x="552" y="82" font-size="30" style="fill:initial">🔢</text><text x="594" y="76" font-size="18" font-weight="800">PIN</text><text x="594" y="102" font-size="17">mostra</text>
+<path d="M230 83H300" stroke="var(--ac)" stroke-width="4" marker-end="url(#fh)"/><path d="M530 83H460" stroke="var(--ac)" stroke-width="4" marker-end="url(#fh)"/>
+<path d="M300 280V296" stroke="var(--ac)" stroke-width="4"/>
+<path d="M300 262L130 292" stroke="var(--ac)" stroke-width="4" marker-end="url(#fh)"/><path d="M460 262L630 292" stroke="var(--ac)" stroke-width="4" marker-end="url(#fh)"/>
+<text x="130" y="322" font-size="17" font-weight="800" text-anchor="middle">📋 elenco e scadenze</text>
+<text x="630" y="322" font-size="17" font-weight="800" text-anchor="middle">🖼️ numeri e foto</text>
+</svg>`;
+}
+/* ---------- finestre, tastierino, blocco ---------- */
+function dlg(titolo, opts) {
+  opts = opts || {};
+  const body = E('div'), box = E('div', {class: 'dlg', role: 'dialog', 'aria-modal': 'true', 'aria-label': titolo || 'Finestra'}, titolo ? E('h2', null, titolo) : null, body);
+  if (S.K1 && !opts.senzaChiudi) box.prepend(E('button', {class: 'chiudi-ora', type: 'button', onclick: () => blocca('pulsante nella finestra')}, '🔒 Chiudi subito'));
+  const ov = E('div', {class: 'ovl' + (opts.alto ? ' alto' : '')}, box); ov.dataset.cf = '1';
+  $('#ovl-root').append(ov);
+  const o = {el: box, body, ov, pend: [],
+    set() { body.replaceChildren(...[].slice.call(arguments).flat().filter(x => x != null && x !== false).map(x => x.nodeType ? x : document.createTextNode(x))); box.scrollTop = 0; return o; },
+    close() { if (o.chiuso) return; o.chiuso = true; S.dlgs = S.dlgs.filter(x => x !== o); ov.querySelectorAll('img').forEach(i => i.removeAttribute('src')); ov.remove(); if (o.onclose) { try { o.onclose(); } catch (e) {} } const p = o.pend; o.pend = []; p.forEach(f => f(0)); },
+    btns(list) { // restituisce una promessa con la chiave del pulsante
+      return new Promise(res => {
+        o.pend.push(res);
+        const bt = E('div', {class: 'bt'});
+        list.forEach(b => bt.append(E('button', {class: 'btn ' + (b.cls || ''), type: 'button', onclick: () => res(b.k)}, b.t)));
+        body.append(bt); o.bt = bt;
+      });
+    }};
+  S.dlgs.push(o);
+  return o;
+}
+function chiudiDialoghi() { S.dlgs.slice().forEach(d => d.close()); document.querySelectorAll('#ovl-root>.ovl').forEach(x => x.remove()); document.querySelectorAll('.sol').forEach(x => { x.querySelectorAll('img').forEach(i => i.removeAttribute('src')); x.remove(); }); }
+const dlgMsg = async (titolo, nodi, ok) => { const d = dlg(titolo); d.set(nodi); await d.btns([{k: 1, t: ok || 'Va bene', cls: 'pri'}]); d.close(); };
+async function dlgScelta(titolo, nodi, si, no, cls) { const d = dlg(titolo); d.set(nodi); const r = await d.btns([{k: 0, t: no || 'Annulla'}, {k: 1, t: si || 'Conferma', cls: cls || 'pri'}]); d.close(); return !!r; }
+
+/* tentativi sbagliati: attese crescenti, nessuna cancellazione automatica */
+const attesa = n => n >= 9 ? 1800 : n >= 7 ? 600 : n >= 5 ? 120 : n >= 3 ? 30 : 0;
+function tent() { try { return JSON.parse(localStorage.getItem('cf-tent') || '{"n":0,"fino":0}'); } catch (e) { return {n: 0, fino: 0}; } }
+function tentSbagliato() { const t = tent(); t.n++; const a = attesa(t.n); t.fino = a ? Date.now() + a * 1000 : 0; localStorage.setItem('cf-tent', JSON.stringify(t)); return t; }
+const tentOk = () => localStorage.setItem('cf-tent', JSON.stringify({n: 0, fino: 0}));
+
+/* Tastierino numerico grande. Restituisce il PIN scritto (o null). verifica(pin) -> true | false | stringa di errore */
+function tastierino(titolo, testo, verifica, opz) {
+  opz = opz || {};
+  return new Promise(res => {
+    const d = dlg(titolo, {alto: true}); let pin = '', occupato = false;
+    const dots = E('div', {class: 'dots', 'aria-live': 'polite'}), msg = E('div', {class: 'msg', role: 'status'});
+    const ok = E('button', {class: 'ok', type: 'button', 'aria-label': 'Conferma'}, 'OK'), canc = E('button', {type: 'button', 'aria-label': 'Cancella una cifra'}, '⌫');
+    const pad = E('div', {class: 'pad'});
+    const disegna = () => { dots.replaceChildren(...Array.from(pin, () => E('i'))); if (!pin.length) dots.append(E('small', null, 'scrivi il PIN')); };
+    const aggiungi = c => { if (occupato || pin.length >= (opz.max || 16)) return; pin += c; disegna(); };
+    ['1', '2', '3', '4', '5', '6', '7', '8', '9'].forEach(c => pad.append(E('button', {type: 'button', onclick: () => aggiungi(c)}, c)));
+    pad.append(canc, E('button', {type: 'button', onclick: () => aggiungi('0')}, '0'), ok);
+    canc.onclick = () => { if (!occupato) { pin = pin.slice(0, -1); disegna(); } };
+    let tm = null;
+    const mostraAttesa = () => { const t = tent(); const r = Math.ceil((t.fino - Date.now()) / 1000); if (r > 0) { msg.className = 'msg ba'; msg.textContent = 'Troppi errori. Riprova fra ' + (r >= 60 ? Math.ceil(r / 60) + ' min' : r + ' s'); ok.disabled = true; } else { if (ok.disabled) { msg.textContent = ''; msg.className = 'msg'; } ok.disabled = false; clearInterval(tm); } };
+    ok.onclick = async () => {
+      if (occupato || ok.disabled) return;
+      if (pin.length < (opz.min || 6)) { msg.className = 'msg ba'; msg.textContent = 'Servono almeno ' + (opz.min || 6) + ' cifre.'; return; }
+      occupato = true; msg.className = 'msg'; msg.textContent = 'Controllo…';
+      const r = await verifica(pin);
+      occupato = false;
+      if (r === true) { res(pin); d.close(); return; }
+      pin = ''; disegna(); msg.className = 'msg ba'; msg.textContent = typeof r === 'string' ? r : 'PIN sbagliato.';
+      if (opz.conta) { clearInterval(tm); tm = setInterval(mostraAttesa, 500); mostraAttesa(); const t = tent(); if (t.fino > Date.now()) msg.textContent = 'PIN sbagliato. Troppi errori: attendi.'; }
+    };
+    d.el.addEventListener('keydown', e => { if (/^\d$/.test(e.key)) aggiungi(e.key); else if (e.key === 'Backspace') canc.click(); else if (e.key === 'Enter') ok.click(); });
+    d.el.tabIndex = -1;
+    d.set(E('p', {class: 'msg', style: 'font-weight:500'}, testo || ''), opz.nota ? E('p', {class: 'pic', style: 'text-align:center'}, opz.nota) : null, dots, msg, pad, opz.conta ? E('p', {class: 'pic', style: 'text-align:center'}, 'Dopo alcuni errori si aspetta un po\'. Ma attenzione: questo limite è solo un freno su questo iPad. La vera difesa è la cifratura e un PIN lungo.') : null, E('div', {class: 'bt'}, E('button', {class: 'btn', type: 'button', onclick: () => { clearInterval(tm); d.close(); res(null); }}, 'Annulla')));
+    disegna();
+    if (opz.conta) { tm = setInterval(mostraAttesa, 500); mostraAttesa(); }
+    d.onclose = () => { clearInterval(tm); res(null); }; d.el.focus();
+  });
+}
+
+/* livello 2: PIN */
+const L2s = 30000;
+async function verificaPin(pin) {
+  const t = tent(); if (t.fino > Date.now()) return 'Attendi prima di riprovare.';
+  const c = S.cfg; let bits;
+  try {
+    bits = await pinBits(pin, ub64(c.saltPin), c.iter);
+    if (c.modo === 'prf') { // in modo PRF il PIN da solo non basta: serve anche la passkey
+      if (!S.prf) { try { S.prf = await leggiPasskey(ub64(c.cred), ub64(c.sale)); } catch (e) { return 'Face ID o il codice dell\'iPad non sono stati confermati.'; } }
+      if (!S.prf) return 'Face ID non ha dato la chiave.';
+    }
+  } catch (e) { return 'Errore: riprova.'; }
+  try {
+    const K2 = c.modo === 'prf' ? await svolgi(await hkey(cat(S.prf, bits), 'livello2-prf+pin'), c.wK2pp, 'wK2pp') : await svolgi(await hkey(bits, 'livello2'), c.wK2p, 'wK2p');
+    tentOk(); S.K2 = K2;
+    if (!S.K1 && S.gate && c.wK1p) S.K1 = await svolgi(await hkey(bits, 'livello1'), c.wK1p, 'wK1p');
+    return true;
+  } catch (e) { const t2 = tentSbagliato(); return t2.fino > Date.now() ? 'PIN sbagliato. Troppi errori: attendi.' : 'PIN sbagliato. (errori: ' + t2.n + ')'; }
+}
+function avviaL2() { S.k2fine = Date.now() + L2s; clearTimeout(S.k2t); S.k2t = setTimeout(chiudiL2, L2s); stato(); }
+function chiudiL2() {
+  clearTimeout(S.k2t); S.K2 = null; S.k2fine = 0; S.l2c = {};
+  const cb = S.onL2; S.onL2 = []; cb.forEach(f => { try { f(); } catch (e) {} });
+  stato();
+}
+/* chiede il PIN se serve; forza = anche se il livello 2 è già aperto */
+async function chiediPin(testo, forza) {
+  if (S.K2 && !forza) { return true; }
+  if (forza) { S.K2 = null; }
+  const r = await tastierino('🔢 PIN', testo || 'Scrivi il PIN per vedere numeri e foto.', verificaPin, {conta: true});
+  if (r == null) return false;
+  avviaL2(); logga('Sblocco PIN'); return true;
+}
+S.l2c = {};
+
+/* ---------- registro (cifrato con K1) ---------- */
+let codaLog = Promise.resolve();
+function logga(a, d, K) {
+  const k = K || S.K1; if (!k) return;
+  const voce = {t: new Date().toISOString(), a, d: d || ''};
+  codaLog = codaLog.then(async () => {
+    let L = []; try { const o = await kvGet('log'); if (o) L = await dJ(k, o, 'log'); } catch (e) {}
+    L.push(voce); if (L.length > 200) L = L.slice(-200);
+    await kvSet('log', await cJ(k, L, 'log'));
+  }).catch(() => {});
+  return codaLog;
+}
+
+/* ---------- blocco automatico ---------- */
+function stato() {
+  const p = $('#stato'), c = $('#chiudiSubito');
+  if (!S.cfg) { p.className = 'pill'; p.textContent = 'Da configurare'; c.hidden = true; $('#lucchetto').textContent = '🔒'; return; }
+  if (!S.K1) { p.className = 'pill'; p.textContent = 'Chiusa'; c.hidden = true; $('#lucchetto').textContent = '🔒'; return; }
+  c.hidden = false; $('#lucchetto').textContent = S.K2 ? '🔓' : '🔐';
+  if (S.K2) { const r = Math.max(0, Math.ceil((S.k2fine - Date.now()) / 1000)); p.className = 'pill wa'; p.textContent = '🔢 PIN attivo: ' + r + ' s'; }
+  else { p.className = 'pill ok'; p.textContent = '🙂 Aperta (livello 1)'; }
+}
+async function blocca(motivo) {
+  const k = S.K1;
+  if (k) logga('Chiusura a chiave', motivo || '', k);
+  const cb = S.onL2; S.onL2 = []; cb.forEach(f => { try { f(); } catch (e) {} });
+  S.K1 = null; S.K2 = null; S.prf = null; S.gate = false; S.items = []; S.archivio = []; S.lettere = []; S.l2c = {}; S.cache = null;
+  clearTimeout(S.k2t); S.k2fine = 0; S.limite = 60000; S.pausa = 0;
+  clearInterval(S.solTm);
+  document.querySelectorAll('img').forEach(i => i.removeAttribute('src'));
+  document.querySelectorAll('canvas').forEach(c => { c.width = 0; c.height = 0; });
+  S.urlsW.forEach(u => URL.revokeObjectURL(u)); S.urlsW = [];
+  chiudiDialoghi();
+  $('#areaStampa').replaceChildren(); $('#vista').replaceChildren();
+  if (S.pronto) await vistaBloccata();
+  stato();
+}
+['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(e => addEventListener(e, () => { S.ult = Date.now(); }, {passive: true, capture: true}));
+setInterval(() => {
+  if (S.K1 && Date.now() - S.ult > S.limite && Date.now() > S.pausa) blocca('60 s senza tocchi');
+  if (S.K1 && document.hidden && S.nascosta && Date.now() - S.nascosta > 20000) blocca('in secondo piano da più di 20 s');
+  if (S.K1) stato();
+}, 1000);
+function velo(on) { $('#velo').classList.toggle('on', !!on); }
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { S.nascosta = Date.now(); velo(true); if (Date.now() > S.pausa) blocca('app in secondo piano'); }
+  else { if (S.nascosta && S.K1 && Date.now() - S.nascosta > 20000) blocca('rimasta in secondo piano più di 20 s'); S.nascosta = 0; velo(false); }
+});
+addEventListener('pagehide', () => { velo(true); if (Date.now() > S.pausa) blocca('pagehide'); });
+addEventListener('pageshow', () => { if (!document.hidden) velo(false); });
+addEventListener('blur', () => { if (S.K1 || S.cfg) velo(true); });
+addEventListener('focus', () => { if (!document.hidden) velo(false); });
+$('#chiudiSubito').onclick = () => blocca('pulsante');
+let ultTap = 0;
+$('#lucchetto').addEventListener('click', () => { const n = Date.now(); if (n - ultTap < 450) blocca('doppio tocco sul lucchetto'); ultTap = n; });
+/* ---------- Face ID (WebAuthn + PRF) ---------- */
+async function creaPasskey(sale) {
+  const cr = await navigator.credentials.create({publicKey: {rp: {name: 'Cassaforte', id: location.hostname}, user: {id: rnd(16), name: 'cassaforte', displayName: 'Cassaforte'},
+    challenge: rnd(32), pubKeyCredParams: [{type: 'public-key', alg: -7}, {type: 'public-key', alg: -257}], timeout: 60000, attestation: 'none',
+    authenticatorSelection: {authenticatorAttachment: 'platform', userVerification: 'required', residentKey: 'preferred'},
+    extensions: {prf: {eval: {first: sale}}}}});
+  const x = cr.getClientExtensionResults(), p = x && x.prf;
+  return {id: new Uint8Array(cr.rawId), prfAttivo: !!(p && (p.enabled || p.results)), prf: p && p.results && p.results.first ? new Uint8Array(p.results.first) : null};
+}
+async function leggiPasskey(cred, sale) {
+  const a = await navigator.credentials.get({publicKey: {challenge: rnd(32), rpId: location.hostname, allowCredentials: [{type: 'public-key', id: cred}], userVerification: 'required', timeout: 60000,
+    extensions: {prf: {eval: {first: sale}}}}});
+  const x = a.getClientExtensionResults(), p = x && x.prf;
+  return p && p.results && p.results.first ? new Uint8Array(p.results.first) : null;
+}
+const faceKey = prf => hkey(prf, 'cassaforte-faceid-livello1');
+
+async function scegliPin(min, nota) {
+  for (;;) {
+    const a = await tastierino('🔢 Scegli il PIN', 'Scegli un PIN di almeno ' + min + ' cifre (fino a 16). Serve per vedere numeri e foto, per aggiungere e per eliminare. Non usare date di nascita.', () => true, {min, max: 16, nota});
+    if (a == null) return null;
+    const b = await tastierino('🔢 Scrivi di nuovo il PIN', 'Ripeti lo stesso PIN.', p => p === a ? true : 'Non è uguale al primo. Riprova.', {min, max: 16});
+    if (b != null) return a;
+  }
+}
+/* crea l'accesso (Face ID o codice dell'iPad + PIN) per K1 e K2 già pronte (estraibili solo qui, temporanee). Ritorna i campi da mettere in cfg, o null.
+   Modo PRF: K2 è avvolta da una chiave che dipende da PRF e PIN insieme (il PIN da solo non basta). Modi di ripiego: PIN di almeno 10 cifre. */
+async function impostaAccesso(K1, K2, rinnovo) {
+  let modo = 'pin', testo = 'Face ID non è disponibile su questo apparecchio: la cassaforte si apre solo con il PIN.', prf = null, cred = null, sale = null;
+  if (window.PublicKeyCredential && navigator.credentials) {
+    const vuole = await dlgScelta('🙂 Face ID', [E('p', null, 'Ora colleghiamo Face ID. L\'iPad ti chiederà di guardare lo schermo.'), E('p', {class: 'pic'}, 'Attenzione: la passkey accetta anche il codice dell\'iPad, e può essere sincronizzata con il Portachiavi iCloud. Chi conosce il codice dell\'iPad può quindi superare questo passaggio: per questo il PIN della cassaforte resta importante.'), E('p', {class: 'pic'}, 'Se non vuoi, salta: la cassaforte si aprirà solo con il PIN.')], 'Attiva Face ID', 'Salta: solo PIN');
+    if (vuole) {
+      try {
+        sale = rnd(32); const cr = await creaPasskey(sale); cred = cr.id; prf = cr.prf;
+        if (!prf) { try { prf = await leggiPasskey(cr.id, sale); } catch (e) { prf = undefined; } }
+        if (prf) { modo = 'prf'; testo = 'Fatto. Face ID (o il codice dell\'iPad) è la chiave del livello 1 e, insieme al PIN, del livello 2: senza il tuo volto i dati dell\'elenco non si aprono.'; }
+        else if (prf === null) { modo = 'gate'; testo = 'ATTENZIONE: questo iPad non permette a Face ID di fare da chiave. Face ID resta un cancello e, per aprire, serve anche il PIN. Funziona e i dati restano cifrati, ma i passaggi sono due e il PIN deve essere lungo.'; }
+        else throw new Error('Face ID non confermato');
+      } catch (e) { modo = 'pin'; prf = null; testo = 'Face ID non è stato attivato (' + (e && e.name ? e.name : 'errore') + '). La cassaforte si apre solo con il PIN. Potrai riprovare con la chiave di recupero.'; }
+    } else testo = 'Hai scelto di non usare Face ID: la cassaforte si apre solo con il PIN.';
+  }
+  const min = modo === 'prf' ? 6 : 10;
+  const pin = await scegliPin(min, modo === 'prf' ? null : 'Senza la chiave di Face ID il PIN è l\'unica difesa: un PIN corto si indovina in poco tempo, anche se qui c\'è il freno dei tentativi. Per questo servono almeno 10 cifre.');
+  if (!pin) return null;
+  const saltPin = rnd(16), iter = 600000, bits = await pinBits(pin, saltPin, iter);
+  const acc = {saltPin: b64(saltPin), iter, modo};
+  if (modo === 'prf') { acc.sale = b64(sale); acc.cred = b64(cred); acc.wK1f = await avvolgi(await faceKey(prf), K1, 'wK1f'); acc.wK2pp = await avvolgi(await hkey(cat(prf, bits), 'livello2-prf+pin'), K2, 'wK2pp'); }
+  else { acc.wK2p = await avvolgi(await hkey(bits, 'livello2'), K2, 'wK2p'); acc.wK1p = await avvolgi(await hkey(bits, 'livello1'), K1, 'wK1p'); if (modo === 'gate') { acc.sale = b64(sale); acc.cred = b64(cred); } }
+  await dlgMsg('Accesso impostato', [E('p', null, testo), E('p', {class: modo === 'prf' ? 'okb' : 'warn'}, modo === 'prf' ? 'Modo: Face ID come chiave (con il PIN per numeri e foto)' : modo === 'gate' ? 'Modo di ripiego: Face ID come cancello + PIN' : 'Modo di ripiego: solo PIN'), rinnovo && modo !== 'pin' ? E('p', {class: 'pic'}, 'La passkey vecchia non serve più: puoi toglierla da Impostazioni → Password.') : null]);
+  return acc;
+}
+
+function paginaStampaRec(rec) {
+  const a = $('#areaStampa');
+  a.replaceChildren(E('h1', null, 'Cassaforte — chiave di recupero'), E('p', null, 'Data: ' + dIt(oggi())), E('p', null, 'Questa è la chiave di recupero. Se perdi Face ID o il PIN, solo questa chiave riapre la cassaforte.'),
+    E('div', {class: 'rk'}, recFmt(rec)), E('p', null, 'Conservala in un posto sicuro, lontano dall\'iPad (per esempio in una busta chiusa). Non fotografarla e non scriverla nel telefono.'),
+    E('p', null, 'Senza Face ID/PIN e senza questa chiave i dati sono persi: nessuno può recuperarli.'));
+  const fine = () => { a.replaceChildren(); removeEventListener('afterprint', fine); };
+  addEventListener('afterprint', fine); print();
+}
+async function mostraRec(rec) {
+  const d = dlg('🗝️ Chiave di recupero');
+  const gruppi = recFmt(rec).split('-'), n = 2 + Math.floor(Math.random() * 4), att = gruppi[n];
+  const chk = E('input', {type: 'checkbox', id: 'recok'}), inp = E('input', {type: 'text', autocomplete: 'off', autocapitalize: 'characters', 'aria-label': 'Gruppo ' + (n + 1)});
+  const ok = E('button', {class: 'btn pri', type: 'button', disabled: true}, '✓ Ho conservato la chiave');
+  const ctrl = () => { ok.disabled = !(chk.checked && inp.value.toUpperCase().replace(/[^A-Z0-9]/g, '') === att); };
+  chk.onchange = ctrl; inp.oninput = ctrl;
+  d.set(E('p', {class: 'bab'}, 'Si vede UNA volta sola. Senza Face ID/PIN e senza questa chiave i dati sono persi.'),
+    E('div', {class: 'rk'}, recFmt(rec)),
+    E('div', {class: 'row c', style: 'margin:10px 0'}, E('button', {class: 'btn', type: 'button', onclick: () => paginaStampaRec(rec)}, '🖨️ Stampa la pagina')),
+    E('p', null, 'Scrivila su carta e tienila lontano dall\'iPad. Per essere sicuri che l\'hai copiata, scrivi qui il gruppo numero ' + (n + 1) + ':'), inp,
+    E('label', {class: 'chk', style: 'margin-top:10px'}, chk, E('span', null, 'Ho stampato o scritto la chiave e l\'ho messa al sicuro.')),
+    E('div', {class: 'bt'}, ok));
+  await new Promise(r => ok.onclick = r); d.close();
+}
+async function salvaCfg(cfg) { await kvSet('cfg', cfg); S.cfg = cfg; localStorage.setItem('cf-conf', '1'); }
+
+async function configura() {
+  const d = dlg('🔐 Configura la cassaforte');
+  d.set(E('div', {class: 'hero', html: svgHero()}), E('p', null, 'Ci vogliono due minuti. Faremo tre cose:'), E('ol', {class: 'lista'}, E('li', null, 'attivi Face ID o il codice dell\'iPad (livello 1: elenco e scadenze);'), E('li', null, 'scegli un PIN (livello 2: numeri completi e foto);'), E('li', null, 'ricevi una chiave di recupero da stampare.')),
+    E('p', {class: 'warn'}, 'I dati restano cifrati su questo iPad: escono solo la copia cifrata, la busta e le copie per lo sportello, e solo se le salvi o le condividi tu. Senza Face ID/PIN e senza la chiave di recupero non si possono recuperare.'));
+  const r = await d.btns([{k: 0, t: 'Più tardi'}, {k: 1, t: 'Cominciamo', cls: 'pri'}]); d.close();
+  if (!r) return false;
+  const K1 = await nuovaK(), K2 = await nuovaK();
+  const acc = await impostaAccesso(K1, K2); if (!acc) return false;
+  const rec = nuovaRec(), saltRec = rnd(16), rk = await recKey(rec, saltRec);
+  await mostraRec(rec);
+  const cfg = Object.assign({v: 1, creato: new Date().toISOString(), saltRec: b64(saltRec), wK1r: await avvolgi(rk, K1, 'wK1r'), wK2r: await avvolgi(rk, K2, 'wK2r')}, acc);
+  await salvaCfg(cfg);
+  localStorage.setItem('cf-ultima-prova', oggi());
+  S.K1 = await svolgi(rk, cfg.wK1r, 'wK1r'); S.K2 = await svolgi(rk, cfg.wK2r, 'wK2r'); S.ult = Date.now(); avviaL2(); logga('Configurazione', 'modo ' + cfg.modo);
+  return true;
+}
+
+/* apertura: Face ID (o PIN) */
+async function apri() {
+  const c = S.cfg; S.gate = false;
+  try {
+    if (c.modo === 'prf') {
+      const prf = await leggiPasskey(ub64(c.cred), ub64(c.sale));
+      if (!prf) throw new Error('Face ID non ha dato la chiave');
+      S.prf = prf; S.K1 = await svolgi(await faceKey(prf), c.wK1f, 'wK1f');
+    } else {
+      if (c.modo === 'gate') { await leggiPasskey(ub64(c.cred), ub64(c.sale)); }
+      S.gate = true;
+      const r = await tastierino('🔢 PIN per aprire', c.modo === 'gate' ? 'Face ID è passato. Ora scrivi il PIN.' : 'Scrivi il PIN per aprire la cassaforte.', verificaPin, {conta: true});
+      if (r == null) { S.gate = false; return false; }
+      avviaL2();
+    }
+  } catch (e) { S.gate = false; S.K1 = null; await dlgMsg('Non si è aperta', [E('p', null, 'Face ID (o il codice dell\'iPad) non è stato confermato oppure non è riuscito. Riprova. Se non funziona più, usa la chiave di recupero.'), E('p', {class: 'pic'}, String(e && e.name || ''))]); return false; }
+  S.gate = false; S.ult = Date.now();
+  logga('Apertura', c.modo === 'prf' ? 'Face ID' : c.modo === 'gate' ? 'Face ID + PIN' : 'PIN');
+  return true;
+}
+async function apriConRecupero() {
+  const d = dlg('🗝️ Chiave di recupero'), inp = E('input', {type: 'text', autocomplete: 'off', autocapitalize: 'characters', placeholder: 'XXXX-XXXX-XXXX-XXXX-XXXX-XXXX', 'aria-label': 'Chiave di recupero'});
+  const msg = E('p', {class: 'msg ba'});
+  d.set(E('p', null, 'Scrivi le 24 lettere e cifre della chiave stampata.'), inp, msg);
+  const r = await d.btns([{k: 0, t: 'Annulla'}, {k: 1, t: 'Apri', cls: 'pri'}]);
+  if (!r) { d.close(); return false; }
+  try {
+    const rk = await recKey(inp.value, ub64(S.cfg.saltRec));
+    const K1 = await svolgi(rk, S.cfg.wK1r, 'wK1r'), K2 = await svolgi(rk, S.cfg.wK2r, 'wK2r');
+    d.close(); S.K1 = K1; S.K2 = K2; avviaL2(); S.ult = Date.now();
+    await logga('Apertura con chiave di recupero');
+    if (await dlgScelta('Nuovo accesso?', [E('p', null, 'La cassaforte è aperta. Vuoi scegliere un nuovo PIN e ricollegare Face ID (per esempio su un iPad nuovo o se hai dimenticato il PIN)?')], 'Sì, imposta il nuovo accesso', 'No, per ora')) {
+      let K1x = await svolgiEstr(rk, S.cfg.wK1r, 'wK1r'), K2x = await svolgiEstr(rk, S.cfg.wK2r, 'wK2r'); // copie estraibili temporanee
+      const acc = await impostaAccesso(K1x, K2x, true); K1x = K2x = null;
+      if (acc) { const c = Object.assign({}, S.cfg); ['wK1f', 'wK1p', 'wK2p', 'wK2pp', 'sale', 'cred'].forEach(k => delete c[k]); await salvaCfg(Object.assign(c, acc)); S.prf = null; logga('Nuovo accesso impostato'); }
+    }
+    return true;
+  } catch (e) { msg.textContent = 'La chiave non è giusta. Controlla le lettere.'; d.close(); await dlgMsg('Chiave non valida', ['La chiave scritta non apre la cassaforte. Controlla ogni gruppo e riprova.']); return false; }
+}
+/* ---------- elementi ---------- */
+const urlW = blob => { const u = URL.createObjectURL(blob); S.urlsW.push(u); return u; };
+const idNuovo = () => b64(rnd(9)).replace(/\+/g, '-').replace(/\//g, '_');
+function sem(l1) {
+  const t = TK[l1.tipo] || TK.altro;
+  if (!l1.scad) return {k: 'gr', t: 'Senza scadenza', i: '⚪', s: 0};
+  const d = giorniTra(oggi(), l1.scad);
+  if (d < 0) return {k: 'ba', t: 'Scaduto', i: '🔴', s: 3, d};
+  if (oggi() >= addMesi(l1.scad, -t.ant)) return {k: 'wa', t: 'Da rinnovare', i: '🟡', s: 2, d};
+  return {k: 'ok', t: 'In regola', i: '🟢', s: 1, d};
+}
+const pillSem = l1 => { const s = sem(l1); return E('span', {class: 'pill ' + s.k}, s.i + ' ' + s.t + (l1.scad ? ' · ' + dIt(l1.scad) : '')); };
+function aggiornaAvvisi() {
+  const its = S.items.filter(x => x.l1.scad);
+  const n = its.filter(x => sem(x.l1).s >= 2).length;
+  const fut = its.filter(x => sem(x.l1).s !== 3).map(x => x.l1.scad).sort()[0];
+  try { localStorage.setItem('cf-avvisi-v1', JSON.stringify({n, prossima: fut ? fut.slice(0, 7) : '', agg: oggi()})); } catch (e) {}
+}
+async function caricaTutto() {
+  const recs = await itAll(), out = [];
+  for (const r of recs) { try { const l1 = await dJ(S.K1, r.l1, aadI(r.id, 'l1')); if (!TK[l1.tipo]) continue; if (l1.scad && !/^\d{4}-\d{2}-\d{2}$/.test(l1.scad)) l1.scad = ''; if (l1.rilascio && !/^\d{4}-\d{2}-\d{2}$/.test(l1.rilascio)) l1.rilascio = ''; out.push({id: r.id, l1, rec: r}); } catch (e) {} }
+  const sost = new Set(out.map(x => x.l1.sost).filter(Boolean));
+  S.items = out.filter(x => !sost.has(x.id)); S.archivio = out.filter(x => sost.has(x.id));
+  try { const o = await kvGet('lettere'); const a = o ? await dJ(S.K1, o, 'lettere') : []; S.lettere = a.map(x => x.apre > oggi() ? {sig: x.sig, apre: x.apre} : x); } catch (e) { S.lettere = []; }
+  await elaboraLettera(); aggiornaAvvisi();
+}
+async function leggiL2(it) {
+  if (!S.K2) throw new Error('livello 2 chiuso');
+  if (!S.l2c[it.id]) S.l2c[it.id] = await dJ(S.K2, it.rec.l2, aadI(it.id, 'l2'));
+  return S.l2c[it.id];
+}
+async function foto(it, lato) { const o = it.rec[lato]; return o ? new Blob([await decifra(S.K2, o, aadI(it.id, lato))], {type: 'image/jpeg'}) : null; }
+function scarica(file) { const u = URL.createObjectURL(file), a = E('a', {href: u, download: file.name}); document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 5000); }
+async function consegna(file) {
+  if (navigator.canShare && navigator.canShare({files: [file]})) { try { await navigator.share({files: [file], title: file.name}); return; } catch (e) { if (e && e.name === 'AbortError') return; } }
+  scarica(file);
+}
+function righePronte(file, testo, k) { // finestrella «pronto: tocca per condividere» (serve un tocco nuovo per navigator.share)
+  return (async () => { const d = dlg('✅ Pronto'); d.set(E('p', null, testo), E('p', {class: 'pic'}, file.name + ' · ' + Math.ceil(file.size / 1024) + ' KB')); const bt = [{k: 1, t: '📤 Condividi o salva il file', cls: 'pri'}, {k: 0, t: 'Chiudi'}];
+    for (;;) { const r = await d.btns(bt); d.bt.remove(); if (!r) break; await consegna(file); } d.close(); })();
+}
+/* campo sensibile: mascherato, con PIN per 10 s */
+function campoSens(etichetta, leggi) {
+  const v = E('span', {class: 'vel mask'}, '••••••••'); let tm = null;
+  const mascher = () => { clearTimeout(tm); v.textContent = '••••••••'; v.className = 'vel mask'; };
+  const b = E('button', {class: 'btn', type: 'button', onclick: async () => {
+    if (!await chiediPin('Scrivi il PIN per vedere questo dato per 10 secondi.')) return;
+    try { const x = await leggi(); v.textContent = x || '(vuoto)'; v.className = 'vel'; clearTimeout(tm); tm = setTimeout(mascher, 10000); S.onL2.push(mascher); } catch (e) { mascher(); }
+  }}, '👁 Mostra (PIN, 10 s)');
+  return [E('b', null, etichetta), E('div', {class: 'row'}, v, b)];
+}
+const halfMask = v => { v = String(v); const n = v.length; if (n <= 6) return '•'.repeat(n); const q = Math.ceil(n / 4); return v.slice(0, q) + '•'.repeat(n - 2 * q) + v.slice(-q); };
+
+/* ---------- procedura di cattura ---------- */
+async function ridimensiona(file) {
+  let bmp;
+  try { bmp = await createImageBitmap(file, {imageOrientation: 'from-image'}); }
+  catch (e) { bmp = await new Promise((ok, ko) => { const i = new Image(); i.onload = () => ok(i); i.onerror = ko; const u = URL.createObjectURL(file); i.src = u; setTimeout(() => URL.revokeObjectURL(u), 20000); }); }
+  const w = bmp.width || bmp.naturalWidth, h = bmp.height || bmp.naturalHeight, k = Math.min(1, 1600 / Math.max(w, h));
+  const c = document.createElement('canvas'); c.width = Math.round(w * k); c.height = Math.round(h * k);
+  c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+  if (bmp.close) bmp.close();
+  return new Promise(ok => c.toBlob(b => { c.width = c.height = 0; ok(b); }, 'image/jpeg', 0.8));
+}
+const passi = n => E('div', {class: 'steps'}, ['Tipo', 'Fronte', 'Retro', 'Testo', 'Conferma'].map((x, i) => E('span', {class: i === n ? 'on' : ''}, (i + 1) + '. ' + x)));
+function scattaFoto(d, W, lato, n) {
+  const nome = lato === 'f' ? 'FRONTE' : 'RETRO';
+  return new Promise(res => {
+    const inp = E('input', {type: 'file', accept: 'image/*', capture: 'environment', style: 'position:absolute;opacity:0;width:1px;height:1px', 'aria-label': 'Scatta la foto del ' + nome.toLowerCase()});
+    const lab = E('label', {class: 'btn pri big', onclick: () => { S.pausa = Date.now() + 90000; }}, '📷 Scatta il ' + nome.toLowerCase(), inp);
+    const prev = E('div', {class: 'prev'}), bt = E('div', {class: 'bt'});
+    d.set(passi(n), E('div', {html: SVG_CATTURA()}), E('p', {style: 'text-align:center'}, 'Appoggia il documento su un tavolo con buona luce. Fotografa il ' + nome + ' tutto intero, senza riflessi. La foto resta solo su questo iPad.'), E('div', {class: 'row c'}, lab), prev, bt);
+    const avanti = E('button', {class: 'btn pri', type: 'button', onclick: () => res('ok')}, 'Avanti ▶');
+    inp.onchange = async () => {
+      S.pausa = 0; const f = inp.files && inp.files[0]; if (!f) return;
+      prev.textContent = 'Preparo la foto…';
+      try { const b = await ridimensiona(f); W[lato] = b; prev.replaceChildren(E('img', {src: urlW(b), alt: 'Foto del ' + nome.toLowerCase()})); lab.firstChild.textContent = '🔄 Rifai la foto'; bt.replaceChildren(avanti); }
+      catch (e) { prev.textContent = 'Non riesco a leggere questa foto. Riprova.'; }
+    };
+    bt.append(E('button', {class: 'btn', type: 'button', onclick: () => res('annulla')}, 'Annulla'));
+    if (lato === 'r') bt.append(E('button', {class: 'btn', type: 'button', onclick: () => { W.r = null; res('ok'); }}, 'Non c\'è il retro'));
+  });
+}
+function passoTesto(d, W) {
+  return new Promise(res => {
+    const stato_ = E('p', {class: 'okb', hidden: true}), ta = E('textarea', {placeholder: 'Incolla qui il testo copiato', 'aria-label': 'Testo copiato'});
+    const dettagli = E('details', null, E('summary', null, 'Il pulsante non incolla? Usa questa casella'), ta, E('div', {class: 'row c', style: 'margin-top:8px'}, E('button', {class: 'btn', type: 'button', onclick: () => usa('f', ta.value, true)}, 'Questo è il testo del FRONTE'), W.r ? E('button', {class: 'btn', type: 'button', onclick: () => usa('r', ta.value, true)}, 'Questo è il testo del RETRO') : null));
+    const go = E('button', {class: 'btn pri big', type: 'button', disabled: true, onclick: () => res('ok')}, '▶ Riconosci i dati');
+    const agg = () => { const n = (W.tf ? 1 : 0) + (W.tr ? 1 : 0); stato_.hidden = !n; stato_.textContent = '✓ Testo ricevuto: ' + (W.tf ? 'fronte ' : '') + (W.tr ? 'retro' : ''); go.disabled = !n; };
+    async function usa(l, t, daCasella) { t = String(t || ''); if (t.trim().length < 4) { stato_.hidden = false; stato_.className = 'warn'; stato_.textContent = 'Non c\'è testo. Copia prima il testo dalla foto.'; return; } stato_.className = 'okb'; if (l === 'f') W.tf = t; else W.tr = t; if (daCasella) ta.value = ''; try { await navigator.clipboard.writeText(' '); } catch (e) {} agg(); }
+    const incolla = l => async () => { try { await usa(l, await navigator.clipboard.readText()); } catch (e) { dettagli.open = true; stato_.hidden = false; stato_.className = 'warn'; stato_.textContent = 'L\'iPad non mi lascia leggere gli appunti: incolla il testo nella casella qui sotto.'; } };
+    const OCR = window.CF_OCR && window.CF_OCR.disponibile;
+    const anteprima = (b, nome) => b ? E('figure', {style: 'margin:0;text-align:center'}, E('img', {src: urlW(b), alt: 'Anteprima del ' + nome, style: 'max-width:100%;max-height:260px;border-radius:10px;border:1px solid var(--line)'}), E('figcaption', {class: 'pic'}, nome)) : null;
+    d.set(passi(3), E('div', {html: flowSvg([{i: '👆', t: 'Tieni premuto|sulla foto'}, {i: '🔤', t: 'Seleziona|tutto'}, {i: '📄', t: 'Copia'}, {i: '📋', t: 'Premi qui|sotto: incolla'}], 'Come copiare il testo dalla foto: tieni premuto sulla foto qui sotto, seleziona tutto, copia, incolla')}),
+      E('p', null, 'Tieni premuto sul testo dell\'anteprima della foto QUI SOTTO (dentro questa pagina, non nell\'app Foto), scegli «Seleziona tutto» e «Copia». Poi premi il pulsante: il testo si incolla da solo e gli appunti si svuotano. Non devi scrivere niente.'),
+      E('div', {class: 'prev', style: 'margin:8px 0'}, anteprima(W.f, 'fronte'), anteprima(W.r, 'retro')),
+      E('div', {class: 'row c'}, E('button', {class: 'btn pri', type: 'button', onclick: incolla('f')}, '📋 Incolla il testo del FRONTE'), W.r ? E('button', {class: 'btn pri', type: 'button', onclick: incolla('r')}, '📋 Incolla il testo del RETRO') : null),
+      stato_, dettagli, E('p', {class: 'pic'}, 'Se la foto finisse nell\'app Foto o in iCloud, cancellala anche da «Eliminati di recente».'), E('div', {class: 'bt'}, E('button', {class: 'btn', type: 'button', onclick: () => res('annulla')}, 'Annulla'), go));
+    if (OCR) (async () => { try { if (W.f) W.tf = await window.CF_OCR.leggi(W.f); if (W.r) W.tr = await window.CF_OCR.leggi(W.r); agg(); res('ok'); } catch (e) {} })();
+  });
+}
+function campiTipo(t) {
+  const c = [];
+  if (t.k !== 'carta') c.push(['numero', 'Numero del documento', true]);
+  if (t.k === 'carta') c.push(['ultime4', 'Ultime 4 cifre', true]);
+  if (t.sc) c.push(['scadenza', 'Scadenza', true]);
+  c.push(['rilascio', 'Rilascio', false], ['ente', 'Ente', false]);
+  if (t.k === 'carta') c.push(['circuito', 'Circuito', false], ['tel', 'Numero per il blocco', false]);
+  if (['ts', 'cf', 'cie', 'el'].includes(t.k)) c.push(['cf', 'Codice fiscale', false]);
+  return c;
+}
+const DA = {MRZ: 'MRZ', testo: 'testo', dedotta: 'testo (la data più lontana: controlla)'};
+async function aggiungi(sost) {
+  const W = {tipo: sost ? sost.l1.tipo : null, f: null, r: null, tf: '', tr: '', sost};
+  const d = dlg(sost ? '↻ Rifai la scansione' : '➕ Nuovo documento');
+  d.onclose = () => { S.urlsW.forEach(u => URL.revokeObjectURL(u)); S.urlsW = []; W.f = W.r = null; W.tf = W.tr = ''; };
+  try {
+    if (!W.tipo) {
+      const sc = await new Promise(res => d.set(passi(0), E('p', {style: 'text-align:center'}, 'Che documento vuoi mettere in cassaforte?'),
+        E('div', {class: 'tipi'}, TIPI.map(t => E('button', {type: 'button', onclick: () => res(t.k)}, E('div', {html: tesseraSvg(t.k)}), E('b', null, t.i + ' ' + t.n)))), E('div', {class: 'bt'}, E('button', {class: 'btn', type: 'button', onclick: () => res(null)}, 'Annulla'))));
+      if (!sc) return; if (sc === 'chiavi') { d.close(); S.aperte.add('chiavi'); render(); return; }
+      W.tipo = sc;
+    }
+    const T = TK[W.tipo];
+    for (;;) {
+      W.f = W.r = null; W.tf = W.tr = '';
+      if (await scattaFoto(d, W, 'f', 1) !== 'ok') return;
+      if (await scattaFoto(d, W, 'r', 2) !== 'ok') return;
+      if (await passoTesto(d, W) !== 'ok') return;
+      const R = CFP.parse((W.tf || '') + '\n' + (W.tr || ''), W.tipo);
+      W.tf = W.tr = '';
+      const campi = campiTipo(T); let salvaPan = false;
+      if (R._avvisoCarta) { /* mostrato nella conferma */ }
+      const rows = E('div', {class: 'kv'});
+      campi.forEach(([k, nome, obbl]) => {
+        let v = R[k].v, da = R[k].da;
+        if (k === 'numero' && v) v = '••••• ' + v.slice(-4);
+        if (k === 'cf' && v) v = '•••••••••••• ' + v.slice(-4);
+        if (k === 'scadenza' || k === 'rilascio') v = v ? dIt(v) : v;
+        rows.append(E('b', null, nome), v ? E('div', null, E('span', {class: 'vel'}, v), E('div', {class: 'pic'}, 'letto da: ' + DA[da])) : E('div', {class: obbl ? 'warn' : 'pic'}, 'non trovato' + (obbl ? ' — da rifare con una foto migliore' : '')));
+      });
+      const sw = R._pan ? E('input', {type: 'checkbox', id: 'panchk'}) : null;
+      d.set(passi(4), R._avvisoCarta ? E('p', {class: 'bab'}, 'Nel testo c\'era il numero di una carta di pagamento: è stato scartato. Se questo è una carta, scegli «Carte di pagamento».') : null, E('p', null, 'Ecco i dati letti dal testo. Nulla si scrive a mano. Se manca qualcosa di importante, rifai le foto.'), rows,
+        sw ? E('label', {class: 'chk'}, sw, E('span', null, 'Salva anche il numero intero della carta (sconsigliato: bastano le ultime 4 cifre)')) : null,
+        E('p', {class: 'pic'}, 'Il codice di sicurezza (CVV) e il PIN della carta non si salvano mai.'),
+        E('div', {class: 'bt'}, E('button', {class: 'btn', type: 'button', onclick: () => d.$r('rifai')}, '↻ Rifai le foto'), E('button', {class: 'btn pri', type: 'button', onclick: () => d.$r('ok')}, '✓ Conferma e chiudi a chiave')));
+      const sc2 = await new Promise(r => d.$r = r);
+      if (sc2 === 'rifai') continue;
+      salvaPan = !!(sw && sw.checked);
+      if (!await chiediPin('Scrivi il PIN per mettere il documento in cassaforte.', true)) { R._pan = null; continue; }
+      const id = idNuovo(), val = k => R[k].v || '';
+      const l1 = {tipo: W.tipo, ente: val('ente'), ultime4: val('ultime4') || (R.numero.v ? R.numero.v.slice(-4) : ''), scad: val('scadenza'), rilascio: val('rilascio'), circ: val('circuito'), tel: val('tel'), creato: new Date().toISOString(),
+        da: {numero: R.numero.da, scadenza: R.scadenza.da, ente: R.ente.da, ultime4: R.ultime4.da}, sost: sost ? sost.id : null, ver: sost ? (sost.l1.ver || 1) + 1 : 1, retro: !!W.r};
+      const l2 = {numero: val('numero'), cf: val('cf'), pan: salvaPan ? R._pan : ''};
+      R._pan = null;
+      const rec = {id, l1: await cJ(S.K1, l1, aadI(id, 'l1')), l2: await cJ(S.K2, l2, aadI(id, 'l2')), f: await cifra(S.K2, new Uint8Array(await W.f.arrayBuffer()), aadI(id, 'f')), r: W.r ? await cifra(S.K2, new Uint8Array(await W.r.arrayBuffer()), aadI(id, 'r')) : null};
+      await itPut(rec);
+      logga('Aggiunta', T.n + (sost ? ' (nuova versione; la vecchia è in archivio)' : ''));
+      W.f = W.r = null;
+      chiudiL2();
+      await caricaTutto();
+      d.set(E('div', {class: 'okb', style: 'text-align:center;font-size:1.2rem'}, '🔒 Salvato e chiuso a chiave'), E('div', {class: 'bt'}, E('button', {class: 'btn pri', type: 'button', onclick: () => d.$r('x')}, 'Va bene')));
+      await new Promise(r => d.$r = r);
+      break;
+    }
+  } finally { d.close(); render(); }
+}
+/* ---------- guide, portafoglio perso, mostra solo questo, copia per lo sportello ---------- */
+function guidaTipo(k, tel) {
+  const t = TK[k];
+  return [E('p', null, E('b', null, 'Se lo perdo: ' + t.i + ' ' + t.n)), E('ol', {class: 'lista'}, t.perdo.map(x => E('li', null, x))),
+    tel ? E('p', {class: 'bab'}, '📞 Numero per il blocco (letto dalla foto del retro): ' + tel + '. Controlla che sia quello sul retro della carta o sul sito della banca.') : null,
+    E('p', null, E('b', null, 'Che cosa portare al rinnovo')), E('ul', {class: 'lista'}, t.rin.map(x => E('li', null, x))), E('p', {class: 'warn'}, RINNOVO_AVV)];
+}
+async function guidaDialog(it) { const d = dlg('🧭 ' + TK[it.l1.tipo].n); d.set(guidaTipo(it.l1.tipo, it.l1.tel), portaliBlocco(it.l1.tipo)); await d.btns([{k: 1, t: 'Chiudi', cls: 'pri'}]); d.close(); }
+function portaliBlocco(tipo) {
+  const mappa = {cie: 0, pass: 1, pat: 2, ts: 3}; const lista = tipo ? (mappa[tipo] != null ? [PORTALI[mappa[tipo]]] : []) : PORTALI;
+  if (!lista.length) return null;
+  return E('div', null, E('p', null, E('b', null, '🌐 Portale ufficiale')), lista.map(p => E('p', null, E('a', {href: p.u, target: '_blank', rel: 'noopener noreferrer'}, p.t + ' ↗'), E('br'), E('small', null, p.u + ' — verifica: ' + p.v + '. Controlla che l\'indirizzo sia quello ufficiale.'))));
+}
+async function portafoglioPerso() {
+  const d = dlg('🚨 Portafoglio perso');
+  const carte = S.items.filter(x => x.l1.tipo === 'carta'), doc = S.items.filter(x => ['cie', 'pass', 'pat', 'ts', 'serv', 'el'].includes(x.l1.tipo));
+  const sp = (id) => { const c = E('input', {type: 'checkbox'}); c.checked = !!S.spunte[id]; c.onchange = () => { S.spunte[id] = c.checked; }; return c; };
+  const riga = (id, testo) => E('label', {class: 'chk', style: 'margin:6px 0'}, sp(id), E('span', null, testo));
+  d.set(E('div', {html: SVG_PERSO()}), E('p', {class: 'bab'}, 'Respira. Fai i passi nell\'ordine. Spunta quello che hai fatto (le spunte non restano salvate).'),
+    E('h3', null, '1. 📞 Blocca subito le carte'), carte.length ? carte.map(x => riga('c' + x.id, (x.l1.ente || 'Banca non letta') + ' — carta che finisce per ' + (x.l1.ultime4 || '????') + '. ' + (x.l1.tel ? 'Numero per il blocco: ' + x.l1.tel + ' (controlla che sia quello sul retro della carta o sul sito della banca)' : 'Numero per il blocco non letto: chiama il numero della tua banca.'))) : E('p', null, 'Nessuna carta in cassaforte. Chiama la tua banca e chiedi di bloccarle tutte.'),
+    E('h3', {style: 'margin-top:14px'}, '2. 👮 Fai la denuncia di questi documenti'), doc.length ? doc.map(x => riga('d' + x.id, TK[x.l1.tipo].i + ' ' + TK[x.l1.tipo].n + (x.l1.ente ? ' (' + x.l1.ente + ')' : ''))) : E('p', null, 'Nessun documento in cassaforte.'),
+    E('p', {class: 'pic'}, 'La denuncia si fa presso le forze dell\'ordine. Porta, se puoi, un altro documento.'),
+    E('h3', {style: 'margin-top:14px'}, '3. 📨 Richiedi il nuovo'), doc.length ? doc.map(x => riga('n' + x.id, COSA_RICHIEDERE[x.l1.tipo] || 'duplicato')) : null, carte.length ? riga('ncarte', 'carte nuove dalla banca') : null,
+    E('p', {class: 'warn'}, RINNOVO_AVV), portaliBlocco(null));
+  await d.btns([{k: 1, t: 'Chiudi', cls: 'pri'}]); d.close();
+}
+async function soloQuesto(it) {
+  if (!await chiediPin('Scrivi il PIN per mostrare questo documento a tutto schermo.', true)) return;
+  const bf = await foto(it, 'f'), br = await foto(it, 'r'); chiudiL2();
+  const uf = bf && urlW(bf), ur = br && urlW(br);
+  const img = E('img', {src: uf, alt: 'Documento'}), info = E('div', {style: 'font-weight:700'});
+  const ov = E('div', {class: 'sol', role: 'dialog', 'aria-label': 'Documento a tutto schermo'}, E('div', {style: 'font-size:1.1rem;font-weight:800'}, TK[it.l1.tipo].i + ' ' + TK[it.l1.tipo].n), img, info,
+    E('div', {class: 'row c'}, E('button', {class: 'btn', type: 'button', onclick: () => blocca('pulsante')}, '🔒 Chiudi subito'), E('button', {class: 'btn', type: 'button', onclick: () => { img.src = uf; }}, 'Fronte'), ur ? E('button', {class: 'btn', type: 'button', onclick: () => { img.src = ur; }}, 'Retro') : null,
+      E('button', {class: 'btn', type: 'button', onclick: async () => { if (await chiediPin('Scrivi il PIN per uscire.', true)) { chiudiL2(); uscita(); } }}, '🔢 Esci (PIN)')));
+  const fine = Date.now() + 300000; S.limite = 300000; S.ult = Date.now();
+  const uscita = () => { clearInterval(S.solTm); ov.remove(); S.limite = 60000; S.urlsW.forEach(u => URL.revokeObjectURL(u)); S.urlsW = []; };
+  S.solTm = setInterval(() => { const r = Math.ceil((fine - Date.now()) / 1000); info.textContent = 'Si chiude da sola fra ' + Math.floor(r / 60) + ':' + String(r % 60).padStart(2, '0'); if (r <= 0) uscita(); }, 1000);
+  document.body.append(ov); logga('Mostra solo questo', TK[it.l1.tipo].n);
+}
+async function copiaSportello(it) {
+  if (!await chiediPin('Scrivi il PIN per preparare la copia.')) return;
+  const d = dlg('🖨️ Copia per uno sportello'), dest = E('input', {type: 'text', maxlength: 40, placeholder: 'Per chi è la copia (es. Ufficio anagrafe)', 'aria-label': 'Destinatario'});
+  const lato = E('select', {'aria-label': 'Quale foto', style: 'font:inherit;font-size:17px;padding:8px;border-radius:10px'}, E('option', {value: 'f'}, 'Fronte'), it.rec.r ? E('option', {value: 'r'}, 'Retro') : null);
+  const out = E('div', {class: 'prev'});
+  d.set(E('div', {style: 'max-width:420px;margin:auto', html: svgFiligrana()}), E('p', null, 'La copia ha una scritta diagonale ripetuta su tutta l\'immagine: «COPIA per [destinatario] del [data]». Così è più difficile riusarla per altro. Il destinatario è l\'unica cosa che scrivi.'), E('div', {class: 'row'}, lato, dest), out);
+  const go = E('button', {class: 'btn pri', type: 'button'}, 'Crea la copia'); d.bt || null;
+  let file = null;
+  go.onclick = async () => {
+    const nome = dest.value.trim(); if (!nome) { out.textContent = 'Scrivi per chi è la copia.'; return; }
+    if (!S.K2 && !await chiediPin('Scrivi il PIN.')) return;
+    const b = await foto(it, lato.value), bmp = await createImageBitmap(b), c = document.createElement('canvas'); c.width = bmp.width; c.height = bmp.height;
+    const x = c.getContext('2d'); x.drawImage(bmp, 0, 0);
+    const testo = 'COPIA per ' + nome + ' del ' + dIt(oggi()), fs = Math.max(22, Math.round(c.width / 24)); x.font = '800 ' + fs + 'px -apple-system,Helvetica,Arial,sans-serif'; x.textBaseline = 'middle';
+    const tw = x.measureText(testo).width + fs * 2, rh = fs * 2.6; x.save(); x.translate(c.width / 2, c.height / 2); x.rotate(-Math.PI / 6);
+    const R = Math.hypot(c.width, c.height); let riga = 0;
+    for (let y = -R; y < R; y += rh, riga++) for (let xx = -R - (riga % 2) * tw / 2; xx < R; xx += tw) { x.lineWidth = 4; x.strokeStyle = 'rgba(255,255,255,.55)'; x.strokeText(testo, xx, y); x.fillStyle = 'rgba(190,20,20,.62)'; x.fillText(testo, xx, y); }
+    x.restore();
+    const bl = await new Promise(r => c.toBlob(r, 'image/jpeg', 0.85)); c.width = c.height = 0; bmp.close && bmp.close(); file = new File([bl], 'copia-' + ymd8() + '.jpg', {type: 'image/jpeg'});
+    out.replaceChildren(E('img', {src: urlW(bl), alt: 'Copia con filigrana'}), E('button', {class: 'btn pri', type: 'button', onclick: () => consegna(file)}, '📤 Condividi o salva'));
+    logga('Copia per sportello', TK[it.l1.tipo].n);
+  };
+  d.body.append(E('div', {class: 'bt'}, E('button', {class: 'btn', type: 'button', onclick: () => { d.close(); d.$r(); }}, 'Chiudi'), go));
+  await new Promise(r => d.$r = r);
+}
+async function elimina(it) {
+  const ids = [it.id]; let cur = it; const tutti = S.items.concat(S.archivio);
+  while (cur.l1.sost) { const prev = tutti.find(x => x.id === cur.l1.sost); if (!prev) break; ids.push(prev.id); cur = prev; }
+  if (!await dlgScelta('🗑️ Eliminare?', [E('p', null, 'Stai per eliminare «' + TK[it.l1.tipo].n + '» e le sue foto' + (ids.length > 1 ? ', con le ' + (ids.length - 1) + ' versioni vecchie in archivio' : '') + '. Non si può annullare.')], 'Continua', 'No, tienilo', 'bad')) return;
+  if (!await chiediPin('Scrivi il PIN per eliminare.', true)) return;
+  for (const id of ids) await itDel(id);
+  logga('Eliminazione', TK[it.l1.tipo].n); chiudiL2(); await caricaTutto(); chiudiDialoghi(); render();
+}
+async function dettaglio(it) {
+  const d = dlg(TK[it.l1.tipo].i + ' ' + TK[it.l1.tipo].n), l1 = it.l1, T = TK[l1.tipo];
+  const kv = E('div', {class: 'kv'});
+  const r = (n, v) => { if (v) kv.append(E('b', null, n), E('div', null, v)); };
+  r('Stato', pillSem(l1)); r('Ente', l1.ente); r('Ultime 4 cifre', l1.ultime4 ? '···· ' + l1.ultime4 : ''); r('Scadenza', dIt(l1.scad)); r('Rilascio', dIt(l1.rilascio)); r('Circuito', l1.circ); r('Numero per il blocco', l1.tel);
+  r('Aggiunto il', dIt((l1.creato || '').slice(0, 10)) + (l1.ver > 1 ? ' (versione ' + l1.ver + ')' : ''));
+  r('Letto da', Object.entries(l1.da || {}).filter(([k, v]) => v).map(([k, v]) => k + ': ' + (DA[v] || v)).join(' · ') || 'non letto');
+  const sens = E('div', {class: 'kv'});
+  const camp = (et, k) => sens.append(...campoSens(et, async () => (await leggiL2(it))[k]));
+  if (T.k !== 'carta') camp('Numero completo', 'numero'); camp('Codice fiscale', 'cf'); if (T.k === 'carta') camp('Numero intero della carta', 'pan');
+  const fotoBox = E('div', {class: 'prev', style: 'margin-top:8px'});
+  const bFoto = E('button', {class: 'btn', type: 'button', onclick: async () => {
+    if (!await chiediPin('Scrivi il PIN per vedere le foto.')) return;
+    const f = await foto(it, 'f'), rr = await foto(it, 'r'); fotoBox.replaceChildren(f && E('img', {src: urlW(f), alt: 'Fronte'}), rr && E('img', {src: urlW(rr), alt: 'Retro'}));
+    const arr = S.urlsW.slice(-2); S.onL2.push(() => { fotoBox.replaceChildren(E('small', null, 'Foto richiuse.')); arr.forEach(u => URL.revokeObjectURL(u)); });
+  }}, '🖼️ Mostra le foto fronte e retro (PIN)');
+  d.set(E('div', {class: 'row c'}, E('div', {style: 'width:220px', html: tesseraSvg(T.k)})), kv, E('h3', null, '🔒 Dati riservati (PIN)'), sens, E('div', {class: 'row'}, bFoto), fotoBox,
+    E('p', {class: 'pic'}, 'Un elemento non si modifica. Per cambiarlo: «Rifai la scansione» (la versione vecchia va in archivio) oppure «Elimina».'),
+    E('div', {class: 'row c', style: 'margin-top:10px'},
+      E('button', {class: 'btn', type: 'button', onclick: () => guidaDialog(it)}, '🧭 Se lo perdo · Cosa portare'), E('button', {class: 'btn', type: 'button', onclick: () => soloQuesto(it)}, '🪟 Mostra solo questo'),
+      E('button', {class: 'btn', type: 'button', onclick: () => copiaSportello(it)}, '🖨️ Copia per uno sportello'), E('button', {class: 'btn', type: 'button', onclick: async () => { d.close(); await aggiungi(it); }}, '↻ Rifai la scansione'),
+      E('button', {class: 'btn bad', type: 'button', onclick: () => elimina(it)}, '🗑️ Elimina')));
+  await d.btns([{k: 1, t: 'Chiudi', cls: 'pri'}]); d.close();
+}
+
+/* ---------- copia di sicurezza, busta, prova di recupero ---------- */
+async function esporta() {
+  if (!await chiediPin('Scrivi il PIN per preparare la copia cifrata.', true)) return;
+  const c = S.cfg, recs = await itAll(), lett = await kvGet('lettere');
+  // la copia si apre SOLO con la chiave di recupero: niente chiavi avvolte dal PIN
+  const f = {formato: 'cassaforte-copia', v: 2, creato: new Date().toISOString(), saltRec: c.saltRec, wK1r: c.wK1r, wK2r: c.wK2r, items: recs, lettere: lett || null};
+  const file = new File([JSON.stringify(f)], 'cassaforte-' + ymd8() + '.cassaforte', {type: 'application/octet-stream'});
+  chiudiL2(); localStorage.setItem('cf-ultima-copia', oggi()); logga('Esportazione', 'copia cifrata');
+  await righePronte(file, 'La copia cifrata è pronta. Si apre solo con la chiave di recupero. Salvala in un posto che non sia questo iPad (per esempio iCloud Drive o una chiavetta): da quel momento la custodia è tua. NON metterla nelle copie normali dell\'app.');
+  render();
+}
+async function chiaviDaFile(f) { // restituisce {K1,K2,rk} (K1 e K2 estraibili, temporanee) oppure null
+  const d = dlg('🔓 Apri la copia'), inp = E('input', {type: 'text', autocomplete: 'off', autocapitalize: 'characters', placeholder: 'Chiave di recupero', 'aria-label': 'Chiave di recupero'}), msg = E('p', {class: 'msg ba'});
+  d.set(E('p', null, 'La copia si apre solo con la chiave di recupero (il PIN non basta).'), inp, msg);
+  for (;;) {
+    const r = await d.btns([{k: 0, t: 'Annulla'}, {k: 1, t: 'Uso la chiave', cls: 'pri'}]); d.bt.remove();
+    if (!r) { d.close(); return null; }
+    try { const rk = await recKey(inp.value, ub64(f.saltRec)); const K1 = await svolgiEstr(rk, f.wK1r, 'wK1r'), K2 = await svolgiEstr(rk, f.wK2r, 'wK2r'); d.close(); return {K1, K2, rk}; }
+    catch (e) { msg.textContent = 'Non si apre: controlla la chiave.'; }
+  }
+}
+const DATA_OK = /^\d{4}-\d{2}-\d{2}$/;
+async function validaRecord(r, K) { // decifra di prova ogni parte, con controlli sui campi
+  if (!r || typeof r.id !== 'string' || !/^[A-Za-z0-9_-]{6,24}$/.test(r.id)) throw new Error('id');
+  const l1 = await dJ(K.K1, r.l1, aadI(r.id, 'l1')); if (!TK[l1.tipo]) throw new Error('tipo');
+  if (l1.scad && !DATA_OK.test(l1.scad)) throw new Error('data'); if (l1.rilascio && !DATA_OK.test(l1.rilascio)) throw new Error('data');
+  await dJ(K.K2, r.l2, aadI(r.id, 'l2')); if (r.f) await decifra(K.K2, r.f, aadI(r.id, 'f')); if (r.r) await decifra(K.K2, r.r, aadI(r.id, 'r'));
+  return l1;
+}
+async function importa() {
+  const file = await new Promise(res => { const i = E('input', {type: 'file', accept: '.cassaforte,application/json,application/octet-stream', style: 'position:absolute;opacity:0'}); i.onchange = () => { res(i.files[0] || null); i.remove(); }; i.oncancel = () => { res(null); i.remove(); }; document.body.append(i); S.pausa = Date.now() + 90000; i.click(); setTimeout(() => { res(null); i.remove(); }, 90000); });
+  S.pausa = 0; if (!file) return;
+  let f; try { f = JSON.parse(await file.text()); if (f.formato !== 'cassaforte-copia' || !Array.isArray(f.items) || !f.saltRec || !f.wK1r || !f.wK2r) throw 0; } catch (e) { await dlgMsg('File non valido', ['Questo non sembra un file «.cassaforte».']); return; }
+  const K = await chiaviDaFile(f); if (!K) return;
+  let n = 0;
+  try { for (const r of f.items) await validaRecord(r, K); } catch (e) { await dlgMsg('Copia non valida', ['La copia ha dati rovinati o strani: non importo niente.']); return; }
+  if (!S.cfg) { // iPad nuovo: si adottano le chiavi della copia e si imposta un nuovo accesso
+    const acc = await impostaAccesso(K.K1, K.K2, true); if (!acc) return;
+    await salvaCfg(Object.assign({v: 1, creato: new Date().toISOString(), saltRec: f.saltRec, wK1r: f.wK1r, wK2r: f.wK2r}, acc));
+    for (const r of f.items) { await itPut(r); n++; }
+    if (f.lettere) await kvSet('lettere', f.lettere);
+    S.K1 = await svolgi(K.rk, f.wK1r, 'wK1r'); S.K2 = await svolgi(K.rk, f.wK2r, 'wK2r'); S.ult = Date.now(); avviaL2(); localStorage.setItem('cf-ultima-prova', oggi());
+  } else {
+    if (!await chiediPin('Scrivi il PIN di questo iPad per aggiungere i dati della copia.', true)) return;
+    const gia = new Set((await itAll()).map(r => r.id));
+    for (const r of f.items) {
+      if (gia.has(r.id)) continue;
+      const l1 = await dJ(K.K1, r.l1, aadI(r.id, 'l1')), l2 = await dJ(K.K2, r.l2, aadI(r.id, 'l2'));
+      await itPut({id: r.id, l1: await cJ(S.K1, l1, aadI(r.id, 'l1')), l2: await cJ(S.K2, l2, aadI(r.id, 'l2')), f: r.f ? await cifra(S.K2, await decifra(K.K2, r.f, aadI(r.id, 'f')), aadI(r.id, 'f')) : null, r: r.r ? await cifra(S.K2, await decifra(K.K2, r.r, aadI(r.id, 'r')), aadI(r.id, 'r')) : null}); n++;
+    }
+    if (f.lettere) { try { const fl = await dJ(K.K1, f.lettere, 'lettere'); const o = await kvGet('lettere'); const mie = o ? await dJ(S.K1, o, 'lettere') : []; const sigs = new Set(mie.map(x => x.sig)); fl.forEach(x => { if (x && typeof x.t === 'string' && DATA_OK.test(x.apre || '') && !sigs.has(x.sig)) mie.push({sig: String(x.sig), apre: x.apre, t: x.t}); }); await kvSet('lettere', await cJ(S.K1, mie, 'lettere')); } catch (e) {} }
+  }
+  K.K1 = K.K2 = K.rk = null;
+  logga('Importazione', n + ' elementi'); await caricaTutto();
+  await dlgMsg('Copia importata', [E('p', null, n + ' elementi aggiunti.')]); render();
+}
+const PAROLE = ('albero amico anello angelo aprile arancia argento aria arco autunno balcone ballo barca basso bello bianco bicchiere biscotto bosco bottone braccio bravo bruno bussola cacao caffe calma cammino campana candela cane cantina capello carota casa castello cavallo cena cerchio cesto chiave chiaro cielo cintura cipolla citta classe coda collina colore coltello cometa conchiglia coniglio corda corno corona corpo costa cucina cuore dado dente deserto destino dolce domani donna dorato drago elica erba estate fabbrica faro felice ferro festa fiamma fienile figura filo fiore fiume foglia fontana forbici forno forte fragola freddo frutta fumo funghi gatto gelato gemma genio giallo giardino giorno gioco giro gola gomma grande grano grillo gufo idea inverno isola lago lampada lana latte lavoro legno lento leone lettera libro limone linea luce luna lupo macchina madre mago mano mare marrone mattina medaglia mela melone menta mercato miele minuto montagna moneta mosca musica nastro nave nebbia neve nido noce nonno notte nuvola oasi occhio oceano oliva ombra onda orologio orso ortica ospite ottobre pace padre pagina palla pane panna parola passo pasta patata penna pera pesce piano pianta piatto pietra pigro pino pioggia pirata pizza polvere ponte porta pranzo prato primavera pulito quadro quercia radio rame ramo rana regalo remo riccio riso riva roccia rosa rosso rubino ruota sabbia sacco salto sapone sasso scala scarpa scatola scudo sedia segno selva sera sole sorriso spada spiaggia stella strada tavolo tazza tempo terra tetto tigre timone tonno torre tramonto treno tronco tulipano uccello uovo uva valle vaso vela vento verde vetro viaggio villa vino viola vita volo zaino zebra zucca zucchero').split(/\s+/);
+function fraseSegreta() { const n = PAROLE.length, lim = 65536 - (65536 % n), out = []; while (out.length < 7) { const b = rnd(2), v = b[0] * 256 + b[1]; if (v < lim) out.push(PAROLE[v % n]); } return out.join(' '); }
+const fraseNorm = s => String(s || '').toLowerCase().replace(/[^a-z\s]/g, ' ').trim().split(/\s+/).join(' ');
+async function creaBusta() {
+  const d = dlg('✉️ Busta per la famiglia'), box = E('div');
+  const conChiavi = E('input', {type: 'checkbox'});
+  const ch = S.items.filter(it => it.l1.tipo !== 'chiavi').map(it => { const c = E('input', {type: 'checkbox'}); return {it, c, riga: E('label', {class: 'chk', style: 'margin:5px 0'}, c, E('span', null, TK[it.l1.tipo].i + ' ' + TK[it.l1.tipo].n + (it.l1.ultime4 ? ' ···· ' + it.l1.ultime4 : '') + (it.l1.ente ? ' (' + it.l1.ente + ')' : '')))}; });
+  const conFoto = E('input', {type: 'checkbox'});
+  d.set(E('div', {html: SVG_BUSTA()}), E('p', null, 'La busta è un file cifrato con una frase segreta di 7 parole. Chi ha il file e la frase può leggere i dati che scegli qui. Non serve Face ID.'), E('h3', null, 'Che cosa metto dentro'), ch.length ? ch.map(x => x.riga) : E('p', null, 'Non ci sono ancora elementi.'),
+    E('label', {class: 'chk', style: 'margin:8px 0'}, conFoto, E('span', null, 'Metti anche le foto')), E('label', {class: 'chk', style: 'margin:8px 0'}, conChiavi, E('span', null, 'Metti anche le chiavi delle app (sconsigliato: chi apre la busta potrebbe usarle)')), box);
+  const r = await d.btns([{k: 0, t: 'Annulla'}, {k: 1, t: 'Prepara la busta', cls: 'pri'}]);
+  if (!r) { d.close(); return; }
+  const scelti = ch.filter(x => x.c.checked).map(x => x.it).concat(conChiavi.checked ? S.items.filter(it => it.l1.tipo === 'chiavi') : []);
+  if (!scelti.length) { d.close(); await dlgMsg('Niente da mettere', ['Scegli almeno un elemento.']); return; }
+  d.close();
+  if (!await chiediPin('Scrivi il PIN per preparare la busta.', true)) return;
+  const el = [];
+  for (const it of scelti) {
+    const l2 = await leggiL2(it), o = {tipo: TK[it.l1.tipo].n, icona: TK[it.l1.tipo].i, ente: it.l1.ente, ultime4: it.l1.ultime4, scadenza: it.l1.scad, rilascio: it.l1.rilascio, tel: it.l1.tel, numero: l2.numero, cf: l2.cf, pan: l2.pan, valore: l2.raw};
+    if (conFoto.checked) { for (const lato of ['f', 'r']) { const b = await foto(it, lato); if (b) (o.foto = o.foto || {})[lato] = b64(await b.arrayBuffer()); } }
+    el.push(o);
+  }
+  chiudiL2();
+  const frase = fraseSegreta(), salt = rnd(16), iter = 600000, bits = await pinBits(fraseNorm(frase), salt, iter), key = await hkey(bits, 'cassaforte-busta');
+  const c = await cJ(key, {v: 1, creata: new Date().toISOString(), elementi: el}, 'busta');
+  const file = new File([JSON.stringify({formato: 'cassaforte-busta', v: 1, iter, salt: b64(salt), iv: c.iv, c: c.c})], 'busta-' + ymd8() + '.busta', {type: 'application/octet-stream'});
+  logga('Busta per la famiglia', el.length + ' elementi');
+  const dd = dlg('✉️ La busta è pronta');
+  const st = () => { const a = $('#areaStampa'); a.replaceChildren(E('h1', null, 'Busta per la famiglia — istruzioni'), E('p', null, 'Data: ' + dIt(oggi())), E('h3', null, 'Che cosa contiene'), E('p', null, 'Un file cifrato («.busta») con ' + el.length + ' documenti e dati personali, scelti per la famiglia.'),
+    E('h3', null, 'Come si apre'), E('ol', {class: 'lista'}, E('li', null, 'Apri la pagina Cassaforte dell\'app Pianificazione.'), E('li', null, 'Premi «Apri una busta».'), E('li', null, 'Scegli il file della busta.'), E('li', null, 'Scrivi le 7 parole qui sotto, nello stesso ordine.')),
+    E('p', null, 'Il file e questa frase vanno tenuti in posti diversi.'), E('div', {class: 'rk', style: 'margin-top:20px'}, frase));
+    const fine = () => { a.replaceChildren(); removeEventListener('afterprint', fine); }; addEventListener('afterprint', fine); print(); };
+  dd.set(E('p', null, 'Questa è la frase segreta. Si vede una volta sola. Scrivila su carta e tienila lontano dal file.'), E('div', {class: 'rk'}, frase), E('div', {class: 'row c', style: 'margin-top:10px'}, E('button', {class: 'btn', type: 'button', onclick: st}, '🖨️ Stampa la pagina di istruzioni')), E('p', {class: 'pic'}, file.name));
+  for (;;) { const k = await dd.btns([{k: 1, t: '📤 Condividi o salva il file', cls: 'pri'}, {k: 0, t: 'Ho finito'}]); dd.bt.remove(); if (!k) break; await consegna(file); }
+  dd.close();
+}
+async function apriBusta() {
+  const file = await new Promise(res => { const i = E('input', {type: 'file', accept: '.busta,application/json,application/octet-stream', style: 'position:absolute;opacity:0'}); i.onchange = () => { res(i.files[0] || null); i.remove(); }; i.oncancel = () => { res(null); i.remove(); }; document.body.append(i); S.pausa = Date.now() + 90000; i.click(); setTimeout(() => { res(null); i.remove(); }, 90000); });
+  S.pausa = 0; if (!file) return;
+  let f; try { f = JSON.parse(await file.text()); if (f.formato !== 'cassaforte-busta') throw 0; } catch (e) { await dlgMsg('File non valido', ['Questo non sembra una busta.']); return; }
+  const d = dlg('✉️ Apri una busta'), ta = E('textarea', {placeholder: 'Le 7 parole, nello stesso ordine', 'aria-label': 'Frase segreta', autocapitalize: 'none'}), msg = E('p', {class: 'msg ba'});
+  d.set(E('p', null, 'Scrivi la frase segreta di 7 parole.'), ta, msg);
+  for (;;) {
+    const r = await d.btns([{k: 0, t: 'Annulla'}, {k: 1, t: 'Apri', cls: 'pri'}]); d.bt.remove(); if (!r) { d.close(); return; }
+    try {
+      const key = await hkey(await pinBits(fraseNorm(ta.value), ub64(f.salt), f.iter), 'cassaforte-busta'); if (!(f.iter >= 100000 && f.iter <= 2000000)) throw new Error('iter'); const dati = await dJ(key, {iv: f.iv, c: f.c}, 'busta'); if (!dati || !Array.isArray(dati.elementi)) throw new Error('forma'); d.close();
+      const v = dlg('✉️ Busta aperta'); S.bustaAperta = true; S.ult = Date.now(); const urls = [];
+      v.set(E('p', {class: 'warn'}, 'Si chiude da sola dopo 60 secondi senza tocchi.'), dati.elementi.map(o => E('div', {class: 'card'}, E('h3', null, (o.icona || '') + ' ' + o.tipo),
+        E('div', {class: 'kv'}, o.ente ? [E('b', null, 'Ente'), E('div', null, o.ente)] : null, o.numero ? [E('b', null, 'Numero'), E('div', {class: 'vel'}, o.numero)] : null, o.cf ? [E('b', null, 'Codice fiscale'), E('div', {class: 'vel'}, o.cf)] : null, o.pan ? [E('b', null, 'Carta'), E('div', {class: 'vel'}, o.pan)] : null,
+          o.ultime4 ? [E('b', null, 'Ultime 4'), E('div', null, o.ultime4)] : null, o.scadenza ? [E('b', null, 'Scadenza'), E('div', null, dIt(o.scadenza))] : null, o.tel ? [E('b', null, 'Numero per il blocco'), E('div', null, o.tel)] : null, o.valore ? [E('b', null, 'Valore'), E('div', {class: 'vel'}, o.valore)] : null),
+        o.foto ? E('div', {class: 'prev'}, Object.values(o.foto).map(b => { const u = URL.createObjectURL(new Blob([ub64(b)], {type: 'image/jpeg'})); urls.push(u); return E('img', {src: u, alt: 'Foto'}); })) : null)));
+      v.onclose = () => { S.bustaAperta = false; urls.forEach(u => URL.revokeObjectURL(u)); };
+      await v.btns([{k: 1, t: 'Chiudi', cls: 'pri'}]); v.close(); return;
+    } catch (e) { msg.textContent = 'La frase non apre la busta. Controlla le parole.'; }
+  }
+}
+const provaDovuta = () => { const u = localStorage.getItem('cf-ultima-prova') || (S.cfg && S.cfg.creato ? S.cfg.creato.slice(0, 10) : oggi()); return addMesi(u, 6) <= oggi(); };
+async function provaRecupero() {
+  const d = dlg('🗓️ Prova di recupero'), inp = E('input', {type: 'text', autocomplete: 'off', autocapitalize: 'characters', placeholder: 'Chiave di recupero', 'aria-label': 'Chiave di recupero'});
+  d.set(E('div', {html: SVG_PROVA()}), E('p', null, 'Ogni 6 mesi controlliamo che la chiave di recupero apra davvero. Prendila dal posto dove l\'hai messa e scrivila qui.'), inp);
+  const r = await d.btns([{k: 0, t: 'Annulla'}, {k: 1, t: 'Controlla', cls: 'pri'}]); d.close(); if (!r) return;
+  try { const rk = await recKey(inp.value, ub64(S.cfg.saltRec)); await svolgi(rk, S.cfg.wK1r, 'wK1r'); await svolgi(rk, S.cfg.wK2r, 'wK2r'); }
+  catch (e) { logga('Prova di recupero', 'non riuscita'); await dlgMsg('❌ Non apre', [E('p', null, 'La chiave scritta non apre la cassaforte. Controlla ogni gruppo. Se la chiave è persa, fai subito una copia cifrata e ricomincia con una nuova configurazione.')]); return; }
+  localStorage.setItem('cf-ultima-prova', oggi()); logga('Prova di recupero', 'riuscita');
+  const nuova = await dlgScelta('✅ Funziona', [E('p', null, 'La chiave di recupero apre la cassaforte. Ricorda di fare una copia cifrata nuova.')], 'Fai la copia ora', 'Più tardi');
+  if (nuova) await esporta(); render();
+}
+/* ---------- chiavi delle app (copia cifrata) ---------- */
+const CHIAVI_APP = [
+  {s: 'gh', k: 'prog-gh-v1', n: 'Chiave GitHub', exp: 1, json: 1},
+  {s: 'cloud', k: 'pn-copia-cloud', n: 'Copia automatica (gist)', json: 1},
+  {s: 'mondo', k: 'prog-link-v1', n: 'Collegamento con Il mio mondo', json: 1},
+  {s: 'scheda', k: 'pn-scheda-chiave', n: 'Chiave della scheda pensione', json: 0}];
+const mask4 = v => { v = String(v); return v.length <= 4 ? '••••' : '••••' + v.slice(-4); }; // solo le ultime 4
+function scadChiave(df, raw) {
+  if (!df.exp || raw == null) return '';
+  try { const e = JSON.parse(raw).exp; const m = String(e || '').match(/^\d{4}-\d{2}-\d{2}/); return m ? m[0] : ''; } catch (x) { return ''; }
+}
+async function chiaveImp() { // HMAC-SHA-256 con una chiave segreta custodita sotto K2 (serve il PIN)
+  const o = await kvGet('impk'); let raw;
+  if (o) raw = ub64((await dJ(S.K2, o, 'impk')).k); else { raw = rnd(32); await kvSet('impk', await cJ(S.K2, {k: b64(raw)}, 'impk')); }
+  return SC.importKey('raw', raw, {name: 'HMAC', hash: 'SHA-256'}, false, ['sign']);
+}
+const hmacHex = async (key, s) => Array.from(new Uint8Array(await SC.sign('HMAC', key, te.encode(s)))).map(x => x.toString(16).padStart(2, '0')).join('');
+async function statoChiavi() {
+  const out = [], hk_ = S.K2 ? await chiaveImp() : null;
+  for (const df of CHIAVI_APP) {
+    const raw = localStorage.getItem(df.k);
+    const copia = S.items.filter(x => x.l1.tipo === 'chiavi' && x.l1.sorg === df.s).sort((a, b) => b.l1.creato.localeCompare(a.l1.creato))[0];
+    let agg = null, imp = null;
+    if (raw != null && hk_) { imp = await hmacHex(hk_, raw); if (copia) { try { agg = (await leggiL2(copia)).imp === imp; } catch (e) { agg = false; } } }
+    if (raw != null && !copia) agg = false;
+    out.push({df, raw, imp, copia, agg});
+  }
+  return out;
+}
+async function aggiornaChiavi() {
+  if (!await chiediPin('Scrivi il PIN per aggiornare la copia delle chiavi nella cassaforte.')) return;
+  const st = await statoChiavi(), hk_ = await chiaveImp(); let n = 0;
+  for (const x of st) {
+    if (x.raw == null) continue; const imp = x.imp || await hmacHex(hk_, x.raw);
+    if (x.copia && (await leggiL2(x.copia)).imp === imp) continue;
+    const id = idNuovo(), l1 = {tipo: 'chiavi', sorg: x.df.s, titolo: x.df.n, scad: scadChiave(x.df, x.raw), creato: new Date().toISOString(), sost: x.copia ? x.copia.id : null, ver: x.copia ? (x.copia.l1.ver || 1) + 1 : 1, da: {}};
+    await itPut({id, l1: await cJ(S.K1, l1, aadI(id, 'l1')), l2: await cJ(S.K2, {raw: x.raw, imp}, aadI(id, 'l2')), f: null, r: null}); n++;
+  }
+  logga('Copia delle chiavi delle app', n + ' aggiornate'); await caricaTutto(); render();
+}
+async function mostraChiave(x, box) {
+  if (!await chiediPin('Scrivi il PIN per vedere la chiave per 10 secondi.')) return;
+  let raw; try { raw = (await leggiL2(x.copia)).raw; } catch (e) { return; }
+  let righe = [];
+  if (x.df.json) { try { const o = JSON.parse(raw); const campi = x.df.s === 'gh' ? ['token', 'exp'] : ['gist', 'key']; righe = campi.filter(c => o[c]).map(c => [c, c === 'exp' ? String(o[c]) : mask4(o[c])]); } catch (e) {} }
+  if (!righe.length) righe = [['valore', mask4(raw)]];
+  box.replaceChildren(...righe.map(([c, v]) => E('div', null, E('b', null, c + ': '), E('span', {class: 'vel'}, v))));
+  const spegni = () => box.replaceChildren(); const tm = setTimeout(spegni, 10000); S.onL2.push(() => { clearTimeout(tm); spegni(); });
+}
+async function rimettiChiavi(st) {
+  const mancanti = st.filter(x => x.raw == null && x.copia);
+  if (!mancanti.length) return;
+  if (!await dlgScelta('Rimetti sull\'iPad', [E('p', null, 'Queste chiavi mancano sull\'iPad e saranno rimesse dalla copia della cassaforte:'), E('ul', {class: 'lista'}, mancanti.map(x => E('li', null, x.df.n))), E('p', {class: 'pic'}, 'Le chiavi che ci sono già non si toccano.')], 'Rimetti', 'Annulla')) return;
+  if (!await chiediPin('Scrivi il PIN per rimettere le chiavi.', true)) return;
+  let n = 0;
+  for (const x of mancanti) { if (localStorage.getItem(x.df.k) != null) continue; const l2 = await leggiL2(x.copia); localStorage.setItem(x.df.k, l2.raw); n++; }
+  chiudiL2(); logga('Chiavi rimesse sull\'iPad', n + ' chiavi'); render();
+}
+async function riempiChiavi(box) {
+  const st = await statoChiavi(), tab = E('div', {class: 'stack'});
+  box.replaceChildren(E('p', null, 'La cassaforte tiene una copia cifrata (PIN) delle chiavi che le app usano. Le chiavi di lavoro restano dove sono: la copia serve per vederle e per rimetterle su un iPad nuovo.'));
+  st.forEach(x => {
+    let p;
+    if (x.raw != null && x.agg === true) p = E('span', {class: 'pill ok'}, '✓ copia aggiornata'); else if (x.raw != null && x.copia && x.agg === null) p = E('span', {class: 'pill'}, 'copia presente: controlla con il PIN'); else if (x.raw != null && x.copia) p = E('span', {class: 'pill wa'}, '⚠ copia da aggiornare'); else if (x.raw != null) p = E('span', {class: 'pill wa'}, '⚠ non ancora copiata');
+    else if (x.copia) p = E('span', {class: 'pill ba'}, 'manca sull\'iPad: si può rimettere'); else p = E('span', {class: 'pill'}, 'non presente');
+    const scad = x.copia && x.copia.l1.scad ? pillSem(x.copia.l1) : null, vis = E('div', {style: 'margin-top:6px'});
+    box.append(E('div', {class: 'card', style: 'margin:0 0 10px'}, E('div', {class: 'row'}, E('b', null, '🔑 ' + x.df.n), p, scad), x.copia ? E('div', {class: 'row', style: 'margin-top:8px'}, E('button', {class: 'btn', type: 'button', onclick: () => mostraChiave(x, vis)}, '👁 Mostra (PIN, 10 s)')) : null, vis));
+  });
+  const m = st.some(x => x.raw == null && x.copia);
+  box.append(E('div', {class: 'row c'}, E('button', {class: 'btn pri', type: 'button', onclick: aggiornaChiavi}, '🔄 Aggiorna la copia nella cassaforte (PIN)'), E('button', {class: 'btn', type: 'button', onclick: async () => { if (await chiediPin('Scrivi il PIN per controllare se le copie sono aggiornate.')) riempiChiavi(box); }}, '🔎 Controlla (PIN)'), m ? E('button', {class: 'btn', type: 'button', onclick: () => rimettiChiavi(st)}, '↩️ Rimetti sull\'iPad (PIN)') : null));
+}
+
+/* ---------- lettera sigillata del Diario ---------- */
+async function leggiLettereDb() { const o = await kvGet('lettere'); return o ? await dJ(S.K1, o, 'lettere') : []; }
+async function elaboraLettera() {
+  const raw = localStorage.getItem('cf-in-lettera'); if (!raw || !S.K1) return;
+  let o; try { o = JSON.parse(raw); } catch (e) { return; }
+  if (!o || typeof o.t !== 'string' || !o.t || !/^\d{4}-\d{2}-\d{2}$/.test(o.apre || '')) return;
+  const rec = {sig: o.sig || new Date().toISOString(), apre: o.apre, t: o.t};
+  try {
+    const arr = (await leggiLettereDb()).filter(x => x.sig !== rec.sig); arr.push(rec);
+    await kvSet('lettere', await cJ(S.K1, arr, 'lettere'));
+    const v = (await leggiLettereDb()).find(x => x.sig === rec.sig);
+    if (!v || v.t !== rec.t || v.apre !== rec.apre) return; // non verificata: la lettera resta dov'è
+    localStorage.removeItem('cf-in-lettera');
+    localStorage.setItem('cf-lettera', JSON.stringify({sig: rec.sig, apre: rec.apre, inCassa: true}));
+    S.lettere = arr.map(x => x.apre > oggi() ? {sig: x.sig, apre: x.apre} : x);
+    logga('Lettera messa in cassaforte', 'si apre il ' + dIt(rec.apre));
+  } catch (e) {}
+}
+function vistaLettera(box) {
+  const L = S.lettere.slice().sort((a, b) => b.sig.localeCompare(a.sig))[0];
+  if (!L) { box.replaceChildren(E('div', {class: 'hero', style: 'max-width:300px', html: svgBusta(false)}), E('p', {style: 'text-align:center'}, 'Nessuna lettera sigillata. Si sigilla dal Diario del passaggio.')); return; }
+  if (L.apre > oggi()) box.replaceChildren(E('div', {class: 'hero', style: 'max-width:340px', html: svgBusta(false)}), E('p', {style: 'text-align:center;font-weight:800;font-size:1.2rem'}, 'Si apre il ' + dIt(L.apre)), E('p', {class: 'pic', style: 'text-align:center'}, 'Sigillata il ' + dIt((L.sig || '').slice(0, 10)) + '. Fino a quel giorno non si mostra.'));
+  else box.replaceChildren(E('div', {class: 'hero', style: 'max-width:300px', html: svgBusta(true)}), E('p', {class: 'pic', style: 'text-align:center'}, 'Sigillata il ' + dIt((L.sig || '').slice(0, 10)) + ' · aperta dal ' + dIt(L.apre)), E('div', {class: 'lettera'}, L.t));
+}
+
+/* ---------- viste ---------- */
+S.aperte = new Set(['doc']); S.spunte = {};
+function sez(id, titolo, fn) {
+  const inn = E('div', {class: 'in'}), d = E('details', {class: 'card', 'data-s': id}, E('summary', null, titolo), inn);
+  d.open = S.aperte.has(id); d.addEventListener('toggle', () => { if (d.open) { S.aperte.add(id); if (d.$lazy) d.$lazy(); } else S.aperte.delete(id); });
+  fn(inn, d); return d;
+}
+function svgTimeline(items) {
+  const W = 900, H = 330, X0 = 70, X1 = W - 70, arr = items.filter(x => x.l1.scad).sort((a, b) => a.l1.scad.localeCompare(b.l1.scad));
+  if (!arr.length) return null;
+  const t0 = oggi(), maxS = arr[arr.length - 1].l1.scad, tEnd = maxS > addMesi(t0, 24) ? (maxS > addMesi(t0, 72) ? addMesi(t0, 72) : maxS) : addMesi(t0, 24), tot = giorniTra(t0, tEnd);
+  const px = iso => X0 + (X1 - X0) * Math.min(1, Math.max(0, giorniTra(t0, iso) / tot));
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Linea del tempo delle scadenze con semaforo" focusable="false">`;
+  s += `<rect x="${X0 - 20}" y="150" width="${X1 - X0 + 40}" height="12" rx="6" fill="var(--sf2)" stroke="var(--line)"/>`;
+  const y0 = +t0.slice(0, 4), y1 = +tEnd.slice(0, 4);
+  for (let y = y0 + 1; y <= y1; y++) { const x = px(y + '-01-01'); s += `<path d="M${x} 144V168" stroke="var(--mut)" stroke-width="2"/><text x="${x}" y="190" font-size="16" text-anchor="middle" style="fill:var(--mut)">${y}</text>`; }
+  s += `<path d="M${X0} 138V174" stroke="var(--ac)" stroke-width="4"/><text x="${X0}" y="122" font-size="16" font-weight="800" text-anchor="middle" style="fill:var(--ac)">oggi</text>`;
+  const col = {ok: 'var(--ok)', wa: '#d89a00', ba: 'var(--ba)', gr: 'var(--gr)'}, lanes = [96, 250, 56, 290];
+  arr.forEach((x, i) => {
+    const sm = sem(x.l1), cx = px(x.l1.scad), ly = lanes[i % 4], sopra = ly < 150, my = 156, lx = Math.min(W - 60, Math.max(60, cx));
+    s += `<path d="M${cx} ${my}V${sopra ? ly + 6 : ly - 18}" stroke="${col[sm.k]}" stroke-width="2"/>`;
+    s += sm.k === 'wa' ? `<path d="M${cx} ${my - 11}l11 20h-22z" fill="${col[sm.k]}" stroke="var(--sf)" stroke-width="2"/>` : sm.k === 'ba' ? `<rect x="${cx - 9}" y="${my - 9}" width="18" height="18" fill="${col[sm.k]}" stroke="var(--sf)" stroke-width="2"/>` : `<circle cx="${cx}" cy="${my}" r="10" fill="${col[sm.k]}" stroke="var(--sf)" stroke-width="2"/>`;
+    s += `<text x="${lx}" y="${ly}" font-size="16" font-weight="700" text-anchor="middle">${esc(TK[x.l1.tipo].i)} ${esc(x.l1.scad.slice(5, 7))}/${esc(x.l1.scad.slice(0, 4))}</text>`;
+  });
+  s += `<g transform="translate(70 ${H - 6})"><circle cx="8" cy="-6" r="8" fill="var(--ok)"/><text x="24" y="0" font-size="16">in regola</text><path d="M178 -16l9 16h-18z" fill="#d89a00"/><text x="196" y="0" font-size="16">da rinnovare</text><rect x="340" y="-14" width="16" height="16" fill="var(--ba)"/><text x="362" y="0" font-size="16">scaduto</text></g></svg>`;
+  return s;
+}
+function listaDoc(box) {
+  const docs = S.items.filter(x => x.l1.tipo !== 'chiavi').sort((a, b) => (sem(b.l1).s - sem(a.l1).s) || String(a.l1.scad || '9').localeCompare(String(b.l1.scad || '9')));
+  box.append(E('div', {class: 'row c', style: 'margin-bottom:12px'}, E('button', {class: 'btn pri big', type: 'button', onclick: () => aggiungi()}, '➕ Aggiungi un documento'), E('button', {class: 'btn bad big', type: 'button', onclick: portafoglioPerso}, '🚨 Portafoglio perso')));
+  if (!docs.length) { box.append(E('div', {html: SVG_CATTURA()})); box.append(E('p', {style: 'text-align:center;margin-top:10px'}, 'La cassaforte è vuota. Premi «Aggiungi un documento»: fotografi fronte e retro e i dati si leggono da soli.')); }
+  else box.append(E('div', {class: 'grid2', style: 'margin-top:12px'}, docs.map(it => E('div', {class: 'tess'}, E('div', {html: tesseraSvg(it.l1.tipo)}), E('div', null, E('h3', null, TK[it.l1.tipo].i + ' ' + TK[it.l1.tipo].n), it.l1.ente ? E('div', {class: 'pic'}, it.l1.ente) : null, it.l1.ultime4 ? E('div', {class: 'mask'}, '···· ' + it.l1.ultime4) : null, E('div', {style: 'margin:6px 0'}, pillSem(it.l1)), E('button', {class: 'btn', type: 'button', onclick: () => dettaglio(it)}, '🔍 Apri'))))));
+  if (S.archivio.length) box.append(E('details', {style: 'margin-top:12px'}, E('summary', null, '🗄️ Archivio delle versioni vecchie (' + S.archivio.length + ')'), E('div', {class: 'stack'}, S.archivio.map(it => E('div', {class: 'row', style: 'margin:6px 0'}, E('span', null, TK[it.l1.tipo].i + ' ' + TK[it.l1.tipo].n + ' · ' + dIt((it.l1.creato || '').slice(0, 10))), E('button', {class: 'btn', type: 'button', onclick: () => dettaglio(it)}, 'Apri'))))));
+}
+function controllo(box) {
+  const v = [], ok = t => v.push(E('p', {class: 'okb'}, '✓ ' + t)), no = t => v.push(E('p', {class: 'warn'}, '⚠ ' + t));
+  const senza = S.items.filter(x => TK[x.l1.tipo].sc && !x.l1.scad && x.l1.tipo !== 'chiavi');
+  senza.length ? no((senza.length === 1 ? '1 elemento senza scadenza letta' : senza.length + ' elementi senza scadenza letta') + ': «Rifai la scansione» con una foto migliore.') : ok('Tutti gli elementi con scadenza l\'hanno letta.');
+  const sc = S.items.filter(x => sem(x.l1).s >= 2).length; sc ? no((sc === 1 ? '1 elemento da rinnovare o scaduto' : sc + ' elementi da rinnovare o scaduti') + ' (guarda «Scadenze»).') : ok('Nessuna scadenza vicina.');
+  const uc = localStorage.getItem('cf-ultima-copia'); (!uc || giorniTra(uc, oggi()) > 30) ? no(uc ? 'L\'ultima copia cifrata è del ' + dIt(uc) + ': è più vecchia di 30 giorni.' : 'Non hai ancora fatto una copia cifrata.') : ok('Copia cifrata recente (' + dIt(uc) + ').');
+  const up = localStorage.getItem('cf-ultima-prova'); provaDovuta() ? no('La prova di recupero è scaduta' + (up ? ' (ultima: ' + dIt(up) + ')' : '') + ': falla ora.') : ok('Prova di recupero fatta il ' + dIt(up) + '.');
+  S.cfg.modo === 'prf' ? ok('Face ID è la chiave del livello 1.') : no(S.cfg.modo === 'gate' ? 'Ripiego attivo: Face ID fa solo da cancello e per aprire serve anche il PIN.' : 'Ripiego attivo: si apre solo con il PIN (Face ID non collegato).');
+  box.append(...v);
+}
+async function registro(box) {
+  try { const o = await kvGet('log'); const L = o ? await dJ(S.K1, o, 'log') : []; box.replaceChildren(L.length ? E('table', {class: 't'}, E('tbody', null, L.slice().reverse().map(x => E('tr', null, E('td', null, dIt(x.t.slice(0, 10)) + ' ' + new Date(x.t).toLocaleTimeString('it-IT', {hour: '2-digit', minute: '2-digit'})), E('td', null, x.a + (x.d ? ' — ' + x.d : '')))))) : E('p', null, 'Il registro è vuoto.')); } catch (e) { box.textContent = 'Non riesco a leggere il registro.'; }
+}
+function render() {
+  if (!S.K1) { vistaBloccata(); return; }
+  const v = $('#vista'), parti = [];
+  const av = [];
+  if (provaDovuta()) av.push(E('div', {class: 'warn', style: 'margin-bottom:12px'}, '🗓️ È tempo della prova di recupero (ogni 6 mesi). ', E('button', {class: 'btn', type: 'button', onclick: provaRecupero}, 'Fai la prova ora')));
+  const nsc = S.items.filter(x => sem(x.l1).s >= 2).length; if (nsc) av.push(E('div', {class: 'warn', style: 'margin-bottom:12px'}, '🟡 ' + (nsc === 1 ? '1 elemento da rinnovare o scaduto' : nsc + ' elementi da rinnovare o scaduti') + '. Guarda «Scadenze».'));
+  parti.push(...av);
+  parti.push(sez('doc', '📋 I miei documenti', listaDoc));
+  parti.push(sez('scad', '📅 Scadenze', (b) => { const s = svgTimeline(S.items); b.append(s ? E('div', {class: 'tl', html: s}) : E('p', null, 'Quando metterai dei documenti con scadenza, qui vedrai la linea del tempo con il semaforo.'));
+    const l = S.items.filter(x => x.l1.scad).sort((a, b2) => a.l1.scad.localeCompare(b2.l1.scad)); if (l.length) b.append(E('table', {class: 't'}, E('tbody', null, l.map(x => E('tr', null, E('td', null, TK[x.l1.tipo].i + ' ' + TK[x.l1.tipo].n + (x.l1.ultime4 ? ' ···· ' + x.l1.ultime4 : '')), E('td', null, pillSem(x.l1)))))))}));
+  parti.push(sez('chiavi', '🔑 Chiavi delle app', (b, d) => { riempiChiavi(b); d.$lazy = () => riempiChiavi(b); }));
+  parti.push(sez('lettera', '✉️ Lettera sigillata', b => vistaLettera(b)));
+  parti.push(sez('guide', '🧭 Se lo perdo · Che cosa portare · Portali', b => {
+    b.append(E('p', null, 'Per ogni tipo: i passi se lo perdi e che cosa portare al rinnovo. ' + RINNOVO_AVV));
+    TIPI.filter(t => !t.spec).forEach(t => b.append(E('details', {style: 'margin:6px 0'}, E('summary', {style: 'font-weight:700;min-height:36px'}, t.i + ' ' + t.n), guidaTipo(t.k))));
+    b.append(portaliBlocco(null)); }));
+  parti.push(sez('ctrl', '🩺 Controllo della cassaforte', controllo));
+  parti.push(sez('copie', '💾 Copie, busta e prova di recupero', b => {
+    b.append(E('p', null, 'La copia cifrata si apre solo con la chiave di recupero. Non va mai nelle copie normali dell\'app.'),
+      E('div', {class: 'row'}, E('button', {class: 'btn pri', type: 'button', onclick: esporta}, '💾 Fai una copia cifrata (PIN)'), E('button', {class: 'btn', type: 'button', onclick: importa}, '📥 Importa una copia')),
+      E('p', {class: 'warn', style: 'margin-top:10px'}, 'La copia si apre solo con la chiave di recupero: tienila al sicuro, lontano dal file. Il limite dei tentativi con il PIN è solo un freno su questo iPad.'),
+      E('h3', {style: 'margin-top:14px'}, '✉️ Busta per la famiglia'), E('div', {html: SVG_BUSTA()}), E('div', {class: 'row'}, E('button', {class: 'btn pri', type: 'button', onclick: creaBusta}, '✉️ Prepara una busta'), E('button', {class: 'btn', type: 'button', onclick: apriBusta}, '📂 Apri una busta')),
+      E('h3', {style: 'margin-top:14px'}, '🗓️ Prova di recupero'), E('div', {html: SVG_PROVA()}), E('p', null, 'Ultima prova: ' + (localStorage.getItem('cf-ultima-prova') ? dIt(localStorage.getItem('cf-ultima-prova')) : 'mai')), E('button', {class: 'btn', type: 'button', onclick: provaRecupero}, 'Fai la prova adesso'),
+      E('h3', {style: 'margin-top:14px'}, '🖨️ Copia per uno sportello'), E('div', {style: 'max-width:420px;margin:auto', html: svgFiligrana()}), E('p', null, 'Si fa da ogni documento: «Apri» e poi «Copia per uno sportello».'),
+      E('h3', {style: 'margin-top:14px'}, '🪟 Mostra solo questo'), E('div', {html: SVG_SOLO()}), E('p', null, 'Si fa da ogni documento: «Apri» e poi «Mostra solo questo».')); }));
+  parti.push(sez('reg', '📜 Registro degli accessi', (b, d) => { d.$lazy = () => registro(b); if (d.open) registro(b); }));
+  v.replaceChildren(...parti);
+  stato();
+}
+async function vistaBloccata() {
+  const v = $('#vista'), c = S.cfg, pend = !!localStorage.getItem('cf-in-lettera');
+  const note = [];
+  if (!c && localStorage.getItem('cf-conf')) note.push(E('p', {class: 'bab'}, 'Su questo iPad i dati della cassaforte non risultano più. Se hai una copia cifrata e la chiave di recupero, importala; altrimenti configura una cassaforte nuova.'));
+  if (pend) note.push(E('p', {class: 'warn'}, '✉️ C\'è una lettera sigillata che aspetta di entrare in cassaforte. ' + (c ? 'Aprila con Face ID e ci entra da sola.' : 'Prima configura la cassaforte: la lettera resta dov\'è finché non è pronta.')));
+  let card;
+  if (!c) card = E('div', {class: 'card'}, E('h2', null, 'Prima volta'), E('p', null, 'La cassaforte tiene al sicuro i tuoi documenti: foto, numeri e scadenze, cifrati su questo iPad. Escono solo la copia cifrata, la busta e le copie per lo sportello, e solo se le salvi o le condividi tu.'), E('div', {class: 'row c'}, E('button', {class: 'btn pri big', type: 'button', onclick: async () => { if (await configura()) await entra(); }}, '🔐 Configura la cassaforte'), E('button', {class: 'btn', type: 'button', onclick: async () => { await importa(); if (S.K1) await entra(); }}, '📥 Importa una copia cifrata')), E('div', {style: 'margin-top:14px', html: SVG_CATTURA()}));
+  else {
+    const t = tent(), at = t.fino > Date.now() ? Math.ceil((t.fino - Date.now()) / 60000) : 0;
+    card = E('div', {class: 'card', style: 'text-align:center'}, E('h2', null, '🔒 Cassaforte chiusa'), E('p', null, c.modo === 'pin' ? 'Per aprire serve il PIN.' : c.modo === 'gate' ? 'Per aprire: Face ID e poi il PIN (ripiego attivo).' : 'Guarda lo schermo: Face ID (o il codice dell\'iPad) apre l\'elenco e le scadenze. Il PIN serve per numeri e foto.'),
+      E('div', {class: 'row c'}, E('button', {id: 'btnApri', class: 'btn pri big', type: 'button', onclick: async () => { if (await apri()) await entra(); }}, c.modo === 'pin' ? '🔢 Apri con il PIN' : '🙂 Apri con Face ID')),
+      at ? E('p', {class: 'bab', style: 'margin-top:10px'}, 'Troppi errori con il PIN: aspetta ancora circa ' + at + ' min.') : null,
+      E('div', {class: 'row c', style: 'margin-top:12px'}, E('button', {id: 'btnRec', class: 'btn', type: 'button', onclick: async () => { if (await apriConRecupero()) await entra(); }}, '🗝️ Uso la chiave di recupero')));
+  }
+  v.replaceChildren(...note, card, E('div', {class: 'card'}, E('h3', null, '✉️ Hai una busta per la famiglia?'), E('p', null, 'Si apre anche senza Face ID: serve il file e la frase di 6 parole.'), E('button', {class: 'btn', type: 'button', onclick: apriBusta}, '📂 Apri una busta')));
+  stato();
+}
+async function entra() {
+  S.ult = Date.now(); await caricaTutto();
+  if (location.hash === '#lettera') S.aperte.add('lettera');
+  render(); stato();
+  if (location.hash === '#lettera') { const e = $('[data-s=lettera]'); if (e && e.scrollIntoView) e.scrollIntoView(); }
+}
+addEventListener('hashchange', () => { if (S.K1 && location.hash === '#lettera') { S.aperte.add('lettera'); render(); } });
+addEventListener('focus', () => { if (S.pausa) setTimeout(() => { S.pausa = 0; }, 1500); });
+setInterval(() => { if (S.bustaAperta && Date.now() - S.ult > 60000) { chiudiDialoghi(); S.bustaAperta = false; } }, 1000);
+window.CF_PARSER = {parse: CFP.parse};
+(async () => {
+  $('#hero').innerHTML = svgHero();
+  try { S.cfg = (await kvGet('cfg')) || null; } catch (e) { S.cfg = null; }
+  S.pronto = true; stato(); await vistaBloccata();
+})();
+</script>
+</body>
+</html>

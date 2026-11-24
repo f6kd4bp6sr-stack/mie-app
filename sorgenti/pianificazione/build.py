@@ -11,7 +11,7 @@ for _f in os.listdir(OUT): os.remove(OUT + _f)
 barra = open(D + 'comune/barra.html', encoding='utf-8').read()
 blocco = open(D + 'comune/blocco.html', encoding='utf-8').read()
 tema = open(D + 'comune/tema.css', encoding='utf-8').read()
-NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('index.html#st', '🗞️ Stampa di oggi', 'st'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi e Ikigai', 'tc'), ('metodo.html', '🤝 Metodo', 'met'), ('progressi.html', '📊 Progressi', 'prog')]
+NAV = [('index.html', '🏠 Pianificazione', 'pian'), ('index.html#st', '🗞️ Stampa di oggi', 'st'), ('licenze.html', '📅 Licenze', 'lic'), ('taichi.html', '🧘 Tai Chi e Ikigai', 'tc'), ('metodo.html', '🤝 Metodo', 'met'), ('progressi.html', '📊 Progressi', 'prog'), ('cassaforte.html', '🔐 Cassaforte', 'cas')]
 # 21/11/2026: «la sezione Metodo per il momento togliamola» → la pagina resta, ma non compare nella barra né nei rimandi
 NAV_NASCOSTE = {'met'}
 # 21/11/2026: nelle pagine Licenze, Tai Chi e Progressi compare anche la riga delle sezioni di Pianificazione (link a index.html#sezione)
@@ -103,8 +103,13 @@ from guardia import guarda  # impronte con chiave segreta: tools/guardia.py
 REGOLE = [[1, 25, 0, "7a440b19774761cc", ""], [3, 18, 0, "0e9c77fc3ab2ff88", ""], [1, 20, 0, "50444ce7bde345f7", ""], [3, 8, 1, "ad4c034b05700f98", ""], [2, 16, 0, "f41f8aae3959f187", ""], [2, 11, 0, "36031939b7981b22", "5:0aac0c9185d356b4"], [1, 18, 1, "018b41f4b494f097", ""], [1, 17, 0, "a5718b2011b7a8e3", ""], [1, 9, 0, "25fb7f27c75d4966", ""], [1, 15, 0, "e4e60b703ba82745", "5:9bc587d2e6c9db47"], [1, 6, 1, "6bcfdddafdab492e", ""], [1, 26, 1, "46fca2cf0a7f9d6e", ""], [2, 23, 0, "2166ecc780095ce4", "5:9848fe10b0e4be6e"], [1, 8, 1, "8614ea5183e6f0ab", ""], [1, 13, 1, "eb79b0f71fe0332a", "3:eb68cfbfd0d40637"], [1, 24, 0, "57930224975c06e5", ""], [2, 10, 1, "9897127b60a9bf21", ""], [3, 21, 0, "1d2c1ad5207a93ee", ""], [2, 26, 0, "e12a21bfdf913ac2", ""], [1, 26, 0, "9c5a70ff67b10e4d", "4:4aafab3c4cc19941"], [2, 21, 1, "a60833659455f78b", ""], [3, 5, 0, "67affbf67e06a15f", ""], [2, 12, 0, "74beb0f0af1af84c", ""], [1, 4, 1, "6dbfc62546322ac6", ""], [2, 17, 0, "706b96c77388a905", "5:b4005abedb18cc31"], [1, 7, 0, "ef3adc62ab67e728", ""], [1, 20, 1, "8f4a33f5ce71240e", "5:a3491cde38157915"], [1, 16, 1, "4aebe1d9057fad1d", ""], [3, 15, 0, "f7722b3c6fdc9dec", ""], [2, 9, 1, "76a42889909c2c60", ""], [3, 12, 1, "310729a512a6e4e2", ""], [1, 26, 1, "0488d22334ba4ae3", ""], [1, 4, 1, "74a4a041e256319d", ""], [1, 4, 1, "f85c7d0bba1d9015", ""], [2, 13, 1, "1da03b654cdf8115", ""], [1, 4, 1, "cee06d995a56a537", ""], [1, 9, 0, "114db3c7cd1b4074", ""], [3, 20, 0, "97614423c4788744", ""], [1, 18, 1, "71b5a5191293b1b6", ""]]  # impronte con chiave segreta, mescolate a impronte casuali (tools/guardia.py)
 for k, s in LAZY_FILES.items():
     if guarda(s, REGOLE): sys.exit('termine vietato in ' + k)
+def _csp_cassaforte(s):
+    # Cassaforte: CSP stretta. Ogni script inline della pagina costruita (compresi quelli della barra) entra con la sua impronta SHA-256: niente 'unsafe-inline' per gli script.
+    hs = sorted({base64.b64encode(hashlib.sha256(m.encode('utf-8')).digest()).decode() for m in re.findall(r'<script>(.*?)</script>', s, re.S)})
+    return re.sub(r'(id="csp-cas" content="[^"]*?)script-src [^;]*;', lambda m: m.group(1) + "script-src " + ' '.join("'sha256-%s'" % h for h in hs) + ";", s, count=1)
 for k, s in pages.items():
     if guarda(s, REGOLE): sys.exit('termine vietato in ' + k)
+    if k == 'cassaforte.html': s = _csp_cassaforte(s)
     open(OUT + k, 'w', encoding='utf-8').write(s)
 # la scheda pensione entra nel sito solo cifrata: nessun file in chiaro fra gli statici
 for f in os.listdir(OUT):

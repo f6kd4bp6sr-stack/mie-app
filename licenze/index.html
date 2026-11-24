@@ -340,7 +340,7 @@ select{max-width:100%}
 @media (min-width:761px){.cols2.st-cols,.cols2.tl-cols3,.cd-g{display:block;columns:2;column-gap:10px}.cols2.st-cols>*,.cols2.tl-cols3>*,.cd-g>*{break-inside:avoid;margin:0 0 10px!important;width:100%;display:block}}
 
 </style>
-<script>window.APP_VERSION="f00cc2a97b";window.APP_BUILD="2026-11-21T15:26+02:00";</script>
+<script>window.APP_VERSION="ba28670395";window.APP_BUILD="2026-11-24T10:21+02:00";</script>
 </head>
 <body>
 <script>/* chiavi neutre dal 24/10/2026: spostamento una volta sola */try{[["v1","v1"],["hist-v1","hist-v1"],["in","in"]].forEach(function(x){var o=atob("cHJvZy12YWxlLQ==")+x[0],n="prog-mm-"+x[1],v=localStorage.getItem(o);if(v!=null){if(localStorage.getItem(n)==null)localStorage.setItem(n,v);if(localStorage.getItem(n)!=null)localStorage.removeItem(o);}});}catch(e){}</script><style id="lockCss">
@@ -444,14 +444,14 @@ html.locked #lockScr{display:grid}
 <script>try{var _l=JSON.parse(localStorage.getItem("licenze-marco-v1")||"null"),_d=new Date(),_t=_d.getFullYear()+"-"+String(_d.getMonth()+1).padStart(2,"0")+"-"+String(_d.getDate()).padStart(2,"0");if(_l&&_l.end&&_l.end<_t)document.documentElement.classList.add("lic-arch");}catch(e){}</script><style>.lic-arch .appsw a[data-a=lic]:not(.on){display:none}</style><style id="tema">/* ===== Tema comune di Pianificazione (inserito dal build in ogni pagina, dopo lo stile della pagina) =====
    Ogni app ha il suo colore: 🏠 Pianificazione blu · 📅 Licenze terracotta · 🧘 Tai Chi verde acqua · 🤝 Metodo ambra · 📊 Progressi rosa.
    Le sezioni dentro Pianificazione hanno i loro colori (pagine/index.html). */
-:root{--app-pian:#2563eb;--app-lic:#c0532b;--app-corsi:#4338ca;--app-tc:#0d9488;--app-met:#b86e00;--app-prog:#d63384}
-@media (prefers-color-scheme:dark){:root{--app-pian:#5b8cff;--app-lic:#f08a5d;--app-corsi:#a5b4fc;--app-tc:#2cc5b6;--app-met:#f0a43a;--app-prog:#ff6fae}}
+:root{--app-cas:#5b3fc4;--app-pian:#2563eb;--app-lic:#c0532b;--app-corsi:#4338ca;--app-tc:#0d9488;--app-met:#b86e00;--app-prog:#d63384}
+@media (prefers-color-scheme:dark){:root{--app-cas:#a692ff;--app-pian:#5b8cff;--app-lic:#f08a5d;--app-corsi:#a5b4fc;--app-tc:#2cc5b6;--app-met:#f0a43a;--app-prog:#ff6fae}}
 .appsw{display:flex;justify-content:flex-start;gap:6px;margin:12px auto 4px;padding:0 16px;background:none;border-radius:0;width:auto;max-width:1180px;overflow-x:auto;scrollbar-width:none;box-shadow:none}
 .appsw::-webkit-scrollbar{display:none}
 .appsw a:first-child{margin-left:auto}.appsw a:last-child{margin-right:auto}
 .appsw a{--c:var(--app-pian);display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font-weight:700;font-size:14.5px;color:var(--c);text-decoration:none;white-space:nowrap;background:transparent;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--c) 35%,transparent)}
 .appsw a.on{background:var(--c);color:#fff;box-shadow:0 2px 8px color-mix(in srgb,var(--c) 35%,transparent)}
-.appsw a[data-a=lic]{--c:var(--app-lic)}.appsw a[data-a=corsi]{--c:var(--app-corsi)}.appsw a[data-a=tc]{--c:var(--app-tc)}.appsw a[data-a=met]{--c:var(--app-met)}.appsw a[data-a=prog]{--c:var(--app-prog)}
+.appsw a[data-a=lic]{--c:var(--app-lic)}.appsw a[data-a=corsi]{--c:var(--app-corsi)}.appsw a[data-a=tc]{--c:var(--app-tc)}.appsw a[data-a=met]{--c:var(--app-met)}.appsw a[data-a=prog]{--c:var(--app-prog)}.appsw a[data-a=cas]{--c:var(--app-cas)}
 /* Licenze e Progressi: riquadri morbidi con la riga del colore dell'app */
 body[data-app=lic],body[data-app=prog]{background:#f4f5f9}
 body[data-app=lic] .card,body[data-app=prog] .card{border:0;border-radius:18px;box-shadow:inset 0 4px 0 var(--app),0 1px 2px rgba(20,24,32,.05),0 4px 16px rgba(20,24,32,.05)}
@@ -469,7 +469,7 @@ a:not([class]),.row>a,.grow>a,p.lbl>a,small>a,li>a{color:#8ab4ff}
 .btn.pri,label.btn.pri,.primary,.st-c,.tagrec,.sect button.on,.seg button.on,.ymg button.today,.appsw a.on,.chip.free,.chip.fest,.chips .chip.on,.pstats .hi,.pstats .hi span,.ksum .hi,.ksum .hi span{color:#0f1115!important}
 }
 .appsw{flex-wrap:wrap}
-</style><script>document.body.setAttribute("data-app","pian")</script><nav class="appsw" aria-label="App"><a data-a="pian" class="on" href="./" aria-current="page">🏠 Pianificazione</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi e Ikigai</a><a data-a="prog" href="progressi.html">📊 Progressi</a></nav>
+</style><script>document.body.setAttribute("data-app","pian")</script><nav class="appsw" aria-label="App"><a data-a="pian" class="on" href="./" aria-current="page">🏠 Pianificazione</a><a data-a="st" href="index.html#st">🗞️ Stampa di oggi</a><a data-a="lic" href="licenze.html">📅 Licenze</a><a data-a="tc" href="taichi.html">🧘 Tai Chi e Ikigai</a><a data-a="prog" href="progressi.html">📊 Progressi</a><a data-a="cas" href="cassaforte.html">🔐 Cassaforte</a></nav>
 <div class="wrap">
   <nav class="sect" id="side" aria-label="Sezioni"></nav>
   <main id="main"></main>
@@ -1978,8 +1978,10 @@ function diaTappeV(){const t=today(),c=diaCess(),T=diaTappe(),L=DIA.lettera,apre
   const leggibile=L.sig&&apre&&t>=apre;
   o+=`<div class="card k-dia nofold"><h3>✉️ Lettera a me del giorno dopo</h3>`;
   if(!L.sig)o+=`<p class="lbl" style="margin-top:0">${esc(DIA_D.lettera)} Quando la sigilli, resta chiusa fino al giorno dopo l'ultimo giorno di servizio${apre?` (<b>${fmt(apre,{day:"numeric",month:"long",year:"numeric"})}</b>)`:""}.</p><textarea id="diaLet" rows="8">${esc(L.t||"")}</textarea><div class="dia-bar"><button class="btn" id="diaLetSave">Salva la bozza</button><button class="btn pri" id="diaLetSig"${(L.t||"").trim()?"":" disabled"}>🔒 Sigilla</button></div>`;
+  /* 24/11/2026 (M5): la lettera sigillata sta cifrata nella 🔐 Cassaforte; qui resta solo la data */
+  else if(L.inCassa)o+=`<p class="dia-sealed">🔐 Sigillata il ${fmt(L.sig.slice(0,10),{day:"numeric",month:"long",year:"numeric"})} e custodita nella Cassaforte, cifrata. ${apre?(leggibile?"Si può aprire da oggi.":`Si apre ${diaFmtL(apre)}.`):"Si apre il giorno dopo l'ultimo giorno di servizio."}</p><a class="btn sm${leggibile?" pri":""}" href="cassaforte.html#lettera">🔐 ${leggibile?"Apri la lettera nella Cassaforte":"Vai alla Cassaforte"}</a>`;
   else if(leggibile)o+=`<p class="lbl" style="margin-top:0">Sigillata il ${fmt(L.sig.slice(0,10),{day:"numeric",month:"long",year:"numeric"})}.</p><div class="dia-letter">${esc(L.t).replace(/\n/g,"<br>")}</div>`;
-  else o+=`<p class="dia-sealed">🔒 Sigillata il ${fmt(L.sig.slice(0,10),{day:"numeric",month:"long",year:"numeric"})}. ${apre?`Si apre ${diaFmtL(apre)}.`:"Si apre il giorno dopo l'ultimo giorno di servizio."}</p><button class="btn sm" id="diaLetUn">Riaprila per cambiarla</button>`;
+  else o+=`<p class="dia-sealed">🔒 Sigillata il ${fmt(L.sig.slice(0,10),{day:"numeric",month:"long",year:"numeric"})}. ${apre?`Si apre ${diaFmtL(apre)}.`:"Si apre il giorno dopo l'ultimo giorno di servizio."}</p><div class="dia-bar"><button class="btn sm pri" id="diaLetCf">🔐 Custodiscila nella Cassaforte</button><button class="btn sm" id="diaLetUn">Riaprila per cambiarla</button></div>`;
   return o+`</div>`;}
 
 /* 🔁 Rileggi: note dei giorni e risposte settimanali insieme, dalla più recente; il filtro «📝 Giorni» mostra solo le note, un tema solo le risposte di quel tema */
@@ -2005,7 +2007,7 @@ function diaCard(){const t=today(),rows=[];
   if(diaHasNota(t))rows.push(`<div class="row"><div class="grow"><b>📝 Nota di oggi ✓</b><small>scritta · ${diaWords(diaNota(t))} parole</small></div><button class="btn sm" data-dgo="giorno">Apri</button></div>`);
   else{const q=diaWeekQ(diaWk(t));rows.push(`<div class="row"><div class="grow"><b>📝 Nota di oggi</b><small>ancora da scrivere${q?" · spunto: "+esc(q.t):""}</small></div><button class="btn sm" data-dgo="giorno">Scrivi</button></div>`);}
   diaTappe().filter(x=>x.dt<=t&&!(((DIA.tappe[x.id]||{}).r||[]).some(s=>(s||"").trim()))&&diff(x.dt,t)<=30).forEach(x=>rows.push(`<div class="row"><div class="grow"><b>${x.ic} ${esc(x.n)}</b><small>la tappa è aperta</small></div><button class="btn sm" data-dgo="tappe">Apri</button></div>`));
-  const c=diaCess();if(DIA.lettera.sig&&c&&t>=add(c,1)&&!DIA.lettera.open)rows.push(`<div class="row"><div class="grow"><b>✉️ La tua lettera si può aprire</b></div><button class="btn sm" data-dgo="tappe">Leggi</button></div>`);
+  const c=diaCess();if(DIA.lettera.sig&&c&&t>=add(c,1)&&!DIA.lettera.open)rows.push(DIA.lettera.inCassa?`<div class="row"><div class="grow"><b>✉️ La tua lettera si può aprire</b><small>è nella 🔐 Cassaforte</small></div><a class="btn sm" href="cassaforte.html#lettera">Apri</a></div>`:`<div class="row"><div class="grow"><b>✉️ La tua lettera si può aprire</b></div><button class="btn sm" data-dgo="tappe">Leggi</button></div>`);
   return rows.length?`<div class="card k-dia"><h3>📓 Diario <button class="lnk" data-go="dia">Apri ›</button></h3>${rows.join("")}</div>`:"";}
 
 /* ---- promemoria nel Calendario dell'iPad: la domenica sera e le tappe (solo titoli, mai le risposte) ---- */
@@ -2034,7 +2036,8 @@ function bindDia(){const R=()=>{diaFlush();render();},q=s=>document.querySelecto
   qa("[data-tpok]").forEach(b=>b.onclick=()=>{const id=b.dataset.tpok,r=[];qa('[data-tp="'+id+'"]').forEach(t=>{r[+t.dataset.ti]=t.value;});DIA.tappe[id]={r,at:new Date().toISOString()};diaSave("Tappa salvata");R();});
   if($("diaLetSave"))$("diaLetSave").onclick=()=>{DIA.lettera.t=$("diaLet").value;diaSave("Bozza salvata");R();};
   if($("diaLet"))$("diaLet").oninput=()=>{const b=$("diaLetSig");if(b)b.disabled=!$("diaLet").value.trim();};
-  if($("diaLetSig"))$("diaLetSig").onclick=()=>{const v=$("diaLet").value;if(!v.trim())return;if(!confirm("Sigillare la lettera? Resterà chiusa fino al giorno dopo l'ultimo giorno di servizio."))return;DIA.lettera.t=v;DIA.lettera.sig=new Date().toISOString();diaSave("✉️ Lettera sigillata");R();};
+  if($("diaLetSig"))$("diaLetSig").onclick=()=>{const v=$("diaLet").value;if(!v.trim())return;if(!confirm("Sigillare la lettera? Resterà chiusa fino al giorno dopo l'ultimo giorno di servizio."))return;DIA.lettera.t=v;DIA.lettera.sig=new Date().toISOString();diaSave("✉️ Lettera sigillata");diaLetCassa();R();};
+  if($("diaLetCf"))$("diaLetCf").onclick=()=>diaLetCassa();
   if($("diaLetUn"))$("diaLetUn").onclick=()=>{if(!confirm("Riaprire la lettera? Vedrai di nuovo il testo per cambiarla."))return;DIA.lettera.sig=null;diaSave();R();};
   if(DIA.lettera.sig&&diaV==="tappe"&&document.querySelector(".dia-letter")&&!DIA.lettera.open){DIA.lettera.open=new Date().toISOString();diaSave();}
   /* data */
@@ -2042,6 +2045,13 @@ function bindDia(){const R=()=>{diaFlush();render();},q=s=>document.querySelecto
 }
 /* dal riquadro di oggi: apri una parte precisa del diario (le parti tolte portano al Giorno) */
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-dgo]");if(!b)return;diaV=DIA_V.some(([k])=>k===b.dataset.dgo)?b.dataset.dgo:"giorno";diaDay=null;diaFlush();go("dia");});
+/* 24/11/2026 (M5): la lettera sigillata passa nella 🔐 Cassaforte. Il testo va per un attimo in "cf-in-lettera":
+   la Cassaforte, aperta con Face ID, lo cifra, lo rilegge e solo allora lo cancella. Nel Diario resta solo la data. */
+function diaLetCassa(){const L=DIA.lettera,c=diaCess();if(!L.sig||!(L.t||"").trim())return;
+  if(!confirm("Custodire la lettera nella 🔐 Cassaforte? Sarà cifrata e si aprirà con Face ID dal giorno dopo l'ultimo giorno di servizio. Nel Diario resterà solo la data."))return;
+  try{localStorage.setItem("cf-in-lettera",JSON.stringify({t:L.t,sig:L.sig,apre:c?add(c,1):""}));}catch(e){toast("⚠️ Non riuscito");return;}
+  DIA.lettera={t:"",sig:L.sig,open:null,inCassa:true};diaSave();
+  location.href="cassaforte.html#lettera";}
 
 /* ---------- 🤖 CULTURA DIGITALE: che cos'è l'intelligenza artificiale e come usarla bene ----------
    Percorso a livelli (1 Base solo per 💻 Programmare app, dall'8/11/2026 · 2 Intermedio · 3 Avanzato; il Base generale è stato tolto il 27/10/2026, completato): l'Avanzato si apre con 4 schede fatte dell'Intermedio.
@@ -3084,6 +3094,8 @@ function vToday(){
   let o=`<h1>☀️ ${saluto}!</h1><p class="sub">${fmt(t,{weekday:"long",day:"numeric",month:"long",year:"numeric"})} · tutto il giorno in una pagina</p><div class="og-pills">`;
   if(L&&!arLic())o+=`<a class="og-p" href="licenze.html">🎖️ <b>${Math.max(0,L.toEnd)}</b> giorni al congedo</a>`;
   {const cx=typeof cnProssima==="function"?cnProssima():null,cg=cx?cnGiorni(cx.d):null;if(cx&&cg<=30)o+=`<button class="og-p${cg<0?" og-w":""}" data-go="condo">🏢 rata condominio ${cg<0?"<b>scaduta</b>":cg===0?"<b>oggi</b>":"tra <b>"+cg+"</b> "+(cg===1?"giorno":"giorni")}</button>`;}
+  /* 24/11/2026: dalla 🔐 Cassaforte arriva solo un conteggio, mai tipo o numero del documento */
+  {const cf=lsJ("cf-avvisi-v1");if(cf&&cf.n>0)o+=`<a class="og-p og-w" href="cassaforte.html">🔐 <b>${cf.n}</b> ${cf.n===1?"scadenza":"scadenze"} in cassaforte</a>`;}
   if(ga!=null&&ga>=0&&ga<=45)o+=`<button class="og-p" data-go="auto">🚗 riconsegna auto ${ga===0?"<b>oggi</b>":"tra <b>"+ga+"</b> "+(ga===1?"giorno":"giorni")}</button>`;
   o+=hw==null?`<button class="og-p" id="ogHealth">🩺 Stato dell’app</button>`:hw?`<button class="og-p og-w" id="ogHealth">🩺 <b>${hw}</b> ${hw===1?"cosa":"cose"} da controllare</button>`:`<button class="og-p" id="ogHealth">🩺 tutto a posto</button>`;
   /* 21/11/2026 (proposta 10): in cima solo tre cose; il giorno e il resto del riepilogo sotto, chiusi, a un tocco */

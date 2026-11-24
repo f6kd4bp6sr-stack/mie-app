@@ -104,8 +104,10 @@ function diaTappeV(){const t=today(),c=diaCess(),T=diaTappe(),L=DIA.lettera,apre
   const leggibile=L.sig&&apre&&t>=apre;
   o+=`<div class="card k-dia nofold"><h3>✉️ Lettera a me del giorno dopo</h3>`;
   if(!L.sig)o+=`<p class="lbl" style="margin-top:0">${esc(DIA_D.lettera)} Quando la sigilli, resta chiusa fino al giorno dopo l'ultimo giorno di servizio${apre?` (<b>${fmt(apre,{day:"numeric",month:"long",year:"numeric"})}</b>)`:""}.</p><textarea id="diaLet" rows="8">${esc(L.t||"")}</textarea><div class="dia-bar"><button class="btn" id="diaLetSave">Salva la bozza</button><button class="btn pri" id="diaLetSig"${(L.t||"").trim()?"":" disabled"}>🔒 Sigilla</button></div>`;
+  /* 24/11/2026 (M5): la lettera sigillata sta cifrata nella 🔐 Cassaforte; qui resta solo la data */
+  else if(L.inCassa)o+=`<p class="dia-sealed">🔐 Sigillata il ${fmt(L.sig.slice(0,10),{day:"numeric",month:"long",year:"numeric"})} e custodita nella Cassaforte, cifrata. ${apre?(leggibile?"Si può aprire da oggi.":`Si apre ${diaFmtL(apre)}.`):"Si apre il giorno dopo l'ultimo giorno di servizio."}</p><a class="btn sm${leggibile?" pri":""}" href="cassaforte.html#lettera">🔐 ${leggibile?"Apri la lettera nella Cassaforte":"Vai alla Cassaforte"}</a>`;
   else if(leggibile)o+=`<p class="lbl" style="margin-top:0">Sigillata il ${fmt(L.sig.slice(0,10),{day:"numeric",month:"long",year:"numeric"})}.</p><div class="dia-letter">${esc(L.t).replace(/\n/g,"<br>")}</div>`;
-  else o+=`<p class="dia-sealed">🔒 Sigillata il ${fmt(L.sig.slice(0,10),{day:"numeric",month:"long",year:"numeric"})}. ${apre?`Si apre ${diaFmtL(apre)}.`:"Si apre il giorno dopo l'ultimo giorno di servizio."}</p><button class="btn sm" id="diaLetUn">Riaprila per cambiarla</button>`;
+  else o+=`<p class="dia-sealed">🔒 Sigillata il ${fmt(L.sig.slice(0,10),{day:"numeric",month:"long",year:"numeric"})}. ${apre?`Si apre ${diaFmtL(apre)}.`:"Si apre il giorno dopo l'ultimo giorno di servizio."}</p><div class="dia-bar"><button class="btn sm pri" id="diaLetCf">🔐 Custodiscila nella Cassaforte</button><button class="btn sm" id="diaLetUn">Riaprila per cambiarla</button></div>`;
   return o+`</div>`;}
 
 /* 🔁 Rileggi: note dei giorni e risposte settimanali insieme, dalla più recente; il filtro «📝 Giorni» mostra solo le note, un tema solo le risposte di quel tema */
@@ -131,7 +133,7 @@ function diaCard(){const t=today(),rows=[];
   if(diaHasNota(t))rows.push(`<div class="row"><div class="grow"><b>📝 Nota di oggi ✓</b><small>scritta · ${diaWords(diaNota(t))} parole</small></div><button class="btn sm" data-dgo="giorno">Apri</button></div>`);
   else{const q=diaWeekQ(diaWk(t));rows.push(`<div class="row"><div class="grow"><b>📝 Nota di oggi</b><small>ancora da scrivere${q?" · spunto: "+esc(q.t):""}</small></div><button class="btn sm" data-dgo="giorno">Scrivi</button></div>`);}
   diaTappe().filter(x=>x.dt<=t&&!(((DIA.tappe[x.id]||{}).r||[]).some(s=>(s||"").trim()))&&diff(x.dt,t)<=30).forEach(x=>rows.push(`<div class="row"><div class="grow"><b>${x.ic} ${esc(x.n)}</b><small>la tappa è aperta</small></div><button class="btn sm" data-dgo="tappe">Apri</button></div>`));
-  const c=diaCess();if(DIA.lettera.sig&&c&&t>=add(c,1)&&!DIA.lettera.open)rows.push(`<div class="row"><div class="grow"><b>✉️ La tua lettera si può aprire</b></div><button class="btn sm" data-dgo="tappe">Leggi</button></div>`);
+  const c=diaCess();if(DIA.lettera.sig&&c&&t>=add(c,1)&&!DIA.lettera.open)rows.push(DIA.lettera.inCassa?`<div class="row"><div class="grow"><b>✉️ La tua lettera si può aprire</b><small>è nella 🔐 Cassaforte</small></div><a class="btn sm" href="cassaforte.html#lettera">Apri</a></div>`:`<div class="row"><div class="grow"><b>✉️ La tua lettera si può aprire</b></div><button class="btn sm" data-dgo="tappe">Leggi</button></div>`);
   return rows.length?`<div class="card k-dia"><h3>📓 Diario <button class="lnk" data-go="dia">Apri ›</button></h3>${rows.join("")}</div>`:"";}
 
 /* ---- promemoria nel Calendario dell'iPad: la domenica sera e le tappe (solo titoli, mai le risposte) ---- */
@@ -160,7 +162,8 @@ function bindDia(){const R=()=>{diaFlush();render();},q=s=>document.querySelecto
   qa("[data-tpok]").forEach(b=>b.onclick=()=>{const id=b.dataset.tpok,r=[];qa('[data-tp="'+id+'"]').forEach(t=>{r[+t.dataset.ti]=t.value;});DIA.tappe[id]={r,at:new Date().toISOString()};diaSave("Tappa salvata");R();});
   if($("diaLetSave"))$("diaLetSave").onclick=()=>{DIA.lettera.t=$("diaLet").value;diaSave("Bozza salvata");R();};
   if($("diaLet"))$("diaLet").oninput=()=>{const b=$("diaLetSig");if(b)b.disabled=!$("diaLet").value.trim();};
-  if($("diaLetSig"))$("diaLetSig").onclick=()=>{const v=$("diaLet").value;if(!v.trim())return;if(!confirm("Sigillare la lettera? Resterà chiusa fino al giorno dopo l'ultimo giorno di servizio."))return;DIA.lettera.t=v;DIA.lettera.sig=new Date().toISOString();diaSave("✉️ Lettera sigillata");R();};
+  if($("diaLetSig"))$("diaLetSig").onclick=()=>{const v=$("diaLet").value;if(!v.trim())return;if(!confirm("Sigillare la lettera? Resterà chiusa fino al giorno dopo l'ultimo giorno di servizio."))return;DIA.lettera.t=v;DIA.lettera.sig=new Date().toISOString();diaSave("✉️ Lettera sigillata");diaLetCassa();R();};
+  if($("diaLetCf"))$("diaLetCf").onclick=()=>diaLetCassa();
   if($("diaLetUn"))$("diaLetUn").onclick=()=>{if(!confirm("Riaprire la lettera? Vedrai di nuovo il testo per cambiarla."))return;DIA.lettera.sig=null;diaSave();R();};
   if(DIA.lettera.sig&&diaV==="tappe"&&document.querySelector(".dia-letter")&&!DIA.lettera.open){DIA.lettera.open=new Date().toISOString();diaSave();}
   /* data */
@@ -168,3 +171,10 @@ function bindDia(){const R=()=>{diaFlush();render();},q=s=>document.querySelecto
 }
 /* dal riquadro di oggi: apri una parte precisa del diario (le parti tolte portano al Giorno) */
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-dgo]");if(!b)return;diaV=DIA_V.some(([k])=>k===b.dataset.dgo)?b.dataset.dgo:"giorno";diaDay=null;diaFlush();go("dia");});
+/* 24/11/2026 (M5): la lettera sigillata passa nella 🔐 Cassaforte. Il testo va per un attimo in "cf-in-lettera":
+   la Cassaforte, aperta con Face ID, lo cifra, lo rilegge e solo allora lo cancella. Nel Diario resta solo la data. */
+function diaLetCassa(){const L=DIA.lettera,c=diaCess();if(!L.sig||!(L.t||"").trim())return;
+  if(!confirm("Custodire la lettera nella 🔐 Cassaforte? Sarà cifrata e si aprirà con Face ID dal giorno dopo l'ultimo giorno di servizio. Nel Diario resterà solo la data."))return;
+  try{localStorage.setItem("cf-in-lettera",JSON.stringify({t:L.t,sig:L.sig,apre:c?add(c,1):""}));}catch(e){toast("⚠️ Non riuscito");return;}
+  DIA.lettera={t:"",sig:L.sig,open:null,inCassa:true};diaSave();
+  location.href="cassaforte.html#lettera";}

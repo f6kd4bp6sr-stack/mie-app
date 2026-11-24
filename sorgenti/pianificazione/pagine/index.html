@@ -670,6 +670,8 @@ function vToday(){
   let o=`<h1>☀️ ${saluto}!</h1><p class="sub">${fmt(t,{weekday:"long",day:"numeric",month:"long",year:"numeric"})} · tutto il giorno in una pagina</p><div class="og-pills">`;
   if(L&&!arLic())o+=`<a class="og-p" href="licenze.html">🎖️ <b>${Math.max(0,L.toEnd)}</b> giorni al congedo</a>`;
   {const cx=typeof cnProssima==="function"?cnProssima():null,cg=cx?cnGiorni(cx.d):null;if(cx&&cg<=30)o+=`<button class="og-p${cg<0?" og-w":""}" data-go="condo">🏢 rata condominio ${cg<0?"<b>scaduta</b>":cg===0?"<b>oggi</b>":"tra <b>"+cg+"</b> "+(cg===1?"giorno":"giorni")}</button>`;}
+  /* 24/11/2026: dalla 🔐 Cassaforte arriva solo un conteggio, mai tipo o numero del documento */
+  {const cf=lsJ("cf-avvisi-v1");if(cf&&cf.n>0)o+=`<a class="og-p og-w" href="cassaforte.html">🔐 <b>${cf.n}</b> ${cf.n===1?"scadenza":"scadenze"} in cassaforte</a>`;}
   if(ga!=null&&ga>=0&&ga<=45)o+=`<button class="og-p" data-go="auto">🚗 riconsegna auto ${ga===0?"<b>oggi</b>":"tra <b>"+ga+"</b> "+(ga===1?"giorno":"giorni")}</button>`;
   o+=hw==null?`<button class="og-p" id="ogHealth">🩺 Stato dell’app</button>`:hw?`<button class="og-p og-w" id="ogHealth">🩺 <b>${hw}</b> ${hw===1?"cosa":"cose"} da controllare</button>`:`<button class="og-p" id="ogHealth">🩺 tutto a posto</button>`;
   /* 21/11/2026 (proposta 10): in cima solo tre cose; il giorno e il resto del riepilogo sotto, chiusi, a un tocco */
