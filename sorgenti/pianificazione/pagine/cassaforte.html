@@ -54,6 +54,10 @@ svg[viewBox="0 0 760 150"]{max-width:480px;margin:0 auto}
 /* 24/11/2026: sezioni su due colonne (I miei documenti e gli avvisi a tutta larghezza) */
 #vista.aperta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}#vista.aperta>*{margin:0!important;min-width:0}#vista.aperta>.warn,#vista.aperta>[data-s=doc]{grid-column:1/-1}@media(max-width:1000px){#vista.aperta{grid-template-columns:1fr}}
 .scans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:10px 0}@media(max-width:760px){.scans{grid-template-columns:1fr}}
+.spunte-box{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0}.spunte{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.sp{font-size:14px;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--line)}.sp.si{background:#e3f6ea;color:#14532d;border-color:#86c9a0}.sp.no{background:#fdf2e3;color:#7a3e00;border-color:#e8b46a}.sp.fac{opacity:.75}
+@media (prefers-color-scheme:dark){.sp.si{background:#15301f;color:#a7e8bf;border-color:#2f6b45}.sp.no{background:#3a2810;color:#f3c98a;border-color:#7a5520}}
+.scanbox.meglio{outline:3px solid var(--ac);outline-offset:4px;border-radius:12px}.scanhead{display:flex;gap:8px;align-items:center;justify-content:space-between}.dove{font-size:14px;margin:4px 0}
+.scanbox textarea.scan{-webkit-text-security:disc;min-height:80px}
 .scanbox{display:grid;gap:6px;font-size:15px}.scanbox textarea.scan{font-size:16px;min-height:110px;border:2px dashed var(--ac);border-radius:12px;padding:10px;background:var(--surface,transparent);color:inherit;width:100%;box-sizing:border-box}
 svg text{font-family:-apple-system,system-ui,sans-serif;fill:var(--ink)}
 .grid2{display:grid;grid-template-columns:1fr;gap:14px}
@@ -867,7 +871,7 @@ async function ridimensiona(file) {
   if (bmp.close) bmp.close();
   return new Promise(ok => c.toBlob(b => { c.width = c.height = 0; ok(b); }, 'image/jpeg', 0.8));
 }
-const passi = n => E('div', {class: 'steps'}, ['Tipo', 'Fronte', 'Retro', 'Testo', 'Conferma'].map((x, i) => E('span', {class: i === n ? 'on' : ''}, (i + 1) + '. ' + x)));
+const passi = n => E('div', {class: 'steps'}, ['Tipo', 'Fronte', 'Retro', 'Lettura', 'Conferma'].map((x, i) => E('span', {class: i === n ? 'on' : ''}, (i + 1) + '. ' + x)));
 function scattaFoto(d, W, lato, n) {
   const nome = lato === 'f' ? 'FRONTE' : 'RETRO';
   return new Promise(res => {
@@ -886,32 +890,59 @@ function scattaFoto(d, W, lato, n) {
     if (lato === 'r') bt.append(E('button', {class: 'btn', type: 'button', onclick: () => { W.r = null; res('ok'); }}, 'Non c\'è il retro'));
   });
 }
+/* 24/11/2026 («migliorare Scansiona testo»): per ogni tipo dice DOVE inquadrare, accanto alla foto del lato giusto;
+   a ogni scansione riconosce subito e spunta i dati trovati; si può scansionare più volte nella stessa casella (il testo si somma);
+   le caselle mostrano solo puntini (il testo non resta visibile sullo schermo); quando c'è tutto lo dice e si va avanti. */
+const DOVE = {
+  cie: {f: 'Il nome del Comune e le date (rilascio e scadenza).', r: 'Le 3 righe in basso con i segni <<< : ci sono numero e scadenza, si leggono meglio di tutto.', meglio: 'r'},
+  pass: {f: 'Sulla pagina con la foto: le 2 righe in basso con i segni <<< (numero e scadenza).', r: '', meglio: 'f'},
+  pat: {f: 'Le righe 4a e 4b (rilascio e scadenza) e la riga 5 (numero).', r: '', meglio: 'f'},
+  ts: {f: 'Il codice fiscale e la data di scadenza.', r: '', meglio: 'f'},
+  carta: {f: 'Le cifre lunghe e la scadenza MM/AA (delle cifre tengo solo le ultime 4).', r: 'Il numero di telefono per il blocco, se c\'è. Mai il codice di 3 cifre (CVV): lo scarto.', meglio: 'f'},
+};
 function passoTesto(d, W) {
   return new Promise(res => {
+    const T = TK[W.tipo], G = DOVE[W.tipo] || {f: 'Le scritte principali: numero e date.', r: 'Le scritte del retro, se ci sono date o numeri.', meglio: 'f'};
+    const campi = campiTipo(T), obbl = campi.filter(c => c[2]);
     const stato_ = E('p', {class: 'okb', hidden: true}), ta = E('textarea', {placeholder: 'Incolla qui il testo copiato', 'aria-label': 'Testo copiato'});
-    const dettagli = E('details', null, E('summary', null, 'Il pulsante non incolla? Usa questa casella'), ta, E('div', {class: 'row c', style: 'margin-top:8px'}, E('button', {class: 'btn', type: 'button', onclick: () => usa('f', ta.value, true)}, 'Questo è il testo del FRONTE'), W.r ? E('button', {class: 'btn', type: 'button', onclick: () => usa('r', ta.value, true)}, 'Questo è il testo del RETRO') : null));
-    const go = E('button', {class: 'btn pri big', type: 'button', disabled: true, onclick: () => res('ok')}, '▶ Riconosci i dati');
-    const agg = () => { const n = (W.tf ? 1 : 0) + (W.tr ? 1 : 0); stato_.hidden = !n; stato_.textContent = '✓ Testo ricevuto: ' + (W.tf ? 'fronte ' : '') + (W.tr ? 'retro' : ''); go.disabled = !n; };
-    async function usa(l, t, daCasella) { t = String(t || ''); if (t.trim().length < 4) { stato_.hidden = false; stato_.className = 'warn'; stato_.textContent = 'Non c\'è testo. Copia prima il testo dalla foto.'; return; } stato_.className = 'okb'; if (l === 'f') W.tf = t; else W.tr = t; if (daCasella) ta.value = ''; try { await navigator.clipboard.writeText(' '); } catch (e) {} agg(); }
+    const spunte = E('div', {class: 'spunte', 'aria-live': 'polite'}), fatto = E('p', {class: 'okb', hidden: true}, '✅ Ho tutto quello che serve: premi «Avanti».');
+    const go = E('button', {class: 'btn pri big', type: 'button', disabled: true, onclick: () => res('ok')}, 'Avanti ▶');
+    function riconosci() {
+      const testo = (W.tf || '') + '\n' + (W.tr || ''); if (testo.trim().length < 4) { spunte.replaceChildren(); go.disabled = true; return; }
+      let R; try { R = CFP.parse(testo, W.tipo); } catch (e) { return; }
+      spunte.replaceChildren(...campi.map(([k, nome, ob]) => { const v = R[k] && R[k].v; return E('span', {class: 'sp ' + (v ? 'si' : ob ? 'no' : 'fac')}, (v ? '✅ ' : ob ? '⬜ ' : '◽ ') + nome + (v && R[k].da === 'MRZ' ? ' (righe <<<)' : '')); }));
+      const ok = obbl.every(([k]) => R[k] && R[k].v); fatto.hidden = !ok; go.disabled = false;
+      go.textContent = ok ? 'Avanti ▶' : 'Avanti lo stesso ▶';
+    }
+    const agg = () => { stato_.hidden = true; riconosci(); };
+    async function usa(l, t, daCasella) { t = String(t || ''); if (t.trim().length < 4) { stato_.hidden = false; stato_.className = 'warn'; stato_.textContent = 'Non c\'è testo.'; return; } stato_.className = 'okb'; if (l === 'f') W.tf = t; else W.tr = t; if (daCasella) ta.value = ''; try { await navigator.clipboard.writeText(' '); } catch (e) {} agg(); }
     const incolla = l => async () => { try { await usa(l, await navigator.clipboard.readText()); } catch (e) { dettagli.open = true; stato_.hidden = false; stato_.className = 'warn'; stato_.textContent = 'L\'iPad non mi lascia leggere gli appunti: incolla il testo nella casella qui sotto.'; } };
+    const dettagli = E('details', null, E('summary', null, 'Il pulsante non incolla? Usa questa casella'), ta, E('div', {class: 'row c', style: 'margin-top:8px'}, E('button', {class: 'btn', type: 'button', onclick: () => usa('f', ta.value, true)}, 'Questo è il testo del FRONTE'), W.r ? E('button', {class: 'btn', type: 'button', onclick: () => usa('r', ta.value, true)}, 'Questo è il testo del RETRO') : null));
     const OCR = window.CF_OCR && window.CF_OCR.disponibile;
-    const anteprima = (b, nome) => b ? E('figure', {style: 'margin:0;text-align:center'}, E('img', {src: urlW(b), alt: 'Anteprima del ' + nome, style: 'max-width:100%;max-height:260px;border-radius:10px;border:1px solid var(--line)'}), E('figcaption', {class: 'pic'}, nome)) : null;
-    /* 24/11/2026 («il riconoscimento non è semplice»): via principale = «Scansiona testo» dell'iPad dentro la casella
-       (la fotocamera legge il testo direttamente, sul dispositivo, senza appunti e senza app Foto). La copia dalla foto resta come seconda via. */
-    const scan = (l, nome) => { const t = E('textarea', {class: 'scan', rows: 4, autocapitalize: 'off', autocomplete: 'off', spellcheck: 'false', placeholder: 'Tocca qui, poi «Scansiona testo» e inquadra il ' + nome, 'aria-label': 'Testo del ' + nome});
-      t.addEventListener('focus', () => { S.pausa = Date.now() + 90000; }); t.addEventListener('blur', () => { S.pausa = 0; });  /* la scansione con la fotocamera non conta come tocchi: niente blocco per inattività mentre si scansiona (max 90 s) */
-      let tm = 0; t.addEventListener('input', () => { clearTimeout(tm); tm = setTimeout(() => { if (t.value.trim().length >= 4) usa(l, t.value, true); }, 600); });
-      return E('label', {class: 'scanbox'}, E('b', null, (l === 'f' ? '🪪 FRONTE' : '🔄 RETRO') + ' del documento'), t); };
+    const anteprima = (b, nome) => b ? E('figure', {style: 'margin:0;text-align:center'}, E('img', {src: urlW(b), alt: 'Anteprima del ' + nome, style: 'max-width:100%;max-height:200px;border-radius:10px;border:1px solid var(--line)'}), E('figcaption', {class: 'pic'}, nome)) : null;
+    const scan = (l, nome) => {
+      const t = E('textarea', {class: 'scan', rows: 3, autocapitalize: 'off', autocomplete: 'off', autocorrect: 'off', spellcheck: 'false', placeholder: 'Tocca qui → «Scansiona testo»', 'aria-label': 'Testo letto dal ' + nome});
+      t.addEventListener('focus', () => { S.pausa = Date.now() + 90000; }); t.addEventListener('blur', () => { S.pausa = 0; });
+      let tm = 0; t.addEventListener('input', () => { clearTimeout(tm); tm = setTimeout(() => { if (l === 'f') W.tf = t.value; else W.tr = t.value; riconosci(); conta.textContent = t.value.trim() ? '✓ testo ricevuto (' + t.value.trim().split(/\s+/).length + ' parole) · puoi scansionare ancora per aggiungere' : ''; }, 500); });
+      const conta = E('div', {class: 'pic'});
+      const svuota = E('button', {class: 'btn sm', type: 'button', onclick: () => { t.value = ''; if (l === 'f') W.tf = ''; else W.tr = ''; conta.textContent = ''; riconosci(); t.focus(); }}, '↺ Ricomincia');
+      const dove = l === 'f' ? G.f : G.r, meglio = G.meglio === l;
+      return E('div', {class: 'scanbox' + (meglio ? ' meglio' : '')},
+        E('div', {class: 'scanhead'}, E('b', null, (l === 'f' ? '🪪 FRONTE' : '🔄 RETRO')), meglio ? E('span', {class: 'pill'}, '⭐ comincia da qui') : null),
+        anteprima(l === 'f' ? W.f : W.r, nome),
+        dove ? E('p', {class: 'dove'}, '🎯 Inquadra: ' + dove) : null, t, E('div', {class: 'row'}, svuota, conta));
+    };
     const viaCopia = E('details', null, E('summary', null, 'Altro modo: copiare il testo dalla foto'),
       E('div', {html: flowSvg([{i: '👆', t: 'Tieni premuto|sulla foto'}, {i: '🔤', t: 'Seleziona|tutto'}, {i: '📄', t: 'Copia'}, {i: '📋', t: 'Premi|incolla'}], 'Come copiare il testo dalla foto')}),
-      E('div', {class: 'prev', style: 'margin:8px 0'}, anteprima(W.f, 'fronte'), anteprima(W.r, 'retro')),
       E('div', {class: 'row c'}, E('button', {class: 'btn', type: 'button', onclick: incolla('f')}, '📋 Incolla il testo del FRONTE'), W.r ? E('button', {class: 'btn', type: 'button', onclick: incolla('r')}, '📋 Incolla il testo del RETRO') : null),
       dettagli);
-    d.set(passi(3), E('div', {html: flowSvg([{i: '👆', t: 'Tocca|la casella'}, {i: '📷', t: '«Scansiona|testo»'}, {i: '🪪', t: 'Inquadra|il documento'}, {i: '✅', t: '«Inserisci»'}], 'Come far leggere il testo all\'iPad: tocca la casella, scegli Scansiona testo, inquadra il documento, premi Inserisci')}),
-      E('p', null, 'Il modo più semplice: tocca la casella qui sotto; se non compare subito, toccala ancora e scegli «Scansiona testo» (l\'icona con la fotocamera e le righe). Inquadra il documento: l\'iPad legge le scritte e premi «Inserisci». Il testo non passa dagli appunti né dall\'app Foto. Non devi scrivere niente: i dati li riconosco io.'),
+    d.set(passi(3), E('div', {html: flowSvg([{i: '👆', t: 'Tocca|la casella'}, {i: '📷', t: '«Scansiona|testo»'}, {i: '🎯', t: 'Inquadra|la parte indicata'}, {i: '✅', t: '«Inserisci»|e guarda le spunte'}], 'Tocca la casella, scegli Scansiona testo, inquadra la parte indicata, premi Inserisci e guarda le spunte')}),
+      E('p', null, 'Tocca una casella e scegli «Scansiona testo» (l\'icona con la fotocamera e le righe; se non compare, tocca ancora la casella). Inquadra solo la parte indicata sotto la foto, così la lettura è più precisa, e premi «Inserisci». Le spunte ti dicono subito che cosa ho trovato: puoi scansionare di nuovo nella stessa casella per aggiungere quello che manca. Le caselle mostrano solo puntini: i numeri non restano visibili sullo schermo.'),
+      E('div', {class: 'spunte-box'}, E('b', null, 'Che cosa ho trovato:'), spunte, fatto),
       E('div', {class: 'scans'}, scan('f', 'fronte'), W.r ? scan('r', 'retro') : null),
       stato_, viaCopia, E('p', {class: 'pic'}, 'Se una foto finisse nell\'app Foto o in iCloud, cancellala anche da «Eliminati di recente».'), E('div', {class: 'bt'}, E('button', {class: 'btn', type: 'button', onclick: () => res('annulla')}, 'Annulla'), go));
-    if (OCR) (async () => { try { if (W.f) W.tf = await window.CF_OCR.leggi(W.f); if (W.r) W.tr = await window.CF_OCR.leggi(W.r); agg(); res('ok'); } catch (e) {} })();
+    riconosci();
+    if (OCR) (async () => { try { if (W.f) W.tf = await window.CF_OCR.leggi(W.f); if (W.r) W.tr = await window.CF_OCR.leggi(W.r); riconosci(); } catch (e) {} })();
   });
 }
 function campiTipo(t) {
