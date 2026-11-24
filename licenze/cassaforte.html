@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com https://gist.githubusercontent.com; worker-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex, nofollow">
-<meta http-equiv="Content-Security-Policy" id="csp-cas" content="default-src 'none'; script-src 'sha256-0FX4Xvmh7KvLlZ66d2kFqxknRlCJZOt8EtbqvXTsO7k=' 'sha256-NyUcn9ApDV5/t8negxgfzPS/DpqoQ3O/ipwCHBrMX+g=' 'sha256-WrgACO/3TY4j/+SF1ZiDt1fTnnZKZipqiJbvu1re6dg=' 'sha256-otIW5QS7Asmi0P8EMYTGwkhNp0IaJSV1leyy1F16iuU=' 'sha256-zuDQ4hJRmoM9Iwd6jV6G9GNjWhVAi0auXB4RVvFKXPU='; style-src 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'none'; form-action 'none'; base-uri 'none'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" id="csp-cas" content="default-src 'none'; script-src 'sha256-0FX4Xvmh7KvLlZ66d2kFqxknRlCJZOt8EtbqvXTsO7k=' 'sha256-LDbMGy/912A+ch/clwla34W6HDufpmOKXMqj43+HyUw=' 'sha256-WrgACO/3TY4j/+SF1ZiDt1fTnnZKZipqiJbvu1re6dg=' 'sha256-otIW5QS7Asmi0P8EMYTGwkhNp0IaJSV1leyy1F16iuU=' 'sha256-zuDQ4hJRmoM9Iwd6jV6G9GNjWhVAi0auXB4RVvFKXPU='; style-src 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'none'; form-action 'none'; base-uri 'none'; manifest-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -54,6 +54,7 @@ svg[viewBox="0 0 760 150"]{max-width:480px;margin:0 auto}
 /* 24/11/2026: sezioni su due colonne (I miei documenti e gli avvisi a tutta larghezza) */
 #vista.aperta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}#vista.aperta>*{margin:0!important;min-width:0}#vista.aperta>.warn,#vista.aperta>[data-s=doc]{grid-column:1/-1}@media(max-width:1000px){#vista.aperta{grid-template-columns:1fr}}
 .scans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:10px 0}@media(max-width:760px){.scans{grid-template-columns:1fr}}
+pre.forma{white-space:pre-wrap;font-size:13px;line-height:1.35;background:var(--bg,#0000);border:1px dashed var(--line);border-radius:10px;padding:10px;max-height:320px;overflow:auto}
 .spunte-box{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0}.spunte{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.sp{font-size:14px;font-weight:700;padding:4px 10px;border-radius:999px;border:1px solid var(--line)}.sp.si{background:#e3f6ea;color:#14532d;border-color:#86c9a0}.sp.no{background:#fdf2e3;color:#7a3e00;border-color:#e8b46a}.sp.fac{opacity:.75}
 @media (prefers-color-scheme:dark){.sp.si{background:#15301f;color:#a7e8bf;border-color:#2f6b45}.sp.no{background:#3a2810;color:#f3c98a;border-color:#7a5520}}
 .scanbox.meglio{outline:3px solid var(--ac);outline-offset:4px;border-radius:12px}.scanhead{display:flex;gap:8px;align-items:center;justify-content:space-between}.dove{font-size:14px;margin:4px 0}
@@ -375,12 +376,13 @@ const CFP = (() => {
     return t.split(/\r?\n/).map(l => l.replace(/\s+/g, '').toUpperCase().replace(/[«‹]/g, '<')).filter(l => l.length >= 28 && l.length <= 46 && /^[A-Z0-9<]+$/.test(l) && l.includes('<'))
       .map(l => l.length <= 32 ? l.padEnd(30, '<').slice(0, 30) : l.padEnd(44, '<').slice(0, 44));
   }
+  const cifre = x => x.replace(/O/g, '0').replace(/[IL]/g, '1').replace(/S/g, '5').replace(/B/g, '8').replace(/Z/g, '2');
   function mrz(t) {
     const R = righeMRZ(t);
     for (let i = 0; i + 1 < R.length; i++) { // TD3 (passaporto)
       const a = R[i], b = R[i + 1];
       if (a.length === 44 && b.length === 44 && a[0] === 'P') {
-        const num = b.slice(0, 9), cn = b[9], ex = b.slice(21, 27), ce = b[27];
+        const num = b.slice(0, 9), cn = cifre(b[9]), ex = cifre(b.slice(21, 27)), ce = cifre(b[27]);
         const compOk = mok(b.slice(0, 10) + b.slice(13, 20) + b.slice(21, 43), b[43]);
         const nOk = mok(num, cn), eOk = mok(ex, ce);
         if (nOk || eOk) return {tipo: 'TD3', numero: nOk ? num.replace(/</g, '') : null, scadenza: eOk ? mrzData(ex) : null, tuttoOk: nOk && eOk && compOk};
@@ -389,7 +391,7 @@ const CFP = (() => {
     for (let i = 0; i + 2 < R.length; i++) { // TD1 (carta d'identità)
       const a = R[i], b = R[i + 1];
       if (a.length === 30 && b.length === 30 && R[i + 2].length === 30) {
-        const num = a.slice(5, 14), cn = a[14], ex = b.slice(8, 14), ce = b[14];
+        const num = a.slice(5, 14), cn = cifre(a[14]), ex = cifre(b.slice(8, 14)), ce = cifre(b[14]);
         const compOk = mok(a.slice(5, 30) + b.slice(0, 7) + b.slice(8, 15) + b.slice(18, 29), b[29]);
         const nOk = mok(num, cn), eOk = mok(ex, ce);
         if (nOk || eOk) return {tipo: 'TD1', numero: nOk ? num.replace(/</g, '') : null, scadenza: eOk ? mrzData(ex) : null, tuttoOk: nOk && eOk && compOk};
@@ -402,8 +404,8 @@ const CFP = (() => {
     return t.replace(new RegExp(k + '\\b[^\\d\\n]{0,14}\\d{3,8}\\b', 'gi'), ' ')
             .replace(new RegExp('\\b\\d{3,4}\\b[^\\d\\n]{0,6}' + k + '\\b', 'gi'), ' ');
   }
-  const EXP = /scadenz\w*|expir\w*|expiry|valid\s*(?:until|thru|to)|good\s*thru|valida?\s*(?:fino|al)|validit[àa]\s*fino|data\s*di\s*scad/gi;
-  const ISS = /rilasci\w*|emission\w*|emess\w*|date\s*of\s*issue|issued|data\s*di\s*emiss/gi;
+  const EXP = /scadenz\w*|expir\w*|expiry|valid\s*(?:until|thru|to)|good\s*thru|valida?\s*(?:fino|al)|validit[àa]\s*fino|data\s*di\s*scad|\b4b\b/gi;
+  const ISS = /rilasci\w*|emission\w*|emess\w*|date\s*of\s*issue|issu\w*|data\s*di\s*emiss|\b4a\b/gi;
   const NAS = /nascit\w*|\bnato\b|\bnata\b|birth|\bborn\b/gi;
   function trovaDate(t) {
     const out = [];
@@ -449,7 +451,7 @@ const CFP = (() => {
   function ente(t) {
     let m;
     if ((m = t.match(/Comune\s+di\s+([A-ZÀ-Ý][\wÀ-ÿ']+(?:[ -][A-ZÀ-Ý][\wÀ-ÿ']+){0,2})/))) return 'Comune di ' + m[1];
-    if ((m = t.match(/COMUNE\s+DI\s+([A-ZÀ-Ý']{2,}(?:[ -][A-ZÀ-Ý']{2,}){0,2})/))) return 'Comune di ' + m[1].toLowerCase().replace(/(^|[ -])([a-zà-ý])/g, (x, a, b) => a + b.toUpperCase());
+    if ((m = t.match(/COMUNE\s+DI\s*(?:\/\s*MUNICIPALITY)?\s*[\n ]\s*([A-ZÀ-Ý']{2,}(?:[ -][A-ZÀ-Ý']{2,}){0,2})/i)) && !/^(MUNICIPALITY|CARTA|REPUBBLICA|COGNOME)$/i.test(m[1])) return 'Comune di ' + m[1].toLowerCase().replace(/(^|[ -])([a-zà-ý])/g, (x, a, b) => a + b.toUpperCase());
     if ((m = t.match(/Ministero\s+(?:dell['’]\s?|della\s+|delle\s+|dei\s+|del\s+)?[A-Za-zÀ-ÿ' ]{3,40}/i))) return m[0].replace(/\s+/g, ' ').trim().split(/\s{2,}|\n/)[0];
     if ((m = t.match(/Motorizzazione(?:\s+Civile)?(?:\s+di\s+[A-ZÀ-Ý][\wÀ-ÿ']+)?/i))) return m[0];
     if ((m = t.match(/Questura\s+di\s+[A-ZÀ-Ý][\wÀ-ÿ']+/i))) return m[0];
@@ -484,6 +486,13 @@ const CFP = (() => {
     const r = D.filter(d => d.k === 'r')[0];
     set('scadenza', s && s.iso, 'testo');
     set('rilascio', r && r.iso, 'testo');
+    if (['cie', 'pass', 'pat', 'serv'].includes(tipo)) {
+      const oggi = new Date().toISOString().slice(0, 10), anni = n => { const d = new Date(); d.setFullYear(d.getFullYear() - n); return d.toISOString().slice(0, 10); };
+      const ds = [...new Set(D.filter(d => d.k !== 'n').map(d => d.iso))].sort();
+      const pass_ = ds.filter(x => x <= oggi && x >= anni(12)), fut = ds.filter(x => x > oggi);
+      if (!R.rilascio.v && pass_.length) set('rilascio', pass_[pass_.length - 1], 'dedotta');
+      if (!R.scadenza.v && fut.length) set('scadenza', fut[fut.length - 1], 'dedotta');
+    }
     if (!R.scadenza.v && tipo !== 'cf' && tipo !== 'el') {
       const lib = D.filter(d => !d.k && (!R.rilascio.v || d.iso > R.rilascio.v) && +d.iso.slice(0, 4) >= new Date().getFullYear() - 1).sort((a, b) => b.iso.localeCompare(a.iso))[0];
       set('scadenza', lib && lib.iso, 'dedotta');
@@ -494,7 +503,7 @@ const CFP = (() => {
     // numero per tipo
     const num = () => {
       let m;
-      if (tipo === 'cie' && (m = T.match(/\b[A-Z]{2}\s?\d{5}\s?[A-Z]{2}\b/))) return m[0].replace(/\s/g, '');
+      if (tipo === 'cie') { for (const q of T.matchAll(/\b([A-Z]{2})\s?([0-9OIS]{5})\s?([A-Z]{2})\b/g)) if (/\d{3}/.test(q[2])) return q[1] + cifre(q[2]) + q[3]; }
       if (tipo === 'pass' && (m = T.match(/\b[A-Z]{2}\s?\d{7}\b/))) return m[0].replace(/\s/g, '');
       if (tipo === 'pat' && (m = T.match(/\b[A-Z]{1,2}\s?\d{7,8}\s?[A-Z]\b/))) return m[0].replace(/\s/g, '');
       if (tipo === 'ts') { const r2 = /(?<!\d)\d(?:[ ]?\d){19}(?!\d)/g; let q; while ((q = r2.exec(T))) { const d = q[0].replace(/ /g, ''); if (d.length === 20) return d; } }
@@ -518,7 +527,10 @@ const CFP = (() => {
     set('ente', ente(t), 'testo');
     return R;
   }
-  return {parse, luhn, cfOk, mrz, mchk, trovaDate, pulisci};
+  /* 24/11/2026: «forma» del testo senza dati personali, per capire perché un campo non si trova (lettere → A, cifre → 9; restano solo parole di etichetta note e i segni) */
+  const NOTE = /^(REPUBBLICA|ITALIANA|CARTA|DI|IDENTIT[AÀ]|IDENTITY|CARD|COMUNE|MUNICIPALITY|COGNOME|SURNAME|NOME|NAME|LUOGO|DATA|NASCITA|PLACE|AND|DATE|OF|BIRTH|SESSO|SEX|STATURA|HEIGHT|CITTADINANZA|NATIONALITY|EMISSIONE|ISSUING|SCADENZA|EXPIRY|FIRMA|SIGNATURE|DEL|TITOLARE|HOLDER'?S|CODICE|FISCALE|FISCAL|CODE|INDIRIZZO|RESIDENZA|RESIDENCE|ESTREMI|ATTO|PASSAPORTO|PASSPORT|PATENTE|GUIDA|TESSERA|SANITARIA|EUROPEA|VALIDA|FINO|AL|RILASCIO|RILASCIATA|MINISTERO|INTERNO|DELL'INTERNO|ITA|N|N°|NUMERO|4A|4B|4C|5|ITALIA)$/;
+  function forma(t) { return String(t || '').split('\n').map(r => r.split(/(\s+)/).map(w => NOTE.test(w.toUpperCase().replace(/[.:,]/g, '')) ? w : w.replace(/[A-Za-zÀ-ÿ]/g, 'A').replace(/\d/g, '9')).join('')).join('\n'); }
+  return {parse, luhn, cfOk, mrz, mchk, trovaDate, pulisci, forma};
 })();
 /* ---------- tipi, testi, disegni ---------- */
 const TIPI = [
@@ -1099,7 +1111,7 @@ async function aggiungi(sost) {
       if (await scattaFoto(d, W, 'f', 1) !== 'ok') return;
       if (await scattaFoto(d, W, 'r', 2) !== 'ok') return;
       if (await passoTesto(d, W) !== 'ok') return;
-      const R = CFP.parse((W.tf || '') + '\n' + (W.tr || ''), W.tipo);
+      const R = CFP.parse((W.tf || '') + '\n' + (W.tr || ''), W.tipo), FORMA = 'FRONTE\n' + CFP.forma(W.tf) + '\n\nRETRO\n' + CFP.forma(W.tr);
       W.tf = W.tr = '';
       const campi = campiTipo(T); let salvaPan = false;
       if (R._avvisoCarta) { /* mostrato nella conferma */ }
@@ -1115,6 +1127,7 @@ async function aggiungi(sost) {
       d.set(passi(4), R._avvisoCarta ? E('p', {class: 'bab'}, 'Nel testo c\'era il numero di una carta di pagamento: è stato scartato. Se questo è una carta, scegli «Carte di pagamento».') : null, E('p', null, 'Ecco i dati letti dal testo. Nulla si scrive a mano. Se manca qualcosa di importante, rifai le foto.'), rows,
         sw ? E('label', {class: 'chk'}, sw, E('span', null, 'Salva anche il numero intero della carta (sconsigliato: bastano le ultime 4 cifre)')) : null,
         E('p', {class: 'pic'}, 'Il codice di sicurezza (CVV) e il PIN della carta non si salvano mai.'),
+        campi.some(([k, , ob]) => ob && !R[k].v) ? E('details', null, E('summary', null, '🔎 Non trova qualcosa? Mostra la forma del testo letto (senza i tuoi dati)'), E('p', {class: 'pic'}, 'Lettere sostituite da A e cifre da 9: restano solo le etichette stampate e i segni. Puoi fotografare questa schermata e mandarla: aiuta a migliorare la lettura senza mostrare nessun dato.'), E('pre', {class: 'forma'}, FORMA)) : null,
         E('div', {class: 'bt'}, E('button', {class: 'btn', type: 'button', onclick: () => d.$r('rifai')}, '↻ Rifai le foto'), E('button', {class: 'btn pri', type: 'button', onclick: () => d.$r('ok')}, '✓ Conferma e chiudi a chiave')));
       const sc2 = await new Promise(r => d.$r = r);
       if (sc2 === 'rifai') continue;
