@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-23T01:03:00+01:00",
+ "updated": "2026-11-24T01:02:00+01:00",
  "voci": [
   {
    "id": "n20261118-bozza4anni",
@@ -558,7 +558,7 @@
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-21T01:03:00+01:00",
+   "ultimo": "2026-11-24T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -649,7 +649,7 @@
    "n": "Infodifesa",
    "url": "https://infodifesa.it/",
    "tipo": "testata",
-   "ultimo": "2026-11-21T01:03:00+01:00",
+   "ultimo": "2026-11-24T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -705,7 +705,7 @@
    "n": "QuiFinanza",
    "url": "https://quifinanza.it/",
    "tipo": "testata",
-   "ultimo": "2026-11-19T01:02:00+01:00",
+   "ultimo": "2026-11-24T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -972,6 +972,11 @@
    "at": "2026-11-23T01:03:00+01:00",
    "notizie": 0,
    "note": "giro di lunedì 23/11: nessuna notizia nuova verificata (ricerche su DPR di recepimento, previdenza dedicata e sindacati GdF: solo articoli già presenti). DPR di recepimento: nessun riscontro in Gazzetta (ultimo fascicolo trovato in ricerca S.G. n. 246 del 22/10). Mercati: BTP 10 anni 4,47% a fine seduta del 19/11 (SoldiOnline/ANSA, spread 107) senza seconda fonte: invariato il 4,40% del 18/11; altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: giro del lunedì fatto. Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-24T01:02:00+01:00",
+   "notizie": 0,
+   "note": "giro di martedì 24/11: nessuna notizia nuova verificata (ricerche su previdenza dedicata, DPR di recepimento e sindacati GdF: solo articoli già presenti; SINAFI 19/11 e Infodifesa 3/11 riletti, nessun fatto nuovo rispetto alle voci esistenti). DPR di recepimento: nessun riscontro in Gazzetta. Mercati: BTP 10 anni 4,40% la mattina del 23/11 (QuiFinanza, con SoldiOnline/ANSA 4,38% in apertura); altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì (fatto il 23/11). Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
@@ -1019,11 +1024,11 @@
    "id": "btp10",
    "t": "BTP a 10 anni (rendimento lordo)",
    "valore": 4.4,
-   "d": "2026-11-18",
-   "fonte": "QuiFinanza, 18/11 ore 9:09",
-   "url": "https://quifinanza.it/economia/finanza/spread-btp-bund-18-novembre-2026/1024746/",
+   "d": "2026-11-23",
+   "fonte": "QuiFinanza, 23/11 mattina",
+   "url": "https://quifinanza.it/economia/finanza/spread-btp-bund-23-novembre-2026/1025373/",
    "unita": "%",
-   "nota": "18/11 mattina: 4,40% con spread 104 (QuiFinanza, riletto due volte); Teleborsa 18/11: 4,43%, spread 105 (coincide entro 0,05). Dato in corso di seduta, non di chiusura. Precedente: 4,38% alla chiusura del 12/11."
+   "nota": "23/11 mattina: 4,40% con spread 108 (QuiFinanza, ore 9:12); SoldiOnline/ANSA 23/11 in apertura: 4,38%, spread 107,3 (coincide entro 0,05). Dato in corso di seduta, non di chiusura. Precedente: 4,40% del 18/11."
   },
   {
    "id": "btpv",
