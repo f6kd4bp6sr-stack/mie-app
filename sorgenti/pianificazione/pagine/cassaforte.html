@@ -48,6 +48,8 @@ details.card>.in{margin-top:12px}
 [hidden]{display:none!important}
 .hero{max-width:760px;margin:0 auto 12px}
 svg{display:block;width:100%;height:auto}
+/* 24/11/2026: i disegni a passi più piccoli e centrati (a 600 px il testo resta ≥ 13 px) */
+svg[viewBox="0 0 760 150"]{max-width:600px;margin:0 auto}
 svg text{font-family:-apple-system,system-ui,sans-serif;fill:var(--ink)}
 .grid2{display:grid;grid-template-columns:1fr;gap:14px}
 @media (min-width:900px){.grid2{grid-template-columns:1fr 1fr}}
@@ -474,7 +476,7 @@ function flowSvg(passi, titolo, colore) {
 }
 const SVG_CATTURA = () => flowSvg([{i: '📷', t: 'Foto|del fronte'}, {i: '🔄', t: 'Foto|del retro'}, {i: '📋', t: 'Incolla|il testo'}, {i: '✅', t: 'Conferma|i dati'}, {i: '🔒', t: 'Chiuso|a chiave'}], 'Come si aggiunge un documento: fronte, retro, testo, conferma, lucchetto');
 const SVG_PERSO = () => flowSvg([{i: '📞', t: '1. Blocca|subito'}, {i: '👮', t: '2. Denuncia'}, {i: '📨', t: '3. Richiedi|il nuovo'}], 'Portafoglio perso: blocca, denuncia, richiedi', 'var(--ba)');
-const SVG_BUSTA = () => flowSvg([{i: '🗂️', t: 'Scegli|i dati'}, {i: '✉️', t: 'File cifrato|(busta)'}, {i: '🔤', t: 'Frase di|6 parole'}, {i: '👪', t: 'La famiglia|la apre'}], 'Busta per la famiglia: scegli i dati, file cifrato, frase di sei parole, la famiglia la apre');
+const SVG_BUSTA = () => flowSvg([{i: '🗂️', t: 'Scegli|i dati'}, {i: '✉️', t: 'File cifrato|(busta)'}, {i: '🔤', t: 'Frase di|7 parole'}, {i: '👪', t: 'La famiglia|la apre'}], 'Busta per la famiglia: scegli i dati, file cifrato, frase di sei parole, la famiglia la apre');
 const SVG_PROVA = () => flowSvg([{i: '🗓️', t: 'Ogni|6 mesi'}, {i: '🔑', t: 'Scrivi la chiave|di recupero'}, {i: '✅', t: 'Si apre?|Bene'}, {i: '💾', t: 'Fai una copia|cifrata nuova'}], 'Prova di recupero ogni sei mesi: scrivi la chiave, controlla che apra, fai una copia nuova', 'var(--ok)');
 const SVG_SOLO = () => flowSvg([{i: '🧾', t: 'Scegli|il documento'}, {i: '🖼️', t: 'Fronte e retro|a tutto schermo'}, {i: '🔢', t: 'Esci|con il PIN'}], 'Mostra solo questo: un documento alla volta, si esce con il PIN');
 function svgFiligrana() {
