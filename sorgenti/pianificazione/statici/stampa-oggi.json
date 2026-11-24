@@ -1,9 +1,22 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-24T05:11+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-24T13:04+01:00",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-campo-largo",
+        "t": "Centrosinistra: oggi il tavolo sull'Ucraina e il nodo patrimoniale, se manca l'intesa decidono i leader",
+        "s": "Restano aperti due punti: la patrimoniale e l'invio di armi a Kiev. Il tavolo sull'Ucraina è fissato alle 16, in presenza. Per Avs il prelievo sarebbe del 2% sui patrimoni oltre 5,4 milioni, il Pd preferisce la proposta Zucman, sopra i 100 milioni; i 5 Stelle giudicano insufficiente la formula del Pd senza armi.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/politica/centrosinistra-ucraina-patrimoniale-programma_4kcPkVgEDI6qT669KM1UHp"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "it-dl-scuola",
         "t": "Decreto scuola: accordo in maggioranza sugli e-book, oggi la fiducia alla Camera",
@@ -13,19 +26,6 @@
           {
             "n": "Adnkronos",
             "url": "https://www.adnkronos.com/politica/e-book-libri-digitali-ultime-notizie_6DbRWn5INNyCemc1FNycDV"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-stato-citta",
-        "t": "Meloni presiede oggi una Conferenza Stato-Città straordinaria a Palazzo Chigi",
-        "s": "L'incontro è alle 15:30 e nasce dalla richiesta del presidente dell'Anci Gaetano Manfredi, sindaco di Napoli.",
-        "d": "2026-11-18",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/18/meloni-il-24-presiede-la-conferenza-stato-citta-a-p.chigi_ed60f6d4-9482-4b7a-b2ef-270c099e2dd0.html"
           }
         ],
         "link": []
@@ -57,14 +57,27 @@
         "link": []
       },
       {
-        "id": "it-sondaggio",
-        "t": "Sondaggio YouTrend: Fratelli d'Italia al 27,2%, in crescita Pd e M5S",
-        "s": "Il Pd sale al 20,6% e il M5S al 13,7%. Futuro Nazionale di Vannacci scende al 6,6%, come Forza Italia. Il centrosinistra ipotetico è al 45%, il centrodestra al 40,8%.",
-        "d": "2026-11-18",
+        "id": "it-siracusa-scuole",
+        "t": "Siracusa: sette indagati per gare truccate e tangenti sui fondi per due scuole",
+        "s": "Su richiesta della Procura europea di Palermo il gip ha disposto sei misure interdittive, eseguite dalla Guardia di Finanza. Ipotesi di corruzione, truffa aggravata e falso su circa 1,5 milioni di euro; la tangente sarebbe stata del 15% del fatturato.",
+        "d": "2026-11-24",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/sondaggio-elezioni-youtrend-sky-tg24_3HMZ4mZ1SbEvTPCve4wwXe"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/gare-truccate-e-tangenti-sui-fondi-per-le-scuole-sette-indagati-a-siracusa_d382edcc-83ee-4781-819e-c6521fc10b9e.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-caltanissetta",
+        "t": "Caltanissetta: Procura al lavoro nel silenzio, riesame il 1° dicembre sull'inchiesta sul depistaggio di via D'Amelio",
+        "s": "Il procuratore De Luca non rilascia dichiarazioni. I pm hanno fatto appello contro il rigetto di alcune misure cautelari da parte del gip; il riesame è fissato per il 1° dicembre ma potrebbe slittare. I penalisti si astengono dalle udienze fino al 27 novembre.",
+        "d": "2026-11-23",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/blindata-la-procura-di-caltanissetta-de-luca-al-lavoro_10825748-4d48-49ec-8a70-4ec83f72c96b.html"
           }
         ],
         "link": []
@@ -72,9 +85,22 @@
     ],
     "mondo": [
       {
+        "id": "mo-ucraina-polonia",
+        "t": "Ucraina: drone russo nello spazio aereo polacco, raid su Zaporizhzhia con due morti",
+        "s": "L'esercito polacco non ha abbattuto il drone, che ha virato verso est, per evitare rischi ai civili. A Zaporizhzhia un attacco a un palazzo ha causato due morti e 22 feriti; l'Ucraina dice di aver neutralizzato 73 droni su 96.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-guerra-ultime-news-oggi-24-novembre_3rKA1bn4MDyU07bBXVV2zN"
+          }
+        ],
+        "link": []
+      },
+      {
         "id": "mo-iran-hormuz",
         "t": "Iran: i Pasdaran parlano di tre navi in fiamme nello Stretto di Hormuz dopo le mine",
-        "s": "Secondo la fonte iraniana, non verificata, le navi hanno urtato mine navali. Il premier del Qatar avverte che la regione non regge un'altra escalation tra Usa e Iran. Intanto Teheran sostiene di aver portato la gittata dei missili a 4.500 km.",
+        "s": "Il comandante dell'esercito iraniano ha ordinato alla marina di chiudere ancora lo Stretto, giorno per giorno, finché gli Usa non accettano sette condizioni. I Pasdaran parlano di tre petroliere colpite da mine; il centro marittimo internazionale non conferma. Il Qatar cerca di riavviare i negoziati.",
         "d": "2026-11-24",
         "fonti": [
           {
@@ -85,6 +111,11 @@
           {
             "n": "Adnkronos",
             "url": "https://adnkronos.com/internazionale/esteri/iran-minaccia-basi-usa-in-europa-missili-italia-allerta_Akd3ghLzZ20OaFKlRDstd"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/24/iran-orders-hormuz-closed-further-day-by-day-as-qatar-seeks-to-revive-peace-talks",
+            "l": "en"
           }
         ],
         "link": []
@@ -116,29 +147,14 @@
         "link": []
       },
       {
-        "id": "mo-guterres-ia",
-        "t": "Guterres: entro un anno un accordo mondiale sulla vigilanza dell'intelligenza artificiale",
-        "s": "Al vertice di Bridgetown, in Barbados, il segretario generale Onu ha chiesto un quadro multilaterale basato su principi e gestione del rischio, con controlli indipendenti.",
+        "id": "mo-montenegro",
+        "t": "Ue: negoziati con il Montenegro da chiudere entro l'anno, vertice con i Balcani occidentali",
+        "s": "Un alto funzionario europeo ritiene alla portata la chiusura entro fine anno, nonostante le questioni bilaterali con la Croazia. Nel 2026 l'Ue punta ad aprire e chiudere oltre 100 capitoli negoziali; per l'Albania la conclusione è possibile entro fine 2027.",
         "d": "2026-11-24",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/24/un-chief-calls-for-world-to-agree-on-ai-oversight-within-a-year",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-trump-hush",
-        "t": "Processo sul caso Stormy Daniels: la Corte d'appello riapre la richiesta di Trump",
-        "s": "Tre giudici federali del 2° Circuito hanno ribaltato la decisione precedente: spetterà a un giudice di Manhattan decidere se trasferire il caso alla giustizia federale. Il verdetto di colpevolezza resta valido.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/24/appeals-court-renews-trump-bid-for-federal-jurisdiction-in-hush-money-case",
-            "l": "en"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/11/24/fonti-ue-negoziati-col-montenegro-chiusi-entro-lanno-nodi-superabili_11b6df97-97d8-4f24-9827-dbad297f9371.html"
           }
         ],
         "link": []
@@ -146,19 +162,28 @@
     ],
     "estero": [
       {
-        "id": "es-blocco-hormuz",
-        "t": "Euronews: Teheran promette «ogni mezzo» contro il blocco navale Usa, 130 giorni di fila",
-        "s": "Il portavoce iraniano Baghaei parla di aggressione militare dopo la minaccia di Trump di affondare le navi che forzino il blocco. Una petroliera iraniana segnalata a Hormuz risulta inesistente, secondo TankerTrackers.",
-        "d": "2026-11-23",
+        "id": "es-sanzioni-russia",
+        "t": "Euronews: la Commissione propone il 22° pacchetto di sanzioni contro la Russia",
+        "s": "La Commissione europea ha presentato un nuovo pacchetto di misure contro Mosca; se i governi lo approvano, sarà il ventiduesimo dal febbraio 2022. Il dettaglio delle misure non è ancora noto.",
+        "d": "2026-11-24",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://euronews.com/2026/11/23/iran-vows-every-means-to-counter-us-blockade-of-hormuz-after-trump-threat",
+            "url": "https://www.euronews.com/2026/11/24/europe-today-eu-commission-proposes-new-round-of-sanctions-against-russia",
             "l": "en"
-          },
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-galapagos",
+        "t": "Euronews: alluvioni alle Galápagos, evacuazioni a Puerto Ayora",
+        "s": "A Santa Cruz l'acqua arriva alla vita e interi quartieri sono sommersi. Militari e volontari distribuiscono pasti e allestiscono rifugi. Molti collegano le piogge a El Niño, ma gli scienziati invitano alla cautela.",
+        "d": "2026-11-24",
+        "fonti": [
           {
             "n": "Euronews",
-            "url": "https://euronews.com/2026/11/22/tracking-site-says-iranian-tanker-reportedly-sailing-through-strait-of-hormuz-does-not-exi",
+            "url": "https://www.euronews.com/video/2026/11/24/ecuador-severe-flooding-hits-galapagos-islands-amid-el-nino-concerns",
             "l": "en"
           }
         ],
@@ -195,6 +220,23 @@
     ],
     "economia": [
       {
+        "id": "ec-borse",
+        "t": "Borse europee in calo prima dei dati Usa sull'inflazione; Milano intorno al -1%",
+        "s": "Oggi le Borse frenano dopo il rally di Nvidia, in attesa dell'indice PCE di domani. Spread BTP-Bund a 106 punti, rendimento del decennale al 4,32%, oro a 3.627 dollari l'oncia. I future scontano un rialzo dei tassi Fed a dicembre.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "Teleborsa",
+            "url": "https://teleborsa.it/News/2026/11/24/borse-europee-in-calo-focus-sull-inflazione-pce-77.html"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/borsa-leuropa-apre-debole-tra-nvidia-e-tensioni-geopolitiche_decc9960-1fe1-4eaf-8d23-28258416417c.html"
+          }
+        ],
+        "link": []
+      },
+      {
         "id": "ec-intesa-mps",
         "t": "Parte l'offerta di Intesa Sanpaolo su Mps: adesioni fino al 22 gennaio",
         "s": "L'operazione vale 31,8 miliardi. Per ogni azione Mps sono previsti 1,25 euro in contanti e 1,664 nuove azioni Intesa. Il perfezionamento è atteso il 29 gennaio 2027, salvo proroghe.",
@@ -208,31 +250,14 @@
         "link": []
       },
       {
-        "id": "ec-borse",
-        "t": "Borse: Milano in calo per lo stacco cedole, gas a 93,6 euro, spread BTP-Bund a 107",
-        "s": "Il Ftse Mib cede lo 0,69% a 48.370 punti, sesta seduta negativa, mentre l'Europa è in lieve rialzo. Brent attorno a 92 dollari, BTP decennale al 4,38%. Il mercato dà al 93,5% un rialzo dei tassi Fed a dicembre.",
-        "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/23/borsa-leuropa-tenta-il-rimbalzo-con-il-tech-corsa-del-gas-con_34177f63-21c9-498d-9804-fe09aeba4eeb.html"
-          },
-          {
-            "n": "Teleborsa",
-            "url": "https://www.teleborsa.it/News/2026/11/23/riduce-le-perdite-la-borsa-di-milano-mentre-l-europa-continua-in-verde-79.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "ec-tokyo",
-        "t": "Tokyo apre in forte rialzo, Nikkei a 58.159 punti con i semiconduttori",
-        "s": "L'indice sale del 3,05% dopo il rally di Nvidia al Nasdaq. Lo yen è a 158,80 sul dollaro e 173,20 sull'euro.",
+        "id": "ec-euro",
+        "t": "Euro stabile a 1,090 sul dollaro, lo yen sale in Asia",
+        "s": "L'euro apre a 1,090 sul dollaro; lo yen guadagna intorno allo 0,3% con il rimbalzo dei mercati.",
         "d": "2026-11-24",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/borsa-tokyo-apertura-in-forte-rialzo-305_caca4692-772c-4f8d-b425-713ce698e15e.html"
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/24/leuro-parte-stabile-a-1090-sul-dollaro_adcd48a3-b623-4274-968c-8e831e6635f6.html"
           }
         ],
         "link": []
@@ -240,27 +265,40 @@
     ],
     "torino": [
       {
-        "id": "to-linea4",
-        "t": "Tram 4 interrotto in corso Unione Sovietica per un guasto fognario: navette Gtt",
-        "s": "Da lunedì 23 novembre la linea è sospesa tra corso Lepanto e corso Bramante. Questa settimana sono previsti anche circa cinque giorni di asfaltatura tra piazzale Caio Mario e via Plava.",
-        "d": "2026-11-20",
+        "id": "to-francoforte",
+        "t": "Lufthansa cancella il Torino-Francoforte dal 28 marzo 2027, Comune e Regione chiedono di ripensarci",
+        "s": "La rotta esiste da 55 anni. Lo Russo e Cirio hanno scritto all'amministratore delegato di Lufthansa; le alternative via Monaco e Roma sono giudicate insufficienti. Il 1° dicembre vertice tra Piemonte, Lombardia e Liguria sugli aeroporti del Nord-Ovest.",
+        "d": "2026-11-24",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/20/leggi-notizia/argomenti/viabilita-1/articolo/un-guasto-alla-fognatura-blocca-la-linea-4-da-lunedi-prossimo-arrivano-le-navette.html"
+            "url": "https://www.torinoggi.it/2026/11/24/leggi-notizia/argomenti/viabilita-1/articolo/stop-al-torino-francoforte-lo-russo-taglio-legato-a-operazione-ita-lufthansa-la-chiusura-e-un.html"
           }
         ],
         "link": []
       },
       {
-        "id": "to-metro2",
-        "t": "Metro 2: partite le attività preliminari dal Trincerone, fine lavori attesa nel 2032",
-        "s": "Il costo complessivo è di 1,828 miliardi, ma è finanziata solo la prima tratta Rebaudengo-Porta Nuova. Per Porta Nuova-Politecnico servono 450 milioni dal Governo.",
-        "d": "2026-11-19",
+        "id": "to-stadio-toro",
+        "t": "Stadio Olimpico e Robaldo al Torino per 90 anni: la proposta passa alla giunta",
+        "s": "Il club ha chiesto un diritto di superficie fino a 90 anni. La concessione attuale scade il 31 dicembre, con proroga temporanea prevista; il Comune punta a portare il voto in Consiglio entro metà dicembre.",
+        "d": "2026-11-24",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/viabilita-1/articolo/metro-3.html"
+            "url": "https://www.torinoggi.it/2026/11/24/leggi-notizia/argomenti/attualita-31/articolo/olimpico-e-robaldo-al-toro-fino-a-90-anni-la-palla-sul-nuovo-stadio-passa-in-giunta.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-circolare",
+        "t": "Torino Circolare: partono 16 progetti, in tutto 2,16 milioni di euro",
+        "s": "I progetti sono stati scelti tra 47 candidature e avranno dieci mesi per testare le soluzioni. Il Living Lab si apre oggi dalle 17 alle 21 a BluFactory, in via Andrea Doria 27.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/24/leggi-notizia/argomenti/santa-rita/articolo/dalla-riparazione-degli-oggetti-agli-scarti-del-cinema-al-via-i-16-cantieri-di-torino-circolare.html"
           }
         ],
         "link": []
@@ -274,6 +312,19 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/piu-controllo-e-tempestivita-nuova-sala-crisi-di-protezione-civile-torino_dab4ba15-a501-4b31-a890-cfc6060f8b47.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-metro2",
+        "t": "Metro 2: partite le attività preliminari dal Trincerone, fine lavori attesa nel 2032",
+        "s": "Il costo complessivo è di 1,828 miliardi, ma è finanziata solo la prima tratta Rebaudengo-Porta Nuova. Per Porta Nuova-Politecnico servono 450 milioni dal Governo.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Torino Oggi",
+            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/viabilita-1/articolo/metro-3.html"
           }
         ],
         "link": []
@@ -293,6 +344,19 @@
       }
     ],
     "piemonte": [
+      {
+        "id": "pi-anpas",
+        "t": "Anpas Piemonte: Vincenzo Sciortino confermato presidente per il 2026-2030",
+        "s": "Vicepresidente è Michele Isoardi, già presidente della Croce Verde di Saluzzo.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/24/anpas-piemonte-vincenzo-sciortino-confermato-presidente_0aa19c81-6566-44f8-a79b-952e37181bd1.html"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "pi-polizia-locale",
         "t": "Regione Piemonte: 900mila euro per la polizia locale col patto sicurezza con le Prefetture",
@@ -325,6 +389,19 @@
       }
     ],
     "scienza": [
+      {
+        "id": "sc-superluna",
+        "t": "Superluna del Castoro: oggi la Luna piena alla minima distanza, alle 15:55",
+        "s": "La Luna sarà a circa 359.000 km dalla Terra, poco più grande e luminosa della media. È la seconda Superluna dell'anno.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/arriva-la-superluna-di-novembre-e-una-luna-piena-alla-distanza-minima_cd7ac9db-00a3-4c57-9e3c-1a53de16ce87.html"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "sc-herpes",
         "t": "Ricostruita l'avanzata del virus Herpes simplex nella pelle",
@@ -980,7 +1057,41 @@
       }
     ],
     "cultura": [],
-    "tecnologia": []
+    "tecnologia": [
+      {
+        "id": "te-guterres-ia",
+        "t": "Guterres: entro un anno regole globali per la sicurezza dell'intelligenza artificiale",
+        "s": "Al vertice sulla sicurezza dell'IA di Bridgetown, in Barbados, il segretario generale Onu ha chiesto un quadro multilaterale con test condivisi e supervisione indipendente. Il suo mandato termina a fine anno.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/24/un-chief-urges-nations-to-establish-ai-safety-safeguards-within-a-year",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "te-nvidia-huang",
+        "t": "Nvidia: Huang torna amministratore delegato, a Washington critiche bipartisan",
+        "s": "Il consiglio ha votato all'unanimità il rientro di Jensen Huang, dimessosi il 12 novembre. Trump dice di aver parlato con il consiglio; alcuni senatori repubblicani criticano la scelta. Huang testimonierà al Congresso il 1° dicembre.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/internazionale/esteri/jensen-huang-nvidia-ultime-news-oggi_dceJrpV3WESfeO7Xj7tgL"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/video/2026/11/24/trump-says-he-spoke-to-nvidia-board-before-jensen-huangs-return-as-ceo",
+            "l": "en"
+          }
+        ],
+        "link": []
+      }
+    ],
+    "sport": []
   },
   "controlli": [
     {
@@ -1098,11 +1209,11 @@
       "note": "Fonti: ANSA, Adnkronos, Teleborsa, Al Jazeera (en), Euronews (en), Torino Oggi, Cuneodice, Teatro Stabile Torino, Comingsoon. Non raggiungibili: rainews (ricerca rifiutata), thespacecinema.it (pagine non lette), torinotoday, Regione Piemonte (una pagina), Teatro Regio e Colosseo (calendari); Reuters, BBC, Guardian non cercate. Cinema, eventi, concerti (nessuno passato) e scienza copiati dall'edizione precedente; teatro con dati parziali. Copia locale non divergente: nessun riallineamento."
     },
     {
-      "at": "2026-11-24T05:11+01:00",
-      "edizione": "mattina",
-      "notizie": 65,
-      "note": "Fonti: ANSA, Adnkronos, Teleborsa, Al Jazeera (en), Euronews (en), Torino Oggi, Cuneodice, Teatro Stabile Torino, Comingsoon. Non raggiungibili: rainews (ricerca rifiutata), thespacecinema.it (pagine non lette), torinotoday, Regione Piemonte (una pagina), Teatro Regio e Colosseo (calendari); Reuters, BBC, Guardian non cercate. Cinema, eventi, concerti (nessuno passato) e scienza copiati dall'edizione precedente; teatro con dati parziali. Copia locale non divergente: nessun riallineamento."
+      "at": "2026-11-24T13:04+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 73,
+      "note": "Fonti: ANSA, Adnkronos, Teleborsa, Euronews (en), Torino Oggi. Non cercate/raggiunte: Reuters, BBC, Guardian (ricerca rifiutata dal proxy); 4 pagine Torino Oggi/Targatocn non leggibili. Eventi, cinema, teatro e concerti copiati dall'edizione del mattino (non è lunedì; nessun concerto passato). Copia locale non divergente: nessun riallineamento."
     }
   ],
-  "nota": "Edizione del pomeriggio del 23 novembre 2026."
+  "nota": "Edizione del pomeriggio del 24 novembre 2026."
 }
