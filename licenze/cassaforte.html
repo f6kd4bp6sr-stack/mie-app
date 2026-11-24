@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src 'self' data: blob:; connect-src 'self' https://api.github.com https://gist.githubusercontent.com; worker-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex, nofollow">
-<meta http-equiv="Content-Security-Policy" id="csp-cas" content="default-src 'none'; script-src 'sha256-0FX4Xvmh7KvLlZ66d2kFqxknRlCJZOt8EtbqvXTsO7k=' 'sha256-WrgACO/3TY4j/+SF1ZiDt1fTnnZKZipqiJbvu1re6dg=' 'sha256-dVxvUsxv3PQNvtAF6x7XSBIpJA0b9cWLSar8uXKAkZM=' 'sha256-otIW5QS7Asmi0P8EMYTGwkhNp0IaJSV1leyy1F16iuU=' 'sha256-zuDQ4hJRmoM9Iwd6jV6G9GNjWhVAi0auXB4RVvFKXPU='; style-src 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'none'; form-action 'none'; base-uri 'none'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" id="csp-cas" content="default-src 'none'; script-src 'sha256-07L1lMEeLN4qY9iwvBk4D4N6+oBBnbVR+GYTI2ujjaU=' 'sha256-0FX4Xvmh7KvLlZ66d2kFqxknRlCJZOt8EtbqvXTsO7k=' 'sha256-WrgACO/3TY4j/+SF1ZiDt1fTnnZKZipqiJbvu1re6dg=' 'sha256-otIW5QS7Asmi0P8EMYTGwkhNp0IaJSV1leyy1F16iuU=' 'sha256-zuDQ4hJRmoM9Iwd6jV6G9GNjWhVAi0auXB4RVvFKXPU='; style-src 'unsafe-inline'; img-src 'self' blob: data:; connect-src 'none'; form-action 'none'; base-uri 'none'; manifest-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -49,7 +49,10 @@ details.card>.in{margin-top:12px}
 .hero{max-width:760px;margin:0 auto 12px}
 svg{display:block;width:100%;height:auto}
 /* 24/11/2026: i disegni a passi più piccoli e centrati (a 600 px il testo resta ≥ 13 px) */
-svg[viewBox="0 0 760 150"]{max-width:600px;margin:0 auto}
+svg[viewBox="0 0 760 150"]{max-width:480px;margin:0 auto}
+.hero svg,#hero svg{max-width:480px;margin:0 auto}
+/* 24/11/2026: sezioni su due colonne (I miei documenti e gli avvisi a tutta larghezza) */
+#vista.aperta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}#vista.aperta>*{margin:0!important;min-width:0}#vista.aperta>.warn,#vista.aperta>[data-s=doc]{grid-column:1/-1}@media(max-width:1000px){#vista.aperta{grid-template-columns:1fr}}
 .scans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:10px 0}@media(max-width:760px){.scans{grid-template-columns:1fr}}
 .scanbox{display:grid;gap:6px;font-size:15px}.scanbox textarea.scan{font-size:16px;min-height:110px;border:2px dashed var(--ac);border-radius:12px;padding:10px;background:var(--surface,transparent);color:inherit;width:100%;box-sizing:border-box}
 svg text{font-family:-apple-system,system-ui,sans-serif;fill:var(--ink)}
@@ -597,12 +600,12 @@ function flowSvg(passi, titolo, colore) {
     const x = 4 + i * (bw + g), cx = x + bw / 2;
     s += `<rect x="${x}" y="8" width="${bw}" height="${H - 16}" rx="14" fill="var(--sf2)" stroke="${c}" stroke-width="2"/>`;
     s += `<text x="${cx}" y="56" font-size="36" text-anchor="middle" style="fill:initial">${p.i}</text>`;
-    String(p.t).split('|').forEach((l, j) => { s += `<text x="${cx}" y="${88 + j * 22}" font-size="17" font-weight="700" text-anchor="middle">${esc(l)}</text>`; });
+    String(p.t).split('|').forEach((l, j) => { s += `<text x="${cx}" y="${88 + j * 22}" font-size="21" font-weight="700" text-anchor="middle">${esc(l)}</text>`; });
     if (i < n - 1) s += `<path d="M${x + bw + 3} ${H / 2} H${x + bw + g - 4}" stroke="${c}" stroke-width="3" marker-end="url(#fa)"/>`;
   });
   return s + '</svg>';
 }
-const SVG_CATTURA = () => flowSvg([{i: '📷', t: 'Foto|del fronte'}, {i: '🔄', t: 'Foto|del retro'}, {i: '📋', t: 'Incolla|il testo'}, {i: '✅', t: 'Conferma|i dati'}, {i: '🔒', t: 'Chiuso|a chiave'}], 'Come si aggiunge un documento: fronte, retro, testo, conferma, lucchetto');
+const SVG_CATTURA = () => flowSvg([{i: '📷', t: 'Foto|del fronte'}, {i: '🔄', t: 'Foto|del retro'}, {i: '📋', t: 'Scansiona|il testo'}, {i: '✅', t: 'Conferma|i dati'}, {i: '🔒', t: 'Chiuso|a chiave'}], 'Come si aggiunge un documento: fronte, retro, testo, conferma, lucchetto');
 const SVG_PERSO = () => flowSvg([{i: '📞', t: '1. Blocca|subito'}, {i: '👮', t: '2. Denuncia'}, {i: '📨', t: '3. Richiedi|il nuovo'}], 'Portafoglio perso: blocca, denuncia, richiedi', 'var(--ba)');
 const SVG_BUSTA = () => flowSvg([{i: '🗂️', t: 'Scegli|i dati'}, {i: '✉️', t: 'File cifrato|(busta)'}, {i: '🔤', t: 'Frase di|7 parole'}, {i: '👪', t: 'La famiglia|la apre'}], 'Busta per la famiglia: scegli i dati, file cifrato, frase di sei parole, la famiglia la apre');
 const SVG_PROVA = () => flowSvg([{i: '🗓️', t: 'Ogni|6 mesi'}, {i: '🔑', t: 'Scrivi la chiave|di recupero'}, {i: '✅', t: 'Si apre?|Bene'}, {i: '💾', t: 'Fai una copia|cifrata nuova'}], 'Prova di recupero ogni sei mesi: scrivi la chiave, controlla che apra, fai una copia nuova', 'var(--ok)');
@@ -625,17 +628,17 @@ function svgHero() {
 <rect x="278" y="48" width="204" height="214" rx="14" fill="none" stroke="var(--line)" stroke-width="3"/>
 <circle cx="380" cy="120" r="34" fill="none" stroke="var(--ac)" stroke-width="5"/><path d="M380 86v-14M380 154v14M346 120h-14M414 120h14" stroke="var(--ac)" stroke-width="5"/>
 <text x="380" y="132" font-size="34" text-anchor="middle" style="fill:initial">🔐</text>
-<text x="380" y="220" font-size="20" font-weight="800" text-anchor="middle">CASSAFORTE</text>
-<text x="380" y="246" font-size="16" text-anchor="middle" style="fill:var(--mut)">due serrature</text>
+<text x="380" y="220" font-size="22" font-weight="800" text-anchor="middle">CASSAFORTE</text>
+<text x="380" y="246" font-size="21" text-anchor="middle" style="fill:var(--mut)">due serrature</text>
 <rect x="40" y="40" width="190" height="86" rx="14" fill="var(--sf)" stroke="var(--ac)" stroke-width="3"/>
-<text x="62" y="82" font-size="30" style="fill:initial">🙂</text><text x="104" y="76" font-size="18" font-weight="800">Face ID</text><text x="104" y="102" font-size="17">apre</text>
+<text x="62" y="82" font-size="30" style="fill:initial">🙂</text><text x="104" y="76" font-size="21" font-weight="800">Face ID</text><text x="104" y="102" font-size="21">apre</text>
 <rect x="530" y="40" width="190" height="86" rx="14" fill="var(--sf)" stroke="var(--ac)" stroke-width="3"/>
-<text x="552" y="82" font-size="30" style="fill:initial">🔢</text><text x="594" y="76" font-size="18" font-weight="800">PIN</text><text x="594" y="102" font-size="17">mostra</text>
+<text x="552" y="82" font-size="30" style="fill:initial">🔢</text><text x="594" y="76" font-size="21" font-weight="800">PIN</text><text x="594" y="102" font-size="21">mostra</text>
 <path d="M230 83H300" stroke="var(--ac)" stroke-width="4" marker-end="url(#fh)"/><path d="M530 83H460" stroke="var(--ac)" stroke-width="4" marker-end="url(#fh)"/>
 <path d="M300 280V296" stroke="var(--ac)" stroke-width="4"/>
 <path d="M300 262L130 292" stroke="var(--ac)" stroke-width="4" marker-end="url(#fh)"/><path d="M460 262L630 292" stroke="var(--ac)" stroke-width="4" marker-end="url(#fh)"/>
-<text x="130" y="322" font-size="17" font-weight="800" text-anchor="middle">📋 elenco e scadenze</text>
-<text x="630" y="322" font-size="17" font-weight="800" text-anchor="middle">🖼️ numeri e foto</text>
+<text x="130" y="322" font-size="21" font-weight="800" text-anchor="middle">📋 elenco e scadenze</text>
+<text x="630" y="322" font-size="21" font-weight="800" text-anchor="middle">🖼️ numeri e foto</text>
 </svg>`;
 }
 /* ---------- finestre, tastierino, blocco ---------- */
@@ -1493,10 +1496,10 @@ function render() {
       E('h3', {style: 'margin-top:14px'}, '🖨️ Copia per uno sportello'), E('div', {style: 'max-width:420px;margin:auto', html: svgFiligrana()}), E('p', null, 'Si fa da ogni documento: «Apri» e poi «Copia per uno sportello».'),
       E('h3', {style: 'margin-top:14px'}, '🪟 Mostra solo questo'), E('div', {html: SVG_SOLO()}), E('p', null, 'Si fa da ogni documento: «Apri» e poi «Mostra solo questo».')); }));
   parti.push(sez('reg', '📜 Registro degli accessi', (b, d) => { d.$lazy = () => registro(b); if (d.open) registro(b); }));
-  v.replaceChildren(...parti);
+  v.replaceChildren(...parti); v.classList.add('aperta');
   stato();
 }
-async function vistaBloccata() {
+async function vistaBloccata() { $('#vista').classList.remove('aperta');
   const v = $('#vista'), c = S.cfg, pend = !!localStorage.getItem('cf-in-lettera');
   const note = [];
   if (!c && localStorage.getItem('cf-conf')) note.push(E('p', {class: 'bab'}, 'Su questo iPad i dati della cassaforte non risultano più. Se hai una copia cifrata e la chiave di recupero, importala; altrimenti configura una cassaforte nuova.'));
