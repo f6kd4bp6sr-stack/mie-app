@@ -246,7 +246,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
  </div></details>
 
 </div>
-<p class="ver" id="ver">Versione 8df9e4eb6f</p>
+<p class="ver" id="ver">Versione f84db4ad4a</p>
 </main></div>
 <div class="pg" id="pg2"><main>
 <section>
@@ -352,7 +352,7 @@ const nomeGiorno=k=>k===0?"oggi":k===1?"domani":GG[dataTra(k).getDay()];
 function prossimoLavoro(k){for(let i=k;i<k+14;i++){const d=dataTra(i);if(giorni().includes(d.getDay())&&!festivo(d)&&!inVacData(d))return i}return k}
 function stops(){return dir==="A"?A.map(s=>({n:s[0],o:s[1],z:s[2]})):A.slice().reverse().map(s=>({n:s[0]==="Statuto Cap"?"Statuto Nord":s[0],o:RIDE-s[1],z:s[2]}))}
 // ---------- Paline e alternative ----------
-const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Andata · sali sul 10"},{p:"386",n:"Caprera",l:[["10","tram"]],k:"Andata · scendi dal 10"},{p:"387",n:"Caprera",l:[["10","tram"]],k:"Ritorno · sali sul 10"},{p:"2719",n:"Don Bosco",l:[["60","bus"]],k:"Andata · sali sul 60"},{p:"31",n:"Vittorio Emanuele II",l:[["60","bus"],["10","tram"]],k:"Andata · cambio 60 → 10"},{p:"3463",n:"Statuto",l:[["60","bus"]],k:"Ritorno · sali sul 60"}];
+const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Andata · sali sul 10"},{p:"387",n:"Caprera",l:[["10","tram"]],k:"Ritorno · sali sul 10"},{p:"2719",n:"Don Bosco",l:[["60","bus"]],k:"Andata · sali sul 60"},{p:"31",n:"Vittorio Emanuele II",l:[["60","bus"],["10","tram"]],k:"Andata · cambio 60 → 10"},{p:"3463",n:"Statuto",l:[["60","bus"]],k:"Ritorno · sali sul 60"}];
 const ALT={A:[{l:"60",ty:"bus",h:"Bus 60 sotto casa → Porta Susa",d:"Palina 2719 Don Bosco (c. Umbria / v. Don Bosco) verso Porta Susa Sud, poi a piedi e tram 10 da XVIII Dicembre. Si attiva nel piano da Impostazioni.",p:"2719"},{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Statuto Cap → palina 386, poi a piedi. Circa ogni 7 min di giorno.",p:"951"}],
  R:[{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Caprera → Statuto Nord (corsa per Rondò Forca). Circa ogni 8 min di giorno.",p:"387"},
  {l:"60",ty:"bus",h:"Bus 60 da Piazza Statuto fino a casa",d:"Dopo il tram: palina 3463 a Piazza Statuto, 3 fermate (Regina Margherita → Don Bosco → Umbria). Coincidenza nel piano se attivi il 60 in Impostazioni.",p:"3463"}]};
@@ -667,7 +667,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="8df9e4eb6f";
+const VER="f84db4ad4a";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
