@@ -1,35 +1,31 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-25T05:10+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-25T13:04+01:00",
   "sezioni": {
     "italia": [
       {
-        "id": "it-manovra-emend",
-        "t": "Manovra: tagliola su oltre 1.700 emendamenti, in aula alla Camera dal 18 dicembre",
-        "s": "I lavori in commissione Bilancio finiranno il 16 dicembre. Dei 6.558 emendamenti depositati ne restano 700 segnalati, da indicare entro giovedì 26 novembre alle 14. Tra quelli esclusi c'è la proposta della Lega di alzare l'Ires alle banche.",
-        "d": "2026-11-24",
+        "id": "it-manovra-chigi",
+        "t": "Manovra: vertice a Palazzo Chigi tra Governo e maggioranza sul calendario in commissione",
+        "s": "Riunione con Mantovano, Giorgetti, Ciriani, la ragioniera generale Perrotta, il presidente della commissione Bilancio Mangialavori, capigruppo e relatori, per fissare metodo e tempi dell'esame alla Camera. L'ANSA non riporta ancora gli esiti.",
+        "d": "2026-11-25",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/manovra-2027-ultime-notizie-oggi_IXQVqWL5XOFx9onh57BLJ"
-          },
-          {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/manovra-tagliola-su-oltre-1.700-emendamenti-anche-la-proposta-della-lega-di-alzare_6fda15fa-62be-4fc8-9ee0-e23897a4997a.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/25/manovra-riunione-governo-maggioranza-a-palazzo-chigi-con-mantovano-e-giorgetti_89646261-4185-4169-ae7b-46ca88eab534.html"
           }
         ],
         "link": []
       },
       {
-        "id": "it-quota64",
-        "t": "Pensioni, Salvini: Quota 64 finanziata in manovra, partenza nel 2027",
-        "s": "Il vicepremier indica 850 milioni come dotazione iniziale. Meloni aggiunge che nel 2027 gli aumenti da rinnovo contrattuale saranno tassati al 5% e i fringe benefit per i under 30 salgono a 2.000 euro.",
-        "d": "2026-11-24",
+        "id": "it-mattarella-25nov",
+        "t": "Mattarella: uscire dalla violenza è possibile, ma non può dipendere solo dal coraggio delle donne",
+        "s": "Nella Giornata contro la violenza sulle donne il Capo dello Stato chiede alle istituzioni protezione, accompagnamento e giustizia, e indica l'educazione in famiglia, a scuola e sul lavoro come leve decisive.",
+        "d": "2026-11-25",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/salvini-quota-64-finanziata-in-manovra-pronti-a-partire-nel-2027_a510419e-fad8-4d0a-8817-71cf26f866c5.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/25/mattarella-uscire-da-violenza-e-possibile-non-dipende-solo-dal-coraggio-di-una_8ab6cb30-cccb-46f2-9747-4594d98dd742.html"
           }
         ],
         "link": []
@@ -43,6 +39,36 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/speciali/25-novembre/2026/11/24/non-una-di-meno-per-il-25-novembre-sit-in-e-iniziative-in-40-citta_8cae99d6-2e9b-4a47-8352-902d3556cc4b.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-maltempo",
+        "t": "Maltempo: allerta arancione su parte di Emilia-Romagna e Lazio, gialla in altre sette regioni",
+        "s": "Una perturbazione atlantica porta piogge diffuse, temporali e vento forte, con piogge intense soprattutto sul versante tirrenico. Allerta gialla su Toscana, Abruzzo, Umbria, Campania e Molise, oltre alle parti non arancioni di Emilia-Romagna e Lazio.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/cronaca/maltempo-piogge-temporali-allerta-ultime-notizie_5mk3gGwGo6u3LYHgyaTmXN"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-manovra-emend",
+        "t": "Manovra: tagliola su oltre 1.700 emendamenti, in aula alla Camera dal 18 dicembre",
+        "s": "I lavori in commissione Bilancio finiranno il 16 dicembre. Dei 6.558 emendamenti depositati ne restano 700 segnalati, da indicare entro giovedì 26 novembre alle 14. Tra quelli esclusi c'è la proposta della Lega di alzare l'Ires alle banche.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/politica/manovra-2027-ultime-notizie-oggi_IXQVqWL5XOFx9onh57BLJ"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/manovra-tagliola-su-oltre-1.700-emendamenti-anche-la-proposta-della-lega-di-alzare_6fda15fa-62be-4fc8-9ee0-e23897a4997a.html"
           }
         ],
         "link": []
@@ -64,63 +90,62 @@
             "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/venerdi-lautopsia-su-de-gennaro.-perizia-calligrafica-sui-manoscritti-sequestrati-nella-casa_acf4144f-3ca4-492d-8a97-103e8ebf2941.html"
           }
         ]
-      },
-      {
-        "id": "it-dl-scuola",
-        "t": "Decreto scuola: il Governo pone la fiducia alla Camera",
-        "s": "Il ministro Ciriani ha posto la questione di fiducia sul decreto scuola all'esame dell'Aula di Montecitorio.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/dl-scuola-ciriani-pone-la-fiducia-al-decreto-scuola-allesame-della-camera_64f5b9f9-17ef-43ba-bae4-14b382401885.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-oms",
-        "t": "Oms: povertà e incertezza pesano sulla salute di 187 milioni di europei",
-        "s": "Secondo il rapporto, i bambini più poveri hanno una probabilità doppia di morire prima dei cinque anni.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/11/24/oms-poverta-e-incertezza-pesano-sulla-salute-di-187-milioni-di-europei_e75403e2-d762-48e1-8f85-f2966a954421.html"
-          }
-        ],
-        "link": []
       }
     ],
     "mondo": [
       {
-        "id": "mo-eisenkot",
-        "t": "Israele: Eisenkot ottiene il primo alleato per formare il governo",
-        "s": "Yashar (21 seggi) e Casa Nostra di Lieberman (7) hanno raggiunto un accordo di coalizione; il Likud ha 53 seggi su 120. Il termine per formare l'esecutivo è il 6 dicembre.",
+        "id": "mo-israele-governo",
+        "t": "Israele: il blocco del cambiamento punta a insediare il nuovo governo mercoledì prossimo",
+        "s": "Secondo Channel 12, dopo l'accordo del 24 novembre tra il partito di Eisenkot e Yisrael Beiteinu di Liberman, che prevede l'esenzione dalla leva per gli studenti della Torah, si cercano altri accordi di coalizione entro la settimana.",
         "d": "2026-11-25",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/25/israels-eisenkot-secures-first-coalition-partner-in-bid-to-form-government",
-            "l": "en"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/israele-change-bloc-punta-a-insediare-un-nuovo-governo-mercoledi-prossimo_d382b6df-0b01-413e-94f9-859e88c479f3.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-netanyahu-processo",
+        "t": "Processo Netanyahu: i giudici invitano la procura a riconsiderare l'accusa di corruzione",
+        "s": "In un'udienza di meno di dieci minuti la giudice Friedman-Feldman osserva che nel caso 4000 le difficoltà riguardano anche l'abuso di fiducia e che nel caso 2000 le probabilità di condanna sono basse. La procuratrice è pronta a un verdetto o a un accordo.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/25/processo-netanyahu-giudici-chiedono-alla-procura-di-rinunciare-alla-corruzione_d6204362-9918-44aa-aba3-71d7daa019f1.html"
           }
         ],
         "link": []
       },
       {
         "id": "mo-houthi",
-        "t": "Yemen: ordine di evacuazione di Hodeidah, gli Houthi minacciano i porti sauditi",
-        "s": "La coalizione guidata da Riad ha ordinato l'evacuazione del porto di Hodeidah; gli Houthi minacciano Gedda e altri scali sul Mar Rosso. Riad parla di 11 feriti in un attacco al quartiere d'affari.",
+        "t": "Yemen: la coalizione saudita intercetta droni Houthi dopo il raid su Hodeidah",
+        "s": "Quattro droni abbattuti su Ras Tanura e altri tre nella provincia orientale, senza vittime. Gli Houthi minacciano i porti sauditi del Mar Rosso, tra cui Gedda, dopo il colpo alla città portuale e il drone che martedì ha ferito almeno 11 persone a Riad.",
         "d": "2026-11-25",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/25/iran-war-live-houthis-threaten-saudi-ports-over-coalitions-hodeidah-order",
+            "url": "https://www.aljazeera.com/news/2026/11/25/saudi-led-coalition-intercepts-houthi-attacks-after-hodeidah-strike",
             "l": "en"
           },
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/riad-11-feriti-nellattacco-degli-houthi-contro-il-quartiere-daffari_1b68310a-b366-4028-a767-18784f94939d.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-vdl-ucraina",
+        "t": "Von der Leyen al Parlamento europeo: Kiev resisterà, l'Ue al suo fianco",
+        "s": "La presidente della Commissione cita perdite russe superiori a 50.000 nel solo ottobre e un divario di bilancio ucraino di circa 70 miliardi nel 2027. Propone uno strumento da 45 miliardi; Kiev rimborserà solo quando la Russia pagherà i danni.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-ue-parlamento-news-oggi-25-novembre-2026_3Y9Cr1nnQZoASVawRtJP19"
           }
         ],
         "link": []
@@ -150,73 +175,88 @@
           }
         ],
         "link": []
-      },
-      {
-        "id": "mo-iran-cantante",
-        "t": "Iran: frustata la cantante Ahmadi, aveva cantato in pubblico senza velo",
-        "s": "Lo riferisce l'ANSA citando le autorità iraniane.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/le-autorita-delliran-frustano-la-cantante-ahmadi-aveva-cantato-in-pubblico-senza-velo_b240fbed-e0f5-48a8-9b1e-3d822e5bc4fc.html"
-          }
-        ],
-        "link": []
       }
     ],
     "estero": [
       {
-        "id": "es-cuba",
-        "t": "Oms: il direttore Tedros chiede di togliere il blocco americano dei carburanti a Cuba",
-        "s": "Tedros annuncia un contributo di 2 milioni di dollari. L'aspettativa di vita a Cuba è scesa da 78,8 anni (2020) a 74,4 (2025).",
+        "id": "es-iran-usa",
+        "t": "Gli Usa invitano i cittadini a lasciare subito l'Iran: ostilità che possono aggravarsi in fretta",
+        "s": "L'ambasciata virtuale americana avverte che Iran, Houthi e gruppi alleati possono colpire interessi e cittadini Usa, dopo gli attacchi iraniani in Bahrein e Kuwait. Possibili cancellazioni di voli e chiusure dello spazio aereo.",
         "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/25/who-chief-urges-end-to-us-fuel-blockade-on-cuba",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-alaska",
-        "t": "Alaska rompe l'accordo sui dati degli elettori con il Dipartimento di Giustizia Usa",
-        "s": "L'intesa del 2025 è chiusa con effetto immediato; nessun elettore è stato rimosso. Almeno 16 Stati avevano collaborato.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/25/alaska-ends-deal-to-give-voter-records-to-us-justice-department",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-femminicidi",
-        "t": "Onu: cinque donne uccise ogni ora da partner o parenti nel 2025",
-        "s": "Circa 47.000 su 78.000 femminicidi: 129 al giorno, secondo il rapporto citato da Al Jazeera nel giorno contro la violenza sulle donne.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/24/five-women-killed-every-hour-globally-by-partner-relative-in-2025-un",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-cop31",
-        "t": "Euronews: dopo il fallimento dei negoziati Cop31, c'è chi vede speranza nell'assenza di accordo",
-        "s": "Il sito europeo discute se sia meglio nessun accordo che un cattivo accordo sul clima.",
-        "d": "2026-11-24",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/24/is-no-deal-better-than-a-bad-deal-why-some-see-hope-in-cop31s-collapse",
+            "url": "https://www.euronews.com/2026/11/25/us-tells-citizens-to-leave-iran-warns-hostilities-could-escalate-fast",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-borse-asia",
+        "t": "Le Borse asiatiche crollano: Taiwan -7,9%, Seul oltre -6%, Tokyo -3,6%",
+        "s": "Il ritorno di Huang alla guida di Nvidia non calma i dubbi sul boom dell'intelligenza artificiale: pesanti i titoli dei chip, da Tokyo Electron a Samsung, SK Hynix e TSMC. Hong Kong sale fino all'1,3%.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/25/asias-stock-markets-dive-as-doubts-to-swirl-over-ai-boom",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-shenzhou",
+        "t": "La Cina porta in orbita il primo astronauta straniero: un pakistano sulla stazione Tiangong",
+        "s": "Shenzhou 24 è partita da Jiuquan con Tang Hongbo, Wu Yi e il pakistano Muhammad Zeeshan Ali, in missione breve. Più di 90 esperimenti; Pechino prepara lo sbarco sulla Luna entro il 2030.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/25/china-sends-first-foreign-astronaut-to-its-space-station-as-pakistani-joins-shenzhou-24-cr",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-magyar-zelensky",
+        "t": "Magyar e Zelensky aprono un «nuovo capitolo» tra Ungheria e Ucraina",
+        "s": "Incontro in Transcarpazia del premier ungherese e del presidente ucraino. Budapest porta aiuti per un miliardo di fiorini, esclude forniture di armi e, secondo i media, ha tolto le obiezioni sugli ultimi due capitoli negoziali Ue per Ucraina e Moldova.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/25/peter-magyar-and-volodymyr-zelenskyy-open-new-chapter-in-ukraine-hungary-relations",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-chen-jining",
+        "t": "Cina: indagato Chen Jining, segretario di Partito di Shanghai e membro del Politburo",
+        "s": "La commissione disciplinare annuncia un'inchiesta per «gravi violazioni della disciplina e della legge», formula che di solito indica corruzione. È il quarto alto dirigente del Politburo allontanato in due anni.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/25/who-is-chen-jining-chinas-latest-politburo-member-under-investigation",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-nordcorea-svizzera",
+        "t": "Pyongyang espelle il capo della missione svizzera e ordina di chiudere l'ufficio di Berna",
+        "s": "L'agenzia KCNA parla di ritorsione per le sanzioni svizzere contro un campo per bambini a Wonsan. L'ufficio era stato aperto il 19 ottobre; al diplomatico sono concesse 48 ore.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/25/north-korea-expels-swiss-diplomat-and-orders-berns-new-pyongyang-office-to-close",
             "l": "en"
           }
         ],
@@ -226,44 +266,39 @@
     "economia": [
       {
         "id": "ec-borsa",
-        "t": "Borsa: Milano chiude in calo, Ftse Mib -1,8%",
-        "s": "Seduta debole per Piazza Affari; a Wall Street Nvidia perde il 7% e gli indici chiudono contrastati.",
-        "d": "2026-11-24",
+        "t": "Borsa: Milano poco mossa, Ftse Mib -0,15% sotto 48.000; Stellantis +5,3%",
+        "s": "Frenano le banche (UniCredit -1,4%, Banco Bpm -1,5%), salgono Stellantis, Buzzi e Ferrari. In tarda mattinata lo spread Btp-Bund è a 110,9 punti.",
+        "d": "2026-11-25",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/borsa-milano-chiude-in-calo-ftse-mib-18_8908c936-7fc6-4971-9296-cc21b548293a.html"
-          }
-        ],
-        "link": [
-          {
-            "n": "ANSA: Wall Street, Nvidia -7%",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/wall-street-chiude-contrastata-nvidia-perde-il-7-giu-nasdaq-e-s500_f180435a-026b-4843-af5b-f1ccf24fb030.html"
-          }
-        ]
-      },
-      {
-        "id": "ec-spread",
-        "t": "Lo spread Btp-Bund chiude a 109 punti",
-        "s": "Dato di chiusura del 24 novembre.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/lo-spread-btp-bund-chiude-a-109-punti_5168cfc5-e9c4-4dee-abc5-0d917d01948d.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/25/borsa-milano-cambia-rotta-015-frenano-le-banche-acquisti-su-stelllantis_9857e8c5-8bfa-4991-9c4b-a93785f9f306.html"
           }
         ],
         "link": []
       },
       {
-        "id": "ec-gas",
-        "t": "I futures sul gas salgono a 92,3 euro",
-        "s": "Prezzo di fine giornata del 24 novembre.",
-        "d": "2026-11-24",
+        "id": "ec-spread",
+        "t": "Lo spread Btp-Bund apre a 109,5 punti, il Btp decennale al 4,33%",
+        "s": "Il differenziale sale da 109 della chiusura precedente; il rendimento del Btp cala di 2,3 punti, quello del Bund di 2,5 al 3,24%.",
+        "d": "2026-11-25",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/i-futures-su-gas-salgono-a-923-euro_ef7eac08-3b7b-4341-97a4-6e5a53305bed.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/25/lo-spread-tra-btp-e-bund-tedeschi-apre-in-rialzo-a-10945-punti_f2012667-c15f-4edd-be05-4b6c67fe8f8c.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "ec-boehringer",
+        "t": "Boehringer Ingelheim investe 160 milioni in cinque anni nello stabilimento di Fornovo San Giovanni",
+        "s": "Il piano, presentato al Mimit, prevede almeno tre nuovi principi attivi e l'ammodernamento del sito bergamasco, che conta circa 320 dipendenti diretti.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/economia/boehringer-ingelheim-investe-160-milioni-in-5-anni-per-produrre-piu-principi-attivi-in-italia_6hnsnrBC0j5QPDrXqIjYMz"
           }
         ],
         "link": []
@@ -284,6 +319,32 @@
         "link": []
       },
       {
+        "id": "to-corteo-nudm",
+        "t": "Torino, corteo di Non Una di Meno per il 25 novembre: percorso e modifiche alla viabilità",
+        "s": "TorinoToday pubblica il percorso del corteo contro la violenza di genere e le informazioni su viabilità e mezzi GTT (dal titolo della pagina, articolo non letto).",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "TorinoToday",
+            "url": "https://www.torinotoday.it/attualita/non-una-di-meno-corteo-violenza-25-novembre-mezzi-gtt.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-questore-arresti",
+        "t": "Questore di Torino: 129 arresti per violenza di genere in dieci mesi",
+        "s": "Dal 1° gennaio al 31 ottobre 196 ammonimenti (107 per stalking, 89 per violenza domestica) e 15 proposte di sorveglianza speciale; nell'ultimo mese sei arresti delle Volanti.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/24/questore-torino-in-10-mesi-129-arresti-per-violenza-di-genere_06ed4894-2fc5-45ae-9d60-5590040a3c0a.html"
+          }
+        ],
+        "link": []
+      },
+      {
         "id": "to-polizia-locale",
         "t": "Violenza sulle donne: 86 casi seguiti dalla Polizia Locale di Torino, erano 51",
         "s": "Il dato, riferito all'ultimo anno, è nel titolo di Torino Oggi.",
@@ -292,6 +353,19 @@
           {
             "n": "Torino Oggi",
             "url": "https://www.torinoggi.it/2026/11/24/leggi-notizia/argomenti/attualita-31/articolo/violenza-contro-le-donne-a-torino-86-casi-seguiti-dalla-polizia-locale-nellultimo-anno-erano-51.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-neve",
+        "t": "Montagne del Torinese imbiancate: neve ovunque oltre i mille metri",
+        "s": "TorinoToday segnala nevicate sui rilievi con il maltempo del 25 novembre (dal titolo della pagina, articolo non letto).",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "TorinoToday",
+            "url": "https://www.torinotoday.it/meteo/maltempo-nevicate-pioggia-25-novembre-2026.html"
           }
         ],
         "link": []
@@ -318,19 +392,6 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/comune_di_torino/2026/11/19/torino-al-via-i-cantieri-per-la-linea-2-della-metropolitana_b66ffee0-69c4-454e-96a3-ef37ba303390.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-anziana",
-        "t": "Torinese: anziana dispersa da sabato trovata viva in un torrente",
-        "s": "Il ritrovamento è stato segnalato la sera del 23 novembre.",
-        "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/dispersa-da-sabato-anziana-trovata-viva-in-un-torrente-nel-torinese_8ebff102-3d83-4b8d-bd93-6d47030d281a.html"
           }
         ],
         "link": []
@@ -506,6 +567,21 @@
         "quando": "fino all'11 gen 2027, apertura settimanale",
         "dove": "Museo Egizio, Torino",
         "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-grado-zero",
+        "t": "Grado zero. La montagna oltre i generi, mostra al Museo Nazionale della Montagna",
+        "s": "Mostra collettiva curata da Andrea Lerda e Linda Cottino con 18 artisti e registi, tra cui Maria Lai e Kate Gilmore, accanto a materiali storici sulle alpiniste dimenticate.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/canale_viaggi/regione/piemonte/2026/11/24/grado-zero-al-museo-della-montagna-le-protagoniste-dimenticate-dellalpinismo_f2777bb7-076c-499f-a114-83e9a465cd40.html"
+          }
+        ],
+        "link": [],
+        "quando": "fino al 6 giu 2027, apertura settimanale",
+        "dove": "Museo Nazionale della Montagna, Torino"
       }
     ],
     "spettacoli": [
@@ -1032,15 +1108,14 @@
     "cultura": [],
     "tecnologia": [
       {
-        "id": "te-guterres-ia",
-        "t": "Guterres: entro un anno regole globali per la sicurezza dell'intelligenza artificiale",
-        "s": "Al vertice sulla sicurezza dell'IA di Bridgetown, in Barbados, il segretario generale Onu ha chiesto un quadro multilaterale con test condivisi e supervisione indipendente. Il suo mandato termina a fine anno.",
-        "d": "2026-11-24",
+        "id": "te-cia-hacker",
+        "t": "Cia e intelligence nazionale Usa: presunto attacco informatico, coinvolte informazioni non classificate",
+        "s": "Secondo la Cnn i funzionari escludono compromissioni di dati classificati o di funzioni critiche; le prime indicazioni portano alla Cina, ma il coinvolgimento di Pechino non è chiaro.",
+        "d": "2026-11-25",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/24/un-chief-urges-nations-to-establish-ai-safety-safeguards-within-a-year",
-            "l": "en"
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/internazionale/esteri/attacco-hacker-cia-usa_4sRuAO5Yj3eBBlmaixtrDB"
           }
         ],
         "link": []
@@ -1062,17 +1137,25 @@
           }
         ],
         "link": []
+      },
+      {
+        "id": "te-guterres-ia",
+        "t": "Guterres: entro un anno regole globali per la sicurezza dell'intelligenza artificiale",
+        "s": "Al vertice sulla sicurezza dell'IA di Bridgetown, in Barbados, il segretario generale Onu ha chiesto un quadro multilaterale con test condivisi e supervisione indipendente. Il suo mandato termina a fine anno.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/24/un-chief-urges-nations-to-establish-ai-safety-safeguards-within-a-year",
+            "l": "en"
+          }
+        ],
+        "link": []
       }
     ],
     "sport": []
   },
   "controlli": [
-    {
-      "at": "2026-11-15T13:03+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 72,
-      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi. TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti). Cinema, eventi e concerti dall'edizione del mattino (domenica, non lunedì), tolti eventi e teatro conclusi il 15; aggiunti 2 spettacoli Fonderie Limone. Copia locale era staccata: ripartita da origin/main."
-    },
     {
       "at": "2026-11-16T05:05+01:00",
       "edizione": "mattina",
@@ -1186,6 +1269,12 @@
       "edizione": "mattina",
       "notizie": 71,
       "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en), Torino Oggi. Non raggiunti: alcuni articoli ANSA (lettura bloccata, usati i titoli), Torino Oggi (una pagina), Reuters/BBC/Guardian non cercate; rainews e lastampa non cercati. Eventi, cinema, teatro, scienza e tecnologia copiati dall'edizione precedente; concerti copiati senza quelli passati (non è lunedì). Copia locale riallineata a origin/main (era staccata dal ramo)."
+    },
+    {
+      "at": "2026-11-25T13:04+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 78,
+      "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en), TorinoToday (solo titoli: pagine non leggibili). Non raggiunti: torinotoday (7 pagine), Reuters/BBC/Guardian non cercate; rainews e lastampa non cercati. Eventi (con una mostra in più), cinema, teatro, concerti, scienza copiati dalla precedente (non è lunedì; nessun concerto passato). Copia locale non divergente: nessun riallineamento."
     }
   ],
   "nota": "Edizione del mattino del 25 novembre 2026."
