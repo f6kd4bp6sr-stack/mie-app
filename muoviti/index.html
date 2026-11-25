@@ -124,6 +124,26 @@ details[open] summary::after{content:"–"}
 .vacb button{min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:600 15px Barlow,system-ui,sans-serif;cursor:pointer}
 .vacb button:first-child{background:var(--or);border-color:var(--or);color:#000}
 .stato.pausa{background:#1f1f2e;color:#b7b7ff}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px;margin-top:6px;align-items:stretch}
+.duo .pal{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2px;padding:8px}
+.duo .ring{width:78px;height:78px}.duo .pal .nm{font-size:19px}.duo .chips{justify-content:center}
+.duo .nexts{grid-template-columns:1fr;margin:0;gap:6px;align-content:stretch}
+.duo .nx{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:5px 10px}
+.duo .nx b{font-size:24px}.duo .nx span{text-align:right}
+.duo .sum{margin:0;padding:6px}
+.duo .ph{display:block;margin:0 0 2px 4px}.duo .ph b{display:block;font-size:18px;line-height:1.1}.duo .ph span{font-size:12px}
+.duo .pr{grid-template-columns:56px 1fr;gap:6px;padding:4px 6px;align-items:start}.duo .pr b{font-size:21px;line-height:1.15}
+.duo .pr strong{display:block;font-size:15px;margin:0}.duo .pr span{font-size:12px;line-height:1.2}
+.colL{display:grid;gap:6px;align-content:start}
+.esci{display:flex;align-items:center;justify-content:center;gap:6px;padding:0 10px}
+.esci b{font:700 22px/1 "Barlow Condensed",system-ui,sans-serif}.esci span{font:500 14px Barlow,system-ui,sans-serif;opacity:.7}
+
+.cards,.grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,165px),1fr))!important}
+.card .h{flex-wrap:wrap;gap:6px}.card .h b{font-size:17px}.card p{font-size:13.5px}
+.card .acts{flex-wrap:wrap}.card .acts a,.card .acts button{flex:1 1 100%;min-height:40px}
+.card .t span:not(.chip){font-size:16px;padding:2px 6px}
+.grid details:has(#sOut){grid-column:1/-1}
+input{max-width:100%}.tipi label,.dy{position:relative;overflow:hidden}.tipi input,.dy input{left:0;top:0;width:1px;height:1px;margin:0}.vac input{width:100%;min-width:0;-webkit-appearance:none;appearance:none}
 label{display:block;margin:10px 0 4px;font-size:14px;color:var(--mut)}
 input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 @media(prefers-reduced-motion:no-preference){.tram{transition:transform 1s ease}.blink{animation:b 1.6s infinite}@keyframes b{50%{opacity:.3}}}
@@ -136,14 +156,18 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
 <main>
 <button class="stato" id="stato" type="button"></button>
 <section aria-live="polite">
- <div class="pal">
-  <svg class="ring" id="ring" viewBox="0 0 112 112" aria-hidden="true"></svg>
-  <div><div class="k">Palina di partenza</div><div class="nm" id="stopNm">Statuto Cap</div>
-   <div class="chips" id="chips"></div></div>
+ <div class="duo">
+  <div class="colL">
+   <div class="pal">
+    <svg class="ring" id="ring" viewBox="0 0 112 112" aria-hidden="true"></svg>
+    <div class="k">Palina di partenza</div><div class="nm" id="stopNm">Statuto Cap</div>
+    <div class="chips" id="chips"></div>
+   </div>
+   <div class="nexts" id="nexts"></div>
+  </div>
+  <div class="sum" id="sum"></div>
  </div>
- <div class="nexts" id="nexts"></div>
- <div class="sum" id="sum"></div>
- <button class="esci" id="esciBtn" type="button">Esci adesso · conto alla rovescia</button>
+ <button class="esci" id="esciBtn" type="button"><b>Esci adesso</b><span>· conto alla rovescia</span></button>
  <div class="live" id="live"></div>
 </section>
 
@@ -182,11 +206,12 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
   <div class="vac"><input id="vDa" type="date" aria-label="Dal"><input id="vA" type="date" aria-label="Al"></div>
   <div class="vacb"><button id="vOn" type="button">Sospendi</button><button id="vOff" type="button">Riprendi</button></div>
   <p class="tag" id="vSt"></p>
-    <label for="sStop">Numero palina ritorno (Caserma Monte Grappa → Statuto)</label><input id="sStop" inputmode="numeric" placeholder="lo leggi sulla palina">
+    <p class="tag">Icona sull'iPhone: apri <b>f6kd4bp6sr-stack.github.io/mie-app/muoviti/</b> in Safari → Condividi → «Aggiungi alla schermata Home». Si aggiorna da sola.</p>
+  <label for="sStop">Numero palina ritorno (Caserma Monte Grappa → Statuto)</label><input id="sStop" inputmode="numeric" placeholder="lo leggi sulla palina">
  </div></details>
- <details><summary>Icona sull'iPhone</summary><div class="body"><p>Apri <b>f6kd4bp6sr-stack.github.io/mie-app/muoviti/</b> in Safari, tocca Condividi e poi «Aggiungi alla schermata Home». L'app si aggiorna da sola a ogni nuova versione.</p></div></details>
+
 </div>
-<p class="ver" id="ver">Versione b99e412c18</p>
+<p class="ver" id="ver">Versione 093464ca5e</p>
 </main>
 <div class="go" id="go" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
@@ -250,13 +275,13 @@ const via60=()=>ls.get("casaMode","piedi")==="bus60";
 function plan(d){const dl=deps(d),w=W(),h=H(),b=via60();
  if(d==="A"){const start=s2m($("sCasa").value);
   if(b){const bus=start+B60.toFerm+B60.attesa,ps=bus+B60.corsaA,at=ps+B60.aPiediPS,dep=dl.find(m=>m+3>=at)??dl[dl.length-1],tr=dep+3;
-   return{d,start,at,dep,tr,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","casa, Corso Umbria 14",start,0],["Bus 60","fermata Umbria → Porta Susa (stima)",bus,0],["Scendi","Inghilterra Cap, a piedi a XVIII Dicembre",ps,0],["Tram 10","da XVIII Dicembre",tr,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","C.so IV Novembre 40 ("+w+" min)",dep+RIDE+w,0]]}}
+   return{d,start,at,dep,tr,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Bus 60","Umbria → Porta Susa",bus,0],["Scendi","Porta Susa, poi a piedi",ps,0],["Tram 10","da XVIII Dicembre",tr,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
   const at=start+h,dep=dl.find(m=>m>=at)??dl[dl.length-1];
-  return{d,start,at,dep,tr:dep,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","casa, Corso Umbria 14",start,0],["Fermata","Statuto Cap ("+h+" min)",at,0],["Tram 10","da Statuto Cap",dep,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","C.so IV Novembre 40 ("+w+" min)",dep+RIDE+w,0]]}}
+  return{d,start,at,dep,tr:dep,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Fermata","Statuto Cap · "+h+"′",at,0],["Tram 10","da Statuto Cap",dep,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
  const start=s2m($("sOut").value),at=start+w,dep=dl.find(m=>m>=at)??dl[dl.length-1],down=dep+RIDE;
  if(b){const bus=down+B60.aPiediSt+B60.attesa,end=bus+B60.corsaR+B60.toFerm;
-  return{d,start,at,dep,tr:dep,down,end,wa:w,wb:end-down,b,rows:[["Esci","ufficio, C.so IV Novembre 40",start,0],["Fermata","Caserma M. Grappa ("+w+" min)",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Statuto → Umbria (stima)",bus,0],["Casa","Corso Umbria 14",end,0]]}}
- return{d,start,at,dep,tr:dep,down,end:down+h,wa:w,wb:h,b,rows:[["Esci","ufficio, C.so IV Novembre 40",start,0],["Fermata","Caserma M. Grappa ("+w+" min)",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Casa","Corso Umbria 14 ("+h+" min)",down+h,0]]}}
+  return{d,start,at,dep,tr:dep,down,end,wa:w,wb:end-down,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Monte Grappa · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Statuto → Umbria",bus,0],["Casa","sotto casa",end,0]]}}
+ return{d,start,at,dep,tr:dep,down,end:down+h,wa:w,wb:h,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Monte Grappa · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Casa","a piedi "+h+"′",down+h,0]]}}
 function render(){
  const n=nowF(),fn=Math.floor(n),dl=deps(dir),st=stops(),day=new Date().getDay(),P=plan(dir);
  $("bA").setAttribute("aria-pressed",dir==="A");$("bR").setAttribute("aria-pressed",dir==="R");
@@ -270,8 +295,8 @@ function render(){
  // piano
  const rows=P.rows;
  const wait=P.tr-P.at;
- $("sum").innerHTML=`<div class="ph"><b>Il tuo piano ${dir==="A"?"del mattino":"del pomeriggio"}</b><span>${day===0||day===6?"oggi festivo: orari diversi":wait>0?"attesa alla fermata "+wait+" min":"tram appena arrivi"}</span></div>`
-  +rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}</span></div>`).join("");
+ $("sum").innerHTML=`<div class="ph"><b>Il tuo piano</b><span>${day===0||day===6?"oggi festivo: orari diversi":wait>0?"attesa alla fermata "+wait+" min":"tram appena arrivi"}</span></div>`
+  +rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn&&fn<=P.end?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}</span></div>`).join("");
  const p=dir==="A"?"951":$("sStop").value.replace(/\D/g,"");
  $("live").innerHTML=(p?`<a class="p" href="${live(p)}">Live GTT · palina ${p}</a>`:`<a class="p" href="#" id="setStop">Imposta palina ritorno</a>`)+`<a href="${AVV}">Avvisi GTT</a>`;
  const ss=$("setStop");if(ss)ss.onclick=e=>{e.preventDefault();const d=document.querySelectorAll("details")[2];d.open=true;$("sStop").focus()};
@@ -381,7 +406,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
  if(ls.get("pop-"+slot,"")===k)return;ls.set("pop-"+slot,k);popup(slot)}
 Promise.all([loadAvv(),loadMeteo()]).then(autoPop);document.addEventListener("visibilitychange",()=>{if(!document.hidden)Promise.all([loadAvv(),loadMeteo()]).then(autoPop)});
 // Web app: copia senza internet e aggiornamento automatico a ogni pubblicazione
-const VER="b99e412c18";
+const VER="093464ca5e";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let reloading=false;
 function checkVer(){if(location.protocol!=="https:")return;fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&v.v&&v.v!==VER&&!reloading){reloading=true;
