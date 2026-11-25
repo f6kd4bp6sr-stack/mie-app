@@ -1,5 +1,5 @@
-// Muoviti: funziona anche senza internet. Versione 9da7a070ef
-const CACHE = 'muoviti-9da7a070ef';
+// Muoviti: funziona anche senza internet. Versione 9457736c91
+const CACHE = 'muoviti-9457736c91';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(f => new Request(f, { cache: 'reload' })))).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('muoviti-') && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
