@@ -9,48 +9,45 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <title>Muoviti</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.open-meteo.com; base-uri 'none'; form-action 'none'">
 <style>
 /* VOICE: pratico e calmo, da fermata alle 7 del mattino
    IDEA: la palina GTT e la linea disegnata sul fianco del tram
    PICTURE: tracciato del 10 con zone, fermate, orari e il tram che avanza
-   COLOUR and TYPE: arancio tram dominante in testata, inchiostro, bianco; Barlow Condensed per orari
+   COLOUR and TYPE: sfondo nero, arancio per l'orario più vicino; Avenir Next Condensed (di sistema iOS) per gli orari
    LAYOUT: testata arancio con direzione, palina + conto alla rovescia, tracciato, pannelli apri/chiudi in griglia */
 :root{color-scheme:dark;--bg:#000;--ink:#f5f5f7;--mut:#b8b8bd;--line:#2c2c2e;--card:#1c1c1e;--zone:#121212;--or:#ff7a33;--or2:#ff8c4d;--ok:#4cd88a}
 *{box-sizing:border-box;min-width:0}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Barlow,system-ui,sans-serif;overflow-x:clip}
-.c{font-family:"Barlow Condensed",sans-serif;font-variant-numeric:tabular-nums}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,system-ui,sans-serif;overflow-x:clip}
+.c{font-family:"Avenir Next Condensed","Arial Narrow",system-ui,sans-serif;font-variant-numeric:tabular-nums}
 .top{background:#000;color:var(--ink);border-bottom:1px solid var(--line);padding:calc(8px + env(safe-area-inset-top)) max(3vw,12px,env(safe-area-inset-right)) 10px max(4vw,16px,env(safe-area-inset-left))}
 main{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
-.upd{position:sticky;top:0;z-index:5;display:none;background:var(--ink);color:var(--bg);text-align:center;padding:10px;font-weight:600}
 .ver{color:var(--mut);font-size:12px;text-align:center;margin-top:24px}
 .in{max-width:760px;margin:0 auto}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:12px}
-h1{margin:0;color:var(--or);font:700 30px/1 "Barlow Condensed",system-ui,sans-serif}
-.clock{font:700 26px "Barlow Condensed",system-ui,sans-serif}
+h1{margin:0;color:var(--or);font:700 30px/1 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
+.clock{font:700 26px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
 .sw{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--card);border-radius:14px;padding:3px;margin-top:8px}
-.sw button{min-height:42px;border:0;border-radius:11px;background:none;color:#d1d1d6;font:600 16px Barlow,system-ui,sans-serif;cursor:pointer}
+.sw button{min-height:44px;border:0;border-radius:11px;background:none;color:#d1d1d6;font:600 16px -apple-system,system-ui,sans-serif;cursor:pointer}
 .sw button[aria-pressed=true]{background:var(--or);color:#000}
 button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--or);outline-offset:2px}
 main{max-width:760px;margin:0 auto;padding:10px max(3vw,12px) 30px}
 .pal{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:10px 12px}
 .ring{width:84px;height:84px}
 .pal .k{font-size:13px;opacity:.75}
-.pal .nm{font:700 22px/1.1 "Barlow Condensed",system-ui,sans-serif}
+.pal .nm{font:700 22px/1.1 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
 .chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
-.chip{display:inline-flex;align-items:center;gap:4px;background:var(--or);color:#000;border-radius:8px;padding:2px 8px;font:700 17px "Barlow Condensed",system-ui,sans-serif}
-.chip.n{background:transparent;border:1px solid currentColor;opacity:.75;font:600 14px Barlow,system-ui,sans-serif}
+.chip{display:inline-flex;align-items:center;gap:4px;background:var(--or);color:#000;border-radius:8px;padding:2px 8px;font:700 17px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
 .nexts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:6px}
 .nx{background:var(--card);border-radius:10px;padding:6px 10px}
-.nx b{display:block;font:700 24px/1 "Barlow Condensed",system-ui,sans-serif}
+.nx b{display:block;font:700 24px/1 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
 .nx span{font-size:13px;color:var(--mut)}
 .sum{margin:6px 0 0;padding:8px 10px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
-.sum b{font:700 22px "Barlow Condensed",system-ui,sans-serif}
+.sum b{font:700 22px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
 .live{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
 .live a{display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:12px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600;text-align:center;padding:6px;border:1px solid var(--line)}
 .live a.p{background:var(--or);border-color:var(--or);color:#000}
-h2{font:700 24px/1.05 "Barlow Condensed",system-ui,sans-serif;margin:16px 0 2px;text-wrap:balance}
+h2{font:700 24px/1.05 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif;margin:16px 0 2px;text-wrap:balance}
 .note{color:var(--mut);font-size:13px;margin:6px 0 0}
 .fig svg{width:100%;height:auto;display:block}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:6px;margin-top:12px;align-items:start}
@@ -61,67 +58,67 @@ summary::after{content:"+";margin-left:auto;font-size:24px;color:var(--or)}
 details[open] summary::after{content:"–"}
 .body{padding:0 16px 14px}
 .tt{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:6px}
-.tt span{background:var(--bg);border-radius:8px;text-align:center;padding:6px 0;font:600 18px "Barlow Condensed",system-ui,sans-serif}
-.tt span.past{opacity:.3}.tt span.nx1{background:var(--or);color:#000;font-weight:700}.tt span.mine{box-shadow:inset 0 0 0 2px var(--or);color:var(--or)}
+.tt span{background:var(--bg);border-radius:8px;text-align:center;padding:6px 0;font:600 18px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
+.tt span.past{opacity:.5}.tt span.nx1{background:var(--or);color:#000;font-weight:700}.tt span.mine{box-shadow:inset 0 0 0 2px var(--or);color:var(--or)}
 .nx.mine{box-shadow:inset 0 0 0 2px var(--or)}.nx.mine span{color:var(--or)}
-.ph{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:2px}.ph b{font:700 22px "Barlow Condensed",system-ui,sans-serif}.ph span{color:var(--mut);font-size:14px}
+.ph{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:2px}.ph b{font:700 22px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}.ph span{color:var(--mut);font-size:14px}
 .pr{display:grid;grid-template-columns:66px 1fr;gap:8px;align-items:center;padding:3px 8px;border-radius:10px;line-height:1.25}
-.pr b{font:700 23px "Barlow Condensed",system-ui,sans-serif}.pr span{font-size:14px;color:var(--mut)}.pr strong{display:inline;color:var(--ink);font-size:16px;font-weight:600;margin-right:6px}
+.pr b{font:700 23px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}.pr span{font-size:14px;color:var(--mut)}.pr strong{display:inline;color:var(--ink);font-size:16px;font-weight:600;margin-right:6px}
 .pr.key{background:var(--or)}.pr.key b,.pr.key span,.pr.key strong{color:#000}.pr.done{opacity:.45}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:6px;margin-top:6px}
 .card{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--card)}
 .card.best{border:2px solid var(--or)}
 .card .h{display:flex;align-items:center;gap:10px}
-.card .h b{font:700 20px/1.1 "Barlow Condensed",system-ui,sans-serif}
+.card .h b{font:700 20px/1.1 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
 .card p{margin:6px 0 0;font-size:15px}
 .card .t{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.card .t span:not(.chip){background:var(--card);border-radius:8px;padding:3px 8px;font:600 18px "Barlow Condensed",system-ui,sans-serif}
+.card .t span:not(.chip){background:var(--card);border-radius:8px;padding:3px 8px;font:600 18px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
 .card .acts{display:flex;gap:6px;margin-top:8px}
-.card .acts a,.card .acts button{flex:1;white-space:nowrap;display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;font:600 15px Barlow,system-ui,sans-serif;border:1px solid var(--line);cursor:pointer}
+.card .acts a,.card .acts button{flex:1;white-space:nowrap;display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;font:600 15px -apple-system,system-ui,sans-serif;border:1px solid var(--line);cursor:pointer}
 .chip.bus{background:#3a3a3c;color:#fff}
-.tag{font-size:12px;color:var(--mut)}
+.tag{font-size:13px;color:var(--mut)}
 .nuova{margin-top:6px}.add2{display:grid;gap:6px;padding:0 12px 12px}
 .tipi{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}.tipi.due{grid-template-columns:1fr 1fr}
-.tipi label{display:flex;align-items:center;justify-content:center;min-height:40px;margin:0;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:600 14px Barlow,system-ui,sans-serif;cursor:pointer}
+.tipi label{display:flex;align-items:center;justify-content:center;min-height:44px;margin:0;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:600 14px -apple-system,system-ui,sans-serif;cursor:pointer}
 .tipi input{position:absolute;opacity:0;pointer-events:none}.tipi label:has(input:checked){background:var(--or);border-color:var(--or);color:#000}
 .chip.ind{background:#2c4a6e;color:#fff}.chip.m{background:#d70015;color:#fff}
-.add2 button{min-height:44px;border:0;border-radius:10px;background:var(--or);color:#000;font:600 16px Barlow,system-ui,sans-serif;padding:0 14px;cursor:pointer}
-.stato{display:flex;align-items:center;gap:8px;width:100%;min-height:38px;margin:0 0 8px;padding:6px 12px;border-radius:14px;border:0;font:600 15px Barlow,system-ui,sans-serif;text-align:left;cursor:pointer;background:#0f2a1b;color:var(--ok)}
+.add2 button{min-height:44px;border:0;border-radius:10px;background:var(--or);color:#000;font:600 16px -apple-system,system-ui,sans-serif;padding:0 14px;cursor:pointer}
+.stato{display:flex;align-items:center;gap:8px;width:100%;min-height:44px;margin:0 0 8px;padding:6px 12px;border-radius:14px;border:0;font:600 15px -apple-system,system-ui,sans-serif;text-align:left;cursor:pointer;background:#0f2a1b;color:var(--ok)}
 .stato.warn{background:#2b1608;color:var(--or2)}
 .stato::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:currentColor}
-.live button{min-height:48px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 16px Barlow,system-ui,sans-serif;cursor:pointer}
+.live button{min-height:48px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 16px -apple-system,system-ui,sans-serif;cursor:pointer}
 .pop{position:fixed;inset:0;z-index:20;background:rgba(10,15,20,.45);display:flex;align-items:flex-end;justify-content:center}
 .pop[hidden]{display:none}
 .sheet{width:100%;max-width:560px;background:#151517;border-top:1px solid var(--line);border-radius:22px 22px 0 0;padding:10px 18px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -10px 40px rgba(0,0,0,.25)}
 .grab{width:44px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 10px}
-.sheet h3{margin:0;font:700 30px/1.05 "Barlow Condensed",system-ui,sans-serif}
+.sheet h3{margin:0;font:700 30px/1.05 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}
 .pl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}
 .pl div{background:var(--card);border-radius:12px;padding:10px;text-align:center}
 .pl div:first-child{background:var(--or);color:#000}
-.pl b{display:block;font:700 30px/1 "Barlow Condensed",system-ui,sans-serif}.pl span{font-size:13px}
+.pl b{display:block;font:700 30px/1 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}.pl span{font-size:13px}
 .av p{margin:6px 0;padding:10px 12px;border-radius:12px;background:var(--card);font-size:15px}
 .av p.w{background:#2b1608;color:var(--or2)}
 
 @media(prefers-reduced-motion:no-preference){.sheet{animation:up .28s ease-out}@keyframes up{from{transform:translateY(40px);opacity:0}}}
-.esci{width:100%;min-height:46px;margin-top:6px;border:0;border-radius:14px;background:var(--ink);color:var(--bg);font:700 20px "Barlow Condensed",system-ui,sans-serif;cursor:pointer}
+.esci{width:100%;min-height:46px;margin-top:6px;border:0;border-radius:14px;background:var(--ink);color:var(--bg);font:700 20px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif;cursor:pointer}
 .meteo{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:#0f1f2e;margin-bottom:8px;font-size:15px}
-.meteo b{font:700 26px "Barlow Condensed",system-ui,sans-serif;white-space:nowrap}
+.meteo b{font:700 26px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif;white-space:nowrap}
 .meteo:empty{display:none}
 .go{position:fixed;inset:0;z-index:30;background:#000;color:var(--ink);display:flex;align-items:center;justify-content:center;padding:24px}
 .go[hidden]{display:none}.go.late{background:#d70015;color:#fff}.go.soon{background:var(--or);color:#000}
 .goin{width:100%;max-width:480px;text-align:center}
-.gk{font:600 20px Barlow,system-ui,sans-serif;opacity:.85}
-.gt{font:700 clamp(96px,32vw,170px)/1 "Barlow Condensed",system-ui,sans-serif;font-variant-numeric:tabular-nums;margin:8px 0}
+.gk{font:600 20px -apple-system,system-ui,sans-serif;opacity:.85}
+.gt{font:700 clamp(96px,32vw,170px)/1 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif;font-variant-numeric:tabular-nums;margin:8px 0}
 .gs{font-size:17px;opacity:.9;margin-bottom:18px}
 .gbar{height:10px;border-radius:5px;background:rgba(255,255,255,.2);overflow:hidden;margin-bottom:24px}.gbar i{display:block;height:100%;background:currentColor;width:0}
-.go button{min-height:52px;width:100%;border-radius:14px;border:2px solid currentColor;background:none;color:inherit;font:600 17px Barlow,system-ui,sans-serif;cursor:pointer}
+.go button{min-height:52px;width:100%;border-radius:14px;border:2px solid currentColor;background:none;color:inherit;font:600 17px -apple-system,system-ui,sans-serif;cursor:pointer}
 .lab{margin:14px 0 6px;font-size:14px;color:var(--mut)}
 .days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
-.dy{display:flex;align-items:center;justify-content:center;min-height:44px;margin:0;border-radius:10px;background:var(--bg);border:1px solid var(--line);color:var(--ink);font:600 15px Barlow,system-ui,sans-serif;cursor:pointer}
+.dy{display:flex;align-items:center;justify-content:center;min-height:44px;margin:0;border-radius:10px;background:var(--bg);border:1px solid var(--line);color:var(--ink);font:600 15px -apple-system,system-ui,sans-serif;cursor:pointer}
 .dy input{position:absolute;opacity:0;pointer-events:none}.dy:has(input:checked){background:var(--or);border-color:var(--or);color:#000}
 .vac{display:grid;grid-template-columns:1fr 1fr;gap:8px}.vac input{color-scheme:dark}
 .vacb{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
-.vacb button{min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:600 15px Barlow,system-ui,sans-serif;cursor:pointer}
+.vacb button{min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:600 15px -apple-system,system-ui,sans-serif;cursor:pointer}
 .vacb button:first-child{background:var(--or);border-color:var(--or);color:#000}
 .stato.pausa{background:#1f1f2e;color:#b7b7ff}
 .duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px;margin-top:6px;align-items:stretch}
@@ -136,17 +133,16 @@ details[open] summary::after{content:"–"}
 .duo .pr strong{display:block;font-size:15px;margin:0}.duo .pr span{font-size:12px;line-height:1.2}
 .colL{display:grid;gap:6px;align-content:start}
 .esci{display:flex;align-items:center;justify-content:center;gap:6px;padding:0 10px}
-.esci b{font:700 22px/1 "Barlow Condensed",system-ui,sans-serif}.esci span{font:500 14px Barlow,system-ui,sans-serif;opacity:.7}
+.esci b{font:700 22px/1 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}.esci span{font:500 14px -apple-system,system-ui,sans-serif;opacity:.7}
 
 .cards,.grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,165px),1fr))!important}
 .card .h{flex-wrap:wrap;gap:6px}.card .h b{font-size:17px}.card p{font-size:13.5px}
-.card .acts{flex-wrap:wrap}.card .acts a,.card .acts button{flex:1 1 100%;min-height:40px}
+.card .acts{flex-wrap:wrap}.card .acts a,.card .acts button{flex:1 1 100%;min-height:44px}
 .card .t span:not(.chip){font-size:16px;padding:2px 6px}
 .grid details:has(#sOut){grid-column:1/-1}
 input{max-width:100%}.tipi label,.dy{position:relative;overflow:hidden}.tipi input,.dy input{left:0;top:0;width:1px;height:1px;margin:0}.vac input{width:100%;min-width:0;-webkit-appearance:none;appearance:none}
 label{display:block;margin:10px 0 4px;font-size:14px;color:var(--mut)}
-input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
-@media(prefers-reduced-motion:no-preference){.tram{transition:transform 1s ease}.blink{animation:b 1.6s infinite}@keyframes b{50%{opacity:.3}}}
+input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 @media(max-width:380px){.ring{width:92px;height:92px}.nx b{font-size:22px}}
 </style></head><body>
 <header class="top"><div class="in">
@@ -154,13 +150,13 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
  <div class="sw" role="group" aria-label="Direzione"><button id="bA" aria-pressed="true">Andata · mattina</button><button id="bR" aria-pressed="false">Ritorno · pomeriggio</button></div>
 </div></header>
 <main>
-<button class="stato" id="stato" type="button"></button>
-<section aria-live="polite">
+<button class="stato" id="stato" type="button" aria-live="polite"></button>
+<section>
  <div class="duo">
   <div class="colL">
    <div class="pal">
-    <svg class="ring" id="ring" viewBox="0 0 112 112" aria-hidden="true"></svg>
-    <div class="k">Palina di partenza</div><div class="nm" id="stopNm">Statuto Cap</div>
+    <svg class="ring" id="ring" viewBox="0 0 112 112" role="img" aria-label="Minuti al prossimo tram"></svg>
+    <div class="k">Prossimo tram · stima</div><div class="nm" id="stopNm">Statuto Cap</div>
     <div class="chips" id="chips"></div>
    </div>
    <div class="nexts" id="nexts"></div>
@@ -173,7 +169,7 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
 
 <h2 id="mapT">Il percorso</h2>
 <div class="fig" id="map"></div>
-<p class="note">Tram pieno = in viaggio adesso (stima dall'orario GTT).</p>
+<p class="note">Orari stimati dalla frequenza della linea (non sono l'orario ufficiale): il tram pieno è la posizione stimata. Per i passaggi veri usa «Live GTT».</p>
 
 <h2 id="altT">Alternative per l'ufficio</h2>
 <div class="cards" id="alt"></div>
@@ -191,8 +187,8 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
 </form></details>
 
 <div class="grid">
- <details><summary>Orario feriale andata</summary><div class="body"><div class="tt" id="ttA"></div><p class="note">Partenze da Statuto Cap (951), ogni 6–9 min: orari indicativi.</p></div></details>
- <details><summary>Orario feriale ritorno</summary><div class="body"><div class="tt" id="ttR"></div><p class="note">Passaggi a Caserma Monte Grappa verso Statuto, dall'ora di uscita.</p></div></details>
+ <details><summary>Orario andata (stime)</summary><div class="body"><p class="tag" id="ttN"></p><div class="tt" id="ttA"></div><p class="note">Stima da Statuto Cap (951): circa ogni 7 min di giorno, più rado presto, la sera e nei festivi. Non è l'orario ufficiale.</p></div></details>
+ <details><summary>Orario ritorno (stime)</summary><div class="body"><div class="tt" id="ttR"></div><p class="note">Stima a Caserma Monte Grappa verso Statuto: circa ogni 8 min di giorno. Non è l'orario ufficiale.</p></div></details>
  <details><summary>Impostazioni</summary><div class="body">
   <label for="sCasa">Partenza da casa (mattina)</label><input id="sCasa" type="time" value="07:00">
   <label for="sOut">Uscita dall'ufficio (pomeriggio)</label><input id="sOut" type="time" value="14:00">
@@ -207,13 +203,14 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
   <div class="vacb"><button id="vOn" type="button">Sospendi</button><button id="vOff" type="button">Riprendi</button></div>
   <p class="tag" id="vSt"></p>
     <p class="tag">Icona sull'iPhone: apri <b>f6kd4bp6sr-stack.github.io/mie-app/muoviti/</b> in Safari → Condividi → «Aggiungi alla schermata Home». Si aggiorna da sola.</p>
+  <p class="tag"><b>Fonti dei dati (da verificare sulla palina):</b> fermate e tempi del 10 dall'orario pubblicato su Transit; palina 385 e linee a Caserma Monte Grappa da Moovit e OpenStreetMap; fermate del 60 da findit/OpenStreetMap; tempi del bus 60 stimati; avvisi dalla pagina GTT «Avvisi e informazioni di servizio».</p>
   <label for="sStop">Numero palina ritorno (Caserma Monte Grappa → Statuto)</label><input id="sStop" inputmode="numeric" placeholder="lo leggi sulla palina">
  </div></details>
 
 </div>
-<p class="ver" id="ver">Versione 093464ca5e</p>
+<p class="ver" id="ver">Versione 2b662ad769</p>
 </main>
-<div class="go" id="go" hidden><div class="goin">
+<div class="go" id="go" role="dialog" aria-modal="true" aria-label="Conto alla rovescia" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
  <div class="gs" id="goS"></div><div class="gbar"><i id="goB"></i></div>
  <button id="goX" type="button">Chiudi</button></div></div>
@@ -227,93 +224,128 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
   <div class="live"><a class="p" id="popLive" href="#">Passaggi live</a><button id="popX" type="button">Chiudi</button></div>
  </div></div>
 <script>{
-const A=[["Statuto Cap",0,"Centro"],["XVIII Dicembre",3,"Centro","Porta Susa"],["Questura",6,"Centro"],["Vittorio Emanuele II",9,"Crocetta"],["Stati Uniti",10,"Crocetta"],["Politecnico",11,"Crocetta","Politecnico"],["Einaudi",12,"Crocetta"],["Vespucci",13,"Crocetta"],["Fratelli Carle",15,"Santa Rita"],["Caserma Monte Grappa",17,"Santa Rita"]];
+"use strict";
+// ---------- Dati della linea 10 (minuti da Statuto Cap, zona, nota) ----------
+const A=[["Statuto Cap",0,"Centro"],["XVIII Dicembre",3,"Centro"],["Questura",6,"Centro"],["Vittorio Emanuele II",9,"Crocetta"],["Stati Uniti",10,"Crocetta"],["Politecnico",11,"Crocetta"],["Einaudi",12,"Crocetta"],["Vespucci",13,"Crocetta"],["Fratelli Carle",15,"Santa Rita"],["Caserma Monte Grappa",17,"Santa Rita"]];
 const RIDE=17,$=id=>document.getElementById(id);
-const ls={get(k,d){try{return localStorage.getItem(k)??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+// ---------- Memoria sul telefono: chiavi con prefisso «mv-», lettura sempre validata ----------
+const ls={get(k,d){try{const v=localStorage.getItem("mv-"+k);return v??d}catch(e){return d}},set(k,v){try{localStorage.setItem("mv-"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("mv-"+k)}catch(e){}}};
+(function migra(){try{if(localStorage.getItem("mv-migrato"))return;const M={out3:"out3",walk:"walk",stop:"stop",home2:"home2",casa:"casa",casaMode:"casaMode",giorni:"giorni",vac:"vac",mine:"mine"};
+ for(const k in M){const v=localStorage.getItem(k);if(v!==null&&localStorage.getItem("mv-"+M[k])===null)localStorage.setItem("mv-"+M[k],v)}localStorage.setItem("mv-migrato","1")}catch(e){}})();
+const jget=(k,d,ok)=>{try{const v=JSON.parse(ls.get(k,"null"));return ok(v)?v:d}catch(e){return d}};
 let dir=new Date().getHours()<12?"A":"R";
 const m2s=m=>{m=((Math.round(m)%1440)+1440)%1440;return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")};
-const s2m=s=>{const[h,mm]=(s||"14:00").split(":").map(Number);return h*60+(mm||0)};
+const s2m=(s,def)=>{const t=/^(\d{1,2}):(\d{2})/.exec(s||"");return t?(+t[1])*60+(+t[2]):def};
 const dur=x=>x>=60?Math.floor(x/60)+" h "+String(x%60).padStart(2,"0"):x+" min";
-const W=()=>Math.max(0,+$("sWalk").value||0);
-function deps(d){const o=[];if(d==="A"){for(let m=390;m<=540;m+=7)o.push(m)}else{for(let m=780;m<=1020;m+=8)o.push(m)}return o}
-const nowF=()=>{const n=new Date();return n.getHours()*60+n.getMinutes()+n.getSeconds()/60};
-function stops(){return dir==="A"?A.map(s=>({n:s[0],o:s[1],z:s[2],l:s[3]})):A.slice().reverse().map(s=>({n:s[0]==="Statuto Cap"?"Statuto Nord":s[0],o:RIDE-s[1],z:s[2],l:s[3]}))}
+const num=(id,def,max)=>{const v=parseInt($(id).value,10);return Number.isFinite(v)&&v>=0?Math.min(v,max):def};
+const W=()=>num("sWalk",4,30),H=()=>num("sHome",8,40);
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const AVV="https://www.gtt.to.it/cms/avvisi-e-informazioni-di-servizio/torino-e-cintura";
 const live=p=>`https://www.gtt.to.it/cms/percorari/arrivi?palina=${encodeURIComponent(p)}`;
-const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Partenza del mattino"},{p:"",n:"Umbria · sotto casa",l:[["60","bus"]],k:"Bus 60: verso Porta Susa e verso via Paris"},{p:"385",n:"Caserma Monte Grappa",l:[["10","tram"],["94","bus"],["55","bus"],["5","bus"],["12","bus"],["64","bus"]],k:"Vicino al civico 40"}];
-const ALT={A:[{l:"60",ty:"bus",h:"Bus 60 sotto casa → Porta Susa",d:"Fermata Umbria verso Corso Inghilterra (Porta Susa), poi tram 10 da XVIII Dicembre. Si attiva nel piano da Impostazioni.",p:"",t60:1},{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Statuto Cap → Caserma Monte Grappa, poi a piedi. Il più semplice: ogni 6–9 min.",p:"951"},
- {l:"94",ty:"bus",h:"Bus 94 · Piazza Statuto ↔ Caserma Monte Grappa",d:"Ferma anche a Caserma Monte Grappa. Palina a Statuto e frequenza da verificare: usa il live.",p:""}],
- R:[{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Caserma Monte Grappa → Statuto Nord (corsa per Rondò Forca). Ogni 6–9 min.",p:"385"},
+const T60="https://transitapp.com/en/region/torino/gtt-torino/bus-60";
+// ---------- Calendario: festivi (domenica, feste nazionali, San Giovanni a Torino, Pasquetta) ----------
+function pasqua(y){const a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return new Date(y,mo-1,da)}
+function festivo(d){if(d.getDay()===0)return true;const md=String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+ if(["01-01","01-06","04-25","05-01","06-02","06-24","08-15","11-01","12-08","12-25","12-26"].includes(md))return true;
+ const p=pasqua(d.getFullYear());p.setDate(p.getDate()+1);return p.toDateString()===d.toDateString()}
+const domani=()=>{const d=new Date();d.setDate(d.getDate()+1);return d};
+// ---------- Partenze STIMATE (non orario ufficiale): servizio 05:00–24:00 ----------
+// Feriale: ogni 7' (andata) / 8' (ritorno) dalle 06:30 alle 20:30, ogni 15' prima e dopo. Festivo: ogni 12', 20' la sera.
+function deps(d,date){const f=festivo(date||new Date()),o=[],anc=d==="A"?390:780,step=f?12:(d==="A"?7:8);
+ for(let m=anc;m>=300;m-=(m>390&&m<=1230?step:(f?20:15)))o.unshift(m);
+ for(let m=anc+step;m<=1439;m+=(m>=390&&m<1230?step:(f?20:15)))o.push(m);
+ return [...new Set(o)].sort((a,b)=>a-b)}
+const nowF=()=>{const n=new Date();return n.getHours()*60+n.getMinutes()+n.getSeconds()/60};
+// prossime partenze a partire da «from» (minuti di oggi); dopo l'ultima, quelle di domani (+1440)
+const dataTra=k=>{const x=new Date();x.setHours(12,0,0,0);x.setDate(x.getDate()+k);return x};
+function prossime(d,from){const o=[];for(let k=Math.max(0,Math.floor(from/1440));k<=8&&o.length<6;k++)deps(d,dataTra(k)).forEach(m=>{if(m+1440*k>=from)o.push(m+1440*k)});return o}
+const GG=["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"];
+const nomeGiorno=k=>k===0?"oggi":k===1?"domani":GG[dataTra(k).getDay()];
+// prossimo giorno di lavoro (da giorni scelti, esclusi festivi e vacanze), a partire da k
+function prossimoLavoro(k){for(let i=k;i<k+14;i++){const d=dataTra(i);if(giorni().includes(d.getDay())&&!festivo(d)&&!inVacData(d))return i}return k}
+function stops(){return dir==="A"?A.map(s=>({n:s[0],o:s[1],z:s[2]})):A.slice().reverse().map(s=>({n:s[0]==="Statuto Cap"?"Statuto Nord":s[0],o:RIDE-s[1],z:s[2]}))}
+// ---------- Paline e alternative ----------
+const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Partenza del mattino"},{p:"",n:"Umbria · sotto casa",l:[["60","bus"]],k:"Bus 60: verso Porta Susa e verso via Paris"},{p:"385",n:"Caserma Monte Grappa",l:[["10","tram"],["94","bus"],["55","bus"],["5","bus"],["12","bus"],["64","bus"]],k:"Vicino al civico 40 · dati Moovit/OSM da verificare"}];
+const ALT={A:[{l:"60",ty:"bus",h:"Bus 60 sotto casa → Porta Susa",d:"Fermata Umbria verso Corso Inghilterra (Porta Susa), poi tram 10 da XVIII Dicembre. Si attiva nel piano da Impostazioni.",t60:1},{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Statuto Cap → Caserma Monte Grappa, poi a piedi. Circa ogni 7 min di giorno.",p:"951"},
+ {l:"94",ty:"bus",h:"Bus 94 · Piazza Statuto ↔ Caserma Monte Grappa",d:"Ferma anche a Caserma Monte Grappa. Palina a Statuto e frequenza da verificare."}],
+ R:[{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Caserma Monte Grappa → Statuto Nord (corsa per Rondò Forca). Circa ogni 8 min di giorno.",p:"385"},
  {l:"94",ty:"bus",h:"Bus 94 · direzione Centro Piazza Statuto",d:"Dalla stessa palina 385, porta in Piazza Statuto. Frequenza da verificare: usa il live.",p:"385"},
- {l:"60",ty:"bus",h:"Bus 60 da Statuto fino a casa",d:"Dopo il tram: Statuto → Regina Margherita → Don Bosco → Umbria.",p:"",t60:1},
- {l:"5 · 12 · 55 · 64",ty:"bus",h:"Altre linee alla palina 385",d:"Non vanno a Statuto: 5 Vittorio Veneto, 12 Porta Nuova, 55 Vanchiglia, 64 Serao. Utili se hai commissioni.",p:"385"}]};
-function getMine(){try{return JSON.parse(ls.get("mine","[]"))||[]}catch(e){return[]}}
-function renderCards(n,up){
+ {l:"60",ty:"bus",h:"Bus 60 da Statuto fino a casa",d:"Dopo il tram: Statuto → Regina Margherita → Don Bosco → Umbria.",t60:1},
+ {l:"5 · 12 · 55 · 64",ty:"bus",h:"Altre linee alla palina 385",d:"Non vanno a Statuto: 5 Vittorio Veneto, 12 Porta Nuova, 55 Vanchiglia, 64 Serao.",p:"385"}]};
+const TIPI=["ind","pal","tram","bus","metro"];
+function getMine(){return jget("mine",[],Array.isArray).filter(x=>x&&typeof x==="object"&&(typeof x.p==="string"||typeof x.p==="number")).map(x=>({t:TIPI.includes(x.t)?x.t:"pal",p:String(x.p).slice(0,80),n:typeof x.n==="string"?x.n.slice(0,40):""})).filter(x=>x.p)}
+let daTogliere=-1;
+function renderCards(up){
  $("altT").textContent=dir==="A"?"Alternative per andare in ufficio":"Alternative per tornare a Statuto";
- $("alt").innerHTML=ALT[dir].map(a=>`<div class="card${a.best?" best":""}"><div class="h">${a.l.split(" · ").map(x=>`<span class="chip ${a.ty==="bus"?"bus":""}">${x}</span>`).join("")}<b>${a.h}</b></div><p>${a.d}</p>${a.l==="10"?`<div class="t">${up.slice(0,4).map(m=>`<span>${m2s(m)}</span>`).join("")}</div><div class="tag">orari indicativi</div>`:""}<div class="acts">${a.t60?`<a href="https://transitapp.com/en/region/torino/gtt-torino/bus-60">Orari 60</a>`:a.p?`<a href="${live(a.p)}">Live palina ${a.p}</a>`:`<a href="${AVV}">Avvisi GTT</a>`}</div></div>`).join("");
+ $("alt").innerHTML=ALT[dir].map(a=>`<div class="card${a.best?" best":""}"><div class="h">${a.l.split(" · ").map(x=>`<span class="chip ${a.ty==="bus"?"bus":""}">${x}</span>`).join("")}<b>${a.h}</b></div><p>${a.d}</p>${a.l==="10"?`<div class="t">${up.slice(0,4).map(m=>`<span>${m2s(m)}</span>`).join("")}</div><div class="tag">stime, non orario ufficiale</div>`:""}<div class="acts">${a.t60?`<a href="${T60}">Orari 60</a>`:a.p?`<a href="${live(a.p)}">Live palina ${a.p}</a>`:`<a href="${AVV}">Avvisi GTT</a>`}</div></div>`).join("");
  const mine=getMine();
- $("pals").innerHTML=PAL.map(x=>`<div class="card"><div class="h"><span class="chip">${x.p||"60"}</span><b>${x.n}</b></div><p class="tag">${x.k}</p><div class="t">${x.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("")}</div><div class="acts">${x.p?`<a href="${live(x.p)}">Passaggi live</a>`:`<a href="https://transitapp.com/en/region/torino/gtt-torino/bus-60">Fermate e orari 60</a>`}</div></div>`).join("")
- +mine.map((x,i)=>{const t=x.t||"pal",v=esc(x.p),nm=esc(x.n||"");
-  const del=`<button data-del="${i}">Togli</button>`;
+ const del=i=>`<button data-del="${i}">${daTogliere===i?"Tocca ancora per togliere":"Togli"}</button>`;
+ $("pals").innerHTML=PAL.map(x=>`<div class="card"><div class="h"><span class="chip">${x.p||"60"}</span><b>${x.n}</b></div><p class="tag">${x.k}</p><div class="t">${x.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("")}</div><div class="acts">${x.p?`<a href="${live(x.p)}">Passaggi live</a>`:`<a href="${T60}">Fermate e orari 60</a>`}</div></div>`).join("")
+ +mine.map((x,i)=>{const t=x.t,v=esc(x.p),nm=esc(x.n);
   if(t==="ind"){const q=encodeURIComponent(x.p+(/torino/i.test(x.p)?"":", Torino"));
-   return `<div class="card"><div class="h"><span class="chip ind">📍</span><b>${nm||v}</b></div>${nm?`<p class="tag">${v}</p>`:""}<div class="acts"><a href="https://maps.apple.com/?daddr=${q}&dirflg=r">Da dove sei</a><a href="https://maps.apple.com/?saddr=${encodeURIComponent("Corso Umbria 14, Torino")}&daddr=${q}&dirflg=r">Da casa</a>${del}</div></div>`}
-  if(t==="tram"||t==="bus"){const n=x.p.toLowerCase().replace(/[^0-9a-z]/g,"");
-   return `<div class="card"><div class="h"><span class="chip ${t==="bus"?"bus":""}">${v}</span><b>${nm||(t==="tram"?"Tram ":"Bus ")+v}</b></div><p class="tag">Fermate e orari della linea</p><div class="acts"><a href="https://transitapp.com/en/region/torino/gtt-torino/${t}-${n}">Orari</a><a href="${AVV}">Avvisi GTT</a>${del}</div></div>`}
-  if(t==="metro")return `<div class="card"><div class="h"><span class="chip m">M1</span><b>${nm||"Metro "+v}</b></div><p class="tag">Metropolitana linea 1</p><div class="acts"><a href="https://maps.apple.com/?daddr=${encodeURIComponent("Metro "+x.p+", Torino")}&dirflg=r">Mappe</a><a href="${AVV}">Avvisi GTT</a>${del}</div></div>`;
-  return `<div class="card"><div class="h"><span class="chip">${v}</span><b>${nm||"Palina "+v}</b></div><p class="tag">Aggiunta da te</p><div class="acts"><a href="${live(x.p)}">Passaggi live</a>${del}</div></div>`}).join("");
- $("pals").querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{const m=getMine();m.splice(+b.dataset.del,1);ls.set("mine",JSON.stringify(m));render()});
+   return `<div class="card"><div class="h"><span class="chip ind">📍</span><b>${nm||v}</b></div>${nm?`<p class="tag">${v}</p>`:""}<div class="acts"><a href="https://maps.apple.com/?daddr=${q}&dirflg=r">Da dove sei</a><a href="https://maps.apple.com/?saddr=${encodeURIComponent("Corso Umbria 14, Torino")}&daddr=${q}&dirflg=r">Da casa</a>${del(i)}</div></div>`}
+  if(t==="tram"||t==="bus"){const n=encodeURIComponent(x.p.toLowerCase().replace(/[^0-9a-z]/g,""));
+   return `<div class="card"><div class="h"><span class="chip ${t==="bus"?"bus":""}">${v}</span><b>${nm||(t==="tram"?"Tram ":"Bus ")+v}</b></div><p class="tag">Fermate e orari della linea (Transit)</p><div class="acts"><a href="https://transitapp.com/en/region/torino/gtt-torino/${t}-${n}">Orari</a><a href="${AVV}">Avvisi GTT</a>${del(i)}</div></div>`}
+  if(t==="metro")return `<div class="card"><div class="h"><span class="chip m">M1</span><b>${nm||"Metro "+v}</b></div><p class="tag">Metropolitana linea 1</p><div class="acts"><a href="https://maps.apple.com/?daddr=${encodeURIComponent("Metro "+x.p+", Torino")}&dirflg=r">Mappe</a><a href="${AVV}">Avvisi GTT</a>${del(i)}</div></div>`;
+  const pn=x.p.replace(/\D/g,"");
+  return `<div class="card"><div class="h"><span class="chip">${esc(pn)}</span><b>${nm||"Palina "+esc(pn)}</b></div><p class="tag">Aggiunta da te</p><div class="acts">${pn?`<a href="${live(pn)}">Passaggi live</a>`:""}${del(i)}</div></div>`}).join("");
+ $("pals").querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{const i=+b.dataset.del;if(daTogliere!==i){daTogliere=i;renderCards(up);return}
+  const m=getMine();m.splice(i,1);ls.set("mine",JSON.stringify(m));daTogliere=-1;render()});
 }
-const FC='font-family="Barlow Condensed,system-ui,sans-serif"',FB='font-family="Barlow,system-ui,sans-serif"';
-function ring(min,lbl){const r=46,C=2*Math.PI*r,f=Math.max(0,Math.min(1,min/15)),num=/^\d+$/.test(lbl);
- $("ring").innerHTML=`<circle cx="56" cy="56" r="${r}" fill="none" stroke="#3a3a3c" stroke-width="9"/><circle cx="56" cy="56" r="${r}" fill="none" stroke="#ff7a33" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C*f} ${C}" transform="rotate(-90 56 56)"/><text x="56" y="${num?62:62}" text-anchor="middle" ${FC} font-weight="700" font-size="${num?40:24}" fill="#ff7a33">${lbl}</text><text x="56" y="82" text-anchor="middle" ${FB} font-size="12" fill="#c7c7cc">${num?"min":""}</text>`}
-const H=()=>Math.max(0,+$("sHome").value||0);
-// Il piano del giorno: casa 07:00 → Statuto → tram 10 → ufficio; ufficio 13:45 → Caserma Monte Grappa → tram 10 → Statuto Nord → casa
-// Bus 60 sotto casa (fermata Umbria): stime modificabili qui
+// ---------- Anello e piano ----------
+const FC='font-family="Avenir Next Condensed,Arial Narrow,system-ui,sans-serif"',FB='font-family="-apple-system,system-ui,sans-serif"';
+function ring(min,lbl,aria){const r=46,C=2*Math.PI*r,f=Math.max(0,Math.min(1,min/15)),isN=/^\d+$/.test(lbl);
+ $("ring").setAttribute("aria-label",aria);
+ $("ring").innerHTML=`<circle cx="56" cy="56" r="${r}" fill="none" stroke="#3a3a3c" stroke-width="9"/><circle cx="56" cy="56" r="${r}" fill="none" stroke="#ff7a33" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C*f} ${C}" transform="rotate(-90 56 56)"/><text x="56" y="${isN?60:62}" text-anchor="middle" ${FC} font-weight="700" font-size="${isN?40:22}" fill="#ff7a33">${isN?"≈"+lbl:lbl}</text><text x="56" y="84" text-anchor="middle" ${FB} font-size="16" fill="#c7c7cc">${isN?"min":""}</text>`}
+// Bus 60 sotto casa (fermata Umbria): tempi stimati
 const B60={toFerm:2,attesa:4,corsaA:10,aPiediPS:3,corsaR:5,aPiediSt:2};
 const via60=()=>ls.get("casaMode","piedi")==="bus60";
-function plan(d){const dl=deps(d),w=W(),h=H(),b=via60();
- if(d==="A"){const start=s2m($("sCasa").value);
-  if(b){const bus=start+B60.toFerm+B60.attesa,ps=bus+B60.corsaA,at=ps+B60.aPiediPS,dep=dl.find(m=>m+3>=at)??dl[dl.length-1],tr=dep+3;
-   return{d,start,at,dep,tr,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Bus 60","Umbria → Porta Susa",bus,0],["Scendi","Porta Susa, poi a piedi",ps,0],["Tram 10","da XVIII Dicembre",tr,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
-  const at=start+h,dep=dl.find(m=>m>=at)??dl[dl.length-1];
+const startDef=d=>d==="A"?s2m($("sCasa").value,420):s2m($("sOut").value,840);
+// piano da un'ora di uscita (default: quella impostata); usa la prima corsa utile, anche di domani
+function plan(d,from){const w=W(),h=H(),b=via60(),start=from??startDef(d);
+ const first=(at,off=0)=>prossime(d,at-off).find(m=>m+off>=at);
+ if(d==="A"){
+  if(b){const bus=start+B60.toFerm+B60.attesa,ps=bus+B60.corsaA,at=ps+B60.aPiediPS,dep=first(at,3),tr=dep+3;
+   return{d,start,at,dep,tr,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Bus 60","Umbria → Porta Susa (stima)",bus,0],["Scendi","Porta Susa, poi a piedi",ps,0],["Tram 10","da XVIII Dicembre",tr,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
+  const at=start+h,dep=first(at);
   return{d,start,at,dep,tr:dep,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Fermata","Statuto Cap · "+h+"′",at,0],["Tram 10","da Statuto Cap",dep,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
- const start=s2m($("sOut").value),at=start+w,dep=dl.find(m=>m>=at)??dl[dl.length-1],down=dep+RIDE;
+ const at=start+w,dep=first(at),down=dep+RIDE;
  if(b){const bus=down+B60.aPiediSt+B60.attesa,end=bus+B60.corsaR+B60.toFerm;
-  return{d,start,at,dep,tr:dep,down,end,wa:w,wb:end-down,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Monte Grappa · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Statuto → Umbria",bus,0],["Casa","sotto casa",end,0]]}}
+  return{d,start,at,dep,tr:dep,down,end,wa:w,wb:end-down,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Monte Grappa · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Statuto → Umbria (stima)",bus,0],["Casa","sotto casa",end,0]]}}
  return{d,start,at,dep,tr:dep,down,end:down+h,wa:w,wb:h,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Monte Grappa · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Casa","a piedi "+h+"′",down+h,0]]}}
 function render(){
- const n=nowF(),fn=Math.floor(n),dl=deps(dir),st=stops(),day=new Date().getDay(),P=plan(dir);
+ const n=nowF(),fn=Math.floor(n),st=stops(),oggi=new Date(),fest=festivo(oggi);
+ let P=plan(dir),kk=0;const passato=fn>P.end;if(passato){kk=prossimoLavoro(1);P=plan(dir,startDef(dir)+1440*kk)}else if(!giorni().includes(oggi.getDay())||fest||inVac()){kk=prossimoLavoro(0);if(kk)P=plan(dir,startDef(dir)+1440*kk)}
  $("bA").setAttribute("aria-pressed",dir==="A");$("bR").setAttribute("aria-pressed",dir==="R");
  $("clk").textContent=m2s(fn);
  $("stopNm").textContent=dir==="A"?"Statuto Cap · 951":"Caserma Monte Grappa → Statuto";
  const pp=PAL[dir==="A"?0:2];$("chips").innerHTML=pp.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("");
- const fut=dl.filter(m=>m>=fn);const tom=!fut.length;const up=(tom?dl:fut).slice(0,4);
- const d0=up[0]-fn;
- ring(tom?0:d0,tom?"domani":d0<=0?"ora":String(d0));
- $("nexts").innerHTML=up.slice(1,4).map(m=>`<div class="nx${m===P.dep?" mine":""}"><b>${m2s(m)}</b><span>${tom?"domani":"tra "+dur(m-fn)}</span></div>`).join("");
- // piano
- const rows=P.rows;
- const wait=P.tr-P.at;
- $("sum").innerHTML=`<div class="ph"><b>Il tuo piano</b><span>${day===0||day===6?"oggi festivo: orari diversi":wait>0?"attesa alla fermata "+wait+" min":"tram appena arrivi"}</span></div>`
-  +rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn&&fn<=P.end?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}</span></div>`).join("");
+ const up=prossime(dir,fn).slice(0,4),d0=up[0]-fn,dom=up[0]>=1440;
+ const lab=m=>m>=1440?nomeGiorno(Math.floor(m/1440)):"tra "+dur(m-fn);
+ ring(dom||d0>=60?0:d0,dom?nomeGiorno(Math.floor(up[0]/1440)):d0>=60?m2s(up[0]):d0<=0?"ora":String(d0),dom?`Prossimo tram domani alle ${m2s(up[0])}`:`Prossimo tram stimato tra circa ${d0} minuti, alle ${m2s(up[0])}`);
+ $("nexts").innerHTML=up.slice(1,4).map(m=>`<div class="nx${m===P.dep?" mine":""}"><b>${m2s(m)}</b><span>${lab(m)}</span></div>`).join("");
+ const wait=Math.round(P.tr-P.at),quando=nomeGiorno(Math.floor(P.start/1440));
+ const nota=(festivo(dataTra(Math.floor(P.start/1440)))?"festivo · ":"")+(wait>0?"attesa ~"+wait+" min":"tram appena arrivi");
+ $("sum").innerHTML=`<div class="ph"><b>Il tuo piano · ${quando}</b><span>${nota} · stime</span></div>`
+  +P.rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}</span></div>`).join("");
  const p=dir==="A"?"951":$("sStop").value.replace(/\D/g,"");
- $("live").innerHTML=(p?`<a class="p" href="${live(p)}">Live GTT · palina ${p}</a>`:`<a class="p" href="#" id="setStop">Imposta palina ritorno</a>`)+`<a href="${AVV}">Avvisi GTT</a>`;
- const ss=$("setStop");if(ss)ss.onclick=e=>{e.preventDefault();const d=document.querySelectorAll("details")[2];d.open=true;$("sStop").focus()};
- const moving=dl.filter(m=>m<=n&&n-m<RIDE).pop();
+ $("live").innerHTML=(p?`<a class="p" href="${live(p)}">Live GTT · palina ${esc(p)}</a>`:`<a class="p" href="#" id="setStop">Imposta palina ritorno</a>`)+`<a href="${AVV}">Avvisi GTT</a>`;
+ const ss=$("setStop");if(ss)ss.onclick=e=>{e.preventDefault();const d=$("sStop").closest("details");if(d)d.open=true;$("sStop").focus()};
+ const moving=deps(dir).filter(m=>m<=n&&n-m<RIDE).pop();
  draw(st,P,moving!=null?n-moving:null);
- const all=t=>{const pt=plan(t).dep;return deps(t).map(m=>`<span class="${m===up[0]&&t===dir&&!tom?"nx1":m===pt?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")};
+ const all=t=>{const pt=plan(t).dep;const nx=t===dir?up[0]:-1;return deps(t).map(m=>`<span class="${m===nx?"nx1":m===pt?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")};
  $("ttA").innerHTML=all("A");$("ttR").innerHTML=all("R");
- renderCards(n,up);
+ $("ttN").textContent=fest?"Oggi festivo: stime con frequenza ridotta.":"";
+ renderCards(up);
 }
 function draw(st,P,prog){
  const t0=P.dep,pts=[];
  const casa={n:"Casa · Corso Umbria 14",home:1},uff={n:"Ufficio · Corso IV Novembre 40",home:2};
  if(dir==="A")pts.push({...casa,t:P.start,wm:P.wa,lab:P.b?"bus 60 + a piedi":null});else pts.push({...uff,t:P.start,wm:P.wa});
- st.forEach(s=>pts.push({n:s.n,t:t0+s.o,z:s.z,l:s.l,o:s.o}));
+ st.forEach(s=>pts.push({n:s.n,t:t0+s.o,z:s.z}));
  if(dir==="A")pts.push({...uff,t:P.end,wm:P.wb});else pts.push({...casa,t:P.end,wm:P.wb,lab:P.b?"a piedi + bus 60":null});
  const G=34,top=22,X=90,HH=top+(pts.length-1)*G+34,VW=380;
- let s=`<svg viewBox="0 0 ${VW} ${HH}" role="img" aria-label="Schema del percorso con orari">`;
+ let s=`<svg viewBox="0 0 ${VW} ${HH}" role="img" aria-label="Schema del percorso con orari stimati">`;
  const zs=[];pts.forEach((p,i)=>{if(p.z&&(!zs.length||zs[zs.length-1].z!==p.z))zs.push({z:p.z,a:i,b:i});else if(p.z)zs[zs.length-1].b=i});
  zs.forEach((z,k)=>{const y1=top+z.a*G-G/2+2,y2=top+z.b*G+G/2-2;s+=`<rect x="${X-22}" y="${y1}" width="${VW-X+20}" height="${y2-y1}" rx="12" fill="var(--zone)" ${k%2?'fill-opacity=".6"':''}/><text x="${VW-10}" y="${y1+16}" text-anchor="end" ${FB} font-size="11" font-weight="600" fill="var(--mut)">${z.z.toUpperCase()}</text>`});
  for(let i=0;i<pts.length-1;i++){const y=top+i*G,hp=pts[i].home?pts[i]:pts[i+1].home?pts[i+1]:null;
@@ -326,91 +358,120 @@ function draw(st,P,prog){
   if(key)s+=`<rect x="6" y="${y-15}" width="66" height="30" rx="8" fill="#ff7a33"/>`;
   s+=`<text x="${key?39:14}" y="${y+7}" ${key?'text-anchor="middle"':""} ${FC} font-weight="700" font-size="21" fill="${key?"#000":"var(--ink)"}">${m2s(p.t)}</text>`;
   s+=`<text x="${X+24}" y="${y+5}" ${FB} font-size="15.5" font-weight="${end||p.home?600:400}" fill="var(--ink)">${p.n}</text>`;
-  
  });
  if(prog!=null){const y=top+G+(prog/RIDE)*((A.length-1)*G);
-  s+=`<g class="tram" transform="translate(${X} ${y})"><rect x="-15" y="-11" width="30" height="22" rx="6" fill="#ff7a33" stroke="var(--bg)" stroke-width="3"/><rect x="-9" y="-6" width="18" height="6" rx="2" fill="#000"/><text x="0" y="8" text-anchor="middle" ${FC} font-weight="700" font-size="9" fill="#000">10</text></g>`}
+  s+=`<g transform="translate(${X} ${y})"><rect x="-15" y="-11" width="30" height="22" rx="6" fill="#ff7a33" stroke="var(--bg)" stroke-width="3"/><rect x="-9" y="-6" width="18" height="6" rx="2" fill="#000"/><text x="0" y="8" text-anchor="middle" ${FC} font-weight="700" font-size="9" fill="#000">10</text></g>`}
  s+=`</svg>`;$("map").innerHTML=s;
  $("mapT").textContent=dir==="A"?"Andata: casa → ufficio":"Ritorno: ufficio → casa";
 }
-$("sOut").value=ls.get("out3","14:00");$("sWalk").value=ls.get("walk","4");$("sStop").value=ls.get("stop","385");
-const HINT={ind:["Via e numero, es. Via Roma 20","L'indirizzo apre il percorso con i mezzi in Mappe, da dove sei o da casa.","text"],pal:["Numero palina, es. 470","Passaggi live GTT della palina (il numero è scritto sulla fermata).","numeric"],tram:["Numero linea tram, es. 4","Fermate e prossimi passaggi della linea.","text"],bus:["Numero linea bus, es. 94","Fermate e prossimi passaggi della linea.","text"],metro:["Fermata metro, es. Porta Susa","Percorso fino alla fermata della metro in Mappe.","text"]};
-const tipo=()=>document.querySelector('#addP input[name=tipo]:checked').value;
-document.querySelectorAll('#addP input[name=tipo]').forEach(r=>r.onchange=()=>{const h=HINT[tipo()];$("pNum").placeholder=h[0];$("pHint").textContent=h[1];$("pNum").inputMode=h[2]});
-$("addP").addEventListener("submit",e=>{e.preventDefault();const t=tipo();let p=$("pNum").value.trim().slice(0,80);if(t==="pal")p=p.replace(/\D/g,"");if(!p)return;const m=getMine();m.push({t,p,n:$("pName").value.trim().slice(0,40)});ls.set("mine",JSON.stringify(m));$("pNum").value="";$("pName").value="";render()});
-const K={sOut:"out3",sWalk:"walk",sStop:"stop",sHome:"home",sCasa:"casa"};$("sHome").value=ls.get("home2","8");$("sCasa").value=ls.get("casa","07:00");K.sHome="home2";
-Object.keys(K).forEach(id=>$(id).addEventListener("input",()=>{ls.set(K[id],$(id).value);render()}));
-$("bA").onclick=()=>{dir="A";render()};$("bR").onclick=()=>{dir="R";render()};
-render();const tick=setInterval(render,20000);
-// Meteo (Open-Meteo, gratuito senza chiavi) per l'ora della partenza
-let meteo=null;
-const WC=c=>c===0?"sereno":c<=3?"nuvoloso":c<=48?"nebbia":c<=57?"pioviggine":c<=67?"pioggia":c<=77?"neve":c<=82?"rovesci":c<=86?"neve":"temporale";
-function loadMeteo(){return fetch("https://api.open-meteo.com/v1/forecast?latitude=45.06&longitude=7.66&hourly=temperature_2m,precipitation_probability,weathercode&timezone=Europe%2FRome&forecast_days=2",{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&v.hourly){meteo=v.hourly;ls.set("meteo",JSON.stringify(v.hourly))}}).catch(()=>{try{meteo=JSON.parse(ls.get("meteo","null"))}catch(e){}})}
-function meteoAt(min,dom){if(!meteo||!meteo.time)return"";const d=new Date();if(dom)d.setDate(d.getDate()+1);
- const key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}T${String(Math.floor(min/60)).padStart(2,"0")}:00`;
- const i=meteo.time.indexOf(key);if(i<0)return"";const t=Math.round(meteo.temperature_2m[i]),pp=meteo.precipitation_probability[i],c=meteo.weathercode[i];
- const tip=pp>=50||c>=51?"prendi l'ombrello":t<=3?"fa freddo: copriti bene":"";
- return `<b>${t}°</b><span>alle ${m2s(Math.floor(min/60)*60)}: ${WC(c)}, prob. pioggia ${pp}%${tip?" · <strong>"+tip+"</strong>":""}</span>`}
-// Esci adesso: conto alla rovescia a tutto schermo
-let goTimer=null,goStart=0;
-function esci(){render();const n=nowF(),dl=deps(dir),P=plan(dir);let t,w;
- if(P.start>n){t=P.tr;w=P.tr-P.start}else{w=dir==="A"?H():W();t=dl.find(m=>m-w>=n)??dl.find(m=>m>=n)}if(t==null){return}
- goStart=n;$("go").hidden=false;
- const tick=()=>{const now=nowF(),left=(t-w-now)*60,tot=Math.max(1,(t-w-goStart)*60);
-  const a=Math.max(0,Math.round(left)),mm=Math.floor(a/60),ss=a%60;
-  $("goT").textContent=mm>=60?`${Math.floor(mm/60)}h ${String(mm%60).padStart(2,"0")}`:`${mm}:${String(ss).padStart(2,"0")}`;
-  $("goK").textContent=left>0?"Esci tra":"Esci ora!";
-  $("goS").textContent=`Esci ${dir==="A"?"di casa":"dall'ufficio"} alle ${m2s(t-w)} · tram 10 delle ${m2s(t)} da ${dir==="A"?(via60()?"XVIII Dicembre":"Statuto Cap"):"Caserma Monte Grappa"}`;
-  $("goB").style.width=Math.min(100,Math.max(0,100*(1-left/tot)))+"%";
-  $("go").className="go"+(left<=0?" late":left<=120?" soon":"");
-  if(now>t+1){clearInterval(goTimer)}};
- tick();clearInterval(goTimer);goTimer=setInterval(tick,1000)}
-$("goX").onclick=()=>{$("go").hidden=true;clearInterval(goTimer)};
-$("esciBtn").onclick=esci;$("popEsci").onclick=()=>{$("pop").hidden=true;esci()};
-document.querySelectorAll('#cMode input').forEach(r=>{r.checked=r.value===ls.get("casaMode","piedi");r.onchange=()=>{ls.set("casaMode",r.value);render()}});
-// Giorni di lavoro (lun, mer, ven) e sospensione per vacanze
-const giorni=()=>{try{return JSON.parse(ls.get("giorni","[1,3,5]"))}catch(e){return[1,3,5]}};
-const vac=()=>{try{return JSON.parse(ls.get("vac","null"))}catch(e){return null}};
+// ---------- Giorni di lavoro e vacanze ----------
+const giorni=()=>{const g=jget("giorni",[1,3,5],Array.isArray).map(Number).filter(x=>x>=0&&x<=6);return g};
+const vac=()=>jget("vac",null,v=>v&&typeof v.da==="string"&&typeof v.a==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(v.da)&&/^\d{4}-\d{2}-\d{2}$/.test(v.a));
 const oggiISO=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
-const inVac=()=>{const v=vac(),t=oggiISO();return !!(v&&v.da<=t&&t<=v.a)};
+const isoDi=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const inVacData=d=>{const v=vac(),t=isoDi(d);return !!(v&&v.da<=t&&t<=v.a)};
+const inVac=()=>inVacData(new Date());
 const it=x=>x.split("-").reverse().slice(0,2).join("/");
 function vacUI(){const v=vac(),t=oggiISO();
  $("vSt").textContent=v&&v.a>=t?(v.da<=t?`Popup sospesi fino al ${it(v.a)} compreso.`:`Popup sospesi dal ${it(v.da)} al ${it(v.a)}.`):"Popup attivi nei giorni scelti.";
  if(v){$("vDa").value=v.da;$("vA").value=v.a}}
+// ---------- Impostazioni ----------
+$("sOut").value=ls.get("out3","14:00");$("sWalk").value=ls.get("walk","4");$("sStop").value=ls.get("stop","385");$("sHome").value=ls.get("home2","8");$("sCasa").value=ls.get("casa","07:00");
+const K={sOut:"out3",sWalk:"walk",sStop:"stop",sHome:"home2",sCasa:"casa"};
+Object.keys(K).forEach(id=>$(id).addEventListener("input",()=>{ls.set(K[id],$(id).value);render()}));
+const HINT={ind:["Via e numero, es. Via Roma 20","L'indirizzo apre il percorso con i mezzi in Mappe, da dove sei o da casa.","text"],pal:["Numero palina, es. 470","Passaggi live GTT della palina (il numero è scritto sulla fermata).","numeric"],tram:["Numero linea tram, es. 4","Fermate e prossimi passaggi della linea.","text"],bus:["Numero linea bus, es. 94","Fermate e prossimi passaggi della linea.","text"],metro:["Fermata metro, es. Porta Susa","Percorso fino alla fermata della metro in Mappe.","text"]};
+const tipo=()=>(document.querySelector('#addP input[name=tipo]:checked')||{value:"ind"}).value;
+document.querySelectorAll('#addP input[name=tipo]').forEach(r=>r.onchange=()=>{const h=HINT[tipo()];$("pNum").placeholder=h[0];$("pHint").textContent=h[1];$("pNum").inputMode=h[2]});
+$("addP").addEventListener("submit",e=>{e.preventDefault();const t=tipo();let p=$("pNum").value.trim().slice(0,80);if(t==="pal")p=p.replace(/\D/g,"");if(!p){$("pHint").textContent="Scrivi un valore valido.";return}
+ const m=getMine();m.push({t,p,n:$("pName").value.trim().slice(0,40)});ls.set("mine",JSON.stringify(m));$("pNum").value="";$("pName").value="";render()});
+document.querySelectorAll('#cMode input').forEach(r=>{r.checked=r.value===ls.get("casaMode","piedi");r.onchange=()=>{ls.set("casaMode",r.value);render()}});
+$("bA").onclick=()=>{dir="A";render()};$("bR").onclick=()=>{dir="R";render()};
+render();setInterval(()=>{if($("go").hidden)render()},20000);
+// ---------- Rete con limite d'attesa (3 s) ----------
+const conLimite=(pr,ms=3000)=>Promise.race([pr,new Promise((_,no)=>setTimeout(()=>no(new Error("timeout")),ms))]);
+// ---------- Meteo (Open-Meteo, senza chiavi) ----------
+let meteo=jget("meteo",null,v=>v&&Array.isArray(v.time));
+const WC=c=>c===0?"sereno":c<=3?"nuvoloso":c<=48?"nebbia":c<=57?"pioviggine":c<=67?"pioggia":c<=77?"neve":c<=82?"rovesci":c<=86?"neve":"temporale";
+function loadMeteo(){return conLimite(fetch("https://api.open-meteo.com/v1/forecast?latitude=45.06&longitude=7.66&hourly=temperature_2m,precipitation_probability,weathercode&timezone=Europe%2FRome&forecast_days=3",{cache:"no-store"}).then(r=>r.json())).then(v=>{if(v&&v.hourly&&Array.isArray(v.hourly.time)){meteo=v.hourly;ls.set("meteo",JSON.stringify(v.hourly))}}).catch(()=>{})}
+function meteoAt(min){if(!meteo)return"";const d=new Date();d.setDate(d.getDate()+Math.floor(min/1440));const mm=((min%1440)+1440)%1440;
+ const key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}T${String(Math.floor(mm/60)).padStart(2,"0")}:00`;
+ const i=meteo.time.indexOf(key);if(i<0)return"";const t=Math.round(+meteo.temperature_2m[i]),pp=+meteo.precipitation_probability[i],c=+meteo.weathercode[i];
+ if(!Number.isFinite(t))return"";const tip=pp>=50||c>=51?"prendi l'ombrello":t<=3?"fa freddo: copriti bene":"";
+ return `<b>${t}°</b><span>alle ${m2s(Math.floor(mm/60)*60)}: ${WC(c)}, prob. pioggia ${Number.isFinite(pp)?pp:"—"}%${tip?" · <strong>"+tip+"</strong>":""}</span>`}
+// ---------- Esci adesso: conto alla rovescia che segue il piano ----------
+let goTimer=null,goStart=0,wake=null;
+function esci(){render();const n=nowF();let P=plan(dir),leave;
+ if(P.start>n){leave=P.start}else{P=plan(dir,Math.ceil(n));leave=Math.ceil(n)+Math.max(0,Math.floor(P.tr-P.at))}
+ goStart=n;$("go").hidden=false;$("goX").focus();
+ try{navigator.wakeLock&&navigator.wakeLock.request("screen").then(l=>{wake=l}).catch(()=>{})}catch(e){}
+ const da=dir==="A"?(P.b?"XVIII Dicembre":"Statuto Cap"):"Caserma Monte Grappa";
+ const tick=()=>{const now=nowF(),left=(leave-now)*60,tot=Math.max(1,(leave-goStart)*60);
+  const a=Math.max(0,Math.round(left)),mm=Math.floor(a/60),ss=a%60;
+  $("goT").textContent=mm>=60?`${Math.floor(mm/60)}h ${String(mm%60).padStart(2,"0")}`:`${mm}:${String(ss).padStart(2,"0")}`;
+  $("goK").textContent=left>0?"Esci tra":"Esci ora!";
+  $("goS").textContent=`Esci ${dir==="A"?"di casa":"dall'ufficio"} alle ${m2s(leave)}${leave>=1440?" (domani)":""} · tram 10 delle ${m2s(P.tr)} da ${da} · orari stimati, controlla il live`;
+  $("goB").style.width=Math.min(100,Math.max(0,100*(1-left/tot)))+"%";
+  $("go").className="go"+(left<=0?" late":left<=120?" soon":"");
+  if(now>leave+5)clearInterval(goTimer)};
+ tick();clearInterval(goTimer);goTimer=setInterval(tick,1000)}
+function chiudiGo(){$("go").hidden=true;clearInterval(goTimer);try{wake&&wake.release()}catch(e){}wake=null;$("esciBtn").focus();forseAggiorna()}
+$("goX").onclick=chiudiGo;
+$("esciBtn").onclick=esci;$("popEsci").onclick=()=>{chiudiPop();esci()};
 document.querySelectorAll("#days input").forEach(c=>{c.checked=giorni().includes(+c.value);c.onchange=()=>{ls.set("giorni",JSON.stringify([...document.querySelectorAll("#days input:checked")].map(x=>+x.value)));stato()}});
 $("vOn").onclick=()=>{const da=$("vDa").value||oggiISO(),a=$("vA").value||da;if(a<da){$("vSt").textContent="La data di fine è prima dell'inizio.";return}ls.set("vac",JSON.stringify({da,a}));vacUI();stato()};
-$("vOff").onclick=()=>{try{localStorage.removeItem("vac")}catch(e){}$("vDa").value="";$("vA").value="";vacUI();stato()};
+$("vOff").onclick=()=>{ls.del("vac");$("vDa").value="";$("vA").value="";vacUI();stato()};
 vacUI();
-// Avvisi e popup partenza (06:45 andata, 13:30 ritorno, feriali)
-let avvisi={agg:"",linee:[]};
-function loadAvv(){return fetch("avvisi.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&Array.isArray(v.linee)){avvisi=v;ls.set("avv",JSON.stringify(v))}}).catch(()=>{try{const c=JSON.parse(ls.get("avv","null"));if(c)avvisi=c}catch(e){}}).finally(stato)}
-const mieLinee=["10","94"];
-const miei=()=>avvisi.linee.filter(a=>(a.linee||[]).some(l=>mieLinee.includes(String(l))));
-function stato(){const m=miei(),b=$("stato");b.className="stato"+(m.length?" warn":"");
+// ---------- Avvisi GTT (avvisi.json, scritto dall'attività programmata) ----------
+let avvisi={agg:"",iso:"",linee:[]};
+function pulisci(v){if(!v||typeof v!=="object")return null;const L=Array.isArray(v.linee)?v.linee:[];
+ return{agg:typeof v.agg==="string"?v.agg.slice(0,20):"",iso:typeof v.iso==="string"?v.iso:"",linee:L.filter(a=>a&&typeof a==="object").map(a=>({linee:(Array.isArray(a.linee)?a.linee:[a.linee]).filter(x=>x!=null).map(String).slice(0,8),titolo:String(a.titolo||"").slice(0,200),quando:String(a.quando||"").slice(0,80)})).filter(a=>a.linee.length&&a.titolo)}}
+{const c=pulisci(jget("avv",null,v=>!!v));if(c)avvisi=c}
+function loadAvv(){return conLimite(fetch("avvisi.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json())).then(v=>{const c=pulisci(v);if(c){avvisi=c;ls.set("avv",JSON.stringify(c))}}).catch(()=>{}).finally(()=>{try{stato()}catch(e){}})}
+const mieLinee=()=>via60()?["10","94","60"]:["10","94"];
+const miei=()=>avvisi.linee.filter(a=>a.linee.some(l=>mieLinee().includes(l)));
+// età del controllo: «iso» se presente, altrimenti «GG/MM HH:MM» dell'anno corrente (o precedente)
+function etaOre(){let t=Date.parse(avvisi.iso);if(!Number.isFinite(t)){const m=/^(\d{2})\/(\d{2}) (\d{2}):(\d{2})/.exec(avvisi.agg);if(!m)return Infinity;const n=new Date();let d=new Date(n.getFullYear(),+m[2]-1,+m[1],+m[3],+m[4]);if(d>n)d.setFullYear(d.getFullYear()-1);t=d.getTime()}return (Date.now()-t)/36e5}
+function stato(){const m=miei(),b=$("stato"),eta=etaOre(),vecchio=eta>72;
+ b.className="stato"+(m.length||vecchio?" warn":"");
  if(inVac()&&!m.length){b.className="stato pausa";b.textContent=`In vacanza: popup sospesi fino al ${it(vac().a)}`;return}
- b.textContent=m.length?`${m.length} avviso${m.length>1?"i":""} GTT su 10/94: tocca per leggere`:`Nessun avviso GTT su 10 e 94${avvisi.agg?" · controllato "+avvisi.agg:""}`}
-function popup(d){if(d)dir=d;render();const n=nowF(),dl=deps(dir),f0=dl.filter(m=>m>=Math.floor(n)),dom=!f0.length,fut=(dom?dl:f0).slice(0,3),w=W();
- $("popT").textContent=dir==="A"?"Andata: tram 10 da Statuto":"Ritorno: tram 10 da Caserma Monte Grappa";
- {const P=plan(dir);$("popS").textContent=`Il tuo piano: esci alle ${m2s(P.start)}, tram 10 delle ${m2s(P.tr)}, arrivo ${m2s(P.end)} · orari indicativi`}
- $("popL").innerHTML=fut.map(m=>`<div><b>${m2s(m)}</b><span>${dom?"domani":"tra "+dur(m-Math.floor(n))}</span></div>`).join("");
- $("popM").innerHTML=meteoAt(fut[0],dom);
- const m=miei();$("popA").innerHTML=m.length?m.map(a=>`<p class="w"><b>Linea ${esc((a.linee||[]).join(", "))}</b> · ${esc(a.titolo||"")}${a.quando?" · "+esc(a.quando):""}</p>`).join(""):`<p>Nessuna deviazione o comunicazione GTT per 10 e 94${avvisi.agg?" (controllo "+esc(avvisi.agg)+")":""}. Per sicurezza guarda il live.</p>`;
+ const lin=mieLinee().join(", ");
+ b.textContent=m.length?`${m.length} avvis${m.length>1?"i":"o"} GTT su ${lin}: tocca per leggere`:vecchio?`Avvisi GTT non aggiornati${avvisi.agg?" dal "+avvisi.agg:""}: controlla su GTT`:`Nessun avviso GTT su ${lin} · controllato ${avvisi.agg}`}
+// ---------- Popup di partenza ----------
+function popup(d){if(d)dir=d;render();const n=nowF(),fut=prossime(dir,Math.floor(n)).slice(0,3);
+ let P=plan(dir);if(Math.floor(n)>P.end)P=plan(dir,startDef(dir)+1440*prossimoLavoro(1));
+ $("popT").textContent=dir==="A"?"Andata: tram 10 da "+(P.b?"Porta Susa":"Statuto"):"Ritorno: tram 10 da Caserma Monte Grappa";
+ $("popS").textContent=`Il tuo piano${P.start>=1440?" di "+nomeGiorno(Math.floor(P.start/1440)):""}: esci alle ${m2s(P.start)}, tram 10 delle ${m2s(P.tr)}, arrivo ${m2s(P.end)} · orari stimati`;
+ $("popL").innerHTML=fut.map(m=>`<div><b>${m2s(m)}</b><span>${m>=1440?nomeGiorno(Math.floor(m/1440)):"tra ~"+dur(m-Math.floor(n))}</span></div>`).join("");
+ $("popM").innerHTML=meteoAt(P.start);
+ const m=miei();$("popA").innerHTML=m.length?m.map(a=>`<p class="w"><b>Linea ${esc(a.linee.join(", "))}</b> · ${esc(a.titolo)}${a.quando?" · "+esc(a.quando):""}</p>`).join(""):`<p>Nessuna deviazione o comunicazione GTT per ${esc(mieLinee().join(", "))}${avvisi.agg?" (controllo "+esc(avvisi.agg)+")":""}. Per sicurezza guarda il live.</p>`;
  const p=dir==="A"?"951":$("sStop").value.replace(/\D/g,"");$("popLive").href=p?live(p):AVV;$("popLive").textContent=p?"Passaggi live · palina "+p:"Avvisi GTT";
- $("pop").hidden=false}
-$("popX").onclick=()=>{$("pop").hidden=true;try{history.replaceState(null,"",location.pathname)}catch(e){}};
+ $("pop").hidden=false;$("popX").focus()}
+function chiudiPop(){$("pop").hidden=true;try{history.replaceState(null,"",location.pathname)}catch(e){}forseAggiorna()}
+$("popX").onclick=()=>{chiudiPop();$("stato").focus()};
 $("pop").addEventListener("click",e=>{if(e.target.id==="pop")$("popX").onclick()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){if(!$("go").hidden)chiudiGo();else if(!$("pop").hidden)$("popX").onclick()}});
 $("stato").onclick=()=>popup();
-function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.getMinutes(),fer=giorni().includes(d.getDay())&&!inVac();
+// fascia del popup: da 15 minuti prima a 15 minuti dopo l'ora di uscita impostata
+function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.getMinutes();
  if(location.hash==="#andata")return popup("A");if(location.hash==="#ritorno")return popup("R");
- if(!fer)return;const slot=m>=405&&m<=435?"A":m>=825&&m<=855?"R":null;if(!slot)return;
- if(ls.get("pop-"+slot,"")===k)return;ls.set("pop-"+slot,k);popup(slot)}
-Promise.all([loadAvv(),loadMeteo()]).then(autoPop);document.addEventListener("visibilitychange",()=>{if(!document.hidden)Promise.all([loadAvv(),loadMeteo()]).then(autoPop)});
-// Web app: copia senza internet e aggiornamento automatico a ogni pubblicazione
-const VER="093464ca5e";
+ if(!giorni().includes(d.getDay())||inVac()||festivo(d))return;
+ const a=startDef("A"),r=startDef("R"),slot=Math.abs(m-a)<=15?"A":Math.abs(m-r)<=15?"R":null;if(!slot)return;
+ if(ls.get("pop-"+slot,"")===k)return;popup(slot);ls.set("pop-"+slot,k)}
+const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
+carica();
+// ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
+const VER="2b662ad769";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
-let reloading=false;
-function checkVer(){if(location.protocol!=="https:")return;fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&v.v&&v.v!==VER&&!reloading){reloading=true;
- navigator.serviceWorker&&navigator.serviceWorker.getRegistration().then(g=>g&&g.update()).catch(()=>{});
- caches&&caches.keys().then(ks=>Promise.all(ks.filter(k=>k.startsWith("muoviti-")).map(k=>caches.delete(k)))).finally(()=>location.reload())}}).catch(()=>{})}
-checkVer();document.addEventListener("visibilitychange",()=>{if(!document.hidden){checkVer();render()}});const vt=setInterval(checkVer,30*60000);
+let nuova=null;
+const libero=()=>$("pop").hidden&&$("go").hidden;
+function aggiorna(v){let n=0;try{n=+sessionStorage.getItem("mv-rl-"+v)||0}catch(e){}
+ if(n>=1)return; // già tentato per questa versione: niente loop, riprova alla prossima apertura
+ try{sessionStorage.setItem("mv-rl-"+v,String(n+1))}catch(e){}
+ const g=navigator.serviceWorker?navigator.serviceWorker.getRegistration().then(r=>r&&r.update()).catch(()=>{}):Promise.resolve();
+ g.finally(()=>location.reload())}
+function forseAggiorna(){if(nuova&&libero())aggiorna(nuova)}
+function checkVer(){if(location.protocol!=="https:")return;conLimite(fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()),4000).then(v=>{if(v&&typeof v.v==="string"&&v.v!==VER){nuova=v.v;forseAggiorna()}}).catch(()=>{})}
+checkVer();
+document.addEventListener("visibilitychange",()=>{if(!document.hidden){render();checkVer();carica()}});
+setInterval(checkVer,30*60000);
 }</script></body></html>

@@ -7,7 +7,7 @@ Quattro app separate pubblicate con GitHub Pages dallo stesso repository. Ognuna
 | 🐉 **Il mio mondo** | [/mie-app/](https://f6kd4bp6sr-stack.github.io/mie-app/) | cartella principale (`index.html`, `sw.js`…) | [`sorgenti/il-mio-mondo/`](sorgenti/il-mio-mondo/README.md) | `mm2-…`, `msync-cfg`, `mondo-…`; IndexedDB `il-mio-mondo`, `mondo-sfondo`, `mondo-disegni` | `mondo-…` |
 | 🏠 **Pianificazione** | [/mie-app/licenze/](https://f6kd4bp6sr-stack.github.io/mie-app/licenze/) | `licenze/` | [`sorgenti/pianificazione/`](sorgenti/pianificazione/README.md) | `pn-…`, `licenze-…`, `tc_…`, `prog-…`; IndexedDB `licenze-…` | `licenze-…` |
 | 🩺 **Semestre filtro** | [/mie-app/semestre/](https://f6kd4bp6sr-stack.github.io/mie-app/semestre/) | `semestre/` (più i rimandi `licenze/fisica.html`, `licenze/semestre.html`) | [`sorgenti/semestre/`](sorgenti/semestre/README.md) | `semestre-…`, `sf-…`; IndexedDB `semestre-filtro` | `semestre-…` |
-| 🚋 **Muoviti** (iPhone) | [/mie-app/muoviti/](https://f6kd4bp6sr-stack.github.io/mie-app/muoviti/) | `muoviti/` | [`sorgenti/muoviti/`](sorgenti/muoviti/README.md) | `out`, `walk`, `stop`, `mine` | `muoviti-…` |
+| 🚋 **Muoviti** (iPhone) | [/mie-app/muoviti/](https://f6kd4bp6sr-stack.github.io/mie-app/muoviti/) | `muoviti/` | [`sorgenti/muoviti/`](sorgenti/muoviti/README.md) | chiavi `mv-…` (es. `mv-casa`, `mv-out3`, `mv-mine`, `mv-giorni`, `mv-vac`) | `muoviti-…` |
 
 Gli indirizzi non cambiano: le icone sulla schermata Home e i dati salvati restano.
 
