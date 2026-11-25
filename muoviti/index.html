@@ -205,7 +205,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
 
 <div class="grid">
  <details><summary>Orario andata (stime)</summary><div class="body"><p class="tag" id="ttN"></p><div class="tt" id="ttA"></div><p class="note">Stima da Statuto Cap (951): circa ogni 7 min di giorno, più rado presto, la sera e nei festivi. Non è l'orario ufficiale.</p></div></details>
- <details><summary>Tram 10 + bus 60 · ritorno (stime)</summary><div class="body"><div id="c60"></div><div class="tt" id="tt60"></div><p class="note">Passaggi del 60 alla palina 463 (Piazza Statuto) stimati: circa ogni 10 min di giorno. 2 min a piedi da Statuto Nord, poi 3 fermate e ~6 min fino a Umbria. Non è l'orario ufficiale: verifica con il live.</p><div class="live"><a class="p" href="https://www.gtt.to.it/cms/percorari/arrivi?palina=463">Live GTT · palina 463</a></div></div></details>
+ <details><summary>Tram 10 + bus 60 · ritorno (stime)</summary><div class="body"><div id="c60"></div><div class="tt" id="tt60"></div><p class="note">Passaggi del 60 alla palina 3463 (Piazza Statuto, fronte via Cibrario) stimati ogni 19 min dall'orario GTT del pomeriggio (14:40, 14:59, 15:18…); presto, sera e festivi possono cambiare. 2 min a piedi da Statuto Nord, poi 3 fermate e ~6 min fino a Umbria. Non è l'orario ufficiale: verifica con il live.</p><div class="live"><a class="p" href="https://www.gtt.to.it/cms/percorari/arrivi?palina=3463">Live GTT · palina 3463</a></div></div></details>
  <details><summary>Orario ritorno (stime)</summary><div class="body"><div class="tt" id="ttR"></div><p class="note">Stima a Caprera (387) verso Statuto: circa ogni 8 min di giorno. Non è l'orario ufficiale.</p></div></details>
  <details><summary>La mia statistica del tram</summary><div class="body stv" id="stat"></div></details>
  <details><summary>Impostazioni</summary><div class="body">
@@ -231,7 +231,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
  </div></details>
 
 </div>
-<p class="ver" id="ver">Versione 9457736c91</p>
+<p class="ver" id="ver">Versione 0c2ebb5286</p>
 </main>
 <div class="go" id="go" role="dialog" aria-modal="true" aria-label="Conto alla rovescia" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
@@ -289,10 +289,10 @@ const nomeGiorno=k=>k===0?"oggi":k===1?"domani":GG[dataTra(k).getDay()];
 function prossimoLavoro(k){for(let i=k;i<k+14;i++){const d=dataTra(i);if(giorni().includes(d.getDay())&&!festivo(d)&&!inVacData(d))return i}return k}
 function stops(){return dir==="A"?A.map(s=>({n:s[0],o:s[1],z:s[2]})):A.slice().reverse().map(s=>({n:s[0]==="Statuto Cap"?"Statuto Nord":s[0],o:RIDE-s[1],z:s[2]}))}
 // ---------- Paline e alternative ----------
-const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Partenza del mattino"},{p:"",n:"Umbria · sotto casa",l:[["60","bus"]],k:"Bus 60: verso Porta Susa e verso via Paris"},{p:"463",n:"Piazza Statuto · bus 60",l:[["60","bus"]],k:"Ritorno: bus 60 verso casa dopo il tram 10"},{p:"387",n:"Caprera",l:[["10","tram"]],k:"Ritorno verso Statuto"},{p:"386",n:"Arrivo del mattino",l:[["10","tram"]],k:"Discesa dal tram 10 verso l'ufficio"},{p:"385",n:"Caserma Monte Grappa",l:[["10","tram"],["55","bus"],["5","bus"],["12","bus"],["64","bus"]],k:"Vicino al civico 40 · dati Moovit/OSM da verificare"}];
+const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Partenza del mattino"},{p:"",n:"Umbria · sotto casa",l:[["60","bus"]],k:"Bus 60: verso Porta Susa e verso via Paris"},{p:"3463",n:"Piazza Statuto · bus 60",l:[["60","bus"]],k:"Ritorno: bus 60 verso casa dopo il tram 10"},{p:"387",n:"Caprera",l:[["10","tram"]],k:"Ritorno verso Statuto"},{p:"386",n:"Arrivo del mattino",l:[["10","tram"]],k:"Discesa dal tram 10 verso l'ufficio"},{p:"385",n:"Caserma Monte Grappa",l:[["10","tram"],["55","bus"],["5","bus"],["12","bus"],["64","bus"]],k:"Vicino al civico 40 · dati Moovit/OSM da verificare"}];
 const ALT={A:[{l:"60",ty:"bus",h:"Bus 60 sotto casa → Porta Susa",d:"Fermata Umbria verso Corso Inghilterra (Porta Susa), poi tram 10 da XVIII Dicembre. Si attiva nel piano da Impostazioni.",t60:1},{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Statuto Cap → palina 386, poi a piedi. Circa ogni 7 min di giorno.",p:"951"}],
  R:[{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Caprera → Statuto Nord (corsa per Rondò Forca). Circa ogni 8 min di giorno.",p:"387"},
- {l:"60",ty:"bus",h:"Bus 60 da Piazza Statuto fino a casa",d:"Dopo il tram: palina 463 a Piazza Statuto, 3 fermate (Regina Margherita → Don Bosco → Umbria). Coincidenza nel piano se attivi il 60 in Impostazioni.",p:"463"},
+ {l:"60",ty:"bus",h:"Bus 60 da Piazza Statuto fino a casa",d:"Dopo il tram: palina 3463 a Piazza Statuto, 3 fermate (Regina Margherita → Don Bosco → Umbria). Coincidenza nel piano se attivi il 60 in Impostazioni.",p:"3463"},
  {l:"5 · 12 · 55 · 64",ty:"bus",h:"Altre linee alla palina 385",d:"Non vanno a Statuto: 5 Vittorio Veneto, 12 Porta Nuova, 55 Vanchiglia, 64 Serao.",p:"385"}]};
 const TIPI=["ind","pal","tram","bus","metro"];
 function getMine(){return jget("mine",[],Array.isArray).filter(x=>x&&typeof x==="object"&&(typeof x.p==="string"||typeof x.p==="number")).map(x=>({t:TIPI.includes(x.t)?x.t:"pal",p:String(x.p).slice(0,80),n:typeof x.n==="string"?x.n.slice(0,40):""})).filter(x=>x.p)}
@@ -321,8 +321,8 @@ function ring(min,lbl,aria){const r=46,C=2*Math.PI*r,f=Math.max(0,Math.min(1,min
  $("ring").innerHTML=`<circle cx="56" cy="56" r="${r}" fill="none" stroke="#3a3a3c" stroke-width="9"/><circle cx="56" cy="56" r="${r}" fill="none" stroke="#ff7a33" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C*f} ${C}" transform="rotate(-90 56 56)"/><text x="56" y="${isN?60:62}" text-anchor="middle" ${FC} font-weight="700" font-size="${isN?40:22}" fill="#ff7a33">${isN?"≈"+lbl:lbl}</text><text x="56" y="84" text-anchor="middle" ${FB} font-size="16" fill="#c7c7cc">${isN?"min":""}</text>`}
 // Bus 60 sotto casa (fermata Umbria): tempi stimati
 const B60={toFerm:2,attesa:4,corsaA:10,aPiediPS:3,corsaR:6,aPiediSt:2};
-// passaggi stimati del 60 alla palina 463 (Piazza Statuto) verso Umbria: circa ogni 10 min di giorno, 15 presto e la sera, 20 nei festivi (stima, non orario ufficiale)
-function deps60(date){const f=festivo(date||new Date()),o=[];let m=333;while(m<=1410){o.push(m);m+=f?20:(m>=390&&m<1230?10:15)}return o}
+// passaggi stimati del 60 alla palina 3463 (Piazza Statuto) verso Umbria: ogni 19 min, ricavato dall'orario GTT della palina 3463 (14:40, 14:59, 15:18, 15:37); mattina, sera e festivi da verificare
+function deps60(date){const o=[];for(let m=880;m>=330;m-=19)o.unshift(m);for(let m=899;m<=1290;m+=19)o.push(m);return o}
 function prossime60(from){const o=[];for(let k=Math.max(0,Math.floor(from/1440));k<=8&&o.length<6;k++)deps60(dataTra(k)).forEach(m=>{if(m+1440*k>=from)o.push(m+1440*k)});return o}
 const coinc=down=>{const at=down+B60.aPiediSt,bus=prossime60(at).find(m=>m>=at),um=bus+B60.corsaR;return{down,at,bus,um,casa:um+B60.toFerm,att:bus-at}};
 const via60=()=>ls.get("casaMode","piedi")==="bus60";
@@ -337,7 +337,7 @@ function plan(d,from){const w=W(),h=H(),b=via60(),start=from??startDef(d);
   return{d,start,at,dep,tr:dep,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Fermata","Statuto Cap · "+h+"′",at,0],["Tram 10","da Statuto Cap",dep,1],["Scendi","Palina 386",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
  const at=start+w,dep=first(at),down=dep+RIDE;
  if(b){const c=coinc(down),end=c.casa;
-  return{d,start,at,dep,tr:dep,bus:c.bus,down,end,wa:w,wb:end-down,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Caprera · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Piazza Statuto · palina 463 · coincidenza, attesa "+c.att+"′",c.bus,0],["Scendi","Umbria · 3 fermate (stima)",c.um,0],["Casa","sotto casa",end,0]]}}
+  return{d,start,at,dep,tr:dep,bus:c.bus,down,end,wa:w,wb:end-down,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Caprera · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Piazza Statuto · palina 3463 · coincidenza, attesa "+c.att+"′",c.bus,0],["Scendi","Umbria · 3 fermate (stima)",c.um,0],["Casa","sotto casa",end,0]]}}
  return{d,start,at,dep,tr:dep,down,end:down+h,wa:w,wb:h,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Caprera · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Casa","a piedi "+h+"′",down+h,0]]}}
 const palV=()=>dir==="A"?"951":$("sStop").value.replace(/\D/g,"");
 // ---------- Le mie corse: «Salgo sul tram» registra l'ora vera di salita ----------
@@ -401,7 +401,7 @@ function render(){
  const all=t=>{const pt=plan(t).dep;const nx=t===dir?up[0]:-1;return deps(t).map(m=>`<span class="${m===nx?"nx1":m===pt?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")};
  $("ttA").innerHTML=all("A");
  {const PR=plan("R"),pb=PR.b?PR.bus:null,ld=prossime("R",Math.max(0,PR.dep-16)).slice(0,6);
-  $("c60").innerHTML=`<p class="tag">Coincidenze (tram 10 da Caprera → Statuto Nord → bus 60 palina 463)</p>`+ld.map(m=>{const c=coinc(m+RIDE),mine=m===PR.dep;return `<div class="pr${mine?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>Statuto ${m2s(c.down)}</strong>bus 60 alle ${m2s(c.bus)} · attesa ${c.att}′ · casa ${m2s(c.casa)}</span></div>`}).join("");
+  $("c60").innerHTML=`<p class="tag">Coincidenze (tram 10 da Caprera → Statuto Nord → bus 60 palina 3463)</p>`+ld.map(m=>{const c=coinc(m+RIDE),mine=m===PR.dep;return `<div class="pr${mine?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>Statuto ${m2s(c.down)}</strong>bus 60 alle ${m2s(c.bus)} · attesa ${c.att}′ · casa ${m2s(c.casa)}</span></div>`}).join("");
   $("tt60").innerHTML=deps60().map(m=>`<span class="${m===pb?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")}$("ttR").innerHTML=all("R");
  $("ttN").textContent=fest?"Oggi festivo: stime con frequenza ridotta.":"";
  renderCards(up);
@@ -529,7 +529,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="9457736c91";
+const VER="0c2ebb5286";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
