@@ -111,6 +111,15 @@ details[open] summary::after{content:"–"}
 .gs{font-size:17px;opacity:.9;margin-bottom:18px}
 .gbar{height:10px;border-radius:5px;background:rgba(255,255,255,.2);overflow:hidden;margin-bottom:24px}.gbar i{display:block;height:100%;background:currentColor;width:0}
 .go button{min-height:52px;width:100%;border-radius:14px;border:2px solid currentColor;background:none;color:inherit;font:600 17px Barlow,system-ui,sans-serif;cursor:pointer}
+.lab{margin:14px 0 6px;font-size:14px;color:var(--mut)}
+.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.dy{display:flex;align-items:center;justify-content:center;min-height:44px;margin:0;border-radius:10px;background:var(--bg);border:1px solid var(--line);color:var(--ink);font:600 15px Barlow,system-ui,sans-serif;cursor:pointer}
+.dy input{position:absolute;opacity:0;pointer-events:none}.dy:has(input:checked){background:var(--or);border-color:var(--or);color:#000}
+.vac{display:grid;grid-template-columns:1fr 1fr;gap:8px}.vac input{color-scheme:dark}
+.vacb{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.vacb button{min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:600 15px Barlow,system-ui,sans-serif;cursor:pointer}
+.vacb button:first-child{background:var(--or);border-color:var(--or);color:#000}
+.stato.pausa{background:#1f1f2e;color:#b7b7ff}
 label{display:block;margin:10px 0 4px;font-size:14px;color:var(--mut)}
 input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 @media(prefers-reduced-motion:no-preference){.tram{transition:transform 1s ease}.blink{animation:b 1.6s infinite}@keyframes b{50%{opacity:.3}}}
@@ -153,7 +162,13 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
   <label for="sOut">Uscita dall'ufficio (pomeriggio)</label><input id="sOut" type="time" value="14:00">
   <label for="sWalk">Minuti a piedi fermata ↔ Corso IV Novembre 40</label><input id="sWalk" type="number" min="0" max="20" value="4">
   <label for="sHome">Minuti a piedi casa (Corso Umbria 14) ↔ Statuto</label><input id="sHome" type="number" min="0" max="30" value="8">
-  <label for="sStop">Numero palina ritorno (Caserma Monte Grappa → Statuto)</label><input id="sStop" inputmode="numeric" placeholder="lo leggi sulla palina">
+<p class="lab">Giorni di lavoro (popup)</p>
+  <div class="days" id="days"><label class="dy"><input type="checkbox" value="1">Lun</label><label class="dy"><input type="checkbox" value="2">Mar</label><label class="dy"><input type="checkbox" value="3">Mer</label><label class="dy"><input type="checkbox" value="4">Gio</label><label class="dy"><input type="checkbox" value="5">Ven</label></div>
+  <p class="lab">Vacanze: sospendi i popup</p>
+  <div class="vac"><input id="vDa" type="date" aria-label="Dal"><input id="vA" type="date" aria-label="Al"></div>
+  <div class="vacb"><button id="vOn" type="button">Sospendi</button><button id="vOff" type="button">Riprendi</button></div>
+  <p class="tag" id="vSt"></p>
+    <label for="sStop">Numero palina ritorno (Caserma Monte Grappa → Statuto)</label><input id="sStop" inputmode="numeric" placeholder="lo leggi sulla palina">
  </div></details>
  <details><summary>Icona sull'iPhone</summary><div class="body"><p>Apri <b>f6kd4bp6sr-stack.github.io/mie-app/muoviti/</b> in Safari, tocca Condividi e poi «Aggiungi alla schermata Home». L'app si aggiorna da sola a ogni nuova versione.</p></div></details>
 </div>
@@ -293,12 +308,26 @@ function esci(){render();const n=nowF(),dl=deps(dir),P=plan(dir);let t,w;
  tick();clearInterval(goTimer);goTimer=setInterval(tick,1000)}
 $("goX").onclick=()=>{$("go").hidden=true;clearInterval(goTimer)};
 $("esciBtn").onclick=esci;$("popEsci").onclick=()=>{$("pop").hidden=true;esci()};
+// Giorni di lavoro (lun, mer, ven) e sospensione per vacanze
+const giorni=()=>{try{return JSON.parse(ls.get("giorni","[1,3,5]"))}catch(e){return[1,3,5]}};
+const vac=()=>{try{return JSON.parse(ls.get("vac","null"))}catch(e){return null}};
+const oggiISO=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const inVac=()=>{const v=vac(),t=oggiISO();return !!(v&&v.da<=t&&t<=v.a)};
+const it=x=>x.split("-").reverse().slice(0,2).join("/");
+function vacUI(){const v=vac(),t=oggiISO();
+ $("vSt").textContent=v&&v.a>=t?(v.da<=t?`Popup sospesi fino al ${it(v.a)} compreso.`:`Popup sospesi dal ${it(v.da)} al ${it(v.a)}.`):"Popup attivi nei giorni scelti.";
+ if(v){$("vDa").value=v.da;$("vA").value=v.a}}
+document.querySelectorAll("#days input").forEach(c=>{c.checked=giorni().includes(+c.value);c.onchange=()=>{ls.set("giorni",JSON.stringify([...document.querySelectorAll("#days input:checked")].map(x=>+x.value)));stato()}});
+$("vOn").onclick=()=>{const da=$("vDa").value||oggiISO(),a=$("vA").value||da;if(a<da){$("vSt").textContent="La data di fine è prima dell'inizio.";return}ls.set("vac",JSON.stringify({da,a}));vacUI();stato()};
+$("vOff").onclick=()=>{try{localStorage.removeItem("vac")}catch(e){}$("vDa").value="";$("vA").value="";vacUI();stato()};
+vacUI();
 // Avvisi e popup partenza (06:45 andata, 13:30 ritorno, feriali)
 let avvisi={agg:"",linee:[]};
 function loadAvv(){return fetch("avvisi.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&Array.isArray(v.linee)){avvisi=v;ls.set("avv",JSON.stringify(v))}}).catch(()=>{try{const c=JSON.parse(ls.get("avv","null"));if(c)avvisi=c}catch(e){}}).finally(stato)}
 const mieLinee=["10","94"];
 const miei=()=>avvisi.linee.filter(a=>(a.linee||[]).some(l=>mieLinee.includes(String(l))));
 function stato(){const m=miei(),b=$("stato");b.className="stato"+(m.length?" warn":"");
+ if(inVac()&&!m.length){b.className="stato pausa";b.textContent=`In vacanza: popup sospesi fino al ${it(vac().a)}`;return}
  b.textContent=m.length?`${m.length} avviso${m.length>1?"i":""} GTT su 10/94: tocca per leggere`:`Nessun avviso GTT su 10 e 94${avvisi.agg?" · controllato "+avvisi.agg:""}`}
 function popup(d){if(d)dir=d;render();const n=nowF(),dl=deps(dir),f0=dl.filter(m=>m>=Math.floor(n)),dom=!f0.length,fut=(dom?dl:f0).slice(0,3),w=W();
  $("popT").textContent=dir==="A"?"Andata: tram 10 da Statuto":"Ritorno: tram 10 da Caserma Monte Grappa";
@@ -311,7 +340,7 @@ function popup(d){if(d)dir=d;render();const n=nowF(),dl=deps(dir),f0=dl.filter(m
 $("popX").onclick=()=>{$("pop").hidden=true;try{history.replaceState(null,"",location.pathname)}catch(e){}};
 $("pop").addEventListener("click",e=>{if(e.target.id==="pop")$("popX").onclick()});
 $("stato").onclick=()=>popup();
-function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.getMinutes(),fer=d.getDay()>0&&d.getDay()<6;
+function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.getMinutes(),fer=giorni().includes(d.getDay())&&!inVac();
  if(location.hash==="#andata")return popup("A");if(location.hash==="#ritorno")return popup("R");
  if(!fer)return;const slot=m>=405&&m<=435?"A":m>=825&&m<=855?"R":null;if(!slot)return;
  if(ls.get("pop-"+slot,"")===k)return;ls.set("pop-"+slot,k);popup(slot)}
