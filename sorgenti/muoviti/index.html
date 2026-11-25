@@ -150,7 +150,7 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
  <details><summary>Orario feriale ritorno</summary><div class="body"><div class="tt" id="ttR"></div><p class="note">Passaggi a Caserma Monte Grappa verso Statuto, dall'ora di uscita.</p></div></details>
  <details><summary>Impostazioni</summary><div class="body">
   <label for="sCasa">Partenza da casa (mattina)</label><input id="sCasa" type="time" value="07:00">
-  <label for="sOut">Uscita dall'ufficio (pomeriggio)</label><input id="sOut" type="time" value="13:45">
+  <label for="sOut">Uscita dall'ufficio (pomeriggio)</label><input id="sOut" type="time" value="14:00">
   <label for="sWalk">Minuti a piedi fermata ↔ Corso IV Novembre 40</label><input id="sWalk" type="number" min="0" max="20" value="4">
   <label for="sHome">Minuti a piedi casa (Corso Umbria 14) ↔ Statuto</label><input id="sHome" type="number" min="0" max="30" value="8">
   <label for="sStop">Numero palina ritorno (Caserma Monte Grappa → Statuto)</label><input id="sStop" inputmode="numeric" placeholder="lo leggi sulla palina">
@@ -262,9 +262,9 @@ function draw(st,P,prog){
  s+=`</svg>`;$("map").innerHTML=s;
  $("mapT").textContent=dir==="A"?"Andata: casa → ufficio":"Ritorno: ufficio → casa";
 }
-$("sOut").value=ls.get("out2","13:45");$("sWalk").value=ls.get("walk","4");$("sStop").value=ls.get("stop","385");
+$("sOut").value=ls.get("out3","14:00");$("sWalk").value=ls.get("walk","4");$("sStop").value=ls.get("stop","385");
 $("addP").addEventListener("submit",e=>{e.preventDefault();const p=$("pNum").value.replace(/\D/g,"");if(!p)return;const m=getMine();m.push({p,n:$("pName").value.trim().slice(0,40)});ls.set("mine",JSON.stringify(m));$("pNum").value="";$("pName").value="";render()});
-const K={sOut:"out2",sWalk:"walk",sStop:"stop",sHome:"home",sCasa:"casa"};$("sHome").value=ls.get("home2","8");$("sCasa").value=ls.get("casa","07:00");K.sHome="home2";
+const K={sOut:"out3",sWalk:"walk",sStop:"stop",sHome:"home",sCasa:"casa"};$("sHome").value=ls.get("home2","8");$("sCasa").value=ls.get("casa","07:00");K.sHome="home2";
 Object.keys(K).forEach(id=>$(id).addEventListener("input",()=>{ls.set(K[id],$(id).value);render()}));
 $("bA").onclick=()=>{dir="A";render()};$("bR").onclick=()=>{dir="R";render()};
 render();const tick=setInterval(render,20000);
@@ -313,7 +313,7 @@ $("pop").addEventListener("click",e=>{if(e.target.id==="pop")$("popX").onclick()
 $("stato").onclick=()=>popup();
 function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.getMinutes(),fer=d.getDay()>0&&d.getDay()<6;
  if(location.hash==="#andata")return popup("A");if(location.hash==="#ritorno")return popup("R");
- if(!fer)return;const slot=m>=405&&m<=435?"A":m>=810&&m<=840?"R":null;if(!slot)return;
+ if(!fer)return;const slot=m>=405&&m<=435?"A":m>=825&&m<=855?"R":null;if(!slot)return;
  if(ls.get("pop-"+slot,"")===k)return;ls.set("pop-"+slot,k);popup(slot)}
 Promise.all([loadAvv(),loadMeteo()]).then(autoPop);document.addEventListener("visibilitychange",()=>{if(!document.hidden)Promise.all([loadAvv(),loadMeteo()]).then(autoPop)});
 // Web app: copia senza internet e aggiornamento automatico a ogni pubblicazione
