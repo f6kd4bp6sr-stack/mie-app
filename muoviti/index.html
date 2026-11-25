@@ -81,7 +81,7 @@ details[open] summary::after{content:"–"}
 .chip.bus{background:#3a3a3c;color:#fff}
 .tag{font-size:12px;color:var(--mut)}
 .nuova{margin-top:6px}.add2{display:grid;gap:6px;padding:0 12px 12px}
-.tipi{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+.tipi{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}.tipi.due{grid-template-columns:1fr 1fr}
 .tipi label{display:flex;align-items:center;justify-content:center;min-height:40px;margin:0;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:600 14px Barlow,system-ui,sans-serif;cursor:pointer}
 .tipi input{position:absolute;opacity:0;pointer-events:none}.tipi label:has(input:checked){background:var(--or);border-color:var(--or);color:#000}
 .chip.ind{background:#2c4a6e;color:#fff}.chip.m{background:#d70015;color:#fff}
@@ -173,6 +173,8 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
   <label for="sCasa">Partenza da casa (mattina)</label><input id="sCasa" type="time" value="07:00">
   <label for="sOut">Uscita dall'ufficio (pomeriggio)</label><input id="sOut" type="time" value="14:00">
   <label for="sWalk">Minuti a piedi fermata ↔ Corso IV Novembre 40</label><input id="sWalk" type="number" min="0" max="20" value="4">
+  <p class="lab">Casa ↔ Statuto</p>
+  <div class="tipi due" id="cMode"><label><input type="radio" name="cm" value="piedi">A piedi</label><label><input type="radio" name="cm" value="bus60">Bus 60 sotto casa</label></div>
   <label for="sHome">Minuti a piedi casa (Corso Umbria 14) ↔ Statuto</label><input id="sHome" type="number" min="0" max="30" value="8">
 <p class="lab">Giorni di lavoro (popup)</p>
   <div class="days" id="days"><label class="dy"><input type="checkbox" value="1">Lun</label><label class="dy"><input type="checkbox" value="2">Mar</label><label class="dy"><input type="checkbox" value="3">Mer</label><label class="dy"><input type="checkbox" value="4">Gio</label><label class="dy"><input type="checkbox" value="5">Ven</label></div>
@@ -184,7 +186,7 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
  </div></details>
  <details><summary>Icona sull'iPhone</summary><div class="body"><p>Apri <b>f6kd4bp6sr-stack.github.io/mie-app/muoviti/</b> in Safari, tocca Condividi e poi «Aggiungi alla schermata Home». L'app si aggiorna da sola a ogni nuova versione.</p></div></details>
 </div>
-<p class="ver" id="ver">Versione d24335846d</p>
+<p class="ver" id="ver">Versione b99e412c18</p>
 </main>
 <div class="go" id="go" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
@@ -214,18 +216,19 @@ function stops(){return dir==="A"?A.map(s=>({n:s[0],o:s[1],z:s[2],l:s[3]})):A.sl
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const AVV="https://www.gtt.to.it/cms/avvisi-e-informazioni-di-servizio/torino-e-cintura";
 const live=p=>`https://www.gtt.to.it/cms/percorari/arrivi?palina=${encodeURIComponent(p)}`;
-const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Partenza del mattino"},{p:"385",n:"Caserma Monte Grappa",l:[["10","tram"],["94","bus"],["55","bus"],["5","bus"],["12","bus"],["64","bus"]],k:"Vicino al civico 40"}];
-const ALT={A:[{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Statuto Cap → Caserma Monte Grappa, poi a piedi. Il più semplice: ogni 6–9 min.",p:"951"},
+const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Partenza del mattino"},{p:"",n:"Umbria · sotto casa",l:[["60","bus"]],k:"Bus 60: verso Porta Susa e verso via Paris"},{p:"385",n:"Caserma Monte Grappa",l:[["10","tram"],["94","bus"],["55","bus"],["5","bus"],["12","bus"],["64","bus"]],k:"Vicino al civico 40"}];
+const ALT={A:[{l:"60",ty:"bus",h:"Bus 60 sotto casa → Porta Susa",d:"Fermata Umbria verso Corso Inghilterra (Porta Susa), poi tram 10 da XVIII Dicembre. Si attiva nel piano da Impostazioni.",p:"",t60:1},{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Statuto Cap → Caserma Monte Grappa, poi a piedi. Il più semplice: ogni 6–9 min.",p:"951"},
  {l:"94",ty:"bus",h:"Bus 94 · Piazza Statuto ↔ Caserma Monte Grappa",d:"Ferma anche a Caserma Monte Grappa. Palina a Statuto e frequenza da verificare: usa il live.",p:""}],
  R:[{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Caserma Monte Grappa → Statuto Nord (corsa per Rondò Forca). Ogni 6–9 min.",p:"385"},
  {l:"94",ty:"bus",h:"Bus 94 · direzione Centro Piazza Statuto",d:"Dalla stessa palina 385, porta in Piazza Statuto. Frequenza da verificare: usa il live.",p:"385"},
+ {l:"60",ty:"bus",h:"Bus 60 da Statuto fino a casa",d:"Dopo il tram: Statuto → Regina Margherita → Don Bosco → Umbria.",p:"",t60:1},
  {l:"5 · 12 · 55 · 64",ty:"bus",h:"Altre linee alla palina 385",d:"Non vanno a Statuto: 5 Vittorio Veneto, 12 Porta Nuova, 55 Vanchiglia, 64 Serao. Utili se hai commissioni.",p:"385"}]};
 function getMine(){try{return JSON.parse(ls.get("mine","[]"))||[]}catch(e){return[]}}
 function renderCards(n,up){
  $("altT").textContent=dir==="A"?"Alternative per andare in ufficio":"Alternative per tornare a Statuto";
- $("alt").innerHTML=ALT[dir].map(a=>`<div class="card${a.best?" best":""}"><div class="h">${a.l.split(" · ").map(x=>`<span class="chip ${a.ty==="bus"?"bus":""}">${x}</span>`).join("")}<b>${a.h}</b></div><p>${a.d}</p>${a.l==="10"?`<div class="t">${up.slice(0,4).map(m=>`<span>${m2s(m)}</span>`).join("")}</div><div class="tag">orari indicativi</div>`:""}<div class="acts">${a.p?`<a href="${live(a.p)}">Live palina ${a.p}</a>`:`<a href="${AVV}">Avvisi GTT</a>`}</div></div>`).join("");
+ $("alt").innerHTML=ALT[dir].map(a=>`<div class="card${a.best?" best":""}"><div class="h">${a.l.split(" · ").map(x=>`<span class="chip ${a.ty==="bus"?"bus":""}">${x}</span>`).join("")}<b>${a.h}</b></div><p>${a.d}</p>${a.l==="10"?`<div class="t">${up.slice(0,4).map(m=>`<span>${m2s(m)}</span>`).join("")}</div><div class="tag">orari indicativi</div>`:""}<div class="acts">${a.t60?`<a href="https://transitapp.com/en/region/torino/gtt-torino/bus-60">Orari 60</a>`:a.p?`<a href="${live(a.p)}">Live palina ${a.p}</a>`:`<a href="${AVV}">Avvisi GTT</a>`}</div></div>`).join("");
  const mine=getMine();
- $("pals").innerHTML=PAL.map(x=>`<div class="card"><div class="h"><span class="chip">${x.p}</span><b>${x.n}</b></div><p class="tag">${x.k}</p><div class="t">${x.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("")}</div><div class="acts"><a href="${live(x.p)}">Passaggi live</a></div></div>`).join("")
+ $("pals").innerHTML=PAL.map(x=>`<div class="card"><div class="h"><span class="chip">${x.p||"60"}</span><b>${x.n}</b></div><p class="tag">${x.k}</p><div class="t">${x.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("")}</div><div class="acts">${x.p?`<a href="${live(x.p)}">Passaggi live</a>`:`<a href="https://transitapp.com/en/region/torino/gtt-torino/bus-60">Fermate e orari 60</a>`}</div></div>`).join("")
  +mine.map((x,i)=>{const t=x.t||"pal",v=esc(x.p),nm=esc(x.n||"");
   const del=`<button data-del="${i}">Togli</button>`;
   if(t==="ind"){const q=encodeURIComponent(x.p+(/torino/i.test(x.p)?"":", Torino"));
@@ -241,22 +244,31 @@ function ring(min,lbl){const r=46,C=2*Math.PI*r,f=Math.max(0,Math.min(1,min/15))
  $("ring").innerHTML=`<circle cx="56" cy="56" r="${r}" fill="none" stroke="#3a3a3c" stroke-width="9"/><circle cx="56" cy="56" r="${r}" fill="none" stroke="#ff7a33" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C*f} ${C}" transform="rotate(-90 56 56)"/><text x="56" y="${num?62:62}" text-anchor="middle" ${FC} font-weight="700" font-size="${num?40:24}" fill="#ff7a33">${lbl}</text><text x="56" y="82" text-anchor="middle" ${FB} font-size="12" fill="#c7c7cc">${num?"min":""}</text>`}
 const H=()=>Math.max(0,+$("sHome").value||0);
 // Il piano del giorno: casa 07:00 → Statuto → tram 10 → ufficio; ufficio 13:45 → Caserma Monte Grappa → tram 10 → Statuto Nord → casa
-function plan(d){const dl=deps(d),w=W(),h=H();
- if(d==="A"){const start=s2m($("sCasa").value),at=start+h,tr=dl.find(m=>m>=at)??dl[dl.length-1];return{d,start,at,tr,down:tr+RIDE,end:tr+RIDE+w,wa:h,wb:w}}
- const start=s2m($("sOut").value),at=start+w,tr=dl.find(m=>m>=at)??dl[dl.length-1];return{d,start,at,tr,down:tr+RIDE,end:tr+RIDE+h,wa:w,wb:h}}
+// Bus 60 sotto casa (fermata Umbria): stime modificabili qui
+const B60={toFerm:2,attesa:4,corsaA:10,aPiediPS:3,corsaR:5,aPiediSt:2};
+const via60=()=>ls.get("casaMode","piedi")==="bus60";
+function plan(d){const dl=deps(d),w=W(),h=H(),b=via60();
+ if(d==="A"){const start=s2m($("sCasa").value);
+  if(b){const bus=start+B60.toFerm+B60.attesa,ps=bus+B60.corsaA,at=ps+B60.aPiediPS,dep=dl.find(m=>m+3>=at)??dl[dl.length-1],tr=dep+3;
+   return{d,start,at,dep,tr,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","casa, Corso Umbria 14",start,0],["Bus 60","fermata Umbria → Porta Susa (stima)",bus,0],["Scendi","Inghilterra Cap, a piedi a XVIII Dicembre",ps,0],["Tram 10","da XVIII Dicembre",tr,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","C.so IV Novembre 40 ("+w+" min)",dep+RIDE+w,0]]}}
+  const at=start+h,dep=dl.find(m=>m>=at)??dl[dl.length-1];
+  return{d,start,at,dep,tr:dep,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","casa, Corso Umbria 14",start,0],["Fermata","Statuto Cap ("+h+" min)",at,0],["Tram 10","da Statuto Cap",dep,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","C.so IV Novembre 40 ("+w+" min)",dep+RIDE+w,0]]}}
+ const start=s2m($("sOut").value),at=start+w,dep=dl.find(m=>m>=at)??dl[dl.length-1],down=dep+RIDE;
+ if(b){const bus=down+B60.aPiediSt+B60.attesa,end=bus+B60.corsaR+B60.toFerm;
+  return{d,start,at,dep,tr:dep,down,end,wa:w,wb:end-down,b,rows:[["Esci","ufficio, C.so IV Novembre 40",start,0],["Fermata","Caserma M. Grappa ("+w+" min)",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Statuto → Umbria (stima)",bus,0],["Casa","Corso Umbria 14",end,0]]}}
+ return{d,start,at,dep,tr:dep,down,end:down+h,wa:w,wb:h,b,rows:[["Esci","ufficio, C.so IV Novembre 40",start,0],["Fermata","Caserma M. Grappa ("+w+" min)",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Casa","Corso Umbria 14 ("+h+" min)",down+h,0]]}}
 function render(){
  const n=nowF(),fn=Math.floor(n),dl=deps(dir),st=stops(),day=new Date().getDay(),P=plan(dir);
  $("bA").setAttribute("aria-pressed",dir==="A");$("bR").setAttribute("aria-pressed",dir==="R");
  $("clk").textContent=m2s(fn);
  $("stopNm").textContent=dir==="A"?"Statuto Cap · 951":"Caserma Monte Grappa → Statuto";
- const pp=PAL[dir==="A"?0:1];$("chips").innerHTML=pp.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("");
+ const pp=PAL[dir==="A"?0:2];$("chips").innerHTML=pp.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("");
  const fut=dl.filter(m=>m>=fn);const tom=!fut.length;const up=(tom?dl:fut).slice(0,4);
  const d0=up[0]-fn;
  ring(tom?0:d0,tom?"domani":d0<=0?"ora":String(d0));
- $("nexts").innerHTML=up.slice(1,4).map(m=>`<div class="nx${m===P.tr?" mine":""}"><b>${m2s(m)}</b><span>${tom?"domani":"tra "+dur(m-fn)}</span></div>`).join("");
+ $("nexts").innerHTML=up.slice(1,4).map(m=>`<div class="nx${m===P.dep?" mine":""}"><b>${m2s(m)}</b><span>${tom?"domani":"tra "+dur(m-fn)}</span></div>`).join("");
  // piano
- const rows=dir==="A"?[["Esci","casa, Corso Umbria 14",P.start,0],["Fermata","Statuto Cap ("+P.wa+" min)",P.at,0],["Tram 10","da Statuto Cap",P.tr,1],["Scendi","Caserma Monte Grappa",P.down,0],["Ufficio","C.so IV Novembre 40 ("+P.wb+" min)",P.end,0]]
-  :[["Esci","ufficio, C.so IV Novembre 40",P.start,0],["Fermata","Caserma M. Grappa ("+P.wa+" min)",P.at,0],["Tram 10","verso Statuto",P.tr,1],["Scendi","Statuto Nord",P.down,0],["Casa","Corso Umbria 14 ("+P.wb+" min)",P.end,0]];
+ const rows=P.rows;
  const wait=P.tr-P.at;
  $("sum").innerHTML=`<div class="ph"><b>Il tuo piano ${dir==="A"?"del mattino":"del pomeriggio"}</b><span>${day===0||day===6?"oggi festivo: orari diversi":wait>0?"attesa alla fermata "+wait+" min":"tram appena arrivi"}</span></div>`
   +rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}</span></div>`).join("");
@@ -265,24 +277,24 @@ function render(){
  const ss=$("setStop");if(ss)ss.onclick=e=>{e.preventDefault();const d=document.querySelectorAll("details")[2];d.open=true;$("sStop").focus()};
  const moving=dl.filter(m=>m<=n&&n-m<RIDE).pop();
  draw(st,P,moving!=null?n-moving:null);
- const all=t=>{const pt=plan(t).tr;return deps(t).map(m=>`<span class="${m===up[0]&&t===dir&&!tom?"nx1":m===pt?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")};
+ const all=t=>{const pt=plan(t).dep;return deps(t).map(m=>`<span class="${m===up[0]&&t===dir&&!tom?"nx1":m===pt?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")};
  $("ttA").innerHTML=all("A");$("ttR").innerHTML=all("R");
  renderCards(n,up);
 }
 function draw(st,P,prog){
- const t0=P.tr,pts=[];
+ const t0=P.dep,pts=[];
  const casa={n:"Casa · Corso Umbria 14",home:1},uff={n:"Ufficio · Corso IV Novembre 40",home:2};
- if(dir==="A")pts.push({...casa,t:P.start,wm:P.wa});else pts.push({...uff,t:P.start,wm:P.wa});
+ if(dir==="A")pts.push({...casa,t:P.start,wm:P.wa,lab:P.b?"bus 60 + a piedi":null});else pts.push({...uff,t:P.start,wm:P.wa});
  st.forEach(s=>pts.push({n:s.n,t:t0+s.o,z:s.z,l:s.l,o:s.o}));
- if(dir==="A")pts.push({...uff,t:P.end,wm:P.wb});else pts.push({...casa,t:P.end,wm:P.wb});
+ if(dir==="A")pts.push({...uff,t:P.end,wm:P.wb});else pts.push({...casa,t:P.end,wm:P.wb,lab:P.b?"a piedi + bus 60":null});
  const G=34,top=22,X=90,HH=top+(pts.length-1)*G+34,VW=380;
  let s=`<svg viewBox="0 0 ${VW} ${HH}" role="img" aria-label="Schema del percorso con orari">`;
  const zs=[];pts.forEach((p,i)=>{if(p.z&&(!zs.length||zs[zs.length-1].z!==p.z))zs.push({z:p.z,a:i,b:i});else if(p.z)zs[zs.length-1].b=i});
  zs.forEach((z,k)=>{const y1=top+z.a*G-G/2+2,y2=top+z.b*G+G/2-2;s+=`<rect x="${X-22}" y="${y1}" width="${VW-X+20}" height="${y2-y1}" rx="12" fill="var(--zone)" ${k%2?'fill-opacity=".6"':''}/><text x="${VW-10}" y="${y1+16}" text-anchor="end" ${FB} font-size="11" font-weight="600" fill="var(--mut)">${z.z.toUpperCase()}</text>`});
  for(let i=0;i<pts.length-1;i++){const y=top+i*G,hp=pts[i].home?pts[i]:pts[i+1].home?pts[i+1]:null;
-  s+=hp?`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="var(--mut)" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/><text x="${X+16}" y="${y+G/2+4}" ${FB} font-size="12" fill="var(--mut)">a piedi ${hp.wm} min</text>`
+  s+=hp?`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="var(--mut)" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/><text x="${X+16}" y="${y+G/2+4}" ${FB} font-size="12" fill="var(--mut)">${hp.lab||"a piedi "+hp.wm+" min"}</text>`
   :`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="#f2661f" stroke-width="10"/><line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="#000" stroke-opacity=".35" stroke-width="2" stroke-dasharray="6 6"/>`}
- pts.forEach((p,i)=>{const y=top+i*G,end=!p.home&&(pts[i-1]?.home||pts[i+1]?.home),key=i===1;
+ pts.forEach((p,i)=>{const y=top+i*G,end=!p.home&&(pts[i-1]?.home||pts[i+1]?.home),key=i===(dir==="A"&&P.b?2:1);
   if(p.home===1)s+=`<rect x="${X-13}" y="${y-13}" width="26" height="26" rx="7" fill="var(--ink)"/><path d="M${X-7} ${y+6}v-7l7-6 7 6v7z" fill="var(--bg)"/>`;
   else if(p.home===2)s+=`<rect x="${X-13}" y="${y-13}" width="26" height="26" rx="7" fill="var(--ink)"/><rect x="${X-7}" y="${y-5}" width="14" height="11" rx="2" fill="var(--bg)"/><rect x="${X-3}" y="${y-8}" width="6" height="4" rx="1" fill="none" stroke="var(--bg)" stroke-width="2"/>`;
   else s+=`<circle cx="${X}" cy="${y}" r="${end?11:7}" fill="var(--bg)" stroke="var(--ink)" stroke-width="${end?4:3}"/>`;
@@ -323,13 +335,14 @@ function esci(){render();const n=nowF(),dl=deps(dir),P=plan(dir);let t,w;
   const a=Math.max(0,Math.round(left)),mm=Math.floor(a/60),ss=a%60;
   $("goT").textContent=mm>=60?`${Math.floor(mm/60)}h ${String(mm%60).padStart(2,"0")}`:`${mm}:${String(ss).padStart(2,"0")}`;
   $("goK").textContent=left>0?"Esci tra":"Esci ora!";
-  $("goS").textContent=`Esci ${dir==="A"?"di casa":"dall'ufficio"} alle ${m2s(t-w)} · tram 10 delle ${m2s(t)} da ${dir==="A"?"Statuto Cap":"Caserma Monte Grappa"}`;
+  $("goS").textContent=`Esci ${dir==="A"?"di casa":"dall'ufficio"} alle ${m2s(t-w)} · tram 10 delle ${m2s(t)} da ${dir==="A"?(via60()?"XVIII Dicembre":"Statuto Cap"):"Caserma Monte Grappa"}`;
   $("goB").style.width=Math.min(100,Math.max(0,100*(1-left/tot)))+"%";
   $("go").className="go"+(left<=0?" late":left<=120?" soon":"");
   if(now>t+1){clearInterval(goTimer)}};
  tick();clearInterval(goTimer);goTimer=setInterval(tick,1000)}
 $("goX").onclick=()=>{$("go").hidden=true;clearInterval(goTimer)};
 $("esciBtn").onclick=esci;$("popEsci").onclick=()=>{$("pop").hidden=true;esci()};
+document.querySelectorAll('#cMode input').forEach(r=>{r.checked=r.value===ls.get("casaMode","piedi");r.onchange=()=>{ls.set("casaMode",r.value);render()}});
 // Giorni di lavoro (lun, mer, ven) e sospensione per vacanze
 const giorni=()=>{try{return JSON.parse(ls.get("giorni","[1,3,5]"))}catch(e){return[1,3,5]}};
 const vac=()=>{try{return JSON.parse(ls.get("vac","null"))}catch(e){return null}};
@@ -368,7 +381,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
  if(ls.get("pop-"+slot,"")===k)return;ls.set("pop-"+slot,k);popup(slot)}
 Promise.all([loadAvv(),loadMeteo()]).then(autoPop);document.addEventListener("visibilitychange",()=>{if(!document.hidden)Promise.all([loadAvv(),loadMeteo()]).then(autoPop)});
 // Web app: copia senza internet e aggiornamento automatico a ogni pubblicazione
-const VER="d24335846d";
+const VER="b99e412c18";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let reloading=false;
 function checkVer(){if(location.protocol!=="https:")return;fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&v.v&&v.v!==VER&&!reloading){reloading=true;
