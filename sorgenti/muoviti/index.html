@@ -95,6 +95,18 @@ details[open] summary::after{content:"–"}
 .av p.w{background:light-dark(#fff1e8,#2b1a10)}
 .card{box-shadow:0 1px 0 var(--line),0 6px 18px -12px rgba(0,0,0,.25)}
 @media(prefers-reduced-motion:no-preference){.sheet{animation:up .28s ease-out}@keyframes up{from{transform:translateY(40px);opacity:0}}}
+.esci{width:100%;min-height:52px;margin-top:10px;border:0;border-radius:14px;background:var(--ink);color:var(--bg);font:700 20px "Barlow Condensed",system-ui,sans-serif;cursor:pointer}
+.meteo{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:light-dark(#eaf3fb,#13212e);margin-bottom:8px;font-size:15px}
+.meteo b{font:700 26px "Barlow Condensed",system-ui,sans-serif;white-space:nowrap}
+.meteo:empty{display:none}
+.go{position:fixed;inset:0;z-index:30;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px}
+.go[hidden]{display:none}.go.late{background:#b3261e;color:#fff}.go.soon{background:var(--or);color:#fff}
+.goin{width:100%;max-width:480px;text-align:center}
+.gk{font:600 20px Barlow,system-ui,sans-serif;opacity:.85}
+.gt{font:700 clamp(96px,32vw,170px)/1 "Barlow Condensed",system-ui,sans-serif;font-variant-numeric:tabular-nums;margin:8px 0}
+.gs{font-size:17px;opacity:.9;margin-bottom:18px}
+.gbar{height:10px;border-radius:5px;background:rgba(255,255,255,.2);overflow:hidden;margin-bottom:24px}.gbar i{display:block;height:100%;background:currentColor;width:0}
+.go button{min-height:52px;width:100%;border-radius:14px;border:2px solid currentColor;background:none;color:inherit;font:600 17px Barlow,system-ui,sans-serif;cursor:pointer}
 label{display:block;margin:10px 0 4px;font-size:14px;color:var(--mut)}
 input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 @media(prefers-reduced-motion:no-preference){.tram{transition:transform 1s ease}.blink{animation:b 1.6s infinite}@keyframes b{50%{opacity:.3}}}
@@ -114,6 +126,7 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
  </div>
  <div class="nexts" id="nexts"></div>
  <div class="sum" id="sum"></div>
+ <button class="esci" id="esciBtn" type="button">Esci adesso · conto alla rovescia</button>
  <div class="live" id="live"></div>
 </section>
 
@@ -134,17 +147,24 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
  <details><summary>Impostazioni</summary><div class="body">
   <label for="sOut">Ora di uscita (pomeriggio)</label><input id="sOut" type="time" value="13:30">
   <label for="sWalk">Minuti a piedi fermata ↔ Corso IV Novembre 40</label><input id="sWalk" type="number" min="0" max="20" value="4">
+  <label for="sHome">Minuti da casa alla fermata di Statuto (mattina)</label><input id="sHome" type="number" min="0" max="30" value="5">
   <label for="sStop">Numero palina ritorno (Caserma Monte Grappa → Statuto)</label><input id="sStop" inputmode="numeric" placeholder="lo leggi sulla palina">
  </div></details>
  <details><summary>Icona sull'iPhone</summary><div class="body"><p>Apri <b>f6kd4bp6sr-stack.github.io/mie-app/muoviti/</b> in Safari, tocca Condividi e poi «Aggiungi alla schermata Home». L'app si aggiorna da sola a ogni nuova versione.</p></div></details>
 </div>
 <p class="ver" id="ver">Versione __VER__</p>
 </main>
+<div class="go" id="go" hidden><div class="goin">
+ <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
+ <div class="gs" id="goS"></div><div class="gbar"><i id="goB"></i></div>
+ <button id="goX" type="button">Chiudi</button></div></div>
 <div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="popT" hidden>
  <div class="sheet"><div class="grab"></div>
   <h3 id="popT">Si parte</h3><p class="tag" id="popS"></p>
   <div class="pl" id="popL"></div>
+  <div class="meteo" id="popM"></div>
   <div class="av" id="popA"></div>
+  <button class="esci" id="popEsci" type="button">Esci adesso · conto alla rovescia</button>
   <div class="live"><a class="p" id="popLive" href="#">Passaggi live</a><button id="popX" type="button">Chiudi</button></div>
  </div></div>
 <script>{
@@ -154,6 +174,7 @@ const ls={get(k,d){try{return localStorage.getItem(k)??d}catch(e){return d}},set
 let dir=new Date().getHours()<12?"A":"R";
 const m2s=m=>{m=((Math.round(m)%1440)+1440)%1440;return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")};
 const s2m=s=>{const[h,mm]=(s||"14:00").split(":").map(Number);return h*60+(mm||0)};
+const dur=x=>x>=60?Math.floor(x/60)+" h "+String(x%60).padStart(2,"0"):x+" min";
 const W=()=>Math.max(0,+$("sWalk").value||0);
 function deps(d){const o=[];if(d==="A"){for(let m=390;m<=540;m+=7)o.push(m)}else{const s=s2m($("sOut").value);for(let m=s;m<=Math.min(s+180,1320);m+=8)o.push(m)}return o}
 const nowF=()=>{const n=new Date();return n.getHours()*60+n.getMinutes()+n.getSeconds()/60};
@@ -230,10 +251,35 @@ function draw(st,t0,w,prog){
 }
 $("sOut").value=ls.get("out","13:30");$("sWalk").value=ls.get("walk","4");$("sStop").value=ls.get("stop","385");
 $("addP").addEventListener("submit",e=>{e.preventDefault();const p=$("pNum").value.replace(/\D/g,"");if(!p)return;const m=getMine();m.push({p,n:$("pName").value.trim().slice(0,40)});ls.set("mine",JSON.stringify(m));$("pNum").value="";$("pName").value="";render()});
-const K={sOut:"out",sWalk:"walk",sStop:"stop"};
+const K={sOut:"out",sWalk:"walk",sStop:"stop",sHome:"home"};$("sHome").value=ls.get("home","5");
 Object.keys(K).forEach(id=>$(id).addEventListener("input",()=>{ls.set(K[id],$(id).value);render()}));
 $("bA").onclick=()=>{dir="A";render()};$("bR").onclick=()=>{dir="R";render()};
 render();const tick=setInterval(render,20000);
+// Meteo (Open-Meteo, gratuito senza chiavi) per l'ora della partenza
+let meteo=null;
+const WC=c=>c===0?"sereno":c<=3?"nuvoloso":c<=48?"nebbia":c<=57?"pioviggine":c<=67?"pioggia":c<=77?"neve":c<=82?"rovesci":c<=86?"neve":"temporale";
+function loadMeteo(){return fetch("https://api.open-meteo.com/v1/forecast?latitude=45.06&longitude=7.66&hourly=temperature_2m,precipitation_probability,weathercode&timezone=Europe%2FRome&forecast_days=2",{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&v.hourly){meteo=v.hourly;ls.set("meteo",JSON.stringify(v.hourly))}}).catch(()=>{try{meteo=JSON.parse(ls.get("meteo","null"))}catch(e){}})}
+function meteoAt(min,dom){if(!meteo||!meteo.time)return"";const d=new Date();if(dom)d.setDate(d.getDate()+1);
+ const key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}T${String(Math.floor(min/60)).padStart(2,"0")}:00`;
+ const i=meteo.time.indexOf(key);if(i<0)return"";const t=Math.round(meteo.temperature_2m[i]),pp=meteo.precipitation_probability[i],c=meteo.weathercode[i];
+ const tip=pp>=50||c>=51?"prendi l'ombrello":t<=3?"fa freddo: copriti bene":"";
+ return `<b>${t}°</b><span>alle ${m2s(Math.floor(min/60)*60)}: ${WC(c)}, prob. pioggia ${pp}%${tip?" · <strong>"+tip+"</strong>":""}</span>`}
+// Esci adesso: conto alla rovescia a tutto schermo
+let goTimer=null,goStart=0;
+function esci(){render();const n=nowF(),dl=deps(dir),w=dir==="A"?Math.max(0,+$("sHome").value||0):W();
+ const t=dl.find(m=>m-w>=n)??dl.find(m=>m>=n);if(t==null){return}
+ goStart=n;$("go").hidden=false;
+ const tick=()=>{const now=nowF(),left=(t-w-now)*60,tot=Math.max(1,(t-w-goStart)*60);
+  const a=Math.max(0,Math.round(left)),mm=Math.floor(a/60),ss=a%60;
+  $("goT").textContent=mm>=60?`${Math.floor(mm/60)}h ${String(mm%60).padStart(2,"0")}`:`${mm}:${String(ss).padStart(2,"0")}`;
+  $("goK").textContent=left>0?"Esci tra":"Esci ora!";
+  $("goS").textContent=`Tram 10 delle ${m2s(t)} da ${dir==="A"?"Statuto Cap":"Caserma Monte Grappa"} · ${w} min a piedi`;
+  $("goB").style.width=Math.min(100,Math.max(0,100*(1-left/tot)))+"%";
+  $("go").className="go"+(left<=0?" late":left<=120?" soon":"");
+  if(now>t+1){clearInterval(goTimer)}};
+ tick();clearInterval(goTimer);goTimer=setInterval(tick,1000)}
+$("goX").onclick=()=>{$("go").hidden=true;clearInterval(goTimer)};
+$("esciBtn").onclick=esci;$("popEsci").onclick=()=>{$("pop").hidden=true;esci()};
 // Avvisi e popup partenza (06:45 andata, 13:30 ritorno, feriali)
 let avvisi={agg:"",linee:[]};
 function loadAvv(){return fetch("avvisi.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&Array.isArray(v.linee)){avvisi=v;ls.set("avv",JSON.stringify(v))}}).catch(()=>{try{const c=JSON.parse(ls.get("avv","null"));if(c)avvisi=c}catch(e){}}).finally(stato)}
@@ -244,7 +290,8 @@ function stato(){const m=miei(),b=$("stato");b.className="stato"+(m.length?" war
 function popup(d){if(d)dir=d;render();const n=nowF(),dl=deps(dir),f0=dl.filter(m=>m>=Math.floor(n)),dom=!f0.length,fut=(dom?dl:f0).slice(0,3),w=W();
  $("popT").textContent=dir==="A"?"Andata: tram 10 da Statuto":"Ritorno: tram 10 da Caserma Monte Grappa";
  $("popS").textContent=(dir==="A"?"Prossime partenze da Statuto Cap (951)":"Prossimi passaggi verso Statuto · esci "+w+" min prima")+" · orari indicativi";
- $("popL").innerHTML=fut.map(m=>`<div><b>${m2s(m)}</b><span>${dom?"domani":"tra "+(m-Math.floor(n))+" min"}</span></div>`).join("");
+ $("popL").innerHTML=fut.map(m=>`<div><b>${m2s(m)}</b><span>${dom?"domani":"tra "+dur(m-Math.floor(n))}</span></div>`).join("");
+ $("popM").innerHTML=meteoAt(fut[0],dom);
  const m=miei();$("popA").innerHTML=m.length?m.map(a=>`<p class="w"><b>Linea ${esc((a.linee||[]).join(", "))}</b> · ${esc(a.titolo||"")}${a.quando?" · "+esc(a.quando):""}</p>`).join(""):`<p>Nessuna deviazione o comunicazione GTT per 10 e 94${avvisi.agg?" (controllo "+esc(avvisi.agg)+")":""}. Per sicurezza guarda il live.</p>`;
  const p=dir==="A"?"951":$("sStop").value.replace(/\D/g,"");$("popLive").href=p?live(p):AVV;$("popLive").textContent=p?"Passaggi live · palina "+p:"Avvisi GTT";
  $("pop").hidden=false}
@@ -255,7 +302,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
  if(location.hash==="#andata")return popup("A");if(location.hash==="#ritorno")return popup("R");
  if(!fer)return;const slot=m>=405&&m<=435?"A":m>=810&&m<=840?"R":null;if(!slot)return;
  if(ls.get("pop-"+slot,"")===k)return;ls.set("pop-"+slot,k);popup(slot)}
-loadAvv().then(autoPop);document.addEventListener("visibilitychange",()=>{if(!document.hidden)loadAvv().then(autoPop)});
+Promise.all([loadAvv(),loadMeteo()]).then(autoPop);document.addEventListener("visibilitychange",()=>{if(!document.hidden)Promise.all([loadAvv(),loadMeteo()]).then(autoPop)});
 // Web app: copia senza internet e aggiornamento automatico a ogni pubblicazione
 const VER="__VER__";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
