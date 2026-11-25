@@ -17,45 +17,45 @@
    PICTURE: tracciato del 10 con zone, fermate, orari e il tram che avanza
    COLOUR and TYPE: arancio tram dominante in testata, inchiostro, bianco; Barlow Condensed per orari
    LAYOUT: testata arancio con direzione, palina + conto alla rovescia, tracciato, pannelli apri/chiudi in griglia */
-:root{color-scheme:dark;--bg:#000;--ink:#f5f5f7;--mut:#a1a1a6;--line:#2c2c2e;--card:#1c1c1e;--zone:#121212;--or:#ff7a33;--or2:#ff8c4d;--ok:#4cd88a}
+:root{color-scheme:dark;--bg:#000;--ink:#f5f5f7;--mut:#b8b8bd;--line:#2c2c2e;--card:#1c1c1e;--zone:#121212;--or:#ff7a33;--or2:#ff8c4d;--ok:#4cd88a}
 *{box-sizing:border-box;min-width:0}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Barlow,system-ui,sans-serif;overflow-x:clip}
 .c{font-family:"Barlow Condensed",sans-serif;font-variant-numeric:tabular-nums}
-.top{background:#000;color:var(--ink);border-bottom:1px solid var(--line);padding:calc(16px + env(safe-area-inset-top)) max(4vw,16px,env(safe-area-inset-right)) 18px max(4vw,16px,env(safe-area-inset-left))}
+.top{background:#000;color:var(--ink);border-bottom:1px solid var(--line);padding:calc(8px + env(safe-area-inset-top)) max(3vw,12px,env(safe-area-inset-right)) 10px max(4vw,16px,env(safe-area-inset-left))}
 main{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
 .upd{position:sticky;top:0;z-index:5;display:none;background:var(--ink);color:var(--bg);text-align:center;padding:10px;font-weight:600}
 .ver{color:var(--mut);font-size:12px;text-align:center;margin-top:24px}
 .in{max-width:760px;margin:0 auto}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:12px}
-h1{margin:0;color:var(--or);font:700 38px/1 "Barlow Condensed",system-ui,sans-serif}
-.clock{font:700 30px "Barlow Condensed",system-ui,sans-serif}
-.sw{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--card);border-radius:14px;padding:4px;margin-top:14px}
-.sw button{min-height:46px;border:0;border-radius:11px;background:none;color:#d1d1d6;font:600 16px Barlow,system-ui,sans-serif;cursor:pointer}
+h1{margin:0;color:var(--or);font:700 30px/1 "Barlow Condensed",system-ui,sans-serif}
+.clock{font:700 26px "Barlow Condensed",system-ui,sans-serif}
+.sw{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--card);border-radius:14px;padding:3px;margin-top:8px}
+.sw button{min-height:42px;border:0;border-radius:11px;background:none;color:#d1d1d6;font:600 16px Barlow,system-ui,sans-serif;cursor:pointer}
 .sw button[aria-pressed=true]{background:var(--or);color:#000}
 button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--or);outline-offset:2px}
-main{max-width:760px;margin:0 auto;padding:16px max(4vw,16px) 40px}
-.pal{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:18px;padding:14px}
-.ring{width:112px;height:112px}
+main{max-width:760px;margin:0 auto;padding:10px max(3vw,12px) 30px}
+.pal{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:10px 12px}
+.ring{width:84px;height:84px}
 .pal .k{font-size:13px;opacity:.75}
-.pal .nm{font:700 24px/1.1 "Barlow Condensed",system-ui,sans-serif}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.pal .nm{font:700 22px/1.1 "Barlow Condensed",system-ui,sans-serif}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
 .chip{display:inline-flex;align-items:center;gap:4px;background:var(--or);color:#000;border-radius:8px;padding:2px 8px;font:700 17px "Barlow Condensed",system-ui,sans-serif}
 .chip.n{background:transparent;border:1px solid currentColor;opacity:.75;font:600 14px Barlow,system-ui,sans-serif}
-.nexts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
-.nx{background:var(--card);border-radius:12px;padding:8px 10px}
-.nx b{display:block;font:700 26px/1 "Barlow Condensed",system-ui,sans-serif}
+.nexts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:6px}
+.nx{background:var(--card);border-radius:10px;padding:6px 10px}
+.nx b{display:block;font:700 24px/1 "Barlow Condensed",system-ui,sans-serif}
 .nx span{font-size:13px;color:var(--mut)}
-.sum{margin:12px 0 4px;padding:12px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.sum{margin:6px 0 0;padding:8px 10px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
 .sum b{font:700 22px "Barlow Condensed",system-ui,sans-serif}
-.live{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
-.live a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:12px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600;text-align:center;padding:6px;border:1px solid var(--line)}
+.live{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
+.live a{display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:12px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600;text-align:center;padding:6px;border:1px solid var(--line)}
 .live a.p{background:var(--or);border-color:var(--or);color:#000}
-h2{font:700 28px/1.05 "Barlow Condensed",system-ui,sans-serif;margin:28px 0 4px;text-wrap:balance}
+h2{font:700 24px/1.05 "Barlow Condensed",system-ui,sans-serif;margin:16px 0 2px;text-wrap:balance}
 .note{color:var(--mut);font-size:13px;margin:6px 0 0}
 .fig svg{width:100%;height:auto;display:block}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px;margin-top:18px;align-items:start}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:6px;margin-top:12px;align-items:start}
 details{border:1px solid var(--line);border-radius:14px;background:var(--card)}
-summary{min-height:50px;display:flex;align-items:center;padding:0 16px;font-weight:600;cursor:pointer;list-style:none}
+summary{min-height:44px;display:flex;align-items:center;padding:0 16px;font-weight:600;cursor:pointer;list-style:none}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";margin-left:auto;font-size:24px;color:var(--or)}
 details[open] summary::after{content:"–"}
@@ -64,25 +64,25 @@ details[open] summary::after{content:"–"}
 .tt span{background:var(--bg);border-radius:8px;text-align:center;padding:6px 0;font:600 18px "Barlow Condensed",system-ui,sans-serif}
 .tt span.past{opacity:.3}.tt span.nx1{background:var(--or);color:#000;font-weight:700}.tt span.mine{box-shadow:inset 0 0 0 2px var(--or);color:var(--or)}
 .nx.mine{box-shadow:inset 0 0 0 2px var(--or)}.nx.mine span{color:var(--or)}
-.ph{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}.ph b{font:700 22px "Barlow Condensed",system-ui,sans-serif}.ph span{color:var(--mut);font-size:14px}
-.pr{display:grid;grid-template-columns:70px 1fr;gap:10px;align-items:center;padding:7px 10px;border-radius:12px}
-.pr b{font:700 24px "Barlow Condensed",system-ui,sans-serif}.pr span{font-size:14px;color:var(--mut)}.pr strong{display:block;color:var(--ink);font-size:16px;font-weight:600}
+.ph{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:2px}.ph b{font:700 22px "Barlow Condensed",system-ui,sans-serif}.ph span{color:var(--mut);font-size:14px}
+.pr{display:grid;grid-template-columns:66px 1fr;gap:8px;align-items:center;padding:3px 8px;border-radius:10px;line-height:1.25}
+.pr b{font:700 23px "Barlow Condensed",system-ui,sans-serif}.pr span{font-size:14px;color:var(--mut)}.pr strong{display:inline;color:var(--ink);font-size:16px;font-weight:600;margin-right:6px}
 .pr.key{background:var(--or)}.pr.key b,.pr.key span,.pr.key strong{color:#000}.pr.done{opacity:.45}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px;margin-top:10px}
-.card{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--card)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:6px;margin-top:6px}
+.card{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--card)}
 .card.best{border:2px solid var(--or)}
 .card .h{display:flex;align-items:center;gap:10px}
 .card .h b{font:700 20px/1.1 "Barlow Condensed",system-ui,sans-serif}
 .card p{margin:6px 0 0;font-size:15px}
 .card .t{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .card .t span:not(.chip){background:var(--card);border-radius:8px;padding:3px 8px;font:600 18px "Barlow Condensed",system-ui,sans-serif}
-.card .acts{display:flex;gap:8px;margin-top:10px}
+.card .acts{display:flex;gap:6px;margin-top:8px}
 .card .acts a,.card .acts button{flex:1;display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;font:600 15px Barlow,system-ui,sans-serif;border:1px solid var(--line);cursor:pointer}
 .chip.bus{background:#3a3a3c;color:#fff}
 .tag{font-size:12px;color:var(--mut)}
 .add{display:grid;grid-template-columns:1fr 1.4fr auto;gap:8px;margin-top:10px}
 .add button{min-height:44px;border:0;border-radius:10px;background:var(--or);color:#000;font:600 16px Barlow,system-ui,sans-serif;padding:0 14px;cursor:pointer}
-.stato{display:flex;align-items:center;gap:10px;width:100%;min-height:48px;margin:0 0 12px;padding:10px 14px;border-radius:14px;border:0;font:600 15px Barlow,system-ui,sans-serif;text-align:left;cursor:pointer;background:#0f2a1b;color:var(--ok)}
+.stato{display:flex;align-items:center;gap:8px;width:100%;min-height:38px;margin:0 0 8px;padding:6px 12px;border-radius:14px;border:0;font:600 15px Barlow,system-ui,sans-serif;text-align:left;cursor:pointer;background:#0f2a1b;color:var(--ok)}
 .stato.warn{background:#2b1608;color:var(--or2)}
 .stato::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:currentColor}
 .live button{min-height:48px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 16px Barlow,system-ui,sans-serif;cursor:pointer}
@@ -99,7 +99,7 @@ details[open] summary::after{content:"–"}
 .av p.w{background:#2b1608;color:var(--or2)}
 
 @media(prefers-reduced-motion:no-preference){.sheet{animation:up .28s ease-out}@keyframes up{from{transform:translateY(40px);opacity:0}}}
-.esci{width:100%;min-height:52px;margin-top:10px;border:0;border-radius:14px;background:var(--ink);color:var(--bg);font:700 20px "Barlow Condensed",system-ui,sans-serif;cursor:pointer}
+.esci{width:100%;min-height:46px;margin-top:6px;border:0;border-radius:14px;background:var(--ink);color:var(--bg);font:700 20px "Barlow Condensed",system-ui,sans-serif;cursor:pointer}
 .meteo{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:#0f1f2e;margin-bottom:8px;font-size:15px}
 .meteo b{font:700 26px "Barlow Condensed",system-ui,sans-serif;white-space:nowrap}
 .meteo:empty{display:none}
@@ -145,7 +145,7 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
 
 <h2 id="mapT">Il percorso</h2>
 <div class="fig" id="map"></div>
-<p class="note">Il tram arancio pieno è quello in viaggio adesso, stimato dall'orario. Tempi tra fermate dall'orario GTT del 10; al ritorno stimati uguali.</p>
+<p class="note">Tram pieno = in viaggio adesso (stima dall'orario GTT).</p>
 
 <h2 id="altT">Alternative per l'ufficio</h2>
 <div class="cards" id="alt"></div>
@@ -172,7 +172,7 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
  </div></details>
  <details><summary>Icona sull'iPhone</summary><div class="body"><p>Apri <b>f6kd4bp6sr-stack.github.io/mie-app/muoviti/</b> in Safari, tocca Condividi e poi «Aggiungi alla schermata Home». L'app si aggiorna da sola a ogni nuova versione.</p></div></details>
 </div>
-<p class="ver" id="ver">Versione c4acf3541c</p>
+<p class="ver" id="ver">Versione e18602601f</p>
 </main>
 <div class="go" id="go" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
@@ -234,10 +234,10 @@ function render(){
  const fut=dl.filter(m=>m>=fn);const tom=!fut.length;const up=(tom?dl:fut).slice(0,4);
  const d0=up[0]-fn;
  ring(tom?0:d0,tom?"domani":d0<=0?"ora":String(d0));
- $("nexts").innerHTML=up.slice(1,4).map(m=>`<div class="nx${m===P.tr?" mine":""}"><b>${m2s(m)}</b><span>${tom?"domani":"tra "+dur(m-fn)}${m===P.tr?" · il tuo":""}</span></div>`).join("");
+ $("nexts").innerHTML=up.slice(1,4).map(m=>`<div class="nx${m===P.tr?" mine":""}"><b>${m2s(m)}</b><span>${tom?"domani":"tra "+dur(m-fn)}</span></div>`).join("");
  // piano
- const rows=dir==="A"?[["Esci di casa","Corso Umbria 14",P.start,0],["Alla fermata","Statuto Cap · "+P.wa+" min a piedi",P.at,0],["Tram 10","da Statuto Cap",P.tr,1],["Scendi","Caserma Monte Grappa",P.down,0],["In ufficio","Corso IV Novembre 40 · "+P.wb+" min a piedi",P.end,0]]
-  :[["Esci dall'ufficio","Corso IV Novembre 40",P.start,0],["Alla fermata","Caserma Monte Grappa · "+P.wa+" min a piedi",P.at,0],["Tram 10","verso Statuto",P.tr,1],["Scendi","Statuto Nord",P.down,0],["A casa","Corso Umbria 14 · "+P.wb+" min a piedi",P.end,0]];
+ const rows=dir==="A"?[["Esci","casa, Corso Umbria 14",P.start,0],["Fermata","Statuto Cap ("+P.wa+" min)",P.at,0],["Tram 10","da Statuto Cap",P.tr,1],["Scendi","Caserma Monte Grappa",P.down,0],["Ufficio","C.so IV Novembre 40 ("+P.wb+" min)",P.end,0]]
+  :[["Esci","ufficio, C.so IV Novembre 40",P.start,0],["Fermata","Caserma M. Grappa ("+P.wa+" min)",P.at,0],["Tram 10","verso Statuto",P.tr,1],["Scendi","Statuto Nord",P.down,0],["Casa","Corso Umbria 14 ("+P.wb+" min)",P.end,0]];
  const wait=P.tr-P.at;
  $("sum").innerHTML=`<div class="ph"><b>Il tuo piano ${dir==="A"?"del mattino":"del pomeriggio"}</b><span>${day===0||day===6?"oggi festivo: orari diversi":wait>0?"attesa alla fermata "+wait+" min":"tram appena arrivi"}</span></div>`
   +rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}</span></div>`).join("");
@@ -256,7 +256,7 @@ function draw(st,P,prog){
  if(dir==="A")pts.push({...casa,t:P.start,wm:P.wa});else pts.push({...uff,t:P.start,wm:P.wa});
  st.forEach(s=>pts.push({n:s.n,t:t0+s.o,z:s.z,l:s.l,o:s.o}));
  if(dir==="A")pts.push({...uff,t:P.end,wm:P.wb});else pts.push({...casa,t:P.end,wm:P.wb});
- const G=46,top=30,X=96,HH=top+(pts.length-1)*G+34,VW=380;
+ const G=34,top=22,X=90,HH=top+(pts.length-1)*G+34,VW=380;
  let s=`<svg viewBox="0 0 ${VW} ${HH}" role="img" aria-label="Schema del percorso con orari">`;
  const zs=[];pts.forEach((p,i)=>{if(p.z&&(!zs.length||zs[zs.length-1].z!==p.z))zs.push({z:p.z,a:i,b:i});else if(p.z)zs[zs.length-1].b=i});
  zs.forEach((z,k)=>{const y1=top+z.a*G-G/2+2,y2=top+z.b*G+G/2-2;s+=`<rect x="${X-22}" y="${y1}" width="${VW-X+20}" height="${y2-y1}" rx="12" fill="var(--zone)" ${k%2?'fill-opacity=".6"':''}/><text x="${VW-10}" y="${y1+16}" text-anchor="end" ${FB} font-size="11" font-weight="600" fill="var(--mut)">${z.z.toUpperCase()}</text>`});
@@ -270,7 +270,7 @@ function draw(st,P,prog){
   if(key)s+=`<rect x="6" y="${y-15}" width="66" height="30" rx="8" fill="#ff7a33"/>`;
   s+=`<text x="${key?39:14}" y="${y+7}" ${key?'text-anchor="middle"':""} ${FC} font-weight="700" font-size="21" fill="${key?"#000":"var(--ink)"}">${m2s(p.t)}</text>`;
   s+=`<text x="${X+24}" y="${y+5}" ${FB} font-size="15.5" font-weight="${end||p.home?600:400}" fill="var(--ink)">${p.n}</text>`;
-  if(p.l)s+=`<text x="${X+24}" y="${y+20}" ${FB} font-size="11.5" fill="var(--mut)">${p.l}</text>`;
+  
  });
  if(prog!=null){const y=top+G+(prog/RIDE)*((A.length-1)*G);
   s+=`<g class="tram" transform="translate(${X} ${y})"><rect x="-15" y="-11" width="30" height="22" rx="6" fill="#ff7a33" stroke="var(--bg)" stroke-width="3"/><rect x="-9" y="-6" width="18" height="6" rx="2" fill="#000"/><text x="0" y="8" text-anchor="middle" ${FC} font-weight="700" font-size="9" fill="#000">10</text></g>`}
@@ -346,7 +346,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
  if(ls.get("pop-"+slot,"")===k)return;ls.set("pop-"+slot,k);popup(slot)}
 Promise.all([loadAvv(),loadMeteo()]).then(autoPop);document.addEventListener("visibilitychange",()=>{if(!document.hidden)Promise.all([loadAvv(),loadMeteo()]).then(autoPop)});
 // Web app: copia senza internet e aggiornamento automatico a ogni pubblicazione
-const VER="c4acf3541c";
+const VER="e18602601f";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let reloading=false;
 function checkVer(){if(location.protocol!=="https:")return;fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&v.v&&v.v!==VER&&!reloading){reloading=true;
