@@ -161,7 +161,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
 .pager{display:flex;align-items:flex-start;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
 .pager::-webkit-scrollbar{display:none}.pg{flex:0 0 100%;width:100%;scroll-snap-align:start;scroll-snap-stop:always}
 .pgt{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:8px}
-.pgt button{display:flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border-radius:18px;border:1px solid var(--line);background:none;color:var(--mut);font:600 14px -apple-system,system-ui,sans-serif;cursor:pointer}
+.pgt button{display:flex;align-items:center;gap:6px;min-height:36px;padding:0 10px;border-radius:18px;border:1px solid var(--line);background:none;color:var(--mut);font:600 14px -apple-system,system-ui,sans-serif;cursor:pointer}
 .pgt button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .pgt i{font-style:normal;color:var(--mut);font-size:12px}
 .co .pr b{min-width:56px}
@@ -170,13 +170,14 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
 .plist .pn{flex:1;display:flex;flex-direction:column;line-height:1.2}.plist .pn b{font-size:16px}.plist .pn span{font-size:13px;color:var(--mut)}
 .plist .pl2{display:flex;gap:4px}.plist .go2{color:var(--or);font-weight:700}
 #pals:empty{display:none}
-.grid details:has(#tt60){grid-column:1/-1}
+.grid details:has(#tt60),.grid details:has(#tt3){grid-column:1/-1}
+.chip.t3{background:#2e9e4f;color:#fff}
 @media(max-width:380px){.ring{width:92px;height:92px}.nx b{font-size:22px}}
 </style></head><body>
 <header class="top"><div class="in">
  <div class="hd"><h1>Muoviti</h1><div class="clock" id="clk">--:--</div></div>
  <div class="sw" role="group" aria-label="Direzione"><button id="bA" aria-pressed="true">Andata · mattina</button><button id="bR" aria-pressed="false">Ritorno · pomeriggio</button></div>
- <div class="pgt" role="tablist" aria-label="Pagine"><button role="tab" data-p="0" aria-selected="true">🚋 Tram 10</button><button role="tab" data-p="1" aria-selected="false">🚌 Bus 60 + 10</button><i>scorri ←</i></div>
+ <div class="pgt" role="tablist" aria-label="Pagine"><button role="tab" data-p="0" aria-selected="true">🚋 Tram 10</button><button role="tab" data-p="1" aria-selected="false">🚌 60 + 10</button><button role="tab" data-p="2" aria-selected="false">🚋 Tram 3</button></div>
 </div></header>
 <div class="pager" id="pager"><div class="pg" id="pg1"><main>
 <button class="stato" id="stato" type="button" aria-live="polite"></button>
@@ -245,7 +246,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
  </div></details>
 
 </div>
-<p class="ver" id="ver">Versione 8123680bd2</p>
+<p class="ver" id="ver">Versione 8df9e4eb6f</p>
 </main></div>
 <div class="pg" id="pg2"><main>
 <section>
@@ -270,6 +271,29 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
 <div class="sum co" id="co2"></div>
 <div class="grid">
  <details><summary>Passaggi del 60 (stime)</summary><div class="body"><p class="tag" id="ttN60"></p><div class="tt" id="tt60"></div><p class="note">Stima dall'orario GTT del pomeriggio (un passaggio ogni ~19 min). Presto, la sera e nei festivi la frequenza cambia: usa il live.</p></div></details>
+</div>
+</main></div>
+<div class="pg" id="pg3"><main>
+<section>
+ <div class="duo">
+  <div class="colL">
+   <div class="pal">
+    <svg class="ring" id="ring3" viewBox="0 0 112 112" role="img" aria-label="Minuti al prossimo tram 3"></svg>
+    <div class="k">Prossimo tram 3 · stima</div><div class="nm">Industria · 193</div>
+    <div class="chips"><span class="chip t3">3</span></div>
+    <a class="palv" href="https://www.gtt.to.it/cms/percorari/arrivi?palina=193">Verifica su GTT ↗</a>
+   </div>
+   <div class="nexts" id="nexts3"></div>
+  </div>
+  <div class="sum" id="sum3"></div>
+ </div>
+ <div class="live"><a class="p" href="https://www.gtt.to.it/cms/percorari/arrivi?palina=193">Live tram 3 · palina 193</a><a href="https://www.gtt.to.it/cms/risorse/tabelle_orarie/timetables/3U_As.html">Orario GTT linea 3</a></div>
+</section>
+<h2>Tram 3: Industria → Hermada</h2>
+<div class="fig" id="map3"></div>
+<p class="note">Corso Regina Margherita da Industria (palina 193, angolo via Bonzanigo) al capolinea Piazza Hermada (221), fermate dal percorso GTT 03A1. Fascia che ti interessa: 15:45–16:45. Il 3 di giorno va «a frequenza»: passaggi e tempi di viaggio sono stimati (circa ogni 13 min, ~2 min a fermata). Verifica con il live.</p>
+<div class="grid">
+ <details open><summary>Passaggi 15:45–16:45 (stime)</summary><div class="body"><div class="tt" id="tt3"></div></div></details>
 </div>
 </main></div></div>
 <div class="go" id="go" role="dialog" aria-modal="true" aria-label="Conto alla rovescia" hidden><div class="goin">
@@ -446,6 +470,7 @@ function render(){
  $("ttR").innerHTML=all("R");
  $("ttN").textContent=fest?"Oggi festivo: stime con frequenza ridotta.":"";
  try{render2(n,fn)}catch(e){}
+ try{render3(n)}catch(e){}
  renderCards(up);
 }
 function draw(st,P,prog,trip){
@@ -482,7 +507,7 @@ function plan2(d){const w=W(),start=startDef(d);
  const at=start+w,dep=prossime("R",at)[0],down=dep+RIDE,c=coinc(down);
  return{start,bus:c.bus,c,dep,end:c.casa,rows:[["Esci","dall'ufficio",start,0],["Tram 10","Caprera · 387",dep,0],["Scendi","Statuto Nord · poi 2′ a piedi",down,0],["Bus 60","Statuto · palina 3463 · attesa "+c.att+"′",c.bus,1],["Scendi","Umbria · 3 fermate",c.um,0],["Casa","sotto casa",c.casa,0]]}}
 function draw2(pts,el){const G=34,top=22,X=90,VW=380,HH=top+(pts.length-1)*G+34;
- const col={bus:"#8e8e93",tram:"#f2661f"};
+ const col={bus:"#8e8e93",tram:"#f2661f",t3:"#2e9e4f"};
  let s=`<svg viewBox="0 0 ${VW} ${HH}" role="img" aria-label="Schema del percorso con bus 60 e tram 10, orari stimati">`;
  for(let i=0;i<pts.length-1;i++){const y=top+i*G,k=pts[i].k;
   s+=k==="walk"?`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="var(--mut)" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/>${pts[i].lab?`<text x="${X+16}" y="${y+G/2+4}" ${FB} font-size="12" fill="var(--mut)">${pts[i].lab}</text>`:""}`
@@ -522,16 +547,30 @@ function render2(n,fn){const d=dir,P=plan2(d),w=W();
   $("co2").innerHTML=l.map(m=>{const c=coinc(m+RIDE);return `<div class="pr${m===P.dep?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>Statuto ${m2s(c.down)}</strong>bus 60 alle ${m2s(c.bus)} · attesa ${c.att}′ · casa ${m2s(c.casa)}</span></div>`}).join("")}
  $("ttN60").textContent=d==="A"?"Alla palina 2719 Don Bosco, verso Porta Susa":"Alla palina 3463 Statuto, verso via Paris";
  $("tt60").innerHTML=deps60(null,stop[2]).map(m=>`<span class="${m===P.bus?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")}
+// ---------- Pagina 3: tram 3 da Industria a Hermada, solo 15:45-16:45 ----------
+const L3=[["Industria","193"],["Rondò Forca Ovest","195"],["Ospedale Cottolengo","197"],["Porta Palazzo","199"],["Porta Palazzo Est","201"],["XI Febbraio","203"],["Giardini Reali","205"],["Rossini","207"],["Campus Einaudi","211"],["Largo Berardi","213"],["Ospedale Gradenigo","217"],["Borromini","219"],["Hermada Cap.","221"]];
+const T3A=945,T3B=1005,T3S=13,T3F=2;
+const deps3=()=>{const o=[];for(let m=939;m<=T3B;m+=T3S)if(m>=T3A)o.push(m);return o};// stima: ancora 15:39 (orario GTT visto alla palina 193), poi ogni 13 min
+function render3(fn){const L=deps3(),day=new Date().getDay();
+ let k=0,nx=L.find(m=>m>=fn);if(nx==null){k=1;nx=L[0]+1440}
+ const d0=nx-fn,lab=m=>m>=1440?"domani":"tra "+dur(Math.round(m-fn));
+ ring(d0>=60||k?0:d0,k?"domani":d0>=60?m2s(nx):d0<=0?"ora":String(Math.round(d0)),`Prossimo tram 3 per Hermada nella fascia 15:45-16:45, stimato alle ${m2s(nx)}`,"ring3");
+ const nn=(k?L.map(m=>m+1440):L.filter(m=>m>=fn)).slice(1,4);
+ $("nexts3").innerHTML=nn.map(m=>`<a class="nx" href="${live("193")}"><span class="nt"><b>${m2s(m)}</b><span>${lab(m)}</span></span><span class="ver">GTT ↗</span></a>`).join("");
+ const arr=nx+(L3.length-1)*T3F;
+ $("sum3").innerHTML=`<div class="ph"><b>Il tuo viaggio col 3</b><span>${k?"domani · ":""}fascia 15:45–16:45 · stime</span></div>`+[["Fermata","Industria · palina 193",nx,0],["Tram 3","verso Val San Martino",nx,1],["Scendi","Hermada Cap. · "+((L3.length-1)*T3F)+"′",arr,0]].map(r=>`<div class="pr${r[3]?" key":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}${r[3]?`<a class="verk" href="${live("193")}">Verifica su GTT ↗</a>`:""}</span></div>`).join("");
+ draw2(L3.map((x,i)=>({n:x[0],pal:x[1],t:nx+i*T3F,k:"t3",key:i===0,big:i===0||i===L3.length-1})),$("map3"));
+ $("tt3").innerHTML=L.map(m=>`<span class="${m===nx%1440&&!k?"nx1":m<fn&&!k?"past":""}">${m2s(m)}</span>`).join("")+(day===0?`<p class="note" style="grid-column:1/-1">Oggi festivo: frequenza diversa.</p>`:"")}
 // pagine: scorri da destra a sinistra o tocca le linguette
 (function(){const pg=$("pager"),tabs=[...document.querySelectorAll(".pgt button")];
- const pages=[$("pg1"),$("pg2")];let cur=0;
+ const pages=[$("pg1"),$("pg2"),$("pg3")];let cur=0;
  const fit=()=>{pg.style.height=pages[cur].offsetHeight+"px"};
  const set=i=>{cur=i;tabs.forEach((t,k)=>t.setAttribute("aria-selected",k===i));ls.set("pagina",String(i));fit()};
  try{const ro=new ResizeObserver(fit);pages.forEach(x=>ro.observe(x))}catch(e){}
  tabs.forEach((t,i)=>t.onclick=()=>{pg.scrollTo({left:i*pg.clientWidth,behavior:"smooth"});set(i);window.scrollTo({top:0,behavior:"smooth"})});
  let tm;pg.addEventListener("scroll",()=>{clearTimeout(tm);tm=setTimeout(()=>set(Math.round(pg.scrollLeft/Math.max(1,pg.clientWidth))),80)},{passive:true});
- const i0=ls.get("pagina","0")==="1"?1:0;if(i0){requestAnimationFrame(()=>{pg.scrollLeft=pg.clientWidth;set(1)})}
- addEventListener("resize",()=>{const i=ls.get("pagina","0")==="1"?1:0;pg.scrollLeft=i*pg.clientWidth})})();
+ const pgi=()=>Math.min(2,Math.max(0,parseInt(ls.get("pagina","0"),10)||0));const i0=pgi();if(i0){requestAnimationFrame(()=>{pg.scrollLeft=i0*pg.clientWidth;set(i0)})}
+ addEventListener("resize",()=>{pg.scrollLeft=pgi()*pg.clientWidth})})();
 // ---------- Giorni di lavoro e vacanze ----------
 const giorni=()=>{const g=jget("giorni",[1,3,5],Array.isArray).map(Number).filter(x=>x>=0&&x<=6);return g};
 const vac=()=>jget("vac",null,v=>v&&typeof v.da==="string"&&typeof v.a==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(v.da)&&/^\d{4}-\d{2}-\d{2}$/.test(v.a));
@@ -628,7 +667,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="8123680bd2";
+const VER="8df9e4eb6f";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
