@@ -147,7 +147,7 @@ details[open] summary::after{content:"–"}
 .card .t span:not(.chip){font-size:16px;padding:2px 6px}
 .grid details:has(#sOut){grid-column:1/-1}
 .grid details:has(#stat){grid-column:1/-1}
-.grid details:has(#c60){grid-column:1/-1}
+
 input{max-width:100%}.tipi label,.dy{position:relative;overflow:hidden}.tipi input,.dy input{left:0;top:0;width:1px;height:1px;margin:0}.vac input{width:100%;min-width:0;-webkit-appearance:none;appearance:none}
 .nx{text-decoration:none;color:var(--ink)}.nt{display:flex;align-items:baseline;justify-content:space-between;gap:6px;flex:1;min-width:0}
 .nx .ver{flex:none;margin-left:8px;padding:4px 8px;border-radius:8px;border:1px solid var(--or);color:var(--or);font:600 13px -apple-system,system-ui,sans-serif;white-space:nowrap}
@@ -158,13 +158,27 @@ input{max-width:100%}.tipi label,.dy{position:relative;overflow:hidden}.tipi inp
 .pl a b{display:block;font:700 30px/1 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}.pl a span{font-size:13px;display:block}.pl a i{font-style:normal;font-size:12px;font-weight:600;opacity:.85}
 label{display:block;margin:10px 0 4px;font-size:14px;color:var(--mut)}
 input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.pager{display:flex;align-items:flex-start;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.pager::-webkit-scrollbar{display:none}.pg{flex:0 0 100%;width:100%;scroll-snap-align:start;scroll-snap-stop:always}
+.pgt{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:8px}
+.pgt button{display:flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border-radius:18px;border:1px solid var(--line);background:none;color:var(--mut);font:600 14px -apple-system,system-ui,sans-serif;cursor:pointer}
+.pgt button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pgt i{font-style:normal;color:var(--mut);font-size:12px}
+.co .pr b{min-width:56px}
+.plist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:6px;margin-top:6px}
+.plist a{display:flex;align-items:center;gap:10px;min-height:52px;padding:6px 10px;border-radius:12px;background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none}
+.plist .pn{flex:1;display:flex;flex-direction:column;line-height:1.2}.plist .pn b{font-size:16px}.plist .pn span{font-size:13px;color:var(--mut)}
+.plist .pl2{display:flex;gap:4px}.plist .go2{color:var(--or);font-weight:700}
+#pals:empty{display:none}
+.grid details:has(#tt60){grid-column:1/-1}
 @media(max-width:380px){.ring{width:92px;height:92px}.nx b{font-size:22px}}
 </style></head><body>
 <header class="top"><div class="in">
  <div class="hd"><h1>Muoviti</h1><div class="clock" id="clk">--:--</div></div>
  <div class="sw" role="group" aria-label="Direzione"><button id="bA" aria-pressed="true">Andata · mattina</button><button id="bR" aria-pressed="false">Ritorno · pomeriggio</button></div>
+ <div class="pgt" role="tablist" aria-label="Pagine"><button role="tab" data-p="0" aria-selected="true">🚋 Tram 10</button><button role="tab" data-p="1" aria-selected="false">🚌 Bus 60 + 10</button><i>scorri ←</i></div>
 </div></header>
-<main>
+<div class="pager" id="pager"><div class="pg" id="pg1"><main>
 <button class="stato" id="stato" type="button" aria-live="polite"></button>
 <section>
  <div class="duo">
@@ -191,7 +205,8 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
 <h2 id="altT">Alternative per l'ufficio</h2>
 <div class="cards" id="alt"></div>
 
-<h2>Paline e altre destinazioni</h2>
+<h2>Le mie paline</h2>
+<div class="plist" id="plist"></div>
 <div class="cards" id="pals"></div>
 <details class="nuova" open><summary>Aggiungi destinazione</summary><form id="addP" class="add2">
  <div class="tipi" role="radiogroup" aria-label="Tipo">
@@ -205,7 +220,6 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
 
 <div class="grid">
  <details><summary>Orario andata (stime)</summary><div class="body"><p class="tag" id="ttN"></p><div class="tt" id="ttA"></div><p class="note">Stima da Statuto Cap (951): circa ogni 7 min di giorno, più rado presto, la sera e nei festivi. Non è l'orario ufficiale.</p></div></details>
- <details><summary>Tram 10 + bus 60 · ritorno (stime)</summary><div class="body"><div id="c60"></div><div class="tt" id="tt60"></div><p class="note">Passaggi del 60 alla palina 3463 (Piazza Statuto, fronte via Cibrario) stimati ogni 19 min dall'orario GTT del pomeriggio (14:40, 14:59, 15:18…); presto, sera e festivi possono cambiare. 2 min a piedi da Statuto Nord, poi 3 fermate e ~6 min fino a Umbria. Non è l'orario ufficiale: verifica con il live.</p><div class="live"><a class="p" href="https://www.gtt.to.it/cms/percorari/arrivi?palina=3463">Live GTT · palina 3463</a></div></div></details>
  <details><summary>Orario ritorno (stime)</summary><div class="body"><div class="tt" id="ttR"></div><p class="note">Stima a Caprera (387) verso Statuto: circa ogni 8 min di giorno. Non è l'orario ufficiale.</p></div></details>
  <details><summary>La mia statistica del tram</summary><div class="body stv" id="stat"></div></details>
  <details><summary>Impostazioni</summary><div class="body">
@@ -222,7 +236,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
   <div class="vacb"><button id="vOn" type="button">Sospendi</button><button id="vOff" type="button">Riprendi</button></div>
   <p class="tag" id="vSt"></p>
     <p class="tag">Icona sull'iPhone: apri <b>f6kd4bp6sr-stack.github.io/mie-app/muoviti/</b> in Safari → Condividi → «Aggiungi alla schermata Home». Si aggiorna da sola.</p>
-  <p class="tag"><b>Fonti dei dati (da verificare sulla palina):</b> fermate e tempi del 10 dall'orario pubblicato su Transit; palina 385 e linee a Caserma Monte Grappa da Moovit e OpenStreetMap; fermate del 60 da findit/OpenStreetMap; tempi del bus 60 stimati; avvisi dalla pagina GTT «Avvisi e informazioni di servizio».</p>
+  <p class="tag"><b>Fonti dei dati (da verificare sulla palina):</b> fermate e numeri di palina del 10 e del 60 dai percorsi GTT (10AB01, 10RB02, 60AD1, 60AR2); tempi del 10 stimati dall'orario su Transit; passaggi del 60 stimati dall'orario GTT del pomeriggio; avvisi dalla pagina GTT «Avvisi e informazioni di servizio».</p>
   <label for="sStop">Numero palina ritorno (Caprera → Statuto)</label><input id="sStop" inputmode="numeric" placeholder="lo leggi sulla palina">
   <p class="lab">Segnala altre paline</p>
   <label for="s60a">Bus 60 sotto casa → Porta Susa (mattina)</label><input id="s60a" inputmode="numeric" placeholder="lo leggi sulla palina">
@@ -231,8 +245,33 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
  </div></details>
 
 </div>
-<p class="ver" id="ver">Versione 81271b6ce5</p>
-</main>
+<p class="ver" id="ver">Versione 8123680bd2</p>
+</main></div>
+<div class="pg" id="pg2"><main>
+<section>
+ <div class="duo">
+  <div class="colL">
+   <div class="pal">
+    <svg class="ring" id="ring2" viewBox="0 0 112 112" role="img" aria-label="Minuti al prossimo bus 60"></svg>
+    <div class="k">Prossimo bus 60 · stima</div><div class="nm" id="stopNm2">Don Bosco</div>
+    <div class="chips"><span class="chip bus">60</span><span class="chip">10</span></div>
+    <a class="palv" id="palVer2" href="#">Verifica su GTT ↗</a>
+   </div>
+   <div class="nexts" id="nexts2"></div>
+  </div>
+  <div class="sum" id="sum2"></div>
+ </div>
+ <div class="live" id="live2"></div>
+</section>
+<h2 id="mapT2">Il percorso col 60</h2>
+<div class="fig" id="map2"></div>
+<p class="note">Fermate dai percorsi GTT. Il 60 e il 10 si incrociano a <b>Vittorio Emanuele II (palina 31)</b>: all'andata scendi dal 60 e prendi il 10 alla stessa palina. Al ritorno il 60 non passa da lì: scendi dal 10 a Statuto Nord e prendi il 60 alla palina 3463. Orari del 60 stimati (circa ogni 19 min): verifica con il live.</p>
+<h2 id="coT2">Coincidenze</h2>
+<div class="sum co" id="co2"></div>
+<div class="grid">
+ <details><summary>Passaggi del 60 (stime)</summary><div class="body"><p class="tag" id="ttN60"></p><div class="tt" id="tt60"></div><p class="note">Stima dall'orario GTT del pomeriggio (un passaggio ogni ~19 min). Presto, la sera e nei festivi la frequenza cambia: usa il live.</p></div></details>
+</div>
+</main></div></div>
 <div class="go" id="go" role="dialog" aria-modal="true" aria-label="Conto alla rovescia" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
  <div class="gs" id="goS"></div><div class="gbar"><i id="goB"></i></div>
@@ -249,8 +288,8 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
 <script>{
 "use strict";
 // ---------- Dati della linea 10 (minuti da Statuto Cap, zona, nota) ----------
-const A=[["Statuto Cap",0,"Centro"],["XVIII Dicembre",3,"Centro"],["Questura",6,"Centro"],["Vittorio Emanuele II",9,"Crocetta"],["Stati Uniti",10,"Crocetta"],["Politecnico",11,"Crocetta"],["Einaudi",12,"Crocetta"],["Vespucci",13,"Crocetta"],["Fratelli Carle",15,"Santa Rita"],["Caserma Monte Grappa",17,"Santa Rita"]];
-const RIDE=17,$=id=>document.getElementById(id);
+const A=[["Statuto Cap",0,"Centro"],["XVIII Dicembre",3,"Centro"],["Questura",6,"Centro"],["Vittorio Emanuele II",9,"Crocetta"],["Stati Uniti",10,"Crocetta"],["Politecnico",11,"Crocetta"],["Einaudi",12,"Crocetta"],["Vespucci",13,"Crocetta"],["Fratelli Carle",15,"Santa Rita"],["Caserma Monte Grappa",17,"Santa Rita"],["Caprera",18,"Santa Rita"]];
+const RIDE=18,$=id=>document.getElementById(id);
 // ---------- Memoria sul telefono: chiavi con prefisso «mv-», lettura sempre validata ----------
 const ls={get(k,d){try{const v=localStorage.getItem("mv-"+k);return v??d}catch(e){return d}},set(k,v){try{localStorage.setItem("mv-"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("mv-"+k)}catch(e){}}};
 (function migra(){try{if(localStorage.getItem("mv-migrato"))return;const M={out3:"out3",walk:"walk",stop:"stop",home2:"home2",casa:"casa",casaMode:"casaMode",giorni:"giorni",vac:"vac",mine:"mine"};
@@ -289,11 +328,10 @@ const nomeGiorno=k=>k===0?"oggi":k===1?"domani":GG[dataTra(k).getDay()];
 function prossimoLavoro(k){for(let i=k;i<k+14;i++){const d=dataTra(i);if(giorni().includes(d.getDay())&&!festivo(d)&&!inVacData(d))return i}return k}
 function stops(){return dir==="A"?A.map(s=>({n:s[0],o:s[1],z:s[2]})):A.slice().reverse().map(s=>({n:s[0]==="Statuto Cap"?"Statuto Nord":s[0],o:RIDE-s[1],z:s[2]}))}
 // ---------- Paline e alternative ----------
-const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Partenza del mattino"},{p:"2719",n:"Don Bosco · sotto casa",l:[["60","bus"],["52","bus"]],k:"Mattina: bus 60 verso Porta Susa (c. Umbria / v. Don Bosco)"},{p:"3463",n:"Piazza Statuto · bus 60",l:[["60","bus"]],k:"Ritorno: bus 60 verso casa dopo il tram 10"},{p:"387",n:"Caprera",l:[["10","tram"]],k:"Ritorno verso Statuto"},{p:"386",n:"Arrivo del mattino",l:[["10","tram"]],k:"Discesa dal tram 10 verso l'ufficio"},{p:"385",n:"Caserma Monte Grappa",l:[["10","tram"],["55","bus"],["5","bus"],["12","bus"],["64","bus"]],k:"Vicino al civico 40 · dati Moovit/OSM da verificare"}];
+const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Andata · sali sul 10"},{p:"386",n:"Caprera",l:[["10","tram"]],k:"Andata · scendi dal 10"},{p:"387",n:"Caprera",l:[["10","tram"]],k:"Ritorno · sali sul 10"},{p:"2719",n:"Don Bosco",l:[["60","bus"]],k:"Andata · sali sul 60"},{p:"31",n:"Vittorio Emanuele II",l:[["60","bus"],["10","tram"]],k:"Andata · cambio 60 → 10"},{p:"3463",n:"Statuto",l:[["60","bus"]],k:"Ritorno · sali sul 60"}];
 const ALT={A:[{l:"60",ty:"bus",h:"Bus 60 sotto casa → Porta Susa",d:"Palina 2719 Don Bosco (c. Umbria / v. Don Bosco) verso Porta Susa Sud, poi a piedi e tram 10 da XVIII Dicembre. Si attiva nel piano da Impostazioni.",p:"2719"},{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Statuto Cap → palina 386, poi a piedi. Circa ogni 7 min di giorno.",p:"951"}],
  R:[{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Caprera → Statuto Nord (corsa per Rondò Forca). Circa ogni 8 min di giorno.",p:"387"},
- {l:"60",ty:"bus",h:"Bus 60 da Piazza Statuto fino a casa",d:"Dopo il tram: palina 3463 a Piazza Statuto, 3 fermate (Regina Margherita → Don Bosco → Umbria). Coincidenza nel piano se attivi il 60 in Impostazioni.",p:"3463"},
- {l:"5 · 12 · 55 · 64",ty:"bus",h:"Altre linee alla palina 385",d:"Non vanno a Statuto: 5 Vittorio Veneto, 12 Porta Nuova, 55 Vanchiglia, 64 Serao.",p:"385"}]};
+ {l:"60",ty:"bus",h:"Bus 60 da Piazza Statuto fino a casa",d:"Dopo il tram: palina 3463 a Piazza Statuto, 3 fermate (Regina Margherita → Don Bosco → Umbria). Coincidenza nel piano se attivi il 60 in Impostazioni.",p:"3463"}]};
 const TIPI=["ind","pal","tram","bus","metro"];
 function getMine(){return jget("mine",[],Array.isArray).filter(x=>x&&typeof x==="object"&&(typeof x.p==="string"||typeof x.p==="number")).map(x=>({t:TIPI.includes(x.t)?x.t:"pal",p:String(x.p).slice(0,80),n:typeof x.n==="string"?x.n.slice(0,40):""})).filter(x=>x.p)}
 let daTogliere=-1;
@@ -302,8 +340,8 @@ function renderCards(up){
  $("alt").innerHTML=ALT[dir].map(a=>`<div class="card${a.best?" best":""}"><div class="h">${a.l.split(" · ").map(x=>`<span class="chip ${a.ty==="bus"?"bus":""}">${x}</span>`).join("")}<b>${a.h}</b></div><p>${a.d}</p>${a.l==="10"?`<div class="t">${up.slice(0,4).map(m=>`<span>${m2s(m)}</span>`).join("")}</div><div class="tag">stime, non orario ufficiale</div>`:""}<div class="acts">${a.t60?`<a href="${T60}">Orari 60</a>`:(a.p||a.pk&&pv(a.pk))?`<a href="${live(a.p||pv(a.pk))}">Live palina ${a.p||pv(a.pk)}</a>`:`<a href="${AVV}">Avvisi GTT</a>`}</div></div>`).join("");
  const mine=getMine();
  const del=i=>`<button data-del="${i}">${daTogliere===i?"Tocca ancora per togliere":"Togli"}</button>`;
- $("pals").innerHTML=PAL.map(x=>`<div class="card"><div class="h"><span class="chip">${x.p||"60"}</span><b>${x.n}</b></div><p class="tag">${x.k}</p><div class="t">${x.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("")}</div><div class="acts">${x.p?`<a href="${live(x.p)}">Passaggi live</a>`:`<a href="${T60}">Fermate e orari 60</a>${[["s60a","Porta Susa"],["s60b","via Paris"]].filter(([i])=>pv(i)).map(([i,n])=>`<a href="${live(pv(i))}">Live ${n} · ${pv(i)}</a>`).join("")}`}</div></div>`).join("")
- +mine.map((x,i)=>{const t=x.t,v=esc(x.p),nm=esc(x.n);
+ $("plist").innerHTML=PAL.map(x=>`<a href="${live(x.p)}" aria-label="Passaggi live palina ${x.p} ${x.n}"><span class="chip">${x.p}</span><span class="pn"><b>${x.n}</b><span>${x.k}</span></span><span class="pl2">${x.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("")}</span><span class="go2">↗</span></a>`).join("");
+ $("pals").innerHTML=mine.map((x,i)=>{const t=x.t,v=esc(x.p),nm=esc(x.n);
   if(t==="ind"){const q=encodeURIComponent(x.p+(/torino/i.test(x.p)?"":", Torino"));
    return `<div class="card"><div class="h"><span class="chip ind">📍</span><b>${nm||v}</b></div>${nm?`<p class="tag">${v}</p>`:""}<div class="acts"><a href="https://maps.apple.com/?daddr=${q}&dirflg=r">Da dove sei</a><a href="https://maps.apple.com/?saddr=${encodeURIComponent("Corso Umbria 14, Torino")}&daddr=${q}&dirflg=r">Da casa</a>${del(i)}</div></div>`}
   if(t==="tram"||t==="bus"){const n=encodeURIComponent(x.p.toLowerCase().replace(/[^0-9a-z]/g,""));
@@ -316,14 +354,19 @@ function renderCards(up){
 }
 // ---------- Anello e piano ----------
 const FC='font-family="Avenir Next Condensed,Arial Narrow,system-ui,sans-serif"',FB='font-family="-apple-system,system-ui,sans-serif"';
-function ring(min,lbl,aria){const r=46,C=2*Math.PI*r,f=Math.max(0,Math.min(1,min/15)),isN=/^\d+$/.test(lbl);
- $("ring").setAttribute("aria-label",aria);
- $("ring").innerHTML=`<circle cx="56" cy="56" r="${r}" fill="none" stroke="#3a3a3c" stroke-width="9"/><circle cx="56" cy="56" r="${r}" fill="none" stroke="#ff7a33" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C*f} ${C}" transform="rotate(-90 56 56)"/><text x="56" y="${isN?60:62}" text-anchor="middle" ${FC} font-weight="700" font-size="${isN?40:22}" fill="#ff7a33">${isN?"≈"+lbl:lbl}</text><text x="56" y="84" text-anchor="middle" ${FB} font-size="16" fill="#c7c7cc">${isN?"min":""}</text>`}
+function ring(min,lbl,aria,id="ring"){const r=46,C=2*Math.PI*r,f=Math.max(0,Math.min(1,min/15)),isN=/^\d+$/.test(lbl);
+ $(id).setAttribute("aria-label",aria);
+ $(id).innerHTML=`<circle cx="56" cy="56" r="${r}" fill="none" stroke="#3a3a3c" stroke-width="9"/><circle cx="56" cy="56" r="${r}" fill="none" stroke="#ff7a33" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C*f} ${C}" transform="rotate(-90 56 56)"/><text x="56" y="${isN?60:62}" text-anchor="middle" ${FC} font-weight="700" font-size="${isN?40:22}" fill="#ff7a33">${isN?"≈"+lbl:lbl}</text><text x="56" y="84" text-anchor="middle" ${FB} font-size="16" fill="#c7c7cc">${isN?"min":""}</text>`}
 // Bus 60 sotto casa (fermata Umbria): tempi stimati
 const B60={toFerm:2,attesa:4,corsaA:10,aPiediPS:3,corsaR:6,aPiediSt:2};
 // passaggi stimati del 60 alla palina 3463 (Piazza Statuto) verso Umbria: ogni 19 min, ricavato dall'orario GTT della palina 3463 (14:40, 14:59, 15:18, 15:37); mattina, sera e festivi da verificare
-function deps60(date){const o=[];for(let m=880;m>=330;m-=19)o.unshift(m);for(let m=899;m<=1290;m+=19)o.push(m);return o}
-function prossime60(from){const o=[];for(let k=Math.max(0,Math.floor(from/1440));k<=8&&o.length<6;k++)deps60(dataTra(k)).forEach(m=>{if(m+1440*k>=from)o.push(m+1440*k)});return o}
+function deps60(date,anc=880){const o=[];for(let m=anc;m>=330;m-=19)o.unshift(m);for(let m=anc+19;m<=1290;m+=19)o.push(m);return o}
+function prossime60(from,anc=880){const o=[];for(let k=Math.max(0,Math.floor(from/1440));k<=8&&o.length<6;k++)deps60(dataTra(k),anc).forEach(m=>{if(m+1440*k>=from)o.push(m+1440*k)});return o}
+// Andata: 60 da Don Bosco (2719) a Vittorio Emanuele II (31), la stessa palina del tram 10 verso Caprera (percorsi GTT 60AD1 e 10AB01)
+const ANC60A=894,VE=9,BUS_VE=9;
+const L60A=[["Don Bosco","2719",0],["Carena","2613",2],["Duchessa Jolanda","3562",4],["Porta Susa Sud","3275",6],["Vittorio Emanuele II","31",BUS_VE]];
+const L60R=[["Statuto","3463",0],["Regina Margherita","3567",2],["Don Bosco","2680",4],["Umbria","1947",B60.corsaR]];
+const coincA=bus=>{const ve=bus+BUS_VE,tv=prossime("A",ve-VE).map(m=>m+VE).find(m=>m>=ve),arr=tv+RIDE-VE;return{bus,ve,tv,arr,att:tv-ve}};
 const coinc=down=>{const at=down+B60.aPiediSt,bus=prossime60(at).find(m=>m>=at),um=bus+B60.corsaR;return{down,at,bus,um,casa:um+B60.toFerm,att:bus-at}};
 const via60=()=>ls.get("casaMode","piedi")==="bus60";
 const startDef=d=>d==="A"?s2m($("sCasa").value,420):s2m($("sOut").value,840);
@@ -331,10 +374,10 @@ const startDef=d=>d==="A"?s2m($("sCasa").value,420):s2m($("sOut").value,840);
 function plan(d,from){const w=W(),h=H(),b=via60(),start=from??startDef(d);
  const first=(at,off=0)=>prossime(d,at-off).find(m=>m+off>=at);
  if(d==="A"){
-  if(b){const bus=start+B60.toFerm+B60.attesa,ps=bus+B60.corsaA,at=ps+B60.aPiediPS,dep=first(at,3),tr=dep+3;
-   return{d,start,at,dep,tr,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Bus 60","Don Bosco · palina 2719 → Porta Susa (stima)",bus,0],["Scendi","Porta Susa Sud, poi a piedi",ps,0],["Tram 10","da XVIII Dicembre",tr,1],["Scendi","Palina 386",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
+  if(b){const bus=prossime60(start+B60.toFerm,ANC60A)[0],c=coincA(bus),dep=c.tv-VE,tr=c.tv;
+   return{d,start,at:c.ve,dep,tr,bus,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Bus 60","Don Bosco · palina 2719 (stima)",bus,0],["Scendi","Vittorio Emanuele II · palina 31",c.ve,0],["Tram 10","stessa palina 31 · attesa "+c.att+"′",tr,1],["Scendi","Caprera · 386",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
   const at=start+h,dep=first(at);
-  return{d,start,at,dep,tr:dep,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Fermata","Statuto Cap · "+h+"′",at,0],["Tram 10","da Statuto Cap",dep,1],["Scendi","Palina 386",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
+  return{d,start,at,dep,tr:dep,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Fermata","Statuto Cap · "+h+"′",at,0],["Tram 10","da Statuto Cap",dep,1],["Scendi","Caprera · 386",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
  const at=start+w,dep=first(at),down=dep+RIDE;
  if(b){const c=coinc(down),end=c.casa;
   return{d,start,at,dep,tr:dep,bus:c.bus,down,end,wa:w,wb:end-down,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Caprera · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Piazza Statuto · palina 3463 · coincidenza, attesa "+c.att+"′",c.bus,0],["Scendi","Umbria · 3 fermate (stima)",c.um,0],["Casa","sotto casa",end,0]]}}
@@ -381,7 +424,7 @@ function render(){
  $("bA").setAttribute("aria-pressed",dir==="A");$("bR").setAttribute("aria-pressed",dir==="R");
  $("clk").textContent=m2s(fn);
  $("stopNm").textContent=dir==="A"?"Statuto Cap · 951":"Caprera · 387 → Statuto";
- const pp=PAL[dir==="A"?0:2];$("chips").innerHTML=pp.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("");
+ const pp=PAL.find(x=>x.p===(dir==="A"?"951":"387"));$("chips").innerHTML=pp.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("");
  const up=prossime(dir,fn).slice(0,4),d0=up[0]-fn,dom=up[0]>=1440;
  const lab=m=>m>=1440?nomeGiorno(Math.floor(m/1440)):"tra "+dur(m-fn);
  ring(dom||d0>=60?0:d0,dom?nomeGiorno(Math.floor(up[0]/1440)):d0>=60?m2s(up[0]):d0<=0?"ora":String(d0),dom?`Prossimo tram domani alle ${m2s(up[0])}`:`Prossimo tram stimato tra circa ${d0} minuti, alle ${m2s(up[0])}`);
@@ -400,10 +443,9 @@ function render(){
  corsaUI(trip,st);statUI();
  const all=t=>{const pt=plan(t).dep;const nx=t===dir?up[0]:-1;return deps(t).map(m=>`<span class="${m===nx?"nx1":m===pt?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")};
  $("ttA").innerHTML=all("A");
- {const PR=plan("R"),pb=PR.b?PR.bus:null,ld=prossime("R",Math.max(0,PR.dep-16)).slice(0,6);
-  $("c60").innerHTML=`<p class="tag">Coincidenze (tram 10 da Caprera → Statuto Nord → bus 60 palina 3463)</p>`+ld.map(m=>{const c=coinc(m+RIDE),mine=m===PR.dep;return `<div class="pr${mine?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>Statuto ${m2s(c.down)}</strong>bus 60 alle ${m2s(c.bus)} · attesa ${c.att}′ · casa ${m2s(c.casa)}</span></div>`}).join("");
-  $("tt60").innerHTML=deps60().map(m=>`<span class="${m===pb?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")}$("ttR").innerHTML=all("R");
+ $("ttR").innerHTML=all("R");
  $("ttN").textContent=fest?"Oggi festivo: stime con frequenza ridotta.":"";
+ try{render2(n,fn)}catch(e){}
  renderCards(up);
 }
 function draw(st,P,prog,trip){
@@ -420,7 +462,7 @@ function draw(st,P,prog,trip){
  for(let i=0;i<pts.length-1;i++){const y=top+i*G,hp=pts[i].home?pts[i]:pts[i+1].home?pts[i+1]:null;
   s+=hp?`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="var(--mut)" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/><text x="${X+16}" y="${y+G/2+4}" ${FB} font-size="12" fill="var(--mut)">${hp.lab||"a piedi "+hp.wm+" min"}</text>`
   :`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="#f2661f" stroke-width="10"/><line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="#000" stroke-opacity=".35" stroke-width="2" stroke-dasharray="6 6"/>`}
- pts.forEach((p,i)=>{const y=top+i*G,end=!p.home&&(pts[i-1]?.home||pts[i+1]?.home),key=i===(dir==="A"&&P.b?2:1);
+ pts.forEach((p,i)=>{const y=top+i*G,end=!p.home&&(pts[i-1]?.home||pts[i+1]?.home),key=i===(dir==="A"&&P.b?4:1);
   if(p.home===1)s+=`<rect x="${X-13}" y="${y-13}" width="26" height="26" rx="7" fill="var(--ink)"/><path d="M${X-7} ${y+6}v-7l7-6 7 6v7z" fill="var(--bg)"/>`;
   else if(p.home===2)s+=`<rect x="${X-13}" y="${y-13}" width="26" height="26" rx="7" fill="var(--ink)"/><rect x="${X-7}" y="${y-5}" width="14" height="11" rx="2" fill="var(--bg)"/><rect x="${X-3}" y="${y-8}" width="6" height="4" rx="1" fill="none" stroke="var(--bg)" stroke-width="2"/>`;
   else s+=`<circle cx="${X}" cy="${y}" r="${end?11:7}" fill="var(--bg)" stroke="var(--ink)" stroke-width="${end?4:3}"/>`;
@@ -433,6 +475,63 @@ function draw(st,P,prog,trip){
  s+=`</svg>`;$("map").innerHTML=s;
  $("mapT").textContent=dir==="A"?"Andata: casa → ufficio":"Ritorno: ufficio → casa";
 }
+// ---------- Pagina 2: bus 60 + tram 10 ----------
+function plan2(d){const w=W(),start=startDef(d);
+ if(d==="A"){const bus=prossime60(start+B60.toFerm,ANC60A)[0],c=coincA(bus);
+  return{start,bus,c,end:c.arr+w,rows:[["Esci","da casa",start,0],["Bus 60","Don Bosco · palina 2719",bus,1],["Scendi","Vittorio Emanuele II · palina 31 · "+BUS_VE+"′",c.ve,0],["Tram 10","stessa palina 31 · attesa "+c.att+"′",c.tv,0],["Scendi","Caprera · 386",c.arr,0],["Ufficio","a piedi "+w+"′",c.arr+w,0]]}}
+ const at=start+w,dep=prossime("R",at)[0],down=dep+RIDE,c=coinc(down);
+ return{start,bus:c.bus,c,dep,end:c.casa,rows:[["Esci","dall'ufficio",start,0],["Tram 10","Caprera · 387",dep,0],["Scendi","Statuto Nord · poi 2′ a piedi",down,0],["Bus 60","Statuto · palina 3463 · attesa "+c.att+"′",c.bus,1],["Scendi","Umbria · 3 fermate",c.um,0],["Casa","sotto casa",c.casa,0]]}}
+function draw2(pts,el){const G=34,top=22,X=90,VW=380,HH=top+(pts.length-1)*G+34;
+ const col={bus:"#8e8e93",tram:"#f2661f"};
+ let s=`<svg viewBox="0 0 ${VW} ${HH}" role="img" aria-label="Schema del percorso con bus 60 e tram 10, orari stimati">`;
+ for(let i=0;i<pts.length-1;i++){const y=top+i*G,k=pts[i].k;
+  s+=k==="walk"?`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="var(--mut)" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/>${pts[i].lab?`<text x="${X+16}" y="${y+G/2+4}" ${FB} font-size="12" fill="var(--mut)">${pts[i].lab}</text>`:""}`
+   :`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="${col[k]}" stroke-width="10"/><line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="#000" stroke-opacity=".35" stroke-width="2" stroke-dasharray="6 6"/>`}
+ pts.forEach((p,i)=>{const y=top+i*G;
+  if(p.home===1)s+=`<rect x="${X-13}" y="${y-13}" width="26" height="26" rx="7" fill="var(--ink)"/><path d="M${X-7} ${y+6}v-7l7-6 7 6v7z" fill="var(--bg)"/>`;
+  else if(p.home===2)s+=`<rect x="${X-13}" y="${y-13}" width="26" height="26" rx="7" fill="var(--ink)"/><rect x="${X-7}" y="${y-5}" width="14" height="11" rx="2" fill="var(--bg)"/><rect x="${X-3}" y="${y-8}" width="6" height="4" rx="1" fill="none" stroke="var(--bg)" stroke-width="2"/>`;
+  else s+=`<circle cx="${X}" cy="${y}" r="${p.big?11:7}" fill="var(--bg)" stroke="${p.cambio?"#ff7a33":"var(--ink)"}" stroke-width="${p.big?4:3}"/>`;
+  if(p.key)s+=`<rect x="6" y="${y-15}" width="66" height="30" rx="8" fill="#ff7a33"/>`;
+  s+=`<text x="${p.key?39:14}" y="${y+7}" ${p.key?'text-anchor="middle"':""} ${FC} font-weight="700" font-size="21" fill="${p.key?"#000":"var(--ink)"}">${m2s(p.t)}</text>`;
+  s+=`<text x="${X+24}" y="${y+5}" ${FB} font-size="15.5" font-weight="${p.big||p.home?600:400}" fill="var(--ink)">${p.n}${p.pal?`<tspan fill="var(--mut)" font-size="12"> · ${p.pal}</tspan>`:""}</text>`;
+  if(p.tag)s+=`<text x="${VW-8}" y="${y+5}" text-anchor="end" ${FB} font-size="11" font-weight="700" fill="#ff7a33">${p.tag}</text>`});
+ el.innerHTML=s+`</svg>`}
+function render2(n,fn){const d=dir,P=plan2(d),w=W();
+ const stop=d==="A"?["Don Bosco · 2719","2719",ANC60A,"verso Porta Susa"]:["Statuto · 3463","3463",880,"verso via Paris"];
+ $("stopNm2").textContent=stop[0];$("palVer2").href=live(stop[1]);
+ const up=prossime60(fn,stop[2]).slice(0,4),d0=up[0]-fn,dom=up[0]>=1440;
+ const lab=m=>m>=1440?nomeGiorno(Math.floor(m/1440)):"tra "+dur(m-fn);
+ ring(dom||d0>=60?0:d0,dom?nomeGiorno(Math.floor(up[0]/1440)):d0>=60?m2s(up[0]):d0<=0?"ora":String(d0),`Prossimo bus 60 ${stop[3]} stimato alle ${m2s(up[0])}`,"ring2");
+ $("nexts2").innerHTML=up.slice(1,4).map(m=>`<a class="nx${m===P.bus?" mine":""}" href="${live(stop[1])}"><span class="nt"><b>${m2s(m)}</b><span>${lab(m)}</span></span><span class="ver">GTT ↗</span></a>`).join("");
+ $("sum2").innerHTML=`<div class="ph"><b>Il tuo piano col 60</b><span>${d==="A"?"andata":"ritorno"} · stime</span></div>`+P.rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}${r[3]?`<a class="verk" href="${live(stop[1])}">Verifica su GTT ↗</a>`:""}</span></div>`).join("");
+ $("live2").innerHTML=d==="A"?`<a class="p" href="${live("2719")}">Live 60 · palina 2719</a><a href="${live("31")}">Live 10 · palina 31</a>`:`<a class="p" href="${live("3463")}">Live 60 · palina 3463</a><a href="${live("387")}">Live 10 · palina 387</a>`;
+ const pts=[];
+ if(d==="A"){const c=P.c;pts.push({n:"Casa · Corso Umbria 14",home:1,t:P.start,k:"walk",lab:"a piedi "+B60.toFerm+" min"});
+  L60A.forEach((x,i)=>pts.push({n:x[0],pal:x[1],t:c.bus+x[2],k:i<L60A.length-1?"bus":"tram",key:i===0,big:i===0||i===L60A.length-1,cambio:i===L60A.length-1,tag:i===L60A.length-1?"CAMBIO":""}));
+  A.filter(x=>x[1]>VE).forEach((x,i,a)=>pts.push({n:x[0],t:c.tv+x[1]-VE,k:i<a.length-1?"tram":"walk",big:i===a.length-1,pal:i===a.length-1?"386":"",lab:i===a.length-1?"a piedi "+w+" min":""}));
+  pts.push({n:"Ufficio · Corso IV Novembre 40",home:2,t:P.end})}
+ else{const c=P.c;pts.push({n:"Ufficio · Corso IV Novembre 40",home:2,t:P.start,k:"walk",lab:"a piedi "+w+" min"});
+  A.slice().reverse().forEach((x,i,a)=>pts.push({n:x[0]==="Statuto Cap"?"Statuto Nord":x[0],t:P.dep+RIDE-x[1],k:i<a.length-1?"tram":"walk",big:i===0||i===a.length-1,pal:i===0?"387":"",lab:i===a.length-1?"a piedi 2 min":""}));
+  L60R.forEach((x,i)=>pts.push({n:x[0],pal:x[1],t:c.bus+x[2],k:i<L60R.length-1?"bus":"walk",key:i===0,big:i===0||i===L60R.length-1,cambio:i===0,tag:i===0?"CAMBIO":"",lab:i===L60R.length-1?"a piedi "+B60.toFerm+" min":""}));
+  pts.push({n:"Casa · Corso Umbria 14",home:1,t:c.casa})}
+ draw2(pts,$("map2"));$("mapT2").textContent=d==="A"?"Andata col 60: casa → ufficio":"Ritorno col 60: ufficio → casa";
+ // coincidenze
+ if(d==="A"){const l=prossime60(Math.max(0,P.bus-40),ANC60A).slice(0,6);$("coT2").textContent="Coincidenze 60 → 10 a Vittorio Emanuele II";
+  $("co2").innerHTML=l.map(m=>{const c=coincA(m);return `<div class="pr${m===P.bus?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>VE II ${m2s(c.ve)}</strong>tram 10 alle ${m2s(c.tv)} · attesa ${c.att}′ · Caprera ${m2s(c.arr)}</span></div>`}).join("")}
+ else{const l=prossime("R",Math.max(0,P.dep-16)).slice(0,6);$("coT2").textContent="Coincidenze 10 → 60 a Statuto";
+  $("co2").innerHTML=l.map(m=>{const c=coinc(m+RIDE);return `<div class="pr${m===P.dep?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>Statuto ${m2s(c.down)}</strong>bus 60 alle ${m2s(c.bus)} · attesa ${c.att}′ · casa ${m2s(c.casa)}</span></div>`}).join("")}
+ $("ttN60").textContent=d==="A"?"Alla palina 2719 Don Bosco, verso Porta Susa":"Alla palina 3463 Statuto, verso via Paris";
+ $("tt60").innerHTML=deps60(null,stop[2]).map(m=>`<span class="${m===P.bus?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")}
+// pagine: scorri da destra a sinistra o tocca le linguette
+(function(){const pg=$("pager"),tabs=[...document.querySelectorAll(".pgt button")];
+ const pages=[$("pg1"),$("pg2")];let cur=0;
+ const fit=()=>{pg.style.height=pages[cur].offsetHeight+"px"};
+ const set=i=>{cur=i;tabs.forEach((t,k)=>t.setAttribute("aria-selected",k===i));ls.set("pagina",String(i));fit()};
+ try{const ro=new ResizeObserver(fit);pages.forEach(x=>ro.observe(x))}catch(e){}
+ tabs.forEach((t,i)=>t.onclick=()=>{pg.scrollTo({left:i*pg.clientWidth,behavior:"smooth"});set(i);window.scrollTo({top:0,behavior:"smooth"})});
+ let tm;pg.addEventListener("scroll",()=>{clearTimeout(tm);tm=setTimeout(()=>set(Math.round(pg.scrollLeft/Math.max(1,pg.clientWidth))),80)},{passive:true});
+ const i0=ls.get("pagina","0")==="1"?1:0;if(i0){requestAnimationFrame(()=>{pg.scrollLeft=pg.clientWidth;set(1)})}
+ addEventListener("resize",()=>{const i=ls.get("pagina","0")==="1"?1:0;pg.scrollLeft=i*pg.clientWidth})})();
 // ---------- Giorni di lavoro e vacanze ----------
 const giorni=()=>{const g=jget("giorni",[1,3,5],Array.isArray).map(Number).filter(x=>x>=0&&x<=6);return g};
 const vac=()=>jget("vac",null,v=>v&&typeof v.da==="string"&&typeof v.a==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(v.da)&&/^\d{4}-\d{2}-\d{2}$/.test(v.a));
@@ -529,7 +628,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="81271b6ce5";
+const VER="8123680bd2";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
