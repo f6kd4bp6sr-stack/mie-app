@@ -141,6 +141,13 @@ details[open] summary::after{content:"–"}
 .card .t span:not(.chip){font-size:16px;padding:2px 6px}
 .grid details:has(#sOut){grid-column:1/-1}
 input{max-width:100%}.tipi label,.dy{position:relative;overflow:hidden}.tipi input,.dy input{left:0;top:0;width:1px;height:1px;margin:0}.vac input{width:100%;min-width:0;-webkit-appearance:none;appearance:none}
+.nx{text-decoration:none;color:var(--ink)}.nt{display:flex;align-items:baseline;justify-content:space-between;gap:6px;flex:1;min-width:0}
+.nx .ver{flex:none;margin-left:8px;padding:4px 8px;border-radius:8px;border:1px solid var(--or);color:var(--or);font:600 13px -apple-system,system-ui,sans-serif;white-space:nowrap}
+.nx .nt{color:var(--ink)}.nx .nt>span{color:var(--mut)}.nx.mine .nt>span{color:var(--or)}.duo .nx{min-height:44px}.duo .nt{flex-direction:column;gap:0}.duo .nt span{text-align:left}
+.palv{display:flex;align-items:center;justify-content:center;min-height:44px;margin-top:6px;padding:0 12px;border-radius:10px;border:1px solid var(--or);color:var(--or);text-decoration:none;font:600 14px -apple-system,system-ui,sans-serif;width:100%}
+.verk{display:inline-block;margin-top:4px;padding:3px 8px;border-radius:8px;background:#000;color:var(--or)!important;text-decoration:none;font:600 13px -apple-system,system-ui,sans-serif}
+.pl a{display:block;background:var(--card);border-radius:12px;padding:10px;text-align:center;color:var(--ink);text-decoration:none}.pl a:first-child{background:var(--or);color:#000}
+.pl a b{display:block;font:700 30px/1 "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif}.pl a span{font-size:13px;display:block}.pl a i{font-style:normal;font-size:12px;font-weight:600;opacity:.85}
 label{display:block;margin:10px 0 4px;font-size:14px;color:var(--mut)}
 input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
 @media(max-width:380px){.ring{width:92px;height:92px}.nx b{font-size:22px}}
@@ -158,6 +165,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
     <svg class="ring" id="ring" viewBox="0 0 112 112" role="img" aria-label="Minuti al prossimo tram"></svg>
     <div class="k">Prossimo tram · stima</div><div class="nm" id="stopNm">Statuto Cap</div>
     <div class="chips" id="chips"></div>
+    <a class="palv" id="palVer" href="#">Verifica su GTT</a>
    </div>
    <div class="nexts" id="nexts"></div>
   </div>
@@ -208,7 +216,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
  </div></details>
 
 </div>
-<p class="ver" id="ver">Versione 2b662ad769</p>
+<p class="ver" id="ver">Versione 450c624018</p>
 </main>
 <div class="go" id="go" role="dialog" aria-modal="true" aria-label="Conto alla rovescia" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
@@ -313,9 +321,10 @@ function plan(d,from){const w=W(),h=H(),b=via60(),start=from??startDef(d);
  if(b){const bus=down+B60.aPiediSt+B60.attesa,end=bus+B60.corsaR+B60.toFerm;
   return{d,start,at,dep,tr:dep,down,end,wa:w,wb:end-down,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Monte Grappa · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Statuto → Umbria (stima)",bus,0],["Casa","sotto casa",end,0]]}}
  return{d,start,at,dep,tr:dep,down,end:down+h,wa:w,wb:h,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Monte Grappa · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Casa","a piedi "+h+"′",down+h,0]]}}
+const palV=()=>dir==="A"?"951":$("sStop").value.replace(/\D/g,"");
 function render(){
  const n=nowF(),fn=Math.floor(n),st=stops(),oggi=new Date(),fest=festivo(oggi);
- let P=plan(dir),kk=0;const passato=fn>P.end;if(passato){kk=prossimoLavoro(1);P=plan(dir,startDef(dir)+1440*kk)}else if(!giorni().includes(oggi.getDay())||fest||inVac()){kk=prossimoLavoro(0);if(kk)P=plan(dir,startDef(dir)+1440*kk)}
+ const pv=palV();let P=plan(dir),kk=0;const passato=fn>P.end;if(passato){kk=prossimoLavoro(1);P=plan(dir,startDef(dir)+1440*kk)}else if(!giorni().includes(oggi.getDay())||fest||inVac()){kk=prossimoLavoro(0);if(kk)P=plan(dir,startDef(dir)+1440*kk)}
  $("bA").setAttribute("aria-pressed",dir==="A");$("bR").setAttribute("aria-pressed",dir==="R");
  $("clk").textContent=m2s(fn);
  $("stopNm").textContent=dir==="A"?"Statuto Cap · 951":"Caserma Monte Grappa → Statuto";
@@ -323,12 +332,13 @@ function render(){
  const up=prossime(dir,fn).slice(0,4),d0=up[0]-fn,dom=up[0]>=1440;
  const lab=m=>m>=1440?nomeGiorno(Math.floor(m/1440)):"tra "+dur(m-fn);
  ring(dom||d0>=60?0:d0,dom?nomeGiorno(Math.floor(up[0]/1440)):d0>=60?m2s(up[0]):d0<=0?"ora":String(d0),dom?`Prossimo tram domani alle ${m2s(up[0])}`:`Prossimo tram stimato tra circa ${d0} minuti, alle ${m2s(up[0])}`);
- $("nexts").innerHTML=up.slice(1,4).map(m=>`<div class="nx${m===P.dep?" mine":""}"><b>${m2s(m)}</b><span>${lab(m)}</span></div>`).join("");
+ $("nexts").innerHTML=up.slice(1,4).map(m=>`<a class="nx${m===P.dep?" mine":""}" href="${pv?live(pv):AVV}" aria-label="Verifica sul sito GTT il passaggio delle ${m2s(m)}"><span class="nt"><b>${m2s(m)}</b><span>${lab(m)}</span></span><span class="ver">GTT ↗</span></a>`).join("");
+ $("palVer").href=pv?live(pv):AVV;$("palVer").textContent=pv?"Verifica su GTT ↗":"Verifica su GTT";
  const wait=Math.round(P.tr-P.at),quando=nomeGiorno(Math.floor(P.start/1440));
  const nota=(festivo(dataTra(Math.floor(P.start/1440)))?"festivo · ":"")+(wait>0?"attesa ~"+wait+" min":"tram appena arrivi");
  $("sum").innerHTML=`<div class="ph"><b>Il tuo piano · ${quando}</b><span>${nota} · stime</span></div>`
-  +P.rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}</span></div>`).join("");
- const p=dir==="A"?"951":$("sStop").value.replace(/\D/g,"");
+  +P.rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}${r[3]?`<a class="verk" href="${pv?live(pv):AVV}">Verifica su GTT ↗</a>`:""}</span></div>`).join("");
+ const p=pv;
  $("live").innerHTML=(p?`<a class="p" href="${live(p)}">Live GTT · palina ${esc(p)}</a>`:`<a class="p" href="#" id="setStop">Imposta palina ritorno</a>`)+`<a href="${AVV}">Avvisi GTT</a>`;
  const ss=$("setStop");if(ss)ss.onclick=e=>{e.preventDefault();const d=$("sStop").closest("details");if(d)d.open=true;$("sStop").focus()};
  const moving=deps(dir).filter(m=>m<=n&&n-m<RIDE).pop();
@@ -441,7 +451,7 @@ function popup(d){if(d)dir=d;render();const n=nowF(),fut=prossime(dir,Math.floor
  let P=plan(dir);if(Math.floor(n)>P.end)P=plan(dir,startDef(dir)+1440*prossimoLavoro(1));
  $("popT").textContent=dir==="A"?"Andata: tram 10 da "+(P.b?"Porta Susa":"Statuto"):"Ritorno: tram 10 da Caserma Monte Grappa";
  $("popS").textContent=`Il tuo piano${P.start>=1440?" di "+nomeGiorno(Math.floor(P.start/1440)):""}: esci alle ${m2s(P.start)}, tram 10 delle ${m2s(P.tr)}, arrivo ${m2s(P.end)} · orari stimati`;
- $("popL").innerHTML=fut.map(m=>`<div><b>${m2s(m)}</b><span>${m>=1440?nomeGiorno(Math.floor(m/1440)):"tra ~"+dur(m-Math.floor(n))}</span></div>`).join("");
+ {const pv=palV();$("popL").innerHTML=fut.map(m=>`<a href="${pv?live(pv):AVV}"><b>${m2s(m)}</b><span>${m>=1440?nomeGiorno(Math.floor(m/1440)):"tra ~"+dur(m-Math.floor(n))}</span><i>verifica GTT ↗</i></a>`).join("")}
  $("popM").innerHTML=meteoAt(P.start);
  const m=miei();$("popA").innerHTML=m.length?m.map(a=>`<p class="w"><b>Linea ${esc(a.linee.join(", "))}</b> · ${esc(a.titolo)}${a.quando?" · "+esc(a.quando):""}</p>`).join(""):`<p>Nessuna deviazione o comunicazione GTT per ${esc(mieLinee().join(", "))}${avvisi.agg?" (controllo "+esc(avvisi.agg)+")":""}. Per sicurezza guarda il live.</p>`;
  const p=dir==="A"?"951":$("sStop").value.replace(/\D/g,"");$("popLive").href=p?live(p):AVV;$("popLive").textContent=p?"Passaggi live · palina "+p:"Avvisi GTT";
@@ -460,7 +470,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="2b662ad769";
+const VER="450c624018";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
