@@ -85,8 +85,10 @@ summary::-webkit-details-marker{display:none}
 summary::after{content:"+";margin-left:auto;font-size:24px;color:var(--or)}details[open] summary::after{content:"–"}
 .body{padding:0 16px 14px}
 .tt{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:6px}
-.tt span{background:var(--bg);border-radius:8px;text-align:center;padding:6px 0;font:600 18px var(--cn)}
-.tt span.past{opacity:.5}.tt span.nx1{background:var(--or);color:#000;font-weight:700}.tt span.mine{box-shadow:inset 0 0 0 2px var(--or);color:var(--or)}
+.tt>*{min-height:40px;border:0;background:var(--bg);color:var(--ink);border-radius:8px;text-align:center;padding:6px 0;font:600 18px var(--cn);cursor:pointer}
+.tt .past{opacity:.5}.tt .nx1{background:var(--or);color:#000;font-weight:700;opacity:1}.tt .mine{box-shadow:inset 0 0 0 2px var(--or);color:var(--or)}
+.tt .note{grid-column:1/-1;cursor:default;min-height:0;background:none;text-align:left;font:13px var(--ui)}
+.pr[data-m]{cursor:pointer}
 .st-h{font-weight:700;margin:12px 0 2px}.st-l{list-style:none;padding:0;margin:6px 0;font-size:14px}.st-l li{padding:3px 0;border-bottom:1px solid var(--line)}
 .nuova{margin-top:6px}.add2{display:grid;gap:6px;padding:0 12px 12px}
 .tipi{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
@@ -168,7 +170,7 @@ input{width:100%;max-width:100%;min-height:44px;font:16px var(--ui);padding:8px 
 </form></details>
 
 <div class="grid">
- <details class="wide"><summary id="ttT">Orario del 10 (stime)</summary><div class="body"><p class="tag" id="ttN"></p><div class="tt" id="tt10"></div><p class="note" id="ttNote"></p></div></details>
+ <details class="wide"><summary id="ttT">Orario del 10 (stime)</summary><div class="body"><p class="tag" id="ttN"></p><p class="tag">Tocca un orario: piano e percorso si aggiornano. Ritoccalo per tornare al tuo.</p><div class="tt" id="tt10"></div><p class="note" id="ttNote"></p></div></details>
  <details class="wide"><summary>La mia statistica del tram</summary><div class="body stv" id="stat"></div></details>
  <details class="wide"><summary>Impostazioni</summary><div class="body">
   <label for="sCasa">Partenza da casa (mattina)</label><input id="sCasa" type="time" value="07:00">
@@ -186,7 +188,7 @@ input{width:100%;max-width:100%;min-height:44px;font:16px var(--ui);padding:8px 
  </div></details>
 
 </div>
-<p class="vers" id="ver">Versione 1e97d218ea</p>
+<p class="vers" id="ver">Versione f734c0a51b</p>
 </main></div>
 <div class="pg" id="pg2"><main>
 <section>
@@ -210,7 +212,7 @@ input{width:100%;max-width:100%;min-height:44px;font:16px var(--ui);padding:8px 
 <h2 id="coT2">Coincidenze</h2>
 <div class="sum co" id="co2"></div>
 <div class="grid">
- <details class="wide"><summary>Passaggi del 60 (stime)</summary><div class="body"><p class="tag" id="ttN60"></p><div class="tt" id="tt60"></div><p class="note">Stima dall'orario GTT del pomeriggio (un passaggio ogni ~19 min). Presto, la sera e nei festivi la frequenza cambia: usa il live.</p></div></details>
+ <details class="wide"><summary>Passaggi del 60 (stime)</summary><div class="body"><p class="tag" id="ttN60"></p><p class="tag">Tocca un orario (o una coincidenza): piano e percorso si aggiornano.</p><div class="tt" id="tt60"></div><p class="note">Stima dall'orario GTT del pomeriggio (un passaggio ogni ~19 min). Presto, la sera e nei festivi la frequenza cambia: usa il live.</p></div></details>
 </div>
 </main></div>
 <div class="pg" id="pg3"><main>
@@ -233,7 +235,7 @@ input{width:100%;max-width:100%;min-height:44px;font:16px var(--ui);padding:8px 
 <div class="fig" id="map3"></div>
 <p class="note">Corso Regina Margherita da Industria (palina 193, angolo via Bonzanigo) al capolinea Piazza Hermada (221), fermate dal percorso GTT 03A1. Fascia che ti interessa: 15:45–16:45. Il 3 di giorno va «a frequenza»: passaggi e tempi di viaggio sono stimati (circa ogni 13 min, ~2 min a fermata). Verifica con il live.</p>
 <div class="grid">
- <details class="wide" open><summary>Passaggi 15:45–16:45 (stime)</summary><div class="body"><div class="tt" id="tt3"></div></div></details>
+ <details class="wide" open><summary>Passaggi 15:45–16:45 (stime)</summary><div class="body"><p class="tag">Tocca un orario: il percorso sopra si aggiorna. Ritoccalo per tornare al prossimo.</p><div class="tt" id="tt3"></div></div></details>
 </div>
 </main></div></div>
 <div class="go" id="go" role="dialog" aria-modal="true" aria-label="Conto alla rovescia" hidden><div class="goin">
@@ -257,7 +259,7 @@ const RIDE=18,$=id=>document.getElementById(id);
 // ---------- Memoria sul telefono: chiavi con prefisso «mv-», lettura sempre validata ----------
 const ls={get(k,d){try{const v=localStorage.getItem("mv-"+k);return v??d}catch(e){return d}},set(k,v){try{localStorage.setItem("mv-"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("mv-"+k)}catch(e){}}};
 const jget=(k,d,ok)=>{try{const v=JSON.parse(ls.get(k,"null"));return ok(v)?v:d}catch(e){return d}};
-let dir=new Date().getHours()<12?"A":"R";
+let dir=new Date().getHours()<12?"A":"R",sel={};
 const m2s=m=>{m=((Math.round(m)%1440)+1440)%1440;return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")};
 const s2m=(s,def)=>{const t=/^(\d{1,2}):(\d{2})/.exec(s||"");return t?(+t[1])*60+(+t[2]):def};
 const dur=x=>x>=60?Math.floor(x/60)+" h "+String(x%60).padStart(2,"0"):x+" min";
@@ -368,7 +370,8 @@ function statUI(){const c=corse(),el=$("stat");if(!el)return;
 function render(){
  const trip0=attiva();if(trip0)dir=trip0.d;
  const n=nowF(),fn=Math.floor(n),st=stops(),oggi=new Date(),fest=festivo(oggi);
- const pv=palV();let P=plan(dir),kk=0;const passato=fn>P.end;if(passato){kk=prossimoLavoro(1);P=plan(dir,startDef(dir)+1440*kk)}else if(!giorni().includes(oggi.getDay())||fest||inVac()){kk=prossimoLavoro(0);if(kk)P=plan(dir,startDef(dir)+1440*kk)}
+ const pv=palV();let P=plan(dir),kk=0;const S=sel[1];const passato=fn>P.end;if(passato){kk=prossimoLavoro(1);P=plan(dir,startDef(dir)+1440*kk)}else if(!giorni().includes(oggi.getDay())||fest||inVac()){kk=prossimoLavoro(0);if(kk)P=plan(dir,startDef(dir)+1440*kk)}
+ if(S!=null)P=plan(dir,S-(dir==="A"?H():W()));
  $("bA").setAttribute("aria-pressed",dir==="A");$("bR").setAttribute("aria-pressed",dir==="R");
  $("clk").textContent=m2s(fn);
  $("stopNm").textContent=dir==="A"?"Statuto Cap · 951":"Caprera · 387 → Statuto";
@@ -388,7 +391,7 @@ function render(){
  const moving=deps(dir).filter(m=>m<=n&&n-m<RIDE).pop();
  if(trip){const el=(Date.now()-trip.ms)/60000;draw(st,P,Math.min(RIDE,el/trip.k),trip)}else draw(st,P,moving!=null?n-moving:null);
  corsaUI(trip,st);statUI();
- $("tt10").innerHTML=deps(dir).map(m=>`<span class="${m===up[0]?"nx1":m===P.dep?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("");
+ $("tt10").innerHTML=deps(dir).map(m=>`<button type="button" data-m="${m}" aria-pressed="${m===P.dep}" class="${m===P.dep?"nx1":m===up[0]?"mine":m<fn?"past":""}">${m2s(m)}</button>`).join("");
  $("ttT").textContent=dir==="A"?"Orario andata · Statuto Cap (stime)":"Orario ritorno · Caprera (stime)";
  $("ttNote").textContent=dir==="A"?"Circa ogni 7 min di giorno, più rado presto, la sera e nei festivi. Non è l'orario ufficiale.":"Circa ogni 8 min di giorno. Non è l'orario ufficiale.";
  $("ttN").textContent=fest?"Oggi festivo: stime con frequenza ridotta.":"";
@@ -444,8 +447,9 @@ function draw2(pts,el){const G=34,top=22,X=90,VW=380,HH=top+(pts.length-1)*G+34;
   s+=`<text x="${X+24}" y="${y+5}" ${FB} font-size="15.5" font-weight="${p.big||p.home?600:400}" fill="var(--ink)">${p.n}${p.pal?`<tspan fill="var(--mut)" font-size="12"> · ${p.pal}</tspan>`:""}</text>`;
   if(p.tag)s+=`<text x="${VW-8}" y="${y+5}" text-anchor="end" ${FB} font-size="11" font-weight="700" fill="#ff7a33">${p.tag}</text>`});
  el.innerHTML=s+`</svg>`}
-function render2(n,fn){const d=dir,w=W(),oggi=new Date();let P=plan2(d);
+function render2(n,fn){const d=dir,w=W(),oggi=new Date(),S=sel[2];let P=plan2(d);
  if(fn>P.end)P=plan2(d,startDef(d)+1440*prossimoLavoro(1));else if(!giorni().includes(oggi.getDay())||festivo(oggi)||inVac()){const k=prossimoLavoro(0);if(k)P=plan2(d,startDef(d)+1440*k)}
+ if(S!=null){if(d==="A")P=plan2("A",S-B60.toFerm);else P=plan2("R",S-w)}
  const stop=d==="A"?["Don Bosco · 2719","2719",ANC60A,"verso Porta Susa"]:["Statuto · 3463","3463",880,"verso via Paris"];
  $("stopNm2").textContent=stop[0];$("palVer2").href=live(stop[1]);
  const up=prossime60(fn,stop[2]).slice(0,4),d0=up[0]-fn,dom=up[0]>=1440;
@@ -466,11 +470,13 @@ function render2(n,fn){const d=dir,w=W(),oggi=new Date();let P=plan2(d);
  draw2(pts,$("map2"));$("mapT2").textContent=d==="A"?"Andata col 60: casa → ufficio":"Ritorno col 60: ufficio → casa";
  // coincidenze
  if(d==="A"){const l=prossime60(Math.max(0,P.bus-40),ANC60A).slice(0,6);$("coT2").textContent="Coincidenze 60 → 10 a Vittorio Emanuele II";
-  $("co2").innerHTML=l.map(m=>{const c=coincA(m);return `<div class="pr${m===P.bus?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>VE II ${m2s(c.ve)}</strong>tram 10 alle ${m2s(c.tv)} · attesa ${c.att}′ · Caprera ${m2s(c.arr)}</span></div>`}).join("")}
+  $("co2").innerHTML=l.map(m=>{const c=coincA(m);return `<div data-m="${m}" class="pr${m===P.bus?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>VE II ${m2s(c.ve)}</strong>tram 10 alle ${m2s(c.tv)} · attesa ${c.att}′ · Caprera ${m2s(c.arr)}</span></div>`}).join("")}
  else{const l=prossime("R",Math.max(0,P.dep-16)).slice(0,6);$("coT2").textContent="Coincidenze 10 → 60 a Statuto";
-  $("co2").innerHTML=l.map(m=>{const c=coinc(m+RIDE);return `<div class="pr${m===P.dep?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>Statuto ${m2s(c.down)}</strong>bus 60 alle ${m2s(c.bus)} · attesa ${c.att}′ · casa ${m2s(c.casa)}</span></div>`}).join("")}
+  $("co2").innerHTML=l.map(m=>{const c=coinc(m+RIDE);return `<div data-m="${m}" class="pr${m===P.dep?" key":""}${m<fn?" done":""}"><b>${m2s(m)}</b><span><strong>Statuto ${m2s(c.down)}</strong>bus 60 alle ${m2s(c.bus)} · attesa ${c.att}′ · casa ${m2s(c.casa)}</span></div>`}).join("")}
  $("ttN60").textContent=d==="A"?"Alla palina 2719 Don Bosco, verso Porta Susa":"Alla palina 3463 Statuto, verso via Paris";
- $("tt60").innerHTML=deps60(null,stop[2]).map(m=>`<span class="${m===P.bus?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")}
+ $("tt60").innerHTML=deps60(null,stop[2]).map(m=>`<button type="button" data-m="${d==="A"?m:(tramPer60(m)??"")}" aria-pressed="${m===P.bus}" class="${m===P.bus?"nx1":m<fn?"past":""}">${m2s(m)}</button>`).join("")}
+// ritorno: l'ultimo tram 10 da Caprera che arriva in tempo per il 60 delle «m»
+const tramPer60=m=>{const l=prossime("R",Math.max(0,m-RIDE-60)).filter(t=>coinc(t+RIDE).bus===m);return l.length?l[l.length-1]:null};
 // ---------- Pagina 3: tram 3 da Industria a Hermada, solo 15:45-16:45 ----------
 const L3=[["Industria","193"],["Rondò Forca Ovest","195"],["Ospedale Cottolengo","197"],["Porta Palazzo","199"],["Porta Palazzo Est","201"],["XI Febbraio","203"],["Giardini Reali","205"],["Rossini","207"],["Campus Einaudi","211"],["Largo Berardi","213"],["Ospedale Gradenigo","217"],["Borromini","219"],["Hermada Cap.","221"]];
 const T3A=945,T3B=1005,T3S=13,T3F=2;
@@ -481,10 +487,11 @@ function render3(fn){const L=deps3(),day=new Date().getDay();
  ring(d0>=60||k?0:d0,k?"domani":d0>=60?m2s(nx):d0<=0?"ora":String(Math.round(d0)),`Prossimo tram 3 per Hermada nella fascia 15:45-16:45, stimato alle ${m2s(nx)}`,"ring3");
  const nn=(k?L.map(m=>m+1440):L.filter(m=>m>=fn)).slice(1,4);
  $("nexts3").innerHTML=nn.map(m=>`<a class="nx" href="${live("193")}"><span class="nt"><b>${m2s(m)}</b><span>${lab(m)}</span></span><span class="gtt">GTT ↗</span></a>`).join("");
- const arr=nx+(L3.length-1)*T3F;
- $("sum3").innerHTML=`<div class="ph"><b>Il tuo viaggio col 3</b><span>${k?"domani · ":""}fascia 15:45–16:45 · stime</span></div>`+[["Fermata","Industria · palina 193",nx,0],["Tram 3","verso Val San Martino",nx,1],["Scendi","Hermada Cap. · "+((L3.length-1)*T3F)+"′",arr,0]].map(r=>`<div class="pr${r[3]?" key":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}${r[3]?`<a class="verk" href="${live("193")}">Verifica su GTT ↗</a>`:""}</span></div>`).join("");
- draw2(L3.map((x,i)=>({n:x[0],pal:x[1],t:nx+i*T3F,k:"t3",key:i===0,big:i===0||i===L3.length-1})),$("map3"));
- $("tt3").innerHTML=L.map(m=>`<span class="${m===nx%1440&&!k?"nx1":m<fn&&!k?"past":""}">${m2s(m)}</span>`).join("")+(day===0?`<p class="note" style="grid-column:1/-1">Oggi festivo: frequenza diversa.</p>`:"")}
+ const ns=sel[3]!=null?sel[3]:nx,ks=sel[3]!=null?0:k;
+ const arr=ns+(L3.length-1)*T3F;
+ $("sum3").innerHTML=`<div class="ph"><b>Il tuo viaggio col 3</b><span>${ks?"domani · ":""}fascia 15:45–16:45 · stime</span></div>`+[["Fermata","Industria · palina 193",ns,0],["Tram 3","verso Val San Martino",ns,1],["Scendi","Hermada Cap. · "+((L3.length-1)*T3F)+"′",arr,0]].map(r=>`<div class="pr${r[3]?" key":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}${r[3]?`<a class="verk" href="${live("193")}">Verifica su GTT ↗</a>`:""}</span></div>`).join("");
+ draw2(L3.map((x,i)=>({n:x[0],pal:x[1],t:ns+i*T3F,k:"t3",key:i===0,big:i===0||i===L3.length-1})),$("map3"));
+ $("tt3").innerHTML=L.map(m=>`<button type="button" data-m="${m}" aria-pressed="${m===ns&&!ks}" class="${m===ns&&!ks?"nx1":m<fn&&!ks?"past":""}">${m2s(m)}</button>`).join("")+(day===0?`<p class="note">Oggi festivo: frequenza diversa.</p>`:"")}
 // pagine: scorri da destra a sinistra o tocca le linguette
 (function(){const pg=$("pager"),tabs=[...document.querySelectorAll(".pgt button")];
  const pages=[$("pg1"),$("pg2"),$("pg3")];let cur=0;
@@ -516,7 +523,9 @@ const tipo=()=>(document.querySelector('#addP input[name=tipo]:checked')||{value
 document.querySelectorAll('#addP input[name=tipo]').forEach(r=>r.onchange=()=>{const h=HINT[tipo()];$("pNum").placeholder=h[0];$("pHint").textContent=h[1];$("pNum").inputMode=h[2]});
 $("addP").addEventListener("submit",e=>{e.preventDefault();const t=tipo();let p=$("pNum").value.trim().slice(0,80);if(t==="pal")p=p.replace(/\D/g,"");if(!p){$("pHint").textContent="Scrivi un valore valido.";return}
  const m=getMine();m.push({t,p,n:$("pName").value.trim().slice(0,40)});ls.set("mine",JSON.stringify(m));$("pNum").value="";$("pName").value="";render()});
-$("bA").onclick=()=>{dir="A";render()};$("bR").onclick=()=>{dir="R";render()};
+$("bA").onclick=()=>{dir="A";sel={};render()};$("bR").onclick=()=>{dir="R";sel={};render()};
+// tocca un orario: percorso e piano si ricalcolano con quell'orario; ritoccalo per tornare al prossimo
+[["tt10",1],["tt60",2],["co2",2],["tt3",3]].forEach(([id,k])=>$(id).addEventListener("click",e=>{const t=e.target.closest("[data-m]");if(!t||t.dataset.m==="")return;const m=+t.dataset.m;sel[k]=sel[k]===m?null:m;render();const f=$(k===1?"map":k===2?"map2":"map3");if(f)f.scrollIntoView({behavior:"smooth",block:"start"})}));
 render();setInterval(()=>{if($("go").hidden)render()},20000);setInterval(()=>{if($("go").hidden&&localStorage.getItem("mv-corsa"))render()},4000);
 // ---------- Rete con limite d'attesa (3 s) ----------
 const conLimite=(pr,ms=3000)=>Promise.race([pr,new Promise((_,no)=>setTimeout(()=>no(new Error("timeout")),ms))]);
@@ -591,7 +600,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="1e97d218ea";
+const VER="f734c0a51b";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
