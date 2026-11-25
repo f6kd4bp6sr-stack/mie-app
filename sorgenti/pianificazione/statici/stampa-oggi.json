@@ -1,83 +1,92 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-24T13:04+01:00",
+  "edizione": "mattina",
+  "updated": "2026-11-25T05:10+01:00",
   "sezioni": {
     "italia": [
       {
-        "id": "it-campo-largo",
-        "t": "Centrosinistra: oggi il tavolo sull'Ucraina e il nodo patrimoniale, se manca l'intesa decidono i leader",
-        "s": "Restano aperti due punti: la patrimoniale e l'invio di armi a Kiev. Il tavolo sull'Ucraina è fissato alle 16, in presenza. Per Avs il prelievo sarebbe del 2% sui patrimoni oltre 5,4 milioni, il Pd preferisce la proposta Zucman, sopra i 100 milioni; i 5 Stelle giudicano insufficiente la formula del Pd senza armi.",
+        "id": "it-manovra-emend",
+        "t": "Manovra: tagliola su oltre 1.700 emendamenti, in aula alla Camera dal 18 dicembre",
+        "s": "I lavori in commissione Bilancio finiranno il 16 dicembre. Dei 6.558 emendamenti depositati ne restano 700 segnalati, da indicare entro giovedì 26 novembre alle 14. Tra quelli esclusi c'è la proposta della Lega di alzare l'Ires alle banche.",
         "d": "2026-11-24",
         "fonti": [
           {
             "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/centrosinistra-ucraina-patrimoniale-programma_4kcPkVgEDI6qT669KM1UHp"
+            "url": "https://www.adnkronos.com/politica/manovra-2027-ultime-notizie-oggi_IXQVqWL5XOFx9onh57BLJ"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/manovra-tagliola-su-oltre-1.700-emendamenti-anche-la-proposta-della-lega-di-alzare_6fda15fa-62be-4fc8-9ee0-e23897a4997a.html"
           }
         ],
         "link": []
+      },
+      {
+        "id": "it-quota64",
+        "t": "Pensioni, Salvini: Quota 64 finanziata in manovra, partenza nel 2027",
+        "s": "Il vicepremier indica 850 milioni come dotazione iniziale. Meloni aggiunge che nel 2027 gli aumenti da rinnovo contrattuale saranno tassati al 5% e i fringe benefit per i under 30 salgono a 2.000 euro.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/salvini-quota-64-finanziata-in-manovra-pronti-a-partire-nel-2027_a510419e-fad8-4d0a-8817-71cf26f866c5.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-25nov",
+        "t": "25 novembre: cortei e presidi di Non Una di Meno in oltre 40 città",
+        "s": "Nel decennale della prima manifestazione nazionale transfemminista, iniziative in più di 40 città. Dal 25 al 28 novembre a Roma gli Stati Generali dell'Autodeterminazione; sabato 28 corteo nazionale alle 14:30 da piazza della Repubblica.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/speciali/25-novembre/2026/11/24/non-una-di-meno-per-il-25-novembre-sit-in-e-iniziative-in-40-citta_8cae99d6-2e9b-4a47-8352-902d3556cc4b.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-degennaro",
+        "t": "Caso De Gennaro: il Ris di Roma analizza i reperti trovati nella casa toscana",
+        "s": "Gli accertamenti proseguono; venerdì è prevista l'autopsia, con perizia calligrafica sui manoscritti sequestrati. Il ministro Nordio osserva che il processo mediatico ha fatto male a molti.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/analisi-del-ris-a-roma-sui-reperti-trovati-nella-casa-toscana_f547b6cf-2afa-4335-8e33-c8cb26ef8d53.html"
+          }
+        ],
+        "link": [
+          {
+            "n": "ANSA: venerdì l'autopsia",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/venerdi-lautopsia-su-de-gennaro.-perizia-calligrafica-sui-manoscritti-sequestrati-nella-casa_acf4144f-3ca4-492d-8a97-103e8ebf2941.html"
+          }
+        ]
       },
       {
         "id": "it-dl-scuola",
-        "t": "Decreto scuola: accordo in maggioranza sugli e-book, oggi la fiducia alla Camera",
-        "s": "Per elementari e medie i libri digitali saranno adottati dopo la valutazione di una commissione di esperti. Il testo, uguale a quello del Senato, va in aula con la fiducia per essere approvato entro il 29 novembre. Pd, M5S, Avs e Italia Viva lasciano la commissione Cultura.",
-        "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/e-book-libri-digitali-ultime-notizie_6DbRWn5INNyCemc1FNycDV"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-vigilanza",
-        "t": "La Russa: mercoledì i nomi dei componenti della commissione di Vigilanza Rai",
-        "s": "Il presidente del Senato Ignazio La Russa dice che mercoledì 25 novembre saranno resi noti i componenti della commissione. Attende i nomi delle opposizioni; se non arrivano, si procederà in ordine dai capigruppo.",
-        "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/23/la-russa-mercoledi-i-nomi-dei-componenti-della-commissione-di-vigilanza-rai_7d118bb9-01c5-40ff-a5fe-418d7373d50f.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-salvini-firme",
-        "t": "Lega: il 12 e 13 dicembre raccolta firme contro le associazioni islamiche legate ai Fratelli Musulmani",
-        "s": "Salvini lo ha annunciato alla Camera. Ha anche parlato dell'affondamento di una nave russa in acque libiche, rivendicato da Kiev, e ha detto che la Lega lavora a «quota 64» nella manovra.",
-        "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://adnkronos.com/politica/matteo-salvini-cosa-ha-detto-oggi-su-ucraina-e-islam_64vcfV8ckvfc94XnwtXrOX"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-siracusa-scuole",
-        "t": "Siracusa: sette indagati per gare truccate e tangenti sui fondi per due scuole",
-        "s": "Su richiesta della Procura europea di Palermo il gip ha disposto sei misure interdittive, eseguite dalla Guardia di Finanza. Ipotesi di corruzione, truffa aggravata e falso su circa 1,5 milioni di euro; la tangente sarebbe stata del 15% del fatturato.",
+        "t": "Decreto scuola: il Governo pone la fiducia alla Camera",
+        "s": "Il ministro Ciriani ha posto la questione di fiducia sul decreto scuola all'esame dell'Aula di Montecitorio.",
         "d": "2026-11-24",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/gare-truccate-e-tangenti-sui-fondi-per-le-scuole-sette-indagati-a-siracusa_d382edcc-83ee-4781-819e-c6521fc10b9e.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/dl-scuola-ciriani-pone-la-fiducia-al-decreto-scuola-allesame-della-camera_64f5b9f9-17ef-43ba-bae4-14b382401885.html"
           }
         ],
         "link": []
       },
       {
-        "id": "it-caltanissetta",
-        "t": "Caltanissetta: Procura al lavoro nel silenzio, riesame il 1° dicembre sull'inchiesta sul depistaggio di via D'Amelio",
-        "s": "Il procuratore De Luca non rilascia dichiarazioni. I pm hanno fatto appello contro il rigetto di alcune misure cautelari da parte del gip; il riesame è fissato per il 1° dicembre ma potrebbe slittare. I penalisti si astengono dalle udienze fino al 27 novembre.",
-        "d": "2026-11-23",
+        "id": "it-oms",
+        "t": "Oms: povertà e incertezza pesano sulla salute di 187 milioni di europei",
+        "s": "Secondo il rapporto, i bambini più poveri hanno una probabilità doppia di morire prima dei cinque anni.",
+        "d": "2026-11-24",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/23/blindata-la-procura-di-caltanissetta-de-luca-al-lavoro_10825748-4d48-49ec-8a70-4ec83f72c96b.html"
+            "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/11/24/oms-poverta-e-incertezza-pesano-sulla-salute-di-187-milioni-di-europei_e75403e2-d762-48e1-8f85-f2966a954421.html"
           }
         ],
         "link": []
@@ -85,76 +94,72 @@
     ],
     "mondo": [
       {
-        "id": "mo-ucraina-polonia",
-        "t": "Ucraina: drone russo nello spazio aereo polacco, raid su Zaporizhzhia con due morti",
-        "s": "L'esercito polacco non ha abbattuto il drone, che ha virato verso est, per evitare rischi ai civili. A Zaporizhzhia un attacco a un palazzo ha causato due morti e 22 feriti; l'Ucraina dice di aver neutralizzato 73 droni su 96.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-guerra-ultime-news-oggi-24-novembre_3rKA1bn4MDyU07bBXVV2zN"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-iran-hormuz",
-        "t": "Iran: i Pasdaran parlano di tre navi in fiamme nello Stretto di Hormuz dopo le mine",
-        "s": "Il comandante dell'esercito iraniano ha ordinato alla marina di chiudere ancora lo Stretto, giorno per giorno, finché gli Usa non accettano sette condizioni. I Pasdaran parlano di tre petroliere colpite da mine; il centro marittimo internazionale non conferma. Il Qatar cerca di riavviare i negoziati.",
-        "d": "2026-11-24",
+        "id": "mo-eisenkot",
+        "t": "Israele: Eisenkot ottiene il primo alleato per formare il governo",
+        "s": "Yashar (21 seggi) e Casa Nostra di Lieberman (7) hanno raggiunto un accordo di coalizione; il Likud ha 53 seggi su 120. Il termine per formare l'esecutivo è il 6 dicembre.",
+        "d": "2026-11-25",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/24/iran-war-live-iran-says-three-ships-catch-fire-after-hitting-hormuz-mines",
-            "l": "en"
-          },
-          {
-            "n": "Adnkronos",
-            "url": "https://adnkronos.com/internazionale/esteri/iran-minaccia-basi-usa-in-europa-missili-italia-allerta_Akd3ghLzZ20OaFKlRDstd"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/24/iran-orders-hormuz-closed-further-day-by-day-as-qatar-seeks-to-revive-peace-talks",
+            "url": "https://www.aljazeera.com/news/2026/11/25/israels-eisenkot-secures-first-coalition-partner-in-bid-to-form-government",
             "l": "en"
           }
         ],
         "link": []
       },
       {
-        "id": "mo-russia-perdite",
-        "t": "Media indipendenti russi: oltre 700mila soldati di Mosca morti in Ucraina dal 2022",
-        "s": "Il dato, ripreso dal New York Times che non lo ha verificato in modo indipendente, si basa su Meduza e Mediazona. Quello ufficiale registrato è di almeno 490mila morti fino a settembre.",
-        "d": "2026-11-24",
+        "id": "mo-houthi",
+        "t": "Yemen: ordine di evacuazione di Hodeidah, gli Houthi minacciano i porti sauditi",
+        "s": "La coalizione guidata da Riad ha ordinato l'evacuazione del porto di Hodeidah; gli Houthi minacciano Gedda e altri scali sul Mar Rosso. Riad parla di 11 feriti in un attacco al quartiere d'affari.",
+        "d": "2026-11-25",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://adnkronos.com/internazionale/esteri/russia-guerra-soldati-morti-ucraina-dati_QADYGpA7qQ6lPYVa6VJfd"
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/25/iran-war-live-houthis-threaten-saudi-ports-over-coalitions-hodeidah-order",
+            "l": "en"
+          },
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/riad-11-feriti-nellattacco-degli-houthi-contro-il-quartiere-daffari_1b68310a-b366-4028-a767-18784f94939d.html"
           }
         ],
         "link": []
       },
       {
-        "id": "mo-ue-gb",
-        "t": "Regno Unito e Ue: firmato il «reset», giovedì in Parlamento la legge di attuazione",
-        "s": "L'intesa vale circa 17 miliardi di sterline l'anno. Le tasse universitarie sono rinviate a un tavolo di sei mesi. Per l'analista Anand Menon la fretta di Burnham potrebbe costare cara.",
-        "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/ue-gb-menon-kings-college_3SBQhnTS627jMNlGD00dLB"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-montenegro",
-        "t": "Ue: negoziati con il Montenegro da chiudere entro l'anno, vertice con i Balcani occidentali",
-        "s": "Un alto funzionario europeo ritiene alla portata la chiusura entro fine anno, nonostante le questioni bilaterali con la Croazia. Nel 2026 l'Ue punta ad aprire e chiudere oltre 100 capitoli negoziali; per l'Albania la conclusione è possibile entro fine 2027.",
+        "id": "mo-patriot",
+        "t": "Il Financial Times: Hegseth blocca la consegna di 60 missili Patriot all'Ucraina",
+        "s": "Secondo il quotidiano britannico, riportato dall'ANSA, il segretario alla Difesa americano ha fermato l'invio.",
         "d": "2026-11-24",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/11/24/fonti-ue-negoziati-col-montenegro-chiusi-entro-lanno-nodi-superabili_11b6df97-97d8-4f24-9827-dbad297f9371.html"
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/il-ft-hegseth-blocca-la-consegna-di-60-missili-per-patriot-allucraina_2d8d9336-6bc5-4470-a273-9eaa8cf9c91c.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-libia",
+        "t": "Due militari libici morti per le ferite dell'attacco ucraino alle navi russe",
+        "s": "La notizia è nel notiziario ANSAmed del 25 novembre.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/due-militari-libici-morti-per-le-ferite-nellattacco-ucraino-alle-navi_e83f53f0-5096-43bb-9fbc-102279013d31.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-iran-cantante",
+        "t": "Iran: frustata la cantante Ahmadi, aveva cantato in pubblico senza velo",
+        "s": "Lo riferisce l'ANSA citando le autorità iraniane.",
+        "d": "2026-11-24",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/le-autorita-delliran-frustano-la-cantante-ahmadi-aveva-cantato-in-pubblico-senza-velo_b240fbed-e0f5-48a8-9b1e-3d822e5bc4fc.html"
           }
         ],
         "link": []
@@ -162,56 +167,56 @@
     ],
     "estero": [
       {
-        "id": "es-sanzioni-russia",
-        "t": "Euronews: la Commissione propone il 22° pacchetto di sanzioni contro la Russia",
-        "s": "La Commissione europea ha presentato un nuovo pacchetto di misure contro Mosca; se i governi lo approvano, sarà il ventiduesimo dal febbraio 2022. Il dettaglio delle misure non è ancora noto.",
-        "d": "2026-11-24",
+        "id": "es-cuba",
+        "t": "Oms: il direttore Tedros chiede di togliere il blocco americano dei carburanti a Cuba",
+        "s": "Tedros annuncia un contributo di 2 milioni di dollari. L'aspettativa di vita a Cuba è scesa da 78,8 anni (2020) a 74,4 (2025).",
+        "d": "2026-11-25",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/24/europe-today-eu-commission-proposes-new-round-of-sanctions-against-russia",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/25/who-chief-urges-end-to-us-fuel-blockade-on-cuba",
             "l": "en"
           }
         ],
         "link": []
       },
       {
-        "id": "es-galapagos",
-        "t": "Euronews: alluvioni alle Galápagos, evacuazioni a Puerto Ayora",
-        "s": "A Santa Cruz l'acqua arriva alla vita e interi quartieri sono sommersi. Militari e volontari distribuiscono pasti e allestiscono rifugi. Molti collegano le piogge a El Niño, ma gli scienziati invitano alla cautela.",
-        "d": "2026-11-24",
+        "id": "es-alaska",
+        "t": "Alaska rompe l'accordo sui dati degli elettori con il Dipartimento di Giustizia Usa",
+        "s": "L'intesa del 2025 è chiusa con effetto immediato; nessun elettore è stato rimosso. Almeno 16 Stati avevano collaborato.",
+        "d": "2026-11-25",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/video/2026/11/24/ecuador-severe-flooding-hits-galapagos-islands-amid-el-nino-concerns",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/25/alaska-ends-deal-to-give-voter-records-to-us-justice-department",
             "l": "en"
           }
         ],
         "link": []
       },
       {
-        "id": "es-megaspeed",
-        "t": "Usa: Megaspeed e altre sei società nella lista nera dell'export di chip",
-        "s": "Il dipartimento del Commercio impone una licenza per spedire loro chip avanzati come le Nvidia. Megaspeed è indagata dal dipartimento di Giustizia per presunta deviazione di chip verso la Cina, ma nega.",
+        "id": "es-femminicidi",
+        "t": "Onu: cinque donne uccise ogni ora da partner o parenti nel 2025",
+        "s": "Circa 47.000 su 78.000 femminicidi: 129 al giorno, secondo il rapporto citato da Al Jazeera nel giorno contro la violenza sulle donne.",
         "d": "2026-11-24",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/economy/2026/11/24/us-adds-megaspeed-firm-at-centre-of-nvidia-scandal-to-export-control-list",
+            "url": "https://www.aljazeera.com/news/2026/11/24/five-women-killed-every-hour-globally-by-partner-relative-in-2025-un",
             "l": "en"
           }
         ],
         "link": []
       },
       {
-        "id": "es-haiti-salvador",
-        "t": "Bukele: tre militari salvadoregni morti ad Haiti, una granata su drone esplosa",
-        "s": "Il presidente ha dato i nomi dei tre soldati e annunciato 200mila dollari più un reddito mensile alle famiglie. Circa 2.500 militari sono stati schierati ad Haiti il mese scorso.",
+        "id": "es-cop31",
+        "t": "Euronews: dopo il fallimento dei negoziati Cop31, c'è chi vede speranza nell'assenza di accordo",
+        "s": "Il sito europeo discute se sia meglio nessun accordo che un cattivo accordo sul clima.",
         "d": "2026-11-24",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/24/bukele-shares-details-on-deaths-of-salvadoran-troops-in-haiti-intervention",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/24/is-no-deal-better-than-a-bad-deal-why-some-see-hope-in-cop31s-collapse",
             "l": "en"
           }
         ],
@@ -220,44 +225,45 @@
     ],
     "economia": [
       {
-        "id": "ec-borse",
-        "t": "Borse europee in calo prima dei dati Usa sull'inflazione; Milano intorno al -1%",
-        "s": "Oggi le Borse frenano dopo il rally di Nvidia, in attesa dell'indice PCE di domani. Spread BTP-Bund a 106 punti, rendimento del decennale al 4,32%, oro a 3.627 dollari l'oncia. I future scontano un rialzo dei tassi Fed a dicembre.",
+        "id": "ec-borsa",
+        "t": "Borsa: Milano chiude in calo, Ftse Mib -1,8%",
+        "s": "Seduta debole per Piazza Affari; a Wall Street Nvidia perde il 7% e gli indici chiudono contrastati.",
         "d": "2026-11-24",
         "fonti": [
           {
-            "n": "Teleborsa",
-            "url": "https://teleborsa.it/News/2026/11/24/borse-europee-in-calo-focus-sull-inflazione-pce-77.html"
-          },
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/borsa-milano-chiude-in-calo-ftse-mib-18_8908c936-7fc6-4971-9296-cc21b548293a.html"
+          }
+        ],
+        "link": [
+          {
+            "n": "ANSA: Wall Street, Nvidia -7%",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/wall-street-chiude-contrastata-nvidia-perde-il-7-giu-nasdaq-e-s500_f180435a-026b-4843-af5b-f1ccf24fb030.html"
+          }
+        ]
+      },
+      {
+        "id": "ec-spread",
+        "t": "Lo spread Btp-Bund chiude a 109 punti",
+        "s": "Dato di chiusura del 24 novembre.",
+        "d": "2026-11-24",
+        "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/borsa-leuropa-apre-debole-tra-nvidia-e-tensioni-geopolitiche_decc9960-1fe1-4eaf-8d23-28258416417c.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/lo-spread-btp-bund-chiude-a-109-punti_5168cfc5-e9c4-4dee-abc5-0d917d01948d.html"
           }
         ],
         "link": []
       },
       {
-        "id": "ec-intesa-mps",
-        "t": "Parte l'offerta di Intesa Sanpaolo su Mps: adesioni fino al 22 gennaio",
-        "s": "L'operazione vale 31,8 miliardi. Per ogni azione Mps sono previsti 1,25 euro in contanti e 1,664 nuove azioni Intesa. Il perfezionamento è atteso il 29 gennaio 2027, salvo proroghe.",
-        "d": "2026-11-08",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/08/via-libera-della-consob-allofferta-di-intesa-per-mps-si-parte-il-24-novembre_15c55497-bc22-4473-aef0-930c9724f4f4.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "ec-euro",
-        "t": "Euro stabile a 1,090 sul dollaro, lo yen sale in Asia",
-        "s": "L'euro apre a 1,090 sul dollaro; lo yen guadagna intorno allo 0,3% con il rimbalzo dei mercati.",
+        "id": "ec-gas",
+        "t": "I futures sul gas salgono a 92,3 euro",
+        "s": "Prezzo di fine giornata del 24 novembre.",
         "d": "2026-11-24",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/24/leuro-parte-stabile-a-1090-sul-dollaro_adcd48a3-b623-4274-968c-8e831e6635f6.html"
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/i-futures-su-gas-salgono-a-923-euro_ef7eac08-3b7b-4341-97a4-6e5a53305bed.html"
           }
         ],
         "link": []
@@ -265,79 +271,66 @@
     ],
     "torino": [
       {
-        "id": "to-francoforte",
-        "t": "Lufthansa cancella il Torino-Francoforte dal 28 marzo 2027, Comune e Regione chiedono di ripensarci",
-        "s": "La rotta esiste da 55 anni. Lo Russo e Cirio hanno scritto all'amministratore delegato di Lufthansa; le alternative via Monaco e Roma sono giudicate insufficienti. Il 1° dicembre vertice tra Piemonte, Lombardia e Liguria sugli aeroporti del Nord-Ovest.",
-        "d": "2026-11-24",
+        "id": "to-25nov",
+        "t": "Torino: il 25 novembre la Mole si illumina di arancione contro la violenza sulle donne",
+        "s": "In città convegni e iniziative: 760 manifesti, posto vuoto nelle sale del Torino Film Festival.",
+        "d": "2026-11-25",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/24/leggi-notizia/argomenti/viabilita-1/articolo/stop-al-torino-francoforte-lo-russo-taglio-legato-a-operazione-ita-lufthansa-la-chiusura-e-un.html"
+            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/eventi-11/articolo/25-novembre-torino-rinnova-il-proprio-impegno-contro-la-violenza-sulle-donne.html"
           }
         ],
         "link": []
       },
       {
-        "id": "to-stadio-toro",
-        "t": "Stadio Olimpico e Robaldo al Torino per 90 anni: la proposta passa alla giunta",
-        "s": "Il club ha chiesto un diritto di superficie fino a 90 anni. La concessione attuale scade il 31 dicembre, con proroga temporanea prevista; il Comune punta a portare il voto in Consiglio entro metà dicembre.",
+        "id": "to-polizia-locale",
+        "t": "Violenza sulle donne: 86 casi seguiti dalla Polizia Locale di Torino, erano 51",
+        "s": "Il dato, riferito all'ultimo anno, è nel titolo di Torino Oggi.",
         "d": "2026-11-24",
         "fonti": [
           {
             "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/24/leggi-notizia/argomenti/attualita-31/articolo/olimpico-e-robaldo-al-toro-fino-a-90-anni-la-palla-sul-nuovo-stadio-passa-in-giunta.html"
+            "url": "https://www.torinoggi.it/2026/11/24/leggi-notizia/argomenti/attualita-31/articolo/violenza-contro-le-donne-a-torino-86-casi-seguiti-dalla-polizia-locale-nellultimo-anno-erano-51.html"
           }
         ],
         "link": []
       },
       {
-        "id": "to-circolare",
-        "t": "Torino Circolare: partono 16 progetti, in tutto 2,16 milioni di euro",
-        "s": "I progetti sono stati scelti tra 47 candidature e avranno dieci mesi per testare le soluzioni. Il Living Lab si apre oggi dalle 17 alle 21 a BluFactory, in via Andrea Doria 27.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/24/leggi-notizia/argomenti/santa-rita/articolo/dalla-riparazione-degli-oggetti-agli-scarti-del-cinema-al-via-i-16-cantieri-di-torino-circolare.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-sala-crisi",
-        "t": "Nuova sala crisi della Protezione civile comunale con monitor sui livelli dei fiumi",
-        "s": "Presentata a Torino: nove monitor per corsi d'acqua, immagini dei droni e videoconferenze. Potenziate anche le radio digitali, che funzionano senza reti telefoniche. Il progetto è sostenuto da Fondazione Crt.",
+        "id": "to-variazione",
+        "t": "Il Comune di Torino approva la sesta variazione di bilancio",
+        "s": "Via libera del 23 novembre.",
         "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/piu-controllo-e-tempestivita-nuova-sala-crisi-di-protezione-civile-torino_dab4ba15-a501-4b31-a890-cfc6060f8b47.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/torino-il-comune-approva-la-sesta-variazione-di-bilancio_4e34d5dc-3fdd-4c46-990d-0bdcc3bb4f4d.html"
           }
         ],
         "link": []
       },
       {
-        "id": "to-metro2",
-        "t": "Metro 2: partite le attività preliminari dal Trincerone, fine lavori attesa nel 2032",
-        "s": "Il costo complessivo è di 1,828 miliardi, ma è finanziata solo la prima tratta Rebaudengo-Porta Nuova. Per Porta Nuova-Politecnico servono 450 milioni dal Governo.",
+        "id": "to-linea2",
+        "t": "Torino, al via i cantieri per la linea 2 della metropolitana",
+        "s": "Partono i lavori della seconda linea.",
         "d": "2026-11-19",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/19/leggi-notizia/argomenti/viabilita-1/articolo/metro-3.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/comune_di_torino/2026/11/19/torino-al-via-i-cantieri-per-la-linea-2-della-metropolitana_b66ffee0-69c4-454e-96a3-ef37ba303390.html"
           }
         ],
         "link": []
       },
       {
-        "id": "to-pub-omicidio",
-        "t": "Titolare di un pub ucciso a Torino: convalidato il fermo di un dipendente",
-        "s": "Francesco Zangari, 66 anni, è stato trovato morto venerdì nel cortile del locale in via Giachino. L'autopsia non è ancora stata disposta.",
+        "id": "to-anziana",
+        "t": "Torinese: anziana dispersa da sabato trovata viva in un torrente",
+        "s": "Il ritrovamento è stato segnalato la sera del 23 novembre.",
         "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/titolare-di-un-pub-ucciso-a-torino-convalidato-fermo-si-attende-autopsia_d9d2eb07-ea90-4ea3-a038-b645ff8193e5.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/dispersa-da-sabato-anziana-trovata-viva-in-un-torrente-nel-torinese_8ebff102-3d83-4b8d-bd93-6d47030d281a.html"
           }
         ],
         "link": []
@@ -345,44 +338,40 @@
     ],
     "piemonte": [
       {
-        "id": "pi-anpas",
-        "t": "Anpas Piemonte: Vincenzo Sciortino confermato presidente per il 2026-2030",
-        "s": "Vicepresidente è Michele Isoardi, già presidente della Croce Verde di Saluzzo.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/24/anpas-piemonte-vincenzo-sciortino-confermato-presidente_0aa19c81-6566-44f8-a79b-952e37181bd1.html"
-          }
-        ],
-        "link": []
-      },
-      {
         "id": "pi-polizia-locale",
-        "t": "Regione Piemonte: 900mila euro per la polizia locale col patto sicurezza con le Prefetture",
-        "s": "Il patto dura due anni. Torino riceve 150mila euro, Cuneo 87.782. I fondi servono a pattuglie aggiuntive, soprattutto la sera e nei fine settimana.",
+        "t": "Regione Piemonte: 900mila euro per la polizia locale nel Patto per la sicurezza",
+        "s": "La Giunta ha approvato lo schema con le otto Prefetture: 150mila euro alla Città metropolitana di Torino, 750mila divisi per delittuosità; durata due anni.",
         "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/regione-piemonte-900mila-euro-per-rafforzare-presenza-polizia-locale_ef7bf717-7ab0-42ae-a488-2465e003814b.html"
-          },
-          {
-            "n": "Cuneodice",
-            "url": "https://www.cuneodice.it/attualita/cuneo-e-valli/sicurezza-urbana-pronto-piano-da-900-mila-euro-dalla-regione-piemonte-per-cuneo-sono-87-mila_130815.html"
           }
         ],
         "link": []
       },
       {
-        "id": "pi-torino2006",
-        "t": "Impianti di Torino 2006: dal 12 dicembre li gestisce la Regione, 79 milioni di dotazione",
-        "s": "L'incontro al Grattacielo della Regione si è svolto con il ministro Abodi. Alla dotazione di 75 milioni il Governo ne ha aggiunti 4.",
+        "id": "pi-alessandria",
+        "t": "Alessandria: a fine gennaio i primi risultati dei lavori al Palazzo di Giustizia",
+        "s": "Lo ha detto il sottosegretario Ostellari.",
         "d": "2026-11-23",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/torino-2006-la-gestione-degli-interventi-sulle-infrastrutture-passa-alla-regione_2f779ee9-2a41-4b4f-a3c3-ccb08705db3a.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/ostellari-a-fine-gennaio-primi-risultati-lavori-palazzo-giustizia-alessandria_e12b1ba0-1320-456e-bacc-c3ac71a0f1b0.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "pi-pragelato",
+        "t": "Oltre 2 milioni per lo Ski Jumping Hotel di Pragelato",
+        "s": "Finanziamento per la struttura in alta Val Chisone.",
+        "d": "2026-11-23",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/oltre-2-milioni-per-lo-ski-jumping-hotel-di-pragelato_eb0e4fd6-8fec-4524-8481-dfff038f6e55.html"
           }
         ],
         "link": []
@@ -645,22 +634,6 @@
       }
     ],
     "concerti": [
-      {
-        "id": "co-ptn",
-        "t": "Pinguini Tattici Nucleari in un piccolo club",
-        "s": "Tour nei club della band pop-rock bergamasca: set di circa un'ora con almeno un brano per ogni album dal 2020, in attesa del nuovo disco «Replay» in uscita il 4 dicembre.",
-        "d": "2026-11-21",
-        "fonti": [
-          {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/21/leggi-notizia/argomenti/cultura-e-spettacoli-7/articolo/pinguini-tattici-nucleari-in-tour-nei-piccoli-club-il-concerto-a-torino-allo-spazio211.html"
-          }
-        ],
-        "link": [],
-        "quando": "mar 24 nov 2026 (orario sul sito)",
-        "dove": "sPAZIO211, Torino",
-        "costo": "prezzi sul sito"
-      },
       {
         "id": "co-jussen",
         "t": "Lucas e Arthur Jussen in concerto a quattro mani",
@@ -1095,12 +1068,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-15T05:03+01:00",
-      "edizione": "mattina",
-      "notizie": 77,
-      "note": "Fonti lette: ANSA, Euronews (it/en), Al Jazeera (en). TorinoToday non leggibile (client_error); Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti); AGI senza risultati recenti. Notizie del 13-14 nov aggiunte a quelle ancora valide. Cinema, eventi e concerti dall'edizione del 14/11 (domenica, non lunedì), tolti gli spettacoli passati; teatro ridotto a 1 spettacolo per mancata verifica. Copia locale non divergente."
-    },
-    {
       "at": "2026-11-15T13:03+01:00",
       "edizione": "pomeriggio",
       "notizie": 72,
@@ -1213,7 +1180,13 @@
       "edizione": "pomeriggio",
       "notizie": 73,
       "note": "Fonti: ANSA, Adnkronos, Teleborsa, Euronews (en), Torino Oggi. Non cercate/raggiunte: Reuters, BBC, Guardian (ricerca rifiutata dal proxy); 4 pagine Torino Oggi/Targatocn non leggibili. Eventi, cinema, teatro e concerti copiati dall'edizione del mattino (non è lunedì; nessun concerto passato). Copia locale non divergente: nessun riallineamento."
+    },
+    {
+      "at": "2026-11-25T05:10+01:00",
+      "edizione": "mattina",
+      "notizie": 71,
+      "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en), Torino Oggi. Non raggiunti: alcuni articoli ANSA (lettura bloccata, usati i titoli), Torino Oggi (una pagina), Reuters/BBC/Guardian non cercate; rainews e lastampa non cercati. Eventi, cinema, teatro, scienza e tecnologia copiati dall'edizione precedente; concerti copiati senza quelli passati (non è lunedì). Copia locale riallineata a origin/main (era staccata dal ramo)."
     }
   ],
-  "nota": "Edizione del pomeriggio del 24 novembre 2026."
+  "nota": "Edizione del mattino del 25 novembre 2026."
 }
