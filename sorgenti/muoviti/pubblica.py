@@ -16,7 +16,7 @@ ver = hashlib.sha1(html.encode() + icons).hexdigest()[:10]
   "name": "Muoviti", "short_name": "Muoviti",
   "description": "Tram 10 GTT: Piazza Statuto ↔ Corso IV Novembre 40, orari e passaggi live",
   "start_url": "./", "scope": "./", "display": "standalone",
-  "background_color": "#ffffff", "theme_color": "#f2661f", "lang": "it",
+  "background_color": "#000000", "theme_color": "#000000", "lang": "it",
   "icons": [{"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
             {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}]
 }, ensure_ascii=False, indent=1), encoding="utf-8")

@@ -5,7 +5,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Muoviti">
-<meta name="theme-color" content="#f2661f">
+<meta name="theme-color" content="#000000">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <title>Muoviti</title>
@@ -17,40 +17,39 @@
    PICTURE: tracciato del 10 con zone, fermate, orari e il tram che avanza
    COLOUR and TYPE: arancio tram dominante in testata, inchiostro, bianco; Barlow Condensed per orari
    LAYOUT: testata arancio con direzione, palina + conto alla rovescia, tracciato, pannelli apri/chiudi in griglia */
-:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0f1419);--ink:light-dark(#15202a,#eef2f5);--mut:light-dark(#5d6a75,#9cadba);--line:light-dark(#e2e7eb,#24303a);--card:light-dark(#f3f5f7,#172029);--zone:light-dark(#fbf1ea,#1d1a17);--or:#f2661f;--or2:#c94a0d;--ok:light-dark(#1d7a4b,#5fd39a)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+:root{color-scheme:dark;--bg:#000;--ink:#f5f5f7;--mut:#a1a1a6;--line:#2c2c2e;--card:#1c1c1e;--zone:#121212;--or:#ff7a33;--or2:#ff8c4d;--ok:#4cd88a}
 *{box-sizing:border-box;min-width:0}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Barlow,system-ui,sans-serif;overflow-x:clip}
 .c{font-family:"Barlow Condensed",sans-serif;font-variant-numeric:tabular-nums}
-.top{background:var(--or);color:#fff;padding:calc(16px + env(safe-area-inset-top)) max(4vw,16px,env(safe-area-inset-right)) 18px max(4vw,16px,env(safe-area-inset-left))}
+.top{background:#000;color:var(--ink);border-bottom:1px solid var(--line);padding:calc(16px + env(safe-area-inset-top)) max(4vw,16px,env(safe-area-inset-right)) 18px max(4vw,16px,env(safe-area-inset-left))}
 main{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
 .upd{position:sticky;top:0;z-index:5;display:none;background:var(--ink);color:var(--bg);text-align:center;padding:10px;font-weight:600}
 .ver{color:var(--mut);font-size:12px;text-align:center;margin-top:24px}
 .in{max-width:760px;margin:0 auto}
 .hd{display:flex;align-items:center;justify-content:space-between;gap:12px}
-h1{margin:0;font:700 38px/1 "Barlow Condensed",system-ui,sans-serif}
+h1{margin:0;color:var(--or);font:700 38px/1 "Barlow Condensed",system-ui,sans-serif}
 .clock{font:700 30px "Barlow Condensed",system-ui,sans-serif}
-.sw{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:rgba(0,0,0,.18);border-radius:14px;padding:4px;margin-top:14px}
-.sw button{min-height:46px;border:0;border-radius:11px;background:none;color:#fff;font:600 16px Barlow,system-ui,sans-serif;cursor:pointer}
-.sw button[aria-pressed=true]{background:#fff;color:var(--or2)}
-button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.sw{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--card);border-radius:14px;padding:4px;margin-top:14px}
+.sw button{min-height:46px;border:0;border-radius:11px;background:none;color:#d1d1d6;font:600 16px Barlow,system-ui,sans-serif;cursor:pointer}
+.sw button[aria-pressed=true]{background:var(--or);color:#000}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--or);outline-offset:2px}
 main{max-width:760px;margin:0 auto;padding:16px max(4vw,16px) 40px}
-.pal{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:var(--ink);color:var(--bg);border-radius:18px;padding:14px}
+.pal{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:18px;padding:14px}
 .ring{width:112px;height:112px}
 .pal .k{font-size:13px;opacity:.75}
 .pal .nm{font:700 24px/1.1 "Barlow Condensed",system-ui,sans-serif}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.chip{display:inline-flex;align-items:center;gap:4px;background:var(--or);color:#fff;border-radius:8px;padding:2px 8px;font:700 17px "Barlow Condensed",system-ui,sans-serif}
+.chip{display:inline-flex;align-items:center;gap:4px;background:var(--or);color:#000;border-radius:8px;padding:2px 8px;font:700 17px "Barlow Condensed",system-ui,sans-serif}
 .chip.n{background:transparent;border:1px solid currentColor;opacity:.75;font:600 14px Barlow,system-ui,sans-serif}
 .nexts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
 .nx{background:var(--card);border-radius:12px;padding:8px 10px}
 .nx b{display:block;font:700 26px/1 "Barlow Condensed",system-ui,sans-serif}
-.nx span{font-size:13px;color:var(--mut);white-space:nowrap}
-.sum{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:14px 0 4px;font-size:15px}
+.nx span{font-size:13px;color:var(--mut)}
+.sum{margin:12px 0 4px;padding:12px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
 .sum b{font:700 22px "Barlow Condensed",system-ui,sans-serif}
 .live{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
 .live a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:12px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600;text-align:center;padding:6px;border:1px solid var(--line)}
-.live a.p{background:var(--or);border-color:var(--or);color:#fff}
+.live a.p{background:var(--or);border-color:var(--or);color:#000}
 h2{font:700 28px/1.05 "Barlow Condensed",system-ui,sans-serif;margin:28px 0 4px;text-wrap:balance}
 .note{color:var(--mut);font-size:13px;margin:6px 0 0}
 .fig svg{width:100%;height:auto;display:block}
@@ -63,9 +62,14 @@ details[open] summary::after{content:"–"}
 .body{padding:0 16px 14px}
 .tt{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:6px}
 .tt span{background:var(--bg);border-radius:8px;text-align:center;padding:6px 0;font:600 18px "Barlow Condensed",system-ui,sans-serif}
-.tt span.past{opacity:.3}.tt span.nx1{background:var(--or);color:#fff}
+.tt span.past{opacity:.3}.tt span.nx1{background:var(--or);color:#000;font-weight:700}.tt span.mine{box-shadow:inset 0 0 0 2px var(--or);color:var(--or)}
+.nx.mine{box-shadow:inset 0 0 0 2px var(--or)}.nx.mine span{color:var(--or)}
+.ph{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}.ph b{font:700 22px "Barlow Condensed",system-ui,sans-serif}.ph span{color:var(--mut);font-size:14px}
+.pr{display:grid;grid-template-columns:70px 1fr;gap:10px;align-items:center;padding:7px 10px;border-radius:12px}
+.pr b{font:700 24px "Barlow Condensed",system-ui,sans-serif}.pr span{font-size:14px;color:var(--mut)}.pr strong{display:block;color:var(--ink);font-size:16px;font-weight:600}
+.pr.key{background:var(--or)}.pr.key b,.pr.key span,.pr.key strong{color:#000}.pr.done{opacity:.45}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px;margin-top:10px}
-.card{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--bg)}
+.card{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--card)}
 .card.best{border:2px solid var(--or)}
 .card .h{display:flex;align-items:center;gap:10px}
 .card .h b{font:700 20px/1.1 "Barlow Condensed",system-ui,sans-serif}
@@ -74,33 +78,33 @@ details[open] summary::after{content:"–"}
 .card .t span:not(.chip){background:var(--card);border-radius:8px;padding:3px 8px;font:600 18px "Barlow Condensed",system-ui,sans-serif}
 .card .acts{display:flex;gap:8px;margin-top:10px}
 .card .acts a,.card .acts button{flex:1;display:flex;align-items:center;justify-content:center;min-height:44px;border-radius:10px;background:var(--card);color:var(--ink);text-decoration:none;font:600 15px Barlow,system-ui,sans-serif;border:1px solid var(--line);cursor:pointer}
-.chip.bus{background:var(--ink);color:var(--bg)}
+.chip.bus{background:#3a3a3c;color:#fff}
 .tag{font-size:12px;color:var(--mut)}
 .add{display:grid;grid-template-columns:1fr 1.4fr auto;gap:8px;margin-top:10px}
-.add button{min-height:44px;border:0;border-radius:10px;background:var(--or);color:#fff;font:600 16px Barlow,system-ui,sans-serif;padding:0 14px;cursor:pointer}
-.stato{display:flex;align-items:center;gap:10px;width:100%;min-height:48px;margin:0 0 12px;padding:10px 14px;border-radius:14px;border:0;font:600 15px Barlow,system-ui,sans-serif;text-align:left;cursor:pointer;background:light-dark(#e7f5ed,#13291e);color:var(--ok)}
-.stato.warn{background:light-dark(#fff1e8,#2b1a10);color:var(--or2)}
+.add button{min-height:44px;border:0;border-radius:10px;background:var(--or);color:#000;font:600 16px Barlow,system-ui,sans-serif;padding:0 14px;cursor:pointer}
+.stato{display:flex;align-items:center;gap:10px;width:100%;min-height:48px;margin:0 0 12px;padding:10px 14px;border-radius:14px;border:0;font:600 15px Barlow,system-ui,sans-serif;text-align:left;cursor:pointer;background:#0f2a1b;color:var(--ok)}
+.stato.warn{background:#2b1608;color:var(--or2)}
 .stato::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:currentColor}
 .live button{min-height:48px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:600 16px Barlow,system-ui,sans-serif;cursor:pointer}
 .pop{position:fixed;inset:0;z-index:20;background:rgba(10,15,20,.45);display:flex;align-items:flex-end;justify-content:center}
 .pop[hidden]{display:none}
-.sheet{width:100%;max-width:560px;background:var(--bg);border-radius:22px 22px 0 0;padding:10px 18px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -10px 40px rgba(0,0,0,.25)}
+.sheet{width:100%;max-width:560px;background:#151517;border-top:1px solid var(--line);border-radius:22px 22px 0 0;padding:10px 18px calc(18px + env(safe-area-inset-bottom));box-shadow:0 -10px 40px rgba(0,0,0,.25)}
 .grab{width:44px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 10px}
 .sheet h3{margin:0;font:700 30px/1.05 "Barlow Condensed",system-ui,sans-serif}
 .pl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}
 .pl div{background:var(--card);border-radius:12px;padding:10px;text-align:center}
-.pl div:first-child{background:var(--or);color:#fff}
+.pl div:first-child{background:var(--or);color:#000}
 .pl b{display:block;font:700 30px/1 "Barlow Condensed",system-ui,sans-serif}.pl span{font-size:13px}
 .av p{margin:6px 0;padding:10px 12px;border-radius:12px;background:var(--card);font-size:15px}
-.av p.w{background:light-dark(#fff1e8,#2b1a10)}
-.card{box-shadow:0 1px 0 var(--line),0 6px 18px -12px rgba(0,0,0,.25)}
+.av p.w{background:#2b1608;color:var(--or2)}
+
 @media(prefers-reduced-motion:no-preference){.sheet{animation:up .28s ease-out}@keyframes up{from{transform:translateY(40px);opacity:0}}}
 .esci{width:100%;min-height:52px;margin-top:10px;border:0;border-radius:14px;background:var(--ink);color:var(--bg);font:700 20px "Barlow Condensed",system-ui,sans-serif;cursor:pointer}
-.meteo{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:light-dark(#eaf3fb,#13212e);margin-bottom:8px;font-size:15px}
+.meteo{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:#0f1f2e;margin-bottom:8px;font-size:15px}
 .meteo b{font:700 26px "Barlow Condensed",system-ui,sans-serif;white-space:nowrap}
 .meteo:empty{display:none}
-.go{position:fixed;inset:0;z-index:30;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px}
-.go[hidden]{display:none}.go.late{background:#b3261e;color:#fff}.go.soon{background:var(--or);color:#fff}
+.go{position:fixed;inset:0;z-index:30;background:#000;color:var(--ink);display:flex;align-items:center;justify-content:center;padding:24px}
+.go[hidden]{display:none}.go.late{background:#d70015;color:#fff}.go.soon{background:var(--or);color:#000}
 .goin{width:100%;max-width:480px;text-align:center}
 .gk{font:600 20px Barlow,system-ui,sans-serif;opacity:.85}
 .gt{font:700 clamp(96px,32vw,170px)/1 "Barlow Condensed",system-ui,sans-serif;font-variant-numeric:tabular-nums;margin:8px 0}
@@ -145,14 +149,15 @@ input{width:100%;min-height:44px;font:16px Barlow,system-ui,sans-serif;padding:8
  <details><summary>Orario feriale andata</summary><div class="body"><div class="tt" id="ttA"></div><p class="note">Partenze da Statuto Cap (951), ogni 6–9 min: orari indicativi.</p></div></details>
  <details><summary>Orario feriale ritorno</summary><div class="body"><div class="tt" id="ttR"></div><p class="note">Passaggi a Caserma Monte Grappa verso Statuto, dall'ora di uscita.</p></div></details>
  <details><summary>Impostazioni</summary><div class="body">
-  <label for="sOut">Ora di uscita (pomeriggio)</label><input id="sOut" type="time" value="13:30">
+  <label for="sCasa">Partenza da casa (mattina)</label><input id="sCasa" type="time" value="07:00">
+  <label for="sOut">Uscita dall'ufficio (pomeriggio)</label><input id="sOut" type="time" value="13:45">
   <label for="sWalk">Minuti a piedi fermata ↔ Corso IV Novembre 40</label><input id="sWalk" type="number" min="0" max="20" value="4">
-  <label for="sHome">Minuti da casa alla fermata di Statuto (mattina)</label><input id="sHome" type="number" min="0" max="30" value="5">
+  <label for="sHome">Minuti a piedi casa (Corso Umbria 14) ↔ Statuto</label><input id="sHome" type="number" min="0" max="30" value="8">
   <label for="sStop">Numero palina ritorno (Caserma Monte Grappa → Statuto)</label><input id="sStop" inputmode="numeric" placeholder="lo leggi sulla palina">
  </div></details>
  <details><summary>Icona sull'iPhone</summary><div class="body"><p>Apri <b>f6kd4bp6sr-stack.github.io/mie-app/muoviti/</b> in Safari, tocca Condividi e poi «Aggiungi alla schermata Home». L'app si aggiorna da sola a ogni nuova versione.</p></div></details>
 </div>
-<p class="ver" id="ver">Versione 105c566e8e</p>
+<p class="ver" id="ver">Versione 9eede04a35</p>
 </main>
 <div class="go" id="go" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
@@ -176,7 +181,7 @@ const m2s=m=>{m=((Math.round(m)%1440)+1440)%1440;return String(Math.floor(m/60))
 const s2m=s=>{const[h,mm]=(s||"14:00").split(":").map(Number);return h*60+(mm||0)};
 const dur=x=>x>=60?Math.floor(x/60)+" h "+String(x%60).padStart(2,"0"):x+" min";
 const W=()=>Math.max(0,+$("sWalk").value||0);
-function deps(d){const o=[];if(d==="A"){for(let m=390;m<=540;m+=7)o.push(m)}else{const s=s2m($("sOut").value);for(let m=s;m<=Math.min(s+180,1320);m+=8)o.push(m)}return o}
+function deps(d){const o=[];if(d==="A"){for(let m=390;m<=540;m+=7)o.push(m)}else{for(let m=780;m<=1020;m+=8)o.push(m)}return o}
 const nowF=()=>{const n=new Date();return n.getHours()*60+n.getMinutes()+n.getSeconds()/60};
 function stops(){return dir==="A"?A.map(s=>({n:s[0],o:s[1],z:s[2],l:s[3]})):A.slice().reverse().map(s=>({n:s[0]==="Statuto Cap"?"Statuto Nord":s[0],o:RIDE-s[1],z:s[2],l:s[3]}))}
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -197,61 +202,69 @@ function renderCards(n,up){
  +mine.map((x,i)=>`<div class="card"><div class="h"><span class="chip">${esc(x.p)}</span><b>${esc(x.n||"Palina "+x.p)}</b></div><p class="tag">Aggiunta da te</p><div class="acts"><a href="${live(x.p)}">Passaggi live</a><button data-del="${i}">Togli</button></div></div>`).join("");
  $("pals").querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{const m=getMine();m.splice(+b.dataset.del,1);ls.set("mine",JSON.stringify(m));render()});
 }
-function ring(min,lbl){const r=46,C=2*Math.PI*r,f=Math.max(0,Math.min(1,min/15));
- $("ring").innerHTML=`<circle cx="56" cy="56" r="${r}" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="9"/><circle cx="56" cy="56" r="${r}" fill="none" stroke="#f2661f" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C*f} ${C}" transform="rotate(-90 56 56)"/><text x="56" y="60" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif",system-ui,sans-serif font-weight="700" font-size="${/^\d+$/.test(lbl)?38:24}" fill="currentColor">${lbl}</text><text x="56" y="80" text-anchor="middle" font-family="Barlow,system-ui,sans-serif" font-size="12" fill="currentColor" opacity=".7">${/^\d+$/.test(lbl)?"min":""}</text>`}
+const FC='font-family="Barlow Condensed,system-ui,sans-serif"',FB='font-family="Barlow,system-ui,sans-serif"';
+function ring(min,lbl){const r=46,C=2*Math.PI*r,f=Math.max(0,Math.min(1,min/15)),num=/^\d+$/.test(lbl);
+ $("ring").innerHTML=`<circle cx="56" cy="56" r="${r}" fill="none" stroke="#3a3a3c" stroke-width="9"/><circle cx="56" cy="56" r="${r}" fill="none" stroke="#ff7a33" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C*f} ${C}" transform="rotate(-90 56 56)"/><text x="56" y="${num?62:62}" text-anchor="middle" ${FC} font-weight="700" font-size="${num?40:24}" fill="#ff7a33">${lbl}</text><text x="56" y="82" text-anchor="middle" ${FB} font-size="12" fill="#c7c7cc">${num?"min":""}</text>`}
+const H=()=>Math.max(0,+$("sHome").value||0);
+// Il piano del giorno: casa 07:00 → Statuto → tram 10 → ufficio; ufficio 13:45 → Caserma Monte Grappa → tram 10 → Statuto Nord → casa
+function plan(d){const dl=deps(d),w=W(),h=H();
+ if(d==="A"){const start=s2m($("sCasa").value),at=start+h,tr=dl.find(m=>m>=at)??dl[dl.length-1];return{d,start,at,tr,down:tr+RIDE,end:tr+RIDE+w,wa:h,wb:w}}
+ const start=s2m($("sOut").value),at=start+w,tr=dl.find(m=>m>=at)??dl[dl.length-1];return{d,start,at,tr,down:tr+RIDE,end:tr+RIDE+h,wa:w,wb:h}}
 function render(){
- const n=nowF(),w=W(),dl=deps(dir),st=stops(),day=new Date().getDay();
+ const n=nowF(),fn=Math.floor(n),dl=deps(dir),st=stops(),day=new Date().getDay(),P=plan(dir);
  $("bA").setAttribute("aria-pressed",dir==="A");$("bR").setAttribute("aria-pressed",dir==="R");
- $("clk").textContent=m2s(Math.floor(n));
+ $("clk").textContent=m2s(fn);
  $("stopNm").textContent=dir==="A"?"Statuto Cap · 951":"Caserma Monte Grappa → Statuto";
  const pp=PAL[dir==="A"?0:1];$("chips").innerHTML=pp.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("");
- const fut=dl.filter(m=>m>=Math.floor(n));const tom=!fut.length;const up=(tom?dl:fut).slice(0,4);
- const d0=up[0]-Math.floor(n);
+ const fut=dl.filter(m=>m>=fn);const tom=!fut.length;const up=(tom?dl:fut).slice(0,4);
+ const d0=up[0]-fn;
  ring(tom?0:d0,tom?"domani":d0<=0?"ora":String(d0));
- $("nexts").innerHTML=up.slice(1,4).map(m=>`<div class="nx"><b>${m2s(m)}</b><span>${tom?"domani":"tra "+(m-Math.floor(n))+" min"}</span></div>`).join("");
- const leave=dir==="A"?up[0]:up[0]-w, arr=dir==="A"?up[0]+RIDE+w:up[0]+RIDE;
- $("sum").innerHTML=`<span>${dir==="A"?"Sali alle":"Esci alle"} <b>${m2s(leave)}</b></span><span>arrivi alle <b>${m2s(arr)}</b></span><span style="color:var(--mut)">${RIDE} min tram + ${w} a piedi${day===0?" · oggi festivo: orari diversi":""}</span>`;
+ $("nexts").innerHTML=up.slice(1,4).map(m=>`<div class="nx${m===P.tr?" mine":""}"><b>${m2s(m)}</b><span>${tom?"domani":"tra "+dur(m-fn)}${m===P.tr?" · il tuo":""}</span></div>`).join("");
+ // piano
+ const rows=dir==="A"?[["Esci di casa","Corso Umbria 14",P.start,0],["Alla fermata","Statuto Cap · "+P.wa+" min a piedi",P.at,0],["Tram 10","da Statuto Cap",P.tr,1],["Scendi","Caserma Monte Grappa",P.down,0],["In ufficio","Corso IV Novembre 40 · "+P.wb+" min a piedi",P.end,0]]
+  :[["Esci dall'ufficio","Corso IV Novembre 40",P.start,0],["Alla fermata","Caserma Monte Grappa · "+P.wa+" min a piedi",P.at,0],["Tram 10","verso Statuto",P.tr,1],["Scendi","Statuto Nord",P.down,0],["A casa","Corso Umbria 14 · "+P.wb+" min a piedi",P.end,0]];
+ const wait=P.tr-P.at;
+ $("sum").innerHTML=`<div class="ph"><b>Il tuo piano ${dir==="A"?"del mattino":"del pomeriggio"}</b><span>${day===0||day===6?"oggi festivo: orari diversi":wait>0?"attesa alla fermata "+wait+" min":"tram appena arrivi"}</span></div>`
+  +rows.map(r=>`<div class="pr${r[3]?" key":""}${r[2]<fn?" done":""}"><b>${m2s(r[2])}</b><span><strong>${r[0]}</strong>${r[1]}</span></div>`).join("");
  const p=dir==="A"?"951":$("sStop").value.replace(/\D/g,"");
- $("live").innerHTML=(p?`<a class="p" href="https://www.gtt.to.it/cms/percorari/arrivi?palina=${p}">Live GTT · palina ${p}</a>`:`<a class="p" href="#" id="setStop">Imposta palina ritorno</a>`)+`<a href="${AVV}">Avvisi GTT</a>`;
+ $("live").innerHTML=(p?`<a class="p" href="${live(p)}">Live GTT · palina ${p}</a>`:`<a class="p" href="#" id="setStop">Imposta palina ritorno</a>`)+`<a href="${AVV}">Avvisi GTT</a>`;
  const ss=$("setStop");if(ss)ss.onclick=e=>{e.preventDefault();const d=document.querySelectorAll("details")[2];d.open=true;$("sStop").focus()};
  const moving=dl.filter(m=>m<=n&&n-m<RIDE).pop();
- draw(st,up[0],w,moving!=null?n-moving:null);
- const all=t=>deps(t).map((m,i,a)=>`<span class="${m<Math.floor(n)?"past":(t===dir&&m===up[0]&&!tom?"nx1":"")}">${m2s(m)}</span>`).join("");
+ draw(st,P,moving!=null?n-moving:null);
+ const all=t=>{const pt=plan(t).tr;return deps(t).map(m=>`<span class="${m===up[0]&&t===dir&&!tom?"nx1":m===pt?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")};
  $("ttA").innerHTML=all("A");$("ttR").innerHTML=all("R");
  renderCards(n,up);
 }
-function draw(st,t0,w,prog){
- const pts=[];if(dir==="R")pts.push({n:"Corso IV Novembre 40",t:t0-w,home:1});
+function draw(st,P,prog){
+ const t0=P.tr,pts=[];
+ const casa={n:"Casa · Corso Umbria 14",home:1},uff={n:"Ufficio · Corso IV Novembre 40",home:2};
+ if(dir==="A")pts.push({...casa,t:P.start,wm:P.wa});else pts.push({...uff,t:P.start,wm:P.wa});
  st.forEach(s=>pts.push({n:s.n,t:t0+s.o,z:s.z,l:s.l,o:s.o}));
- if(dir==="A")pts.push({n:"Corso IV Novembre 40",t:t0+RIDE+w,home:1});
- const G=46,top=30,X=96,H=top+(pts.length-1)*G+34,VW=380;
- let s=`<svg viewBox="0 0 ${VW} ${H}" role="img" aria-label="Schema del percorso con orari">`;
- // zone
- let zi=0;const zs=[];pts.forEach((p,i)=>{if(p.z&&(!zs.length||zs[zs.length-1].z!==p.z))zs.push({z:p.z,a:i,b:i});else if(p.z)zs[zs.length-1].b=i});
- zs.forEach((z,k)=>{const y1=top+z.a*G-G/2+2,y2=top+z.b*G+G/2-2;s+=`<rect x="${X-22}" y="${y1}" width="${VW-X+20}" height="${y2-y1}" rx="12" fill="var(--zone)" ${k%2?'fill-opacity=".55"':''}/><text x="${VW-10}" y="${y1+16}" text-anchor="end" font-family="Barlow,system-ui,sans-serif" font-size="11" font-weight="600" fill="var(--mut)">${z.z.toUpperCase()}</text>`});
- // binario
- for(let i=0;i<pts.length-1;i++){const y=top+i*G,wk=pts[i].home||pts[i+1].home;
-  s+=wk?`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="var(--mut)" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/><text x="${X+16}" y="${y+G/2+4}" font-family="Barlow,system-ui,sans-serif" font-size="12" fill="var(--mut)">a piedi ${w} min</text>`
-  :`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="#f2661f" stroke-width="10"/><line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="#fff" stroke-opacity=".45" stroke-width="2" stroke-dasharray="6 6"/>`}
- // fermate
- pts.forEach((p,i)=>{const y=top+i*G,end=!p.home&&(i===0||i===pts.length-1||pts[i-1]?.home||pts[i+1]?.home);
-  s+=p.home?`<rect x="${X-13}" y="${y-13}" width="26" height="26" rx="7" fill="var(--ink)"/><path d="M${X-7} ${y+6}v-7l7-6 7 6v7z" fill="var(--bg)"/>`
-   :`<circle cx="${X}" cy="${y}" r="${end?11:7}" fill="var(--bg)" stroke="var(--ink)" stroke-width="${end?4:3}"/>`;
-  s+=`<text x="14" y="${y+7}" font-family="Barlow Condensed,system-ui,sans-serif",system-ui,sans-serif font-weight="700" font-size="21" fill="var(--ink)">${m2s(p.t)}</text>`;
-  s+=`<text x="${X+24}" y="${y+5}" font-family="Barlow,system-ui,sans-serif" font-size="15.5" font-weight="${end||p.home?600:400}" fill="var(--ink)">${p.n}</text>`;
-  if(p.l)s+=`<text x="${X+24}" y="${y+20}" font-family="Barlow,system-ui,sans-serif" font-size="11.5" fill="var(--mut)">${p.l}</text>`;
+ if(dir==="A")pts.push({...uff,t:P.end,wm:P.wb});else pts.push({...casa,t:P.end,wm:P.wb});
+ const G=46,top=30,X=96,HH=top+(pts.length-1)*G+34,VW=380;
+ let s=`<svg viewBox="0 0 ${VW} ${HH}" role="img" aria-label="Schema del percorso con orari">`;
+ const zs=[];pts.forEach((p,i)=>{if(p.z&&(!zs.length||zs[zs.length-1].z!==p.z))zs.push({z:p.z,a:i,b:i});else if(p.z)zs[zs.length-1].b=i});
+ zs.forEach((z,k)=>{const y1=top+z.a*G-G/2+2,y2=top+z.b*G+G/2-2;s+=`<rect x="${X-22}" y="${y1}" width="${VW-X+20}" height="${y2-y1}" rx="12" fill="var(--zone)" ${k%2?'fill-opacity=".6"':''}/><text x="${VW-10}" y="${y1+16}" text-anchor="end" ${FB} font-size="11" font-weight="600" fill="var(--mut)">${z.z.toUpperCase()}</text>`});
+ for(let i=0;i<pts.length-1;i++){const y=top+i*G,hp=pts[i].home?pts[i]:pts[i+1].home?pts[i+1]:null;
+  s+=hp?`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="var(--mut)" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/><text x="${X+16}" y="${y+G/2+4}" ${FB} font-size="12" fill="var(--mut)">a piedi ${hp.wm} min</text>`
+  :`<line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="#f2661f" stroke-width="10"/><line x1="${X}" y1="${y}" x2="${X}" y2="${y+G}" stroke="#000" stroke-opacity=".35" stroke-width="2" stroke-dasharray="6 6"/>`}
+ pts.forEach((p,i)=>{const y=top+i*G,end=!p.home&&(pts[i-1]?.home||pts[i+1]?.home),key=i===1;
+  if(p.home===1)s+=`<rect x="${X-13}" y="${y-13}" width="26" height="26" rx="7" fill="var(--ink)"/><path d="M${X-7} ${y+6}v-7l7-6 7 6v7z" fill="var(--bg)"/>`;
+  else if(p.home===2)s+=`<rect x="${X-13}" y="${y-13}" width="26" height="26" rx="7" fill="var(--ink)"/><rect x="${X-7}" y="${y-5}" width="14" height="11" rx="2" fill="var(--bg)"/><rect x="${X-3}" y="${y-8}" width="6" height="4" rx="1" fill="none" stroke="var(--bg)" stroke-width="2"/>`;
+  else s+=`<circle cx="${X}" cy="${y}" r="${end?11:7}" fill="var(--bg)" stroke="var(--ink)" stroke-width="${end?4:3}"/>`;
+  if(key)s+=`<rect x="6" y="${y-15}" width="66" height="30" rx="8" fill="#ff7a33"/>`;
+  s+=`<text x="${key?39:14}" y="${y+7}" ${key?'text-anchor="middle"':""} ${FC} font-weight="700" font-size="21" fill="${key?"#000":"var(--ink)"}">${m2s(p.t)}</text>`;
+  s+=`<text x="${X+24}" y="${y+5}" ${FB} font-size="15.5" font-weight="${end||p.home?600:400}" fill="var(--ink)">${p.n}</text>`;
+  if(p.l)s+=`<text x="${X+24}" y="${y+20}" ${FB} font-size="11.5" fill="var(--mut)">${p.l}</text>`;
  });
- // tram in viaggio
- if(prog!=null){const ti=dir==="R"?1:0,y=top+ti*G+(prog/RIDE)*((A.length-1)*G);
-  s+=`<g class="tram" transform="translate(${X} ${y})"><rect x="-15" y="-11" width="30" height="22" rx="6" fill="#f2661f" stroke="var(--bg)" stroke-width="3"/><rect x="-9" y="-6" width="18" height="6" rx="2" fill="#fff"/><text x="0" y="8" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif",system-ui,sans-serif font-weight="700" font-size="9" fill="#fff">10</text></g>`}
- // tram prossimo (contorno) al capolinea
- const sy=top+(dir==="R"?1:0)*G;s+=`<g transform="translate(${X} ${sy})"><rect x="-15" y="-11" width="30" height="22" rx="6" fill="var(--bg)" stroke="#f2661f" stroke-width="3"/><text x="0" y="5" text-anchor="middle" font-family="Barlow Condensed,system-ui,sans-serif",system-ui,sans-serif font-weight="700" font-size="12" fill="#f2661f">10</text></g>`;
+ if(prog!=null){const y=top+G+(prog/RIDE)*((A.length-1)*G);
+  s+=`<g class="tram" transform="translate(${X} ${y})"><rect x="-15" y="-11" width="30" height="22" rx="6" fill="#ff7a33" stroke="var(--bg)" stroke-width="3"/><rect x="-9" y="-6" width="18" height="6" rx="2" fill="#000"/><text x="0" y="8" text-anchor="middle" ${FC} font-weight="700" font-size="9" fill="#000">10</text></g>`}
  s+=`</svg>`;$("map").innerHTML=s;
- $("mapT").textContent=dir==="A"?"Andata: Statuto → Corso IV Novembre 40":"Ritorno: Corso IV Novembre 40 → Statuto";
+ $("mapT").textContent=dir==="A"?"Andata: casa → ufficio":"Ritorno: ufficio → casa";
 }
-$("sOut").value=ls.get("out","13:30");$("sWalk").value=ls.get("walk","4");$("sStop").value=ls.get("stop","385");
+$("sOut").value=ls.get("out2","13:45");$("sWalk").value=ls.get("walk","4");$("sStop").value=ls.get("stop","385");
 $("addP").addEventListener("submit",e=>{e.preventDefault();const p=$("pNum").value.replace(/\D/g,"");if(!p)return;const m=getMine();m.push({p,n:$("pName").value.trim().slice(0,40)});ls.set("mine",JSON.stringify(m));$("pNum").value="";$("pName").value="";render()});
-const K={sOut:"out",sWalk:"walk",sStop:"stop",sHome:"home"};$("sHome").value=ls.get("home","5");
+const K={sOut:"out2",sWalk:"walk",sStop:"stop",sHome:"home",sCasa:"casa"};$("sHome").value=ls.get("home2","8");$("sCasa").value=ls.get("casa","07:00");K.sHome="home2";
 Object.keys(K).forEach(id=>$(id).addEventListener("input",()=>{ls.set(K[id],$(id).value);render()}));
 $("bA").onclick=()=>{dir="A";render()};$("bR").onclick=()=>{dir="R";render()};
 render();const tick=setInterval(render,20000);
@@ -266,14 +279,14 @@ function meteoAt(min,dom){if(!meteo||!meteo.time)return"";const d=new Date();if(
  return `<b>${t}°</b><span>alle ${m2s(Math.floor(min/60)*60)}: ${WC(c)}, prob. pioggia ${pp}%${tip?" · <strong>"+tip+"</strong>":""}</span>`}
 // Esci adesso: conto alla rovescia a tutto schermo
 let goTimer=null,goStart=0;
-function esci(){render();const n=nowF(),dl=deps(dir),w=dir==="A"?Math.max(0,+$("sHome").value||0):W();
- const t=dl.find(m=>m-w>=n)??dl.find(m=>m>=n);if(t==null){return}
+function esci(){render();const n=nowF(),dl=deps(dir),P=plan(dir);let t,w;
+ if(P.start>n){t=P.tr;w=P.tr-P.start}else{w=dir==="A"?H():W();t=dl.find(m=>m-w>=n)??dl.find(m=>m>=n)}if(t==null){return}
  goStart=n;$("go").hidden=false;
  const tick=()=>{const now=nowF(),left=(t-w-now)*60,tot=Math.max(1,(t-w-goStart)*60);
   const a=Math.max(0,Math.round(left)),mm=Math.floor(a/60),ss=a%60;
   $("goT").textContent=mm>=60?`${Math.floor(mm/60)}h ${String(mm%60).padStart(2,"0")}`:`${mm}:${String(ss).padStart(2,"0")}`;
   $("goK").textContent=left>0?"Esci tra":"Esci ora!";
-  $("goS").textContent=`Tram 10 delle ${m2s(t)} da ${dir==="A"?"Statuto Cap":"Caserma Monte Grappa"} · ${w} min a piedi`;
+  $("goS").textContent=`Esci ${dir==="A"?"di casa":"dall'ufficio"} alle ${m2s(t-w)} · tram 10 delle ${m2s(t)} da ${dir==="A"?"Statuto Cap":"Caserma Monte Grappa"}`;
   $("goB").style.width=Math.min(100,Math.max(0,100*(1-left/tot)))+"%";
   $("go").className="go"+(left<=0?" late":left<=120?" soon":"");
   if(now>t+1){clearInterval(goTimer)}};
@@ -289,7 +302,7 @@ function stato(){const m=miei(),b=$("stato");b.className="stato"+(m.length?" war
  b.textContent=m.length?`${m.length} avviso${m.length>1?"i":""} GTT su 10/94: tocca per leggere`:`Nessun avviso GTT su 10 e 94${avvisi.agg?" · controllato "+avvisi.agg:""}`}
 function popup(d){if(d)dir=d;render();const n=nowF(),dl=deps(dir),f0=dl.filter(m=>m>=Math.floor(n)),dom=!f0.length,fut=(dom?dl:f0).slice(0,3),w=W();
  $("popT").textContent=dir==="A"?"Andata: tram 10 da Statuto":"Ritorno: tram 10 da Caserma Monte Grappa";
- $("popS").textContent=(dir==="A"?"Prossime partenze da Statuto Cap (951)":"Prossimi passaggi verso Statuto · esci "+w+" min prima")+" · orari indicativi";
+ {const P=plan(dir);$("popS").textContent=`Il tuo piano: esci alle ${m2s(P.start)}, tram 10 delle ${m2s(P.tr)}, arrivo ${m2s(P.end)} · orari indicativi`}
  $("popL").innerHTML=fut.map(m=>`<div><b>${m2s(m)}</b><span>${dom?"domani":"tra "+dur(m-Math.floor(n))}</span></div>`).join("");
  $("popM").innerHTML=meteoAt(fut[0],dom);
  const m=miei();$("popA").innerHTML=m.length?m.map(a=>`<p class="w"><b>Linea ${esc((a.linee||[]).join(", "))}</b> · ${esc(a.titolo||"")}${a.quando?" · "+esc(a.quando):""}</p>`).join(""):`<p>Nessuna deviazione o comunicazione GTT per 10 e 94${avvisi.agg?" (controllo "+esc(avvisi.agg)+")":""}. Per sicurezza guarda il live.</p>`;
@@ -304,7 +317,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
  if(ls.get("pop-"+slot,"")===k)return;ls.set("pop-"+slot,k);popup(slot)}
 Promise.all([loadAvv(),loadMeteo()]).then(autoPop);document.addEventListener("visibilitychange",()=>{if(!document.hidden)Promise.all([loadAvv(),loadMeteo()]).then(autoPop)});
 // Web app: copia senza internet e aggiornamento automatico a ogni pubblicazione
-const VER="105c566e8e";
+const VER="9eede04a35";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let reloading=false;
 function checkVer(){if(location.protocol!=="https:")return;fetch("version.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(v=>{if(v&&v.v&&v.v!==VER&&!reloading){reloading=true;
