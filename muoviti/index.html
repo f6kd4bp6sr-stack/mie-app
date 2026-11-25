@@ -117,6 +117,12 @@ details[open] summary::after{content:"–"}
 .dy{display:flex;align-items:center;justify-content:center;min-height:44px;margin:0;border-radius:10px;background:var(--bg);border:1px solid var(--line);color:var(--ink);font:600 15px -apple-system,system-ui,sans-serif;cursor:pointer}
 .dy input{position:absolute;opacity:0;pointer-events:none}.dy:has(input:checked){background:var(--or);border-color:var(--or);color:#000}
 .vac{display:grid;grid-template-columns:1fr 1fr;gap:8px}.vac input{color-scheme:dark}
+.corsa{margin-top:10px}
+.sali{width:100%;min-height:52px;border:0;border-radius:14px;background:var(--or);color:#000;font:700 21px "Avenir Next Condensed","Arial Narrow",system-ui,sans-serif;cursor:pointer}
+.viaggio{border:2px solid var(--or);border-radius:14px;padding:10px 12px;background:var(--card)}
+.viaggio b{font-size:17px}.viaggio .vacb button:first-child{background:var(--ok);border-color:var(--ok)}
+.st-h{font-weight:700;margin:12px 0 2px}.st-l{list-style:none;padding:0;margin:6px 0;font-size:14px}.st-l li{padding:3px 0;border-bottom:1px solid var(--line)}
+.stv svg{width:100%;height:auto;display:block}
 .vacb{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
 .vacb button{min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:600 15px -apple-system,system-ui,sans-serif;cursor:pointer}
 .vacb button:first-child{background:var(--or);border-color:var(--or);color:#000}
@@ -140,6 +146,7 @@ details[open] summary::after{content:"–"}
 .card .acts{flex-wrap:wrap}.card .acts a,.card .acts button{flex:1 1 100%;min-height:44px}
 .card .t span:not(.chip){font-size:16px;padding:2px 6px}
 .grid details:has(#sOut){grid-column:1/-1}
+.grid details:has(#stat){grid-column:1/-1}
 input{max-width:100%}.tipi label,.dy{position:relative;overflow:hidden}.tipi input,.dy input{left:0;top:0;width:1px;height:1px;margin:0}.vac input{width:100%;min-width:0;-webkit-appearance:none;appearance:none}
 .nx{text-decoration:none;color:var(--ink)}.nt{display:flex;align-items:baseline;justify-content:space-between;gap:6px;flex:1;min-width:0}
 .nx .ver{flex:none;margin-left:8px;padding:4px 8px;border-radius:8px;border:1px solid var(--or);color:var(--or);font:600 13px -apple-system,system-ui,sans-serif;white-space:nowrap}
@@ -178,6 +185,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
 <h2 id="mapT">Il percorso</h2>
 <div class="fig" id="map"></div>
 <p class="note">Orari stimati dalla frequenza della linea (non sono l'orario ufficiale): il tram pieno è la posizione stimata. Per i passaggi veri usa «Live GTT».</p>
+<div class="corsa" id="corsa"></div>
 
 <h2 id="altT">Alternative per l'ufficio</h2>
 <div class="cards" id="alt"></div>
@@ -197,6 +205,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
 <div class="grid">
  <details><summary>Orario andata (stime)</summary><div class="body"><p class="tag" id="ttN"></p><div class="tt" id="ttA"></div><p class="note">Stima da Statuto Cap (951): circa ogni 7 min di giorno, più rado presto, la sera e nei festivi. Non è l'orario ufficiale.</p></div></details>
  <details><summary>Orario ritorno (stime)</summary><div class="body"><div class="tt" id="ttR"></div><p class="note">Stima a Caprera (387) verso Statuto: circa ogni 8 min di giorno. Non è l'orario ufficiale.</p></div></details>
+ <details><summary>La mia statistica del tram</summary><div class="body stv" id="stat"></div></details>
  <details><summary>Impostazioni</summary><div class="body">
   <label for="sCasa">Partenza da casa (mattina)</label><input id="sCasa" type="time" value="07:00">
   <label for="sOut">Uscita dall'ufficio (pomeriggio)</label><input id="sOut" type="time" value="14:00">
@@ -220,7 +229,7 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
  </div></details>
 
 </div>
-<p class="ver" id="ver">Versione 91f039c98c</p>
+<p class="ver" id="ver">Versione 918050e6aa</p>
 </main>
 <div class="go" id="go" role="dialog" aria-modal="true" aria-label="Conto alla rovescia" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
@@ -325,7 +334,42 @@ function plan(d,from){const w=W(),h=H(),b=via60(),start=from??startDef(d);
   return{d,start,at,dep,tr:dep,down,end,wa:w,wb:end-down,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Caprera · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Statuto → Umbria (stima)",bus,0],["Casa","sotto casa",end,0]]}}
  return{d,start,at,dep,tr:dep,down,end:down+h,wa:w,wb:h,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Caprera · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Casa","a piedi "+h+"′",down+h,0]]}}
 const palV=()=>dir==="A"?"951":$("sStop").value.replace(/\D/g,"");
+// ---------- Le mie corse: «Salgo sul tram» registra l'ora vera di salita ----------
+const corse=()=>jget("corse",[],Array.isArray).filter(c=>c&&(c.d==="A"||c.d==="R")&&typeof c.s==="number"&&typeof c.g==="string"&&typeof c.id==="number");
+const attiva=()=>{const c=jget("corsa",null,v=>v&&(v.d==="A"||v.d==="R")&&typeof v.ms==="number");if(!c)return null;if(Date.now()-c.ms>75*60000||Date.now()<c.ms){ls.del("corsa");return null}return c};
+const viaggi=d=>corse().filter(c=>c.d===d&&typeof c.r==="number"&&c.r>=5&&c.r<=60);
+const rideMedia=d=>{const v=viaggi(d).slice(-10);return v.length?v.reduce((a,c)=>a+c.r,0)/v.length:RIDE};
+const mediana=a=>{const b=a.slice().sort((x,y)=>x-y),k=b.length>>1;return b.length%2?b[k]:(b[k-1]+b[k])/2};
+const GGc=["dom","lun","mar","mer","gio","ven","sab"];
+function sali(){const n=new Date(),ms=n.getTime(),m=n.getHours()*60+n.getMinutes()+n.getSeconds()/60;
+ const c=corse();c.push({id:ms,g:isoDi(n),w:n.getDay(),d:dir,s:Math.round(m*10)/10});ls.set("corse",JSON.stringify(c.slice(-500)));
+ ls.set("corsa",JSON.stringify({d:dir,ms}));render()}
+function scendi(){const a=attiva();if(a){const r=Math.round((Date.now()-a.ms)/6000)/10,c=corse(),x=c.find(e=>e.id===a.ms);if(x)x.r=r;ls.set("corse",JSON.stringify(c))}ls.del("corsa");render()}
+function annulla(){const a=attiva();if(a)ls.set("corse",JSON.stringify(corse().filter(e=>e.id!==a.ms)));ls.del("corsa");render()}
+function corsaUI(trip,st){
+ if(!trip){const n=corse().filter(c=>c.d===dir).length;
+  $("corsa").innerHTML=`<button class="sali" id="saliB" type="button">🚋 Salgo sul tram</button><p class="tag">Toccalo quando sali (${dir==="A"?"a Statuto":"a Caprera"}): il tram scorre sul percorso e nel tempo impari a che ora passa davvero. Corse registrate in questa direzione: ${n}.</p>`;
+  $("saliB").onclick=sali;return}
+ const el=(Date.now()-trip.ms)/60000,k=rideMedia(trip.d)/RIDE,prox=st.find(s=>s.o*k>el+.05),fine=st[st.length-1];
+ $("corsa").innerHTML=`<div class="viaggio" aria-live="polite"><b>🚋 In viaggio · salito alle ${m2s(trip.t0)}</b><p class="tag">${prox?`Prossima fermata: <b>${prox.n}</b> verso le ${m2s(trip.t0+prox.o*k)}`:`Dovresti essere a ${fine.n}`} · arrivo stimato ${m2s(trip.t0+RIDE*k)}${k!==1?" (dalle tue corse)":""}</p><div class="vacb"><button id="scendiB" type="button">Sono sceso</button><button id="annB" type="button">Annulla</button></div></div>`;
+ $("scendiB").onclick=scendi;$("annB").onclick=annulla}
+let cancOk=0;
+function statUI(){const c=corse(),el=$("stat");if(!el)return;
+ if(!c.length){el.innerHTML=`<p class="tag">Ancora nessuna corsa. Tocca «🚋 Salgo sul tram» ogni volta che sali: qui vedrai a che ora passa davvero il tram che prendi e quanto dura il viaggio.</p>`;return}
+ let h="";for(const d of ["A","R"]){const v=c.filter(x=>x.d===d);if(!v.length)continue;
+  const md=mediana(v.map(x=>x.s)),vg=viaggi(d);
+  h+=`<p class="st-h">${d==="A"?"Andata · Statuto → ufficio":"Ritorno · Caprera → Statuto"}</p><p class="tag">${v.length} corse · di solito sali alle <b>${m2s(md)}</b>${vg.length?` · viaggio medio <b>${Math.round(rideMedia(d))} min</b> (stima ${RIDE})`:""}</p>`;
+  const lo=Math.floor((md-30)/5)*5,bins=Array(12).fill(0);v.forEach(x=>{const i=Math.floor((x.s-lo)/5);if(i>=0&&i<12)bins[i]++});const mx=Math.max(1,...bins);
+  h+=`<svg viewBox="0 0 360 120" role="img" aria-label="Ore di salita sul tram, a gruppi di 5 minuti">`+bins.map((b,i)=>{const bh=b/mx*80,x=8+i*29;return `<rect x="${x}" y="${96-bh}" width="24" height="${Math.max(bh,1)}" rx="4" fill="${b?"var(--or)":"var(--line)"}"/>${b?`<text x="${x+12}" y="${90-bh}" text-anchor="middle" font-size="11" fill="var(--ink)" font-family="system-ui">${b}</text>`:""}${i%2?"":`<text x="${x+12}" y="114" text-anchor="middle" font-size="11" fill="var(--mut)" font-family="system-ui">${m2s(lo+i*5)}</text>`}`}).join("")+`</svg>`;
+  const pg=[1,2,3,4,5].map(w=>{const z=v.filter(x=>x.w===w);return z.length?`${GGc[w]} ${m2s(mediana(z.map(x=>x.s)))}`:""}).filter(Boolean);
+  if(pg.length>1)h+=`<p class="tag">Per giorno: ${pg.join(" · ")}</p>`}
+ h+=`<p class="st-h">Ultime corse</p><ul class="st-l">`+c.slice(-6).reverse().map(x=>`<li>${GGc[x.w]} ${it(x.g)} · ${x.d==="A"?"andata":"ritorno"} · ${m2s(x.s)}${typeof x.r==="number"?" · "+Math.round(x.r)+" min":""}</li>`).join("")+`</ul>`;
+ h+=`<div class="vacb"><button id="stCsv" type="button">Copia i dati</button><button id="stDel" type="button">${cancOk?"Tocca ancora per cancellare":"Cancella statistica"}</button></div>`;
+ el.innerHTML=h;
+ $("stDel").onclick=()=>{if(!cancOk){cancOk=1;statUI();return}cancOk=0;ls.del("corse");ls.del("corsa");render()};
+ $("stCsv").onclick=()=>{const t="data;giorno;direzione;salita;minuti\n"+corse().map(x=>[x.g,GGc[x.w],x.d==="A"?"andata":"ritorno",m2s(x.s),x.r??""].join(";")).join("\n");try{navigator.clipboard.writeText(t).then(()=>{$("stCsv").textContent="Copiati ✓"},()=>{})}catch(e){}}}
 function render(){
+ const trip0=attiva();if(trip0)dir=trip0.d;
  const n=nowF(),fn=Math.floor(n),st=stops(),oggi=new Date(),fest=festivo(oggi);
  const pv=palV();let P=plan(dir),kk=0;const passato=fn>P.end;if(passato){kk=prossimoLavoro(1);P=plan(dir,startDef(dir)+1440*kk)}else if(!giorni().includes(oggi.getDay())||fest||inVac()){kk=prossimoLavoro(0);if(kk)P=plan(dir,startDef(dir)+1440*kk)}
  $("bA").setAttribute("aria-pressed",dir==="A");$("bR").setAttribute("aria-pressed",dir==="R");
@@ -344,19 +388,22 @@ function render(){
  const p=pv;
  $("live").innerHTML=(p?`<a class="p" href="${live(p)}">Live GTT · palina ${esc(p)}</a>`:`<a class="p" href="#" id="setStop">Imposta palina ritorno</a>`)+`<a href="${AVV}">Avvisi GTT</a>`;
  const ss=$("setStop");if(ss)ss.onclick=e=>{e.preventDefault();const d=$("sStop").closest("details");if(d)d.open=true;$("sStop").focus()};
+ const trip=trip0?{...trip0,t0:(()=>{const b=new Date(trip0.ms);return b.getHours()*60+b.getMinutes()+b.getSeconds()/60})(),k:rideMedia(trip0.d)/RIDE}:null;
  const moving=deps(dir).filter(m=>m<=n&&n-m<RIDE).pop();
- draw(st,P,moving!=null?n-moving:null);
+ if(trip){const el=(Date.now()-trip.ms)/60000;draw(st,P,Math.min(RIDE,el/trip.k),trip)}else draw(st,P,moving!=null?n-moving:null);
+ corsaUI(trip,st);statUI();
  const all=t=>{const pt=plan(t).dep;const nx=t===dir?up[0]:-1;return deps(t).map(m=>`<span class="${m===nx?"nx1":m===pt?"mine":m<fn?"past":""}">${m2s(m)}</span>`).join("")};
  $("ttA").innerHTML=all("A");$("ttR").innerHTML=all("R");
  $("ttN").textContent=fest?"Oggi festivo: stime con frequenza ridotta.":"";
  renderCards(up);
 }
-function draw(st,P,prog){
- const t0=P.dep,pts=[];
+function draw(st,P,prog,trip){
+ const t0=trip?trip.t0:P.dep,kk=trip?trip.k:1,pts=[];
  const casa={n:"Casa · Corso Umbria 14",home:1},uff={n:"Ufficio · Corso IV Novembre 40",home:2};
- if(dir==="A")pts.push({...casa,t:P.start,wm:P.wa,lab:P.b?"bus 60 + a piedi":null});else pts.push({...uff,t:P.start,wm:P.wa});
- st.forEach(s=>pts.push({n:s.n,t:t0+s.o,z:s.z}));
- if(dir==="A")pts.push({...uff,t:P.end,wm:P.wb});else pts.push({...casa,t:P.end,wm:P.wb,lab:P.b?"a piedi + bus 60":null});
+ if(dir==="A")pts.push({...casa,t:trip?t0-P.wa:P.start,wm:P.wa,lab:P.b?"bus 60 + a piedi":null});else pts.push({...uff,t:trip?t0-P.wa:P.start,wm:P.wa});
+ st.forEach(s=>pts.push({n:s.n,t:t0+s.o*kk,z:s.z}));
+ const fe=trip?t0+RIDE*kk+P.wb:P.end;
+ if(dir==="A")pts.push({...uff,t:fe,wm:P.wb});else pts.push({...casa,t:fe,wm:P.wb,lab:P.b?"a piedi + bus 60":null});
  const G=34,top=22,X=90,HH=top+(pts.length-1)*G+34,VW=380;
  let s=`<svg viewBox="0 0 ${VW} ${HH}" role="img" aria-label="Schema del percorso con orari stimati">`;
  const zs=[];pts.forEach((p,i)=>{if(p.z&&(!zs.length||zs[zs.length-1].z!==p.z))zs.push({z:p.z,a:i,b:i});else if(p.z)zs[zs.length-1].b=i});
@@ -399,7 +446,7 @@ $("addP").addEventListener("submit",e=>{e.preventDefault();const t=tipo();let p=
  const m=getMine();m.push({t,p,n:$("pName").value.trim().slice(0,40)});ls.set("mine",JSON.stringify(m));$("pNum").value="";$("pName").value="";render()});
 document.querySelectorAll('#cMode input').forEach(r=>{r.checked=r.value===ls.get("casaMode","piedi");r.onchange=()=>{ls.set("casaMode",r.value);render()}});
 $("bA").onclick=()=>{dir="A";render()};$("bR").onclick=()=>{dir="R";render()};
-render();setInterval(()=>{if($("go").hidden)render()},20000);
+render();setInterval(()=>{if($("go").hidden)render()},20000);setInterval(()=>{if($("go").hidden&&localStorage.getItem("mv-corsa"))render()},4000);
 // ---------- Rete con limite d'attesa (3 s) ----------
 const conLimite=(pr,ms=3000)=>Promise.race([pr,new Promise((_,no)=>setTimeout(()=>no(new Error("timeout")),ms))]);
 // ---------- Meteo (Open-Meteo, senza chiavi) ----------
@@ -473,7 +520,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="91f039c98c";
+const VER="918050e6aa";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
