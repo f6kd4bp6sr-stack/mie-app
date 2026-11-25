@@ -216,12 +216,11 @@ input{width:100%;min-height:44px;font:16px -apple-system,system-ui,sans-serif;pa
   <p class="lab">Segnala altre paline</p>
   <label for="s60a">Bus 60 sotto casa → Porta Susa</label><input id="s60a" inputmode="numeric" placeholder="lo leggi sulla palina">
   <label for="s60b">Bus 60 sotto casa → via Paris</label><input id="s60b" inputmode="numeric" placeholder="lo leggi sulla palina">
-  <label for="s94">Bus 94 a Piazza Statuto (andata)</label><input id="s94" inputmode="numeric" placeholder="lo leggi sulla palina">
   <p class="tag">I numeri che inserisci compaiono nelle card con il link ai passaggi live GTT.</p>
  </div></details>
 
 </div>
-<p class="ver" id="ver">Versione 97338389c9</p>
+<p class="ver" id="ver">Versione 91f039c98c</p>
 </main>
 <div class="go" id="go" role="dialog" aria-modal="true" aria-label="Conto alla rovescia" hidden><div class="goin">
  <div class="gk" id="goK">Esci tra</div><div class="gt" id="goT">--:--</div>
@@ -279,11 +278,9 @@ const nomeGiorno=k=>k===0?"oggi":k===1?"domani":GG[dataTra(k).getDay()];
 function prossimoLavoro(k){for(let i=k;i<k+14;i++){const d=dataTra(i);if(giorni().includes(d.getDay())&&!festivo(d)&&!inVacData(d))return i}return k}
 function stops(){return dir==="A"?A.map(s=>({n:s[0],o:s[1],z:s[2]})):A.slice().reverse().map(s=>({n:s[0]==="Statuto Cap"?"Statuto Nord":s[0],o:RIDE-s[1],z:s[2]}))}
 // ---------- Paline e alternative ----------
-const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Partenza del mattino"},{p:"",n:"Umbria · sotto casa",l:[["60","bus"]],k:"Bus 60: verso Porta Susa e verso via Paris"},{p:"387",n:"Caprera",l:[["10","tram"]],k:"Ritorno verso Statuto"},{p:"385",n:"Caserma Monte Grappa",l:[["10","tram"],["94","bus"],["55","bus"],["5","bus"],["12","bus"],["64","bus"]],k:"Vicino al civico 40 · dati Moovit/OSM da verificare"}];
-const ALT={A:[{l:"60",ty:"bus",h:"Bus 60 sotto casa → Porta Susa",d:"Fermata Umbria verso Corso Inghilterra (Porta Susa), poi tram 10 da XVIII Dicembre. Si attiva nel piano da Impostazioni.",t60:1},{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Statuto Cap → Caserma Monte Grappa, poi a piedi. Circa ogni 7 min di giorno.",p:"951"},
- {l:"94",ty:"bus",pk:"s94",h:"Bus 94 · Piazza Statuto ↔ Caserma Monte Grappa",d:"Ferma anche a Caserma Monte Grappa. Palina a Statuto e frequenza da verificare."}],
+const PAL=[{p:"951",n:"Statuto Cap",l:[["10","tram"]],k:"Partenza del mattino"},{p:"",n:"Umbria · sotto casa",l:[["60","bus"]],k:"Bus 60: verso Porta Susa e verso via Paris"},{p:"387",n:"Caprera",l:[["10","tram"]],k:"Ritorno verso Statuto"},{p:"386",n:"Arrivo del mattino",l:[["10","tram"]],k:"Discesa dal tram 10 verso l'ufficio"},{p:"385",n:"Caserma Monte Grappa",l:[["10","tram"],["55","bus"],["5","bus"],["12","bus"],["64","bus"]],k:"Vicino al civico 40 · dati Moovit/OSM da verificare"}];
+const ALT={A:[{l:"60",ty:"bus",h:"Bus 60 sotto casa → Porta Susa",d:"Fermata Umbria verso Corso Inghilterra (Porta Susa), poi tram 10 da XVIII Dicembre. Si attiva nel piano da Impostazioni.",t60:1},{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Statuto Cap → palina 386, poi a piedi. Circa ogni 7 min di giorno.",p:"951"}],
  R:[{l:"10",ty:"tram",best:1,h:"Tram 10 diretto",d:"Caprera → Statuto Nord (corsa per Rondò Forca). Circa ogni 8 min di giorno.",p:"387"},
- {l:"94",ty:"bus",h:"Bus 94 · direzione Centro Piazza Statuto",d:"Dalla palina 385 (Caserma Monte Grappa), porta in Piazza Statuto. Frequenza da verificare: usa il live.",p:"385"},
  {l:"60",ty:"bus",h:"Bus 60 da Statuto fino a casa",d:"Dopo il tram: Statuto → Regina Margherita → Don Bosco → Umbria.",t60:1},
  {l:"5 · 12 · 55 · 64",ty:"bus",h:"Altre linee alla palina 385",d:"Non vanno a Statuto: 5 Vittorio Veneto, 12 Porta Nuova, 55 Vanchiglia, 64 Serao.",p:"385"}]};
 const TIPI=["ind","pal","tram","bus","metro"];
@@ -320,9 +317,9 @@ function plan(d,from){const w=W(),h=H(),b=via60(),start=from??startDef(d);
  const first=(at,off=0)=>prossime(d,at-off).find(m=>m+off>=at);
  if(d==="A"){
   if(b){const bus=start+B60.toFerm+B60.attesa,ps=bus+B60.corsaA,at=ps+B60.aPiediPS,dep=first(at,3),tr=dep+3;
-   return{d,start,at,dep,tr,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Bus 60","Umbria → Porta Susa (stima)",bus,0],["Scendi","Porta Susa, poi a piedi",ps,0],["Tram 10","da XVIII Dicembre",tr,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
+   return{d,start,at,dep,tr,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Bus 60","Umbria → Porta Susa (stima)",bus,0],["Scendi","Porta Susa, poi a piedi",ps,0],["Tram 10","da XVIII Dicembre",tr,1],["Scendi","Palina 386",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
   const at=start+h,dep=first(at);
-  return{d,start,at,dep,tr:dep,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Fermata","Statuto Cap · "+h+"′",at,0],["Tram 10","da Statuto Cap",dep,1],["Scendi","Caserma Monte Grappa",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
+  return{d,start,at,dep,tr:dep,down:dep+RIDE,end:dep+RIDE+w,wa:h,wb:w,b,rows:[["Esci","da casa",start,0],["Fermata","Statuto Cap · "+h+"′",at,0],["Tram 10","da Statuto Cap",dep,1],["Scendi","Palina 386",dep+RIDE,0],["Ufficio","a piedi "+w+"′",dep+RIDE+w,0]]}}
  const at=start+w,dep=first(at),down=dep+RIDE;
  if(b){const bus=down+B60.aPiediSt+B60.attesa,end=bus+B60.corsaR+B60.toFerm;
   return{d,start,at,dep,tr:dep,down,end,wa:w,wb:end-down,b,rows:[["Esci","dall'ufficio",start,0],["Fermata","Caprera · "+w+"′",at,0],["Tram 10","verso Statuto",dep,1],["Scendi","Statuto Nord",down,0],["Bus 60","Statuto → Umbria (stima)",bus,0],["Casa","sotto casa",end,0]]}}
@@ -392,8 +389,8 @@ function vacUI(){const v=vac(),t=oggiISO();
  $("vSt").textContent=v&&v.a>=t?(v.da<=t?`Popup sospesi fino al ${it(v.a)} compreso.`:`Popup sospesi dal ${it(v.da)} al ${it(v.a)}.`):"Popup attivi nei giorni scelti.";
  if(v){$("vDa").value=v.da;$("vA").value=v.a}}
 // ---------- Impostazioni ----------
-$("sOut").value=ls.get("out3","14:00");$("sWalk").value=ls.get("walk","4");if(ls.get("stop","")==="385")ls.set("stop","387");$("sStop").value=ls.get("stop","387");$("sHome").value=ls.get("home2","8");$("sCasa").value=ls.get("casa","07:00");$("s60a").value=ls.get("p60a","");$("s60b").value=ls.get("p60b","");$("s94").value=ls.get("p94","");
-const K={sOut:"out3",sWalk:"walk",sStop:"stop",sHome:"home2",sCasa:"casa",s60a:"p60a",s60b:"p60b",s94:"p94"};
+$("sOut").value=ls.get("out3","14:00");$("sWalk").value=ls.get("walk","4");if(ls.get("stop","")==="385")ls.set("stop","387");$("sStop").value=ls.get("stop","387");$("sHome").value=ls.get("home2","8");$("sCasa").value=ls.get("casa","07:00");$("s60a").value=ls.get("p60a","");$("s60b").value=ls.get("p60b","");
+const K={sOut:"out3",sWalk:"walk",sStop:"stop",sHome:"home2",sCasa:"casa",s60a:"p60a",s60b:"p60b"};
 Object.keys(K).forEach(id=>$(id).addEventListener("input",()=>{ls.set(K[id],$(id).value);render()}));
 const HINT={ind:["Via e numero, es. Via Roma 20","L'indirizzo apre il percorso con i mezzi in Mappe, da dove sei o da casa.","text"],pal:["Numero palina, es. 470","Passaggi live GTT della palina (il numero è scritto sulla fermata).","numeric"],tram:["Numero linea tram, es. 4","Fermate e prossimi passaggi della linea.","text"],bus:["Numero linea bus, es. 94","Fermate e prossimi passaggi della linea.","text"],metro:["Fermata metro, es. Porta Susa","Percorso fino alla fermata della metro in Mappe.","text"]};
 const tipo=()=>(document.querySelector('#addP input[name=tipo]:checked')||{value:"ind"}).value;
@@ -443,7 +440,7 @@ function pulisci(v){if(!v||typeof v!=="object")return null;const L=Array.isArray
  return{agg:typeof v.agg==="string"?v.agg.slice(0,20):"",iso:typeof v.iso==="string"?v.iso:"",linee:L.filter(a=>a&&typeof a==="object").map(a=>({linee:(Array.isArray(a.linee)?a.linee:[a.linee]).filter(x=>x!=null).map(String).slice(0,8),titolo:String(a.titolo||"").slice(0,200),quando:String(a.quando||"").slice(0,80)})).filter(a=>a.linee.length&&a.titolo)}}
 {const c=pulisci(jget("avv",null,v=>!!v));if(c)avvisi=c}
 function loadAvv(){return conLimite(fetch("avvisi.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json())).then(v=>{const c=pulisci(v);if(c){avvisi=c;ls.set("avv",JSON.stringify(c))}}).catch(()=>{}).finally(()=>{try{stato()}catch(e){}})}
-const mieLinee=()=>via60()?["10","94","60"]:["10","94"];
+const mieLinee=()=>via60()?["10","60"]:["10"];
 const miei=()=>avvisi.linee.filter(a=>a.linee.some(l=>mieLinee().includes(l)));
 // età del controllo: «iso» se presente, altrimenti «GG/MM HH:MM» dell'anno corrente (o precedente)
 function etaOre(){let t=Date.parse(avvisi.iso);if(!Number.isFinite(t)){const m=/^(\d{2})\/(\d{2}) (\d{2}):(\d{2})/.exec(avvisi.agg);if(!m)return Infinity;const n=new Date();let d=new Date(n.getFullYear(),+m[2]-1,+m[1],+m[3],+m[4]);if(d>n)d.setFullYear(d.getFullYear()-1);t=d.getTime()}return (Date.now()-t)/36e5}
@@ -476,7 +473,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="97338389c9";
+const VER="91f039c98c";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
