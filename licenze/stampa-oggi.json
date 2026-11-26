@@ -1,177 +1,88 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-25T13:04+01:00",
+  "edizione": "mattina",
+  "updated": "2026-11-26T05:10+01:00",
   "sezioni": {
     "italia": [
       {
-        "id": "it-manovra-chigi",
-        "t": "Manovra: vertice a Palazzo Chigi tra Governo e maggioranza sul calendario in commissione",
-        "s": "Riunione con Mantovano, Giorgetti, Ciriani, la ragioniera generale Perrotta, il presidente della commissione Bilancio Mangialavori, capigruppo e relatori, per fissare metodo e tempi dell'esame alla Camera. L'ANSA non riporta ancora gli esiti.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/25/manovra-riunione-governo-maggioranza-a-palazzo-chigi-con-mantovano-e-giorgetti_89646261-4185-4169-ae7b-46ca88eab534.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-mattarella-25nov",
-        "t": "Mattarella: uscire dalla violenza è possibile, ma non può dipendere solo dal coraggio delle donne",
-        "s": "Nella Giornata contro la violenza sulle donne il Capo dello Stato chiede alle istituzioni protezione, accompagnamento e giustizia, e indica l'educazione in famiglia, a scuola e sul lavoro come leve decisive.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/25/mattarella-uscire-da-violenza-e-possibile-non-dipende-solo-dal-coraggio-di-una_8ab6cb30-cccb-46f2-9747-4594d98dd742.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-25nov",
-        "t": "25 novembre: cortei e presidi di Non Una di Meno in oltre 40 città",
-        "s": "Nel decennale della prima manifestazione nazionale transfemminista, iniziative in più di 40 città. Dal 25 al 28 novembre a Roma gli Stati Generali dell'Autodeterminazione; sabato 28 corteo nazionale alle 14:30 da piazza della Repubblica.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/speciali/25-novembre/2026/11/24/non-una-di-meno-per-il-25-novembre-sit-in-e-iniziative-in-40-citta_8cae99d6-2e9b-4a47-8352-902d3556cc4b.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-maltempo",
-        "t": "Maltempo: allerta arancione su parte di Emilia-Romagna e Lazio, gialla in altre sette regioni",
-        "s": "Una perturbazione atlantica porta piogge diffuse, temporali e vento forte, con piogge intense soprattutto sul versante tirrenico. Allerta gialla su Toscana, Abruzzo, Umbria, Campania e Molise, oltre alle parti non arancioni di Emilia-Romagna e Lazio.",
+        "id": "it-manovra-calendario",
+        "t": "Manovra: il calendario fino al voto finale previsto il 30 dicembre",
+        "s": "Dopo il vertice di maggioranza a Palazzo Chigi, i lavori in commissione Bilancio alla Camera partono il 3 dicembre, con votazioni dal 9. L'Aula della Camera è prevista il 18 dicembre, il Senato il 28 e il via libera definitivo il 30.",
         "d": "2026-11-25",
         "fonti": [
           {
             "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/cronaca/maltempo-piogge-temporali-allerta-ultime-notizie_5mk3gGwGo6u3LYHgyaTmXN"
+            "url": "https://www.adnkronos.com/economia/manovra-maggioranza-accelera-su-modifiche-possibile-stop-spalma-crediti-superbonus_SyQlsTeJZ0z3ma4ZBQM6D"
           }
         ],
         "link": []
       },
       {
-        "id": "it-manovra-emend",
-        "t": "Manovra: tagliola su oltre 1.700 emendamenti, in aula alla Camera dal 18 dicembre",
-        "s": "I lavori in commissione Bilancio finiranno il 16 dicembre. Dei 6.558 emendamenti depositati ne restano 700 segnalati, da indicare entro giovedì 26 novembre alle 14. Tra quelli esclusi c'è la proposta della Lega di alzare l'Ires alle banche.",
+        "id": "it-patrimoniale-tavolo",
+        "t": "Centrosinistra: «grandi passi avanti» su fisco e patrimoniale al tavolo del programma",
+        "s": "Al tavolo dei progressisti i delegati hanno raggiunto varie intese, tra cui quelle sul fisco. Il confronto è proseguito il 25 novembre e, secondo le fonti, non servirebbe un vertice tra i leader. La notizia non riporta cifre sulla patrimoniale.",
         "d": "2026-11-24",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/manovra-2027-ultime-notizie-oggi_IXQVqWL5XOFx9onh57BLJ"
-          },
-          {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/manovra-tagliola-su-oltre-1.700-emendamenti-anche-la-proposta-della-lega-di-alzare_6fda15fa-62be-4fc8-9ee0-e23897a4997a.html"
+            "url": "https://ansa.it/sito/notizie/topnews/2026/11/24/grandi-passi-in-avanti-sulla-patrimoniale-al-tavolo-progressista_abc93b0e-ecef-406e-a28b-96ed6d22e5c5.html"
           }
         ],
         "link": []
       },
       {
-        "id": "it-degennaro",
-        "t": "Caso De Gennaro: il Ris di Roma analizza i reperti trovati nella casa toscana",
-        "s": "Gli accertamenti proseguono; venerdì è prevista l'autopsia, con perizia calligrafica sui manoscritti sequestrati. Il ministro Nordio osserva che il processo mediatico ha fatto male a molti.",
-        "d": "2026-11-24",
+        "id": "it-degennaro-lettere",
+        "t": "Caso De Gennaro: lettere con accuse al procuratore di Caltanissetta, secondo Corriere e Repubblica",
+        "s": "Nelle lettere lasciate dall'ex capo della polizia ci sarebbero accuse al procuratore Salvatore De Luca, che ne aveva chiesto l'arresto nell'inchiesta sulla strage di via D'Amelio. In una busta c'era anche l'hard disk mai trovato nelle perquisizioni.",
+        "d": "2026-11-25",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/24/analisi-del-ris-a-roma-sui-reperti-trovati-nella-casa-toscana_f547b6cf-2afa-4335-8e33-c8cb26ef8d53.html"
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/le-lettere-di-de-gennaro-lhard-disk-non-ve-lho-dato-perche-non-avreste_990dcfdb-4804-4496-9613-4036357dd514.html"
           }
         ],
-        "link": [
-          {
-            "n": "ANSA: venerdì l'autopsia",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/24/venerdi-lautopsia-su-de-gennaro.-perizia-calligrafica-sui-manoscritti-sequestrati-nella-casa_acf4144f-3ca4-492d-8a97-103e8ebf2941.html"
-          }
-        ]
+        "link": []
       }
     ],
     "mondo": [
       {
-        "id": "mo-israele-governo",
-        "t": "Israele: il blocco del cambiamento punta a insediare il nuovo governo mercoledì prossimo",
-        "s": "Secondo Channel 12, dopo l'accordo del 24 novembre tra il partito di Eisenkot e Yisrael Beiteinu di Liberman, che prevede l'esenzione dalla leva per gli studenti della Torah, si cercano altri accordi di coalizione entro la settimana.",
-        "d": "2026-11-25",
+        "id": "mo-ucraina-savasleyka",
+        "t": "Ucraina: colpita la base aerea russa di Savasleyka, danneggiati cinque aerei",
+        "s": "Secondo lo Stato maggiore di Kiev sono stati danneggiati tre MiG-31 e due cacciabombardieri Su-34 nella regione di Nižnij Novgorod. Mosca non ha commentato subito. L'attacco segue altri raid ucraini recenti, anche contro navi russe.",
+        "d": "2026-11-26",
         "fonti": [
           {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/israele-change-bloc-punta-a-insediare-un-nuovo-governo-mercoledi-prossimo_d382b6df-0b01-413e-94f9-859e88c479f3.html"
+            "n": "Al Jazeera",
+            "url": "https://aljazeera.com/news/2026/11/26/ukraine-attacks-russian-military-base-says-five-planes-struck",
+            "l": "en"
           }
         ],
         "link": []
       },
       {
-        "id": "mo-netanyahu-processo",
-        "t": "Processo Netanyahu: i giudici invitano la procura a riconsiderare l'accusa di corruzione",
-        "s": "In un'udienza di meno di dieci minuti la giudice Friedman-Feldman osserva che nel caso 4000 le difficoltà riguardano anche l'abuso di fiducia e che nel caso 2000 le probabilità di condanna sono basse. La procuratrice è pronta a un verdetto o a un accordo.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/25/processo-netanyahu-giudici-chiedono-alla-procura-di-rinunciare-alla-corruzione_d6204362-9918-44aa-aba3-71d7daa019f1.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-houthi",
-        "t": "Yemen: la coalizione saudita intercetta droni Houthi dopo il raid su Hodeidah",
-        "s": "Quattro droni abbattuti su Ras Tanura e altri tre nella provincia orientale, senza vittime. Gli Houthi minacciano i porti sauditi del Mar Rosso, tra cui Gedda, dopo il colpo alla città portuale e il drone che martedì ha ferito almeno 11 persone a Riad.",
+        "id": "mo-israele-eisenkot",
+        "t": "Israele: Eisenkot stringe il primo patto di coalizione con il partito di Lieberman",
+        "s": "Il partito centrista di Gadi Eisenkot si allea con Israel Our Home dopo le elezioni del 27 ottobre. Ha tempo fino al 6 dicembre per formare il governo. Il blocco del Likud ha 53 seggi su 120; proseguono anche i colloqui con il Likud.",
         "d": "2026-11-25",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/25/saudi-led-coalition-intercepts-houthi-attacks-after-hodeidah-strike",
+            "url": "https://aljazeera.com/news/2026/11/25/israels-eisenkot-secures-first-coalition-partner-in-bid-to-form-government",
             "l": "en"
-          },
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/riad-11-feriti-nellattacco-degli-houthi-contro-il-quartiere-daffari_1b68310a-b366-4028-a767-18784f94939d.html"
           }
         ],
         "link": []
       },
       {
-        "id": "mo-vdl-ucraina",
-        "t": "Von der Leyen al Parlamento europeo: Kiev resisterà, l'Ue al suo fianco",
-        "s": "La presidente della Commissione cita perdite russe superiori a 50.000 nel solo ottobre e un divario di bilancio ucraino di circa 70 miliardi nel 2027. Propone uno strumento da 45 miliardi; Kiev rimborserà solo quando la Russia pagherà i danni.",
+        "id": "mo-trump-elsayed",
+        "t": "Usa: Trump vuole incontrare il senatore eletto El-Sayed sulla sanità pubblica",
+        "s": "Trump ha detto che parlerà con il democratico Abdul El-Sayed, che propone un'assicurazione sanitaria pubblica e la chiamerebbe «Trumpcare». Nessuna data fissata. Resta incerto che l'idea di un «Medicare per tutti» trovi spazio al Congresso.",
         "d": "2026-11-25",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-ue-parlamento-news-oggi-25-novembre-2026_3Y9Cr1nnQZoASVawRtJP19"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-patriot",
-        "t": "Il Financial Times: Hegseth blocca la consegna di 60 missili Patriot all'Ucraina",
-        "s": "Secondo il quotidiano britannico, riportato dall'ANSA, il segretario alla Difesa americano ha fermato l'invio.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/24/il-ft-hegseth-blocca-la-consegna-di-60-missili-per-patriot-allucraina_2d8d9336-6bc5-4470-a273-9eaa8cf9c91c.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-libia",
-        "t": "Due militari libici morti per le ferite dell'attacco ucraino alle navi russe",
-        "s": "La notizia è nel notiziario ANSAmed del 25 novembre.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/due-militari-libici-morti-per-le-ferite-nellattacco-ucraino-alle-navi_e83f53f0-5096-43bb-9fbc-102279013d31.html"
+            "n": "Al Jazeera",
+            "url": "https://aljazeera.com/news/2026/11/25/trump-to-meet-abdul-el-sayed-will-he-agree-to-a-renamed-medicare-for-all",
+            "l": "en"
           }
         ],
         "link": []
@@ -179,70 +90,28 @@
     ],
     "estero": [
       {
-        "id": "es-iran-usa",
-        "t": "Gli Usa invitano i cittadini a lasciare subito l'Iran: ostilità che possono aggravarsi in fretta",
-        "s": "L'ambasciata virtuale americana avverte che Iran, Houthi e gruppi alleati possono colpire interessi e cittadini Usa, dopo gli attacchi iraniani in Bahrein e Kuwait. Possibili cancellazioni di voli e chiusure dello spazio aereo.",
+        "id": "es-ue-bilancio-costa",
+        "t": "Eurodeputati contro Costa: niente via libera a un bilancio Ue 2028-2034 ridotto",
+        "s": "I negoziatori del Parlamento europeo rifiutano il taglio del 10% del bilancio pluriennale, da circa 2.000 a 1.780 miliardi di euro, proposto dal presidente del Consiglio europeo. Appoggiano invece le nuove risorse proprie, tra cui una tassa sui servizi digitali.",
         "d": "2026-11-25",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/25/us-tells-citizens-to-leave-iran-warns-hostilities-could-escalate-fast",
+            "url": "https://euronews.com/2026/11/25/meps-warn-costa-no-approval-without-a-bigger-eu-budget",
             "l": "en"
           }
         ],
         "link": []
       },
       {
-        "id": "es-borse-asia",
-        "t": "Le Borse asiatiche crollano: Taiwan -7,9%, Seul oltre -6%, Tokyo -3,6%",
-        "s": "Il ritorno di Huang alla guida di Nvidia non calma i dubbi sul boom dell'intelligenza artificiale: pesanti i titoli dei chip, da Tokyo Electron a Samsung, SK Hynix e TSMC. Hong Kong sale fino all'1,3%.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/25/asias-stock-markets-dive-as-doubts-to-swirl-over-ai-boom",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-shenzhou",
-        "t": "La Cina porta in orbita il primo astronauta straniero: un pakistano sulla stazione Tiangong",
-        "s": "Shenzhou 24 è partita da Jiuquan con Tang Hongbo, Wu Yi e il pakistano Muhammad Zeeshan Ali, in missione breve. Più di 90 esperimenti; Pechino prepara lo sbarco sulla Luna entro il 2030.",
+        "id": "es-shenzhou24",
+        "t": "La Cina lancia la Shenzhou 24 con il primo astronauta straniero, un pakistano",
+        "s": "La missione cinese porta in orbita per la prima volta un astronauta non cinese: un pakistano. La notizia è tra i titoli di apertura di Euronews del 25 novembre.",
         "d": "2026-11-25",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/25/china-sends-first-foreign-astronaut-to-its-space-station-as-pakistani-joins-shenzhou-24-cr",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-magyar-zelensky",
-        "t": "Magyar e Zelensky aprono un «nuovo capitolo» tra Ungheria e Ucraina",
-        "s": "Incontro in Transcarpazia del premier ungherese e del presidente ucraino. Budapest porta aiuti per un miliardo di fiorini, esclude forniture di armi e, secondo i media, ha tolto le obiezioni sugli ultimi due capitoli negoziali Ue per Ucraina e Moldova.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/25/peter-magyar-and-volodymyr-zelenskyy-open-new-chapter-in-ukraine-hungary-relations",
-            "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-chen-jining",
-        "t": "Cina: indagato Chen Jining, segretario di Partito di Shanghai e membro del Politburo",
-        "s": "La commissione disciplinare annuncia un'inchiesta per «gravi violazioni della disciplina e della legge», formula che di solito indica corruzione. È il quarto alto dirigente del Politburo allontanato in due anni.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/25/who-is-chen-jining-chinas-latest-politburo-member-under-investigation",
+            "url": "https://www.euronews.com/just-in",
             "l": "en"
           }
         ],
@@ -250,13 +119,13 @@
       },
       {
         "id": "es-nordcorea-svizzera",
-        "t": "Pyongyang espelle il capo della missione svizzera e ordina di chiudere l'ufficio di Berna",
-        "s": "L'agenzia KCNA parla di ritorsione per le sanzioni svizzere contro un campo per bambini a Wonsan. L'ufficio era stato aperto il 19 ottobre; al diplomatico sono concesse 48 ore.",
+        "t": "Pyongyang espelle il diplomatico svizzero e fa chiudere l'ufficio di Berna",
+        "s": "La Corea del Nord ha ordinato la chiusura dell'ufficio svizzero aperto il 19 ottobre e l'espulsione del diplomatico che lo guidava, secondo Euronews.",
         "d": "2026-11-25",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/25/north-korea-expels-swiss-diplomat-and-orders-berns-new-pyongyang-office-to-close",
+            "url": "https://www.euronews.com/news",
             "l": "en"
           }
         ],
@@ -265,40 +134,14 @@
     ],
     "economia": [
       {
-        "id": "ec-borsa",
-        "t": "Borsa: Milano poco mossa, Ftse Mib -0,15% sotto 48.000; Stellantis +5,3%",
-        "s": "Frenano le banche (UniCredit -1,4%, Banco Bpm -1,5%), salgono Stellantis, Buzzi e Ferrari. In tarda mattinata lo spread Btp-Bund è a 110,9 punti.",
+        "id": "ec-dazi-usa",
+        "t": "Dazi: gli Usa propongono tariffe per Cina, Ue e altri 12 Paesi",
+        "s": "Washington indica il 20% per Cina e Vietnam, il 15% per Ue, Svizzera, Corea del Sud e Giappone. Le tariffe passano prima da una consultazione pubblica. La Commissione europea richiama la dichiarazione congiunta che fissa il limite al 15%.",
         "d": "2026-11-25",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/25/borsa-milano-cambia-rotta-015-frenano-le-banche-acquisti-su-stelllantis_9857e8c5-8bfa-4991-9c4b-a93785f9f306.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "ec-spread",
-        "t": "Lo spread Btp-Bund apre a 109,5 punti, il Btp decennale al 4,33%",
-        "s": "Il differenziale sale da 109 della chiusura precedente; il rendimento del Btp cala di 2,3 punti, quello del Bund di 2,5 al 3,24%.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/25/lo-spread-tra-btp-e-bund-tedeschi-apre-in-rialzo-a-10945-punti_f2012667-c15f-4edd-be05-4b6c67fe8f8c.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "ec-boehringer",
-        "t": "Boehringer Ingelheim investe 160 milioni in cinque anni nello stabilimento di Fornovo San Giovanni",
-        "s": "Il piano, presentato al Mimit, prevede almeno tre nuovi principi attivi e l'ammodernamento del sito bergamasco, che conta circa 320 dipendenti diretti.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/economia/boehringer-ingelheim-investe-160-milioni-in-5-anni-per-produrre-piu-principi-attivi-in-italia_6hnsnrBC0j5QPDrXqIjYMz"
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/usa-propongono-nuovi-dazi-per-cina-ue-e-altri-12-paesi_7b5dc39c-cbf2-4816-91bd-81f56b44833b.html"
           }
         ],
         "link": []
@@ -306,27 +149,40 @@
     ],
     "torino": [
       {
-        "id": "to-25nov",
-        "t": "Torino: il 25 novembre la Mole si illumina di arancione contro la violenza sulle donne",
-        "s": "In città convegni e iniziative: 760 manifesti, posto vuoto nelle sale del Torino Film Festival.",
-        "d": "2026-11-25",
+        "id": "to-tff-travolta",
+        "t": "Torino Film Festival: red carpet con John Travolta, standing ovation in sala",
+        "s": "L'attore americano è stato accolto dal pubblico alla 44ª edizione del festival, in corso fino al 2 dicembre.",
+        "d": "2026-11-24",
         "fonti": [
           {
-            "n": "Torino Oggi",
-            "url": "https://www.torinoggi.it/2026/11/17/leggi-notizia/argomenti/eventi-11/articolo/25-novembre-torino-rinnova-il-proprio-impegno-contro-la-violenza-sulle-donne.html"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/24/standing-ovation-per-travolta-al-tff-mi-avete-permesso-di-volare-in-alto_1c1fb85f-9b6b-48b7-8b68-1548e8a9c3a0.html"
           }
         ],
         "link": []
       },
       {
-        "id": "to-corteo-nudm",
-        "t": "Torino, corteo di Non Una di Meno per il 25 novembre: percorso e modifiche alla viabilità",
-        "s": "TorinoToday pubblica il percorso del corteo contro la violenza di genere e le informazioni su viabilità e mezzi GTT (dal titolo della pagina, articolo non letto).",
+        "id": "to-neve",
+        "t": "Montagne del Torinese imbiancate: neve ovunque oltre i mille metri",
+        "s": "TorinoToday segnala nevicate sui rilievi con il maltempo del 25 novembre (dal titolo della pagina, articolo non letto).",
         "d": "2026-11-25",
         "fonti": [
           {
             "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/attualita/non-una-di-meno-corteo-violenza-25-novembre-mezzi-gtt.html"
+            "url": "https://www.torinotoday.it/meteo/maltempo-nevicate-pioggia-25-novembre-2026.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-don-ali",
+        "t": "Torino, confermata in appello la condanna per l'agguato al maestro: fine pena nel 2027",
+        "s": "Secondo TorinoToday, i giudici d'appello non hanno concesso sconti all'imputato noto come Don Alì per l'aggressione al maestro. Il titolo indica che la pena finirà nel 2027. Pagina non leggibile per intero: dettagli da verificare.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "TorinoToday",
+            "url": "https://torinotoday.it/cronaca/condanna-don-ali-agguato-maestro-conferma-appello.html"
           }
         ],
         "link": []
@@ -353,19 +209,6 @@
           {
             "n": "Torino Oggi",
             "url": "https://www.torinoggi.it/2026/11/24/leggi-notizia/argomenti/attualita-31/articolo/violenza-contro-le-donne-a-torino-86-casi-seguiti-dalla-polizia-locale-nellultimo-anno-erano-51.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-neve",
-        "t": "Montagne del Torinese imbiancate: neve ovunque oltre i mille metri",
-        "s": "TorinoToday segnala nevicate sui rilievi con il maltempo del 25 novembre (dal titolo della pagina, articolo non letto).",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/meteo/maltempo-nevicate-pioggia-25-novembre-2026.html"
           }
         ],
         "link": []
@@ -412,19 +255,6 @@
         "link": []
       },
       {
-        "id": "pi-alessandria",
-        "t": "Alessandria: a fine gennaio i primi risultati dei lavori al Palazzo di Giustizia",
-        "s": "Lo ha detto il sottosegretario Ostellari.",
-        "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/ostellari-a-fine-gennaio-primi-risultati-lavori-palazzo-giustizia-alessandria_e12b1ba0-1320-456e-bacc-c3ac71a0f1b0.html"
-          }
-        ],
-        "link": []
-      },
-      {
         "id": "pi-pragelato",
         "t": "Oltre 2 milioni per lo Ski Jumping Hotel di Pragelato",
         "s": "Finanziamento per la struttura in alta Val Chisone.",
@@ -436,22 +266,48 @@
           }
         ],
         "link": []
-      }
-    ],
-    "scienza": [
+      },
       {
-        "id": "sc-superluna",
-        "t": "Superluna del Castoro: oggi la Luna piena alla minima distanza, alle 15:55",
-        "s": "La Luna sarà a circa 359.000 km dalla Terra, poco più grande e luminosa della media. È la seconda Superluna dell'anno.",
+        "id": "pi-novara-investimenti",
+        "t": "Confindustria Novara: sul territorio investimenti per quasi 10 miliardi",
+        "s": "Secondo l'associazione degli industriali, nel Novarese sono in corso o previsti investimenti per quasi 10 miliardi di euro.",
         "d": "2026-11-24",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/24/arriva-la-superluna-di-novembre-e-una-luna-piena-alla-distanza-minima_cd7ac9db-00a3-4c57-9e3c-1a53de16ce87.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/24/confindustria-novara-sul-territorio-investimenti-per-quasi-10-miliardi_aa242b03-3669-484f-a079-b9bc9481528c.html"
           }
         ],
         "link": []
       },
+      {
+        "id": "pi-accordo-242",
+        "t": "Governo e Regione: accordo da 242 milioni per interventi strategici in Piemonte",
+        "s": "La Regione ha comunicato l'accordo con il Governo per finanziare opere e interventi considerati strategici per il territorio. Dettagli sulla pagina della Regione.",
+        "d": "2026-11-19",
+        "fonti": [
+          {
+            "n": "Regione Piemonte",
+            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/accordo-governo-regione-242-milioni-per-interventi-strategici-piemonte"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "pi-voucher-scuola",
+        "t": "Voucher scuola: la Regione Piemonte finanzia tutte le domande",
+        "s": "La Regione annuncia che le risorse coprono tutte le richieste presentate per il voucher scuola.",
+        "d": "2026-11-20",
+        "fonti": [
+          {
+            "n": "Regione Piemonte",
+            "url": "https://www.regione.piemonte.it/web/pinforma/notizie/voucher-scuola-regione-finanzia-tutte-domande"
+          }
+        ],
+        "link": []
+      }
+    ],
+    "scienza": [
       {
         "id": "sc-herpes",
         "t": "Ricostruita l'avanzata del virus Herpes simplex nella pelle",
@@ -478,6 +334,58 @@
       }
     ],
     "eventi": [
+      {
+        "id": "ev-tff44",
+        "t": "44° Torino Film Festival, dedicato a Marilyn Monroe nel centenario della nascita",
+        "s": "Il festival porta in città film, ospiti e proiezioni in più sale; la cerimonia di apertura si è tenuta al Teatro Regio.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/tff-torino-film-festival-44-edizione"
+          },
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/torino-film-festival/"
+          }
+        ],
+        "link": [],
+        "quando": "fino a mer 2 dic 2026",
+        "dove": "varie sale, Torino",
+        "costo": "prezzi sul sito"
+      },
+      {
+        "id": "ev-maratona",
+        "t": "FIAT Torino City Marathon",
+        "s": "Maratona cittadina con partenza da piazza Vittorio Veneto e due punti di arrivo.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/fiat-torino-city-marathon/"
+          }
+        ],
+        "link": [],
+        "quando": "dom 29 nov 2026, 8:00-14:30",
+        "dove": "piazza Vittorio Veneto, Torino",
+        "costo": "vedi sito"
+      },
+      {
+        "id": "ev-presepe-annunziata",
+        "t": "Presepe meccanico della SS. Annunziata",
+        "s": "Presepe meccanico in via Po, aperto durante le feste.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/presepe-meccanico-della-ss-annunziata-via-po-2026"
+          }
+        ],
+        "link": [],
+        "quando": "dal 7 nov 2026 al 1 gen 2027",
+        "dove": "via Po, Torino",
+        "costo": "prezzo sul sito"
+      },
       {
         "id": "ev-luci-artista",
         "t": "Luci d'Artista: installazioni luminose in tutta la città",
@@ -507,21 +415,6 @@
         "quando": "dal 13 nov al 20 dic (inaugurazione ven 13 nov, 18:30)",
         "dove": "Centro storico, Asti",
         "costo": "mercatini gratuiti"
-      },
-      {
-        "id": "ev-kusama",
-        "t": "Yayoi Kusama. Infinity Mirrored Room alle OGR di Torino",
-        "s": "Mostra con la Infinity Mirrored Room dell'artista giapponese; dettagli e orari sulla pagina di Turismo Torino.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/yayoi-kusama-infinity-mirrored-room"
-          }
-        ],
-        "quando": "fino al 25 feb 2027, apertura settimanale",
-        "dove": "OGR, Torino",
-        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
       },
       {
         "id": "ev-banksy",
@@ -588,116 +481,184 @@
       {
         "id": "spe-cin-hunger-games",
         "t": "Hunger Games: L'alba sulla mietitura, il nuovo capitolo della saga",
-        "s": "Il sedicenne Haymitch, del Distretto 12, partecipa alla 50ª edizione dei Giochi e i ribelli gli chiedono di far saltare l'arena. Regia di Francis Lawrence.",
-        "d": "2026-11-23",
+        "s": "Il giovane Haymitch, del Distretto 12, partecipa alla 50ª edizione dei Giochi. Regia di Francis Lawrence.",
+        "d": "2026-11-26",
         "fonti": [
           {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/cinema/torino/"
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/hunger-games-l-alba-sulla-mietitura/66957/scheda/"
           }
         ],
         "link": [],
-        "quando": "orari della settimana sul sito della sala",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "quando": "oggi gio 26 nov: 15:15, 18:15, 21:15 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-rumore-cose-nuove",
+        "t": "Il rumore delle cose nuove, commedia corale di Paolo Genovese",
+        "s": "Tre famiglie milanesi che si sfiorano da anni senza conoscersi vengono sconvolte da un incontro imprevisto. Regia di Paolo Genovese.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/il-rumore-delle-cose-nuove/68017/scheda/"
+          }
+        ],
+        "link": [],
+        "quando": "oggi gio 26 nov: 17:20, 21:40 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-se-domani-non-torno",
+        "t": "Se domani non torno, il film di Paola Randi sulla storia di Gino Cecchettin",
+        "s": "Il padre di Giulia Cecchettin affronta la perdita della figlia e un percorso di consapevolezza sul femminicidio. Regia di Paola Randi.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/se-domani-non-torno/68243/scheda/"
+          }
+        ],
+        "link": [],
+        "quando": "oggi gio 26 nov: 15:10, 19:30 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
       {
         "id": "spe-cin-scrooge",
         "t": "Scrooge e gli Spiriti del Natale, nuova versione del racconto di Dickens",
-        "s": "Rilettura cinematografica del classico natalizio con protagonista l'avaro Ebenezer. Regia di Ti West.",
-        "d": "2026-11-23",
+        "s": "Rilettura del classico natalizio: l'avaro Ebenezer ottiene una seconda possibilità in una notte di magia e terrore. Regia di Ti West.",
+        "d": "2026-11-26",
         "fonti": [
           {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/cinema/torino/provincia/?f=119804"
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/scrooge-e-gli-spiriti-del-natale/68609/scheda/"
           }
         ],
         "link": [],
-        "quando": "orari della settimana sul sito della sala",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
-        "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-dio-ride",
-        "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
-        "s": "Nell'Italia del Seicento un frate attira folle con le sue prediche; l'inquisitore mandato a giudicarlo finisce per dubitare. Regia di Giovanni Veronesi.",
-        "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/film/2026/dio-ride/"
-          }
-        ],
-        "quando": "orari della settimana sul sito della sala",
-        "dove": "Cinema Ideal",
-        "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-wild-horse-nine",
-        "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh con Sam Rockwell e John Malkovich",
-        "s": "Nel 1973, alla vigilia del colpo di stato in Cile, due agenti della Cia raggiungono l'Isola di Pasqua; il progetto di scrivere le memorie di uno dei due allarma il capo. Regia di Martin McDonagh, 118 minuti.",
-        "d": "2026-11-23",
-        "fonti": [
-          {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/film/2026/wild-horse-nine/"
-          }
-        ],
-        "quando": "orari della settimana sul sito della sala",
+        "quando": "oggi gio 26 nov: 15:00, 17:15 (altri giorni sul sito della sala)",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
       {
         "id": "spe-cin-gatto-cappello",
-        "t": "Il Gatto col Cappello, il film d'animazione tratto da Dr. Seuss (per tutti)",
-        "s": "Il Gatto incaricato di intrattenere due fratelli annoiati in due giornate di pioggia scatena un caos enorme e rischia il licenziamento. Regia di Alessandro Carloni ed Erica Rivinoja.",
-        "d": "2026-11-23",
+        "t": "Il Gatto col Cappello, animazione tratta da Dr. Seuss (per tutti)",
+        "s": "Un gatto con il cappello intrattiene due fratelli in due giornate di pioggia, con risultati caotici. Per tutti, anche per i più piccoli.",
+        "d": "2026-11-26",
         "fonti": [
           {
-            "n": "MYmovies",
-            "url": "https://www.mymovies.it/film/2026/il-gatto-col-cappello/"
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/il-gatto-col-cappello/67427/scheda/"
           }
         ],
-        "quando": "orari della settimana sul sito della sala",
+        "link": [],
+        "quando": "oggi gio 26 nov: 15:10, 17:15 (altri giorni sul sito della sala)",
         "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
       {
-        "id": "spe-cin-godzilla-minus-zero",
-        "t": "Godzilla Minus Zero, il seguito del film giapponese premiato con l'Oscar",
-        "s": "Seguito di «Godzilla Minus One» ambientato nel Giappone del dopoguerra. Regia di Takashi Yamazaki.",
-        "d": "2026-11-23",
+        "id": "spe-cin-dio-ride",
+        "t": "Dio ride, la commedia di Giovanni Veronesi sul frate e l'inquisitore",
+        "s": "Nel Seicento un frate che predica il Vangelo viene processato da un cardinale inquisitore che inizia a dubitare. Regia di Giovanni Veronesi.",
+        "d": "2026-11-26",
         "fonti": [
           {
-            "n": "ComingSoon Cinema Ideal",
-            "url": "https://www.comingsoon.it/cinema/torino/ideal/1072/"
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/dio-ride/69130/scheda/"
           }
         ],
         "link": [],
-        "quando": "orari della settimana sul sito della sala",
-        "dove": "The Space Cinema Torino e Cinema Ideal",
+        "quando": "oggi gio 26 nov: 19:30, 21:40 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
         "costo": "Ideal 9 €"
       },
       {
-        "id": "spe-tea-bicicletta",
-        "t": "Il giorno in cui mio padre mi ha insegnato ad andare in bicicletta",
-        "s": "Spettacolo in cartellone al Teatro Stabile di Torino; interpreti, orari e prezzi sul sito.",
-        "d": "2026-11-24",
-        "quando": "24-29 nov 2026 (orari sul sito)",
-        "dove": "Teatro Gobetti, Torino",
+        "id": "spe-cin-wild-horse-nine",
+        "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh",
+        "s": "Nel 1973, alla vigilia del golpe contro Allende, due agenti della CIA si trovano sull'Isola di Pasqua. Regia di Martin McDonagh.",
+        "d": "2026-11-26",
         "fonti": [
           {
-            "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/en/categoria_portfolio/3-gobetti-26-27/"
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/wild-horse-nine/68581/scheda/"
           }
         ],
-        "link": []
+        "link": [],
+        "quando": "oggi gio 26 nov: 21:35 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-weekend-artificiale",
+        "t": "Un weekend artificiale, la commedia di Leonardo Pieraccioni",
+        "s": "Un parrucchiere fiorentino, invitato in una villa con sei sconosciuti, deve smascherare un umanoide creato con l'intelligenza artificiale. Regia di Leonardo Pieraccioni.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/un-weekend-artificiale/69096/scheda/"
+          }
+        ],
+        "link": [],
+        "quando": "oggi gio 26 nov: 19:45 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-tea-bolle",
+        "t": "Roberto Bolle and Friends, gala di danza",
+        "s": "Serata di danza con Roberto Bolle e danzatori internazionali, produzione Arte Danza.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/opera-e-balletto-2026-2027/roberto-bolle-and-friends"
+          }
+        ],
+        "link": [],
+        "quando": "mer 2 e gio 3 dic 2026, 20:00",
+        "dove": "Teatro Regio, Torino",
+        "costo": "biglietti su Vivaticket"
+      },
+      {
+        "id": "spe-tea-pierino",
+        "t": "Pierino e il lupo, spettacolo per famiglie al Teatro Regio",
+        "s": "Titolo della stagione famiglie del Teatro Regio, in cartellone per più repliche.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/famiglia-2026-2027/pierino-e-il-lupo"
+          }
+        ],
+        "link": [],
+        "quando": "dal 28 nov al 5 dic 2026 (orari sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "biglietti su Vivaticket"
+      },
+      {
+        "id": "spe-tea-frigo",
+        "t": "Differenti sensazioni / Il frigo, di Copi, con Eva Robin's",
+        "s": "Monologo di 60 minuti, regia di Andrea Adriatico, produzione Teatri di Vita.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/differenti-sensazioni-il-frigo-2/"
+          }
+        ],
+        "link": [],
+        "quando": "sab 28 nov 2026, 21:00",
+        "dove": "Officine Caos, Torino",
+        "costo": "a pagamento, con prenotazione"
       },
       {
         "id": "spe-tea-incendi",
         "t": "Incendi",
         "s": "Spettacolo in cartellone al Teatro Stabile di Torino, in replica fino al 29 novembre; interpreti, orari e prezzi sul sito.",
-        "d": "2026-11-24",
+        "d": "2026-11-26",
         "quando": "fino al 29 nov 2026 (orari sul sito)",
         "dove": "Teatro Carignano, Torino",
         "fonti": [
@@ -710,22 +671,6 @@
       }
     ],
     "concerti": [
-      {
-        "id": "co-jussen",
-        "t": "Lucas e Arthur Jussen in concerto a quattro mani",
-        "s": "Recital dei due pianisti olandesi per la stagione dell'Unione Musicale.",
-        "d": "2026-11-16",
-        "fonti": [
-          {
-            "n": "Unione Musicale",
-            "url": "https://unionemusicale.it/concerto/lucas-e-arthur-jussen/"
-          }
-        ],
-        "link": [],
-        "quando": "mer 25 nov 2026 (orario sul sito)",
-        "dove": "Torino (luogo sul sito)",
-        "costo": "prezzi sul sito"
-      },
       {
         "id": "co-lotr-mystery",
         "t": "Musiche da The Lord of the Rings: tribute a Howard Shore",
@@ -1157,12 +1102,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-16T05:05+01:00",
-      "edizione": "mattina",
-      "notizie": 80,
-      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi, Comune di Torino (eventi), Ideal Cityplex, Hiroshima Mon Amour, Teatro Regio, Unione Musicale, Teatro Stabile. Reuters (ricerca rifiutata dal proxy); BBC/Guardian non cercate. TorinoToday non cercato. The Space Cinema Torino: pagina senza programmazione leggibile (orari solo Ideal). Lunedì: concerti aggiornati con i siti di Hiroshima, Regio e Unione Musicale; Inalpi Arena e Lingotto Musica copiati dalla lista precedente. Copia locale divergente: riallineata a origin/main."
-    },
-    {
       "at": "2026-11-16T13:04+01:00",
       "edizione": "pomeriggio",
       "notizie": 78,
@@ -1275,7 +1214,13 @@
       "edizione": "pomeriggio",
       "notizie": 78,
       "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en), TorinoToday (solo titoli: pagine non leggibili). Non raggiunti: torinotoday (7 pagine), Reuters/BBC/Guardian non cercate; rainews e lastampa non cercati. Eventi (con una mostra in più), cinema, teatro, concerti, scienza copiati dalla precedente (non è lunedì; nessun concerto passato). Copia locale non divergente: nessun riallineamento."
+    },
+    {
+      "at": "2026-11-26T05:10+01:00",
+      "edizione": "mattina",
+      "notizie": 73,
+      "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en), Regione Piemonte, MYmovies/ComingSoon (Cinema Ideal), Teatro Regio, Comune di Torino, Turismo Torino. Non raggiunti: Reuters e BBC/Guardian (ricerca rifiutata), TorinoToday (pagine non leggibili, solo titolo da ricerca), The Space Cinema (pagina non leggibile: film dati solo per Cinema Ideal), notiziario ANSAMed (404). Concerti, scienza e tecnologia copiati dalla precedente (non è lunedì; tolti i passati). Copia locale riallineata a origin/main: nessuna divergenza."
     }
   ],
-  "nota": "Edizione del mattino del 25 novembre 2026."
+  "nota": "Edizione del mattino del 26 novembre 2026."
 }
