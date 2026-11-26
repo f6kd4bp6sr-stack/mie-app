@@ -189,7 +189,7 @@ input{width:100%;max-width:100%;min-height:44px;font:16px var(--ui);padding:8px 
  </div></details>
 
 </div>
-<p class="vers" id="ver">Versione fe1e107f2b</p>
+<p class="vers" id="ver">Versione 03a169cd94</p>
 </main></div>
 <div class="pg" id="pg2"><main>
 <section>
@@ -279,9 +279,11 @@ function festivo(d){if(d.getDay()===0)return true;const md=String(d.getMonth()+1
 // ---------- Passaggi reali (osservati.json): nei feriali sostituiscono le stime nella fascia rilevata ----------
 const t2m=x=>{const t=/^(\d{1,2}):(\d{2})$/.exec(x);return t?+t[1]*60+(+t[2]):null};
 let oss=[];
-const pulisciOss=v=>(v&&Array.isArray(v.rilievi)?v.rilievi:[]).filter(r=>r&&(r.dir==="A"||r.dir==="R")&&typeof r.g==="string"&&Array.isArray(r.t)).map(r=>({g:r.g.slice(0,10),dir:r.dir,pal:String(r.pal||""),t:r.t.map(t2m).filter(x=>x!=null).sort((a,b)=>a-b)})).filter(r=>r.t.length>1);
+const pulisciOss=v=>(v&&Array.isArray(v.rilievi)?v.rilievi:[]).filter(r=>r&&(r.dir==="A"||r.dir==="R")&&typeof r.g==="string"&&Array.isArray(r.t)).map(r=>({g:r.g.slice(0,10),dir:r.dir,pal:String(r.pal||""),o:t2m(String(r.ora||""))??0,t:r.t.map(t2m).filter(x=>x!=null).sort((a,b)=>a-b)})).filter(r=>r.t.length>1);
 {const c=jget("oss",null,v=>!!v);if(c)oss=pulisciOss(c)}
-const ril=d=>{const l=oss.filter(r=>r.dir===d);return l.length?l[l.length-1]:null};
+// ultimo giorno rilevato per direzione; più rilievi dello stesso giorno si uniscono: ognuno vale fino all'ora del successivo
+const ril=d=>{const l=oss.filter(r=>r.dir===d);if(!l.length)return null;const g=l[l.length-1].g,day=l.filter(r=>r.g===g).sort((a,b)=>a.o-b.o);
+ const t=day.flatMap((r,i)=>r.t.filter(m=>i===day.length-1||m<day[i+1].o));return{g,dir:d,t:[...new Set(t)].sort((a,b)=>a-b)}};
 function deps(d,date){const o0=depsStima(d,date);if(festivo(date||new Date()))return o0;const r=ril(d);if(!r)return o0;
  const lo=r.t[0],hi=r.t[r.t.length-1];return [...o0.filter(m=>m<lo-3||m>hi+3),...r.t].sort((a,b)=>a-b)}
 function depsStima(d,date){const f=festivo(date||new Date()),o=[],anc=d==="A"?390:780,step=f?12:(d==="A"?7:8);
@@ -611,7 +613,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo(),loadOss()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="fe1e107f2b";
+const VER="03a169cd94";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;

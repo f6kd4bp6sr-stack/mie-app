@@ -1,4 +1,5 @@
-{"nota":"Passaggi reali letti da Marco sul live GTT (archivio). L'app li usa al posto delle stime nei giorni feriali.","rilievi":[
+{"nota":"Passaggi reali letti da Marco sul live GTT (archivio). L'app usa l'ultimo giorno rilevato per direzione, unendo i rilievi della giornata (ogni rilievo vale dalla sua ora in poi), al posto delle stime nei feriali.","rilievi":[
 {"g": "2026-11-26", "w": 4, "linea": "10", "pal": "951", "dir": "A", "ora": "07:05", "t": ["07:06", "07:12", "07:19", "07:25", "07:32"]},
-{"g": "2026-11-26", "w": 4, "linea": "10", "pal": "387", "dir": "R", "ora": "13:57", "t": ["14:04", "14:05", "14:11", "14:19"]}
+{"g": "2026-11-26", "w": 4, "linea": "10", "pal": "387", "dir": "R", "ora": "13:57", "t": ["14:04", "14:05", "14:11", "14:19"]},
+{"g": "2026-11-26", "w": 4, "linea": "10", "pal": "387", "dir": "R", "ora": "14:07", "t": ["14:09", "14:15", "14:19", "14:28"]}
 ]}
