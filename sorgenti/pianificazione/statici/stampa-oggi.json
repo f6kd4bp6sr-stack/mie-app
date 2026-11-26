@@ -1,18 +1,74 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-26T05:10+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-26T13:04+01:00",
   "sezioni": {
     "italia": [
       {
-        "id": "it-manovra-calendario",
-        "t": "Manovra: il calendario fino al voto finale previsto il 30 dicembre",
-        "s": "Dopo il vertice di maggioranza a Palazzo Chigi, i lavori in commissione Bilancio alla Camera partono il 3 dicembre, con votazioni dal 9. L'Aula della Camera è prevista il 18 dicembre, il Senato il 28 e il via libera definitivo il 30.",
-        "d": "2026-11-25",
+        "id": "it-dl-scuola",
+        "t": "La Camera approva con la fiducia il decreto scuola: 142 sì e 112 no",
+        "s": "Via libera dell'Aula con 142 voti favorevoli, 112 contrari e 4 astenuti. La maggioranza si ricompatta sui libri digitali, dopo le divisioni al Senato; un ordine del giorno esclude la primaria e rinvia l'obbligo alle medie. Le opposizioni protestano.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/la-camera-approva-il-decreto-scuola-142-i-si-112-i-no_5047ebbb-1341-4588-bf7b-77a900079b72.html"
+          },
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/politica/decreto-scuola-libri-digitali-ultime-notizie_4eVa8fi0UxPivwVzj8uPEf"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-manovra-aula",
+        "t": "Manovra 2027: in aula alla Camera dal 18 dicembre, tetto di 700 emendamenti segnalati",
+        "s": "I lavori in commissione Bilancio finiscono il 16 dicembre. Su 6.558 emendamenti presentati, oltre 1.700 sono inammissibili; i gruppi devono indicare quelli segnalati entro le 14 di oggi. Tra le misure, tassa all'1% sugli aumenti per i giovani under 30.",
+        "d": "2026-11-26",
         "fonti": [
           {
             "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/economia/manovra-maggioranza-accelera-su-modifiche-possibile-stop-spalma-crediti-superbonus_SyQlsTeJZ0z3ma4ZBQM6D"
+            "url": "https://www.adnkronos.com/politica/manovra-2027-ultime-notizie-oggi_IXQVqWL5XOFx9onh57BLJ"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-anm-meloni",
+        "t": "Magistrati e governo: l'Anm lamenta il rifiuto di Meloni al confronto",
+        "s": "Il presidente dell'Anm Giuseppe Tango dice che l'associazione aveva teso la mano, ma la premier ha declinato l'invito al congresso di Napoli e ha rivolto nuove critiche a una sentenza. Per l'Anm l'attacco è strumentale.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/anm-noi-per-il-dialogo-ma-meloni-ci-attacca-e-rinuncia-al-confronto_05e24523-e056-4225-ab6e-be3781f4f9fb.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-mattarella-ia",
+        "t": "Mattarella: l'intelligenza artificiale offre prospettive ma rischia di far arretrare l'intelligenza umana",
+        "s": "Intervenendo all'apertura dell'anno accademico della Lateranense, il presidente della Repubblica ha detto che governare l'IA richiede più capacità umane, richiamando il rischio denunciato dal Papa nell'enciclica «Magnifica humanitas».",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/26/mattarella-ia-presenta-prospettive-suggestive-ma-anche-rischio-di-arretramento_92ae5b87-0686-4e7f-889f-1270883dd04c.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "it-ponte-buggianese",
+        "t": "Pistoiese, donna uccisa a Ponte Buggianese: il compagno si sarebbe gettato da un viadotto",
+        "s": "Secondo la ricostruzione, ancora da confermare, l'uomo ha ucciso la compagna in casa e poi avrebbe raggiunto il viadotto Lora dell'A1, a Barberino del Mugello. La polizia scientifica sta eseguendo i rilievi.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/uccide-compagna-poi-si-getta-dal-viadotto-lo-stesso-cavalcavia-di-lorena-isceri_6f905f2b-8704-4a58-90da-00838cbf4689.html"
           }
         ],
         "link": []
@@ -29,22 +85,41 @@
           }
         ],
         "link": []
-      },
-      {
-        "id": "it-degennaro-lettere",
-        "t": "Caso De Gennaro: lettere con accuse al procuratore di Caltanissetta, secondo Corriere e Repubblica",
-        "s": "Nelle lettere lasciate dall'ex capo della polizia ci sarebbero accuse al procuratore Salvatore De Luca, che ne aveva chiesto l'arresto nell'inchiesta sulla strage di via D'Amelio. In una busta c'era anche l'hard disk mai trovato nelle perquisizioni.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/25/le-lettere-di-de-gennaro-lhard-disk-non-ve-lho-dato-perche-non-avreste_990dcfdb-4804-4496-9613-4036357dd514.html"
-          }
-        ],
-        "link": []
       }
     ],
     "mondo": [
+      {
+        "id": "mo-ue-vertice-bilancio",
+        "t": "Vertice Ue a Bruxelles: scontro sul bilancio 2028-2034 e sul prestito all'Ucraina",
+        "s": "I leader discutono la proposta di Costa di un bilancio da quasi 1.700 miliardi e il prestito di 45 miliardi a Kiev con debito comune. L'olandese Jetten la giudica inaccettabile; il ceco Babiš difende la coesione. Intesa cercata entro fine anno.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/internazionale/esteri/bilancio-ue-consiglio-europeo-oggi-26-novembre_7kdkARON7CKdHoApfULyAP"
+          },
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/26/eu-summit-leaders-ready-to-spar-over-new-budget-and-ukraine-aid",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-ucraina-zaporizhia",
+        "t": "Ucraina: drone su un parcheggio nel Zaporizhia occupato, cinque morti; missili su Kiev",
+        "s": "Secondo il governatore filorusso Balitsky l'attacco ha ucciso cinque persone. Nella notte la Russia ha colpito Kiev con missili balistici, danneggiando un centro commerciale e due edifici, con almeno sette feriti.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/26/ukraine-drone-attack-kills-five-in-russian-occupied-zaporizhia",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
       {
         "id": "mo-ucraina-savasleyka",
         "t": "Ucraina: colpita la base aerea russa di Savasleyka, danneggiati cinque aerei",
@@ -54,6 +129,46 @@
           {
             "n": "Al Jazeera",
             "url": "https://aljazeera.com/news/2026/11/26/ukraine-attacks-russian-military-base-says-five-planes-struck",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-gaza-raid",
+        "t": "Gaza: sei morti nei raid israeliani della notte; ucciso un finanziere di Hamas",
+        "s": "Secondo i media locali i raid hanno colpito al-Tuffah e al-Shati. Netanyahu e Katz confermano l'uccisione a Deir al-Balah di Khaled Abu Nadaun, indicato come gestore dei fondi di Hamas.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/media-di-gaza-sei-vittime-negli-attacchi-dellidf-durante-la-notte_c0f550f8-65b7-42e6-b150-711ca9835ef4.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-regno-unito-riservisti",
+        "t": "Regno Unito: 100mila riservisti invitati a tenersi pronti in caso di guerra",
+        "s": "Secondo il Telegraph, riferito da Ansa, una lettera dei comandanti di Esercito, Marina e Aeronautica chiede di aggiornare i recapiti e di offrirsi per l'addestramento, anche per le esercitazioni Nato del 2027.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/gb-chiede-a-100-mila-riservisti-di-tenersi-pronti-in-caso-di-guerra_4e4aae73-a28f-4ae1-aab9-4016fcf8b2fb.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-houthi-sanaa",
+        "t": "Guerra con l'Iran: esplosione a Sanaa, missili Houthi intercettati su Riad",
+        "s": "La coalizione a guida saudita dice di aver intercettato due missili balistici diretti a Riad. Nel Golfo, un proiettile non identificato è esploso vicino a una petroliera a 93 km da Dubai, senza feriti.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/26/iran-war-live-explosion-rocks-sanaa-missiles-intercepted-over-riyadh",
             "l": "en"
           }
         ],
@@ -72,23 +187,23 @@
           }
         ],
         "link": []
-      },
+      }
+    ],
+    "estero": [
       {
-        "id": "mo-trump-elsayed",
-        "t": "Usa: Trump vuole incontrare il senatore eletto El-Sayed sulla sanità pubblica",
-        "s": "Trump ha detto che parlerà con il democratico Abdul El-Sayed, che propone un'assicurazione sanitaria pubblica e la chiamerebbe «Trumpcare». Nessuna data fissata. Resta incerto che l'idea di un «Medicare per tutti» trovi spazio al Congresso.",
+        "id": "es-ue-balcani",
+        "t": "Vertice Ue-Balcani occidentali senza la Serbia: il Montenegro è il più vicino all'adesione",
+        "s": "Bruxelles punta a un trattato di adesione del Montenegro pronto entro giugno. Restano ostacoli, come la disputa di confine con la Croazia e l'ipotesi di dieci anni di «prova» per i nuovi membri.",
         "d": "2026-11-25",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://aljazeera.com/news/2026/11/25/trump-to-meet-abdul-el-sayed-will-he-agree-to-a-renamed-medicare-for-all",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/25/balkan-to-the-future-the-long-and-winding-road-to-brussels",
             "l": "en"
           }
         ],
         "link": []
-      }
-    ],
-    "estero": [
+      },
       {
         "id": "es-ue-bilancio-costa",
         "t": "Eurodeputati contro Costa: niente via libera a un bilancio Ue 2028-2034 ridotto",
@@ -142,6 +257,20 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/usa-propongono-nuovi-dazi-per-cina-ue-e-altri-12-paesi_7b5dc39c-cbf2-4816-91bd-81f56b44833b.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "ec-corea-tassi",
+        "t": "La Banca di Corea alza i tassi al 3,25% e rivede al rialzo la crescita",
+        "s": "Rialzo di 0,25 punti per l'inflazione sopra il target (2,8% a ottobre). Il Pil è atteso al 3,9% nel 2026 e al 4,1% nel 2027; a ottobre l'export è cresciuto del 94% annuo.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/economy/2026/11/26/south-koreas-central-bank-hikes-interest-rates-raises-gdp-growth-forecast",
+            "l": "en"
           }
         ],
         "link": []
@@ -1102,12 +1231,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-16T13:04+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 78,
-      "note": "Fonti lette: ANSA, Euronews (en), Al Jazeera (en), Torino Oggi. TorinoToday: ricerca ok ma lettura bloccata (client_error). Reuters/BBC/Guardian non cercate (rifiutate nei giri precedenti). Cinema, eventi, teatro e concerti dall'edizione del mattino (lunedì, già aggiornata). Copia locale staccata: ripartita da origin/main."
-    },
-    {
       "at": "2026-11-17T05:09+01:00",
       "edizione": "mattina",
       "notizie": 73,
@@ -1220,6 +1343,12 @@
       "edizione": "mattina",
       "notizie": 73,
       "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en), Regione Piemonte, MYmovies/ComingSoon (Cinema Ideal), Teatro Regio, Comune di Torino, Turismo Torino. Non raggiunti: Reuters e BBC/Guardian (ricerca rifiutata), TorinoToday (pagine non leggibili, solo titolo da ricerca), The Space Cinema (pagina non leggibile: film dati solo per Cinema Ideal), notiziario ANSAMed (404). Concerti, scienza e tecnologia copiati dalla precedente (non è lunedì; tolti i passati). Copia locale riallineata a origin/main: nessuna divergenza."
+    },
+    {
+      "at": "2026-11-26T13:04+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 82,
+      "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en). Non raggiunti: Reuters, BBC, Guardian (non cercate), TorinoToday; lettura delle pagine ANSA Piemonte e Regione Piemonte negata dal sistema di permessi, quindi Torino, Piemonte, cinema, teatro, eventi, concerti, scienza e tecnologia copiati dalla mattina (nessun passato). Copia locale riallineata a origin/main (HEAD staccato)."
     }
   ],
   "nota": "Edizione del mattino del 26 novembre 2026."
