@@ -189,7 +189,7 @@ input{width:100%;max-width:100%;min-height:44px;font:16px var(--ui);padding:8px 
  </div></details>
 
 </div>
-<p class="vers" id="ver">Versione bf3b480677</p>
+<p class="vers" id="ver">Versione af6356af61</p>
 </main></div>
 <div class="pg" id="pg2"><main>
 <section>
@@ -591,7 +591,9 @@ const mieLinee=()=>["10","60"];
 const miei=()=>avvisi.linee.filter(a=>a.linee.some(l=>mieLinee().includes(l)));
 // età del controllo: «iso» se presente, altrimenti «GG/MM HH:MM» dell'anno corrente (o precedente)
 function etaOre(){let t=Date.parse(avvisi.iso);if(!Number.isFinite(t)){const m=/^(\d{2})\/(\d{2}) (\d{2}):(\d{2})/.exec(avvisi.agg);if(!m)return Infinity;const n=new Date();let d=new Date(n.getFullYear(),+m[2]-1,+m[1],+m[3],+m[4]);if(d>n)d.setFullYear(d.getFullYear()-1);t=d.getTime()}return (Date.now()-t)/36e5}
-function stato(){const m=miei(),b=$("stato"),eta=etaOre(),vecchio=eta>72;
+// nelle fasce attive (feriali) il controllo gira ogni ora: oltre 2 ore è vecchio
+function inFasciaOra(){const d=new Date(),m=d.getHours()*60+d.getMinutes();return d.getDay()>=1&&d.getDay()<=5&&!festivo(d)&&["A","R"].some(k=>m>=FASCE[k][0]-30&&m<=FASCE[k][1])}
+function stato(){const m=miei(),b=$("stato"),eta=etaOre(),vecchio=eta>72||(inFasciaOra()&&eta>2);
  b.className="stato"+(m.length||vecchio?" warn":"");
  if(inVac()&&!m.length){b.className="stato pausa";b.textContent=`In vacanza: popup sospesi fino al ${it(vac().a)}`;return}
  const lin=mieLinee().join(", ");
@@ -620,7 +622,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo(),loadOss()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="bf3b480677";
+const VER="af6356af61";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
