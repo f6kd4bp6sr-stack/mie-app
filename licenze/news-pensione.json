@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-25T01:01:00+01:00",
+ "updated": "2026-11-26T01:03:00+01:00",
  "voci": [
   {
    "id": "n20261118-bozza4anni",
@@ -432,7 +432,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-23T01:03:00+01:00",
+   "ultimo": "2026-11-26T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -544,14 +544,14 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-21T01:03:00+01:00",
+   "ultimo": "2026-11-26T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-21T01:03:00+01:00",
+   "ultimo": "2026-11-26T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -705,7 +705,7 @@
    "n": "QuiFinanza",
    "url": "https://quifinanza.it/",
    "tipo": "testata",
-   "ultimo": "2026-11-24T01:02:00+01:00",
+   "ultimo": "2026-11-26T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -982,6 +982,11 @@
    "at": "2026-11-25T01:01:00+01:00",
    "notizie": 0,
    "note": "giro di mercoledì 25/11: nessuna notizia nuova verificata (ricerche su previdenza dedicata, DPR di recepimento e sindacati GdF: solo articoli già presenti; Affaritaliani 19/11 e SoldiOnline/ANSA 18/11 riletti, stessa bozza già in n20261118-bozza4anni, GdF non citata). DPR di recepimento: nessun riscontro in Gazzetta. Mercati: BTP 10 anni 4,34% in apertura del 24/11 (QuiFinanza) senza seconda fonte dello stesso giorno: invariato il 4,40% del 23/11; altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì (fatto il 23/11). Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-26T01:03:00+01:00",
+   "notizie": 0,
+   "note": "giro di giovedì 26/11: nessuna notizia nuova verificata (ricerche su previdenza dedicata, DPR di recepimento e sindacati GdF: solo articoli già presenti; Sky TG24 13/11 su SILF e pmi.it non raggiungibili, quindi non inserite; pagina USIF trovata è di aprile). DPR di recepimento: nessun riscontro in Gazzetta. Mercati: BTP 10 anni 4,34% solo nel titolo QuiFinanza del 25/11 in apertura, senza conferma nel testo né seconda fonte: invariato il 4,40% del 23/11; altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
