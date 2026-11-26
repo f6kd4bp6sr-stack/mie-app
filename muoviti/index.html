@@ -87,6 +87,7 @@ summary::after{content:"+";margin-left:auto;font-size:24px;color:var(--or)}detai
 .tt{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:6px}
 .tt>*{min-height:40px;border:0;background:var(--bg);color:var(--ink);border-radius:8px;text-align:center;padding:6px 0;font:600 18px var(--cn);cursor:pointer}
 .tt .past{opacity:.5}.tt .nx1{background:var(--or);color:#000;font-weight:700;opacity:1}.tt .mine{box-shadow:inset 0 0 0 2px var(--or);color:var(--or)}
+.tt .ril{text-decoration:underline 2px var(--ok);text-underline-offset:4px}
 .tt .note{grid-column:1/-1;cursor:default;min-height:0;background:none;text-align:left;font:13px var(--ui)}
 .pr[data-m]{cursor:pointer}
 .st-h{font-weight:700;margin:12px 0 2px}.st-l{list-style:none;padding:0;margin:6px 0;font-size:14px}.st-l li{padding:3px 0;border-bottom:1px solid var(--line)}
@@ -188,7 +189,7 @@ input{width:100%;max-width:100%;min-height:44px;font:16px var(--ui);padding:8px 
  </div></details>
 
 </div>
-<p class="vers" id="ver">Versione f734c0a51b</p>
+<p class="vers" id="ver">Versione fe1e107f2b</p>
 </main></div>
 <div class="pg" id="pg2"><main>
 <section>
@@ -275,7 +276,15 @@ function festivo(d){if(d.getDay()===0)return true;const md=String(d.getMonth()+1
  const p=pasqua(d.getFullYear());p.setDate(p.getDate()+1);return p.toDateString()===d.toDateString()}
 // ---------- Partenze STIMATE (non orario ufficiale): servizio 05:00–24:00 ----------
 // Feriale: ogni 7' (andata) / 8' (ritorno) dalle 06:30 alle 20:30, ogni 15' prima e dopo. Festivo: ogni 12', 20' la sera.
-function deps(d,date){const f=festivo(date||new Date()),o=[],anc=d==="A"?390:780,step=f?12:(d==="A"?7:8);
+// ---------- Passaggi reali (osservati.json): nei feriali sostituiscono le stime nella fascia rilevata ----------
+const t2m=x=>{const t=/^(\d{1,2}):(\d{2})$/.exec(x);return t?+t[1]*60+(+t[2]):null};
+let oss=[];
+const pulisciOss=v=>(v&&Array.isArray(v.rilievi)?v.rilievi:[]).filter(r=>r&&(r.dir==="A"||r.dir==="R")&&typeof r.g==="string"&&Array.isArray(r.t)).map(r=>({g:r.g.slice(0,10),dir:r.dir,pal:String(r.pal||""),t:r.t.map(t2m).filter(x=>x!=null).sort((a,b)=>a-b)})).filter(r=>r.t.length>1);
+{const c=jget("oss",null,v=>!!v);if(c)oss=pulisciOss(c)}
+const ril=d=>{const l=oss.filter(r=>r.dir===d);return l.length?l[l.length-1]:null};
+function deps(d,date){const o0=depsStima(d,date);if(festivo(date||new Date()))return o0;const r=ril(d);if(!r)return o0;
+ const lo=r.t[0],hi=r.t[r.t.length-1];return [...o0.filter(m=>m<lo-3||m>hi+3),...r.t].sort((a,b)=>a-b)}
+function depsStima(d,date){const f=festivo(date||new Date()),o=[],anc=d==="A"?390:780,step=f?12:(d==="A"?7:8);
  for(let m=anc;m>=300;m-=(m>390&&m<=1230?step:(f?20:15)))o.unshift(m);
  for(let m=anc+step;m<=1439;m+=(m>=390&&m<1230?step:(f?20:15)))o.push(m);
  return [...new Set(o)].sort((a,b)=>a-b)}
@@ -391,9 +400,10 @@ function render(){
  const moving=deps(dir).filter(m=>m<=n&&n-m<RIDE).pop();
  if(trip){const el=(Date.now()-trip.ms)/60000;draw(st,P,Math.min(RIDE,el/trip.k),trip)}else draw(st,P,moving!=null?n-moving:null);
  corsaUI(trip,st);statUI();
- $("tt10").innerHTML=deps(dir).map(m=>`<button type="button" data-m="${m}" aria-pressed="${m===P.dep}" class="${m===P.dep?"nx1":m===up[0]?"mine":m<fn?"past":""}">${m2s(m)}</button>`).join("");
+ const R10=ril(dir);
+ $("tt10").innerHTML=deps(dir).map(m=>`<button type="button" data-m="${m}" aria-pressed="${m===P.dep}" class="${m===P.dep?"nx1":m===up[0]?"mine":m<fn?"past":""}${R10&&!fest&&R10.t.includes(m)?" ril":""}">${m2s(m)}</button>`).join("");
  $("ttT").textContent=dir==="A"?"Orario andata · Statuto Cap (stime)":"Orario ritorno · Caprera (stime)";
- $("ttNote").textContent=dir==="A"?"Circa ogni 7 min di giorno, più rado presto, la sera e nei festivi. Non è l'orario ufficiale.":"Circa ogni 8 min di giorno. Non è l'orario ufficiale.";
+ $("ttNote").textContent=(R10?`Sottolineati in verde: passaggi reali letti il ${it(R10.g)} sul live (usati nei feriali). `:"")+(dir==="A"?"Gli altri sono stime: circa ogni 7 min di giorno, più rado presto, la sera e nei festivi.":"Gli altri sono stime: circa ogni 8 min di giorno.");
  $("ttN").textContent=fest?"Oggi festivo: stime con frequenza ridotta.":"";
  try{render2(n,fn)}catch(e){}
  try{render3(n)}catch(e){}
@@ -566,6 +576,7 @@ let avvisi={agg:"",iso:"",linee:[]};
 function pulisci(v){if(!v||typeof v!=="object")return null;const L=Array.isArray(v.linee)?v.linee:[];
  return{agg:typeof v.agg==="string"?v.agg.slice(0,20):"",iso:typeof v.iso==="string"?v.iso:"",linee:L.filter(a=>a&&typeof a==="object").map(a=>({linee:(Array.isArray(a.linee)?a.linee:[a.linee]).filter(x=>x!=null).map(String).slice(0,8),titolo:String(a.titolo||"").slice(0,200),quando:String(a.quando||"").slice(0,80)})).filter(a=>a.linee.length&&a.titolo)}}
 {const c=pulisci(jget("avv",null,v=>!!v));if(c)avvisi=c}
+function loadOss(){return conLimite(fetch("osservati.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json())).then(v=>{const c=pulisciOss(v);if(c.length){oss=c;ls.set("oss",JSON.stringify(v));render()}}).catch(()=>{})}
 function loadAvv(){return conLimite(fetch("avvisi.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.json())).then(v=>{const c=pulisci(v);if(c){avvisi=c;ls.set("avv",JSON.stringify(c))}}).catch(()=>{}).finally(()=>{try{stato()}catch(e){}})}
 const mieLinee=()=>["10","60"];
 const miei=()=>avvisi.linee.filter(a=>a.linee.some(l=>mieLinee().includes(l)));
@@ -597,10 +608,10 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
  if(!giorni().includes(d.getDay())||inVac()||festivo(d))return;
  const a=startDef("A"),r=startDef("R"),slot=Math.abs(m-a)<=15?"A":Math.abs(m-r)<=15?"R":null;if(!slot)return;
  if(ls.get("pop-"+slot,"")===k)return;popup(slot);ls.set("pop-"+slot,k)}
-const carica=()=>Promise.allSettled([loadAvv(),loadMeteo()]).then(()=>{try{autoPop()}catch(e){}});
+const carica=()=>Promise.allSettled([loadAvv(),loadMeteo(),loadOss()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="f734c0a51b";
+const VER="fe1e107f2b";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
