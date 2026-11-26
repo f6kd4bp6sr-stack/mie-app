@@ -189,7 +189,7 @@ input{width:100%;max-width:100%;min-height:44px;font:16px var(--ui);padding:8px 
  </div></details>
 
 </div>
-<p class="vers" id="ver">Versione 03a169cd94</p>
+<p class="vers" id="ver">Versione bf3b480677</p>
 </main></div>
 <div class="pg" id="pg2"><main>
 <section>
@@ -260,7 +260,7 @@ const RIDE=18,$=id=>document.getElementById(id);
 // ---------- Memoria sul telefono: chiavi con prefisso «mv-», lettura sempre validata ----------
 const ls={get(k,d){try{const v=localStorage.getItem("mv-"+k);return v??d}catch(e){return d}},set(k,v){try{localStorage.setItem("mv-"+k,v)}catch(e){}},del(k){try{localStorage.removeItem("mv-"+k)}catch(e){}}};
 const jget=(k,d,ok)=>{try{const v=JSON.parse(ls.get(k,"null"));return ok(v)?v:d}catch(e){return d}};
-let dir=new Date().getHours()<12?"A":"R",sel={};
+let dir=(h=>h<12||h>=17?"A":"R")(new Date().getHours()),sel={};// sera: già la mattina dopo
 const m2s=m=>{m=((Math.round(m)%1440)+1440)%1440;return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0")};
 const s2m=(s,def)=>{const t=/^(\d{1,2}):(\d{2})/.exec(s||"");return t?(+t[1])*60+(+t[2]):def};
 const dur=x=>x>=60?Math.floor(x/60)+" h "+String(x%60).padStart(2,"0"):x+" min";
@@ -284,8 +284,12 @@ const pulisciOss=v=>(v&&Array.isArray(v.rilievi)?v.rilievi:[]).filter(r=>r&&(r.d
 // ultimo giorno rilevato per direzione; più rilievi dello stesso giorno si uniscono: ognuno vale fino all'ora del successivo
 const ril=d=>{const l=oss.filter(r=>r.dir===d);if(!l.length)return null;const g=l[l.length-1].g,day=l.filter(r=>r.g===g).sort((a,b)=>a.o-b.o);
  const t=day.flatMap((r,i)=>r.t.filter(m=>i===day.length-1||m<day[i+1].o));return{g,dir:d,t:[...new Set(t)].sort((a,b)=>a-b)}};
-function deps(d,date){const o0=depsStima(d,date);if(festivo(date||new Date()))return o0;const r=ril(d);if(!r)return o0;
- const lo=r.t[0],hi=r.t[r.t.length-1];return [...o0.filter(m=>m<lo-3||m>hi+3),...r.t].sort((a,b)=>a-b)}
+// fasce del 10 che interessano: fuori da queste niente stime, solo «Live GTT»
+const FASCE={A:[405,480],R:[825,945]},fasciaTxt=d=>m2s(FASCE[d][0])+"–"+m2s(FASCE[d][1]);
+const inFascia=(d,m)=>m>=FASCE[d][0]&&m<=FASCE[d][1];
+function deps(d,date){let o=depsStima(d,date);const r=festivo(date||new Date())?null:ril(d);
+ if(r){const lo=r.t[0],hi=r.t[r.t.length-1];o=[...o.filter(m=>m<lo-3||m>hi+3),...r.t].sort((a,b)=>a-b)}
+ return o.filter(m=>inFascia(d,m))}
 function depsStima(d,date){const f=festivo(date||new Date()),o=[],anc=d==="A"?390:780,step=f?12:(d==="A"?7:8);
  for(let m=anc;m>=300;m-=(m>390&&m<=1230?step:(f?20:15)))o.unshift(m);
  for(let m=anc+step;m<=1439;m+=(m>=390&&m<1230?step:(f?20:15)))o.push(m);
@@ -389,8 +393,11 @@ function render(){
  const pp=PAL.find(x=>x.p===(dir==="A"?"951":"387"));$("chips").innerHTML=pp.l.map(([l,t])=>`<span class="chip ${t==="bus"?"bus":""}">${l}</span>`).join("");
  const up=prossime(dir,fn).slice(0,4),d0=up[0]-fn,dom=up[0]>=1440;
  const lab=m=>m>=1440?nomeGiorno(Math.floor(m/1440)):"tra "+dur(m-fn);
- ring(dom||d0>=60?0:d0,dom?nomeGiorno(Math.floor(up[0]/1440)):d0>=60?m2s(up[0]):d0<=0?"ora":String(d0),dom?`Prossimo tram domani alle ${m2s(up[0])}`:`Prossimo tram stimato tra circa ${d0} minuti, alle ${m2s(up[0])}`);
- $("nexts").innerHTML=up.slice(1,4).map(m=>`<a class="nx${m===P.dep?" mine":""}" href="${pv?live(pv):AVV}" aria-label="Verifica sul sito GTT il passaggio delle ${m2s(m)}"><span class="nt"><b>${m2s(m)}</b><span>${lab(m)}</span></span><span class="gtt">GTT ↗</span></a>`).join("");
+ const vicino=fn>=FASCE[dir][0]-60&&fn<=FASCE[dir][1];
+ if(!vicino){ring(0,"live",`Fuori dalla fascia ${fasciaTxt(dir)}: per i passaggi usa il live GTT`);
+  $("nexts").innerHTML=`<a class="nx" href="${live(pv)}"><span class="nt"><b>Live GTT</b><span>fuori fascia ${fasciaTxt(dir)}</span></span><span class="gtt">palina ${pv} ↗</span></a><a class="nx" href="${live(pv)}"><span class="nt"><b>${m2s(up[0])}</b><span>primo stimato ${nomeGiorno(Math.floor(up[0]/1440))}</span></span><span class="gtt">GTT ↗</span></a>`}
+ else{ring(dom||d0>=60?0:d0,dom?nomeGiorno(Math.floor(up[0]/1440)):d0>=60?m2s(up[0]):d0<=0?"ora":String(d0),dom?`Prossimo tram domani alle ${m2s(up[0])}`:`Prossimo tram stimato tra circa ${d0} minuti, alle ${m2s(up[0])}`);
+ $("nexts").innerHTML=up.slice(1,4).map(m=>`<a class="nx${m===P.dep?" mine":""}" href="${pv?live(pv):AVV}" aria-label="Verifica sul sito GTT il passaggio delle ${m2s(m)}"><span class="nt"><b>${m2s(m)}</b><span>${lab(m)}</span></span><span class="gtt">GTT ↗</span></a>`).join("")}
  $("palVer").href=pv?live(pv):AVV;$("palVer").textContent=pv?"Verifica su GTT ↗":"Verifica su GTT";
  const wait=Math.round(P.tr-P.at),quando=nomeGiorno(Math.floor(P.start/1440));
  const nota=(festivo(dataTra(Math.floor(P.start/1440)))?"festivo · ":"")+(wait>0?"attesa ~"+wait+" min":"tram appena arrivi");
@@ -404,8 +411,8 @@ function render(){
  corsaUI(trip,st);statUI();
  const R10=ril(dir);
  $("tt10").innerHTML=deps(dir).map(m=>`<button type="button" data-m="${m}" aria-pressed="${m===P.dep}" class="${m===P.dep?"nx1":m===up[0]?"mine":m<fn?"past":""}${R10&&!fest&&R10.t.includes(m)?" ril":""}">${m2s(m)}</button>`).join("");
- $("ttT").textContent=dir==="A"?"Orario andata · Statuto Cap (stime)":"Orario ritorno · Caprera (stime)";
- $("ttNote").textContent=(R10?`Sottolineati in verde: passaggi reali letti il ${it(R10.g)} sul live (usati nei feriali). `:"")+(dir==="A"?"Gli altri sono stime: circa ogni 7 min di giorno, più rado presto, la sera e nei festivi.":"Gli altri sono stime: circa ogni 8 min di giorno.");
+ $("ttT").textContent=(dir==="A"?"Andata · Statuto Cap ":"Ritorno · Caprera ")+fasciaTxt(dir)+" (stime)";
+ $("ttNote").textContent=(R10?`Sottolineati in verde: passaggi reali letti il ${it(R10.g)} sul live (usati nei feriali). `:"")+(dir==="A"?"Gli altri sono stime (circa ogni 7 min).":"Gli altri sono stime (circa ogni 8 min).")+` Solo la fascia ${fasciaTxt(dir)}: per altri orari usa «Live GTT».`;
  $("ttN").textContent=fest?"Oggi festivo: stime con frequenza ridotta.":"";
  try{render2(n,fn)}catch(e){}
  try{render3(n)}catch(e){}
@@ -613,7 +620,7 @@ function autoPop(){const d=new Date(),k=d.toDateString(),m=d.getHours()*60+d.get
 const carica=()=>Promise.allSettled([loadAvv(),loadMeteo(),loadOss()]).then(()=>{try{autoPop()}catch(e){}});
 carica();
 // ---------- Web app: copia senza internet e aggiornamento automatico (senza ricariche a ripetizione) ----------
-const VER="03a169cd94";
+const VER="bf3b480677";
 if("serviceWorker" in navigator&&location.protocol==="https:"){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 let nuova=null;
 const libero=()=>$("pop").hidden&&$("go").hidden;
