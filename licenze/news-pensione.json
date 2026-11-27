@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-26T01:03:00+01:00",
+ "updated": "2026-11-27T01:03:00+01:00",
  "voci": [
   {
    "id": "n20261118-bozza4anni",
@@ -432,7 +432,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-26T01:03:00+01:00",
+   "ultimo": "2026-11-27T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -474,7 +474,7 @@
    "n": "INPS",
    "url": "https://www.inps.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-21T01:03:00+01:00",
+   "ultimo": "2026-11-27T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -544,21 +544,21 @@
    "n": "USIF",
    "url": "https://www.usif.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-26T01:03:00+01:00",
+   "ultimo": "2026-11-27T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SILF",
    "url": "https://www.silfnazionale.it/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-26T01:03:00+01:00",
+   "ultimo": "2026-11-27T01:03:00+01:00",
    "esito": "ok"
   },
   {
    "n": "SINAFI",
    "url": "https://www.sinafi.org/",
    "tipo": "sindacato GdF",
-   "ultimo": "2026-11-24T01:02:00+01:00",
+   "ultimo": "2026-11-27T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -705,7 +705,7 @@
    "n": "QuiFinanza",
    "url": "https://quifinanza.it/",
    "tipo": "testata",
-   "ultimo": "2026-11-26T01:03:00+01:00",
+   "ultimo": "2026-11-27T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -726,7 +726,7 @@
    "n": "ANSA",
    "url": "https://www.ansa.it/",
    "tipo": "testata",
-   "ultimo": "2026-11-02",
+   "ultimo": "2026-11-27T01:03:00+01:00",
    "esito": "ok"
   },
   {
@@ -987,6 +987,11 @@
    "at": "2026-11-26T01:03:00+01:00",
    "notizie": 0,
    "note": "giro di giovedì 26/11: nessuna notizia nuova verificata (ricerche su previdenza dedicata, DPR di recepimento e sindacati GdF: solo articoli già presenti; Sky TG24 13/11 su SILF e pmi.it non raggiungibili, quindi non inserite; pagina USIF trovata è di aprile). DPR di recepimento: nessun riscontro in Gazzetta. Mercati: BTP 10 anni 4,34% solo nel titolo QuiFinanza del 25/11 in apertura, senza conferma nel testo né seconda fonte: invariato il 4,40% del 23/11; altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-27T01:03:00+01:00",
+   "notizie": 0,
+   "note": "giro di venerdì 27/11: nessuna notizia nuova verificata (ricerche su contratto, DPR di recepimento, previdenza dedicata, sindacati GdF e INPS: solo articoli già presenti). DPR di recepimento: nessun riscontro in Gazzetta. INPS messaggio n. 3770 del 18/11: oggetto non leggibile dalla pagina, non inserito. Mercati: BTP 10 anni 4,33% in apertura del 26/11 (SoldiOnline/ANSA; QuiFinanza 4,35% nel titolo, entro 0,05); altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
@@ -1033,12 +1038,12 @@
   {
    "id": "btp10",
    "t": "BTP a 10 anni (rendimento lordo)",
-   "valore": 4.4,
-   "d": "2026-11-23",
-   "fonte": "QuiFinanza, 23/11 mattina",
-   "url": "https://quifinanza.it/economia/finanza/spread-btp-bund-23-novembre-2026/1025373/",
+   "valore": 4.33,
+   "d": "2026-11-26",
+   "fonte": "SoldiOnline (ANSA), apertura del 26/11",
+   "url": "https://www.soldionline.it/notizie/obbligazioni-italia/spread-btp-bund-scende-a-109-punti-cosa-segnala-sui-mercati-2",
    "unita": "%",
-   "nota": "23/11 mattina: 4,40% con spread 108 (QuiFinanza, ore 9:12); SoldiOnline/ANSA 23/11 in apertura: 4,38%, spread 107,3 (coincide entro 0,05). Dato in corso di seduta, non di chiusura. Precedente: 4,40% del 18/11."
+   "nota": "4,33% in apertura del 26/11 (dal 4,34% della vigilia); QuiFinanza 26/11 riporta 4,35% nel titolo"
   },
   {
    "id": "btpv",
