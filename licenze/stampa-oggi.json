@@ -1,7 +1,7 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-27T05:10+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-27T13:03+01:00",
   "sezioni": {
     "italia": [
       {
@@ -61,7 +61,7 @@
       {
         "id": "mo-vertice-ue-bilancio",
         "t": "Vertice Ue sul bilancio senza accordo: Costa punta a un'intesa a dicembre",
-        "s": "Dopo circa 15 ore di lavori i sette Paesi frugali chiedono più tagli. Costa potrebbe presentare una nuova proposta sul quadro 2028-34 la settimana prossima; 24 Stati sostengono il prestito da 45 miliardi per l'Ucraina, contrari Ungheria, Cechia e Slovacchia.",
+        "s": "Il vertice di giovedì si chiude senza intesa. Costa ha proposto 1.780 miliardi per sette anni, circa il 10% in meno della bozza, respinti da tutti. Macron vuole un accordo entro il 31 dicembre; i Paesi frugali chiedono più tagli, 24 Stati sostengono il prestito da 45 miliardi all'Ucraina.",
         "d": "2026-11-27",
         "fonti": [
           {
@@ -72,6 +72,19 @@
             "n": "Euronews",
             "url": "https://www.euronews.com/2026/11/27/a-lot-of-political-theatre-eu-summit-ends-in-disarray-as-leaders-cling-to-red-lines",
             "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "mo-trump-iran-vittoria",
+        "t": "Trump ai soldati nel giorno del Ringraziamento: in Iran la vittoria è a portata di mano",
+        "s": "Parlando in collegamento con le truppe americane, Trump dice che agli iraniani vengono date tutte le possibilità di un accordo, ma che non è certo che Teheran ne approfitti. Nel testo non ci sono repliche iraniane.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/27/trump-la-vittoria-e-a-portata-di-mano-in-iran_edbae226-c82f-419b-8251-0d67493dc391.html"
           }
         ],
         "link": []
@@ -126,6 +139,20 @@
           {
             "n": "Al Jazeera",
             "url": "https://www.aljazeera.com/news/2026/11/27/zelenskyy-warns-of-major-russian-attack-as-trump-urges-putin-to-pull-back",
+            "l": "en"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "es-lettonia-drone",
+        "t": "Drone non identificato nello spazio aereo lettone: decollano caccia Nato",
+        "s": "Nella notte un drone è entrato per poco in Lettonia, vicino al confine russo, nel comune di Ludza. Allerta dalle 2:30 alle 2:55 locali; sono decollati caccia della missione Baltic Air Policing. L'esercito non indica la provenienza e avverte che altre incursioni sono probabili.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/27/nato-jets-scrambled-after-drone-briefly-enters-latvian-airspace",
             "l": "en"
           }
         ],
@@ -219,6 +246,19 @@
     ],
     "torino": [
       {
+        "id": "to-politecnico-occupato",
+        "t": "Torino, studenti occupano il Politecnico contro l'accordo con MBDA",
+        "s": "Dopo il Campus e Palazzo Nuovo, la mobilitazione degli studenti contro gli «accordi bellici» arriva al Politecnico, occupato oggi. L'ateneo ha diffuso una nota. Dati ricavati dal titolo e dall'anteprima della ricerca: la pagina non era leggibile.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "TorinoToday",
+            "url": "https://www.torinotoday.it/attualita/politecnico-occupato-accordo-mbda-istanze-studenti-nota-ateneo-27-novembre-2026.html"
+          }
+        ],
+        "link": []
+      },
+      {
         "id": "to-chieri-arresto",
         "t": "Chieri: arrestato dopo una fuga di nove ore un uomo accusato di tentato omicidio",
         "s": "Secondo TorinoToday l'uomo avrebbe accoltellato un giovane alla gola ed è fuggito prima di essere fermato (pagina non leggibile: dato dal titolo del risultato di ricerca).",
@@ -266,6 +306,19 @@
           {
             "n": "TorinoToday",
             "url": "https://torinotoday.it/cronaca/condanna-don-ali-agguato-maestro-conferma-appello.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "to-violenza-genere",
+        "t": "Torino, in dieci mesi calano del 19,8% le denunce dei reati legati alla violenza di genere",
+        "s": "Dati interforze presentati in Prefettura dal prefetto Cafagna: rispetto al 2025 gli atti persecutori scendono del 35,2%, il revenge porn sale del 37%. Gli arresti per i principali reati di genere crescono del 31,5% tra 2023 e 2026.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/26/torino-calano-le-denunce-per-reati-legati-alla-violenza-di-genere_4123a662-bbd9-46fd-985e-77ac0076ce59.html"
           }
         ],
         "link": []
@@ -320,6 +373,19 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/23/oltre-2-milioni-per-lo-ski-jumping-hotel-di-pragelato_eb0e4fd6-8fec-4524-8481-dfff038f6e55.html"
+          }
+        ],
+        "link": []
+      },
+      {
+        "id": "pi-cinema-fondo",
+        "t": "Cinema in Piemonte: 66 milioni di ricadute dal Film Tv Fund tra 2018 e 2025",
+        "s": "Il fondo ha sostenuto 84 produzioni e 55 imprese con 19,92 milioni di risorse pubbliche. Le ricadute stimate superano i 66 milioni, con oltre 67mila rapporti di lavoro. Dati della Film Commission, presentati a Torino Film Industry.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/26/il-cinema-piemontese-cresce-66-milioni-di-ricadute-sul-territorio_e8f9da5e-843e-4428-a216-db97f8ad077d.html"
           }
         ],
         "link": []
@@ -1132,12 +1198,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-17T13:04+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 75,
-      "note": "Fonti lette: ANSA, Adnkronos, il Giornale (elenco), Euronews (en), Al Jazeera (en), CBS News (en), Torino Oggi. TorinoToday e thespacecinema.it non letti; Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti). Cinema, teatro, eventi e concerti dall'edizione del mattino (martedì, nessun concerto passato). Nessun riallineamento: copia già pari a origin/main."
-    },
-    {
       "at": "2026-11-18T05:03+01:00",
       "edizione": "mattina",
       "notizie": 70,
@@ -1250,7 +1310,13 @@
       "edizione": "mattina",
       "notizie": 75,
       "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en), Comune di Torino, Turismo Torino, ComingSoon (Cinema Ideal), Regione/ANSA Piemonte. Non raggiunti: TorinoToday (pagine non leggibili, solo titoli da ricerca), The Space Cinema (pagina non leggibile: film solo del Cinema Ideal), MYmovies Ideal (vuoto), Reuters/BBC/Guardian non cercate, due pagine del Teatro Stabile. Concerti, scienza e tecnologia copiati dalla precedente (non è lunedì; nessun concerto passato). Copia locale riallineata a origin/main (HEAD staccato)."
+    },
+    {
+      "at": "2026-11-27T13:03+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 80,
+      "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en), ANSA Piemonte. Non raggiunti: TorinoToday (tre pagine non leggibili, usati titoli da ricerca), Reuters/BBC/Guardian non cercate, The Space Cinema e teatri non riaggiornati. Cinema, teatro, eventi, concerti, scienza e tecnologia copiati dalla mattina (nessun concerto passato). Copia locale riallineata a origin/main (HEAD staccato)."
     }
   ],
-  "nota": "Edizione del mattino del 26 novembre 2026."
+  "nota": "Edizione del pomeriggio del 27 novembre 2026."
 }
