@@ -1,9 +1,82 @@
 {
   "app": "stampa-oggi",
-  "edizione": "mattina",
-  "updated": "2026-11-28T05:10+01:00",
+  "edizione": "pomeriggio",
+  "updated": "2026-11-28T13:04+01:00",
   "sezioni": {
     "italia": [
+      {
+        "id": "it-de-gennaro-funerali",
+        "t": "De Gennaro, aperta la camera ardente a Roma; funerali lunedì 30 novembre",
+        "s": "È stata aperta alla Scuola superiore di Polizia la camera ardente dell'ex capo della Polizia Gianni De Gennaro, riservata alla famiglia. I funerali sono fissati per lunedì alle 12 a Santa Maria degli Angeli. La Procura di Grosseto indaga per istigazione, contro ignoti.",
+        "d": "2026-11-28",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/28/aperta-la-camera-ardente-per-de-gennaro_4976f56b-4782-4af8-8c5e-af5a1d4bc036.html"
+          },
+          {
+            "n": "Adnkronos",
+            "url": "https://www.adnkronos.com/cronaca/de-gennaro-camera-ardente-oggi-roma_2H7fZwpSQoDEWFGH29oIPh"
+          }
+        ]
+      },
+      {
+        "id": "it-nordio-anm",
+        "t": "Nordio al congresso dei magistrati: «Superiamo i dissidi», e chiede di rateizzare gli arretrati",
+        "s": "A Napoli il ministro della Giustizia dice all'Anm che il conflitto sul referendum è superato e propone con l'avvocatura un «diritto penale minimo». Chiede inoltre ai giudici di accettare che gli arretrati stipendiali riconosciuti dal Consiglio di Stato siano pagati a rate.",
+        "d": "2026-11-28",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/28/nordio-allanm-stiamo-superando-i-dissidi-lavoriamo-insieme_af50b19d-d167-46af-aa7b-f48854eaa83f.html"
+          },
+          {
+            "n": "ANSA (arretrati)",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/28/nordio-magistrati-accettino-di-rateizzare-gli-stipendi-arretrati_16ed2fac-cf69-47b7-b2a0-20df909fccd8.html"
+          }
+        ]
+      },
+      {
+        "id": "it-cacciatori-messina",
+        "t": "Cacciatori uccisi nel Messinese: arrestato un amico di una delle vittime",
+        "s": "I carabinieri hanno arrestato Agostino Segreto per omicidio volontario nell'inchiesta sui tre cacciatori morti il 28 gennaio a Montagnareale. Secondo la ricostruzione della Procura di Patti, avrebbe ferito uno dei fratelli già colpito; esclusa la legittima difesa.",
+        "d": "2026-11-28",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/28/svolta-nel-giallo-dei-cacciatori-uccisi-nel-messinese-un-arresto-_3c7f37fd-7c54-41a9-94ee-23f1d3463981.html"
+          }
+        ]
+      },
+      {
+        "id": "it-famiglia-bosco",
+        "t": "Famiglia nel bosco: sospesa per 70 giorni l'assistente sociale del caso",
+        "s": "L'assistente sociale Veruska D'Angelo è stata sospesa per 70 giorni. Il suo legale dice che due dei tre rilievi sono marginali; il legale della famiglia parla invece di numerose violazioni del codice deontologico.",
+        "d": "2026-11-28",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://ansa.it/sito/notizie/cronaca/2026/11/28/famiglia-del-bosco-sospesa-assistente-sociale-solo-rilievi-marginali_058bcc71-d6d5-4a28-8a9f-28b5f2046463.html"
+          }
+        ]
+      },
+      {
+        "id": "it-kuwait-tecnici",
+        "t": "Kuwait, morti due tecnici italiani di Rheinmetall in un attacco con droni",
+        "s": "Il ministro degli Esteri Tajani dice che le indagini kuwaitiane confermano che il drone dell'attacco in cui sono morti due tecnici italiani di Rheinmetall era di fabbricazione iraniana. Teheran nega e propone un'inchiesta congiunta.",
+        "d": "2026-11-28",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/due-tecnici-italiani-della-rheinmetall-morti-in-un-attacco-in-kuwait_060489c8-4e35-4f04-9c6a-ade4a80acda4.html"
+          },
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/11/28/iran-war-live-italy-says-drone-in-deadly-kuwait-attack-was-made-in-iran",
+            "l": "en"
+          }
+        ]
+      },
       {
         "id": "it-condono-manovra",
         "t": "Manovra, la maggioranza lavora a una norma sul condono ma esclude le zone sismiche",
@@ -15,124 +88,69 @@
             "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/salvini-in-manovra-una-norma-sul-condono-la-stiamo-costruendo-con-i-comuni_6c4a993a-9e13-463d-b930-9be3df31a000.html"
           }
         ]
-      },
-      {
-        "id": "it-degennaro",
-        "t": "Caso De Gennaro: la lettera al Corriere e il Riesame dei coindagati rinviato al 17 dicembre",
-        "s": "Nella lettera al Corriere della Sera De Gennaro respinge l'accusa di tradimento. La presidente del Consiglio Meloni dice che la vicenda l'ha scioccata. L'udienza del Riesame per i coindagati slitta al 17 dicembre.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/la-lettera-di-de-gennaro-sul-corriere-io-condannato-a-morte_8d506c3b-6d62-4d78-a4a7-2c6bed64af4a.html"
-          }
-        ]
-      },
-      {
-        "id": "it-kuwait-tecnici",
-        "t": "Kuwait, morti due tecnici italiani di Rheinmetall in un attacco con droni",
-        "s": "Due dipendenti di Rheinmetall Italia, di 65 e 36 anni, sono morti nell'attacco del 26 novembre. Il ministro degli Esteri Tajani annuncia una protesta presso l'ambasciata iraniana; Teheran nega ogni responsabilità.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/due-tecnici-italiani-della-rheinmetall-morti-in-un-attacco-in-kuwait_060489c8-4e35-4f04-9c6a-ade4a80acda4.html"
-          }
-        ]
-      },
-      {
-        "id": "it-bologna-incendio",
-        "t": "Bologna, incendio in un palazzo: 14 feriti, tre gravi, cinquanta evacuati",
-        "s": "Le fiamme hanno coinvolto un edificio residenziale. Tra i feriti ci sono tre persone in condizioni gravi; una cinquantina di residenti sono state evacuate.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/incendio-in-un-palazzo-a-bologna-14-feriti-di-cui-tre-gravi_edfa33c7-df53-47be-af98-e3f5bb5ab7b6.html"
-          }
-        ]
-      },
-      {
-        "id": "it-orlandi",
-        "t": "Caso Orlandi: la voce del telefonista sarebbe di un ex agente dei servizi",
-        "s": "Nuovi elementi sul caso di Emanuela Orlandi: secondo quanto emerso, la voce del telefonista sarebbe di un ex agente dei servizi segreti.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/chi-lha-visto-e-di-un-ex-007-la-voce-del-telefonista-di-emanuela-orlandi_a12a4e85-6eb9-4eac-bada-c410e3a9955c.html"
-          }
-        ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-ue-bilancio",
-        "t": "Vertice Ue sul bilancio senza accordo: Costa chiede un'intesa a dicembre",
-        "s": "I leader riuniti a Bruxelles non hanno trovato l'accordo sul bilancio pluriennale 2028-2034. Il presidente del Consiglio europeo Costa dice che serve un'intesa a dicembre.",
-        "d": "2026-11-27",
+        "id": "mo-hormuz",
+        "t": "Hormuz: due petroliere esplodono dopo aver urtato mine, riferiscono i Pasdaran",
+        "s": "Secondo la Marina dei Pasdaran due petroliere hanno preso fuoco dopo aver toccato mine, una presso il porto omanita di Khasab e l'altra a est dello Stretto. La notizia arriva solo da fonte iraniana; non sono riportate vittime.",
+        "d": "2026-11-28",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/27/il-bilancio-spacca-leuropa-ma-costa-insiste-serve-unintesa-a-dicembre_8efd2071-60cc-4a6d-9da5-9029afc0c108.html"
-          },
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/28/iran-due-petroliere-sono-esplose-nello-stretto-di-hormuz-dopo-aver_f6ae65bd-e717-42ae-ae84-db195a723006.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-blocco-usa",
+        "t": "Usa colpiscono una nave che violava il blocco dei porti iraniani",
+        "s": "Il comando Usa ha disabilitato con munizioni di precisione la Pacific Archer, partita da Bandar Abbas. Dal blocco di metà luglio sei navi sono state fermate e 158 deviate. Teheran dice che Hormuz potrebbe riaprire in due giorni se Washington toglie il blocco.",
+        "d": "2026-11-28",
+        "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/economy/2026/11/26/eu-leaders-struggle-to-agree-on-long-term-budget-more-money-for-ukraine",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/28/us-military-fires-at-a-ship-that-violated-blockade-of-iranian-ports",
             "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-ue-prestito-ucraina",
-        "t": "Prestito aggiuntivo all'Ucraina: lo sostengono 24 Paesi Ue",
-        "s": "Costa riferisce che 24 Stati membri appoggiano il prestito straordinario a Kiev, in discussione al vertice insieme al bilancio.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/27/costa-24-paesi-ue-sostengono-lextra-prestito-per-lucraina_bec4b9c7-2c83-40ea-9671-3426eaf6a02e.html"
-          }
-        ]
-      },
-      {
-        "id": "mo-trump-iran",
-        "t": "Trump: in Iran «la vittoria è a portata di mano»",
-        "s": "Parlando alle truppe americane nel giorno del Ringraziamento, il presidente Usa dice che la vittoria nella guerra con l'Iran è vicina.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/27/trump-la-vittoria-e-a-portata-di-mano-in-iran_edbae226-c82f-419b-8251-0d67493dc391.html"
-          },
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/27/trump-downplays-russia-china-support-for-iran-during-talks-with-us-troops",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "mo-uk-riservisti",
-        "t": "Regno Unito: centomila riservisti invitati a tenersi pronti per una guerra",
-        "s": "Londra chiede a 100mila riservisti di restare disponibili in caso di conflitto, per la minaccia russa.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/gb-chiede-a-100-mila-riservisti-di-tenersi-pronti-in-caso-di-guerra_4e4aae73-a28f-4ae1-aab9-4016fcf8b2fb.html"
           }
         ]
       },
       {
         "id": "mo-spagna-voto",
-        "t": "Spagna al voto domenica: le destre verso la maggioranza, Vox ago della bilancia",
-        "s": "Secondo i sondaggi citati da Euronews, conservatori ed estrema destra potrebbero ottenere insieme la maggioranza alle elezioni anticipate di domenica; pesa il tema della casa.",
-        "d": "2026-11-27",
+        "t": "Spagna al voto domenica: il Pp verso il primo posto, ma serve Vox",
+        "s": "Alle elezioni anticipate di domenica i sondaggi danno il Partito popolare primo, ma senza i 176 seggi su 350 necessari. Vox, che nel 2023 ne ebbe 33, dovrebbe quasi raddoppiare, con circa il 18% dei voti.",
+        "d": "2026-11-28",
         "fonti": [
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/27/spain-general-election-is-vox-set-to-be-the-kingmaker-and-how-crucial-is-the-housing-issue",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/28/two-visions-of-spain-collide-as-voters-weigh-sanchez-record",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-israele-governo",
+        "t": "Israele, stallo nei colloqui per un governo di unità tra Eisenkot e Likud",
+        "s": "Dopo il voto del 27 ottobre il blocco di Netanyahu ha 53 seggi su 120 e quello di Eisenkot 48. Il presidente Herzog ha dato a Eisenkot tempo fino al 6 dicembre; ostacolo è la rotazione alla guida del governo.",
+        "d": "2026-11-28",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/28/israel-unity-government-talks-stall-what-happens-now",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "mo-afghanistan-scuola",
+        "t": "Afghanistan, esplosione accanto a una scuola nel Kunar: almeno sei studenti morti",
+        "s": "Secondo le autorità locali il bilancio provvisorio è di almeno sei studenti uccisi e 97 feriti. L'esplosione, vicino a una casa che custodiva dinamite legata ad attività minerarie, è avvenuta verso le 10 di sabato.",
+        "d": "2026-11-28",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/28/students-killed-injured-in-school-explosion-in-afghanistans-kunar-region",
             "l": "en"
           }
         ]
@@ -140,40 +158,40 @@
     ],
     "estero": [
       {
-        "id": "es-estonia-confine",
-        "t": "L'Estonia chiuderà il confine con la Russia dal primo dicembre",
-        "s": "Il ministro degli Esteri Tsahkna lo ha confermato a Baku, dicendo che la misura serve a proteggere l'Europa. Il Paese apre anche ambasciate a Baku e Erevan.",
-        "d": "2026-11-27",
+        "id": "es-mosca-droni",
+        "t": "Mosca: abbattuti centinaia di droni ucraini; Kiev annuncia il primo jet drone abbattuto con un laser",
+        "s": "Il sindaco di Mosca dice che le difese hanno abbattuto centinaia di droni, oltre 460 diretti verso la regione. L'Ucraina riferisce di aver colpito per la prima volta un drone a reazione russo con un sistema laser, avvertendo che la tecnologia non è pronta per un uso di massa.",
+        "d": "2026-11-28",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/27/estonia-will-close-border-with-russia-to-secure-europe-foreign-minister-says-during-baku-v",
+            "url": "https://www.euronews.com/2026/11/28/russia-says-it-downed-hundreds-of-drones-as-ukraine-reports-first-laser-interception-of-a-",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-mar-nero",
-        "t": "Kiev propone una tregua nel Mar Nero mentre Putin rafforza la marina",
-        "s": "Il ministro Sybiha offre il cessate il fuoco per proteggere l'export di grano; Mosca vorrebbe includere il trasporto di petrolio, Kiev no.",
-        "d": "2026-11-27",
+        "id": "es-francia-terre-rare",
+        "t": "La Francia prepara riserve strategiche di terre rare e metalli critici",
+        "s": "Dopo una riunione all'Eliseo con una quindicina di industriali, Parigi annuncia scorte gestite dalla Caisse des dépôts, con acquisti comuni e prezzi garantiti ai produttori. Mobilitati quasi 7 miliardi; la Francia chiede 25 miliardi nel Fondo per la competitività europeo.",
+        "d": "2026-11-28",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/27/kyiv-offers-black-sea-ceasefire-as-putin-expands-russias-navy",
+            "n": "Euronews",
+            "url": "https://euronews.com/2026/11/28/france-to-build-strategic-rare-earths-and-critical-metal-reserves-to-boost-resilience",
             "l": "en"
           }
         ]
       },
       {
-        "id": "es-italia-libia",
-        "t": "Perché Roma è irritata con Kiev per gli attacchi a navi russe davanti alla Libia",
-        "s": "Al Jazeera riferisce che, secondo gli analisti, l'Italia teme danni ai propri interessi energetici e alla gestione dei flussi migratori.",
-        "d": "2026-11-26",
+        "id": "es-australia-victoria",
+        "t": "Australia, il Victoria al voto: dopo 12 anni i laburisti rischiano di perdere",
+        "s": "Nello Stato di Victoria i sondaggi indicano possibile la sconfitta dei laburisti. La liberale Jess Wilson, 36 anni, sarebbe la prima premier donna del suo partito; propone 20 miliardi di tagli al debito. One Nation potrebbe entrare in Parlamento.",
+        "d": "2026-11-28",
         "fonti": [
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/26/why-is-italy-angry-with-ukraine-for-striking-russian-ships-off-libya",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/28/australias-conservatives-hope-for-victory-in-trendsetting-state",
             "l": "en"
           }
         ]
@@ -187,24 +205,6 @@
           {
             "n": "Euronews",
             "url": "https://www.euronews.com/2026/11/27/no-burqas-at-school-and-fewer-foreign-pupils-italy-passes-controversial-education-law",
-            "l": "en"
-          }
-        ]
-      },
-      {
-        "id": "es-kuwait-iran",
-        "t": "Teheran nega e parla di operazione «false flag» dopo la morte di due italiani in Kuwait",
-        "s": "Secondo Al Jazeera sono i primi civili europei uccisi nella guerra tra Usa-Israele e Iran. Roma e Kuwait accusano Teheran, che definisce l'attacco sospetto.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/27/italians-killed-in-kuwait-why-is-iran-denying-responsibility",
-            "l": "en"
-          },
-          {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/27/iran-denies-responsibility-for-kuwait-drone-strike-that-killed-two-italians",
             "l": "en"
           }
         ]
@@ -273,7 +273,7 @@
         "id": "to-marathon",
         "t": "Fiat Torino City Marathon domenica: oltre 11mila iscritti, record di partecipazione",
         "s": "La maratona parte il 29 novembre da piazza Vittorio Veneto; ci si aspettano modifiche alla viabilità nel centro.",
-        "d": "2026-11-26",
+        "d": "2026-11-28",
         "fonti": [
           {
             "n": "ANSA",
@@ -282,14 +282,38 @@
         ]
       },
       {
-        "id": "to-shorto",
-        "t": "ShorTo Film Market: da oggi a lunedì tre giorni dedicati al cortometraggio",
-        "s": "L'undicesima edizione si svolge dal 28 al 30 novembre a Torino, con Total Refusal come ospite speciale.",
-        "d": "2026-11-26",
+        "id": "to-la-loggia",
+        "t": "La Loggia, scontro sulla ex statale 20: muore una coppia di 87 anni",
+        "s": "Intorno alle 11 due auto si sono scontrate sulla ex statale 20 al bivio con la variante. Sono morti i due coniugi di 87 anni a bordo di una vettura; il conducente dell'altra, 43 anni, è ferito al CTO. Le cause sono da accertare.",
+        "d": "2026-11-28",
+        "fonti": [
+          {
+            "n": "TorinoOggi",
+            "url": "https://www.torinoggi.it/2026/11/28/leggi-notizia/argomenti/cronaca-11/articolo/tragedia-sulla-statale-di-la-loggia-in-un-incidente-stradale-muoiono-una-coppia-di-87enni-rimasti.html"
+          }
+        ]
+      },
+      {
+        "id": "to-controlli-nizza",
+        "t": "Controlli straordinari a Nizza Millefonti e San Salvario: sala scommesse multata per oltre 26mila euro",
+        "s": "La Polizia, con Carabinieri, Guardia di Finanza e Polizia locale, ha controllato persone, veicoli ed esercizi. In una sala scommesse vicino a piazza Bengasi giocava un diciassettenne: sanzione al titolare e segnalazione all'Agenzia delle dogane per la sospensione.",
+        "d": "2026-11-28",
+        "fonti": [
+          {
+            "n": "TorinoOggi",
+            "url": "https://www.torinoggi.it/2026/11/28/leggi-notizia/argomenti/cronaca-11/articolo/nizza-millefonti-e-san-salvario-giro-di-vite-per-la-sicurezza-multa-da-26mila-euro-in-una-sala-sco.html"
+          }
+        ]
+      },
+      {
+        "id": "to-disfestival",
+        "t": "Torino, al via il DisFestival: 13 eventi fino all'8 dicembre",
+        "s": "La terza edizione, promossa dalla Consulta per le Persone in Difficoltà, ha per tema «Umano Non Umano». Il 30 novembre il premio Ferrero al Museo di Scienze naturali, il 3 dicembre la Giornata internazionale delle persone con disabilità al palasport cittadino.",
+        "d": "2026-11-28",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/26/shorto-film-market-a-torino-tre-giorni-dedicati-al-futuro-del-cortometraggio_c1c3757d-de46-40d4-9aa6-21156464a204.html"
+            "url": "https://www.ansa.it/responsabilmente/notizie/valori_condivisi/2026/11/28/a-torino-la-terza-edizione-del-disfestival_a1f02b11-0e9a-417f-8805-df0e53942fb9.html"
           }
         ]
       },
@@ -315,18 +339,6 @@
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/26/fiom-nuova-cassa-integrazione-alle-carrozzerie-di-mirafiori-dall1-al-4-dicembre_a25bf3ed-6bde-43dc-8683-e144bb6558f2.html"
-          }
-        ]
-      },
-      {
-        "id": "to-palazzo-madama",
-        "t": "Palazzo Madama: concluso il restauro della facciata di Juvarra",
-        "s": "L'intervento da 5,2 milioni è stato sostenuto da Fondazione Crt e ministero della Cultura.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/25/palazzo-madama-torino-concluso-il-restauro-integrale-della-facciata-juvarriana_d033f9a0-d853-4166-af19-dad3a30a372e.html"
           }
         ]
       },
@@ -684,16 +696,17 @@
         "dove": "Torino"
       },
       {
-        "id": "ev-mole-panettoni",
-        "t": "Una Mole di Panettoni 2026",
-        "s": "Tre giorni dedicati al panettone artigianale a Torino.",
-        "d": "2026-11-28",
-        "quando": "fino a dom 29 nov",
-        "dove": "Torino",
+        "id": "ev-lego-lab",
+        "t": "Lego Holiday Lab in piazza Lagrange",
+        "s": "Truck di 17 metri su due piani con giochi di costruzione e iniziativa benefica Build to Give. Prenotazione su Eventbrite.",
+        "d": "2026-11-27",
+        "quando": "sab 28 e dom 29 nov, 10-19",
+        "dove": "piazza Lagrange, Torino",
+        "costo": "gratis",
         "fonti": [
           {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/una-mole-di-panettoni-2026"
+            "n": "TorinoOggi",
+            "url": "https://www.torinoggi.it/2026/11/27/leggi-notizia/argomenti/centro/articolo/il-lego-holiday-lab-arriva-in-piazza-lagrange-il-28-e-29-novembre-due-giorni-di-gioco-e-magia-natal.html"
           }
         ]
       }
@@ -1242,12 +1255,6 @@
   },
   "controlli": [
     {
-      "at": "2026-11-18T13:03+01:00",
-      "edizione": "pomeriggio",
-      "notizie": 79,
-      "note": "Fonti lette: ANSA, Adnkronos (via ANSA), Il Sole 24 Ore, Euronews (en), Al Jazeera (en), Torino Oggi. ansa.it/piemonte non leggibile (robots); Reuters/BBC/Guardian non cercati (rifiutati nei giri precedenti); TorinoToday, thespacecinema.it non letti. Cinema, teatro, eventi e concerti copiati dall'edizione del mattino (nessun concerto passato). Nessun riallineamento a origin/main."
-    },
-    {
       "at": "2026-11-19T05:03+01:00",
       "edizione": "mattina",
       "notizie": 72,
@@ -1360,7 +1367,13 @@
       "edizione": "mattina",
       "notizie": 84,
       "note": "Fonti: ANSA (sciopero, pagine ferme al 26-27/11), Al Jazeera (en), Euronews (en), ANSA Piemonte, ComingSoon (Cinema Ideal), Comune di Torino, Turismo Torino. Non raggiunti: TorinoToday (errore), The Space Cinema (pagina non leggibile: film solo del Cinema Ideal), Reuters/BBC/Guardian non cercate. Piemonte, scienza, tecnologia, cinema, teatro, eventi e concerti in parte copiati dalla precedente (nessun concerto passato; non è lunedì). Copia locale riallineata a origin/main (storia divergente)."
+    },
+    {
+      "at": "2026-11-28T13:04+01:00",
+      "edizione": "pomeriggio",
+      "notizie": 85,
+      "note": "Fonti: ANSA, Adnkronos, TorinoOggi, Al Jazeera (en), Euronews (en). Non raggiunti: TorinoToday (due pagine non leggibili), pagina Borgo Vittoria di TorinoOggi (errore), The Space Cinema e Reuters/BBC/Guardian non cercate; ricerca economia e Piemonte senza novità del giorno. Economia, Piemonte, cinema, teatro, concerti, scienza e tecnologia copiati dalla mattina (nessun concerto passato; non è lunedì). Copia locale riallineata a origin/main (storia divergente)."
     }
   ],
-  "nota": "Edizione del mattino del 28 novembre 2026. Il sito ANSA segnala uno sciopero dei giornalisti: le notizie più recenti lette sono del 26-27 novembre."
+  "nota": "Edizione del pomeriggio del 28 novembre 2026."
 }
