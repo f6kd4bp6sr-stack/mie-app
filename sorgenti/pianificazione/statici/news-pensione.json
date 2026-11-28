@@ -1,7 +1,7 @@
 {
  "app": "pianificazione-novita",
  "v": 1,
- "updated": "2026-11-27T01:03:00+01:00",
+ "updated": "2026-11-28T01:02:00+01:00",
  "voci": [
   {
    "id": "n20261118-bozza4anni",
@@ -432,7 +432,7 @@
    "n": "Gazzetta Ufficiale",
    "url": "https://www.gazzettaufficiale.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-27T01:03:00+01:00",
+   "ultimo": "2026-11-28T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -446,7 +446,7 @@
    "n": "Funzione Pubblica",
    "url": "https://www.funzionepubblica.gov.it/",
    "tipo": "ufficiale",
-   "ultimo": "2026-11-21T01:03:00+01:00",
+   "ultimo": "2026-11-28T01:02:00+01:00",
    "esito": "ok"
   },
   {
@@ -992,6 +992,11 @@
    "at": "2026-11-27T01:03:00+01:00",
    "notizie": 0,
    "note": "giro di venerdì 27/11: nessuna notizia nuova verificata (ricerche su contratto, DPR di recepimento, previdenza dedicata, sindacati GdF e INPS: solo articoli già presenti). DPR di recepimento: nessun riscontro in Gazzetta. INPS messaggio n. 3770 del 18/11: oggetto non leggibile dalla pagina, non inserito. Mercati: BTP 10 anni 4,33% in apertura del 26/11 (SoldiOnline/ANSA; QuiFinanza 4,35% nel titolo, entro 0,05); altri valori invariati. Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
+  },
+  {
+   "at": "2026-11-28T01:02:00+01:00",
+   "notizie": 0,
+   "note": "giro di sabato 28/11: nessuna notizia nuova verificata (ricerche su contratto, DPR di recepimento, previdenza dedicata, sindacati GdF: solo articoli già presenti). DPR di recepimento: nessun riscontro in Gazzetta né su Funzione Pubblica. Mercati: BTP 10 anni 4,35% in apertura del 27/11 (SoldiOnline) senza seconda fonte dello stesso giorno: invariato il 4,33% del 26/11; altri valori invariati (prossimo ISTAT 30/11). Tasso 2026 e coefficienti già usciti; F.A.F. 2027 attesa nel 2028. Prodotti invariati. Volontariato: non è lunedì. Cultura digitale: già fatta il 1/11. Scheda: invariata. Non ricontrollate le altre fonti"
   }
  ],
  "mercati": [
