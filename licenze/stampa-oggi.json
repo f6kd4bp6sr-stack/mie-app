@@ -1,67 +1,75 @@
 {
   "app": "stampa-oggi",
-  "edizione": "pomeriggio",
-  "updated": "2026-11-27T13:03+01:00",
+  "edizione": "mattina",
+  "updated": "2026-11-28T05:10+01:00",
   "sezioni": {
     "italia": [
       {
-        "id": "it-meloni-bilancio-ue",
-        "t": "Bilancio Ue, Meloni: «anni luce» da una soluzione e sì solo a condizioni dignitose",
-        "s": "La premier ha detto a margine del vertice dei 27 che l'Italia porta un no alla proposta sul bilancio pluriennale e che a decidere sono le condizioni poste, non i tempi. Il vertice si è chiuso senza accordo.",
+        "id": "it-condono-manovra",
+        "t": "Manovra, la maggioranza lavora a una norma sul condono ma esclude le zone sismiche",
+        "s": "Il leader della Lega Salvini dice che la norma sul condono è in costruzione insieme ai Comuni. La maggioranza assicura che non ci saranno sanatorie nelle aree a rischio sismico.",
         "d": "2026-11-26",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/26/meloni-sul-bilancio-ue-siamo-a-anni-luce-da-una-soluzione_79a0cb04-4647-4937-9e41-a8a380a30f91.html"
+            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/salvini-in-manovra-una-norma-sul-condono-la-stiamo-costruendo-con-i-comuni_6c4a993a-9e13-463d-b930-9be3df31a000.html"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "it-anm-congresso",
-        "t": "Congresso Anm a Napoli: Meloni assente e non firma il decreto sugli arretrati",
-        "s": "Alla presenza di Mattarella si apre il 37° congresso dei magistrati. La premier ha declinato l'invito e dice che non firmerà il provvedimento sugli arretrati retributivi. Il Consiglio di Stato ha accolto il ricorso dell'Anm sul periodo 2018-2020.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/stipendi-magistrati-meloni-anm-congresso_5engMZe3vhJIURa71rLZ4c"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-parlamento-fine-anno",
-        "t": "Parlamento verso lo sprint di fine anno: manovra in aula alla Camera il 18 dicembre",
-        "s": "Dopo il sì definitivo al decreto Scuola, il Senato ha approvato con fiducia il decreto ex Ilva, da convertire entro il 15 dicembre. Seguono i decreti anti-«maranza» (21 dicembre), Autorità anticorruzione (5 gennaio) e Campi Flegrei (10 gennaio).",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/politica/parlamento-manovra-decreti-legge-ingorgo_5IShlQO38yWI3am3bXcp1p"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "it-spinelli-onu",
-        "t": "Santino Spinelli interviene all'Onu a Ginevra: prima volta per un rom italiano",
-        "s": "Il musicista e docente parla oggi al 19° Forum sulle minoranze delle Nazioni Unite. Con lui interviene Maria Deborah Cieri, consigliera comunale di Atessa, definita la prima romnì italiana a farlo in quel contesto.",
+        "id": "it-degennaro",
+        "t": "Caso De Gennaro: la lettera al Corriere e il Riesame dei coindagati rinviato al 17 dicembre",
+        "s": "Nella lettera al Corriere della Sera De Gennaro respinge l'accusa di tradimento. La presidente del Consiglio Meloni dice che la vicenda l'ha scioccata. L'udienza del Riesame per i coindagati slitta al 17 dicembre.",
         "d": "2026-11-26",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/politica/2026/11/26/santino-spinelli-parla-allonu-e-la-prima-volta-di-un-rom-italiano_78ec3c8f-c42d-4d8e-a4e3-d93acc73243d.html"
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/la-lettera-di-de-gennaro-sul-corriere-io-condannato-a-morte_8d506c3b-6d62-4d78-a4a7-2c6bed64af4a.html"
           }
-        ],
-        "link": []
+        ]
+      },
+      {
+        "id": "it-kuwait-tecnici",
+        "t": "Kuwait, morti due tecnici italiani di Rheinmetall in un attacco con droni",
+        "s": "Due dipendenti di Rheinmetall Italia, di 65 e 36 anni, sono morti nell'attacco del 26 novembre. Il ministro degli Esteri Tajani annuncia una protesta presso l'ambasciata iraniana; Teheran nega ogni responsabilità.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/due-tecnici-italiani-della-rheinmetall-morti-in-un-attacco-in-kuwait_060489c8-4e35-4f04-9c6a-ade4a80acda4.html"
+          }
+        ]
+      },
+      {
+        "id": "it-bologna-incendio",
+        "t": "Bologna, incendio in un palazzo: 14 feriti, tre gravi, cinquanta evacuati",
+        "s": "Le fiamme hanno coinvolto un edificio residenziale. Tra i feriti ci sono tre persone in condizioni gravi; una cinquantina di residenti sono state evacuate.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/incendio-in-un-palazzo-a-bologna-14-feriti-di-cui-tre-gravi_edfa33c7-df53-47be-af98-e3f5bb5ab7b6.html"
+          }
+        ]
+      },
+      {
+        "id": "it-orlandi",
+        "t": "Caso Orlandi: la voce del telefonista sarebbe di un ex agente dei servizi",
+        "s": "Nuovi elementi sul caso di Emanuela Orlandi: secondo quanto emerso, la voce del telefonista sarebbe di un ex agente dei servizi segreti.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/cronaca/2026/11/26/chi-lha-visto-e-di-un-ex-007-la-voce-del-telefonista-di-emanuela-orlandi_a12a4e85-6eb9-4eac-bada-c410e3a9955c.html"
+          }
+        ]
       }
     ],
     "mondo": [
       {
-        "id": "mo-vertice-ue-bilancio",
-        "t": "Vertice Ue sul bilancio senza accordo: Costa punta a un'intesa a dicembre",
-        "s": "Il vertice di giovedì si chiude senza intesa. Costa ha proposto 1.780 miliardi per sette anni, circa il 10% in meno della bozza, respinti da tutti. Macron vuole un accordo entro il 31 dicembre; i Paesi frugali chiedono più tagli, 24 Stati sostengono il prestito da 45 miliardi all'Ucraina.",
+        "id": "mo-ue-bilancio",
+        "t": "Vertice Ue sul bilancio senza accordo: Costa chiede un'intesa a dicembre",
+        "s": "I leader riuniti a Bruxelles non hanno trovato l'accordo sul bilancio pluriennale 2028-2034. Il presidente del Consiglio europeo Costa dice che serve un'intesa a dicembre.",
         "d": "2026-11-27",
         "fonti": [
           {
@@ -69,182 +77,222 @@
             "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/27/il-bilancio-spacca-leuropa-ma-costa-insiste-serve-unintesa-a-dicembre_8efd2071-60cc-4a6d-9da5-9029afc0c108.html"
           },
           {
-            "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/27/a-lot-of-political-theatre-eu-summit-ends-in-disarray-as-leaders-cling-to-red-lines",
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/economy/2026/11/26/eu-leaders-struggle-to-agree-on-long-term-budget-more-money-for-ukraine",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "mo-trump-iran-vittoria",
-        "t": "Trump ai soldati nel giorno del Ringraziamento: in Iran la vittoria è a portata di mano",
-        "s": "Parlando in collegamento con le truppe americane, Trump dice che agli iraniani vengono date tutte le possibilità di un accordo, ma che non è certo che Teheran ne approfitti. Nel testo non ci sono repliche iraniane.",
+        "id": "mo-ue-prestito-ucraina",
+        "t": "Prestito aggiuntivo all'Ucraina: lo sostengono 24 Paesi Ue",
+        "s": "Costa riferisce che 24 Stati membri appoggiano il prestito straordinario a Kiev, in discussione al vertice insieme al bilancio.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/27/costa-24-paesi-ue-sostengono-lextra-prestito-per-lucraina_bec4b9c7-2c83-40ea-9671-3426eaf6a02e.html"
+          }
+        ]
+      },
+      {
+        "id": "mo-trump-iran",
+        "t": "Trump: in Iran «la vittoria è a portata di mano»",
+        "s": "Parlando alle truppe americane nel giorno del Ringraziamento, il presidente Usa dice che la vittoria nella guerra con l'Iran è vicina.",
         "d": "2026-11-27",
         "fonti": [
           {
             "n": "ANSA",
             "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/27/trump-la-vittoria-e-a-portata-di-mano-in-iran_edbae226-c82f-419b-8251-0d67493dc391.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-ucraina-trump-putin",
-        "t": "Ucraina: Trump chiede a Putin di ritirarsi; Londra contatta 100mila riservisti, Polonia prepara una no-fly zone",
-        "s": "Il presidente americano dice di sperare in un accordo rapido. Il ministero della Difesa britannico ha contattato circa 100mila ex militari; Varsavia istituirà una zona di divieto di volo al confine con l'Ucraina tra fine dicembre e inizio gennaio.",
-        "d": "2026-11-27",
-        "fonti": [
+          },
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/trump-putin-ucraina-nato-oggi_oinrM8wjiy7AF19en1kUz"
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/27/trump-downplays-russia-china-support-for-iran-during-talks-with-us-troops",
+            "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "mo-spagna-voto",
-        "t": "Spagna, ultimo duello tv prima del voto anticipato di domenica",
-        "s": "Sánchez e Colau si presentano insieme come ticket progressista. Quasi tutti i sondaggi, tranne quello del Cis, danno al Pp di Feijóo la maggioranza assoluta con Vox in crescita, ipotesi che porterebbe l'estrema destra al governo per la prima volta dopo il franchismo.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/topnews/2026/11/27/spagna-sanchez-e-colau-in-tandem-credono-nella-rimonta-sul-consorzio-feijoo_60e7f406-a9ee-4d7f-826d-1d807e68413e.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "mo-thanksgiving-parata",
-        "t": "New York, per il maltempo la parata del Ringraziamento slitta a sabato",
-        "s": "La sfilata di Macy's, in programma dal 1924 e fermata solo tra il 1942 e il 1944, slitta alle 8.30 locali di sabato per venti fino a circa 80 km/h e forti piogge. A Philadelphia la parata è stata cancellata.",
+        "id": "mo-uk-riservisti",
+        "t": "Regno Unito: centomila riservisti invitati a tenersi pronti per una guerra",
+        "s": "Londra chiede a 100mila riservisti di restare disponibili in caso di conflitto, per la minaccia russa.",
         "d": "2026-11-26",
         "fonti": [
           {
-            "n": "Adnkronos",
-            "url": "https://www.adnkronos.com/internazionale/esteri/giorno-del-ringraziamento-2026-parata-new-york-maltempo_6k5sVeC9WrWXRI0BkFTcgP"
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/26/gb-chiede-a-100-mila-riservisti-di-tenersi-pronti-in-caso-di-guerra_4e4aae73-a28f-4ae1-aab9-4016fcf8b2fb.html"
           }
-        ],
-        "link": []
-      }
-    ],
-    "estero": [
-      {
-        "id": "es-zelensky-attacco",
-        "t": "Zelensky avverte di un nuovo grande attacco russo, Trump dice di aver premuto su Putin",
-        "s": "Il presidente ucraino dice di avere informazioni su un attacco di massa nei prossimi giorni. Trump riferisce di aver chiesto a Putin, in un colloquio, di fermare le operazioni militari in Europa e di aver informato il segretario generale Nato Rutte.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/27/zelenskyy-warns-of-major-russian-attack-as-trump-urges-putin-to-pull-back",
-            "l": "en"
-          }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "es-lettonia-drone",
-        "t": "Drone non identificato nello spazio aereo lettone: decollano caccia Nato",
-        "s": "Nella notte un drone è entrato per poco in Lettonia, vicino al confine russo, nel comune di Ludza. Allerta dalle 2:30 alle 2:55 locali; sono decollati caccia della missione Baltic Air Policing. L'esercito non indica la provenienza e avverte che altre incursioni sono probabili.",
+        "id": "mo-spagna-voto",
+        "t": "Spagna al voto domenica: le destre verso la maggioranza, Vox ago della bilancia",
+        "s": "Secondo i sondaggi citati da Euronews, conservatori ed estrema destra potrebbero ottenere insieme la maggioranza alle elezioni anticipate di domenica; pesa il tema della casa.",
         "d": "2026-11-27",
         "fonti": [
           {
             "n": "Euronews",
-            "url": "https://www.euronews.com/2026/11/27/nato-jets-scrambled-after-drone-briefly-enters-latvian-airspace",
+            "url": "https://www.euronews.com/2026/11/27/spain-general-election-is-vox-set-to-be-the-kingmaker-and-how-crucial-is-the-housing-issue",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
+      }
+    ],
+    "estero": [
+      {
+        "id": "es-estonia-confine",
+        "t": "L'Estonia chiuderà il confine con la Russia dal primo dicembre",
+        "s": "Il ministro degli Esteri Tsahkna lo ha confermato a Baku, dicendo che la misura serve a proteggere l'Europa. Il Paese apre anche ambasciate a Baku e Erevan.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/27/estonia-will-close-border-with-russia-to-secure-europe-foreign-minister-says-during-baku-v",
+            "l": "en"
+          }
+        ]
       },
       {
-        "id": "es-iran-kuwait",
-        "t": "Guerra con l'Iran: Teheran definisce «sospetto» l'attacco mortale in Kuwait, morti due italiani",
-        "s": "Il ministro degli Esteri Araghchi parla di «ricetta preconfezionata» per la guerra. Le autorità kuwaitiane riferiscono che due italiani sono morti per detriti caduti durante l'intercettazione di droni iraniani su un sito vitale.",
+        "id": "es-mar-nero",
+        "t": "Kiev propone una tregua nel Mar Nero mentre Putin rafforza la marina",
+        "s": "Il ministro Sybiha offre il cessate il fuoco per proteggere l'export di grano; Mosca vorrebbe includere il trasporto di petrolio, Kiev no.",
         "d": "2026-11-27",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/liveblog/2026/11/27/iran-war-live-irans-araghchi-calls-deadly-kuwait-attack-suspicious",
+            "url": "https://www.aljazeera.com/news/2026/11/27/kyiv-offers-black-sea-ceasefire-as-putin-expands-russias-navy",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
       },
       {
-        "id": "es-afp-attacco-informatico",
-        "t": "L'agenzia Afp subisce un attacco informatico e sospende la piattaforma dei contenuti",
-        "s": "L'attacco è cominciato all'1.30 di Parigi e ha messo fuori uso Afp Forum. Il responsabile francese della cybersicurezza lo definisce una minaccia senza precedenti; anche la Fifa ha confermato un'intrusione nei propri sistemi.",
+        "id": "es-italia-libia",
+        "t": "Perché Roma è irritata con Kiev per gli attacchi a navi russe davanti alla Libia",
+        "s": "Al Jazeera riferisce che, secondo gli analisti, l'Italia teme danni ai propri interessi energetici e alla gestione dei flussi migratori.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Al Jazeera",
+            "url": "https://www.aljazeera.com/news/2026/11/26/why-is-italy-angry-with-ukraine-for-striking-russian-ships-off-libya",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-italia-scuola",
+        "t": "Euronews sulla legge italiana sulla scuola: velo integrale vietato e meno alunni stranieri",
+        "s": "Il titolo di Euronews presenta come controversa la legge d'istruzione approvata in Italia, che vieta il burqa a scuola e riguarda la presenza di alunni stranieri.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/27/no-burqas-at-school-and-fewer-foreign-pupils-italy-passes-controversial-education-law",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "es-kuwait-iran",
+        "t": "Teheran nega e parla di operazione «false flag» dopo la morte di due italiani in Kuwait",
+        "s": "Secondo Al Jazeera sono i primi civili europei uccisi nella guerra tra Usa-Israele e Iran. Roma e Kuwait accusano Teheran, che definisce l'attacco sospetto.",
         "d": "2026-11-27",
         "fonti": [
           {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/27/global-news-agency-afp-reports-cyberattack-shuts-down-content-platform",
+            "url": "https://www.aljazeera.com/news/2026/11/27/italians-killed-in-kuwait-why-is-iran-denying-responsibility",
             "l": "en"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-uk-houthi",
-        "t": "Il Regno Unito sanziona gli Houthi: per un analista misura soprattutto simbolica",
-        "s": "Londra ha congelato i beni e vietato i viaggi a quattro dirigenti del gruppo yemenita, mentre crescono gli attacchi all'Arabia Saudita. L'Onu ha rinnovato il regime di sanzioni sullo Yemen fino a novembre 2027.",
-        "d": "2026-11-26",
-        "fonti": [
+          },
           {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/26/symbolic-why-did-uk-sanction-yemens-houthis-amid-attacks-on-saudi",
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/27/iran-denies-responsibility-for-kuwait-drone-strike-that-killed-two-italians",
             "l": "en"
           }
-        ],
-        "link": []
-      },
-      {
-        "id": "es-messico-spacex",
-        "t": "Il Messico chiede colloqui agli Usa su presunti detriti di SpaceX sulla spiaggia di Matamoros",
-        "s": "La presidente Sheinbaum vuole un incontro tra le autorità aeree dei due Paesi sull'uso dello spazio aereo messicano. SpaceX contesta che i detriti siano suoi e chiede alla Faa di aumentare i lanci dallo Starbase texano.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/news/2026/11/26/mexico-seeks-us-talks-about-suspected-spacex-debris",
-            "l": "en"
-          }
-        ],
-        "link": []
+        ]
       }
     ],
     "economia": [
       {
-        "id": "ec-dazi-usa",
-        "t": "Dazi: gli Usa propongono tariffe per Cina, Ue e altri 12 Paesi",
-        "s": "Washington indica il 20% per Cina e Vietnam, il 15% per Ue, Svizzera, Corea del Sud e Giappone. Le tariffe passano prima da una consultazione pubblica. La Commissione europea richiama la dichiarazione congiunta che fissa il limite al 15%.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/sito/notizie/mondo/2026/11/25/usa-propongono-nuovi-dazi-per-cina-ue-e-altri-12-paesi_7b5dc39c-cbf2-4816-91bd-81f56b44833b.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "ec-corea-tassi",
-        "t": "La Banca di Corea alza i tassi al 3,25% e rivede al rialzo la crescita",
-        "s": "Rialzo di 0,25 punti per l'inflazione sopra il target (2,8% a ottobre). Il Pil è atteso al 3,9% nel 2026 e al 4,1% nel 2027; a ottobre l'export è cresciuto del 94% annuo.",
+        "id": "ec-bce-de-cos",
+        "t": "Pablo Hernández de Cos sarà il nuovo presidente della Bce al posto di Lagarde",
+        "s": "I leader dell'eurozona hanno trovato l'accordo sullo spagnolo, già governatore della Banca di Spagna, per la guida della Banca centrale europea.",
         "d": "2026-11-26",
         "fonti": [
           {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/sito/notizie/economia/2026/11/26/accordo-per-de-cos-alla-bce-ma-e-muro-contro-muro-sul-bilancio_b89e1430-4300-482f-9508-c475065af9d8.html"
+          },
+          {
             "n": "Al Jazeera",
-            "url": "https://www.aljazeera.com/economy/2026/11/26/south-koreas-central-bank-hikes-interest-rates-raises-gdp-growth-forecast",
+            "url": "https://www.aljazeera.com/news/2026/11/26/spanish-economist-to-become-new-european-central-bank-chief",
             "l": "en"
           }
-        ],
-        "link": []
+        ]
+      },
+      {
+        "id": "ec-germania-bilancio",
+        "t": "La Germania approva il bilancio 2027: nuovo debito per 210 miliardi",
+        "s": "Il Bundestag ha votato il bilancio dell'anno prossimo, con un ricorso ai prestiti che arriva a 210 miliardi di euro.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/27/german-bundestag-approves-record-2027-budget-as-borrowing-hits-210bn",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "ec-argentina",
+        "t": "Argentina in recessione tecnica: Pil in calo dell'1,8% nel terzo trimestre",
+        "s": "È la seconda contrazione consecutiva, con consumi deboli e minore potere d'acquisto.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/26/argentina-enters-technical-recession-as-weak-consumption-undermines-mileis-economic-gains",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "ec-francia-inflazione",
+        "t": "In Francia l'inflazione scende al 2,9% a novembre",
+        "s": "Il rallentamento dei prezzi è attribuito al calo dei costi dell'energia.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/27/frances-inflation-slows-to-29-in-november-as-energy-prices-fall",
+            "l": "en"
+          }
+        ]
       }
     ],
     "torino": [
+      {
+        "id": "to-marathon",
+        "t": "Fiat Torino City Marathon domenica: oltre 11mila iscritti, record di partecipazione",
+        "s": "La maratona parte il 29 novembre da piazza Vittorio Veneto; ci si aspettano modifiche alla viabilità nel centro.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/26/fiat-torino-city-marathon-batte-suoi-record-oltre-11mila-partecipanti_1cd71d22-b436-4d31-8c58-f444422ae530.html"
+          }
+        ]
+      },
+      {
+        "id": "to-shorto",
+        "t": "ShorTo Film Market: da oggi a lunedì tre giorni dedicati al cortometraggio",
+        "s": "L'undicesima edizione si svolge dal 28 al 30 novembre a Torino, con Total Refusal come ospite speciale.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/26/shorto-film-market-a-torino-tre-giorni-dedicati-al-futuro-del-cortometraggio_c1c3757d-de46-40d4-9aa6-21156464a204.html"
+          }
+        ]
+      },
       {
         "id": "to-politecnico-occupato",
         "t": "Torino, studenti occupano il Politecnico contro l'accordo con MBDA",
@@ -259,69 +307,40 @@
         "link": []
       },
       {
-        "id": "to-chieri-arresto",
-        "t": "Chieri: arrestato dopo una fuga di nove ore un uomo accusato di tentato omicidio",
-        "s": "Secondo TorinoToday l'uomo avrebbe accoltellato un giovane alla gola ed è fuggito prima di essere fermato (pagina non leggibile: dato dal titolo del risultato di ricerca).",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/daniel-marranghella-chieri-tentato-omicidio-arresto-novembre-2026-caselli.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-tff-travolta",
-        "t": "Torino Film Festival: red carpet con John Travolta, standing ovation in sala",
-        "s": "L'attore americano è stato accolto dal pubblico alla 44ª edizione del festival, in corso fino al 2 dicembre.",
-        "d": "2026-11-24",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/24/standing-ovation-per-travolta-al-tff-mi-avete-permesso-di-volare-in-alto_1c1fb85f-9b6b-48b7-8b68-1548e8a9c3a0.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-neve",
-        "t": "Montagne del Torinese imbiancate: neve ovunque oltre i mille metri",
-        "s": "TorinoToday segnala nevicate sui rilievi con il maltempo del 25 novembre (dal titolo della pagina, articolo non letto).",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "TorinoToday",
-            "url": "https://www.torinotoday.it/meteo/maltempo-nevicate-pioggia-25-novembre-2026.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-don-ali",
-        "t": "Torino, confermata in appello la condanna per l'agguato al maestro: fine pena nel 2027",
-        "s": "Secondo TorinoToday, i giudici d'appello non hanno concesso sconti all'imputato noto come Don Alì per l'aggressione al maestro. Il titolo indica che la pena finirà nel 2027. Pagina non leggibile per intero: dettagli da verificare.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "TorinoToday",
-            "url": "https://torinotoday.it/cronaca/condanna-don-ali-agguato-maestro-conferma-appello.html"
-          }
-        ],
-        "link": []
-      },
-      {
-        "id": "to-violenza-genere",
-        "t": "Torino, in dieci mesi calano del 19,8% le denunce dei reati legati alla violenza di genere",
-        "s": "Dati interforze presentati in Prefettura dal prefetto Cafagna: rispetto al 2025 gli atti persecutori scendono del 35,2%, il revenge porn sale del 37%. Gli arresti per i principali reati di genere crescono del 31,5% tra 2023 e 2026.",
+        "id": "to-mirafiori-cig",
+        "t": "Mirafiori, cassa integrazione alle Carrozzerie dall'1 al 4 dicembre",
+        "s": "La Fiom comunica la nuova fermata e chiede un nuovo modello e investimenti per il rilancio dello stabilimento.",
         "d": "2026-11-26",
         "fonti": [
           {
             "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/26/torino-calano-le-denunce-per-reati-legati-alla-violenza-di-genere_4123a662-bbd9-46fd-985e-77ac0076ce59.html"
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/26/fiom-nuova-cassa-integrazione-alle-carrozzerie-di-mirafiori-dall1-al-4-dicembre_a25bf3ed-6bde-43dc-8683-e144bb6558f2.html"
           }
-        ],
-        "link": []
+        ]
+      },
+      {
+        "id": "to-palazzo-madama",
+        "t": "Palazzo Madama: concluso il restauro della facciata di Juvarra",
+        "s": "L'intervento da 5,2 milioni è stato sostenuto da Fondazione Crt e ministero della Cultura.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/25/palazzo-madama-torino-concluso-il-restauro-integrale-della-facciata-juvarriana_d033f9a0-d853-4166-af19-dad3a30a372e.html"
+          }
+        ]
+      },
+      {
+        "id": "to-notre-dame",
+        "t": "Notre Dame de Paris all'Inalpi Arena dal 4 al 7 dicembre",
+        "s": "Il musical torna a Torino con quattro giorni di repliche.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/piemonte/notizie/2026/11/25/a-torino-tornano-a-suonare-le-campane-di-notre-dame-de-paris_86398228-3611-454b-a032-ebd08e78e4a3.html"
+          }
+        ]
       }
     ],
     "piemonte": [
@@ -415,6 +434,32 @@
             "url": "https://www.ansa.it/piemonte/notizie/2026/11/16/tumori-dei-cani-latlante-genomico-individua-39-geni-chiave_8c2c201a-f338-4a53-abc0-1a51240fe893.html"
           }
         ]
+      },
+      {
+        "id": "sc-hera",
+        "t": "Hera mostra il cratere sull'asteroide Dimorphos colpito dalla sonda Dart",
+        "s": "Le nuove immagini mostrano un cratere grande come uno stadio, quattro anni dopo l'impatto della missione Nasa.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/26/new-images-show-stadium-sized-crater-on-asteroid-nasa-crashed-into",
+            "l": "en"
+          }
+        ]
+      },
+      {
+        "id": "sc-ebola",
+        "t": "Ebola in Congo: superati i 12mila casi, l'epidemia cresce più rapidamente",
+        "s": "Il titolo di Euronews la indica come l'epidemia a crescita più veloce.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Euronews",
+            "url": "https://www.euronews.com/2026/11/26/ebola-cases-in-congo-surpass-12000-in-fastest-growing-outbreak",
+            "l": "en"
+          }
+        ]
       }
     ],
     "tecnologia": [
@@ -459,6 +504,356 @@
             "n": "Euronews",
             "url": "https://www.euronews.com/2026/11/24/un-chief-urges-nations-to-establish-ai-safety-safeguards-within-a-year",
             "l": "en"
+          }
+        ],
+        "link": []
+      }
+    ],
+    "cultura": [],
+    "eventi": [
+      {
+        "id": "ev-tff44",
+        "t": "44° Torino Film Festival, dedicato a Marilyn Monroe nel centenario della nascita",
+        "s": "Il festival porta in città film, ospiti e proiezioni in più sale; la cerimonia di apertura si è tenuta al Teatro Regio.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/tff-torino-film-festival-44-edizione"
+          },
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/torino-film-festival/"
+          }
+        ],
+        "link": [],
+        "quando": "fino a mer 2 dic 2026",
+        "dove": "varie sale, Torino",
+        "costo": "prezzi sul sito"
+      },
+      {
+        "id": "ev-maratona",
+        "t": "FIAT Torino City Marathon",
+        "s": "Maratona cittadina con partenza da piazza Vittorio Veneto e due punti di arrivo.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/fiat-torino-city-marathon/"
+          }
+        ],
+        "link": [],
+        "quando": "dom 29 nov 2026, 8:00-14:30",
+        "dove": "piazza Vittorio Veneto, Torino",
+        "costo": "vedi sito"
+      },
+      {
+        "id": "ev-luci-artista",
+        "t": "Luci d'Artista: installazioni luminose in tutta la città",
+        "s": "Le opere luminose d'artista illuminano le vie e le piazze di Torino per l'inverno.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/luci-dartista"
+          }
+        ],
+        "quando": "fino al 10 gen 2027",
+        "dove": "In tutta la città, Torino",
+        "costo": "gratis (all'aperto)"
+      },
+      {
+        "id": "ev-presepe-annunziata",
+        "t": "Presepe meccanico della SS. Annunziata",
+        "s": "Presepe meccanico in via Po, aperto durante le feste.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/presepe-meccanico-della-ss-annunziata-via-po-2026"
+          }
+        ],
+        "link": [],
+        "quando": "dal 7 nov 2026 al 1 gen 2027",
+        "dove": "via Po, Torino",
+        "costo": "prezzo sul sito"
+      },
+      {
+        "id": "ev-banksy",
+        "t": "Banksy. Street is the Museum",
+        "s": "Mostra dedicata all'artista di strada Banksy.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/banksy-street-is-the-museum"
+          }
+        ],
+        "quando": "fino al 31 gen 2027, apertura settimanale",
+        "dove": "Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-wpp",
+        "t": "World Press Photo Exhibition 2026 a Torino",
+        "s": "Mostra dei premi di fotogiornalismo, aperta ogni settimana; altre mostre in corso (Kusama alle OGR, Jessica Lange, Tiepolo) nell'agenda di Turismo Torino.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/agenda"
+          }
+        ],
+        "quando": "fino al 13 dic",
+        "dove": "Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-egizio-sguardi",
+        "t": "Sguardi contemporanei sull'antico al Museo Egizio",
+        "s": "Percorso espositivo che mette in dialogo la collezione del museo con lo sguardo contemporaneo.",
+        "d": "2026-11-17",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/sguardi-contemporanei-sull-antico"
+          }
+        ],
+        "quando": "fino all'11 gen 2027, apertura settimanale",
+        "dove": "Museo Egizio, Torino",
+        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
+      },
+      {
+        "id": "ev-grado-zero",
+        "t": "Grado zero. La montagna oltre i generi, mostra al Museo Nazionale della Montagna",
+        "s": "Mostra collettiva curata da Andrea Lerda e Linda Cottino con 18 artisti e registi, tra cui Maria Lai e Kate Gilmore, accanto a materiali storici sulle alpiniste dimenticate.",
+        "d": "2026-11-25",
+        "fonti": [
+          {
+            "n": "ANSA",
+            "url": "https://www.ansa.it/canale_viaggi/regione/piemonte/2026/11/24/grado-zero-al-museo-della-montagna-le-protagoniste-dimenticate-dellalpinismo_f2777bb7-076c-499f-a114-83e9a465cd40.html"
+          }
+        ],
+        "link": [],
+        "quando": "fino al 6 giu 2027, apertura settimanale",
+        "dove": "Museo Nazionale della Montagna, Torino"
+      },
+      {
+        "id": "ev-weekend-danza",
+        "t": "Weekend della danza al Teatro Monterosa",
+        "s": "Spettacoli di danza nel fine settimana.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/weekend-della-danza-5/"
+          }
+        ],
+        "link": [],
+        "quando": "sab 28 nov, 15:30 e 17:30; dom 29 nov, 17:30",
+        "dove": "Teatro Monterosa, Torino"
+      },
+      {
+        "id": "ev-felidi",
+        "t": "Un viaggio tra i felidi del mondo, laboratorio al Museo di Scienze Naturali",
+        "s": "Laboratorio e visite guidate al museo nel fine settimana.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/un-viaggio-tra-i-felidi-del-mondo/"
+          }
+        ],
+        "link": [],
+        "quando": "sab 28 nov, 11-17:30",
+        "dove": "Museo Regionale di Scienze Naturali, Torino"
+      },
+      {
+        "id": "ev-ofili-manet",
+        "t": "Laure. Chris Ofili & Édouard Manet, mostra a Torino",
+        "s": "Mostra che mette in dialogo l'artista britannico e il pittore francese.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/laure-chris-ofili-and-edouard-manet"
+          }
+        ],
+        "link": [],
+        "quando": "fino al 4 apr 2027",
+        "dove": "Torino"
+      },
+      {
+        "id": "ev-mole-panettoni",
+        "t": "Una Mole di Panettoni 2026",
+        "s": "Tre giorni dedicati al panettone artigianale a Torino.",
+        "d": "2026-11-28",
+        "quando": "fino a dom 29 nov",
+        "dove": "Torino",
+        "fonti": [
+          {
+            "n": "Turismo Torino",
+            "url": "https://turismotorino.org/en/visit/events/una-mole-di-panettoni-2026"
+          }
+        ]
+      }
+    ],
+    "spettacoli": [
+      {
+        "id": "spe-cin-hunger-games",
+        "t": "Hunger Games: L'alba sulla mietitura, il nuovo capitolo della saga",
+        "s": "Il giovane Haymitch, del Distretto 12, partecipa alla 50ª edizione dei Giochi. Regia di Francis Lawrence.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/hunger-games-l-alba-sulla-mietitura/66957/scheda/"
+          }
+        ],
+        "link": [],
+        "quando": "orari indicativi letti il 28 nov: 18:15, 21:15 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-rumore-cose-nuove",
+        "t": "Il rumore delle cose nuove, commedia corale di Paolo Genovese",
+        "s": "Tre famiglie milanesi che si sfiorano da anni senza conoscersi vengono sconvolte da un incontro imprevisto. Regia di Paolo Genovese.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/il-rumore-delle-cose-nuove/68017/scheda/"
+          }
+        ],
+        "link": [],
+        "quando": "orari indicativi letti il 28 nov: 17:35, 21:30 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-se-domani-non-torno",
+        "t": "Se domani non torno, il film di Paola Randi sulla storia di Gino Cecchettin",
+        "s": "Il padre di Giulia Cecchettin affronta la perdita della figlia e un percorso di consapevolezza sul femminicidio. Regia di Paola Randi.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/se-domani-non-torno/68243/scheda/"
+          }
+        ],
+        "link": [],
+        "quando": "orari indicativi letti il 28 nov: 15:30, 19:25 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-scrooge",
+        "t": "Scrooge e gli Spiriti del Natale, nuova versione del racconto di Dickens",
+        "s": "Rilettura del classico natalizio: l'avaro Ebenezer ottiene una seconda possibilità in una notte di magia e terrore. Regia di Ti West.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/scrooge-e-gli-spiriti-del-natale/68609/scheda/"
+          }
+        ],
+        "link": [],
+        "quando": "orari indicativi letti il 28 nov: 17:10, 21:35 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-gatto-cappello",
+        "t": "Il Gatto col Cappello, animazione tratta da Dr. Seuss (per tutti)",
+        "s": "Un gatto con il cappello intrattiene due fratelli in due giornate di pioggia, con risultati caotici. Per tutti, anche per i più piccoli.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/il-gatto-col-cappello/67427/scheda/"
+          }
+        ],
+        "link": [],
+        "quando": "orari indicativi letti il 28 nov: 15:00 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-cin-wild-horse-nine",
+        "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh",
+        "s": "Nel 1973, alla vigilia del golpe contro Allende, due agenti della CIA si trovano sull'Isola di Pasqua. Regia di Martin McDonagh.",
+        "d": "2026-11-27",
+        "fonti": [
+          {
+            "n": "ComingSoon - Cinema Ideal",
+            "url": "https://www.comingsoon.it/film/wild-horse-nine/68581/scheda/"
+          }
+        ],
+        "link": [],
+        "quando": "orari indicativi letti il 28 nov: 21:30 (altri giorni sul sito della sala)",
+        "dove": "Cinema Ideal",
+        "costo": "Ideal 9 €"
+      },
+      {
+        "id": "spe-tea-bolle",
+        "t": "Roberto Bolle and Friends, gala di danza",
+        "s": "Serata di danza con Roberto Bolle e danzatori internazionali, produzione Arte Danza.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/opera-e-balletto-2026-2027/roberto-bolle-and-friends"
+          }
+        ],
+        "link": [],
+        "quando": "mer 2 e gio 3 dic 2026, 20:00",
+        "dove": "Teatro Regio, Torino",
+        "costo": "biglietti su Vivaticket"
+      },
+      {
+        "id": "spe-tea-pierino",
+        "t": "Pierino e il lupo, spettacolo per famiglie al Teatro Regio",
+        "s": "Titolo della stagione famiglie del Teatro Regio, in cartellone per più repliche.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Teatro Regio",
+            "url": "https://www.teatroregio.torino.it/en/famiglia-2026-2027/pierino-e-il-lupo"
+          }
+        ],
+        "link": [],
+        "quando": "dal 28 nov al 5 dic 2026 (orari sul sito)",
+        "dove": "Teatro Regio, Torino",
+        "costo": "biglietti su Vivaticket"
+      },
+      {
+        "id": "spe-tea-frigo",
+        "t": "Differenti sensazioni / Il frigo, di Copi, con Eva Robin's",
+        "s": "Monologo di 60 minuti, regia di Andrea Adriatico, produzione Teatri di Vita.",
+        "d": "2026-11-26",
+        "fonti": [
+          {
+            "n": "Comune di Torino",
+            "url": "https://eventi.comune.torino.it/calendario/differenti-sensazioni-il-frigo-2/"
+          }
+        ],
+        "link": [],
+        "quando": "sab 28 nov 2026, 21:00",
+        "dove": "Officine Caos, Torino",
+        "costo": "a pagamento, con prenotazione"
+      },
+      {
+        "id": "spe-tea-incendi",
+        "t": "Incendi",
+        "s": "Spettacolo in cartellone al Teatro Stabile di Torino, in replica fino al 29 novembre; interpreti, orari e prezzi sul sito.",
+        "d": "2026-11-26",
+        "quando": "fino al 29 nov 2026 (orari sul sito)",
+        "dove": "Teatro Carignano, Torino",
+        "fonti": [
+          {
+            "n": "Teatro Stabile Torino",
+            "url": "https://www.teatrostabiletorino.it/en/categoria_portfolio/2-carignano-26-27/"
           }
         ],
         "link": []
@@ -843,366 +1238,9 @@
           }
         ]
       }
-    ],
-    "cultura": [],
-    "eventi": [
-      {
-        "id": "ev-tff44",
-        "t": "44° Torino Film Festival, dedicato a Marilyn Monroe nel centenario della nascita",
-        "s": "Il festival porta in città film, ospiti e proiezioni in più sale; la cerimonia di apertura si è tenuta al Teatro Regio.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/tff-torino-film-festival-44-edizione"
-          },
-          {
-            "n": "Comune di Torino",
-            "url": "https://eventi.comune.torino.it/calendario/torino-film-festival/"
-          }
-        ],
-        "link": [],
-        "quando": "fino a mer 2 dic 2026",
-        "dove": "varie sale, Torino",
-        "costo": "prezzi sul sito"
-      },
-      {
-        "id": "ev-maratona",
-        "t": "FIAT Torino City Marathon",
-        "s": "Maratona cittadina con partenza da piazza Vittorio Veneto e due punti di arrivo.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "Comune di Torino",
-            "url": "https://eventi.comune.torino.it/calendario/fiat-torino-city-marathon/"
-          }
-        ],
-        "link": [],
-        "quando": "dom 29 nov 2026, 8:00-14:30",
-        "dove": "piazza Vittorio Veneto, Torino",
-        "costo": "vedi sito"
-      },
-      {
-        "id": "ev-luci-artista",
-        "t": "Luci d'Artista: installazioni luminose in tutta la città",
-        "s": "Le opere luminose d'artista illuminano le vie e le piazze di Torino per l'inverno.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/luci-dartista"
-          }
-        ],
-        "quando": "fino al 10 gen 2027",
-        "dove": "In tutta la città, Torino",
-        "costo": "gratis (all'aperto)"
-      },
-      {
-        "id": "ev-presepe-annunziata",
-        "t": "Presepe meccanico della SS. Annunziata",
-        "s": "Presepe meccanico in via Po, aperto durante le feste.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/presepe-meccanico-della-ss-annunziata-via-po-2026"
-          }
-        ],
-        "link": [],
-        "quando": "dal 7 nov 2026 al 1 gen 2027",
-        "dove": "via Po, Torino",
-        "costo": "prezzo sul sito"
-      },
-      {
-        "id": "ev-asti-natale",
-        "t": "Magico Paese di Natale ad Asti: inaugurazione venerdì 13 novembre",
-        "s": "Mercatini e iniziative natalizie nel centro storico.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/piemonte/notizie/2026/11/05/al-via-ad-asti-la-ventesima-edizione-del-magico-paese-di-natale_021f61c6-de2e-4d9d-81cc-5786467ddda3.html"
-          }
-        ],
-        "quando": "dal 13 nov al 20 dic (inaugurazione ven 13 nov, 18:30)",
-        "dove": "Centro storico, Asti",
-        "costo": "mercatini gratuiti"
-      },
-      {
-        "id": "ev-banksy",
-        "t": "Banksy. Street is the Museum",
-        "s": "Mostra dedicata all'artista di strada Banksy.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/banksy-street-is-the-museum"
-          }
-        ],
-        "quando": "fino al 31 gen 2027, apertura settimanale",
-        "dove": "Torino",
-        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-      },
-      {
-        "id": "ev-wpp",
-        "t": "World Press Photo Exhibition 2026 a Torino",
-        "s": "Mostra dei premi di fotogiornalismo, aperta ogni settimana; altre mostre in corso (Kusama alle OGR, Jessica Lange, Tiepolo) nell'agenda di Turismo Torino.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/agenda"
-          }
-        ],
-        "quando": "fino al 13 dic",
-        "dove": "Torino",
-        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-      },
-      {
-        "id": "ev-egizio-sguardi",
-        "t": "Sguardi contemporanei sull'antico al Museo Egizio",
-        "s": "Percorso espositivo che mette in dialogo la collezione del museo con lo sguardo contemporaneo.",
-        "d": "2026-11-17",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/sguardi-contemporanei-sull-antico"
-          }
-        ],
-        "quando": "fino all'11 gen 2027, apertura settimanale",
-        "dove": "Museo Egizio, Torino",
-        "costo": "ingresso con Torino+Piemonte Card; prezzi sul sito"
-      },
-      {
-        "id": "ev-grado-zero",
-        "t": "Grado zero. La montagna oltre i generi, mostra al Museo Nazionale della Montagna",
-        "s": "Mostra collettiva curata da Andrea Lerda e Linda Cottino con 18 artisti e registi, tra cui Maria Lai e Kate Gilmore, accanto a materiali storici sulle alpiniste dimenticate.",
-        "d": "2026-11-25",
-        "fonti": [
-          {
-            "n": "ANSA",
-            "url": "https://www.ansa.it/canale_viaggi/regione/piemonte/2026/11/24/grado-zero-al-museo-della-montagna-le-protagoniste-dimenticate-dellalpinismo_f2777bb7-076c-499f-a114-83e9a465cd40.html"
-          }
-        ],
-        "link": [],
-        "quando": "fino al 6 giu 2027, apertura settimanale",
-        "dove": "Museo Nazionale della Montagna, Torino"
-      },
-      {
-        "id": "ev-weekend-danza",
-        "t": "Weekend della danza al Teatro Monterosa",
-        "s": "Spettacoli di danza nel fine settimana.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "Comune di Torino",
-            "url": "https://eventi.comune.torino.it/calendario/weekend-della-danza-5/"
-          }
-        ],
-        "link": [],
-        "quando": "sab 28 nov, 15:30 e 17:30; dom 29 nov, 17:30",
-        "dove": "Teatro Monterosa, Torino"
-      },
-      {
-        "id": "ev-felidi",
-        "t": "Un viaggio tra i felidi del mondo, laboratorio al Museo di Scienze Naturali",
-        "s": "Laboratorio e visite guidate al museo nel fine settimana.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "Comune di Torino",
-            "url": "https://eventi.comune.torino.it/calendario/un-viaggio-tra-i-felidi-del-mondo/"
-          }
-        ],
-        "link": [],
-        "quando": "sab 28 nov, 11-17:30",
-        "dove": "Museo Regionale di Scienze Naturali, Torino"
-      },
-      {
-        "id": "ev-ofili-manet",
-        "t": "Laure. Chris Ofili & Édouard Manet, mostra a Torino",
-        "s": "Mostra che mette in dialogo l'artista britannico e il pittore francese.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "Turismo Torino",
-            "url": "https://turismotorino.org/en/visit/events/laure-chris-ofili-and-edouard-manet"
-          }
-        ],
-        "link": [],
-        "quando": "fino al 4 apr 2027",
-        "dove": "Torino"
-      }
-    ],
-    "spettacoli": [
-      {
-        "id": "spe-cin-hunger-games",
-        "t": "Hunger Games: L'alba sulla mietitura, il nuovo capitolo della saga",
-        "s": "Il giovane Haymitch, del Distretto 12, partecipa alla 50ª edizione dei Giochi. Regia di Francis Lawrence.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "ComingSoon - Cinema Ideal",
-            "url": "https://www.comingsoon.it/film/hunger-games-l-alba-sulla-mietitura/66957/scheda/"
-          }
-        ],
-        "link": [],
-        "quando": "orari indicativi di oggi ven 27 nov: 18:15, 21:15 (altri giorni sul sito della sala)",
-        "dove": "Cinema Ideal",
-        "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-rumore-cose-nuove",
-        "t": "Il rumore delle cose nuove, commedia corale di Paolo Genovese",
-        "s": "Tre famiglie milanesi che si sfiorano da anni senza conoscersi vengono sconvolte da un incontro imprevisto. Regia di Paolo Genovese.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "ComingSoon - Cinema Ideal",
-            "url": "https://www.comingsoon.it/film/il-rumore-delle-cose-nuove/68017/scheda/"
-          }
-        ],
-        "link": [],
-        "quando": "orari indicativi di oggi ven 27 nov: 17:35, 21:30 (altri giorni sul sito della sala)",
-        "dove": "Cinema Ideal",
-        "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-se-domani-non-torno",
-        "t": "Se domani non torno, il film di Paola Randi sulla storia di Gino Cecchettin",
-        "s": "Il padre di Giulia Cecchettin affronta la perdita della figlia e un percorso di consapevolezza sul femminicidio. Regia di Paola Randi.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "ComingSoon - Cinema Ideal",
-            "url": "https://www.comingsoon.it/film/se-domani-non-torno/68243/scheda/"
-          }
-        ],
-        "link": [],
-        "quando": "orari indicativi di oggi ven 27 nov: 15:30, 19:25 (altri giorni sul sito della sala)",
-        "dove": "Cinema Ideal",
-        "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-scrooge",
-        "t": "Scrooge e gli Spiriti del Natale, nuova versione del racconto di Dickens",
-        "s": "Rilettura del classico natalizio: l'avaro Ebenezer ottiene una seconda possibilità in una notte di magia e terrore. Regia di Ti West.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "ComingSoon - Cinema Ideal",
-            "url": "https://www.comingsoon.it/film/scrooge-e-gli-spiriti-del-natale/68609/scheda/"
-          }
-        ],
-        "link": [],
-        "quando": "orari indicativi di oggi ven 27 nov: 17:10, 21:35 (altri giorni sul sito della sala)",
-        "dove": "Cinema Ideal",
-        "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-gatto-cappello",
-        "t": "Il Gatto col Cappello, animazione tratta da Dr. Seuss (per tutti)",
-        "s": "Un gatto con il cappello intrattiene due fratelli in due giornate di pioggia, con risultati caotici. Per tutti, anche per i più piccoli.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "ComingSoon - Cinema Ideal",
-            "url": "https://www.comingsoon.it/film/il-gatto-col-cappello/67427/scheda/"
-          }
-        ],
-        "link": [],
-        "quando": "orari indicativi di oggi ven 27 nov: 15:00 (altri giorni sul sito della sala)",
-        "dove": "Cinema Ideal",
-        "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-cin-wild-horse-nine",
-        "t": "Wild Horse Nine, la commedia di spie di Martin McDonagh",
-        "s": "Nel 1973, alla vigilia del golpe contro Allende, due agenti della CIA si trovano sull'Isola di Pasqua. Regia di Martin McDonagh.",
-        "d": "2026-11-27",
-        "fonti": [
-          {
-            "n": "ComingSoon - Cinema Ideal",
-            "url": "https://www.comingsoon.it/film/wild-horse-nine/68581/scheda/"
-          }
-        ],
-        "link": [],
-        "quando": "orari indicativi di oggi ven 27 nov: 21:30 (altri giorni sul sito della sala)",
-        "dove": "Cinema Ideal",
-        "costo": "Ideal 9 €"
-      },
-      {
-        "id": "spe-tea-bolle",
-        "t": "Roberto Bolle and Friends, gala di danza",
-        "s": "Serata di danza con Roberto Bolle e danzatori internazionali, produzione Arte Danza.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "Teatro Regio",
-            "url": "https://www.teatroregio.torino.it/en/opera-e-balletto-2026-2027/roberto-bolle-and-friends"
-          }
-        ],
-        "link": [],
-        "quando": "mer 2 e gio 3 dic 2026, 20:00",
-        "dove": "Teatro Regio, Torino",
-        "costo": "biglietti su Vivaticket"
-      },
-      {
-        "id": "spe-tea-pierino",
-        "t": "Pierino e il lupo, spettacolo per famiglie al Teatro Regio",
-        "s": "Titolo della stagione famiglie del Teatro Regio, in cartellone per più repliche.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "Teatro Regio",
-            "url": "https://www.teatroregio.torino.it/en/famiglia-2026-2027/pierino-e-il-lupo"
-          }
-        ],
-        "link": [],
-        "quando": "dal 28 nov al 5 dic 2026 (orari sul sito)",
-        "dove": "Teatro Regio, Torino",
-        "costo": "biglietti su Vivaticket"
-      },
-      {
-        "id": "spe-tea-frigo",
-        "t": "Differenti sensazioni / Il frigo, di Copi, con Eva Robin's",
-        "s": "Monologo di 60 minuti, regia di Andrea Adriatico, produzione Teatri di Vita.",
-        "d": "2026-11-26",
-        "fonti": [
-          {
-            "n": "Comune di Torino",
-            "url": "https://eventi.comune.torino.it/calendario/differenti-sensazioni-il-frigo-2/"
-          }
-        ],
-        "link": [],
-        "quando": "sab 28 nov 2026, 21:00",
-        "dove": "Officine Caos, Torino",
-        "costo": "a pagamento, con prenotazione"
-      },
-      {
-        "id": "spe-tea-incendi",
-        "t": "Incendi",
-        "s": "Spettacolo in cartellone al Teatro Stabile di Torino, in replica fino al 29 novembre; interpreti, orari e prezzi sul sito.",
-        "d": "2026-11-26",
-        "quando": "fino al 29 nov 2026 (orari sul sito)",
-        "dove": "Teatro Carignano, Torino",
-        "fonti": [
-          {
-            "n": "Teatro Stabile Torino",
-            "url": "https://www.teatrostabiletorino.it/en/categoria_portfolio/2-carignano-26-27/"
-          }
-        ],
-        "link": []
-      }
     ]
   },
   "controlli": [
-    {
-      "at": "2026-11-18T05:03+01:00",
-      "edizione": "mattina",
-      "notizie": 70,
-      "note": "Fonti lette: ANSA, Adnkronos, Euronews (en), Al Jazeera (en), Torino Oggi. Non cercate/bloccate: Reuters, BBC, Guardian; TorinoToday, thespacecinema.it non letti; liveblog Al Jazeera non leggibile. Cinema, teatro, eventi e concerti copiati dall'edizione precedente (mercoledì, nessun concerto passato). Nessun riallineamento a origin/main."
-    },
     {
       "at": "2026-11-18T13:03+01:00",
       "edizione": "pomeriggio",
@@ -1316,7 +1354,13 @@
       "edizione": "pomeriggio",
       "notizie": 80,
       "note": "Fonti: ANSA, Adnkronos, Al Jazeera (en), Euronews (en), ANSA Piemonte. Non raggiunti: TorinoToday (tre pagine non leggibili, usati titoli da ricerca), Reuters/BBC/Guardian non cercate, The Space Cinema e teatri non riaggiornati. Cinema, teatro, eventi, concerti, scienza e tecnologia copiati dalla mattina (nessun concerto passato). Copia locale riallineata a origin/main (HEAD staccato)."
+    },
+    {
+      "at": "2026-11-28T05:10+01:00",
+      "edizione": "mattina",
+      "notizie": 84,
+      "note": "Fonti: ANSA (sciopero, pagine ferme al 26-27/11), Al Jazeera (en), Euronews (en), ANSA Piemonte, ComingSoon (Cinema Ideal), Comune di Torino, Turismo Torino. Non raggiunti: TorinoToday (errore), The Space Cinema (pagina non leggibile: film solo del Cinema Ideal), Reuters/BBC/Guardian non cercate. Piemonte, scienza, tecnologia, cinema, teatro, eventi e concerti in parte copiati dalla precedente (nessun concerto passato; non è lunedì). Copia locale riallineata a origin/main (storia divergente)."
     }
   ],
-  "nota": "Edizione del pomeriggio del 27 novembre 2026."
+  "nota": "Edizione del mattino del 28 novembre 2026. Il sito ANSA segnala uno sciopero dei giornalisti: le notizie più recenti lette sono del 26-27 novembre."
 }
